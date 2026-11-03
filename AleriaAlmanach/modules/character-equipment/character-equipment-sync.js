@@ -6,6 +6,7 @@ export const CHARACTER_EQUIPMENT_LINK_SCHEMA_VERSION = 1;
 import { normalizeEquipmentDamageProtection } from './equipment-damage-protection.js';
 import { applyArmorBalance, balanceArmorInventoryItem } from './equipment-armor-rules.js';
 import { materializeInventoryItem, storeInventoryItem, storeDefinitionInventory, resolveItemDefinition } from '../item-definitions/item-definition-resolver.js';
+import { projectEquipmentPassiveEffects } from './equipment-passive-effects.js';
 
 const EQUIPMENT_KINDS = Object.freeze({ weapon: 'weapons', armor: 'armorItems' });
 
@@ -240,7 +241,7 @@ export function synchronizeEquipmentFromCombat({ inventory = {}, combatProfile =
   return { inventory: nextInventory, combatProfile: nextProfile };
 }
 
-export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfile = {}, addMissingEquipment = false, definitions, preserveLoadout = false } = {}) {
+export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfile = {}, addMissingEquipment = false, definitions, preserveLoadout = false, definitionRulesOnly = false } = {}) {
   const nextInventory = clone(inventory && typeof inventory === 'object' ? inventory : {});
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
   nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
@@ -252,6 +253,9 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
       .filter(entry => !entry.inventoryItemId || itemsById.has(text(entry.inventoryItemId)))
       .map(entry => {
         const source = itemsById.get(text(entry.inventoryItemId));
+        // A read-time rule refresh must not import unrelated legacy card values
+        // into a freely authored profile merely because it also owns a bound item.
+        if (definitionRulesOnly && !source?.definitionRef) return entry;
         const definition = source?.definitionRef ? resolveItemDefinition(source, definitions) : null;
         if (source?.definitionRef && !definition) return entry;
         if (definition && definition.combatDefinition?.kind !== kind) return null;
@@ -261,6 +265,7 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
       }).filter(Boolean);
     if (addMissingEquipment) {
       for (const source of nextInventory.items) {
+        if (definitionRulesOnly && !source.definitionRef) continue;
         const item = materializeInventoryItem(source, definitions);
         if (!item.combatDefinition || equipmentKindFromInventoryItem(item) !== kind) continue;
         if (nextProfile[collectionName].some(entry => text(entry.inventoryItemId) === text(item.id))) continue;
@@ -271,6 +276,11 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
     }
   });
 
+  const passiveItems = nextInventory.items.filter(item => resolveItemDefinition(item, definitions))
+    .map(item => materializeInventoryItem(item, definitions));
+  const passiveEffects = projectEquipmentPassiveEffects(passiveItems);
+  if (passiveEffects.length) nextProfile.equipmentPassiveEffects = passiveEffects;
+  else delete nextProfile.equipmentPassiveEffects;
   return { inventory: storeDefinitionInventory(nextInventory), combatProfile: nextProfile };
 }
 

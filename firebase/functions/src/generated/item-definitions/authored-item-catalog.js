@@ -187,6 +187,110 @@ export const AUTHORED_ITEMS = [
     }
   },
   {
+    "id": "gwynthor-seven:rianna-silberhirsch",
+    "canonicalKey": "gwynthor-seven:rianna-silberhirsch",
+    "title": "Owetas Silberhirsch",
+    "category": "sonstiges",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-ca3e627ec0704c6d%2Foriginal.png?alt=media",
+    "combatDefinition": null,
+    "description": "Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie ausschließlich Oweta Draig als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.",
+    "type": "Ausrüstung",
+    "section": "definition",
+    "categoryLabel": "sonstiges",
+    "aliases": [],
+    "tags": [
+      "Gwynthor",
+      "Individuelle Ausrüstung"
+    ],
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [],
+    "updatedAt": 0,
+    "mechanicsStatus": "defined",
+    "inventoryUseMode": "use",
+    "passiveEffects": [
+      {
+        "type": "damage-reduction",
+        "magicScope": "magical",
+        "amount": 1,
+        "activation": "carried",
+        "name": "Silberhirsch · Tenebritspuren"
+      }
+    ],
+    "stackable": false,
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-silberhirsch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ],
+    "hiddenMeta": {
+      "origin": "Gwynthor · Autorenauftrag 02.11.2026"
+    },
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "gwynthor-seven:rianna-silberhirsch",
+      "revision": "cfd41958fd7684ec28395eab"
+    }
+  },
+  {
+    "id": "gwynthor-seven:draig-speer",
+    "canonicalKey": "gwynthor-seven:draig-speer",
+    "title": "Draig Speer",
+    "category": "waffen",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-003fd54385e1d785%2Foriginal.png?alt=media",
+    "combatDefinition": {
+      "kind": "weapon",
+      "weaponType": "spear",
+      "weaponProfileId": "spear",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "damageType": "Stich",
+      "attackAttribute": "strength",
+      "proficient": true,
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf · Wurf 6/18 m",
+      "properties": "Einhändig · Vielseitig · Wurfwaffe",
+      "triggerRules": [],
+      "ammunition": null,
+      "versatileDamageFormula": "1d8"
+    },
+    "description": "Owetas Speer in der Bauform des Hauses Draig. Gewöhnlicher Speer mit 1W6 Stich, beidhändig 1W8; Wurfweite 6/18 m.",
+    "type": "Waffe",
+    "section": "definition",
+    "categoryLabel": "waffen",
+    "aliases": [],
+    "tags": [
+      "Gwynthor",
+      "Individuelle Ausrüstung"
+    ],
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [],
+    "updatedAt": 0,
+    "mechanicsStatus": "defined",
+    "inventoryUseMode": "use",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "draig-speer",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ],
+    "hiddenMeta": {
+      "origin": "Gwynthor · Autorenauftrag 02.11.2026"
+    },
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "gwynthor-seven:draig-speer",
+      "revision": "8c2e61c8aa5a769cd307e839"
+    }
+  },
+  {
     "id": "gwynthor-seven:draig-ritterschwert",
     "canonicalKey": "gwynthor-seven:draig-ritterschwert",
     "title": "Draig Ritterschwert",
@@ -1279,6 +1383,744 @@ export const AUTHORED_ITEMS = [
     "definitionRef": {
       "id": "gwynthor-seven:oweta-zinnritter",
       "revision": "9faab346c8b3c1f9a38e4627"
+    }
+  },
+  {
+    "id": "house-signet:haus-aderyn",
+    "canonicalKey": "house-signet:haus-aderyn",
+    "title": "Aderyn-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-aderyn%2Fhouse-signets-de3c483c2450b83a%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Aderyn O'Penbryn. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Aderyn O'Penbryn"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Aderyn O'Penbryn"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-aderyn",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-aderyn"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-aderyn",
+      "revision": "5764a01400ecdaf3d06160e7"
+    }
+  },
+  {
+    "id": "house-signet:haus-awenor",
+    "canonicalKey": "house-signet:haus-awenor",
+    "title": "Awenor-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-awenor%2Fhouse-signets-d0658d7ab1c0a04c%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenor. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Awenor"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Awenor"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-awenor",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-awenor"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-awenor",
+      "revision": "7c571bd22a9f4e9bd64f4983"
+    }
+  },
+  {
+    "id": "house-signet:haus-awenydd",
+    "canonicalKey": "house-signet:haus-awenydd",
+    "title": "Awenydd-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-awenydd%2Fhouse-signets-6d51fc101cae0e14%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Awenydd"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Awenydd"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-awenydd",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-awenydd"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-awenydd",
+      "revision": "13649b7438abc826aad621d2"
+    }
+  },
+  {
+    "id": "house-signet:haus-balchder",
+    "canonicalKey": "house-signet:haus-balchder",
+    "title": "Balchder-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2Fhouse-signets-ff2d5f2128e381f7%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Balchder. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Balchder"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Balchder"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-balchder",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-balchder"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-balchder",
+      "revision": "d2c768402d9799c9bc01f2f3"
+    }
+  },
+  {
+    "id": "house-signet:haus-chwedlonol",
+    "canonicalKey": "house-signet:haus-chwedlonol",
+    "title": "Chwedonol-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fhouse-signets-f390454695268772%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Chwedonol. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Chwedonol"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Chwedonol"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-chwedlonol",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-chwedlonol"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-chwedlonol",
+      "revision": "3646d1af494257c5e06b3e24"
+    }
+  },
+  {
+    "id": "house-signet:haus-draig",
+    "canonicalKey": "house-signet:haus-draig",
+    "title": "Draig-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-bdac8c16cb36282e%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Draig"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Draig"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-draig",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-draig"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-draig",
+      "revision": "a274f3994f5ad5303421a36e"
+    }
+  },
+  {
+    "id": "house-signet:haus-gafyr",
+    "canonicalKey": "house-signet:haus-gafyr",
+    "title": "Gafyr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gafyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Gafyr"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Gafyr"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gafyr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gafyr"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-gafyr",
+      "revision": "bf2cae0ff5ed2d079ef9a757"
+    }
+  },
+  {
+    "id": "house-signet:haus-gwefrydd",
+    "canonicalKey": "house-signet:haus-gwefrydd",
+    "title": "Gwefrydd-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwefrydd%2Fhouse-signets-68b697643f527837%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwefrydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Gwefrydd"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Gwefrydd"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gwefrydd",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gwefrydd"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-gwefrydd",
+      "revision": "6b01bfeb090abd715bd2cc8e"
+    }
+  },
+  {
+    "id": "house-signet:haus-gwyvern",
+    "canonicalKey": "house-signet:haus-gwyvern",
+    "title": "Gwyvern-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Gwyvern"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Gwyvern"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gwyvern",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gwyvern"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-gwyvern",
+      "revision": "ddded0df5c142ed080032800"
+    }
+  },
+  {
+    "id": "house-signet:haus-neidr",
+    "canonicalKey": "house-signet:haus-neidr",
+    "title": "Neidr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-neidr%2Fhouse-signets-783e51ec223f250f%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Neidr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Neidr"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Neidr"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-neidr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-neidr"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-neidr",
+      "revision": "213ef18e1873f576f5e4fcca"
+    }
+  },
+  {
+    "id": "house-signet:haus-rhyddid",
+    "canonicalKey": "house-signet:haus-rhyddid",
+    "title": "Rhyddid-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-rhyddid%2Fhouse-signets-16c573da438ffebc%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Rhyddid. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Rhyddid"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Rhyddid"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-rhyddid",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-rhyddid"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-rhyddid",
+      "revision": "6b0e179e602a7888e2d01a54"
+    }
+  },
+  {
+    "id": "house-signet:haus-saethwyr",
+    "canonicalKey": "house-signet:haus-saethwyr",
+    "title": "Saethwyr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-saethwyr%2Fhouse-signets-7b6d04513014d9c4%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Saethwyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Saethwyr"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Saethwyr"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-saethwyr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-saethwyr"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-saethwyr",
+      "revision": "06a9560db6af49870231875a"
+    }
+  },
+  {
+    "id": "house-signet:haus-skald",
+    "canonicalKey": "house-signet:haus-skald",
+    "title": "Skald-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-skald%2Fhouse-signets-f2b6a80cd941126c%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Skald. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Clan Skald"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Clan Skald"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-skald",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-skald"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-skald",
+      "revision": "f7d5407d3bb16272dd12a9b7"
+    }
+  },
+  {
+    "id": "house-signet:haus-skellor",
+    "canonicalKey": "house-signet:haus-skellor",
+    "title": "Skellor-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-skellor%2Fhouse-signets-d8c26dac57bd5811%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Skellor. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Skellor"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Skellor"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-skellor",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-skellor"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-skellor",
+      "revision": "2e3005bacb61c87aada98eec"
+    }
+  },
+  {
+    "id": "house-signet:haus-varulv",
+    "canonicalKey": "house-signet:haus-varulv",
+    "title": "Varulv-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fhouse-signets-f41aa5b381b45988%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Varulv. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Clan Varulv"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Clan Varulv"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-varulv",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-varulv"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-varulv",
+      "revision": "1a129504a6d048cca87b2971"
+    }
+  },
+  {
+    "id": "house-signet:haus-wolfshorn",
+    "canonicalKey": "house-signet:haus-wolfshorn",
+    "title": "Wolfshorn-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wolfshorn%2Fhouse-signets-78cb045186bfee57%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Wolfshorn. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Clan Wolfshorn"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Clan Wolfshorn"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wolfshorn",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wolfshorn"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-wolfshorn",
+      "revision": "538ebb92da8f11e8e0d276bd"
+    }
+  },
+  {
+    "id": "house-signet:haus-wylan",
+    "canonicalKey": "house-signet:haus-wylan",
+    "title": "Wylan-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fhouse-signets-9f254d9cc421c51c%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wylan O'Cerrigarth. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Wylan O'Cerrigarth"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Wylan O'Cerrigarth"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wylan",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wylan"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-wylan",
+      "revision": "b55084f1e497f31cdb92d7d7"
+    }
+  },
+  {
+    "id": "house-signet:haus-wyrm",
+    "canonicalKey": "house-signet:haus-wyrm",
+    "title": "Wyrm-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "section": "definition",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-76d56e75db6cdde5%2Foriginal.png?alt=media",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "aliases": [],
+    "tags": [
+      "Siegelring",
+      "Hauszugehörigkeit",
+      "Haus Wyrm"
+    ],
+    "stackable": false,
+    "combatDefinition": null,
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Haus",
+        "value": "Haus Wyrm"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wyrm",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wyrm"
+      }
+    ],
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "house-signet:haus-wyrm",
+      "revision": "58432cfafcaaf0b123379522"
     }
   }
 ];

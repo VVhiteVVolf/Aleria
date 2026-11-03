@@ -3,6 +3,7 @@
 export const ITEM_DEFINITION_SCHEMA = 1;
 import { normalizeEquipmentPreparationCosts } from '../character-equipment/equipment-preparation-costs.js';
 import { normalizeSubstanceExposure } from '../character-health/substance-profiles.js';
+import { normalizeEquipmentPassiveEffects } from '../character-equipment/equipment-passive-effects.js';
 export const ITEM_CATEGORIES = Object.freeze(['waffen', 'ruestungen', 'speisen', 'getraenke', 'alchemie', 'arkanes', 'werkzeuge', 'sonstiges', 'pferde', 'vieh']);
 const clean = (value, limit = 180) => String(value ?? '').trim().slice(0, limit);
 const copy = value => value == null ? value : JSON.parse(JSON.stringify(value));
@@ -128,11 +129,13 @@ export function normalizeItemDefinition(input = {}, { id = input.id, revision = 
     : ['speisen', 'getraenke', 'alchemie'].includes(category) ? 'consume' : 'use';
   const useDefinition = normalizeItemUseDefinition(input.useDefinition, inventoryUseMode);
   const kind = input.kind === 'unique' ? 'unique' : 'shared';
+  const passiveEffects = normalizeEquipmentPassiveEffects(input.passiveEffects);
   return { schemaVersion: ITEM_DEFINITION_SCHEMA, ...ref, kind,
     baseRef: normalizeItemDefinitionRef(input.baseRef), title, category,
     type: clean(input.type), image: imagePath(input.image), description: clean(input.description, 12000),
     mechanicsStatus: ['provisional', 'defined', 'narrative'].includes(input.mechanicsStatus) ? input.mechanicsStatus : 'provisional',
     combatDefinition: normalizeItemCombatDefinition(input.combatDefinition, category),
+    ...(passiveEffects.length ? { passiveEffects } : {}),
     inventoryUseMode: useDefinition.mode, useDefinition,
     stackable: kind !== 'unique' && !['waffen', 'ruestungen', 'pferde', 'vieh'].includes(category) && input.stackable !== false,
     weight: input.weight == null || input.weight === '' ? null : number(input.weight, 0, 100000),

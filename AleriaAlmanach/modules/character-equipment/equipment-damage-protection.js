@@ -1,6 +1,7 @@
 // Flat armor protection belongs to each typed damage component, after affinities.
 // This also handles spell/save damage and follow-up hits without attack-kind exceptions.
 import { canUseEquippedCombatShield } from '../combat/combat-weapon-loadout.js';
+import { getEquipmentPassiveDamageProtection } from './equipment-passive-effects.js';
 const text = (value, max = 160) => String(value ?? '').trim().slice(0, max);
 export function equipmentDamageType(value) {
   const type = text(value).toLocaleLowerCase('de');
@@ -22,7 +23,7 @@ export function describeEquipmentDamageProtection(value) {
   const exceptions = protection.excludedDamageTypes.length ? ` außer ${protection.excludedDamageTypes.map(label).join(' und ')}` : '';
   return `${protection.amount} Schaden weniger gegen ${types}${exceptions}, je Schadensinstanz (mindestens 0). Wirkt nur bei angelegter Rüstung; kein RK-Bonus.`;
 }
-export function resolveEquipmentDamageProtection(profile = {}, damageType, amount = 0, { reductionBypass = 0 } = {}) {
+export function resolveEquipmentDamageProtection(profile = {}, damageType, amount = 0, { reductionBypass = 0, magical = false } = {}) {
   const type = equipmentDamageType(damageType || 'physisch');
   const sources = (profile.armorItems || []).filter(armor => armor.equipped === true
     && (armor.kind !== 'shield' || canUseEquippedCombatShield(profile))).flatMap(armor => {
@@ -32,9 +33,15 @@ export function resolveEquipmentDamageProtection(profile = {}, damageType, amoun
     return [{ ...protection, armorId: armor.id, armorName: armor.name }];
   });
   // Multiple equipped pieces do not multiply the same passive armor protection.
-  const capacity = Math.max(0, ...sources.map(source => source.amount));
+  const armorCapacity = Math.max(0, ...sources.map(source => source.amount));
+  const passiveSources = getEquipmentPassiveDamageProtection(profile, { magical });
+  // Duplicate carried charms do not multiply their protection. Armor and a
+  // separately carried charm protect independently when both apply.
+  const passiveCapacity = Math.max(0, ...passiveSources.map(source => source.amount));
+  const capacity = armorCapacity + passiveCapacity;
   const bypassedReduction = Math.min(capacity, Math.max(0, Number(reductionBypass) || 0));
   const reduction = Math.min(Math.max(0, Number(amount) || 0), capacity - bypassedReduction);
   return { reduction, ...(bypassedReduction ? { bypassedReduction } : {}),
-    sources: reduction > 0 ? sources.filter(source => source.amount === capacity) : [] };
+    sources: reduction > 0 ? [...sources.filter(source => source.amount === armorCapacity),
+      ...passiveSources.filter(source => source.amount === passiveCapacity)] : [] };
 }

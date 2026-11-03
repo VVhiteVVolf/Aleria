@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { projectGawainFamilySnapshot } from '../modules/gawain-duncan/gawain-family-snapshot.mjs';
+import { gawainFamilyBackupPath } from '../modules/gawain-duncan/gawain-family-backup.mjs';
 
 const root = new URL('../../Stammbäume/assets/data/published-families/', import.meta.url);
 const target = new URL('haus-draig.json', root), registryPath = new URL('registry.json', root);
@@ -10,10 +11,10 @@ const source = FAMILY_REGISTRY.find(row => row.id === 'haus-draig');
 if (!source) throw Error('Haus Draigs öffentliche Projektquelle fehlt.');
 const result = projectGawainFamilySnapshot({ envelope: original, registry, sourceFamily: source.family, now: new Date().toISOString() });
 const json = value => JSON.stringify(value, null, 2) + '\n';
-const backups = result.changed ? [original, result.envelope].map(envelope => ({
-  path: new URL(`backups/haus-draig/r${String(envelope.revision).padStart(8, '0')}-${envelope.updatedAt.replace(/[^0-9A-Z]/gi, '')}.json`, root),
-  content: envelope === original ? originalText : json(envelope)
-})) : [];
+const backups = result.changed ? [original, result.envelope].map(envelope => {
+  const content = envelope === original ? originalText : json(envelope);
+  return { path: new URL(gawainFamilyBackupPath(envelope, content), root), content };
+}) : [];
 // A colliding archive name is never overwritten. Check every output before
 // writing the first one, and recheck the two live local inputs immediately.
 for (const backup of backups) {

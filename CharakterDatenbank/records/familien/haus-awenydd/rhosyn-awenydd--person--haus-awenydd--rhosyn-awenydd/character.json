@@ -59,6 +59,7 @@
       "collection": "characters",
       "documentId": "person--haus-awenydd--rhosyn-awenydd",
       "documentIds": [
+        "person--haus-awenydd--rhosyn-awenydd",
         "person--haus-awenydd--rhosyn-awenydd"
       ],
       "documents": [
@@ -66,6 +67,11 @@
           "documentId": "person--haus-awenydd--rhosyn-awenydd",
           "createdAt": "2026-11-01T23:27:59.527Z",
           "updatedAt": "2026-11-01T23:27:59.527Z"
+        },
+        {
+          "documentId": "person--haus-awenydd--rhosyn-awenydd",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -81,13 +87,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Sieben/rhosyn-awenydd.json",
-    "sourceExportedAt": "2026-11-01T23:27:59.527Z",
-    "sourceUpdatedAt": "2026-11-01T23:27:59.527Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-awenydd--rhosyn-awenydd.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-awenydd--rhosyn-awenydd",
       "person--haus-awenydd--rhosyn-awenydd"
     ],
-    "contentHash": "1ddf0c109850b4175aa32bab181e7f5b645d77561172e99fdc07ed70908ad791"
+    "contentHash": "deea8805bc55cd84fa358578dd39a53f3a8664c5faebc860298d2dafeac0d56d"
   },
   "local": {
     "notes": "",
@@ -1113,6 +1120,82 @@
           },
           "notes": ""
         }
+      },
+      {
+        "id": "person--haus-awenydd--rhosyn-awenydd",
+        "name": "Rhosyn Awenydd",
+        "inventory": {
+          "items": [
+            {
+              "id": "rhosyn-awenydd-rhosyn-kleid-1",
+              "instanceId": "rhosyn-awenydd-rhosyn-kleid-1",
+              "templateId": "gwynthor-seven:rhosyn-kleid",
+              "templateName": "Rhosyns weinrotes Kleid",
+              "definitionRef": {
+                "id": "gwynthor-seven:rhosyn-kleid",
+                "revision": "5adcaa37cccc4adc7be241a2"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rhosyn-kleid",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-awenydd--rhosyn-awenydd",
+              "ownerCharacterName": "Rhosyn Awenydd",
+              "acquiredAt": "2026-11-01T23:27:59.527Z",
+              "name": "Rhosyns weinrotes Kleid",
+              "type": "Kleidung",
+              "category": "other",
+              "description": "Weinrotes Kleid mit langem Rock und dezentem goldenen Turmzeichen nach Rhosyns Porträt.",
+              "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rhosyn-kleid.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "person--haus-awenydd--rhosyn-awenydd-house-signet-20261102",
+              "instanceId": "person--haus-awenydd--rhosyn-awenydd-house-signet-20261102",
+              "templateId": "house-signet:haus-awenydd",
+              "templateName": "Awenydd-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-awenydd",
+                "revision": "13649b7438abc826aad621d2"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-awenydd",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-awenydd--rhosyn-awenydd",
+              "ownerCharacterName": "Rhosyn Awenydd",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Rhosyn Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-awenydd%2Fhouse-signets-6d51fc101cae0e14%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Awenydd",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Awenydd"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "definitionSchemaVersion": 1,
+          "revision": 1
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -1133,7 +1216,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-11-01T23:27:59.527Z",
-    "updatedAt": "2026-11-01T23:27:59.527Z",
+    "updatedAt": "2026-11-02T21:05:42.453432Z",
     "portrait": "../Stammbäume/assets/images/portraits/haus-awenydd/rhosyn-awenydd.jpg",
     "emotes": [],
     "emotesOverride": false,
@@ -1172,9 +1255,45 @@
           "valuation": null,
           "infoRows": [],
           "attributes": []
+        },
+        {
+          "id": "person--haus-awenydd--rhosyn-awenydd-house-signet-20261102",
+          "instanceId": "person--haus-awenydd--rhosyn-awenydd-house-signet-20261102",
+          "templateId": "house-signet:haus-awenydd",
+          "templateName": "Awenydd-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-awenydd",
+            "revision": "13649b7438abc826aad621d2"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-awenydd",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-awenydd--rhosyn-awenydd",
+          "ownerCharacterName": "Rhosyn Awenydd",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Rhosyn Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-awenydd%2Fhouse-signets-6d51fc101cae0e14%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Awenydd",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Awenydd"
+            }
+          ],
+          "attributes": []
         }
       ],
-      "definitionSchemaVersion": 1
+      "definitionSchemaVersion": 1,
+      "revision": 1
     },
     "biography": {
       "schema": "aleria.biography-module",

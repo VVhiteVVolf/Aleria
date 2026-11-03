@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { characterDatabaseContentHash } from '../../../CharakterDatenbank/lib/character-database-model.mjs';
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
+import { hasNewerCharacterRecordProjection } from '../../../CharakterDatenbank/lib/character-record-confirmation.mjs';
 import { GAWAIN_ID, GAWAIN_WORLD_ID, GAWAIN_PUBLIC_TITLE, GAWAIN_PUBLIC_SUMMARY, withGawainPublicBiography } from './gawain-public-biography.mjs';
 
 const biographyFields = ['title', 'bio', 'biography'];
@@ -30,6 +31,10 @@ export function projectGawainCharacterDatabase({ registry, snapshot, report, rec
   assert.equal(entries[0].recordId, record.recordId);
   assert.equal(people[0].localRecord.recordId, record.recordId);
   assert.equal(people[0].localRecord.path, entries[0].path);
+
+  if (hasNewerCharacterRecordProjection({ record, registry, snapshot, sourcePath, exportedAt: exported.exportedAt })) {
+    return { registry, snapshot, report, records: [{ record, path: entries[0].path, snapshotCharacter: people[0] }] };
+  }
 
   const nextRecord = structuredClone(record), person = structuredClone(people[0]);
   for (const field of biographyFields) {

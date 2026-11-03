@@ -1,0 +1,26 @@
+{
+  "id": "rianna-silberhirsch",
+  "title": "Riannas Silberhirsch",
+  "owner": "Rianna Wyrm",
+  "givenBy": "Armel Balchder",
+  "description": "Antike Silbermünze mit Hirschprägung und abgenutztem Rand. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer.",
+  "userRequest": "Erstelle noch ihren Silberhirschen (antike silbermünze mit hirsch) den sie von Armel als glücksbringer bekommen hat",
+  "createdOn": "2026-11-02",
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-inventory-item",
+  "aspectRatio": "1:1",
+  "transparentBackground": true,
+  "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rianna-silberhirsch-v1.png",
+  "sourceImage": "C:/Users/fhg_r/.codex/generated_images/01a19dbe-2d8b-70d0-9af1-89fd7389a4d7/exec-18f62a99-889f-4092-bd31-40cb22f2c0f8.png",
+  "references": [
+    {
+      "path": "AleriaAlmanach/assets/currency/aleria-silbertaler-v1.png",
+      "role": "Silbermaterial und Itemdarstellung; keine Übernahme der Prägung"
+    },
+    {
+      "path": "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/8FAAa56.png",
+      "role": "Darstellungsstil freigestellter Inventargegenstände"
+    }
+  ],
+  "prompt": "Use case: stylized-concept.\nCreate ONE square 1:1 fantasy RPG inventory item illustration: Rianna Wyrm's \"Silberhirsch\", a single ANCIENT SILVER COIN stamped with a STAG, which Armel gave her as a keepsake and good-luck token.\n\nInput images: Reference 1 (silver coin) is a reference ONLY for a readable coin shape, the silver material and inventory presentation; DO NOT copy its moon, waves, interlace, diamond border or design. Reference 2 (spear item) helps establish the restrained illustrated inventory-art style only. The requested NEW design is one old silver coin with a deer.\nSubject/design: An old hand-struck silver coin with a slightly uneven thin round edge, gently worn rim, small nicks and centuries-softened relief. Its face clearly shows ONE elegant full-bodied stag in profile with branching antlers, standing calmly; all four legs legible, antlers contained within the coin. Stag and relief are made entirely from the same silver as the coin, no colored animal. A simple narrow beaded rim, partially rubbed smooth. A few restrained age marks and dark silver tarnish in the recesses. Recognizably a modest antique coin, not an oversized elaborate medallion. No specific monarch, mint, dates or readable inscriptions.\nStyle/medium: Hand-painted illustrated fantasy inventory art, painterly textured metal, crisp dark outlines, soft simplified shading, muted colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI, not a glossy 3D render. Do not copy any heraldry or other motifs from the style references.\nComposition: Entire isolated coin centered and large within the square with about 10% clear margin on all sides. Nearly frontal with just enough slight three-quarter angle to see the thin irregular edge, face and stag remain clearly readable.\nTRUE transparent PNG alpha background. No background color, no painted checkerboard. No person, hands, mannequin, scenery, floor, stand, frame, caption, lettering, watermark or unrelated objects. No cord, hole, loop or chain. No magical glow, sparkles, runes or invented magical abilities. No external shadow. This is a treasured gift coin, not spendable currency artwork with a denomination."
+}

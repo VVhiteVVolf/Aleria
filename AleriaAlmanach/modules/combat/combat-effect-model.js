@@ -125,7 +125,7 @@ export function applyTypedCombatDamage(state = {}, amount = 0, profile = {}, opt
   const bypass = Math.max(0, Number(options.reductionBypass) || 0);
   const guarded = consumeDamageGuard(options.conditions || profile.temporaryConditions || [], adjusted, { reductionBypass: bypass });
   const equipmentProtection = resolveEquipmentDamageProtection(profile, options.damageType, adjusted - guarded.reduction,
-    { reductionBypass: Math.max(0, bypass - (guarded.bypassedReduction || 0)) });
+    { reductionBypass: Math.max(0, bypass - (guarded.bypassedReduction || 0)), magical: options.magical === true });
   const bypassed = (guarded.bypassedReduction || 0) + (equipmentProtection.bypassedReduction || 0);
   const protectedAmount = Math.max(0, adjusted - guarded.reduction - equipmentProtection.reduction);
   const applied = applyBerserkSurvival(applyCombatDamage(state, protectedAmount), guarded.conditions);

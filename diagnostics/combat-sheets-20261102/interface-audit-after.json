@@ -1,0 +1,1877 @@
+{
+  "capturedAt": "2026-11-02T22:58:28.733Z",
+  "schemaVersion": 11,
+  "characters": [
+    {
+      "id": "6atOllMA637Z2VNAZAxf",
+      "name": "Gethin",
+      "level": 5,
+      "revision": 1792017390259,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [],
+      "statistics": {
+        "hp": 62,
+        "maximumHp": 62,
+        "armorClass": 11,
+        "resources": 21,
+        "weapons": 2,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "level": 6,
+      "revision": 1791265884352,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-symbiose-varulv-wolf",
+          "name": "Silvanische Symbiose der Varulv (Wolf)",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 82,
+        "maximumHp": 82,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 5,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "HjDXMMexahez1G0rJrBE",
+      "name": "Kane Draig",
+      "level": 5,
+      "revision": 1792017390261,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [],
+      "statistics": {
+        "hp": 49,
+        "maximumHp": 49,
+        "armorClass": 12,
+        "resources": 21,
+        "weapons": 2,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "level": 7,
+      "revision": 1793211343444,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-faehrtenleser",
+          "name": "Geborener Fährtenleser",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 60,
+        "maximumHp": 95,
+        "armorClass": 16,
+        "resources": 21,
+        "weapons": 5,
+        "techniques": 34,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "level": 5,
+      "revision": 1791265884384,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-frohnatur",
+          "name": "Frohnatur",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp"
+        },
+        {
+          "id": "development-trait-buehnenmensch",
+          "name": "Bühnenmensch",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp"
+        },
+        {
+          "id": "development-trait-vollbusig",
+          "name": "Vollbusig",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 42,
+        "maximumHp": 42,
+        "armorClass": 17,
+        "resources": 21,
+        "weapons": 4,
+        "techniques": 10,
+        "spells": 8
+      },
+      "issues": []
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "level": 7,
+      "revision": 1793306399250,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-fit",
+          "name": "Fit",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 108,
+        "maximumHp": 110,
+        "armorClass": 15,
+        "resources": 22,
+        "weapons": 4,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "person--haus-draig--gethin-1722-draig",
+      "name": "Gethin Draig",
+      "level": 5,
+      "revision": 1792017390264,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [],
+      "statistics": {
+        "hp": 62,
+        "maximumHp": 62,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 2,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "name": "Gildas Gafyr",
+      "level": 6,
+      "revision": 1793660241174,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-wachsam",
+          "name": "Wachsamer Blick",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 0,
+        "maximumHp": 58,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 3,
+        "techniques": 26,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "level": 5,
+      "revision": 1792017390266,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-spuernase",
+          "name": "Spürnase",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp"
+        },
+        {
+          "id": "development-trait-scharfe-augen",
+          "name": "Scharfe Augen",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 37,
+        "maximumHp": 37,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 5,
+        "techniques": 26,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "level": 6,
+      "revision": 1792017390267,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        },
+        {
+          "id": "development-trait-ritualgebunden",
+          "name": "Ritualgebunden",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 0,
+        "maximumHp": 73,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 3,
+        "techniques": 32,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "person--haus-wyrm--gais-wyrm",
+      "name": "Gais Wyrm",
+      "level": 5,
+      "revision": 1793307530843,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-silberzunge",
+          "name": "Silberzunge",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 43,
+        "maximumHp": 43,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 3,
+        "techniques": 30,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "level": 5,
+      "revision": 1792017390269,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-neugier-vor-vorsicht",
+          "name": "Neugier vor Vorsicht",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 28,
+        "maximumHp": 49,
+        "armorClass": 15,
+        "resources": 21,
+        "weapons": 3,
+        "techniques": 22,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "level": 20,
+      "revision": 1792017390269,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-taktisches-gespuer",
+          "name": "Taktisches Gespür",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 255,
+        "maximumHp": 255,
+        "armorClass": 17,
+        "resources": 21,
+        "weapons": 1,
+        "techniques": 81,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "y7MBxDiAaesbWHBtmw5Q",
+      "name": "Rhiannon Draig",
+      "level": 6,
+      "revision": 1793660241174,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": true,
+      "quirks": [
+        {
+          "id": "development-trait-arkan-geschult",
+          "name": "Arkan geschult",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp"
+        }
+      ],
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 35,
+        "armorClass": 10,
+        "resources": 21,
+        "weapons": 1,
+        "techniques": 0,
+        "spells": 23
+      },
+      "issues": []
+    }
+  ],
+  "creatures": [
+    {
+      "id": "catalog-draig-lehensritter",
+      "name": "Draig Lehensritter",
+      "level": 7,
+      "revision": 1793656108207,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 63,
+        "maximumHp": 63,
+        "armorClass": 18,
+        "resources": 12,
+        "weapons": 3,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "catalog-draig-waffenknecht",
+      "name": "Draig Waffenknecht",
+      "level": 3,
+      "revision": 1793656108207,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 16,
+        "resources": 12,
+        "weapons": 3,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-anaraut-gwrgi",
+      "name": "Gwrgi",
+      "level": 3,
+      "revision": 1790311825185,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "statistics": {
+        "hp": 30,
+        "maximumHp": 30,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-anaraut-merfyn",
+      "name": "Merfyn",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 50,
+        "maximumHp": 50,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-armel-argent",
+      "name": "Argent",
+      "level": 3,
+      "revision": 1791975419104,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/herzogsschimmer",
+        "name": "Herzogsschimmer",
+        "url": "/Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-asgeir-haeppchen",
+      "name": "Häppchen",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 10,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-branwen-eira",
+      "name": "Eira",
+      "level": 2,
+      "revision": 1792090615772,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/rhedwyr",
+        "name": "Rhedwyr",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-branwen-eurwen",
+      "name": "Eurwen",
+      "level": 3,
+      "revision": 1792090615772,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-branwen-mabon",
+      "name": "Mabon",
+      "level": 2,
+      "revision": 1792090615772,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/rhedwyr",
+        "name": "Rhedwyr",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-cadfan-ciaran",
+      "name": "Cíaran",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Hund"
+        }
+      ]
+    },
+    {
+      "id": "companion-cadfan-donn",
+      "name": "Donn",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "statistics": {
+        "hp": 39,
+        "maximumHp": 39,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-carys-alaw",
+      "name": "Alaw",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "statistics": {
+        "hp": 23,
+        "maximumHp": 23,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-carys-roisin",
+      "name": "Roisin",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Trywydd–Rhedwyr-Mischling"
+        }
+      ]
+    },
+    {
+      "id": "companion-duncan-carreg",
+      "name": "Carreg",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/ritterschimmer",
+        "name": "Ritterschimmer",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-einion-greif",
+      "name": "Greif",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-gais-rabenstolz",
+      "name": "Saithor",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/edelsale",
+        "name": "Edelsale",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-sale"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-galahad-sturmwind",
+      "name": "Sturmwind",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/drake",
+        "name": "Drake",
+        "url": "/Bestiarium/tiere/pferde/drake/index.html"
+      },
+      "statistics": {
+        "hp": 39,
+        "maximumHp": 39,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-gethin-vivian",
+      "name": "Vivian",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/sonnenlaeufer",
+        "name": "Sonnenläufer",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl"
+      },
+      "statistics": {
+        "hp": 32,
+        "maximumHp": 32,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-guinevere-scath",
+      "name": "Scath",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/tryw",
+        "name": "Tryw",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/tryw/index.html"
+      },
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-gwendolyn-alwen",
+      "name": "Alwen",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 9,
+        "maximumHp": 9,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Rotmilan"
+        }
+      ]
+    },
+    {
+      "id": "companion-gwendolyn-flam",
+      "name": "Flam",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-halvar-lund",
+      "name": "Lund",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Hest–Tirashan-Mischling"
+        }
+      ]
+    },
+    {
+      "id": "companion-heledd-mabli",
+      "name": "Mabli",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/katzen/skjarn",
+        "name": "Skjarn",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/skjarn/index.html"
+      },
+      "statistics": {
+        "hp": 9,
+        "maximumHp": 9,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-hrolf-myrk",
+      "name": "Myrk",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 10,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-hrolf-skarn",
+      "name": "Skarn",
+      "level": 2,
+      "revision": 1791974671689,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/raubtiere/woelfe/gramnir",
+        "name": "Gramnir",
+        "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+      },
+      "statistics": {
+        "hp": 14,
+        "maximumHp": 14,
+        "armorClass": 9,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-huw-dyreth",
+      "name": "Dyreth",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-idwal-drecksack",
+      "name": "Drecksack",
+      "level": 2,
+      "revision": 1790311824720,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/equo",
+        "name": "Equo",
+        "url": "/Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-isobel-pompoesa",
+      "name": "Fürstin Pompösa von Samtpfote",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/katzen/lethin",
+        "name": "Lethin",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/lethin/index.html"
+      },
+      "statistics": {
+        "hp": 12,
+        "maximumHp": 12,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-isobel-rhoslyn",
+      "name": "Rhoslyn",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/erlenglanz",
+        "name": "Erlenglanz",
+        "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html"
+      },
+      "statistics": {
+        "hp": 20,
+        "maximumHp": 20,
+        "armorClass": 14,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-kamber-silberwind",
+      "name": "Silberwind",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-kane-aelwyn",
+      "name": "Aelwyn",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 11,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-mair-nia",
+      "name": "Nia",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/bugail",
+        "name": "Bugail",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/bugail/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-mair-tiwlip",
+      "name": "Tiwlip",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-maredudd-cadarn",
+      "name": "Cadarn",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-maredudd-hari",
+      "name": "Hari",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 30,
+        "maximumHp": 30,
+        "armorClass": 11,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Wachhund"
+        }
+      ]
+    },
+    {
+      "id": "companion-neala-floeckchen",
+      "name": "Flöckchen",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-neithon-cador",
+      "name": "Cador",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/eidwacht",
+        "name": "Eidwacht",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-oweta-heulwen",
+      "name": "Heulwen",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-rhiannon-mel",
+      "name": "Mél",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-rhys-lot",
+      "name": "Lot",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/edel-rhyfel",
+        "name": "Edel Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-skalli-astrid",
+      "name": "Astrid",
+      "level": 3,
+      "revision": 1791977774204,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/zuchtbuch/roh-rhyfel",
+        "name": "Roh-Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-sleipnir-kappi",
+      "name": "Kappi",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-sleipnir-skuggi",
+      "name": "Skuggi",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "statistics": {
+        "hp": 9,
+        "maximumHp": 9,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": [
+        {
+          "kind": "no-exact-bestiary-profile",
+          "species": "Habicht"
+        }
+      ]
+    },
+    {
+      "id": "companion-sleipnir-trygg",
+      "name": "Trygg",
+      "level": 4,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 34,
+        "maximumHp": 34,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-steffan-guto",
+      "name": "Guto",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-steffan-uther",
+      "name": "Uther",
+      "level": 3,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-tegan-alaw",
+      "name": "Alaw",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-tegwen-uffyrae",
+      "name": "Uffyrae",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-trevor-bwmbo",
+      "name": "Bwmbo",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "statistics": {
+        "hp": 9,
+        "maximumHp": 9,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-trevor-struppi",
+      "name": "Struppi",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-trevor-uffel",
+      "name": "Uffel",
+      "level": 2,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "statistics": {
+        "hp": 12,
+        "maximumHp": 12,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-tudwal-ceiniog",
+      "name": "Ceiniog",
+      "level": 2,
+      "revision": 1791748002303,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "statistics": {
+        "hp": 25,
+        "maximumHp": 25,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-bjoern",
+      "name": "Björn",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-fenja",
+      "name": "Fenja",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-hroth",
+      "name": "Hroth",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-ljosa",
+      "name": "Ljósa",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-skadi",
+      "name": "Skadi",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-skar",
+      "name": "Skar",
+      "level": 3,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 27,
+        "maximumHp": 27,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-varulv-yr",
+      "name": "Yr",
+      "level": 2,
+      "revision": 0,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/vieh/haustiere/hunde/gamir",
+        "name": "Gamir",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/gamir/index.html"
+      },
+      "statistics": {
+        "hp": 19,
+        "maximumHp": 19,
+        "armorClass": 12,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "level": 4,
+      "revision": 1790987958664,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [
+        {
+          "id": "freki-eigensinn",
+          "name": "Wachsamer Eigensinn",
+          "icon": ""
+        }
+      ],
+      "bestiary": {
+        "id": "tiere/raubtiere/woelfe/gramnir",
+        "name": "Gramnir",
+        "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+      },
+      "statistics": {
+        "hp": 50,
+        "maximumHp": 50,
+        "armorClass": 13,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 3,
+        "spells": 0
+      },
+      "issues": []
+    },
+    {
+      "id": "companion-ylva-silberkrone",
+      "name": "Silberkrone",
+      "level": 3,
+      "revision": 1791915361326,
+      "legacyDevelopment": true,
+      "reviewedTraitAssignment": false,
+      "quirks": [],
+      "bestiary": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "statistics": {
+        "hp": 35,
+        "maximumHp": 35,
+        "armorClass": 11,
+        "resources": 11,
+        "weapons": 2,
+        "techniques": 0,
+        "spells": 0
+      },
+      "issues": []
+    }
+  ],
+  "summary": {
+    "characters": 14,
+    "creatures": 61,
+    "issues": [
+      {
+        "id": "companion-cadfan-ciaran",
+        "name": "Cíaran",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Hund"
+      },
+      {
+        "id": "companion-carys-roisin",
+        "name": "Roisin",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Trywydd–Rhedwyr-Mischling"
+      },
+      {
+        "id": "companion-gwendolyn-alwen",
+        "name": "Alwen",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Rotmilan"
+      },
+      {
+        "id": "companion-halvar-lund",
+        "name": "Lund",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Hest–Tirashan-Mischling"
+      },
+      {
+        "id": "companion-maredudd-hari",
+        "name": "Hari",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Wachhund"
+      },
+      {
+        "id": "companion-sleipnir-skuggi",
+        "name": "Skuggi",
+        "kind": "no-exact-bestiary-profile",
+        "species": "Habicht"
+      }
+    ]
+  }
+}

@@ -48,7 +48,7 @@ export function getCharacterArchiveEntryIconPresentation(entry = {}) {
 
   const combatKind = COMBAT_ICON_KIND_BY_ARCHIVE_KIND[kind];
   if (combatKind) {
-    return getCombatEntryIconPresentation(combatKind, { ...data, icon: explicitSource });
+    return getCombatEntryIconPresentation(combatKind, { name: entry.name, ...data, icon: explicitSource });
   }
 
   return {
@@ -74,8 +74,8 @@ export function getCharacterSheetEntryIconPresentation(combatKind, item = {}, ar
     && normalizeCharacterArchiveEntry(entry).key === itemKey
   ));
   return archiveEntry
-    ? { ...getCharacterArchiveEntryIconPresentation(archiveEntry), linked: true }
-    : item.catalogReference || item.catalogOrigin ? { source: item.icon || '', fallbackSource: '', custom: Boolean(item.icon), linked: Boolean(item.catalogReference) }
+    ? { ...getCharacterArchiveEntryIconPresentation({ ...archiveEntry, data: { ...item, ...archiveEntry.data } }), linked: true }
+    : combatKind === 'spell' && (item.catalogReference || item.catalogOrigin) ? { source: item.icon || '', fallbackSource: '', custom: Boolean(item.icon), linked: Boolean(item.catalogReference) }
       : { ...fallback, linked: false };
 }
 

@@ -53,6 +53,7 @@
       "documentIds": [
         "person--haus-balchder--armel-balchder",
         "person--haus-balchder--armel-balchder",
+        "person--haus-balchder--armel-balchder",
         "person--haus-balchder--armel-balchder"
       ],
       "documents": [
@@ -70,6 +71,11 @@
           "documentId": "person--haus-balchder--armel-balchder",
           "createdAt": "",
           "updatedAt": "2026-10-14T10:56:59.104Z"
+        },
+        {
+          "documentId": "person--haus-balchder--armel-balchder",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -85,15 +91,16 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gefaehrten/argent-2026-10-14/armel-inventar-und-reittier.json",
-    "sourceExportedAt": "2026-10-14T10:56:59.104Z",
-    "sourceUpdatedAt": "2026-10-14T10:56:59.104Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-balchder--armel-balchder.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-balchder--armel-balchder",
       "person--haus-balchder--armel-balchder",
       "person--haus-balchder--armel-balchder",
       "person--haus-balchder--armel-balchder"
     ],
-    "contentHash": "8c860efbd32d2a709bafd4a4410f78a42bb75e3877b37607d2452738662a5442"
+    "contentHash": "bfc1d19fdf8157aef3cb123067d151f1466affe8f1ebf3a6d9aee39b5515ba06"
   },
   "local": {
     "notes": "",
@@ -816,6 +823,96 @@
             "footer": "Personenakte · Sir Armel Balchder · Haus Balchder"
           }
         }
+      },
+      {
+        "id": "person--haus-balchder--armel-balchder",
+        "name": "Armel Balchder",
+        "inventory": {
+          "companions": [
+            {
+              "id": "card-armel-argent",
+              "name": "Argent",
+              "species": "Herzogsschimmer",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2F8f76bed3-1856-4677-a138-bdceb664b3c6%2Foriginal.png?alt=media",
+              "description": "Argent ist Sir Armel Balchders Herzogsschimmer: ein zuverlässiges, edles Reitpferd mit matter schwarzer Fellfarbe, silbern auslaufenden Beinen und silbrig glänzenden Hufen. Die voluminöse silberne Mähne wird zu den Spitzen immer weißer. Argent strahlt Grazie aus, bleibt im vertrauten Umgang gelassen und ist nicht übermäßig verspielt.",
+              "summary": "Argent ist Sir Armel Balchders Herzogsschimmer: ein zuverlässiges, edles Reitpferd mit matter schwarzer Fellfarbe, silbern auslaufenden Beinen und silbrig glänzenden Hufen. Die voluminöse silberne Mähne wird zu den Spitzen immer weißer. Argent strahlt Grazie aus, bleibt im vertrauten Umgang gelassen und ist nicht übermäßig verspielt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-armel-argent",
+              "inventoryItemId": "armel-argent"
+            }
+          ],
+          "items": [
+            {
+              "id": "armel-argent",
+              "instanceId": "armel-argent",
+              "creatureId": "companion-armel-argent",
+              "name": "Argent",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2F8f76bed3-1856-4677-a138-bdceb664b3c6%2Foriginal.png?alt=media",
+              "description": "Argent ist Sir Armel Balchders Herzogsschimmer: ein zuverlässiges, edles Reitpferd mit matter schwarzer Fellfarbe, silbern auslaufenden Beinen und silbrig glänzenden Hufen. Die voluminöse silberne Mähne wird zu den Spitzen immer weißer. Argent strahlt Grazie aus, bleibt im vertrauten Umgang gelassen und ist nicht übermäßig verspielt.",
+              "type": "Herzogsschimmer",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Herzogsschimmer",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-balchder--armel-balchder",
+              "ownerCharacterName": "Armel Balchder",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-14T10:56:59.113Z"
+            },
+            {
+              "id": "person--haus-balchder--armel-balchder-house-signet-20261102",
+              "instanceId": "person--haus-balchder--armel-balchder-house-signet-20261102",
+              "templateId": "house-signet:haus-balchder",
+              "templateName": "Balchder-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-balchder",
+                "revision": "d2c768402d9799c9bc01f2f3"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-balchder",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-balchder--armel-balchder",
+              "ownerCharacterName": "Armel Balchder",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Armel Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Balchder. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2Fhouse-signets-ff2d5f2128e381f7%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Balchder",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Balchder"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "characterId": "person--haus-balchder--armel-balchder",
+          "revision": 1791975419105
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -1303,10 +1400,45 @@
           "attributes": [],
           "infoRows": [],
           "individualizedAt": "2026-10-14T10:56:59.113Z"
+        },
+        {
+          "id": "person--haus-balchder--armel-balchder-house-signet-20261102",
+          "instanceId": "person--haus-balchder--armel-balchder-house-signet-20261102",
+          "templateId": "house-signet:haus-balchder",
+          "templateName": "Balchder-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-balchder",
+            "revision": "d2c768402d9799c9bc01f2f3"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-balchder",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-balchder--armel-balchder",
+          "ownerCharacterName": "Armel Balchder",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Armel Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Balchder. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2Fhouse-signets-ff2d5f2128e381f7%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Balchder",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Balchder"
+            }
+          ],
+          "attributes": []
         }
       ],
       "characterId": "person--haus-balchder--armel-balchder",
-      "revision": 1791975419104
+      "revision": 1791975419105
     },
     "name": "Armel Balchder",
     "origin": "",
@@ -1319,6 +1451,6 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "Sir · Uchelwyr des Hauses Balchder",
-    "updatedAt": "2026-10-14T10:56:59.104Z"
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
   }
 }

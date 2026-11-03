@@ -61,8 +61,8 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('gameplay-guides'));
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
-  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['balchder-characters', 'gameplay-guides', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'group-community', 'item-mechanics']);
 });
 
 

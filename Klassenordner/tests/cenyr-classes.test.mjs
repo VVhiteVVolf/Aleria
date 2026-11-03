@@ -30,7 +30,7 @@ const definitions = getCenyrClassDefinitions();
 const root = new URL('../', import.meta.url);
 const culture = JSON.parse(await readFile(new URL('Cenyr/kultur.json', root), 'utf8'));
 const sourcePassages = { milwr: 'Fundament des cenyrischen Heeres', teulu: 'Vom Becher und vom Durst', cantref: 'Hundertschaft des Landes', uchelwyr: 'Ritter des hohen Sattels', helwyr: 'Offiziere, Bannerträger, Engstellen', arthwyr: 'Tanz der Bärenklaue', barddwyr: 'Haus Ceirwyn O’Calon' };
-const trainingPassages = { milwr: 'Alle freigeschalteten Formtechniken', teulu: 'Alle freigeschalteten Formtechniken', cantref: 'Hellebarde', uchelwyr: 'Tanz des stürmenden Drachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
+const trainingPassages = { milwr: 'Einzeln im Stufenassistenten kaufen', teulu: 'Einzeln im Stufenassistenten kaufen', cantref: 'Hellebarde', uchelwyr: 'Tanz des stürmenden Drachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
 
 test('seven cultural pages preserve supplied lore, artwork proportions and local navigation', async () => {
   for (const definition of definitions) {
@@ -39,6 +39,7 @@ test('seven cultural pages preserve supplied lore, artwork proportions and local
     const page = await readFile(new URL(`${path}index.html`, root), 'utf8');
     assert(page.includes(sourcePassages[definition.classId]));
     assert(page.includes(trainingPassages[definition.classId]));
+    assert(page.includes('Ältere Bögen ohne Kaufmodus behalten ihre automatische Formvergabe.')); 
     assert(!/animexx|Titel hier|Zitatgeber|Dialog von Figur|\bonclick=/.test(page));
     assert.equal((page.match(/data-training-row="/g) || []).length, 20);
     assert.equal((page.match(/data-training-attack="/g) || []).length, getCenyrClassProgression(definition.classId, 20).attackCatalog.length);

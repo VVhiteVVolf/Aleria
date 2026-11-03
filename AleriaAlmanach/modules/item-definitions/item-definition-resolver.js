@@ -11,6 +11,7 @@ export function materializeInventoryItem(item = {}, definitions) {
   const definition = resolveItemDefinition(item, definitions);
   if (!definition) return item;
   return { ...item, combatDefinition: structuredClone(definition.combatDefinition),
+    passiveEffects: structuredClone(definition.passiveEffects || []),
     inventoryUseMode: definition.inventoryUseMode, useDefinition: structuredClone(definition.useDefinition),
     registerCategory: definition.category, mechanicsStatus: definition.mechanicsStatus,
     definitionTitle: definition.title,
@@ -18,7 +19,7 @@ export function materializeInventoryItem(item = {}, definitions) {
 }
 export function storeInventoryItem(item = {}) {
   if (!normalizeItemDefinitionRef(item.definitionRef)) return item;
-  const { combatDefinition, useDefinition, inventoryUseMode, mechanicsStatus, definitionKind, definitionTitle, ...stored } = item;
+  const { combatDefinition, passiveEffects, useDefinition, inventoryUseMode, mechanicsStatus, definitionKind, definitionTitle, ...stored } = item;
   return stored;
 }
 export function storeDefinitionInventory(inventory = {}) {

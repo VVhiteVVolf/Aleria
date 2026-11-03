@@ -83,6 +83,7 @@
         "OJEmpbD6YWhDFDmitk6R",
         "OJEmpbD6YWhDFDmitk6R",
         "OJEmpbD6YWhDFDmitk6R",
+        "OJEmpbD6YWhDFDmitk6R",
         "OJEmpbD6YWhDFDmitk6R"
       ],
       "documents": [
@@ -105,6 +106,11 @@
           "documentId": "OJEmpbD6YWhDFDmitk6R",
           "createdAt": "",
           "updatedAt": "2026-10-15T19:24:10.194Z"
+        },
+        {
+          "documentId": "OJEmpbD6YWhDFDmitk6R",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -126,16 +132,17 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/Biographien/branwen-draig-2026-10-15/branwen-charakter.json",
-    "sourceExportedAt": "2026-10-15T19:24:10.194Z",
-    "sourceUpdatedAt": "2026-10-15T19:24:10.194Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/OJEmpbD6YWhDFDmitk6R.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "OJEmpbD6YWhDFDmitk6R",
       "OJEmpbD6YWhDFDmitk6R",
       "OJEmpbD6YWhDFDmitk6R",
       "OJEmpbD6YWhDFDmitk6R",
       "OJEmpbD6YWhDFDmitk6R"
     ],
-    "contentHash": "1fda47d3a336c9c60be90a818594bb5376348f965b3bfb98c734f442a3826bc5"
+    "contentHash": "b6a933ebfe185b875b0f985c7a1ce6b86faea4735d1c0a26b6ba015e8e31d788"
   },
   "local": {
     "notes": "",
@@ -2635,6 +2642,533 @@
         },
         "title": "Adjutantin des Herolds des Grafen",
         "origin": "Rhosmere · Artus Streben"
+      },
+      {
+        "id": "OJEmpbD6YWhDFDmitk6R",
+        "name": "Branwen (Geb. Gwefrydd) Draig",
+        "inventory": {
+          "healthColor": "#5c7f20",
+          "infoRows": [],
+          "portrait": "https://i.imgur.com/U6kCjOZ.png",
+          "carryValue": "Noch festlegen",
+          "name": "Branwen (Geb. Gwefrydd) Draig",
+          "revision": 1792090615773,
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portraitPosition": "top",
+          "portraitFit": "cover",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "carryLabel": "Traglast",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "type": "Waffe",
+              "tags": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "category": "weapon",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "quantity": "1"
+            },
+            {
+              "weight": "Noch festlegen",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "quantity": "1",
+              "type": "Rüstung",
+              "id": "item-mqu1vat1-1-exvo",
+              "imagePosition": "center",
+              "category": "armor",
+              "infoRows": [],
+              "icon": "*",
+              "image": "",
+              "imageFit": "contain",
+              "imageFormat": "square"
+            },
+            {
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-2-0fx2",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "category": "equipment",
+              "infoRows": [],
+              "imageFormat": "square",
+              "icon": "*",
+              "image": ""
+            },
+            {
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "icon": "*",
+              "infoRows": [],
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "image": "",
+              "tags": "",
+              "id": "item-mqu1vat1-3-2lgm"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "category": "documents",
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "imagePosition": "center",
+              "image": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-4-ajrj",
+              "quantity": "1",
+              "icon": "*",
+              "imageFormat": "square"
+            },
+            {
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "category": "other",
+              "infoRows": [],
+              "image": "",
+              "name": "Persönlicher Gegenstand",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "type": "Sonstiges",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "id": "item-mqu1vat1-5-5kao"
+            },
+            {
+              "instanceId": "branwen-eurwen",
+              "imageFormat": "portrait",
+              "type": "Ceffyl",
+              "templateName": "Ceffyl",
+              "name": "Eurwen",
+              "registerCategory": "pferde",
+              "imageFit": "contain",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "category": "companion",
+              "creatureId": "companion-branwen-eurwen",
+              "id": "branwen-eurwen",
+              "quantity": "1",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "templateId": "",
+              "imagePosition": "center",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.780Z",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "attributes": [],
+              "itemStorageMode": "character",
+              "itemDbKey": ""
+            },
+            {
+              "category": "companion",
+              "infoRows": [],
+              "itemDbKey": "",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "creatureId": "companion-branwen-mabon",
+              "templateName": "Rhedwyr",
+              "originItemDbKey": "",
+              "id": "branwen-mabon",
+              "registerCategory": "vieh",
+              "instanceId": "branwen-mabon",
+              "imageFit": "contain",
+              "name": "Mabon",
+              "type": "Rhedwyr",
+              "imagePosition": "center",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "attributes": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "imageFormat": "portrait",
+              "templateId": "",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "itemStorageMode": "character",
+              "quantity": "1"
+            },
+            {
+              "infoRows": [],
+              "category": "companion",
+              "name": "Eira",
+              "attributes": [],
+              "type": "Rhedwyr",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "imageFormat": "portrait",
+              "templateName": "Rhedwyr",
+              "imagePosition": "center",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "imageFit": "contain",
+              "id": "branwen-eira",
+              "itemStorageMode": "character",
+              "creatureId": "companion-branwen-eira",
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "originItemDbKey": "",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "instanceId": "branwen-eira",
+              "quantity": "1",
+              "itemDbKey": ""
+            },
+            {
+              "id": "OJEmpbD6YWhDFDmitk6R-house-signet-20261102",
+              "instanceId": "OJEmpbD6YWhDFDmitk6R-house-signet-20261102",
+              "templateId": "house-signet:haus-gwefrydd",
+              "templateName": "Gwefrydd-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-gwefrydd",
+                "revision": "6b01bfeb090abd715bd2cc8e"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-gwefrydd",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Branwen Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwefrydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwefrydd%2Fhouse-signets-68b697643f527837%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Gwefrydd",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Gwefrydd"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "status": "Gesund",
+          "portraitFormat": "portrait",
+          "hitpoints": "TP / Zustand",
+          "title": "Charakter-Inventar",
+          "companions": [
+            {
+              "creatureId": "companion-branwen-eurwen",
+              "role": "Reittier",
+              "imageFormat": "portrait",
+              "species": "Ceffyl",
+              "summary": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "attributes": [],
+              "imageFit": "contain",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "inventoryItemId": "branwen-eurwen",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "imagePosition": "center",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "name": "Eurwen",
+              "status": "Gesund"
+            },
+            {
+              "imageFit": "contain",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "attributes": [],
+              "role": "Gefährte",
+              "imagePosition": "center",
+              "status": "Gesund",
+              "infoRows": [],
+              "inventoryItemId": "branwen-mabon",
+              "imageFormat": "portrait",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "name": "Mabon",
+              "summary": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "species": "Rhedwyr",
+              "creatureId": "companion-branwen-mabon",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "id": "card-branwen-eira",
+              "imagePosition": "center",
+              "status": "Gesund",
+              "imageFit": "contain",
+              "name": "Eira",
+              "imageFormat": "portrait",
+              "species": "Rhedwyr",
+              "infoRows": [],
+              "summary": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "attributes": [],
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "inventoryItemId": "branwen-eira",
+              "role": "Gefährte",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "creatureId": "companion-branwen-eira"
+            }
+          ],
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "moneyNotice": "",
+          "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "equipmentQuiz": {
+            "status": "",
+            "updatedAt": "",
+            "open": false,
+            "resultText": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "silver": 0,
+            "gold": 0
+          }
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -2646,7 +3180,7 @@
       "portrait": "https://i.imgur.com/U6kCjOZ.png",
       "carryValue": "Noch festlegen",
       "name": "Branwen (Geb. Gwefrydd) Draig",
-      "revision": 1792090615772,
+      "revision": 1792090615773,
       "attributes": [
         {
           "value": 8,
@@ -3004,6 +3538,41 @@
           "instanceId": "branwen-eira",
           "quantity": "1",
           "itemDbKey": ""
+        },
+        {
+          "id": "OJEmpbD6YWhDFDmitk6R-house-signet-20261102",
+          "instanceId": "OJEmpbD6YWhDFDmitk6R-house-signet-20261102",
+          "templateId": "house-signet:haus-gwefrydd",
+          "templateName": "Gwefrydd-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gwefrydd",
+            "revision": "6b01bfeb090abd715bd2cc8e"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-gwefrydd",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+          "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Branwen Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwefrydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwefrydd%2Fhouse-signets-68b697643f527837%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Gwefrydd",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Gwefrydd"
+            }
+          ],
+          "attributes": []
         }
       ],
       "status": "Gesund",
@@ -3284,7 +3853,7 @@
       }
     },
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere",
-    "updatedAt": "2026-10-15T19:24:10.194Z",
+    "updatedAt": "2026-11-02T21:05:42.453432Z",
     "biography": {
       "revision": 1792092250194,
       "quote": "",

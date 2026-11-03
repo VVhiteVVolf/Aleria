@@ -58,6 +58,21 @@ test('the same reviewed export is idempotent and never duplicates provenance or 
   assert.equal(next.records[0].record.sources.firestoreExports.length, 2);
 });
 
+test('a later confirmed trait review owns biography, resources and provenance over this historical import', () => {
+  const input = fixture(), path = 'Charakter Archiv Exporte/Bestätigte Traits/gawain.json';
+  input.record.sync.sourceArchive = path;
+  input.record.sync.sourceExportedAt = '2026-11-02T18:00:00.000Z';
+  input.registry.sourceOverlays.push(path); input.snapshot.sourceOverlays.push(path);
+  input.record.character.biography = { biography: { abilities: [{ title: 'Neugier vor Vorsicht' }] } };
+  input.snapshot.characters[0].biography = structuredClone(input.record.character.biography);
+  const before = structuredClone(input), result = projectGawainCharacterDatabase(input);
+  assert.deepEqual(input, before);
+  assert.deepEqual(result.records[0].record, before.record);
+  for (const field of ['registry', 'snapshot', 'report']) assert.deepEqual(result[field], before[field]);
+  input.exported.character.inventory = {};
+  assert.throws(() => projectGawainCharacterDatabase(input), /keine weiteren Profilfelder/);
+});
+
 test('unexpected gameplay source fields or ambiguous identity abort instead of broadening a biography import', () => {
   const gameplay = fixture(); gameplay.exported.character.inventory = { items: [] };
   assert.throws(() => projectGawainCharacterDatabase(gameplay), /keine weiteren Profilfelder/);

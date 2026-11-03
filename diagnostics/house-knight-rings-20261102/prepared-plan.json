@@ -1,0 +1,719 @@
+{
+  "dryRun": false,
+  "charactersRead": 390,
+  "eligible": 52,
+  "online": 49,
+  "localOnly": [
+    {
+      "id": "person--haus-awenydd--rhosyn-awenydd",
+      "name": "Rhosyn Awenydd"
+    },
+    {
+      "id": "person--haus-awenor--briallen-awenor",
+      "name": "Briallen Awenor"
+    },
+    {
+      "id": "person--haus-rhyddid--evie-rhyddid",
+      "name": "Evie Rhyddid"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "0Sku8euk5jhlWebdsskI",
+      "name": "Trevor Gwyvern",
+      "familyId": "haus-gwyvern",
+      "changed": true,
+      "added": [
+        {
+          "id": "0Sku8euk5jhlWebdsskI-house-signet-20261102",
+          "name": "Trevor Siegelring",
+          "templateId": "house-signet:haus-gwyvern"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "0caPdKpJoVazPUuu2KMu",
+      "name": "Hrolf Wolfshorn",
+      "familyId": "haus-wolfshorn",
+      "changed": true,
+      "added": [
+        {
+          "id": "0caPdKpJoVazPUuu2KMu-house-signet-20261102",
+          "name": "Hrolf Siegelring",
+          "templateId": "house-signet:haus-wolfshorn"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "15ml9RhSvJPXof7z4qY3",
+      "name": "Gwendolyn Draig",
+      "familyId": "haus-aderyn",
+      "changed": true,
+      "added": [
+        {
+          "id": "15ml9RhSvJPXof7z4qY3-house-signet-20261102",
+          "name": "Gwendolyn Siegelring",
+          "templateId": "house-signet:haus-aderyn"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "27fN2uvUpVVNICNc4vQU",
+      "name": "Einion Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "27fN2uvUpVVNICNc4vQU-house-signet-20261102",
+          "name": "Einion Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "6Gpz6nJaoL7yo9rFu85H",
+      "name": "Neithon Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "6Gpz6nJaoL7yo9rFu85H-house-signet-20261102",
+          "name": "Neithon Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "7VjIYgifnq4uqNNfjzcM",
+      "name": "Odyar Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "7VjIYgifnq4uqNNfjzcM-house-signet-20261102",
+          "name": "Odyar Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "93PwKnPytHr0sOc9mNHi",
+      "name": "Steffan Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "93PwKnPytHr0sOc9mNHi-house-signet-20261102",
+          "name": "Steffan Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "9hurPRtv2yMJTYkAARkl",
+      "name": "Rhys Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "9hurPRtv2yMJTYkAARkl-house-signet-20261102",
+          "name": "Rhys Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "CJFC3INTycaqn3tOwZHB",
+      "name": "Trahern Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "CJFC3INTycaqn3tOwZHB-house-signet-20261102",
+          "name": "Trahern Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "E8HXkgi2kdkXaqkxrnRo",
+      "name": "Meurig Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "E8HXkgi2kdkXaqkxrnRo-house-signet-20261102",
+          "name": "Meurig Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "Eka4z7TWpzEgx8KjhIzy",
+      "name": "Caralyn Chwedonol",
+      "familyId": "haus-chwedlonol",
+      "changed": true,
+      "added": [
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-house-signet-20261102",
+          "name": "Caralyn Siegelring",
+          "templateId": "house-signet:haus-chwedlonol"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "familyId": "haus-varulv",
+      "changed": true,
+      "added": [
+        {
+          "id": "FKiXsSWVoV74rTgmpPip-house-signet-20261102",
+          "name": "Fenrir Siegelring",
+          "templateId": "house-signet:haus-varulv"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "HjDXMMexahez1G0rJrBE",
+      "name": "Kane Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "HjDXMMexahez1G0rJrBE-house-signet-20261102",
+          "name": "Kane Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "J4wpNQON98GsdPzsaIUk",
+      "name": "Heledd (Geb. Gwyvern) Draig",
+      "familyId": "haus-gwyvern",
+      "changed": true,
+      "added": [
+        {
+          "id": "J4wpNQON98GsdPzsaIUk-house-signet-20261102",
+          "name": "Heledd Siegelring",
+          "templateId": "house-signet:haus-gwyvern"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "OJEmpbD6YWhDFDmitk6R",
+      "name": "Branwen (Geb. Gwefrydd) Draig",
+      "familyId": "haus-gwefrydd",
+      "changed": true,
+      "added": [
+        {
+          "id": "OJEmpbD6YWhDFDmitk6R-house-signet-20261102",
+          "name": "Branwen Siegelring",
+          "templateId": "house-signet:haus-gwefrydd"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "ZGiDqxIwkkvOHzpnKmyk",
+      "name": "Maredudd Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "ZGiDqxIwkkvOHzpnKmyk-house-signet-20261102",
+          "name": "Maredudd Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "avZbi5bD7DFcx6XtefJ4",
+      "name": "Mair Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "avZbi5bD7DFcx6XtefJ4-house-signet-20261102",
+          "name": "Mair Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "familyId": "haus-wolfshorn",
+      "changed": true,
+      "added": [
+        {
+          "id": "bSYZYAEOwiRgy44f6OmO-house-signet-20261102",
+          "name": "Ylva Siegelring",
+          "templateId": "house-signet:haus-wolfshorn"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "fcNfoBWpVNvK3ORQUJwX",
+      "name": "Tudwal Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "fcNfoBWpVNvK3ORQUJwX-house-signet-20261102",
+          "name": "Tudwal Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "fklEm9zDR9y1LuCaXeeb",
+      "name": "Tegan Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "fklEm9zDR9y1LuCaXeeb-house-signet-20261102",
+          "name": "Tegan Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "fq586i4k2gj5Lg30dUwW",
+      "name": "Anaraut Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "fq586i4k2gj5Lg30dUwW-house-signet-20261102",
+          "name": "Anaraut Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "hTN74LdJjXUFz7X7ReRr",
+      "name": "Cadfan Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "hTN74LdJjXUFz7X7ReRr-house-signet-20261102",
+          "name": "Cadfan Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "kJss0DGF1RLuVrrVCBQT",
+      "name": "Idwal Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "kJss0DGF1RLuVrrVCBQT-house-signet-20261102",
+          "name": "Idwal Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "familyId": "haus-skald",
+      "changed": true,
+      "added": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7-house-signet-20261102",
+          "name": "Freya Siegelring",
+          "templateId": "house-signet:haus-skald"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "familyId": "haus-wolfshorn",
+      "changed": true,
+      "added": [
+        {
+          "id": "oUlhJyX6C4Q69mtLS9u1-house-signet-20261102",
+          "name": "Asgeir Siegelring",
+          "templateId": "house-signet:haus-wolfshorn"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-balchder--armel-balchder",
+      "name": "Armel Balchder",
+      "familyId": "haus-balchder",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-balchder--armel-balchder-house-signet-20261102",
+          "name": "Armel Siegelring",
+          "templateId": "house-signet:haus-balchder"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-balchder--kamber-balchder",
+      "name": "Kamber Balchder",
+      "familyId": "haus-balchder",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-balchder--kamber-balchder-house-signet-20261102",
+          "name": "Kamber Siegelring",
+          "templateId": "house-signet:haus-balchder"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-draig--galahad-draig",
+      "name": "Galahad Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-draig--galahad-draig-house-signet-20261102",
+          "name": "Galahad Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-draig--gethin-1722-draig",
+      "name": "Gethin Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-draig--gethin-1722-draig-house-signet-20261102",
+          "name": "Gethin Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "name": "Gildas Gafyr",
+      "familyId": "haus-gafyr",
+      "changed": true,
+      "added": [],
+      "corrected": [
+        {
+          "id": "gildas-gafyr-draig-knight-signet-item",
+          "name": "Gildas Siegelring",
+          "templateId": "house-signet:haus-gafyr"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-gafyr--lefraye-gafyr",
+      "name": "Lefraye Gafyr",
+      "familyId": "haus-gafyr",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-house-signet-20261102",
+          "name": "Lefraye Siegelring",
+          "templateId": "house-signet:haus-gafyr"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-gwyvern--huw-gwyvern",
+      "name": "Huw Gwyvern",
+      "familyId": "haus-gwyvern",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-gwyvern--huw-gwyvern-house-signet-20261102",
+          "name": "Huw Siegelring",
+          "templateId": "house-signet:haus-gwyvern"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-gwyvern--tegwen-gwyvern",
+      "name": "Tegwen Gwyvern",
+      "familyId": "haus-gwyvern",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-gwyvern--tegwen-gwyvern-house-signet-20261102",
+          "name": "Tegwen Siegelring",
+          "templateId": "house-signet:haus-gwyvern"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "familyId": "haus-neidr",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-neidr--guinevere-neidr-house-signet-20261102",
+          "name": "Guinevere Siegelring",
+          "templateId": "house-signet:haus-neidr"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "familyId": "haus-saethwyr",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-saethwyr--nudd-saethwyr-house-signet-20261102",
+          "name": "Nudd Siegelring",
+          "templateId": "house-signet:haus-saethwyr"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-varulv--skalli-varulv",
+      "name": "Skalli Varulv",
+      "familyId": "haus-varulv",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-varulv--skalli-varulv-house-signet-20261102",
+          "name": "Skalli Siegelring",
+          "templateId": "house-signet:haus-varulv"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-varulv--sleipnir-varulv",
+      "name": "Sleipnir Varulv",
+      "familyId": "haus-varulv",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-varulv--sleipnir-varulv-house-signet-20261102",
+          "name": "Sleipnir Siegelring",
+          "templateId": "house-signet:haus-varulv"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-wylan--neala-wylan",
+      "name": "Neala Wylan",
+      "familyId": "haus-wylan",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-wylan--neala-wylan-house-signet-20261102",
+          "name": "Neala Siegelring",
+          "templateId": "house-signet:haus-wylan"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-wyrm--gais-wyrm",
+      "name": "Gais Wyrm",
+      "familyId": "haus-wyrm",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-wyrm--gais-wyrm-house-signet-20261102",
+          "name": "Gais Siegelring",
+          "templateId": "house-signet:haus-wyrm"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "person--haus-wyrm--rianna-wyrm",
+      "name": "Rianna Wyrm",
+      "familyId": "haus-wyrm",
+      "changed": true,
+      "added": [
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+          "name": "Rianna Siegelring",
+          "templateId": "house-signet:haus-wyrm"
+        },
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-rianna-silberhirsch-20261102",
+          "name": "Riannas Silberhirsch",
+          "templateId": "gwynthor-seven:rianna-silberhirsch"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "q1QtSIug74FzzwUAqWrs-house-signet-20261102",
+          "name": "Gawain Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "familyId": "haus-gafyr",
+      "changed": true,
+      "added": [
+        {
+          "id": "tmfBA2zPTc88EMMGkyyA-house-signet-20261102",
+          "name": "Duncan Siegelring",
+          "templateId": "house-signet:haus-gafyr"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "ujMjNxdOs1pnR2jGNus4",
+      "name": "Myrddin Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "ujMjNxdOs1pnR2jGNus4-house-signet-20261102",
+          "name": "Myrddin Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "vk0xAa3ZcEhVvGC1CzNq",
+      "name": "Oweta Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "vk0xAa3ZcEhVvGC1CzNq-house-signet-20261102",
+          "name": "Oweta Siegelring",
+          "templateId": "house-signet:haus-draig"
+        },
+        {
+          "id": "vk0xAa3ZcEhVvGC1CzNq-draig-speer-20261102",
+          "name": "Draig Speer",
+          "templateId": "gwynthor-seven:draig-speer"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "wnS8JOFUR3oS1izRzObH",
+      "name": "Isobel Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "wnS8JOFUR3oS1izRzObH-house-signet-20261102",
+          "name": "Isobel Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "wvBnM1mHYYXycW9nnza9",
+      "name": "Halvar Wolfshorn",
+      "familyId": "haus-wolfshorn",
+      "changed": true,
+      "added": [
+        {
+          "id": "wvBnM1mHYYXycW9nnza9-house-signet-20261102",
+          "name": "Halvar Siegelring",
+          "templateId": "house-signet:haus-wolfshorn"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "y7MBxDiAaesbWHBtmw5Q",
+      "name": "Rhiannon Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q-house-signet-20261102",
+          "name": "Rhiannon Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "yLJ0Rr5suTSLa42sL743",
+      "name": "Carys Draig",
+      "familyId": "haus-draig",
+      "changed": true,
+      "added": [
+        {
+          "id": "yLJ0Rr5suTSLa42sL743-house-signet-20261102",
+          "name": "Carys Siegelring",
+          "templateId": "house-signet:haus-draig"
+        }
+      ],
+      "corrected": []
+    },
+    {
+      "id": "zitteraale-schwarzer-zitteraal",
+      "name": "Der Schwarze Zitteraal",
+      "familyId": "haus-skellor",
+      "changed": true,
+      "added": [
+        {
+          "id": "zitteraale-schwarzer-zitteraal-house-signet-20261102",
+          "name": "Zitteraal Siegelring",
+          "templateId": "house-signet:haus-skellor"
+        }
+      ],
+      "corrected": []
+    }
+  ],
+  "definitionWrites": 34
+}

@@ -27,7 +27,7 @@ function initializeCultureTraining(root) {
       .filter(attack => attack.minimumLevel <= plan.selectedLevel)
       .map(attack => attack.id));
     const attacksById = new Map(plan.attackCatalog.map(attack => [attack.id, attack]));
-    summary.textContent = `Stufe ${plan.selectedLevel} · ${available.size} Formtechniken bis hier · innerhalb zugänglicher Formen automatisch erlernt`;
+    summary.textContent = `Stufe ${plan.selectedLevel} · ${available.size} Formtechniken bis hier · im Kaufmodus einzeln wählen`;
     if (plan.progressionStatus === 'structure-only') {
       summary.textContent = `Stufe ${plan.selectedLevel} · Ausbildungsinhalt offen · keine automatische Kampfvergabe`;
     }

@@ -1,0 +1,428 @@
+{
+  "livingDraigs": 32,
+  "people": [
+    {
+      "personId": "galahad-draig",
+      "name": "Galahad Draig",
+      "worldPersonId": "person--haus-draig--galahad-draig",
+      "characterId": "person--haus-draig--galahad-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/galahad-draig--person--haus-draig--galahad-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/galahad-draig.jpg"
+    },
+    {
+      "personId": "gwendolyn-aderyn",
+      "name": "Gwendolyn Draig",
+      "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+      "characterId": "15ml9RhSvJPXof7z4qY3",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-aderyn/gwendolyn-draig--15ml9RhSvJPXof7z4qY3/character.json",
+      "portrait": "assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg"
+    },
+    {
+      "personId": "anaraut-draig",
+      "name": "Anaraut Draig",
+      "worldPersonId": "person--haus-draig--anaraut-draig",
+      "characterId": "fq586i4k2gj5Lg30dUwW",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/anaraut-draig--fq586i4k2gj5Lg30dUwW/character.json",
+      "portrait": "assets/images/portraits/haus-draig/anaraut-draig.jpg"
+    },
+    {
+      "personId": "idwal-draig",
+      "name": "Idwal Draig",
+      "worldPersonId": "person--haus-draig--idwal-draig",
+      "characterId": "kJss0DGF1RLuVrrVCBQT",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/idwal-draig--kJss0DGF1RLuVrrVCBQT/character.json",
+      "portrait": "assets/images/portraits/haus-draig/idwal-draig.jpg"
+    },
+    {
+      "personId": "tudwal-draig",
+      "name": "Tudwal Draig",
+      "worldPersonId": "person--haus-draig--tudwal-draig",
+      "characterId": "fcNfoBWpVNvK3ORQUJwX",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/tudwal-draig--fcNfoBWpVNvK3ORQUJwX/character.json",
+      "portrait": "assets/images/portraits/haus-draig/tudwal-draig.jpg"
+    },
+    {
+      "personId": "neithon-1718-draig",
+      "name": "Neithon Draig",
+      "worldPersonId": "person--haus-draig--neithon-1718-draig",
+      "characterId": "6Gpz6nJaoL7yo9rFu85H",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/neithon-draig--6Gpz6nJaoL7yo9rFu85H/character.json",
+      "portrait": "assets/images/portraits/haus-draig/neithon-1718-draig.jpg"
+    },
+    {
+      "personId": "isobel-1719-draig",
+      "name": "Isobel Draig",
+      "worldPersonId": "person--haus-draig--isobel-1719-draig",
+      "characterId": "wnS8JOFUR3oS1izRzObH",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/isobel-draig--wnS8JOFUR3oS1izRzObH/character.json",
+      "portrait": "assets/images/portraits/haus-draig/isobel-1719-draig.jpg"
+    },
+    {
+      "personId": "rhiannon-draig",
+      "name": "Rhiannon Draig",
+      "worldPersonId": "person--haus-draig--rhiannon-draig",
+      "characterId": "y7MBxDiAaesbWHBtmw5Q",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/rhiannon-draig--y7MBxDiAaesbWHBtmw5Q/character.json",
+      "portrait": "assets/images/portraits/haus-draig/rhiannon-draig.jpg"
+    },
+    {
+      "personId": "gawain-draig",
+      "name": "Gawain Draig",
+      "worldPersonId": "person--haus-draig--gawain-draig",
+      "characterId": "q1QtSIug74FzzwUAqWrs",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
+      "portrait": "assets/images/portraits/haus-draig/gawain-draig.jpg"
+    },
+    {
+      "personId": "guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "worldPersonId": "person--haus-neidr--guinevere-neidr",
+      "characterId": "person--haus-neidr--guinevere-neidr",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-neidr/guinevere-neidr--person--haus-neidr--guinevere-neidr/character.json",
+      "portrait": "assets/images/portraits/haus-draig/guinevere-neidr.jpg"
+    },
+    {
+      "personId": "mair-draig",
+      "name": "Mair Draig",
+      "worldPersonId": "person--haus-draig--mair-draig",
+      "characterId": "avZbi5bD7DFcx6XtefJ4",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/mair-draig--avZbi5bD7DFcx6XtefJ4/character.json",
+      "portrait": "assets/images/portraits/haus-draig/mair-draig.jpg"
+    },
+    {
+      "personId": "meurig-draig",
+      "name": "Meurig Draig",
+      "worldPersonId": "person--haus-draig--meurig-draig",
+      "characterId": "E8HXkgi2kdkXaqkxrnRo",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/meurig-draig--E8HXkgi2kdkXaqkxrnRo/character.json",
+      "portrait": "assets/images/portraits/haus-draig/meurig-draig.jpg"
+    },
+    {
+      "personId": "heledd-gwyvern",
+      "name": "Heledd (Geb. Gwyvern) Draig",
+      "worldPersonId": "person--haus-gwyvern--heledd-gwyvern",
+      "characterId": "J4wpNQON98GsdPzsaIUk",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-gwyvern/heledd-geb-gwyvern-draig--J4wpNQON98GsdPzsaIUk/character.json",
+      "portrait": "assets/images/portraits/haus-draig/heledd-gwyvern.jpg"
+    },
+    {
+      "personId": "rhys-draig",
+      "name": "Rhys Draig",
+      "worldPersonId": "person--haus-draig--rhys-draig",
+      "characterId": "9hurPRtv2yMJTYkAARkl",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/rhys-draig--9hurPRtv2yMJTYkAARkl/character.json",
+      "portrait": "assets/images/portraits/haus-draig/rhys-draig.jpg"
+    },
+    {
+      "personId": "brona-eisenherz",
+      "name": "Brona Eisenherz",
+      "worldPersonId": "person--haus-eisenherz--brona-eisenherz",
+      "characterId": "XTL39e7WjIwUtoT9Gxml",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/brona-eisenherz--XTL39e7WjIwUtoT9Gxml/character.json",
+      "portrait": ""
+    },
+    {
+      "personId": "kane-draig",
+      "name": "Kane Draig",
+      "worldPersonId": "person--haus-draig--kane-draig",
+      "characterId": "HjDXMMexahez1G0rJrBE",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/kane-draig--HjDXMMexahez1G0rJrBE/character.json",
+      "portrait": "assets/images/portraits/haus-draig/kane-draig.jpg"
+    },
+    {
+      "personId": "oweta-draig",
+      "name": "Oweta Draig",
+      "worldPersonId": "person--haus-draig--oweta-draig",
+      "characterId": "vk0xAa3ZcEhVvGC1CzNq",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/oweta-draig--vk0xAa3ZcEhVvGC1CzNq/character.json",
+      "portrait": "assets/images/portraits/haus-draig/oweta-draig.jpg"
+    },
+    {
+      "personId": "odyar-draig",
+      "name": "Odyar Draig",
+      "worldPersonId": "person--haus-draig--odyar-draig",
+      "characterId": "7VjIYgifnq4uqNNfjzcM",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/odyar-draig--7VjIYgifnq4uqNNfjzcM/character.json",
+      "portrait": "assets/images/portraits/haus-draig/odyar-draig.jpg"
+    },
+    {
+      "personId": "beibhinn-eirce",
+      "name": "Beibhinn (Geb. Eirce) Draig",
+      "worldPersonId": "person--haus-eirce--beibhinn-eirce",
+      "characterId": "nwamQ2ikeSV6St26fnWJ",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-ua-eirce/beibhinn-geb-eirce-draig--nwamQ2ikeSV6St26fnWJ/character.json",
+      "portrait": "assets/images/portraits/haus-draig/beibhinn-eirce.jpg"
+    },
+    {
+      "personId": "steffan-draig",
+      "name": "Steffan Draig",
+      "worldPersonId": "person--haus-draig--steffan-draig",
+      "characterId": "93PwKnPytHr0sOc9mNHi",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/steffan-draig--93PwKnPytHr0sOc9mNHi/character.json",
+      "portrait": "assets/images/portraits/haus-draig/steffan-draig.jpg"
+    },
+    {
+      "personId": "branwen-gwefrydd",
+      "name": "Branwen (Geb. Gwefrydd) Draig",
+      "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+      "characterId": "OJEmpbD6YWhDFDmitk6R",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-gwefrydd/branwen-geb-gwefrydd-draig--OJEmpbD6YWhDFDmitk6R/character.json",
+      "portrait": "assets/images/portraits/haus-draig/branwen-gwefrydd.jpg"
+    },
+    {
+      "personId": "gethin-1722-draig",
+      "name": "Gethin Draig",
+      "worldPersonId": "person--haus-draig--gethin-1722-draig",
+      "characterId": "person--haus-draig--gethin-1722-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/gethin-draig--person--haus-draig--gethin-1722-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/gethin-1722-draig.jpg"
+    },
+    {
+      "personId": "tegan-draig",
+      "name": "Tegan Draig",
+      "worldPersonId": "person--haus-draig--tegan-draig",
+      "characterId": "fklEm9zDR9y1LuCaXeeb",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/tegan-draig--fklEm9zDR9y1LuCaXeeb/character.json",
+      "portrait": "assets/images/portraits/haus-draig/tegan-draig.jpg"
+    },
+    {
+      "personId": "trahern-draig",
+      "name": "Trahern Draig",
+      "worldPersonId": "person--haus-draig--trahern-draig",
+      "characterId": "CJFC3INTycaqn3tOwZHB",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/trahern-draig--CJFC3INTycaqn3tOwZHB/character.json",
+      "portrait": "assets/images/portraits/haus-draig/trahern-draig.jpg"
+    },
+    {
+      "personId": "maredudd-draig",
+      "name": "Maredudd Draig",
+      "worldPersonId": "person--haus-draig--maredudd-draig",
+      "characterId": "ZGiDqxIwkkvOHzpnKmyk",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/maredudd-draig--ZGiDqxIwkkvOHzpnKmyk/character.json",
+      "portrait": "assets/images/portraits/haus-draig/maredudd-draig.jpg"
+    },
+    {
+      "personId": "cadfan-draig",
+      "name": "Cadfan Draig",
+      "worldPersonId": "person--haus-draig--cadfan-draig",
+      "characterId": "hTN74LdJjXUFz7X7ReRr",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/cadfan-draig--hTN74LdJjXUFz7X7ReRr/character.json",
+      "portrait": "assets/images/portraits/haus-draig/cadfan-draig.jpg"
+    },
+    {
+      "personId": "wynonna-fiachrach",
+      "name": "Wynonna (Geb. Fiachrach) Draig",
+      "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
+      "characterId": "wBW8kfX7wCLLM12kPoW2",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-fiachrach/wynonna-geb-fiachrach-draig--wBW8kfX7wCLLM12kPoW2/character.json",
+      "portrait": "assets/images/portraits/haus-draig/wynonna-fiachrach.jpg"
+    },
+    {
+      "personId": "einion-draig",
+      "name": "Einion Draig",
+      "worldPersonId": "person--haus-draig--einion-draig",
+      "characterId": "27fN2uvUpVVNICNc4vQU",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/einion-draig--27fN2uvUpVVNICNc4vQU/character.json",
+      "portrait": "assets/images/portraits/haus-draig/einion-draig.jpg"
+    },
+    {
+      "personId": "carys-draig",
+      "name": "Carys Draig",
+      "worldPersonId": "person--haus-draig--carys-draig",
+      "characterId": "yLJ0Rr5suTSLa42sL743",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/carys-draig--yLJ0Rr5suTSLa42sL743/character.json",
+      "portrait": "assets/images/portraits/haus-draig/carys-draig.jpg"
+    },
+    {
+      "personId": "myrddin-draig",
+      "name": "Myrddin Draig",
+      "worldPersonId": "person--haus-draig--myrddin-draig",
+      "characterId": "ujMjNxdOs1pnR2jGNus4",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/myrddin-draig--ujMjNxdOs1pnR2jGNus4/character.json",
+      "portrait": "assets/images/portraits/haus-draig/myrddin-draig.jpg"
+    },
+    {
+      "personId": "lancelot-draig",
+      "name": "Lancelot Draig",
+      "worldPersonId": "person--haus-draig--lancelot-draig",
+      "characterId": "person--haus-draig--lancelot-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/lancelot-draig--person--haus-draig--lancelot-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/lancelot-draig.jpg"
+    },
+    {
+      "personId": "gwyneth-neidr",
+      "name": "Gwyneth Neidr",
+      "worldPersonId": "person--haus-neidr--gwyneth-neidr",
+      "characterId": "person--haus-neidr--gwyneth-neidr",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-neidr/gwyneth-neidr--person--haus-neidr--gwyneth-neidr/character.json",
+      "portrait": "assets/images/portraits/haus-draig/gwyneth-neidr.jpg"
+    },
+    {
+      "personId": "ffion-draig",
+      "name": "Ffion Draig",
+      "worldPersonId": "person--haus-draig--ffion-draig",
+      "characterId": "person--haus-draig--ffion-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/ffion-draig--person--haus-draig--ffion-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/ffion-draig.jpg"
+    },
+    {
+      "personId": "myriad-draig",
+      "name": "Myriad Draig",
+      "worldPersonId": "person--haus-draig--myriad-draig",
+      "characterId": "person--haus-draig--myriad-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/myriad-draig--person--haus-draig--myriad-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/myriad-draig.jpg"
+    },
+    {
+      "personId": "rihanna-ceirwynn",
+      "name": "Rihanna Draig (geb. Ceirwyn)",
+      "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+      "characterId": "YgZBoWpb8KPGN1CNmpd3",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-ceirwyn/rihanna-draig-geb-ceirwyn--YgZBoWpb8KPGN1CNmpd3/character.json",
+      "portrait": "assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg"
+    },
+    {
+      "personId": "eilonwy-draig",
+      "name": "Eilonwy Draig",
+      "worldPersonId": "person--haus-draig--eilonwy-draig",
+      "characterId": "person--haus-draig--eilonwy-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/eilonwy-draig--person--haus-draig--eilonwy-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/eilonwy-draig.jpg"
+    },
+    {
+      "personId": "generis-draig",
+      "name": "Generis (Geb. Draig) Wylan",
+      "worldPersonId": "person--haus-draig--generis-draig",
+      "characterId": "C9E5NjYfZp9mJDkbovDn",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/generis-geb-draig-wylan--C9E5NjYfZp9mJDkbovDn/character.json",
+      "portrait": "assets/images/portraits/haus-draig/generis-draig.jpg"
+    },
+    {
+      "personId": "ceridwen-draig",
+      "name": "Ceridwen Draig",
+      "worldPersonId": "person--haus-draig--ceridwen-draig",
+      "characterId": "person--haus-draig--ceridwen-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/ceridwen-draig--person--haus-draig--ceridwen-draig/character.json",
+      "portrait": "assets/images/portraits/haus-wyrm/ceridwen-draig.jpg"
+    },
+    {
+      "personId": "mailgwin-wyrm",
+      "name": "Mailgwin Wyrm",
+      "worldPersonId": "person--haus-wyrm--mailgwin-wyrm",
+      "characterId": "person--haus-wyrm--mailgwin-wyrm",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-wyrm/mailgwin-wyrm--person--haus-wyrm--mailgwin-wyrm/character.json",
+      "portrait": "assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg"
+    },
+    {
+      "personId": "alicyn-draig",
+      "name": "Alicyn (Geb. Draig) Gafyr",
+      "worldPersonId": "person--haus-draig--alicyn-draig",
+      "characterId": "AXmTd4ylJriVJOoS8bIJ",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/alicyn-geb-draig-gafyr--AXmTd4ylJriVJOoS8bIJ/character.json",
+      "portrait": "assets/images/portraits/haus-gafyr/alicyn-draig.jpg"
+    },
+    {
+      "personId": "egon-gafyr",
+      "name": "Egon Gafyr O'Gwynthor",
+      "worldPersonId": "person--haus-gafyr--egon-gafyr",
+      "characterId": "",
+      "status": "alive",
+      "record": "Stammbäume/assets/js/data/house-draig-family.js",
+      "portrait": "assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+    },
+    {
+      "personId": "tecwyn-draig",
+      "name": "Tecwyn Draig",
+      "worldPersonId": "person--haus-arwydd--tecwyn-draig",
+      "characterId": "person--haus-arwydd--tecwyn-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/tecwyn-draig--person--haus-arwydd--tecwyn-draig/character.json",
+      "portrait": "assets/images/portraits/haus-arwydd/tecwyn-draig.jpg"
+    },
+    {
+      "personId": "ianto-arwydd",
+      "name": "Ianto Arwydd",
+      "worldPersonId": "person--haus-arwydd--ianto-arwydd",
+      "characterId": "person--haus-arwydd--ianto-arwydd",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-arwydd/ianto-arwydd--person--haus-arwydd--ianto-arwydd/character.json",
+      "portrait": "assets/images/portraits/haus-arwydd/ianto-arwydd.jpg"
+    },
+    {
+      "personId": "dwynwen-draig",
+      "name": "Dwynwen Draig",
+      "worldPersonId": "person--haus-draig--dwynwen-draig",
+      "characterId": "person--haus-draig--dwynwen-draig",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-draig/dwynwen-draig--person--haus-draig--dwynwen-draig/character.json",
+      "portrait": "assets/images/portraits/haus-draig/dwynwen-draig.jpg"
+    },
+    {
+      "personId": "caswallon-grael",
+      "name": "Caswallon Grael",
+      "worldPersonId": "person--haus-grael--caswallon-grael",
+      "characterId": "person--haus-grael--caswallon-grael",
+      "status": "alive",
+      "record": "CharakterDatenbank/records/familien/haus-grael/caswallon-grael--person--haus-grael--caswallon-grael/character.json",
+      "portrait": "assets/images/portraits/haus-draig/caswallon-grael.jpg"
+    }
+  ],
+  "unlinkedCharacterPersons": [
+    "egon-gafyr"
+  ],
+  "excludedIds": [
+    "owain-draig",
+    "amadia-draig",
+    "rhygifarch-draig",
+    "rollo-draig",
+    "siana-draig",
+    "iolo-draig"
+  ],
+  "guestHouseholds": [
+    "generis",
+    "ceridwen-mailgwin",
+    "alicyn-egon",
+    "tecwyn-ianto",
+    "dwynwen-caswallon"
+  ]
+}

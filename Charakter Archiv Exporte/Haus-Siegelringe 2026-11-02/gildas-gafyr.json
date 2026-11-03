@@ -1,0 +1,480 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:17:57.038388Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/gildas-gafyr.json",
+  "character": {
+    "id": "gildas-gafyr",
+    "name": "Gildas Gafyr",
+    "inventory": {
+      "showInfoTable": true,
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "revision": 1791265884401,
+      "level": "Stufe 6",
+      "name": "Gildas Gafyr",
+      "moneyNotice": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [],
+      "role": "Ritter des Hauses Gafyr · Teulu",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "hitpoints": "58 / 58 LP",
+      "carryValue": "ca. 110 kg",
+      "status": "Gesund",
+      "portraitFormat": "portrait",
+      "items": [
+        {
+          "tags": "Vielseitig · 1W10 bei zweihändiger Führung",
+          "imageFormat": "square",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "gildas-gafyr-duty-sword"
+          },
+          "ownerCharacterName": "Gildas Gafyr",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "valuation": {
+            "minCopper": 5500,
+            "maxCopper": 5500
+          },
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "ownerCharacterId": "gildas-gafyr",
+          "category": "weapon",
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück.",
+          "infoRows": [
+            {
+              "icon": "◈",
+              "label": "Wert",
+              "value": "5 Goldtaler, 5 Silbertaler"
+            },
+            {
+              "label": "Schaden",
+              "icon": "⚔",
+              "value": "1W8+1 · vielseitig 1W10+1"
+            },
+            {
+              "value": "Aktiv geführt",
+              "icon": "◆",
+              "label": "Status"
+            },
+            {
+              "label": "Qualität",
+              "value": "Ausgewogene Klinge: +1 Angriff und +1 Schaden."
+            }
+          ],
+          "description": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
+          "equipped": true,
+          "type": "Ritterschwert",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "sword",
+            "training": "martial",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "1d10",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 1,
+            "damageBonus": 1,
+            "range": "Nahkampf",
+            "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
+            "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
+            "requirements": "",
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+          },
+          "id": "gildas-gafyr-duty-sword-item",
+          "weight": "1,5 kg",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "attributes": [],
+          "name": "Pflichtschwur · Draig-Ritterschwert",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "icon": "https://i.imgur.com/38Na5EY.png",
+          "value": {
+            "copper": 0,
+            "silver": 5,
+            "pfennig": 0,
+            "gold": 5,
+            "totalCopper": 5500
+          },
+          "flavorText": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss."
+        },
+        {
+          "acquiredAt": "",
+          "attributes": [],
+          "equipped": true,
+          "imageFormat": "square",
+          "infoRows": [
+            {
+              "icon": "⬙",
+              "value": "Basis-RK 16; kein zusätzlicher RK-Bonus",
+              "label": "Rüstungsklasse"
+            },
+            {
+              "value": "Haus Gafyr",
+              "icon": "✦",
+              "label": "Ausführung"
+            },
+            {
+              "icon": "◆",
+              "value": "Angelegt",
+              "label": "Status"
+            },
+            {
+              "label": "Qualität",
+              "value": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus."
+            }
+          ],
+          "ownerCharacterId": "gildas-gafyr",
+          "icon": "https://i.imgur.com/7siJPXG.png",
+          "imageFit": "contain",
+          "id": "gildas-gafyr-watch-armor-item",
+          "name": "Gafyr-Plattenrüstung",
+          "flavorText": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
+          "originItemDbKey": "",
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück.",
+          "ownerCharacterName": "Gildas Gafyr",
+          "type": "Gafyr-Plattenrüstung",
+          "description": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
+          "weight": "24 kg",
+          "value": {
+            "pfennig": 0,
+            "copper": 0,
+            "silver": 8,
+            "gold": 8,
+            "totalCopper": 8800
+          },
+          "individualizedAt": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "image": "https://i.imgur.com/7siJPXG.png",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "gildas-gafyr-watch-armor"
+          },
+          "combatDefinition": {
+            "mechanics": {},
+            "damageProtection": {
+              "amount": 2,
+              "name": "Gafyr-Plattenschutz",
+              "damageTypes": [],
+              "excludedDamageTypes": [
+                "stich"
+              ]
+            },
+            "triggerRules": [],
+            "armorKind": "armor",
+            "armorCategory": "heavy",
+            "baseArmorClass": 15,
+            "armorClassBonus": 0,
+            "dexterityMode": "none",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+            "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus.",
+            "kind": "armor"
+          },
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "valuation": {
+            "minCopper": 8800,
+            "maxCopper": 8800
+          },
+          "category": "armor",
+          "tags": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm"
+        },
+        {
+          "acquiredAt": "",
+          "attributes": [],
+          "itemStorageMode": "character",
+          "ownerCharacterId": "gildas-gafyr",
+          "imageFit": "contain",
+          "tags": "Finesse · leicht · Wurfwaffe",
+          "infoRows": [
+            {
+              "value": "1W4 Stich",
+              "icon": "†",
+              "label": "Schaden"
+            },
+            {
+              "value": "Finesse · leicht",
+              "icon": "◇",
+              "label": "Führung"
+            },
+            {
+              "label": "Status",
+              "icon": "◆",
+              "value": "Seitenwaffe"
+            }
+          ],
+          "id": "gildas-gafyr-dagger-item",
+          "equipped": false,
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "weight": "0,5 kg",
+          "ownerCharacterName": "Gildas Gafyr",
+          "quantity": "1",
+          "imagePosition": "center",
+          "name": "Draig-Dolch",
+          "individualizedAt": "",
+          "type": "Dolch",
+          "image": "https://i.imgur.com/caR593j.png",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "dagger",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Stich",
+            "attackAttribute": "dexterity",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Finesse · leicht · Wurfwaffe",
+            "notes": "Seitenwaffe des Hauses Draig.",
+            "requirements": "",
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick."
+          },
+          "itemDbKey": "",
+          "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
+          "category": "weapon",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "gildas-gafyr-dagger"
+          },
+          "icon": "https://i.imgur.com/caR593j.png"
+        },
+        {
+          "itemStorageMode": "character",
+          "acquiredAt": "2026-09-05T00:00:00.000Z",
+          "combatDefinition": null,
+          "weight": "",
+          "equipped": true,
+          "tags": "Gafyr, Rittersiegel, Ring, Schmuck, Überzeugen",
+          "imagePosition": "center",
+          "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+          "type": "Siegelring",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+          "description": "Siegelring eines Gafyr-Ritters. Offen getragen verleiht er +1 auf Überzeugen.",
+          "quantity": "1",
+          "ownerCharacterId": "person--haus-gafyr--gildas-gafyr",
+          "infoRows": [
+            {
+              "icon": "✦",
+              "value": "+1 auf Überzeugen",
+              "label": "Effekt"
+            },
+            {
+              "value": "Angelegt",
+              "label": "Status",
+              "icon": "◆"
+            }
+          ],
+          "attributes": [],
+          "ownerCharacterName": "Gildas Gafyr",
+          "id": "gildas-gafyr-draig-knight-signet-item",
+          "name": "Gildas Siegelring",
+          "originItemDbKey": "house-signet:haus-gafyr",
+          "category": "other",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "equipmentLink": null,
+          "instanceId": "gildas-gafyr-draig-knight-signet-item",
+          "templateId": "house-signet:haus-gafyr",
+          "templateName": "Gafyr-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gafyr",
+            "revision": "bf2cae0ff5ed2d079ef9a757"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "valuation": null
+        },
+        {
+          "imagePosition": "center",
+          "individualizedAt": "",
+          "icon": "*",
+          "quantity": "1",
+          "imageFit": "contain",
+          "ownerCharacterId": "gildas-gafyr",
+          "weight": "2 kg",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "image": "",
+          "attributes": [],
+          "acquiredAt": "",
+          "infoRows": [],
+          "ownerCharacterName": "Gildas Gafyr",
+          "equipped": false,
+          "description": "Wetzstein, Öl, Lappen, Ersatzriemen und kleine Werkzeuge; nach jeder Übung gewissenhaft benutzt.",
+          "id": "gildas-gafyr-maintenance-kit",
+          "tags": "Werkzeug, Wartung, Vorbereitung",
+          "type": "Werkzeug",
+          "imageFormat": "square",
+          "category": "equipment",
+          "itemDbKey": "",
+          "name": "Pflegeset für Klinge und Rüstung",
+          "combatDefinition": null
+        },
+        {
+          "type": "Notizbuch",
+          "category": "documents",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "tags": "Dokument, Training, Planung, Pflicht",
+          "attributes": [],
+          "combatDefinition": null,
+          "name": "Übungsheft und Pflichtkalender",
+          "imageFormat": "square",
+          "description": "Enthält Trainingsfolgen, beobachtete Fehler, Termine und offene Pflichten in einer auffallend ordentlichen Hand.",
+          "image": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "icon": "*",
+          "id": "gildas-gafyr-training-ledger",
+          "individualizedAt": "",
+          "weight": "0,4 kg",
+          "imageFit": "contain",
+          "quantity": "1",
+          "infoRows": [],
+          "ownerCharacterName": "Gildas Gafyr",
+          "ownerCharacterId": "gildas-gafyr",
+          "equipped": false
+        },
+        {
+          "image": "",
+          "type": "Reiseausrüstung",
+          "tags": "Reise, Versorgung, Verband, Seil",
+          "combatDefinition": null,
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterName": "Gildas Gafyr",
+          "name": "Schlichtes Feldzeug",
+          "category": "equipment",
+          "description": "Wasser, haltbarer Proviant, Verbandstoff, Seil und eine kleine Laterne. Nichts Glänzendes, aber alles kontrolliert.",
+          "attributes": [],
+          "infoRows": [],
+          "icon": "*",
+          "ownerCharacterId": "gildas-gafyr",
+          "acquiredAt": "",
+          "imageFormat": "square",
+          "weight": "8 kg",
+          "itemDbKey": "",
+          "equipped": false,
+          "imagePosition": "center",
+          "id": "gildas-gafyr-field-kit",
+          "imageFit": "contain",
+          "quantity": "1",
+          "individualizedAt": ""
+        }
+      ],
+      "infoRows": [
+        {
+          "label": "Klasse",
+          "value": "Teulu"
+        },
+        {
+          "label": "Kampfstil",
+          "value": "Drachentanz · Form I"
+        },
+        {
+          "label": "Stand",
+          "value": "Ritter"
+        }
+      ],
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "portraitFit": "cover",
+      "carryLabel": "Traglast",
+      "characterId": "gildas-gafyr",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+      "equipmentQuiz": {
+        "step": 0,
+        "answers": [
+          ""
+        ],
+        "status": "",
+        "open": false,
+        "resultText": "",
+        "updatedAt": ""
+      },
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 8
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 6
+        },
+        {
+          "label": "Wei",
+          "value": 7
+        },
+        {
+          "label": "Cha",
+          "value": 7
+        }
+      ]
+    },
+    "updatedAt": "2026-11-02T21:17:57.038388Z"
+  }
+}

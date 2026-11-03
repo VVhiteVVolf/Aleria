@@ -1,0 +1,11 @@
+import { writeFile } from 'node:fs/promises';
+import { createPublicContentReadClient } from '../../firebase/scripts/content/content-publication-client.mjs';
+import { decodeFirestoreFields } from '../../firebase/scripts/backup/firestore-value-codec.mjs';
+import { isInventoryPlaceholder } from '../../AleriaAlmanach/modules/character-inventory/inventory-placeholders.js';
+const client = createPublicContentReadClient();
+const rows = await client.request(':runQuery', { structuredQuery: { from: [{ collectionId:'characters' }], limit:1000 } });
+const documents = rows.flatMap(row=>row.document?[row.document]:[]);
+if(documents.length>=1000)throw Error('Inventarprüfung benötigt vollständige Pagination.');
+const characters=documents.map(raw=>({...decodeFirestoreFields(raw.fields||{}),id:raw.name.split('/').at(-1)}));
+await writeFile(new URL('./online-before.json',import.meta.url),JSON.stringify({capturedAt:new Date().toISOString(),documents,characters},null,2)+'\n');
+console.log(JSON.stringify({all:characters.length,worked:characters.filter(c=>c.inventory?.items?.some(i=>!isInventoryPlaceholder(i))).map(c=>({id:c.id,name:c.name,worldId:c.identity?.worldPersonId,house:c.genealogy?.houseName,items:c.inventory.items.filter(i=>!isInventoryPlaceholder(i)).map(i=>i.name)}))},null,2));

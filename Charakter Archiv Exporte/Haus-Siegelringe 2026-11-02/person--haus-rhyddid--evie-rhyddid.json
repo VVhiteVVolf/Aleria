@@ -1,0 +1,83 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-rhyddid--evie-rhyddid.json",
+  "character": {
+    "id": "person--haus-rhyddid--evie-rhyddid",
+    "name": "Evie Rhyddid",
+    "inventory": {
+      "items": [
+        {
+          "id": "evie-rhyddid-evie-rhyddid-ruestung-1",
+          "instanceId": "evie-rhyddid-evie-rhyddid-ruestung-1",
+          "templateId": "gwynthor-seven:evie-rhyddid-ruestung",
+          "templateName": "Evies Rhyddid-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:evie-rhyddid-ruestung",
+            "revision": "e691574cc5e3031680ed564d"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:evie-rhyddid-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-rhyddid--evie-rhyddid",
+          "ownerCharacterName": "Evie Rhyddid",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Evies Rhyddid-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-rhyddid-harnisch-v1.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "person--haus-rhyddid--evie-rhyddid-house-signet-20261102",
+          "instanceId": "person--haus-rhyddid--evie-rhyddid-house-signet-20261102",
+          "templateId": "house-signet:haus-rhyddid",
+          "templateName": "Rhyddid-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-rhyddid",
+            "revision": "6b0e179e602a7888e2d01a54"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-rhyddid",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-rhyddid--evie-rhyddid",
+          "ownerCharacterName": "Evie Rhyddid",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Evie Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Rhyddid. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-rhyddid%2Fhouse-signets-16c573da438ffebc%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Rhyddid",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Rhyddid"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "definitionSchemaVersion": 1,
+      "revision": 1
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

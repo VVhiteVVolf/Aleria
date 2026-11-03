@@ -1,0 +1,2231 @@
+{
+  "version": 5,
+  "customSections": [
+    {
+      "key": "Wohntrakte",
+      "tab": "Völker & Kulturen",
+      "desc": "Die verbundenen Wohnflügel der lebenden Draig-Familie.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte"
+      ],
+      "entryIds": [
+        "castell-draig-wohntrakte",
+        "castell-draig-familienstube"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-wohntrakte",
+          "title": "Wohntrakte · Übersicht",
+          "subtitle": "Wohntrakte · Übersicht",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-10-15/wohntrakte-korridor.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Wohntrakte von Castell Draig",
+              "commentThreadKey": "uebersicht",
+              "image": "./public/assets/castell-draig/2026-10-15/wohntrakte-korridor.png",
+              "imageWidth": 30,
+              "imageTall": true,
+              "enableComments": false,
+              "description": "Die Wohntrakte gliedern sich in sechs miteinander verbundene Flügel. Galahad und Gwendolyn wohnen im Grafenflügel bei ihren Kindern. Gemeinsame Gänge und die Familienstube ermöglichen Besuche und Begegnungen, während jede Wohnpartei einen eigenen Rückzugsraum besitzt.",
+              "stats": [
+                [
+                  "Flügel",
+                  "6"
+                ],
+                [
+                  "Wohnparteien",
+                  "34"
+                ],
+                [
+                  "Lebende Draigs",
+                  "32"
+                ]
+              ],
+              "sceneBlocks": [
+                {
+                  "type": "intro",
+                  "text": "<h3>Grafenflügel</h3><p>Galahad und Gwendolyn, ihre Kinder sowie die Gemächer Guineveres und Mairs. Die gemeinsame Stube verbindet die gräflichen Gemächer mit dem Familienalltag.</p>"
+                },
+                {
+                  "type": "intro",
+                  "text": "<h3>Meurigs Familienflügel</h3><p>Meurig und Heledd, Rhys und Brona sowie Kane und Oweta wohnen um einen gemeinsamen Flurgang.</p>"
+                },
+                {
+                  "type": "intro",
+                  "text": "<h3>Odyars Familienflügel</h3><p>Odyar und Beibhinn, Steffan und Branwen sowie Gethin und Tegan teilen diesen Wohnflügel.</p>"
+                },
+                {
+                  "type": "intro",
+                  "text": "<h3>Traherns Familienflügel</h3><p>Trahern, Maredudd, Cadfan und Wynonna sowie Einion und Carys. Traherns Gemach liegt bei seiner Familie, mit kurzen Wegen zur gemeinsamen Stube.</p>"
+                },
+                {
+                  "type": "intro",
+                  "text": "<h3>Flügel des älteren Draig-Zweigs</h3><p>Persönliche Rückzugsräume für Myrddin, Lancelot und Gwyneth, Ffion und Myriad sowie Rihanna und Eilonwy.</p>"
+                },
+                {
+                  "type": "intro",
+                  "text": "<h3>Gästeflügel der Familie</h3><p>Eigene Besuchsquartiere für die wegverheirateten Angehörigen und ihre Ehepartner, mit kurzen Wegen zu den übrigen Wohnflügeln.</p>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-familienstube",
+          "title": "Gemeinsame Familienstube",
+          "subtitle": "Gemeinsame Familienstube",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/familienstube-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemeinsame Familienstube",
+              "commentThreadKey": "familienstube",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/familienstube-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Zwischen den Wohnflügeln liegt die gemeinsame Familienstube. Mehrere Sessel und Bänke gruppieren sich um den Kamin; ein großer Tisch bietet Platz für Gespräche, ein Spiel oder einen ungeplanten Besuch. Von hier führen kurze Gänge in die einzelnen Flügel. Auch Galahad und Gwendolyn erreichen die Stube direkt von ihren Gemächern aus.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Familienstube",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [],
+              "sessionCastDetails": [],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemeinsame Familienstube",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Grafenflügel",
+      "tab": "Völker & Kulturen",
+      "desc": "Galahad und Gwendolyn, ihre Kinder sowie die Gemächer Guineveres und Mairs. Die gemeinsame Stube verbindet die gräflichen Gemächer mit dem Familienalltag.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Grafenflügel"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-galahad-gwendolyn",
+        "castell-draig-gemach-anaraut",
+        "castell-draig-gemach-idwal",
+        "castell-draig-gemach-tudwal",
+        "castell-draig-gemach-neithon",
+        "castell-draig-gemach-isobel",
+        "castell-draig-gemach-rhiannon",
+        "modul-1781470059057",
+        "castell-draig-gemach-guinevere",
+        "castell-draig-gemach-mair"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-galahad-gwendolyn",
+          "title": "Gemächer von Galahad und Gwendolyn",
+          "subtitle": "Gemächer von Galahad und Gwendolyn",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-10-15/wohntrakte-grafengemaecher.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Galahad und Gwendolyn",
+              "commentThreadKey": "wohntrakte-galahad-gwendolyn",
+              "image": "./public/assets/castell-draig/2026-10-15/wohntrakte-grafengemaecher.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Die gräflichen Gemächer liegen am selben Gang wie die Zimmer der Familie. Ein großes Himmelbett, ein kleiner gemeinsamer Sitzbereich und ein Schreibtisch geben Galahad und Gwendolyn einen privaten Rückzugsort. Die Tür zur gemeinsamen Stube ist nur wenige Schritte entfernt.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Grafenflügel · Gemächer von Galahad und Gwendolyn",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--galahad-draig",
+                "15ml9RhSvJPXof7z4qY3"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--galahad-draig",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "15ml9RhSvJPXof7z4qY3",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Galahad und Gwendolyn",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-anaraut",
+          "title": "Gemach von Anaraut",
+          "subtitle": "Gemach von Anaraut",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/anaraut-gemach-v3.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach des Kronprinzen Anaraut",
+              "commentThreadKey": "wohntrakte-anaraut",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/anaraut-gemach-v3.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Anarauts Gemach ist stattlich, gepflegt und vollkommen aufgeräumt. Hochwertige dunkle Stoffe, poliertes Holz und sparsame Goldverzierungen unterstreichen den Rang seines Bewohners. Auf dem Schreibtisch liegen ein geschlossenes Buch und ein sauber abgelegter Brief; die ritterliche Ausrüstung hat ihren festen Platz.</p><p>Die Bettdecke liegt glatt auf dem ordentlich gerichteten Himmelbett. Weinrote und dunkelgrüne Stoffe setzen ruhige Akzente im gepflegten Raum. Von draußen fällt Tageslicht durch das Bogenfenster.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Anarauts Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "fq586i4k2gj5Lg30dUwW"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "fq586i4k2gj5Lg30dUwW",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Anarauts Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-idwal",
+          "title": "Gemach von Idwal",
+          "subtitle": "Gemach von Idwal",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/idwal-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach des Prinzen Idwal",
+              "commentThreadKey": "wohntrakte-idwal",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/idwal-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>In Idwals Gemach liegen Hemden, Stiefel und achtlos abgelegte Kleidung zwischen Stuhl, Truhe und Boden. Die Bettdecke hängt halb herunter. Staub überzieht die kaum berührten Flächen; zwischen Bettpfosten und Wand ziehen sich Spinnweben. Ein Stapel Seekarten scheint schon lange auf seine nächste Verwendung zu warten.</p><p>Unter dem erhöhten Bett liegt eine umgekippte Flasche neben einer alten, eingetrockneten Lache. Weiter hinten blitzen zwei Tieraugen aus dem Dunkel. Das Zimmer wirkt, als hätte sein Bewohner seit geraumer Zeit lieber an ganz anderen Orten geschlafen.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Idwals Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "kJss0DGF1RLuVrrVCBQT"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "kJss0DGF1RLuVrrVCBQT",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Idwals Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-tudwal",
+          "title": "Gemach von Tudwal",
+          "subtitle": "Gemach von Tudwal",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/tudwal-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach des Prinzen Tudwal",
+              "commentThreadKey": "wohntrakte-tudwal",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/tudwal-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Tudwals Gemach ist ebenso ordentlich wie geschäftsmäßig eingerichtet. Neben dem sauber gemachten Bett steht ein großer Schreibtisch mit einem offenen Kontobuch, akkurat gerollten Verträgen und kleinen, voneinander getrennten Münzstapeln. Messingwaage und Rechenbrett liegen griffbereit.</p><p>Die Regale enthalten geordnete Hauptbücher und geschlossene Dokumentenkästen. Eine gefaltete Handelskarte wartet am Rand der Arbeitsfläche. Dunkles Grün und warmes Holz geben dem Zimmer einen zurückhaltenden Wohlstand; die Ordnung dient hier vor allem dem nächsten klugen Geschäft.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Tudwals Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "fcNfoBWpVNvK3ORQUJwX"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "fcNfoBWpVNvK3ORQUJwX",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Tudwals Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-neithon",
+          "title": "Gemach von Neithon",
+          "subtitle": "Gemach von Neithon",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/neithon-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach des Prinzen Neithon",
+              "commentThreadKey": "wohntrakte-neithon",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/neithon-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>In Neithons Gemach scheint jeder Gegenstand einen genau bestimmten Platz zu besitzen. Das Bett ist glatt gerichtet, die Bücher stehen nach Größe ausgerichtet in den Regalen, und die Pergamentrollen ruhen sauber nebeneinander in ihrem Gestell. Kein Blatt ragt ungeordnet aus einem Stapel.</p><p>Auf dem freien Schreibtisch liegen Federkiel und Holzlineal parallel zur Tischkante. Das Tintenfass ist verschlossen, die wenigen Bücherstapel stehen rechtwinklig. Helles Tageslicht fällt auf sauberes Holz, geordnete Schriftstücke und den unversperrten Boden.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Neithons Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "6Gpz6nJaoL7yo9rFu85H"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "6Gpz6nJaoL7yo9rFu85H",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Neithons Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-isobel",
+          "title": "Gemach von Isobel",
+          "subtitle": "Gemach von Isobel",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/isobel-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach der Prinzessin Isobel",
+              "commentThreadKey": "wohntrakte-isobel",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/isobel-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Isobels Gemach verbindet ein fein gerichtetes Himmelbett mit dem kleinen Salon einer Bardin. Schimmernde Stoffe, verspielte Goldverzierungen und ein großer Ankleidespiegel lassen keinen Zweifel an ihrem Sinn für einen gepflegten Auftritt. Ein elegantes Kleid wartet auf einer Kleiderpuppe; Schmuck und Schleifen liegen geordnet auf dem Tisch.</p><p>Bei der gepolsterten Bank steht eine Laute neben einem offenen Notenheft. Eine kleine Harfe hat ihren Platz am Fenster. Zwischen Instrumenten, schönen Stoffen und dem makellosen Bett bleibt Raum, um ein Lied zu erproben oder einen Besuch zu empfangen.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Isobels Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "wnS8JOFUR3oS1izRzObH"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "wnS8JOFUR3oS1izRzObH",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Isobels Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-rhiannon",
+          "title": "Gemach von Rhiannon",
+          "subtitle": "Gemach von Rhiannon",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/rhiannon-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach der Prinzessin Rhiannon",
+              "commentThreadKey": "wohntrakte-rhiannon",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/rhiannon-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Rhiannons Gemach ist zugleich Schlafzimmer und Gelehrtenstube. Neben dem Bett mit dunkler Decke steht ein benutzter Studiertisch: Offene Folianten, Pergamente mit arkanen Diagrammen, Federkiel und Tinte liegen für die nächste Arbeit bereit. Die Regale bergen Bücher und wenige sorgfältig verwahrte Gefäße.</p><p>Ein kristallines Lehrmodell schimmert sanft über seinem kleinen Holzständer. Beim Fenster steht ein Astrolabium aus Messing. Zwischen kühlen Farbakzenten und warmem Licht auf den Buchseiten wirkt der Raum wie der Rückzugsort einer Magierin, deren Gedanken selbst vor dem Schlafengehen noch bei ihren Studien verweilen.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Rhiannons Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "y7MBxDiAaesbWHBtmw5Q"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "y7MBxDiAaesbWHBtmw5Q",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Rhiannons Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "modul-1781470059057",
+          "title": "Gemach von Gawain",
+          "subtitle": "Gemach von Gawain",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/gawain-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "commentThreadKey": "wohntrakte-gawain",
+              "pageTitle": "Gemach des Prinzen Gawain",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/gawain-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Gawains Gemach empfängt seine Besucher mit rotem Samt, schweren Seidenvorhängen und warmem, rötlichem Kerzenlicht. Das üppige Himmelbett, eine gepolsterte Chaiselongue und ein vergoldeter Spiegel geben dem privaten Zimmer etwas von einem teuren, verruchten Salon.</p><p>Dabei liegt nichts achtlos herum: Die weißen Laken sind glatt gezogen, der Boden ist blank poliert und die Schuhe stehen exakt nebeneinander. Auf dem Ankleidetisch bilden Kamm und Duftfläschchen eine sorgfältige Reihe. Selbst das bereitgelegte Gewand ist so ordentlich gefaltet, als dürfte kein fremder Finger es verrücken.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Gawains Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "q1QtSIug74FzzwUAqWrs"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "q1QtSIug74FzzwUAqWrs",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": 1740,
+                "month": 3,
+                "day": 10
+              },
+              "sessionEmptyTitle": "Gawains Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Beginne hier einen Besuch oder führe eine Begegnung im Gemach fort."
+            }
+          ],
+          "symbol": null,
+          "sessionCast": [],
+          "sessionCastDetails": []
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-guinevere",
+          "title": "Gemach von Guinevere",
+          "subtitle": "Gemach von Guinevere",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/guinevere-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Guinevere",
+              "commentThreadKey": "wohntrakte-guinevere",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/guinevere-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Ein helles, zurückhaltend ausgestattetes Gemach für Guinevere, Galahads Mündel und Gawains Verlobte. Ein eigenes Bett, eine Kleidertruhe und die gepolsterte Fensterbank machen das Zimmer zu ihrem persönlichen Rückzugsort im Grafenflügel.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Grafenflügel · Gemach von Guinevere",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-neidr--guinevere-neidr"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-neidr--guinevere-neidr",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Guinevere",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-mair",
+          "title": "Gemach von Mair",
+          "subtitle": "Gemach von Mair",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/mair-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Mair",
+              "commentThreadKey": "wohntrakte-mair",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/mair-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Mairs Gemach öffnet sich auf den Gang des Grafenflügels. Ein Bett mit bernsteinfarbenem Überwurf, eine kleine Sitznische und ein verschließbares Schreibkästchen geben dem Raum eine eigene, warme Note. Die gemeinsame Familienstube bleibt nah.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Grafenflügel · Gemach von Mair",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "avZbi5bD7DFcx6XtefJ4"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "avZbi5bD7DFcx6XtefJ4",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Mair",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Meurigs Familienflügel",
+      "tab": "Völker & Kulturen",
+      "desc": "Meurig und Heledd, Rhys und Brona sowie Kane und Oweta wohnen um einen gemeinsamen Flurgang.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Meurigs Familienflügel"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-meurig-heledd",
+        "castell-draig-gemach-rhys-brona",
+        "castell-draig-gemach-kane",
+        "castell-draig-gemach-oweta"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-meurig-heledd",
+          "title": "Gemächer von Meurig und Heledd",
+          "subtitle": "Gemächer von Meurig und Heledd",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/meurig-heledd-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Meurig und Heledd",
+              "commentThreadKey": "wohntrakte-meurig-heledd",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/meurig-heledd-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Das gemeinsame Gemach von Meurig und Heledd verbindet ein breites Bett mit zwei Sitzplätzen am Fenster. Auf Meurigs Schreibpult liegen ein geschlossenes Rechtsbuch und versiegelte Schriftstücke. Kleidertruhen und ein kleiner Tisch halten den Raum als Wohnung erkennbar.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Meurigs Familienflügel · Gemächer von Meurig und Heledd",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "E8HXkgi2kdkXaqkxrnRo",
+                "J4wpNQON98GsdPzsaIUk"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "E8HXkgi2kdkXaqkxrnRo",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "J4wpNQON98GsdPzsaIUk",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Meurig und Heledd",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-rhys-brona",
+          "title": "Gemächer von Rhys und Brona",
+          "subtitle": "Gemächer von Rhys und Brona",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/rhys-brona-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Rhys und Brona",
+              "commentThreadKey": "wohntrakte-rhys-brona",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/rhys-brona-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Rhys und Brona teilen ein ordentliches Schlaf- und Wohngemach. Gepflegte ritterliche Ausrüstung steht beim Schrank; auf dem kleinen Schreibtisch liegen gefaltete Ablaufpläne für den Hof. Zwei Stühle am Kamin und das breite Bett gehören zum gemeinsamen Alltag des Paares.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Meurigs Familienflügel · Gemächer von Rhys und Brona",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "9hurPRtv2yMJTYkAARkl",
+                "XTL39e7WjIwUtoT9Gxml"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "9hurPRtv2yMJTYkAARkl",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "XTL39e7WjIwUtoT9Gxml",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Rhys und Brona",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-kane",
+          "title": "Gemach von Kane",
+          "subtitle": "Gemach von Kane",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/kane-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Kane",
+              "commentThreadKey": "wohntrakte-kane",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/kane-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Kanes Gemach ist als persönlicher Raum eines jungen Ritters eingerichtet. Ein ordentliches Bett, ein Rüstungsständer und eine feste Halterung für das Schwert lassen den Boden frei. Eine schmale Bank am Fenster bietet Platz für Besuch.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Meurigs Familienflügel · Gemach von Kane",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "HjDXMMexahez1G0rJrBE"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "HjDXMMexahez1G0rJrBE",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Kane",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-oweta",
+          "title": "Gemach von Oweta",
+          "subtitle": "Gemach von Oweta",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/oweta-gemach-v2.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach der Ritterin Oweta",
+              "commentThreadKey": "wohntrakte-oweta",
+              "image": "./public/assets/castell-draig/2026-11-01/rooms-v2/oweta-gemach-v2.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Owetas Gemach ist schlicht, sauber und aufgeräumt. Das Bett ist ordentlich gemacht, die Kleidertruhe geschlossen und die gepflegte Rüstung am Holzständer verwahrt. Daneben stehen die Stiefel; ihr langer Speer lehnt sicher an der Wand.</p><p>Auf der Kommode stehen kleine Zinnsoldaten in einer sorgfältig aufgestellten Formation. Die silbrigen Ritter und Speerträger sind zwischen der praktischen Einrichtung ein sehr persönliches Detail. Durch das Burgfenster fällt ruhiges Tageslicht auf die Figuren und die bereitgehaltene Ausrüstung.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte der Burg · Owetas Gemach",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "vk0xAa3ZcEhVvGC1CzNq"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "vk0xAa3ZcEhVvGC1CzNq",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Owetas Gemach",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung im Gemach beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Odyars Familienflügel",
+      "tab": "Völker & Kulturen",
+      "desc": "Odyar und Beibhinn, Steffan und Branwen sowie Gethin und Tegan teilen diesen Wohnflügel.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Odyars Familienflügel"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-odyar-beibhinn",
+        "castell-draig-gemach-steffan-branwen",
+        "castell-draig-gemach-gethin",
+        "castell-draig-gemach-tegan"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-odyar-beibhinn",
+          "title": "Gemächer von Odyar und Beibhinn",
+          "subtitle": "Gemächer von Odyar und Beibhinn",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/odyar-beibhinn-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Odyar und Beibhinn",
+              "commentThreadKey": "wohntrakte-odyar-beibhinn",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/odyar-beibhinn-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Odyar und Beibhinns gemeinsames Gemach besitzt ein breites Bett und einen kleinen Sitzbereich. Auf dem Arbeitstisch des Kämmerers liegen ein Hauptbuch, ein Rechenbrett und geschlossene Schriftkästen. Grüne Stoffe und warmes Holz verbinden Arbeitswinkel und Wohnraum.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Odyars Familienflügel · Gemächer von Odyar und Beibhinn",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "7VjIYgifnq4uqNNfjzcM",
+                "nwamQ2ikeSV6St26fnWJ"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "7VjIYgifnq4uqNNfjzcM",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "nwamQ2ikeSV6St26fnWJ",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Odyar und Beibhinn",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-steffan-branwen",
+          "title": "Gemächer von Steffan und Branwen",
+          "subtitle": "Gemächer von Steffan und Branwen",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/steffan-branwen-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Steffan und Branwen",
+              "commentThreadKey": "wohntrakte-steffan-branwen",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/steffan-branwen-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Steffan und Branwen teilen ein geräumiges Gemach mit breitem Bett, Kleidertruhe und einem Tisch für zwei. Die sauber abgelegte Ausrüstung und ein gefalteter Wachplan am Schreibpult erinnern an Steffans Dienst als Kommandant der Hausgarde.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Odyars Familienflügel · Gemächer von Steffan und Branwen",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "93PwKnPytHr0sOc9mNHi",
+                "OJEmpbD6YWhDFDmitk6R"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "93PwKnPytHr0sOc9mNHi",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "OJEmpbD6YWhDFDmitk6R",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Steffan und Branwen",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-gethin",
+          "title": "Gemach von Gethin",
+          "subtitle": "Gemach von Gethin",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/gethin-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Gethin",
+              "commentThreadKey": "wohntrakte-gethin",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/gethin-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Gethins Gemach bietet ein Bett mit dunkelblauem Überwurf, einen Ausrüstungsständer und einen kleinen Tisch. Seine ritterliche Ausbildung hat ihren Platz in der Einrichtung; die Fensterbank bleibt als Sitzplatz frei.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Odyars Familienflügel · Gemach von Gethin",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--gethin-1722-draig"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--gethin-1722-draig",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Gethin",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-tegan",
+          "title": "Gemach von Tegan",
+          "subtitle": "Gemach von Tegan",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/tegan-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Tegan",
+              "commentThreadKey": "wohntrakte-tegan",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/tegan-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Tegans eigenes Zimmer liegt im selben Flügel wie die Gemächer ihrer Eltern und ihres Bruders. Ein Bett mit gedeckten mauvefarbenen Stoffen, eine Kleidertruhe und ein kleiner Tisch am Fenster lassen viel freien Raum.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Odyars Familienflügel · Gemach von Tegan",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "fklEm9zDR9y1LuCaXeeb"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "fklEm9zDR9y1LuCaXeeb",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Tegan",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Traherns Familienflügel",
+      "tab": "Völker & Kulturen",
+      "desc": "Trahern, Maredudd, Cadfan und Wynonna sowie Einion und Carys. Traherns Gemach liegt bei seiner Familie, mit kurzen Wegen zur gemeinsamen Stube.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Traherns Familienflügel"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-trahern",
+        "castell-draig-gemach-maredudd",
+        "castell-draig-gemach-cadfan-wynonna",
+        "castell-draig-gemach-einion",
+        "castell-draig-gemach-carys"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-trahern",
+          "title": "Gemach von Trahern",
+          "subtitle": "Gemach von Trahern",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/trahern-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Trahern",
+              "commentThreadKey": "wohntrakte-trahern",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/trahern-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Traherns Gemach liegt nahe bei den Räumen seiner Familie. Ein bequemer Sessel mit Fußbank steht am Kamin, das Bett bleibt leicht erreichbar. Auf dem niedrigen Arbeitstisch liegen Genealogiebücher und Pergamente; Pinsel und eine kleine Staffelei erinnern an seine Arbeit als Maler und Heraldiker.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Traherns Familienflügel · Gemach von Trahern",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "CJFC3INTycaqn3tOwZHB"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "CJFC3INTycaqn3tOwZHB",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Trahern",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-maredudd",
+          "title": "Gemach von Maredudd",
+          "subtitle": "Gemach von Maredudd",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/maredudd-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Maredudd",
+              "commentThreadKey": "wohntrakte-maredudd",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/maredudd-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Maredudds privates Gemach verbindet das Bett und einen bequemen Sessel mit einem kleinen militärischen Schreibplatz. Eine gefaltete Karte, ein Dokumentenkasten und die gepflegte Ausrüstung genügen für die Arbeit des Feldmarschalls, ohne das Zimmer in einen Ratssaal zu verwandeln.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Traherns Familienflügel · Gemach von Maredudd",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "ZGiDqxIwkkvOHzpnKmyk"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "ZGiDqxIwkkvOHzpnKmyk",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Maredudd",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-cadfan-wynonna",
+          "title": "Gemächer von Cadfan und Wynonna",
+          "subtitle": "Gemächer von Cadfan und Wynonna",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/cadfan-wynonna-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Cadfan und Wynonna",
+              "commentThreadKey": "wohntrakte-cadfan-wynonna",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/cadfan-wynonna-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Cadfan und Wynonna teilen ein wohnliches Gemach mit breitem Bett und zwei gepolsterten Stühlen. Auf einem seitlichen Schreibpult liegen Siegelgerät und geordnete Schriftrollen für Cadfans Heroldsamt. Die Wege zu Trahern, Einion und Carys bleiben kurz.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Traherns Familienflügel · Gemächer von Cadfan und Wynonna",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "hTN74LdJjXUFz7X7ReRr",
+                "wBW8kfX7wCLLM12kPoW2"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "hTN74LdJjXUFz7X7ReRr",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "wBW8kfX7wCLLM12kPoW2",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Cadfan und Wynonna",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-einion",
+          "title": "Gemach von Einion",
+          "subtitle": "Gemach von Einion",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/einion-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Einion",
+              "commentThreadKey": "wohntrakte-einion",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/einion-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Einions Zimmer ist das persönliche Gemach eines Knappen. Neben dem ordentlich gemachten Bett stehen eine Kleidertruhe und ein Ständer mit einfacher Übungsausrüstung. Ein kleiner Tisch und die Bank am Fenster bieten Raum für Alltag und Besuch.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Traherns Familienflügel · Gemach von Einion",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "27fN2uvUpVVNICNc4vQU"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "27fN2uvUpVVNICNc4vQU",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Einion",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-carys",
+          "title": "Gemach von Carys",
+          "subtitle": "Gemach von Carys",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/carys-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Carys",
+              "commentThreadKey": "wohntrakte-carys",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/carys-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Carys besitzt ein eigenes Zimmer nahe den Gemächern ihrer Eltern. Das schmale Bett mit dunkelgrünem Überwurf, die Kleidertruhe und die ordentlich verwahrte Übungsausrüstung passen zu ihrem Knappendienst. Ein kleiner Tisch steht im Tageslicht des Burgfensters.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Traherns Familienflügel · Gemach von Carys",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "yLJ0Rr5suTSLa42sL743"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "yLJ0Rr5suTSLa42sL743",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Carys",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Flügel des älteren Draig-Zweigs",
+      "tab": "Völker & Kulturen",
+      "desc": "Persönliche Rückzugsräume für Myrddin, Lancelot und Gwyneth, Ffion und Myriad sowie Rihanna und Eilonwy.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Flügel des älteren Draig-Zweigs"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-myrddin",
+        "castell-draig-gemach-lancelot-gwyneth",
+        "castell-draig-gemach-ffion",
+        "castell-draig-gemach-myriad",
+        "castell-draig-gemach-rihanna",
+        "castell-draig-gemach-eilonwy"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-myrddin",
+          "title": "Gemach von Myrddin",
+          "subtitle": "Gemach von Myrddin",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/myrddin-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Myrddin",
+              "commentThreadKey": "wohntrakte-myrddin",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/myrddin-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Myrddins persönliches Gemach verbindet ein schlichtes Bett mit dem Arbeitsplatz eines Ratszauberers. Alte Folianten und ein kleines Messingmodell stehen im Licht des Fensters. Die Einrichtung bleibt auf Wohnen und konzentrierte Arbeit begrenzt.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemach von Myrddin",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "ujMjNxdOs1pnR2jGNus4"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "ujMjNxdOs1pnR2jGNus4",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Myrddin",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-lancelot-gwyneth",
+          "title": "Gemächer von Lancelot und Gwyneth",
+          "subtitle": "Gemächer von Lancelot und Gwyneth",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/lancelot-gwyneth-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemächer von Lancelot und Gwyneth",
+              "commentThreadKey": "wohntrakte-lancelot-gwyneth",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/lancelot-gwyneth-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Lancelot und Gwyneth erhalten ein gemeinsames Gemach mit breitem Himmelbett, zwei Fenstersesseln und getrennten Kleidertruhen. Dunkelgrüne und cremefarbene Stoffe setzen ruhige Akzente im hellen Steinraum.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemächer von Lancelot und Gwyneth",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--lancelot-draig",
+                "person--haus-neidr--gwyneth-neidr"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--lancelot-draig",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-neidr--gwyneth-neidr",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemächer von Lancelot und Gwyneth",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-ffion",
+          "title": "Gemach von Ffion",
+          "subtitle": "Gemach von Ffion",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/ffion-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Ffion",
+              "commentThreadKey": "wohntrakte-ffion",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/ffion-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Ffions eigenes Gemach liegt bei den Räumen ihrer Eltern. Ein schlichtes Himmelbett, ein Ankleidetisch und die kleine gepolsterte Fensterbank bilden einen ruhigen Wohnraum mit blaugrauen Stoffen.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemach von Ffion",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--ffion-draig"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--ffion-draig",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Ffion",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-myriad",
+          "title": "Gemach von Myriad",
+          "subtitle": "Gemach von Myriad",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/myriad-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Myriad",
+              "commentThreadKey": "wohntrakte-myriad",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/myriad-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Myriads persönliches Gemach bleibt bewusst zurückhaltend eingerichtet. Ein Bett mit dunkelviolettem Überwurf, eine geschlossene Truhe und ein kleiner Tisch stehen im ruhigen Licht der Fensternische. Ein Sessel bietet Platz zum Lesen oder für Besuch.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemach von Myriad",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--myriad-draig"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--myriad-draig",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Myriad",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-rihanna",
+          "title": "Gemach von Rihanna",
+          "subtitle": "Gemach von Rihanna",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/rihanna-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Rihanna",
+              "commentThreadKey": "wohntrakte-rihanna",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/rihanna-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Rihanna besitzt einen eigenen Rückzugsraum nahe Eilonwys Gemach. Das Bett mit dunkelblauen Stoffen, eine Kleidertruhe und ein bequemer Fenstersessel lassen den Raum warm und bewohnt wirken.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemach von Rihanna",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "YgZBoWpb8KPGN1CNmpd3"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "YgZBoWpb8KPGN1CNmpd3",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Rihanna",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-eilonwy",
+          "title": "Gemach von Eilonwy",
+          "subtitle": "Gemach von Eilonwy",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/eilonwy-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Gemach von Eilonwy",
+              "commentThreadKey": "wohntrakte-eilonwy",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/eilonwy-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Eilonwys eigenes Gemach liegt nahe dem ihrer Mutter Rihanna. Ein Bett mit sandfarbenen und petrolfarbenen Stoffen, ein kleiner Schreibtisch und eine Sitznische geben dem Zimmer eine klare, persönliche Form.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Flügel des älteren Draig-Zweigs · Gemach von Eilonwy",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--eilonwy-draig"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--eilonwy-draig",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Gemach von Eilonwy",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Gästeflügel der Familie",
+      "tab": "Völker & Kulturen",
+      "desc": "Eigene Besuchsquartiere für die wegverheirateten Angehörigen und ihre Ehepartner, mit kurzen Wegen zu den übrigen Wohnflügeln.",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Castell Draig",
+        "Wohntrakte",
+        "Gästeflügel der Familie"
+      ],
+      "entryIds": [
+        "castell-draig-gemach-generis",
+        "castell-draig-gemach-ceridwen-mailgwin",
+        "castell-draig-gemach-alicyn-egon",
+        "castell-draig-gemach-tecwyn-ianto",
+        "castell-draig-gemach-dwynwen-caswallon"
+      ],
+      "entries": [
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-generis",
+          "title": "Besuchsquartier von Generis",
+          "subtitle": "Besuchsquartier von Generis",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/generis-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Besuchsquartier von Generis",
+              "commentThreadKey": "wohntrakte-generis",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/generis-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Für Besuche bei ihrer Familie steht Generis ein eigenes Quartier im Gästeflügel zur Verfügung. Ein Bett mit meergrünen Stoffen, eine Reisekleidertruhe und zwei Sitzplätze geben ihr Raum für den Aufenthalt.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Gästeflügel der Familie · Besuchsquartier von Generis",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "C9E5NjYfZp9mJDkbovDn"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "C9E5NjYfZp9mJDkbovDn",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Besuchsquartier von Generis",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-ceridwen-mailgwin",
+          "title": "Besuchsquartier von Ceridwen und Mailgwin",
+          "subtitle": "Besuchsquartier von Ceridwen und Mailgwin",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/ceridwen-mailgwin-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Besuchsquartier von Ceridwen und Mailgwin",
+              "commentThreadKey": "wohntrakte-ceridwen-mailgwin",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/ceridwen-mailgwin-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Ceridwen und Mailgwin finden für Familienbesuche ein gemeinsames Quartier mit breitem Bett, zwei Kleidertruhen und einem kleinen Tisch. Weinrote und helle Stoffe schaffen einen wohnlichen Rahmen für ihren Aufenthalt.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Gästeflügel der Familie · Besuchsquartier von Ceridwen und Mailgwin",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--ceridwen-draig",
+                "person--haus-wyrm--mailgwin-wyrm"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--ceridwen-draig",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-wyrm--mailgwin-wyrm",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Besuchsquartier von Ceridwen und Mailgwin",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-alicyn-egon",
+          "title": "Besuchsquartier von Alicyn und Egon",
+          "subtitle": "Besuchsquartier von Alicyn und Egon",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/alicyn-egon-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Besuchsquartier von Alicyn und Egon",
+              "commentThreadKey": "wohntrakte-alicyn-egon",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/alicyn-egon-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Alicyn und Egon erhalten ein gemeinsames Besuchsquartier für Aufenthalte im Castell. Ein breites Bett mit blauen Stoffen, zwei Reisekleidertruhen und eine Fensternische bieten ihnen einen privaten Raum nahe der Familie.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Gästeflügel der Familie · Besuchsquartier von Alicyn und Egon",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "AXmTd4ylJriVJOoS8bIJ"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "AXmTd4ylJriVJOoS8bIJ",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Besuchsquartier von Alicyn und Egon",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-tecwyn-ianto",
+          "title": "Besuchsquartier von Tecwyn und Ianto",
+          "subtitle": "Besuchsquartier von Tecwyn und Ianto",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/tecwyn-ianto-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Besuchsquartier von Tecwyn und Ianto",
+              "commentThreadKey": "wohntrakte-tecwyn-ianto",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/tecwyn-ianto-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Tecwyn und Ianto können bei Besuchen ein gemeinsames Quartier mit breitem Bett, Schreibplatz und zwei Sitzplätzen nutzen. Moosgrüne Stoffe und dunkles Holz geben dem Zimmer einen ruhigen Charakter.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Gästeflügel der Familie · Besuchsquartier von Tecwyn und Ianto",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-arwydd--tecwyn-draig",
+                "person--haus-arwydd--ianto-arwydd"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-arwydd--tecwyn-draig",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-arwydd--ianto-arwydd",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Besuchsquartier von Tecwyn und Ianto",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "id": "castell-draig-gemach-dwynwen-caswallon",
+          "title": "Besuchsquartier von Dwynwen und Caswallon",
+          "subtitle": "Besuchsquartier von Dwynwen und Caswallon",
+          "type": "Story",
+          "category": "Kultur",
+          "moduleWidth": 100,
+          "moduleHeight": 100,
+          "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/dwynwen-caswallon-v1.png",
+          "stamp": "Celtigerns Wacht · Gwynthor · Castell Draig",
+          "icon": "",
+          "locked": false,
+          "appendCommentsPage": false,
+          "enablePageComments": true,
+          "multipage": true,
+          "pages": [
+            {
+              "schemaVersion": 1,
+              "pageTitle": "Besuchsquartier von Dwynwen und Caswallon",
+              "commentThreadKey": "wohntrakte-dwynwen-caswallon",
+              "image": "./public/assets/castell-draig/2026-11-02/wohnfluegel/dwynwen-caswallon-v1.png",
+              "imageWidth": 34,
+              "imageTall": true,
+              "enableComments": true,
+              "sessionPage": true,
+              "sessionIntro": "<p>Für Dwynwen und Caswallon steht ein gemeinsames Besuchsquartier bereit. Ein breites Bett, zwei Reisetruhen und eine kleine Sitzgruppe bieten einen privaten Platz während ihres Besuchs aus Mathragon.</p>",
+              "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+              "sessionLocation": "Castell Draig · Wohntrakte · Gästeflügel der Familie · Besuchsquartier von Dwynwen und Caswallon",
+              "sessionStatus": "active",
+              "sessionParticipants": [],
+              "sessionCast": [
+                "person--haus-draig--dwynwen-draig",
+                "person--haus-grael--caswallon-grael"
+              ],
+              "sessionCastDetails": [
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-draig--dwynwen-draig",
+                  "role": "Bewohner des Gemachs"
+                },
+                {
+                  "schemaVersion": 1,
+                  "id": "person--haus-grael--caswallon-grael",
+                  "role": "Bewohner des Gemachs"
+                }
+              ],
+              "sessionDateAleria": {
+                "year": null,
+                "month": null,
+                "day": null
+              },
+              "sessionEmptyTitle": "Besuchsquartier von Dwynwen und Caswallon",
+              "sessionEmptyText": "Die Szene ist offen. Hier kann ein Besuch oder eine Begegnung beginnen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "moduleSectionNodes": [
+    {
+      "id": "root:volker-kulturen",
+      "parentId": "",
+      "tab": "Völker & Kulturen",
+      "title": "Kultur",
+      "desc": "Menschliche Völker, Krieger & Kulturen",
+      "sortOrder": 0
+    },
+    {
+      "id": "node:volker-kulturen:cenyr",
+      "parentId": "root:volker-kulturen",
+      "tab": "Völker & Kulturen",
+      "title": "Cenyr",
+      "desc": "",
+      "sortOrder": 0,
+      "iconUrl": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Königreich Cenyr.png"
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht",
+      "parentId": "node:volker-kulturen:cenyr",
+      "tab": "Völker & Kulturen",
+      "title": "Celtigerns Wacht",
+      "desc": "",
+      "sortOrder": 0,
+      "iconUrl": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Celtigerns Wacht Grafschaft.png"
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht",
+      "tab": "Völker & Kulturen",
+      "title": "Llamreis Ankunft",
+      "desc": "",
+      "sortOrder": 0,
+      "iconUrl": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Llamreis Ankunft.png"
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft",
+      "tab": "Völker & Kulturen",
+      "title": "Gwynthor",
+      "desc": "",
+      "sortOrder": 0,
+      "iconUrl": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Celtigerns Wacht Schild.png"
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "tab": "Völker & Kulturen",
+      "title": "Castell Draig",
+      "desc": "Menschliche Völker, Krieger & Kulturen",
+      "sortOrder": 0,
+      "iconUrl": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Königreich Cenyr.png"
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig",
+      "tab": "Völker & Kulturen",
+      "title": "Wohntrakte",
+      "desc": "Die verbundenen Wohnflügel der lebenden Draig-Familie.",
+      "sortOrder": 0
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Grafenflügel",
+      "desc": "Galahad und Gwendolyn, ihre Kinder sowie die Gemächer Guineveres und Mairs. Die gemeinsame Stube verbindet die gräflichen Gemächer mit dem Familienalltag.",
+      "sortOrder": 0
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Meurigs Familienflügel",
+      "desc": "Meurig und Heledd, Rhys und Brona sowie Kane und Oweta wohnen um einen gemeinsamen Flurgang.",
+      "sortOrder": 1
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Odyars Familienflügel",
+      "desc": "Odyar und Beibhinn, Steffan und Branwen sowie Gethin und Tegan teilen diesen Wohnflügel.",
+      "sortOrder": 2
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Traherns Familienflügel",
+      "desc": "Trahern, Maredudd, Cadfan und Wynonna sowie Einion und Carys. Traherns Gemach liegt bei seiner Familie, mit kurzen Wegen zur gemeinsamen Stube.",
+      "sortOrder": 3
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Flügel des älteren Draig-Zweigs",
+      "desc": "Persönliche Rückzugsräume für Myrddin, Lancelot und Gwyneth, Ffion und Myriad sowie Rihanna und Eilonwy.",
+      "sortOrder": 4
+    },
+    {
+      "id": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+      "parentId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+      "tab": "Völker & Kulturen",
+      "title": "Gästeflügel der Familie",
+      "desc": "Eigene Besuchsquartiere für die wegverheirateten Angehörigen und ihre Ehepartner, mit kurzen Wegen zu den übrigen Wohnflügeln.",
+      "sortOrder": 5
+    }
+  ],
+  "moduleNodeAssignments": {
+    "castell-draig-wohntrakte": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+    "castell-draig-familienstube": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte",
+    "castell-draig-gemach-galahad-gwendolyn": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-anaraut": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-idwal": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-tudwal": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-neithon": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-isobel": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-rhiannon": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "modul-1781470059057": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-guinevere": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-mair": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/grafen",
+    "castell-draig-gemach-meurig-heledd": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+    "castell-draig-gemach-rhys-brona": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+    "castell-draig-gemach-kane": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+    "castell-draig-gemach-oweta": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/meurig",
+    "castell-draig-gemach-odyar-beibhinn": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+    "castell-draig-gemach-steffan-branwen": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+    "castell-draig-gemach-gethin": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+    "castell-draig-gemach-tegan": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/odyar",
+    "castell-draig-gemach-trahern": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+    "castell-draig-gemach-maredudd": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+    "castell-draig-gemach-cadfan-wynonna": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+    "castell-draig-gemach-einion": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+    "castell-draig-gemach-carys": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/trahern",
+    "castell-draig-gemach-myrddin": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-lancelot-gwyneth": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-ffion": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-myriad": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-rihanna": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-eilonwy": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/aelterer-zweig",
+    "castell-draig-gemach-generis": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+    "castell-draig-gemach-ceridwen-mailgwin": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+    "castell-draig-gemach-alicyn-egon": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+    "castell-draig-gemach-tecwyn-ianto": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste",
+    "castell-draig-gemach-dwynwen-caswallon": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig/wohntrakte/gaeste"
+  }
+}

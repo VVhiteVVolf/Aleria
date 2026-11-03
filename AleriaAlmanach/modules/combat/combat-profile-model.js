@@ -18,6 +18,7 @@ import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-comba
 import { getCombatWeaponLoadout, canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { getCombatSupportEquipment } from './combat-support-equipment.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
+import { sanitizeProjectedEquipmentPassiveEffects } from '../character-equipment/equipment-passive-effects.js';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
@@ -1055,6 +1056,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk, 120),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
     damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity, 100),
+    ...(source.equipmentPassiveEffects?.length
+      ? { equipmentPassiveEffects: sanitizeProjectedEquipmentPassiveEffects(source.equipmentPassiveEffects) } : {}),
     abilities: sanitizeList(source.abilities, sanitizeAbility),
     magic: {
       enabled: magicEnabled,
@@ -1497,9 +1500,10 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
 }
 
 export function resolveCharacterCombatProfile(character = {}) {
-  if (character.inventory?.items?.some(item => item.definitionRef)) {
+  if (character.inventory && (character.inventory.items?.some(item => item.definitionRef)
+    || character.combatProfile?.equipmentPassiveEffects)) {
     const { combatProfile } = synchronizeEquipmentFromInventory({ inventory: character.inventory,
-      combatProfile: character.combatProfile || {}, preserveLoadout: true });
+      combatProfile: character.combatProfile || {}, preserveLoadout: true, definitionRulesOnly: true });
     character = { ...character, combatProfile };
   }
   const sanitized = sanitizeCharacterCombatProfile(character.combatProfile, {

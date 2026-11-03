@@ -8,7 +8,10 @@ const readJson = async path => JSON.parse(await readFile(new URL(path, new URL('
 export async function importAuthoredCharacters({ sources, feature, check = false, familyCandidates = [] }) {
   const exports = await Promise.all(sources.map(async sourcePath => ({ ...await readJson(sourcePath), sourcePath })));
   const [registry, snapshot, report] = await Promise.all(['registry.json', 'generated/characters.snapshot.json', 'generated/sync-report.json'].map(p=>readJson(`CharakterDatenbank/${p}`)));
-  const result = buildAuthoredCharacterImport({registry,snapshot,report},exports,feature,familyCandidates);
+  const ids = new Set(exports.map(entry => entry.character.id));
+  const existingRecords = await Promise.all(registry.records.filter(row => ids.has(row.firestoreDocumentId))
+    .map(row => readJson(`CharakterDatenbank/${row.path}`)));
+  const result = buildAuthoredCharacterImport({registry,snapshot,report,existingRecords},exports,feature,familyCandidates);
   const outputs = result.records.map(item=>[`CharakterDatenbank/${item.path}`,item.record]);
   outputs.push(['CharakterDatenbank/registry.json',result.registry],['CharakterDatenbank/generated/characters.snapshot.json',result.snapshot],['CharakterDatenbank/generated/sync-report.json',result.report]);
   for (const [path,data] of outputs) {

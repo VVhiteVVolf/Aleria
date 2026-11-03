@@ -60,6 +60,8 @@
       "documentId": "person--haus-wyrm--rianna-wyrm",
       "documentIds": [
         "person--haus-wyrm--rianna-wyrm",
+        "person--haus-wyrm--rianna-wyrm",
+        "person--haus-wyrm--rianna-wyrm",
         "person--haus-wyrm--rianna-wyrm"
       ],
       "documents": [
@@ -72,6 +74,16 @@
           "documentId": "person--haus-wyrm--rianna-wyrm",
           "createdAt": "",
           "updatedAt": "2026-11-02T20:00:31.921906Z"
+        },
+        {
+          "documentId": "person--haus-wyrm--rianna-wyrm",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
+        },
+        {
+          "documentId": "person--haus-wyrm--rianna-wyrm",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:30:55.582333Z"
         }
       ]
     },
@@ -87,14 +99,16 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/Startbesitz 2026-11-02/rianna-wyrm.json",
-    "sourceExportedAt": "2026-11-02T20:00:31.921906Z",
-    "sourceUpdatedAt": "2026-11-02T20:00:31.921906Z",
+    "sourceArchive": "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
+    "sourceExportedAt": "2026-11-02T21:30:55.582333Z",
+    "sourceUpdatedAt": "2026-11-02T21:30:55.582333Z",
     "sourceDocumentIds": [
+      "person--haus-wyrm--rianna-wyrm",
+      "person--haus-wyrm--rianna-wyrm",
       "person--haus-wyrm--rianna-wyrm",
       "person--haus-wyrm--rianna-wyrm"
     ],
-    "contentHash": "d697b349696a04859a5234f2b8c376b191798b6e1b3262044e211873b566351f"
+    "contentHash": "f5cf2e842dc16b3063a6e56a820e235bb2ca920cfc0d76381b5ba154a23396a5"
   },
   "local": {
     "notes": "",
@@ -3124,6 +3138,844 @@
           "notes": ""
         },
         "updatedAt": "2026-11-02T20:00:31.921906Z"
+      },
+      {
+        "id": "person--haus-wyrm--rianna-wyrm",
+        "name": "Rianna Wyrm",
+        "inventory": {
+          "items": [
+            {
+              "id": "rianna-wyrm-rianna-wyrm-ruestung-1",
+              "instanceId": "rianna-wyrm-rianna-wyrm-ruestung-1",
+              "templateId": "gwynthor-seven:rianna-wyrm-ruestung",
+              "templateName": "Riannas Wyrm-Rüstung",
+              "definitionRef": {
+                "id": "gwynthor-seven:rianna-wyrm-ruestung",
+                "revision": "c3e6fc9bf42b4d68a45af3d6"
+              },
+              "offerId": "",
+              "registerCategory": "ruestungen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rianna-wyrm-ruestung",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Riannas Wyrm-Rüstung",
+              "type": "Rüstung",
+              "category": "armor",
+              "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-22a589e5e508a610%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-wyrm-wyrm-ritterschwert-2",
+              "instanceId": "rianna-wyrm-wyrm-ritterschwert-2",
+              "templateId": "gwynthor-seven:wyrm-ritterschwert",
+              "templateName": "Wyrm Ritterschwert",
+              "definitionRef": {
+                "id": "gwynthor-seven:wyrm-ritterschwert",
+                "revision": "951230a50de94023d5b59199"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:wyrm-ritterschwert",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Wyrm Ritterschwert",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Riannas gewöhnliches Langschwert. Der Hausname verleiht keinen magischen Bonus und ist kein Großschwertprofil.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-e51177e63a3dcdc5%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-wyrm-rianna-dolch-3",
+              "instanceId": "rianna-wyrm-rianna-dolch-3",
+              "templateId": "gwynthor-seven:rianna-dolch",
+              "templateName": "Dolch",
+              "definitionRef": {
+                "id": "gwynthor-seven:rianna-dolch",
+                "revision": "1bb80ea5ef151438662ffb1a"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rianna-dolch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Dolch",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Schlichter Stahldolch für Rianna.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-21391edd6c275f7a%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-sir-fressbert",
+              "instanceId": "rianna-sir-fressbert",
+              "creatureId": "companion-rianna-sir-fressbert",
+              "name": "Sir Fressbert",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/sir-fressbert.png",
+              "description": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "type": "Cenyric-Kater",
+              "category": "companion",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "templateName": "Cenyric-Kater",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "rianna-goldloeckchen",
+              "instanceId": "rianna-goldloeckchen",
+              "creatureId": "companion-rianna-goldloeckchen",
+              "name": "Goldlöckchen",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/goldloeckchen.png",
+              "description": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "type": "Goldmähne",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Goldmähne",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+              "templateId": "standard:gemischtwarenhandler:spiegel",
+              "templateName": "Spiegel (Metall)",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:spiegel",
+                "revision": "8d141c8e0d0124680c7f3c2f"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:spiegel",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Spiegel (Metall)",
+              "type": "Ausrüstung",
+              "category": "equipment",
+              "description": "Kleiner polierter Bronzespiegel.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/spiegel.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Bronze, Pflege, Signal",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 5,
+                "maxCopper": 5
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 4
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 7
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 8
+                },
+                {
+                  "label": "Alltag",
+                  "value": 7
+                },
+                {
+                  "label": "Reise",
+                  "value": 4
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+              "templateId": "standard:gemischtwarenhandler:holzkamm",
+              "templateName": "Holzkamm",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:holzkamm",
+                "revision": "21ee820a133052493f92a26f"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:holzkamm",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Holzkamm",
+              "type": "Hygiene",
+              "category": "equipment",
+              "description": "Einfacher Kamm aus geschnitztem Holz.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzkamm.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Hygiene, Holz, Pflege",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 1,
+                "maxCopper": 1
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 4
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 5
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 10
+                },
+                {
+                  "label": "Alltag",
+                  "value": 9
+                },
+                {
+                  "label": "Reise",
+                  "value": 6
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+              "templateId": "standard:arkanist:unverzauberter-ring",
+              "templateName": "Ring · unverzaubert",
+              "definitionRef": {
+                "id": "standard:arkanist:unverzauberter-ring",
+                "revision": "27322dbc67664138eb2b928a"
+              },
+              "offerId": "",
+              "registerCategory": "arkanes",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:arkanist:unverzauberter-ring",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Ring · unverzaubert",
+              "type": "Unverzaubertes Zubehör",
+              "category": "other",
+              "description": "Ein schlichter Silberring ohne Stein und ohne Verzauberung.",
+              "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/unverzauberter-ring.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Unverzaubertes Zubehör",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 16,
+                "maxCopper": 16
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Macht",
+                  "value": 0
+                },
+                {
+                  "label": "Speicher",
+                  "value": 0
+                },
+                {
+                  "label": "Kontrolle",
+                  "value": 0
+                },
+                {
+                  "label": "Schutz",
+                  "value": 0
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 1
+                },
+                {
+                  "label": "Risiko",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+              "templateId": "house-signet:haus-wyrm",
+              "templateName": "Wyrm-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-wyrm",
+                "revision": "58432cfafcaaf0b123379522"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-wyrm",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Rianna Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-76d56e75db6cdde5%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Wyrm",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Wyrm"
+                }
+              ],
+              "attributes": []
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-rianna-silberhirsch-20261102",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-rianna-silberhirsch-20261102",
+              "templateId": "gwynthor-seven:rianna-silberhirsch",
+              "templateName": "Riannas Silberhirsch",
+              "definitionRef": {
+                "id": "gwynthor-seven:rianna-silberhirsch",
+                "revision": "1e845f07310800b83e2571b3"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rianna-silberhirsch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Riannas Silberhirsch",
+              "type": "Ausrüstung",
+              "category": "other",
+              "description": "Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-ca3e627ec0704c6d%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            }
+          ],
+          "definitionSchemaVersion": 1,
+          "companions": [
+            {
+              "id": "card-rianna-sir-fressbert",
+              "name": "Sir Fressbert",
+              "species": "Cenyric-Kater",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/sir-fressbert.png",
+              "description": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "summary": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "role": "Gefährte",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-rianna-sir-fressbert",
+              "inventoryItemId": "rianna-sir-fressbert"
+            },
+            {
+              "id": "card-rianna-goldloeckchen",
+              "name": "Goldlöckchen",
+              "species": "Goldmähne",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/goldloeckchen.png",
+              "description": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "summary": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-rianna-goldloeckchen",
+              "inventoryItemId": "rianna-goldloeckchen"
+            }
+          ],
+          "money": "1 Gold, 8 Silber, 40 Kupfer, 0 Eisenpfennig",
+          "moneyState": {
+            "gold": 1,
+            "copper": 40,
+            "silver": 8,
+            "totalCopper": 1840,
+            "pfennig": 0
+          },
+          "revision": 3
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
+      },
+      {
+        "id": "person--haus-wyrm--rianna-wyrm",
+        "name": "Rianna Wyrm",
+        "inventory": {
+          "items": [
+            {
+              "id": "rianna-wyrm-rianna-wyrm-ruestung-1",
+              "instanceId": "rianna-wyrm-rianna-wyrm-ruestung-1",
+              "templateId": "gwynthor-seven:rianna-wyrm-ruestung",
+              "templateName": "Riannas Wyrm-Rüstung",
+              "definitionRef": {
+                "id": "gwynthor-seven:rianna-wyrm-ruestung",
+                "revision": "c3e6fc9bf42b4d68a45af3d6"
+              },
+              "offerId": "",
+              "registerCategory": "ruestungen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rianna-wyrm-ruestung",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Riannas Wyrm-Rüstung",
+              "type": "Rüstung",
+              "category": "armor",
+              "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-22a589e5e508a610%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-wyrm-wyrm-ritterschwert-2",
+              "instanceId": "rianna-wyrm-wyrm-ritterschwert-2",
+              "templateId": "gwynthor-seven:wyrm-ritterschwert",
+              "templateName": "Wyrm Ritterschwert",
+              "definitionRef": {
+                "id": "gwynthor-seven:wyrm-ritterschwert",
+                "revision": "951230a50de94023d5b59199"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:wyrm-ritterschwert",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Wyrm Ritterschwert",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Riannas gewöhnliches Langschwert. Der Hausname verleiht keinen magischen Bonus und ist kein Großschwertprofil.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-e51177e63a3dcdc5%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-wyrm-rianna-dolch-3",
+              "instanceId": "rianna-wyrm-rianna-dolch-3",
+              "templateId": "gwynthor-seven:rianna-dolch",
+              "templateName": "Dolch",
+              "definitionRef": {
+                "id": "gwynthor-seven:rianna-dolch",
+                "revision": "1bb80ea5ef151438662ffb1a"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:rianna-dolch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Dolch",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Schlichter Stahldolch für Rianna.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fknight-equipment-21391edd6c275f7a%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "rianna-sir-fressbert",
+              "instanceId": "rianna-sir-fressbert",
+              "creatureId": "companion-rianna-sir-fressbert",
+              "name": "Sir Fressbert",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/sir-fressbert.png",
+              "description": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "type": "Cenyric-Kater",
+              "category": "companion",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "templateName": "Cenyric-Kater",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "rianna-goldloeckchen",
+              "instanceId": "rianna-goldloeckchen",
+              "creatureId": "companion-rianna-goldloeckchen",
+              "name": "Goldlöckchen",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/goldloeckchen.png",
+              "description": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "type": "Goldmähne",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Goldmähne",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+              "templateId": "standard:gemischtwarenhandler:spiegel",
+              "templateName": "Spiegel (Metall)",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:spiegel",
+                "revision": "8d141c8e0d0124680c7f3c2f"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:spiegel",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Spiegel (Metall)",
+              "type": "Ausrüstung",
+              "category": "equipment",
+              "description": "Kleiner polierter Bronzespiegel.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/spiegel.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Bronze, Pflege, Signal",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 5,
+                "maxCopper": 5
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 4
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 7
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 8
+                },
+                {
+                  "label": "Alltag",
+                  "value": 7
+                },
+                {
+                  "label": "Reise",
+                  "value": 4
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+              "templateId": "standard:gemischtwarenhandler:holzkamm",
+              "templateName": "Holzkamm",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:holzkamm",
+                "revision": "21ee820a133052493f92a26f"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:holzkamm",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Holzkamm",
+              "type": "Hygiene",
+              "category": "equipment",
+              "description": "Einfacher Kamm aus geschnitztem Holz.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzkamm.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Hygiene, Holz, Pflege",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 1,
+                "maxCopper": 1
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 4
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 5
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 10
+                },
+                {
+                  "label": "Alltag",
+                  "value": 9
+                },
+                {
+                  "label": "Reise",
+                  "value": 6
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+              "templateId": "standard:arkanist:unverzauberter-ring",
+              "templateName": "Ring · unverzaubert",
+              "definitionRef": {
+                "id": "standard:arkanist:unverzauberter-ring",
+                "revision": "27322dbc67664138eb2b928a"
+              },
+              "offerId": "",
+              "registerCategory": "arkanes",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:arkanist:unverzauberter-ring",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Ring · unverzaubert",
+              "type": "Unverzaubertes Zubehör",
+              "category": "other",
+              "description": "Ein schlichter Silberring ohne Stein und ohne Verzauberung.",
+              "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/unverzauberter-ring.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Unverzaubertes Zubehör",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 16,
+                "maxCopper": 16
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Macht",
+                  "value": 0
+                },
+                {
+                  "label": "Speicher",
+                  "value": 0
+                },
+                {
+                  "label": "Kontrolle",
+                  "value": 0
+                },
+                {
+                  "label": "Schutz",
+                  "value": 0
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 1
+                },
+                {
+                  "label": "Risiko",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+              "instanceId": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+              "templateId": "house-signet:haus-wyrm",
+              "templateName": "Wyrm-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-wyrm",
+                "revision": "58432cfafcaaf0b123379522"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-wyrm",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+              "ownerCharacterName": "Rianna Wyrm",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Rianna Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-76d56e75db6cdde5%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Wyrm",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Wyrm"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "definitionSchemaVersion": 1,
+          "companions": [
+            {
+              "id": "card-rianna-sir-fressbert",
+              "name": "Sir Fressbert",
+              "species": "Cenyric-Kater",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/sir-fressbert.png",
+              "description": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "summary": "Rianna Wyrms Kater Sir Fressbert verbringt die meiste Zeit faul zu Hause. Seine Bildgestaltung zeigt einen gut genährten, rotgetigerten Cenyric mit hellem Fang und heller Brust auf einem goldgelben Kissen. Alter und besondere Ausbildung sind nicht festgelegt.",
+              "role": "Gefährte",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-rianna-sir-fressbert",
+              "inventoryItemId": "rianna-sir-fressbert"
+            },
+            {
+              "id": "card-rianna-goldloeckchen",
+              "name": "Goldlöckchen",
+              "species": "Goldmähne",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/goldloeckchen.png",
+              "description": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "summary": "Goldlöckchen ist Rianna Wyrms Goldmähnen-Stute. Rhydian Wyrm besorgte sie für seine Tochter. Edles weißes Fell und eine voluminöse, lockige goldene Mähne prägen ihre Erscheinung; die Sattelung trägt Schwarz und Gold sowie den schwarzen Drachen des Hauses Wyrm. Ihr Alter ist nicht festgelegt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-rianna-goldloeckchen",
+              "inventoryItemId": "rianna-goldloeckchen"
+            }
+          ],
+          "money": "1 Gold, 8 Silber, 40 Kupfer, 0 Eisenpfennig",
+          "moneyState": {
+            "gold": 1,
+            "copper": 40,
+            "silver": 8,
+            "totalCopper": 1840,
+            "pfennig": 0
+          },
+          "revision": 1793655055013
+        },
+        "updatedAt": "2026-11-02T21:30:55.582333Z"
       }
     ]
   },
@@ -3144,7 +3996,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-11-01T23:27:59.527Z",
-    "updatedAt": "2026-11-02T20:00:31.921906Z",
+    "updatedAt": "2026-11-02T21:30:55.582333Z",
     "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/rianna-wyrm.jpg",
     "emotes": [],
     "emotesOverride": false,
@@ -3597,6 +4449,41 @@
               "value": 0
             }
           ]
+        },
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+          "instanceId": "person--haus-wyrm--rianna-wyrm-house-signet-20261102",
+          "templateId": "house-signet:haus-wyrm",
+          "templateName": "Wyrm-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-wyrm",
+            "revision": "58432cfafcaaf0b123379522"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-wyrm",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-wyrm--rianna-wyrm",
+          "ownerCharacterName": "Rianna Wyrm",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Rianna Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-76d56e75db6cdde5%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Wyrm",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Wyrm"
+            }
+          ],
+          "attributes": []
         }
       ],
       "definitionSchemaVersion": 1,
@@ -3644,7 +4531,7 @@
         "totalCopper": 1840,
         "pfennig": 0
       },
-      "revision": 2
+      "revision": 1793655055013
     },
     "biography": {
       "schema": "aleria.biography-module",

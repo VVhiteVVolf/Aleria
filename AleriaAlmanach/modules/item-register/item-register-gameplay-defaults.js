@@ -2,6 +2,7 @@
 // existing possessions. IDs are explicit: prose/name similarity is not identity.
 // Weapon dice and defenses follow Aleria's explicitly approved catalogue balance.
 import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
+import { normalizeEquipmentPassiveEffects } from '../character-equipment/equipment-passive-effects.js';
 
 const weaponBaselines = {
   stahlschwert: ['sword', 'sword', '1d8', 'Hieb', '1d10'],
@@ -89,5 +90,6 @@ export function withRegisterGameplayDefaults(item) {
     || (item.category === 'ruestungen' && (fromArmory || item.houseArmor) ? defaultArmor(item, sourceId) : null);
   return balanceArmorInventoryItem({ ...item, combatDefinition,
     inventoryUseMode: useMode(item),
-    mechanicsStatus: item.combatDefinition ? 'defined' : combatDefinition ? 'provisional' : 'narrative' });
+    mechanicsStatus: item.combatDefinition || normalizeEquipmentPassiveEffects(item.passiveEffects).length
+      ? 'defined' : combatDefinition ? 'provisional' : 'narrative' });
 }

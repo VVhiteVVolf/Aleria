@@ -1,0 +1,254 @@
+{
+  "version": "2026-11-02-sparse-v1",
+  "profiles": [
+    {
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-frohnatur",
+          "name": "Frohnatur",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp"
+        },
+        {
+          "id": "development-trait-buehnenmensch",
+          "name": "Bühnenmensch",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp"
+        },
+        {
+          "id": "development-trait-vollbusig",
+          "name": "Vollbusig",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp"
+        }
+      ]
+    },
+    {
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-symbiose-varulv-wolf",
+          "name": "Silvanische Symbiose der Varulv (Wolf)",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp"
+        }
+      ]
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-fit",
+          "name": "Fit",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp"
+        }
+      ]
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-faehrtenleser",
+          "name": "Geborener Fährtenleser",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp"
+        }
+      ]
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-neugier-vor-vorsicht",
+          "name": "Neugier vor Vorsicht",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-draig--gethin-1722-draig",
+      "name": "Gethin Draig",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": []
+    },
+    {
+      "id": "6atOllMA637Z2VNAZAxf",
+      "name": "Gethin",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": []
+    },
+    {
+      "id": "HjDXMMexahez1G0rJrBE",
+      "name": "Kane Draig",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": []
+    },
+    {
+      "id": "y7MBxDiAaesbWHBtmw5Q",
+      "name": "Rhiannon Draig",
+      "changed": false,
+      "fieldPaths": [],
+      "revision": 1793660241174,
+      "traits": [
+        {
+          "id": "development-trait-arkan-geschult",
+          "name": "Arkan geschult",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp"
+        }
+      ]
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-taktisches-gespuer",
+          "name": "Taktisches Gespür",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "name": "Gildas Gafyr",
+      "changed": false,
+      "fieldPaths": [],
+      "revision": 1793660241174,
+      "traits": [
+        {
+          "id": "development-trait-wachsam",
+          "name": "Wachsamer Blick",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-spuernase",
+          "name": "Spürnase",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp"
+        },
+        {
+          "id": "development-trait-scharfe-augen",
+          "name": "Scharfe Augen",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        },
+        {
+          "id": "development-trait-ritualgebunden",
+          "name": "Ritualgebunden",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp"
+        }
+      ]
+    },
+    {
+      "id": "person--haus-wyrm--gais-wyrm",
+      "name": "Gais Wyrm",
+      "changed": true,
+      "fieldPaths": [
+        "combatProfile.revision",
+        "updatedAt"
+      ],
+      "revision": 1793660407946,
+      "traits": [
+        {
+          "id": "development-trait-silberzunge",
+          "name": "Silberzunge",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ]
+    }
+  ]
+}

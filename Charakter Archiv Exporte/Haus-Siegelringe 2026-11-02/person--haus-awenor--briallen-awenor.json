@@ -1,0 +1,83 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-awenor--briallen-awenor.json",
+  "character": {
+    "id": "person--haus-awenor--briallen-awenor",
+    "name": "Briallen Awenor",
+    "inventory": {
+      "items": [
+        {
+          "id": "briallen-awenor-briallen-awenor-ruestung-1",
+          "instanceId": "briallen-awenor-briallen-awenor-ruestung-1",
+          "templateId": "gwynthor-seven:briallen-awenor-ruestung",
+          "templateName": "Briallens Awenor-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:briallen-awenor-ruestung",
+            "revision": "c6e490de004560b2073ac767"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:briallen-awenor-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-awenor--briallen-awenor",
+          "ownerCharacterName": "Briallen Awenor",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Briallens Awenor-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-awenor-harnisch-v1.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "person--haus-awenor--briallen-awenor-house-signet-20261102",
+          "instanceId": "person--haus-awenor--briallen-awenor-house-signet-20261102",
+          "templateId": "house-signet:haus-awenor",
+          "templateName": "Awenor-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-awenor",
+            "revision": "7c571bd22a9f4e9bd64f4983"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-awenor",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-awenor--briallen-awenor",
+          "ownerCharacterName": "Briallen Awenor",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Briallen Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenor. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-awenor%2Fhouse-signets-d0658d7ab1c0a04c%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Awenor",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Awenor"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "definitionSchemaVersion": 1,
+      "revision": 1
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

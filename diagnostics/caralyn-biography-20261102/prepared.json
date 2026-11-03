@@ -1,0 +1,2373 @@
+{
+  "id": "Eka4z7TWpzEgx8KjhIzy",
+  "patch": {
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Caralyn Chwedonol"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Chwedonol, Gwynthor & Glastraeth"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Ritterin, Gwynthor & Glastraeth"
+        },
+        {
+          "label": "Geboren",
+          "value": "1722"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "weiblich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "ledig / verlobt"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Ritter"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": ""
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor - Burg der Chwedlonol"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Hintergrund – Wer ist sie?",
+        "biographyText": "Sir Caralyn Chwedonol ist eine achtzehnjährige Ritterin des Hauses Chwedonol aus Gwynthor und gehört dem Stand der Morwyr an, jenen Rittern, die insbesondere für den Dienst und Kampf zur See ausgebildet werden. Sie ist die einzige Tochter von Glyndwr Chwedonol und dessen Gemahlin sowie eine Urenkelin<br>von Gwenhwyfar Chwedonol, dem gegenwärtigen Oberhaupt der Familie.<br><br>Caralyn wuchs überwiegend in Glastraeth auf, wo ihre Tante Morgaine als Lehenswartin tätig ist, verbrachte jedoch auch einen beträchtlichen Teil ihrer Kindheit auf der Familienburg im Hafenbezirk von Gwynthor. Durch ihre Herkunft ist sie seit frühester Jugend mit dem Leben an der Küste, der Schifffahrt und den Traditionen ihres Hauses vertraut.<br><br>Obwohl sie innerhalb der weitverzweigten Familie keine herausgehobene Stellung in der Erbfolge einnimmt, genießt sie das Vertrauen und die Zuneigung ihrer Angehörigen. Erst vor wenigen Monaten erhielt sie nach ihrer Ausbildung unter Sir Meredithe Chwedonol den Ritterschlag und versieht seither gewöhnliche<br>ritterliche Dienste für ihr Haus.<br><br>Besondere Bedeutung erlangte Caralyn durch ihre Verlobung mit Einion Draig, einem Angehörigen des gräflichen Hauses Draig. Die Verbindung gilt innerhalb ihrer Familie als außergewöhnliche Ehre und eröffnet ihr eine Zukunft, deren gesellschaftliche Tragweite sie selbst noch nicht vollständig überblickt.",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Bodenständig",
+            "detail": "Caralyn besitzt einen ausgeprägten Sinn für das Praktische und verliert auch ange-sichts großer Möglichkeiten selten den Bezug zur Wirklichkeit.",
+            "icon": "/IconOrdner/Traits%20Icon/Content.png"
+          },
+          {
+            "title": "Warmherzig",
+            "detail": "Sie begegnet ihren Mitmenschen mit aufrichtiger Freundlichkeit, Anteilnahme und einem offenen Ohr für deren Sorgen.",
+            "icon": "/IconOrdner/Traits%20Icon/Kind.png"
+          },
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Übertragene Aufgaben nimmt sie ernst und bemüht sich, sie gewissenhaft und zuver-lässig zu erfüllen.",
+            "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+          },
+          {
+            "title": "Selbstbewusst",
+            "detail": "Trotz ihres freundlichen Wesens kann sie ihre Meinung vertreten und scheut sich nicht, selbst die Initiative zu ergreifen.",
+            "icon": "/IconOrdner/Traits%20Icon/Brave.png"
+          },
+          {
+            "title": "Bescheiden",
+            "detail": "Sie kennt ihre Fähigkeiten und Grenzen und verspürt wenig Bedürfnis, sich durch besondere Leistungen hervorzutun.",
+            "icon": "/IconOrdner/Traits%20Icon/Humble.png"
+          },
+          {
+            "title": "Aufrichtig",
+            "detail": "Caralyn spricht gewöhnlich offen und ehrlich, was sie denkt. Gelegentlich fehlt ihr dabei das notwendige Fingerspitzengefühl.",
+            "icon": "/IconOrdner/Traits%20Icon/Honest.png"
+          },
+          {
+            "title": "Traditionsbewusst",
+            "detail": "Sie achtet die Bräuche ihres Hauses, lehnt es jedoch ab, alte Feindschaften allein aus Gewohnheit fortzuführen.",
+            "icon": "/IconOrdner/Traits%20Icon/Conscientious.png"
+          },
+          {
+            "title": "Gutgläubig",
+            "detail": "Da sie selbst selten mit Hintergedanken handelt, fällt es ihr manchmal schwer, solche bei anderen zu erkennen.",
+            "icon": "/IconOrdner/Traits%20Icon/Trusting.png"
+          },
+          {
+            "title": "Umsichtig",
+            "detail": "Besonders bei der Übernahme von Verantwortung bemüht sie sich, mögliche Folgen ihrer Entscheidungen zu bedenken.",
+            "icon": "/IconOrdner/Traits%20Icon/Patient.png"
+          },
+          {
+            "title": "Humorvoll",
+            "detail": "Sie besitzt einen warmen, gelegentlich trockenen Humor und kann sich auch über die kleinen Unzulänglichkeiten des Alltags amüsieren.",
+            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Caralyn wurde als einziges Kind von Glyndwr Chwedonol und dessen Gemahlin in eine Familie geboren, deren Geschichte seit Generationen eng mit der Seefahrt verbunden ist. Obwohl das Oberhaupt des Hauses auf der Burg im Hafenbezirk von Gwynthor residiert, verbrachte sie den größeren Teil ihrer Kindheit in Glastraeth, wo ihre Tante Morgaine das Amt der Lehenswartin ausübte und von ihrem Bruder Glyndwr unterstützt wurde.\n\nIhre Kindheit verlief weitgehend unbeschwert. Caralyn genoss die Zuneigung ihrer Eltern und pflegte ein gutes Verhältnis zu den übrigen Angehörigen ihres Hauses, darunter ihre Großmutter Niniane und ihre Urgroßmutter Gwenhwyfar. Da sie zahlreiche Vettern und Cousinen besaß, mangelte es ihr trotz fehlender Geschwister nicht an gleichaltriger Gesellschaft.\n\nSchon früh begleitete sie Angehörige ihrer Familie auf Seereisen. Die Häfen von Glastraeth und Gwynthor, die Werften und die Arbeit der Seeleute gehörten ebenso selbstverständlich zu ihrem Alltag wie das Leben auf den Burgen ihres Hauses. Während ihrer Zeit als Page begann sie, auch kleinere Aufgaben an Bord zu übernehmen und die Grundlagen der Seemannschaft kennenzulernen.\n\nIhre eigentliche ritterliche Ausbildung absolvierte Caralyn als Knappin ihrer Großtante Sir Meredithe Chwedonol.\n\nMeredithe, die Jahrzehnte zuvor ihren Gemahl Rhodhri während einer verhängnisvollen Seereise verloren hatte, galt als erfahrene, jedoch stille und bedächtige Ritterin. Trotz einer schweren Verletzung ihrer rechten Hand hatte sie ihre kämpferischen Fähigkeiten neu erlernt und sich ihre Stellung innerhalb der Familie bewahrt.\n\nUnter ihrer Anleitung erhielt Caralyn eine umfassende Ausbildung zur Morwyr. Sie erlernte den Umgang mit dem Dreizack, wurde im Kampf zur See unterwiesen und vertiefte ihre Kenntnisse in Nautik, Navigation und Schiffsführung.\n\nMeredithe legte besonderen Wert auf Umsicht und Verantwortungsbewusstsein. Sie verlangte von ihrer Knappin nicht nur Gehorsam, sondern auch die Fähigkeit, Entscheidungen zu hinterfragen und deren mögliche Folgen zu erkennen. Caralyn erwies sich dabei als fleißige und aufmerksame Schülerin, deren Stärken weniger im Kampf als in ihrer Zuverlässigkeit und ihrem Verständnis für die praktischen Anforderungen der Seefahrt lagen.\n\nWährend gemeinsamer Fahrten erhielt sie zunehmend Gelegenheit, Aufgaben an Bord zu übernehmen und unter Aufsicht ihrer Rittermutter Anweisungen an die Besatzung zu geben. Ein eigenes Schiff führte sie jedoch niemals.\n\nNachdem Meredithe ihre Ausbildung schließlich als abgeschlossen betrachtete, wurde Caralyn im Alter von achtzehn Jahren zur Ritterin geschlagen.\n\nDer Ritterschlag liegt erst wenige Monate zurück. Seither versieht sie ihren Dienst für das Haus Chwedonol überwiegend in Gwynthor, wo sie Patrouillen, Wach- und Begleitdienste sowie weitere gewöhnliche ritterliche Aufgaben übernimmt."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Obwohl Caralyn erst seit kurzer Zeit den Ritterstand bekleidet, hat ihre Verlobung mit Einion Draig ihre Stellung innerhalb der Familie bereits erheblich verändert.\n\nAls einziges Kind Glyndwrs und Angehörige einer Nebenlinie des Hauses Chwedonol war für sie ursprünglich keine besonders herausgehobene Rolle innerhalb der Familienführung vorgesehen. Ihre Zukunft schien vielmehr im gewöhnlichen ritterlichen Dienst und möglicherweise in einer ehelichen Verbindung mit einem anderen Adelshaus zu liegen.\n\nDie Begegnung mit Einion Draig eröffnete ihr jedoch eine weit bedeutendere Perspektive.\n\nCaralyn fand Gefallen an dem fröhlichen und verträumten jungen Mann, dessen unbeschwerte Art einen deutlichen Gegensatz zu ihrem eigenen praktischen Wesen bildete. Anstatt auf eine Annäherung seinerseits zu warten, ergriff sie selbst die Initiative und fragte ihn nach einer möglichen Verlobung. Einion nahm ihren Vorschlag an.\n\nDie Verbindung wurde von Gräfin Gwendolyn Draig gesegnet und innerhalb des Hauses Chwedonol mit großer Begeisterung aufgenommen.\n\nFür die Familie stellt die bevorstehende Vermählung eine außergewöhnliche gesellschaftliche und politische Verbindung dar. Haus Draig ist das gräfliche Herrschergeschlecht von Celtigerns Wacht und durch seine Abstammung eng mit dem Königshaus verbunden. Eine Ehe zwischen Caralyn und Einion verspricht daher eine erhebliche Aufwertung der Beziehungen zwischen beiden Häusern.\n\nCaralyn selbst ist sich der Bedeutung dieser Verbindung durchaus bewusst. Sie empfindet aufrichtige Zuneigung für Einion, weiß jedoch ebenso, dass sie eine außerordentlich vorteilhafte Partie gemacht hat.\n\nMit der Vermählung wird sie voraussichtlich aus der unmittelbaren Familienordnung des Hauses Chwedonol ausscheiden und künftig dem Haus Draig angehören. Dieser Umstand stellt für sie eine besondere Veränderung dar, da sie in einer Familie aufgewachsen ist, deren Führung traditionell in weiblicher Hand liegt.\n\nNoch fällt es ihr schwer, sich ihre zukünftige Stellung und die damit verbundenen Erwartungen vollständig vorzustellen.\n\nEine mögliche Perspektive eröffnet sich durch die Überlegung, Einion nach Abschluss seiner Knappschaft gemeinsam mit Caralyn nach Caer Gwaunhir zu entsenden. Dort könnte das junge Paar Erfahrungen in der Verwaltung eines Lehens sammeln und sich auf zukünftige Aufgaben vorbereiten.\n\nOb Caralyn eines Tages tatsächlich eine bedeutende Stellung innerhalb der Grafschaft einnehmen wird, bleibt abzuwarten. Ihre praktische Ausbildung, ihre Vertrautheit mit den Angelegenheiten der Seefahrt und ihr pflichtbewusstes Wesen könnten sich dabei jedoch als wertvoll erweisen.\n\nGegenwärtig ist sie vor allem eine junge Ritterin, deren gesellschaftliche Bedeutung durch ihre Verlobung bereits erheblich gewachsen ist, während ihre persönliche Erfahrung mit dieser Entwicklung erst noch Schritt halten muss."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung – Meredithe Chwedonol",
+            "text": "Unter den zahlreichen Angehörigen ihrer Familie nimmt Lady Meredithe Chwedonol einen besonderen Platz in Caralyns Leben ein.\n\nAls ihre ehemalige Rittermutter war Meredithe über mehrere Jahre hinweg nicht nur für ihre Ausbildung verantwortlich, sondern wurde auch zu einer wichtigen Vertrauensperson und Ratgeberin.\n\nDie ältere Ritterin, deren Leben durch den Verlust ihres Gemahls und ihre schwere Verletzung geprägt wurde, vermittelte Caralyn ein Verständnis von Mut, das weit über die Bereitschaft zum Kampf hinausging.\n\nMeredithe lehrte sie, dass Verantwortung nicht allein darin besteht, entschlossen zu handeln, sondern ebenso darin, die Folgen des eigenen Handelns zu bedenken. Besonders auf See, wo eine einzige unbedachte Entscheidung das Leben einer ganzen Besatzung gefährden kann, betrachtete sie diese Fähigkeit als unerlässlich.\n\nCaralyn bewundert ihre Großtante nicht nur wegen ihrer ritterlichen Erfahrung, sondern vor allem wegen ihrer Beharrlichkeit und der stillen Würde, mit der sie ihr Schicksal trägt.\n\nDas Verhältnis zwischen beiden ist von großer Zuneigung geprägt. Während Meredithe gewöhnlich eher zurückhaltend auftritt, begegnet Caralyn ihr mit einer natürlichen Herzlichkeit, die der älteren Ritterin durchaus guttut.\n\nAuch nach ihrem Ritterschlag sucht Caralyn gelegentlich den Rat ihrer ehemaligen Lehrmeisterin. Insbesondere bei Entscheidungen, die ihr schwierig erscheinen, schätzt sie Meredithes ruhige und überlegte Sichtweise.\n\nMeredithe wiederum betrachtet ihre ehemalige Knappin mit einer gewissen Zufriedenheit. Caralyn mag keine außergewöhnliche Kriegerin geworden sein, doch besitzt sie jene Eigenschaften, die Meredithe an einem Ritter besonders schätzt: Pflichtgefühl, Aufrichtigkeit und die Bereitschaft, Verantwortung für andere zu übernehmen."
+          }
+        ],
+        "historyTitle": "Charakter",
+        "historyText": "Caralyn Chwedonol ist eine junge Frau von freundlichem Wesen, deren größte Stärke weniger in außergewöhnlichen Fähigkeiten als in ihrer Verlässlichkeit und ihrem Umgang mit anderen Menschen liegt. Sie gehört nicht zu jenen Rittern, die nach Ruhm streben oder sich durch große Taten einen Namen machen möchten.<br>Vielmehr betrachtet sie ihre Stellung als Verpflichtung, der sie nach bestem Vermögen gerecht werden will.<br><br>Ihre Bodenständigkeit verdankt sie zu einem erheblichen Teil ihrer Erziehung. Insbesondere ihr Vater Glyndwr, der als männlicher Angehöriger des Hauses Chwedonol niemals dessen Führung erben konnte, vermittelte ihr ein Verständnis von Verantwortung, das nicht allein an Rang und Herkunft gebunden ist. Caralyn<br>lernte früh, dass auch jene Aufgaben, die wenig Ansehen versprechen, gewissenhaft erfüllt werden müssen.<br><br>Trotz ihrer ruhigen und umgänglichen Art ist sie keineswegs willenlos. Sie besitzt durchaus eigene Überzeugungen und kann überraschend bestimmt auftreten, wenn sie etwas für richtig hält. Besonders Ungerechtigkeit, Nachlässigkeit und der Missbrauch von Vertrauen widerstreben ihr. Allerdings ist sie noch jung und verfügt bislang über wenig Erfahrung mit den politischen und gesellschaftlichen Verwicklungen des höheren Adels.<br><br>Caralyn ist sich ihrer eigenen Grenzen durchaus bewusst. Sie weiß, dass andere Ritter geschickter kämpfen, erfahrenere Seeleute bessere Entscheidungen treffen und ältere Familienmitglieder die Angelegenheiten des Hauses sicherer beurteilen können. Anstatt sich davon entmutigen zu lassen, ist sie gewöhnlich bereit, zuzuhören und zu lernen.<br><br>Ihre Verlobung mit Einion Draig offenbart eine weitere Seite ihres Wesens. Caralyn ist durchaus empfänglich für Zuneigung und Romantik, ohne dabei ihren Sinn für das Praktische aufzugeben. Einions fröhliche und verträumte Art gefällt ihr aufrichtig, auch wenn sie ahnt, dass seine Neigung, sich in eigenen Vorstellungen zu verlieren, ihre Geduld gelegentlich beanspruchen könnte.<br><br>Dabei möchte sie seine Fantasie keineswegs einschränken. Vielmehr besitzt sie die Fähigkeit, seinen Gedanken mit freundlichem Interesse zu begegnen und ihn zugleich an die Wirklichkeit zu erinnern. <br><br>Caralyn hat bislang keine großen Pläne für ihr Leben entwickelt. Sie möchte glücklich werden, ihre Pflichten erfüllen und den Menschen, die ihr nahestehen, eine gute Gefährtin sein. Welche Aufgaben und Möglichkeiten sich ihr eines Tages eröffnen werden, überlässt sie vorerst der Zukunft.",
+        "worksTitle": "Können & Fähigkeiten",
+        "works": [
+          "Dreizackkampf - Als ausgebildete Morwyr beherrscht Caralyn den Dreizack und die damit verbundenen Kampftechniken. Ihre Fähigkeiten entsprechen denen einer or-dentlich ausgebildeten Ritterin, ohne außergewöhnlich zu sein.",
+          "Kampf zur See - Sie ist mit den besonderen Anforderungen des Kampfes auf Schif-fen vertraut, insbesondere mit beengten Verhältnissen, schwankendem Untergrund und den Gefahren eines Entergefechts.",
+          "Nautik - Caralyn verfügt über gute Kenntnisse der Seemannschaft, der Schiffsabläu-fe und der Aufgaben einer Besatzung.",
+          "Navigation - Sie kann Seekarten lesen, Kurse bestimmen und sich anhand von Ster-nen, Küstenverläufen, Wind und Strömungen orientieren.",
+          "Schiffsführung - Während ihrer Ausbildung übernahm sie unter Aufsicht ihrer Rit-termutter wiederholt Aufgaben der Schiffsführung. Ein eigenständiges Kommando über ein Schiff hatte sie bislang jedoch nicht inne.",
+          "Menschenführung - Caralyn besitzt ein ruhiges und freundliches Auftreten. Sie be-müht sich um klare Anweisungen und ist bereit, den Rat erfahrener Untergebener an-zunehmen.",
+          "Lesen und Schreiben - Durch ihre Erziehung und den Einfluss ihrer Mutter verfügt sie über eine gute schriftliche Bildung und interessiert sich besonders für Reisebe-richte und Erzählungen.",
+          "Verwaltungskenntnisse - Sie besitzt grundlegende Kenntnisse der Organisation und Verwaltung, die sie durch das familiäre Umfeld und ihre ritterliche Ausbildung er-worben hat.",
+          "Körperliche Fähigkeiten - Ihre körperliche Stärke und Ausdauer bewegen sich im gewöhnlichen Rahmen einer ausgebildeten Ritterin. Sie zeichnet sich weder durch außergewöhnliche Kraft noch durch besondere Schnelligkeit aus."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Caralyn ist Einzelkind, besitzt jedoch zahlreiche Vettern und Cousinen innerhalb des weitverzweigten Hauses Chwedonol.",
+          "Sie verbrachte den größeren Teil ihrer Kindheit in Glastraeth, betrachtet jedoch auch die Familienburg im Hafenbezirk von Gwynthor als ihr Zuhause.",
+          "Ihr Ritterschlag liegt weniger als ein halbes Jahr zurück, weshalb sie noch zu den un-erfahrensten Rittern ihres Hauses gehört.",
+          "Obwohl sie eine ausgebildete Morwyr ist, hat sie bislang niemals selbstständig ein Schiff befehligt.",
+          "Caralyn liest gerne Reiseberichte und Geschichten über fremde Länder, obwohl sie selbst bereits seit ihrer Kindheit mit der Seefahrt vertraut ist.",
+          "Sie ist durchaus empfänglich für schöne Kleider, Schmuck und andere Annehmlich-keiten des höfischen Lebens und sieht darin keinen Widerspruch zu ihrem Ritter-stand.",
+          "Gelegentlich spricht sie ihre Gedanken aus, bevor sie darüber nachdenkt, wie ihre Worte aufgenommen werden könnten.",
+          "Sie lehnt die alten Fehden ihres Hauses ab, ohne deshalb dessen Traditionen und Brä-che infrage zu stellen.",
+          "Caralyn war es, die bei ihrer Annäherung an Einion Draig die Initiative ergriff und ihn nach einer Verlobung fragte.",
+          "Sie schätzt Einions verträumtes Wesen, obwohl gerade diese Eigenschaft ihre Geduld gelegentlich auf die Probe stellen dürfte.",
+          "Ihr Vater Glyndwr gilt als wichtiger Einfluss auf ihre bodenständige Persönlichkeit.",
+          "Trotz ihrer bevorstehenden Vermählung mit Einion möchte Caralyn ihre Verbindung zur Seefahrt nicht verlieren.",
+          "Über die Frage, wofür sie eines Tages in Erinnerung bleiben möchte, hat sie sich bis-lang kaum Gedanken gemacht.",
+          "Caralyn besitzt einen Goldfisch, den sie liebevoll „Eure Blubbrigkeit“ nennt. Sie besteht scherzhaft darauf, dass man das Tier seinem vermeintlich hohen Rang entsprechend anspricht. Ob der Goldfisch selbst von seiner herausra-genden gesellschaftlichen Stellung weiß, ist bislang ungeklärt."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Familie Chwedonol",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Gwenhwyfar Chwedonol",
+            "detail": "Urgroßmutter / Familienoberhaupt",
+            "image": "https://64.media.tumblr.com/706336b351fa2813b66cc5a030723bfe/509b0fc594dd0b61-78/s250x400/45ea1d30fc0fbc85448975851e05031f1f822ae7.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Niniane Chwedonol",
+            "detail": "Großmutter",
+            "image": "https://64.media.tumblr.com/503d36f23f07a07f7eafdc7f633bf737/509b0fc594dd0b61-d0/s250x400/9f5784a77c96d3af7feedb9d7ad391483d4ca334.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Meredithe Chwedonol",
+            "detail": "Großtante / Rittermutter",
+            "image": "https://64.media.tumblr.com/cf4049e87a3854e51cd963c1763e0d43/509b0fc594dd0b61-90/s250x400/e95621df26ef0f87fd3f5138b1c200ecd5839d76.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Morgaine Chwedonol",
+            "detail": "Tante / Lehenswartin von Glastraeth",
+            "image": "https://64.media.tumblr.com/32c84e5f08c8d73a4576f591a85815c8/151bc1668958c3d6-f0/s250x400/570f988fe9c241aa99af84f6f5dc0906796e26cd.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Glyndwr Chwedonol",
+            "detail": "Vater",
+            "image": "https://64.media.tumblr.com/1c236211f1e3434f92c3d1b03a7b8699/509b0fc594dd0b61-eb/s250x400/8314b51c3950256b961e670e9764deac9a5ed99e.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Kathleen Chwedonol",
+            "detail": "Mutter",
+            "image": "https://64.media.tumblr.com/27ea74099254c4512e1c60e4706d9c0b/509b0fc594dd0b61-14/s250x400/a60d9f8b3cee378c5752ff80997e462adf626810.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Haus Draig",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Einion Draig",
+            "detail": "Verlobter",
+            "image": "https://64.media.tumblr.com/4a7dfa653fc043fbaa6535a58c43ab90/f7cc597c74572057-16/s250x400/eac7456d99de206d4436527ea258c1839c0483bd.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Carys Draig",
+            "detail": "Schwägerin in Spe - Hast du mich gerade gebissen??",
+            "image": "https://64.media.tumblr.com/f118cbf9dfa42f8169bb96bc0881c87a/f7cc597c74572057-d2/s250x400/e51ea860134b99f0b4f403cf5c9d5ac2d7d92872.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cadfan Draig",
+            "detail": "Schwiegervater in Spe / Herold des Grafen",
+            "image": "https://64.media.tumblr.com/6034a84cca438e1a440ad8df3f682189/f7cc597c74572057-f7/s250x400/7a6018a5e2f1ece2f9e4c79432466edbd975b623.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Wynonna Draig (geb. Fiachrach)",
+            "detail": "Schwiegermonster in Spe",
+            "image": "https://i.imgur.com/HuYhwuh.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Freundestruppe in Spe",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Oweta Draig",
+            "detail": "Freundin in Spe",
+            "image": "https://64.media.tumblr.com/fb9e2ea658858eb078b7a48e3cd06152/5009d73b71942c23-b5/s250x400/59f3b85638db303cf656a36d5d97b6aa5f898ea0.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Lefraye Gafyr",
+            "detail": "Freundin in Spe",
+            "image": "https://i.imgur.com/TCZZeT9.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rianna Wyrm",
+            "detail": "Freundin in Spe",
+            "image": "https://64.media.tumblr.com/5a465765e109e1eccf1f9e838121ad83/2253a408f503aa07-06/s250x400/54b4a0bfaac2ce68d594df7e3bd23ff8dc8c5115.pnj",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Tierische Begleiter",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Eure Blubbrigkeit",
+            "detail": "Goldfisch · biografische Erwähnung",
+            "image": "https://i.imgur.com/Ub0OkV6.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eure Hufigkeit",
+            "detail": "Pferd",
+            "image": "https://i.imgur.com/c69AFl9.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Personenakte · Caralyn Chwedonol"
+      }
+    },
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "carryLabel": "Traglast",
+      "title": "Charakter-Inventar",
+      "money": "0 Gold, 6 Silber, 80 Kupfer, 0 Eisenpfennig",
+      "level": "Haus Chwedonol, Gwynthor & Glastraeth",
+      "revision": 1793659549767,
+      "portraitFit": "cover",
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "healthColor": "#5c7f20",
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "updatedAt": ""
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "moneyState": {
+        "gold": 0,
+        "silver": 6,
+        "copper": 80,
+        "pfennig": 0,
+        "totalCopper": 680
+      },
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+      "role": "Ritterin, Gwynthor & Glastraeth",
+      "items": [
+        {
+          "id": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "instanceId": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "templateId": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "templateName": "Caralyns Chwedonol-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+            "revision": "7cfaf43ad2ef720765fb3ee9"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Caralyns Chwedonol-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-efe3c1d38655839c%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "instanceId": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "templateId": "gwynthor-seven:chwedonol-dreizack",
+          "templateName": "Chwedonol Dreizack",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-dreizack",
+            "revision": "be71b2bb8d14a2556f1159af"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-dreizack",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Dreizack",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Dreizack in grünen und goldenen Hausfarben.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-1055815face35522%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "instanceId": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "templateId": "gwynthor-seven:chwedonol-enteraxt",
+          "templateName": "Chwedonol Enteraxt",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-enteraxt",
+            "revision": "23a75879de27a0282d3be37a"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-enteraxt",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Enteraxt",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Handliche Enteraxt für das Gedränge an Deck.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-2d5e4c953cecf2ef%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-netz-7",
+          "instanceId": "caralyn-chwedlonol-netz-7",
+          "templateId": "gwynthor-seven:netz",
+          "templateName": "Netz",
+          "definitionRef": {
+            "id": "gwynthor-seven:netz",
+            "revision": "4a6e140389422fc425cc0d34"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:netz",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Netz",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Ein Wurf- und Fangnetz. Kein automatischer Zustand ohne ausgearbeitete Aktion.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-4345de1502d3ed85%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-seil-8",
+          "instanceId": "caralyn-chwedlonol-seil-8",
+          "templateId": "gwynthor-seven:seil",
+          "templateName": "Seil",
+          "definitionRef": {
+            "id": "gwynthor-seven:seil",
+            "revision": "ea6062dea433bf62a09626bc"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:seil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Seil",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Hanfseil, 15 m. Die Verbindung mit Netz oder Harpune muss tatsächlich hergestellt werden.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-94b83e34baadaaf9%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "templateId": "standard:gemischtwarenhandler:signalpfeife",
+          "templateName": "Signalpfeife",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:signalpfeife",
+            "revision": "50fc073cd20c5da4b7111cbc"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:signalpfeife",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Signalpfeife",
+          "type": "Werkzeug",
+          "category": "equipment",
+          "description": "Metallpfeife, hörbar auf über 100 m.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/signalpfeife.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Signal, Metall, Warnung",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 3,
+            "maxCopper": 3
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 6
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 4
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "templateId": "standard:gemischtwarenhandler:wasserschlauch",
+          "templateName": "Wasserschlauch",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:wasserschlauch",
+            "revision": "9ac0c4ae35ada6ac7f54ffd4"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:wasserschlauch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Wasserschlauch",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Ziegenleder-Schlauch für ca. 2 L Wasser.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/wasserschlauch.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Wasser, Leder, Reise",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 3,
+            "maxCopper": 3
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 8
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 10
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "templateId": "standard:gemischtwarenhandler:nadel-faden",
+          "templateName": "Nadel & Faden",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:nadel-faden",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Nadel & Faden",
+          "type": "Werkzeug",
+          "category": "equipment",
+          "description": "Set aus Bronze- oder Eisennadel mit Garn.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Nähen, Reparatur, Garn",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-house-signet-20261102",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-house-signet-20261102",
+          "templateId": "house-signet:haus-chwedlonol",
+          "templateName": "Chwedonol-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-chwedlonol",
+            "revision": "3646d1af494257c5e06b3e24"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-chwedlonol",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Caralyn Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Chwedonol. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fhouse-signets-f390454695268772%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Chwedonol",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Chwedonol"
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-eure-hufigkeit",
+          "instanceId": "caralyn-eure-hufigkeit",
+          "creatureId": "companion-caralyn-eure-hufigkeit",
+          "name": "Eure Hufigkeit",
+          "image": "https://i.imgur.com/c69AFl9.png",
+          "description": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+          "type": "Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-02T22:45:49.767Z"
+        }
+      ],
+      "portraitPosition": "top",
+      "name": "Caralyn Chwedonol",
+      "moneyNotice": "",
+      "infoRows": [],
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "https://i.imgur.com/c69AFl9.png",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Eure Hufigkeit",
+          "species": "Pferd",
+          "role": "Reittier",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+          "description": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+          "infoRows": [],
+          "attributes": [],
+          "creatureId": "companion-caralyn-eure-hufigkeit",
+          "inventoryItemId": "caralyn-eure-hufigkeit"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ]
+    },
+    "updatedAt": "2026-11-02T22:45:49.767Z"
+  },
+  "creatures": [
+    {
+      "schemaVersion": 7,
+      "entityType": "creature",
+      "itemOrigin": {
+        "instanceId": "caralyn-eure-hufigkeit",
+        "inventoryItemId": "caralyn-eure-hufigkeit",
+        "templateId": "",
+        "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+        "ownerCharacterName": "Caralyn Chwedonol",
+        "disposition": "owned"
+      },
+      "needsStatReview": false,
+      "name": "Eure Hufigkeit",
+      "type": "Tier",
+      "species": "Pferd",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null,
+      "classification": {
+        "genus": "Pferde",
+        "location": "Gwynthor",
+        "house": "Haus Chwedonol"
+      },
+      "habitat": "Gwynthor und Glastraeth · Haus Chwedonol",
+      "challengeRating": 1,
+      "size": "Groß",
+      "level": 1,
+      "biography": {
+        "schemaVersion": 2,
+        "revision": 0,
+        "summary": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+        "appearance": "",
+        "personality": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+        "history": "",
+        "bonds": "Tierischer Begleiter von Caralyn Chwedonol.",
+        "habits": "",
+        "facts": [
+          {
+            "label": "Rolle",
+            "value": "Reittier"
+          }
+        ],
+        "sections": [],
+        "quote": "",
+        "quoteBy": "",
+        "traitsTitle": "Persönlichkeit & Eigenschaften",
+        "connectionsTitle": "Verbindungen",
+        "traits": [],
+        "connections": []
+      },
+      "imageSetSchemaVersion": 1,
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "https://i.imgur.com/c69AFl9.png",
+          "emotes": [],
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ],
+      "activeImageSetId": "standard",
+      "portrait": "https://i.imgur.com/c69AFl9.png",
+      "avatars": [],
+      "portraitCaption": "Eure Hufigkeit · Caralyn Chwedonol",
+      "templateId": "",
+      "instanceOrdinal": 0,
+      "combatProfile": {
+        "schemaVersion": 11,
+        "revision": 0,
+        "identity": {
+          "ancestry": "Pferd",
+          "archetype": "Tier",
+          "background": "Gwynthor und Glastraeth · Haus Chwedonol"
+        },
+        "templateSelections": {
+          "schemaVersion": 1,
+          "ancestryId": "",
+          "backgroundId": "",
+          "classId": "",
+          "attributeMethod": "",
+          "appliedAt": ""
+        },
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "languages": [],
+          "notes": ""
+        },
+        "progression": {
+          "level": 1,
+          "specialLevels": 0,
+          "resourceRulesVersion": 2,
+          "actionPoolChoices": [],
+          "experience": 0,
+          "nextLevelExperience": null,
+          "experienceReward": null,
+          "proficiencyBonusOverride": null
+        },
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 16,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 2,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 10,
+            "modifierOverride": null
+          }
+        ],
+        "hitPoints": {
+          "current": 15,
+          "temporary": 0,
+          "hitDie": 10,
+          "averagePerLevelOverride": null,
+          "maximumOverride": 15
+        },
+        "armorClass": {
+          "base": 10,
+          "dexterityMode": "full",
+          "dexterityCap": 2,
+          "shieldBonus": 0,
+          "magicModifier": 0,
+          "otherModifier": 0,
+          "override": null,
+          "overrideMode": "total"
+        },
+        "combat": {
+          "movement": 18,
+          "initiativeBonus": 0,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "passivePerceptionBonus": 0,
+          "canActAtZeroHitPoints": false,
+          "mounted": false
+        },
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ],
+        "skills": [
+          {
+            "id": "caralyn-eure-hufigkeit-perception",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": ""
+          }
+        ],
+        "weapons": [
+          {
+            "id": "caralyn-eure-hufigkeit-natural",
+            "inventoryItemId": "",
+            "name": "Hufschlag",
+            "image": "",
+            "weaponProfileId": "",
+            "triggerRules": [],
+            "weaponType": "natural",
+            "training": "simple",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Naturwaffe",
+            "notes": "",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          },
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "image": "",
+            "weaponProfileId": "",
+            "triggerRules": [],
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          }
+        ],
+        "armorItems": [],
+        "resources": [
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "focus",
+            "name": "Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "focus",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "pact-points",
+            "name": "Paktpunkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "pact",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "notes": ""
+          }
+        ],
+        "techniques": [],
+        "classTraining": {
+          "schemaVersion": 2,
+          "curriculumId": "",
+          "selections": [],
+          "techniqueSelections": []
+        },
+        "quirks": [],
+        "conditions": [],
+        "damageAffinities": [],
+        "abilities": [
+          {
+            "id": "caralyn-eure-hufigkeit-ability-0",
+            "name": "Reittier",
+            "description": "Trägt einen geeigneten Reiter. Auf- und Absitzen sowie berittene Manöver verwenden die gemeinsame Reittier- und Aktionslogik.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "passive",
+            "delivery": "ability",
+            "resolutionType": "",
+            "saveAttribute": "dexterity",
+            "halfDamageOnSave": false,
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          }
+        ],
+        "magic": {
+          "enabled": false,
+          "casterTier": "full",
+          "bypassResourceId": "",
+          "focusEnabled": false,
+          "focusResourceId": "focus",
+          "castingAttribute": "intelligence",
+          "spellAttackOverride": null,
+          "spellSaveDcOverride": null,
+          "manaResourceId": "mana-focus",
+          "slotResourceIds": [],
+          "notes": "",
+          "spells": []
+        },
+        "aura": {
+          "enabled": false,
+          "name": "Aura",
+          "domain": "",
+          "focusResourceId": "aura-focus",
+          "focusBypassCost": 1,
+          "notes": "",
+          "activeForm": {
+            "enabled": false,
+            "active": false,
+            "name": "Aktive Form",
+            "description": "",
+            "radius": "",
+            "target": "Selbst und gewählte Ziele",
+            "trigger": "",
+            "duration": "",
+            "requirements": "",
+            "aiInstructions": "",
+            "selfMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "allyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "enemyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            }
+          },
+          "latentPresence": {
+            "enabled": true,
+            "active": true,
+            "name": "Latente Präsenz",
+            "description": "",
+            "radius": "",
+            "target": "Umgebung, Verbündete und Gegner",
+            "trigger": "",
+            "duration": "",
+            "requirements": "",
+            "aiInstructions": "",
+            "selfMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "allyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
+            "enemyMechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            }
+          }
+        },
+        "cheats": {
+          "enabled": false,
+          "automaticCritical": false
+        },
+        "notes": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab."
+      },
+      "loot": {
+        "currency": "",
+        "notes": "Persönlicher Begleiter; kein festgelegter Handelswert.",
+        "items": [],
+        "revision": 0
+      },
+      "notes": "Eure Hufigkeit ist Caralyn Chwedonols persönliches Reitpferd. Die neue Biografie nennt das Tier samt Porträt. Rasse, Alter und Geschlecht sind bislang nicht festgelegt; das vorhandene allgemeine Pferdeprofil bildet seine Grundwerte ab.",
+      "id": "companion-caralyn-eure-hufigkeit",
+      "createdAt": "2026-11-02T22:45:49.767Z",
+      "updatedAt": "2026-11-02T22:45:49.767Z"
+    }
+  ],
+  "source": {
+    "biography": {
+      "biography": {
+        "biographyText": "<p>Caralyn Chwedonol gehört zu Haus Chwedonol. Sie wurde 1722 geboren und ist im Weltjahr 1740 etwa 18 Jahre alt.</p><p>Caralyn Chwedonol ist die Tochter von Glyndwr Chwedonol und Kathleen.</p><p>Ihre Klasse ist Morwyr; ihr Kampfprofil bleibt vorerst auf Stufe 1.</p>",
+        "historyText": "<p>Haus Chwedonol ist ein von Frauen geführtes Ritterhaus im Dienst der Saethwyr. Seine Kapitäne und Ritter zur See schützen die Küste; Burgen in Gwynthor und Glastraeth sowie eine Werft tragen seine Stellung.</p><p>Die Chwedonol verfügen über zwei Burgen, die ihre Stellung innerhalb der Grafschaft unterstreichen. Die erste erhebt sich im Hafenbereich von Gwynthor. Dort residiert das Familienoberhaupt, ebenso wie viele weitere Mitglieder des Hauses.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "triviaTitle": "Trivia",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg",
+        "abilities": [],
+        "connectionsTitle": "Familie und Herkunft",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "worksTitle": "Bekannte Werke",
+        "documentsTitle": "Quellen",
+        "works": [],
+        "quotes": [],
+        "connectionTextOffset": 0,
+        "sideWidth": 100,
+        "documents": [
+          {
+            "icon": "",
+            "title": "Haus Chwedonol · Stammbaum",
+            "text": "Person, Geburtsjahr, Eltern, Geschwister, Haus und Originalporträt.",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=caralyn-chwedlonol"
+          },
+          {
+            "icon": "",
+            "title": "Hausakte",
+            "text": "Überlieferter Hauskontext. Klassen und Ausrüstung folgen zusätzlich dem Autorenauftrag vom 02.11.2026.",
+            "link": "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.data.js"
+          }
+        ],
+        "biographyTitle": "Caralyn Chwedonol",
+        "footer": "Belegte Personenakte · Weltjahr 1740",
+        "trivia": [],
+        "historyTitle": "Belegter Familienhintergrund",
+        "connectionPortraitHeight": 68,
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Glyndwr Chwedonol",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chwedlonol/glyndwr-chwedlonol.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Kathleen",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chwedlonol/kathleen.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Chwedonol",
+            "detail": "Gwynthor",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png",
+            "imageFormat": "square"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Saethwyr",
+            "detail": "Dienst- beziehungsweise Lehnsbindung des Hauses; keine zusätzliche Wohnortzuordnung.",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Langes rotes Haar, grüne Augen und grün-goldener Wappenrock mit Meerjungfrau über dunkler Rüstung.</p>"
+          }
+        ],
+        "quotesTitle": "Zitate"
+      },
+      "quote": "",
+      "quoteBy": "",
+      "stats": [
+        [
+          "Name",
+          "Caralyn Chwedonol"
+        ],
+        [
+          "Geboren",
+          "1722"
+        ],
+        [
+          "Alter im Weltjahr 1740",
+          "etwa 18 Jahre"
+        ],
+        [
+          "Haus",
+          "Haus Chwedonol"
+        ],
+        [
+          "Sitz des Hauses",
+          "Gwynthor"
+        ],
+        [
+          "Klasse",
+          "Morwyr"
+        ],
+        [
+          "Stufe",
+          "1"
+        ]
+      ],
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1
+    },
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "carryLabel": "Traglast",
+      "title": "Charakter-Inventar",
+      "money": "0 Gold, 6 Silber, 80 Kupfer, 0 Eisenpfennig",
+      "level": "Haus Chwedonol, Gwynthor & Glastraeth",
+      "revision": 3,
+      "portraitFit": "cover",
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "healthColor": "#5c7f20",
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "updatedAt": ""
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "moneyState": {
+        "gold": 0,
+        "silver": 6,
+        "copper": 80,
+        "pfennig": 0,
+        "totalCopper": 680
+      },
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+      "role": "Ritterin, Gwynthor & Glastraeth",
+      "items": [
+        {
+          "id": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "instanceId": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "templateId": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "templateName": "Caralyns Chwedonol-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+            "revision": "7cfaf43ad2ef720765fb3ee9"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Caralyns Chwedonol-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-efe3c1d38655839c%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "instanceId": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "templateId": "gwynthor-seven:chwedonol-dreizack",
+          "templateName": "Chwedonol Dreizack",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-dreizack",
+            "revision": "be71b2bb8d14a2556f1159af"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-dreizack",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Dreizack",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Dreizack in grünen und goldenen Hausfarben.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-1055815face35522%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "instanceId": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "templateId": "gwynthor-seven:chwedonol-enteraxt",
+          "templateName": "Chwedonol Enteraxt",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-enteraxt",
+            "revision": "23a75879de27a0282d3be37a"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-enteraxt",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Enteraxt",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Handliche Enteraxt für das Gedränge an Deck.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-2d5e4c953cecf2ef%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-netz-7",
+          "instanceId": "caralyn-chwedlonol-netz-7",
+          "templateId": "gwynthor-seven:netz",
+          "templateName": "Netz",
+          "definitionRef": {
+            "id": "gwynthor-seven:netz",
+            "revision": "4a6e140389422fc425cc0d34"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:netz",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Netz",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Ein Wurf- und Fangnetz. Kein automatischer Zustand ohne ausgearbeitete Aktion.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-4345de1502d3ed85%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-seil-8",
+          "instanceId": "caralyn-chwedlonol-seil-8",
+          "templateId": "gwynthor-seven:seil",
+          "templateName": "Seil",
+          "definitionRef": {
+            "id": "gwynthor-seven:seil",
+            "revision": "ea6062dea433bf62a09626bc"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:seil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Seil",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Hanfseil, 15 m. Die Verbindung mit Netz oder Harpune muss tatsächlich hergestellt werden.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-94b83e34baadaaf9%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "templateId": "standard:gemischtwarenhandler:signalpfeife",
+          "templateName": "Signalpfeife",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:signalpfeife",
+            "revision": "50fc073cd20c5da4b7111cbc"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:signalpfeife",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Signalpfeife",
+          "type": "Werkzeug",
+          "category": "equipment",
+          "description": "Metallpfeife, hörbar auf über 100 m.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/signalpfeife.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Signal, Metall, Warnung",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 3,
+            "maxCopper": 3
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 6
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 4
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "templateId": "standard:gemischtwarenhandler:wasserschlauch",
+          "templateName": "Wasserschlauch",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:wasserschlauch",
+            "revision": "9ac0c4ae35ada6ac7f54ffd4"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:wasserschlauch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Wasserschlauch",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Ziegenleder-Schlauch für ca. 2 L Wasser.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/wasserschlauch.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Wasser, Leder, Reise",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 3,
+            "maxCopper": 3
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 8
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 10
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "templateId": "standard:gemischtwarenhandler:nadel-faden",
+          "templateName": "Nadel & Faden",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:nadel-faden",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Nadel & Faden",
+          "type": "Werkzeug",
+          "category": "equipment",
+          "description": "Set aus Bronze- oder Eisennadel mit Garn.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Nähen, Reparatur, Garn",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-house-signet-20261102",
+          "instanceId": "Eka4z7TWpzEgx8KjhIzy-house-signet-20261102",
+          "templateId": "house-signet:haus-chwedlonol",
+          "templateName": "Chwedonol-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-chwedlonol",
+            "revision": "3646d1af494257c5e06b3e24"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-chwedlonol",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Caralyn Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Chwedonol. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fhouse-signets-f390454695268772%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Chwedonol",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Chwedonol"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "portraitPosition": "top",
+      "name": "Caralyn Chwedonol",
+      "moneyNotice": "",
+      "infoRows": [],
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

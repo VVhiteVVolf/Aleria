@@ -12,6 +12,11 @@ const definitions = [
  ['saerwyn-kleid','Saerwyns pflaumenfarbenes Kleid','kleidung',art('saerwyn-kleid'),null,'Pflaumenfarbenes Kleid mit goldenen Borten, gerafften Ärmeln und breitem Taillengürtel nach Saerwyns Porträt.'],
  ['wyrm-ritterschwert','Wyrm Ritterschwert','waffen',art('wyrm-ritterschwert'),weapon('sword','sword','1d8','Hieb','Einhändig · Langschwert'),'Riannas gewöhnliches Langschwert. Der Hausname verleiht keinen magischen Bonus und ist kein Großschwertprofil.'],
  ['rianna-dolch','Dolch','waffen','/AleriaAlmanach/assets/gofrann-schmiede/items/stahldolch.png',weapon('dagger','dagger','1d4','Stich','Einhändig · Leicht · Finesse · Wurfwaffe','Nahkampf · Wurf 6/18 m'),'Schlichter Stahldolch für Rianna.'],
+ // Keep the historical definition ID and original image path stable; ownership
+ // was explicitly corrected to Oweta by the author on 2 November 2026.
+ ['rianna-silberhirsch','Owetas Silberhirsch','sonstiges',art('rianna-silberhirsch-v1'),null,'Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie ausschließlich Oweta Draig als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.',
+  [{type:'damage-reduction',magicScope:'magical',amount:1,activation:'carried',name:'Silberhirsch · Tenebritspuren'}]],
+ ['draig-speer','Draig Speer','waffen',art('oweta-draig-speer-v1'),{...weapon('spear','spear','1d6','Stich','Einhändig · Vielseitig · Wurfwaffe','Nahkampf · Wurf 6/18 m'),versatileDamageFormula:'1d8'},'Owetas Speer in der Bauform des Hauses Draig. Gewöhnlicher Speer mit 1W6 Stich, beidhändig 1W8; Wurfweite 6/18 m.'],
  ['draig-ritterschwert','Draig Ritterschwert','waffen','https://i.imgur.com/bthNwPb.png',{...weapon('sword','sword','1d8','Hieb','Einhändig · Vielseitig'),versatileDamageFormula:'1d10'},'Owetas gewöhnliches Draig-Ritterschwert. Vorhandene Hausbauform; keine persönlichen Angriffs-, Schadens- oder Ausbildungsboni.'],
  ['draig-dolch','Draig Dolch','waffen',oldArt('draig-dolch-v1'),weapon('dagger','dagger','1d4','Stich','Einhändig · Leicht · Finesse · Wurfwaffe','Nahkampf · Wurf 6/18 m'),'Owetas Draig-Dolch in der vorhandenen Hausbauform. Keine persönlichen Sonderboni.'],
  ['helwyr-langbogen','Helwyr Langbogen','waffen',oldArt('guinevere-langbogen-v4'),weapon('bow','longbow','1d8','Stich','Zweihändig · Munition','45/180 m'),'Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.'],
@@ -37,11 +42,12 @@ for (const [id,name,house] of [
  damageProtection:{name:'Plattengrundschutz',amount:1,damageTypes:['hieb','stich','wucht'],excludedDamageTypes:[]},properties:'Schwere Startrüstung',triggerRules:[]},
  'Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.']);
 export function buildGwynthorSevenItems({ publishedArtwork = true } = {}) {
- return definitions.map(([key,title,category,image,combatDefinition,description])=>({
+ return definitions.map(([key,title,category,image,combatDefinition,description,passiveEffects])=>({
   id:`gwynthor-seven:${key}`,canonicalKey:`gwynthor-seven:${key}`,title,category:category==='kleidung'?'sonstiges':category==='munition'?'werkzeuge':category,image:publishedArtwork ? GWYNTHOR_EQUIPMENT_ARTWORK[image]?.url || image : image,combatDefinition,description,
   type:category==='waffen'?'Waffe':category==='ruestungen'?'Rüstung':category==='kleidung'?'Kleidung':category==='munition'?'Munition':'Ausrüstung',
   section:'standard',categoryLabel:category,aliases:[],tags:['Gwynthor','Individuelle Ausrüstung'],priceRange:null,stock:null,
-  attributes:[],infoRows:[],updatedAt:0,mechanicsStatus:combatDefinition?'defined':'narrative',inventoryUseMode:'use',
+  attributes:[],infoRows:[],updatedAt:0,mechanicsStatus:combatDefinition||passiveEffects?.length?'defined':'narrative',inventoryUseMode:'use',
+  ...(passiveEffects?.length?{passiveEffects,stackable:false}:{}),
   sourceRefs:[{kind:'authored-equipment',sourceId:key,sourcePage:'AleriaAlmanach/modules/gwynthor-seven/README.md'}],hiddenMeta:{origin:'Gwynthor · Autorenauftrag 02.11.2026'}
  }));
 }

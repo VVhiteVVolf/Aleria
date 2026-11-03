@@ -1,0 +1,107 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-gwyvern--tegwen-gwyvern.json",
+  "character": {
+    "id": "person--haus-gwyvern--tegwen-gwyvern",
+    "name": "Tegwen Gwyvern",
+    "inventory": {
+      "characterId": "person--haus-gwyvern--tegwen-gwyvern",
+      "name": "Tegwen Gwyvern",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg",
+      "title": "Charakter-Inventar",
+      "role": "Haus Gwyvern",
+      "level": "Nicht ausgearbeitet",
+      "hitpoints": "Nicht ausgearbeitet",
+      "carryValue": "Nicht ausgearbeitet",
+      "status": "Nicht ausgearbeitet",
+      "infoRows": [],
+      "attributes": [],
+      "items": [
+        {
+          "id": "tegwen-uffyrae",
+          "instanceId": "tegwen-uffyrae",
+          "creatureId": "companion-tegwen-uffyrae",
+          "name": "Uffyrae",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+          "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "type": "Rhyfel-Stute",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel-Stute",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gwyvern--tegwen-gwyvern",
+          "ownerCharacterName": "Tegwen Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.718Z"
+        },
+        {
+          "id": "person--haus-gwyvern--tegwen-gwyvern-house-signet-20261102",
+          "instanceId": "person--haus-gwyvern--tegwen-gwyvern-house-signet-20261102",
+          "templateId": "house-signet:haus-gwyvern",
+          "templateName": "Gwyvern-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gwyvern",
+            "revision": "ddded0df5c142ed080032800"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-gwyvern",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gwyvern--tegwen-gwyvern",
+          "ownerCharacterName": "Tegwen Gwyvern",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Tegwen Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Gwyvern",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Gwyvern"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "companions": [
+        {
+          "id": "card-tegwen-uffyrae",
+          "name": "Uffyrae",
+          "species": "Rhyfel-Stute",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+          "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "summary": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-tegwen-uffyrae",
+          "inventoryItemId": "tegwen-uffyrae"
+        }
+      ],
+      "revision": 1791839346720
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

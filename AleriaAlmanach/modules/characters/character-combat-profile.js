@@ -1,4 +1,7 @@
 import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
+import { renderCombatSheetHeader, renderCombatSheetPages } from '../combat-sheet/combat-sheet-pages.js';
+import { createCombatSheetWorkspace } from '../combat-sheet/combat-sheet-workspace.js';
+const sheetWorkspace = createCombatSheetWorkspace();
 import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
 const SKILL_PROFICIENCY_LABELS={none:'Ungeübt',trained:'Geübt',expertise:'Expertise'};
 import { renderDevelopmentShop, refreshDevelopmentShop } from '../character-development/development-ui.js';
@@ -105,8 +108,8 @@ function synchronizeDraftFromCombat(options = {}) {
   return result;
 }
 
-function synchronizeDraftFromInventory(inventory = getInventoryDraft()) {
-  const result = synchronizeEquipmentFromInventory({ inventory, combatProfile: draftProfile });
+function synchronizeDraftFromInventory(inventory = getInventoryDraft(), options = {}) {
+  const result = synchronizeEquipmentFromInventory({ inventory, combatProfile: draftProfile, ...options });
   draftProfile = sanitizeCharacterCombatProfile(result.combatProfile);
   result.inventory = setInventoryDraft(result.inventory);
   return result;
@@ -229,11 +232,11 @@ function activateEntryIconFallbacks(root) {
 
 function refreshArchiveLinkedEntryIcons(root = document.getElementById('cp-combat-sheet-root')) {
   root?.querySelectorAll?.('[data-combat-entry-icon][data-combat-entry-kind][data-combat-entry-name]').forEach(image => {
-    const spell = image.dataset.combatEntryKind === 'spell'
-      ? draftProfile.magic?.spells.find(item => item.id === image.dataset.combatEntryId) : null;
+    const collectionPath = { spell: 'magic.spells', technique: 'techniques', ability: 'abilities', quirk: 'quirks', condition: 'conditions' }[image.dataset.combatEntryKind];
+    const item = collectionPath && getAtPath(draftProfile, collectionPath)?.find(entry => entry.id === image.dataset.combatEntryId);
     const presentation = getCharacterSheetEntryIconPresentation(
       image.dataset.combatEntryKind,
-      spell || { name: image.dataset.combatEntryName }
+      item || { name: image.dataset.combatEntryName }
     );
     if (!presentation.linked) return;
     const fallbackSource = getSafeImageSource(presentation.fallbackSource);
@@ -257,19 +260,6 @@ function renderIdentityAndProgression(profile) {
   const characterName = activeCharacter?.name || 'Unbenannte Figur';
   const classSummary = getCenyrCharacterClassSummary(profile);
   return `
-    <header class="cp-sheet-titlebar">
-      <div>
-        <span class="cp-sheet-kicker">Aleria · Kampf- &amp; Abenteuerprofil</span>
-        <h3>Charakterbogen</h3>
-      </div>
-      <div class="cp-sheet-title-actions">
-        <p>Alle Werte sind frei bearbeitbar, werden online mit der Figur gespeichert und als verbindlicher Kontext an AleriaGPT übergeben.</p>
-        <button type="button" data-combat-action="open-character-setup">✦ Starthilfe · Aufbau &amp; Ausbildung</button>
-        <button type="button" data-combat-action="open-level-up">✦ Stufenaufstieg</button>
-      </div>
-    </header>
-    ${setupNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(setupNotice)}</p>` : ''}
-    ${levelUpNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(levelUpNotice)}</p>` : ''}
     <section class="cp-sheet-card cp-sheet-identity" aria-label="Figur und Fortschritt">
       <div class="cp-sheet-portrait">
         ${portraitSource
@@ -282,7 +272,7 @@ function renderIdentityAndProgression(profile) {
         <label><span>Volk / Herkunft</span><input data-combat-path="identity.ancestry" value="${escapeMarkup(profile.identity.ancestry)}" maxlength="100" placeholder="z. B. Halbelf"></label>
         <label><span>Klasse / Archetyp</span><input data-combat-path="identity.archetype" value="${escapeMarkup(profile.identity.archetype)}" maxlength="120" placeholder="z. B. Waldläufer"></label>
         <label><span>Hintergrund</span><input data-combat-path="identity.background" value="${escapeMarkup(profile.identity.background)}" maxlength="120" placeholder="z. B. Volksheld"></label>
-        ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · ${escapeMarkup(classSummary.culture)} · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount} Formtechniken automatisch erlernt · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
+        ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · ${escapeMarkup(classSummary.culture)} · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount} erlernte Formtechniken${profile.progression?.development?.mode === 'purchase' ? ' · Einzelkauf mit Balancepunkten' : ' · automatische Formvergabe'} · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
         ${classSummary?.foundationOptions.length ? `<label class="wide"><span>Grundausbildung des Derwyn</span><select data-combat-foundation-choice>${classSummary.foundationOptions.map(option => `<option value="${escapeMarkup(option.formId)}"${selected(classSummary.foundationFormId, option.formId)}>${escapeMarkup(option.name)}</option>`).join('')}</select><small>Beide Wege führen nach der freien kreativen Phase zu denselben vier Wyrmformen. Ein Wechsel gleicht die Grundtechniken an.</small></label>` : ''}
       </div>
       <div class="cp-sheet-progression">
@@ -404,7 +394,7 @@ function renderAttributeRadar(profile) {
     <section class="cp-sheet-card cp-sheet-attributes" aria-labelledby="cp-sheet-attributes-title">
       <div class="cp-sheet-section-head"><div><span>Grundlagen</span><h4 id="cp-sheet-attributes-title">Attribute</h4></div><small>Wert 10 entspricht Modifikator +0</small></div>
       <div class="cp-sheet-attribute-layout">
-        <div class="cp-sheet-radar-wrap">
+        <details class="cp-sheet-radar-wrap" data-sheet-disclosure="attribute-diagram"><summary>Eigenschaftsdiagramm</summary>
           <svg class="cp-sheet-radar" viewBox="0 0 260 250" role="img" aria-label="Diagramm der sechs Attribute">
             <g class="cp-sheet-radar-grid" aria-hidden="true">
               <polygon points="130,20 229,77 229,173 130,230 31,173 31,77"></polygon>
@@ -423,7 +413,7 @@ function renderAttributeRadar(profile) {
             </g>
           </svg>
           <p>Das Netz zeigt die Werte relativ zur frei nutzbaren Skala 1–30.</p>
-        </div>
+        </details>
         <div class="cp-sheet-attribute-grid">
           ${profile.attributes.map(attribute => {
             const effective = getEffectiveCombatAttribute(calculation, attribute.key);
@@ -435,8 +425,8 @@ function renderAttributeRadar(profile) {
               <input class="cp-sheet-attribute-score" type="number" min="1" max="40" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="score" value="${attribute.score}" aria-label="${escapeMarkup(attribute.label)} Wert">
               <strong data-combat-attribute-modifier="${attribute.key}">${displayModifier(getAttributeModifier(effective))}</strong>
               <small class="cp-sheet-attribute-effect" data-combat-attribute-effective="${attribute.key}"${note ? '' : ' hidden'}>${escapeMarkup(note)}</small>
-              <label>Kürzel<input data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="shortLabel" value="${escapeMarkup(attribute.shortLabel)}" maxlength="8"></label>
-              <label>Mod. frei<input type="number" min="-20" max="20" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="modifierOverride" value="${attribute.modifierOverride ?? ''}" placeholder="auto"></label>
+              <details class="cs-attribute-options"><summary>Anpassen</summary><label>Kürzel<input data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="shortLabel" value="${escapeMarkup(attribute.shortLabel)}" maxlength="8"></label>
+              <label>Modifikator frei<input type="number" min="-20" max="20" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="modifierOverride" value="${attribute.modifierOverride ?? ''}" placeholder="auto"></label></details>
             </article>`; }).join('')}
         </div>
       </div>
@@ -566,7 +556,7 @@ function renderResources(profile) {
 function renderWeapons(profile) {
   return `<section class="cp-sheet-card">
     <div class="cp-sheet-section-head"><div><span>Inventar als Vorlage · danach frei</span><h4>Waffen</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="weapon">${renderInventoryOptions('weapon')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="weapon">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="weapons">+ Waffe</button></div></div>
-    <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<article class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}">
+    <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<details class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}" data-sheet-entry="${escapeMarkup('weapon:' + weapon.id)}" data-sheet-search-text="${escapeMarkup([weapon.name,weapon.damageType,weapon.properties].join(' '))}"><summary class="cs-weapon-summary"><span><strong>${escapeMarkup(weapon.name || 'Unbenannte Waffe')}</strong><small>${escapeMarkup(weapon.damageType)} · ${escapeMarkup(weapon.range)}</small></span><b>${escapeMarkup(weapon.damageFormula.toUpperCase().replace(/D/g,'W'))}</b>${weapon.equipped ? '<em>Aktiv</em>' : `<button type="button" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}">Auswählen</button>`}</summary><div class="cs-weapon-body">
       <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname">${weapon.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : '<span class="cp-sheet-equipment-link is-system">Grundangriff</span>'}<button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
       ${renderEquipmentArtwork(weapon, { characterId: activeCharacter?.id })}
       <div class="cp-sheet-fields weapon">
@@ -584,7 +574,7 @@ function renderWeapons(profile) {
         <label class="wide"><span>Notizen / besondere Regeln</span><textarea data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="notes" maxlength="800">${escapeMarkup(weapon.notes)}</textarea></label>
       </div>
       <div class="cp-sheet-item-derived">Angriff <strong data-combat-weapon-attack="${escapeMarkup(weapon.id)}">${displayModifier(getWeaponAttackModifier(profile, weapon))}</strong> · Schaden <strong data-combat-weapon-damage="${escapeMarkup(weapon.id)}">${displayModifier(getWeaponDamageModifier(profile, weapon))}</strong></div>
-    </article>`).join('') : '<p class="cp-sheet-empty">Noch keine Waffe. Manuell hinzufügen oder aus dem Inventar übernehmen.</p>'}</div>
+    </div></details>`).join('') : '<p class="cp-sheet-empty">Noch keine Waffe. Manuell hinzufügen oder aus dem Inventar übernehmen.</p>'}</div>
   </section>`;
 }
 
@@ -682,16 +672,20 @@ function renderCardProperty(iconSource, label, value, valueRole = '') {
   return `<div class="cp-card-property">${renderPropertyIcon(iconSource)}<div><span>${escapeMarkup(label)}</span><strong${valueRole ? ` data-role="${escapeMarkup(valueRole)}"` : ''}>${escapeMarkup(value)}</strong></div></div>`;
 }
 
-function renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items) {
+function renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items, defaultActivation = '') {
   return `<article class="cp-sheet-card cp-sheet-detail-cards cp-sheet-presentation-cards">
-    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}">+ ${addLabel}</button></div>
+    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}"${defaultActivation ? ` data-combat-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
     <div class="cp-entry-card-list">${items.map(item => {
       const costs = (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · ');
       const meta = kind === 'quirk'
-        ? [item.type, item.appliesWhen, item.target].filter(Boolean).join(' · ')
-        : [getActivationLabel(item.activationType), item.delivery, costs].filter(Boolean).join(' · ');
+        ? ['Eigenschaft', item.appliesWhen, item.target].filter(Boolean).join(' · ')
+        : [getActivationLabel(item.activationType), costs].filter(Boolean).join(' · ');
+      const activeWeapon = draftProfile.weapons.find(weapon => weapon.equipped) || draftProfile.weapons[0];
+      const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon);
+      const damage = kind === 'technique' ? describeTechniqueDamage(item, draftProfile) : '';
+      const damageRoll = kind === 'technique' && compatible ? resolveTechniqueDamageFormula(item, activeWeapon || {}, draftProfile).toUpperCase().replace(/D/g, 'W') : '';
       const mechanics = renderMechanicsSummary(item.mechanics);
-      const propertyRows = kind === 'ability'
+      const propertyRows = kind === 'ability' || kind === 'technique'
         ? [
           renderCardProperty(getActivationIconSource(item.activationType), 'Aktivierung', getActivationLabel(item.activationType)),
           renderCardProperty(getRollIconSource(item.rollFormula, item.damageType), 'Wirkung', [String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'), item.damageType].filter(Boolean).join(' · ')),
@@ -701,10 +695,12 @@ function renderPresentationDetailCards(collection, title, kicker, kind, addLabel
           renderCardProperty(getActivationIconSource('passive'), 'Gilt', item.appliesWhen || 'Dauerhaft'),
           renderCardProperty(getRangeIconSource(), 'Betroffene', item.target || 'Selbst')
         ].join('');
-      return `<details class="cp-entry-card ${item.active ? 'active' : 'inactive'}">
+      return `<details class="cp-entry-card ${kind === 'technique' ? 'cp-sheet-detail-card' : ''} ${item.active && compatible ? 'active' : 'inactive'}" data-compatible="${compatible}" data-sheet-entry="${escapeMarkup(collection + ':' + item.id)}">
         <summary>${renderEntryIcon(kind, item, 'cp-entry-card-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup(meta || (item.active ? 'Aktiv' : 'Inaktiv'))}</small><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><span>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</span></span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
         <div class="cp-entry-card-body">
           <section><h5>Beschreibung</h5><p>${escapeMarkup(item.description || 'Noch keine Beschreibung eingetragen.')}</p></section>
+          ${!compatible ? `<p class="cp-entry-limitations">Nicht mit ${escapeMarkup(activeWeapon?.name || 'der aktiven Waffe')} verfügbar.</p>` : ''}
+          ${damage ? `<p class="cp-entry-mechanics-note"><strong>Schaden${damageRoll ? `: ${escapeMarkup(damageRoll)}` : ''}</strong> · ${escapeMarkup(damage)}</p>` : ''}
           ${propertyRows ? `<section><h5>Eigenschaften</h5><div class="cp-card-property-grid">${propertyRows}</div></section>` : ''}
           ${mechanics ? `<p class="cp-entry-mechanics-note"><strong>Strukturierte Wirkung:</strong> ${escapeMarkup(mechanics)}</p>` : ''}
           ${item.requirements || item.limitations ? `<p class="cp-entry-limitations"><strong>Grenzen:</strong> ${escapeMarkup(item.requirements || item.limitations)}</p>` : ''}
@@ -717,28 +713,7 @@ function renderPresentationDetailCards(collection, title, kicker, kind, addLabel
 
 function renderDetailCards(profile, collection, title, kicker, kind, addLabel, itemsOverride = null, defaultActivation = '') {
   const items = itemsOverride || profile[collection] || [];
-  if (kind === 'quirk' || kind === 'ability') {
-    return renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items);
-  }
-  const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || null;
-  return `<article class="cp-sheet-card cp-sheet-detail-cards">
-    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}"${defaultActivation ? ` data-combat-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
-    <div class="cp-sheet-detail-list">${items.map(item => {
-      const costs = (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · ');
-      const meta = kind === 'quirk'
-        ? [item.type, item.appliesWhen, item.target].filter(Boolean).join(' · ')
-        : [item.activationType, item.delivery, costs].filter(Boolean).join(' · ');
-      const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon);
-      const stateClass = item.active && compatible ? 'active' : 'inactive';
-      const compatibilityNote = compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar.`;
-      const damage = kind === 'technique' ? describeTechniqueDamage(item, profile) : '';
-      const damageRoll = kind === 'technique' && compatible ? resolveTechniqueDamageFormula(item, activeWeapon || {}, profile).toUpperCase().replace(/D/g, 'W') : '';
-      return `<article class="cp-sheet-detail-card ${stateClass}" data-compatible="${compatible}">
-        <div><span>${escapeMarkup([meta || (item.active ? 'Aktiv' : 'Inaktiv'), compatibilityNote].filter(Boolean).join(' · '))}</span><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</p>${damage ? `<p><b>Schadenswürfel${damageRoll ? `: ${escapeMarkup(damageRoll)}` : ''}</b><br><small>${escapeMarkup(damage)} · Feste Waffen- und Klassenboni kommen hinzu.</small></p>` : ''}</div>
-        <div class="cp-sheet-detail-actions"><button type="button" data-combat-action="edit-detail-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-entry-kind="${kind}">Bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}">×</button></div>
-      </article>`;
-    }).join('') || `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
-  </article>`;
+  return renderPresentationDetailCards(collection, title, kicker, kind, addLabel, items, defaultActivation);
 }
 
 function renderConditionCollection(profile, title, kicker, addLabel) {
@@ -860,7 +835,7 @@ function renderSpellCard(spell, manaName, profile) {
     Number(upcast.amountPerLevel) ? `+${upcast.amountPerLevel} je Grad` : '',
     upcast.maximumLevel ? `bis Grad ${upcast.maximumLevel}` : ''
   ].filter(Boolean);
-  return `<details class="cp-spell-card ${spell.prepared ? 'prepared' : 'unprepared'}" data-spell-id="${escapeMarkup(spell.id)}">
+  return `<details class="cp-spell-card ${spell.prepared ? 'prepared' : 'unprepared'}" data-sheet-entry="${escapeMarkup('spell:' + spell.id)}" data-spell-id="${escapeMarkup(spell.id)}">
     <summary>${renderEntryIcon('spell', spell, 'cp-spell-summary-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup([spell.school, presentationLabel, getSpellLevelLabel(spell.level)].filter(Boolean).join(' · '))}</small><strong>${escapeMarkup(spell.name || 'Unbenannter Zauber')}</strong><span>${escapeMarkup(spell.description || 'Noch keine Zauberbeschreibung.')}</span></span><span class="cp-spell-ready-state">${spell.prepared ? 'Bereit' : 'Nicht bereit'}</span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
     <div class="cp-spell-card-body">
       <section class="cp-spell-card-hero">
@@ -914,27 +889,25 @@ function renderSheet() {
   const profile = projectEquipmentArtwork({
     ...(activeCharacter || {}), combatProfile: sanitizeCharacterCombatProfile(draftProfile)
   }).combatProfile;
-  root.innerHTML = `<div class="cp-combat-profile">
-    <details class="cp-combat-status"><summary>Aktueller Kampfstand <small>LP, Ressourcen &amp; Zustände</small></summary><section data-character-combat-status aria-label="Aktueller Kampfstand"></section></details>
-    ${renderIdentityAndProgression(profile)}
-    ${renderAttributeRadar(profile)}
-    ${renderDerivedStats(profile)}
-    ${renderRules(profile)}
-    ${renderProficiencies(profile)}
-    ${renderResources(profile)}
-    ${renderSkills(profile)}
-    ${renderWeapons(profile)}
-    ${renderTechniques(profile)}
-    ${renderArmor(profile)}
-    ${renderDamageAffinities(profile)}
-    ${renderAura(profile)}
-    <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Dauerhafte Zustände & Effekte', 'Grundwerte des Bogens · temporäre Effekte oben im Kampfstand verwalten', 'Zustand')}</section>
-    ${renderAbilities(profile)}
-    ${renderMagic(profile)}
-    ${renderCheats(profile)}
-    ${renderNotes(profile)}
+  sheetWorkspace.capture(root);
+  const pages = {
+    overview: `${renderDerivedStats(profile)}${renderAttributeRadar(profile)}
+      <details class="cs-drawer" data-sheet-disclosure="progression"><summary>Ausbildung &amp; Fortschritt bearbeiten</summary>${renderIdentityAndProgression(profile)}${renderProficiencies(profile)}</details>
+      <details class="cp-combat-status" data-sheet-disclosure="scene-status"><summary>Aktueller Szenenstand <small>TP, Ressourcen &amp; Zustände</small></summary><section data-character-combat-status aria-label="Aktueller Kampfstand"></section></details>${renderNotes(profile)}`,
+    arsenal: `${renderWeapons(profile)}${renderTechniques(profile)}<details class="cs-drawer" data-sheet-disclosure="armor"><summary>Rüstung &amp; Schutz</summary>${renderArmor(profile)}${renderDamageAffinities(profile)}</details>`,
+    traits: `${renderNarrativeCollection(profile, 'quirks', 'Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Eigenschaft')}${renderAbilities(profile)}${renderNarrativeCollection(profile, 'conditions', 'Dauerhafte Zustände', 'Temporäre Effekte im Szenenstand verwalten', 'Zustand')}`,
+    magic: `${renderMagic(profile)}${renderAura(profile)}`,
+    resources: `${renderResources(profile)}${renderSkills(profile)}`,
+    rules: `${renderRules(profile)}${renderCheats(profile)}`
+  };
+  root.innerHTML = `<div class="cp-combat-profile" data-rpg-sheet>
+    ${renderCombatSheetHeader({ name: activeCharacter?.name, portrait: getSafeImageSource(activeCharacter?.portrait), archetype: profile.identity.archetype, level: profile.progression.level + profile.progression.specialLevels })}
+    ${setupNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(setupNotice)}</p>` : ''}
+    ${levelUpNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(levelUpNotice)}</p>` : ''}
+    ${renderCombatSheetPages(pages)}
     ${renderLevelUpDialog(profile)}
   </div>`;
+  sheetWorkspace.mount(root);
   activateResourceIconFallbacks(root);
   mountCharacterCombatStatus(activeCharacter);
   activateEntryIconFallbacks(root);
@@ -1265,10 +1238,11 @@ function equipWeapon(itemId) {
 }
 
 function init(character = {}, options = {}) {
+  sheetWorkspace.reset(character.id);
   activeCharacter = character;
   draftProfile = upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
   activeCharacter = { ...character, combatProfile: structuredClone(draftProfile) };
-  synchronizeDraftFromInventory(character.inventory || {});
+  synchronizeDraftFromInventory(character.inventory || {}, { definitionRulesOnly: true, preserveLoadout: true });
   synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: options.render !== false });
   levelUpState = null;
   levelUpNotice = '';
@@ -1350,6 +1324,7 @@ document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-combat-action]');
   if (!trigger || !trigger.closest('#cp-tab-combat')) return;
   const action = trigger.dataset.combatAction;
+  if (action === 'equip-weapon' && trigger.closest('summary')) event.preventDefault();
   if (action === 'add-item') {
     const collection = trigger.dataset.combatCollection;
     addItemFromCharacterArchive(collection, '', () => addItem(collection));

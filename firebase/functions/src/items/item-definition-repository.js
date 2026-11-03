@@ -68,7 +68,7 @@ export function hydrateItemRecord(record, definitions, { requireEquipped = false
       && !definitions.has(itemDefinitionKey(item.definitionRef))) throw new HttpsError('failed-precondition', `Die Regelversion von ${item.name || 'der angelegten Ausrüstung'} fehlt.`);
   }
   return { ...record, combatProfile: synchronizeEquipmentFromInventory({ inventory: record.inventory,
-    combatProfile: record.combatProfile || {}, definitions, addMissingEquipment: true, preserveLoadout }).combatProfile };
+    combatProfile: record.combatProfile || {}, definitions, addMissingEquipment: true, preserveLoadout, definitionRulesOnly: true }).combatProfile };
 }
 
 // All reads happen while preparing. The caller writes only after its remaining

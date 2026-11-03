@@ -113,7 +113,19 @@ function switchCreaturePage(page) {
   if (!state.draft || !CREATURE_SHEET_PAGES.some(item => item.id === page)) return;
   collectDraftFromForm();
   state.activePage = page;
-  renderSheet();
+  // The forms stay mounted. Navigation must not rebuild every attack, spell,
+  // portrait and editor or discard an expanded card.
+  document.querySelectorAll('#creature-sheet-root .creature-sheet-page').forEach(panel => {
+    panel.hidden = panel.id !== `creature-page-${page}`;
+  });
+  document.querySelectorAll('#creature-page-tabs [data-creature-page]').forEach(button => {
+    const active = button.dataset.creaturePage === page;
+    button.setAttribute('aria-selected', String(active)); button.tabIndex = active ? 0 : -1;
+  });
+  if (page === 'overview') {
+    const content = document.querySelector('#creature-page-overview .creature-dossier');
+    if (content) content.outerHTML = renderCreatureDossier(state.draft);
+  }
   document.getElementById('creature-sheet-root').scrollTop = 0;
   document.getElementById(`creature-tab-${page}`)?.focus({ preventScroll: true });
 }

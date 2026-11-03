@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-02",
+  "request": {
+    "structure": "Jeder Flügel als eigene Kategorie unter Wohntrakte; jede Wohnpartei mit eigenen Modulen und passenden Bildern.",
+    "scope": "Nur lebende Draigs; Owain und seine Bastarde ignorieren.",
+    "clarificationQuote": "Er meint den Grafen Galahad Draig"
+  },
+  "editorialDecisions": {
+    "countNearFamily": "Galahad und Gwendolyn liegen im Grafenflügel bei den Kindern. Eine gemeinsame Familienstube verbindet die Wohnflügel.",
+    "wingGrouping": "Sechs Flügel anhand der belegten Familienbeziehungen; keine weitergehende frühere Flügelaufteilung war im bereitgestellten Gespräch belegt.",
+    "guestRooms": "Wegverheiratete lebende Draigs erhalten eigene Besuchsquartiere. Es werden keine kanonischen Wohnsitze geändert.",
+    "unknownCharacterLink": "Egon bleibt als Ehepartner Alicyns benannt. Der gleichnamige Einzelcharakter wird ohne belegte genealogische Verknüpfung nicht zugeordnet.",
+    "reuse": "Acht persönliche Zimmerbilder und das vorhandene gräfliche Bild bleiben erhalten. 25 fehlende Gemächer und eine gemeinsame Familienstube werden neu generiert."
+  },
+  "validation": {
+    "livingDraigs": 32,
+    "households": 34,
+    "modules": 36,
+    "independentScenes": 35,
+    "generatedImages": 26,
+    "imageTool": "built-in image_gen",
+    "imagesVisuallyInspected": 26,
+    "imageDimensions": "1024x1536",
+    "targetedModelTestsPassed": 13,
+    "browserViews": 72,
+    "browserLayouts": ["desktop", "phone"],
+    "externalWritesBlockedDuringBrowserTest": true,
+    "onlineReadbackAndImageHashesVerified": true
+  }
+}

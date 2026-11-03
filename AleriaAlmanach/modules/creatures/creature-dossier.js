@@ -14,18 +14,20 @@ function renderAction(action, profile, resourceNames) {
   const description = action.weapon?.notes || '';
   const heading = action.resolutionMode === 'automatic' ? 'Automatisch' : action.resolutionMode === 'saving-throw'
     ? `SG ${action.spellSaveDc}` : `${signed(action.attackModifier)} Treffer`;
-  return `<section><div><strong>${escape(action.name)}</strong><b>${escape(heading)}</b></div>
+  return `<details class="creature-dossier-action"><summary><strong>${escape(action.name)}</strong><b>${escape(heading)}</b></summary><div>
     <p>${escape((action.formula || 'Effekt').replace(/d(?=\d)/gi, 'W'))}${action.formula ? ` ${signed(action.damageModifier || 0)}` : ''}${action.maximumTargets > 1 ? ` · bis zu ${action.maximumTargets} gewählte Ziele` : ''}</p>
     <small>${escape(costs || 'Ohne Ressourcenkosten')}</small>
     ${save?.enabled ? `<p>${escape(saveLabel)}-Rettung SG ${save.dc} · bei Misslingen: ${escape(save.failureCondition.name)}</p>` : ''}
-    ${description ? `<details><summary>Wirkung</summary><p>${escape(description)}</p></details>` : ''}
-  </section>`;
+    ${description ? `<p>${escape(description)}</p>` : ''}
+  </div></details>`;
 }
 
 export function renderCreatureDossier(creature, { includePortrait = true } = {}) {
   const profile = resolveCombatProfile(creature);
+  const defaults = new Set(['default-melee', 'default-unarmed', 'default-unarmed-melee', 'unarmed']);
+  const hasOwnAttack = profile.actions.some(action => action.kind === 'weapon' && !defaults.has(action.sourceId));
   const actions = profile.actions.filter(action => ['weapon', 'technique', 'ability', 'spell', 'song', 'prayer'].includes(action.kind)
-    && action.sourceId !== 'default-melee' && action.compatible !== false);
+    && !(hasOwnAttack && defaults.has(action.sourceId)) && action.compatible !== false);
   const resourceNames = new Map(profile.resources.map(resource => [resource.id, resource.name]));
   const portrait = CREATURE_IMAGE_LIBRARY.normalizeImageUrl(creature.portrait) || '';
   return `<article class="creature-dossier" aria-label="Kreaturkarte ${escape(creature.name)}">
@@ -43,7 +45,7 @@ export function renderCreatureDossier(creature, { includePortrait = true } = {})
         <p class="creature-dossier-source">Gespeicherter Kreaturbogen. Im Kampf werden LP, Ressourcen und Zustände je Instanz in der Szene geführt.</p>
         <h3>Angriffe &amp; Fähigkeiten</h3>
         <div class="creature-dossier-attacks">${actions.map(action => renderAction(action, profile, resourceNames)).join('')}</div>
-        ${profile.abilities.filter(ability => ability.active && !ability.combatUsable).map(ability => `<section class="creature-dossier-trait"><h3>${escape(ability.name)}</h3><p>${escape(ability.description)}</p></section>`).join('')}
+        ${profile.abilities.filter(ability => ability.active && !ability.combatUsable).map(ability => `<details class="creature-dossier-trait"><summary>${escape(ability.name)}</summary><p>${escape(ability.description)}</p></details>`).join('')}
         <details class="creature-dossier-notes"><summary>Zustände &amp; Taktik</summary><p>${escape(profile.conditions.filter(condition => condition.active).map(condition => `${condition.name}${condition.duration ? ` · ${condition.duration}` : ''}`).join('; ') || 'Keine Zustände im gespeicherten Bogen.')}</p><p>${escape(creature.notes)}</p></details>
       </div>
     </div>

@@ -62,6 +62,7 @@
         "0Sku8euk5jhlWebdsskI",
         "0Sku8euk5jhlWebdsskI",
         "0Sku8euk5jhlWebdsskI",
+        "0Sku8euk5jhlWebdsskI",
         "0Sku8euk5jhlWebdsskI"
       ],
       "documents": [
@@ -84,6 +85,11 @@
           "documentId": "0Sku8euk5jhlWebdsskI",
           "createdAt": "",
           "updatedAt": "2026-10-13T17:55:29.861Z"
+        },
+        {
+          "documentId": "0Sku8euk5jhlWebdsskI",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -99,16 +105,17 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/0Sku8euk5jhlWebdsskI-inventar.json",
-    "sourceExportedAt": "2026-10-13T17:55:29.861Z",
-    "sourceUpdatedAt": "2026-10-13T17:55:29.861Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/0Sku8euk5jhlWebdsskI.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "0Sku8euk5jhlWebdsskI",
       "0Sku8euk5jhlWebdsskI",
       "0Sku8euk5jhlWebdsskI",
       "0Sku8euk5jhlWebdsskI",
       "0Sku8euk5jhlWebdsskI"
     ],
-    "contentHash": "6a174fb9decc484e385f0183dd6787a0ed70c7794b07c9c55ea0aac52b35d084"
+    "contentHash": "3d312d7b26aeb93f0b34aa261e8b07667beeadf221e30dcfedc15664dc687e83"
   },
   "local": {
     "notes": "",
@@ -2493,6 +2500,490 @@
           "revision": 1791914130223
         },
         "updatedAt": "2026-10-13T17:55:29.861Z"
+      },
+      {
+        "id": "0Sku8euk5jhlWebdsskI",
+        "name": "Trevor Gwyvern",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "role": "Prinz, Abergwint",
+          "level": "Haus Gwyvern, Gwendolyns Ufer",
+          "equipmentQuiz": {
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "open": false,
+            "status": "",
+            "updatedAt": ""
+          },
+          "portraitFit": "cover",
+          "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+          "portraitPosition": "top",
+          "title": "Charakter-Inventar",
+          "moneyNotice": "",
+          "hitpoints": "TP / Zustand",
+          "carryValue": "Noch festlegen",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "companions": [
+            {
+              "id": "companion-mqu1vat2-0-zz2n",
+              "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Bwmbo",
+              "species": "Cenyric-Kater",
+              "role": "Gefährte",
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "summary": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+              "description": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+              "infoRows": [],
+              "attributes": [],
+              "creatureId": "companion-trevor-bwmbo",
+              "inventoryItemId": "trevor-bwmbo"
+            },
+            {
+              "id": "card-trevor-struppi",
+              "name": "Struppi",
+              "species": "Rhyfel-Hengst",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+              "description": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+              "summary": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-trevor-struppi",
+              "inventoryItemId": "trevor-struppi"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "name": "Trevor Gwyvern",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "moneyState": {
+            "gold": 0,
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "infoRows": [],
+          "items": [
+            {
+              "id": "item-mqu1vat1-0-w8ef",
+              "category": "weapon",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Hauptwaffe",
+              "type": "Waffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-1-exvo",
+              "category": "armor",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Reiseausrüstung",
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-3-2lgm",
+              "category": "potions",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Heil- oder Verbrauchsgut",
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "category": "documents",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Dokumente / Urkunden",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "category": "other",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "trevor-bwmbo",
+              "instanceId": "trevor-bwmbo",
+              "creatureId": "companion-trevor-bwmbo",
+              "name": "Bwmbo",
+              "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+              "description": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+              "type": "Cenyric-Kater",
+              "category": "companion",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "templateName": "Cenyric-Kater",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+              "ownerCharacterName": "Trevor Gwyvern",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-12T21:09:06.705Z"
+            },
+            {
+              "id": "trevor-struppi",
+              "instanceId": "trevor-struppi",
+              "creatureId": "companion-trevor-struppi",
+              "name": "Struppi",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+              "description": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+              "type": "Rhyfel-Hengst",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Rhyfel-Hengst",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+              "ownerCharacterName": "Trevor Gwyvern",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-12T21:09:06.712Z"
+            },
+            {
+              "id": "0Sku8euk5jhlWebdsskI-house-signet-20261102",
+              "instanceId": "0Sku8euk5jhlWebdsskI-house-signet-20261102",
+              "templateId": "house-signet:haus-gwyvern",
+              "templateName": "Gwyvern-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-gwyvern",
+                "revision": "ddded0df5c142ed080032800"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-gwyvern",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+              "ownerCharacterName": "Trevor Gwyvern",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Trevor Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Gwyvern",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Gwyvern"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "status": "Gesund",
+          "revision": 1791915361327
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -2946,10 +3437,45 @@
           "attributes": [],
           "infoRows": [],
           "individualizedAt": "2026-10-12T21:09:06.712Z"
+        },
+        {
+          "id": "0Sku8euk5jhlWebdsskI-house-signet-20261102",
+          "instanceId": "0Sku8euk5jhlWebdsskI-house-signet-20261102",
+          "templateId": "house-signet:haus-gwyvern",
+          "templateName": "Gwyvern-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gwyvern",
+            "revision": "ddded0df5c142ed080032800"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-gwyvern",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+          "ownerCharacterName": "Trevor Gwyvern",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Trevor Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Gwyvern",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Gwyvern"
+            }
+          ],
+          "attributes": []
         }
       ],
       "status": "Gesund",
-      "revision": 1791914130223
+      "revision": 1791915361327
     },
     "role": "Erster Maat",
     "identity": {
@@ -3288,6 +3814,6 @@
     "origin": "",
     "relevance": "",
     "status": "",
-    "updatedAt": "2026-10-13T17:55:29.861Z"
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
   }
 }

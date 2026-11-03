@@ -3,6 +3,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import { characterDatabaseContentHash } from '../../CharakterDatenbank/lib/character-database-model.mjs';
 import { mergeCharacterRecordProjections } from '../../CharakterDatenbank/lib/character-record-projections.mjs';
+import { hasNewerEquipmentRecordProjection } from '../../CharakterDatenbank/lib/character-equipment-record-projection.mjs';
 import { reconcileReviewedCompanions, REVIEWED_COMPANION_OWNERS } from '../modules/creatures/creature-ownership-review.mjs';
 const root = new URL('../../', import.meta.url), check = process.argv.includes('--check');
 const read = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
@@ -16,6 +17,12 @@ for (const review of REVIEWED_COMPANION_OWNERS) {
   assert.equal(record.character.id, review.id); assert(person);
   const character = reconcileReviewedCompanions(record.character, source.creatures, source.reviewedAt);
   const sourcePath = `Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/${review.id}.json`;
+  if (hasNewerEquipmentRecordProjection({ record, registry, snapshot, sourcePath, exportedAt: source.reviewedAt })) {
+    assert.deepEqual(character.inventory, record.character.inventory, `Neuere bestätigte Akte hat abweichende Begleiter: ${review.name}`);
+    records.push({ path: row.path, record, snapshotCharacter: person });
+    exports.push({ sourcePath, exportedAt: source.reviewedAt });
+    continue;
+  }
   const exported = { type: 'aleria-character', mergeStrategy: 'replace-exported-fields', exportedAt: source.reviewedAt,
     character: { id: review.id, name: review.name, inventory: character.inventory, updatedAt: source.reviewedAt } };
   if (!isDeepStrictEqual(character.inventory, record.character.inventory)) {

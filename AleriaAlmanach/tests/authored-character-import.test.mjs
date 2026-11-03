@@ -40,3 +40,18 @@ test('independent bounded imports remain reproducible after another feature adds
   const repeated=buildAuthoredCharacterImport(second,entries,'first');
   for(const projection of ['registry','snapshot','report'])assert.deepEqual(repeated[projection],second[projection],projection);
 });
+
+test('a historical authored import preserves a newer confirmed record and consumed resources',()=>{
+  const first=buildAuthoredCharacterImport(prior,entries,'test');
+  const record=structuredClone(first.records[0].record),person=structuredClone(first.snapshot.characters.find(character=>character.id==='new'));
+  const sourcePath='Charakter Archiv Exporte/Bestätigte Prüfung/new.json';
+  record.character.inventory={items:[{id:'later-owned-item'}],money:'7 Kupfer'};
+  record.character.combatProfile={hitPoints:{current:2},resources:[{id:'used',current:0}]};
+  record.sync.sourceArchive=sourcePath;record.sync.sourceExportedAt='2026-11-03T00:00:00Z';
+  person.inventory=structuredClone(record.character.inventory);person.combatProfile=structuredClone(record.character.combatProfile);
+  const registry={...first.registry,sourceOverlays:[...first.registry.sourceOverlays,sourcePath]};
+  const snapshot={...first.snapshot,characters:first.snapshot.characters.map(character=>character.id==='new'?person:character),sourceOverlays:[...first.snapshot.sourceOverlays,sourcePath]};
+  const result=buildAuthoredCharacterImport({registry,snapshot,report:first.report,existingRecords:[record]},entries,'test');
+  assert.deepEqual(result.records[0].record,record);
+  assert.deepEqual(result.snapshot.characters.find(character=>character.id==='new'),person);
+});

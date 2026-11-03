@@ -6,6 +6,7 @@ const SOURCE_ARCHIVE_ROOTS = [
   'js/biography/sources/',
   'AleriaAlmanach/modules/gwynthor-seven/source/',
   'AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/',
+  'AleriaAlmanach/assets/castell-draig/wohnfluegel-2026-11-02/',
   'shared/accepted-realms/sources/',
   'shared/accepted-realms/scripts/',
   'shared/accepted-realms/authoring/',

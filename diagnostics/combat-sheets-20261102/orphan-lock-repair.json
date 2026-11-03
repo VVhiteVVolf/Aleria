@@ -1,0 +1,39 @@
+{
+  "verified": true,
+  "committedAt": "2026-11-02T21:48:23.048496Z",
+  "path": "combat_profile_locks/creatures/records/catalog-draig-lehensritter",
+  "queries": [
+    {
+      "entryId": "test-testarena-sparring",
+      "documents": 0,
+      "readTimes": [
+        "2026-11-02T21:48:22.371874Z"
+      ]
+    },
+    {
+      "entryId": "test-testarena-sparring::session:testarena-sparring",
+      "documents": 0,
+      "readTimes": [
+        "2026-11-02T21:48:22.473579Z"
+      ]
+    }
+  ],
+  "before": {
+    "activeEncounterKeys": [
+      "test-testarena-sparring::session:testarena-sparring:88d3305b-435d-4a89-b7b4-be5d518f9ac2"
+    ],
+    "updatedAt": {
+      "seconds": 1785991483,
+      "nanoseconds": 187000000
+    }
+  },
+  "after": {
+    "activeEncounterKeys": [],
+    "updatedAt": {
+      "seconds": 1793656102,
+      "nanoseconds": 468000000
+    }
+  },
+  "profileWrites": 0,
+  "historyWrites": 0
+}

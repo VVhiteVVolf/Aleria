@@ -70,6 +70,7 @@
       "collection": "characters",
       "documentId": "person--haus-wylan--neala-wylan",
       "documentIds": [
+        "person--haus-wylan--neala-wylan",
         "person--haus-wylan--neala-wylan"
       ],
       "documents": [
@@ -77,6 +78,11 @@
           "documentId": "person--haus-wylan--neala-wylan",
           "createdAt": "2026-09-02T20:12:47.010Z",
           "updatedAt": "2026-09-03T17:54:50.847Z"
+        },
+        {
+          "documentId": "person--haus-wylan--neala-wylan",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -98,13 +104,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wylan--neala-wylan.json",
-    "sourceExportedAt": "2026-11-02T20:28:09.214Z",
-    "sourceUpdatedAt": "2026-11-02T20:28:09.214Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-wylan--neala-wylan.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-wylan--neala-wylan",
       "person--haus-wylan--neala-wylan"
     ],
-    "contentHash": "4b00377fa9cdd0cd8bc31c90e62f9e028f5607ef671cd805d8a6c6cab3062e25"
+    "contentHash": "b63cfe5060be5959f3b5cc9a62bd984334a47ca27be9b60309a4393e8851f6e2"
   },
   "local": {
     "notes": "",
@@ -376,6 +383,95 @@
           ]
         },
         "updatedAt": "2026-11-02T20:28:09.214Z"
+      },
+      {
+        "id": "person--haus-wylan--neala-wylan",
+        "name": "Neala Wylan",
+        "inventory": {
+          "companions": [
+            {
+              "id": "card-neala-floeckchen",
+              "name": "Flöckchen",
+              "species": "Ceffyl-Pferd",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+              "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "summary": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-neala-floeckchen",
+              "inventoryItemId": "neala-floeckchen"
+            }
+          ],
+          "items": [
+            {
+              "id": "neala-floeckchen",
+              "instanceId": "neala-floeckchen",
+              "creatureId": "companion-neala-floeckchen",
+              "name": "Flöckchen",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+              "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "type": "Ceffyl-Pferd",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Ceffyl-Pferd",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wylan--neala-wylan",
+              "ownerCharacterName": "Neala Wylan",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-02T20:28:09.214Z"
+            },
+            {
+              "id": "person--haus-wylan--neala-wylan-house-signet-20261102",
+              "instanceId": "person--haus-wylan--neala-wylan-house-signet-20261102",
+              "templateId": "house-signet:haus-wylan",
+              "templateName": "Wylan-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-wylan",
+                "revision": "b55084f1e497f31cdb92d7d7"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-wylan",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-wylan--neala-wylan",
+              "ownerCharacterName": "Neala Wylan",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Neala Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wylan O'Cerrigarth. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fhouse-signets-9f254d9cc421c51c%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Wylan O'Cerrigarth",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Wylan O'Cerrigarth"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "revision": 1792249762666
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -630,8 +726,44 @@
           "attributes": [],
           "infoRows": [],
           "individualizedAt": "2026-11-02T20:28:09.214Z"
+        },
+        {
+          "id": "person--haus-wylan--neala-wylan-house-signet-20261102",
+          "instanceId": "person--haus-wylan--neala-wylan-house-signet-20261102",
+          "templateId": "house-signet:haus-wylan",
+          "templateName": "Wylan-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-wylan",
+            "revision": "b55084f1e497f31cdb92d7d7"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-wylan",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-wylan--neala-wylan",
+          "ownerCharacterName": "Neala Wylan",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Neala Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wylan O'Cerrigarth. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fhouse-signets-9f254d9cc421c51c%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Wylan O'Cerrigarth",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Wylan O'Cerrigarth"
+            }
+          ],
+          "attributes": []
         }
-      ]
+      ],
+      "revision": 1792249762666
     },
     "name": "Neala Wylan",
     "origin": "",
@@ -644,6 +776,6 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "",
-    "updatedAt": "2026-11-02T20:28:09.214Z"
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
   }
 }

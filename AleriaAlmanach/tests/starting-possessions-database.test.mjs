@@ -18,6 +18,29 @@ const records = await Promise.all(KNIGHT_EQUIPMENT_TARGETS.map(target => {
 // inside this pure test. The executable importer requires the actual afterfile.
 const verification = { ...plan, verified: true, dryRun: false, idempotent: true, committedAt: prepared.capturedAt };
 const options = { registry, snapshot, report, records, online: prepared, verification };
+// Exercise historical imports from their own provenance baseline, retaining
+// today's additional possessions as explicit preservation fixtures.
+for (const record of records) {
+  const target = KNIGHT_EQUIPMENT_TARGETS.find(target => target.knownIds.includes(record.character.id));
+  record.sync.sourceArchive = `${KNIGHT_STARTING_EXPORT_DIRECTORY}/${target.key}.json`;
+  record.sync.sourceExportedAt = prepared.capturedAt;
+}
+
+test('Ein vollständig registrierter neuerer Ausrüstungsimport wird vom alten Beleg nicht zurückgesetzt', () => {
+  const input = structuredClone(options), archive = 'Charakter Archiv Exporte/Neuerer Besitz/person.json';
+  input.registry.sourceOverlays.push(archive); input.snapshot.sourceOverlays.push(archive);
+  input.registry.sourceOverlays.sort(); input.snapshot.sourceOverlays.sort();
+  for (const record of input.records) {
+    record.sync.sourceArchive = archive;
+    record.sync.sourceExportedAt = '2099-01-01T00:00:00.000Z';
+  }
+  const result = projectKnightStartingPossessionsDatabase(input);
+  assert.equal(result.verification.supersededProfiles, 4);
+  assert.deepEqual(result.records, []); assert.deepEqual(result.exports, []);
+  assert.deepEqual(result.snapshot, input.snapshot);
+  input.snapshot.sourceOverlays = input.snapshot.sourceOverlays.filter(path => path !== archive);
+  assert.throws(() => projectKnightStartingPossessionsDatabase(input), /nicht vollständig registriert/);
+});
 
 test('Ein bestätigter späterer Import besitzt die Projektionen; unvollständige Zuständigkeiten werden abgewiesen', () => {
   assert.equal(hasKnightStartingPossessionsProjection({}, {}), false);

@@ -44,6 +44,11 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'inventory-theme', label: 'Inventory presentation, images, card data and equipment/transfer invariants',
     inputs: ['AleriaAlmanach/modules/character-inventory/', 'AleriaAlmanach/modules/characters/character-inventory-profile.js',
+      'AleriaAlmanach/modules/combat-sheet/', 'AleriaAlmanach/modules/creatures/creature-dossier.js',
+      'AleriaAlmanach/modules/creatures/creature-system.js', 'AleriaAlmanach/modules/character-trait-review/character-trait-publication-plan.mjs',
+      'AleriaAlmanach/tests/combat-sheet-workspace.browser.mjs', almanach('combat-sheet-schema-upgrade'), almanach('character-trait-publication'),
+      'AleriaAlmanach/modules/gwynthor-seven/caralyn-biography-import.mjs', 'AleriaAlmanach/modules/gwynthor-seven/caralyn-companion.js',
+      'AleriaAlmanach/modules/gwynthor-seven/source/caralyn-biography-20261102.json', almanach('caralyn-biography-import'),
       'AleriaAlmanach/modules/characters/character-combat-profile.js', almanach('character-inventory-owner'),
       'AleriaAlmanach/styles/character-inventory-cards.css', 'AleriaAlmanach/styles/module-page-character-inventory.css',
       'AleriaAlmanach/public/assets/inventory-ui/', 'AleriaAlmanach/tests/character-inventory-theme.browser.mjs',
@@ -51,7 +56,27 @@ export const SITE_BUILD_TASKS = [
         'group-landing-inventory','inventory-use-model','inventory-equipment-effects','scene-inventory-transfer'].map(almanach)],
     commands: [['AleriaAlmanach/modules/character-inventory/scripts/build-ui-art.mjs', '--verify'],
       testCommand(...['character-inventory-owner','character-inventory-images','character-inventory-itemization','character-database-inventory',
-      'group-landing-inventory','inventory-use-model','inventory-equipment-effects','scene-inventory-transfer'].map(almanach))]
+      'group-landing-inventory','inventory-use-model','inventory-equipment-effects','scene-inventory-transfer',
+      'combat-sheet-schema-upgrade','character-trait-publication','silberhirsch-owner-correction','caralyn-biography-import'].map(almanach)),
+      testCommand('firebase/functions/tests/combat-inventory-hydration.test.js', 'firebase/functions/tests/reviewed-trait-revisions.test.js')]
+  },
+  {
+    id: 'house-signets', label: 'Own-house seal rings, Silberhirsch magic protection and bounded inventory amendments',
+    inputs: ['AleriaAlmanach/modules/house-knight-rings/', 'AleriaAlmanach/assets/house-knight-rings/',
+      'AleriaAlmanach/modules/gwynthor-seven/equipment.mjs', 'AleriaAlmanach/modules/gwynthor-seven/equipment-artwork.mjs',
+      'AleriaAlmanach/modules/character-equipment/', 'AleriaAlmanach/modules/combat/combat-effect-model.js',
+      'AleriaAlmanach/modules/combat/combat-profile-model.js', 'AleriaAlmanach/modules/item-definitions/',
+      'CharakterDatenbank/scripts/sync-house-signets.mjs', 'CharakterDatenbank/lib/character-equipment-record-projection.mjs',
+      'CharakterDatenbank/registry.json', 'CharakterDatenbank/generated/', 'CharakterDatenbank/records/',
+      'Stammbäume/assets/js/data/families.registry.js', 'Stammbäume/assets/js/domain/house-profile.js',
+      'Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/', 'diagnostics/house-knight-rings-20261102/',
+      'firebase/scripts/content/publish-house-signets.mjs', 'firebase/scripts/content/publish-house-signets-artwork.mjs',
+      'firebase/functions/tests/silberhirsch-protection.test.js', almanach('house-signets-and-silberhirsch'), almanach('house-signets-database')],
+    commands: [['AleriaAlmanach/scripts/build-authored-item-catalog.mjs', '--check'],
+      ['CharakterDatenbank/scripts/sync-house-signets.mjs', '--check'],
+      testCommand(almanach('house-signets-and-silberhirsch'), almanach('house-signets-database'),
+        almanach('equipment-damage-protection'), almanach('character-equipment-sync')),
+      testCommand('firebase/functions/tests/silberhirsch-protection.test.js')]
   },
   {
     id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer',
@@ -161,12 +186,15 @@ export const SITE_BUILD_TASKS = [
     commands: [['AleriaAlmanach/scripts/build-gwynthor-marktplatz.mjs', '--check'],
       testCommand(almanach('gwynthor-marktplatz'))]
   },
-
   {
     id: 'quest-journal', label: 'Quest sources, prepared travel, landing bridges and atomic rewards',
     inputs: ['AleriaAlmanach/quests.html', 'AleriaAlmanach/modules/quests/', 'AleriaAlmanach/modules/landing/',
+      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/modules/item-definitions/',
       'AleriaAlmanach/scripts/build-quest-catalog.mjs', 'AleriaAlmanach/scripts/build-troetzli-quest.mjs',
+      'AleriaAlmanach/scripts/build-fleischsammler-quest.mjs', 'AleriaAlmanach/scripts/build-quest-preparations.mjs',
+      'Stammb?ume/assets/js/data/gwynthor-fleischsammler/',
+      'Stammb?ume/assets/images/houses/Llamreis Ankunft/B?rgerliche/Gwynthor/fleischsammler/',
       'Anzeigetafeln/', 'Karten/karten.registry.js', 'Karten/assets/js/lsb/',
       'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', 'Karten/assets/js/karto-app.js',
       'Stammbäume/assets/data/published-families/haus-penrudd.json', ...questCatalogInputs,
@@ -178,7 +206,6 @@ export const SITE_BUILD_TASKS = [
       testCommand(...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)),
       testCommand('firebase/functions/tests/quest-system.test.js')]
   },
-
   {
     id: 'balchder-characters', label: 'Published Balchder biographies and bounded database import',
     inputs: ['firebase/scripts/content/balchder-character-plan.mjs', 'firebase/scripts/content/publish-balchder-characters.mjs',
@@ -226,6 +253,7 @@ export const SITE_BUILD_TASKS = [
         'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-composition-sources.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs', 'Anzeigetafeln/tests/board-performance.test.mjs',
         'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs', 'Anzeigetafeln/tests/notice-timeline-archive.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
+        'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Anzeigetafeln/tests/fleischsammler.test.mjs', 'Anzeigetafeln/tests/gwrgan-lleucu.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
         ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach))]
   },
   {
@@ -354,6 +382,7 @@ export const SITE_BUILD_TASKS = [
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
+      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/item-register/item-register-standard.js',
       'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
       'Kontinente/modules/goldmund/goldmund-context.mjs',

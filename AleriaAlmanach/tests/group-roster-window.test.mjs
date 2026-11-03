@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { createRequire } from 'node:module';
+import { parseFragment } from 'parse5';
 import { selectGroupRosterWindow, mountGroupRosterWindow } from '../modules/landing/group-roster-window.js';
 import { renderGroupRoster, renderGroupRosterResults } from '../modules/landing/group-landing-view.js';
 import { projectGroupReadiness } from '../modules/landing/group-landing-combat.js';
 
-const { parseFragment } = createRequire(new URL('../../firebase/package.json', import.meta.url))('parse5');
 const attr = (node, name) => node.attrs?.find(attribute => attribute.name === name)?.value;
 const nodes = root => (root.childNodes || []).flatMap(node => [node, ...nodes(node)]);
 const cards = markup => nodes(parseFragment(markup)).filter(node => node.tagName === 'article' && attr(node, 'data-member-id') != null);

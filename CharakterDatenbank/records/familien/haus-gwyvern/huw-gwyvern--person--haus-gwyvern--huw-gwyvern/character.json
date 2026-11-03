@@ -51,6 +51,7 @@
       "collection": "characters",
       "documentId": "person--haus-gwyvern--huw-gwyvern",
       "documentIds": [
+        "person--haus-gwyvern--huw-gwyvern",
         "person--haus-gwyvern--huw-gwyvern"
       ],
       "documents": [
@@ -58,6 +59,11 @@
           "documentId": "person--haus-gwyvern--huw-gwyvern",
           "createdAt": "2026-10-12T21:09:06.423Z",
           "updatedAt": "2026-10-12T21:09:06.423Z"
+        },
+        {
+          "documentId": "person--haus-gwyvern--huw-gwyvern",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -73,13 +79,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-10-12T21:09:06.423Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-gwyvern--huw-gwyvern.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-gwyvern--huw-gwyvern",
       "person--haus-gwyvern--huw-gwyvern"
     ],
-    "contentHash": "936a6bf61c7d68cd7c97ee9d1ff975e8b002d3ab7a29d5919821166edc4971a1"
+    "contentHash": "3c83e2963cd19bfb29366d12a168753ed0069c98d9ceef4f6e09de391c85f411"
   },
   "local": {
     "notes": "",
@@ -225,6 +232,106 @@
             "children": []
           }
         }
+      },
+      {
+        "id": "person--haus-gwyvern--huw-gwyvern",
+        "name": "Huw Gwyvern",
+        "inventory": {
+          "characterId": "person--haus-gwyvern--huw-gwyvern",
+          "name": "Huw Gwyvern",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/huw-gwyvern.jpg",
+          "title": "Charakter-Inventar",
+          "role": "Haus Gwyvern",
+          "level": "Nicht ausgearbeitet",
+          "hitpoints": "Nicht ausgearbeitet",
+          "carryValue": "Nicht ausgearbeitet",
+          "status": "Nicht ausgearbeitet",
+          "infoRows": [],
+          "attributes": [],
+          "items": [
+            {
+              "id": "huw-dyreth",
+              "instanceId": "huw-dyreth",
+              "creatureId": "companion-huw-dyreth",
+              "name": "Dyreth",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+              "description": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+              "type": "Rhyfel-Hengst",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Rhyfel-Hengst",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-gwyvern--huw-gwyvern",
+              "ownerCharacterName": "Huw Gwyvern",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-12T21:09:06.719Z"
+            },
+            {
+              "id": "person--haus-gwyvern--huw-gwyvern-house-signet-20261102",
+              "instanceId": "person--haus-gwyvern--huw-gwyvern-house-signet-20261102",
+              "templateId": "house-signet:haus-gwyvern",
+              "templateName": "Gwyvern-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-gwyvern",
+                "revision": "ddded0df5c142ed080032800"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-gwyvern",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gwyvern--huw-gwyvern",
+              "ownerCharacterName": "Huw Gwyvern",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Huw Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Gwyvern",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Gwyvern"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "companions": [
+            {
+              "id": "card-huw-dyreth",
+              "name": "Dyreth",
+              "species": "Rhyfel-Hengst",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+              "description": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+              "summary": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-huw-dyreth",
+              "inventoryItemId": "huw-dyreth"
+            }
+          ],
+          "revision": 1791839346722
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -246,7 +353,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-10-12T21:09:06.423Z",
-    "updatedAt": "2026-10-12T21:09:06.423Z",
+    "updatedAt": "2026-11-02T21:05:42.453432Z",
     "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/huw-gwyvern.jpg",
     "emotes": [],
     "emotesOverride": false,
@@ -291,6 +398,41 @@
           "attributes": [],
           "infoRows": [],
           "individualizedAt": "2026-10-12T21:09:06.719Z"
+        },
+        {
+          "id": "person--haus-gwyvern--huw-gwyvern-house-signet-20261102",
+          "instanceId": "person--haus-gwyvern--huw-gwyvern-house-signet-20261102",
+          "templateId": "house-signet:haus-gwyvern",
+          "templateName": "Gwyvern-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gwyvern",
+            "revision": "ddded0df5c142ed080032800"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-gwyvern",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gwyvern--huw-gwyvern",
+          "ownerCharacterName": "Huw Gwyvern",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Huw Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gwyvern%2Fhouse-signets-a5613ba60f785679%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Gwyvern",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Gwyvern"
+            }
+          ],
+          "attributes": []
         }
       ],
       "companions": [
@@ -312,7 +454,7 @@
           "inventoryItemId": "huw-dyreth"
         }
       ],
-      "revision": 1791839346721
+      "revision": 1791839346722
     },
     "biography": null,
     "identity": {

@@ -71,6 +71,7 @@
       "documentId": "person--haus-varulv--skalli-varulv",
       "documentIds": [
         "person--haus-varulv--skalli-varulv",
+        "person--haus-varulv--skalli-varulv",
         "person--haus-varulv--skalli-varulv"
       ],
       "documents": [
@@ -83,6 +84,11 @@
           "documentId": "person--haus-varulv--skalli-varulv",
           "createdAt": "",
           "updatedAt": "2026-10-14T11:36:14.204Z"
+        },
+        {
+          "documentId": "person--haus-varulv--skalli-varulv",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -104,14 +110,15 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gefaehrten/astrid-2026-10-14/skalli-inventar.json",
-    "sourceExportedAt": "2026-10-14T11:36:14.204Z",
-    "sourceUpdatedAt": "2026-10-14T11:36:14.204Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-varulv--skalli-varulv.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-varulv--skalli-varulv",
       "person--haus-varulv--skalli-varulv",
       "person--haus-varulv--skalli-varulv"
     ],
-    "contentHash": "a91b5bccf10e1b9cffa971a568f5e87961ec300b6807e7510e2adb65dcd0a9a9"
+    "contentHash": "f139203b79a3cc9de9a5870b3e4a43becdb440be9534e01a0dfca126f2aa0aca"
   },
   "local": {
     "notes": "",
@@ -265,6 +272,96 @@
           "revision": 1791977774204
         },
         "updatedAt": "2026-10-14T11:36:14.204Z"
+      },
+      {
+        "id": "person--haus-varulv--skalli-varulv",
+        "name": "Skalli Varulv",
+        "inventory": {
+          "companions": [
+            {
+              "id": "card-skalli-astrid",
+              "name": "Astrid",
+              "species": "Roh-Rhyfel (Hest × Ceffyl)",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+              "description": "Astrid ist Skalli Varulvs Roh-Rhyfel aus Hest und Ceffyl: ein kräftiger Schimmel mit dichtem Fell, edler Halslinie und kurz geknoteter Mähne. Das gut reitbare Ross verbindet die Erhabenheit des Ceffyl mit der rohen Kraft des Hest. Am Sattel hängt das Varulv-Wappenschild. Skalli benannte ihr Pferd nach ihrer Vorfahrin Astrid Varulv (1603–1627). Astrid wurde 1627 bei ihrer Hochzeit gemeinsam mit Roger Vaeren, dem König von Aldrimar, vergiftet. Skalli erinnert mit dem Namen an diese beinahe Königin, der man nachsagt, eine große Schildmaid gewesen zu sein.",
+              "summary": "Astrid ist Skalli Varulvs Roh-Rhyfel aus Hest und Ceffyl: ein kräftiger Schimmel mit dichtem Fell, edler Halslinie und kurz geknoteter Mähne. Das gut reitbare Ross verbindet die Erhabenheit des Ceffyl mit der rohen Kraft des Hest. Am Sattel hängt das Varulv-Wappenschild. Skalli benannte ihr Pferd nach ihrer Vorfahrin Astrid Varulv (1603–1627). Astrid wurde 1627 bei ihrer Hochzeit gemeinsam mit Roger Vaeren, dem König von Aldrimar, vergiftet. Skalli erinnert mit dem Namen an diese beinahe Königin, der man nachsagt, eine große Schildmaid gewesen zu sein.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-skalli-astrid",
+              "inventoryItemId": "skalli-astrid"
+            }
+          ],
+          "items": [
+            {
+              "id": "skalli-astrid",
+              "instanceId": "skalli-astrid",
+              "creatureId": "companion-skalli-astrid",
+              "name": "Astrid",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+              "description": "Astrid ist Skalli Varulvs Roh-Rhyfel aus Hest und Ceffyl: ein kräftiger Schimmel mit dichtem Fell, edler Halslinie und kurz geknoteter Mähne. Das gut reitbare Ross verbindet die Erhabenheit des Ceffyl mit der rohen Kraft des Hest. Am Sattel hängt das Varulv-Wappenschild. Skalli benannte ihr Pferd nach ihrer Vorfahrin Astrid Varulv (1603–1627). Astrid wurde 1627 bei ihrer Hochzeit gemeinsam mit Roger Vaeren, dem König von Aldrimar, vergiftet. Skalli erinnert mit dem Namen an diese beinahe Königin, der man nachsagt, eine große Schildmaid gewesen zu sein.",
+              "type": "Roh-Rhyfel (Hest × Ceffyl)",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Roh-Rhyfel (Hest × Ceffyl)",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-varulv--skalli-varulv",
+              "ownerCharacterName": "Skalli Varulv",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-14T11:36:14.211Z"
+            },
+            {
+              "id": "person--haus-varulv--skalli-varulv-house-signet-20261102",
+              "instanceId": "person--haus-varulv--skalli-varulv-house-signet-20261102",
+              "templateId": "house-signet:haus-varulv",
+              "templateName": "Varulv-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-varulv",
+                "revision": "1a129504a6d048cca87b2971"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-varulv",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-varulv--skalli-varulv",
+              "ownerCharacterName": "Skalli Varulv",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Skalli Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Varulv. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fhouse-signets-f41aa5b381b45988%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Clan Varulv",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Clan Varulv"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "characterId": "person--haus-varulv--skalli-varulv",
+          "revision": 1791977774205
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -399,10 +496,45 @@
           "attributes": [],
           "infoRows": [],
           "individualizedAt": "2026-10-14T11:36:14.211Z"
+        },
+        {
+          "id": "person--haus-varulv--skalli-varulv-house-signet-20261102",
+          "instanceId": "person--haus-varulv--skalli-varulv-house-signet-20261102",
+          "templateId": "house-signet:haus-varulv",
+          "templateName": "Varulv-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-varulv",
+            "revision": "1a129504a6d048cca87b2971"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-varulv",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-varulv--skalli-varulv",
+          "ownerCharacterName": "Skalli Varulv",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Skalli Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Varulv. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fhouse-signets-f41aa5b381b45988%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Clan Varulv",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Clan Varulv"
+            }
+          ],
+          "attributes": []
         }
       ],
       "characterId": "person--haus-varulv--skalli-varulv",
-      "revision": 1791977774204
+      "revision": 1791977774205
     },
     "name": "Skalli Varulv",
     "origin": "",
@@ -415,6 +547,6 @@
     "status": "active",
     "taxonomyPath": "Aldrimar > Roriksheim > Rorikstal > Rorikshall",
     "title": "Wegverlobt an Haus Draig",
-    "updatedAt": "2026-10-14T11:36:14.204Z"
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
   }
 }

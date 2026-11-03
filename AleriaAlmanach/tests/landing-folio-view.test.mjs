@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
-import { createRequire } from 'node:module';
+import { parseFragment } from 'parse5';
 import { readFileSync } from 'node:fs';
 import { normalizeLandingData } from '../modules/landing/landing-model.js';
 import { renderGroupBody } from '../modules/landing/group-landing-view.js';
@@ -9,9 +9,7 @@ import { landingQuestJournalShell } from '../modules/landing/landing-quest-model
 import { LANDING_FOLIO_COVER, renderLandingFolioHeader, renderLandingFolioIndex, landingFolioIcon } from '../modules/landing/landing-folio-view.js';
 import { html } from '../modules/landing/group-landing-markup.js';
 
-// Use the HTML parser already installed with this repository's Firebase test
-// tooling. Parse real elements and attributes rather than matching layout text.
-const { parseFragment } = createRequire(new URL('../../firebase/package.json', import.meta.url))('parse5');
+// Parse real elements and attributes with the explicitly locked test dependency.
 const attr = (node, name) => node.attrs?.find(attribute => attribute.name === name)?.value;
 const nodes = root => (root.childNodes || []).flatMap(node => [node, ...nodes(node)]);
 const withAttr = (root, name, value) => nodes(root).filter(node => attr(node, name) != null && (value == null || attr(node, name) === value));

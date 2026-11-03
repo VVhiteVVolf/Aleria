@@ -60,6 +60,7 @@
       "documentId": "person--haus-gafyr--lefraye-gafyr",
       "documentIds": [
         "person--haus-gafyr--lefraye-gafyr",
+        "person--haus-gafyr--lefraye-gafyr",
         "person--haus-gafyr--lefraye-gafyr"
       ],
       "documents": [
@@ -72,6 +73,11 @@
           "documentId": "person--haus-gafyr--lefraye-gafyr",
           "createdAt": "",
           "updatedAt": "2026-11-02T20:00:31.921906Z"
+        },
+        {
+          "documentId": "person--haus-gafyr--lefraye-gafyr",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -87,14 +93,15 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/Startbesitz 2026-11-02/lefraye-gafyr.json",
-    "sourceExportedAt": "2026-11-02T20:00:31.921906Z",
-    "sourceUpdatedAt": "2026-11-02T20:00:31.921906Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-gafyr--lefraye-gafyr.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-gafyr--lefraye-gafyr",
       "person--haus-gafyr--lefraye-gafyr",
       "person--haus-gafyr--lefraye-gafyr"
     ],
-    "contentHash": "b8a38d1c4c02219621fe7ea81f4e6279e8944888342507e5939cad89479e2980"
+    "contentHash": "a7d295c1d98eece03e5e2b6b5203ebdb309a4b84d7d649b62f081ccc2b6a1bbd"
   },
   "local": {
     "notes": "",
@@ -3710,6 +3717,596 @@
           "notes": ""
         },
         "updatedAt": "2026-11-02T20:00:31.921906Z"
+      },
+      {
+        "id": "person--haus-gafyr--lefraye-gafyr",
+        "name": "Lefraye Gafyr",
+        "inventory": {
+          "items": [
+            {
+              "id": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+              "instanceId": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+              "templateId": "gwynthor-seven:lefraye-gafyr-ruestung",
+              "templateName": "Lefrayes Gafyr-Rüstung",
+              "definitionRef": {
+                "id": "gwynthor-seven:lefraye-gafyr-ruestung",
+                "revision": "580b5986e02be383bffb99eb"
+              },
+              "offerId": "",
+              "registerCategory": "ruestungen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:lefraye-gafyr-ruestung",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Lefrayes Gafyr-Rüstung",
+              "type": "Rüstung",
+              "category": "armor",
+              "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-b559d73c70c3f01f%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-helwyr-langbogen-2",
+              "instanceId": "lefraye-gafyr-helwyr-langbogen-2",
+              "templateId": "gwynthor-seven:helwyr-langbogen",
+              "templateName": "Helwyr Langbogen",
+              "definitionRef": {
+                "id": "gwynthor-seven:helwyr-langbogen",
+                "revision": "d6ca6855411fd4a373c66f2a"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:helwyr-langbogen",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Helwyr Langbogen",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-7b7a75d57a30a658%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": [],
+              "itemState": {
+                "ammunitionItemId": "lefraye-gafyr-standardpfeil-9"
+              }
+            },
+            {
+              "id": "lefraye-gafyr-helwyr-kurzbogen-3",
+              "instanceId": "lefraye-gafyr-helwyr-kurzbogen-3",
+              "templateId": "gwynthor-seven:helwyr-kurzbogen",
+              "templateName": "Helwyr Kurzbogen",
+              "definitionRef": {
+                "id": "gwynthor-seven:helwyr-kurzbogen",
+                "revision": "b343e2e2a367d5c42aa42c7b"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:helwyr-kurzbogen",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Helwyr Kurzbogen",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-41a5f4f210b66ff4%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": [],
+              "itemState": {
+                "ammunitionItemId": "lefraye-gafyr-standardpfeil-9"
+              }
+            },
+            {
+              "id": "lefraye-gafyr-gafyr-ritterschwert-4",
+              "instanceId": "lefraye-gafyr-gafyr-ritterschwert-4",
+              "templateId": "gwynthor-seven:gafyr-ritterschwert",
+              "templateName": "Gafyr Ritterschwert",
+              "definitionRef": {
+                "id": "gwynthor-seven:gafyr-ritterschwert",
+                "revision": "d4fd0a7706fb4abb67bec9c3"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:gafyr-ritterschwert",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Gafyr Ritterschwert",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Lefrayes einhändiges Gafyr-Langschwert ohne persönliche Schadens- oder Ausbildungsboni.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-35678e6208f2d139%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-helwyr-kampfdolch-5",
+              "instanceId": "lefraye-gafyr-helwyr-kampfdolch-5",
+              "templateId": "gwynthor-seven:helwyr-kampfdolch",
+              "templateName": "Helwyr Kampfdolch",
+              "definitionRef": {
+                "id": "gwynthor-seven:helwyr-kampfdolch",
+                "revision": "9a289e4d57e6bfd6f563d31d"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:helwyr-kampfdolch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Helwyr Kampfdolch",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-helwyr-kampfdolch-6",
+              "instanceId": "lefraye-gafyr-helwyr-kampfdolch-6",
+              "templateId": "gwynthor-seven:helwyr-kampfdolch",
+              "templateName": "Helwyr Kampfdolch",
+              "definitionRef": {
+                "id": "gwynthor-seven:helwyr-kampfdolch",
+                "revision": "9a289e4d57e6bfd6f563d31d"
+              },
+              "offerId": "",
+              "registerCategory": "waffen",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:helwyr-kampfdolch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Helwyr Kampfdolch",
+              "type": "Waffe",
+              "category": "weapon",
+              "description": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-signalpfeil-7",
+              "instanceId": "lefraye-gafyr-signalpfeil-7",
+              "templateId": "gwynthor-seven:signalpfeil",
+              "templateName": "Signalpfeil",
+              "definitionRef": {
+                "id": "gwynthor-seven:signalpfeil",
+                "revision": "eee7aef8058e82f9fa5033b8"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:signalpfeil",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Signalpfeil",
+              "type": "Munition",
+              "category": "equipment",
+              "description": "Signalmunition. Signalwirkung situativ auswerten; kein automatischer Zusatzschaden.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-0ad3a02ae1264154%2Foriginal.png?alt=media",
+              "quantity": "3",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-feuerpfeil-8",
+              "instanceId": "lefraye-gafyr-feuerpfeil-8",
+              "templateId": "gwynthor-seven:feuerpfeil",
+              "templateName": "Feuerpfeil",
+              "definitionRef": {
+                "id": "gwynthor-seven:feuerpfeil",
+                "revision": "7dd640fd1dcfdc41542c88f6"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:feuerpfeil",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Feuerpfeil",
+              "type": "Munition",
+              "category": "equipment",
+              "description": "Brandmunition. Anzünden und Feuerwirkung gesondert auswerten; keine kostenlose Zusatzattacke.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-6457260b602e1505%2Foriginal.png?alt=media",
+              "quantity": "2",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-gafyr-standardpfeil-9",
+              "instanceId": "lefraye-gafyr-standardpfeil-9",
+              "templateId": "gwynthor-seven:standardpfeil",
+              "templateName": "Standard Pfeil",
+              "definitionRef": {
+                "id": "gwynthor-seven:standardpfeil",
+                "revision": "c40d398a35c5f13c975b2096"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "gwynthor-seven:standardpfeil",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T19:46:40.010Z",
+              "name": "Standard Pfeil",
+              "type": "Munition",
+              "category": "equipment",
+              "description": "Gewöhnlicher Pfeil. Der Schaden stammt vom geführten Bogen.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-28a655da47533436%2Foriginal.png?alt=media",
+              "quantity": "30",
+              "weight": "",
+              "tags": "Gwynthor, Individuelle Ausrüstung",
+              "equipped": false,
+              "valuation": null,
+              "infoRows": [],
+              "attributes": []
+            },
+            {
+              "id": "lefraye-agravaine",
+              "instanceId": "lefraye-agravaine",
+              "creatureId": "companion-lefraye-agravaine",
+              "name": "Agravaine",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+              "description": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+              "type": "Mwyalchen-Drossel",
+              "category": "companion",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "templateName": "Mwyalchen-Drossel",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "lefraye-thalena",
+              "instanceId": "lefraye-thalena",
+              "creatureId": "companion-lefraye-thalena",
+              "name": "Thalena",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/thalena.png",
+              "description": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+              "type": "Farnschritt",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Farnschritt",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-01T23:27:59.527Z"
+            },
+            {
+              "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+              "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+              "templateId": "standard:gemischtwarenhandler:notizbuch",
+              "templateName": "Notizbuch (klein)",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:notizbuch",
+                "revision": "49c9999873bc24a73529d569"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:notizbuch",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Notizbuch (klein)",
+              "type": "Schreibmaterial",
+              "category": "equipment",
+              "description": "20 Seiten aus handgeschöpftem Papier, in Leder gebunden.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Papier, Leder, Notizen",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 8,
+                "maxCopper": 8
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 7
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 5
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 8
+                },
+                {
+                  "label": "Alltag",
+                  "value": 9
+                },
+                {
+                  "label": "Reise",
+                  "value": 8
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 7
+                }
+              ]
+            },
+            {
+              "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+              "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+              "templateId": "standard:gemischtwarenhandler:feder-tinte",
+              "templateName": "Feder & Tinte",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:feder-tinte",
+                "revision": "261195af426d183145b98220"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:feder-tinte",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Feder & Tinte",
+              "type": "Schreibmaterial",
+              "category": "equipment",
+              "description": "Schreibfeder und Tinte aus Ruß und Galläpfeln.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Tinte, Feder, Schreiben",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 1,
+                "maxCopper": 1
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 6
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 4
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 8
+                },
+                {
+                  "label": "Alltag",
+                  "value": 9
+                },
+                {
+                  "label": "Reise",
+                  "value": 5
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+              "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+              "templateId": "standard:gemischtwarenhandler:feuerstein-stahl",
+              "templateName": "Feuerstein & Stahl",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+                "revision": "cdb8d503f7c8e15f7af760a6"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:feuerstein-stahl",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T20:00:30.067Z",
+              "name": "Feuerstein & Stahl",
+              "type": "Werkzeug",
+              "category": "equipment",
+              "description": "Zum Entzünden von Feuer, langlebig und zuverlässig.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Feuer, Werkzeug, Langlebig",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 2,
+                "maxCopper": 2
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 8
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 9
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 9
+                },
+                {
+                  "label": "Alltag",
+                  "value": 6
+                },
+                {
+                  "label": "Reise",
+                  "value": 10
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "person--haus-gafyr--lefraye-gafyr-house-signet-20261102",
+              "instanceId": "person--haus-gafyr--lefraye-gafyr-house-signet-20261102",
+              "templateId": "house-signet:haus-gafyr",
+              "templateName": "Gafyr-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-gafyr",
+                "revision": "bf2cae0ff5ed2d079ef9a757"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-gafyr",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+              "ownerCharacterName": "Lefraye Gafyr",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Lefraye Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gafyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Gafyr",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Gafyr"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "definitionSchemaVersion": 1,
+          "companions": [
+            {
+              "id": "card-lefraye-agravaine",
+              "name": "Agravaine",
+              "species": "Mwyalchen-Drossel",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+              "description": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+              "summary": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+              "role": "Gefährte",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-lefraye-agravaine",
+              "inventoryItemId": "lefraye-agravaine"
+            },
+            {
+              "id": "card-lefraye-thalena",
+              "name": "Thalena",
+              "species": "Farnschritt",
+              "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/thalena.png",
+              "description": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+              "summary": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-lefraye-thalena",
+              "inventoryItemId": "lefraye-thalena"
+            }
+          ],
+          "money": "0 Gold, 7 Silber, 60 Kupfer, 0 Eisenpfennig",
+          "moneyState": {
+            "silver": 7,
+            "pfennig": 0,
+            "totalCopper": 760,
+            "gold": 0,
+            "copper": 60
+          },
+          "revision": 3
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -3731,7 +4328,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-09-23T21:33:30.387Z",
-    "updatedAt": "2026-11-02T20:00:31.921906Z",
+    "updatedAt": "2026-11-02T21:05:42.453432Z",
     "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/lefraye-gafyr.jpg",
     "emotes": [],
     "emotesOverride": true,
@@ -4376,6 +4973,41 @@
               "value": 10
             }
           ]
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-house-signet-20261102",
+          "instanceId": "person--haus-gafyr--lefraye-gafyr-house-signet-20261102",
+          "templateId": "house-signet:haus-gafyr",
+          "templateName": "Gafyr-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-gafyr",
+            "revision": "bf2cae0ff5ed2d079ef9a757"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-gafyr",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Lefraye Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gafyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Gafyr",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Gafyr"
+            }
+          ],
+          "attributes": []
         }
       ],
       "definitionSchemaVersion": 1,
@@ -4423,7 +5055,7 @@
         "gold": 0,
         "copper": 60
       },
-      "revision": 2
+      "revision": 3
     },
     "biography": {
       "schema": "aleria.biography-module",

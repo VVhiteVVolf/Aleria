@@ -90,6 +90,7 @@
       "documentId": "person--haus-draig--galahad-draig",
       "documentIds": [
         "person--haus-draig--galahad-draig",
+        "person--haus-draig--galahad-draig",
         "person--haus-draig--galahad-draig"
       ],
       "documents": [
@@ -102,6 +103,11 @@
           "documentId": "person--haus-draig--galahad-draig",
           "createdAt": "",
           "updatedAt": "2026-10-11T19:46:42.303Z"
+        },
+        {
+          "documentId": "person--haus-draig--galahad-draig",
+          "createdAt": "",
+          "updatedAt": "2026-11-02T21:05:42.453432Z"
         }
       ]
     },
@@ -129,14 +135,15 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-10-11T19:46:42.303Z",
+    "sourceArchive": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-draig--galahad-draig.json",
+    "sourceExportedAt": "2026-11-02T21:05:42.453432Z",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
     "sourceDocumentIds": [
+      "person--haus-draig--galahad-draig",
       "person--haus-draig--galahad-draig",
       "person--haus-draig--galahad-draig"
     ],
-    "contentHash": "e1de051db8be1cb1489695f6c1aeffb209ab462d3d8366593e6b3af543af70a2"
+    "contentHash": "627ada2e8eb574c1399a809b09e585aec591a032d588d0b6c8d875ecc1917220"
   },
   "local": {
     "notes": "",
@@ -351,6 +358,95 @@
           "revision": 1791748002303
         },
         "updatedAt": "2026-10-11T19:46:42.303Z"
+      },
+      {
+        "id": "person--haus-draig--galahad-draig",
+        "name": "Galahad Draig",
+        "inventory": {
+          "items": [
+            {
+              "category": "companion",
+              "creatureId": "companion-galahad-sturmwind",
+              "templateId": "",
+              "itemDbKey": "",
+              "templateName": "Drake-Pferd",
+              "ownerCharacterId": "person--haus-draig--galahad-draig",
+              "id": "galahad-sturmwind",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "ownerCharacterName": "Galahad Draig",
+              "imageFit": "contain",
+              "type": "Drake-Pferd",
+              "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "originItemDbKey": "",
+              "imageFormat": "portrait",
+              "instanceId": "galahad-sturmwind",
+              "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+              "quantity": "1",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-11T19:46:45.483Z",
+              "registerCategory": "pferde",
+              "name": "Sturmwind"
+            },
+            {
+              "id": "person--haus-draig--galahad-draig-house-signet-20261102",
+              "instanceId": "person--haus-draig--galahad-draig-house-signet-20261102",
+              "templateId": "house-signet:haus-draig",
+              "templateName": "Draig-Siegelring",
+              "definitionRef": {
+                "id": "house-signet:haus-draig",
+                "revision": "a274f3994f5ad5303421a36e"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "house-signet:haus-draig",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "person--haus-draig--galahad-draig",
+              "ownerCharacterName": "Galahad Draig",
+              "acquiredAt": "2026-11-02T21:05:39.754Z",
+              "name": "Galahad Siegelring",
+              "type": "Siegelring",
+              "category": "other",
+              "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-bdac8c16cb36282e%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Hauszugehörigkeit, Haus Draig",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Draig"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "companions": [
+            {
+              "attributes": [],
+              "inventoryItemId": "galahad-sturmwind",
+              "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "name": "Sturmwind",
+              "imageFormat": "portrait",
+              "id": "card-galahad-sturmwind",
+              "role": "Reittier",
+              "imagePosition": "center",
+              "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+              "species": "Drake-Pferd",
+              "imageFit": "contain",
+              "creatureId": "companion-galahad-sturmwind",
+              "infoRows": [],
+              "summary": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "status": "Gesund"
+            }
+          ],
+          "revision": 1791748002304
+        },
+        "updatedAt": "2026-11-02T21:05:42.453432Z"
       }
     ]
   },
@@ -538,6 +634,41 @@
           "individualizedAt": "2026-10-11T19:46:45.483Z",
           "registerCategory": "pferde",
           "name": "Sturmwind"
+        },
+        {
+          "id": "person--haus-draig--galahad-draig-house-signet-20261102",
+          "instanceId": "person--haus-draig--galahad-draig-house-signet-20261102",
+          "templateId": "house-signet:haus-draig",
+          "templateName": "Draig-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-draig",
+            "revision": "a274f3994f5ad5303421a36e"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-draig",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-draig--galahad-draig",
+          "ownerCharacterName": "Galahad Draig",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Galahad Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-bdac8c16cb36282e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Draig",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Draig"
+            }
+          ],
+          "attributes": []
         }
       ],
       "companions": [
@@ -559,7 +690,7 @@
           "status": "Gesund"
         }
       ],
-      "revision": 1791748002303
+      "revision": 1791748002304
     },
     "name": "Galahad Draig",
     "origin": "",
@@ -572,6 +703,6 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "Graf von Celtigerns Wacht",
-    "updatedAt": "2026-10-11T19:46:42.303Z"
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
   }
 }

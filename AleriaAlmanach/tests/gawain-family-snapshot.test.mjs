@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { projectGawainFamilySnapshot } from '../modules/gawain-duncan/gawain-family-snapshot.mjs';
+import { gawainFamilyBackupPath } from '../modules/gawain-duncan/gawain-family-backup.mjs';
 import { GAWAIN_WORLD_ID, GAWAIN_PUBLIC_SUMMARY, GAWAIN_PUBLIC_BIOGRAPHY } from '../modules/gawain-duncan/gawain-public-biography.mjs';
 
 const input = () => ({
@@ -44,6 +45,14 @@ test('repeated Gawain projections do not create new revisions, timestamps or pen
   assert.equal(next.changed, false); assert.equal(next.registryChanged, false);
   assert.strictEqual(next.envelope, first.envelope);
   assert.equal(next.envelope.revision, 3); assert.equal(next.envelope.updatedAt, data.now);
+});
+
+test('immutable backups distinguish reused historical revisions and exact line endings without overwriting archives', () => {
+  const envelope = input().envelope, first = JSON.stringify(envelope) + '\n';
+  assert.equal(gawainFamilyBackupPath(envelope, first), gawainFamilyBackupPath(envelope, first));
+  assert.notEqual(gawainFamilyBackupPath(envelope, first), gawainFamilyBackupPath(envelope, first.replace(/\n/g, '\r\n')));
+  assert.notEqual(gawainFamilyBackupPath(envelope, first), gawainFamilyBackupPath(envelope, first + ' '));
+  assert.throws(() => gawainFamilyBackupPath({ ...envelope, familyId: '../other' }, first));
 });
 
 test('wrong or duplicated Gawain identity and unrelated source content are rejected rather than reconciled', () => {

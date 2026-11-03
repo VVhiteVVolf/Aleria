@@ -1,5 +1,20 @@
 # Sieben Figuren aus Gwynthor
 
+Owetas Silberhirsch (korrigierte Zuordnung vom 2. November 2026): eine antike
+Silbermünze mit Hirschprägung, die Armel Balchder ihr als Glücksbringer schenkte.
+`equipment.mjs` besitzt die eigene Itemvorlage `gwynthor-seven:rianna-silberhirsch`.
+Das transparente Itembild liegt unter `assets/gwynthor-seven/items/rianna-silberhirsch-v1.png`;
+Prompt, Originalquelle und Alphaprüfung unter `diagnostics/rianna-silberhirsch-20261102/`.
+Die ergänzende Nutzerfestlegung gibt ihm Tenebritspuren: Solange er mitgeführt wird,
+reduziert er magischen Schaden um 1, bis mindestens 0. Beim Draufbeißen knistert er
+kurz. Die zunächst falsche Zuordnung zu Rianna wurde atomar berichtigt: Nur Oweta
+Draig besitzt die ursprüngliche Münze, geschenkt von Armel Balchder. Interne
+Vorlagen- und Bildkennungen bleiben aus Gründen der Versionshistorie erhalten.
+Der verifizierte Beleg liegt unter `diagnostics/combat-sheets-20261102/silberhirsch-owner-correction.json`.
+Die automatische Auswertung ist im gemeinsamen Browser-
+und Servermodell umgesetzt; die Firebase-Funktionen sind veröffentlicht und der
+gemeinsame Frontendrelease enthält dieselbe Mechanik.
+
 Autorenauftrag vom 2. November 2026: Rhosyn Awenydd, Briallen Awenor,
 Rianna Wyrm, Evie Rhyddid, Lefraye Gafyr, Saerwyn Gwyllach und Caralyn Chwedonol.
 
@@ -18,7 +33,7 @@ Originale. Lefrayes Geschlecht wurde entsprechend „sie ist eine Helwyr“ in d
 Stammbaumquelle auf weiblich präzisiert.
 
 `roster.mjs` benennt die Figuren, `character-content.mjs` besitzt die begrenzte
-Profilprojektion, `equipment.mjs` die 24 gemeinsam versionierten Itemvorlagen
+Profilprojektion, `equipment.mjs` die 26 gemeinsam versionierten Itemvorlagen
 und exakten Besitzlisten. Die bereits vorhandenen Helwyr-Bogen- und Pfeilbilder
 werden wiederverwendet. Zwei Kampfdolche und drei Harpunen sind getrennte
 Besitzstücke. Bögen verbrauchen den verknüpften Standardpfeilstapel. Signal-
@@ -26,7 +41,7 @@ und Brandwirkungen bleiben entsprechend dem bestehenden Katalog situativ;
 es wurden keine zusätzlichen Angriffe oder automatischen Sonderwirkungen
 erfunden. Startplatten haben RK 15 ohne GES und Grundschutz −1 Hieb/Stich/Wucht.
 
-Ergänzung für Oweta Draig vom 2. November 2026: Ihre ausdrücklich beauftragte
+Ergänzung für Oweta Draig vom 2. November 2026: Ihre ursprüngliche ausdrücklich beauftragte
 Besitzliste enthält „Draig - Jungritter Plattenrüstung“, „Draig Ritterschwert“
 und „Draig Dolch“. Rüstung und Schwert sind angelegt, der Dolch bleibt im Gepäck.
 Die Rüstung verwendet den vorhandenen Draig-Harnisch aus dem Hausregister;
@@ -36,6 +51,10 @@ Zuordnungsexport vom 14. Oktober. Seine Waffenbasis ist 1W8 Hieb, vielseitig
 1W10; der Dolch hat 1W4 Stich. Persönliche Boni oder Techniken werden nicht
 übertragen. Die Zusatzliste ist unabhängig von der ursprünglichen
 Sieben-Figuren-Profilprojektion und vergibt keine Klassen-Startpakete.
+Der anschließende Haus-Siegelring-Auftrag ergänzt ihren fehlenden „Draig Speer“:
+1W6 Stich, vielseitig 1W8, Wurfweite 6/18 m, zunächst im Gepäck. Die historische
+Dreierliste bleibt als ursprünglicher Vergabebeleg erhalten; der Speer besitzt
+eine eigene versionierte Definition und einen gesonderten Ergänzungsbeleg.
 
 `CharakterDatenbank/scripts/sync-oweta-equipment.mjs` übernimmt diese Zusatzliste
 gezielt in Owetas bereits bestehende lokale Akte und erstellt den öffentlichen
@@ -111,7 +130,7 @@ zugeordnet. Die übrigen Online-IDs bleiben erhalten. `knight-equipment-plan.mjs
 besitzt den reinen Ergänzungsplan; `firebase/scripts/content/publish-knight-equipment.mjs`
 die gesicherte, atomare Übernahme einschließlich unveränderlicher Itemversionen.
 `equipment-artwork.mjs` verzeichnet öffentlich geprüfte Originale in Storage;
-lokale Bildoriginale bleiben erhalten. Die Vorlage umfasst nun 24 Ausrüstungen
+lokale Bildoriginale bleiben erhalten. Die Vorlage umfasst nun 26 Ausrüstungen
 und einen zusätzlichen gewöhnlichen Zinnritter aus `starting-possessions.mjs`.
 
 Der zusätzliche Startbesitz umfasst je drei Kleinigkeiten und eine einmalige

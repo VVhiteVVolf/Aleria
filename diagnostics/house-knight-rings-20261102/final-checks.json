@@ -1,0 +1,98 @@
+{
+  "verifiedAt": "2026-11-02T21:19:37.975Z",
+  "checks": [
+    {
+      "name": "tests",
+      "args": [
+        "--test",
+        "--experimental-test-isolation=none",
+        "--test-reporter=tap",
+        "AleriaAlmanach/tests/house-signets-and-silberhirsch.test.mjs",
+        "AleriaAlmanach/tests/house-signets-database.test.mjs",
+        "AleriaAlmanach/tests/starting-possessions-database.test.mjs",
+        "AleriaAlmanach/tests/item-definitions.test.mjs",
+        "AleriaAlmanach/tests/character-equipment-sync.test.mjs",
+        "AleriaAlmanach/tests/equipment-damage-protection.test.mjs",
+        "AleriaAlmanach/tests/combat-defense-balance.test.mjs",
+        "AleriaAlmanach/tests/inventory-equipment-effects.test.mjs",
+        "AleriaAlmanach/tests/gildas-equipment-effects.test.mjs",
+        "AleriaAlmanach/tests/equipment-standards-2026-11.test.mjs",
+        "AleriaAlmanach/tests/draig-knight-equipment.test.mjs",
+        "AleriaAlmanach/tests/knight-equipment-plan.test.mjs",
+        "AleriaAlmanach/tests/oweta-equipment-database.test.mjs",
+        "AleriaAlmanach/tests/gwynthor-seven.test.mjs",
+        "firebase/functions/tests/silberhirsch-protection.test.js",
+        "firebase/functions/tests/item-definitions.test.js",
+        "firebase/functions/tests/item-system-checkup.test.js",
+        "firebase/functions/tests/item-passive-profile.test.js",
+        "firebase/functions/tests/combat-inventory-hydration.test.js",
+        "firebase/functions/tests/combat-resolution-integrity.test.js",
+        "firebase/functions/tests/item-register.test.js"
+      ],
+      "exitCode": 0,
+      "tests": 133,
+      "passed": 133,
+      "failed": 0
+    },
+    {
+      "name": "check-1",
+      "args": [
+        "AleriaAlmanach/scripts/build-authored-item-catalog.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-2",
+      "args": [
+        "AleriaAlmanach/scripts/build-item-register.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-3",
+      "args": [
+        "CharakterDatenbank/scripts/sync-house-signets.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-4",
+      "args": [
+        "CharakterDatenbank/scripts/sync-knight-starting-possessions.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-5",
+      "args": [
+        "CharakterDatenbank/scripts/sync-oweta-equipment.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-6",
+      "args": [
+        "AleriaAlmanach/scripts/build-gwynthor-seven.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "check-7",
+      "args": [
+        "netlify/build/check-mechanics-projection.mjs"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "online": {
+    "profiles": 49,
+    "idempotent": true
+  },
+  "codeDeployed": false
+}

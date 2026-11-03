@@ -494,6 +494,69 @@ export const ARCHIVED_ITEM_DEFINITIONS = [
   },
   {
     "schemaVersion": 1,
+    "id": "gwynthor-seven:draig-speer",
+    "revision": "7835adbe5d428c08dcd3bdfc",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Draig Speer",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/oweta-draig-speer-v1.png",
+    "description": "Owetas Speer in der Bauform des Hauses Draig. Gewöhnlicher Speer mit 1W6 Stich, beidhändig 1W8; Wurfweite 6/18 m.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Vielseitig · Wurfwaffe",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "spear",
+      "weaponProfileId": "spear",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "versatileDamageFormula": "1d8",
+      "damageType": "Stich",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf · Wurf 6/18 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "draig-speer",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
     "id": "gwynthor-seven:evie-rhyddid-ruestung",
     "revision": "e691574cc5e3031680ed564d",
     "kind": "shared",
@@ -1241,6 +1304,177 @@ export const ARCHIVED_ITEM_DEFINITIONS = [
   },
   {
     "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-silberhirsch",
+    "revision": "0e79ca1209863f400566293e",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Riannas Silberhirsch",
+    "category": "sonstiges",
+    "type": "Ausrüstung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rianna-silberhirsch-v1.png",
+    "description": "Antike Silbermünze mit Hirschprägung und abgenutztem Rand. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-silberhirsch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-silberhirsch",
+    "revision": "1e845f07310800b83e2571b3",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Riannas Silberhirsch",
+    "category": "sonstiges",
+    "type": "Ausrüstung",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-ca3e627ec0704c6d%2Foriginal.png?alt=media",
+    "description": "Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": null,
+    "passiveEffects": [
+      {
+        "type": "damage-reduction",
+        "magicScope": "magical",
+        "amount": 1,
+        "activation": "carried",
+        "name": "Silberhirsch · Tenebritspuren"
+      }
+    ],
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-silberhirsch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-silberhirsch",
+    "revision": "949f1e7d290bb7bb59ab3854",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Riannas Silberhirsch",
+    "category": "sonstiges",
+    "type": "Ausrüstung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rianna-silberhirsch-v1.png",
+    "description": "Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "passiveEffects": [
+      {
+        "type": "damage-reduction",
+        "magicScope": "magical",
+        "amount": 1,
+        "activation": "carried",
+        "name": "Silberhirsch · Tenebritspuren"
+      }
+    ],
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-silberhirsch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-silberhirsch",
+    "revision": "bd8fa296c213c0b92e8c2cfe",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Riannas Silberhirsch",
+    "category": "sonstiges",
+    "type": "Ausrüstung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rianna-silberhirsch-v1.png",
+    "description": "Antike Silbermünze mit Hirschprägung, abgenutztem Rand und Spuren von Tenebrit. Armel Balchder schenkte sie Rianna Wyrm als Glücksbringer. Mitgeführt verringert sie magischen Schaden je Schadensinstanz um 1, mindestens auf 0. Beißt man darauf, knistert es kurz.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": null,
+    "passiveEffects": [
+      {
+        "type": "damage-reduction",
+        "magicScope": "magical",
+        "amount": 1,
+        "activation": "carried",
+        "name": "Silberhirsch · Tenebritspuren"
+      }
+    ],
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-silberhirsch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
     "id": "gwynthor-seven:rianna-wyrm-ruestung",
     "revision": "eb4c0024c755d3bc11b2293a",
     "kind": "shared",
@@ -1574,6 +1808,654 @@ export const ARCHIVED_ITEM_DEFINITIONS = [
         "kind": "authored-equipment",
         "sourceId": "wyrm-ritterschwert",
         "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-aderyn",
+    "revision": "e9fe132f83ac563897a32b31",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Aderyn-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-aderyn-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Aderyn O'Penbryn. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-aderyn",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-aderyn"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-awenor",
+    "revision": "cc92e60cbb8a36ab5fbfecda",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Awenor-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-awenor-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenor. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-awenor",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-awenor"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-awenydd",
+    "revision": "008e4c5ffd513cb307f4bc32",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Awenydd-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-awenydd-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Awenydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-awenydd",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-awenydd"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-balchder",
+    "revision": "139c540adfbf07f46f2432ab",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Balchder-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-balchder-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Balchder. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-balchder",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-balchder"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-chwedlonol",
+    "revision": "1f64604daa8db6c57992b3c3",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Chwedonol-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-chwedlonol-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Chwedonol. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-chwedlonol",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-chwedlonol"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-draig",
+    "revision": "fabd76fc44fd78dea21d792a",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Draig-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-draig-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-draig",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-draig"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-gafyr",
+    "revision": "8be83c90a60809c18868cfd1",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Gafyr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-gafyr-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gafyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gafyr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gafyr"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-gwefrydd",
+    "revision": "c8da89431795aced3fbdf715",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Gwefrydd-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-gwefrydd-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwefrydd. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gwefrydd",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gwefrydd"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-gwyvern",
+    "revision": "114e9ffdeeb9f442f660665c",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Gwyvern-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-gwyvern-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Gwyvern. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-gwyvern",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-gwyvern"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-neidr",
+    "revision": "1c4cd7ff01e5ae106997ff34",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Neidr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-neidr-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Neidr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-neidr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-neidr"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-rhyddid",
+    "revision": "0ef08e767994194221040f72",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Rhyddid-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-rhyddid-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Rhyddid. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-rhyddid",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-rhyddid"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-saethwyr",
+    "revision": "aa69c7f257c6c0971908febe",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Saethwyr-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-saethwyr-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Saethwyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-saethwyr",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-saethwyr"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-skald",
+    "revision": "6539cf07695608df8b9520ad",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Skald-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-skald-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Skald. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-skald",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-skald"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-skellor",
+    "revision": "68e9cabb69f19ee5fed34967",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Skellor-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-skellor-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Skellor. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-skellor",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-skellor"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-varulv",
+    "revision": "d0adf06f79c7fb180e1db7ea",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Varulv-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-varulv-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Varulv. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-varulv",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-varulv"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-wolfshorn",
+    "revision": "a487de6feb065420ddd15abd",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Wolfshorn-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-wolfshorn-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Clan Wolfshorn. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wolfshorn",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wolfshorn"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-wylan",
+    "revision": "76dbf4d0ff24a1e3ae5a8995",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Wylan-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-wylan-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wylan O'Cerrigarth. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wylan",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wylan"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house-signet:haus-wyrm",
+    "revision": "92373ea248c87b0e73546bef",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Wyrm-Siegelring",
+    "category": "sonstiges",
+    "type": "Siegelring",
+    "image": "/AleriaAlmanach/assets/house-knight-rings/haus-wyrm-siegelring-v1.png",
+    "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "house-signet",
+        "familyId": "haus-wyrm",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-wyrm"
       }
     ]
   },

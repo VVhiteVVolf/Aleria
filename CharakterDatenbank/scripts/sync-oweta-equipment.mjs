@@ -32,9 +32,9 @@ const characters = KNIGHT_EQUIPMENT_TARGETS.map(target => {
   return matches[0];
 });
 const result = projectOwetaEquipmentDatabase({ registry, snapshot, report, record, characters, templates: AUTHORED_ITEMS, sourcePath, now });
-const outputs = [[recordPath, result.records[0].record], [resolve(databaseRoot, 'registry.json'), result.registry],
+const outputs = [...result.records.map(entry => [resolve(databaseRoot, entry.path), entry.record]), [resolve(databaseRoot, 'registry.json'), result.registry],
   [resolve(databaseRoot, 'generated/characters.snapshot.json'), result.snapshot], [resolve(databaseRoot, 'generated/sync-report.json'), result.report],
-  [resolve(root, sourcePath), result.exported]]
+  ...(result.exported ? [[resolve(root, sourcePath), result.exported]] : [])]
   .map(([path, value]) => [path, `${JSON.stringify(value, null, 2)}\n`]).filter(([path, text]) => inputs.get(path) !== text);
 if (process.argv.includes('--check')) {
   if (outputs.length) throw Error(`Owetas Ausrüstungsprojektion ist nicht aktuell: ${outputs.map(([path]) => relative(root, path)).join(', ')}`);

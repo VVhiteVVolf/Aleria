@@ -14,6 +14,8 @@
 .combat-arsenal-card-title { display: flex; align-items: center; gap: .5rem; min-height: 2.5rem; }
 .combat-arsenal-card-title strong { font-size: 1rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .combat-arsenal-card-title .combat-weapon-badge { flex: none; }
+.combat-arsenal-technique-icon { width:48px; height:48px; flex:none; object-fit:contain; border-radius:9px; }
+.combat-arsenal-technique-icon-detail { width:56px; height:56px; vertical-align:middle; margin-right:.65rem; }
 .combat-arsenal-card-weapon { color: #48695b; font-size: .68rem; line-height: 1.3; }
 .combat-arsenal-detail-body > .combat-weapon-badge { padding-bottom: .35rem; }
 .combat-arsenal-weapon-requirements { font-size: .78rem; line-height: 1.35; color: #576b5d; margin: .2rem 0 .7rem; }

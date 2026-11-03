@@ -1,0 +1,515 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-saethwyr--nudd-saethwyr.json",
+  "character": {
+    "id": "person--haus-saethwyr--nudd-saethwyr",
+    "name": "Nudd Saethwyr",
+    "inventory": {
+      "portrait": "",
+      "companions": [],
+      "showInfoTable": false,
+      "infoRows": [],
+      "items": [
+        {
+          "infoRows": [
+            {
+              "label": "Verzauberung",
+              "value": "1W10 Stich; +1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht verdoppelt. Der erste erfolgreiche Treffer mit dieser Waffe je Szene verursacht zusätzlich +1 Schaden. Gilt auch für passende Speertechniken."
+            }
+          ],
+          "value": {
+            "silver": 0,
+            "copper": 0,
+            "pfennig": 0,
+            "totalCopper": 0,
+            "gold": 0
+          },
+          "quantity": "1",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "flavorText": "",
+          "inventoryUseMode": "auto",
+          "templateName": "",
+          "imageFit": "contain",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "starter-cantref-spear",
+            "schemaVersion": 1
+          },
+          "name": "Dreifache Pflicht · Saethwyr-Dreizack",
+          "valuation": null,
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemStorageMode": "character",
+          "icon": "",
+          "description": "1W10 Stich; +1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht verdoppelt. Der erste erfolgreiche Treffer mit dieser Waffe je Szene verursacht zusätzlich +1 Schaden. Gilt auch für passende Speertechniken.",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-dreizack-v1.png",
+          "ownerCharacterId": "person--haus-saethwyr--nudd-saethwyr",
+          "registerCategory": "",
+          "instanceId": "equipment-weapon-starter-cantref-spear",
+          "type": "Waffe",
+          "weight": "",
+          "imagePosition": "center",
+          "creatureId": "",
+          "category": "weapon",
+          "combatDefinition": {
+            "attackBonus": 0,
+            "requirements": "",
+            "attackAttribute": "strength",
+            "damageType": "Stich",
+            "notes": "1W10 Stich; +1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht verdoppelt. Der erste erfolgreiche Treffer mit dieser Waffe je Szene verursacht zusätzlich +1 Schaden. Gilt auch für passende Speertechniken.",
+            "training": "martial",
+            "triggerRules": [
+              {
+                "sourceRelation": "self",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "frequency": "always",
+                "recipient": "actor",
+                "phase": "pre-damage",
+                "description": "+2 Schaden bei kritischem Treffer; nicht verdoppelt.",
+                "id": "nudd-trident-critical",
+                "condition": "critical-hit",
+                "effects": {
+                  "damageModifier": 2
+                },
+                "name": "Drei scharfe Zinken",
+                "activation": "passive",
+                "weaponAttackOnly": true
+              },
+              {
+                "weaponAttackOnly": true,
+                "id": "nudd-trident-first-hit",
+                "activation": "passive",
+                "frequency": "scene",
+                "recipient": "actor",
+                "phase": "pre-hit-damage",
+                "sourceRelation": "self",
+                "effects": {
+                  "damageModifier": 1
+                },
+                "description": "Erster erfolgreicher Dreizacktreffer je Szene: +1 Schaden, auch bei Speertechniken.",
+                "name": "Pflichtspitze",
+                "condition": "would-hit",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ]
+              }
+            ],
+            "weaponType": "spear",
+            "kind": "weapon",
+            "damageBonus": 1,
+            "versatileDamageFormula": "",
+            "range": "Nahkampf",
+            "damageFormula": "1d10",
+            "properties": "Dreizack · Speerwaffe · Saethwyr-Segnung",
+            "aiInstructions": "",
+            "proficient": true
+          },
+          "offerId": "",
+          "equipped": true,
+          "acquiredAt": "2026-09-22T02:30:46.582Z",
+          "templateId": "",
+          "individualizedAt": "",
+          "valuationNote": "",
+          "purchase": null,
+          "id": "equipment-weapon-starter-cantref-spear",
+          "ownerCharacterName": "Nudd Saethwyr",
+          "tags": "Dreizack · Speerwaffe · Saethwyr-Segnung",
+          "itemDbKey": ""
+        },
+        {
+          "equipped": true,
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "combatDefinition": {
+            "dexterityUnlockLevel": 0,
+            "mechanics": {},
+            "armorKind": "armor",
+            "armorCategory": "heavy",
+            "dexterityCap": 2,
+            "baseArmorClass": 15,
+            "damageProtection": {
+              "excludedDamageTypes": [],
+              "amount": 2,
+              "name": "Saethwyr-Plattenschutz",
+              "damageTypes": [
+                "hieb",
+                "stich"
+              ]
+            },
+            "kind": "armor",
+            "properties": "Startausrüstung der gewählten Klasse",
+            "dexterityMode": "none",
+            "armorClassBonus": 0,
+            "notes": "Angelegt: −2 Schaden gegen Hieb und Stich je Treffer. Der erste treffende Hieb-/Stich-Waffen- oder Technikangriff je Szene verursacht zusätzlich 2 Schaden weniger. Ersetzt den bisherigen Plattengrundschutz; kein zusätzlicher RK-Bonus.",
+            "triggerRules": [
+              {
+                "activation": "passive",
+                "recipient": "target",
+                "phase": "pre-hit-damage",
+                "name": "Goldene Wacht",
+                "sourceRelation": "self",
+                "condition": "would-hit",
+                "weaponAttackOnly": true,
+                "effects": {
+                  "damageReduction": 2
+                },
+                "frequency": "scene",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "damageTypes": [
+                  "hieb",
+                  "stich"
+                ],
+                "id": "nudd-armor-first-hit",
+                "description": "Erster treffender Hieb-/Stich-Waffen- oder Technikangriff je Szene: zusätzlich −2 Schaden."
+              }
+            ]
+          },
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "purchase": null,
+          "registerCategory": "",
+          "ownerCharacterId": "person--haus-saethwyr--nudd-saethwyr",
+          "type": "Rüstung",
+          "tags": "Startausrüstung der gewählten Klasse",
+          "templateName": "",
+          "valuationNote": "",
+          "value": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0,
+            "pfennig": 0
+          },
+          "individualizedAt": "",
+          "flavorText": "",
+          "category": "armor",
+          "id": "equipment-armor-starter-cantref-chainmail",
+          "equipmentLink": {
+            "kind": "armor",
+            "schemaVersion": 1,
+            "combatEntryId": "starter-cantref-chainmail"
+          },
+          "name": "Goldene Wacht · Saethwyr-Plattenrüstung",
+          "itemStorageMode": "character",
+          "acquiredAt": "2026-09-22T02:30:46.582Z",
+          "inventoryUseMode": "auto",
+          "description": "Angelegt: −2 Schaden gegen Hieb und Stich je Treffer. Der erste treffende Hieb-/Stich-Waffen- oder Technikangriff je Szene verursacht zusätzlich 2 Schaden weniger. Ersetzt den bisherigen Plattengrundschutz; kein zusätzlicher RK-Bonus.",
+          "templateId": "",
+          "valuation": null,
+          "weight": "",
+          "offerId": "",
+          "originItemDbKey": "",
+          "instanceId": "equipment-armor-starter-cantref-chainmail",
+          "quantity": "1",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v5.png",
+          "infoRows": [
+            {
+              "value": "Angelegt: −2 Schaden gegen Hieb und Stich je Treffer. Der erste treffende Hieb-/Stich-Waffen- oder Technikangriff je Szene verursacht zusätzlich 2 Schaden weniger. Ersetzt den bisherigen Plattengrundschutz; kein zusätzlicher RK-Bonus.",
+              "label": "Verzauberung"
+            }
+          ],
+          "imageFormat": "square",
+          "houseArmor": {
+            "houseId": "haus-saethwyr",
+            "regionId": "celtigerns-wacht",
+            "rankId": "jungritter",
+            "armorClassRange": "13–15",
+            "minimumLevel": 4
+          },
+          "creatureId": "",
+          "imageFit": "contain",
+          "icon": "",
+          "ownerCharacterName": "Nudd Saethwyr"
+        },
+        {
+          "name": "Eidwacht · Saethwyr-Ritterschwert",
+          "description": "+1 Waffenangriff und +1 Waffenschaden. Der erste Angriff mit diesem Schwert je Szene erhält zusätzlich +1 Angriff, auch bei Fehlschlag verbraucht. Der erste erfolgreiche Treffer je Szene verursacht zusätzlich +1 Schaden. Keine zusätzliche Kritwirkung. Speertechniken bleiben an Speerwaffen gebunden.",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "nudd-saethwyr-knightly-sword",
+            "kind": "weapon"
+          },
+          "acquiredAt": "2026-10-12T22:24:41.566Z",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-saethwyr--nudd-saethwyr",
+          "infoRows": [
+            {
+              "value": "+1 Waffenangriff und +1 Waffenschaden. Der erste Angriff mit diesem Schwert je Szene erhält zusätzlich +1 Angriff, auch bei Fehlschlag verbraucht. Der erste erfolgreiche Treffer je Szene verursacht zusätzlich +1 Schaden. Keine zusätzliche Kritwirkung. Speertechniken bleiben an Speerwaffen gebunden.",
+              "label": "Verzauberung"
+            }
+          ],
+          "imageFormat": "square",
+          "quantity": "1",
+          "icon": "",
+          "combatDefinition": {
+            "range": "Nahkampf",
+            "damageType": "Hieb",
+            "versatileDamageFormula": "1d10",
+            "training": "martial",
+            "aiInstructions": "",
+            "damageBonus": 1,
+            "damageFormula": "1d8",
+            "requirements": "",
+            "weaponType": "sword",
+            "attackBonus": 1,
+            "notes": "+1 Waffenangriff und +1 Waffenschaden. Der erste Angriff mit diesem Schwert je Szene erhält zusätzlich +1 Angriff, auch bei Fehlschlag verbraucht. Der erste erfolgreiche Treffer je Szene verursacht zusätzlich +1 Schaden. Keine zusätzliche Kritwirkung. Speertechniken bleiben an Speerwaffen gebunden.",
+            "proficient": true,
+            "attackAttribute": "strength",
+            "kind": "weapon",
+            "properties": "Vielseitig · 1W10 ausschließlich bei zweihändiger Führung · Saethwyr-Segnung",
+            "triggerRules": [
+              {
+                "activation": "passive",
+                "weaponAttackOnly": true,
+                "id": "nudd-sword-opening",
+                "effects": {
+                  "attackModifier": 1
+                },
+                "sourceRelation": "self",
+                "phase": "pre-roll",
+                "frequency": "scene",
+                "recipient": "actor",
+                "description": "Erster Schwertangriff je Szene: +1 Angriff; auch ein Fehlschlag verbraucht den Zusatz.",
+                "condition": "always",
+                "name": "Ruhige Eröffnung",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ]
+              },
+              {
+                "condition": "would-hit",
+                "weaponAttackOnly": true,
+                "activation": "passive",
+                "frequency": "scene",
+                "recipient": "actor",
+                "phase": "pre-hit-damage",
+                "name": "Eidstreue Schneide",
+                "id": "nudd-sword-first-hit",
+                "effects": {
+                  "damageModifier": 1
+                },
+                "description": "Erster erfolgreicher Schwerttreffer je Szene: +1 Schaden.",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "sourceRelation": "self"
+              }
+            ]
+          },
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-ritterschwert-v1.png",
+          "equipped": false,
+          "imagePosition": "center",
+          "type": "Waffe",
+          "attributes": [],
+          "tags": "Vielseitig · 1W10 ausschließlich bei zweihändiger Führung · Saethwyr-Segnung",
+          "itemStorageMode": "character",
+          "id": "equipment-weapon-nudd-saethwyr-knightly-sword",
+          "itemDbKey": "",
+          "ownerCharacterName": "Nudd Saethwyr",
+          "category": "weapon",
+          "weight": ""
+        },
+        {
+          "id": "person--haus-saethwyr--nudd-saethwyr-house-signet-20261102",
+          "instanceId": "person--haus-saethwyr--nudd-saethwyr-house-signet-20261102",
+          "templateId": "house-signet:haus-saethwyr",
+          "templateName": "Saethwyr-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-saethwyr",
+            "revision": "06a9560db6af49870231875a"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-saethwyr",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-saethwyr--nudd-saethwyr",
+          "ownerCharacterName": "Nudd Saethwyr",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Nudd Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Saethwyr. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-saethwyr%2Fhouse-signets-7b6d04513014d9c4%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Saethwyr",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Saethwyr"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "pfennig": 0,
+        "silver": 0
+      },
+      "money": "0 Gold, 0 Silber, 0 Kupfer, 0 Eisenpfennig",
+      "title": "Charakter-Inventar",
+      "characterId": "",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "step": 0,
+        "open": false,
+        "resultText": "",
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "moneyNotice": "",
+      "healthColor": "#5c7f20",
+      "name": "Name des Charakters",
+      "carryValue": "78,4 / 120 kg",
+      "carryLabel": "Traglast",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "hitpoints": "48 / 52 TP",
+      "role": "Rolle",
+      "level": "Stufe",
+      "portraitFormat": "portrait",
+      "status": "Gesund",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "revision": 1791892214535
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

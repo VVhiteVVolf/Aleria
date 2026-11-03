@@ -1,0 +1,465 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-wyrm--gais-wyrm.json",
+  "character": {
+    "id": "person--haus-wyrm--gais-wyrm",
+    "name": "Gais Wyrm",
+    "inventory": {
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "level": "Stufe",
+      "moneyNotice": "",
+      "name": "Name des Charakters",
+      "revision": 1791931247870,
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "id": "card-gais-rabenstolz",
+          "name": "Saithor",
+          "species": "Edelsale-Hengst",
+          "image": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+          "description": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+          "summary": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-gais-rabenstolz",
+          "inventoryItemId": "gais-rabenstolz"
+        }
+      ],
+      "equipmentQuiz": {
+        "open": false,
+        "resultText": "",
+        "step": 0,
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": ""
+      },
+      "role": "Rolle",
+      "portraitPosition": "top",
+      "portrait": "",
+      "portraitFormat": "portrait",
+      "showInfoTable": false,
+      "infoRows": [],
+      "hitpoints": "48 / 52 TP",
+      "carryValue": "78,4 / 120 kg",
+      "items": [
+        {
+          "templateName": "",
+          "acquiredAt": "2026-09-12T16:21:11.647Z",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "spear",
+            "training": "martial",
+            "damageFormula": "1d12",
+            "versatileDamageFormula": "",
+            "damageType": "Stich",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+            "notes": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "purchase": null,
+          "templateId": "",
+          "registerCategory": "",
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "creatureId": "",
+          "equipped": true,
+          "weight": "",
+          "individualizedAt": "",
+          "tags": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "starter-uchelwyr-lance"
+          },
+          "image": "",
+          "category": "weapon",
+          "icon": "",
+          "ownerCharacterName": "Gais Wyrm",
+          "value": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "valuation": null,
+          "description": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+          "itemStorageMode": "character",
+          "name": "Lanze",
+          "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+          "quantity": "1",
+          "id": "equipment-weapon-starter-uchelwyr-lance",
+          "type": "Waffe",
+          "imagePosition": "center",
+          "instanceId": "equipment-weapon-starter-uchelwyr-lance",
+          "offerId": ""
+        },
+        {
+          "value": {
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "icon": "",
+          "instanceId": "equipment-weapon-starter-uchelwyr-longsword",
+          "category": "weapon",
+          "valuation": null,
+          "itemDbKey": "",
+          "image": "",
+          "offerId": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "starter-uchelwyr-longsword"
+          },
+          "type": "Waffe",
+          "quantity": "1",
+          "ownerCharacterName": "Gais Wyrm",
+          "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+          "name": "Langschwert",
+          "id": "equipment-weapon-starter-uchelwyr-longsword",
+          "originItemDbKey": "",
+          "registerCategory": "",
+          "templateName": "",
+          "creatureId": "",
+          "purchase": null,
+          "description": "Startausrüstung der gewählten Klasse",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "sword",
+            "training": "martial",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Startausrüstung der gewählten Klasse",
+            "notes": "Startausrüstung der gewählten Klasse",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "weight": "",
+          "tags": "Startausrüstung der gewählten Klasse",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "infoRows": [],
+          "acquiredAt": "2026-09-12T16:21:11.647Z",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "templateId": "",
+          "itemStorageMode": "character",
+          "equipped": false
+        },
+        {
+          "combatDefinition": {
+            "mechanics": {},
+            "damageProtection": {
+              "amount": 1,
+              "name": "Plattengrundschutz",
+              "damageTypes": [
+                "hieb",
+                "stich",
+                "wucht"
+              ],
+              "excludedDamageTypes": []
+            },
+            "triggerRules": [],
+            "armorKind": "armor",
+            "armorCategory": "heavy",
+            "baseArmorClass": 15,
+            "armorClassBonus": 0,
+            "dexterityMode": "none",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Startausrüstung der gewählten Klasse",
+            "notes": "Startausrüstung der gewählten Klasse",
+            "kind": "armor"
+          },
+          "ownerCharacterName": "Gais Wyrm",
+          "category": "armor",
+          "registerCategory": "",
+          "id": "equipment-armor-starter-uchelwyr-chainmail",
+          "weight": "",
+          "itemStorageMode": "character",
+          "description": "Startausrüstung der gewählten Klasse",
+          "quantity": "1",
+          "individualizedAt": "",
+          "instanceId": "equipment-armor-starter-uchelwyr-chainmail",
+          "tags": "Startausrüstung der gewählten Klasse",
+          "templateName": "",
+          "templateId": "",
+          "acquiredAt": "2026-09-12T16:21:11.647Z",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "purchase": null,
+          "valuation": null,
+          "itemDbKey": "",
+          "icon": "",
+          "imagePosition": "center",
+          "name": "Kettenhemd",
+          "originItemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "starter-uchelwyr-chainmail"
+          },
+          "value": {
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "gold": 0
+          },
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+          "type": "Rüstung",
+          "infoRows": [],
+          "offerId": "",
+          "image": "",
+          "creatureId": "",
+          "equipped": true
+        },
+        {
+          "id": "gais-rabenstolz",
+          "instanceId": "gais-rabenstolz",
+          "creatureId": "companion-gais-rabenstolz",
+          "name": "Saithor",
+          "image": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+          "description": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+          "type": "Edelsale-Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Edelsale-Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+          "ownerCharacterName": "Gais Wyrm",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T22:13:00.353Z"
+        },
+        {
+          "id": "person--haus-wyrm--gais-wyrm-house-signet-20261102",
+          "instanceId": "person--haus-wyrm--gais-wyrm-house-signet-20261102",
+          "templateId": "house-signet:haus-wyrm",
+          "templateName": "Wyrm-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-wyrm",
+            "revision": "58432cfafcaaf0b123379522"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-wyrm",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+          "ownerCharacterName": "Gais Wyrm",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Gais Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Wyrm. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wyrm%2Fhouse-signets-76d56e75db6cdde5%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Wyrm",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Wyrm"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "characterId": "",
+      "portraitFit": "cover",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast"
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

@@ -50,7 +50,7 @@ const outputs = records.map(item => ['CharakterDatenbank/' + item.path, item.rec
 outputs.push(['CharakterDatenbank/registry.json', result.registry], ['CharakterDatenbank/generated/characters.snapshot.json', result.snapshot], ['CharakterDatenbank/generated/sync-report.json', result.report]);
 for (const [path, data] of outputs) {
   const url = new URL(path, root), text = JSON.stringify(data, null, 2) + '\n';
-  if (check) assert.equal(await readFile(url, 'utf8'), text, `Veraltete Balchder-Projektion: ${path}`);
+  if (check) assert.equal((await readFile(url, 'utf8')).replace(/\r\n/g, '\n'), text, `Veraltete Balchder-Projektion: ${path}`);
   else { await mkdir(new URL('.', url), { recursive: true }); await writeFile(url, text); }
 }
 console.log(JSON.stringify({ checked: check, profiles: records.length, unrelatedProfilesPreserved: snapshot.characters.filter(c => !ids.includes(c.id)).length }));

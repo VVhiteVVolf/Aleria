@@ -1,0 +1,476 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T21:05:42.453432Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/person--haus-draig--gethin-1722-draig.json",
+  "character": {
+    "id": "person--haus-draig--gethin-1722-draig",
+    "name": "Gethin Draig",
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "status": "Gesund",
+      "items": [
+        {
+          "ownerCharacterId": "person--haus-draig--gethin-1722-draig",
+          "offerId": "",
+          "acquiredAt": "2026-10-14T10:22:06.573Z",
+          "templateName": "Ritterschwert",
+          "flavorText": "",
+          "instanceId": "equipment-weapon-starter-teulu-longsword",
+          "icon": "",
+          "imageFit": "contain",
+          "purchase": null,
+          "description": "Startausrüstung der gewählten Klasse",
+          "individualizedAt": "",
+          "inventoryUseMode": "auto",
+          "imagePosition": "center",
+          "tags": "Startausrüstung der gewählten Klasse",
+          "templateId": "standard:waffen-rustungen:ritterschwert",
+          "valuation": null,
+          "itemStorageMode": "character",
+          "name": "Draig Ritterschwert",
+          "imageFormat": "square",
+          "registerCategory": "waffen",
+          "image": "https://i.imgur.com/bthNwPb.png",
+          "ownerCharacterName": "Gethin Draig",
+          "equipped": true,
+          "originItemDbKey": "standard:waffen-rustungen:ritterschwert",
+          "category": "weapon",
+          "type": "Waffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "equipment-weapon-starter-teulu-longsword",
+          "itemDbKey": "",
+          "value": {
+            "gold": 0,
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "pfennig": 0
+          },
+          "valuationNote": "",
+          "creatureId": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "starter-teulu-longsword"
+          },
+          "quantity": "1",
+          "infoRows": [],
+          "weight": "",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "sword",
+            "weaponProfileId": "sword",
+            "training": "martial",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "1d10",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Startausrüstung der gewählten Klasse",
+            "notes": "Startausrüstung der gewählten Klasse",
+            "requirements": "",
+            "aiInstructions": ""
+          }
+        },
+        {
+          "houseArmor": {
+            "houseId": "haus-draig",
+            "regionId": "celtigerns-wacht",
+            "rankId": "jungritter",
+            "minimumLevel": 4,
+            "armorClassRange": "13–15"
+          },
+          "name": "Draig Plattenrüstung",
+          "equipped": true,
+          "originItemDbKey": "standard:cenyr-ruestungen:haus-draig:jungritter",
+          "tags": "Startausrüstung der gewählten Klasse",
+          "ownerCharacterName": "Gethin Draig",
+          "category": "armor",
+          "creatureId": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "starter-teulu-chainmail"
+          },
+          "icon": "",
+          "templateName": "Haus Draig · Jungritter-Plattenrüstung",
+          "quantity": "1",
+          "combatDefinition": {
+            "kind": "armor",
+            "mechanics": {
+              "spellAttack": 0,
+              "attack": 0,
+              "armorClass": 0,
+              "attackRollMode": "normal",
+              "initiative": 0,
+              "spellSaveDc": 0,
+              "passivePerception": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "damage": 0,
+              "bonusDamageFormula": "",
+              "savingThrow": 0,
+              "savingThrowDisadvantageAttributes": [],
+              "savingThrowAdvantageAttributes": [],
+              "movement": 0,
+              "skill": 0,
+              "maximumHitPoints": 0
+            },
+            "damageProtection": {
+              "amount": 1,
+              "name": "Plattengrundschutz",
+              "damageTypes": [
+                "hieb",
+                "stich",
+                "wucht"
+              ],
+              "excludedDamageTypes": []
+            },
+            "triggerRules": [],
+            "armorKind": "armor",
+            "armorCategory": "heavy",
+            "baseArmorClass": 15,
+            "armorClassBonus": 0,
+            "dexterityMode": "none",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Startausrüstung der gewählten Klasse",
+            "notes": "Startausrüstung der gewählten Klasse"
+          },
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "valuationNote": "",
+          "itemDbKey": "",
+          "infoRows": [],
+          "templateId": "standard:cenyr-ruestungen:haus-draig:jungritter",
+          "weight": "",
+          "imageFormat": "square",
+          "ownerCharacterId": "person--haus-draig--gethin-1722-draig",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "purchase": null,
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-draig-harnisch-v1.png",
+          "id": "equipment-armor-starter-teulu-chainmail",
+          "type": "Rüstung",
+          "flavorText": "",
+          "instanceId": "equipment-armor-starter-teulu-chainmail",
+          "valuation": null,
+          "acquiredAt": "2026-10-14T10:22:06.573Z",
+          "offerId": "",
+          "description": "Startausrüstung der gewählten Klasse",
+          "inventoryUseMode": "auto",
+          "value": {
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "pfennig": 0,
+            "gold": 0
+          },
+          "registerCategory": "ruestungen",
+          "itemStorageMode": "character",
+          "imagePosition": "center"
+        },
+        {
+          "itemStorageMode": "character",
+          "ownerCharacterName": "Gethin Draig",
+          "infoRows": [],
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "description": "Vivian, von Gethin meist Vivi genannt, ist seine Sonnenläufer-Stute aus Ceffyl und Aurelianer. Ihr beiges Fell wird nach unten zunehmend golden, bis zu den goldenen Hufen. Die üppige weiße Mähne trägt hellgoldene Spitzen. Eine außergewöhnlich gute Stute mit ausgeprägten Diva-Allüren.",
+          "creatureId": "companion-gethin-vivian",
+          "individualizedAt": "2026-10-13T18:16:04.077Z",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png",
+          "imageFormat": "portrait",
+          "category": "companion",
+          "id": "gethin-vivian",
+          "ownerCharacterId": "person--haus-draig--gethin-1722-draig",
+          "type": "Sonnenläufer-Stute",
+          "registerCategory": "pferde",
+          "name": "Vivian",
+          "instanceId": "gethin-vivian",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 9,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 8,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Stärke",
+              "value": 7
+            },
+            {
+              "label": "Agilität",
+              "value": 8
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 8
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ],
+          "templateId": "",
+          "imageFit": "contain",
+          "templateName": "Sonnenläufer-Stute"
+        },
+        {
+          "id": "person--haus-draig--gethin-1722-draig-house-signet-20261102",
+          "instanceId": "person--haus-draig--gethin-1722-draig-house-signet-20261102",
+          "templateId": "house-signet:haus-draig",
+          "templateName": "Draig-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-draig",
+            "revision": "a274f3994f5ad5303421a36e"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-draig",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-draig--gethin-1722-draig",
+          "ownerCharacterName": "Gethin Draig",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Gethin Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-bdac8c16cb36282e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Draig",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Draig"
+            }
+          ],
+          "attributes": []
+        }
+      ],
+      "hitpoints": "48 / 52 TP",
+      "portraitFit": "cover",
+      "level": "Stufe",
+      "characterId": "person--haus-draig--gethin-1722-draig",
+      "money": "0 Gold, 0 Silber, 0 Kupfer, 0 Eisenpfennig",
+      "role": "Rolle",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "open": false,
+        "updatedAt": "",
+        "status": "",
+        "step": 0
+      },
+      "revision": 1791974298917,
+      "carryValue": "78,4 / 120 kg",
+      "showInfoTable": false,
+      "portraitFormat": "portrait",
+      "moneyState": {
+        "silver": 0,
+        "copper": 0,
+        "pfennig": 0,
+        "totalCopper": 0,
+        "gold": 0
+      },
+      "name": "Gethin Draig",
+      "moneyNotice": "",
+      "infoRows": [],
+      "healthColor": "#5c7f20",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "portrait": "",
+      "portraitPosition": "top",
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 9
+            },
+            {
+              "value": 8,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 7,
+              "label": "Stärke"
+            },
+            {
+              "label": "Agilität",
+              "value": 8
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 8
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ],
+          "description": "Vivian, von Gethin meist Vivi genannt, ist seine Sonnenläufer-Stute aus Ceffyl und Aurelianer. Ihr beiges Fell wird nach unten zunehmend golden, bis zu den goldenen Hufen. Die üppige weiße Mähne trägt hellgoldene Spitzen. Eine außergewöhnlich gute Stute mit ausgeprägten Diva-Allüren.",
+          "imageFit": "contain",
+          "imageFormat": "portrait",
+          "summary": "Vivian, von Gethin meist Vivi genannt, ist seine Sonnenläufer-Stute aus Ceffyl und Aurelianer. Ihr beiges Fell wird nach unten zunehmend golden, bis zu den goldenen Hufen. Die üppige weiße Mähne trägt hellgoldene Spitzen. Eine außergewöhnlich gute Stute mit ausgeprägten Diva-Allüren.",
+          "statusColor": "#5c7f20",
+          "inventoryItemId": "gethin-vivian",
+          "status": "Gesund",
+          "role": "Reittier",
+          "name": "Vivian",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png",
+          "creatureId": "companion-gethin-vivian",
+          "imagePosition": "center",
+          "infoRows": [
+            {
+              "label": "Besitz",
+              "value": "Gethin"
+            },
+            {
+              "label": "Rufname",
+              "value": "Vivi"
+            },
+            {
+              "value": "Ceffyl × Aurelianer",
+              "label": "Zucht"
+            }
+          ],
+          "species": "Sonnenläufer-Stute",
+          "id": "companion-mqu1vat2-0-zz2n"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+    },
+    "updatedAt": "2026-11-02T21:05:42.453432Z"
+  }
+}

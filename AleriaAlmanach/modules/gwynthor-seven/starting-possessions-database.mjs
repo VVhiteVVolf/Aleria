@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
-import { projectEquipmentCharacterRecord } from '../../../CharakterDatenbank/lib/character-equipment-record-projection.mjs';
+import { projectEquipmentCharacterRecord, hasNewerEquipmentRecordProjection } from '../../../CharakterDatenbank/lib/character-equipment-record-projection.mjs';
 import { KNIGHT_EQUIPMENT_TARGETS } from './knight-equipment-plan.mjs';
 import { GWYNTHOR_SEVEN_LOADOUTS } from './equipment.mjs';
 
@@ -82,6 +82,7 @@ export function projectKnightStartingPossessionsDatabase({ registry, snapshot, r
   assert.equal(online.characters.length, 4); assert.equal(verification.profiles.length, 4); assert.equal(records.length, 4);
   const projections = [], exports = [], selectedIds = new Set();
   let preservedExtraItems = 0;
+  let supersededProfiles = 0;
   for (const target of KNIGHT_EQUIPMENT_TARGETS) {
     const matches = online.characters.filter(character => target.knownIds.includes(character.id));
     assert.equal(matches.length, 1, 'Die veröffentlichte Figur ist nicht eindeutig.');
@@ -99,6 +100,10 @@ export function projectKnightStartingPossessionsDatabase({ registry, snapshot, r
     assert.equal(person.localRecord.path, registryRow.path);
     const merged = mergePublishedEquipment(record.character, remote, proofs[0], target);
     const sourcePath = `${KNIGHT_STARTING_EXPORT_DIRECTORY}/${target.key}.json`;
+    if (hasNewerEquipmentRecordProjection({ record, registry, snapshot, sourcePath, exportedAt: online.capturedAt })) {
+      supersededProfiles += 1;
+      continue;
+    }
     const { projection, exported } = projectEquipmentCharacterRecord({ record, snapshotCharacter: person, path: registryRow.path,
       ...merged, sourcePath, now: online.capturedAt });
     assert.deepEqual(preservedFields(projection.record.character), preservedFields(record.character), 'Unbeteiligte lokale Charakterfelder müssen erhalten bleiben.');
@@ -113,6 +118,6 @@ export function projectKnightStartingPossessionsDatabase({ registry, snapshot, r
   assert.deepEqual(result.snapshot.characters.filter(character => !selectedIds.has(character.id)), unrelated);
   assert.deepEqual(result.registry.records.filter(row => !selectedIds.has(row.firestoreDocumentId)), registry.records.filter(row => !selectedIds.has(row.firestoreDocumentId)));
   assert.deepEqual(result.snapshot.charTabs, snapshot.charTabs);
-  return { ...result, exports, verification: { profiles: 4, unrelatedCharactersPreserved: unrelated.length,
+  return { ...result, exports, verification: { profiles: 4, supersededProfiles, unrelatedCharactersPreserved: unrelated.length,
     preservedExtraItems, localDataPreserved: true, biographyAndGenealogyPreserved: true, combatResourcesPreserved: true, sourceTimestamp: online.capturedAt } };
 }

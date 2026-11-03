@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
-import { projectEquipmentCharacterRecord } from '../../../CharakterDatenbank/lib/character-equipment-record-projection.mjs';
+import { projectEquipmentCharacterRecord, hasNewerEquipmentRecordProjection } from '../../../CharakterDatenbank/lib/character-equipment-record-projection.mjs';
 import { planKnightEquipment } from './knight-equipment-plan.mjs';
 
 export const OWETA_EQUIPMENT_ID = 'vk0xAa3ZcEhVvGC1CzNq';
@@ -9,6 +9,7 @@ export const OWETA_EQUIPMENT_WORLD_ID = 'person--haus-draig--oweta-draig';
 function withoutEquipment(character) {
   const result = structuredClone(character);
   delete result.updatedAt;
+  if (result.localRecord) { delete result.localRecord.contentHash; delete result.localRecord.firestoreDocumentIds; }
   if (result.inventory) {
     delete result.inventory.items;
     delete result.inventory.revision;
@@ -37,6 +38,11 @@ export function projectOwetaEquipmentDatabase({ registry, snapshot, report, reco
   assert.equal(registryRow.recordId, record.recordId);
   assert.equal(snapshotRow.localRecord.recordId, record.recordId);
   assert.equal(snapshotRow.localRecord.path, registryRow.path);
+
+  if (hasNewerEquipmentRecordProjection({ record, registry, snapshot, sourcePath, exportedAt: now })) {
+    return { ...mergeCharacterRecordProjections({ registry, snapshot, report }, [], [], snapshot.charTabs), exported: null,
+      verification: { characterId: OWETA_EQUIPMENT_ID, superseded: true } };
+  }
 
   const plan = planKnightEquipment({ characters: characters.map(character => character.id === OWETA_EQUIPMENT_ID ? record.character : character), templates, now });
   const entry = plan.entries.find(item => item.key === 'oweta-draig');

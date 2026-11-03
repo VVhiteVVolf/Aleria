@@ -1,0 +1,3043 @@
+{
+  "verified": true,
+  "committedAt": "2026-11-02T21:48:29.149316Z",
+  "before": [
+    {
+      "type": "Lehensritter",
+      "name": "Draig Lehensritter",
+      "portrait": "https://i.imgur.com/sY3vKh7.png",
+      "species": "Mensch",
+      "portraitCaption": "Lehensritter des Hauses Draig mit Langschwert.",
+      "avatars": [],
+      "level": 7,
+      "entityType": "creature",
+      "createdAt": "2026-08-06T00:35:29.696Z",
+      "notes": "Erfahrener Lehensritter. Pflichterfüllt, kontrolliert und eher zu einem geordneten Rückzug oder einer ehrenhaften Aufgabe bereit als zu sinnlosem Sterben.",
+      "challengeRating": 7,
+      "loot": {
+        "notes": "Die Ausrüstung trägt erkennbare Draig-Zeichen und sollte bei ehrenhaftem Ausgang an das Haus zurückgegeben werden.",
+        "currency": "2W10 Silberstücke, 1W4 Goldstücke",
+        "items": [
+          {
+            "id": "loot-draig-lehensritter-siegel",
+            "name": "Lehenssiegel des Hauses Draig",
+            "quantity": 1,
+            "chance": 100,
+            "notes": "Belegt Rang und Verpflichtung des Ritters."
+          },
+          {
+            "id": "loot-draig-lehensritter-langschwert",
+            "name": "Draig-Langschwert",
+            "quantity": 1,
+            "chance": 90,
+            "notes": "Gut gepflegte Klinge mit einfacher Hausmarke."
+          },
+          {
+            "id": "loot-draig-lehensritter-befehl",
+            "name": "Versiegelter Marschbefehl",
+            "quantity": 1,
+            "chance": 35,
+            "notes": "Nennt Weg, Auftrag oder den zuständigen Lehensherrn."
+          }
+        ]
+      },
+      "classification": {
+        "house": "Haus Draig",
+        "location": "Celtigerns Wacht",
+        "genus": "Menschen"
+      },
+      "size": "Mittel",
+      "ownerUid": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "schemaVersion": 3,
+      "updatedAt": "2026-10-11T19:46:42.303Z",
+      "createdBy": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "templateId": "",
+      "instanceOrdinal": 0,
+      "habitat": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+      "combatProfile": {
+        "techniques": [],
+        "armorItems": [
+          {
+            "id": "draig-lehensritter-harnisch",
+            "inventoryItemId": "",
+            "name": "Draig-Harnisch",
+            "kind": "armor",
+            "baseArmorClass": 17,
+            "armorClassBonus": 0,
+            "dexterityMode": "none",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Schwer, gepflegt",
+            "notes": "Dunkler Stahl mit dem Zeichen des Hauses Draig.",
+            "equipped": true
+          },
+          {
+            "id": "draig-lehensritter-wehrgehänge",
+            "inventoryItemId": "",
+            "name": "Verstärktes Wehrgehänge",
+            "kind": "ward",
+            "baseArmorClass": null,
+            "armorClassBonus": 1,
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Parierschutz",
+            "notes": "Schützt Schwertarm und Flanke, ohne ein Schild zu benötigen.",
+            "equipped": true
+          }
+        ],
+        "skills": [
+          {
+            "id": "draig-lehensritter-athletik",
+            "name": "Athletik",
+            "attributeKey": "strength",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Hält Engstellen und drängt Gegner von seinen Gefolgsleuten fort."
+          },
+          {
+            "id": "draig-lehensritter-wahrnehmung",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Achtet auf Flanken, Schützen und Gefahren für seine Leute."
+          },
+          {
+            "id": "draig-lehensritter-ueberzeugen",
+            "name": "Überzeugen",
+            "attributeKey": "charisma",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Spricht mit der ruhigen Autorität eines vereidigten Lehensmanns."
+          }
+        ],
+        "cheats": {
+          "automaticCritical": false,
+          "enabled": false
+        },
+        "damageAffinities": [],
+        "weapons": [
+          {
+            "id": "draig-lehensritter-langschwert",
+            "inventoryItemId": "",
+            "name": "Draig-Langschwert",
+            "weaponType": "sword",
+            "training": "simple",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Vielseitig",
+            "notes": "Kontrollierte Hiebe; wird zweihändig geführt, sobald der Ritter Raum gewinnt.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          },
+          {
+            "id": "draig-lehensritter-knaufstoss",
+            "inventoryItemId": "",
+            "name": "Knaufstoß",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Kontrolle",
+            "notes": "Ein kurzer Stoß, um einen Gegner zu unterbrechen oder zurückzudrängen.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          },
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          }
+        ],
+        "hitPoints": {
+          "maximumOverride": 63,
+          "temporary": 0,
+          "current": 63,
+          "hitDie": 10,
+          "averagePerLevelOverride": null
+        },
+        "notes": "Erfahrener Lehensritter. Pflichterfüllt, kontrolliert und eher zu einem geordneten Rückzug oder einer ehrenhaften Aufgabe bereit als zu sinnlosem Sterben.",
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 18,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 16,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 11,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 14,
+            "modifierOverride": null
+          }
+        ],
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ],
+        "quirks": [],
+        "progression": {
+          "proficiencyBonusOverride": null,
+          "nextLevelExperience": null,
+          "experience": 0,
+          "experienceReward": null,
+          "specialLevels": 0,
+          "level": 7
+        },
+        "conditions": [],
+        "identity": {
+          "archetype": "Lehensritter",
+          "background": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+          "ancestry": "Mensch"
+        },
+        "combat": {
+          "damageBonus": 0,
+          "movement": 9,
+          "passivePerceptionBonus": 0,
+          "attackBonus": 0,
+          "canActAtZeroHitPoints": false,
+          "initiativeBonus": 0
+        },
+        "magic": {
+          "manaResourceId": "mana-focus",
+          "spells": [],
+          "notes": "",
+          "spellAttackOverride": null,
+          "slotResourceIds": [],
+          "enabled": false,
+          "spellSaveDcOverride": null,
+          "castingAttribute": "intelligence"
+        },
+        "armorClass": {
+          "base": 10,
+          "override": 18,
+          "magicModifier": 0,
+          "dexterityCap": 2,
+          "overrideMode": "total",
+          "otherModifier": 0,
+          "dexterityMode": "full",
+          "shieldBonus": 0
+        },
+        "abilities": [
+          {
+            "id": "draig-lehensritter-schutzpflicht",
+            "name": "Schutzpflicht",
+            "description": "Der Ritter stellt sich bevorzugt zwischen eine unmittelbare Bedrohung und einen verwundeten oder bedrängten Draig-Gefolgsmann.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-lehensritter-lehensbefehl",
+            "name": "Lehensbefehl",
+            "description": "Einmal pro Szene lässt er Verbündete geschlossen vorrücken, Deckung beziehen oder einen Rückzug sichern.",
+            "usesCurrent": 1,
+            "usesMaximum": 1,
+            "recovery": "scene",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-lehensritter-standfest",
+            "name": "Standfest",
+            "description": "Solange noch ein Gefolgsmann an seiner Seite kämpft, widersteht er Einschüchterung und ungeordnetem Rückzug.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          }
+        ],
+        "schemaVersion": 9,
+        "resources": [
+          {
+            "id": "draig-lehensritter-befehl",
+            "name": "Lehensbefehl",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": "Ordnet einmal pro Szene einen koordinierten Stellungswechsel an."
+          },
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana / Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          }
+        ],
+        "proficiencies": {
+          "weapons": [],
+          "notes": "",
+          "languages": [],
+          "armor": [],
+          "tools": []
+        },
+        "aura": {
+          "focusResourceId": "aura-focus",
+          "latentPresence": {
+            "name": "Latente Präsenz",
+            "requirements": "",
+            "enemyMechanics": {
+              "attack": 0,
+              "maximumHitPoints": 0,
+              "attackRollMode": "normal",
+              "movement": 0,
+              "passivePerception": 0,
+              "armorClass": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "skill": 0,
+              "damage": 0,
+              "spellSaveDc": 0,
+              "initiative": 0
+            },
+            "trigger": "",
+            "radius": "",
+            "target": "Umgebung, Verbündete und Gegner",
+            "aiInstructions": "",
+            "allyMechanics": {
+              "spellAttack": 0,
+              "passivePerception": 0,
+              "attack": 0,
+              "spellSaveDc": 0,
+              "armorClass": 0,
+              "skill": 0,
+              "damage": 0,
+              "maximumHitPoints": 0,
+              "initiative": 0,
+              "attackRollMode": "normal",
+              "savingThrow": 0,
+              "movement": 0
+            },
+            "enabled": true,
+            "duration": "",
+            "active": true,
+            "selfMechanics": {
+              "spellSaveDc": 0,
+              "armorClass": 0,
+              "skill": 0,
+              "damage": 0,
+              "movement": 0,
+              "spellAttack": 0,
+              "initiative": 0,
+              "maximumHitPoints": 0,
+              "savingThrow": 0,
+              "attackRollMode": "normal",
+              "passivePerception": 0,
+              "attack": 0
+            },
+            "description": ""
+          },
+          "name": "Aura",
+          "activeForm": {
+            "requirements": "",
+            "enemyMechanics": {
+              "passivePerception": 0,
+              "skill": 0,
+              "attackRollMode": "normal",
+              "savingThrow": 0,
+              "maximumHitPoints": 0,
+              "attack": 0,
+              "armorClass": 0,
+              "spellAttack": 0,
+              "damage": 0,
+              "movement": 0,
+              "initiative": 0,
+              "spellSaveDc": 0
+            },
+            "enabled": false,
+            "aiInstructions": "",
+            "active": false,
+            "allyMechanics": {
+              "maximumHitPoints": 0,
+              "skill": 0,
+              "spellSaveDc": 0,
+              "initiative": 0,
+              "spellAttack": 0,
+              "attack": 0,
+              "attackRollMode": "normal",
+              "passivePerception": 0,
+              "savingThrow": 0,
+              "damage": 0,
+              "movement": 0,
+              "armorClass": 0
+            },
+            "name": "Aktive Form",
+            "duration": "",
+            "target": "Selbst und gewählte Ziele",
+            "description": "",
+            "radius": "",
+            "selfMechanics": {
+              "attackRollMode": "normal",
+              "passivePerception": 0,
+              "savingThrow": 0,
+              "skill": 0,
+              "maximumHitPoints": 0,
+              "movement": 0,
+              "armorClass": 0,
+              "attack": 0,
+              "damage": 0,
+              "spellSaveDc": 0,
+              "spellAttack": 0,
+              "initiative": 0
+            },
+            "trigger": ""
+          },
+          "enabled": false,
+          "domain": "",
+          "notes": "",
+          "focusBypassCost": 1
+        },
+        "templateSelections": {
+          "appliedAt": "",
+          "backgroundId": "",
+          "ancestryId": "",
+          "attributeMethod": "",
+          "classId": "",
+          "schemaVersion": 1
+        }
+      },
+      "id": "catalog-draig-lehensritter"
+    },
+    {
+      "instanceOrdinal": 0,
+      "schemaVersion": 3,
+      "portrait": "https://i.imgur.com/QaY77kP.png",
+      "challengeRating": 3,
+      "createdBy": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "entityType": "creature",
+      "loot": {
+        "items": [
+          {
+            "id": "loot-draig-waffenknecht-speer",
+            "name": "Draig-Speer",
+            "quantity": 1,
+            "chance": 85,
+            "notes": "Gerader Schaft, eiserne Spitze, deutliche Gebrauchsspuren."
+          },
+          {
+            "id": "loot-draig-waffenknecht-schild",
+            "name": "Draig-Rundschild",
+            "quantity": 1,
+            "chance": 75,
+            "notes": "Nach einem Kampf häufig reparaturbedürftig."
+          },
+          {
+            "id": "loot-draig-waffenknecht-marke",
+            "name": "Hölzerne Soldmarke",
+            "quantity": 1,
+            "chance": 100,
+            "notes": "Kennzeichnet Einheit und ausstehenden Sold."
+          }
+        ],
+        "currency": "1W8 Silberstücke",
+        "notes": "Schlichte, brauchbare Lehensausrüstung mit Draig-Farben."
+      },
+      "notes": "Solider Lehenssoldat. Kein Held, aber diszipliniert genug, um seinem Ritter zu folgen und verwundete Kameraden nicht zurückzulassen.",
+      "size": "Mittel",
+      "habitat": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+      "name": "Draig Waffenknecht",
+      "combatProfile": {
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ],
+        "quirks": [],
+        "aura": {
+          "latentPresence": {
+            "allyMechanics": {
+              "spellSaveDc": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "attack": 0,
+              "initiative": 0,
+              "movement": 0,
+              "spellAttack": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "skill": 0,
+              "maximumHitPoints": 0,
+              "savingThrow": 0
+            },
+            "name": "Latente Präsenz",
+            "trigger": "",
+            "aiInstructions": "",
+            "enemyMechanics": {
+              "movement": 0,
+              "spellSaveDc": 0,
+              "armorClass": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "spellAttack": 0,
+              "initiative": 0,
+              "maximumHitPoints": 0,
+              "damage": 0,
+              "skill": 0,
+              "attack": 0,
+              "savingThrow": 0
+            },
+            "radius": "",
+            "active": true,
+            "duration": "",
+            "target": "Umgebung, Verbündete und Gegner",
+            "selfMechanics": {
+              "attackRollMode": "normal",
+              "spellAttack": 0,
+              "savingThrow": 0,
+              "skill": 0,
+              "initiative": 0,
+              "damage": 0,
+              "spellSaveDc": 0,
+              "attack": 0,
+              "armorClass": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0
+            },
+            "enabled": true,
+            "description": "",
+            "requirements": ""
+          },
+          "domain": "",
+          "enabled": false,
+          "name": "Aura",
+          "notes": "",
+          "focusResourceId": "aura-focus",
+          "focusBypassCost": 1,
+          "activeForm": {
+            "trigger": "",
+            "target": "Selbst und gewählte Ziele",
+            "description": "",
+            "name": "Aktive Form",
+            "selfMechanics": {
+              "initiative": 0,
+              "skill": 0,
+              "spellSaveDc": 0,
+              "maximumHitPoints": 0,
+              "attack": 0,
+              "savingThrow": 0,
+              "damage": 0,
+              "passivePerception": 0,
+              "armorClass": 0,
+              "spellAttack": 0,
+              "attackRollMode": "normal",
+              "movement": 0
+            },
+            "active": false,
+            "requirements": "",
+            "aiInstructions": "",
+            "enemyMechanics": {
+              "spellSaveDc": 0,
+              "skill": 0,
+              "passivePerception": 0,
+              "movement": 0,
+              "initiative": 0,
+              "maximumHitPoints": 0,
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "spellAttack": 0,
+              "savingThrow": 0,
+              "attackRollMode": "normal"
+            },
+            "allyMechanics": {
+              "savingThrow": 0,
+              "skill": 0,
+              "initiative": 0,
+              "attackRollMode": "normal",
+              "spellAttack": 0,
+              "armorClass": 0,
+              "movement": 0,
+              "damage": 0,
+              "maximumHitPoints": 0,
+              "attack": 0,
+              "spellSaveDc": 0,
+              "passivePerception": 0
+            },
+            "radius": "",
+            "enabled": false,
+            "duration": ""
+          }
+        },
+        "techniques": [],
+        "weapons": [
+          {
+            "id": "draig-waffenknecht-speer",
+            "inventoryItemId": "",
+            "name": "Draig-Speer",
+            "weaponType": "spear",
+            "training": "simple",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "damageType": "Stich",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf oder Wurf 6 / 18 m",
+            "properties": "Einhand, Wurf",
+            "notes": "Wird hinter dem Schild geführt und hält Gegner auf Abstand.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          },
+          {
+            "id": "draig-waffenknecht-schildstoss",
+            "inventoryItemId": "",
+            "name": "Schildstoß",
+            "weaponType": "shield",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Kontrolle",
+            "notes": "Schafft Raum für den Speer oder schützt einen Gefährten.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          },
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          }
+        ],
+        "schemaVersion": 9,
+        "conditions": [],
+        "magic": {
+          "enabled": false,
+          "notes": "",
+          "spellAttackOverride": null,
+          "slotResourceIds": [],
+          "spellSaveDcOverride": null,
+          "spells": [],
+          "manaResourceId": "mana-focus",
+          "castingAttribute": "intelligence"
+        },
+        "armorItems": [
+          {
+            "dexterityMode": "none",
+            "baseArmorClass": 13,
+            "kind": "armor",
+            "dexterityUnlockLevel": 0,
+            "properties": "Mittel",
+            "armorClassBonus": 0,
+            "notes": "Robuste, einheitliche Lehensausrüstung.",
+            "inventoryItemId": "",
+            "name": "Draig-Kettenhemd",
+            "dexterityCap": 2,
+            "equipped": true,
+            "id": "draig-waffenknecht-kettenhemd",
+            "armorCategory": "heavy"
+          },
+          {
+            "dexterityUnlockLevel": 0,
+            "dexterityCap": 2,
+            "baseArmorClass": null,
+            "properties": "Schild",
+            "name": "Draig-Rundschild",
+            "equipped": true,
+            "notes": "Bemalter Holzschild mit verstärktem Rand.",
+            "kind": "shield",
+            "inventoryItemId": "",
+            "id": "draig-waffenknecht-schild",
+            "dexterityMode": "full",
+            "armorClassBonus": 2
+          }
+        ],
+        "identity": {
+          "background": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+          "ancestry": "Mensch",
+          "archetype": "Waffenknecht"
+        },
+        "armorClass": {
+          "override": 16,
+          "magicModifier": 0,
+          "base": 10,
+          "otherModifier": 0,
+          "shieldBonus": 0,
+          "dexterityCap": 2,
+          "overrideMode": "total",
+          "dexterityMode": "full"
+        },
+        "hitPoints": {
+          "maximumOverride": 27,
+          "averagePerLevelOverride": null,
+          "current": 27,
+          "hitDie": 10,
+          "temporary": 0
+        },
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 15,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 10,
+            "modifierOverride": null
+          }
+        ],
+        "combat": {
+          "damageBonus": 0,
+          "passivePerceptionBonus": 0,
+          "canActAtZeroHitPoints": false,
+          "attackBonus": 0,
+          "movement": 9,
+          "initiativeBonus": 0
+        },
+        "resources": [
+          {
+            "id": "draig-waffenknecht-schildwacht",
+            "name": "Schildwacht",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": "Fängt einmal pro Szene erzählerisch einen Angriff auf einen unmittelbar benachbarten Verbündeten ab."
+          },
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana / Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "notes": ""
+          }
+        ],
+        "defenseBalanceVersion": 1,
+        "progression": {
+          "nextLevelExperience": null,
+          "experienceReward": null,
+          "specialLevels": 0,
+          "level": 3,
+          "experience": 0,
+          "proficiencyBonusOverride": null
+        },
+        "abilities": [
+          {
+            "id": "draig-waffenknecht-speerwall",
+            "name": "Speerwall",
+            "description": "Neben einem zweiten Schildträger kontrolliert der Waffenknecht einen schmalen Zugang besonders wirkungsvoll.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-waffenknecht-schildwacht",
+            "name": "Schildwacht",
+            "description": "Einmal pro Szene schiebt er sich mit dem Schild vor einen direkt benachbarten Verbündeten.",
+            "usesCurrent": 1,
+            "usesMaximum": 1,
+            "recovery": "scene",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          }
+        ],
+        "revision": 1790987958664,
+        "proficiencies": {
+          "languages": [],
+          "weapons": [],
+          "notes": "",
+          "tools": [],
+          "armor": []
+        },
+        "damageAffinities": [],
+        "templateSelections": {
+          "appliedAt": "",
+          "classId": "",
+          "schemaVersion": 1,
+          "ancestryId": "",
+          "attributeMethod": "",
+          "backgroundId": ""
+        },
+        "notes": "Solider Lehenssoldat. Kein Held, aber diszipliniert genug, um seinem Ritter zu folgen und verwundete Kameraden nicht zurückzulassen.",
+        "cheats": {
+          "automaticCritical": false,
+          "enabled": false
+        },
+        "skills": [
+          {
+            "id": "draig-waffenknecht-athletik",
+            "name": "Athletik",
+            "attributeKey": "strength",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Stemmt Schild und Speer gegen Ansturm oder Fluchtversuch."
+          },
+          {
+            "id": "draig-waffenknecht-wahrnehmung",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Hält im Wachdienst Wege und Gebäudeecken im Blick."
+          }
+        ]
+      },
+      "species": "Mensch",
+      "updatedAt": "2026-10-11T19:46:42.303Z",
+      "portraitCaption": "Draig-Waffenknecht mit Speer und Schild.",
+      "level": 3,
+      "ownerUid": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "avatars": [],
+      "classification": {
+        "house": "Haus Draig",
+        "genus": "Menschen",
+        "location": "Celtigerns Wacht"
+      },
+      "createdAt": "2026-08-06T04:57:43.823Z",
+      "templateId": "",
+      "type": "Waffenknecht",
+      "id": "catalog-draig-waffenknecht"
+    }
+  ],
+  "characters": [
+    {
+      "ownerUid": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "portraitCaption": "Lehensritter des Hauses Draig mit Langschwert.",
+      "avatars": [],
+      "loot": {
+        "currency": "2W10 Silberstücke, 1W4 Goldstücke",
+        "items": [
+          {
+            "id": "loot-draig-lehensritter-siegel",
+            "name": "Lehenssiegel des Hauses Draig",
+            "quantity": 1,
+            "chance": 100,
+            "notes": "Belegt Rang und Verpflichtung des Ritters."
+          },
+          {
+            "id": "loot-draig-lehensritter-langschwert",
+            "name": "Draig-Langschwert",
+            "quantity": 1,
+            "chance": 90,
+            "notes": "Gut gepflegte Klinge mit einfacher Hausmarke."
+          },
+          {
+            "id": "loot-draig-lehensritter-befehl",
+            "name": "Versiegelter Marschbefehl",
+            "quantity": 1,
+            "chance": 35,
+            "notes": "Nennt Weg, Auftrag oder den zuständigen Lehensherrn."
+          }
+        ],
+        "notes": "Die Ausrüstung trägt erkennbare Draig-Zeichen und sollte bei ehrenhaftem Ausgang an das Haus zurückgegeben werden."
+      },
+      "entityType": "creature",
+      "habitat": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+      "species": "Mensch",
+      "notes": "Erfahrener Lehensritter. Pflichterfüllt, kontrolliert und eher zu einem geordneten Rückzug oder einer ehrenhaften Aufgabe bereit als zu sinnlosem Sterben.",
+      "instanceOrdinal": 0,
+      "updatedAt": "2026-11-02T21:48:28.207Z",
+      "createdBy": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "createdAt": "2026-08-06T00:35:29.696Z",
+      "level": 7,
+      "size": "Mittel",
+      "schemaVersion": 3,
+      "name": "Draig Lehensritter",
+      "templateId": "",
+      "challengeRating": 7,
+      "combatProfile": {
+        "notes": "Erfahrener Lehensritter. Pflichterfüllt, kontrolliert und eher zu einem geordneten Rückzug oder einer ehrenhaften Aufgabe bereit als zu sinnlosem Sterben.",
+        "aura": {
+          "focusBypassCost": 1,
+          "notes": "",
+          "activeForm": {
+            "requirements": "",
+            "name": "Aktive Form",
+            "allyMechanics": {
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "attackRollMode": "normal",
+              "damage": 0,
+              "passivePerception": 0,
+              "movement": 0,
+              "spellSaveDc": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "maximumHitPoints": 0,
+              "attack": 0
+            },
+            "trigger": "",
+            "enemyMechanics": {
+              "maximumHitPoints": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "attackRollMode": "normal",
+              "initiative": 0,
+              "movement": 0,
+              "spellSaveDc": 0,
+              "skill": 0,
+              "spellAttack": 0,
+              "passivePerception": 0,
+              "attack": 0,
+              "savingThrow": 0
+            },
+            "duration": "",
+            "selfMechanics": {
+              "attackRollMode": "normal",
+              "skill": 0,
+              "spellAttack": 0,
+              "maximumHitPoints": 0,
+              "initiative": 0,
+              "armorClass": 0,
+              "attack": 0,
+              "savingThrow": 0,
+              "passivePerception": 0,
+              "movement": 0,
+              "spellSaveDc": 0,
+              "damage": 0
+            },
+            "description": "",
+            "radius": "",
+            "aiInstructions": "",
+            "target": "Selbst und gewählte Ziele",
+            "active": false,
+            "enabled": false
+          },
+          "domain": "",
+          "name": "Aura",
+          "focusResourceId": "aura-focus",
+          "latentPresence": {
+            "trigger": "",
+            "duration": "",
+            "requirements": "",
+            "aiInstructions": "",
+            "allyMechanics": {
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "attack": 0,
+              "attackRollMode": "normal",
+              "initiative": 0,
+              "spellSaveDc": 0,
+              "maximumHitPoints": 0,
+              "armorClass": 0,
+              "movement": 0,
+              "passivePerception": 0,
+              "damage": 0
+            },
+            "radius": "",
+            "target": "Umgebung, Verbündete und Gegner",
+            "active": true,
+            "name": "Latente Präsenz",
+            "selfMechanics": {
+              "maximumHitPoints": 0,
+              "spellSaveDc": 0,
+              "damage": 0,
+              "skill": 0,
+              "movement": 0,
+              "savingThrow": 0,
+              "passivePerception": 0,
+              "initiative": 0,
+              "armorClass": 0,
+              "attack": 0,
+              "spellAttack": 0,
+              "attackRollMode": "normal"
+            },
+            "enabled": true,
+            "description": "",
+            "enemyMechanics": {
+              "initiative": 0,
+              "savingThrow": 0,
+              "armorClass": 0,
+              "damage": 0,
+              "spellAttack": 0,
+              "skill": 0,
+              "attack": 0,
+              "maximumHitPoints": 0,
+              "spellSaveDc": 0,
+              "passivePerception": 0,
+              "movement": 0,
+              "attackRollMode": "normal"
+            }
+          },
+          "enabled": false
+        },
+        "cheats": {
+          "automaticCritical": false,
+          "enabled": false
+        },
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ],
+        "skills": [
+          {
+            "id": "draig-lehensritter-athletik",
+            "name": "Athletik",
+            "attributeKey": "strength",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Hält Engstellen und drängt Gegner von seinen Gefolgsleuten fort."
+          },
+          {
+            "id": "draig-lehensritter-wahrnehmung",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Achtet auf Flanken, Schützen und Gefahren für seine Leute."
+          },
+          {
+            "id": "draig-lehensritter-ueberzeugen",
+            "name": "Überzeugen",
+            "attributeKey": "charisma",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Spricht mit der ruhigen Autorität eines vereidigten Lehensmanns."
+          }
+        ],
+        "magic": {
+          "manaResourceId": "mana-focus",
+          "notes": "",
+          "spellSaveDcOverride": null,
+          "enabled": false,
+          "slotResourceIds": [],
+          "spellAttackOverride": null,
+          "castingAttribute": "intelligence",
+          "spells": []
+        },
+        "weapons": [
+          {
+            "id": "draig-lehensritter-langschwert",
+            "inventoryItemId": "",
+            "name": "Draig-Langschwert",
+            "weaponType": "sword",
+            "training": "simple",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Vielseitig",
+            "notes": "Kontrollierte Hiebe; wird zweihändig geführt, sobald der Ritter Raum gewinnt.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          },
+          {
+            "id": "draig-lehensritter-knaufstoss",
+            "inventoryItemId": "",
+            "name": "Knaufstoß",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Kontrolle",
+            "notes": "Ein kurzer Stoß, um einen Gegner zu unterbrechen oder zurückzudrängen.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          },
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          }
+        ],
+        "progression": {
+          "specialLevels": 0,
+          "nextLevelExperience": null,
+          "experienceReward": null,
+          "proficiencyBonusOverride": null,
+          "level": 7,
+          "experience": 0
+        },
+        "resources": [
+          {
+            "id": "draig-lehensritter-befehl",
+            "name": "Lehensbefehl",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": "Ordnet einmal pro Szene einen koordinierten Stellungswechsel an."
+          },
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana / Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "recoveryDayKey": "cheat-reset",
+            "notes": ""
+          }
+        ],
+        "damageAffinities": [],
+        "quirks": [],
+        "armorClass": {
+          "otherModifier": 0,
+          "dexterityCap": 2,
+          "overrideMode": "total",
+          "shieldBonus": 0,
+          "dexterityMode": "full",
+          "override": 18,
+          "magicModifier": 0,
+          "base": 10
+        },
+        "proficiencies": {
+          "tools": [],
+          "weapons": [],
+          "languages": [],
+          "armor": [],
+          "notes": ""
+        },
+        "identity": {
+          "ancestry": "Mensch",
+          "background": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+          "archetype": "Lehensritter"
+        },
+        "revision": 1793656108207,
+        "combat": {
+          "damageBonus": 0,
+          "attackBonus": 0,
+          "canActAtZeroHitPoints": false,
+          "movement": 9,
+          "initiativeBonus": 0,
+          "passivePerceptionBonus": 0
+        },
+        "hitPoints": {
+          "temporary": 0,
+          "hitDie": 10,
+          "maximumOverride": 63,
+          "averagePerLevelOverride": null,
+          "current": 63
+        },
+        "armorItems": [
+          {
+            "id": "draig-lehensritter-harnisch",
+            "inventoryItemId": "",
+            "name": "Draig-Harnisch",
+            "kind": "armor",
+            "baseArmorClass": 17,
+            "armorClassBonus": 0,
+            "dexterityMode": "none",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Schwer, gepflegt",
+            "notes": "Dunkler Stahl mit dem Zeichen des Hauses Draig.",
+            "equipped": true
+          },
+          {
+            "id": "draig-lehensritter-wehrgehänge",
+            "inventoryItemId": "",
+            "name": "Verstärktes Wehrgehänge",
+            "kind": "ward",
+            "baseArmorClass": null,
+            "armorClassBonus": 1,
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Parierschutz",
+            "notes": "Schützt Schwertarm und Flanke, ohne ein Schild zu benötigen.",
+            "equipped": true
+          }
+        ],
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 18,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 16,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 11,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 14,
+            "modifierOverride": null
+          }
+        ],
+        "schemaVersion": 11,
+        "templateSelections": {
+          "backgroundId": "",
+          "appliedAt": "",
+          "schemaVersion": 1,
+          "attributeMethod": "",
+          "classId": "",
+          "ancestryId": ""
+        },
+        "abilities": [
+          {
+            "id": "draig-lehensritter-schutzpflicht",
+            "name": "Schutzpflicht",
+            "description": "Der Ritter stellt sich bevorzugt zwischen eine unmittelbare Bedrohung und einen verwundeten oder bedrängten Draig-Gefolgsmann.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-lehensritter-lehensbefehl",
+            "name": "Lehensbefehl",
+            "description": "Einmal pro Szene lässt er Verbündete geschlossen vorrücken, Deckung beziehen oder einen Rückzug sichern.",
+            "usesCurrent": 1,
+            "usesMaximum": 1,
+            "recovery": "scene",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-lehensritter-standfest",
+            "name": "Standfest",
+            "description": "Solange noch ein Gefolgsmann an seiner Seite kämpft, widersteht er Einschüchterung und ungeordnetem Rückzug.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          }
+        ],
+        "conditions": [],
+        "techniques": []
+      },
+      "portrait": "https://i.imgur.com/sY3vKh7.png",
+      "classification": {
+        "genus": "Menschen",
+        "location": "Celtigerns Wacht",
+        "house": "Haus Draig"
+      },
+      "type": "Lehensritter",
+      "id": "catalog-draig-lehensritter"
+    },
+    {
+      "name": "Draig Waffenknecht",
+      "instanceOrdinal": 0,
+      "species": "Mensch",
+      "schemaVersion": 3,
+      "combatProfile": {
+        "abilities": [
+          {
+            "id": "draig-waffenknecht-speerwall",
+            "name": "Speerwall",
+            "description": "Neben einem zweiten Schildträger kontrolliert der Waffenknecht einen schmalen Zugang besonders wirkungsvoll.",
+            "usesCurrent": 0,
+            "usesMaximum": 0,
+            "recovery": "none",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          },
+          {
+            "id": "draig-waffenknecht-schildwacht",
+            "name": "Schildwacht",
+            "description": "Einmal pro Szene schiebt er sich mit dem Schild vor einen direkt benachbarten Verbündeten.",
+            "usesCurrent": 1,
+            "usesMaximum": 1,
+            "recovery": "scene",
+            "recoveryDayKey": "",
+            "rollFormula": "",
+            "damageType": "physisch",
+            "activationType": "action",
+            "delivery": "ability",
+            "combatUsable": false,
+            "target": "",
+            "range": "",
+            "duration": "",
+            "requirements": "",
+            "tags": "",
+            "aiInstructions": "",
+            "effects": [],
+            "concentration": false,
+            "channelComments": 0,
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "active": true,
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal"
+            },
+            "triggerRules": [],
+            "inventoryUseTrigger": {
+              "enabled": false,
+              "itemTags": [],
+              "restoreResources": [],
+              "requireActualRecovery": true
+            }
+          }
+        ],
+        "revision": 1793656108207,
+        "techniques": [],
+        "hitPoints": {
+          "averagePerLevelOverride": null,
+          "maximumOverride": 27,
+          "temporary": 0,
+          "hitDie": 10,
+          "current": 27
+        },
+        "skills": [
+          {
+            "id": "draig-waffenknecht-athletik",
+            "name": "Athletik",
+            "attributeKey": "strength",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Stemmt Schild und Speer gegen Ansturm oder Fluchtversuch."
+          },
+          {
+            "id": "draig-waffenknecht-wahrnehmung",
+            "name": "Wahrnehmung",
+            "attributeKey": "wisdom",
+            "proficiency": "trained",
+            "bonus": 0,
+            "notes": "Hält im Wachdienst Wege und Gebäudeecken im Blick."
+          }
+        ],
+        "conditions": [],
+        "aura": {
+          "domain": "",
+          "latentPresence": {
+            "requirements": "",
+            "active": true,
+            "duration": "",
+            "aiInstructions": "",
+            "trigger": "",
+            "enemyMechanics": {
+              "movement": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "attackRollMode": "normal",
+              "skill": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "passivePerception": 0,
+              "maximumHitPoints": 0,
+              "attack": 0,
+              "savingThrow": 0,
+              "initiative": 0
+            },
+            "allyMechanics": {
+              "passivePerception": 0,
+              "savingThrow": 0,
+              "attack": 0,
+              "armorClass": 0,
+              "attackRollMode": "normal",
+              "movement": 0,
+              "skill": 0,
+              "damage": 0,
+              "maximumHitPoints": 0,
+              "initiative": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0
+            },
+            "description": "",
+            "enabled": true,
+            "radius": "",
+            "name": "Latente Präsenz",
+            "selfMechanics": {
+              "spellAttack": 0,
+              "movement": 0,
+              "spellSaveDc": 0,
+              "initiative": 0,
+              "skill": 0,
+              "attack": 0,
+              "savingThrow": 0,
+              "damage": 0,
+              "passivePerception": 0,
+              "maximumHitPoints": 0,
+              "attackRollMode": "normal",
+              "armorClass": 0
+            },
+            "target": "Umgebung, Verbündete und Gegner"
+          },
+          "focusResourceId": "aura-focus",
+          "focusBypassCost": 1,
+          "enabled": false,
+          "notes": "",
+          "activeForm": {
+            "selfMechanics": {
+              "movement": 0,
+              "armorClass": 0,
+              "damage": 0,
+              "savingThrow": 0,
+              "attack": 0,
+              "attackRollMode": "normal",
+              "passivePerception": 0,
+              "maximumHitPoints": 0,
+              "initiative": 0,
+              "spellAttack": 0,
+              "skill": 0,
+              "spellSaveDc": 0
+            },
+            "enabled": false,
+            "active": false,
+            "target": "Selbst und gewählte Ziele",
+            "duration": "",
+            "aiInstructions": "",
+            "radius": "",
+            "trigger": "",
+            "allyMechanics": {
+              "skill": 0,
+              "spellAttack": 0,
+              "damage": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "attackRollMode": "normal",
+              "initiative": 0,
+              "savingThrow": 0,
+              "armorClass": 0,
+              "passivePerception": 0,
+              "maximumHitPoints": 0,
+              "attack": 0
+            },
+            "name": "Aktive Form",
+            "description": "",
+            "enemyMechanics": {
+              "attack": 0,
+              "spellSaveDc": 0,
+              "spellAttack": 0,
+              "passivePerception": 0,
+              "initiative": 0,
+              "armorClass": 0,
+              "skill": 0,
+              "attackRollMode": "normal",
+              "movement": 0,
+              "savingThrow": 0,
+              "maximumHitPoints": 0,
+              "damage": 0
+            },
+            "requirements": ""
+          },
+          "name": "Aura"
+        },
+        "magic": {
+          "spells": [],
+          "slotResourceIds": [],
+          "castingAttribute": "intelligence",
+          "manaResourceId": "mana-focus",
+          "spellAttackOverride": null,
+          "notes": "",
+          "enabled": false,
+          "spellSaveDcOverride": null
+        },
+        "quirks": [],
+        "armorClass": {
+          "dexterityCap": 2,
+          "shieldBonus": 0,
+          "magicModifier": 0,
+          "overrideMode": "total",
+          "override": 16,
+          "otherModifier": 0,
+          "base": 10,
+          "dexterityMode": "full"
+        },
+        "cheats": {
+          "enabled": false,
+          "automaticCritical": false
+        },
+        "progression": {
+          "experienceReward": null,
+          "proficiencyBonusOverride": null,
+          "specialLevels": 0,
+          "level": 3,
+          "nextLevelExperience": null,
+          "experience": 0
+        },
+        "proficiencies": {
+          "armor": [],
+          "languages": [],
+          "tools": [],
+          "notes": "",
+          "weapons": []
+        },
+        "weapons": [
+          {
+            "id": "draig-waffenknecht-speer",
+            "inventoryItemId": "",
+            "name": "Draig-Speer",
+            "weaponType": "spear",
+            "training": "simple",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "damageType": "Stich",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf oder Wurf 6 / 18 m",
+            "properties": "Einhand, Wurf",
+            "notes": "Wird hinter dem Schild geführt und hält Gegner auf Abstand.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": true
+          },
+          {
+            "id": "draig-waffenknecht-schildstoss",
+            "inventoryItemId": "",
+            "name": "Schildstoß",
+            "weaponType": "shield",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Kontrolle",
+            "notes": "Schafft Raum für den Speer oder schützt einen Gefährten.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          },
+          {
+            "id": "default-unarmed-melee",
+            "inventoryItemId": "",
+            "name": "Nahkampf",
+            "weaponType": "unarmed",
+            "training": "simple",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "damageType": "Wucht",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf",
+            "properties": "Schlicht · simpel · immer verfügbar",
+            "notes": "Grundlegender waffenloser Nahkampfangriff.",
+            "requirements": "",
+            "aiInstructions": "",
+            "effects": [],
+            "ammunition": null,
+            "activationType": "action",
+            "costs": [
+              {
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "scope": "comment"
+              }
+            ],
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "equipped": false
+          }
+        ],
+        "notes": "Solider Lehenssoldat. Kein Held, aber diszipliniert genug, um seinem Ritter zu folgen und verwundete Kameraden nicht zurückzulassen.",
+        "resources": [
+          {
+            "id": "draig-waffenknecht-schildwacht",
+            "name": "Schildwacht",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": "Fängt einmal pro Szene erzählerisch einen Angriff auf einen unmittelbar benachbarten Verbündeten ab."
+          },
+          {
+            "id": "inspiration",
+            "name": "Inspiration",
+            "current": 0,
+            "maximum": 1,
+            "recovery": "manual",
+            "scope": "persistent",
+            "category": "",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "mana-focus",
+            "name": "Mana / Fokus",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "magic",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "celestial-points",
+            "name": "Celestiale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "celestial",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "infernal-points",
+            "name": "Infernale Punkte",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "infernal",
+            "icon": "",
+            "notes": ""
+          },
+          {
+            "id": "action",
+            "name": "Aktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "bonus-action",
+            "name": "Bonusaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "reaction",
+            "name": "Reaktion",
+            "current": 1,
+            "maximum": 1,
+            "recovery": "scene",
+            "scope": "comment",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/reaction.png",
+            "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+          },
+          {
+            "id": "special-action",
+            "name": "Besondere Aktion",
+            "current": 2,
+            "maximum": 2,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "icon": "./public/assets/combat-profile-icons/special-action.png",
+            "notes": ""
+          },
+          {
+            "id": "aura-focus",
+            "name": "Aura-Fokuspunkt",
+            "current": 0,
+            "maximum": 0,
+            "recovery": "day",
+            "scope": "persistent",
+            "category": "action",
+            "paymentRole": "universal-substitute",
+            "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+            "notes": ""
+          }
+        ],
+        "templateSelections": {
+          "classId": "",
+          "backgroundId": "",
+          "appliedAt": "",
+          "schemaVersion": 1,
+          "ancestryId": "",
+          "attributeMethod": ""
+        },
+        "combat": {
+          "canActAtZeroHitPoints": false,
+          "passivePerceptionBonus": 0,
+          "attackBonus": 0,
+          "movement": 9,
+          "damageBonus": 0,
+          "initiativeBonus": 0
+        },
+        "attributes": [
+          {
+            "key": "strength",
+            "label": "Kraft",
+            "shortLabel": "KRF",
+            "score": 15,
+            "modifierOverride": null
+          },
+          {
+            "key": "dexterity",
+            "label": "Geschick",
+            "shortLabel": "GES",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "constitution",
+            "label": "Konstitution",
+            "shortLabel": "KON",
+            "score": 14,
+            "modifierOverride": null
+          },
+          {
+            "key": "intelligence",
+            "label": "Intelligenz",
+            "shortLabel": "INT",
+            "score": 10,
+            "modifierOverride": null
+          },
+          {
+            "key": "wisdom",
+            "label": "Weisheit",
+            "shortLabel": "WEI",
+            "score": 12,
+            "modifierOverride": null
+          },
+          {
+            "key": "charisma",
+            "label": "Charisma",
+            "shortLabel": "CHA",
+            "score": 10,
+            "modifierOverride": null
+          }
+        ],
+        "identity": {
+          "ancestry": "Mensch",
+          "archetype": "Waffenknecht",
+          "background": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte"
+        },
+        "armorItems": [
+          {
+            "dexterityMode": "none",
+            "baseArmorClass": 13,
+            "kind": "armor",
+            "dexterityUnlockLevel": 0,
+            "properties": "Mittel",
+            "armorClassBonus": 0,
+            "notes": "Robuste, einheitliche Lehensausrüstung.",
+            "inventoryItemId": "",
+            "name": "Draig-Kettenhemd",
+            "dexterityCap": 2,
+            "equipped": true,
+            "id": "draig-waffenknecht-kettenhemd",
+            "armorCategory": "heavy"
+          },
+          {
+            "dexterityUnlockLevel": 0,
+            "dexterityCap": 2,
+            "baseArmorClass": null,
+            "properties": "Schild",
+            "name": "Draig-Rundschild",
+            "equipped": true,
+            "notes": "Bemalter Holzschild mit verstärktem Rand.",
+            "kind": "shield",
+            "inventoryItemId": "",
+            "id": "draig-waffenknecht-schild",
+            "dexterityMode": "full",
+            "armorClassBonus": 2
+          }
+        ],
+        "damageAffinities": [],
+        "schemaVersion": 11,
+        "defenseBalanceVersion": 1,
+        "savingThrows": [
+          {
+            "attributeKey": "strength",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "dexterity",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "constitution",
+            "proficient": true,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "intelligence",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "wisdom",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          },
+          {
+            "attributeKey": "charisma",
+            "proficient": false,
+            "expertise": false,
+            "bonus": 0
+          }
+        ]
+      },
+      "challengeRating": 3,
+      "classification": {
+        "location": "Celtigerns Wacht",
+        "house": "Haus Draig",
+        "genus": "Menschen"
+      },
+      "ownerUid": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "loot": {
+        "items": [
+          {
+            "id": "loot-draig-waffenknecht-speer",
+            "name": "Draig-Speer",
+            "quantity": 1,
+            "chance": 85,
+            "notes": "Gerader Schaft, eiserne Spitze, deutliche Gebrauchsspuren."
+          },
+          {
+            "id": "loot-draig-waffenknecht-schild",
+            "name": "Draig-Rundschild",
+            "quantity": 1,
+            "chance": 75,
+            "notes": "Nach einem Kampf häufig reparaturbedürftig."
+          },
+          {
+            "id": "loot-draig-waffenknecht-marke",
+            "name": "Hölzerne Soldmarke",
+            "quantity": 1,
+            "chance": 100,
+            "notes": "Kennzeichnet Einheit und ausstehenden Sold."
+          }
+        ],
+        "notes": "Schlichte, brauchbare Lehensausrüstung mit Draig-Farben.",
+        "currency": "1W8 Silberstücke"
+      },
+      "type": "Waffenknecht",
+      "createdBy": "RpJ9bEiwc7gYQiOHYxrrnAOnJ0Q2",
+      "portrait": "https://i.imgur.com/QaY77kP.png",
+      "portraitCaption": "Draig-Waffenknecht mit Speer und Schild.",
+      "createdAt": "2026-08-06T04:57:43.823Z",
+      "size": "Mittel",
+      "habitat": "Draig-Lehen, Grenzwege und umkämpfte Gehöfte",
+      "level": 3,
+      "updatedAt": "2026-11-02T21:48:28.207Z",
+      "notes": "Solider Lehenssoldat. Kein Held, aber diszipliniert genug, um seinem Ritter zu folgen und verwundete Kameraden nicht zurückzulassen.",
+      "templateId": "",
+      "entityType": "creature",
+      "avatars": [],
+      "id": "catalog-draig-waffenknecht"
+    }
+  ]
+}

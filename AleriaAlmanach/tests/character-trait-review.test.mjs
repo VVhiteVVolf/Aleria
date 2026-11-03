@@ -7,12 +7,15 @@ import { reviewedCharacterTraits, reviewedBiographyTraitCards, hasAuthoredCombat
 import { createTraitReviewExport, projectTraitReviewRecord } from '../modules/character-trait-review/character-trait-review-database.mjs';
 import { mergeCharacterRecordProjections } from '../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { sanitizeCharacterCombatProfile, getMaximumHitPoints } from '../modules/combat/combat-profile-model.js';
+import { reconcileClassDamageRevisions } from '../modules/classes/class-damage-revisions.js';
+import { correctExistingSignetAbility } from '../modules/character-trait-review/character-trait-publication-plan.mjs';
 
 const root = new URL('../../', import.meta.url);
 const json = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
 const baseline = await json('diagnostics/character-trait-review-20261102/local-before.json');
 const beforeSnapshot = await json('diagnostics/character-trait-review-20261102/snapshot-before.json');
 const snapshot = await json('CharakterDatenbank/generated/characters.snapshot.json');
+const confirmed = await json('diagnostics/combat-sheets-20261102/traits-online-after.json').catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
 const assignment = name => REVIEWED_CHARACTER_TRAITS.find(row => row.name === name);
 const before = id => baseline.profiles.find(row => row.id === id).character;
 const after = id => snapshot.characters.find(row => row.id === id);
@@ -34,7 +37,13 @@ test('all 14 reviewed records change only traits, named obsolete ability and exi
   for (const row of REVIEWED_CHARACTER_TRAITS) {
     const original = structuredClone(before(row.id)), current = structuredClone(after(row.id));
     assert.deepEqual(current.combatProfile.quirks, reviewedCharacterTraits(row), row.name);
-    const expected = projectReviewedCharacterTraits(original, row);
+    let expected = projectReviewedCharacterTraits(original, row);
+    if (confirmed) {
+      const remote = confirmed.characters.find(character => character.id === row.onlineId); assert(remote);
+      expected = correctExistingSignetAbility({ ...expected, inventory: current.inventory });
+      expected.combatProfile = reconcileClassDamageRevisions(expected.combatProfile);
+      expected.combatProfile.revision = Math.max(expected.combatProfile.revision || 0, remote.combatProfile.revision);
+    }
     // Projection metadata is not gameplay; every other field must remain exact.
     for (const value of [expected, current]) { delete value.updatedAt; delete value.localRecord; delete value.inventory; }
     assert.deepEqual(current, expected, row.name);
@@ -101,7 +110,10 @@ test('only the obsolete Gawain personality ability is removed; personal training
     const row = assignment(name), oldProfile = before(row.id).combatProfile, newProfile = after(row.id).combatProfile;
     const expected = oldProfile.abilities.filter(ability => !(row.removeAbilityIds || []).includes(ability.id));
     assert.deepEqual(newProfile.abilities, expected, name);
-    for (const key of ['weapons', 'armorItems', 'techniques', 'magic', 'progression', 'attributes']) assert.deepEqual(newProfile[key], oldProfile[key], `${name}: ${key}`);
+    for (const key of ['weapons', 'armorItems', 'techniques', 'magic', 'progression', 'attributes']) {
+      const expected = confirmed && name === 'Rhiannon Draig' && key === 'magic' ? reconcileClassDamageRevisions(oldProfile).magic : oldProfile[key];
+      assert.deepEqual(newProfile[key], expected, `${name}: ${key}`);
+    }
   }
   const asgeir = assignment('Asgeir Wolfshorn');
   assert.equal(getMaximumHitPoints(sanitizeCharacterCombatProfile(after(asgeir.id).combatProfile)), getMaximumHitPoints(sanitizeCharacterCombatProfile(before(asgeir.id).combatProfile)) + 2);
@@ -113,6 +125,13 @@ test('public biography prose, relations, mentors, history and statistics survive
   let replaced = 0;
   for (const oldEntry of original.entries) {
     const entry = current.entries.find(row => row.key === oldEntry.key);
+    if (entry.source?.includes('source/caralyn-biography-20261102.json')) {
+      const imported = await json('AleriaAlmanach/modules/gwynthor-seven/source/caralyn-biography-20261102.json');
+      assert.deepEqual(entry.characterIds, oldEntry.characterIds);
+      assert.equal(entry.biography.biography.biographyText, imported.biography.biography.biographyText);
+      assert.equal(entry.biography.biography.abilities.length, 10);
+      continue; // A separately authorized later biography import has its own preservation test.
+    }
     const row = REVIEWED_CHARACTER_TRAITS.find(row => entry.characterIds.includes(row.id) || entry.characterIds.includes(row.onlineId));
     const expected = structuredClone(oldEntry);
     if (row) { replaced++; expected.biography.biography.abilities = reviewedBiographyTraitCards(row.id); expected.biography.biography.abilitiesTitle = 'Eigenschaften'; }

@@ -16,6 +16,18 @@ const record = await read(`CharakterDatenbank/${row.path}`);
 const characters = KNIGHT_EQUIPMENT_TARGETS.map(target => snapshot.characters.find(character => target.knownIds.includes(character.id)));
 const options = { registry, snapshot, report, record, characters, templates: AUTHORED_ITEMS,
   sourcePath: 'Charakter Archiv Exporte/oweta-draig-ausruestung-2026-11-02.json', now: '2026-11-02T18:30:00.000Z' };
+record.sync.sourceArchive = options.sourcePath;
+record.sync.sourceExportedAt = options.now;
+
+test('Owetas historischer Ausrüstungsimport erhält einen neueren bestätigten Inventarstand', () => {
+  const input = structuredClone(options), archive = 'Charakter Archiv Exporte/Neuerer Besitz/oweta.json';
+  for (const index of [input.registry, input.snapshot]) index.sourceOverlays = [...index.sourceOverlays, archive].sort();
+  input.record.sync.sourceArchive = archive; input.record.sync.sourceExportedAt = '2099-01-01T00:00:00.000Z';
+  const result = projectOwetaEquipmentDatabase(input);
+  assert.equal(result.verification.superseded, true);
+  assert.deepEqual(result.records, []); assert.equal(result.exported, null);
+  assert.deepEqual(result.snapshot, input.snapshot);
+});
 
 test('Owetas Ausrüstungsprojektion erhält sämtliche unbeteiligten Figuren, eigene Stammdaten und Quellenhistorie', () => {
   const before = JSON.stringify(options);
