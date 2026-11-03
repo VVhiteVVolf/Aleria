@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-03",
+  "reason": "Explicit user correction: ignore the southern island; it is not an archonate, may be independent. Do not assign Bolar to it. No replacement sixth territory invented.",
+  "excludedArchonates": [
+    {
+      "id": "archonat-insel",
+      "name": "Inselarchonat",
+      "nameStatus": "geographic-working-label",
+      "description": "Grau getönte südliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+      "colour": "#758b87",
+      "houseId": "house-bolar",
+      "assignmentStatus": "editable-proposal",
+      "capitalId": null,
+      "seatProposalId": "ort-23",
+      "cityIds": [
+        "ort-23",
+        "ort-24"
+      ],
+      "bannerId": "banner-bolar"
+    }
+  ],
+  "excludedSettlements": [
+    {
+      "id": "ort-23",
+      "name": "Ort 23 (Name offen)",
+      "archonateId": "archonat-insel",
+      "point": [
+        21.2219,
+        89.7084
+      ],
+      "pin": [
+        21.2219,
+        89.7084
+      ],
+      "label": [
+        21.2219,
+        91.7084
+      ],
+      "overlayLabel": true,
+      "description": "Grau getönte südliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+      "kind": "circle",
+      "sourceMarkerShape": "circle",
+      "sourcePixelCentre": [
+        1738.5,
+        4214.5
+      ],
+      "nameStatus": "open",
+      "sourceKey": "is01"
+    },
+    {
+      "id": "ort-24",
+      "name": "Ort 24 (Name offen)",
+      "archonateId": "archonat-insel",
+      "point": [
+        31.9275,
+        93.0289
+      ],
+      "pin": [
+        31.9275,
+        93.0289
+      ],
+      "label": [
+        31.9275,
+        95.0289
+      ],
+      "overlayLabel": true,
+      "description": "Grau getönte südliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+      "kind": "circle",
+      "sourceMarkerShape": "circle",
+      "sourcePixelCentre": [
+        2615.5,
+        4370.5
+      ],
+      "nameStatus": "open",
+      "sourceKey": "is02"
+    }
+  ],
+  "excludedSeatProposals": [
+    {
+      "houseId": "house-bolar",
+      "settlementId": "ort-23",
+      "archonateId": "archonat-insel",
+      "status": "editable-proposal"
+    }
+  ],
+  "sourceBitmapsRetained": true
+}

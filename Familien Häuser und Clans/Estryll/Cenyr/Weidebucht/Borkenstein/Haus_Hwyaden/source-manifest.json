@@ -1,0 +1,43 @@
+{
+  "source": {
+    "attachmentId": "ee69fea8-3387-4a24-979f-3de6db4905e6",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "66deaa14882306119fd8e032ce992e720aa9343bb361e71afd0365fd8d7d483d"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-hwyaden",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-hwyaden",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 3,
+    "currentSeat": "Trefyddin",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Speerritter des Hauses",
+      "url": "https://i.imgur.com/2NVDRzN.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "5c7a8ae24084d49d57cb8039ad5f75e63ef0e787a2ce702ebc7cd3bb4a889a2b",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Catwg folgt der aktuellen Person, nicht dem alten Hofkartennamen Cadwg. Der unbekannte Gründer bleibt ohne erfundene Namenskarte.",
+    "Das Original zeigt einen Speerritter; es wird erhalten und nicht irreführend als Helwyr-Bogenschütze bezeichnet. Der qualitative Helwyr-Schwerpunkt bleibt als Textüberlieferung erhalten."
+  ]
+}

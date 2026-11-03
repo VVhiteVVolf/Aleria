@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "id": "normal",
+      "file": "Kaiserreich (Tirnara Normal).png",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Tirnara Provinz\\Kaiserreich (Tirnara Normal).png",
+      "sourceSha256": "c4780e7e6bc4930a93ff61e42759390c07eb17c7c5b916436d3d5719edbee663",
+      "sourceImageSize": [
+        8192,
+        4698
+      ],
+      "map": "assets/maps/leukonia-normal.webp",
+      "sha256": "7acad4008170504125114ac98af0f8e383b89d039e2ac4da7a383804dac1c8cb",
+      "imageSize": [
+        4096,
+        2349
+      ],
+      "short": "Normal",
+      "originalRetained": true,
+      "scale": 0.5,
+      "noGeometryEdits": true,
+      "bakedNames": true
+    },
+    {
+      "id": "regions",
+      "file": "Kaiserreich (Tirnara Portion).png",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Tirnara Provinz\\Kaiserreich (Tirnara Portion).png",
+      "sourceSha256": "4f3e52b26c958619f2928fa20167bded9cef01833e51962e2d7afb259eef6efa",
+      "sourceImageSize": [
+        8192,
+        4698
+      ],
+      "map": "assets/maps/leukonia-regions.webp",
+      "sha256": "078d5553c4c9571c05c67918b2920dc59461cb33243adf62ec29f6342b1d9b9e",
+      "imageSize": [
+        4096,
+        2349
+      ],
+      "short": "Archonate",
+      "originalRetained": true,
+      "scale": 0.5,
+      "noGeometryEdits": true,
+      "bakedNames": true
+    }
+  ],
+  "sourceRetained": true,
+  "anchorsFromDrawnMarkers": true,
+  "alignment": {
+    "sameDimensions": true,
+    "sourceImageSize": [
+      8192,
+      4698
+    ],
+    "phaseCorrelationSampleSize": [
+      512,
+      294
+    ],
+    "phaseShiftSamplePixels": [
+      0,
+      0
+    ]
+  }
+}

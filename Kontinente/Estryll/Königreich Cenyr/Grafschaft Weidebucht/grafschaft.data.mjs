@@ -202,7 +202,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-wylan"
         },
         {
           "name": "Dinefwr",
@@ -212,7 +213,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dinefwr"
         },
         {
           "name": "Mochdaer",
@@ -222,7 +224,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-mochdaer"
         },
         {
           "name": "Tir Addawol",
@@ -232,7 +235,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tir-addawol"
         },
         {
           "name": "Hwyaden",
@@ -242,7 +246,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-hwyaden"
         },
         {
           "name": "Creyr",
@@ -252,7 +257,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-creyr"
         }
       ]
     },
@@ -267,7 +273,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-carwyn"
         },
         {
           "name": "Deyrn",
@@ -277,7 +284,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-deyrn"
         },
         {
           "name": "Garan",
@@ -287,7 +295,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-garan"
         },
         {
           "name": "Kelan",
@@ -297,7 +306,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kelan"
         },
         {
           "name": "Pellan",
@@ -307,7 +317,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-pellan"
         },
         {
           "name": "Serin",
@@ -317,7 +328,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-serin"
         },
         {
           "name": "Uldyn",
@@ -327,7 +339,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-uldyn"
         },
         {
           "name": "Yllen",
@@ -337,7 +350,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-yllen"
         },
         {
           "name": "Corlyn",
@@ -347,7 +361,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-corlyn"
         },
         {
           "name": "Derlan",
@@ -357,7 +372,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-derlan"
         }
       ]
     },
@@ -372,7 +388,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tannau"
         }
       ]
     },
@@ -387,7 +404,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-asyn"
         }
       ]
     },
@@ -402,7 +420,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Laird",
           "featured": false,
-          "featuredLabel": "Laird"
+          "featuredLabel": "Laird",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-fhaire"
         },
         {
           "name": "Ui Trisceil",
@@ -412,7 +431,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mor Tiarna",
           "featured": false,
-          "featuredLabel": "Mor Tiarna"
+          "featuredLabel": "Mor Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-trisceil"
         }
       ]
     }

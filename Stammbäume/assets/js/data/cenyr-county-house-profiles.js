@@ -2,7 +2,7 @@ import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { AEHRENTAL_HOUSE_PROFILES } from './aehrental-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_PROFILES } from './graue-weite-house-profiles.js';
 import { KLAUENINSEL_HOUSE_PROFILES } from './klaueninseln-house-profiles.js';
-import { SONNENKUESTE_HOUSE_PROFILES } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_PROFILES } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { SILBERINSEL_HOUSE_PROFILES } from './silberinsel-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
 import { VORTIGERNS_RUH_HOUSE_PROFILES } from './vortigerns-ruh-house-profiles.js';

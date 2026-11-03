@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "66fc9d35-553f-41af-b2fa-c5cd780bb4cb",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "e11f5f17571840844d050c9ffc8f74b2c30fa00b8e1bbec794ddbb557b08e694"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-gwarchod",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-gwarchod",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 2,
+    "currentSeat": "",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Ritterliche Hausdarstellung",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "note": "Ergänzende Darstellung; keine neue benannte Person oder genealogische Aussage.",
+      "sha256": "a64ff6b78718f5935e1b745d7679246c0d13172d005324260e758bfdeb933217",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json"
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Das O’Glyndraith im überlieferten Namen erzeugt keinen heutigen Stammsitz. Der aktuelle Sitz bleibt leer.",
+    "Walerans Rückkehr aus nordmännischer Gefangenschaft und sein späterer Tod beim Blutbund folgen den bereits bestehenden öffentlichen Personennotizen der aktuellen Akte (waleran-gwarchod), nicht der hochgeladenen Stammbaumtabelle. Der dynastisch erloschene Status bleibt unverändert."
+  ]
+}

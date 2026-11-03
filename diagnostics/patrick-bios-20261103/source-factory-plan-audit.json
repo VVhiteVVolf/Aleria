@@ -1,0 +1,40 @@
+{
+  "reviewedAt": "2026-11-03T16:43:29.200Z",
+  "sourceFactory": "preparePatrickBiographyCharacters",
+  "sourceFileSha256": "e32aadac151628796112c87cb1c73d212bd20300d752d32f0518b2e0d2137332",
+  "assetMapSha256": "72e219843ef5853ba15366c260a81617c74d496a71ed6ab322c8486a9f453c3f",
+  "sourceInputsUnchanged": true,
+  "existingProseAndItemsPreserved": true,
+  "gwenUploadProsePreserved": true,
+  "resolvedIcons": 34,
+  "allMappedArtworkFilesExist": true,
+  "petOwners": [
+    {
+      "id": "companion-cadogan-sgrechiwr-silberstolz",
+      "name": "Silberstolz",
+      "ownerCharacterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "bestiaryId": "tiere/pferde/erlenglanz"
+    },
+    {
+      "id": "companion-rhiannon-draenmelyn-perle",
+      "name": "Perle",
+      "ownerCharacterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "bestiaryId": "tiere/pferde/rhyfel"
+    },
+    {
+      "id": "companion-gwen-hamnett-sir-balthasar",
+      "name": "Sir Balthasar",
+      "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+      "bestiaryId": "tiere/vieh/haustiere/katzen/samtlicht"
+    },
+    {
+      "id": "companion-gwen-hamnett-sonnenaufgang",
+      "name": "Sonnenaufgang",
+      "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+      "bestiaryId": "tiere/pferde/goldmaehne"
+    }
+  ],
+  "pending": [],
+  "idempotent": true,
+  "passed": true
+}

@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "8ef348fa-4421-4767-a3af-a9f8544d4709",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "e1f28f96b26aa25cb1896e51b6345b145b86ca780dac49a3a338d93ac1c09f41"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-wivern",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-wivern",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 2,
+    "currentSeat": "Coedlyn",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/cBL4bdx.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "f92b2114e7ce920224488cf417ec0ddd46c60a48f66096a2e30c6e08ecf7d581",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Das sitzende Original am Baum wird unverändert übernommen.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

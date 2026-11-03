@@ -1,0 +1,449 @@
+{
+  "schema": "aleria.patrick-biography-icon-plan",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "source": "Only the two authorized current public live biographies and the authorized Gwen Hamnett upload; no other raw records included.",
+  "styleReference": "AleriaAlmanach/public/assets/combat-technique-icons/focus.png",
+  "styleGuide": "AleriaAlmanach/docs/art/ability-icons/manifest.json",
+  "style": "Simple flat 2D comic, rounded square panel, solid interior, transparent outside. Generic traits do not assert a disorder or change numerical mechanics.",
+  "counts": {
+    "cards": 34,
+    "uniqueTitles": 28,
+    "reuse": 5,
+    "new": 23
+  },
+  "reuse": [
+    {
+      "key": "trait:Eitel",
+      "title": "Eitel",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Cadogan legt außerordentlichen Wert auf ein gepflegtes Äußeres. Seine Kleidung, sein Schnurrbart und sein gesamtes Auftreten müssen stets tadellos sein."
+        }
+      ],
+      "decision": "reuse-existing",
+      "existingPath": "/IconOrdner/Traits Icon/Groomed.png"
+    },
+    {
+      "key": "trait:Gewissenhaft",
+      "title": "Gewissenhaft",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Seine beruflichen Pflichten nimmt Cadogan ausgesprochen ernst. Gerade bei diplomatischen Angelegenheiten lässt er äußerste Sorgfalt walten."
+        },
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst."
+        }
+      ],
+      "decision": "reuse-existing",
+      "existingPath": "/IconOrdner/Traits Icon/Diligent.png"
+    },
+    {
+      "key": "trait:Ehrgeizig",
+      "title": "Ehrgeizig",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Er hat hart gearbeitet, um seine Stellung zu erreichen. Sein Ehrgeiz richtet sich inzwischen weniger auf weiteren Aufstieg als auf die vollkommene Beherrschung seines Amtes."
+        }
+      ],
+      "decision": "reuse-existing",
+      "existingPath": "/IconOrdner/Traits Icon/Ambitious.png"
+    },
+    {
+      "key": "trait:Gesellig",
+      "title": "Gesellig",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Cadogan schätzt anregende Unterhaltungen, gesellschaftliche Veranstaltungen und die Gesellschaft kultivierter Menschen."
+        },
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Sie schätzt anregende Gespräche, gesellschaftliche Veranstaltungen und den Austausch mit anderen Künstlern."
+        }
+      ],
+      "decision": "reuse-existing",
+      "existingPath": "/IconOrdner/Traits Icon/Gregarious.png"
+    },
+    {
+      "key": "trait:Familienverbunden",
+      "title": "Familienverbunden",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder."
+        }
+      ],
+      "decision": "reuse-existing",
+      "existingPath": "/IconOrdner/Traits Icon/Family_focus.png"
+    }
+  ],
+  "new": [
+    {
+      "key": "trait:Perfektionistisch",
+      "title": "Perfektionistisch",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Selbst kleinste Fehler in Rangordnung, Anrede oder Sitzordnung können ihn erheblich verärgern. Nachlässigkeit betrachtet er als vermeidbares Ärgernis."
+        },
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Charmant",
+      "title": "Charmant",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Cadogan besitzt ausgezeichnete Umgangsformen und versteht es, Menschen mit Höflichkeit, Witz und gewandter Sprache für sich einzunehmen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Redegewandt",
+      "title": "Redegewandt",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Er spricht gerne, ausführlich und mit sichtlicher Begeisterung. Nicht immer bemerkt er, dass seine Zuhörer das Gespräch längst beenden möchten."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Klatschfreudig",
+      "title": "Klatschfreudig",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Er interessiert sich lebhaft für Neuigkeiten, kleine Skandale und persönliche Angelegenheiten am Hof, wahrt jedoch die Vertraulichkeit dienstlicher Informationen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Kunstliebend",
+      "title": "Kunstliebend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Theateraufführungen, Gemäldegalerien und andere kulturelle Veranstaltungen gehören zu seinen größten Vergnügungen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Empfindlich gegenüber Fehlern",
+      "title": "Empfindlich gegenüber Fehlern",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Missgeschicke, insbesondere solche, die sein sorgfältig vorbereitetes Protokoll betreffen, beschäftigen ihn häufig länger, als eigentlich notwendig wäre."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Romantisch",
+      "title": "Romantisch",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Hinter seiner Eitelkeit verbirgt sich ein aufmerksamer und liebevoller Ehemann, der seine Gemahlin aufrichtig bewundert."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Schlecht im Delegieren",
+      "title": "Schlecht im Delegieren",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "name": "Cadogan Sgrechiwr",
+          "detail": "Obwohl ihm Mitarbeiter zur Verfügung stehen, fällt es Cadogan schwer, wichtige Aufgaben vollständig aus der Hand zu geben."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Ordnungsliebend",
+      "title": "Ordnungsliebend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Beobachtend",
+      "title": "Beobachtend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf."
+        },
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Gwen besitzt ein ausgezeichnetes Auge für Einzelheiten, Gesichtsausdrücke, Farben und Lichtverhältnisse."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Selbstbewusst",
+      "title": "Selbstbewusst",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen."
+        },
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Sie kennt ihre Fähigkeiten und ihren gesellschaftlichen Wert, ohne deshalb überheblich aufzutreten."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Freundlich",
+      "title": "Freundlich",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Zurückhaltend",
+      "title": "Zurückhaltend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Humorvoll",
+      "title": "Humorvoll",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist."
+        },
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Gwen besitzt einen feinen, gelegentlich trockenen Humor und begegnet insbesondere den Eigenheiten ihres Gemahls mit liebevollem Spott."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Diszipliniert",
+      "title": "Diszipliniert",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Bestimmend",
+      "title": "Bestimmend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Nachtragend",
+      "title": "Nachtragend",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "name": "Rhiannon (geb. Draenmelyn) Swyll",
+          "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Künstlerisch",
+      "title": "Künstlerisch",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Gwen besitzt eine ausgeprägte schöpferische Begabung und betrachtet ihre Umgebung häufig aus der Perspektive einer Malerin."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Temperamentvoll",
+      "title": "Temperamentvoll",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Hinter ihrer häufig ruhigen und nachdenklichen Erscheinung verbirgt sich eine lebhafte Frau, die ihre Ansichten durchaus entschieden vertritt."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Unabhängig",
+      "title": "Unabhängig",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Sie legt großen Wert auf ihre künstlerische Freiheit und lässt sich nur ungern durch gesellschaftliche Erwartungen einschränken."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Leidenschaftlich",
+      "title": "Leidenschaftlich",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Wird sie von einer künstlerischen Eingebung erfasst, kann sie sich ihrer Arbeit mit nahezu grenzenloser Hingabe widmen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Unberechenbar",
+      "title": "Unberechenbar",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Besonders während schöpferischer Phasen verliert sie häufig jedes Gefühl für Zeit, Termine und Verpflichtungen."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    },
+    {
+      "key": "trait:Liebevoll",
+      "title": "Liebevoll",
+      "kind": "shared-biography-trait",
+      "details": [
+        {
+          "characterId": "person--family-tree--unknown-cadogan-spouse",
+          "name": "Gwen Hamnett",
+          "detail": "Trotz ihrer gelegentlichen Zerstreutheit ist Gwen ihrer Familie aufrichtig zugetan und genießt die Gesellschaft ihres Gemahls und ihrer Töchter."
+        }
+      ],
+      "decision": "new-art-needed",
+      "existingPath": null
+    }
+  ],
+  "gwenAdditionalTitles": [
+    "Künstlerisch",
+    "Temperamentvoll",
+    "Unabhängig",
+    "Leidenschaftlich",
+    "Unberechenbar",
+    "Liebevoll"
+  ]
+}

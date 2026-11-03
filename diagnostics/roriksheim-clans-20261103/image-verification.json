@@ -1,0 +1,948 @@
+{
+  "schema": "aleria.clan-image-verification",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "originalCount": 19,
+  "generatedCount": 15,
+  "total": 34,
+  "contactSheet": "diagnostics/roriksheim-clans-20261103/all-clan-figures.jpg",
+  "contactSheetLayout": {
+    "columns": 7,
+    "rows": 5,
+    "cellWidth": 200,
+    "cellHeight": 320,
+    "width": 1400,
+    "height": 1600
+  },
+  "visualReviewPending": false,
+  "entries": [
+    {
+      "id": "haus-varulv",
+      "slug": "varulv",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-varulv/krieger.png",
+      "bytes": 241344,
+      "sha256": "3b00838760a9b5910f4bb0f1d52d329c1886600ce2522231e32bcaba4bdd1f81",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-varulv",
+      "slug": "varulv",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-varulv/krieger-2.png",
+      "bytes": 224627,
+      "sha256": "c2dd49239f0aaa8fa3de2416034bade03b8c6125014d9de1638f6a947a7d0b58",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-vangandr",
+      "slug": "vangandr",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-vangandr/krieger.png",
+      "bytes": 301273,
+      "sha256": "9103c730f6c5eab486249548f250496cbacdddd885a3c19b3df8567a07281808",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-freiwinter",
+      "slug": "freiwinter",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-freiwinter/krieger.png",
+      "bytes": 276482,
+      "sha256": "7dcc5107f398ab252523dead94532e6191d56392d52ecbaf82bf7206dbf963a4",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-skaal",
+      "slug": "skaal",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-skaal/krieger.png",
+      "bytes": 271830,
+      "sha256": "fbb73cb07cdf95534ea3fa4ee2104ba59e8cae01e4f511c2de7cdf1dce76862b",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-brathfengr",
+      "slug": "brathfengr",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-brathfengr/krieger.png",
+      "bytes": 252781,
+      "sha256": "2dcce02aa9552f5ff6542265fb0dcebe6c3d7829160c0356c0755ef5f6c02606",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "slug": "schwarzdorn",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-schwarzdorn/krieger.png",
+      "bytes": 324906,
+      "sha256": "90527e1d032370349e877630e9a88a673a215a5bff16018933c7825ac96bf3a8",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-kampfgeborene",
+      "slug": "kampfgeborene",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+      "bytes": 268597,
+      "sha256": "0a800c065d4886516026e0aa44f6cf2c773dc2abdda30b1e6bdb2f2c3d7f06e1",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-frostgeborene",
+      "slug": "frostgeborene",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-frostgeborene/krieger.png",
+      "bytes": 288780,
+      "sha256": "cfa7d13cdad452ce4ac05e57b86d5e2f9c282a954ad0c8fee371f55156fe321d",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "slug": "nachtjaeger",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-nachtjaeger/krieger.png",
+      "bytes": 247290,
+      "sha256": "fcdbd8a6ab0289ae3db5873d54791014109c58f4d35590acbd2cdf28f9661cf4",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-skjegg",
+      "slug": "skjegg",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-skjegg/krieger.png",
+      "bytes": 281210,
+      "sha256": "1ddce1067ff3d2eb5cf7cd65daffacda6155d948254e8a1c33f926c0f5fa5555",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-sterkr",
+      "slug": "sterkr",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-sterkr/krieger.png",
+      "bytes": 330416,
+      "sha256": "1c19d734e3443950aa9cba0b5bd00ae630380b325ea06482d32dcdc962eafd9a",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-soekeren",
+      "slug": "soekeren",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-soekeren/krieger.png",
+      "bytes": 270145,
+      "sha256": "edd8fa3343376f03ac18ff52c18e1dc7235204cbce611f24f8b93ad272c93a14",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        255,
+        247
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-skald",
+      "slug": "skald",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-skald/krieger.png",
+      "bytes": 315005,
+      "sha256": "02802d281c75fb57aebbfb31d7a99b176e6fc1ff458a85ee820dd98e8db9c9e6",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        255,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-ulvasar",
+      "slug": "ulvasar",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-ulvasar/krieger.png",
+      "bytes": 219730,
+      "sha256": "b0b5afedb6768906643eefa243f0c394b924be2f1af70fa73ea0ec997965b2ac",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-bjornskar",
+      "slug": "bjornskar",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-bjornskar/krieger.png",
+      "bytes": 257709,
+      "sha256": "2a8d54f0bb27139a18db56d5fc3ccfe979ffa04b901dc18dc9ab9a30dc2a33ff",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-vanir",
+      "slug": "vanir",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-vanir/krieger.png",
+      "bytes": 235081,
+      "sha256": "e3aed123dfaf5955425680144e0241429539c460c46af0775344367437615791",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-tiogar",
+      "slug": "tiogar",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-tiogar/krieger.png",
+      "bytes": 295776,
+      "sha256": "5fbf52739317441bb7db48c469c218e43b4ea2aa0a6584abe63babe5b1dab72f",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-fiadhrach",
+      "slug": "fiadhrach",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-fiadhrach/krieger.png",
+      "bytes": 254279,
+      "sha256": "1c9b3b7d8718078ec19c5286bac27a0de775030cf48af7ae44322ee46c4aa542",
+      "declaredHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-gruenklang",
+      "slug": "gruenklang",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-gruenklang/krieger-generated-v1.png",
+      "bytes": 1893103,
+      "sha256": "7bd8b94d7bf8f56b517111b19fca9ec51840ed1fd4a577bd7e1a0b2053a100a1",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-flammenschritt",
+      "slug": "flammenschritt",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-flammenschritt/krieger-generated-v1.png",
+      "bytes": 1967045,
+      "sha256": "e39a0d462ca2bdd189001187020cad406c533449ad2a6283ec6adc1500b8e0f9",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-runensaenger",
+      "slug": "runensaenger",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-runensaenger/krieger-generated-v1.png",
+      "bytes": 2101131,
+      "sha256": "f2d6dc2b8e80038e66e2452bb6f320669fcd3cfe0e73d9ef0a58b7a1ef5e8334",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-sturmsaenger",
+      "slug": "sturmsaenger",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-sturmsaenger/krieger-generated-v1.png",
+      "bytes": 2217096,
+      "sha256": "70cdb8abfbe4942c5448edb2fa140820600d506da4e657bfc718e7d39dc6a64c",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-liedtrinker",
+      "slug": "liedtrinker",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-liedtrinker/krieger-generated-v1.png",
+      "bytes": 2254306,
+      "sha256": "09396bf473466ce4d5908abb2a00a382e11fb91e55dc9bdc9c8ef6a8392f74e4",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-spottzunge",
+      "slug": "spottzunge",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-spottzunge/krieger-generated-v1.png",
+      "bytes": 1983398,
+      "sha256": "a5b4f36edbacb15efcc36bdc1af8495195058c35be0043e579b910d182ff3257",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-eisenjungfer",
+      "slug": "eisenjungfer",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-eisenjungfer/krieger-generated-v1.png",
+      "bytes": 2119714,
+      "sha256": "2bdce2648f629ffeb05d2572d68c1d17229cc7576f04e2fcee292fffcdf3bcd8",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-blutdorn",
+      "slug": "blutdorn",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-blutdorn/krieger-generated-v1.png",
+      "bytes": 2198721,
+      "sha256": "ee551ab52731b2f1e1ec03d69e878bb9823abb22ff6666377fe8eaad0e04d8dd",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-dornacker",
+      "slug": "dornacker",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-dornacker/krieger-generated-v1.png",
+      "bytes": 2006254,
+      "sha256": "c66e10113b2182881db7fefcf2a11747e197d0970e6275584986ad4b488a215d",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-baerenherz",
+      "slug": "baerenherz",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-baerenherz/krieger-generated-v1.png",
+      "bytes": 2219187,
+      "sha256": "f939b72406099ccb7bb4929601f4bb80d97c5ec9d02cbaeaace0632de4395a49",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-kraehenrufer",
+      "slug": "kraehenrufer",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-kraehenrufer/krieger-generated-v1.png",
+      "bytes": 2246886,
+      "sha256": "cec8841845bf9de26eb9646360ff9750462ded4e546f180369a40c3da454f8e8",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-unholdbann",
+      "slug": "unholdbann",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-unholdbann/krieger-generated-v1.png",
+      "bytes": 2292831,
+      "sha256": "15a99bc2f3dab425d067072a828060dd7eacef7efa2bb33bc99aff5e48731422",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-rotstahl",
+      "slug": "rotstahl",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-rotstahl/krieger-generated-v1.png",
+      "bytes": 1907972,
+      "sha256": "9868f7641c1c4cc8108b9412b9324d0840c06c1c9c1e06f4103de1db15fea614",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-bogenhand",
+      "slug": "bogenhand",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-bogenhand/krieger-generated-v1.png",
+      "bytes": 2057866,
+      "sha256": "ea2d8850a2984bdc5ce255d8e92aa61ca86844efb64249736dccbfbee285ebe5",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-wolfshorn",
+      "slug": "wolfshorn",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-wolfshorn/krieger-generated-v1.png",
+      "bytes": 2252881,
+      "sha256": "7c69638f872b3d30da36eb5ae89ee6d1c60b5d25981b02fcb0fbc40abe38fbe8",
+      "declaredHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "id": "haus-soekeren",
+      "problem": "Nonzero original corner alpha retained",
+      "cornerAlpha": [
+        0,
+        0,
+        255,
+        247
+      ],
+      "assessment": "Originale Felsbasis, unverändert beibehalten."
+    },
+    {
+      "id": "haus-skald",
+      "problem": "Nonzero original corner alpha retained",
+      "cornerAlpha": [
+        0,
+        0,
+        255,
+        0
+      ],
+      "assessment": "Originale Felsbasis, unverändert beibehalten."
+    },
+    {
+      "id": "haus-gruenklang",
+      "problem": "Nonzero original corner alpha retained",
+      "cornerAlpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "assessment": "Originales Alpha 1/255 an einer Ecke; kein sichtbarer Saum, unverändert beibehalten."
+    }
+  ],
+  "visualReviewComplete": true,
+  "status": "passed",
+  "visualFindings": [
+    "Alle 34 Figuren im Kontaktblatt tatsächlich angesehen.",
+    "Keine abgeschnittenen Figuren, falschen Hauslabels oder sichtbaren neuen Hintergründe festgestellt.",
+    "Sökeren und Skald behalten ihre zur Originalillustration gehörenden Felsbasen, die bis an die unteren Bildecken reichen.",
+    "Grünklang hat an einer Ecke Alpha 1 statt 0; im hellen Kontaktblatt ist kein störender Saum sichtbar. Originalbytes bleiben unverändert."
+  ]
+}

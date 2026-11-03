@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "authorization": {
+    "date": "2026-11-03",
+    "quote": "Ja, Transparenz technisch bereinigen",
+    "helper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+    "operation": "prepare_emblem_from_source(source, target, coverage=.88)"
+  },
+  "count": 26,
+  "status": "passed",
+  "contactSheets": [
+    "diagnostics\\ishtaran\\emblems-final-01-07-light-dark.jpg",
+    "diagnostics\\ishtaran\\emblems-final-08-14-light-dark.jpg",
+    "diagnostics\\ishtaran\\emblems-final-15-21-light-dark.jpg",
+    "diagnostics\\ishtaran\\emblems-final-22-26-light-dark.jpg"
+  ],
+  "records": [
+    {
+      "id": "pool-01",
+      "source": "assets/emblems/generated/pool-01.png",
+      "sourceSha256": "7a7ab1208496cdfbaf5aea30f05233a9af21991a48a1ce9fe68ccfaae8223e25",
+      "production": "assets/emblems/production/pool-01.png",
+      "productionSha256": "5e9c2898eb20e67df0a0b1008aedea79ad486d1a88ad372f385363276fd1ecbd",
+      "preview": "assets/emblems/previews/pool-01.webp",
+      "previewSha256": "df673d2ec44bb1ce904c71fcd44d0b0751df90cb9736efd31238fb75b9b0c616",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1374,
+        1374
+      ],
+      "padding": {
+        "left": 63,
+        "top": 66
+      },
+      "circle": {
+        "centre": [
+          687,
+          687
+        ],
+        "radius": 604
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-02",
+      "source": "assets/emblems/generated/pool-02.png",
+      "sourceSha256": "3e951bab256c8b4f8da57a1e4797fb880e913277283b04285bfde55fed59624a",
+      "production": "assets/emblems/production/pool-02.png",
+      "productionSha256": "ead8b06bb48d2fcba0aefb6e5140efbc669ce721df9e6cb58e75deb195e011ff",
+      "preview": "assets/emblems/previews/pool-02.webp",
+      "previewSha256": "acdb9f4073bcc12da7f244e1ab00b9e04dfd41614c2ebb26c9840666ede4ec96",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1374,
+        1374
+      ],
+      "padding": {
+        "left": 64,
+        "top": 61
+      },
+      "circle": {
+        "centre": [
+          687,
+          687
+        ],
+        "radius": 604
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-03",
+      "source": "assets/emblems/generated/pool-03.png",
+      "sourceSha256": "4d11d62c352b24d54e866e8058d0d49ca1b2ebe8062eb3eabf57b081e3e18afb",
+      "production": "assets/emblems/production/pool-03.png",
+      "productionSha256": "3ff4254d208f507d1ddc373985064b771db56b591175bc97626a94b49846b6ef",
+      "preview": "assets/emblems/previews/pool-03.webp",
+      "previewSha256": "bf9444fb94e0d97a779979b59bb6b0c14f4e7a88ea6da60926a0895acf09b81e",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1362,
+        1362
+      ],
+      "padding": {
+        "left": 58,
+        "top": 55
+      },
+      "circle": {
+        "centre": [
+          681,
+          681
+        ],
+        "radius": 599
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-04",
+      "source": "assets/emblems/generated/pool-04.png",
+      "sourceSha256": "3193f12f442b845c8406ae1cf637b179d3e688abca8bec6c7b1db4de82d7169d",
+      "production": "assets/emblems/production/pool-04.png",
+      "productionSha256": "64dad4859567c1265cbfd63ad42131444c5543aa0c182008d40ec3ced28e6bab",
+      "preview": "assets/emblems/previews/pool-04.webp",
+      "previewSha256": "5b50210f474791cd04ff542235234ee65211fd88d4f20d28081ffa2d860b3d84",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1350,
+        1350
+      ],
+      "padding": {
+        "left": 51,
+        "top": 53
+      },
+      "circle": {
+        "centre": [
+          675,
+          675
+        ],
+        "radius": 594
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-05",
+      "source": "assets/emblems/generated/pool-05.png",
+      "sourceSha256": "7214e1f1df88f77e5d6115e023c15606b974e42b06bdfff73e9501451e6057a3",
+      "production": "assets/emblems/production/pool-05.png",
+      "productionSha256": "3dd2f92d21cf8546762261bba35214b125d50c24a7942bddfa1ef99b683bcb8b",
+      "preview": "assets/emblems/previews/pool-05.webp",
+      "previewSha256": "c8b7ac3d8613ad6fae1b9967cb4d3218556bebe89295a9fbd594b834bd9a8368",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1356,
+        1356
+      ],
+      "padding": {
+        "left": 55,
+        "top": 59
+      },
+      "circle": {
+        "centre": [
+          678,
+          678
+        ],
+        "radius": 596
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-06",
+      "source": "assets/emblems/generated/pool-06.png",
+      "sourceSha256": "a312bc13c6eeea9e6cbbe85d34731278286cfd80981b56dfd2d0065225165257",
+      "production": "assets/emblems/production/pool-06.png",
+      "productionSha256": "6b341558f199e2894c51f5c6581dc506057106eb7e157694f1008e3e8540c542",
+      "preview": "assets/emblems/previews/pool-06.webp",
+      "previewSha256": "eced09a1b97a751d0591c4820d5de7970f10e75429518ae8c6987aa284ba6c5c",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1296,
+        1296
+      ],
+      "padding": {
+        "left": 24,
+        "top": 29
+      },
+      "circle": {
+        "centre": [
+          648,
+          648
+        ],
+        "radius": 570
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-07",
+      "source": "assets/emblems/generated/pool-07.png",
+      "sourceSha256": "a953f47d172646d9b77d58b5f81e80d6b5220433ef903d42fb4d17cb35284f45",
+      "production": "assets/emblems/production/pool-07.png",
+      "productionSha256": "4798a81589b5969463a72275b0d91058f991432842f4c137457529c36319fa58",
+      "preview": "assets/emblems/previews/pool-07.webp",
+      "previewSha256": "66796b13f7d86b069a9d1198b5e9a4ef7014b93dff4ac7be6bb34108a5098d40",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1260,
+        1260
+      ],
+      "padding": {
+        "left": 4,
+        "top": 4
+      },
+      "circle": {
+        "centre": [
+          630,
+          630
+        ],
+        "radius": 550
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-08",
+      "source": "assets/emblems/generated/pool-08.png",
+      "sourceSha256": "41bd9b3bd291967672c4f7f7f512c37208954b70c07e64021e523ca9d5d4d674",
+      "production": "assets/emblems/production/pool-08.png",
+      "productionSha256": "50030e695c43c576f275f4fc3c936cb1269f1b6cdc428e0b04f4b7224f046a67",
+      "preview": "assets/emblems/previews/pool-08.webp",
+      "previewSha256": "b00869bdb260e47e3edd24ffe763dc0ae5cbf46b82f538bc6c7d4fcda032b34d",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1298,
+        1298
+      ],
+      "padding": {
+        "left": 27,
+        "top": 24
+      },
+      "circle": {
+        "centre": [
+          649,
+          649
+        ],
+        "radius": 571
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-09",
+      "source": "assets/emblems/generated/pool-09.png",
+      "sourceSha256": "eb18dad69a43d1e824cc28a85289cae3c8a27f0e79be2aa63a33a24ac988de0f",
+      "production": "assets/emblems/production/pool-09.png",
+      "productionSha256": "00a27b69fddd580549356bb55eb7a6f56c09f06c549dbf715debbfe009926565",
+      "preview": "assets/emblems/previews/pool-09.webp",
+      "previewSha256": "5dc52aefd4751d24b0b7650d2203f70b744e87b5da59a84ccd4843b44bd9f54c",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1314,
+        1314
+      ],
+      "padding": {
+        "left": 34,
+        "top": 32
+      },
+      "circle": {
+        "centre": [
+          657,
+          657
+        ],
+        "radius": 578
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-10",
+      "source": "assets/emblems/generated/pool-10.png",
+      "sourceSha256": "1355c99f539e89af01b14ec943bc9a215ba6d1a187b7ea6b298d88ec309034eb",
+      "production": "assets/emblems/production/pool-10.png",
+      "productionSha256": "b561ba197449fb23fc3458419da2afa7f3be4854f42ebd1d9182f99775cd494f",
+      "preview": "assets/emblems/previews/pool-10.webp",
+      "previewSha256": "e45342cc281a34148c07a87eb403d20504e2309c82b8c45a2bae9ab421ba660b",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1320,
+        1320
+      ],
+      "padding": {
+        "left": 36,
+        "top": 38
+      },
+      "circle": {
+        "centre": [
+          660,
+          660
+        ],
+        "radius": 580
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-11",
+      "source": "assets/emblems/generated/pool-11.png",
+      "sourceSha256": "19aa9ae444387cc73530eb368cf413f240746829608c60c0e50784921076a2b8",
+      "production": "assets/emblems/production/pool-11.png",
+      "productionSha256": "97fbd36876bff95130562fe790fcc97a9b1c801efbfd4a8ffbf9f6e859205b03",
+      "preview": "assets/emblems/previews/pool-11.webp",
+      "previewSha256": "6b42c3aadb05d37d7ffc57fef2265043b2963ddbe68f9895f729005d5761b631",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1288,
+        1288
+      ],
+      "padding": {
+        "left": 22,
+        "top": 12
+      },
+      "circle": {
+        "centre": [
+          644,
+          644
+        ],
+        "radius": 566
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-12",
+      "source": "assets/emblems/generated/pool-12.png",
+      "sourceSha256": "c6bacfecd1d12b9164769169ec39386fec60d5e17c9eee0002369693ed1ea865",
+      "production": "assets/emblems/production/pool-12.png",
+      "productionSha256": "81f28f8294fdf8ad7589f157852a00beb3200bfbeaae7108fb1a9539658f8019",
+      "preview": "assets/emblems/previews/pool-12.webp",
+      "previewSha256": "2118e8ea23b88bb8d5916c46da9a270f11a5a2bf429a666beb9fce453dc36f54",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1276,
+        1276
+      ],
+      "padding": {
+        "left": 20,
+        "top": 8
+      },
+      "circle": {
+        "centre": [
+          638,
+          638
+        ],
+        "radius": 561
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-13",
+      "source": "assets/emblems/generated/pool-13.png",
+      "sourceSha256": "2b4bd2981b10a98a6fe7758e7bb03a8d068b717a0400356847cff30623bc0168",
+      "production": "assets/emblems/production/pool-13.png",
+      "productionSha256": "e24c8254058111c28bc92ef3f1c629b0cffb4c77deabb882fd57f0d1ded409f0",
+      "preview": "assets/emblems/previews/pool-13.webp",
+      "previewSha256": "204110b502bff05ac28362d25549fa62cfa2c5cb142e322b9ac8fc42ca49cbb5",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1294,
+        1294
+      ],
+      "padding": {
+        "left": 27,
+        "top": 19
+      },
+      "circle": {
+        "centre": [
+          647,
+          647
+        ],
+        "radius": 569
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-14",
+      "source": "assets/emblems/generated/pool-14.png",
+      "sourceSha256": "8d33691ec93dbaa3bea68ced2f76269391d09be0dffd13068ec79e5ad9cfbc90",
+      "production": "assets/emblems/production/pool-14.png",
+      "productionSha256": "2499ed5e8878cecd7400699882baed3e28dc9fbba37724281fb322f0033eb630",
+      "preview": "assets/emblems/previews/pool-14.webp",
+      "previewSha256": "142f4c2aaaab69f0fcc5b4aacf7cb4968ff25db2c54abb6059199230a5b1850d",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1270,
+        1270
+      ],
+      "padding": {
+        "left": 13,
+        "top": 11
+      },
+      "circle": {
+        "centre": [
+          635,
+          635
+        ],
+        "radius": 558
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-15",
+      "source": "assets/emblems/generated/pool-15.png",
+      "sourceSha256": "763603f34047d8804e0c4da62d3a65e574b0fd4125276899715b91e6697d380a",
+      "production": "assets/emblems/production/pool-15.png",
+      "productionSha256": "c979391e97a036bdc7424aa2ca32d4a2968e1ba727b861c3108d94e26a303ac7",
+      "preview": "assets/emblems/previews/pool-15.webp",
+      "previewSha256": "d058120e944659131580f067617c1d6a910140169e1dc115947c9ade1bcc515b",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1276,
+        1276
+      ],
+      "padding": {
+        "left": 16,
+        "top": 10
+      },
+      "circle": {
+        "centre": [
+          638,
+          638
+        ],
+        "radius": 561
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-16",
+      "source": "assets/emblems/generated/pool-16.png",
+      "sourceSha256": "c5d18c2a079aa8f396e2db4ef793f735d76b3281cc8e694729ed05245109d107",
+      "production": "assets/emblems/production/pool-16.png",
+      "productionSha256": "026e38a7b3b700ab7625707b9092a78fa4bde24055ff5f713eb27e5565c650d0",
+      "preview": "assets/emblems/previews/pool-16.webp",
+      "previewSha256": "1188108dddbfa8258e4206417ebdb3aec92c1948aae0449fc8d151d492a7d816",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1320,
+        1320
+      ],
+      "padding": {
+        "left": 36,
+        "top": 35
+      },
+      "circle": {
+        "centre": [
+          660,
+          660
+        ],
+        "radius": 580
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-17",
+      "source": "assets/emblems/generated/pool-17.png",
+      "sourceSha256": "84996323d19bf7e0363f4fe1616a3d167b4b0be7f2cc7af671cae22d872d10e3",
+      "production": "assets/emblems/production/pool-17.png",
+      "productionSha256": "fa775c877e58e0884ac676aac51f2809e01a440ea6b1906ede181e5ad2cae080",
+      "preview": "assets/emblems/previews/pool-17.webp",
+      "previewSha256": "b3cfbab66bce6080b6e30c1c132615d729a102272aa5ae0ae5590b484ca68942",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1310,
+        1310
+      ],
+      "padding": {
+        "left": 35,
+        "top": 25
+      },
+      "circle": {
+        "centre": [
+          655,
+          655
+        ],
+        "radius": 576
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-18",
+      "source": "assets/emblems/generated/pool-18.png",
+      "sourceSha256": "adc0023e1ff9ca24a5c9d7892d7422a1e6da9e0e7e39bb6c706a473c9f40d0bf",
+      "production": "assets/emblems/production/pool-18.png",
+      "productionSha256": "76c48acc241e3b9014dc9414b5a6411c505e5f37d7ca0c6da0296a0be6cd91fe",
+      "preview": "assets/emblems/previews/pool-18.webp",
+      "previewSha256": "a9b4999b41a1d19a0050ddb5882297cdebffd327b3e4cae6688e084b83a52ad5",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1326,
+        1326
+      ],
+      "padding": {
+        "left": 41,
+        "top": 37
+      },
+      "circle": {
+        "centre": [
+          663,
+          663
+        ],
+        "radius": 583
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-19",
+      "source": "assets/emblems/generated/pool-19.png",
+      "sourceSha256": "66e217bb358ecb19a185914024b8daae7d0324c9e759260982b8d69a6452d25d",
+      "production": "assets/emblems/production/pool-19.png",
+      "productionSha256": "86e4d58512b39802e140d06f8a4271f1b718c47ca4df6de573306f5e214dc470",
+      "preview": "assets/emblems/previews/pool-19.webp",
+      "previewSha256": "062c75bc19de1a2e0f60fc42c22f049ffa80dc0b4982240c695687e1e2738f89",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1278,
+        1278
+      ],
+      "padding": {
+        "left": 19,
+        "top": 17
+      },
+      "circle": {
+        "centre": [
+          639,
+          639
+        ],
+        "radius": 562
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-20",
+      "source": "assets/emblems/generated/pool-20.png",
+      "sourceSha256": "e2e944f5437ccd5e2bf337d7dedfc77975b856c6fdc90297228882307456f190",
+      "production": "assets/emblems/production/pool-20.png",
+      "productionSha256": "47fd73601a5a74cb56f7baa8c092edf2a075b10a3cef1c2a7c4931611704898c",
+      "preview": "assets/emblems/previews/pool-20.webp",
+      "previewSha256": "dbebdfdbbdd31377a492424f06db56508df6212a5cea858bf98653127ece882c",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1312,
+        1312
+      ],
+      "padding": {
+        "left": 32,
+        "top": 32
+      },
+      "circle": {
+        "centre": [
+          656,
+          656
+        ],
+        "radius": 577
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-21",
+      "source": "assets/emblems/generated/pool-21.png",
+      "sourceSha256": "722c605386962d2854944a79550868d24d27b5c772301a2d833426f3f273d4f3",
+      "production": "assets/emblems/production/pool-21.png",
+      "productionSha256": "b70f6cbd7e43a5bdae623dc9843cdc56575b46123f401bcca11adb22e480a622",
+      "preview": "assets/emblems/previews/pool-21.webp",
+      "previewSha256": "e39d64eb20f0cd938e5cf9858ea0a219e7c08e9b012a6a3827de928a8c42045f",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1292,
+        1292
+      ],
+      "padding": {
+        "left": 24,
+        "top": 16
+      },
+      "circle": {
+        "centre": [
+          646,
+          646
+        ],
+        "radius": 568
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-22",
+      "source": "assets/emblems/generated/pool-22.png",
+      "sourceSha256": "02f2387caa838ba63f4e4c5b461b23110282c887ceb9764f0f6f8bd0cf09d15c",
+      "production": "assets/emblems/production/pool-22.png",
+      "productionSha256": "592125db814f8f3bd4019e3192314e5af44251481cccc3e4e3577cbb860259f6",
+      "preview": "assets/emblems/previews/pool-22.webp",
+      "previewSha256": "f40ab4eb3778df3aa0d195cd7ca63df738e03feadc9a84d2dfcf4520d4f41dc6",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1290,
+        1290
+      ],
+      "padding": {
+        "left": 22,
+        "top": 19
+      },
+      "circle": {
+        "centre": [
+          645,
+          645
+        ],
+        "radius": 567
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-23",
+      "source": "assets/emblems/generated/pool-23.png",
+      "sourceSha256": "89da02191ae1006924cb52a062bd0b0405f79451b90ee7b153161d55377c7cae",
+      "production": "assets/emblems/production/pool-23.png",
+      "productionSha256": "13d61bffb7fe3555049c5cdc19888b6e0537b9737cfa18fa99c38e95ac6105f0",
+      "preview": "assets/emblems/previews/pool-23.webp",
+      "previewSha256": "f0c6a02407d2c261c670e59787cfe06c0cb950f72b8cbd9e0573d4e91985286b",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1310,
+        1310
+      ],
+      "padding": {
+        "left": 31,
+        "top": 35
+      },
+      "circle": {
+        "centre": [
+          655,
+          655
+        ],
+        "radius": 576
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-24",
+      "source": "assets/emblems/generated/pool-24.png",
+      "sourceSha256": "a85cf4abdb90a3483dc448402f038352a868759c73149eaf7c51df8e1454e24d",
+      "production": "assets/emblems/production/pool-24.png",
+      "productionSha256": "920e5f1acdfb4da69ea80b6078b6ba3af36a3398e88ae91aa0259271fbae234f",
+      "preview": "assets/emblems/previews/pool-24.webp",
+      "previewSha256": "d27c75dfb28e2d13ed01d84a9051ce59edb6f81c9a0e80b4abc2568c5ca69e87",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1290,
+        1290
+      ],
+      "padding": {
+        "left": 23,
+        "top": 32
+      },
+      "circle": {
+        "centre": [
+          645,
+          645
+        ],
+        "radius": 567
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-25",
+      "source": "assets/emblems/generated/pool-25.png",
+      "sourceSha256": "e416b7f7abcaf08791a25a4c277b9993d0f50b56342ed8eff89752c1649a4eef",
+      "production": "assets/emblems/production/pool-25.png",
+      "productionSha256": "f809f191697410b28a55224e5b1af5b9daaf108610b2ccc33480c22d107caa08",
+      "preview": "assets/emblems/previews/pool-25.webp",
+      "previewSha256": "a1d066d28f831104171f8434d5c87f2ad3eedaf5e78289ab8b327aa63af3aab3",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1292,
+        1292
+      ],
+      "padding": {
+        "left": 26,
+        "top": 10
+      },
+      "circle": {
+        "centre": [
+          646,
+          646
+        ],
+        "radius": 568
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "pool-26",
+      "source": "assets/emblems/generated/pool-26.png",
+      "sourceSha256": "19fb4c0391bda2372b5701746271cb5a2a1ee6cc4e7853394608f295bbd4bc12",
+      "production": "assets/emblems/production/pool-26.png",
+      "productionSha256": "0782ce74db370644ab840ba24812135b39e71705b230f94e9d460ceb314d6182",
+      "preview": "assets/emblems/previews/pool-26.webp",
+      "previewSha256": "fb0b023c1687d41dd7ddc75036e7e42e94342a23e92ec6914dd25f984e9e494e",
+      "previewSize": [
+        600,
+        600
+      ],
+      "previewAlphaIdentical": true,
+      "exactCircle": true,
+      "interiorAlpha": 255,
+      "exteriorAlpha": 0,
+      "originalUnchanged": true,
+      "size": [
+        1300,
+        1300
+      ],
+      "padding": {
+        "left": 33,
+        "top": 21
+      },
+      "circle": {
+        "centre": [
+          650,
+          650
+        ],
+        "radius": 572
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    }
+  ]
+}

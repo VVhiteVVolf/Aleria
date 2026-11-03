@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../modules/sonnenkueste/territory-page.mjs?v=sonnenkueste-20261019';
+import { createTerritory } from '../../../modules/sonnenkueste/territory-page.mjs?v=20261103-sonnenkueste-v1';
 
 export default createTerritory({
   "id": "grafschaft-sonnenkueste",
@@ -195,7 +195,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-illewod"
         },
         {
           "name": "Morforwyn",
@@ -205,7 +206,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-morforwyn"
         },
         {
           "name": "Illwath",
@@ -215,7 +217,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-illwath"
         },
         {
           "name": "Llwynog",
@@ -225,7 +228,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-llwynog"
         },
         {
           "name": "Blach",
@@ -235,7 +239,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blach"
         },
         {
           "name": "Teyrngarch",
@@ -245,7 +250,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-teyrngarch"
         }
       ]
     },
@@ -260,7 +266,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-grianlaoch"
         },
         {
           "name": "Gwaedryn",
@@ -270,7 +277,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwaedryn"
         },
         {
           "name": "Rhavorn",
@@ -280,7 +288,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rhavorn"
         },
         {
           "name": "Pergarn",
@@ -290,7 +299,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-pergarn"
         },
         {
           "name": "Donwyr",
@@ -300,7 +310,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-donwyr"
         },
         {
           "name": "Uffyrn",
@@ -310,7 +321,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-uffyrn"
         },
         {
           "name": "Pwllor",
@@ -320,7 +332,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-pwllor"
         },
         {
           "name": "Llurien",
@@ -330,7 +343,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-llurien"
         },
         {
           "name": "Neddair",
@@ -340,7 +354,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-neddair"
         },
         {
           "name": "Cyrwain",
@@ -350,7 +365,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cyrwain"
         },
         {
           "name": "Donvael",
@@ -360,7 +376,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-donvael"
         },
         {
           "name": "Rhenith",
@@ -370,7 +387,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rhenith"
         }
       ]
     },
@@ -385,7 +403,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bellyn"
         },
         {
           "name": "Fenor",
@@ -395,7 +414,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-fenor"
         },
         {
           "name": "Loryn",
@@ -405,7 +425,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-loryn"
         },
         {
           "name": "Orlen",
@@ -415,7 +436,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-orlen"
         },
         {
           "name": "Renvyn",
@@ -425,7 +447,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-renvyn"
         }
       ]
     },
@@ -441,7 +464,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Dún Tiarna",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-nic-riordain"
         }
       ]
     }

@@ -280,6 +280,9 @@ function getCharacterById(id) {
   if (!id) return null;
   const safeId = String(id || '').trim();
   const saved = _characters.find(char => String(char.id || '').trim() === safeId);
+  const canonicalId = saved?.mergeIdentity?.status === 'merged' ? saved.mergeIdentity.canonicalCharacterId : '';
+  const canonical = canonicalId && _characters.find(char => String(char.id || '').trim() === canonicalId);
+  if (canonical && canonical.id !== saved.id) return canonical;
   if (saved) return saved;
   const archivedAlias = _characters.find(char => char.localRecord?.firestoreDocumentIds?.includes(safeId));
   if (archivedAlias) return archivedAlias;

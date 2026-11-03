@@ -1,0 +1,730 @@
+{
+  "startedAt": "2026-11-03T16:54:43.071Z",
+  "tabId": "1982820708",
+  "url": "http://127.0.0.1:8897/Vorschau/Leukonia/",
+  "desktop": {
+    "initial": {
+      "caption": "7 von 41 Häusern zugeordnet · 28 Orte · Normal.",
+      "cityOptions": 28,
+      "documentWidth": 1905,
+      "houseOptions": 41,
+      "sourceHouses": [
+        {
+          "id": "house-apinia",
+          "name": "Haus Apinia ansehen"
+        },
+        {
+          "id": "house-bolar",
+          "name": "Haus Bolar ansehen"
+        },
+        {
+          "id": "house-lex",
+          "name": "Haus Lex ansehen"
+        },
+        {
+          "id": "house-orania",
+          "name": "Haus Orania ansehen"
+        },
+        {
+          "id": "house-pelagia",
+          "name": "Haus Pelagia ansehen"
+        },
+        {
+          "id": "house-tremelia",
+          "name": "Haus Tremelia ansehen"
+        },
+        {
+          "id": "house-mede",
+          "name": "Haus Mede ansehen"
+        }
+      ],
+      "viewport": [
+        1920,
+        897
+      ]
+    },
+    "map": {
+      "mapRect": {
+        "bottom": 923.328125,
+        "height": 719.203125,
+        "left": 310.453125,
+        "right": 1564.546875,
+        "top": 204.125,
+        "width": 1254.09375
+      },
+      "open": true,
+      "pins": [
+        {
+          "bottom": 256.4375,
+          "city": "alvanista",
+          "clipped": false,
+          "left": 622.78125,
+          "right": 672.78125,
+          "top": 206.4375
+        },
+        {
+          "bottom": 299.46875,
+          "city": "ort-03",
+          "clipped": false,
+          "left": 977.015625,
+          "right": 1027.015625,
+          "top": 249.46875
+        },
+        {
+          "bottom": 361.921875,
+          "city": "aspio",
+          "clipped": false,
+          "left": 394.515625,
+          "right": 444.515625,
+          "top": 311.921875
+        },
+        {
+          "bottom": 532.3125,
+          "city": "zaphias",
+          "clipped": false,
+          "left": 990.34375,
+          "right": 1040.34375,
+          "top": 482.3125
+        },
+        {
+          "bottom": 714.78125,
+          "city": "ort-18",
+          "clipped": false,
+          "left": 508.875,
+          "right": 558.875,
+          "top": 664.78125
+        },
+        {
+          "bottom": 733.609375,
+          "city": "ort-20",
+          "clipped": false,
+          "left": 741.875,
+          "right": 791.875,
+          "top": 683.609375
+        },
+        {
+          "bottom": 874.296875,
+          "city": "ort-23",
+          "clipped": false,
+          "left": 551.59375,
+          "right": 601.59375,
+          "top": 824.296875
+        }
+      ],
+      "source": "assets/maps/leukonia-normal.webp",
+      "targetCount": 28
+    }
+  },
+  "dossiers": [
+    {
+      "kind": "house",
+      "id": "house-apinia",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/apinia.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfOrt 20 (Name offen)RangArchonRahmenSilber",
+      "title": "Haus Apinia"
+    },
+    {
+      "kind": "house",
+      "id": "house-bolar",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/bolar.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfOrt 23 (Name offen)RangArchonRahmenGold",
+      "title": "Haus Bolar"
+    },
+    {
+      "kind": "house",
+      "id": "house-lex",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/lex.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfAlvanistaRangArchonRahmenSilber",
+      "title": "Haus Lex"
+    },
+    {
+      "kind": "house",
+      "id": "house-orania",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/orania.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfOrt 18 (Name offen)RangArchonRahmenBronze",
+      "title": "Haus Orania"
+    },
+    {
+      "kind": "house",
+      "id": "house-pelagia",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/pelagia.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfOrt 03 (Name offen)RangArchonRahmenGold",
+      "title": "Haus Pelagia"
+    },
+    {
+      "kind": "house",
+      "id": "house-tremelia",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/tremelia.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfAspioRangArchonRahmenGold",
+      "title": "Haus Tremelia"
+    },
+    {
+      "kind": "house",
+      "id": "house-mede",
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/mede.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "rect": {
+        "bottom": 818.84375,
+        "left": 412.5,
+        "right": 1492.5,
+        "top": 78.15625
+      },
+      "scrollTop": 0,
+      "seat": "Sitz im EntwurfZaphiasRangKaiserliche LinieRahmenGold",
+      "title": "Haus Mede"
+    },
+    {
+      "id": "illustris",
+      "kind": "caste",
+      "label": "Illustris ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/illustris.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/illustris.png",
+        "assets/castes/production/illustris.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Illustris"
+    },
+    {
+      "id": "patrizier",
+      "kind": "caste",
+      "label": "Patrizier ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/patrizier.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/patrizier.png",
+        "assets/castes/production/patrizier.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Patrizier"
+    },
+    {
+      "id": "magnarier",
+      "kind": "caste",
+      "label": "Magnarier ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/magnarier.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/magnarier.png",
+        "assets/castes/production/magnarier.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Magnarier"
+    },
+    {
+      "id": "mercantrier",
+      "kind": "caste",
+      "label": "Mercantrier ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/mercantrier.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/mercantrier.png",
+        "assets/castes/production/mercantrier.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mercantrier"
+    },
+    {
+      "id": "plebejer",
+      "kind": "caste",
+      "label": "Plebejer ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/plebejer.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/plebejer.png",
+        "assets/castes/production/plebejer.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Plebejer"
+    },
+    {
+      "id": "servi",
+      "kind": "caste",
+      "label": "Servi ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/castes/previews/servi.webp"
+        }
+      ],
+      "links": [
+        "assets/castes/production/servi.png",
+        "assets/castes/production/servi.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Servi"
+    },
+    {
+      "id": "province-leukonia",
+      "kind": "artwork",
+      "label": "Leukonia als Provinz ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/emblems/previews/leukonia.webp"
+        }
+      ],
+      "links": [
+        "assets/emblems/production/leukonia.png",
+        "assets/emblems/production/leukonia.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Leukonia als Provinz"
+    },
+    {
+      "id": "banner-apinia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Apinia ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/apinia.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/apinia.png",
+        "assets/banners/production/apinia.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Apinia"
+    },
+    {
+      "id": "banner-bolar",
+      "kind": "artwork",
+      "label": "Archonatsbanner Bolar ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/bolar.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/bolar.png",
+        "assets/banners/production/bolar.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Bolar"
+    },
+    {
+      "id": "banner-lex",
+      "kind": "artwork",
+      "label": "Archonatsbanner Lex ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/lex.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/lex.png",
+        "assets/banners/production/lex.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Lex"
+    },
+    {
+      "id": "banner-orania",
+      "kind": "artwork",
+      "label": "Archonatsbanner Orania ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/orania.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/orania.png",
+        "assets/banners/production/orania.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Orania"
+    },
+    {
+      "id": "banner-pelagia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Pelagia ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/pelagia.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/pelagia.png",
+        "assets/banners/production/pelagia.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Pelagia"
+    },
+    {
+      "id": "banner-tremelia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Tremelia ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 1,
+          "src": "assets/banners/previews/tremelia.webp"
+        }
+      ],
+      "links": [
+        "assets/banners/production/tremelia.png",
+        "assets/banners/production/tremelia.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Tremelia"
+    },
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "label": "Schwerer Infanterist ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-01.png",
+        "assets/warriors/production/prototype-01.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwerer Infanterist"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "label": "Schwer gepanzerter Lanzenträger ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-02.png",
+        "assets/warriors/production/prototype-02.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwer gepanzerter Lanzenträger"
+    },
+    {
+      "id": "prototype-03",
+      "kind": "prototype",
+      "label": "Berittener mit Schwert · Kataphrakt ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-03.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-03.png",
+        "assets/warriors/production/prototype-03.png",
+        "../../Bestiarium/tiere/pferde/equo/index.html"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Berittener mit Schwert · Kataphrakt"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "label": "Fernkämpfer mit Speer und Rückenköcher ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-04.png",
+        "assets/warriors/production/prototype-04.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Fernkämpfer mit Speer und Rückenköcher"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "label": "Mariner und Kleriker des Zephyr ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-05.png",
+        "assets/warriors/production/prototype-05.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mariner und Kleriker des Zephyr"
+    },
+    {
+      "id": "prototype-06",
+      "kind": "prototype",
+      "label": "Miliz · einfacher Legionär ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-06.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-06.png",
+        "assets/warriors/production/prototype-06.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Miliz · einfacher Legionär"
+    },
+    {
+      "id": "prototype-07",
+      "kind": "prototype",
+      "label": "Römischer Kampfbarde ansehen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "ratio": 0.6666666666666666,
+          "src": "assets/warriors/previews/prototype-07.webp"
+        }
+      ],
+      "links": [
+        "assets/warriors/production/prototype-07.png",
+        "assets/warriors/production/prototype-07.png"
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Römischer Kampfbarde"
+    }
+  ],
+  "functions": {
+    "regionSwitch": {
+      "pressed": "true",
+      "src": "assets/maps/leukonia-regions.webp",
+      "targets": 28
+    },
+    "zoom": {
+      "label": "135 %",
+      "width": 1693.03125
+    },
+    "fit": {
+      "height": 719,
+      "label": "Ganze Karte",
+      "scrollHeight": 719
+    },
+    "export": {
+      "downloadEvent": "backend-timeout",
+      "actualFile": "C:/Users/fhg_r/Downloads/leukonia-sitzentwurf.json",
+      "bytes": 993,
+      "exactPlacementsMatch": true,
+      "assigned": 7
+    },
+    "dynamicSeat": "Sitz im EntwurfAllantaicRangArchonRahmenSilber",
+    "undoSeat": "seat-alvanista",
+    "persistence": {
+      "caption": "7 von 41 Häusern zugeordnet · 28 Orte · Normal.",
+      "lexSeat": "seat-allantaic"
+    }
+  },
+  "mobile": {},
+  "scopeChange": {
+    "time": "2026-11-03T17:05:40.181Z",
+    "reason": "User excludes southern island from active Leukonia; prior 6-archonate/28-city/41-house baseline is superseded.",
+    "oldQaEditsReset": true
+  }
+}

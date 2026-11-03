@@ -1,0 +1,86 @@
+{
+  "id": "haus-varulv",
+  "source": {
+    "attachmentId": "e44c88a7-2869-4cd2-bff0-c46105324b31",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\e44c88a7-2869-4cd2-bff0-c46105324b31\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/varulv/animexx-original.html",
+    "bytes": 134621,
+    "sha256": "e4f789d4152b620dbdeca2ef16b3952ad38764eb5d6dc2c029fd5a83896d9fb3",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-varulv",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "jarl",
+      "seat": "Rorikshall",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-roriksheim.png",
+        "assets/images/regions/aldrimar-rorikstal.png",
+        "assets/images/regions/aldrimar-roriksheim-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-varulv",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "varulv",
+    "familyId": "haus-varulv",
+    "attachmentId": "e44c88a7-2869-4cd2-bff0-c46105324b31",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/vorvvTP.png",
+    "path": "Stammbäume/assets/images/references/haus-varulv/krieger.png",
+    "sourceStyle": "float:right; height:320px; width:213px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 241344,
+    "sha256": "3b00838760a9b5910f4bb0f1d52d329c1886600ce2522231e32bcaba4bdd1f81",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-varulv",
+    "url": "https://i.imgur.com/vorvvTP.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-varulv/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Gerüsteter Hauskrieger mit Wolfskopfhelm, dunklem Fell und Wolfssymbol auf schwarzem Wappenrock.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-1.png"
+  },
+  "decisions": [
+    "Aktuelle Einordnung: Jarl, Rorikshall/Rorikstal/Roriksheim/Aldrimar; Lehnsherr Clan Vaeren. Gegenwärtiges belegtes Oberhaupt ist Gleipnir Varulv. Eldar ist eine historische Figur, kein neues aktuelles Oberhaupt.",
+    "Übersicht, Geschichte, Besitztum und Kultur sind in der Vorlage weitgehend leer. Keine neue Gründungschronik oder neuen Güter erfinden; für den Einstieg den kanonischen Überblick verwenden.",
+    "Die Silvanische Symbiose der Varulv (Wolf) ist erblich und kein Pilzritual oder Zatrach-Fluch. Die wörtliche Verwandlung durch den Berserkerpilz wird nicht übernommen; Mutprobe und Rauschtradition bleiben erhalten.",
+    "Roger Vaeren ist kanonisch König von Aldrimar. Den alten Hochkönig-Titel im Fließtext entsprechend berichtigen.",
+    "Astrids und Rogers Ermordung, Eldars Einsatz sowie die wechselnden Fraktionen bleiben historische Erzählung; daraus keine neuen Ehen, Todesdaten oder genealogischen Knoten importieren.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

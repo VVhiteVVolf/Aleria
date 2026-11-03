@@ -77,7 +77,10 @@ test('names are resolved from their own texts, while seven unpositioned caves re
 
 test('local house selection and historical family identities stay distinct',()=>{
   assert.equal(pages.length,14);
-  assert.deepEqual(pages.map(p=>p.view.familySections.flatMap(s=>s.cards).length),[36,1,1,1,2,1,5,1,1,1,1,1,1,1]);
+  assert.deepEqual(pages.map(p=>p.view.familySections.flatMap(s=>s.cards).length),[36,1,1,1,2,2,5,1,1,1,1,1,1,1]);
+  const llafnfor=pages[5].view.familySections.flatMap(s=>s.cards).find(h=>h.id==='haus-llafnfor');
+  assert.ok(llafnfor,'Llafnfor bleibt bei Dyfrgi in Krallenspitze');
+  assert.ok(!pages[0].view.familySections.flatMap(s=>s.cards).some(h=>h.id==='haus-llafnfor'));
   for(const page of pages)assert.equal(page.view.familySections.flatMap(s=>s.cards).filter(h=>h.featured).length,1);
   const houses=pages[0].view.familySections.flatMap(s=>s.cards);
   assert.ok(houses.some(h=>h.id==='haus-blodyn-talgarth'));assert.ok(houses.some(h=>h.id==='haus-blodyn-aberdail'));

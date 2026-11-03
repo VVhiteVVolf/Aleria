@@ -1,0 +1,93 @@
+{
+  "schema": "aleria.confirmed-character-retirements",
+  "schemaVersion": 1,
+  "preparedAt": "2026-11-03T16:52:48.188Z",
+  "summary": {
+    "retiredDocuments": 1,
+    "membershipUpdates": 0,
+    "canonicalProfileWrites": 0,
+    "liveResourceWrites": 0
+  },
+  "entries": [
+    {
+      "legacyId": "uiKiMFXC6OEWOdDenbiM",
+      "canonicalCharacterId": "15ml9RhSvJPXof7z4qY3",
+      "expectedUpdateTime": "2026-09-06T01:03:35.765063Z",
+      "canonicalExpectedUpdateTime": "2026-11-02T21:05:42.453432Z",
+      "beforeSha256": "18c7c7ef3b3578dc3f86d63ef8c6edef9f4b337f5b24d488090b27c03d38076b",
+      "canonicalBeforeSha256": "5395cee5222d37daec56c7b300af6182cdfe4c0afb8ef5afea27c056a8a1c7ba",
+      "patch": {
+        "archived": true,
+        "mergeIdentity": {
+          "schemaVersion": 1,
+          "status": "merged",
+          "canonicalCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "canonicalWorldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+          "confirmedOn": "2026-11-03",
+          "evidence": "registered-source-alias-countess-portrait-married-name-2026-11-03"
+        }
+      },
+      "rollback": {
+        "archived": {
+          "restoreRestValue": {
+            "booleanValue": false
+          }
+        },
+        "mergeIdentity": {
+          "deleteField": true
+        }
+      }
+    }
+  ],
+  "writes": [
+    {
+      "update": {
+        "name": "projects/aleriaprojekt/databases/(default)/documents/characters/uiKiMFXC6OEWOdDenbiM",
+        "fields": {
+          "archived": {
+            "booleanValue": true
+          },
+          "mergeIdentity": {
+            "mapValue": {
+              "fields": {
+                "schemaVersion": {
+                  "integerValue": "1"
+                },
+                "status": {
+                  "stringValue": "merged"
+                },
+                "canonicalCharacterId": {
+                  "stringValue": "15ml9RhSvJPXof7z4qY3"
+                },
+                "canonicalWorldPersonId": {
+                  "stringValue": "person--haus-aderyn--gwendolyn-aderyn"
+                },
+                "confirmedOn": {
+                  "stringValue": "2026-11-03"
+                },
+                "evidence": {
+                  "stringValue": "registered-source-alias-countess-portrait-married-name-2026-11-03"
+                }
+              }
+            }
+          }
+        }
+      },
+      "updateMask": {
+        "fieldPaths": [
+          "archived",
+          "mergeIdentity"
+        ]
+      },
+      "currentDocument": {
+        "updateTime": "2026-09-06T01:03:35.765063Z"
+      }
+    },
+    {
+      "verify": "projects/aleriaprojekt/databases/(default)/documents/characters/15ml9RhSvJPXof7z4qY3",
+      "currentDocument": {
+        "updateTime": "2026-11-02T21:05:42.453432Z"
+      }
+    }
+  ]
+}

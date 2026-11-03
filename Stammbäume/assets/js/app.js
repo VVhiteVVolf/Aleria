@@ -1,6 +1,6 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
 import { configureFamilyEmbedView } from './modules/family-embed/family-embed-view.js';
-import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20261027-uathneach-warriors-v1';
+import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20261103-vennyr-warriors-v1';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
@@ -9,10 +9,10 @@ import { createFamilyAssetUploadController } from './modules/family-assets/famil
 import { createFamilySyncController } from './modules/family-sync/family-sync-controller.js?v=20261027-uathneach-warriors-v1';
 import { createLocalFamilyRepository } from './modules/family-sync/local-family-repository.js?v=20261027-uathneach-warriors-v1';
 import { createLatestLocalFamilySource } from './modules/family-sync/latest-local-family-source.js?v=20261027-uathneach-warriors-v1';
-import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js?v=20261027-uathneach-warriors-v1';
+import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js?v=20261103-vennyr-warriors-v1';
 import { reconcileInitialFamilyDraft } from './modules/family-sync/project-origin-reconciliation.js?v=20261027-uathneach-warriors-v1';
 import { applyPublishedFamilyPriority } from './modules/family-sync/published-family-priority.js?v=20261027-uathneach-warriors-v1';
-import { loadFamilyById, normalizeFamilyId } from './services/family-library.js?v=20261027-uathneach-warriors-v1';
+import { loadFamilyById, normalizeFamilyId } from './services/family-library.js?v=20261103-vennyr-warriors-v1';
 import { loadPersistedFamily } from './services/family-persistence.js';
 import {
   hasPendingTreeGeneratorLaunch,
@@ -21,7 +21,7 @@ import {
   WORKSPACE_MODE
 } from './services/workspace-access.js';
 import { createFamilyStore } from './state/family-store.js';
-import { createAppController } from './ui/app-controller.js?v=20261027-uathneach-warriors-v1';
+import { createAppController } from './ui/app-controller.js?v=20261103-vennyr-warriors-v1';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
 configureFamilyEmbedView({ documentRef: document, locationRef: globalThis.location });
@@ -33,7 +33,7 @@ const requestedPersonId = requestedQuery.get('person');
 // entfernt (verhindert ein erneutes Auslösen beim späteren Aufruf derselben
 // Adresse aus der Historie) und stattdessen als Ein-Schuss-Merker in
 // sessionStorage abgelegt — er überlebt so den Seiten-Reload, den die
-// Passwort-Freigabe für den Bearbeitungsmodus auslöst (siehe app-controller.js).
+// Passwort-Freigabe für den Bearbeitungsmodus auslöst (siehe app-controller.js?v=20261103-vennyr-warriors-v1
 if (requestedQuery.get('action') === 'start-tree-generator') {
   markPendingTreeGeneratorLaunch(globalThis.sessionStorage);
   const cleanedUrl = new URL(globalThis.location.href);

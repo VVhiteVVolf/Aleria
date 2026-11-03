@@ -1,6 +1,6 @@
 import { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
 export { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261027-uathneach-warriors-v1';
+import { HOUSE_BIOGRAPHY_DEFAULT_CATALOG } from './house-biography-default-catalog.js?v=20261103-vennyr-warriors-v1';
 
 const REPLACED_DEFAULTS = Object.freeze({
   // Draig revision 8: full biography, replaced by the requested short overview.
@@ -15,7 +15,7 @@ export function houseBiographyDefaultUpgrade(registered, local) {
   if (!oldBiography || !newBiography) return {};
   const knownDefaults = [
     ...(REPLACED_DEFAULTS[registered.document.id] || []),
-    ...(HOUSE_BIOGRAPHY_DEFAULTS[registered.document.id]?.replacedDefaultFingerprints || []),
+    ...(HOUSE_BIOGRAPHY_DEFAULT_CATALOG[registered.document.id]?.replacedDefaultFingerprints || []),
   ];
   return knownDefaults.includes(houseBiographyDefaultFingerprint(oldBiography))
     ? { houseBiographyModule: newBiography }

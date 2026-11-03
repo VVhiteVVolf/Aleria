@@ -1,0 +1,86 @@
+{
+  "id": "haus-freiwinter",
+  "source": {
+    "attachmentId": "fe1f9ce8-b186-41aa-aeb9-762efda7c58d",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\fe1f9ce8-b186-41aa-aeb9-762efda7c58d\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/freiwinter/animexx-original.html",
+    "bytes": 110297,
+    "sha256": "359addf659b555f256914bd96481c34a5aab3e575ab3ace2b744a2cd170f66dd",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-freiwinter",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Wolfswacht",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Winterfänge",
+        "Wolfswacht"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-freiwinter",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "freiwinter",
+    "familyId": "haus-freiwinter",
+    "attachmentId": "fe1f9ce8-b186-41aa-aeb9-762efda7c58d",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/yDlnKuk.png",
+    "path": "Stammbäume/assets/images/references/haus-freiwinter/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 276482,
+    "sha256": "7dcc5107f398ab252523dead94532e6191d56392d52ecbaf82bf7206dbf963a4",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-freiwinter",
+    "url": "https://i.imgur.com/yDlnKuk.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-freiwinter/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Hauskrieger mit geschlossenem Wolfskopfhelm, dunklem Fell, Schwert und begleitendem Wolf.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-1.png"
+  },
+  "decisions": [
+    "Der vollständige kanonische Ortsweg führt über Rorikstal und Winterfänge nach Wolfswacht. Dienstbindungen an Schwarzdorn begründen keinen Ortswechsel und ersetzen die Lehnsherrschaft der Varulv nicht.",
+    "Südliche Gründungsgrenze, nördliche Überfälle und die Brückenlage Wolfswachts sind als alte Quellenangaben überliefert. Bei räumlicher Ausgestaltung aktuelle Kartenpositionen vor alten Richtungsangaben verwenden.",
+    "Brauversprechen, Schutzherrenfest, Jugendturnier und Armreifprüfung sind konkrete Hausbräuche und können ausführlich erhalten bleiben.",
+    "Die Frostwölfe werden als Banditenbedrohung beschrieben. Mutmaßliche Urheber und Autorwissen von der nach außen belegten politischen Situation trennen; keine zusätzlichen Personen- oder Gildenakten erzeugen.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

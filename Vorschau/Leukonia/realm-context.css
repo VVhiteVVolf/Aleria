@@ -1,0 +1,32 @@
+.leukonia-workbench .history-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.province-context{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:35px;padding-top:30px;border-top:1px solid var(--line)}
+.province-context article{padding:22px;background:#ebe7dc;border-top:3px solid #836844}
+.province-context p,.administration-chain p,.local-posts p{font-size:15px;color:var(--muted);margin-bottom:0}
+.administration-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:25px}
+.administration-chain article{padding:22px;background:#e5e4db;border:1px solid var(--line)}
+.local-posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:35px;padding:25px;border-block:1px solid var(--line)}
+.government-columns{display:grid;grid-template-columns:1fr;gap:30px}
+.government-context{max-width:950px;margin-bottom:30px}
+.government-context p{font-size:16px;color:var(--muted)}
+.office-context>.imperial-offices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 35px}
+.imperial-offices{margin:0}
+.imperial-offices>div{padding:16px 0;border-top:1px solid var(--line)}
+.imperial-offices dt{font-size:23px;color:var(--accent)}
+.imperial-offices dd{margin:7px 0 0;font:13px/1.7 var(--sans)}
+.imperial-offices dd strong{font-weight:normal}
+.imperial-offices dd p{color:var(--muted);margin:8px 0 0}
+.institution-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.institution-grid article{padding:25px;border:1px solid var(--line);background:#fdfaf1;min-width:0}
+.institution-grid h3{overflow-wrap:anywhere}
+.institution-grid p{font-size:15px;color:var(--muted)}
+.institution-grid .institution-leadership{font:12px/1.7 var(--sans);padding-top:15px;border-top:1px solid var(--line);margin-bottom:0}
+.religion-context{padding:28px;background:#e6e4d9;border-left:3px solid var(--accent);margin-top:28px}
+.religion-context p{margin-bottom:0;color:var(--muted)}
+.military-terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;margin:0}
+.military-terms>div{border-top:1px solid var(--line);padding-top:18px}
+.military-terms dt{font-size:25px;color:var(--accent)}
+.military-terms dd{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.open-questions{padding-left:22px;max-width:900px;color:var(--muted)}
+.open-questions li{margin:12px 0}
+@media(max-width:850px){.province-context,.administration-chain{grid-template-columns:1fr}.government-columns{grid-template-columns:1fr;gap:30px}}
+@media(max-width:650px){.leukonia-workbench .history-grid,.local-posts,.institution-grid,.military-terms,.office-context>.imperial-offices{grid-template-columns:1fr}.local-posts{padding:20px}}

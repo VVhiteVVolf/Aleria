@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "77dc41f0-cb68-451f-b32e-f51cfbc6bea7",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "9dbab10416f69d21fcf900325990e26437eb0f03155e64a925f530badd2bda2e"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-cruithenaech",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-cruithenaech",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Dun Clachrath",
+    "currentRankId": "unknown"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "b7900270d006b20dfaf4055745d910361e0c4ffa3b60f28c6e3432a664df7e84",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die dünne Vorlage bleibt eine vorbereitete Seite; anonyme bestehende Figuren werden nicht als benannte Hausmitglieder ausgearbeitet.",
+    "Historischer Clanstatus und unbekannter Rang bleiben erhalten. Ein erloschener Status wird nicht aus den pauschalen alten Tabellen angenommen."
+  ]
+}

@@ -2,18 +2,18 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-02T23:00:11.395595Z",
+  "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
   "summary": {
-    "sourceDocuments": 490,
+    "sourceDocuments": 492,
     "total": 261,
     "mergedSameNameGroups": 45,
     "familyLinked": 170,
     "familyAmbiguous": 0,
     "familyPending": 91,
-    "primaryFamily": 170,
+    "primaryFamily": 169,
     "primaryGroup": 31,
     "primaryPlace": 27,
-    "primaryUnassigned": 33,
+    "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -766,6 +766,17 @@
       "familyAlternatives": []
     },
     {
+      "recordId": "character--glendower-o-cenyr",
+      "name": "Glendower O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
       "recordId": "character--jenna-o-cenyr",
       "name": "Jenna O'Cenyr",
       "status": "pending",
@@ -971,18 +982,6 @@
     {
       "recordId": "character--vebrand-wolfsruf",
       "name": "Vébrand Wolfsruf",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "gwynthor",
-        "label": "Gwynthor",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--rob-gwynthor-tageloehner",
-      "name": "Rob",
       "status": "pending",
       "primary": {
         "kind": "place",

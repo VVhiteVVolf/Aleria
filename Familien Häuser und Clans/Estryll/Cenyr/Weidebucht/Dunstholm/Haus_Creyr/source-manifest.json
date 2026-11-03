@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "4c0aba4a-b776-4438-8f45-c24768d95764",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "2aea5dd9b90c638a817d93b6690ddc13ba73ff3663e061786b2405ee7e9dabea"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-creyr",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-creyr",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 4,
+    "currentSeat": "Esgairmor",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/m4eb7Pq.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "044ba3a86ff4deba4a1a908c941f432aba7de76994fd7f7c94c0cfeb2a6834e2",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Der aktuelle Sitz Esgairmor gehört zur Baronie Dunstholm. Der weiße langhalsige Flügelvogel auf Rot im Original hat Vorrang vor dem falschen Kreuztext."
+  ]
+}

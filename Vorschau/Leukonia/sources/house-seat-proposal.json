@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "houseId": "house-lex",
+      "settlementId": "alvanista",
+      "archonateId": "archonat-nord",
+      "status": "editable-proposal"
+    },
+    {
+      "houseId": "house-tremelia",
+      "settlementId": "aspio",
+      "archonateId": "archonat-west",
+      "status": "editable-proposal"
+    },
+    {
+      "houseId": "house-pelagia",
+      "settlementId": "ort-03",
+      "archonateId": "archonat-nordost",
+      "status": "editable-proposal"
+    },
+    {
+      "houseId": "house-orania",
+      "settlementId": "ort-18",
+      "archonateId": "archonat-suedwest",
+      "status": "editable-proposal"
+    },
+    {
+      "houseId": "house-apinia",
+      "settlementId": "ort-20",
+      "archonateId": "archonat-suedost",
+      "status": "editable-proposal"
+    },
+    {
+      "houseId": "house-mede",
+      "settlementId": "zaphias",
+      "archonateId": "archonat-nordost",
+      "status": "user-confirmed-imperial-domain"
+    }
+  ],
+  "bannerProposals": [
+    {
+      "id": "banner-lex",
+      "regionId": "archonat-nord",
+      "regionName": "Noerdliches Archonat",
+      "houseId": "house-lex",
+      "colors": [
+        "Schwarz",
+        "Silber"
+      ],
+      "motif": "Silberner korinthischer Helm mit Lorbeer",
+      "status": "editable-proposal",
+      "preview": "assets/banners/previews/lex.webp",
+      "production": "assets/banners/production/lex.png",
+      "seatId": "alvanista"
+    },
+    {
+      "id": "banner-tremelia",
+      "regionId": "archonat-west",
+      "regionName": "Westliches Archonat",
+      "houseId": "house-tremelia",
+      "colors": [
+        "Petrolgruen",
+        "Gold",
+        "Elfenbein"
+      ],
+      "motif": "Zwei einander zugewandte goldene Seepferdchen",
+      "status": "editable-proposal",
+      "preview": "assets/banners/previews/tremelia.webp",
+      "production": "assets/banners/production/tremelia.png",
+      "seatId": "aspio"
+    },
+    {
+      "id": "banner-pelagia",
+      "regionId": "archonat-nordost",
+      "regionName": "Nordostarchonat",
+      "houseId": "house-pelagia",
+      "colors": [
+        "Nachtblau",
+        "Gold",
+        "Azurblau"
+      ],
+      "motif": "Goldenes Seepferd zwischen blauen Wellen",
+      "status": "editable-proposal",
+      "preview": "assets/banners/previews/pelagia.webp",
+      "production": "assets/banners/production/pelagia.png",
+      "seatId": "ort-03"
+    },
+    {
+      "id": "banner-orania",
+      "regionId": "archonat-suedwest",
+      "regionName": "Suedwestliches Archonat",
+      "houseId": "house-orania",
+      "colors": [
+        "Dunkelviolett",
+        "Silberweiss",
+        "Bronze"
+      ],
+      "motif": "Steigendes silberweisses Pferd",
+      "status": "editable-proposal",
+      "preview": "assets/banners/previews/orania.webp",
+      "production": "assets/banners/production/orania.png",
+      "seatId": "ort-18"
+    },
+    {
+      "id": "banner-apinia",
+      "regionId": "archonat-suedost",
+      "regionName": "Suedostarchonat",
+      "houseId": "house-apinia",
+      "colors": [
+        "Schwarz",
+        "Silber",
+        "Kupferorange"
+      ],
+      "motif": "Silberne Feder mit goldenem Kiel vor orangefarbenem Rundfeld",
+      "status": "editable-proposal",
+      "preview": "assets/banners/previews/apinia.webp",
+      "production": "assets/banners/production/apinia.png",
+      "seatId": "ort-20"
+    }
+  ],
+  "islandCorrection": "Southern island excluded by user; Bolar region/seat deliberately left open."
+}

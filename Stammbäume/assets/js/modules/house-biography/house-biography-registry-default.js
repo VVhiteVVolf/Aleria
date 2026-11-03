@@ -19,6 +19,12 @@ export function withHouseBiographyDefault(family, defaults) {
       // A biography-only revision must not reapply older managed person fields.
       registryManagedEntitySourceRevision: family.extensions?.registryManagedEntitySourceRevision
         ?? family.extensions?.sourceRevision ?? 0,
+      // The fingerprint policy owns biography replacement. Legacy sources must
+      // not force this field over an edited or explicitly removed saved bio.
+      ...(family.extensions?.registryManagedExtensionFields?.includes('houseBiographyModule') ? {
+        registryManagedExtensionFields: family.extensions.registryManagedExtensionFields
+          .filter(field => field !== 'houseBiographyModule')
+      } : {}),
       sourceRevision: Math.max(family.extensions?.sourceRevision || 0, entry.sourceRevision),
       houseBiographyModule: entry.biography,
     },

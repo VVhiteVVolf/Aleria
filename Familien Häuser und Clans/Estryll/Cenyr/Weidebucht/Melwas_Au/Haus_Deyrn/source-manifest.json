@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "reviewed-public-family-registry",
+    "familyId": "haus-deyrn",
+    "sourceRevision": 0
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-deyrn",
+    "existingGraphUnchanged": true,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ]
+  },
+  "preparation": {
+    "inventedPeople": false,
+    "inventedRelationships": false,
+    "inventedProfession": false,
+    "militaryStatisticsImported": false
+  },
+  "images": [
+    {
+      "role": "Repräsentative Hausfigur",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "sha256": "12985d6b9f2e8a5fcfa0727a50e1b52fa82b110ae2b24fab8f2bb70e14afcebe",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json",
+      "namedPerson": false
+    }
+  ],
+  "decisions": [
+    "Nur belegte öffentliche Registerfakten und bestehende Angehörige verwendet. Keine alten Genealogien, Amtsfolgen oder Militärstatistiken importiert.",
+    "Bestehende Hausquellen bleiben erhalten; dieses neue Modul füllt eine geprüfte aktive Seitenlücke."
+  ]
+}

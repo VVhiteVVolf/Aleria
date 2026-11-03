@@ -1,0 +1,115 @@
+{
+  "checkedOn": "2026-11-03",
+  "localOnly": true,
+  "pushed": false,
+  "deployed": false,
+  "firebaseWrites": false,
+  "scope": {
+    "houses": 15,
+    "originalIllustrationsPreserved": 15,
+    "newIllustrations": 0,
+    "directTerritoryLinks": 27,
+    "territoryFiles": 11
+  },
+  "preservation": {
+    "targetGraphsAndProfiles": 15,
+    "northernOriginRecords": 4,
+    "originalFigureHashes": "15/15 identical",
+    "sourceArchiveHashes": "15/15 identical",
+    "foreignGeneratedFilesUnchanged": 846,
+    "foreignPageRecordsUnchanged": 416,
+    "foreignRankRecordsUnchanged": 424,
+    "foreignBiographyRecordsUnchanged": 422
+  },
+  "finalChecks": [
+    {
+      "name": "house-suites",
+      "passed": true
+    },
+    {
+      "name": "scoped-drift",
+      "passed": true
+    }
+  ],
+  "tests": {
+    "combinedHouseAndScopeSuites": {
+      "passed": 35,
+      "failed": 0
+    },
+    "territoryRegression": {
+      "passed": 8,
+      "failed": 0
+    },
+    "scopedGalleryRegression": {
+      "passed": 12,
+      "failed": 0
+    },
+    "publicationRegression": {
+      "passed": 4,
+      "failed": 0
+    },
+    "buildTaskRegression": {
+      "passed": 19,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:5575",
+    "pages": [
+      {
+        "id": "haus-pysgod",
+        "canonicalTitleAndRankVerified": true,
+        "originalFigureLoaded": true,
+        "brokenImages": 0,
+        "iframe": {
+          "familyTitle": "Haus Pysgod O'Tredegar",
+          "people": 105,
+          "mode": "view"
+        },
+        "biography": {
+          "opened": true,
+          "originalFigureLoaded": true,
+          "returnHouseLinkCorrect": true
+        }
+      },
+      {
+        "id": "haus-blaidd-tredegar",
+        "southernBranchVerified": true,
+        "liegePysgodVerified": true,
+        "canonicalIframeIdVerified": true,
+        "brokenImages": 0
+      },
+      {
+        "id": "haus-tanwyn",
+        "historicalContextVerified": true,
+        "originalArcaneFigureLoaded": true,
+        "brokenImages": 0
+      },
+      {
+        "id": "haus-dornach",
+        "smallTemplateVerified": true,
+        "rankDunTiarnaVerified": true,
+        "originalFigureLoaded": true,
+        "brokenImages": 0
+      },
+      {
+        "id": "haus-wivern",
+        "originalSeatedFigureWithTreePreserved": true,
+        "brokenImages": 0
+      },
+      {
+        "id": "haus-wylan",
+        "unchangedEarlierRegionControl": true,
+        "originalFigureLoaded": true,
+        "brokenImages": 0
+      }
+    ]
+  },
+  "sourcePolicy": {
+    "sourceGenealogyImported": false,
+    "militaryStatisticsImported": false,
+    "currentStructuresHavePriority": true,
+    "archivesExcludedFromStaticDelivery": true
+  },
+  "notes": "All fifteen source illustrations were already present and suitable. No new illustration or image editing was needed. Existing original backgrounds and poses were preserved."
+}

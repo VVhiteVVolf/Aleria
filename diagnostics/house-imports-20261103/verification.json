@@ -1,0 +1,78 @@
+{
+  "checkedOn": "2026-11-03",
+  "localOnly": true,
+  "pushed": false,
+  "deployed": false,
+  "firebaseWrites": false,
+  "scope": {
+    "houses": 12,
+    "existingOriginalIllustrations": 9,
+    "newIllustrations": 4,
+    "imagePositions": 13,
+    "territoryLinks": 21
+  },
+  "checks": [
+    {
+      "name": "house-pages",
+      "status": "fulfilled",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "publication",
+      "status": "fulfilled",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "house-drift",
+      "status": "fulfilled",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "gallery-drift",
+      "status": "fulfilled",
+      "exitCode": 0,
+      "passed": true
+    }
+  ],
+  "content": {
+    "existingFamilyGraphsUnchanged": true,
+    "sourceGenealogyImported": false,
+    "militaryStatisticsImported": false,
+    "currentCanonicalMetadataTakesPriority": true
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:5573",
+    "pages": [
+      {
+        "id": "haus-sgwarnog",
+        "mainAndGalleryImagesLoaded": true,
+        "brokenImages": 0,
+        "familyIframeLoaded": true,
+        "familyIframePeople": 39,
+        "familyIframeGenerations": 6,
+        "mode": "view"
+      },
+      {
+        "id": "haus-aroglyn",
+        "civilianStatusVerified": true,
+        "newCivilianImageLoaded": true,
+        "brokenImages": 0
+      },
+      {
+        "id": "haus-gwarchod",
+        "extinctDynastyStatusVerified": true,
+        "newHistoricalWarriorImageLoaded": true,
+        "brokenImages": 0
+      }
+    ],
+    "note": "The existing lazy iframe was visibly loaded and its canonical family title and nodes were checked. The read-only QA overlay falls back to a verified public checkout and limits current registry rows to these twelve existing families."
+  },
+  "artwork": {
+    "provider": "Built-in image generation tool",
+    "prompts": "diagnostics/house-imports-20261103/image-prompts.json",
+    "assets": "diagnostics/house-imports-20261103/generated-assets.json"
+  }
+}

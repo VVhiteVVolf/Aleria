@@ -1,0 +1,49 @@
+{
+  "id": "haus-eisenjungfer",
+  "source": null,
+  "authority": {
+    "familyId": "haus-eisenjungfer",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Forsthain"
+      ],
+      "liegeHouseId": "house-skald",
+      "liegeHouseName": "Clan Skald",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-eisenjungfer",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "eisenjungfer",
+    "id": "haus-eisenjungfer",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-f2ad2339-e27e-4bac-a7d2-972fd6185939.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-eisenjungfer/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "preset": "fantasy-rpg-character",
+    "promptManifest": "diagnostics/roriksheim-clans-20261103/image-prompts.json",
+    "sha256": "2bdce2648f629ffeb05d2572d68c1d17229cc7576f04e2fcee292fffcdf3bcd8"
+  },
+  "decisions": [
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

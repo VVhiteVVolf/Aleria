@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-03",
+  "ok": true,
+  "scope": "Explicitly allowlisted public Cenyr family residences; no private identities or person graphs.",
+  "localOnly": true,
+  "taskActions": {
+    "push": false,
+    "deploy": false,
+    "firebaseWrites": false
+  },
+  "completion": {
+    "families": 276,
+    "counties": 9,
+    "existingFamiliesPreserved": 266,
+    "newDocumentedPreparedFamilies": 10,
+    "missingHousePage": 0,
+    "missingBiography": 0,
+    "missingFigure": 0,
+    "originalFiguresReused": 248,
+    "newFigures": 28
+  },
+  "coverage": {
+    "families": 276,
+    "territorialGroups": 9,
+    "missingPage": 0,
+    "missingBio": 0,
+    "missingArt": 0,
+    "noLocalArt": 0,
+    "iframeIssues": 0,
+    "biographyBackLinkIssues": 0,
+    "preparedPages": 122,
+    "publishedOwnNull": 0,
+    "unreviewedPublicScopedFamilies": 0,
+    "counties": {
+      "Graue Weite": {
+        "families": 15,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Ährental": {
+        "families": 12,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Vortigerns Ruh": {
+        "families": 19,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Weidebucht": {
+        "families": 20,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Tal der Milane": {
+        "families": 21,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Celtigerns Wacht": {
+        "families": 104,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Sonnenküste": {
+        "families": 30,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Klaueninsel": {
+        "families": 37,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Silberinsel": {
+        "families": 18,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      }
+    }
+  },
+  "checks": {
+    "targetedTests": {
+      "passed": 79,
+      "failed": 0,
+      "log": "root-verification-tests.log"
+    },
+    "scopedHouseGenerator": {
+      "families": 66,
+      "exitCode": 0
+    },
+    "scopedGalleryGenerator": {
+      "families": 276,
+      "exitCode": 0
+    },
+    "routingRegressionTests": 3,
+    "repeatableCoverageCli": {
+      "exitCode": 0
+    }
+  },
+  "browserChecks": [
+    {
+      "id": "haus-grianlaoch",
+      "result": "Original figure restored; page and profile show Ritterhaus / Ritterherr."
+    },
+    {
+      "id": "haus-jernigan",
+      "result": "Prepared commoner page and civilian figure load; correct residence and service; actual view iframe displays zero people."
+    },
+    {
+      "id": "haus-carwyn",
+      "result": "New house-specific knight figure and crest load; correct title, residence and liege."
+    },
+    {
+      "id": "sept-cneacail",
+      "result": "Current Gwynthor exile and Ceitheach origin distinguished; public family identity retained."
+    },
+    {
+      "id": "haus-swynol",
+      "result": "Civilian figure loads; canonical Bragwhislyn / Tanwens Flamme / Vortigerns Ruh residence retained."
+    },
+    {
+      "id": "haus-morforwyn-linie-elimue",
+      "result": "Branch-specific heraldry and new figure load without broken images."
+    },
+    {
+      "id": "haus-arth",
+      "result": "Activated existing authoring displays retained original figure."
+    },
+    {
+      "id": "haus-cwningod",
+      "result": "Rich biography preserved; local original figure and canonical house-page back-link load; obsolete troop/fleet rows absent."
+    },
+    {
+      "id": "haus-cwingod",
+      "result": "Documented legacy alias resolves Cwingod page and canonical read-only family iframe."
+    },
+    {
+      "id": "unknown-house-route",
+      "result": "Explicit unknown family ID shows existing missing-house error instead of a different family."
+    }
+  ],
+  "finalRoutingCorrection": {
+    "canonical": "haus-cwningod",
+    "alias": "haus-cwingod",
+    "sourceAliasPreservedByGenerator": true,
+    "explicitUnknownIdFallsBackToDifferentFamily": false,
+    "defaultRoutePreserved": true,
+    "loaderVersion": "cenyr-routing-20261103",
+    "note": "The late alias-only correction supplements the earlier source-preservation snapshots; no family graph, profile, illustration or biography prose changed."
+  },
+  "artEvidence": {
+    "provider": "Built-in imagegen",
+    "prompts": "image-prompts.json",
+    "manifest": "art-audit/final-artwork-manifest.json",
+    "review": "art-audit/final-artwork-review.md",
+    "generationReceipts": 28,
+    "allNewFiguresVisuallyReviewed": true
+  },
+  "interfaces": "family-interfaces.json",
+  "preservation": "final-authoring-preservation.json"
+}

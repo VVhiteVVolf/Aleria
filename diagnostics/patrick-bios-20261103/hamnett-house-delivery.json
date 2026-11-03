@@ -1,0 +1,37 @@
+{
+  "familyId": "haus-hamnett",
+  "source": "Familien Häuser und Clans/Estryll/Cenyr/Silberinsel/Haus_Hamnett/haus.content.mjs",
+  "page": "Familien Häuser und Clans/kleinehaeuser.html?haus=haus-hamnett",
+  "countyCard": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs",
+  "crestSha256": "edd5b46c436324e4ef726e9a8ad8f2f7fa5ee628a36ac1294937955fb1d15a95",
+  "figureSha256": "4211d776a51f0f0c3335735f2d375539e914725b52d92801d14164324ca9f24b",
+  "activeMotif": "Hammer und Meißel",
+  "colours": [
+    "Dunkelblau",
+    "Elfenbein",
+    "Gold"
+  ],
+  "artManifest": "AleriaAlmanach/docs/art/hamnett-20261103/manifest.json",
+  "portraitFactory": "getPatrickBiographyPersonFields(unknown-cadogan-spouse)",
+  "personWorldId": "person--family-tree--unknown-cadogan-spouse",
+  "inventedPeople": false,
+  "inventedFounder": false,
+  "inventedParents": false,
+  "inventedSeat": false,
+  "inferredVassalage": false,
+  "knownHouseFacts": [
+    "Seit Generationen wohlhabendes Künstler- und Kunsthandwerkerhaus der Silberinsel",
+    "Werkstätten für Reliefs, Ornament-Schnitzerei und Bildhauerarbeiten",
+    "Auftraggeber sind wohlhabende Bürger und Adelsfamilien, besonders Neidr",
+    "Gwen lebt in Gwynthor; der genaue Haussitz und die Besitzgrößen bleiben offen"
+  ],
+  "tests": {
+    "path": "Familien Häuser und Clans/tests/hamnett-house-page.test.mjs",
+    "passed": 3,
+    "scopedGeneratorCheck": true
+  },
+  "inactiveAlternativesKeptLocally": true,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

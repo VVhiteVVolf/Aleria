@@ -1,0 +1,44 @@
+{
+  "houseId": "haus-pawen",
+  "source": {
+    "attachmentId": "d08552fd-38bd-4d94-9e92-4b6814adc55a",
+    "file": "animexx-original.html",
+    "sha256": "982f7adc548e9c7ba39ec92d45204f173dc5da8dccf83a548bfa1b4f12104bc1",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-pawen"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/ZJPs9qA.png",
+      "role": "Hausdarstellung",
+      "sha256": "3a0d834e49431d953e7480b6fcb1dbe7d07c31f353d2fd7d531e4b05b9f95cac",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "status": "Original unverändert lokal eingebunden und angesehen",
+      "inspection": {
+        "date": "2026-11-03",
+        "description": "Dunkler Ritter mit rotem Fell, Schwert, Vogel und Braunbär."
+      }
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/herrschaft.data.mjs"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig aus der Übernahme ausgeschlossen. Ausschließlich bestehende Familien- und Personen-IDs; keine Graphänderung. Amtszeiten sind von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken in Profil und Fließtext ausgelassen. Qualitative Ausrüstungs-, Ausbildungs- und Kulturangaben bleiben erhalten.",
+    "Aktuelle Ortsstruktur Klaueninsel/Sturmklaue/Talgarth beibehalten. Brac seit 1695; überlieferter Sadwn heißt in der bestehenden Person Sadwrn. Erbe Amaethon nach kanonischer Schreibweise.",
+    "Die knappe Altvorlage wird durch die bestehende Pawen-Gebietsquelle ergänzt: Dyfnor, Brondir, Llanvyr und deren Wirtschaft. Kein neues Ritual und kein zusätzlicher Ort erfunden.",
+    "Wirtschaftlich vielseitige Herrschaft und die ältere Charakterisierung ohne besonderen Wirtschaftssinn sind unterschiedliche Aussagen. Kein Widerspruch durch ein erfundenes neues Wohlstandsniveau aufgelöst.",
+    "Blegywryd ist in der aktuellen Ratsliste als Marschall des Ritterfürsten belegt und wird zusätzlich zu den zwanzig unbenannten Alt-Hofämtern geführt. Gründer Lamorak Arth und Erbe Lamorak Pawen bleiben getrennt."
+  ]
+}

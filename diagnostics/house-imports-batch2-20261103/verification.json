@@ -1,0 +1,84 @@
+{
+  "checkedOn": "2026-11-03",
+  "localOnly": true,
+  "pushed": false,
+  "deployed": false,
+  "firebaseWrites": false,
+  "scope": {
+    "houses": 10,
+    "originalIllustrationsPreserved": 9,
+    "newIllustrations": 1,
+    "territoryLinks": 18
+  },
+  "checks": {
+    "houseSuitesIncludingEarlierAehrental": {
+      "passed": 18,
+      "failed": 0
+    },
+    "weidebuchtTerritoryRegression": {
+      "passed": 7,
+      "failed": 0
+    },
+    "scopedGalleryRegression": {
+      "passed": 9,
+      "failed": 0
+    },
+    "publicationAndBuildTaskRegression": {
+      "passed": 23,
+      "failed": 0
+    },
+    "scopedHouseOutputs": "10/10 current",
+    "scopedGalleryDrift": "passed",
+    "canonicalFamilyGraphs": "10/10 unchanged",
+    "originalImageHashes": "9/9 unchanged"
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:5574",
+    "pages": [
+      {
+        "id": "haus-tannau",
+        "civilianStatusVerified": true,
+        "newTannerFigureLoaded": true,
+        "visibleHalo": false,
+        "brokenImages": 0,
+        "iframe": {
+          "familyTitle": "Haus Tannau",
+          "people": 2,
+          "mode": "view"
+        }
+      },
+      {
+        "id": "haus-wylan",
+        "countRankVerified": true,
+        "originalFigureLoaded": true,
+        "brokenImages": 0,
+        "iframe": {
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "people": 115,
+          "mode": "view"
+        },
+        "biography": {
+          "opened": true,
+          "originalHouseImageLoaded": true,
+          "returnHouseLinkCorrect": true
+        }
+      },
+      {
+        "id": "haus-fhaire",
+        "historicalLairdContextVerified": true,
+        "originalDruidLoaded": true,
+        "brokenImages": 0
+      }
+    ]
+  },
+  "artwork": {
+    "provider": "Built-in image generation",
+    "finalPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Tannau/assets/hausdarstellung-2026-11-03.png",
+    "sha256": "ae5d8e11cc1896efa01898789bfff48a73e80a0b8877b46c0139241f6e9a7dec",
+    "promptSet": "diagnostics/house-imports-batch2-20261103/image-prompts.json"
+  },
+  "limitation": {
+    "globalHouseBuilderDrift": "An unrelated existing local Haus_Bellyn/haus.data.js output was stale during the full builder check; all ten Weidebucht page and biography outputs match authoring. The unrelated area was preserved.",
+    "path": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Bellyn/haus.data.js"
+  }
+}

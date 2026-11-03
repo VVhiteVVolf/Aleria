@@ -1,4 +1,5 @@
 import { withGawainPublicBiography } from '../../../AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs';
+import { applyConfirmedCharacterRetirement, getConfirmedCharacterRetirement } from './character-identity-retirements.mjs';
 const LOCAL_CHARACTER_SNAPSHOT_URL = new URL('../../generated/characters.snapshot.json', import.meta.url);
 
 let localDatabasePromise = null;
@@ -204,7 +205,7 @@ export function mergeOnlineAndLocalCharacter(onlineCharacter, localCharacter) {
   merged.localRecord = clone(local.localRecord, clone(online.localRecord, null));
   merged.inventory = hasObjectData(online.inventory) ? online.inventory : clone(local.inventory, online.inventory);
   merged.combatProfile = mergeRuntimeCombatProfile(online.combatProfile, local.combatProfile);
-  return withGawainPublicBiography(merged);
+  return applyConfirmedCharacterRetirement(withGawainPublicBiography(merged));
 }
 
 export function mergeCharacterDatabases(onlineCharacters = [], localCharacters = []) {
@@ -226,6 +227,12 @@ export function mergeCharacterDatabases(onlineCharacters = [], localCharacters =
     const local = localBySourceId.get(text(online?.id))
       || localByWorldPersonId.get(worldPersonId(online))
       || null;
+    if (getConfirmedCharacterRetirement(online?.id)) {
+      // Keep the old document as an archived receipt. Its stale inventory,
+      // media or combat state must never outrank a current canonical document.
+      groups.push({ local: text(local?.id) === text(online.id) ? local : null, online: [online] });
+      return;
+    }
     let group = null;
     if (local) {
       const key = text(local.localRecord?.recordId) || text(local.id);
@@ -262,7 +269,8 @@ export function mergeCharacterDatabases(onlineCharacters = [], localCharacters =
     const key = text(local.localRecord?.recordId) || text(local.id);
     if (!consumedLocalRecords.has(key)) merged.push(clone(local, local));
   });
-  return merged.map(withGawainPublicBiography).sort((first, second) => text(first?.name).localeCompare(text(second?.name), 'de', { sensitivity: 'base' }));
+  return merged.map(withGawainPublicBiography).map(applyConfirmedCharacterRetirement)
+    .sort((first, second) => text(first?.name).localeCompare(text(second?.name), 'de', { sensitivity: 'base' }));
 }
 
 function normalizeSnapshot(payload) {

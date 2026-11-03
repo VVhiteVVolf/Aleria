@@ -1,0 +1,861 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--family-tree--unknown-cadogan-spouse",
+  "slug": "gwen-hamnett",
+  "identity": {
+    "name": "Gwen Hamnett",
+    "aliases": [
+      "Gwen Sgrechiwr"
+    ],
+    "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "confirmed-residence"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-hamnett",
+        "familyTitle": "Haus Hamnett",
+        "personId": "unknown-cadogan-spouse",
+        "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+        "houseId": "house-hamnett",
+        "houseName": "Haus Hamnett",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Silberinsel"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-sgrechiwr",
+        "familyTitle": "Haus Sgrechiwr",
+        "personId": "unknown-cadogan-spouse",
+        "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+        "houseId": "house-hamnett",
+        "houseName": "Haus Hamnett",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Lynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--family-tree--unknown-cadogan-spouse",
+      "documentIds": [
+        "person--family-tree--unknown-cadogan-spouse"
+      ],
+      "documents": [
+        {
+          "documentId": "person--family-tree--unknown-cadogan-spouse",
+          "createdAt": "",
+          "updatedAt": "2026-11-03T17:25:17.128Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-hamnett",
+        "personId": "unknown-cadogan-spouse",
+        "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+        "url": ""
+      },
+      {
+        "familyId": "haus-sgrechiwr",
+        "personId": "unknown-cadogan-spouse",
+        "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--family-tree--unknown-cadogan-spouse.json",
+    "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
+    "sourceUpdatedAt": "2026-11-03T17:25:17.128Z",
+    "sourceDocumentIds": [
+      "person--family-tree--unknown-cadogan-spouse"
+    ],
+    "contentHash": "6251a2f1f3fd8d14f964d168552ad6b6d430da38f9a8047caef856e082c882ee"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "patrick-biographies"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--family-tree--unknown-cadogan-spouse",
+        "name": "Gwen Hamnett",
+        "title": "Malerin",
+        "aliases": [
+          "Gwen Hamnett",
+          "Gwen Sgrechiwr"
+        ],
+        "identity": {
+          "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+        },
+        "genealogy": {
+          "birth": "1694",
+          "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+          "familyRole": "married",
+          "houseId": "house-hamnett",
+          "sex": "female",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sgrechiwr",
+              "personId": "unknown-cadogan-spouse",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-03T17:25:17.128Z",
+              "lastSyncedAt": "2026-11-03T17:25:17.128Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=unknown-cadogan-spouse",
+              "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
+            },
+            {
+              "familyId": "haus-hamnett",
+              "personId": "unknown-cadogan-spouse",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-hamnett&mode=view&person=unknown-cadogan-spouse",
+              "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "importedAt": "2026-11-03T17:25:17.128Z",
+              "lastSyncedAt": "2026-11-03T17:25:17.128Z"
+            }
+          ],
+          "status": "alive",
+          "portraitPlaceholder": "auto",
+          "death": "",
+          "houseName": "Haus Hamnett",
+          "relationships": {
+            "children": [
+              {
+                "personId": "eluned-sgrechiwr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr",
+                "name": "Eluned Sgrechiwr"
+              },
+              {
+                "personId": "meinwen-sgrechiwr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr",
+                "name": "Meinwen Sgrechiwr"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "cadogan-sgrechiwr",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+                "name": "Cadogan Sgrechiwr"
+              }
+            ],
+            "parents": []
+          }
+        },
+        "biography": {
+          "quote": "",
+          "revision": 1793726717128,
+          "biography": {
+            "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Vergangenheit",
+                "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Wirkung",
+                "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
+                "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
+              }
+            ],
+            "historyTitle": "Charakter",
+            "connectionTextOffset": 0,
+            "connectionsTitle": "Verbindungen",
+            "worksTitle": "Können & Fähigkeiten",
+            "triviaTitle": "Trivia",
+            "quotes": [],
+            "documentsTitle": "Eigentum & Besitz",
+            "sideWidth": 100,
+            "footer": "Personenakte · Gwen Hamnett",
+            "documents": [],
+            "works": [
+              "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
+              "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
+              "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
+              "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
+              "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
+              "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
+              "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
+              "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
+            ],
+            "biographyTitle": "Hintergrund – Wer ist sie?",
+            "quotesTitle": "Zitate",
+            "abilities": [
+              {
+                "title": "Künstlerisch",
+                "detail": "Gwen besitzt eine ausgeprägte schöpferische Begabung und betrachtet ihre Umgebung häufig aus der Perspektive einer Malerin.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-artistic-2de3a80745921e32%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Selbstbewusst",
+                "detail": "Sie kennt ihre Fähigkeiten und ihren gesellschaftlichen Wert, ohne deshalb überheblich aufzutreten.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Beobachtend",
+                "detail": "Gwen besitzt ein ausgezeichnetes Auge für Einzelheiten, Gesichtsausdrücke, Farben und Lichtverhältnisse.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Gesellig",
+                "detail": "Sie schätzt anregende Gespräche, gesellschaftliche Veranstaltungen und den Austausch mit anderen Künstlern.",
+                "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+              },
+              {
+                "title": "Temperamentvoll",
+                "detail": "Hinter ihrer häufig ruhigen und nachdenklichen Erscheinung verbirgt sich eine lebhafte Frau, die ihre Ansichten durchaus entschieden vertritt.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-spirited-00c6dbd2638206f3%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Humorvoll",
+                "detail": "Gwen besitzt einen feinen, gelegentlich trockenen Humor und begegnet insbesondere den Eigenheiten ihres Gemahls mit liebevollem Spott.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Unabhängig",
+                "detail": "Sie legt großen Wert auf ihre künstlerische Freiheit und lässt sich nur ungern durch gesellschaftliche Erwartungen einschränken.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-independent-7ac25c09b5a430a9%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Leidenschaftlich",
+                "detail": "Wird sie von einer künstlerischen Eingebung erfasst, kann sie sich ihrer Arbeit mit nahezu grenzenloser Hingabe widmen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-passionate-5a58eecf1912bc6f%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Unberechenbar",
+                "detail": "Besonders während schöpferischer Phasen verliert sie häufig jedes Gefühl für Zeit, Termine und Verpflichtungen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-unpredictable-87b38589e575dbb8%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Liebevoll",
+                "detail": "Trotz ihrer gelegentlichen Zerstreutheit ist Gwen ihrer Familie aufrichtig zugetan und genießt die Gesellschaft ihres Gemahls und ihrer Töchter.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-loving-5f329a6a6ae0021c%2Foriginal.png?alt=media"
+              }
+            ],
+            "trivia": [
+              "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
+              "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
+              "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
+              "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
+              "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
+              "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
+              "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
+              "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
+              "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
+              "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
+              "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
+              "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
+              "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+            ],
+            "connectionPortraitHeight": 68,
+            "knightMentors": [],
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Familie Sgrechiwr",
+                "detail": "",
+                "image": ""
+              },
+              {
+                "type": "connection",
+                "name": "Cadogan Sgrechiwr",
+                "detail": "Mein Ehemann. Mein Schnäuzelchen!",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eluned Sgrechiwr",
+                "detail": "Tochter",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/eluned-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meinwen Sgrechiwr",
+                "detail": "Tochter",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/meinwen-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Andere Künstler",
+                "detail": "",
+                "image": ""
+              },
+              {
+                "type": "connection",
+                "name": "Myrddin Draig",
+                "detail": "Seine Farbgebung ist Klasse. Er hat den richtigen Blick. Doch sein Pinselstrich ist gewöhnungsbedürfig. Dennoch ist seine Kunst gut.",
+                "image": "/Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Tierische Begleiter",
+                "detail": "",
+                "image": ""
+              },
+              {
+                "type": "connection",
+                "name": "Sir Balthasar",
+                "detail": "Ihr Samtlicht.",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Sonnenaufgang",
+                "detail": "Ihre Goldmähne.",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sonnenaufgang-3f887817421ab673%2Foriginal.jpeg?alt=media",
+                "imageFormat": "portrait"
+              }
+            ],
+            "abilitiesTitle": "Persönlichkeit",
+            "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>"
+          },
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Gwen Hamnett"
+            },
+            {
+              "label": "Haus",
+              "value": "Sgrechiwr"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": ""
+            },
+            {
+              "label": "Geboren",
+              "value": "1694"
+            },
+            {
+              "label": "Geburtsort",
+              "value": "Silberinseln"
+            },
+            {
+              "label": "Gestorben",
+              "value": "Lebend"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "46 Jahre"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Weiblich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "verheiratet"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": ""
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Malerin"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            }
+          ],
+          "quoteBy": "",
+          "schema": "aleria.biography-module"
+        },
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+        "currentLocation": "Gwynthor",
+        "updatedAt": "2026-11-03T17:25:17.128Z"
+      }
+    ]
+  },
+  "character": {
+    "id": "person--family-tree--unknown-cadogan-spouse",
+    "name": "Gwen Hamnett",
+    "title": "Malerin",
+    "aliases": [
+      "Gwen Hamnett",
+      "Gwen Sgrechiwr"
+    ],
+    "identity": {
+      "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+    },
+    "genealogy": {
+      "birth": "1694",
+      "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+      "familyRole": "married",
+      "houseId": "house-hamnett",
+      "sex": "female",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-sgrechiwr",
+          "personId": "unknown-cadogan-spouse",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-03T17:25:17.128Z",
+          "lastSyncedAt": "2026-11-03T17:25:17.128Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=unknown-cadogan-spouse",
+          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
+        },
+        {
+          "familyId": "haus-hamnett",
+          "personId": "unknown-cadogan-spouse",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-hamnett&mode=view&person=unknown-cadogan-spouse",
+          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+          "importedAt": "2026-11-03T17:25:17.128Z",
+          "lastSyncedAt": "2026-11-03T17:25:17.128Z"
+        }
+      ],
+      "status": "alive",
+      "portraitPlaceholder": "auto",
+      "death": "",
+      "houseName": "Haus Hamnett",
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "cadogan-sgrechiwr",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+            "name": "Cadogan Sgrechiwr"
+          }
+        ],
+        "children": [
+          {
+            "personId": "eluned-sgrechiwr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr",
+            "name": "Eluned Sgrechiwr"
+          },
+          {
+            "personId": "meinwen-sgrechiwr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr",
+            "name": "Meinwen Sgrechiwr"
+          }
+        ]
+      }
+    },
+    "biography": {
+      "quote": "",
+      "revision": 1793726717128,
+      "biography": {
+        "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
+            "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
+          }
+        ],
+        "historyTitle": "Charakter",
+        "connectionTextOffset": 0,
+        "connectionsTitle": "Verbindungen",
+        "worksTitle": "Können & Fähigkeiten",
+        "triviaTitle": "Trivia",
+        "quotes": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "sideWidth": 100,
+        "footer": "Personenakte · Gwen Hamnett",
+        "documents": [],
+        "works": [
+          "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
+          "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
+          "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
+          "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
+          "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
+          "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
+          "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
+          "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
+        ],
+        "biographyTitle": "Hintergrund – Wer ist sie?",
+        "quotesTitle": "Zitate",
+        "abilities": [
+          {
+            "title": "Künstlerisch",
+            "detail": "Gwen besitzt eine ausgeprägte schöpferische Begabung und betrachtet ihre Umgebung häufig aus der Perspektive einer Malerin.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-artistic-2de3a80745921e32%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Selbstbewusst",
+            "detail": "Sie kennt ihre Fähigkeiten und ihren gesellschaftlichen Wert, ohne deshalb überheblich aufzutreten.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Beobachtend",
+            "detail": "Gwen besitzt ein ausgezeichnetes Auge für Einzelheiten, Gesichtsausdrücke, Farben und Lichtverhältnisse.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Gesellig",
+            "detail": "Sie schätzt anregende Gespräche, gesellschaftliche Veranstaltungen und den Austausch mit anderen Künstlern.",
+            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+          },
+          {
+            "title": "Temperamentvoll",
+            "detail": "Hinter ihrer häufig ruhigen und nachdenklichen Erscheinung verbirgt sich eine lebhafte Frau, die ihre Ansichten durchaus entschieden vertritt.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-spirited-00c6dbd2638206f3%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Humorvoll",
+            "detail": "Gwen besitzt einen feinen, gelegentlich trockenen Humor und begegnet insbesondere den Eigenheiten ihres Gemahls mit liebevollem Spott.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Unabhängig",
+            "detail": "Sie legt großen Wert auf ihre künstlerische Freiheit und lässt sich nur ungern durch gesellschaftliche Erwartungen einschränken.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-independent-7ac25c09b5a430a9%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Leidenschaftlich",
+            "detail": "Wird sie von einer künstlerischen Eingebung erfasst, kann sie sich ihrer Arbeit mit nahezu grenzenloser Hingabe widmen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-passionate-5a58eecf1912bc6f%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Unberechenbar",
+            "detail": "Besonders während schöpferischer Phasen verliert sie häufig jedes Gefühl für Zeit, Termine und Verpflichtungen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-unpredictable-87b38589e575dbb8%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Liebevoll",
+            "detail": "Trotz ihrer gelegentlichen Zerstreutheit ist Gwen ihrer Familie aufrichtig zugetan und genießt die Gesellschaft ihres Gemahls und ihrer Töchter.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-loving-5f329a6a6ae0021c%2Foriginal.png?alt=media"
+          }
+        ],
+        "trivia": [
+          "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
+          "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
+          "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
+          "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
+          "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
+          "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
+          "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
+          "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
+          "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
+          "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
+          "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
+          "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
+          "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+        ],
+        "connectionPortraitHeight": 68,
+        "knightMentors": [],
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Familie Sgrechiwr",
+            "detail": "",
+            "image": ""
+          },
+          {
+            "type": "connection",
+            "name": "Cadogan Sgrechiwr",
+            "detail": "Mein Ehemann. Mein Schnäuzelchen!",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eluned Sgrechiwr",
+            "detail": "Tochter",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/eluned-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Meinwen Sgrechiwr",
+            "detail": "Tochter",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/meinwen-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Andere Künstler",
+            "detail": "",
+            "image": ""
+          },
+          {
+            "type": "connection",
+            "name": "Myrddin Draig",
+            "detail": "Seine Farbgebung ist Klasse. Er hat den richtigen Blick. Doch sein Pinselstrich ist gewöhnungsbedürfig. Dennoch ist seine Kunst gut.",
+            "image": "/Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Tierische Begleiter",
+            "detail": "",
+            "image": ""
+          },
+          {
+            "type": "connection",
+            "name": "Sir Balthasar",
+            "detail": "Ihr Samtlicht.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Sonnenaufgang",
+            "detail": "Ihre Goldmähne.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sonnenaufgang-3f887817421ab673%2Foriginal.jpeg?alt=media",
+            "imageFormat": "portrait"
+          }
+        ],
+        "abilitiesTitle": "Persönlichkeit",
+        "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>"
+      },
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Gwen Hamnett"
+        },
+        {
+          "label": "Haus",
+          "value": "Sgrechiwr"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": ""
+        },
+        {
+          "label": "Geboren",
+          "value": "1694"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Silberinseln"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "46 Jahre"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Weiblich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "verheiratet"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": ""
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Malerin"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        }
+      ],
+      "quoteBy": "",
+      "schema": "aleria.biography-module"
+    },
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+    "currentLocation": "Gwynthor",
+    "updatedAt": "2026-11-03T17:25:17.128Z",
+    "taxonomyPath": "Cenyr > Silberinsel",
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-gwen-hamnett-sir-balthasar",
+          "name": "Sir Balthasar",
+          "species": "Samtlicht-Kater",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+          "description": "Sir Balthasar ist Gwen Hamnetts geliebter, kostspieliger Samtlicht-Kater aus Weisenfluh. Eluned und Meinwen verliehen ihm als Kinder den Namenstitel „Sir“. Er sucht Gwens Nähe und hält sich gerne in ihrem Atelier auf. Alter und besondere Ausbildung sind nicht festgelegt.",
+          "summary": "Sir Balthasar ist Gwen Hamnetts geliebter, kostspieliger Samtlicht-Kater aus Weisenfluh. Eluned und Meinwen verliehen ihm als Kinder den Namenstitel „Sir“. Er sucht Gwens Nähe und hält sich gerne in ihrem Atelier auf. Alter und besondere Ausbildung sind nicht festgelegt.",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-gwen-hamnett-sir-balthasar",
+          "inventoryItemId": "gwen-hamnett-sir-balthasar"
+        },
+        {
+          "id": "card-gwen-hamnett-sonnenaufgang",
+          "name": "Sonnenaufgang",
+          "species": "Goldmähne-Pferd",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sonnenaufgang-3f887817421ab673%2Foriginal.jpeg?alt=media",
+          "description": "Sonnenaufgang ist Gwen Hamnetts Goldmähne. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "summary": "Sonnenaufgang ist Gwen Hamnetts Goldmähne. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-gwen-hamnett-sonnenaufgang",
+          "inventoryItemId": "gwen-hamnett-sonnenaufgang"
+        }
+      ],
+      "items": [
+        {
+          "id": "gwen-hamnett-sir-balthasar",
+          "instanceId": "gwen-hamnett-sir-balthasar",
+          "creatureId": "companion-gwen-hamnett-sir-balthasar",
+          "name": "Sir Balthasar",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+          "description": "Sir Balthasar ist Gwen Hamnetts geliebter, kostspieliger Samtlicht-Kater aus Weisenfluh. Eluned und Meinwen verliehen ihm als Kinder den Namenstitel „Sir“. Er sucht Gwens Nähe und hält sich gerne in ihrem Atelier auf. Alter und besondere Ausbildung sind nicht festgelegt.",
+          "type": "Samtlicht-Kater",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Samtlicht-Kater",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+          "ownerCharacterName": "Gwen Hamnett",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-03T17:26:06.547268Z"
+        },
+        {
+          "id": "gwen-hamnett-sonnenaufgang",
+          "instanceId": "gwen-hamnett-sonnenaufgang",
+          "creatureId": "companion-gwen-hamnett-sonnenaufgang",
+          "name": "Sonnenaufgang",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sonnenaufgang-3f887817421ab673%2Foriginal.jpeg?alt=media",
+          "description": "Sonnenaufgang ist Gwen Hamnetts Goldmähne. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "type": "Goldmähne-Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Goldmähne-Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+          "ownerCharacterName": "Gwen Hamnett",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-03T17:26:06.547268Z"
+        }
+      ],
+      "revision": 1793726766547
+    }
+  }
+}

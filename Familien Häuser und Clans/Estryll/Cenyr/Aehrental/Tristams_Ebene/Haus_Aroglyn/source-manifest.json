@@ -1,0 +1,44 @@
+{
+  "source": {
+    "attachmentId": "9ff345e9-b731-4660-856f-438d47497731",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "1fd1c01612c41232e229bffb520671d736b7c5a54c4b0440a507ace7bca722b3"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-aroglyn",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-aroglyn",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Glyndraith",
+    "currentRankId": "commoner"
+  },
+  "images": [
+    {
+      "role": "Bürgerliche Hausdarstellung",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "note": "Ergänzende Darstellung; keine neue benannte Person oder genealogische Aussage.",
+      "sha256": "ef9aea0504d41c8eec218a4194f97355382e42f7bbb4594fd4a4c1fe77f531ec",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json"
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die dünne Vorlage bleibt eine vorbereitete Seite; anonyme bestehende Figuren werden nicht als benannte Hausmitglieder ausgearbeitet."
+  ]
+}

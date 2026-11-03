@@ -81,7 +81,7 @@ export function createPlacementControls({root,getSelected,onMove,escape,canMove=
    surface.querySelectorAll('.placement-targets').forEach(element=>element.remove());
    const overlay=document.createElement('div');
    overlay.className='placement-targets';
-   overlay.innerHTML=proposal.settlements.map(seat=>`<button class="placement-target" data-action="place-at-seat" data-drop-seat="${escape(seat.id)}" style="left:${seat.point[0]}%;top:${seat.point[1]}%" aria-label="Gewähltes Wappen nach ${escape(seat.name)} versetzen" title="${escape(seat.name)}">+</button>`).join('');
+   overlay.innerHTML=proposal.settlements.map(seat=>`<button class="placement-target${seat.placementDisabled?' is-disabled-target':''}" data-action="place-at-seat" data-drop-seat="${escape(seat.id)}" style="left:${seat.point[0]}%;top:${seat.point[1]}%" ${seat.placementDisabled?'disabled aria-disabled="true"':''} aria-label="${seat.placementDisabled?escape(seat.disabledReason||seat.name):'Gewähltes Wappen nach '+escape(seat.name)+' versetzen'}" title="${escape(seat.disabledReason||seat.name)}">${seat.placementDisabled?'×':'+'}</button>`).join('');
    surface.append(overlay);
   }
   const selected=getSelected();

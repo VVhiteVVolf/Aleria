@@ -1,0 +1,39 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-walwrs-caer-deheuol",
+  "attachmentId": "507413ff-36f3-4ea1-9b34-374d12c150b8",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "b0b5675af4c53210a6bccd264aa4fbe4dfc2a81ce8f3d4bb178cbdfcaf5c37e7",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/PieqevY.png",
+      "sha256": "7af5fd45d6100a50573f120c4f019fd5f0a16d699812c1e439f4f7a07eb43653",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-walwrs-caer-deheuol",
+    "originFamilyId": "haus-walwrs",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-walwrs-family.js",
+    "Stammbäume/assets/js/data/house-walwrs-portraits.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/Herrschaft Blutsturz.html"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "biographyWords": 334
+}

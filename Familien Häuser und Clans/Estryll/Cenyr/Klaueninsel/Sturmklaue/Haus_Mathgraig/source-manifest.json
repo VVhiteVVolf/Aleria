@@ -1,0 +1,36 @@
+{
+  "houseId": "haus-mathgraig",
+  "kind": "canonical-register-preparation",
+  "date": "2026-11-03",
+  "canonicalRegistrySource": "Stammbäume/assets/js/data/families.registry.js",
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/lynne-crew-house-families.js",
+    "Stammbäume/assets/js/data/lynne-crew-family-members.js",
+    "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json"
+  ],
+  "canonicalSnapshot": {
+    "file": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+    "recordId": "haus-mathgraig",
+    "recordJsonSha256": "e57a8f42b333457b39434f85e6ccc5a6b5d23a04bd3abeda9f65dfa853b40cd0",
+    "sourceRevision": 6
+  },
+  "genealogy": {
+    "existingFamilyId": "haus-mathgraig",
+    "graphChanged": false,
+    "suppliedTreeImported": false
+  },
+  "militaryStatisticsIgnored": true,
+  "image": {
+    "file": "assets/hausdarstellung-2026-11-03.png",
+    "promptManifest": "diagnostics/klaueninsel-house-pages-20261103/image-prompts.json",
+    "metadata": "assets/image-generation.json",
+    "preserveExistingImages": true
+  },
+  "decisions": [
+    "Nur vorhandene öffentliche Registerfakten, Beschreibungen, Personen und deren belegte Aufgaben redigiert. Keine zusätzliche Familie oder Verwandtschaft angelegt.",
+    "Datierte genealogische Gerüste sind keine Hauschronik: keine daraus abgeleiteten Gründungsjahre, Wanderungen, Amtsfolgen oder Oberhäupter.",
+    "Nur reale Personen mit vorhandenem individuellem Portrait erhalten Angehörigenkarten. Namen und Portraitpfade stammen unverändert aus der bestehenden Akte.",
+    "Sämtliche Militärstatistiken ausgelassen. Persönliche Bordaufgaben bleiben von Hausämtern und Hausrang getrennt."
+  ]
+}

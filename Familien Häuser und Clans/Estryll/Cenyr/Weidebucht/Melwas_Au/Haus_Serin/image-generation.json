@@ -1,0 +1,23 @@
+{
+  "id": "haus-serin",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19e7a-219c-7240-9adb-89ae6e7a2b5f\\exec-7f846b17-305c-4733-b256-e6e3124667e3.png",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-serin.png",
+  "sha256": "9625156a6b7afae86edadbd8de08e3fe8d38f15729721b85e0574e869900d247",
+  "provider": "built-in-imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one representative fantasy house figure for the Aleria house register. Input image 1 is the approved STYLE reference only; image 2 is the exact house HERALDRY and muted palette reference only. Do not copy the style knight's blue griffin, plate armour design or hairstyle. Match its restrained matte hand-painted treatment: simplified readable shapes, soft thin painted contours, sparse soft shading, muted earthy colours, fine uniform gouache pigment grain. Calm upright three-quarter pose, complete full-body silhouette and all equipment tips visible, 2:3 portrait with comfortable clear margin. Plain readable face where open, tidy anatomy. Actual transparent RGBA PNG: outside the figure silhouette and through every open gap alpha=0. Absolutely no background colour, mist, halo, aura, exterior shadow, floor, scenery, paper, border, lettering or watermark. No photorealistic skin, glossy metal, CGI, dramatic lighting, thick black comic outlines or oil-paint splashes. Image is an unnamed representative, never a new person or historical event.\nHouse: Haus Serin. Context: Cenyr, Weidebucht, Melwas Au, Cerrigarth. The Weidebucht designs use practical clothing for a mild wet windy coastal and pastoral region; historical Crannath designs use their older culture. No unrecorded family profession is implied.\nSubject and equipment: An anonymous adult male house knight. Simple open iron cap, mail sleeves, ivory surcoat over a plain steel cuirass, deep green wool mantle. Small ivory tree-and-spindle house badge on the surcoat. One short-hafted battle axe held upright at rest, sword sheathed. No shield, no crown, no woodland scenery.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-serin.png"
+  ],
+  "status": "visually-accepted-awaiting-final-technical-QA",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Serin/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/haus-serin.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "namedPerson": false,
+  "createsPersonRecord": false
+}

@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=klaueninseln-20261019';
+import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=20261103-klaueninsel-v1';
 
 export default createTerritory({
   "id": "baronie-talklaue",
@@ -179,7 +179,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-cwningod"
         },
         {
           "name": "Dyfrgi O'Caer Cryftlawd",
@@ -189,7 +190,8 @@ export default createTerritory({
           "liege": "Haus Cwingod",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dyfrgi-caer-cryftlawd"
         }
       ]
     }

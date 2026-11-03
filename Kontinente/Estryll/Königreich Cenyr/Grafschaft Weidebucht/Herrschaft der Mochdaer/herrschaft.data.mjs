@@ -130,7 +130,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-mochdaer"
         }
       ]
     },
@@ -145,7 +146,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-asyn"
         }
       ]
     }

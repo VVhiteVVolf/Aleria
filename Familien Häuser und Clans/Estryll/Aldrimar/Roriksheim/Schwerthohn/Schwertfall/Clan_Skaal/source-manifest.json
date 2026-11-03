@@ -1,0 +1,80 @@
+{
+  "id": "haus-skaal",
+  "source": {
+    "attachmentId": "126111e4-b107-4a9a-939c-7f1c12a98afa",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\126111e4-b107-4a9a-939c-7f1c12a98afa\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/skaal/animexx-original.html",
+    "bytes": 121205,
+    "sha256": "8d07eca934f43a6595fc964e53d29ed7e1b54d511f7ab16f6122f3c7102ba466",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-skaal",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Schwertfall",
+      "barony": "Schwerthohn",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwerthohn.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-skaal",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "skaal",
+    "familyId": "haus-skaal",
+    "attachmentId": "126111e4-b107-4a9a-939c-7f1c12a98afa",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/ATWOuy4.png",
+    "path": "Stammbäume/assets/images/references/haus-skaal/krieger.png",
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 271830,
+    "sha256": "fbb73cb07cdf95534ea3fa4ee2104ba59e8cae01e4f511c2de7cdf1dce76862b",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-skaal",
+    "url": "https://i.imgur.com/ATWOuy4.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-skaal/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Gepanzerter Krieger in Blau mit gekreuzten Äxten als Hauszeichen, Schild und Streitkolben.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-1.png"
+  },
+  "decisions": [
+    "Aktuelle Sitze und Lehnshierarchie bleiben Schwertfall/Schwerthohn unter Varulv; Schwarzacker ist das eigene Lehen der Skjegg unter Skaal, kein zusätzlicher Registereintrag des gesamten Skaal-Clans.",
+    "Altes Pantheon und heutige Neun Göttliche sind in der Quelle verschiedene historische Stadien. Die gegenwärtige Verehrung Balthors und die Kirche nicht rückwirkend in die nordische Wanderungszeit versetzen.",
+    "Balthors Söhne, das nordische Ringen und die dreiteilige Armreifprüfung sind ausführliche übernehmbare Kulturinhalte. Der Drei-Phasen-Aufbau ist ein Ritualablauf, keine Militärstatistik.",
+    "Die Wertungen über den verfälschten Nordkult werden als religiöse Sicht der Skaal formuliert, nicht als allgemeine Aussage über sämtliche Norrnaigh.",
+    "Wanderung, Küstenlage, Bergbausiedlungen und Flusswege nicht zur Änderung der heutigen Karte benutzen; die Ortsregister sind maßgeblich.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

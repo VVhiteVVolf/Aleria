@@ -1,0 +1,2710 @@
+{
+  "schema": "aleria.leukonia.warriors",
+  "version": 1,
+  "entries": [
+    {
+      "id": "house-apinia",
+      "source": "assets/warriors/generated/house-apinia.png",
+      "sourceSha256": "8e3e40c006446fc1aaa6c031ec037ca65ce8c693db1ccd5c47fba6a645075ab7",
+      "production": "assets/warriors/production/house-apinia.png",
+      "productionSha256": "2d9a7a22f83008b4aac4b947fac77930f854c818cf3c40544f3b7e46f778c4b8",
+      "preview": "assets/warriors/previews/house-apinia.webp",
+      "previewSha256": "edf405cc09a6d78b0c8c9bf8385b841f2dd2bb75f53fc711640c37aa786cea50",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          21,
+          0,
+          1008,
+          1522
+        ],
+        "margins": {
+          "left": 21,
+          "top": 0,
+          "right": 16,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1062715,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 510149,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          94,
+          10,
+          845,
+          1519
+        ],
+        "margins": {
+          "left": 94,
+          "top": 10,
+          "right": 179,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 1097118,
+        "opaquePixels": 470619,
+        "partialAlphaPixels": 5127,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          68,
+          5,
+          636,
+          1142
+        ],
+        "margins": {
+          "left": 68,
+          "top": 5,
+          "right": 132,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 609218,
+        "opaquePixels": 257425,
+        "partialAlphaPixels": 18093,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-bolar",
+      "source": "assets/warriors/generated/house-bolar.png",
+      "sourceSha256": "824ce950f4f9424c9a4b8bd16c88c467f324b61f61ffad872e4a6ba833d467cf",
+      "production": "assets/warriors/production/house-bolar.png",
+      "productionSha256": "c84b4f4cb767d4c4367824832c4594fc7053fdb9382322aba90fbe8373a1605c",
+      "preview": "assets/warriors/previews/house-bolar.webp",
+      "previewSha256": "025d27de100facfecbac23264697cc77b01bcf5a3b56246f20d6550fb39bef3a",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1018,
+          1526
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 6,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 909583,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 663281,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          68,
+          25,
+          910,
+          1488
+        ],
+        "margins": {
+          "left": 68,
+          "top": 25,
+          "right": 114,
+          "bottom": 48
+        },
+        "minimumMarginPixels": 25,
+        "touchesCanvas": false,
+        "transparentPixels": 951649,
+        "opaquePixels": 615440,
+        "partialAlphaPixels": 5775,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          49,
+          16,
+          685,
+          1118
+        ],
+        "margins": {
+          "left": 49,
+          "top": 16,
+          "right": 83,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 527324,
+        "opaquePixels": 338730,
+        "partialAlphaPixels": 18682,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-lex",
+      "source": "assets/warriors/generated/house-lex.png",
+      "sourceSha256": "0411958d11ca753db4364436725ac7d755a2d20f7536a419fc9a89aa70c104c7",
+      "production": "assets/warriors/production/house-lex.png",
+      "productionSha256": "83a726195a3cf8a71357b3078ca8a45f5eb1ccb0ad43777bd0727014b5fb6646",
+      "preview": "assets/warriors/previews/house-lex.webp",
+      "previewSha256": "ca0ea287cab6a87ce020cd3d1dcce386a0e184837fc303fff8db864e781b7a3c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          95,
+          5,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 95,
+          "top": 5,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1159530,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 413334,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          269,
+          8,
+          765,
+          1520
+        ],
+        "margins": {
+          "left": 269,
+          "top": 8,
+          "right": 259,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 1182807,
+        "opaquePixels": 385715,
+        "partialAlphaPixels": 4342,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          199,
+          4,
+          576,
+          1142
+        ],
+        "margins": {
+          "left": 199,
+          "top": 4,
+          "right": 192,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 658706,
+        "opaquePixels": 210701,
+        "partialAlphaPixels": 15329,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-mede",
+      "source": "assets/warriors/generated/house-mede.png",
+      "sourceSha256": "e5276b3dae798384777d0bc424b29e0fc3413f750adcde37dfc2fee1fd8cc015",
+      "production": "assets/warriors/production/house-mede.png",
+      "productionSha256": "79bae0e072d337d000c1f7a9ea721ea8d05eff3d9471c51887d7bd0aad548370",
+      "preview": "assets/warriors/previews/house-mede.webp",
+      "previewSha256": "1e03820732b04b1ed38dab02a4e6bbb87fedad0cda6ac38860eb1d6948ed2f06",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1006,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 18,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 849576,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 723288,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          71,
+          15,
+          896,
+          1516
+        ],
+        "margins": {
+          "left": 71,
+          "top": 15,
+          "right": 128,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 873102,
+        "opaquePixels": 695489,
+        "partialAlphaPixels": 4273,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          51,
+          9,
+          674,
+          1138
+        ],
+        "margins": {
+          "left": 51,
+          "top": 9,
+          "right": 94,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 485270,
+        "opaquePixels": 385822,
+        "partialAlphaPixels": 13644,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-orania",
+      "source": "assets/warriors/generated/house-orania.png",
+      "sourceSha256": "e473f2f084925ddd577204407ed42fbcf0ab6df7aa6ab8a7d10ed5b4cdd8b635",
+      "production": "assets/warriors/production/house-orania.png",
+      "productionSha256": "c0fb35af0ae3c2e8ca7ebdc9e4581a51641e674ebc60fe9d56e8e4377264e268",
+      "preview": "assets/warriors/previews/house-orania.webp",
+      "previewSha256": "f375bbc476a06569506ccb2542fa448b06e821f7e6cda5e781f489f281976d3f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1018,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 6,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 896417,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 676447,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          30,
+          100,
+          995,
+          1450
+        ],
+        "margins": {
+          "left": 30,
+          "top": 100,
+          "right": 29,
+          "bottom": 86
+        },
+        "minimumMarginPixels": 29,
+        "touchesCanvas": false,
+        "transparentPixels": 968429,
+        "opaquePixels": 596209,
+        "partialAlphaPixels": 8226,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          20,
+          73,
+          749,
+          1090
+        ],
+        "margins": {
+          "left": 20,
+          "top": 73,
+          "right": 19,
+          "bottom": 62
+        },
+        "minimumMarginPixels": 19,
+        "touchesCanvas": false,
+        "transparentPixels": 534139,
+        "opaquePixels": 325463,
+        "partialAlphaPixels": 25134,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-pelagia",
+      "source": "assets/warriors/generated/house-pelagia.png",
+      "sourceSha256": "bd123b92ca437c0d4a70d83e20bbbfa2ef84e81c9e97555a273dc5fb678244c9",
+      "production": "assets/warriors/production/house-pelagia.png",
+      "productionSha256": "9150563ae2bfb2b93dbbe9de6635a95313e9853cb44114bfdd0f932cc705ff88",
+      "preview": "assets/warriors/previews/house-pelagia.webp",
+      "previewSha256": "9888088ad9f2aa9d3d97c9e35fc3574db55f1f6954bd5e07c961e2013ce39112",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 887984,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 684880,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          166,
+          5,
+          869,
+          1512
+        ],
+        "margins": {
+          "left": 166,
+          "top": 5,
+          "right": 155,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 916258,
+        "opaquePixels": 652889,
+        "partialAlphaPixels": 3717,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          123,
+          1,
+          654,
+          1136
+        ],
+        "margins": {
+          "left": 123,
+          "top": 1,
+          "right": 114,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 1,
+        "touchesCanvas": false,
+        "transparentPixels": 509789,
+        "opaquePixels": 362053,
+        "partialAlphaPixels": 12894,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tremelia",
+      "source": "assets/warriors/generated/house-tremelia.png",
+      "sourceSha256": "468aee844a1e335df020db4e04fd588484f3c2186d217163b52e52a29fe04a9a",
+      "production": "assets/warriors/production/house-tremelia.png",
+      "productionSha256": "28b7e267d3ee06242ff83f18611ec0d94a3f217c2d7bca78c0869359b41ad0df",
+      "preview": "assets/warriors/previews/house-tremelia.webp",
+      "previewSha256": "1fed946508864ac8cf3851ae95d6940e44e14342b75f0f94415d281b1992c503",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          2,
+          1002,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 2,
+          "right": 22,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1117450,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 455414,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          252,
+          12,
+          855,
+          1507
+        ],
+        "margins": {
+          "left": 252,
+          "top": 12,
+          "right": 169,
+          "bottom": 29
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 1160792,
+        "opaquePixels": 405826,
+        "partialAlphaPixels": 6246,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          187,
+          8,
+          644,
+          1133
+        ],
+        "margins": {
+          "left": 187,
+          "top": 8,
+          "right": 124,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 644084,
+        "opaquePixels": 220164,
+        "partialAlphaPixels": 20488,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-01",
+      "source": "assets/warriors/generated/pool-01.png",
+      "sourceSha256": "f8bd3564f93fcd356e4c90109680543919aea208bda22c7242279c80089f7ec5",
+      "production": "assets/warriors/production/pool-01.png",
+      "productionSha256": "7a5d51bfc01c65180a33e1e0c1fda29189d6b21ed72c3f33098856d04ff7a2a8",
+      "preview": "assets/warriors/previews/pool-01.webp",
+      "previewSha256": "72efb147a26828f7c013f0faa09c16c58a6d6c39e5828a60c57608e7217dabd5",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          23,
+          1021,
+          1508
+        ],
+        "margins": {
+          "left": 0,
+          "top": 23,
+          "right": 3,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 898106,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 674758,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          72,
+          38,
+          892,
+          1504
+        ],
+        "margins": {
+          "left": 72,
+          "top": 38,
+          "right": 132,
+          "bottom": 32
+        },
+        "minimumMarginPixels": 32,
+        "touchesCanvas": false,
+        "transparentPixels": 922893,
+        "opaquePixels": 646021,
+        "partialAlphaPixels": 3950,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          52,
+          26,
+          671,
+          1130
+        ],
+        "margins": {
+          "left": 52,
+          "top": 26,
+          "right": 97,
+          "bottom": 22
+        },
+        "minimumMarginPixels": 22,
+        "touchesCanvas": false,
+        "transparentPixels": 513090,
+        "opaquePixels": 357701,
+        "partialAlphaPixels": 13945,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-02",
+      "source": "assets/warriors/generated/pool-02.png",
+      "sourceSha256": "c31946b115e634cd2b9c495d0a3dac54540697a366eaabff9ad872de3dfd64b8",
+      "production": "assets/warriors/production/pool-02.png",
+      "productionSha256": "4f2e30fc8e1c94a64a1ab086949e23c25d9623ba4b369c758b45ad9e08306d84",
+      "preview": "assets/warriors/previews/pool-02.webp",
+      "previewSha256": "d438bb135a3ffa57a81e3e1851ce52fefd4b99295df2011365c42daf10c578cd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1023,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 1,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1143080,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 429784,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          210,
+          13,
+          767,
+          1505
+        ],
+        "margins": {
+          "left": 210,
+          "top": 13,
+          "right": 257,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 1168411,
+        "opaquePixels": 400498,
+        "partialAlphaPixels": 3955,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          155,
+          7,
+          578,
+          1131
+        ],
+        "margins": {
+          "left": 155,
+          "top": 7,
+          "right": 190,
+          "bottom": 21
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 650980,
+        "opaquePixels": 219352,
+        "partialAlphaPixels": 14404,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-03",
+      "source": "assets/warriors/generated/pool-03.png",
+      "sourceSha256": "81ea1a9cbb9c2429b709204de25f1f59d3e14f35f5af2dd08e4dbc5866be089a",
+      "production": "assets/warriors/production/pool-03.png",
+      "productionSha256": "2d4429f8bcf411646abd393ddd1d6dc42d266cf2fefda50b1b91b99812bb7569",
+      "preview": "assets/warriors/previews/pool-03.webp",
+      "previewSha256": "dbf416485f49781b22bec02ee5dfb0d244c744a55fadca0986b9914e038200d6",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          19,
+          1000,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 19,
+          "right": 24,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1111195,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 461669,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          218,
+          41,
+          773,
+          1479
+        ],
+        "margins": {
+          "left": 218,
+          "top": 41,
+          "right": 251,
+          "bottom": 57
+        },
+        "minimumMarginPixels": 41,
+        "touchesCanvas": false,
+        "transparentPixels": 1139211,
+        "opaquePixels": 429219,
+        "partialAlphaPixels": 4434,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          161,
+          28,
+          582,
+          1112
+        ],
+        "margins": {
+          "left": 161,
+          "top": 28,
+          "right": 186,
+          "bottom": 40
+        },
+        "minimumMarginPixels": 28,
+        "touchesCanvas": false,
+        "transparentPixels": 634397,
+        "opaquePixels": 235436,
+        "partialAlphaPixels": 14903,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-04",
+      "source": "assets/warriors/generated/pool-04.png",
+      "sourceSha256": "dc95f4fedf7f7919af19440979960139abf7c11cf44cb5dff7fd531feb8618a1",
+      "production": "assets/warriors/production/pool-04.png",
+      "productionSha256": "27ef3057c69666a2afe06608c6564e42a7969c6b3c7a5d9641f1ea88acc1447d",
+      "preview": "assets/warriors/previews/pool-04.webp",
+      "previewSha256": "e72f994130187f09b5e065216ac51c2759dea17badb1f9b23d96bd124c3e6010",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1004,
+          1460
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 20,
+          "bottom": 76
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1122468,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 450396,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          160,
+          20,
+          785,
+          1457
+        ],
+        "margins": {
+          "left": 160,
+          "top": 20,
+          "right": 239,
+          "bottom": 79
+        },
+        "minimumMarginPixels": 20,
+        "touchesCanvas": false,
+        "transparentPixels": 1148839,
+        "opaquePixels": 419142,
+        "partialAlphaPixels": 4883,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          118,
+          13,
+          591,
+          1095
+        ],
+        "margins": {
+          "left": 118,
+          "top": 13,
+          "right": 177,
+          "bottom": 57
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 638323,
+        "opaquePixels": 228198,
+        "partialAlphaPixels": 18215,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-05",
+      "source": "assets/warriors/generated/pool-05.png",
+      "sourceSha256": "9c65553f570d835ceb33fd2d83314f33baf4b04c5679ed69b0be9c0fab469f60",
+      "production": "assets/warriors/production/pool-05.png",
+      "productionSha256": "0d51764d939f30a7e446ac77199d62333c6daaddebe0b62164f497a55152a699",
+      "preview": "assets/warriors/previews/pool-05.webp",
+      "previewSha256": "34f4eed918b56ea6333b68c05d1b24b6f482d7113942d62474775c14760dcf66",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1024,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 0,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1062479,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 510385,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          224,
+          20,
+          831,
+          1510
+        ],
+        "margins": {
+          "left": 224,
+          "top": 20,
+          "right": 193,
+          "bottom": 26
+        },
+        "minimumMarginPixels": 20,
+        "touchesCanvas": false,
+        "transparentPixels": 1105705,
+        "opaquePixels": 460190,
+        "partialAlphaPixels": 6969,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          166,
+          14,
+          626,
+          1135
+        ],
+        "margins": {
+          "left": 166,
+          "top": 14,
+          "right": 142,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 612213,
+        "opaquePixels": 249712,
+        "partialAlphaPixels": 22811,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-06",
+      "source": "assets/warriors/generated/pool-06.png",
+      "sourceSha256": "55d475043adb3bce7c7029bdae7fa984bf44a81ead970303564ccea08cf462c0",
+      "production": "assets/warriors/production/pool-06.png",
+      "productionSha256": "0ce52cd79eb9be72021079eb669a3e05d9b6c470883712e605a50d2557f3d980",
+      "preview": "assets/warriors/previews/pool-06.webp",
+      "previewSha256": "300aaec8eac199cfbd42cef72ae1dc0af613cac88fdc0697c797d8905b65b523",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          38,
+          996,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 38,
+          "right": 28,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 874140,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 698724,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          22,
+          79,
+          992,
+          1468
+        ],
+        "margins": {
+          "left": 22,
+          "top": 79,
+          "right": 32,
+          "bottom": 68
+        },
+        "minimumMarginPixels": 22,
+        "touchesCanvas": false,
+        "transparentPixels": 929361,
+        "opaquePixels": 634410,
+        "partialAlphaPixels": 9093,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          14,
+          57,
+          746,
+          1103
+        ],
+        "margins": {
+          "left": 14,
+          "top": 57,
+          "right": 22,
+          "bottom": 49
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 512195,
+        "opaquePixels": 347223,
+        "partialAlphaPixels": 25318,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-07",
+      "source": "assets/warriors/generated/pool-07.png",
+      "sourceSha256": "c842455ca7719814043fa22d8d1ec0b572e6777ea1c900ed6eed2cee9078d130",
+      "production": "assets/warriors/production/pool-07.png",
+      "productionSha256": "3aafedb860f8ee7999ffc4147a7e7f866c3f93086e47e76ad2c88222cab49082",
+      "preview": "assets/warriors/previews/pool-07.webp",
+      "previewSha256": "296e0d97085b41b50c3888cfd5c1123dbd7d7fc49ecee8629db5e4c8ea5811be",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1012,
+          1518
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 12,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1050093,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 522771,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          72,
+          18,
+          907,
+          1502
+        ],
+        "margins": {
+          "left": 72,
+          "top": 18,
+          "right": 117,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 18,
+        "touchesCanvas": false,
+        "transparentPixels": 1080629,
+        "opaquePixels": 488324,
+        "partialAlphaPixels": 3911,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          52,
+          11,
+          683,
+          1129
+        ],
+        "margins": {
+          "left": 52,
+          "top": 11,
+          "right": 85,
+          "bottom": 23
+        },
+        "minimumMarginPixels": 11,
+        "touchesCanvas": false,
+        "transparentPixels": 601149,
+        "opaquePixels": 268348,
+        "partialAlphaPixels": 15239,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-08",
+      "source": "assets/warriors/generated/pool-08.png",
+      "sourceSha256": "5826af3b9c37a9b5750011bb38c9e732c08e35e4fe7b9e631257668d2badc3aa",
+      "production": "assets/warriors/production/pool-08.png",
+      "productionSha256": "b88417ca14360117c2b2956ca7b5e67ff905e216c9dab0f908de3f730ac3bed2",
+      "preview": "assets/warriors/previews/pool-08.webp",
+      "previewSha256": "33bedc90450cb7104ab52c5fb4ffe948f81973ffa0700393c39ec4e4ddeaad0e",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1508
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 974530,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 598334,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          161,
+          10,
+          875,
+          1505
+        ],
+        "margins": {
+          "left": 161,
+          "top": 10,
+          "right": 149,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 1005583,
+        "opaquePixels": 562320,
+        "partialAlphaPixels": 4961,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          118,
+          5,
+          659,
+          1131
+        ],
+        "margins": {
+          "left": 118,
+          "top": 5,
+          "right": 109,
+          "bottom": 21
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 558025,
+        "opaquePixels": 309137,
+        "partialAlphaPixels": 17574,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-09",
+      "source": "assets/warriors/generated/pool-09.png",
+      "sourceSha256": "35ca4067b45e624db1850a500d46e7a6de3efb72fd112ac39b7120cb93f88e03",
+      "production": "assets/warriors/production/pool-09.png",
+      "productionSha256": "aa891e210741174b74e8b8e73526d94e8dc3bdc0747597e6018c73edd7d5d681",
+      "preview": "assets/warriors/previews/pool-09.webp",
+      "previewSha256": "abdb68d7eddd706d4e5bdb8ced41a841e89d95af728f66066e8b618f695b2f2f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          18,
+          1000,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 18,
+          "right": 24,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1077696,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 495168,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          201,
+          21,
+          851,
+          1478
+        ],
+        "margins": {
+          "left": 201,
+          "top": 21,
+          "right": 173,
+          "bottom": 58
+        },
+        "minimumMarginPixels": 21,
+        "touchesCanvas": false,
+        "transparentPixels": 1106348,
+        "opaquePixels": 462402,
+        "partialAlphaPixels": 4114,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          148,
+          13,
+          641,
+          1111
+        ],
+        "margins": {
+          "left": 148,
+          "top": 13,
+          "right": 127,
+          "bottom": 41
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 615541,
+        "opaquePixels": 253744,
+        "partialAlphaPixels": 15451,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-10",
+      "source": "assets/warriors/generated/pool-10.png",
+      "sourceSha256": "53e9df6c95bab27d4a692016b2008e13af335875f1339ff710e61b9ee627b0a3",
+      "production": "assets/warriors/production/pool-10.png",
+      "productionSha256": "7ef15669ef9cb3e96d9d8a87a5377c4c244bc7fd8cf541f7461606d03f051084",
+      "preview": "assets/warriors/previews/pool-10.webp",
+      "previewSha256": "3b090cf9254803cf664e080fa34281f49600227c3d60c5bebc5326ce96abd4e6",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          3,
+          1014,
+          1522
+        ],
+        "margins": {
+          "left": 0,
+          "top": 3,
+          "right": 10,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1095757,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 477107,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          161,
+          16,
+          776,
+          1515
+        ],
+        "margins": {
+          "left": 161,
+          "top": 16,
+          "right": 248,
+          "bottom": 21
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 1149341,
+        "opaquePixels": 418696,
+        "partialAlphaPixels": 4827,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          118,
+          10,
+          584,
+          1139
+        ],
+        "margins": {
+          "left": 118,
+          "top": 10,
+          "right": 184,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 639045,
+        "opaquePixels": 228413,
+        "partialAlphaPixels": 17278,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-11",
+      "source": "assets/warriors/generated/pool-11.png",
+      "sourceSha256": "f72f17eaf900926b35ea89e039a701b22e8897e796d468e13a34bd45229dd895",
+      "production": "assets/warriors/production/pool-11.png",
+      "productionSha256": "85ae9c9e6a21c84e99fc1e56959c6914e96bd62724727525ad49fa9ac4a3b164",
+      "preview": "assets/warriors/previews/pool-11.webp",
+      "previewSha256": "93af24e521ec6cf8d9867d83c39fb8292f4661895015e35ca2aa580c2f16b2af",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          23,
+          1010,
+          1506
+        ],
+        "margins": {
+          "left": 0,
+          "top": 23,
+          "right": 14,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1090702,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 482162,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          180,
+          27,
+          828,
+          1503
+        ],
+        "margins": {
+          "left": 180,
+          "top": 27,
+          "right": 196,
+          "bottom": 33
+        },
+        "minimumMarginPixels": 27,
+        "touchesCanvas": false,
+        "transparentPixels": 1117894,
+        "opaquePixels": 450408,
+        "partialAlphaPixels": 4562,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          133,
+          18,
+          623,
+          1130
+        ],
+        "margins": {
+          "left": 133,
+          "top": 18,
+          "right": 145,
+          "bottom": 22
+        },
+        "minimumMarginPixels": 18,
+        "touchesCanvas": false,
+        "transparentPixels": 621707,
+        "opaquePixels": 246626,
+        "partialAlphaPixels": 16403,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "pool-12",
+      "source": "assets/warriors/generated/pool-12.png",
+      "sourceSha256": "80f98c4193547ae10c716737eab004c1eb222b6610a0adc1168a6661cdf36280",
+      "production": "assets/warriors/production/pool-12.png",
+      "productionSha256": "a391aa3ca4581ab86b7e943a1a805170a9d3b29c12fbed76802292f306e3b3ed",
+      "preview": "assets/warriors/previews/pool-12.webp",
+      "previewSha256": "c49e12077fb964d9b58e2c22bbeb8d79af13e3a15fac0f7eb18722c6bbe605a9",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          14,
+          1024,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 14,
+          "right": 0,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 815213,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 757651,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          12,
+          18,
+          1017,
+          1485
+        ],
+        "margins": {
+          "left": 12,
+          "top": 18,
+          "right": 7,
+          "bottom": 51
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 868682,
+        "opaquePixels": 696362,
+        "partialAlphaPixels": 7820,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          7,
+          11,
+          765,
+          1116
+        ],
+        "margins": {
+          "left": 7,
+          "top": 11,
+          "right": 3,
+          "bottom": 36
+        },
+        "minimumMarginPixels": 3,
+        "touchesCanvas": false,
+        "transparentPixels": 478103,
+        "opaquePixels": 381777,
+        "partialAlphaPixels": 24856,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-01",
+      "source": "assets/warriors/generated/prototype-01.png",
+      "sourceSha256": "b4a170b9441bccb3884f73f4e33475eb7267a45fa2d4862939e68fe4deec273b",
+      "production": "assets/warriors/production/prototype-01.png",
+      "productionSha256": "4f422905974268df3fd3e5a223ec1246c603b5a5ffeedf3411e5c5049bb5cdf0",
+      "preview": "assets/warriors/previews/prototype-01.webp",
+      "previewSha256": "d676aacfcaa73e4b90b2e77d2199bae2e4d00e0652fbe199dcb46aab506277f0",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          984,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 40,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 810268,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 762596,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          84,
+          14,
+          931,
+          1491
+        ],
+        "margins": {
+          "left": 84,
+          "top": 14,
+          "right": 93,
+          "bottom": 45
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 833003,
+        "opaquePixels": 735172,
+        "partialAlphaPixels": 4689,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          61,
+          8,
+          701,
+          1121
+        ],
+        "margins": {
+          "left": 61,
+          "top": 8,
+          "right": 67,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 461693,
+        "opaquePixels": 407114,
+        "partialAlphaPixels": 15929,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-02",
+      "source": "assets/warriors/generated/prototype-02.png",
+      "sourceSha256": "343e39069d38ffd05dae7559c7cc821e73e59fb9381fb0800202af4e64ff1a2b",
+      "production": "assets/warriors/production/prototype-02.png",
+      "productionSha256": "adf1b88215703fc0c13619648b3ace6045b177366efaac4d2b089324619812c3",
+      "preview": "assets/warriors/previews/prototype-02.webp",
+      "previewSha256": "81b2f8542837d4cf10da5f392e810f3e95b374338d6bb40ec9b151ff4f18acdb",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1107428,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 465436,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          181,
+          11,
+          736,
+          1513
+        ],
+        "margins": {
+          "left": 181,
+          "top": 11,
+          "right": 288,
+          "bottom": 23
+        },
+        "minimumMarginPixels": 11,
+        "touchesCanvas": false,
+        "transparentPixels": 1131795,
+        "opaquePixels": 437043,
+        "partialAlphaPixels": 4026,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          133,
+          6,
+          554,
+          1137
+        ],
+        "margins": {
+          "left": 133,
+          "top": 6,
+          "right": 214,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 6,
+        "touchesCanvas": false,
+        "transparentPixels": 630749,
+        "opaquePixels": 240176,
+        "partialAlphaPixels": 13811,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-03",
+      "source": "assets/warriors/generated/prototype-03.png",
+      "sourceSha256": "df77df9204c367781d263ccf39fc3a616be449add00a724f2c99e770432ab28c",
+      "production": "assets/warriors/production/prototype-03.png",
+      "productionSha256": "1d02bb87b7a9968f512eb62920cec3af92002b991bac918db29ead417e3ea223",
+      "preview": "assets/warriors/previews/prototype-03.webp",
+      "previewSha256": "3e5e0becb150063a22e367f22e3bf65ca0be9cd71db3a25a3c8bb67a4dbe3c9d",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          15,
+          1024,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 15,
+          "right": 0,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 853605,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 719259,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          13,
+          79,
+          1016,
+          1462
+        ],
+        "margins": {
+          "left": 13,
+          "top": 79,
+          "right": 8,
+          "bottom": 74
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 912580,
+        "opaquePixels": 651891,
+        "partialAlphaPixels": 8393,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          8,
+          57,
+          764,
+          1099
+        ],
+        "margins": {
+          "left": 8,
+          "top": 57,
+          "right": 4,
+          "bottom": 53
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 503381,
+        "opaquePixels": 357532,
+        "partialAlphaPixels": 23823,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-04",
+      "source": "assets/warriors/generated/prototype-04.png",
+      "sourceSha256": "21567434c2f83b488840399572a55d77013c9ec1038eb5235622accc4d6d8ca4",
+      "production": "assets/warriors/production/prototype-04.png",
+      "productionSha256": "76f6af06dc89d2e939a5e2a850ccb1b97cdc4de9cc3dff0c083f7eabca7404d3",
+      "preview": "assets/warriors/previews/prototype-04.webp",
+      "previewSha256": "c32a2cac5a29322bf53ae3fb05c47a8b4106a5843a0e76e87cb895f368ae3d7d",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1065948,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 506916,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          199,
+          9,
+          822,
+          1510
+        ],
+        "margins": {
+          "left": 199,
+          "top": 9,
+          "right": 202,
+          "bottom": 26
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 1137981,
+        "opaquePixels": 428072,
+        "partialAlphaPixels": 6811,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          147,
+          4,
+          619,
+          1135
+        ],
+        "margins": {
+          "left": 147,
+          "top": 4,
+          "right": 149,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 631167,
+        "opaquePixels": 232505,
+        "partialAlphaPixels": 21064,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-05",
+      "source": "assets/warriors/generated/prototype-05.png",
+      "sourceSha256": "726083a95467b4196f0c424d643c5b6df892c6c3842ad1dbbdfa11e10ba31102",
+      "production": "assets/warriors/production/prototype-05.png",
+      "productionSha256": "eba946472dec38ffc21d7c6e3672423db7dd792d6394e075603db0ae33fc204a",
+      "preview": "assets/warriors/previews/prototype-05.webp",
+      "previewSha256": "51acbc1a632fca8ccdeddbd38bcc57211a6232e1119afa57aed97a2817e3c91c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          27,
+          10,
+          1023,
+          1512
+        ],
+        "margins": {
+          "left": 27,
+          "top": 10,
+          "right": 1,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 1,
+        "touchesCanvas": false,
+        "transparentPixels": 981799,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 591065,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          178,
+          16,
+          881,
+          1500
+        ],
+        "margins": {
+          "left": 178,
+          "top": 16,
+          "right": 143,
+          "bottom": 36
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 1013322,
+        "opaquePixels": 554705,
+        "partialAlphaPixels": 4837,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          131,
+          10,
+          663,
+          1127
+        ],
+        "margins": {
+          "left": 131,
+          "top": 10,
+          "right": 105,
+          "bottom": 25
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 563078,
+        "opaquePixels": 305625,
+        "partialAlphaPixels": 16033,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-06",
+      "source": "assets/warriors/generated/prototype-06.png",
+      "sourceSha256": "fe92282bf4868eba487621b40340c43f3ddf4ae62b6d75861fc533661b968f81",
+      "production": "assets/warriors/production/prototype-06.png",
+      "productionSha256": "97f3c14e74fc64e2d04141e434a765c61b8a12c32c61625df7783d892deb4733",
+      "preview": "assets/warriors/previews/prototype-06.webp",
+      "previewSha256": "a11500403181c23967311b83f460185f737c8b31c2676ca1f4a0f1cb872b03dd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1004,
+          1510
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 20,
+          "bottom": 26
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1057735,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 515129,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          167,
+          14,
+          831,
+          1463
+        ],
+        "margins": {
+          "left": 167,
+          "top": 14,
+          "right": 193,
+          "bottom": 73
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 1089645,
+        "opaquePixels": 477948,
+        "partialAlphaPixels": 5271,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          123,
+          8,
+          626,
+          1100
+        ],
+        "margins": {
+          "left": 123,
+          "top": 8,
+          "right": 142,
+          "bottom": 52
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 605479,
+        "opaquePixels": 261982,
+        "partialAlphaPixels": 17275,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-07",
+      "source": "assets/warriors/generated/prototype-07.png",
+      "sourceSha256": "2b938ca496b157341a067f5e7c0e9908e9a1b2e3370b102f6630346ff73bb7c1",
+      "production": "assets/warriors/production/prototype-07.png",
+      "productionSha256": "92f848da817b775a7a7e8c81a7e408f40888b86dd26dda059f8bb0f15b981468",
+      "preview": "assets/warriors/previews/prototype-07.webp",
+      "previewSha256": "df6dbeb2ce42085616fcf049ad78f7399352fc88200af9f26d7c878435b8a580",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1018,
+          1474
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 6,
+          "bottom": 62
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1047386,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 525478,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          132,
+          20,
+          813,
+          1472
+        ],
+        "margins": {
+          "left": 132,
+          "top": 20,
+          "right": 211,
+          "bottom": 64
+        },
+        "minimumMarginPixels": 20,
+        "touchesCanvas": false,
+        "transparentPixels": 1071362,
+        "opaquePixels": 497286,
+        "partialAlphaPixels": 4216,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          97,
+          13,
+          612,
+          1106
+        ],
+        "margins": {
+          "left": 97,
+          "top": 13,
+          "right": 156,
+          "bottom": 46
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 596720,
+        "opaquePixels": 274281,
+        "partialAlphaPixels": 13735,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

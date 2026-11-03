@@ -8,7 +8,7 @@ import {
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_TYLLUAN_PORTRAITS } from './house-tylluan-portraits.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,
   TAL_DER_MILANE_HOUSE_PROFILES

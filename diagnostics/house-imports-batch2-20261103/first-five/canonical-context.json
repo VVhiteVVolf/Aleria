@@ -1,0 +1,142 @@
+[
+  {
+    "id": "haus-wylan",
+    "exists": true,
+    "title": "Haus Wylan O'Cerrigarth",
+    "folderPath": [
+      "Cenyr",
+      "Weidebucht",
+      "Melwas Au",
+      "Cerrigarth"
+    ],
+    "profile": {
+      "rankId": "county",
+      "seat": "Cerrigarth",
+      "barony": "Melwas Au",
+      "county": "Weidebucht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Weidebucht/Melwas Au.png",
+        "county": "assets/images/regions/weidebucht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "personCount": 115
+  },
+  {
+    "id": "haus-dinefwr",
+    "exists": true,
+    "title": "Haus Dinefwr O'Cerrigarth",
+    "folderPath": [
+      "Cenyr",
+      "Weidebucht",
+      "Melwas Au",
+      "Cerrigarth"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Cerrigarth",
+      "barony": "Melwas Au",
+      "county": "Weidebucht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-wylan",
+      "liegeHouseName": "Haus Wylan O'Cerrigarth",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Weidebucht/Melwas Au.png",
+        "county": "assets/images/regions/weidebucht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "personCount": 50
+  },
+  {
+    "id": "haus-mochdaer",
+    "exists": true,
+    "title": "Haus Mochdaer O'Cerrigarth",
+    "folderPath": [
+      "Cenyr",
+      "Weidebucht",
+      "Melwas Au",
+      "Cerrigarth"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Cerrigarth",
+      "barony": "Melwas Au",
+      "county": "Weidebucht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-wylan",
+      "liegeHouseName": "Haus Wylan O'Cerrigarth",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Weidebucht/Melwas Au.png",
+        "county": "assets/images/regions/weidebucht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "personCount": 14
+  },
+  {
+    "id": "haus-tir-addawol",
+    "exists": true,
+    "title": "Haus Tir Addawol",
+    "folderPath": [
+      "Cenyr",
+      "Weidebucht",
+      "Hochweide",
+      "Glyndale"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Glyndale",
+      "barony": "Hochweide",
+      "county": "Weidebucht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-wylan",
+      "liegeHouseName": "Haus Wylan O'Cerrigarth",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Weidebucht/Hochweide.png",
+        "county": "assets/images/regions/weidebucht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "personCount": 48
+  },
+  {
+    "id": "haus-hwyaden",
+    "exists": true,
+    "title": "Haus Hwyaden O'Trefyddin",
+    "folderPath": [
+      "Cenyr",
+      "Weidebucht",
+      "Borkenstein",
+      "Trefyddin"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Trefyddin",
+      "barony": "Borkenstein",
+      "county": "Weidebucht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-wylan",
+      "liegeHouseName": "Haus Wylan O'Cerrigarth",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Weidebucht/Borkenstein.png",
+        "county": "assets/images/regions/weidebucht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "personCount": 48
+  }
+]

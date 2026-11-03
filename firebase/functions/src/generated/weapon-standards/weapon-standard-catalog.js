@@ -1,6 +1,5 @@
 // Authored neutral baselines for later unique items. A cultural silhouette never
 // grants a personal technique, bonus attack, armor penetration or free control.
-import { getWeaponStandardDisplayProfile } from './weapon-standard-presentation.js';
 const ART_ROOT = '/AleriaAlmanach/public/assets/weapon-standards';
 const groups = Object.freeze({
   common: 'Weitere Waffenstandards', curved: 'Gebogene Klingen und Wurfwaffen', eastern: 'Fernöstlich geprägte Waffenformen'
@@ -25,7 +24,7 @@ function standard(id, name, weaponType, weaponProfileId, damageFormula, damageTy
     enchantment: 'Keine', mana: '-', material: options.material || 'Stahl, Holz, Leder',
     price: { min: price, max: price, unit: 'K' }, image: `${ART_ROOT}/${id}.png`,
     tags: [groups[options.group || 'common'], properties, `${damageFormula.replace(/d/g, 'W')} ${damageType}`],
-    desc: description, weaponDisplayProfile: getWeaponStandardDisplayProfile(id), combatDefinition };
+    desc: description, combatDefinition };
 }
 
 const common = [

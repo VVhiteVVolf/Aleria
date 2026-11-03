@@ -1,0 +1,82 @@
+{
+  "id": "haus-schwarzdorn",
+  "source": {
+    "attachmentId": "62831b4b-a992-4637-8ed5-3b037a2a14d8",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\62831b4b-a992-4637-8ed5-3b037a2a14d8\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/schwarzdorn/animexx-original.html",
+    "bytes": 141347,
+    "sha256": "82b87ae7381129355bd5d7fb19e59e72973980fa348c41f23ad54682525b7302",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-schwarzdorn",
+    "baselineSourceRevision": 6,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Rorikshall",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-schwarzdorn",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "schwarzdorn",
+    "familyId": "haus-schwarzdorn",
+    "attachmentId": "62831b4b-a992-4637-8ed5-3b037a2a14d8",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/FTy7xeb.png",
+    "path": "Stammbäume/assets/images/references/haus-schwarzdorn/krieger.png",
+    "sourceStyle": "float:right; height:450px; width:300px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 324906,
+    "sha256": "90527e1d032370349e877630e9a88a673a215a5bff16018933c7825ac96bf3a8",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-schwarzdorn",
+    "url": "https://i.imgur.com/FTy7xeb.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-schwarzdorn/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Dunkel gerüsteter Hauskrieger mit Rosenheraldik auf dem Rundschild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-2.png"
+  },
+  "decisions": [
+    "Maven ist kanonisch Leiterin der Schwarzdorn-Brauerei, nicht die heutige Hesirin des ganzen Clans. Die einleitende Rollenvermischung wird korrigiert; Tormund Schwarzdorn bleibt das bestehende Clanoberhaupt.",
+    "Svartetorn ist der alte Quellenname, stabile ID und aktueller Titel bleiben haus-schwarzdorn/Clan Schwarzdorn. Rorikstatt als Jarltumsname wird Roriksheim; Rorikstatt als Stadtname wird Rorikshall. Ivarstatt wird im Jarltumskontext Ivarsheim.",
+    "Braukunst, politisch arrangierte Ehen, Brauwettbewerb und Armreifprüfung sind ausführlich übernehmbar. Allgemeine Ehebräuche erzeugen keine neuen konkreten Familienbeziehungen.",
+    "Goldglanz, Goldenglanz und Goldglanz-Syndikat erscheinen in verwandten Quellen. Namen vor neuer Organisationsverlinkung prüfen; derzeit keine neue Alias-ID oder Gildenakte erzeugen.",
+    "Nachtflügel und Nachtfalter werden in der Vorlage als Diebesgilde beziehungsweise verbundene Bande bezeichnet. Die genaue organisatorische Abgrenzung bleibt offen; nicht beide Namen stillschweigend gleichsetzen.",
+    "Die vergleichende größte Kavallerie wird als Militärstärke ausgelassen. Gestüte, Weiden und Geleitschutz der Mettransporte bleiben als Besitz- und Tätigkeitsbeschreibung erhalten.",
+    "Die scherzhafte Ishval-Autorenbemerkung ist kein Sachtext der Hausseite und wird ausgelassen.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

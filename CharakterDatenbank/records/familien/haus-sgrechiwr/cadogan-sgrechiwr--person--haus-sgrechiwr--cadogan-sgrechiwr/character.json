@@ -51,6 +51,7 @@
       "collection": "characters",
       "documentId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
       "documentIds": [
+        "person--haus-sgrechiwr--cadogan-sgrechiwr",
         "person--haus-sgrechiwr--cadogan-sgrechiwr"
       ],
       "documents": [
@@ -58,6 +59,11 @@
           "documentId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
           "createdAt": "2026-09-02T20:37:58.808Z",
           "updatedAt": "2026-09-03T18:13:26.221Z"
+        },
+        {
+          "documentId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "createdAt": "",
+          "updatedAt": "2026-11-03T17:25:17.128Z"
         }
       ]
     },
@@ -73,13 +79,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-09-03T18:13:26.221Z",
+    "sourceArchive": "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-sgrechiwr--cadogan-sgrechiwr.json",
+    "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
+    "sourceUpdatedAt": "2026-11-03T17:25:17.128Z",
     "sourceDocumentIds": [
+      "person--haus-sgrechiwr--cadogan-sgrechiwr",
       "person--haus-sgrechiwr--cadogan-sgrechiwr"
     ],
-    "contentHash": "9111d98dd559293aa7ec0d0e54560ea850f7ae895f18d3080d39d3d49717c602"
+    "contentHash": "02fce50b61f36cc1bada457d08335dc2c64b97f9eae40f13dabb2a3cc27aa248"
   },
   "local": {
     "notes": "",
@@ -347,6 +354,370 @@
         "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Lynthor",
         "title": "Vorgesehener Erbe des Hauses Sgrechiwr",
         "updatedAt": "2026-09-03T18:13:26.221Z"
+      },
+      {
+        "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+        "name": "Cadogan Sgrechiwr",
+        "title": "Protokollmeister des Herolds von Haus Draig · Vorgesehener Erbe des Hauses Sgrechiwr",
+        "aliases": [],
+        "identity": {
+          "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr"
+        },
+        "genealogy": {
+          "birth": "1690",
+          "status": "alive",
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gareth-sgrechiwr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--gareth-sgrechiwr",
+                "name": "Gareth Sgrechiwr"
+              },
+              {
+                "personId": "unknown-gareth-spouse",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unknown-gareth-spouse",
+                "name": "Unbekannte Ehefrau"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "unknown-cadogan-spouse",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+                "name": "Gwen Hamnett"
+              }
+            ],
+            "children": [
+              {
+                "personId": "eluned-sgrechiwr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr",
+                "name": "Eluned Sgrechiwr"
+              },
+              {
+                "personId": "meinwen-sgrechiwr",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr",
+                "name": "Meinwen Sgrechiwr"
+              }
+            ]
+          },
+          "houseName": "Haus Sgrechiwr",
+          "sex": "male",
+          "familyRole": "core",
+          "tags": [],
+          "death": "",
+          "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "houseId": "house-sgrechiwr",
+          "sources": [
+            {
+              "familyId": "haus-sgrechiwr",
+              "personId": "cadogan-sgrechiwr",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-02T20:37:58.808Z",
+              "lastSyncedAt": "2026-09-02T20:37:58.808Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr",
+              "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
+            }
+          ],
+          "portraitPlaceholder": "auto"
+        },
+        "biography": {
+          "quote": "",
+          "revision": 1793726717128,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Cadogan Sgrechiwr"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sgrechiwr"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Vorgesehener Erbe des Hauses Sgrechiwr"
+            },
+            {
+              "label": "Geboren",
+              "value": "1690"
+            },
+            {
+              "label": "Geburtsort",
+              "value": "Lynthor"
+            },
+            {
+              "label": "Gestorben",
+              "value": "Lebend"
+            },
+            {
+              "label": "Geschlecht",
+              "value": "Männlich"
+            },
+            {
+              "label": "Familienstand",
+              "value": "verheiratet"
+            },
+            {
+              "label": "Rang / Stand",
+              "value": ""
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Protokollmeister des Herolds des Grafen"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            }
+          ],
+          "schemaVersion": 1,
+          "biography": {
+            "footer": "Personenakte · Cadogan Sgrechiwr",
+            "connectionTextOffset": 0,
+            "biographyTitle": "Hintergrund – Wer ist er?",
+            "connectionsTitle": "Verbindungen",
+            "abilities": [
+              {
+                "title": "Eitel",
+                "detail": "Cadogan legt außerordentlichen Wert auf ein gepflegtes Äußeres. Seine Kleidung, sein Schnurrbart und sein gesamtes Auftreten müssen stets tadellos sein.",
+                "icon": "/IconOrdner/Traits%20Icon/Groomed.png"
+              },
+              {
+                "title": "Perfektionistisch",
+                "detail": "Selbst kleinste Fehler in Rangordnung, Anrede oder Sitzordnung können ihn erheblich verärgern. Nachlässigkeit betrachtet er als vermeidbares Ärgernis.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Gewissenhaft",
+                "detail": "Seine beruflichen Pflichten nimmt Cadogan ausgesprochen ernst. Gerade bei diplomatischen Angelegenheiten lässt er äußerste Sorgfalt walten.",
+                "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+              },
+              {
+                "title": "Ehrgeizig",
+                "detail": "Er hat hart gearbeitet, um seine Stellung zu erreichen. Sein Ehrgeiz richtet sich inzwischen weniger auf weiteren Aufstieg als auf die vollkommene Beherrschung seines Amtes.",
+                "icon": "/IconOrdner/Traits%20Icon/Ambitious.png"
+              },
+              {
+                "title": "Charmant",
+                "detail": "Cadogan besitzt ausgezeichnete Umgangsformen und versteht es, Menschen mit Höflichkeit, Witz und gewandter Sprache für sich einzunehmen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-charming-131f5a12fbffcf8b%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Redegewandt",
+                "detail": "Er spricht gerne, ausführlich und mit sichtlicher Begeisterung. Nicht immer bemerkt er, dass seine Zuhörer das Gespräch längst beenden möchten.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-eloquent-71919b4c2095a972%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Gesellig",
+                "detail": "Cadogan schätzt anregende Unterhaltungen, gesellschaftliche Veranstaltungen und die Gesellschaft kultivierter Menschen.",
+                "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+              },
+              {
+                "title": "Klatschfreudig",
+                "detail": "Er interessiert sich lebhaft für Neuigkeiten, kleine Skandale und persönliche Angelegenheiten am Hof, wahrt jedoch die Vertraulichkeit dienstlicher Informationen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-gossip-loving-2c49aa00db0e6346%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Kunstliebend",
+                "detail": "Theateraufführungen, Gemäldegalerien und andere kulturelle Veranstaltungen gehören zu seinen größten Vergnügungen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-art-loving-3f3181c366013051%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Empfindlich gegenüber Fehlern",
+                "detail": "Missgeschicke, insbesondere solche, die sein sorgfältig vorbereitetes Protokoll betreffen, beschäftigen ihn häufig länger, als eigentlich notwendig wäre.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-sensitive-to-mistakes-f2bd4f32238597dc%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Romantisch",
+                "detail": "Hinter seiner Eitelkeit verbirgt sich ein aufmerksamer und liebevoller Ehemann, der seine Gemahlin aufrichtig bewundert.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-romantic-3b4433574d3b1ccd%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Schlecht im Delegieren",
+                "detail": "Obwohl ihm Mitarbeiter zur Verfügung stehen, fällt es Cadogan schwer, wichtige Aufgaben vollständig aus der Hand zu geben.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-poor-at-delegating-995f63afaeae7285%2Foriginal.png?alt=media"
+              }
+            ],
+            "worksTitle": "Können & Fähigkeiten",
+            "quotes": [],
+            "connectionPortraitHeight": 68,
+            "historyTitle": "Charakter",
+            "works": [
+              "Diplomatisches Protokoll - Cadogan verfügt über umfassende Kenntnisse höfischer Rangordnungen, Anreden, Audienzregeln und diplomatischer Gepflogenheiten.",
+              "Organisation von Empfängen - Er bereitet Sitzordnungen, Ehrenbezeugungen und den protokollarischen Ablauf offizieller Zusammenkünfte vor.",
+              "Verhandlungsdokumentation - Cadogan besitzt große Erfahrung darin, Gesprächsverläufe und förmliche Erklärungen präzise und nachvollziehbar festzuhalten.",
+              "Unterscheidung von Zusagen - Er erkennt den Unterschied zwischen höflichen Absichtserklärungen, unverbindlichen Ehrenbezeugungen und rechtsverbindlichen Zusagen.",
+              "Diplomatische Bildung - Durch sein Studium bei den Staufenberg verfügt er über fundierte Kenntnisse diplomatischer Verfahren, politischer Geschichte und zwischenherrschaftlicher Beziehungen.",
+              "Sprachkenntnisse - Neben der Gemeinen Zunge beherrscht er die Sprache der Cenyri, die Sprache der Alben sowie die Sprachen Morgorns, Baldreskas und Aeldrunmars.",
+              "Schriftliche Ausdrucksfähigkeit - Cadogan ist ein geübter Schreiber, der besonderen Wert auf eindeutige Formulierungen und die korrekte Verwendung von Titeln legt.",
+              "Menschenkenntnis - Seine langjährige Tätigkeit am Hof hat ihn gelehrt, gesellschaftliche Spannungen und mögliche protokollarische Schwierigkeiten frühzeitig zu erkennen.",
+              "Diplomatisches Geschick - Auch bei bewussten Verstößen gegen das Protokoll versteht er es, unangenehme Situationen ohne öffentliche Bloßstellung der Beteiligten zu entschärfen.",
+              "Schauspielerische Begabung - Obwohl Cadogan kein Musiker ist, besitzt er ein gewisses Talent für Darstellung, Mimik und wirkungsvolle Auftritte.",
+              "Kunstverständnis - Er verfügt über ein ausgeprägtes Interesse an Malerei, Theater und anderen Künsten, das durch seine Herkunft und seine Ehe zusätzlich gefördert wurde.",
+              "Personalführung - Cadogan leitet die ihm unterstellten Mitarbeiter und überwacht deren Arbeit, neigt allerdings dazu, zu viele Aufgaben selbst kontrollieren zu wollen."
+            ],
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "knightMentors": [],
+            "trivia": [
+              "Cadogan beginnt Gespräche häufig mit den Worten „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“, selbst wenn niemand eine entsprechende Frage gestellt hat.",
+              "Sein sorgfältig gepflegter Schnurrbart gehört zu seinen auffälligsten äußeren Merkmalen. Er verwendet beträchtliche Mühe darauf, ihn stets in tadellosem Zustand zu halten.",
+              "Cadogan besitzt eine ausgesprochene Vorliebe für elegante, maßgeschneiderte Kleidung und besucht gerne seinen Schneider.",
+              "Obwohl die Sgrechiwr für ihre musikalische Tradition bekannt sind, ist Cadogan selbst ausgesprochen unmusikalisch. Dieser Umstand stellt eine seiner wenigen persönlichen Enttäuschungen dar.",
+              "Er besucht leidenschaftlich gerne Theateraufführungen. Fehlerhafte Anreden oder unpassende Rangordnungen in historischen Stücken können ihn allerdings erheblich aus der Fassung bringen.",
+              "Cadogan liebt Klatsch und Tratsch, unterscheidet jedoch streng zwischen gesellschaftlichen Gerüchten und vertraulichen Informationen aus seinem Amt.",
+              "Selbst bei privaten Gesellschaften fällt es ihm schwer, eine ungeschickte Sitzordnung einfach hinzunehmen.",
+              "Seine Gemahlin Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett. Cadogan ist außerordentlich stolz auf ihren künstlerischen Ruf.",
+              "Gelegentlich versucht er, Gwen bei der Anordnung ihrer Gemälde zu beraten. Seine Vorstellungen von einer korrekten Reihenfolge decken sich allerdings nicht immer mit ihren künstlerischen Absichten.",
+              "Cadogan versteht sich gut mit Prinz Gawain, dessen Sinn für gepflegte Kleidung und ein ansprechendes Äußeres er besonders schätzt. Gespräche über Schneider, Stoffe und Düfte gehören zu ihren gemeinsamen Interessen.",
+              "Obwohl Cadogan mehrere Mitarbeiter beschäftigt, kontrolliert er wichtige Aufzeichnungen häufig persönlich. Er ist überzeugt, dass eine zusätzliche Überprüfung niemals schaden könne.",
+              "Er kann sich noch lange über protokollarische Verstöße ärgern, selbst wenn die betreffenden Veranstaltungen bereits seit Wochen vorüber sind.",
+              "Sir Dalvin Balchder gehört zu den wenigen Menschen, deren Kritik Cadogan auch dann ernst nimmt, wenn sie seinen Stolz verletzt.",
+              "Cadogan betrachtet seine Stellung als Protokollmeister als den Höhepunkt seiner beruflichen Laufbahn. Ein höheres Amt strebt er nicht an.",
+              "Sein größter beruflicher Wunsch besteht darin, eines Tages als der gewissenhafteste Protokollmeister in der Geschichte des Hauses Draig in Erinnerung zu bleiben."
+            ],
+            "biographyText": "<p>Cadogan Sgrechiwr ist ein fünfzigjähriger Angehöriger des wohlhabenden und angesehenen Bürgerhauses Sgrechiwr aus Lynthor und  ekleidet das Amt des Protokollmeisters des Herolds von Haus Draig. In dieser Funktion gehört er zu den erfahrenen Beamten des gräflichen Hofstaates und arbeitet unmittelbar für Sir Cadfan, den obersten Diplomaten des Hauses Draig.</p><br><p>Seine Verantwortung umfasst die Einhaltung höfischer Rangordnungen, die korrekte Anrede hochrangiger Persönlichkeiten, die Vorbereitung diplomatischer Audienzen sowie die gewissenhafte Dokumentation offizieller Verhandlungen. Dabei achtet Cadogan besonders darauf, dass höfische Ehrenbezeugungen nicht mit rechtsverbindlichen Zusagen verwechselt werden und diplomatische Erklärungen eindeutig festgehalten sind.</p><br><p>Cadogan stammt aus einer Familie, deren Mitglieder seit Generationen als Herolde, Hofschreier, Musiker, Zeremonienmeister und  nstrumentenbauer bekannt sind. Sein Vater Gareth Sgrechiwr steht dem Familienhaus in Lynthor vor, während Cadogan selbst seine berufliche Laufbahn am Hof der Draigs eingeschlagen hat.</p><div><br></div><p>Die enge Verbindung zwischen den Häusern Sgrechiwr und Balchder ermöglichte ihm eine hervorragende Ausbildung. Nach dem Besuch der Schreiberschule des Ritterhauses Balchder studierte er an der Schule der Staufenberg in der Blutstadt mit dem Schwerpunkt Diplomatie.</p><br><p>Seit rund zehn Jahren bekleidet er sein gegenwärtiges Amt, in das er noch unter Trahern, dem Vorgänger und Großvater Sir Cadfans, berufen wurde.</p><p>Cadogan ist mit der angesehenen Malerin Gwen Hamnett verheiratet, die von den Silberinseln stammt. Gemeinsam haben sie zwei erwachsene Töchter, Eluned und Meinwen.</p>",
+            "portrait": "",
+            "quotesTitle": "Zitate",
+            "triviaTitle": "Trivia",
+            "historyText": "<p>Cadogan Sgrechiwr ist ein Mann, der von sich selbst und seiner Arbeit eine außerordentlich hohe Meinung besitzt, ohne deshalb  grundsätzlich überheblich oder unangenehm zu sein. Seine Eitelkeit ist unverkennbar, doch hinter seinem gepflegten Äußeren und seinen gelegentlich  usschweifenden Ausführungen verbirgt sich ein erfahrener, gebildeter und pflichtbewusster Hofbeamter.</p><br><p>Bereits als junger Mann zeigte Cadogan eine ausgeprägte Vorliebe für schöne Kleidung, gepflegte Umgangsformen und die Kunst der  ffentlichen Rede. Diese Eigenschaften haben ihn sein gesamtes Leben begleitet. Noch heute achtet er peinlich genau auf den Sitz seines Gewandes, die Pflege seines Schnurrbartesund den Eindruck, den er auf andere hinterlässt.</p><br><p>Seine größte Leidenschaft gilt jedoch seinem Beruf. Cadogan betrachtet das diplomatische Protokoll keineswegs als bloße Ansammlung  öfischer Vorschriften. Für ihn ist es eine anspruchsvolle Kunst, deren Regeln den geordneten Umgang zwischen Adelshäusern, Gesandtschaften und Herrschaften überhaupt erst ermöglichen.</p><br><p>Er weiß, dass eine falsch gewählte Anrede, eine unbedachte Ehrenbezeugung oder eine missverständliche Formulierung erhebliche  iplomatische Folgen haben können. Entsprechend gewissenhaft bereitet er seine Aufgaben vor und erwartet von seinen Mitarbeitern dieselbe Sorgfalt.</p><br><p>Dabei kann Cadogan durchaus anstrengend sein. Seine Neigung, jede Kleinigkeit persönlich zu überprüfen, führt gelegentlich zu Spannungen mit seinen Untergebenen. Besonders ärgert er sich, wenn andere seine sorgfältigen Vorbereitungen durch Nachlässigkeit oder eigenmächtige  Änderungen durcheinanderbringen.</p><br><p>Dennoch ist Cadogan kein unbeherrschter Mann. Seine langjährige Erfahrung hat ihn gelehrt, auch in schwierigen Situationen die äußere Form zu wahren. Verstößt ein hochrangiger Gast gegen das Protokoll, wird er diesen kaum öffentlich zurechtweisen. Stattdessen versucht er, die Angelegenheit mit diplomatischem Geschick zu bereinigen.</p><br><p>Dass er sich anschließend noch wochenlang darüber beschweren kann, steht auf einem anderen Blatt.</p><br><p>Eine seiner auffälligsten Eigenheiten ist seine Angewohnheit, Gespräche mit Formulierungen wie „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“ einzuleiten. Häufig hat sein Gegenüber allerdings überhaupt keine Frage gestellt. Cadogan verwendet diese Wendungen vielmehr, um ein Thema anzuschneiden, über das er selbst unbedingt sprechen möchte.</p><br><p>Seine Kollegen kennen diese Angewohnheit inzwischen nur zu gut.</p><br><p>Abseits seiner beruflichen Pflichten ist Cadogan ein geselliger, kultivierter und durchaus humorvoller Mann. Er liebt das Theater, besucht regelmäßig Kunstausstellungen und interessiert sich für die neuesten gesellschaftlichen Entwicklungen. Auch einem gepflegten Klatsch ist er nicht abgeneigt, wobei er zwischen privaten Neuigkeiten und dienstlich vertraulichen Informationen streng unterscheidet.</p><br><p>Seiner Familie gegenüber zeigt er sich liebevoll und aufmerksam, wenngleich seine ausgeprägte Hingabe an sein Amt gelegentlich dazu führt, dass er mehr Zeit mit diplomatischen Aufzeichnungen als mit seiner Gemahlin verbringt.</p><br><p>Cadogan ist mit seinem Leben zufrieden. Er hat eine angesehene Stellung erreicht, eine Familie gegründet und genießt den Respekt seiner Kollegen. Höhere Ämter strebt er nicht an. Vielmehr ist er davon überzeugt, dass es kaum eine ehrenvollere Aufgabe gibt, als das diplomatische Protokoll des Hauses Draig in vollkommener Ordnung zu halten.</p>",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Haus Sgrechiwr",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Gareth",
+                "detail": "Vater / Familienoberhaupt",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/gareth-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "???",
+                "detail": "Mutter",
+                "image": "/Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwen (geb. Hamnett)",
+                "detail": "Ehefrau",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eluned",
+                "detail": "Tochter",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/eluned-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meinwen",
+                "detail": "Tochter",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/meinwen-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Fflur",
+                "detail": "Schwester",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/fflur-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Colwyn",
+                "detail": "Bruder",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/colwyn-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Godwyn",
+                "detail": "Vetter 2. Grades",
+                "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Tierische Begleiter",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Silberstolz",
+                "detail": "Sein Erlenglanz",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-silberstolz-8e777f0152ccc489%2Foriginal.png?alt=media",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Sir Balthasar",
+                "detail": "Gwen's Samtlicht.",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+                "imageFormat": "portrait"
+              }
+            ],
+            "sideWidth": 100,
+            "documents": [],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Vergangenheit",
+                "text": "Cadogan Sgrechiwr wurde in Lynthor geboren, einer für ihre Kunst, Kultur und Musik bekannten Stadt in der Grafschaft Celtigerns Wacht. Er ist der Sohn von Gareth Sgrechiwr, dem gegenwärtigen Oberhaupt des Bürgerhauses Sgrechiwr, und wuchs gemeinsam mit seinen jüngeren Geschwistern Fflur und Colwyn in wohlhabenden Verhältnissen auf.\n\nDie Familie gehörte bereits seit Generationen zu den angesehensten Bürgerhäusern Lynthors. Ursprünglich durch den Instrumentenbau zu Wohlstand gelangt, hatten die Sgrechiwr ihren wirtschaftlichen Einfluss durch Instrumentenmanufakturen und Holzverarbeitungsbetriebe erheblich erweitert. Gleichzeitig standen zahlreiche Angehörige des Hauses als Herolde, Musiker, Hofschreier und Zeremonienmeister im Dienst verschiedener Adelshäuser.\n\nCadogan erhielt daher früh eine Erziehung, in der Bildung, höfische Umgangsformen und die Kunst des öffentlichen Auftretens einen hohen Stellenwert besaßen.\n\nSchon als Kind fiel er durch seine Redegewandtheit und sein ausgeprägtes Bewusstsein für sein äußeres Erscheinungsbild auf. Während andere Angehörige seiner Familie musikalische Begabungen entwickelten, zeigte Cadogan allerdings wenig Talent für das Spielen von Instrumenten. Stattdessen interessierte er sich zunehmend für Sprache, gesellschaftliche Regeln und die Organisation höfischer Veranstaltungen.\n\nSeine Begabung blieb dem Ritterhaus Balchder nicht verborgen, das seit Langem enge Beziehungen zu den Sgrechiwr unterhielt. Besonders Sir Dalvin Balchder förderte seine Ausbildung und wurde zu einem wichtigen Vorbild für den jungen Cadogan.\n\nZunächst besuchte er die Schreiberschule der Balchder, wo er eine gründliche Ausbildung in Schriftwesen, Verwaltung und den Grundlagen höfischer Korrespondenz erhielt.\n\nAufgrund seiner Leistungen wurde ihm anschließend ein weiterführendes Studium an der Schule der Staufenberg in der Blutstadt ermöglicht. Dort widmete er sich insbesondere der Diplomatie, den höfischen Rangordnungen, fremden Sprachen und der Dokumentation offizieller Verhandlungen.\n\nZu seinen wichtigsten Lehrern gehörte Gideon Staufenberg, ein Gelehrter, dessen Unterricht Cadogans Verständnis für die Bedeutung präziser Formulierungen nachhaltig prägte.\n\nNach Abschluss seiner Ausbildung trat Cadogan in den Dienst des Hauses Draig. Seine berufliche Laufbahn begann er in untergeordneten Funktionen des diplomatischen Protokolls, wo er erfahrenen Beamten zuarbeitete und sich nach und nach mit den Abläufen des gräflichen Hofes vertraut machte.\n\nIm Laufe der folgenden Jahre übernahm er zunehmend verantwortungsvollere Aufgaben. Seine Gewissenhaftigkeit, seine Sprachkenntnisse und seine Vertrautheit mit höfischen Gepflogenheiten verschafften ihm einen ausgezeichneten Ruf.\n\nSchließlich wurde er vor rund zehn Jahren unter Trahern, dem damaligen Herold des Hauses Draig, zum Protokollmeister ernannt.\n\nAuch unter dessen Nachfolger Sir Cadfan behielt Cadogan seine Stellung. Seither gehört er zu den festen Größen des diplomatischen Hofdienstes und trägt maßgeblich dazu bei, dass Audienzen, Empfänge und offizielle Verhandlungen nach den geltenden Regeln durchgeführt werden.\n\nWährend seiner Zeit in Celtigerns Wacht lernte Cadogan auch Gwen Hamnett kennen, eine von den Silberinseln stammende Malerin, die zur künstlerischen Weiterbildung in die Grafschaft gekommen war.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen erlangte im Laufe der Jahre selbst großes Ansehen als Künstlerin, während Cadogan seine Laufbahn am gräflichen Hof fortsetzte.\n\nDas Paar bekam zwei Töchter, Eluned und Meinwen, und führt bis heute eine glückliche Ehe, die von gegenseitiger Wertschätzung und einer gemeinsamen Liebe zu Kunst und Kultur geprägt ist."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Wirkung",
+                "text": "Cadogan Sgrechiwr zählt zu den erfahrenen Beamten des Hauses Draig und genießt innerhalb des gräflichen Hofstaates einen guten Ruf.\n\nSeine langjährige Tätigkeit und seine umfassenden Kenntnisse machen ihn zu einem verlässlichen Ansprechpartner in sämtlichen Fragen des diplomatischen Protokolls. Gerade bei Empfängen auswärtiger Gesandtschaften und hochrangiger Persönlichkeiten wird seine Erfahrung geschätzt.\n\nDabei liegt seine Bedeutung weniger in eigenständigen politischen Entscheidungen als in der gewissenhaften Vorbereitung und Begleitung diplomatischer Begegnungen.\n\nCadogan sorgt dafür, dass die geltenden Rangordnungen berücksichtigt, Ehrenbezeugungen korrekt vorgenommen und offizielle Erklärungen eindeutig dokumentiert werden. Durch seine Aufmerksamkeit trägt er dazu bei, Missverständnisse und unnötige diplomatische Verstimmungen zu vermeiden.\n\nMit dem Zeremonienmeister und dem Vogt arbeitet er regelmäßig zusammen. Gelegentliche Meinungsverschiedenheiten bleiben dabei nicht aus, insbesondere wenn Cadogans Perfektionismus mit den praktischen Anforderungen anderer Hofämter zusammentrifft.\n\nSein Verhältnis zu Sir Cadfan ist von gegenseitigem Respekt und einer eingespielten beruflichen Zusammenarbeit geprägt. Eine besonders enge persönliche Freundschaft verbindet die beiden zwar nicht, doch Cadfan kann sich auf die Gewissenhaftigkeit seines Protokollmeisters verlassen.\n\nInnerhalb des Hofstaates ist Cadogan für seine Eitelkeit, seine Redseligkeit und seine gelegentlich übertriebenen Ansprüche an die äußere Form bekannt. Diese Eigenheiten führen mitunter zu belustigten Reaktionen, beeinträchtigen jedoch nicht die Anerkennung seiner fachlichen Fähigkeiten.\n\nAuch außerhalb seines Amtes ist Cadogan gesellschaftlich gut vernetzt. Durch seine Herkunft aus dem angesehenen Haus Sgrechiwr, seine Tätigkeit am Hof und seine Ehe mit der bekannten Malerin Gwen Hamnett besitzt er zahlreiche Kontakte zu Künstlern, Gelehrten und Angehörigen wohlhabender Bürgerfamilien.\n\nCadogan selbst betrachtet seine gegenwärtige Stellung als den Höhepunkt seiner beruflichen Laufbahn. Er strebt weder nach einem höheren Amt noch nach politischem Einfluss.\n\nSein persönliches Ziel besteht vielmehr darin, seine Aufgaben mit größtmöglicher Vollkommenheit zu erfüllen.\n\nWenn man sich eines Tages an ihn erinnert, dann möchte er vor allem als ein Mann gelten, dessen Protokolle fehlerfrei und dessen Audienzen tadellos vorbereitet waren."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung - Gwen Hamnett – seine Gemahlin",
+                "text": "Die wichtigste persönliche Bindung in Cadogans Leben besteht zu seiner Gemahlin Gwen Hamnett, einer hochangesehenen Malerin, die ursprünglich von den Silberinseln stammt.\n\nGwen kam als junge Frau nach Celtigerns Wacht, um ihre künstlerische Ausbildung fortzusetzen. Dort begegnete sie Cadogan, der bereits damals durch seine gepflegte Erscheinung, seine Redegewandtheit und seine Begeisterung für gesellschaftliche Umgangsformen auffiel.\n\nDie beiden fanden nicht zuletzt durch ihre gemeinsame Liebe zur Kunst zueinander. Während Cadogan besonders das Theater und die gesellschaftliche Inszenierung schätzt, widmet Gwen ihr Leben der Malerei.\n\nIhre Ehe ist von gegenseitiger Zuneigung, Bewunderung und einem ausgeprägten Sinn für Humor geprägt.\n\nCadogan ist außerordentlich stolz auf die künstlerischen Leistungen seiner Frau. Er besucht ihre Ausstellungen, interessiert sich für ihre Werke und nutzt gerne jede Gelegenheit, anderen von ihrer Begabung zu erzählen. Dabei kann seine Begeisterung gelegentlich ebenso ausschweifend ausfallen wie seine beruflichen Erläuterungen.\n\nGwen wiederum schätzt die Gewissenhaftigkeit und den Ehrgeiz ihres Gemahls. Sie weiß, wie viel ihm seine Arbeit bedeutet, und respektiert seine Hingabe an das Amt.\nAllerdings gehört sie auch zu den wenigen Menschen, die Cadogan ohne große Umstände unterbrechen können, wenn er wieder einmal zu ausführlich wird.\nGelegentlich scherzt sie, ihr Gemahl liebe seine Arbeit mehr als sie selbst. Cadogan widerspricht dieser Behauptung selbstverständlich entschieden, auch wenn sein täglicher Arbeitseifer ihr bisweilen recht zu geben scheint.\n\nTrotz seiner Eitelkeit und seiner ausgeprägten beruflichen Leidenschaft ist Cadogan ein liebevoller Ehemann, der die Gesellschaft seiner Frau genießt und ihre Eigenständigkeit als Künstlerin aufrichtig bewundert.\n\nGemeinsam haben sie ihre beiden Töchter Eluned und Meinwen großgezogen und sich ein Leben aufgebaut, in dem Kunst, Bildung und gesellschaftliche Verpflichtungen einen festen Platz einnehmen."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung - Iestyn Swyll – sein Freund am Hof",
+                "text": "Eine weitere wichtige Bindung besteht zu Iestyn Swyll, einem Angehörigen des gleichnamigen Bürgerhauses aus Gwynthor.\n\nBeide Männer kennen den Hofstaat seit vielen Jahren und verbindet eine persönliche Freundschaft, die über ihre beruflichen Aufgaben hinausgeht.\n\nIestyn gehört zu den Menschen, in deren Gegenwart Cadogan weniger auf die Förmlichkeiten seines Amtes achtet. Dennoch kann er es auch bei seinem Freund selten lassen, ausführlich über die Schwierigkeiten des höfischen Protokolls zu sprechen.\n\nGerade diese Vertrautheit macht ihre Freundschaft wertvoll. Iestyn muss Cadogan weder beeindrucken noch ihm in jeder Angelegenheit zustimmen.\n\nCadogan wiederum schätzt die Gesellschaft seines Freundes und die Möglichkeit, sich abseits seiner beruflichen Verpflichtungen auszutauschen."
+              }
+            ],
+            "abilitiesTitle": "Persönlichkeit"
+          },
+          "schema": "aleria.biography-module",
+          "quoteBy": ""
+        },
+        "portrait": "../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+        "currentLocation": "Gwynthor",
+        "updatedAt": "2026-11-03T17:25:17.128Z"
       }
     ]
   },
@@ -355,9 +726,288 @@
     "aliases": [],
     "archived": false,
     "bio": "",
-    "biography": null,
+    "biography": {
+      "quote": "",
+      "revision": 1793726717128,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Cadogan Sgrechiwr"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Sgrechiwr"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Vorgesehener Erbe des Hauses Sgrechiwr"
+        },
+        {
+          "label": "Geboren",
+          "value": "1690"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Lynthor"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "verheiratet"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": ""
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Protokollmeister des Herolds des Grafen"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        }
+      ],
+      "schemaVersion": 1,
+      "biography": {
+        "footer": "Personenakte · Cadogan Sgrechiwr",
+        "connectionTextOffset": 0,
+        "biographyTitle": "Hintergrund – Wer ist er?",
+        "connectionsTitle": "Verbindungen",
+        "abilities": [
+          {
+            "title": "Eitel",
+            "detail": "Cadogan legt außerordentlichen Wert auf ein gepflegtes Äußeres. Seine Kleidung, sein Schnurrbart und sein gesamtes Auftreten müssen stets tadellos sein.",
+            "icon": "/IconOrdner/Traits%20Icon/Groomed.png"
+          },
+          {
+            "title": "Perfektionistisch",
+            "detail": "Selbst kleinste Fehler in Rangordnung, Anrede oder Sitzordnung können ihn erheblich verärgern. Nachlässigkeit betrachtet er als vermeidbares Ärgernis.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Gewissenhaft",
+            "detail": "Seine beruflichen Pflichten nimmt Cadogan ausgesprochen ernst. Gerade bei diplomatischen Angelegenheiten lässt er äußerste Sorgfalt walten.",
+            "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+          },
+          {
+            "title": "Ehrgeizig",
+            "detail": "Er hat hart gearbeitet, um seine Stellung zu erreichen. Sein Ehrgeiz richtet sich inzwischen weniger auf weiteren Aufstieg als auf die vollkommene Beherrschung seines Amtes.",
+            "icon": "/IconOrdner/Traits%20Icon/Ambitious.png"
+          },
+          {
+            "title": "Charmant",
+            "detail": "Cadogan besitzt ausgezeichnete Umgangsformen und versteht es, Menschen mit Höflichkeit, Witz und gewandter Sprache für sich einzunehmen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-charming-131f5a12fbffcf8b%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Redegewandt",
+            "detail": "Er spricht gerne, ausführlich und mit sichtlicher Begeisterung. Nicht immer bemerkt er, dass seine Zuhörer das Gespräch längst beenden möchten.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-eloquent-71919b4c2095a972%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Gesellig",
+            "detail": "Cadogan schätzt anregende Unterhaltungen, gesellschaftliche Veranstaltungen und die Gesellschaft kultivierter Menschen.",
+            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+          },
+          {
+            "title": "Klatschfreudig",
+            "detail": "Er interessiert sich lebhaft für Neuigkeiten, kleine Skandale und persönliche Angelegenheiten am Hof, wahrt jedoch die Vertraulichkeit dienstlicher Informationen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-gossip-loving-2c49aa00db0e6346%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Kunstliebend",
+            "detail": "Theateraufführungen, Gemäldegalerien und andere kulturelle Veranstaltungen gehören zu seinen größten Vergnügungen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-art-loving-3f3181c366013051%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Empfindlich gegenüber Fehlern",
+            "detail": "Missgeschicke, insbesondere solche, die sein sorgfältig vorbereitetes Protokoll betreffen, beschäftigen ihn häufig länger, als eigentlich notwendig wäre.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-sensitive-to-mistakes-f2bd4f32238597dc%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Romantisch",
+            "detail": "Hinter seiner Eitelkeit verbirgt sich ein aufmerksamer und liebevoller Ehemann, der seine Gemahlin aufrichtig bewundert.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-romantic-3b4433574d3b1ccd%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Schlecht im Delegieren",
+            "detail": "Obwohl ihm Mitarbeiter zur Verfügung stehen, fällt es Cadogan schwer, wichtige Aufgaben vollständig aus der Hand zu geben.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-poor-at-delegating-995f63afaeae7285%2Foriginal.png?alt=media"
+          }
+        ],
+        "worksTitle": "Können & Fähigkeiten",
+        "quotes": [],
+        "connectionPortraitHeight": 68,
+        "historyTitle": "Charakter",
+        "works": [
+          "Diplomatisches Protokoll - Cadogan verfügt über umfassende Kenntnisse höfischer Rangordnungen, Anreden, Audienzregeln und diplomatischer Gepflogenheiten.",
+          "Organisation von Empfängen - Er bereitet Sitzordnungen, Ehrenbezeugungen und den protokollarischen Ablauf offizieller Zusammenkünfte vor.",
+          "Verhandlungsdokumentation - Cadogan besitzt große Erfahrung darin, Gesprächsverläufe und förmliche Erklärungen präzise und nachvollziehbar festzuhalten.",
+          "Unterscheidung von Zusagen - Er erkennt den Unterschied zwischen höflichen Absichtserklärungen, unverbindlichen Ehrenbezeugungen und rechtsverbindlichen Zusagen.",
+          "Diplomatische Bildung - Durch sein Studium bei den Staufenberg verfügt er über fundierte Kenntnisse diplomatischer Verfahren, politischer Geschichte und zwischenherrschaftlicher Beziehungen.",
+          "Sprachkenntnisse - Neben der Gemeinen Zunge beherrscht er die Sprache der Cenyri, die Sprache der Alben sowie die Sprachen Morgorns, Baldreskas und Aeldrunmars.",
+          "Schriftliche Ausdrucksfähigkeit - Cadogan ist ein geübter Schreiber, der besonderen Wert auf eindeutige Formulierungen und die korrekte Verwendung von Titeln legt.",
+          "Menschenkenntnis - Seine langjährige Tätigkeit am Hof hat ihn gelehrt, gesellschaftliche Spannungen und mögliche protokollarische Schwierigkeiten frühzeitig zu erkennen.",
+          "Diplomatisches Geschick - Auch bei bewussten Verstößen gegen das Protokoll versteht er es, unangenehme Situationen ohne öffentliche Bloßstellung der Beteiligten zu entschärfen.",
+          "Schauspielerische Begabung - Obwohl Cadogan kein Musiker ist, besitzt er ein gewisses Talent für Darstellung, Mimik und wirkungsvolle Auftritte.",
+          "Kunstverständnis - Er verfügt über ein ausgeprägtes Interesse an Malerei, Theater und anderen Künsten, das durch seine Herkunft und seine Ehe zusätzlich gefördert wurde.",
+          "Personalführung - Cadogan leitet die ihm unterstellten Mitarbeiter und überwacht deren Arbeit, neigt allerdings dazu, zu viele Aufgaben selbst kontrollieren zu wollen."
+        ],
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "knightMentors": [],
+        "trivia": [
+          "Cadogan beginnt Gespräche häufig mit den Worten „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“, selbst wenn niemand eine entsprechende Frage gestellt hat.",
+          "Sein sorgfältig gepflegter Schnurrbart gehört zu seinen auffälligsten äußeren Merkmalen. Er verwendet beträchtliche Mühe darauf, ihn stets in tadellosem Zustand zu halten.",
+          "Cadogan besitzt eine ausgesprochene Vorliebe für elegante, maßgeschneiderte Kleidung und besucht gerne seinen Schneider.",
+          "Obwohl die Sgrechiwr für ihre musikalische Tradition bekannt sind, ist Cadogan selbst ausgesprochen unmusikalisch. Dieser Umstand stellt eine seiner wenigen persönlichen Enttäuschungen dar.",
+          "Er besucht leidenschaftlich gerne Theateraufführungen. Fehlerhafte Anreden oder unpassende Rangordnungen in historischen Stücken können ihn allerdings erheblich aus der Fassung bringen.",
+          "Cadogan liebt Klatsch und Tratsch, unterscheidet jedoch streng zwischen gesellschaftlichen Gerüchten und vertraulichen Informationen aus seinem Amt.",
+          "Selbst bei privaten Gesellschaften fällt es ihm schwer, eine ungeschickte Sitzordnung einfach hinzunehmen.",
+          "Seine Gemahlin Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett. Cadogan ist außerordentlich stolz auf ihren künstlerischen Ruf.",
+          "Gelegentlich versucht er, Gwen bei der Anordnung ihrer Gemälde zu beraten. Seine Vorstellungen von einer korrekten Reihenfolge decken sich allerdings nicht immer mit ihren künstlerischen Absichten.",
+          "Cadogan versteht sich gut mit Prinz Gawain, dessen Sinn für gepflegte Kleidung und ein ansprechendes Äußeres er besonders schätzt. Gespräche über Schneider, Stoffe und Düfte gehören zu ihren gemeinsamen Interessen.",
+          "Obwohl Cadogan mehrere Mitarbeiter beschäftigt, kontrolliert er wichtige Aufzeichnungen häufig persönlich. Er ist überzeugt, dass eine zusätzliche Überprüfung niemals schaden könne.",
+          "Er kann sich noch lange über protokollarische Verstöße ärgern, selbst wenn die betreffenden Veranstaltungen bereits seit Wochen vorüber sind.",
+          "Sir Dalvin Balchder gehört zu den wenigen Menschen, deren Kritik Cadogan auch dann ernst nimmt, wenn sie seinen Stolz verletzt.",
+          "Cadogan betrachtet seine Stellung als Protokollmeister als den Höhepunkt seiner beruflichen Laufbahn. Ein höheres Amt strebt er nicht an.",
+          "Sein größter beruflicher Wunsch besteht darin, eines Tages als der gewissenhafteste Protokollmeister in der Geschichte des Hauses Draig in Erinnerung zu bleiben."
+        ],
+        "biographyText": "<p>Cadogan Sgrechiwr ist ein fünfzigjähriger Angehöriger des wohlhabenden und angesehenen Bürgerhauses Sgrechiwr aus Lynthor und  ekleidet das Amt des Protokollmeisters des Herolds von Haus Draig. In dieser Funktion gehört er zu den erfahrenen Beamten des gräflichen Hofstaates und arbeitet unmittelbar für Sir Cadfan, den obersten Diplomaten des Hauses Draig.</p><br><p>Seine Verantwortung umfasst die Einhaltung höfischer Rangordnungen, die korrekte Anrede hochrangiger Persönlichkeiten, die Vorbereitung diplomatischer Audienzen sowie die gewissenhafte Dokumentation offizieller Verhandlungen. Dabei achtet Cadogan besonders darauf, dass höfische Ehrenbezeugungen nicht mit rechtsverbindlichen Zusagen verwechselt werden und diplomatische Erklärungen eindeutig festgehalten sind.</p><br><p>Cadogan stammt aus einer Familie, deren Mitglieder seit Generationen als Herolde, Hofschreier, Musiker, Zeremonienmeister und  nstrumentenbauer bekannt sind. Sein Vater Gareth Sgrechiwr steht dem Familienhaus in Lynthor vor, während Cadogan selbst seine berufliche Laufbahn am Hof der Draigs eingeschlagen hat.</p><div><br></div><p>Die enge Verbindung zwischen den Häusern Sgrechiwr und Balchder ermöglichte ihm eine hervorragende Ausbildung. Nach dem Besuch der Schreiberschule des Ritterhauses Balchder studierte er an der Schule der Staufenberg in der Blutstadt mit dem Schwerpunkt Diplomatie.</p><br><p>Seit rund zehn Jahren bekleidet er sein gegenwärtiges Amt, in das er noch unter Trahern, dem Vorgänger und Großvater Sir Cadfans, berufen wurde.</p><p>Cadogan ist mit der angesehenen Malerin Gwen Hamnett verheiratet, die von den Silberinseln stammt. Gemeinsam haben sie zwei erwachsene Töchter, Eluned und Meinwen.</p>",
+        "portrait": "",
+        "quotesTitle": "Zitate",
+        "triviaTitle": "Trivia",
+        "historyText": "<p>Cadogan Sgrechiwr ist ein Mann, der von sich selbst und seiner Arbeit eine außerordentlich hohe Meinung besitzt, ohne deshalb  grundsätzlich überheblich oder unangenehm zu sein. Seine Eitelkeit ist unverkennbar, doch hinter seinem gepflegten Äußeren und seinen gelegentlich  usschweifenden Ausführungen verbirgt sich ein erfahrener, gebildeter und pflichtbewusster Hofbeamter.</p><br><p>Bereits als junger Mann zeigte Cadogan eine ausgeprägte Vorliebe für schöne Kleidung, gepflegte Umgangsformen und die Kunst der  ffentlichen Rede. Diese Eigenschaften haben ihn sein gesamtes Leben begleitet. Noch heute achtet er peinlich genau auf den Sitz seines Gewandes, die Pflege seines Schnurrbartesund den Eindruck, den er auf andere hinterlässt.</p><br><p>Seine größte Leidenschaft gilt jedoch seinem Beruf. Cadogan betrachtet das diplomatische Protokoll keineswegs als bloße Ansammlung  öfischer Vorschriften. Für ihn ist es eine anspruchsvolle Kunst, deren Regeln den geordneten Umgang zwischen Adelshäusern, Gesandtschaften und Herrschaften überhaupt erst ermöglichen.</p><br><p>Er weiß, dass eine falsch gewählte Anrede, eine unbedachte Ehrenbezeugung oder eine missverständliche Formulierung erhebliche  iplomatische Folgen haben können. Entsprechend gewissenhaft bereitet er seine Aufgaben vor und erwartet von seinen Mitarbeitern dieselbe Sorgfalt.</p><br><p>Dabei kann Cadogan durchaus anstrengend sein. Seine Neigung, jede Kleinigkeit persönlich zu überprüfen, führt gelegentlich zu Spannungen mit seinen Untergebenen. Besonders ärgert er sich, wenn andere seine sorgfältigen Vorbereitungen durch Nachlässigkeit oder eigenmächtige  Änderungen durcheinanderbringen.</p><br><p>Dennoch ist Cadogan kein unbeherrschter Mann. Seine langjährige Erfahrung hat ihn gelehrt, auch in schwierigen Situationen die äußere Form zu wahren. Verstößt ein hochrangiger Gast gegen das Protokoll, wird er diesen kaum öffentlich zurechtweisen. Stattdessen versucht er, die Angelegenheit mit diplomatischem Geschick zu bereinigen.</p><br><p>Dass er sich anschließend noch wochenlang darüber beschweren kann, steht auf einem anderen Blatt.</p><br><p>Eine seiner auffälligsten Eigenheiten ist seine Angewohnheit, Gespräche mit Formulierungen wie „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“ einzuleiten. Häufig hat sein Gegenüber allerdings überhaupt keine Frage gestellt. Cadogan verwendet diese Wendungen vielmehr, um ein Thema anzuschneiden, über das er selbst unbedingt sprechen möchte.</p><br><p>Seine Kollegen kennen diese Angewohnheit inzwischen nur zu gut.</p><br><p>Abseits seiner beruflichen Pflichten ist Cadogan ein geselliger, kultivierter und durchaus humorvoller Mann. Er liebt das Theater, besucht regelmäßig Kunstausstellungen und interessiert sich für die neuesten gesellschaftlichen Entwicklungen. Auch einem gepflegten Klatsch ist er nicht abgeneigt, wobei er zwischen privaten Neuigkeiten und dienstlich vertraulichen Informationen streng unterscheidet.</p><br><p>Seiner Familie gegenüber zeigt er sich liebevoll und aufmerksam, wenngleich seine ausgeprägte Hingabe an sein Amt gelegentlich dazu führt, dass er mehr Zeit mit diplomatischen Aufzeichnungen als mit seiner Gemahlin verbringt.</p><br><p>Cadogan ist mit seinem Leben zufrieden. Er hat eine angesehene Stellung erreicht, eine Familie gegründet und genießt den Respekt seiner Kollegen. Höhere Ämter strebt er nicht an. Vielmehr ist er davon überzeugt, dass es kaum eine ehrenvollere Aufgabe gibt, als das diplomatische Protokoll des Hauses Draig in vollkommener Ordnung zu halten.</p>",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Haus Sgrechiwr",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Gareth",
+            "detail": "Vater / Familienoberhaupt",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/gareth-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "???",
+            "detail": "Mutter",
+            "image": "/Stammbäume/assets/images/placeholders/female.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwen (geb. Hamnett)",
+            "detail": "Ehefrau",
+            "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eluned",
+            "detail": "Tochter",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/eluned-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Meinwen",
+            "detail": "Tochter",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/meinwen-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Fflur",
+            "detail": "Schwester",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/fflur-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Colwyn",
+            "detail": "Bruder",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/colwyn-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Godwyn",
+            "detail": "Vetter 2. Grades",
+            "image": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Tierische Begleiter",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Silberstolz",
+            "detail": "Sein Erlenglanz",
+            "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-silberstolz-8e777f0152ccc489%2Foriginal.png?alt=media",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Sir Balthasar",
+            "detail": "Gwen's Samtlicht.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sir-balthasar-ed1ed505d4f62d28%2Foriginal.png?alt=media",
+            "imageFormat": "portrait"
+          }
+        ],
+        "sideWidth": 100,
+        "documents": [],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Cadogan Sgrechiwr wurde in Lynthor geboren, einer für ihre Kunst, Kultur und Musik bekannten Stadt in der Grafschaft Celtigerns Wacht. Er ist der Sohn von Gareth Sgrechiwr, dem gegenwärtigen Oberhaupt des Bürgerhauses Sgrechiwr, und wuchs gemeinsam mit seinen jüngeren Geschwistern Fflur und Colwyn in wohlhabenden Verhältnissen auf.\n\nDie Familie gehörte bereits seit Generationen zu den angesehensten Bürgerhäusern Lynthors. Ursprünglich durch den Instrumentenbau zu Wohlstand gelangt, hatten die Sgrechiwr ihren wirtschaftlichen Einfluss durch Instrumentenmanufakturen und Holzverarbeitungsbetriebe erheblich erweitert. Gleichzeitig standen zahlreiche Angehörige des Hauses als Herolde, Musiker, Hofschreier und Zeremonienmeister im Dienst verschiedener Adelshäuser.\n\nCadogan erhielt daher früh eine Erziehung, in der Bildung, höfische Umgangsformen und die Kunst des öffentlichen Auftretens einen hohen Stellenwert besaßen.\n\nSchon als Kind fiel er durch seine Redegewandtheit und sein ausgeprägtes Bewusstsein für sein äußeres Erscheinungsbild auf. Während andere Angehörige seiner Familie musikalische Begabungen entwickelten, zeigte Cadogan allerdings wenig Talent für das Spielen von Instrumenten. Stattdessen interessierte er sich zunehmend für Sprache, gesellschaftliche Regeln und die Organisation höfischer Veranstaltungen.\n\nSeine Begabung blieb dem Ritterhaus Balchder nicht verborgen, das seit Langem enge Beziehungen zu den Sgrechiwr unterhielt. Besonders Sir Dalvin Balchder förderte seine Ausbildung und wurde zu einem wichtigen Vorbild für den jungen Cadogan.\n\nZunächst besuchte er die Schreiberschule der Balchder, wo er eine gründliche Ausbildung in Schriftwesen, Verwaltung und den Grundlagen höfischer Korrespondenz erhielt.\n\nAufgrund seiner Leistungen wurde ihm anschließend ein weiterführendes Studium an der Schule der Staufenberg in der Blutstadt ermöglicht. Dort widmete er sich insbesondere der Diplomatie, den höfischen Rangordnungen, fremden Sprachen und der Dokumentation offizieller Verhandlungen.\n\nZu seinen wichtigsten Lehrern gehörte Gideon Staufenberg, ein Gelehrter, dessen Unterricht Cadogans Verständnis für die Bedeutung präziser Formulierungen nachhaltig prägte.\n\nNach Abschluss seiner Ausbildung trat Cadogan in den Dienst des Hauses Draig. Seine berufliche Laufbahn begann er in untergeordneten Funktionen des diplomatischen Protokolls, wo er erfahrenen Beamten zuarbeitete und sich nach und nach mit den Abläufen des gräflichen Hofes vertraut machte.\n\nIm Laufe der folgenden Jahre übernahm er zunehmend verantwortungsvollere Aufgaben. Seine Gewissenhaftigkeit, seine Sprachkenntnisse und seine Vertrautheit mit höfischen Gepflogenheiten verschafften ihm einen ausgezeichneten Ruf.\n\nSchließlich wurde er vor rund zehn Jahren unter Trahern, dem damaligen Herold des Hauses Draig, zum Protokollmeister ernannt.\n\nAuch unter dessen Nachfolger Sir Cadfan behielt Cadogan seine Stellung. Seither gehört er zu den festen Größen des diplomatischen Hofdienstes und trägt maßgeblich dazu bei, dass Audienzen, Empfänge und offizielle Verhandlungen nach den geltenden Regeln durchgeführt werden.\n\nWährend seiner Zeit in Celtigerns Wacht lernte Cadogan auch Gwen Hamnett kennen, eine von den Silberinseln stammende Malerin, die zur künstlerischen Weiterbildung in die Grafschaft gekommen war.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen erlangte im Laufe der Jahre selbst großes Ansehen als Künstlerin, während Cadogan seine Laufbahn am gräflichen Hof fortsetzte.\n\nDas Paar bekam zwei Töchter, Eluned und Meinwen, und führt bis heute eine glückliche Ehe, die von gegenseitiger Wertschätzung und einer gemeinsamen Liebe zu Kunst und Kultur geprägt ist."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Cadogan Sgrechiwr zählt zu den erfahrenen Beamten des Hauses Draig und genießt innerhalb des gräflichen Hofstaates einen guten Ruf.\n\nSeine langjährige Tätigkeit und seine umfassenden Kenntnisse machen ihn zu einem verlässlichen Ansprechpartner in sämtlichen Fragen des diplomatischen Protokolls. Gerade bei Empfängen auswärtiger Gesandtschaften und hochrangiger Persönlichkeiten wird seine Erfahrung geschätzt.\n\nDabei liegt seine Bedeutung weniger in eigenständigen politischen Entscheidungen als in der gewissenhaften Vorbereitung und Begleitung diplomatischer Begegnungen.\n\nCadogan sorgt dafür, dass die geltenden Rangordnungen berücksichtigt, Ehrenbezeugungen korrekt vorgenommen und offizielle Erklärungen eindeutig dokumentiert werden. Durch seine Aufmerksamkeit trägt er dazu bei, Missverständnisse und unnötige diplomatische Verstimmungen zu vermeiden.\n\nMit dem Zeremonienmeister und dem Vogt arbeitet er regelmäßig zusammen. Gelegentliche Meinungsverschiedenheiten bleiben dabei nicht aus, insbesondere wenn Cadogans Perfektionismus mit den praktischen Anforderungen anderer Hofämter zusammentrifft.\n\nSein Verhältnis zu Sir Cadfan ist von gegenseitigem Respekt und einer eingespielten beruflichen Zusammenarbeit geprägt. Eine besonders enge persönliche Freundschaft verbindet die beiden zwar nicht, doch Cadfan kann sich auf die Gewissenhaftigkeit seines Protokollmeisters verlassen.\n\nInnerhalb des Hofstaates ist Cadogan für seine Eitelkeit, seine Redseligkeit und seine gelegentlich übertriebenen Ansprüche an die äußere Form bekannt. Diese Eigenheiten führen mitunter zu belustigten Reaktionen, beeinträchtigen jedoch nicht die Anerkennung seiner fachlichen Fähigkeiten.\n\nAuch außerhalb seines Amtes ist Cadogan gesellschaftlich gut vernetzt. Durch seine Herkunft aus dem angesehenen Haus Sgrechiwr, seine Tätigkeit am Hof und seine Ehe mit der bekannten Malerin Gwen Hamnett besitzt er zahlreiche Kontakte zu Künstlern, Gelehrten und Angehörigen wohlhabender Bürgerfamilien.\n\nCadogan selbst betrachtet seine gegenwärtige Stellung als den Höhepunkt seiner beruflichen Laufbahn. Er strebt weder nach einem höheren Amt noch nach politischem Einfluss.\n\nSein persönliches Ziel besteht vielmehr darin, seine Aufgaben mit größtmöglicher Vollkommenheit zu erfüllen.\n\nWenn man sich eines Tages an ihn erinnert, dann möchte er vor allem als ein Mann gelten, dessen Protokolle fehlerfrei und dessen Audienzen tadellos vorbereitet waren."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung - Gwen Hamnett – seine Gemahlin",
+            "text": "Die wichtigste persönliche Bindung in Cadogans Leben besteht zu seiner Gemahlin Gwen Hamnett, einer hochangesehenen Malerin, die ursprünglich von den Silberinseln stammt.\n\nGwen kam als junge Frau nach Celtigerns Wacht, um ihre künstlerische Ausbildung fortzusetzen. Dort begegnete sie Cadogan, der bereits damals durch seine gepflegte Erscheinung, seine Redegewandtheit und seine Begeisterung für gesellschaftliche Umgangsformen auffiel.\n\nDie beiden fanden nicht zuletzt durch ihre gemeinsame Liebe zur Kunst zueinander. Während Cadogan besonders das Theater und die gesellschaftliche Inszenierung schätzt, widmet Gwen ihr Leben der Malerei.\n\nIhre Ehe ist von gegenseitiger Zuneigung, Bewunderung und einem ausgeprägten Sinn für Humor geprägt.\n\nCadogan ist außerordentlich stolz auf die künstlerischen Leistungen seiner Frau. Er besucht ihre Ausstellungen, interessiert sich für ihre Werke und nutzt gerne jede Gelegenheit, anderen von ihrer Begabung zu erzählen. Dabei kann seine Begeisterung gelegentlich ebenso ausschweifend ausfallen wie seine beruflichen Erläuterungen.\n\nGwen wiederum schätzt die Gewissenhaftigkeit und den Ehrgeiz ihres Gemahls. Sie weiß, wie viel ihm seine Arbeit bedeutet, und respektiert seine Hingabe an das Amt.\nAllerdings gehört sie auch zu den wenigen Menschen, die Cadogan ohne große Umstände unterbrechen können, wenn er wieder einmal zu ausführlich wird.\nGelegentlich scherzt sie, ihr Gemahl liebe seine Arbeit mehr als sie selbst. Cadogan widerspricht dieser Behauptung selbstverständlich entschieden, auch wenn sein täglicher Arbeitseifer ihr bisweilen recht zu geben scheint.\n\nTrotz seiner Eitelkeit und seiner ausgeprägten beruflichen Leidenschaft ist Cadogan ein liebevoller Ehemann, der die Gesellschaft seiner Frau genießt und ihre Eigenständigkeit als Künstlerin aufrichtig bewundert.\n\nGemeinsam haben sie ihre beiden Töchter Eluned und Meinwen großgezogen und sich ein Leben aufgebaut, in dem Kunst, Bildung und gesellschaftliche Verpflichtungen einen festen Platz einnehmen."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung - Iestyn Swyll – sein Freund am Hof",
+            "text": "Eine weitere wichtige Bindung besteht zu Iestyn Swyll, einem Angehörigen des gleichnamigen Bürgerhauses aus Gwynthor.\n\nBeide Männer kennen den Hofstaat seit vielen Jahren und verbindet eine persönliche Freundschaft, die über ihre beruflichen Aufgaben hinausgeht.\n\nIestyn gehört zu den Menschen, in deren Gegenwart Cadogan weniger auf die Förmlichkeiten seines Amtes achtet. Dennoch kann er es auch bei seinem Freund selten lassen, ausführlich über die Schwierigkeiten des höfischen Protokolls zu sprechen.\n\nGerade diese Vertrautheit macht ihre Freundschaft wertvoll. Iestyn muss Cadogan weder beeindrucken noch ihm in jeder Angelegenheit zustimmen.\n\nCadogan wiederum schätzt die Gesellschaft seines Freundes und die Möglichkeit, sich abseits seiner beruflichen Verpflichtungen auszutauschen."
+          }
+        ],
+        "abilitiesTitle": "Persönlichkeit"
+      },
+      "schema": "aleria.biography-module",
+      "quoteBy": ""
+    },
     "createdAt": "2026-09-02T20:37:58.808Z",
-    "currentLocation": "",
+    "currentLocation": "Gwynthor",
     "emotes": [
       {
         "img": "https://i.imgur.com/iekJzVo.png",
@@ -442,50 +1092,50 @@
       "houseName": "Haus Sgrechiwr",
       "portraitPlaceholder": "auto",
       "relationships": {
-        "children": [
-          {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Eluned Sgrechiwr",
-            "personId": "eluned-sgrechiwr",
-            "type": "biological",
-            "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr"
-          },
-          {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Meinwen Sgrechiwr",
-            "personId": "meinwen-sgrechiwr",
-            "type": "biological",
-            "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr"
-          }
-        ],
         "parents": [
           {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Gareth Sgrechiwr",
             "personId": "gareth-sgrechiwr",
             "type": "biological",
-            "worldPersonId": "person--haus-sgrechiwr--gareth-sgrechiwr"
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--gareth-sgrechiwr",
+            "name": "Gareth Sgrechiwr"
           },
           {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Unbekannte Ehefrau",
             "personId": "unknown-gareth-spouse",
             "type": "biological",
-            "worldPersonId": "person--family-tree--unknown-gareth-spouse"
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-gareth-spouse",
+            "name": "Unbekannte Ehefrau"
           }
         ],
         "partners": [
           {
-            "certainty": "confirmed",
-            "name": "Unbekannte Ehefrau",
             "personId": "unknown-cadogan-spouse",
-            "status": "active",
             "type": "marriage",
-            "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+            "name": "Gwen Hamnett"
+          }
+        ],
+        "children": [
+          {
+            "personId": "eluned-sgrechiwr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--eluned-sgrechiwr",
+            "name": "Eluned Sgrechiwr"
+          },
+          {
+            "personId": "meinwen-sgrechiwr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr",
+            "name": "Meinwen Sgrechiwr"
           }
         ]
       },
@@ -493,13 +1143,13 @@
       "sources": [
         {
           "familyId": "haus-sgrechiwr",
-          "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}",
+          "personId": "cadogan-sgrechiwr",
+          "releaseId": "",
+          "publishedAt": "",
           "importedAt": "2026-09-02T20:37:58.808Z",
           "lastSyncedAt": "2026-09-02T20:37:58.808Z",
-          "personId": "cadogan-sgrechiwr",
-          "publishedAt": "",
-          "releaseId": "",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr"
+          "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=cadogan-sgrechiwr",
+          "fingerprint": "{\"name\":\"Cadogan Sgrechiwr\",\"title\":\"Vorgesehener Erbe des Hauses Sgrechiwr\",\"birth\":\"1690\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sgrechiwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--gareth-sgrechiwr\",\"name\":\"Gareth Sgrechiwr\"},{\"personId\":\"unknown-gareth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-gareth-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[{\"personId\":\"unknown-cadogan-spouse\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-cadogan-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
         }
       ],
       "status": "alive",
@@ -595,7 +1245,55 @@
     ],
     "imageSetSchemaVersion": 1,
     "imageSetsOverride": true,
-    "inventory": null,
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-cadogan-sgrechiwr-silberstolz",
+          "name": "Silberstolz",
+          "species": "Erlenglanz-Pferd",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-silberstolz-8e777f0152ccc489%2Foriginal.png?alt=media",
+          "description": "Silberstolz ist Cadogan Sgrechiwrs Erlenglanz. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "summary": "Silberstolz ist Cadogan Sgrechiwrs Erlenglanz. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-cadogan-sgrechiwr-silberstolz",
+          "inventoryItemId": "cadogan-sgrechiwr-silberstolz"
+        }
+      ],
+      "items": [
+        {
+          "id": "cadogan-sgrechiwr-silberstolz",
+          "instanceId": "cadogan-sgrechiwr-silberstolz",
+          "creatureId": "companion-cadogan-sgrechiwr-silberstolz",
+          "name": "Silberstolz",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-silberstolz-8e777f0152ccc489%2Foriginal.png?alt=media",
+          "description": "Silberstolz ist Cadogan Sgrechiwrs Erlenglanz. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "type": "Erlenglanz-Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Erlenglanz-Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+          "ownerCharacterName": "Cadogan Sgrechiwr",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-03T17:26:06.547268Z"
+        }
+      ],
+      "revision": 1793726766547
+    },
     "name": "Cadogan Sgrechiwr",
     "origin": "",
     "playerOwner": "",
@@ -606,7 +1304,7 @@
     "role": "",
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Lynthor",
-    "title": "Vorgesehener Erbe des Hauses Sgrechiwr",
-    "updatedAt": "2026-09-03T18:13:26.221Z"
+    "title": "Protokollmeister des Herolds von Haus Draig · Vorgesehener Erbe des Hauses Sgrechiwr",
+    "updatedAt": "2026-11-03T17:25:17.128Z"
   }
 }

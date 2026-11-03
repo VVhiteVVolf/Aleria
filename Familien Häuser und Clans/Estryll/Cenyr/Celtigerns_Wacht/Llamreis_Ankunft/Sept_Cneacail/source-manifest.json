@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "reviewed-public-family-registry",
+    "familyId": "sept-cneacail",
+    "sourceRevision": 2
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "sept-cneacail",
+    "existingGraphUnchanged": true,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ]
+  },
+  "preparation": {
+    "inventedPeople": false,
+    "inventedRelationships": false,
+    "inventedProfession": false,
+    "militaryStatisticsImported": false
+  },
+  "images": [
+    {
+      "role": "Repräsentative Hausfigur",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "sha256": "dc82c57db2db0fe9acbc485499d09fe6d71eed80ea8fcdddfa2b896064b5c61d",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json",
+      "namedPerson": false
+    }
+  ],
+  "decisions": [
+    "Nur belegte öffentliche Registerfakten und bestehende Angehörige verwendet. Keine alten Genealogien, Amtsfolgen oder Militärstatistiken importiert.",
+    "Bestehende Hausquellen bleiben erhalten; dieses neue Modul füllt eine geprüfte aktive Seitenlücke.",
+    "Primäres Profil und Herkunftsgebiet bleiben unverändert. Die heutige Gwynthorer Exilplatzierung wird als eigener belegter Kontext gezeigt; keine neue Familienakte oder neue Genealogie aus der Auswanderung erzeugt."
+  ]
+}

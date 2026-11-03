@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "groupId": "oweta-quartett",
+  "note": "Einmalige Startausstattung des gemeinsamen Gruppeninventars; keine persönlichen Inventare oder Live-Ressourcen ändern.",
+  "stock": [
+    {
+      "key": "rationen",
+      "quantity": 12,
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/rationen.png",
+      "sourceKey": "standard:gemischtwarenhandler:rationen"
+    },
+    {
+      "key": "wasserschlauch",
+      "quantity": 4,
+      "sourceKey": "standard:gemischtwarenhandler:wasserschlauch"
+    },
+    {
+      "key": "bettrolle",
+      "quantity": 4,
+      "sourceKey": "standard:gemischtwarenhandler:bettrolle"
+    },
+    {
+      "key": "zelt-klein",
+      "quantity": 2,
+      "sourceKey": "standard:gemischtwarenhandler:zelt-klein"
+    },
+    {
+      "key": "kochgeschirr",
+      "quantity": 1,
+      "sourceKey": "standard:gemischtwarenhandler:kochgeschirr"
+    },
+    {
+      "key": "essbesteck",
+      "quantity": 4,
+      "sourceKey": "standard:gemischtwarenhandler:essbesteck"
+    },
+    {
+      "key": "feuerstein-stahl",
+      "quantity": 2,
+      "sourceKey": "standard:gemischtwarenhandler:feuerstein-stahl"
+    },
+    {
+      "key": "seil",
+      "quantity": 1,
+      "sourceKey": "standard:gemischtwarenhandler:seil"
+    },
+    {
+      "key": "laterne",
+      "quantity": 1,
+      "sourceKey": "standard:gemischtwarenhandler:laterne"
+    },
+    {
+      "key": "lampenoel",
+      "quantity": 2,
+      "sourceKey": "standard:gemischtwarenhandler:lampenoel"
+    },
+    {
+      "key": "fackel",
+      "quantity": 6,
+      "sourceKey": "standard:gemischtwarenhandler:fackel"
+    },
+    {
+      "key": "verbandstoff",
+      "quantity": 2,
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/verbandstoff.png",
+      "sourceKey": "standard:gemischtwarenhandler:verbandstoff"
+    },
+    {
+      "key": "nadel-faden",
+      "quantity": 1,
+      "sourceKey": "standard:gemischtwarenhandler:nadel-faden"
+    },
+    {
+      "key": "seife",
+      "quantity": 2,
+      "sourceKey": "standard:gemischtwarenhandler:seife"
+    },
+    {
+      "key": "salzbeutel",
+      "quantity": 1,
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/salzbeutel.png",
+      "sourceKey": "standard:gemischtwarenhandler:salzbeutel"
+    },
+    {
+      "key": "wetzstein",
+      "quantity": 1,
+      "sourceKey": "standard:gemischtwarenhandler:wetzstein"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "attachmentId": "f74f1eb7-5d05-41e4-a3a9-aff9b4a88731",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "1c7b26d84df33d973488d514f1d7467f5c6ef378a2bbecf9f3586fc6cb8d3e2b"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-grawn",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-grawn",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 6,
+    "currentSeat": "Glyndraith",
+    "currentRankId": "county"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/ovpqPif.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "f3932bd76d07f153f52fd57d781b941622714a2fee5653f6e524925d1d068505",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register."
+  ]
+}

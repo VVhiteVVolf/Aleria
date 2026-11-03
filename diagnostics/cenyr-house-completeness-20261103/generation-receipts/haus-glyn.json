@@ -1,0 +1,61 @@
+{
+  "id": "haus-glyn",
+  "prompt": "Use case: stylized-concept. Asset type: one anonymous civilian fantasy house figure for the Aleria house register. The supplied image is ONLY the approved STYLE reference: copy its quiet matte hand-painted treatment, gently simplified proportions, large clear clothing shapes, thin soft painted contours, restrained soft shading and fine uniform gouache pigment grain. Do not copy armour, weapon, helmet, plume, colours or heraldry. Calm upright three-quarter standing pose, complete full body including head and both feet with clear margin, portrait2:3. Muted earthy palette and practical medieval-fantasy wool/linen clothing suitable for mild wet windy Cenyr. Actual transparent RGBA PNG, alpha=0 outside the silhouette and in every opening. No scenery, ground, floor, external shadow, fog, halo, aura, border, lettering or watermark. No photorealism, CGI, gloss, dramatic lighting, thick comic outlines or paint splashes. This is an unnamed representative: no named person identity, rank insignia, house crest, badge, jewellery emblem, profession symbol or tool. No armour, weapons or crown. One person only.\nHouse: haus-glyn. Context: Llysfaen, Llamreis Ankunft, Celtigerns Wacht, Cenyr. No individual heraldry is known.\nSubject: An anonymous adult man around45 with short dark hair and modest short beard. Blue-grey wool tunic, dark muted brown-grey wool shoulder cloak, plain belt with a small unmarked everyday pouch, brown trousers and boots. One empty hand rests lightly near the belt and the other relaxed by his side, calm upright stance. No hood covering face.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "referenceSha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-glyn.png",
+  "provider": "built-in-imagegen",
+  "status": "visually-and-technically-accepted",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-3c4b-7ac1-94a8-f6c32917a174\\exec-c3746e76-0195-4867-acdb-0a74ad435770.png",
+  "sha256": "7fef1e7ddac869e696af5e7bb33db91855dc59e7294d87ceedbd13889ca310ab",
+  "sourceSha256": "7fef1e7ddac869e696af5e7bb33db91855dc59e7294d87ceedbd13889ca310ab",
+  "stylePreset": "fantasy-rpg-character",
+  "anonymousRepresentative": true,
+  "personIdentityCreated": false,
+  "heraldryAdded": false,
+  "professionClaimed": false,
+  "technicalQA": {
+    "familyId": "haus-glyn",
+    "size": [
+      1024,
+      1536
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "borderMaxAlpha": 1,
+    "alpha0": 1024418,
+    "alpha250plus": 526504,
+    "bboxesAlphaAbove": {
+      "0": [
+        0,
+        19,
+        982,
+        1536
+      ],
+      "10": [
+        142,
+        49,
+        769,
+        1503
+      ],
+      "100": [
+        142,
+        50,
+        769,
+        1502
+      ],
+      "250": [
+        143,
+        53,
+        768,
+        1501
+      ]
+    },
+    "sourceBytesPreserved": true
+  },
+  "visualQA": "Tatsächlich auf Hellgrau und Dunkelgrau komponiert angesehen: vollständige Figur, keine sichtbare Außenfahne, keine Wappen, Waffen oder Berufsgeräte."
+}

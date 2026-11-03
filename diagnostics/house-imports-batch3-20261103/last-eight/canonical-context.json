@@ -1,0 +1,702 @@
+[
+  {
+    "id": "haus-draenog",
+    "document": {
+      "id": "haus-draenog",
+      "title": "Haus Draenog O'Llanforwyn",
+      "motto": "Tarian yn y Ffydd. · Schild im Glauben.",
+      "description": "Priester- und Ritterfamilie sowie Baronshaus des Silberwaldes mit Sitz in Llanforwyn.",
+      "emblem": "assets/images/houses/Graue Weite/Silberwald/haus-draenog.png",
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "Llanforwyn",
+        "barony": "Silberwald",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Silberwald.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "mathonwy-founder-draenog",
+        "name": "Mathonwy Draenog",
+        "title": "Gründer und erster Baron des Hauses Draenog",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "ariana-founder-draenog",
+        "name": "Ariana",
+        "title": "Mitgründerin des Hauses Draenog",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "llywellyn-draenog",
+        "name": "Llywellyn Draenog",
+        "title": "Baron des Hauses Draenog bis 1652",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "rhianu-draenog",
+        "name": "Rhianu Draenog",
+        "title": "Wegverheiratet an Haus Pysgod",
+        "status": "dead",
+        "notes": "Die ausgearbeitete Pysgod-Gegenakte lässt das Todesjahr offen; die Draenog-Altquelle nennt 1688."
+      },
+      {
+        "id": "limwris-draenog",
+        "name": "Limwris Draenog",
+        "title": "Baron des Hauses Draenog 1652–1680",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "cariad-draenog",
+        "name": "Cariad Draenog",
+        "title": "Wegverheiratet an Haus Pendrag",
+        "status": "dead",
+        "notes": "Die ausgearbeitete Pendrag-Gegenakte ist für das Todesjahr kanonisch; die Draenog-Altquelle nennt 1725."
+      },
+      {
+        "id": "ariana-draenog",
+        "name": "Ariana Draenog",
+        "title": "Wegverheiratet an Haus Wylan",
+        "status": "dead",
+        "notes": "Die ausgearbeitete Wylan-Gegenakte ist für das Todesjahr kanonisch; die Draenog-Altquelle nennt 1715."
+      },
+      {
+        "id": "sieffre-draenog",
+        "name": "Sieffre Draenog",
+        "title": "Baron des Hauses Draenog 1680–1704",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "arianwen-draenog",
+        "name": "Arianwen Draenog",
+        "title": "Wegverheiratet an Haus Morfil O'Talsarn",
+        "status": "dead",
+        "notes": "Die ausgearbeitete Morfil-Gegenakte ist für das Todesjahr kanonisch; die Draenog-Altquelle nennt 1729."
+      },
+      {
+        "id": "deiniol-draenog",
+        "name": "Deiniol Draenog",
+        "title": "Baron von Llanforwyn seit 1704",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "gwerful-draenog",
+        "name": "Gwerful Draenog",
+        "title": "Wegverheiratet an Haus Hwyaden",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "banw-draenog",
+        "name": "Banw Draenog",
+        "title": "Wegverheiratet an Haus Tylwyth",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "mathonwy-draenog",
+        "name": "Mathonwy Draenog",
+        "title": "Erster Erbe des Hauses Draenog",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "llwyn-draenog",
+        "name": "Llwyn Draenog",
+        "title": "Wegverheiratet an Haus Brithyll",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "zethyra-draenog",
+        "name": "Zethyra Draenog",
+        "title": "Wegverheiratet an Haus Wivern",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "siriol-draenog",
+        "name": "Siriol Draenog",
+        "title": "Wegverheiratet an Haus Illewod",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "ulysses-1672-wivern",
+        "name": "Ulysses Wivern",
+        "title": "Erster Erbe des Hauses Wivern",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "tarah-draenog",
+        "name": "Tarah Draenog",
+        "title": "Wegverheiratet an Haus Grawn",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "ninian-draenog",
+        "name": "Ninian Draenog",
+        "title": "Zweiter Erbe des Hauses Draenog",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "eluned-draenog",
+        "name": "Eluned Draenog",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "briallen-draenog",
+        "name": "Briallen Draenog",
+        "title": "Wegverheiratet an Haus Gwaedlyd O'Tredegar",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "gower-draenog",
+        "name": "Gower Draenog",
+        "title": "Dritter Erbe des Hauses Draenog",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "arfon-draenog",
+        "name": "Arfon Draenog",
+        "title": "Vierter Erbe des Hauses Draenog",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-wivern",
+    "document": {
+      "id": "haus-wivern",
+      "title": "Haus Wivern O'Coedlyn",
+      "motto": "Gyda chronfa haern i mewn i'r gaeaf.",
+      "description": "Altes Baronshaus von Eichenlicht aus der Handelsstadt Coedlyn in der Grauen Weite.",
+      "emblem": "assets/images/houses/Graue Weite/Eichenlicht/haus-wivern.png",
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "Coedlyn",
+        "barony": "Eichenlicht",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Eichenlicht.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "ulysses-founder-wivern",
+        "name": "Ulysses Wivern",
+        "title": "Gründer und erster Baron des Hauses Wivern",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "ulaeth-founder-wivern",
+        "name": "Ulaeth",
+        "title": "Mitgründerin des Hauses Wivern",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "jowaneth-wivern",
+        "name": "Jowaneth Wivern",
+        "title": "Baron des Hauses Wivern bis 1709",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "guenevere-wivern",
+        "name": "Guenevere Wivern",
+        "title": "Wegverheiratet an Haus Tylwyth",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "islwyn-wivern",
+        "name": "Islwyn Wivern",
+        "title": "Baron des Hauses Wivern seit 1709",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "blodwen-wivern",
+        "name": "Blodwen Wivern",
+        "title": "Wegverheiratet an Haus Morfil O'Talsarn",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "nerys-wivern",
+        "name": "Nerys Wivern",
+        "title": "Wegverheiratet an Haus Grawn",
+        "status": "dead",
+        "notes": "Die ausgearbeitete Grawn-Gegenakte ist für die Lebensdaten kanonisch. Die Wivern-Altquelle nennt abweichend 1658–1702."
+      },
+      {
+        "id": "ulysses-1672-wivern",
+        "name": "Ulysses Wivern",
+        "title": "Erster Erbe des Hauses Wivern",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "arwen-wivern",
+        "name": "Arwen Wivern",
+        "title": "Wegverheiratet an Haus Brithyll",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "zyraline-wivern",
+        "name": "Zyraline Wivern",
+        "title": "Wegverheiratet an Haus Canwyll",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "brynmor-wivern",
+        "name": "Brynmor Wivern",
+        "title": "Zweiter Erbe des Hauses Wivern",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "nolwenn-wivern",
+        "name": "Nolwenn Wivern",
+        "title": "Wegverheiratet an Haus Illygoden O'Tredegar",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "ulfyn-wivern",
+        "name": "Ulfyn Wivern",
+        "title": "Dritter Erbe des Hauses Wivern",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "branek-wivern",
+        "name": "Branek Wivern",
+        "title": "Vierter Erbe des Hauses Wivern",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-morfil",
+    "document": {
+      "id": "haus-morfil",
+      "title": "Haus Morfil O'Talsarn",
+      "motto": "",
+      "description": "Erstes Kadettenhaus der Pysgod und Baronshaus der Hafen- und Schiffbauerstadt Talsarn an der Grauküste.",
+      "emblem": "assets/images/houses/Graue Weite/Grauküste/haus-morfil.png",
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "Talsarn",
+        "barony": "Grauküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Grauküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "trayvion-pysgod",
+        "name": "Trayvion Pysgod",
+        "title": "Gründer des Hauses Morfil",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "murvin-morfil",
+        "name": "Murvin Morfil",
+        "title": "Baron des Hauses Morfil bis 1682",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "braith-morfil",
+        "name": "Braith Morfil",
+        "title": "Wegverheiratet an Haus Tiwna",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "berwyn-morfil",
+        "name": "Berwyn Morfil",
+        "title": "Baron des Hauses Morfil 1682–1707",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "aelwen-morfil",
+        "name": "Aelwen Morfil",
+        "title": "Wegverheiratet an Haus Gwialen",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "arial-morfil",
+        "name": "Arial Morfil",
+        "title": "Wegverheiratet an Haus Pysgod",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "cafael-morfil",
+        "name": "Cafael Morfil",
+        "title": "Baron des Hauses Morfil 1707–1723",
+        "status": "dead",
+        "notes": "Die Ämterliste schreibt einmal Cadfael; Karte und Stammbaumgrafik belegen Cafael."
+      },
+      {
+        "id": "talaith-morfil",
+        "name": "Talaith Morfil",
+        "title": "Wegverheiratet an Haus Arth",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "aneurin-morfil",
+        "name": "Aneurin Morfil",
+        "title": "Baron des Hauses Morfil seit 1723",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "caru-morfil",
+        "name": "Caru Morfil",
+        "title": "Wegverheiratet an Haus Créyr",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "siriol-morfil",
+        "name": "Siriol Morfil",
+        "title": "Wegverheiratet an Haus Skogg",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "bran-morfil",
+        "name": "Bran Morfil",
+        "title": "Erster Erbe des Hauses Morfil",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "carys-morfil",
+        "name": "Carys Morfil",
+        "title": "Unverheiratet",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "mabil-morfil",
+        "name": "Mabil Morfil",
+        "title": "Wegverheiratet an Haus Pawen",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "caraf-morfil",
+        "name": "Caraf Morfil",
+        "title": "Wegverheiratet an Haus Gwaedlyd O'Tredegar",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "alun-morfil",
+        "name": "Alun Morfil",
+        "title": "Zweiter Erbe des Hauses Morfil",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-lyfant-caer-asgwrn",
+    "document": {
+      "id": "haus-lyfant-caer-asgwrn",
+      "title": "Haus Lyfant O'Caer Asgwrn",
+      "motto": "Mwynha’r byd pan fo’r môr, awyr a sêr yn dy amgylchynu.",
+      "description": "Die seit 1720 von Cledwyn primär geführte Ritterfürstenlinie in Caer Asgwrn. Cadwgan und seine Kinder bilden den mitausgewanderten Seitenzweig; Meredydds erloschene Linie verbleibt in Derwyddion.",
+      "emblem": "assets/images/houses/Graue Weite/Silberwald/haus-lyfant.png",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Caer Asgwrn",
+        "barony": "Silberwald",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "folderPath": [
+          "Cenyr",
+          "Graue Weite",
+          "Silberwald",
+          "Skelettküste",
+          "Caer Asgwrn"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Graue Weite/Skelettküste.png",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Silberwald.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "cledwyn-lyfant",
+        "name": "Cledwyn Lyfant",
+        "title": "Ritterfürst von Caer Asgwrn seit 1720 · Begründer der neuen Linie",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "cadwgan-lyfant",
+        "name": "Cadwgan Lyfant",
+        "title": "Mitausgewanderter Seitenzweig in Caer Asgwrn",
+        "status": "dead",
+        "notes": ""
+      },
+      {
+        "id": "rhisiart-lyfant",
+        "name": "Rhisiart Lyfant",
+        "title": "Erster Erbe des Hauses Lyfant",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "bethan-lyfant",
+        "name": "Bethan Lyfant",
+        "title": "Wegverheiratet an Haus Walwrs",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "yale-lyfant",
+        "name": "Yale Lyfant",
+        "title": "Sohn Cadwgans · fortgeführter Caer-Asgwrn-Zweig",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "eilun-llyfant",
+        "name": "Eilun Llyfant",
+        "title": "Wegverheiratet an Haus Morfil",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-dornach",
+    "document": {
+      "id": "haus-dornach",
+      "title": "Clan Dornach",
+      "motto": "",
+      "description": "Vorbereitete Familienakte des antiken Crannath-Geschlechts Dornach aus der Grauen Weite.",
+      "emblem": "assets/images/houses/Graue Weite/Antike Crannath Clans/clan-dornach.png",
+      "houseProfile": {
+        "rankId": "dun-tiarna",
+        "seat": "Ard Ghallon",
+        "barony": "Antike Crannath Clans",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/AntikeIcon.png",
+          "barony": "assets/images/regions/AntikeIcon.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-dornach-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "haus-dornach-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-brathaireann",
+    "document": {
+      "id": "haus-brathaireann",
+      "title": "Clan Brathaireann",
+      "motto": "",
+      "description": "Vorbereitete Familienakte des antiken Crannath-Geschlechts Brathaireann aus der Grauen Weite.",
+      "emblem": "assets/images/houses/Graue Weite/Antike Crannath Clans/clan-brathaireann.png",
+      "houseProfile": {
+        "rankId": "mor-tiarna",
+        "seat": "Mor Mhachair",
+        "barony": "Antike Crannath Clans",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/AntikeIcon.png",
+          "barony": "assets/images/regions/AntikeIcon.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-brathaireann-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "haus-brathaireann-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-tonnmharra",
+    "document": {
+      "id": "haus-tonnmharra",
+      "title": "Clan Tonnmharra",
+      "motto": "",
+      "description": "Vorbereitete Familienakte des antiken Crannath-Geschlechts Tonnmharra aus der Grauen Weite.",
+      "emblem": "assets/images/houses/Graue Weite/Antike Crannath Clans/clan-tonnmharra.png",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Dun Liath",
+        "barony": "Antike Crannath Clans",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/AntikeIcon.png",
+          "barony": "assets/images/regions/AntikeIcon.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-tonnmharra-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "haus-tonnmharra-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "haus-tanwyn",
+    "document": {
+      "id": "haus-tanwyn",
+      "title": "Haus Tanwyn",
+      "motto": "",
+      "description": "Vorbereitete Familienakte des erloschenen Magiergeschlechts Tanwyn aus Llanfyn.",
+      "emblem": "assets/images/houses/Graue Weite/Ausgestorbene Häuser/haus-tanwyn.png",
+      "houseProfile": {
+        "rankId": "unknown",
+        "seat": "",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-tanwyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "status": "alive",
+        "notes": ""
+      },
+      {
+        "id": "haus-tanwyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "status": "alive",
+        "notes": ""
+      }
+    ]
+  }
+]

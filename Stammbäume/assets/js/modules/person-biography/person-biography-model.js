@@ -158,6 +158,7 @@ export function sanitizeBiographyStatsForFirestore(stats) {
 
 export function getPersonBiographyModule(person) {
   const stored = person?.extensions?.[PERSON_BIOGRAPHY_EXTENSION_ID];
+  if (stored === null && Object.hasOwn(person?.extensions || {}, PERSON_BIOGRAPHY_EXTENSION_ID)) return null;
   if (stored?.disabled === true) return null;
   const resolved = globalThis.AleriaBiographyCatalog.resolve(stored && typeof stored === 'object' ? stored : null, {
     worldPersonId: person?.worldPersonId || person?.extensions?.identity?.worldPersonId,

@@ -9,7 +9,7 @@ import {
   AEHRENTAL_HOUSE_EMBLEMS,
   AEHRENTAL_HOUSE_PROFILES
 } from './aehrental-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 import { HOUSE_BAEDD_PORTRAITS } from './house-baedd-portraits.js';

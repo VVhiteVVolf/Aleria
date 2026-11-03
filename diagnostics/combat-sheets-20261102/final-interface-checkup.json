@@ -1,0 +1,89 @@
+{
+  "verified": true,
+  "completedAt": "2026-11-03T00:38:33.374Z",
+  "commit": "15296cfce6cee61550d7319f79ef7e2fb39a9ad3",
+  "release": {
+    "deployId": "6ae92b9472b7db177c8469d6",
+    "commit": "15296cfce6cee61550d7319f79ef7e2fb39a9ad3",
+    "verifiedFiles": 33198,
+    "functions": [
+      "document-publisher",
+      "family-publisher",
+      "imgur-album",
+      "karten-publisher",
+      "wedding-publisher",
+      "world-content-publisher"
+    ],
+    "url": "https://dieweltvonaleria.netlify.app",
+    "verifiedAt": "2026-11-03T00:34:11.080Z"
+  },
+  "tests": {
+    "frontend": 2272,
+    "backend": 333,
+    "combatIntegration": 74,
+    "releaseTasks": 47
+  },
+  "reviewedAboveLevelOne": {
+    "characters": 14,
+    "creatures": 61
+  },
+  "contentGaps": [
+    {
+      "id": "companion-cadfan-ciaran",
+      "name": "Cíaran",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Hund"
+    },
+    {
+      "id": "companion-carys-roisin",
+      "name": "Roisin",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Trywydd–Rhedwyr-Mischling"
+    },
+    {
+      "id": "companion-gwendolyn-alwen",
+      "name": "Alwen",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Rotmilan"
+    },
+    {
+      "id": "companion-halvar-lund",
+      "name": "Lund",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Hest–Tirashan-Mischling"
+    },
+    {
+      "id": "companion-maredudd-hari",
+      "name": "Hari",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Wachhund"
+    },
+    {
+      "id": "companion-sleipnir-skuggi",
+      "name": "Skuggi",
+      "kind": "no-exact-bestiary-profile",
+      "species": "Habicht"
+    }
+  ],
+  "liveUserData": {
+    "verified": true,
+    "checkedAt": "2026-11-03T00:37:02.719Z",
+    "reviewedCombatProfiles": 14,
+    "caralynBiography": true,
+    "biographyIcons": 10,
+    "activeHorseInventoryLink": true,
+    "horseSpecies": "Rhyfel (vermutlich)",
+    "goldfishMentionOnly": true,
+    "silberhirschOnlyOweta": true,
+    "gildasGafyrSignet": true
+  },
+  "production": {
+    "verified": true,
+    "verifiedAt": "2026-11-03T00:37:01.952Z",
+    "commit": "15296cfce6cee61550d7319f79ef7e2fb39a9ad3",
+    "criticalFrontendFiles": 5,
+    "htmlDomEquivalentWithNetlifyPrettyUrls": true,
+    "otherFilesMatchCommittedBytes": true,
+    "origin": "https://dieweltvonaleria.netlify.app"
+  }
+}

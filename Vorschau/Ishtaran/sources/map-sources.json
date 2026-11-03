@@ -1,0 +1,83 @@
+{
+  "country": "Ishtaran",
+  "preparedAt": "2026-11-03",
+  "authorization": "The user supplied the two new maps and explicitly authorized their use in the current task.",
+  "sourceOriginalsRetainedOutsideRepository": true,
+  "oldIshtaranMapUsed": false,
+  "zoomVariant": null,
+  "zoomDecision": "4096-pixel views retain readable original labels and provide sufficient detail for the present map view; no second, larger payload is needed.",
+  "entries": [
+    {
+      "id": "normal",
+      "originalName": "Ishtaran (Normal).png",
+      "originalPath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran (Normal).png",
+      "originalBytes": 83785000,
+      "originalSha256": "d3892c1c9e9603e1ef1f566aa7d17dfdd9e57c9e19fb11b291d92b273391a15c",
+      "originalDimensions": [
+        8192,
+        4698
+      ],
+      "originalMode": "RGBA",
+      "originalUnchanged": true,
+      "originalCopiedIntoRepository": false,
+      "image": "assets/maps/ishtaran-normal.webp",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 3110260,
+      "sha256": "1714cd3a597f14dd70f443e8f33e12619ab71c0fae42fc18ee48350f40496f32",
+      "processing": {
+        "format": "WebP",
+        "maxWidth": 4096,
+        "resampling": "Lanczos",
+        "quality": 90,
+        "method": 6,
+        "aspectRatioPreserved": true,
+        "crop": false,
+        "labelsEdited": false,
+        "boundariesEdited": false,
+        "newAssignments": []
+      }
+    },
+    {
+      "id": "regions",
+      "originalName": "Ishtaran Regionen.png",
+      "originalPath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Regionen.png",
+      "originalBytes": 72314085,
+      "originalSha256": "70041e391f6ceab498f58bcacce5d086fbf36433af73c0534431a0024ea616b9",
+      "originalDimensions": [
+        8192,
+        4698
+      ],
+      "originalMode": "RGBA",
+      "originalUnchanged": true,
+      "originalCopiedIntoRepository": false,
+      "image": "assets/maps/ishtaran-regions.webp",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 2028582,
+      "sha256": "b4b62e63bad4386e5f7a5b451ebb4c2b698a9f9bf48d740efa355b2fecfd2580",
+      "processing": {
+        "format": "WebP",
+        "maxWidth": 4096,
+        "resampling": "Lanczos",
+        "quality": 90,
+        "method": 6,
+        "aspectRatioPreserved": true,
+        "crop": false,
+        "labelsEdited": false,
+        "boundariesEdited": false,
+        "newAssignments": []
+      }
+    }
+  ],
+  "visualReview": {
+    "reviewed": true,
+    "normal": "Grünbraune Landflächen mit gegliederter Küste, weit ins Land reichenden Wasserläufen, größeren Wasserflächen, mehreren Gebirgsgruppen, Hügeln, Felsformationen und verteilten Wäldern. Wolken verdecken Teile der unteren und seitlichen Ränder. Keine Siedlungsnamen sind eingezeichnet.",
+    "regions": "Dieselbe Geografie mit farbig unterlegten Gebietsflächen und roten Grenzlinien. Die gelieferten Bezeichnungen Pascharat und Herrschaft sowie große weiße und kleinere farbig umrandete Ringmarker bleiben unverändert sichtbar.",
+    "interpretationLimit": "Keine eigenen Regionsnamen, Hauszuordnungen, Stadtnamen oder Bedeutungen der einzelnen Marker ergänzt."
+  }
+}

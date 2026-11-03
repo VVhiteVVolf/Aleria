@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-03",
+  "houseId": "haus-tannau",
+  "mode": "built-in-imagegen",
+  "purpose": "Only missing representative civilian house illustration; all nine existing warrior or druid illustrations are preserved",
+  "preset": "fantasy-rpg-character",
+  "referenceRoles": [
+    {
+      "path": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "role": "approved painted figure style, inspected before generation"
+    },
+    {
+      "path": "Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-tannau.png",
+      "role": "house leather and tool heraldry, inspected before generation"
+    }
+  ],
+  "identity": "Unnamed representative leatherworker; no new person record",
+  "source": "C:/Users/fhg_r/.codex/generated_images/01a19e7a-219c-7240-9adb-89ae6e7a2b5f/exec-e948b030-cbb7-455b-bc45-4506fd654280.png",
+  "output": "assets/hausdarstellung-2026-11-03.png",
+  "prompt": "Use case: stylized-concept. Asset type: representative full-body house illustration for the existing fantasy house Tannau, a commoner family of Cerrigarth on the mild, wet, windy west coast of Cenyr. Image 1 is the mandatory STYLE reference only (approved matte house knight); Image 2 is the MOTIF AND COLOR reference only (Tannau's round heraldry showing leather hide, knife and wooden mallet). Create ONE unnamed adult male tanner and leatherworker, calm upright three-quarter standing pose, complete head-to-toe silhouette with comfortable margin, 2:3 portrait. Modest practical coastal craft clothing: soft round dark brown wool cap, muted blue-grey linen shirt with rolled sleeves, plain wool trousers, long chestnut leather work apron with a modest split at the bottom, sturdy brown ankle boots. A small natural tan rolled finished leather hide tucked under his left forearm; right hand relaxed holding one simple short wooden leatherworker's mallet downward. A small sheathed leatherworking knife at his belt. Weathered kind face with a short brown beard, clearly painted eyes, nose and mouth. These are work tools, not weapons or martial equipment. No armour, helmet, noble robes, invented person identity, gold trim, cape, shield, large emblem or extra objects. Match the approved matte hand-painted fantasy figure style: simplified readable large shapes, restrained muted earthy color, soft thin painted contours, sparing soft shading, fine uniform gouache pigment grain. Avoid photorealism, glossy metal, strong black comic outlines, volumetric light or complex texture. Actual transparent PNG background: all outside silhouette and open gaps alpha=0. NO scenery, floor, haze, halo, external shadow, glow, paper, coloured background, border or lettering. Preserve the clean cutout and full boots. The knight's armor and blue heraldry are NOT part of this character design.",
+  "inspection": {
+    "mode": "RGBA",
+    "width": 1024,
+    "height": 1536,
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visualReview": "complete figure, craft clothing, mallet and hide, no armour, uncut boots"
+  }
+}

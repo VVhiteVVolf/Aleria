@@ -1,0 +1,41 @@
+{
+  "source": {
+    "attachmentId": "1c2654c1-4d30-4426-b499-5d8a2d0b2bc6",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "401920d351a5ec8d9f89e31a876cf7e8c48c3fc5e9b5d3855b469e8546b8f326"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-gwythiad",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-gwythiad",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Glyndraith",
+    "currentRankId": "knight"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "64bc216b185b180e735d52a5a5f957f7a30dffbfb32bcb817be53101ddb04640",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die dünne Vorlage bleibt eine vorbereitete Seite; anonyme bestehende Figuren werden nicht als benannte Hausmitglieder ausgearbeitet."
+  ]
+}

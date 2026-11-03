@@ -1,0 +1,36 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-canwyll",
+  "attachmentId": "dbb992e0-dcfd-4ec7-adee-8b8efcc534c2",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "7c55fd5c12426b7f20587430d543eea5b41d31cc6e4f5ccf53fa07a34b94095c",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hauskrieger",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/3b14Ff5.png",
+      "sha256": "43c8160cea83096600f6e9463cdc45bfa5dff5fdd9bf1fde76adeb2c65d21c55",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-canwyll",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-canwyll-family.js",
+    "Stammbäume/assets/js/data/house-canwyll-portraits.js",
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/herrschaft.data.mjs"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true
+}

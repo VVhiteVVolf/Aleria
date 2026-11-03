@@ -1,0 +1,41 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-sliabh",
+  "source": {
+    "attachmentId": "54af552d-c6f4-4fcf-8c2a-c43aa5904977",
+    "file": "animexx-original.html",
+    "sha256": "027e9a186d84334cf1e72f283d2de1282be48fd48b01637bc6dccf1afa6bfcc6",
+    "bytes": 59324,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "ignored source genealogy; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-sliabh"
+  },
+  "biographySourceRevision": 2,
+  "previousFamilySourceRevision": 1,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://64.media.tumblr.com/5404ed2eba76ca6a86ea853af63f63b9/c862763dbd94575a-4e/s1280x1920/ceefea330482bdce802d6979551bf130c3e05248.pnj",
+      "role": "house-illustration",
+      "sha256": "c5dc112f379f21c579efcce8e1135c67f8a075d81c3e5560eb274a6afbf7634b",
+      "bytes": 3070379,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js",
+    "Stammbäume/assets/js/data/house-sliabh-family.js",
+    "Stammbäume/assets/js/data/house-sliabh-portraits.js"
+  ]
+}

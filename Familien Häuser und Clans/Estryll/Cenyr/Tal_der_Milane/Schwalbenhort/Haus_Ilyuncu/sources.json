@@ -1,0 +1,67 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-ilyuncu",
+  "source": {
+    "attachmentId": "82e816ea-be70-41f4-945c-b5cd696a4c68",
+    "file": "animexx-original.html",
+    "sha256": "ef6e8031af31e1cef15f134ea7a69e2f449bfcf49070c2513a0b84d0549cbdb9",
+    "bytes": 61545,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "ignored source genealogy; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-ilyuncu"
+  },
+  "biographySourceRevision": 3,
+  "previousFamilySourceRevision": 2,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/jBJh4iN.png",
+      "role": "house-illustration",
+      "sha256": "b68ceed02e7a4ec7232ec7e57f027d622b89c9ec4541e357799eeca77f3b33f7",
+      "bytes": 223796,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/HM1LyaP.png",
+      "role": "territory-banner",
+      "sha256": "335bfdd4c0526c3341147b9da6316c19522e5ce25154f217443a94302cf94cb6",
+      "bytes": 284408,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 460,
+      "height": 542,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/hofkaplan-reese-original.png",
+      "source": "https://64.media.tumblr.com/b7ec265a4b14b2c791d4c81bba066488/aa837b99612c2ba2-38/s250x400/d1e787d0b8452f6f88c32490f7bcd33cf42ba63f.pnj",
+      "role": "named-office-portrait",
+      "sha256": "0907e52847b031a3052823a1f6862d2903c2902460932a6236213ea9e674206c",
+      "bytes": 29261,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "JPEG",
+      "width": 250,
+      "height": 375,
+      "mode": "RGB"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js",
+    "Stammbäume/assets/js/data/house-ilyuncu-family.js",
+    "Stammbäume/assets/js/data/house-ilyuncu-portraits.js"
+  ]
+}

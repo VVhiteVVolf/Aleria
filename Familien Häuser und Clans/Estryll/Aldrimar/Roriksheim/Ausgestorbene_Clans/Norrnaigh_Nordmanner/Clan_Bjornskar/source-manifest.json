@@ -1,0 +1,80 @@
+{
+  "id": "haus-bjornskar",
+  "source": {
+    "attachmentId": "f976bb7b-2355-4808-b6ea-3297380fa25b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f976bb7b-2355-4808-b6ea-3297380fa25b\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/bjornskar/animexx-original.html",
+    "bytes": 70865,
+    "sha256": "5d2e0d86320c2b65dc09896f135913455598dce33966fc1aae4cbea66fd973cb",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-bjornskar",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-bjornskar",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "bjornskar",
+    "familyId": "haus-bjornskar",
+    "attachmentId": "f976bb7b-2355-4808-b6ea-3297380fa25b",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/U3PJwvg.png",
+    "path": "Stammbäume/assets/images/references/haus-bjornskar/krieger.png",
+    "sourceStyle": "float:right; height:400px; width:267px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 257709,
+    "sha256": "2a8d54f0bb27139a18db56d5fc3ccfe979ffa04b901dc18dc9ab9a30dc2a33ff",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-bjornskar",
+    "url": "https://i.imgur.com/U3PJwvg.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-bjornskar/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Krieger in Bärenfell mit Axt; trotz kopierter Ulvasar-Überschrift eindeutig eigenes SRC.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-4.png"
+  },
+  "decisions": [
+    "Die Caption Der Ulvasar Clan ist ein eindeutiger Vorlagenrest: Der gesamte Fließtext handelt von Bjornskar. Bestehende Identität haus-bjornskar und Clan Bjornskar verwenden.",
+    "Historische Registergruppe und technische active-Hausknoten widersprechen sich wie bei den übrigen antiken Platzhalterakten. Keine Status- oder Graphänderung vornehmen.",
+    "Klangheim ist in der Quelle ein zeitweiliges historisches Machtzentrum, kein heutiger Sitz des gesamten ausgestorbenen Clans.",
+    "Religiöser Fanatismus, Kriegszüge und Wolfsymbolik als historische Überlieferung erhalten. Keine neuen Fähigkeiten, Kreaturen oder heutige Gemeinschaft aus bildhafter Sprache ableiten.",
+    "Die Formulierung bis zum letzten Mann ist eine absolute Vernichtungserzählung, kein genealogischer Nachweis sämtlicher Angehöriger. Die empfohlene Fassung benennt die Niederlage und das Ende der Herrschaft neutral.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

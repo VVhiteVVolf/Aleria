@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-03",
+  "tool": "image_gen.imagegen (built-in)",
+  "preset": "anime-scene-portrait",
+  "promptFile": "image-prompt.txt",
+  "asset": "AleriaAlmanach/assets/groups/oweta-quartett/mittagsrast-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "sha256": "c1f297afc2c142906033c07e802dbc018eb6aa802c4f88fbf1650f0126a9fc3e",
+  "references": [
+    "Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+    "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/rianna-wyrm-ruestung-begleiter.png",
+    "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/lefraye-gafyr-ruestung-begleiter.png",
+    "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Caralyn Chwedonol/Referenzen/caralyn-chwedlonol.jpg",
+    "references/heulwen.jpeg"
+  ],
+  "additionalViewedReference": "references/eure-hufigkeit.png",
+  "visualReview": {
+    "women": 4,
+    "horses": 4,
+    "cats": 1,
+    "thrushes": 1,
+    "goldfish": 0,
+    "daylight": "midday",
+    "identityHairstylesPreserved": true
+  }
+}

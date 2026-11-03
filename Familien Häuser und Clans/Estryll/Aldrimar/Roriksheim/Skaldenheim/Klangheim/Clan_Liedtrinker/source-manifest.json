@@ -1,0 +1,47 @@
+{
+  "id": "haus-liedtrinker",
+  "source": null,
+  "authority": {
+    "familyId": "haus-liedtrinker",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-brathfengr",
+      "liegeHouseName": "Clan Brathfengr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-liedtrinker",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "liedtrinker",
+    "id": "haus-liedtrinker",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-a83d824d-4797-4d28-b531-24e8e8c9acaf.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-liedtrinker/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "preset": "fantasy-rpg-character",
+    "promptManifest": "diagnostics/roriksheim-clans-20261103/image-prompts.json",
+    "sha256": "09396bf473466ce4d5908abb2a00a382e11fb91e55dc9bdc9c8ef6a8392f74e4"
+  },
+  "decisions": [
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

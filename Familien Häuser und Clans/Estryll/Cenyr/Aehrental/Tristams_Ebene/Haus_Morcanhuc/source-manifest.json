@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "e206d9fc-fd95-43f8-974a-061440ff8789",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "b710c376bbb09518b6f3989c1222b218fbbea032da07cc3e78b3218fc2c5268c"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-morcanhuc",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-morcanhuc",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 1,
+    "currentSeat": "Glyndraith",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/tnbIXeM.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "d06a95e7fad82d95cad888b1ea7ee764037c8e423eb170493cb7dabc1cfe4cf7",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Eine versehentlich mit Marchog beschriftete Besitzpassage wurde nicht übernommen."
+  ]
+}

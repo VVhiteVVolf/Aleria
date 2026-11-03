@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 3,
+  "createdAt": "2026-11-03",
+  "status": "generated-with-explicit-retentions",
+  "generationAllowed": true,
+  "scope": "13 vollständig neue Figuren für pool-14 bis pool-26. V1/V2 werden nicht als Bildreferenz verwendet.",
+  "globalDirection": {
+    "ageRange": [
+      20,
+      30
+    ],
+    "physique": "Ausschließlich schlanke oder athletische junge Erwachsene mit klarer Taille. Auch schwere Rüstung folgt einem trainierten Körper, nicht einer breiten oder fülligen Statur.",
+    "faces": "Eigenständige junge erwachsene Gesichter, verschiedene Gesichtsproportionen, Haartrachten, Hauttöne und ruhige Ausdrücke. Keine grauen Haare, Altersfalten oder älteren Gesichter.",
+    "helmets": "Nur traditionelle, gewöhnlich konstruierte Kumanen-Kegelhelme mit Nasal/Kette, osmanische Mighfer mit üblichen Flutungen oder Turbanwicklung, persische Kulah Khud mit Halbkugel/kurzem Dorn/Nasal/Kette oder Janitscharen-Börk.",
+    "helmetForbidden": [
+      "Tierkopf oder Tiergesicht",
+      "Hörner",
+      "Geweih",
+      "Flammenform",
+      "Sternbauteile",
+      "Brücken-/Turmaufbauten",
+      "Ankerflunken",
+      "radiale Wappen-Sondergeometrie",
+      "gegenständliche Wappenzier auf dem Helm",
+      "motivabhängiger Umbau der normalen Helmform"
+    ],
+    "helmetDecoration": "Herkömmliche Metallkanten, schmale einfache Zierbänder und normale konstruktive Rippung sind zulässig. Kein Wappenzeichen und kein motivabhängiger Aufsatz am Helm.",
+    "heraldicDesign": "Farben, großzügig lesbare gemalte oder gestickte Wappenmotive, Stoffmuster und individuelle Rüstungs-/Gewandschnitte gestalten die Figur unterhalb des Helms. Keine schwebende Wappengrafik.",
+    "paintingStyle": "Freigegebene matte Aleria-Pigmentmalerei mit dünnen weichen Konturen; ruhige vollständige Ganzfigur, 2:3, ideal 1024 × 1536, echter transparenter PNG-Hintergrund.",
+    "referencePolicy": "Freigegebener Hausritter nur für Malstil + das konkrete Wappen nur für Farben/Motive + bei Reitern tatsächliche Breedreferenz. Keine generische Klassenfigur und keine verworfene V1/V2-Figur als Bildreferenz.",
+    "contentLimits": "Keine Feuerwaffen, keine neuen Klassenmechaniken, Personenbiografien, Namen, Ränge, Häuser oder Sitze. Keine Landschaft, Bodenfläche oder äußeren Schatten.",
+    "helmetCombinationUpdate": "Latest user explicitly permits normal Cuman helmet plus Janissary Bork combinations. Applied only to pool-25 and pool-26 before their generation."
+  },
+  "records": [
+    {
+      "id": "pool-14",
+      "classId": "lewent",
+      "age": 24,
+      "gender": "female",
+      "physique": "Schlank-athletisch, kräftige Unterarme, schmale Taille und lange Beine.",
+      "face": "Junges kantiges erwachsenes Gesicht, mittelbrauner Hautton, breite dunkle Brauen, dunkle Augen und ein gerader schwarzer Zopf.",
+      "helmet": {
+        "type": "Ottoman Mighfer",
+        "form": "Gewöhnliche niedrige konische Stahlhaube mit schmalem Nasenbügel, normalen beweglichen Wangenplatten und kurzem Kettennackenschutz.",
+        "coverage": "Gesicht offen",
+        "finish": "Mattes graues Eisen mit schlichter heller Kante; keine Wappenform am Helm."
+      },
+      "palette": "Gedämpftes Dunkelrot, Silberweiß, dunkelbraunes Leder, anthrazitfarbenes Eisen",
+      "armorAndCloth": "Leichte dunkelrote maritime Lederbrigantine mit wenigen silbernen Schuppen, darunter lange helle Leinenärmel. Kurzer vorn geteilter Überwurf, schmale Wickelgamaschen und weiche braune Stiefel. Deutliche Taille statt massigem Brustkörper.",
+      "motifPlacement": "Gut lesbarer silberner Anker als flache Einlage auf der roten Brust und dezentes Tau-Stichmuster an den Gewandkanten. Keine Ankerteile an Helm oder Schulterkontur.",
+      "equipment": [
+        "Kurzer Kompositbogen",
+        "Gegürteter Krummsäbel",
+        "Pfeilköcher"
+      ],
+      "pose": "Ruhige rechte Dreiviertelansicht, Bogen links senkrecht neben dem Körper, rechte Hand entspannt am Köcherriemen. Füße leicht versetzt, kein Zielen.",
+      "mount": null,
+      "brief": "Junge athletische Marinekriegerin mit traditionellem offenem Mighfer und eigenständigem kurzem rotem Schuppen-/Lederaufbau. Das Ankerwappen prägt Brustgestaltung und textile Bordüren; Kopf und Helm bleiben normal. Vollständiger Bogen, Säbel und Köcher, beide Stiefel sichtbar."
+    },
+    {
+      "id": "pool-15",
+      "classId": "nefer",
+      "age": 22,
+      "gender": "male",
+      "physique": "Trainierter junger Soldat mit mäßig breiten Schultern, flachem Bauch und schlanker Taille.",
+      "face": "Junges rundliches, aber schlankes bartloses Gesicht, warmer heller Hautton, gerade Brauen, dunkles kurzes Haar und dezente Sommersprossen.",
+      "helmet": {
+        "type": "Cuman conical nasal helmet",
+        "form": "Traditioneller einfacher Kegelhelm aus normalen Metallsegmenten mit geradem Nasenbügel und kurzen Kettenwangen.",
+        "coverage": "Mund, Kinn und Wangen weitgehend offen",
+        "finish": "Mattes Eisen, schmaler ungemusterter Messingrand; keine Ährenrippen oder Pflanzen am Helm."
+      },
+      "palette": "Braunoliv, gedämpftes Gold, braunes Leder, graue Kette",
+      "armorAndCloth": "Olivenfarbene Steppärmel unter kurzem Kettenhemd, darüber wenige schmale horizontal geschichtete Lederlamellen an Brust und Hüfte. Goldene Stoffkanten und einfacher Ledergurt; praktische Infanteriesilhouette.",
+      "motifPlacement": "Drei goldene gebündelte Ähren deutlich auf dem braunoliven Rundschild; kleine Ährenstickerei an den äußeren Ärmelkanten. Normaler unbemalter Helm.",
+      "equipment": [
+        "Speer",
+        "Rundschild",
+        "Gegürteter Krummsäbel"
+      ],
+      "pose": "Fast frontal, Kopf leicht nach links. Speer aufrecht dicht an der rechten Schulter, Schild entspannt etwas tiefer am linken Unterarm. Beide Füße sichtbar.",
+      "mount": null,
+      "brief": "Junger bartloser Ähren-Nefer mit schlichter traditioneller Kumanenhaube, kurzen Ketten- und Lederlagen und klarer Taille. Das große Schildzeichen und die oliv-goldenen Textilien bestimmen den Wappenbezug; kein ornamentaler Sonderhelm."
+    },
+    {
+      "id": "pool-16",
+      "classId": "nizet",
+      "age": 27,
+      "gender": "female",
+      "physique": "Groß und sehnig-athletisch, lange Arme, gerade Haltung und schmale Taille.",
+      "face": "Junges erwachsenes längliches Gesicht mit hohen Wangenknochen, gerader Nase, dunklen Augen und einer langen schwarzen Flechte über einer Schulter.",
+      "helmet": {
+        "type": "Persian Kulah Khud",
+        "form": "Traditionelle niedrige halbkugelige Stahlhaube mit kurzem gewöhnlichem Scheiteldorn, geradem verstellbarem Nasal und feinem Kettenaventail.",
+        "coverage": "Augen, Wangen und Mund offen",
+        "finish": "Mattes Silber mit schlichtem dunkelblauem Untertuch. Keine Bogenstirn, Türme oder Brückenpfeiler am Helm."
+      },
+      "palette": "Marineblau, Elfenbein, mattes Silber und wenig Dunkelbraun",
+      "armorAndCloth": "Taillierte blaue Lamellenweste über elfenbeinfarbenen Stoffärmeln mit kurzen Ketteneinsätzen, darunter ein langer geteilter blauer Rock. Kleine normale Schulterkappen und sauber gefasste helle Stoffkanten.",
+      "motifPlacement": "Weiße einbogige Brücke gut lesbar auf einer blauen Brustbahn; bogenförmige textile Bordüren am unteren Rock. Die Stahlhaube und Schulterkappen bleiben gewöhnlich konstruiert.",
+      "equipment": [
+        "Langstielige orientalische Glevenwaffe"
+      ],
+      "pose": "Ruhige linke Dreiviertelansicht; lange Waffe leicht diagonal neben dem Körper, beide Hände in verschiedenen Höhen am zusammenhängenden Schaft. Ganze Klinge und Schaftabschluss sichtbar.",
+      "mount": null,
+      "brief": "Junge athletische Stangenkämpferin in schmaler blauer Lamellenrüstung mit echter weißer Brückenheraldik auf Stoff. Gewöhnlicher persischer Kulah Khud, keine gebaute Brückenkrone. Die lange Gleve bleibt ihre einzige gehaltene Waffe."
+    },
+    {
+      "id": "pool-17",
+      "classId": "aschik",
+      "age": 21,
+      "gender": "male",
+      "physique": "Schlanker erwachsener Fechter mit schmalen Schultern, trainierten Armen und deutlicher Taille.",
+      "face": "Junges schmales bartloses Gesicht, dunkle Locken im Nacken, lange Nase und aufmerksamer leicht schräger Blick.",
+      "helmet": {
+        "type": "Ottoman turban Mighfer",
+        "form": "Kleine gewöhnliche stählerne Haube mit einfacher elfenbeinfarbener Turbanwicklung und schmalem geradem Nasenbügel.",
+        "coverage": "Gesicht offen",
+        "finish": "Schlichtes mattes Eisen unter dem Tuch; grüner schmaler Stoffsaum. Keine Speichen, radialen Segmente oder Radzier am Helm."
+      },
+      "palette": "Elfenbein, gedecktes Rot, Dunkelgrün und matte Bronze",
+      "armorAndCloth": "Asymmetrisch geschlossene kurze elfenbeinfarbene Jacke über roter fitted Steppweste, grünes schmales Schultertuch, leichter Ledergurt und schlichte bronzene Armschienen. Schmale dunkle Stiefel, keine schwere Brustplatte.",
+      "motifPlacement": "Ein rotes Rad mit acht klaren Speichen auf der sichtbaren hellen Brustseite; dezente rote Linien in der textilen Bordüre. Gewöhnliche leichte Kappe ohne Motivgeometrie.",
+      "equipment": [
+        "Ein gezogener Krummsäbel",
+        "Gegürteter Dolch",
+        "Kleine Langhalslaute am Rücken"
+      ],
+      "pose": "Ruhiger schmaler Kontrapost nach links. Säbel locker neben dem rechten Bein nach unten, linke Hand am Gürtel; Lautenhals und Teil des Korpus hinter der Schulter sichtbar.",
+      "mount": null,
+      "brief": "Junger athletischer Rad-Aschik mit leichter traditioneller Turbanhaube, kurzem mehrlagigem Jackenschnitt und sichtbarem Instrument am Rücken. Erwachsener poetischer Fechter, kein wohlbeleibter Höfling."
+    },
+    {
+      "id": "pool-18",
+      "classId": "derwisch",
+      "age": 25,
+      "gender": "male",
+      "physique": "Schlank-muskulös, lange Beine, schmale Taille und sehnige Unterarme.",
+      "face": "Junges erwachsenes ovales Gesicht, markante gerade Brauen, kurzer dunkler Bartschatten und wache Augen; keine Altersfalten.",
+      "helmet": {
+        "type": "Janissary Bork",
+        "form": "Traditionelle hohe cremefarbene Filz-Börk mit nach hinten fallender Stoffbahn und normalem dunkelrotem Stirnband.",
+        "coverage": "Gesicht vollständig offen",
+        "finish": "Gewöhnlicher glatter Filzaufbau ohne Metallflammen, Motivkrone oder spezielle Sehschlitze."
+      },
+      "palette": "Schwarzblau, Dunkelrot, altes Gold und wenig graues Eisen",
+      "armorAndCloth": "Schmale schwarzblaue Wickelweste mit zurückhaltenden normalen Metallplättchen über gefüttertem Stoff, lange rote seitliche Gewandbahnen und schlichte goldene Kanten. Keine flammenförmigen Panzerplatten.",
+      "motifPlacement": "Goldene Feuerschale mit stilisierten Flammen deutlich auf dem oberen schwarzen Bruststoff, ergänzt durch flache goldene Pflanzenbordüre. Motiv bleibt Malerei/Stickerei, kein echter Feuereffekt.",
+      "equipment": [
+        "Ein zweihändig geführter großer Krummsäbel"
+      ],
+      "pose": "Ruhige rechte Dreiviertelstellung. Beide Hände greifen plausibel den langen Griff; Klinge zeigt leicht neben den Körper nach unten. Kein Angriff und keine zweite gezogene Waffe.",
+      "mount": null,
+      "brief": "Junger athletischer Derwisch mit normaler heller Janitscharen-Börk und dunkler körpernaher Wickelrüstung. Feuerschalenheraldik auf Stoff, gewöhnlicher Helm; zweihändiger Säbel als eigenständige Waffenvariante."
+    },
+    {
+      "id": "pool-19",
+      "classId": "keman",
+      "age": 23,
+      "gender": "female",
+      "physique": "Schlanke sportliche Reiterin mit aufrechter Haltung und kräftigen, aber schmalen Armen.",
+      "face": "Junges erwachsenes Gesicht mit breitem Augenabstand, geraden dunklen Brauen, leicht gebräunter Haut und langem dunklem Zopf.",
+      "helmet": {
+        "type": "Cuman conical nasal helmet",
+        "form": "Traditioneller schlanker Kumanen-Kegelhelm mit gewöhnlichem geradem Nasal und kurzem Kettennackenschutz.",
+        "coverage": "Gesicht offen",
+        "finish": "Mattes Silber, schmale rote Stoffunterlage. Keine Hörner, kein Geweih, keine Tierform und keine tierischen Helmrippen."
+      },
+      "palette": "Blaugrün, Silberweiß, schmale dunkelrote Kanten und braunes Leder",
+      "armorAndCloth": "Kurzer geteilter blaugrüner Reitkaftan mit wenigen normalen Silberlamellen an oberer Brust und Schultern, roten Stoffkanten und leichten Lederstulpen. Beweglicher schmaler Aufbau ohne schweres Ganzkörperbarding.",
+      "motifPlacement": "Silberner Hirsch mit Geweih gut lesbar ausschließlich auf der blaugrünen Satteldecke; kleine pflanzliche Silberstickerei am Reitrock. Der Helm bleibt vollkommen gewöhnlich.",
+      "equipment": [
+        "Kurzer Kompositbogen",
+        "Gegürteter Krummsäbel",
+        "Sattelköcher"
+      ],
+      "pose": "Ruhiger linker Dreiviertelstand des Pferdes. Bogen entspannt quer über den Knien, eine Hand am Griff und die andere an den tief gehaltenen Zügeln; kein Schuss.",
+      "mount": {
+        "name": "Sarkal",
+        "href": "../../Bestiarium/tiere/pferde/sarkal/index.html",
+        "coat": "Dunkelbraun mit schwarzer Mähne und schmalem weißem Stirnzeichen",
+        "build": "Hochgewachsen, sehnig, tiefe Brust, lange trockene Beine",
+        "pose": "Ruhig nach links, vier vollständige Beine und Hufe sichtbar"
+      },
+      "brief": "Junge athletische Hirsch-Keman auf einem braunen Sarkal mit teal-silbernen leichten Reittextilien. Das Geweih bleibt Teil des gemalten Wappens, niemals Teil des Helms. Klassischer Kumanenhelm, vollständiges Pferd und klare Bogenhaltung."
+    },
+    {
+      "id": "pool-20",
+      "classId": "ghulam",
+      "age": 28,
+      "gender": "male",
+      "physique": "Athletischer breitschultriger junger Mann mit V-förmigem trainiertem Oberkörper, klar schmaler Taille und kräftigen langen Beinen; keine gedrungene oder füllige Statur.",
+      "face": "Junges quadratisches Gesicht, glatte Haut, dunkle Augen und kurz gepflegter schwarzer Bartschatten. Gesicht gut sichtbar.",
+      "helmet": {
+        "type": "Ottoman fluted Mighfer",
+        "form": "Traditioneller osmanischer Mighfer mit gewöhnlicher Flutung, geradem Nasal, kleinen normalen Wangenklappen und Kettenaventail.",
+        "coverage": "Junge Gesichtszüge sichtbar",
+        "finish": "Geschwärztes Eisen mit schlichter heller Kante. Keine Widderform, Hörner, Spiralflanken oder Tiermaske."
+      },
+      "palette": "Schwarzrot, Elfenbeinweiß, mattes Anthraziteisen und wenige blaue Schmucknieten",
+      "armorAndCloth": "Schwere, aber taillierte Ketten-/Lamellenrüstung mit normalen horizontalen Eisenreihen, schmalem roten Gürtel und längerem geteiltem Waffenrock. Klare Schultern und flacher Bauch; Gewicht durch Material, nicht Körperfülle.",
+      "motifPlacement": "Weißer Widderkopf auf einem breiten roten Bruststoffpanel und kleine weiße geschwungene Einlagen auf den normalen Armschienen; keine vorspringenden Hörner an Rüstung oder Helm.",
+      "equipment": [
+        "Ein kurzer ruhender Kettenmorgenstern"
+      ],
+      "pose": "Ruhige fast frontale Stellung, Beine leicht versetzt. Ein Griff in der rechten Hand; kurze senkrechte Kette und genau eine Kugel hängen neben dem Bein. Linker Arm entspannt.",
+      "mount": null,
+      "brief": "Junger athletischer schwerer Widder-Ghulam mit schmaler Taille, sichtbarem jungen Gesicht und gewöhnlichem osmanischem Mighfer. Die Widderheraldik liegt auf Stoff; weder Körper noch Helm werden zu einer massigen Widdergestalt."
+    },
+    {
+      "id": "pool-21",
+      "classId": "sipahi",
+      "age": 26,
+      "gender": "male",
+      "physique": "Großer schlank-athletischer junger Reiter mit gerader Haltung und langen Gliedmaßen.",
+      "face": "Junges warmbraunes Gesicht mit hoher Stirn, gerader Nase, klarer bartloser Kinnlinie und kurzen dunklen Haaren.",
+      "helmet": {
+        "type": "Ottoman turban Mighfer",
+        "form": "Traditionelle konische Stahlhaube mit weißer Stoffwicklung, normalem geradem Nasenbügel und kurzem Nackenkettenschutz.",
+        "coverage": "Gesicht offen",
+        "finish": "Mattes Silber und gewöhnliche schmale Goldkante. Keine acht Sternrippen, Sternspitzen, Strahlensegmente oder Motivgeometrie am Helm."
+      },
+      "palette": "Dunkelblau, matte Goldkanten, Silbergrau und dunkles Leder",
+      "armorAndCloth": "Taillierter silberner Lamellenharnisch mit normalen schmalen Plattenreihen über dunkelblauem Kaftan, kurze geteilte Reitbahnen und schmaler Gürtel. Kein sternförmiger Metallbrustpanzer.",
+      "motifPlacement": "Gut lesbarer goldener achtzackiger Stern auf dunkelblauem Bruststoff und einmal auf der Satteldecke; flache gemalte oder gestickte Heraldik.",
+      "equipment": [
+        "Orientalische Lanze",
+        "Gegürteter Krummsäbel"
+      ],
+      "pose": "Pferd ruhig nach rechts, Kopf leicht zum Betrachter. Reiter aufrecht; Lanze dicht neben der Schulter, Zügel in der anderen Hand tief am Sattel. Vollständige Spitze und Schaftabschluss.",
+      "mount": {
+        "name": "Sarkal",
+        "href": "../../Bestiarium/tiere/pferde/sarkal/index.html",
+        "coat": "Helles rotbraun-weißes Stichelhaar mit kastanienbrauner Mähne",
+        "build": "Sehniges hohes Kriegspferd, tiefe Brust und trockene Beine",
+        "pose": "Ruhiger Stand nach rechts mit vier sichtbaren vollständigen Hufen"
+      },
+      "brief": "Junger athletischer Stern-Sipahi in reich gefasster, aber normal konstruierter Reiterlamelle auf hellem rotem Sarkal. Der Stern bleibt textile Heraldik, die Turbanhaube bleibt traditionell und ohne Sonderform."
+    },
+    {
+      "id": "pool-22",
+      "classId": "derwisch",
+      "age": 24,
+      "gender": "female",
+      "physique": "Schlank-athletische erwachsene Schwertkämpferin mit langen Armen und schmaler Taille.",
+      "face": "Junges erwachsenes schmales Gesicht, dunkle mandelförmige Augen, volle glatte Stirn und ein seitlich geflochtener schwarzer Zopf.",
+      "helmet": {
+        "type": "Persian Kulah Khud",
+        "form": "Gewöhnlicher halbkugeliger Kulah Khud mit kurzem Scheiteldorn, geradem Nasal und locker fallendem Kettennackenschutz.",
+        "coverage": "Gesicht offen",
+        "finish": "Mattes Silber mit schlichtem grünem Untertuch. Kein säbelförmiger Stirnreif, keine Wellenkonstruktion oder Fantasygeometrie am Helm."
+      },
+      "palette": "Gedämpftes Grün, Elfenbein, Dunkelrot und mattes Silber",
+      "armorAndCloth": "Körpernaher langer grüner Wickelrock mit roten stofflichen Wellenborten, kurzen normalen Kettenärmeln und schlichten silbernen Unterarmplatten. Ein kurzer heller Schulterstoff fällt asymmetrisch nach hinten.",
+      "motifPlacement": "Weiße gesenkte Klinge über rotem Flussband deutlich auf einer breiten grünen Vorderbahn; die Wellen bleiben textile Muster.",
+      "equipment": [
+        "Genau zwei Krummsäbel"
+      ],
+      "pose": "Ruhige Drehung nach rechts, beide Füße am Boden. Ein Säbel locker diagonal vor dem unteren Oberkörper, der andere neben dem äußeren Bein nach unten; keine Klinge auf der Schulter und kein Angriff.",
+      "mount": null,
+      "brief": "Junge athletische Derwisch mit traditionellem persischem Helm, zwei klar getrennten Säbeln und eigenständiger grüner Wickelkleidung. Das rote Flussband und die weiße Klinge bleiben große lesbare Stoffheraldik."
+    },
+    {
+      "id": "pool-23",
+      "classId": "nefer",
+      "age": 29,
+      "gender": "male",
+      "physique": "Großer athletischer junger Soldat mit flachem Bauch, kräftigen Beinen und schmalem Gürtelbereich.",
+      "face": "Junges markantes Gesicht mit geradem Mund, kurzer schwarzer Kinnbartspitze, dunklen Brauen und schmaler gerader Nase. Keine grauen Haare oder Hängeaugen.",
+      "helmet": {
+        "type": "Cuman conical nasal helmet",
+        "form": "Traditioneller etwas höherer Kumanen-Kegelhelm mit einfachem Nasal, kurzen Kettenwangen und schlichtem dunkelblauem Stoff am Helmrand.",
+        "coverage": "Mund und Kinn offen",
+        "finish": "Mattes Eisen, glatte normale Kappe. Keine Zinnen, Turmformen, Stufenbauten oder Festungsbauteile am Helm."
+      },
+      "palette": "Elfenbein, Ziegelrot, Blau und graues Eisen",
+      "armorAndCloth": "Taillierte rote Brigantine mit kleinen normalen rechteckigen Innenplatten über längerem elfenbeinfarbenem Waffenrock, kurze blaue Schulterbahn und schmaler Kettenschal. Knielange geteilte Stoffbahnen und feste schlanke Stiefel.",
+      "motifPlacement": "Rote zweiturmige Festung groß auf dem elfenbeinfarbenen Rundschild; kleine rote Bordüre auf der hellen Stofffront. Keine gebaute Burg an Körper oder Kopf.",
+      "equipment": [
+        "Speer",
+        "Rundschild",
+        "Gegürteter Krummsäbel"
+      ],
+      "pose": "Ruhige linke Dreiviertelstellung, Speer senkrecht etwas hinter der rechten Schulter, Schild leicht zum Betrachter gewendet. Beide Stiefel frei sichtbar.",
+      "mount": null,
+      "brief": "Junger athletischer Festungs-Nefer in individuell geschnittener roter Brigantine und hellem Waffenrock. Traditioneller hoher Nasalhelm ohne Festungssonderform; großer runder Schild als klarer Träger der roten Heraldik."
+    },
+    {
+      "id": "pool-24",
+      "classId": "keman",
+      "age": 22,
+      "gender": "male",
+      "physique": "Sehr schlanker, trainierter erwachsener Bogenschütze mit langen Beinen und schmalem Oberkörper.",
+      "face": "Junges erwachsenes dunkelbraunes Gesicht, lange schmale Nase, bartlose Kinnlinie und dunkles lockiges Haar in einem tiefen kurzen Zopf.",
+      "helmet": {
+        "type": "Persian Kulah Khud",
+        "form": "Niedriger gewöhnlicher Kulah Khud mit kleiner Halbkugel, kurzem Dorn, geradem Nasal und leichtem Kettennacken.",
+        "coverage": "Gesicht offen",
+        "finish": "Mattes Eisen mit schmalem Goldrand. Keine Ohrenform, Hundemaske, nach hinten gezogenen Fantasyflügel oder motivabhängigen Helmteile."
+      },
+      "palette": "Fast schwarzes Waldgrün, mattes Gold, braunes Leder und wenig Elfenbein",
+      "armorAndCloth": "Sehr leichte taillierte dunkelgrüne Lederweste über langen hellen Stoffärmeln, geteilter langer Reitrock und schmale goldene Stoffkanten. Wenige gewöhnliche Lederstulpen, keine schwere Brustplatte.",
+      "motifPlacement": "Goldener Windhund gut lesbar auf der schwarzgrünen Satteldecke; flache schlanke Goldstickerei am Reitrock. Keine Tierform am Helm.",
+      "equipment": [
+        "Kurzer Kompositbogen",
+        "Kleiner Sattelköcher",
+        "Gegürteter Krummsäbel"
+      ],
+      "pose": "Ruhiger linker Dreiviertelstand des Pferdes, Reiter leicht zum Betrachter gewandt. Bogen senkrecht auf der Außenseite entspannt getragen, andere Hand an den Zügeln.",
+      "mount": {
+        "name": "Shahzad",
+        "href": "../../Bestiarium/tiere/pferde/shahzad/index.html",
+        "coat": "Honiggold mit hellerer goldener Mähne",
+        "build": "Leicht, hochbeinig, elegant, schmaler Brustkorb und feine harte Hufe; wenig Reitergewicht und kein schweres Barding",
+        "pose": "Ruhiger Stand nach links, vier vollständige Beine und Hufe sichtbar",
+        "reason": "Im Nutzerauftrag erlaubte seltene Alternative zum überwiegenden Sarkal, passend zu einem besonders leichten Keman"
+      },
+      "brief": "Junger schlanker erwachsener Windhund-Keman auf honiggoldenem leichtem Shahzad, mit gewöhnlicher persischer Stahlhaube und dunkelgrüner leichter Reitkleidung. Das Tiermotiv bleibt Sattelstickerei, nicht Helmkonstruktion."
+    },
+    {
+      "id": "pool-25",
+      "classId": "lewent",
+      "age": 26,
+      "gender": "female",
+      "physique": "Sportliche schlanke erwachsene Marinekriegerin mit trainierten Schultern und schmaler Taille.",
+      "face": "Junges ovales Gesicht, heller gebräunter Hautton, breite dunkle Brauen, braune Augen und straff geflochtenes dunkles Haar.",
+      "helmet": {
+        "type": "Cuman helmet with Janissary Bork",
+        "form": "Ein einziges plausibel kombiniertes Kopfzeug: schlanke normale kumanische Stahlkegelhaube mit geradem Nasal und kurzem Kettenaventail, dazu ein weißer Janitscharen-Filzreif mit blauem Stirnband und einer normal großen nach hinten gefalteten weißen Börk-Bahn. Die gewöhnliche Stahlkappe bleibt vorn sichtbar; keine zwei übereinandergestapelten Riesenhüte.",
+        "coverage": "Junges Gesicht vollständig offen",
+        "finish": "Mattes Silber, weißer Filz und schlichtes blaues Band; normale Bauteile ohne Motivform."
+      },
+      "palette": "Gedecktes Meeresblau, Elfenbeinweiß, Bronze und Dunkelbraun",
+      "armorAndCloth": "Kurzer blauer Lederplattenüberwurf über lockerem hellem Leinen, schmale bronzene Unterarmschienen, weiße asymmetrische Schulterbahn und feste weiche Stiefel. Klar leichter als Infanterie oder Reiterlamellen.",
+      "motifPlacement": "Weißer Segler mit Dreieckssegel großzügig auf der blauen Brustseite; schmale weiße Wellenstickerei auf dem unteren Stoff. Helm und Metallteile bleiben gewöhnlich.",
+      "equipment": [
+        "Kurzer Bogen",
+        "Gegürteter Krummsäbel",
+        "Pfeilköcher"
+      ],
+      "pose": "Ruhige leichte hintere Dreiviertelansicht, Kopf zum Betrachter. Bogen senkrecht seitlich am Bein, freie Hand ruhig am Gürtel. Keine Enterbewegung.",
+      "mount": null,
+      "brief": "Junge athletische Segelschiff-Lewent mit plausibel kombiniertem gewöhnlichem Kumanen-Stahlhelm und weiß-blauer Janitscharen-Börk. Junges Gesicht offen; leichte blaue Leder-/Leinenschichten und weiße Marineheraldik. Keine Motive als Helmbauteile.",
+      "headgearUserCorrection": "Latest user steering: combine the Cuman helmet with a Janissary hat for some figures; apply to these not-yet-generated pool-25 and pool-26 only."
+    },
+    {
+      "id": "pool-26",
+      "classId": "aschik",
+      "age": 29,
+      "gender": "female",
+      "physique": "Schlanke athletische erwachsene Musikerin mit klarer Taille und langen Armen; auch der reichere Mantel folgt einer flachen schmalen Körperform.",
+      "face": "Junges erwachsenes warmbraunes Gesicht mit hohen Wangenknochen, mandelförmigen dunklen Augen und glattem schwarzem Haar als schmale Flechte.",
+      "helmet": {
+        "type": "Cuman helmet with Janissary Bork",
+        "form": "Schlanke traditionelle kumanische Stahlkappe mit einfachem geradem Nasenbügel und kurzem feinem Kettennacken, organisch mit einem elfenbeinfarbenen Janitscharen-Filzband und einer mittelgroßen hinten gefalteten Börk-Bahn kombiniert. Dunkelroter schmaler Stirnsaum; Metallfront und gewöhnliche Kegelform bleiben erkennbar. Ein zusammengehöriger Aufbau statt gestapelter Hüte.",
+        "coverage": "Junges Gesicht vollständig offen",
+        "finish": "Mattes Eisen, heller Filz und dunkelrotes Stoffband; keine Tier-, Frucht- oder Fantasieform."
+      },
+      "palette": "Elfenbein, gedecktes Granatapfelrot, Blattgrün und matte Messingdetails",
+      "armorAndCloth": "Langer leichter elfenbeinfarbener Mantel über taillierter dunkelroter Lederweste, schmaler grüner Hüftgurt und weite, aber kontrolliert fallende helle Ärmel. Keine runde oder schwere Körpersilhouette.",
+      "motifPlacement": "Ein geöffneter roter Granatapfel mit grünen Blättern gut lesbar auf der hellen Brustseitenbahn; kleine runde rote Steppfelder und grüne flache Stoffbordüre unterhalb des Helms.",
+      "equipment": [
+        "Gegürteter Krummsäbel",
+        "Separater gegürteter Dolch",
+        "Kleine Langhalslaute"
+      ],
+      "pose": "Ruhiger linker Dreiviertelstand. Laute leicht seitlich vor der Hüfte, linke Hand am Hals und rechte Hand entspannt an den Saiten; Waffen bleiben getrennt am Gürtel sichtbar.",
+      "mount": null,
+      "brief": "Junge schlanke erwachsene Granatapfel-Aschik mit gewöhnlichem Kumanen-Stahlhelm und organisch integriertem elfenbein-rotem Janitscharen-Börk-Filz. Gesicht offen, leichter heller Mantel und rote Weste, individuelle ruhige Musikerpose mit Laute.",
+      "headgearUserCorrection": "Latest user steering: combine the Cuman helmet with a Janissary hat for some figures; apply to these not-yet-generated pool-25 and pool-26 only."
+    }
+  ],
+  "selfReview": {
+    "count": 13,
+    "ageMin": 21,
+    "ageMax": 29,
+    "genderCounts": {
+      "male": 7,
+      "female": 6
+    },
+    "allSlimOrAthletic": true,
+    "onlyTraditionalHelmetFamilies": true,
+    "helmetMotifGeometryRemoved": true,
+    "genericOrRejectedFiguresUsedAsReferences": false,
+    "classMappingChanged": false,
+    "mounts": {
+      "pool-19": "Sarkal",
+      "pool-21": "Sarkal",
+      "pool-24": "Shahzad"
+    },
+    "variety": "Kette, Lamellen, Brigantine, maritime Leder-/Leinenschichten, leichte Fechterweste und lange Künstlergewänder; verschiedenes Gewicht auf gleichermaßen fitten Körpern. Eine Zweihandklinge gegenüber zwei Säbeln, Instrument am Rücken gegenüber in den Händen, verschiedene ruhige Bogen- und Stangenwaffenhaltungen."
+  },
+  "approval": "Root reviewed and approved; central archive ready before generation",
+  "retainedOverrides": {
+    "pool-18": "Exact V2 retained by latest user instruction",
+    "pool-20": "Exact V1 retained by latest user instruction"
+  }
+}

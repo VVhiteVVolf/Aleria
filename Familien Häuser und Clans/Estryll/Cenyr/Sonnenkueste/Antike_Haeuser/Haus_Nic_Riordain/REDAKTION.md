@@ -1,0 +1,15 @@
+# Nic Ríordáin: Quellenabgleich vom 3. November 2026
+
+Die redaktionelle Quelle ist `haus.content.mjs`. Der Anhang liegt unverändert als `animexx-original.html` vor; Herkunft und Prüfsummen stehen in `quellen.json`.
+
+- Die bestehende ID `haus-nic-riordain` und Schreibweise Nic Ríordáin bleiben erhalten. Der kanonische Rang lautet Dún Tiarna (Baron), nicht der kopierte Mor-Tiarna-Rang der Altinfotabelle. Dun Afalla bleibt der historische Sitz; es wird keine heutige Lehnsherrschaft konstruiert.
+- Der Clan wird aufgrund des ausdrücklichen Untergangstexts als ausgestorben dargestellt. Die generischen Gründerplatzhalter im unveränderten Stammbaum sind keine neu belegten lebenden Personen und werden nicht umgeschrieben. Erlöschensjahr und letzte Amtsübergabe bleiben offen.
+- Sämtliche gelieferten Hierarchie-/Stammbaumteile werden ignoriert. Auch der offensichtlich kopierte Tabellenkopf Tir an Muirghin wird nicht übernommen. Kein Personen-, Ehe-, Elternschafts-, Datums- oder Nebenlinienimport.
+- Die Königliche Bardin bleibt eine Figur der Gründungssage. Der Name Rior Dain aus der knappen Infotabelle ist nicht als sichere Personenidentität belegt; ebenso bleiben der Albenkönig und die Datierung unbekannt. Keine Verknüpfung auf die generischen Gründer erzeugt.
+- Die Hofnamen Muireen und Mallaidh bleiben als überlieferte Namen ohne gesicherte Amtsdaten erhalten. Die Ard-Conbhrón-Akte enthält zwar einen Namensstub Muireen Ríordáin, aber keinen belastbaren zeitlichen Identifikationsbeleg oder ein passendes Individualportrait. Dieser Hinweis begründet keine automatische Personenverknüpfung. Mallaidh wird insbesondere nicht mit Mallaidh Muirghin aus Neidr gleichgesetzt.
+- Die namenlose Standardliste moderner Hofrollen ist kein belastbarer Beleg einer antiken Amtsordnung. Sie erzeugt daher keine zwanzig angenommenen Clanämter. Für den erloschenen Clan wird keine gegenwärtige Erbfolge ergänzt.
+- Matriarchale Führung, Dun Afallas Gründung, die Zerstörung durch die Norrnaigh, Bardenfeste, Ausbildung, Schulen, Theater, Bibliotheken, Ahnenbäume und Nachtigallverehrung bleiben erhalten. Die generische militärgeschichtliche Passage wird als kultureller Hintergrund gekürzt, nicht als individuelle Chronik ausgegeben.
+- Das kopierte Jagdmotto ist nicht das Motto der Nic Ríordáin. Ebenso wird die pauschale Alerische-Kirche-Zeile nicht gegen die ausgeführte vorcenyrische Nachtigall- und Ahnenverehrung durchgesetzt. Militärstatistiken werden vollständig ausgelassen.
+- Bestehende Blach-/Illewod-Verbindungen sind als bekannte Hausbezüge erhalten, ohne die fehlende eigene Genealogie durch neue Verwandtschaftskonstruktionen zu ersetzen.
+- Die vorhandene antike Clanfigur mit Flöte wurde tatsächlich angesehen und unverändert lokal eingebunden. Die Quellenportraits der benannten Frauen werden gegebenenfalls lokal übernommen, ohne neue Personenakten oder IDs anzulegen.
+- `biographySourceRevision: 1` ergänzt die bislang nicht ausgearbeitete Familienquelle. Die Bio ergänzt Inhalte, keine Genealogie.

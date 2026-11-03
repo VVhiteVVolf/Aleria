@@ -1,0 +1,80 @@
+{
+  "id": "haus-ulvasar",
+  "source": {
+    "attachmentId": "64994baa-d80c-44e6-ac45-70ff0ea94ac3",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\64994baa-d80c-44e6-ac45-70ff0ea94ac3\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/ulvasar/animexx-original.html",
+    "bytes": 71451,
+    "sha256": "322c5d838f020168e20218c3d0b4d6ca12b5366e32c9ecc888c2ff0a9c0b58d9",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ulvasar",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ulvasar",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "ulvasar",
+    "familyId": "haus-ulvasar",
+    "attachmentId": "64994baa-d80c-44e6-ac45-70ff0ea94ac3",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/p5WN6kU.png",
+    "path": "Stammbäume/assets/images/references/haus-ulvasar/krieger.png",
+    "sourceStyle": "float:right; height:400px; width:267px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 219730,
+    "sha256": "b0b5afedb6768906643eefa243f0c394b924be2f1af70fa73ea0ec997965b2ac",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-ulvasar",
+    "url": "https://i.imgur.com/p5WN6kU.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ulvasar/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Krieger in Wolfsfell und Schuppenrüstung mit zwei gebogenen Klingen.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-3.png"
+  },
+  "decisions": [
+    "Historische Gruppierung unter Ausgestorbene Clans/Norrnaigh ist keine reale Sitzbezeichnung. Den technischen Profilwert Norrnaigh (Nordmänner) nicht als antike Hauptstadt darstellen.",
+    "Die Stammbaum-Hausknoten sind technisch weiterhin active, während Beschreibungen und Register den Clan ausgestorben nennen. Diesen vorhandenen Metadatenwiderspruch dokumentieren, nicht durch Graphänderung lösen.",
+    "Die Behauptung, beim Untergang der Ulvasar seien Tiogar, Fiadhrach und Vanir alle zugleich ausgelöscht worden, widerspricht der mehrstufigen Erzählung der anderen Quellen. Neutral bleiben: verheerende Kriege und Niederlage der Ulvasar; keine gemeinsame Aussterbechronologie festlegen.",
+    "Wolfsriten und Wolfskrieger sind überlieferte Kultur. Keine Theriantrophie, vollständige Tiergestalt oder genetische Verwandtschaft zu anderen Clans daraus anlegen.",
+    "Rorikheim wird als alte Orts-/Regionsbenennung behandelt. Gegenwärtiger Raum ist Roriksheim; eigene Festungen bleiben unbenannt.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

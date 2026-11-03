@@ -1,0 +1,83 @@
+{
+  "id": "haus-tiogar",
+  "source": {
+    "attachmentId": "91fb13f3-5627-4e37-92d0-47110faef616",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\91fb13f3-5627-4e37-92d0-47110faef616\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/tiogar/animexx-original.html",
+    "bytes": 49514,
+    "sha256": "5d29f0e72b214e8e56f74a810a55fec39bc8914392d951fc7c935a8b4ca18316",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-tiogar",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Tigairan bei Rorikshall"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-tiogar",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "tiogar",
+    "familyId": "haus-tiogar",
+    "attachmentId": "91fb13f3-5627-4e37-92d0-47110faef616",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/hPZN7S8.png",
+    "path": "Stammbäume/assets/images/references/haus-tiogar/krieger.png",
+    "sourceStyle": "float:right; height:325px; vertical-align:top; width:217px",
+    "context": "Tiarnatum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 295776,
+    "sha256": "5fbf52739317441bb7db48c469c218e43b4ea2aa0a6584abe63babe5b1dab72f",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-tiogar",
+    "url": "https://i.imgur.com/hPZN7S8.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-tiogar/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Albenkrieger mit Speer, Fellkleidung und goldfarbenem Tigerschild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-4.png"
+  },
+  "decisions": [
+    "Kanonische Anzeige Clan Tíogar, ID haus-tiogar. Tiogar und Tigairán sind unterschiedliche Namen für Clan und Stadt; nicht zu einer ID vermischen.",
+    "Der Registerrang unknown hat Vorrang vor der alten Gleichsetzung Mor Tiarna = Graf. Im historischen Text darf die Quelle als frühere Herrschaftsüberlieferung genannt werden, ohne einen neuen aktuellen Rang zu setzen.",
+    "Die Quelle behauptet Tigairán sei später Rorikshall geworden. Das aktuelle Profil führt Tigairan bei Rorikshall als historischen Bezug; mangels eindeutiger Gleichsetzung wird nur die Lage im Raum Rorikshall übernommen.",
+    "Gärten, Tempelhöfe, Dichterschulen, Musikzirkel, Bibliothek und Ruinen sind konkrete kulturelle Besitzüberlieferung und bleiben ausführlich erhalten.",
+    "Die Quelle nennt ausdrücklich das Ende der männlichen Erblinie. Daraus nicht die Auslöschung jeder weiblichen Linie oder aller Nachkommen ableiten; keine genealogischen Änderungen.",
+    "Das allgemeine Tiarnatum beschreibt eine Epoche, nicht eine belegte persönliche Ausbildung jedes Tiogar-Angehörigen. Alte Ausrüstung und Kampfvorstellungen nur als historischen Kulturrahmen erhalten.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

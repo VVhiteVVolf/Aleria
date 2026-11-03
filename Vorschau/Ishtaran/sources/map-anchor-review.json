@@ -1,0 +1,662 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "sourceFiles": [
+    {
+      "path": "Vorschau/Ishtaran/assets/maps/ishtaran-normal.webp",
+      "sha256": "1714cd3a597f14dd70f443e8f33e12619ab71c0fae42fc18ee48350f40496f32"
+    },
+    {
+      "path": "Vorschau/Ishtaran/assets/maps/ishtaran-regions.webp",
+      "sha256": "b4b62e63bad4386e5f7a5b451ebb4c2b698a9f9bf48d740efa355b2fecfd2580"
+    }
+  ],
+  "dimensions": [
+    4096,
+    2349
+  ],
+  "alignment": {
+    "sampleSize": [
+      512,
+      294
+    ],
+    "peakShiftSamplePixels": [
+      0,
+      0
+    ],
+    "peak": 0.3417246350740684
+  },
+  "counts": {
+    "allCircles": 21,
+    "largeWhiteIncludingCapital": 9,
+    "capital": 1,
+    "ordinaryLarge": 8,
+    "small": 12,
+    "smallBlue": 11,
+    "smallRed": 1
+  },
+  "capitalIncludedInNineLarge": true,
+  "namesNote": "Only generic Pascharat and Herrschaft labels are drawn. No proper city or territory names are present.",
+  "colorNote": "Small red marker's separate color has no supplied legend; do not infer a different rank solely from it.",
+  "capacityFromLatestUserInstruction": {
+    "capitalAdditionalHousesMinimum": 2,
+    "largeAdditionalTarkanHousesMaximum": 2,
+    "largeAdditionalTarkanHousesOptional": true,
+    "smallTotalHouses": 1
+  },
+  "records": [
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        1830.5,
+        197.0
+      ],
+      "markerBounds": [
+        1725,
+        91,
+        1937,
+        304
+      ],
+      "markerPixels": 20282,
+      "diameter": [
+        212,
+        213
+      ],
+      "id": "capital",
+      "type": "capital",
+      "x": 44.6899,
+      "y": 8.3865,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/capital-normal-regions.png",
+      "geography": "Nordküste des mittleren nördlichen Landarms im orangebraunen Großgebiet.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        2797.0,
+        121.5
+      ],
+      "markerBounds": [
+        2742,
+        66,
+        2853,
+        178
+      ],
+      "markerPixels": 5414,
+      "diameter": [
+        111,
+        112
+      ],
+      "id": "large-01",
+      "type": "large-count-seat",
+      "x": 68.2861,
+      "y": 5.1724,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-01-normal-regions.png",
+      "geography": "Nördlicher Küstensaum des nordöstlichen gelbgrünen Landarms.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        500.5,
+        191.5
+      ],
+      "markerBounds": [
+        445,
+        136,
+        557,
+        248
+      ],
+      "markerPixels": 5482,
+      "diameter": [
+        112,
+        112
+      ],
+      "id": "large-02",
+      "type": "large-count-seat",
+      "x": 12.2192,
+      "y": 8.1524,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-02-normal-regions.png",
+      "geography": "Nordküste der nordwestlichen violetten Halbinsel.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        3752.0,
+        565.5
+      ],
+      "markerBounds": [
+        3697,
+        510,
+        3808,
+        622
+      ],
+      "markerPixels": 5436,
+      "diameter": [
+        111,
+        112
+      ],
+      "id": "large-03",
+      "type": "large-count-seat",
+      "x": 91.6016,
+      "y": 24.0741,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-03-normal-regions.png",
+      "geography": "Nördlicher Küstensaum der östlichen grünen Halbinsel.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        183.0,
+        871.0
+      ],
+      "markerBounds": [
+        128,
+        816,
+        239,
+        927
+      ],
+      "markerPixels": 5398,
+      "diameter": [
+        111,
+        111
+      ],
+      "id": "large-04",
+      "type": "large-count-seat",
+      "x": 4.4678,
+      "y": 37.0796,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-04-normal-regions.png",
+      "geography": "Westlicher Rand, unmittelbar südlich der westlichen Flussmündung, im gelbgrünen Großgebiet.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        1127.5,
+        871.5
+      ],
+      "markerBounds": [
+        1072,
+        816,
+        1184,
+        928
+      ],
+      "markerPixels": 5471,
+      "diameter": [
+        112,
+        112
+      ],
+      "id": "large-05",
+      "type": "large-count-seat",
+      "x": 27.5269,
+      "y": 37.1009,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-05-normal-regions.png",
+      "geography": "Westliche Mitte südlich des breiten westlichen Wasserarms, im grünen Großgebiet.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        2881.0,
+        1227.0
+      ],
+      "markerBounds": [
+        2826,
+        1172,
+        2937,
+        1283
+      ],
+      "markerPixels": 5521,
+      "diameter": [
+        111,
+        111
+      ],
+      "id": "large-06",
+      "type": "large-count-seat",
+      "x": 70.3369,
+      "y": 52.235,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-06-normal-regions.png",
+      "geography": "Östliche Mitte am Südostufer des großen inneren Sees, nördlich des östlichen Gebirges.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        3414.0,
+        1235.0
+      ],
+      "markerBounds": [
+        3359,
+        1180,
+        3470,
+        1291
+      ],
+      "markerPixels": 5512,
+      "diameter": [
+        111,
+        111
+      ],
+      "id": "large-07",
+      "type": "large-count-seat",
+      "x": 83.3496,
+      "y": 52.5756,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-07-normal-regions.png",
+      "geography": "Östliche Halbinsel südlich des grünen Nordostgebietes, im türkisfarbenen Großgebiet.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "white",
+      "pixelCentre": [
+        2078.5,
+        1347.0
+      ],
+      "markerBounds": [
+        2023,
+        1292,
+        2135,
+        1403
+      ],
+      "markerPixels": 5485,
+      "diameter": [
+        112,
+        111
+      ],
+      "id": "large-08",
+      "type": "large-count-seat",
+      "x": 50.7446,
+      "y": 57.3436,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/large-08-normal-regions.png",
+      "geography": "Zentrale Südregion westlich des nord-südlichen Flussarmes, im rosavioletten Großgebiet.",
+      "cartographicAreaLabel": "Pascharat",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        3723.0,
+        324.0
+      ],
+      "markerBounds": [
+        3690,
+        291,
+        3757,
+        358
+      ],
+      "markerPixels": 1916,
+      "diameter": [
+        67,
+        67
+      ],
+      "id": "small-01",
+      "type": "small-seat",
+      "x": 90.8936,
+      "y": 13.7931,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-01-normal-regions.png",
+      "geography": "Nordöstlicher vorgelagerter Landzipfel an dessen Nordostküste.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        1068.5,
+        588.0
+      ],
+      "markerBounds": [
+        1036,
+        555,
+        1102,
+        622
+      ],
+      "markerPixels": 1982,
+      "diameter": [
+        66,
+        67
+      ],
+      "id": "small-02",
+      "type": "small-seat",
+      "x": 26.0864,
+      "y": 25.0319,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-02-normal-regions.png",
+      "geography": "Kleine westliche Insel östlich der nordwestlichen violetten Halbinsel.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        2229.5,
+        675.0
+      ],
+      "markerBounds": [
+        2197,
+        642,
+        2263,
+        709
+      ],
+      "markerPixels": 1970,
+      "diameter": [
+        66,
+        67
+      ],
+      "id": "small-03",
+      "type": "small-seat",
+      "x": 54.4312,
+      "y": 28.7356,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-03-normal-regions.png",
+      "geography": "Nordwestlicher Küstenzipfel des östlich-mittleren violetten Großgebietes am zentralen Meeresarm.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        2045.5,
+        748.0
+      ],
+      "markerBounds": [
+        2013,
+        715,
+        2079,
+        782
+      ],
+      "markerPixels": 1918,
+      "diameter": [
+        66,
+        67
+      ],
+      "id": "small-04",
+      "type": "small-seat",
+      "x": 49.939,
+      "y": 31.8433,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-04-normal-regions.png",
+      "geography": "Östlicher Küstenrand des orangebraunen Hauptstadtsgebiets, westlich des zentralen Meeresarms.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        2910.5,
+        844.0
+      ],
+      "markerBounds": [
+        2878,
+        811,
+        2944,
+        878
+      ],
+      "markerPixels": 1914,
+      "diameter": [
+        66,
+        67
+      ],
+      "id": "small-05",
+      "type": "small-seat",
+      "x": 71.0571,
+      "y": 35.9302,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-05-normal-regions.png",
+      "geography": "Gebirgsrand im Westen des hellgrünen nordöstlichen Großgebietes.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        2043.0,
+        919.5
+      ],
+      "markerBounds": [
+        2010,
+        887,
+        2077,
+        953
+      ],
+      "markerPixels": 1954,
+      "diameter": [
+        67,
+        66
+      ],
+      "id": "small-06",
+      "type": "small-seat",
+      "x": 49.8779,
+      "y": 39.1443,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-06-normal-regions.png",
+      "geography": "Nordöstlicher Grenzvorsprung des rosavioletten südzentralen Gebietes an einem Flussknie.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        572.5,
+        1089.0
+      ],
+      "markerBounds": [
+        540,
+        1056,
+        606,
+        1123
+      ],
+      "markerPixels": 1968,
+      "diameter": [
+        66,
+        67
+      ],
+      "id": "small-07",
+      "type": "small-seat",
+      "x": 13.9771,
+      "y": 46.3602,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-07-normal-regions.png",
+      "geography": "Südlicher Ausläufer des nordwestlichen violetten Pascharats, nördlich eines westlichen Flussbogens.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        1131.0,
+        1511.5
+      ],
+      "markerBounds": [
+        1098,
+        1479,
+        1165,
+        1545
+      ],
+      "markerPixels": 1923,
+      "diameter": [
+        67,
+        66
+      ],
+      "id": "small-08",
+      "type": "small-seat",
+      "x": 27.6123,
+      "y": 64.3465,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-08-normal-regions.png",
+      "geography": "Schmales Westmittelgebiet an einem Flussbogen südwestlich des zentralen Gebirges.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        256.5,
+        1652.5
+      ],
+      "markerBounds": [
+        224,
+        1620,
+        290,
+        1686
+      ],
+      "markerPixels": 1893,
+      "diameter": [
+        66,
+        66
+      ],
+      "id": "small-09",
+      "type": "small-seat",
+      "x": 6.2622,
+      "y": 70.3491,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-09-normal-regions.png",
+      "geography": "Äußerster südwestlicher Gebirgsrand an der Wolkenkante, westlich des südwestlichen Binnenraums.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "red",
+      "pixelCentre": [
+        1261.0,
+        1825.0
+      ],
+      "markerBounds": [
+        1227,
+        1791,
+        1296,
+        1860
+      ],
+      "markerPixels": 2059,
+      "diameter": [
+        69,
+        69
+      ],
+      "id": "small-10",
+      "type": "small-seat",
+      "x": 30.7861,
+      "y": 77.6926,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-10-normal-regions.png",
+      "geography": "Südlicher Landstreifen westlich des nord-südlichen Flussarmes am östlichen Rand des südwestlichen gelbgrünen Gebiets.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        620.0,
+        1838.5
+      ],
+      "markerBounds": [
+        587,
+        1806,
+        654,
+        1872
+      ],
+      "markerPixels": 1890,
+      "diameter": [
+        67,
+        66
+      ],
+      "id": "small-11",
+      "type": "small-seat",
+      "x": 15.1367,
+      "y": 78.2673,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-11-normal-regions.png",
+      "geography": "Südwestlicher Binnenraum zwischen südwestlichem See-/Flusssystem und südlicher Wolkenkante.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    },
+    {
+      "markerColor": "blue",
+      "pixelCentre": [
+        3471.5,
+        1917.5
+      ],
+      "markerBounds": [
+        3439,
+        1885,
+        3505,
+        1951
+      ],
+      "markerPixels": 1939,
+      "diameter": [
+        66,
+        66
+      ],
+      "id": "small-12",
+      "type": "small-seat",
+      "x": 84.7534,
+      "y": 81.6305,
+      "properPlaceName": null,
+      "evidenceCrop": "diagnostics/ishtaran/placement-map-review/small-12-normal-regions.png",
+      "geography": "Südostzipfel des türkisfarbenen Großgebietes oberhalb der Wolken-/Gebirgskante.",
+      "cartographicAreaLabel": "Herrschaft",
+      "positionSource": "Centre of the actually drawn colored/white ring, never an invented settlement point",
+      "positionTolerancePixels": 1,
+      "cropVisuallyReviewed": true
+    }
+  ],
+  "visualStatus": "passed",
+  "visualReview": "Both full maps and all21 paired Normal/Regions crop panels actually viewed. Coastlines, rivers and mountain geometry align. Capital is the sole212x213px ring; other whites111-112px; smalls66-69px.",
+  "capitalRankNote": "The drawing uses a generic Pascharat label here, but latest user instruction explicitly establishes the largest ring as capital/Sultan domain.",
+  "diagnosticCropNote": "Black strips in the far northern crop are out-of-canvas crop padding, not map geography."
+}

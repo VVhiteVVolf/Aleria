@@ -1,0 +1,83 @@
+{
+  "id": "haus-vanir",
+  "source": {
+    "attachmentId": "b7a0c540-30a9-4812-9b0b-6f8b7dbcf6a6",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\b7a0c540-30a9-4812-9b0b-6f8b7dbcf6a6\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/vanir/animexx-original.html",
+    "bytes": 76533,
+    "sha256": "383403fa5802f2fc6ca1ab860d479b2a68d63fa41f5ba34c4993f3620b61f96a",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-vanir",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Connair bei Wolfspfad"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-vanir",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "vanir",
+    "familyId": "haus-vanir",
+    "attachmentId": "b7a0c540-30a9-4812-9b0b-6f8b7dbcf6a6",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/nT8C88I.png",
+    "path": "Stammbäume/assets/images/references/haus-vanir/krieger.png",
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 235081,
+    "sha256": "e3aed123dfaf5955425680144e0241429539c460c46af0775344367437615791",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-vanir",
+    "url": "https://i.imgur.com/nT8C88I.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-vanir/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Voll gerüsteter Krieger mit weiß-rotem Wappenrock, Schwert und passendem Schild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-4.png"
+  },
+  "decisions": [
+    "Nachfolgerbezug haus-vangandr ist bereits kanonisch. Historisch untergegangener Vanir-Clan bedeutet nicht, dass jede biologische Linie verschwunden wäre.",
+    "Die Einzelbehauptung im Besitztumkapitel, die Fiadhrach hätten Verrat begangen, widerspricht dem übrigen Vanir-Konfliktkapitel und den Quellen von Vangandr und Fiadhrach. Keine solche Schuldbehauptung übernehmen; den Untergang unter Täuschung durch eine dunkle Macht neutral schildern.",
+    "Im Westen entstandene Schwesternlinien und Aesnir-Herkunft sind nur allgemeine Herkunftserzählung; keine neuen Stammbäume, Häuser oder Abstammungskanten daraus erzeugen.",
+    "Altes Pantheon und spätere Alerische Kirche zeitlich auseinanderhalten. Die Vanir erlebten die spätere kirchliche Reform nach dieser Quelle nicht mehr.",
+    "Connair bei Wolfspfad ist im aktuellen Profil als historischer Bezug vorhanden. Keine automatische Umbenennung Connairs in Wolfspfad oder Änderung des Registerpfads.",
+    "Die offenen technischen Status- und Rangfelder der historischen Platzhalterakte werden nicht überschrieben.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

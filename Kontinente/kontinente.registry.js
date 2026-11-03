@@ -18077,7 +18077,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Grafschaft Tal der Milane",
     "type": "Grafschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/grafschaft.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/grafschaft.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18109,7 +18109,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Taubenfurt",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/Baronie Taubenfurt.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/baronie.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/baronie.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18146,7 +18146,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Falkenhöh",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/Baronie Falkenhöh.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/baronie.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/baronie.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18183,7 +18183,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Schwalbenhort",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/Herrschaft Schwalbenhort.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/herrschaft.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18225,7 +18225,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Tylluan",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/Herrschaft der Tylluan.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/herrschaft.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18267,7 +18267,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Mwyalchen",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/Herrschaft der Mwyalchen.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/herrschaft.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18309,7 +18309,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Eryr",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/Herrschaft der Eryr.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/herrschaft.data.mjs?v=20261103-tal-der-milane-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18762,7 +18762,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Grafschaft Klaueninsel – Ynys Pawennau",
     "type": "Grafschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Grafschaft Klaueninsel.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/grafschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/grafschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18794,7 +18794,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Pawen",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/Herrschaft der Pawen.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18831,7 +18831,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Crafanc",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/Herrschaft der Crafanc.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18868,7 +18868,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Diafol",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/Herrschaft der Diafol.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18905,7 +18905,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Talklaue – Cra Fryn",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/baronie.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/baronie.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18942,7 +18942,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Krallenspitze – Pen Ewinedd",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/Herrschaft Krallenspitze.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -18979,7 +18979,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Blutklaue – Cra Gwaed",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/Baronie Blutklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/baronie.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/baronie.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19016,7 +19016,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Dianc",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19053,7 +19053,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Arfordir",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19090,7 +19090,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Blutsturz – Cwymp Gwaed",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/Herrschaft Blutsturz.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19127,7 +19127,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Frostklaue – Cra Rhew",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/Herrschaft Frostklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19164,7 +19164,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Silberklaue – Cra Carreg",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/Herrschaft Silberklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19201,7 +19201,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Nebelklaue – Cra Niwl",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19238,7 +19238,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Wellenklaue – Cra Tonnau",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/herrschaft.data.mjs?v=20261103-klaueninsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19279,7 +19279,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Grafschaft Silberinsel – Ynys Arian",
     "type": "Grafschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19311,7 +19311,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Saith",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/herrschaft.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/herrschaft.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19348,7 +19348,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Crefyddol",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/herrschaft.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/herrschaft.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19385,7 +19385,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Canwyll",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/herrschaft.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/herrschaft.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19424,7 +19424,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Silberpfad",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/herrschaft.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/herrschaft.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19461,7 +19461,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Silberküste",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/baronie.data.mjs?v=silberinsel-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/baronie.data.mjs?v=20261103-silberinsel-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19949,7 +19949,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Grafschaft Sonnenküste – Cwm yr Lleuad",
     "type": "Grafschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/grafschaft.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/grafschaft.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -19981,7 +19981,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Baronie Jungferntal",
     "type": "Baronie",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/baronie.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/baronie.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -20018,7 +20018,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft Löwenberg",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/herrschaft.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -20055,7 +20055,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Llwynog",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/herrschaft.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -20092,7 +20092,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Blach",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/herrschaft.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {
@@ -20129,7 +20129,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Teyrngarch",
     "type": "Herrschaft",
     "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
-    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/herrschaft.data.mjs?v=20261103-sonnenkueste-v1",
     "dataType": "module",
     "hierarchy": [
       {

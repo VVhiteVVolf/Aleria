@@ -147,7 +147,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-baedd"
         }
       ]
     },
@@ -162,7 +163,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warthog"
         }
       ]
     }

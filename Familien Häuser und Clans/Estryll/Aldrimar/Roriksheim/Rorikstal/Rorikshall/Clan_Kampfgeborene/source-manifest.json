@@ -1,0 +1,81 @@
+{
+  "id": "haus-kampfgeborene",
+  "source": {
+    "attachmentId": "65e5c39f-34cf-4664-ab35-9bfcc758c3ee",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\65e5c39f-34cf-4664-ab35-9bfcc758c3ee\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/kampfgeborene/animexx-original.html",
+    "bytes": 127685,
+    "sha256": "97a336c3b5f9a310026b6defbcf9583d1de9502f15abdaf2b46f10b3b8934f5d",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-kampfgeborene",
+    "baselineSourceRevision": 6,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Rorikshall",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-kampfgeborene",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "kampfgeborene",
+    "familyId": "haus-kampfgeborene",
+    "attachmentId": "65e5c39f-34cf-4664-ab35-9bfcc758c3ee",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/NcibyKy.png",
+    "path": "Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+    "sourceStyle": "float:right; height:440px; width:293px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 268597,
+    "sha256": "0a800c065d4886516026e0aa44f6cf2c773dc2abdda30b1e6bdb2f2c3d7f06e1",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-kampfgeborene",
+    "url": "https://i.imgur.com/NcibyKy.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Gerüsteter Krieger mit Speer, Rundschild und begleitendem Wolf.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-2.png"
+  },
+  "decisions": [
+    "Krigsfodt/Kampfgeborener sind Quellenbezeichnungen; bestehender Clantitel Clan Kampfgeborene und ID haus-kampfgeborene bleiben erhalten. Personen werden nicht nach der Hausmehrzahl umbenannt.",
+    "Fridthjof Kampfgeborener ist bereits kanonisch als Gründer belegt. Die Geschichte, Jagdtradition und frühere Zusammenarbeit mit den Schwarzdorn können ohne genealogischen Import erzählt werden.",
+    "Geheime Vaterschaftsbehauptungen aus der Trivia werden vollständig von der strukturierten Übernahme ausgeschlossen und verbleiben ausschließlich im unveränderten Roharchiv. Keine Eltern-, Ehe-, Trait- oder Identitätsänderung.",
+    "Doppelte Triviazeilen werden zusammengeführt. Purpurne Augen und die überlieferte Auseinandersetzung zwischen Lars und Wiglaff bleiben als Textquelle, ohne neue medizinische oder persönliche Merkmale zu schreiben.",
+    "Die Jagdprobe begründet in der Erzählung die Aufnahme zum Huskarl; sie adelt nicht automatisch jedes Mitglied des getrennten Hauses Frostgeborene.",
+    "Rivalität, wirtschaftliche Verdrängung und Raubzüge erhalten ihre zeitliche Entwicklung; die früheren Verbündeten werden nicht rückwirkend als dauerhafte Feinde dargestellt.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

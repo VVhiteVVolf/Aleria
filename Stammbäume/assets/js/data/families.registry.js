@@ -2,6 +2,7 @@ import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=hausbio-20260911b'
 import { HOUSE_GARRAEL_FAMILY } from './house-garrael-family.js';
 import { HOUSE_GWYLLACH_FAMILY } from './house-gwyllach-family.js';
 import { HOUSE_SGRECHIWR_FAMILY } from './house-sgrechiwr-family.js';
+import { HOUSE_HAMNETT_FAMILY } from './house-hamnett-family.js';
 import { HOUSE_GWEFRYDD_FAMILY } from './house-gwefrydd-family.js?v=hausbio-20260911c';
 import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js?v=hausbio-20260911c';
 import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js?v=hausbio-20260911c';
@@ -58,12 +59,13 @@ import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.j
 import { GWYNTHOR_ERBSTREIT_FAMILIES } from './gwynthor-erbstreit/family-records.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
+import { CENYR_TERRITORY_COMMONER_FAMILIES } from './cenyr-territory-commoner-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js?v=20261027-uathneach-warriors-v1';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
 import {
   SONNENKUESTE_DEPENDENT_HOUSE_FAMILIES,
   SONNENKUESTE_LINKED_LINE_FAMILIES
-} from './sonnenkueste-house-families.js';
+} from './sonnenkueste-house-families.js?v=20261103-klaueninsel-v1';
 import { VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES } from './vortigerns-ruh-house-families.js';
 import { WEIDEBUCHT_DEPENDENT_HOUSE_FAMILIES } from './weidebucht-house-families.js';
 import { AEHRENTAL_DEPENDENT_HOUSE_FAMILIES } from './aehrental-house-families.js';
@@ -76,13 +78,13 @@ import {
 import {
   KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES,
   KLAUENINSEL_ORIGIN_HOUSE_FAMILIES
-} from './klaueninseln-house-families.js?v=parzifal-gwyllt-20261006';
+} from './klaueninseln-house-families.js?v=20261103-klaueninsel-v2';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261027-uathneach-warriors-v1';
-import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
+import { HOUSE_BIOGRAPHY_DEFAULT_CATALOG } from '../modules/house-biography/house-biography-default-catalog.js?v=20261103-vennyr-warriors-v1';
+import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js?v=20261103-vennyr-warriors-v1';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
 import { withDunfalPortraitUpgrade } from './dunfal-portrait-upgrade.js';
 import { withMathghamSourceCounterUpgrade } from './mathgham-source-counter-upgrade.js';
@@ -136,7 +138,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withBrannSourceCounterUpgrade(family);
   family = withDunfalPortraitUpgrade(family);
   family = withLagaCounterpartUpgrade(family);
-  family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
+  family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULT_CATALOG);
   family = withReviewedAlbicPlacement(family);
   family = withAcceptedRealmPlacement(family);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
@@ -157,6 +159,10 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
 }
 
 export const FAMILY_REGISTRY = Object.freeze([
+  familyRecord({id:'haus-hamnett',title:'Haus Hamnett',family:HOUSE_HAMNETT_FAMILY,type:'commoner'}),
+  ...CENYR_TERRITORY_COMMONER_FAMILIES.map(family => familyRecord({
+    id: family.document.id, title: family.document.title, family, type: 'commoner'
+  })),
   ...ACCEPTED_REALM_FAMILIES.map(family => familyRecord({ id: family.document.id, title: family.document.title, family })),
   familyRecord({
     id: 'haus-arwydd',

@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "subject": "Kaiserreich Argentum; zunächst Provinz Leukonia",
+  "status": "confirmed-context-with-explicit-open-questions",
+  "source": {
+    "id": "Q1",
+    "path": "Vorschau/Leukonia/sources/user-request-2026-11-03.txt",
+    "kind": "inhaltlich vollständige, orthografisch geglättete Lesefassung des direkten Nutzerauftrags",
+    "verbatimTranscript": false,
+    "sha256": "affb0c98cdd5b7f6f8262979077f864881260269b4c0d8be79854e9285c8997a",
+    "precedence": "Aktueller direkter Nutzerauftrag vor älteren öffentlichen Register- oder Sprachquellen."
+  },
+  "laterDecisions": [
+    {
+      "id": "Q2",
+      "date": "2026-11-03",
+      "kind": "Spätere ausdrückliche Nutzerentscheidungen im laufenden Auftrag; keine wörtliche Transkription.",
+      "countsSupersededBy": "Q3",
+      "statements": [
+        "Apinia, Bolar, Lex, Orania, Pelagia und Tremelia sind die sechs Archonhäuser.",
+        "Mede beherrscht Zaphias als kaiserliche Domäne.",
+        "Der geprüfte Kartenbefund umfasst sechs Regionen und 28 Kartenorte.",
+        "Zuerst die sieben Klassentypen erstellen, danach 41 Hausfiguren: sieben bestehende Häuser einschließlich Mede und 34 neue Häuser."
+      ]
+    },
+    {
+      "id": "Q3",
+      "date": "2026-11-03",
+      "kind": "Neueste ausdrückliche Nutzerkorrektur und danach geprüfter Kartenbefund.",
+      "statements": [
+        "Die untere südliche Insel wird vorerst ignoriert und nicht als Leukonia-Archonat gezählt; ihre Zugehörigkeit bleibt offen, möglicherweise ist sie ein eigenes Land.",
+        "Aktive Vorbereitung: fünf Festlandregionen beziehungsweise Archonate und 26 Orte (fünf Quadrate und 21 Kreise). Die Insel-Orte ort-23 und ort-24 sind ausgeschlossen.",
+        "Bolar bleibt als Haus mit unverändertem Rang erhalten; seine regionale Zuordnung und sein Sitz bleiben offen.",
+        "Die drei Großprovinzen Argentums bleiben als Reichskontext unverändert.",
+        "Rüstungen und Helme sollen griechische, römische und byzantinische Formen vielfältig verbinden. Schwere Gattungen dürfen geschlossene Helme erhalten."
+      ],
+      "derivedCounts": {"newHouseEmblems": 32, "houseFigures": 39, "formula": "26 Festlandorte plus 6 neue Wappen; 7 bestehende Häuser plus 32 neue Häuser"},
+      "mapEvidence": "sources/island-exclusion-2026-11-03.json; territory-data.mjs"
+    }
+  ],
+  "history": {
+    "sources": ["Q1:4-16"],
+    "predecessorEmpire": "großes Alerisches Kaiserreich / Kaiserreich von Aleria",
+    "currentEmpire": "Kaiserreich Argentum",
+    "currentEmpireByname": "Silbernes Kaiserreich",
+    "confirmedSequence": [
+      "Die Alben beziehungsweise Proto-Alben sind die ersten Menschen Alerias. Aus ihnen gingen albische Fürstentümer hervor; andere Gruppen brachen früh als eigenständige Königreiche und Volksgruppen weg.",
+      "Die Albath, die sogenannten Weißalben, bewohnten den südöstlichen Rand Tirnaras.",
+      "Die Argonath spalteten sich von den Albath ab, segelten nach Osten und breiteten sich dort aus.",
+      "Albath und Argonath wurden nie in das Königreich der Alben integriert. Beide bildeten eigenständige Kulturen mit eigenen Sprachen und Ländern.",
+      "Leukonia etablierte sich als Land beziehungsweise Provinz der Albath. Im Osten blühte Silverant auf.",
+      "Das Kaiserreich von Aleria hatte Leukonia und Silverant einverleibt. Nach seinem Zerfall annektierte Silverant benachbarte Regionen, darunter Leukonia.",
+      "Gemeinsam wurden sie zum Kaiserreich Argentum, das sich nach dem Zerfall des alten Reiches rasch als Großmacht im Machtvakuum etablierte."
+    ],
+    "dates": null,
+    "namedFounders": [],
+    "boundaries": [
+      "Königreich der Alben und späteres Kaiserreich von Aleria nicht gleichsetzen.",
+      "Nicht in das Königreich der Alben integriert bedeutet nicht, dass Leukonia und Silverant nie zum Kaiserreich von Aleria gehörten.",
+      "Die Argonath segelten nach Osten; die genaue politische und ethnische Gleichsetzung sämtlicher heutiger Einwohner Silverants ist nicht zusätzlich festgelegt."
+    ]
+  },
+  "calidaria": {
+    "sources": ["Q1:14-16"],
+    "type": "Archipel",
+    "imperialName": "Calidaria",
+    "earlierLocalLandName": "Tlapatlan",
+    "confirmedPeopleName": "Tlapanui",
+    "ancestralOrigin": "Sundara",
+    "locationWording": "Inselgruppe zwischen den Kontinenten und Leukonia und Silverant",
+    "preciseCoordinates": null,
+    "peopleDescription": ["etwas kleines Inselvolk", "freundlich", "recht friedvoll", "traditioneller Handel mit Nachbarn"],
+    "culturalInspiration": ["Rapa Nui", "indigene Azteken", "Maya"],
+    "incorporation": "Die Tlapanui ließen sich im Austausch für auf Tlapatlan nicht zugängliche Waren vom Kaiserreich annektieren und wurden mit der Zeit integriert.",
+    "presentPopulation": "Mischvolk aus Argentern und Tlapanui",
+    "boundaries": [
+      "Tlapanui ist der ab sofort festgelegte Volksname; Tlapatlan ist der überlieferte Landesname, Calidaria der kaiserliche Name.",
+      "Die realen Kulturvorbilder bestimmen keine automatisch übernommenen Gottheiten, Schrift oder Sprachgrammatik."
+    ]
+  },
+  "territorialAdministration": {
+    "sources": ["Q1:20-25", "Q1:37-38", "Q1:75-76"],
+    "majorProvinceCount": 3,
+    "majorProvinces": ["Leukonia", "Silverant", "Calidaria"],
+    "proconsulSeatCount": 3,
+    "proconsulSeatAssignment": "Ein Prokonsulsitz je Großprovinz.",
+    "archonate": {
+      "definition": "Große Region innerhalb einer der drei Großprovinzen.",
+      "rulerTitle": "Archon",
+      "nobleRankEquivalent": "Graf",
+      "subordinateTo": "Prokonsul",
+      "automaticSenator": true,
+      "count": 5,
+      "countSource": "Q3: fünf aktive Festlandarchonate; Bolar bleibt Haus im Archonrang mit offener regionaler Zuordnung"
+    },
+    "nobleRanksBelowArchon": false,
+    "subordinateAdministrativePosts": [
+      {
+        "title": "Präfekt",
+        "scope": "größere Region",
+        "comparison": "vergleichbar mit Ritterfürst oder Baron",
+        "comparisonCreatesNobleRank": false,
+        "hereditary": false
+      },
+      {
+        "title": "Magistrat",
+        "scope": "einzelne Stadt und ihr Bannkreis",
+        "hereditary": false
+      }
+    ],
+    "appointment": {
+      "decisionAuthority": "Archon",
+      "imperialInfluence": "Der Kaiser kann auf bestimmten Magistraten oder Präfekten insistieren.",
+      "continuity": "Bei guter Amtsführung können bisherige Amtsführungen fortgeführt werden; bei gewünschtem Wechsel werden die Posten neu vergeben.",
+      "createsAutomaticFamilySuccession": false,
+      "fixedTerm": null
+    },
+    "terminologyAmbiguity": {
+      "sourceWording": "Provinzen gleichen in etwa einer Grafschaft; zugleich werden drei große Provinzen und Archonate mit einem Grafen entsprechenden Archonen genannt.",
+      "resolution": "offen",
+      "handling": "Die drei benannten Großprovinzen und ihre Archonate beibehalten. Aus der Größenanalogie keine zusätzliche Ebene kleiner Provinzen, neue Titel oder eine andere Anzahl Prokonsule erfinden."
+    }
+  },
+  "socialStrata": {
+    "sources": ["Q1:27-34"],
+    "count": 6,
+    "independentFromAdministrativeAuthority": true,
+    "records": [
+      {"name": "Illustris", "meaning": "kaiserliche Linie"},
+      {"name": "Patrizier", "meaning": "hoher sesshafter Landadel; die Archone"},
+      {"name": "Magnarier", "meaning": "etwa Ritterfürstenhäuser"},
+      {"name": "Mercantrier", "meaning": "gute Bürgerhäuser beziehungsweise Ritterherrenhäuser"},
+      {"name": "Plebejer", "meaning": "Unterschicht; das gemeine Volk"},
+      {"name": "Servi", "meaning": "Leibeigene"}
+    ],
+    "illustrationRequest": "Je Schicht eine ulkige Comicillustration.",
+    "boundaries": [
+      "Soziale Stellung verleiht nicht automatisch ein Verwaltungsamt, eine Befehlsgewalt oder einen Senatssitz.",
+      "Die gesellschaftlichen Vergleiche Magnarier und Mercantrier nicht in zusätzliche erbliche Adelsränge unterhalb des Archons umdeuten.",
+      "Die Nutzerschreibung Mercantrier nicht still durch die venalische Form Mercantier ersetzen."
+    ]
+  },
+  "government": {
+    "sources": ["Q1:21", "Q1:36-50"],
+    "headOfStateTitle": "Kaiser",
+    "currentHeadOfStateGender": "weiblich; derzeit eine Kaiserin",
+    "currentHeadOfStateName": null,
+    "senate": {
+      "exists": true,
+      "totalSeatCount": null,
+      "automaticHighSeats": {"role": "Prokonsul", "count": 3},
+      "automaticSenators": "Archone",
+      "officeOverlap": "Prokonsule bekleiden oft ein weiteres Amt; nicht als zwingende Doppelbesetzung auslegen."
+    },
+    "abolishedOffice": {"title": "Konsul", "reason": "Monarchie", "currentlyActive": false},
+    "posts": [
+      {"title": "Prokonsul", "role": "Gouverneur einer gesamten Großprovinz", "supervises": "Archone", "automaticHighSenateSeat": true, "count": 3},
+      {"title": "Archon", "role": "Adliger einer Region; einem Grafen entsprechender Rang", "automaticSenator": true},
+      {"title": "Legat", "role": "oberster militärischer Führer; Marschall des Reiches"},
+      {"title": "Quästor", "role": "oberster Verwalter und Kämmerer"},
+      {"title": "Prätor", "role": "oberster Vorsteher der Justiz; Justiziar"},
+      {"title": "Magus", "role": "oberster Magier oder Zauberer"},
+      {"title": "Pontifex", "role": "ranghöchster Geistlicher der staatseigenen Religion Celestische Synode"},
+      {"title": "Herold", "role": "oberster Würdenträger des Reiches"},
+      {"title": "Speculatores", "role": "oberster Verantwortlicher für Geheimhaltung und Spionage"},
+      {"title": "Artifex", "role": "oberster Verantwortlicher für Bildung, Kultur und Unterhaltung"},
+      {"title": "Aedil", "role": "Sonderrang der Verwaltung", "subordinateTo": "Quästor", "exactCountPerQuaestor": 5},
+      {"title": "Volkstribun", "role": "vom Volk gewählter Repräsentant des gesamten Volkes", "vetoUsesPerYear": 1, "vetoTargetScope": null, "vetoDuration": null},
+      {"title": "Nauticus", "role": "oberster Verantwortlicher für Seefahrt und Außenhandel; Handel, Seefahrt und Häfen", "subordinateTo": "Quästor"},
+      {"title": "Honor Custus", "role": "Sonderposten für die Liktorengarde als kaiserliche Leibgarde"}
+    ],
+    "aedils": {"exactCountPerQuaestor": 5, "totalEmpireCount": null},
+    "tribuneVeto": {
+      "usesPerYear": 1,
+      "meaning": "Einmaliges jährliches Vetorecht des gewählten Volksvertreters.",
+      "notEstablished": ["genauer Gegenstand und Reichweite", "Dauer einer Vetowirkung", "Überstimmungsverfahren", "Wahlverfahren und Amtszeit"]
+    },
+    "imperialGuard": {
+      "name": "Liktorengarde",
+      "responsiblePost": "Honor Custus",
+      "protects": "kaiserliche Familie",
+      "soleSupremeCommand": "Kaiseramt; derzeit Kaiserin",
+      "noCommandAuthority": ["Legat", "Quästor", "Konsule"],
+      "abolishedConsulReference": "Die Erwähnung von Konsulen im Befehlsausschluss reaktiviert das abgeschaffte Konsulamt nicht."
+    },
+    "notEstablished": ["weitere Amtsinhaber", "persönliche Namen", "Amtszeiten", "allgemeine Wahl- oder Erbverfahren", "automatischer Senatssitz jedes weiteren Amts", "vollständige Zahl aller Senatoren"]
+  },
+  "institutions": {
+    "sources": ["Q1:52-62"],
+    "count": 10,
+    "records": [
+      {"name": "Judikatur des Othorin", "kind": "kaiserliche Judikative", "responsibilities": ["Justizsystem"], "leadership": "Leitung ist zugleich Prätor des Kaisers."},
+      {"name": "Hetären der Lytheris", "kind": "klerikale Institution; Priesterschaft der Lytheris", "responsibilities": ["Unterhaltung", "Prostitution im klerikalen Sinne und deren Organisation und Unterhaltung im Land"], "leadership": "oberste geistliche Priesterin der Lytheris"},
+      {"name": "Forum des Tharistos", "kind": "kaiserliche Handelskammer", "responsibilities": ["Orientierung der Regulierung"], "leadership": "Leitung ist zugleich Quästor beziehungsweise Kämmerer des Kaisers."},
+      {"name": "Kaiserliche Universität", "kind": "akademische Institution", "responsibilities": ["akademische Institution"], "subordinateTo": "Artifex"},
+      {"name": "Venaim Rogare Thedros", "kind": "klerikale Institution", "responsibilities": ["kaiserliche Resozialisierung", "Sozialsystem"], "leadership": "höchster Geistlicher des Thedros"},
+      {"name": "Sepulcretum Kharos", "kind": "klerikales Bestattungsinstitut", "responsibilities": ["Bestattung"], "leadership": "oberster Geistlicher des Kharos"},
+      {"name": "Mardrans Contubernium", "kind": "militärische Institution", "responsibilities": ["Militärsystem", "Wehrpflicht", "Einbürgerung", "Dienst", "Pensionierung", "Legionssystem"], "leadership": "Legat führt den höchsten Rang."},
+      {"name": "Avrum Divanas", "kind": "wirtschaftliche Institution", "responsibilities": ["Wirtschaft", "Agrarsystem", "Viehsystem"], "leadership": "Höchste Posten sind die Aedilsposten."},
+      {"name": "Auspicium Ordeus", "kind": "klerikale Institution", "responsibilities": ["Zeremonien", "Krönung", "Salbung", "Auspizien"], "leadership": "oberster Priester des Ordeus"},
+      {"name": "Orbus qui Mariella", "kind": "Waisenheim der Mariella; Waiseninstitut", "responsibilities": ["Waisenheim", "karitative Arbeit"], "leadership": "oberster Priester der Mariella"}
+    ],
+    "currentTenthInstitution": "Orbus qui Mariella",
+    "noAdditionalOfficeHoldersInvented": true
+  },
+  "militaryOrganization": {
+    "sources": ["Q1:64-70"],
+    "records": [
+      {"name": "Legio", "meaning": "Legion", "personnelMin": 4000, "personnelMax": 6000},
+      {"name": "Exerte", "meaning": "Aufgebot eines Archonats"},
+      {"name": "Kohorte", "meaning": "Aufgebot einer Stadt"},
+      {"name": "Zenturie", "meaning": "Aufgebot einer kleinen Stadt oder Siedlung"},
+      {"name": "Manipel", "meaning": "Einheit innerhalb einer Zenturie", "personnelMin": 20, "personnelMax": 40},
+      {"name": "Turma", "meaning": "irreguläre Einheit; oft Gefolge eines Prinzen oder Freischärlertruppe aus Hilfstruppen"}
+    ],
+    "boundaries": [
+      "Keine realrömischen Standardgrößen ergänzen; die angegebenen Aleria-Definitionen gelten.",
+      "Aus den Einheitsnamen keine nicht festgelegten Multiplikationsverhältnisse, Rekrutenzahlen oder Gesamttruppenstärke berechnen.",
+      "Einheiten und Kriegerklassen sind unterschiedliche Begriffsgruppen."
+    ]
+  },
+  "religion": {
+    "sources": ["Q1:43", "Q1:72-73"],
+    "stateReligion": "Celestische Synode",
+    "religiousFreedom": true,
+    "missionaryActivity": "unerwünscht",
+    "missionaryActivityProhibitionOrPenalty": null
+  },
+  "requestedWork": {
+    "sources": ["Q1:34", "Q1:78-93", "Q2", "Q3"],
+    "initialProvinceOnly": "Leukonia",
+    "archonateBanners": "Ein eigenes Banner nach Art von Legionsbannern je Archonat.",
+    "provinceEmblem": "Ein Wappen für Leukonia als Provinz.",
+    "additionalHouseEmblems": {"formula": "Anzahl aktiver Festlandorte plus 6", "cityCount": 26, "emblemCount": 32, "style": "römisch-lateinisch-kampanisch"},
+    "warriorSequence": "Zuerst die sieben Klassentypen, danach 39 Hausfiguren.",
+    "houseFigureCount": 39,
+    "existingHouseCount": 7,
+    "newHouseCount": 32,
+    "socialIllustrations": "Sechs ulkige Comicillustrationen, eine je gesellschaftlicher Schicht.",
+    "scopeOfThisSourceExtraction": "Nur Quellen und Bestandskonflikte dokumentieren; keine Runtime-, Register- oder Bildänderungen."
+  },
+  "classPrototypeBriefs": {
+    "sources": ["Q1:85-93", "Q2"],
+    "announcedCount": 6,
+    "listedCount": 7,
+    "provisionalRetainedCount": 7,
+    "confirmedTypeCount": 7,
+    "resolutionStatus": "Die ursprüngliche Sechser-/Siebenerabweichung wurde durch die spätere Bestätigung aller sieben Typen aufgelöst.",
+    "classNamesEstablished": false,
+    "records": [
+      {"id": "prototype-01", "name": null, "brief": "Schwerer Infanterist mit Schwert oder Axt, manchmal Turmschild.", "status": "unnamed-prototype"},
+      {"id": "prototype-02", "name": null, "brief": "Schwer gepanzerter Lanzenträger.", "status": "unnamed-prototype"},
+      {"id": "prototype-03", "name": null, "brief": "Berittener mit Schwert; Kataphrakt.", "status": "unnamed-prototype"},
+      {"id": "prototype-04", "name": null, "brief": "Fernkämpfer mit Rückenköcher und Speer in der Hand.", "status": "unnamed-prototype"},
+      {"id": "prototype-05", "name": null, "brief": "Mariner und Kleriker des Zephyr; Säbel und Rückenköcher, edel, pompös, besonders und selten.", "status": "unnamed-prototype"},
+      {"id": "prototype-06", "name": null, "brief": "Miliz; einfacher Legionär.", "status": "unnamed-prototype"},
+      {"id": "prototype-07", "name": null, "brief": "Römischer Kampfbarde mit Säbel und Instrument.", "status": "unnamed-prototype"}
+    ],
+    "boundaries": [
+      "Technische prototype-IDs sind keine Klassennamen.",
+      "Die ursprüngliche Ankündigung von sechs Prototypen bleibt als Quellenhistorie erhalten; aktuell sind sieben Typen bestätigt.",
+      "Keinen der sieben bestätigten Typen ungefragt streichen oder zusammenlegen.",
+      "Bei Prototyp 4 und 5 beweist ein Rückenköcher allein noch keine ausdrücklich benannte Fernwaffenart; Bogen, Armbrust oder andere konkrete Fernwaffen nicht als bereits bestätigte Ausrüstung ausgeben.",
+      "Keine Klassenmechaniken, Pferderassen, persönlichen Namen oder Häuser ergänzen."
+    ]
+  },
+  "languageAndNamingBoundaries": {
+    "confirmedNewGrammar": false,
+    "confirmedNewClassNames": false,
+    "statements": [
+      "Albath und Argonath entwickelten eigene Sprachen und Kulturen; dieser Auftrag legt deren Grammatik, Alphabet und Einzelnamen nicht fest.",
+      "Lingua Argenti existiert als ältere öffentliche Sprach- und Namensquelle. Ihre politischen Begriffsdeutungen ersetzen keine aktuellen Nutzerfestlegungen.",
+      "Die Formen Honor Custus, Exerte, Orbus qui Mariella, Mercantrier, Tlapanui und Tlapatlan quellentreu führen; keine stillen vermeintlich lateinischen Korrekturen vornehmen.",
+      "Venalys ist nicht aufgrund gemeinsamer Namen oder Sprache automatisch Provinz Argentums. Seine eigenen bestätigten Stände und Ämter nicht mit Argentum gleichsetzen."
+    ]
+  },
+  "olderPublicContext": {
+    "status": "ergänzender Altbestand, nicht als neue Nutzerentscheidung übernommen",
+    "sources": [
+      {"path": "Fraktionen/data/organisationen.json", "sha256": "28ea9a6533d2ea69b3408a88c4a3fe94be0fa1caa03f60d3a5b3ecef096f8a8c", "relevantLines": "363-533", "use": "Zehn ältere Institutseinträge mit Namen und lokalen Wappenverweisen."},
+      {"path": "Fonts/Lingua-Argenti-Gesamtpaket-1.000/Quellen/Originalvorlage_Lingua_Argenti.txt", "sha256": "226f3ab1887e5bb1f7bab063685754d513d87105bd62a21ef00d6cc6b41d3397", "use": "Vorhandene ältere argentische Sprach- und Schriftbeschreibung; hier keine Grammatik übernommen."},
+      {"path": "Fonts/Lingua-Argenti-Gesamtpaket-1.000/Daten/Lingua_Argenti_Daten_1.0.json", "sha256": "3d2a5acfb2454f4b0bc72d93e011dd8d0ec10f5049ad2b5f463f223fd6d9b5d9", "relevantLines": "1944", "use": "Ältere Lexik bezeichnet Präfekt allgemein als Provinzvorsteher; aktuelle Verwaltungsvorgabe hat Vorrang."},
+      {"path": "Vorschau/Venalys/sources/RECHERCHE.md", "relevantLines": "176-185", "use": "Lingua Argenti als bestehende Namensquelle; keine ungeprüfte Ableitung von Venalys' Verfassung oder politischer Zugehörigkeit."}
+    ],
+    "conflicts": [
+      {
+        "topic": "zehntes Institut",
+        "olderValue": "zweiter, karitativer Eintrag Hetären der Lytheris (hetaeren-der-lytheris-1400)",
+        "currentValue": "Orbus qui Mariella",
+        "handling": "Für die neue Leukonia-Ausarbeitung gilt der aktuelle Nutzerauftrag. Älteres öffentliches Register unverändert lassen; keinen elften Institutseintrag erfinden."
+      },
+      {
+        "topic": "Präfekt als Provinzvorsteher",
+        "olderValue": "ältere allgemeine Begriffsdefinition in Lingua-Argenti-Daten",
+        "currentValue": "nicht erblicher staatlicher Verwaltungsposten unter dem Archon; Großprovinz wird vom Prokonsul regiert",
+        "handling": "Aktuelle politische Definition verwenden; alte Sprachdateien nicht verändern."
+      }
+    ]
+  },
+  "currentMapAndHousePlan": {
+    "source": "Q3",
+    "scope": "nur aktives Festland Leukonias",
+    "regionCount": 5,
+    "settlementCount": 26,
+    "archonHouses": ["Apinia", "Bolar", "Lex", "Orania", "Pelagia", "Tremelia"],
+    "imperialDomain": {"house": "Mede", "place": "Zaphias"},
+    "bolar": {"houseRetained": true, "rankUnchanged": true, "region": null, "seat": null},
+    "excludedIsland": {"region": "archonat-insel", "places": ["ort-23", "ort-24"], "visibleInSourceMap": true, "politicalAffiliation": "offen", "activeArchonate": false},
+    "existingHouseCount": 7,
+    "newHouseCount": 32,
+    "houseFigureCount": 39,
+    "classTypeCount": 7,
+    "boundary": "Die Hausbestätigung benennt keine persönlichen Amtsträger und setzt für die sechs Archonhäuser keine zusätzlichen, unbelegten Stammsitze."
+  },
+  "openQuestions": [
+    "Wie ist die Größenanalogie Provinz ungefähr Grafschaft gegenüber drei Großprovinzen und den Archonaten begrifflich genau gemeint?",
+    "Welche Namen erhalten die noch unbenannten Gebiete und Orte der fünf aktiven Festlandarchonate mit 26 Orten?",
+    "Welcher Region und welchem Sitz wird Bolar später zugeordnet?",
+    "Welche eigenständige Zugehörigkeit hat die südliche Insel? Sie bleibt vorerst außerhalb der Leukonia-Vorbereitung.",
+    "Welche präzise geografische Lage hat das Calidaria-Archipel innerhalb der gegebenen relativen Beschreibung?",
+    "Wie lauten die Namen der derzeitigen Kaiserin und etwaiger Amtsinhaber?",
+    "Wie groß ist der Senat insgesamt und welche weiteren Ämter begründen selbst einen Senatssitz?",
+    "Welche konkrete Reichweite und Wirkungsdauer hat das einmalige jährliche Veto des Volkstribuns?",
+    "Welche weiteren Regeln gelten gegebenenfalls für Ernennung, Amtsdauer, Nachfolge oder Ämterverbindung?",
+    "Welche Klassennamen und welche ausdrücklich benannten Fernwaffen erhalten die noch unbenannten Prototypen?"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "haus-blevis",
+  "prompt": "Use case: stylized-concept. Asset type: one anonymous civilian fantasy house figure for the Aleria house register. The supplied image is ONLY the approved STYLE reference: copy its quiet matte hand-painted treatment, gently simplified proportions, large clear clothing shapes, thin soft painted contours, restrained soft shading and fine uniform gouache pigment grain. Do not copy armour, weapon, helmet, plume, colours or heraldry. Calm upright three-quarter standing pose, complete full body including head and both feet with clear margin, portrait2:3. Muted earthy palette and practical medieval-fantasy wool/linen clothing suitable for mild wet windy Cenyr. Actual transparent RGBA PNG, alpha=0 outside the silhouette and in every opening. No scenery, ground, floor, external shadow, fog, halo, aura, border, lettering or watermark. No photorealism, CGI, gloss, dramatic lighting, thick comic outlines or paint splashes. This is an unnamed representative: no named person identity, rank insignia, house crest, badge, jewellery emblem, profession symbol or tool. No armour, weapons or crown. One person only.\nHouse: haus-blevis. Context: Llysfaen, Llamreis Ankunft, Celtigerns Wacht, Cenyr. No individual heraldry is known.\nSubject: An anonymous adult woman around40 with dark braided hair and a calm thoughtful face. Muted blue linen-and-wool long dress with a plain brown shoulder wrap, simple belt and practical brown shoes. One empty hand lightly holds the opposite wrist in front, shoulders relaxed, full skirt shapes simple and readable. No apron or headscarf, no jewellery emblem.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "referenceSha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-blevis.png",
+  "provider": "built-in-imagegen",
+  "status": "generated-awaiting-QA",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-3c4b-7ac1-94a8-f6c32917a174\\exec-b283855b-7d18-4143-8c82-12b6e1e16282.png"
+}

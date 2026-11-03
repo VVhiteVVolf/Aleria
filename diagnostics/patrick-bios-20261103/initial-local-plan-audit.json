@@ -1,0 +1,190 @@
+{
+  "source": "Fresh authorized two-record live snapshot, no other raw records included.",
+  "existingCreatureSnapshotProvided": false,
+  "newCreaturesAreProposalsUntilLiveCreatureRead": true,
+  "sourceInputsUnchanged": true,
+  "characters": [
+    {
+      "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "changedFields": [
+        "biography",
+        "inventory",
+        "updatedAt"
+      ],
+      "allNonIconBiographyFieldsIdentical": true,
+      "originalItemsRetained": true,
+      "priorNonItemInventoryFieldsRetained": true,
+      "iconAssignments": [
+        {
+          "title": "Eitel",
+          "icon": "/IconOrdner/Traits%20Icon/Groomed.png",
+          "reused": true
+        },
+        {
+          "title": "Gewissenhaft",
+          "icon": "/IconOrdner/Traits%20Icon/Diligent.png",
+          "reused": true
+        },
+        {
+          "title": "Ehrgeizig",
+          "icon": "/IconOrdner/Traits%20Icon/Ambitious.png",
+          "reused": true
+        },
+        {
+          "title": "Gesellig",
+          "icon": "/IconOrdner/Traits%20Icon/Gregarious.png",
+          "reused": true
+        }
+      ],
+      "pendingIcons": 8,
+      "sourceBiographySha256": "d798d13c6b19842e77028e01d2f421b90a2a63124fbc5e33410f7209dad9336c"
+    },
+    {
+      "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "changedFields": [
+        "biography",
+        "inventory",
+        "updatedAt"
+      ],
+      "allNonIconBiographyFieldsIdentical": true,
+      "originalItemsRetained": true,
+      "priorNonItemInventoryFieldsRetained": true,
+      "iconAssignments": [
+        {
+          "title": "Gewissenhaft",
+          "icon": "/IconOrdner/Traits%20Icon/Diligent.png",
+          "reused": true
+        },
+        {
+          "title": "Familienverbunden",
+          "icon": "/IconOrdner/Traits%20Icon/Family_focus.png",
+          "reused": true
+        }
+      ],
+      "pendingIcons": 10,
+      "sourceBiographySha256": "517dc685efb451af5204ca4544f6648644c9843b978218a645db1470e483611c"
+    }
+  ],
+  "proposedCreatures": [
+    {
+      "id": "companion-cadogan-sgrechiwr-silberstolz",
+      "name": "Silberstolz",
+      "species": "Erlenglanz-Pferd",
+      "ownerCharacterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "bestiaryReference": {
+        "id": "tiere/pferde/erlenglanz",
+        "name": "Erlenglanz",
+        "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html"
+      }
+    },
+    {
+      "id": "companion-rhiannon-draenmelyn-perle",
+      "name": "Perle",
+      "species": "Rhyfel-Pferd",
+      "ownerCharacterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      }
+    }
+  ],
+  "pending": [
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Perfektionistisch"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Charmant"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Redegewandt"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Klatschfreudig"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Kunstliebend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Empfindlich gegenüber Fehlern"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Romantisch"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Schlecht im Delegieren"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Ordnungsliebend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Beobachtend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Selbstbewusst"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Freundlich"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Zurückhaltend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Humorvoll"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Diszipliniert"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Bestimmend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Nachtragend"
+    },
+    {
+      "kind": "missing-trait-icon",
+      "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Perfektionistisch"
+    },
+    {
+      "kind": "unresolved-pet-owner",
+      "name": "Sir Balthasar",
+      "ownerName": "Gwen Hamnett"
+    }
+  ],
+  "passed": true
+}

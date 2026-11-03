@@ -1,0 +1,46 @@
+{
+  "source": {
+    "attachmentId": "24c87950-07a1-4010-98a5-0feb6a8b2a34",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "645102fab76ce5cc48dfa8def4ab4df167fc4b9b8039eff0b82e9c71b6930899"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-lyfant-caer-asgwrn",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-lyfant-caer-asgwrn",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 3,
+    "currentSeat": "Caer Asgwrn",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/63SmZIx.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "8a0290cad18e459085726fd337368f703b24e9ab3d7a5755fb1e1f8a04604489",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Nur haus-lyfant-caer-asgwrn ergänzen. Cledwyn führt die südliche Linie, Cadwgan ist Seitenzweig. Die Derwyddion-/Meredyddlinie bleibt im Norden.",
+    "Die vollständige örtliche Hierarchie Silberwald/Skelettküste/Caer Asgwrn bleibt erhalten. Lehnsherr ist Pysgod, nicht Draenog oder ein Herr aus Llanforwyn.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

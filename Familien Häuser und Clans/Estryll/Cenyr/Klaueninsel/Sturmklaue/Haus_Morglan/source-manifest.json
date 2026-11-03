@@ -1,0 +1,36 @@
+{
+  "houseId": "haus-morglan",
+  "kind": "canonical-register-preparation",
+  "date": "2026-11-03",
+  "canonicalRegistrySource": "Stammbäume/assets/js/data/families.registry.js",
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/lynne-crew-house-families.js",
+    "Stammbäume/assets/js/data/lynne-crew-family-members.js",
+    "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json"
+  ],
+  "canonicalSnapshot": {
+    "file": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+    "recordId": "haus-morglan",
+    "recordJsonSha256": "8e2fcf36a8361a716e5f69862b2e9731f526e0b16fa9c2c10c02ceb82ace8558",
+    "sourceRevision": 6
+  },
+  "genealogy": {
+    "existingFamilyId": "haus-morglan",
+    "graphChanged": false,
+    "suppliedTreeImported": false
+  },
+  "militaryStatisticsIgnored": true,
+  "image": {
+    "file": "assets/hausdarstellung-2026-11-03.png",
+    "promptManifest": "diagnostics/klaueninsel-house-pages-20261103/image-prompts.json",
+    "metadata": "assets/image-generation.json",
+    "preserveExistingImages": true
+  },
+  "decisions": [
+    "Nur vorhandene öffentliche Registerfakten, Beschreibungen, Personen und deren belegte Aufgaben redigiert. Keine zusätzliche Familie oder Verwandtschaft angelegt.",
+    "Datierte genealogische Gerüste sind keine Hauschronik: keine daraus abgeleiteten Gründungsjahre, Wanderungen, Amtsfolgen oder Oberhäupter.",
+    "Nur reale Personen mit vorhandenem individuellem Portrait erhalten Angehörigenkarten. Namen und Portraitpfade stammen unverändert aus der bestehenden Akte.",
+    "Sämtliche Militärstatistiken ausgelassen. Persönliche Bordaufgaben bleiben von Hausämtern und Hausrang getrennt."
+  ]
+}

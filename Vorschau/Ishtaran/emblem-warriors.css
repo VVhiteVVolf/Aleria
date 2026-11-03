@@ -1,0 +1,14 @@
+.ishtaran-workbench .emblem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ishtaran-workbench .emblem-pair-button{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center;gap:12px;width:100%;padding:0;background:transparent;border:0;text-align:center}
+.ishtaran-workbench .emblem-pair-button:hover{background:#f8f4e94d}
+.emblem-pair-crest,.emblem-pair-warrior{display:flex;align-items:center;justify-content:center;flex-direction:column;min-width:0}
+.ishtaran-workbench .emblem-pair-crest img{display:block;width:100%;height:180px;max-width:none;object-fit:contain}
+.ishtaran-workbench .emblem-pair-warrior img{display:block;width:100%;height:370px;max-width:none;object-fit:contain}
+.emblem-pair-crest>span,.emblem-pair-warrior>span{font:10px/1.6 var(--sans);color:var(--muted);margin-top:10px}
+.emblem-pair-open{grid-column:1/-1;font:11px/1.6 var(--sans);color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.ishtaran-workbench .emblem-card .emblem-warrior-label{font:11px/1.7 var(--sans);color:var(--accent)}
+.ishtaran-workbench .ancient-emblems .emblem-card{display:flex}
+.ishtaran-workbench .ancient-emblems .shortlist-button{grid-column:auto}
+.ishtaran-art-dialog .house-warrior>a{height:min(70vh,750px)}
+@media(max-width:700px){.ishtaran-workbench .emblem-grid{grid-template-columns:1fr}.ishtaran-workbench .emblem-pair-button{grid-template-columns:1fr;gap:15px}.ishtaran-workbench .emblem-pair-crest img{height:175px;max-width:210px}.ishtaran-workbench .emblem-pair-warrior img{height:400px}.emblem-pair-open{grid-column:1}.ishtaran-workbench .realm-crest .emblem-pair-warrior img{height:330px}.ishtaran-workbench .realm-crest .emblem-pair-crest img{height:130px;max-width:160px}}
+@media print{.ishtaran-workbench .emblem-pair-button{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}.emblem-pair-open{display:none}.ishtaran-workbench .emblem-pair-warrior img{height:280px}.ishtaran-workbench .emblem-pair-crest img{height:130px}}

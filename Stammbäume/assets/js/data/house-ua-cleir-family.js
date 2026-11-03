@@ -18,7 +18,7 @@ import {
   LEITHEACH_HOUSE_EMBLEMS,
   LEITHEACH_LAIRD_HOUSE_EMBLEMS
 } from './leitheach-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   TIR_NA_SINSEAR_HOUSE_EMBLEMS,
   TIR_NA_SINSEAR_HOUSE_PROFILES,

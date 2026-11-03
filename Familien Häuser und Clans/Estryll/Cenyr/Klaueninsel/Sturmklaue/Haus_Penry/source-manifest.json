@@ -1,0 +1,37 @@
+{
+  "houseId": "haus-penry",
+  "kind": "canonical-register-preparation",
+  "date": "2026-11-03",
+  "canonicalRegistrySource": "Stammbäume/assets/js/data/families.registry.js",
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/lynne-crew-house-families.js",
+    "Stammbäume/assets/js/data/lynne-crew-family-members.js",
+    "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json"
+  ],
+  "canonicalSnapshot": {
+    "file": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+    "recordId": "haus-penry",
+    "recordJsonSha256": "c14254127446dcb784fe36fa2a28057e940611b0f0b60c980b481399437999eb",
+    "sourceRevision": 6
+  },
+  "genealogy": {
+    "existingFamilyId": "haus-penry",
+    "graphChanged": false,
+    "suppliedTreeImported": false
+  },
+  "militaryStatisticsIgnored": true,
+  "image": {
+    "file": "assets/hausdarstellung-2026-11-03.png",
+    "promptManifest": "diagnostics/klaueninsel-house-pages-20261103/image-prompts.json",
+    "metadata": "assets/image-generation.json",
+    "preserveExistingImages": true
+  },
+  "decisions": [
+    "Nur vorhandene öffentliche Registerfakten, Beschreibungen, Personen und deren belegte Aufgaben redigiert. Keine zusätzliche Familie oder Verwandtschaft angelegt.",
+    "Datierte genealogische Gerüste sind keine Hauschronik: keine daraus abgeleiteten Gründungsjahre, Wanderungen, Amtsfolgen oder Oberhäupter.",
+    "Nur reale Personen mit vorhandenem individuellem Portrait erhalten Angehörigenkarten. Namen und Portraitpfade stammen unverändert aus der bestehenden Akte.",
+    "Sämtliche Militärstatistiken ausgelassen. Persönliche Bordaufgaben bleiben von Hausämtern und Hausrang getrennt.",
+    "Rhun Penrys Vogtamt stammt aus dem ausdrücklichen bestehenden Personentitel. Keine Ableitung einer familiären Führung aus Amt oder Alter."
+  ]
+}

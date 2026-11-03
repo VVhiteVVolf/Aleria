@@ -15,7 +15,7 @@ export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
  function surfaceMarkup(variant){
   const groups=variant.settlements.filter(place=>variant.clans.some(c=>c.seat===place.id));
   const lines=groups.map(p=>`<line x1="${p.point[0]}" y1="${p.point[1]}" x2="${p.pin[0]}" y2="${p.pin[1]}"/>`).join('');
-  const pins=groups.map(place=>`<div class="crest-group" style="left:${place.pin[0]}%;top:${place.pin[1]}%" data-city="${place.id}">${variant.clans.filter(c=>c.seat===place.id).map(clan=>`<button class="clan-pin" data-action="show-clan" data-clan="${clan.id}" aria-label="${escape(clan.name)} · ${escape(place.name)} · ${escape(rankLabel(clan))}"><img src="${assetUrl('assets/'+clan.crest)}" width="40" height="40" alt="Wappen ${escape(clan.name)}"></button>`).join('')}</div>`).join('');
+  const pins=groups.map(place=>`<div class="crest-group" style="left:${place.pin[0]}%;top:${place.pin[1]}%" data-city="${place.id}">${variant.clans.filter(c=>c.seat===place.id).map(clan=>`<button class="clan-pin" data-action="show-clan" data-clan="${clan.id}" ${clan.markerTone?`data-marker-tone="${escape(clan.markerTone)}"`:''} aria-label="${escape(clan.name)} · ${escape(place.name)} · ${escape(rankLabel(clan))}${clan.markerNote?' · '+escape(clan.markerNote):''}"><img src="${assetUrl('assets/'+clan.crest)}" width="40" height="40" alt="Wappen ${escape(clan.name)}"></button>`).join('')}</div>`).join('');
   const labelledPlaces=hasBakedNames(variant)?variant.settlements.filter(place=>place.overlayLabel):variant.settlements;
   const names=labelledPlaces.map(place=>{const position=place.label??[place.point[0],place.point[1]+3.6];return `<span class="city-name" style="left:${position[0]}%;top:${position[1]}%">${escape(place.name)}</span>`;}).join('');
   const [width,height]=variant.imageSize??imageSize;
@@ -28,16 +28,18 @@ export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
   root.querySelector('#map-caption').textContent=caption(variant);
   dialog.querySelector('[data-role="map-title"]').textContent=`Variante ${variant.number} · ${variant.short}`;
   const namesButton=root.querySelector('[data-action="toggle-names"]');
-  namesButton.disabled=hasBakedNames(variant);
-  namesButton.textContent=hasBakedNames(variant)?'Ortsnamen im Kartenbild':'Ortsnamen';
-  namesButton.setAttribute('aria-pressed',String(hasBakedNames(variant)||showNames));
+  if(namesButton){
+   namesButton.disabled=hasBakedNames(variant);
+   namesButton.textContent=hasBakedNames(variant)?'Ortsnamen im Kartenbild':'Ortsnamen';
+   namesButton.setAttribute('aria-pressed',String(hasBakedNames(variant)||showNames));
+  }
   sizeOverview();
  }
  function tip(button){
   const variant=getVariant(),clan=variant.clans.find(c=>c.id===button.dataset.clan);
   const place=variant.settlements.find(p=>p.id===clan.seat),liege=variant.clans.find(c=>c.id===clan.liege);
   (button.closest('dialog')??document.body).append(tooltip);
-  tooltip.innerHTML=`<strong>${escape(clan.name)}</strong><span>${escape(rankLabel(clan))} · ${escape(place.name)}</span><span>${liege?'Dient '+escape(liege.name):escape(rootClanLabel)}</span>`;
+  tooltip.innerHTML=`<strong>${escape(clan.name)}</strong><span>${escape(rankLabel(clan))} · ${escape(place.name)}</span><span>${liege?'Dient '+escape(liege.name):escape(rootClanLabel)}</span>${clan.markerNote?`<span>${escape(clan.markerNote)}</span>`:''}`;
   tooltip.hidden=false;
   const rect=button.getBoundingClientRect();
   tooltip.style.left=Math.max(8,Math.min(rect.left,window.innerWidth-tooltip.offsetWidth-8))+'px';

@@ -1,0 +1,56 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-pyrth",
+  "source": {
+    "attachmentId": "4dedb73d-0d17-4dd4-bdc0-943764aed2a6",
+    "file": "animexx-original.html",
+    "sha256": "0939bd92ae35289ec3cd418bc62d163a5e50f3e5142967cca75b4e189814313e",
+    "bytes": 101087,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "ignore supplied genealogy; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-pyrth"
+  },
+  "militaryStatistics": "ignored entirely",
+  "biographySourceRevision": 3,
+  "previousFamilySourceRevision": 2,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/3HG8c9M.png",
+      "role": "house-illustration",
+      "sha256": "dc4bc821330997f0bf6b5205245b4f20a7e18dc9d7b8d78993e4a8cd59b3f43f",
+      "bytes": 192279,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/WK83adj.png",
+      "role": "territory-banner",
+      "sha256": "d4fec461f0e5feb59f3f62f2f4c05db4374fd8a7d7b082496f0e704bdfa7c1a9",
+      "bytes": 320528,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 482,
+      "height": 517,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Stammbäume/assets/js/data/house-pyrth-family.js",
+    "Stammbäume/assets/js/data/house-pyrth-portraits.js"
+  ],
+  "territorySource": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/herrschaft.data.mjs"
+}

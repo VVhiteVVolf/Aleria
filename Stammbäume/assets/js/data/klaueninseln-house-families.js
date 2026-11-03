@@ -11,7 +11,7 @@ import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
 import { PARZIFAL_CREW_HOUSE_FAMILIES } from './parzifal-crew-house-families.js';
 import { withParzifalCrewPortraitUpgrade } from './parzifal-crew-families/portrait-upgrade.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
-import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js';
+import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js?v=20261103-klaueninsel-v2';
 import {
   HOUSE_DIAFOL_TALGARTH_FAMILY,
   HOUSE_DIAFOL_TREFGOCH_FAMILY

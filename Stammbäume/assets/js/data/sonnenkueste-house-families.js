@@ -8,10 +8,11 @@ import {
   HOUSE_MORFORWYN_LINKED_LINE_FAMILIES
 } from './house-morforwyn-family.js';
 import { HOUSE_TEYRNGARCH_FAMILY } from './house-teyrngarch-family.js';
+import { HOUSE_CAERWEN_FAMILY, HOUSE_NERWYNN_FAMILY } from './jungferntal-knight-houses.js?v=20261103-sonnenkueste-v1';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS,
   SONNENKUESTE_HOUSE_PROFILES
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 
 export const SONNENKUESTE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'teyrngarch', title: 'Teyrngarch' }),
@@ -21,6 +22,8 @@ export const SONNENKUESTE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'morforwyn', title: 'Morforwyn' }),
   Object.freeze({ slug: 'rhelian', title: 'Rhelian' }),
   Object.freeze({ slug: 'aelryn', title: 'Aelryn' }),
+  Object.freeze({ slug: 'caerwen', title: 'Caerwen' }),
+  Object.freeze({ slug: 'nerwynn', title: 'Nerwynn' }),
   Object.freeze({ slug: 'grianlaoch', title: 'Grianlaoch' }),
   Object.freeze({ slug: 'gwaedryn', title: 'Gwaedryn' }),
   Object.freeze({ slug: 'rhavorn', title: 'Rhavorn' }),
@@ -69,6 +72,8 @@ function placeholderFamily(definition) {
 }
 
 const COMPLETED_DEPENDENT_FAMILIES = Object.freeze({
+  caerwen: HOUSE_CAERWEN_FAMILY,
+  nerwynn: HOUSE_NERWYNN_FAMILY,
   blach: HOUSE_BLACH_FAMILY,
   grianlaoch: HOUSE_GRIANLAOCH_FAMILY,
   illwath: HOUSE_ILLWATH_FAMILY,

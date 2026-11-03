@@ -1,5 +1,8 @@
 import { markCharacterTechniqueOverlay, isCharacterTechniqueOverlay, applyCharacterTechniqueOverlays } from './character-technique-overlays.mjs';
 import { markCharacterTraitOverlay, isCharacterTraitOverlay, applyCharacterTraitOverlays } from './character-trait-overlays.mjs';
+import { applyCharacterCompanionOverlays } from './character-companion-overlays.mjs';
+import { confirmedCharacterResidence } from './character-residence-overlays.mjs';
+import { currentReviewedMetadataSources } from './character-reviewed-metadata-overlays.mjs';
 import { createHash } from 'node:crypto';
 
 export const CHARACTER_DATABASE_SCHEMA_VERSION = 1;
@@ -395,6 +398,7 @@ function fillMissingValues(primary, fallback, path = '') {
 }
 
 function groupArchiveCharacters(characters = []) {
+  characters=currentReviewedMetadataSources(characters);
   // A confirmed rename owns the name of its existing document. Grouping the
   // historical spelling separately would otherwise recreate the old character.
   const renamedDocuments = new Map();
@@ -438,6 +442,9 @@ function groupArchiveCharacters(characters = []) {
     merged = applyCharacterTechniqueOverlays(merged, sourceCharacters, latestCombatTimestamp);
     const latestBiographyTimestamp = Math.max(0, ...snapshotOverlays.filter(source => source.biography?.biography?.abilities !== undefined).map(source => Date.parse(source.updatedAt || '') || 0));
     merged = applyCharacterTraitOverlays(merged, sourceCharacters, latestCombatTimestamp, latestBiographyTimestamp);
+    const latestInventoryTimestamp=Math.max(0,...sourceCharacters.filter(source=>source.inventory&&typeof source.inventory==='object')
+      .map(source=>Date.parse(source.updatedAt||'')||0));
+    merged = applyCharacterCompanionOverlays(merged,sourceCharacters,latestInventoryTimestamp);
     merged.id = canonicalDocumentId;
     merged.aliases = uniqueBy([
       ...(Array.isArray(merged.aliases) ? merged.aliases : []),
@@ -486,7 +493,7 @@ export function buildCharacterDatabase(archive, familyCandidates, options = {}) 
     const assigned = combinedAssignments(sourceCharacters, assignments);
     const familyMatch = matchCharacterToFamily(sourceCharacter, familyCandidates);
     const affiliations = classifyLegacyTabs(assigned);
-    const primary = choosePrimaryClassification(familyMatch, affiliations);
+    const primary = confirmedCharacterResidence(sourceCharacters,choosePrimaryClassification(familyMatch, affiliations));
     const recordId = `character--${text(sourceCharacter.id) || characterDatabaseSlug(sourceCharacter.name)}`;
     const character = enrichCharacterWithFamily(sourceCharacter, familyMatch, exportedAt);
     const directory = recordDirectory(primary, character, recordId);

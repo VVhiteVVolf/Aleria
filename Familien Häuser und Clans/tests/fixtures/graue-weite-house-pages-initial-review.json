@@ -1,0 +1,329 @@
+{
+  "provenance": "Initial review before local Graue Weite house-page projection, 2026-11-03. No uploaded genealogy is copied. Fifteen graph hashes and four protected-origin family hashes are one-time audit references, not permanent restrictions on later authorized genealogy or biography editing. Exact source and fifteen original scene hashes identify supplied artifacts.",
+  "records": [
+    {
+      "id": "haus-pysgod",
+      "initialGraphFingerprint": "4b999b8391a8eb0f9a6056bc06d2e8a3f0b4db0a349aee1d7dfd57f9f93f8b01",
+      "initialCanonicalProfile": {
+        "rankId": "county",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "c369a4e3-4d12-4024-b4c1-00c452e0ce41",
+        "sha256": "e4e4b60beaa50a7492d7d91f1c8baf14463e5ab7fe92ac67e2b3a3082c212e1f"
+      },
+      "originalSceneSha256": "2aa7392ef75c747277a1308126e59a908d5f900c0704b9039be99d7351a2e8b0"
+    },
+    {
+      "id": "haus-blaidd-tredegar",
+      "initialGraphFingerprint": "39cb6435842295018a7ca5bc7054f1eef837dfd2c40da1a3e396212ab041a40a",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "8022dfb2-2fa4-414e-962f-9750cf0327d7",
+        "sha256": "857a180a14bc026011eefb675a03b3c5c7023777eb491f56ad1e785bbdddb620"
+      },
+      "originalSceneSha256": "612b47e98a8c20f1f24b55be91a821ce3a05e522c10a430e6def1afe1eca3372"
+    },
+    {
+      "id": "haus-brithyll",
+      "initialGraphFingerprint": "8ba218cda6c731ca925e53895a9267146ae3adea3303ad9ccfab043c907cee6f",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "b0a5725d-8ba8-4bc4-8246-c2148cb4dbaf",
+        "sha256": "4ccb19421b67848c484f22afb252a452034045eaf5174f1e782a8e86c0a1dc1b"
+      },
+      "originalSceneSha256": "7b12085eab6c7bfddd3f3c109459182e3403ad58b01fe5405e185a43cbc4cbb3"
+    },
+    {
+      "id": "haus-gwialen",
+      "initialGraphFingerprint": "8910bf29be433c32f36dd7c17fde4a2f45044810e5b74ab265ec9f3b756b4777",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "30c27015-c2ea-4c0e-b358-53a66318c43f",
+        "sha256": "4981bc8818d234d02d0eaca12c1815eefa391bd6c2b6d763efd1a402ac7374aa"
+      },
+      "originalSceneSha256": "94f37c0912ae0cb3cda0a0be5ec3a532e139ac759e441788360f0767646aaacd"
+    },
+    {
+      "id": "haus-illygoden-tredegar",
+      "initialGraphFingerprint": "a35d46a11dd23593e7a3d03e4b4274e8f582faa516563223f4399b306476b641",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "1bfe2d27-d6fb-424f-8db1-4d60499d8862",
+        "sha256": "aff48d108b24e7c38d662dfbcc0453e0fd3acdfff40c7c2cd507d668d22f7241"
+      },
+      "originalSceneSha256": "9cf116d44aea600dd369200feaae3848cad19e0842f8109a5d226172463abfdc"
+    },
+    {
+      "id": "haus-gwaedlyd-tredegar",
+      "initialGraphFingerprint": "0985a7e2e8f5df4356eb07be1934a27f6e6bcacd3649985699746a1f54d370b4",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Schimmerküste",
+        "seat": "Tredegar",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "fce23593-f26f-401a-ac39-8962e1184cfb",
+        "sha256": "40d1e1dc5f8704fecd725ab12c91c90e7a1cac03e7739bbcbef48924782ff565"
+      },
+      "originalSceneSha256": "dc4b61ac3674d8ee6d92812482a2ef4eeb4ea73ccca1bd56b5178f0764a6a049"
+    },
+    {
+      "id": "haus-coedwig",
+      "initialGraphFingerprint": "0cea4d2353b09fa71fb758352a7c5dd9c34845bd4c2d848b49bbbf943cc19cf7",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Achatsee",
+        "seat": "Llanfyn",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "55934959-b162-4711-bf3d-e4e0a2727bee",
+        "sha256": "5b19eb29231d3d977fec62b898907821801bae2bae3e09862a18c01b728b074d"
+      },
+      "originalSceneSha256": "6fb56b416a422ed6f1105a179983e9dbca5f227bd9d2f52003b048d332836ee3"
+    },
+    {
+      "id": "haus-draenog",
+      "initialGraphFingerprint": "09911e4a4b5436d7bfaa539fd068e1bb08e774cb69740ab37521bf5992e4c605",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Silberwald",
+        "seat": "Llanforwyn",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "1ebdb645-0558-445f-865d-944dea0cb1ed",
+        "sha256": "e7a7757315de357817cdd098f1dc8cd43f0e467aae4cd36edbb704ea525b7af3"
+      },
+      "originalSceneSha256": "e4292a8e53ffeae49c58f5225f2782a158439b7be3a22c6924e3ce7d06a6c659"
+    },
+    {
+      "id": "haus-wivern",
+      "initialGraphFingerprint": "57bf393449176617b09ffb6cb82149997d4ed69cf43afec92a477351a1f36302",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Eichenlicht",
+        "seat": "Coedlyn",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "8ef348fa-4421-4767-a3af-a9f8544d4709",
+        "sha256": "e1f28f96b26aa25cb1896e51b6345b145b86ca780dac49a3a338d93ac1c09f41"
+      },
+      "originalSceneSha256": "f92b2114e7ce920224488cf417ec0ddd46c60a48f66096a2e30c6e08ecf7d581"
+    },
+    {
+      "id": "haus-morfil",
+      "initialGraphFingerprint": "0297764974a98fc9cb685ae2ae166d66f643adbaea861e6d9b4569ac0e6c1fc6",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Grauküste",
+        "seat": "Talsarn",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "e86e84fb-0958-46f9-a6df-5b342b339dbb",
+        "sha256": "55e316cd3c1bb2d2e537779d23c59363d3a2ee3fdc86e1e6c7c4322b889a363d"
+      },
+      "originalSceneSha256": "ac777812f4de7b02c8658655779503217618491aacd64ae87e5e03383954fce0"
+    },
+    {
+      "id": "haus-lyfant-caer-asgwrn",
+      "initialGraphFingerprint": "17e580dcdb19e61a3e3cf5a2d30d390e5f12d4f011751a92c99e7f7b1b7c4d6c",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Silberwald",
+        "seat": "Caer Asgwrn",
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar"
+      },
+      "source": {
+        "attachmentId": "24c87950-07a1-4010-98a5-0feb6a8b2a34",
+        "sha256": "645102fab76ce5cc48dfa8def4ab4df167fc4b9b8039eff0b82e9c71b6930899"
+      },
+      "originalSceneSha256": "8a0290cad18e459085726fd337368f703b24e9ab3d7a5755fb1e1f8a04604489"
+    },
+    {
+      "id": "haus-dornach",
+      "initialGraphFingerprint": "ea5dbc9ce0ab34730aa58fb7493c17afffb14e6e38070e4bd5ddf3ad46018b9a",
+      "initialCanonicalProfile": {
+        "rankId": "dun-tiarna",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Antike Crannath Clans",
+        "seat": "Ard Ghallon",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "e7f78465-691f-4435-8644-7a531a306294",
+        "sha256": "8a1877d4e4e74ec322c81dfe8aaba987b43a69769fed011a7905fd37a31df8fd"
+      },
+      "originalSceneSha256": "2bb630a768aa7fdbd5f545fffede8041af79ad62ae2bdf161dde6bc5dbfef13e"
+    },
+    {
+      "id": "haus-brathaireann",
+      "initialGraphFingerprint": "7d51da28e6ce36b2cf83016ae4fdcf209460a1d0a7f45abeb91c735921145e10",
+      "initialCanonicalProfile": {
+        "rankId": "mor-tiarna",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Antike Crannath Clans",
+        "seat": "Mor Mhachair",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "2f505f20-720a-4bef-ae42-718f5f3c37ac",
+        "sha256": "0a124cd300ca2e9b8a437bb856b284e4b42e14593a8a01a9fa333e67d44fa819"
+      },
+      "originalSceneSha256": "6d8df9cc2bf701a145026c8cabc70d3e1f12debb58da317a5f8766b9ac74846c"
+    },
+    {
+      "id": "haus-tonnmharra",
+      "initialGraphFingerprint": "f5f002298ed05698b00313343b000d6bb90f8d6ce9efde6ebe8eef9196782802",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Antike Crannath Clans",
+        "seat": "Dun Liath",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "cc9bb5b5-4be9-4d3a-8b30-e61d68a8e5f5",
+        "sha256": "0adc27e244c8a776cdfe06fe2ce9ced65d3e341b9074413d67e9a37ea20cc320"
+      },
+      "originalSceneSha256": "c8af34b7fce957a3fa235c5d8a6d257803c0291dd6c86b4edaebd9e027a100ac"
+    },
+    {
+      "id": "haus-tanwyn",
+      "initialGraphFingerprint": "a4a142442f09721e0367b92ccfb9a3e73f7ba758eb063a36f6d0a2a33588bbd6",
+      "initialCanonicalProfile": {
+        "rankId": "unknown",
+        "kingdom": "Cenyr",
+        "county": "Graue Weite",
+        "barony": "Ausgestorbene Häuser",
+        "seat": "",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "8474a101-9863-4ff4-afdc-cc70f8e0e9b6",
+        "sha256": "41e8e72494050dddba2a06e36264a240977aa12e20e2e4b970b918e50888fe25"
+      },
+      "originalSceneSha256": "59f0758c8eca510844ed2843d37fa07364e499f54ca08db2a2151b0a80bb45ba"
+    }
+  ],
+  "protectedOrigins": [
+    {
+      "id": "haus-blaidd",
+      "initialCanonicalProfile": {
+        "rankId": "county",
+        "kingdom": "Vennyr",
+        "county": "Tir Dwyrain",
+        "barony": "Branon",
+        "seat": "",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "initialFamilyFingerprint": "6f274c0a21ff5bb8f3b2eda7108b43fae3ed97003a56508296f659184426cf97"
+    },
+    {
+      "id": "haus-illygoden",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Vennyr",
+        "county": "Tir Dwyrain",
+        "barony": "Tirwedd",
+        "seat": "",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "initialFamilyFingerprint": "784cd2db6815c953b46e951cfdc7fcf1542981a6901f91a27f2d4ed71b08030e"
+    },
+    {
+      "id": "haus-gwaedlyd",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Vennyr",
+        "county": "Tir Arfordir",
+        "barony": "Caer Gorwel",
+        "seat": "",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "initialFamilyFingerprint": "ed2611cabd137a950eecc20d508f2e1e9f067f36b8a41ddd7f471f0d51b76e84"
+    },
+    {
+      "id": "haus-lyfant",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Vennyr",
+        "county": "Tir Mynddoedd",
+        "barony": "Derwyddion",
+        "seat": "",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "initialFamilyFingerprint": "885f1dede7162fef649b8c68ccb9d36bd4d3127fdec72c693cbfb949d9931efe"
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "date": "2026-11-03",
+  "country": "Ishtaran",
+  "cityCount": 21,
+  "countTierCities": 8,
+  "baronKnightPrinceTierCities": 12,
+  "additionalEmblems": 26,
+  "latestCityCorrection": "12 kleine Städte (Baron/Ritterfürst Tier) und 9 Große (Grafen Tier Städte)",
+  "ancientEmblemSeparate": "Maghneach",
+  "mapDeferred": false,
+  "mapUsageAuthorization": "Die karten sind jetzt übrigens auch drinenn, zum benutzen",
+  "mapSources": [
+    "Ishtaran (Normal).png",
+    "Ishtaran Regionen.png"
+  ],
+  "cityAssignments": [
+    {
+      "id": "capital",
+      "name": "Altasar",
+      "tier": "capital",
+      "point": [
+        44.6899,
+        8.3865
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-01",
+      "name": "Ildaran",
+      "tier": "pascha",
+      "point": [
+        68.2861,
+        5.1724
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-02",
+      "name": "Kargulan",
+      "tier": "pascha",
+      "point": [
+        12.2192,
+        8.1524
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-03",
+      "name": "Ayseran",
+      "tier": "pascha",
+      "point": [
+        91.6016,
+        24.0741
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-04",
+      "name": "Orsakent",
+      "tier": "pascha",
+      "point": [
+        4.4678,
+        37.0796
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-05",
+      "name": "Belduran",
+      "tier": "pascha",
+      "point": [
+        27.5269,
+        37.1009
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-06",
+      "name": "Kalduran",
+      "tier": "pascha",
+      "point": [
+        70.3369,
+        52.235
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-07",
+      "name": "Kembaran",
+      "tier": "pascha",
+      "point": [
+        83.3496,
+        52.5756
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "large-08",
+      "name": "Torgasar",
+      "tier": "pascha",
+      "point": [
+        50.7446,
+        57.3436
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-01",
+      "name": "Kersalan",
+      "tier": "tarkan",
+      "point": [
+        90.8936,
+        13.7931
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-02",
+      "name": "Altschar",
+      "tier": "tarkan",
+      "point": [
+        26.0864,
+        25.0319
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-03",
+      "name": "Bayrath",
+      "tier": "tarkan",
+      "point": [
+        54.4312,
+        28.7356
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-04",
+      "name": "Koyrath",
+      "tier": "tarkan",
+      "point": [
+        49.939,
+        31.8433
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-05",
+      "name": "Arkulan",
+      "tier": "tarkan",
+      "point": [
+        71.0571,
+        35.9302
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-06",
+      "name": "Oryntar",
+      "tier": "tarkan",
+      "point": [
+        49.8779,
+        39.1443
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-07",
+      "name": "Börkent",
+      "tier": "tarkan",
+      "point": [
+        13.9771,
+        46.3602
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-08",
+      "name": "Ilbarsen",
+      "tier": "tarkan",
+      "point": [
+        27.6123,
+        64.3465
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-09",
+      "name": "Teldarak",
+      "tier": "tarkan",
+      "point": [
+        6.2622,
+        70.3491
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-10",
+      "name": "Kutlakar",
+      "tier": "tarkan",
+      "point": [
+        30.7861,
+        77.6926
+      ],
+      "destroyed": true,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-11",
+      "name": "Taschuran",
+      "tier": "tarkan",
+      "point": [
+        15.1367,
+        78.2673
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "small-12",
+      "name": "Temrakan",
+      "tier": "tarkan",
+      "point": [
+        84.7534,
+        81.6305
+      ],
+      "destroyed": false,
+      "status": "editable-proposal"
+    }
+  ],
+  "houseAssignments": [
+    {
+      "id": "source-01",
+      "name": "Bayindir",
+      "rank": "Pascha",
+      "seat": "large-01",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-02",
+      "name": "Ilterisch",
+      "rank": "Tarkan",
+      "seat": "small-03",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-03",
+      "name": "Dahakid",
+      "rank": "Pascha",
+      "seat": "large-02",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-04",
+      "name": "Altugan",
+      "rank": "Pascha",
+      "seat": "large-04",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-05",
+      "name": "Kutlug",
+      "rank": "Tarkan",
+      "seat": "large-05",
+      "displaced": true,
+      "originSeatId": "small-10",
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-06",
+      "name": "Merugan",
+      "rank": "Tarkan",
+      "seat": "small-01",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-07",
+      "name": "Aschina",
+      "rank": "Sultan",
+      "seat": "capital",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-08",
+      "name": "Alptegin",
+      "rank": "Pascha",
+      "seat": "large-03",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-09",
+      "name": "Kargan",
+      "rank": "Pascha",
+      "seat": "large-08",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-10",
+      "name": "Tarkut",
+      "rank": "Tarkan",
+      "seat": "small-02",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "source-11",
+      "name": "Bayturan",
+      "rank": "Pascha",
+      "seat": "large-05",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-01",
+      "name": "Börtan",
+      "rank": "Tarkan",
+      "seat": "small-07",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-02",
+      "name": "Turgut",
+      "rank": "Tarkan",
+      "seat": "small-09",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-03",
+      "name": "Arkut",
+      "rank": "Tarkan",
+      "seat": "small-11",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-04",
+      "name": "Erlugan",
+      "rank": "Tarkan",
+      "seat": "small-08",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-05",
+      "name": "Afschar",
+      "rank": "Tarkan",
+      "seat": "small-04",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-06",
+      "name": "Tardu",
+      "rank": "Tarkan",
+      "seat": "large-06",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-07",
+      "name": "Barsbek",
+      "rank": "Pascha",
+      "seat": "large-06",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-08",
+      "name": "Aybars",
+      "rank": "Tarkan",
+      "seat": "capital",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-09",
+      "name": "Turgan",
+      "rank": "Tarkan",
+      "seat": "small-06",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-10",
+      "name": "Tenguran",
+      "rank": "Tarkan",
+      "seat": "capital",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-11",
+      "name": "Karluk",
+      "rank": "Tarkan",
+      "seat": "large-08",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-12",
+      "name": "Iltan",
+      "rank": "Tarkan",
+      "seat": "large-02",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-13",
+      "name": "Salur",
+      "rank": "Tarkan",
+      "seat": "large-03",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-14",
+      "name": "Ordugan",
+      "rank": "Tarkan",
+      "seat": "large-04",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-15",
+      "name": "Balkar",
+      "rank": "Tarkan",
+      "seat": "small-05",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-16",
+      "name": "Erkut",
+      "rank": "Tarkan",
+      "seat": "large-05",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-17",
+      "name": "Kinik",
+      "rank": "Tarkan",
+      "seat": "large-01",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-18",
+      "name": "Göktemir",
+      "rank": "Tarkan",
+      "seat": "capital",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-19",
+      "name": "Ardulan",
+      "rank": "Tarkan",
+      "seat": "large-06",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-20",
+      "name": "Kurtan",
+      "rank": "Tarkan",
+      "seat": "large-02",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-21",
+      "name": "Börtugan",
+      "rank": "Pascha",
+      "seat": "large-07",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-22",
+      "name": "Torgun",
+      "rank": "Tarkan",
+      "seat": "large-08",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-23",
+      "name": "Kuturan",
+      "rank": "Tarkan",
+      "seat": "small-12",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-24",
+      "name": "Yarkulan",
+      "rank": "Tarkan",
+      "seat": "large-01",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-25",
+      "name": "Tebaran",
+      "rank": "Tarkan",
+      "seat": "large-03",
+      "displaced": false,
+      "status": "editable-proposal"
+    },
+    {
+      "id": "pool-26",
+      "name": "Albaran",
+      "rank": "Tarkan",
+      "seat": "large-07",
+      "displaced": false,
+      "status": "editable-proposal"
+    }
+  ],
+  "confirmedRanks": [
+    {
+      "rank": "König",
+      "title": "Sultan"
+    },
+    {
+      "rank": "Fürst / Herzog",
+      "title": "Emir"
+    },
+    {
+      "rank": "Graf",
+      "title": "Pascha"
+    },
+    {
+      "rank": "Baron",
+      "title": "Bey"
+    },
+    {
+      "rank": "Ritterfürst",
+      "title": "Tarkan"
+    },
+    {
+      "rank": "Ritterlicher Herr",
+      "title": "Timar"
+    },
+    {
+      "rank": "Ritter",
+      "title": "Sayyid / Sayyida"
+    },
+    {
+      "rank": "Knappe",
+      "title": "Alp"
+    },
+    {
+      "rank": "Page",
+      "title": "Sabi"
+    },
+    {
+      "rank": "Freier Bürger",
+      "title": "Reaya"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Nefer",
+      "role": "Waffenknecht",
+      "weapons": [
+        "Speer",
+        "Schild",
+        "Krummsäbel"
+      ]
+    },
+    {
+      "name": "Derwisch",
+      "role": "Schwertmeister",
+      "weapons": [
+        "Zweihändig geführter Krummsäbel oder zwei Krummsäbel"
+      ]
+    },
+    {
+      "name": "Sipahi",
+      "role": "Berittener Lanzierer",
+      "weapons": [
+        "Orientalische Lanze",
+        "Krummsäbel"
+      ]
+    },
+    {
+      "name": "Ghulam",
+      "role": "Schwerer Krieger",
+      "weapons": [
+        "Flegel",
+        "Morgenstern",
+        "Streitkolben"
+      ]
+    },
+    {
+      "name": "Aschik",
+      "role": "Poetischer Fechter und Musiker",
+      "weapons": [
+        "Krummsäbel",
+        "Dolch",
+        "Musikinstrument"
+      ]
+    },
+    {
+      "name": "Nizet",
+      "role": "Stangenwaffenkämpfer",
+      "weapons": [
+        "Stangenwaffe"
+      ]
+    },
+    {
+      "name": "Keman",
+      "role": "Berittener Bogenschütze",
+      "weapons": [
+        "Bogen",
+        "Krummsäbel"
+      ]
+    },
+    {
+      "name": "Lewent",
+      "role": "Marinekrieger",
+      "weapons": [
+        "Bogen",
+        "Krummsäbel"
+      ]
+    }
+  ],
+  "alphaProcessingAuthorization": "Ja, Transparenz technisch bereinigen",
+  "alphaScope": "Neue Bilder; technische Alpha-Aufbereitung, Farben und Generatororiginale erhalten.",
+  "emblemWarriors": {
+    "scope": "Zu jedem Wappen eine passende eigene Kriegerdarstellung wie bei Brevanor.",
+    "newDirection": "35 Wappenfiguren als vollständig eigenständige V3-Bildentwürfe gestalten; keine bloßen Farb- und Wappenvarianten. Drei ausdrücklich ausgewählte Paarbilder bleiben erhalten: Dahakid/source-03, Feuerschalen-Derwisch/pool-18 und Widder-Ghulam/pool-20. Zusätzlich bleibt der ursprüngliche unmarkierte Ghulam als Klassenbeispiel erhalten.",
+    "figureAgeAndBuild": "Die 35 neuen V3-Bilder zeigen junge erwachsene Männer oder Frauen, schlank bis athletisch. Die vier ausdrücklich behaltenen Darstellungen bleiben unverändert. Bildvorgabe, keine Bevölkerungs- oder Personenaktenfestlegung.",
+    "helmets": "Für die 35 neuen V3-Bilder traditionelle kumanische, osmanische, janitscharische und persische Kopfbedeckungen verwenden. Die ausdrücklich behaltenen Bilder sind Ausnahmen und werden nicht auf die neue Vorgabe umgestaltet.",
+    "combinedHeadgear": "Bei einigen neuen Figuren darf ein normaler kumanischer Stahlhelm mit dem Janitscharenhut beziehungsweise dem Filz-Börk und seinem gefalteten Nackentuch kombiniert werden.",
+    "armor": "Individuelle Rüstung und Stoffe dürfen sich an Wappenmotiven und deren Farben orientieren.",
+    "newV3PairIllustrations": 35,
+    "retainedPairImageIds": [
+      "source-03",
+      "pool-18",
+      "pool-20"
+    ],
+    "retainedClassImageId": "ghulam",
+    "pairedIllustrations": 38,
+    "uniqueRuntimeFigureImages": 39,
+    "physicalArtifactEntries": 46,
+    "preservationManifest": "sources/approved-warrior-images.json",
+    "dahakidException": "Derwisch-Krieger mit ritterlichen Elementen; dieses Haus ist besonders.",
+    "historicalMaghneach": "Antiker Bildentwurf, keine neue heutige Klasse."
+  },
+  "publication": "Lokale Vorbereitung; keine neue Push-/Deploy-Anweisung.",
+  "largeCities": 9,
+  "capitalCities": 1,
+  "smallCityDraftRank": "Tarkan",
+  "seatProposalAuthorization": "Weise erstmal deine vorgeschlagenen namen auf die bestehenden Wappen und so zu; dann die besten St?dtenamen den Orten; nach eigenem Ermessen H?user den St?dten zu.",
+  "seatRules": {
+    "capital": "Sultan plus mindestens zwei zus?tzliche Tarkan-H?user im Ausgangsentwurf; keine obere Grenze festgelegt",
+    "pascha": "Ein Paschahaus plus optional bis zu zwei Tarkan-H?user",
+    "tarkan": "Nur ein Tarkan-Haus",
+    "editing": "Vor?bergehend freie Sitze sind im bearbeitbaren Entwurf erlaubt",
+    "residenceDoesNotImplyLiege": true,
+    "destroyed": "Kutlakar bleibt leer und darf keinem Haus als neuer Sitz zugewiesen werden."
+  },
+  "proposalTotals": {
+    "houses": 37,
+    "seated": 37,
+    "unassigned": 0,
+    "cities": 21,
+    "destroyedCities": 1,
+    "capitalIncludedInLargeCities": true,
+    "capitalAdditionalHouses": 3
+  },
+  "emblemCorrection": {
+    "emblemId": "pool-07",
+    "request": "Korrigiere das wappen, hier ist ein fl?gel zu viel.",
+    "status": "complete",
+    "preserve": "Farben, Kreisrahmen, Ornamente und ?briger Adler; Original erhalten",
+    "receipt": "sources/pool-07-wing-fix-20261103-v1.json"
+  },
+  "destroyedPlaces": [
+    {
+      "id": "small-10",
+      "name": "Kutlakar",
+      "userConfirmed": true,
+      "capacity": 0
+    }
+  ],
+  "evacuations": [
+    {
+      "houseId": "source-05",
+      "houseName": "Kutlug",
+      "from": "small-10",
+      "to": "large-05",
+      "toName": "Belduran",
+      "markerTone": "muted",
+      "scope": "map display, original image retained"
+    }
+  ],
+  "houseRenames": [
+    {
+      "houseId": "pool-18",
+      "from": "K?ktemir",
+      "to": "G?ktemir",
+      "preservedNameProposalId": "house-koektemir"
+    }
+  ],
+  "finalFiveAllocation": {
+    "authorization": "Verteile die ?brigen 5 auf alle Paschah?user oder die hauptstadt.",
+    "assignments": [
+      {
+        "house": "Tenguran",
+        "city": "Altasar"
+      },
+      {
+        "house": "Salur",
+        "city": "Ayseran"
+      },
+      {
+        "house": "Ordugan",
+        "city": "Orsakent"
+      },
+      {
+        "house": "Torgun",
+        "city": "Torgasar"
+      },
+      {
+        "house": "Albaran",
+        "city": "Kembaran"
+      }
+    ]
+  }
+}

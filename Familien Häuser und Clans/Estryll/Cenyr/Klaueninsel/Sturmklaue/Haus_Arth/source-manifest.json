@@ -1,0 +1,48 @@
+{
+  "houseId": "haus-arth",
+  "source": {
+    "attachmentId": "0ea7f98c-1328-48e0-9bda-103e612cf394",
+    "file": "animexx-original.html",
+    "sha256": "0656451043f788aeba5269111127eb51d446744cfbd247fa2ccfe6f6a43d53a4",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-arth"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/MpBoNsE.png",
+      "role": "Hausdarstellung",
+      "sha256": "1af2363e7dbd05ccd3e5d2af7f0a1dbf3aa4066a449a04aa88e64dc57f16a948",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "status": "Original unverändert lokal eingebunden und angesehen",
+      "inspection": {
+        "date": "2026-11-03",
+        "description": "Dunkler Plattenritter mit roter Bärenbrust, Hellebarde und rotem Helmbusch."
+      }
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/grafschaft.data.mjs",
+    "Stammbäume/assets/js/data/parzifal-crew-families/penry.js"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig aus der Übernahme ausgeschlossen. Ausschließlich bestehende Familien- und Personen-IDs; keine Graphänderung. Amtszeiten sind von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken in Profil und Fließtext ausgelassen. Qualitative Ausrüstungs-, Ausbildungs- und Kulturangaben bleiben erhalten.",
+    "Aktuelle Grafschaft Klaueninsel, Sturmklaue und Talgarth haben Vorrang vor dem früheren Sammelnamen Grafschaft Talgarth. Alte Städtenamen werden nicht zu neuen Grafschaften.",
+    "Der erste Caradoc Arth besitzt in der kanonischen Akte absichtlich kein abrufbares individuelles Portrait. Gründerkarte mit Silhouette und ohne Personenlink; keine Übernahme des Bildes seines späteren Namensvetters.",
+    "Die erste Caradoc-Karte der Oberhauptfolge ist caradoc-line-arth; Gründer caradoc-arth bleibt davon getrennt. 1620–1645 sind Traharyans Amtsjahre, nicht Lebensdaten.",
+    "Die Hofnamen folgen der tatsächlichen Tabellenspalte: Elisud Crafanc = Kommandant der Garde; Brac Pawen = Waffenmeister.",
+    "Nur Pawen, Crafanc, Cwingod, Unigol und Eirth sind als Kadetten ausgewiesen. Morthwyll und Sélwyn bleiben eigenständige Vasallenhäuser.",
+    "Abgebrochener Traditionssatz und punktierte Platzhalter wurden nicht als Lore ergänzt. Die Segnung des Streiters bleibt ausdrücklich religiöse Hausüberlieferung, kein neuer Spielwert.",
+    "Rhun Penry (haus-penry/rhun-penry) ist im bestehenden Personentitel ausdrücklich Vogt der Arth. Die alte leere Hofspalte wird durch diesen aktuellen Beleg ausgefüllt. Stabile reale Personen-ID verlinkt; mangels Portrait bleibt die männliche Silhouette."
+  ]
+}

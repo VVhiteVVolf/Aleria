@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=klaueninseln-20261019';
+import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=20261103-klaueninsel-v1';
 
 export default createTerritory({
   "id": "baronie-blutklaue",
@@ -186,7 +186,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blodyn-aberdail"
         },
         {
           "name": "Dianc O'Aberdail",
@@ -196,7 +197,8 @@ export default createTerritory({
           "liege": "Haus Blodyn O'Aberdail",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dianc-aberdail"
         },
         {
           "name": "Arfordir O'Aberdail",
@@ -206,7 +208,8 @@ export default createTerritory({
           "liege": "Haus Blodyn O'Aberdail",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-arfordir-aberdail"
         },
         {
           "name": "Walwrs O'Caer Deheuol",
@@ -216,7 +219,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-walwrs-caer-deheuol"
         }
       ]
     },
@@ -231,7 +235,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-ard-follmhar"
         }
       ]
     }

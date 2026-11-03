@@ -1,11 +1,11 @@
-import {createPlacementControls} from './placement-controls.mjs';
-import {createClanMap} from './clan-map.mjs';
+import {createPlacementControls} from './placement-controls.mjs?v=20261103-placement-2';
+import {createClanMap} from './clan-map.mjs?v=20261103-placement-2';
 
 /** Shared draft controller. Country modules own data, copy and rendering. */
 export function createCountryPlacement({root,onHouse,notice},{houses,settlements,createPlacementState,createMapProposal,escapeHtml:e,houseCard,renderSeats,rankLabel,storageKey,resetMessage,exportName,caption}){
  const state=createPlacementState(),houseSelect=root.querySelector('[data-role="house-select"]'),seatSelect=root.querySelector('[data-role="seat-select"]');
  let selected=null;
- function save(){try{localStorage.setItem(storageKey,state.serialize());}catch{notice('Deine Änderung bleibt in dieser geöffneten Ansicht erhalten.');}}
+ function save(){if(storageKey===null){notice('Deine Änderung bleibt in dieser geöffneten Ansicht. Bitte den Sitzentwurf herunterladen.');return;}try{localStorage.setItem(storageKey,state.serialize());}catch{notice('Deine Änderung bleibt in dieser geöffneten Ansicht erhalten.');}}
  function render(){
   const placements=state.current(),unassigned=houses.filter(h=>placements[h.id]===null);
   root.querySelector('[data-role="unassigned-houses"]').innerHTML=unassigned.map(h=>houseCard(h,selected)).join('')||'<p>Alle Familien haben einen Sitz im Entwurf.</p>';
@@ -29,8 +29,8 @@ export function createCountryPlacement({root,onHouse,notice},{houses,settlements
  const map=createClanMap({root:root.querySelector('[data-role="map-section"]'),dialog:root.querySelector('#map-dialog'),tooltip:root.querySelector('#clan-tooltip'),getVariant:()=>createMapProposal(state.current()),escape:e,onClan:onHouse,rankLabel,rootClanLabel:'Lehnszugehörigkeit offen',caption});
  const controls=createPlacementControls({root,getSelected:()=>selected,onMove:move,escape:e,canMove:state.canMove});
  houseSelect.innerHTML='<option value="">Ein Wappen auswählen …</option>'+houses.map(h=>`<option value="${e(h.id)}">${h.clan?'Clan':'Haus'} ${e(h.name)}</option>`).join('');
- seatSelect.innerHTML='<option value="">Sitz offenlassen</option>'+settlements.map(s=>`<option value="${s.id}">${e(s.name)}</option>`).join('');
- try{const saved=localStorage.getItem(storageKey);if(saved)state.restore(JSON.parse(saved));}catch{notice('Der gespeicherte Entwurf konnte nicht geladen werden. Die Ausgangszuordnung wird angezeigt.');}
+ seatSelect.innerHTML='<option value="">Sitz offenlassen</option>'+settlements.map(s=>`<option value="${s.id}" ${s.placementDisabled?'disabled':''}>${e(s.name)}</option>`).join('');
+ try{const saved=storageKey===null?null:localStorage.getItem(storageKey);if(saved)state.restore(JSON.parse(saved));}catch{notice('Der gespeicherte Entwurf konnte nicht geladen werden. Die Ausgangszuordnung wird angezeigt.');}
  houseSelect.addEventListener('change',()=>choose(houseSelect.value));
  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&!root.querySelector('dialog[open]'))choose(null);});
  root.addEventListener('click',event=>{
@@ -53,5 +53,5 @@ export function createCountryPlacement({root,onHouse,notice},{houses,settlements
   try{if(file.size>100000)throw Error('Die Entwurfsdatei ist zu groß.');state.restore(JSON.parse(await file.text()));selected=null;save();render();notice('Dein Entwurf ist geladen.');}catch(error){notice(error.message||'Die Datei konnte nicht geladen werden.');}finally{event.target.value='';}
  });
  render();
- return {current:state.current,choose(id){choose(id);root.querySelector('#karte').scrollIntoView({behavior:'smooth',block:'start'});houseSelect.focus({preventScroll:true});}};
+ return {current:state.current,refresh:render,choose(id){choose(id);root.querySelector('#karte').scrollIntoView({behavior:'smooth',block:'start'});houseSelect.focus({preventScroll:true});}};
 }

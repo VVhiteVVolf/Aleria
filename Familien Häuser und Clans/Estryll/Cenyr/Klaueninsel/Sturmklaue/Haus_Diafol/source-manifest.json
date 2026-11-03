@@ -1,0 +1,47 @@
+{
+  "houseId": "haus-diafol-talgarth",
+  "source": {
+    "attachmentId": "28d1cbd6-7711-4e2c-b3ea-544c6690f1fa",
+    "file": "animexx-original.html",
+    "sha256": "273495ca578fa5af620064f26b1d4b3b5b11c6a354b963ea0438f4e45867f295",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-diafol-talgarth"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/PgyaJIA.png",
+      "role": "Hausdarstellung",
+      "sha256": "10a7cb0fc9cb81e6a3fa4b5963d080ad4da6d4813d20286719a7e4000c25d2c3",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "status": "Original unverändert lokal eingebunden und angesehen",
+      "inspection": {
+        "date": "2026-11-03",
+        "description": "Knochen- und Fellkrieger mit gehörntem Schädelhelm und Axt."
+      }
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/herrschaft.data.mjs",
+    "Stammbäume/assets/js/data/klaueninseln-house-families.js",
+    "Stammbäume/assets/js/data/house-diafol-family.js"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig aus der Übernahme ausgeschlossen. Ausschließlich bestehende Familien- und Personen-IDs; keine Graphänderung. Amtszeiten sind von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken in Profil und Fließtext ausgelassen. Qualitative Ausrüstungs-, Ausbildungs- und Kulturangaben bleiben erhalten.",
+    "Hausseite und Iframe gehören ausschließlich zur kanonischen Cenyr-Akte haus-diafol-talgarth. Die eigenständige Vennyr-Akte haus-diafol bleibt erhalten und liefert nur die stabil identifizierten früheren Oberhäupter. Der territoriale Alias haus-diafol-trefgoch wird nicht als Personen-Familien-ID verwendet.",
+    "Tryffin ist nach der bestehenden Person weiblich und wird in der Oberhauptkarte als Ritterfürstin geführt. Amtsbeginn 1720 folgt der getrennten kanonischen Talgarther Linie, nicht einem neuen Lebensdatum.",
+    "Die Fluchtgeschichte der Besitzlosigkeit wird zeitlich eingeordnet. Aktuelle Gebietsquelle belegt Tewdar, Dôrgar und das von Pawen überlassene Tirwen; deren Wiederaufbau und Einkünfte haben Vorrang vor einer behaupteten heutigen völligen Besitzlosigkeit.",
+    "Die Ogerblut- und Vergewaltigungs-/Herkunftserzählungen bleiben ausdrücklich als unbestätigte, teils vom Klerus bestrittene Mythen erhalten. Kein Import als genealogische Tatsache, Rasse oder bestätigte Fähigkeit. Ogma bleibt nur die in der Überlieferung genannte Zeugenfigur, ohne erfundene Personen-ID.",
+    "Das Fest des Blutes, kontrolliertes Aufnahmeritual, Narbenzeichen und Kodex der Stärke bleiben als einmalige Hausgeschichte erhalten. Keine Truppen- oder Flottenzahlen übernommen."
+  ]
+}

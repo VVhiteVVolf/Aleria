@@ -148,7 +148,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-marchog"
         }
       ]
     },
@@ -164,7 +165,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-chiffyddlon"
         }
       ]
     }

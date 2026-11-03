@@ -10,7 +10,7 @@ import { HOUSE_MORFORWYN_PORTRAITS } from './house-morforwyn-portraits.js';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS,
   SONNENKUESTE_HOUSE_PROFILES
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 
 const MORFORWYN_HOUSE_ID = 'house-morforwyn';

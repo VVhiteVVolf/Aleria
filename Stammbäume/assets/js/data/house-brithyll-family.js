@@ -12,7 +12,7 @@ import {
 } from './graue-weite-house-profiles.js';
 import { HOUSE_BRITHYLL_PORTRAITS } from './house-brithyll-portraits.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 
 const BRITHYLL_HOUSE_ID = 'house-brithyll';
 const BRITHYLL_EMBLEM = GRAUE_WEITE_HOUSE_EMBLEMS.brithyll;

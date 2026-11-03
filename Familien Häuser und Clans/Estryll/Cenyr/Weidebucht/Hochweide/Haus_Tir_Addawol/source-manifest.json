@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "575ad120-8ac2-4d14-9912-bcbe5429716f",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "0c49d11f5508a168f5d60a25249571f2d9c1008ea11a43291dcb0a7792a01433"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-tir-addawol",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-tir-addawol",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 1,
+    "currentSeat": "Glyndale",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/GzQgjhm.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "dd83a82c59c406aa13663118de378d2f6afc7380e44cc04d5fb830f47afa1b25",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Eynon ist der Gründer des Hauses Tir Addawol; Beynon gründete das Bruderhaus Dinefwr. Erim wird als Stammvater, nicht als neuer erster Baron geführt."
+  ]
+}

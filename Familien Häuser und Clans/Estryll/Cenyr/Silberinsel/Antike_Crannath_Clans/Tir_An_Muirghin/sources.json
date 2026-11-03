@@ -1,0 +1,55 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-tir-an-muirghin",
+  "source": {
+    "attachmentId": "277d7f8c-11f2-4d49-9175-24d06463c094",
+    "file": "animexx-original.html",
+    "sha256": "7db6d7275a441d5322110af19a6e2d38344a656b67194326511d77dc2c411539",
+    "bytes": 65933,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "ignore supplied genealogy; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-tir-an-muirghin"
+  },
+  "militaryStatistics": "ignored entirely",
+  "statusDecision": {
+    "legacyClaim": "AUSGESTORBEN in the empty head and succession tables",
+    "legacySourceLines": [298, 340],
+    "currentCanonTakesPrecedence": true,
+    "extinct": false,
+    "historicalSeat": "Ard Iasgleann",
+    "reason": "Current Silberinsel documentation forbids a blanket extinction status; the current place source explicitly preserves the lineage through a cadet branch at Sonnenküste and relates Haus Blach to it. Loss of the old island lordship is distinct from lineage survival.",
+    "graphChanged": false
+  },
+  "biographySourceRevision": 1,
+  "previousFamilySourceRevision": 0,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/7W8wlDc.png",
+      "role": "historical-clan-illustration",
+      "sha256": "27c830f1f7e35e5d31b40f95b0ecef1312d0d1c2a80f6fe5bc29b52a9fd46da3",
+      "bytes": 234638,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Stammbäume/assets/js/data/silberinsel-house-families.js",
+    "Stammbäume/assets/js/data/house-neidr-family.js",
+    "Kontinente/docs/silberinsel/README.md",
+    "Karten/Cenyr/silberinsel/places.source.json",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/baronie.data.mjs"
+  ],
+  "territorySource": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs"
+}

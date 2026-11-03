@@ -1,0 +1,172 @@
+{
+  "moduleId": "oweta-quartett",
+  "alreadyPublished": false,
+  "pages": 4,
+  "characters": 4,
+  "companions": 6,
+  "groupItems": 16,
+  "stock": [
+    {
+      "id": "oweta-quartett-start-rationen",
+      "name": "Rationen (1 Tag)",
+      "quantity": "12",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:rationen",
+        "revision": "2950af0712afbd90bc8a72ec"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-wasserschlauch",
+      "name": "Wasserschlauch",
+      "quantity": "4",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:wasserschlauch",
+        "revision": "9ac0c4ae35ada6ac7f54ffd4"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-bettrolle",
+      "name": "Bettrolle",
+      "quantity": "4",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:bettrolle",
+        "revision": "3ab1d86886f483c2322f9da6"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-zelt-klein",
+      "name": "Zelt (klein)",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:zelt-klein",
+        "revision": "5b7277eb31d5f9cc14bf0067"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-kochgeschirr",
+      "name": "Kochgeschirr",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kochgeschirr",
+        "revision": "5a45f65e1bddcdcb52b19b44"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-essbesteck",
+      "name": "Essbesteck & Schale",
+      "quantity": "4",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:essbesteck",
+        "revision": "d37f0002c967194db2305a0c"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-feuerstein-stahl",
+      "name": "Feuerstein & Stahl",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+        "revision": "cdb8d503f7c8e15f7af760a6"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-seil",
+      "name": "Seil (Hanf, 15m)",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:seil",
+        "revision": "53da0a47271a1da6021cf7ee"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-laterne",
+      "name": "Laterne (einfach)",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:laterne",
+        "revision": "2d96a893cc141eed38bff98b"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-lampenoel",
+      "name": "Lampenöl (Flasche)",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:lampenoel",
+        "revision": "e911e3d6e618cade66d90b96"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-fackel",
+      "name": "Fackel",
+      "quantity": "6",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:fackel",
+        "revision": "0a53ef0a795e805d7acf18a0"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-verbandstoff",
+      "name": "Verbandstoff (Paket)",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:verbandstoff",
+        "revision": "98763d4dcb3546a5a986c226"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-nadel-faden",
+      "name": "Nadel & Faden",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:nadel-faden",
+        "revision": "b04f80d412691a2b54c5f430"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-seife",
+      "name": "Seife",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:seife",
+        "revision": "cbc4c228c36b9718df30439d"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-salzbeutel",
+      "name": "Salzbeutel (klein)",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:salzbeutel",
+        "revision": "cb2182abd007ef71d6ae295a"
+      }
+    },
+    {
+      "id": "oweta-quartett-start-wetzstein",
+      "name": "Wetzstein",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:wetzstein",
+        "revision": "0aaded8f3a86e07035d95b40"
+      }
+    }
+  ],
+  "characterWrites": 0,
+  "creatureWrites": 0,
+  "sceneCommentWrites": 0,
+  "url": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/AleriaAlmanach.html?entry=oweta-quartett",
+  "publicImageReferencesVerified": 8,
+  "dryRun": false,
+  "definitionsCreated": 24,
+  "protectedClaimChecked": true,
+  "image": {
+    "localPath": "AleriaAlmanach/assets/groups/oweta-quartett/mittagsrast-v1.png",
+    "sha256": "c1f297afc2c142906033c07e802dbc018eb6aa802c4f88fbf1650f0126a9fc3e",
+    "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Foweta-quartett-mittagsrast-v1-c1f297afc2c14290%2Foriginal.png?alt=media"
+  },
+  "configFields": [
+    "moduleStoreManifest",
+    "moduleStoreUpdatedAtClient",
+    "moduleNodeAssignments"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "aroglyn",
+  "mode": "built-in image_gen",
+  "stylePreset": "fantasy-rpg-character",
+  "image": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Aroglyn/assets/hausdarstellung-2026-11-03.png",
+  "sha256": "ef9aea0504d41c8eec218a4194f97355382e42f7bbb4594fd4a4c1fe77f531ec",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "transparent": true,
+  "prompt": "Use case: stylized-concept. Edit the supplied approved figure template into the requested different anonymous house representative, retaining only its restrained painted illustration style and full-body portrait composition. Image 1 is the approved style/figure template, never a costume requirement. Image 2 is heraldry reference only, do not redesign that emblem. Output ONE complete upright three-quarter full-body figure, 2:3 portrait, head and both shoes wholly in frame. Simplified large readable shapes, matte muted earthy paint, soft thin painted contour, subtle even fine gouache pigment grain and sparse shading. No realism, no CGI, no thick black comic outline, no shiny metal, no text, no frame. Truly transparent PNG background, no environment, floor, shadow, glow or painted color cloud outside the figure. This is an unnamed representative illustration, not a new named person or officeholder. Subject: an adult unarmoured woman representing a modestly prosperous Cenyrian civilian house associated with fragrances. Completely replace the template's armour, helmet, sword and cape with a simple long dark muted teal wool overdress, natural cream linen sleeves, practical leather belt and soft brown shoes; brown hair in a plain pinned braid, calm attentive expression. A tiny dull-violet flower and teal flask emblem appears as a small embroidered house badge at the chest. She holds ONE small stoppered turquoise glass fragrance bottle near waist height and a closed slim account book under the other arm. Few props, no weapons, no armour, no crown or invented official insignia. Teal and violet are subdued accents from the actual emblem, not bright magical glow.",
+  "refinement": "Use case: background-extraction. Edit this exact supplied image. Remove ALL of the diffuse brown/grey/teal smoky gradient, glow, haze and shadow surrounding the figure and equipment. The finished PNG is a CLEAN CUTOUT of only the solid painted human, clothing and held items. Outside the precise visible silhouette and inside open gaps there must be 100% actual transparency (alpha 0), not translucent haze, no dark or light backdrop and no outer halo. Preserve exactly the figure's painted style, pose, all colours, small heraldic motif, props, proportions and full-body 2:3 framing. The figure itself is opaque, crisp but softly painted with only narrow natural antialiasing at its actual edge. Do not crop any part, change clothing, add anything, add text, frame or floor.",
+  "unnamedRepresentative": true
+}

@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "check": "valid-capital-fourth-house",
+      "passed": true
+    },
+    {
+      "check": "reload-persistence-and-undo",
+      "passed": true
+    },
+    {
+      "check": "full-pascha-reject",
+      "capital": [
+        "source-07",
+        "pool-08",
+        "pool-18"
+      ],
+      "free": "5 ohne Sitz",
+      "ildaran": [
+        "source-01",
+        "pool-17",
+        "pool-24"
+      ],
+      "notice": "Ildaran nimmt höchstens zwei Tarkan-Häuser auf."
+    },
+    {
+      "check": "rank-reject",
+      "capital": [
+        "source-07",
+        "pool-08",
+        "pool-18"
+      ],
+      "free": "5 ohne Sitz",
+      "ildaran": [
+        "source-01",
+        "pool-17",
+        "pool-24"
+      ],
+      "notice": "Haus Bayindir (Pascha) passt nicht zum Rang von Altasar."
+    },
+    {
+      "check": "valid-import-roundtrip",
+      "notice": "Dein Entwurf ist geladen.",
+      "passed": true
+    },
+    {
+      "check": "actual-mouse-drag-Erkut-Belduran-to-Orsakent",
+      "passed": true
+    },
+    {
+      "check": "mobile-selection-and-target-button",
+      "passed": true
+    }
+  ],
+  "mobile": {
+    "grayKutlug": "grayscale(1)",
+    "image": "assets/maps/ishtaran-regions.webp",
+    "markers": 37,
+    "overflow": false,
+    "ruinMarkers": 1,
+    "zoom": "170 %"
+  },
+  "responsive": {
+    "clippedGroups": [],
+    "dialogOverflow": false,
+    "markers": 37,
+    "pageOverflow": false,
+    "ruin": 1,
+    "squares": true,
+    "viewport": [
+      392,
+      844
+    ]
+  },
+  "exportFile": "placement-browser-baseline.json",
+  "finalHouses": 37,
+  "finalFree": 0,
+  "originalDraftTestBaseline": "32 plus5, superseded by explicit final-five user instruction",
+  "viewportReset": true,
+  "finalFive": [
+    [
+      "pool-10",
+      "capital"
+    ],
+    [
+      "pool-13",
+      "large-03"
+    ],
+    [
+      "pool-14",
+      "large-04"
+    ],
+    [
+      "pool-22",
+      "large-08"
+    ],
+    [
+      "pool-26",
+      "large-07"
+    ]
+  ]
+}

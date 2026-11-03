@@ -6665,6 +6665,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "9e211b5c640448",
+    "name": "haus hamnett",
+    "url": "/Stammbäume/assets/images/houses/Silberinsel/haus-hamnett.png",
+    "kind": "crest",
+    "group": "Silberinsel",
+    "source": "Hauswappen"
+  },
+  {
     "id": "3f8ace922bcff8",
     "name": "haus neidr",
     "url": "/Stammbäume/assets/images/houses/Silberinsel/haus-neidr.png",
@@ -7105,9 +7113,25 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "4fe561511a6426",
+    "name": "haus caerwen",
+    "url": "/Stammbäume/assets/images/houses/Sonnenk%C3%BCste/Jungferntal/haus-caerwen.png",
+    "kind": "crest",
+    "group": "Sonnenküste / Jungferntal",
+    "source": "Hauswappen"
+  },
+  {
     "id": "6849c893e29cc8",
     "name": "haus morforwyn",
     "url": "/Stammbäume/assets/images/houses/Sonnenk%C3%BCste/Jungferntal/haus-morforwyn.png",
+    "kind": "crest",
+    "group": "Sonnenküste / Jungferntal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3a32843d396dbb",
+    "name": "haus nerwynn",
+    "url": "/Stammbäume/assets/images/houses/Sonnenk%C3%BCste/Jungferntal/haus-nerwynn.png",
     "kind": "crest",
     "group": "Sonnenküste / Jungferntal",
     "source": "Hauswappen"

@@ -1,0 +1,45 @@
+{
+  "houseId": "haus-cwningod",
+  "source": {
+    "attachmentId": "f9c7780b-c9ab-4651-926c-38ed319c9989",
+    "file": "animexx-original.html",
+    "sha256": "98a71dff251acf26bdddf236c3ecbd5283f9996751f2c1cc1aff4a5d7c26b910",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-cwningod"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/GguxeYO.png",
+      "role": "Hausdarstellung",
+      "sha256": "8bdc944d96942a190180196e0d74bd587df301a239d093dd1e6638da67d9ce0c",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "status": "Original unverändert lokal eingebunden und angesehen",
+      "inspection": {
+        "date": "2026-11-03",
+        "description": "Gelb-schwarzer schwerer Ritter mit schwarzem Fell, Schwert und schwarzem Bären."
+      }
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/baronie.data.mjs"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig aus der Übernahme ausgeschlossen. Ausschließlich bestehende Familien- und Personen-IDs; keine Graphänderung. Amtszeiten sind von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken in Profil und Fließtext ausgelassen. Qualitative Ausrüstungs-, Ausbildungs- und Kulturangaben bleiben erhalten.",
+    "Stabile ID haus-cwningod bleibt erhalten; kanonischer Anzeigename ist Haus Cwingod O’Morea. Gwingod und Cwningod in Alttexten werden nicht zu neuen Häusern.",
+    "Aktuelles Profil ordnet den Hauptsitz Cra Fryn in Talklaue zu und nennt Morea als weiteren Sitz. Morea bleibt Handels- und Hafenort; keine Umbenennung Cra Fryns oder Gleichsetzung beider Orte.",
+    "Idris ist die bestehende Person idris-cwingod. 1671–1672 sind Amtsjahre, kein erzwungenes Todesjahr. Gründer Galeshin Arth und das heutige Oberhaupt Galeshin Cwingod bleiben getrennt.",
+    "Vorhandene frühere Hausbio enthält Militärstatistiken und das Wappen als Hauptbild. Die neue gemeinsame Quelle ersetzt ihren Standard mit dem Original-Kriegerbild und ohne Militärstatistiken; keine eigenständig bearbeitete Nutzerbio wird direkt verändert.",
+    "Ruhige Verwaltungskultur, Kapelle der Dame der See, Verehrung des Knechts und Brüderlichkeit zu den anderen Kadetten bleiben erhalten. Die bildhafte angebliche Unverwundbarkeit schwerer Rüstung wird nicht als tatsächliche Fähigkeit behauptet."
+  ]
+}

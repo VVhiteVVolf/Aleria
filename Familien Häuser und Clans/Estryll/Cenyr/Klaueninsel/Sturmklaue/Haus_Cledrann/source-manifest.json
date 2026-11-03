@@ -1,0 +1,36 @@
+{
+  "houseId": "haus-cledrann",
+  "kind": "canonical-register-preparation",
+  "date": "2026-11-03",
+  "canonicalRegistrySource": "Stammbäume/assets/js/data/families.registry.js",
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/rhydian-crew-house-families.js",
+    "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json"
+  ],
+  "canonicalSnapshot": {
+    "file": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+    "recordId": "haus-cledrann",
+    "recordJsonSha256": "3ee7510f0fa2812a82fc2dc7e112c689a6dcaa7a3e86e6488bed1391aa39a29a",
+    "sourceRevision": 1
+  },
+  "genealogy": {
+    "existingFamilyId": "haus-cledrann",
+    "graphChanged": false,
+    "suppliedTreeImported": false
+  },
+  "militaryStatisticsIgnored": true,
+  "image": {
+    "file": "assets/hausdarstellung-2026-11-03.png",
+    "promptManifest": "diagnostics/klaueninsel-house-pages-20261103/image-prompts.json",
+    "metadata": "assets/image-generation.json",
+    "preserveExistingImages": true
+  },
+  "decisions": [
+    "Nur vorhandene öffentliche Registerfakten, Beschreibungen, Personen und deren belegte Aufgaben redigiert. Keine zusätzliche Familie oder Verwandtschaft angelegt.",
+    "Datierte genealogische Gerüste sind keine Hauschronik: keine daraus abgeleiteten Gründungsjahre, Wanderungen, Amtsfolgen oder Oberhäupter.",
+    "Nur reale Personen mit vorhandenem individuellem Portrait erhalten Angehörigenkarten. Namen und Portraitpfade stammen unverändert aus der bestehenden Akte.",
+    "Sämtliche Militärstatistiken ausgelassen. Persönliche Bordaufgaben bleiben von Hausämtern und Hausrang getrennt.",
+    "Ritterstand aus dem aktuellen Profil beibehalten; die konkrete Lehensbindung bleibt trotz örtlicher Nähe zu Arth offen. Keine Kandidaten aus dem Planungsentwurf übernommen."
+  ]
+}

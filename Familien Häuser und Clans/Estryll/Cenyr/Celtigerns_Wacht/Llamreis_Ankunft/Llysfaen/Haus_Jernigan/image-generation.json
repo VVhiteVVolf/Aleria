@@ -1,0 +1,71 @@
+{
+  "id": "haus-jernigan",
+  "prompt": "Use case: stylized-concept. Asset type: one anonymous civilian fantasy house figure for the Aleria house register. The supplied image is ONLY the approved STYLE reference: copy its quiet matte hand-painted treatment, gently simplified proportions, large clear clothing shapes, thin soft painted contours, restrained soft shading and fine uniform gouache pigment grain. Do not copy armour, weapon, helmet, plume, colours or heraldry. Calm upright three-quarter standing pose, complete full body including head and both feet with clear margin, portrait2:3. Muted earthy palette and practical medieval-fantasy wool/linen clothing suitable for mild wet windy Cenyr. Actual transparent RGBA PNG, alpha=0 outside the silhouette and in every opening. No scenery, ground, floor, external shadow, fog, halo, aura, border, lettering or watermark. No photorealism, CGI, gloss, dramatic lighting, thick comic outlines or paint splashes. This is an unnamed representative: no named person identity, rank insignia, house crest, badge, jewellery emblem, profession symbol or tool. No armour, weapons or crown. One person only.\nHouse: haus-jernigan. Context: Llysfaen, Llamreis Ankunft, Celtigerns Wacht, Cenyr. No individual heraldry is known.\nSubject: An anonymous adult woman around35, muted sage-green long wool dress, plain cream everyday apron, simple linen headscarf partly covering brown hair, brown practical shoes. Both empty hands rest naturally together in front of her waist, calm grounded stance, gentle self-possessed expression.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "referenceSha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-jernigan.png",
+  "provider": "built-in-imagegen",
+  "status": "visually-and-technically-accepted",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-3c4b-7ac1-94a8-f6c32917a174\\exec-a83f6515-feb4-4bfe-8bf6-ca31d9e2478c.png",
+  "sha256": "bc2221a6e3cd0a414ba7c01dfd3639a3a7f1d997597374b762e4bae2fcbf1e45",
+  "sourceSha256": "bc2221a6e3cd0a414ba7c01dfd3639a3a7f1d997597374b762e4bae2fcbf1e45",
+  "stylePreset": "fantasy-rpg-character",
+  "anonymousRepresentative": true,
+  "personIdentityCreated": false,
+  "heraldryAdded": false,
+  "professionClaimed": false,
+  "technicalQA": {
+    "familyId": "haus-jernigan",
+    "size": [
+      1024,
+      1536
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "borderMaxAlpha": 1,
+    "alpha0": 978353,
+    "alpha250plus": 570391,
+    "bboxesAlphaAbove": {
+      "0": [
+        0,
+        15,
+        1010,
+        1536
+      ],
+      "10": [
+        192,
+        18,
+        808,
+        1521
+      ],
+      "100": [
+        193,
+        18,
+        807,
+        1521
+      ],
+      "250": [
+        194,
+        19,
+        806,
+        1520
+      ]
+    },
+    "sourceBytesPreserved": true
+  },
+  "visualQA": "Tatsächlich auf Hellgrau und Dunkelgrau komponiert angesehen: vollständige Figur, keine sichtbare Außenfahne, keine Wappen, Waffen oder Berufsgeräte.",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Llysfaen/Haus_Jernigan/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/haus-jernigan.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "namedPerson": false,
+  "createsPersonRecord": false
+}

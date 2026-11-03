@@ -1,0 +1,236 @@
+{
+  "sources": [
+    {
+      "id": "haus-draenog",
+      "slug": "draenog",
+      "canonical": {
+        "rank": "Baron",
+        "seat": "Llanforwyn",
+        "barony": "Silberwald",
+        "liege": "haus-pysgod",
+        "head": "deiniol-draenog",
+        "founder": "mathonwy-founder-draenog"
+      },
+      "narrative": [
+        "Priester- und Ritterhaus: Verteidigung Llanforwyns und des Tempels gegen Räuber führte zum weltlichen Ritter-/Baronenstand.",
+        "Heiligtümer, Pilger, Segnungen, Priesterausbildung und Schutz des Silberwaldes.",
+        "Defensive Klerikertradition der Dame; Wasser- und Schutzmotive nur beschreibend, keine neue Unterklasse oder Kampfmechanik erzeugen.",
+        "Nimue und Sylvanaeth, Rechtschaffenheit, Treue und Integrität."
+      ],
+      "cautions": [
+        "Mathonwy als alter Gründer nicht mit dem heutigen Erben Mathonwy oder der nicht exakt zugeordneten Erzpatriarchen-Erzählung vermischen. Keine neue amtliche Besetzung ableiten.",
+        "Die Königssegnungen als Hausüberlieferung, nicht als neu festgelegtes verbindliches Reichsgesetz behandeln.",
+        "Source9.)Werte ist tatsächlich ein Hof-/Personenblock und wurde vollständig ausgeschlossen."
+      ],
+      "art": "Igel-Schnauzenhelm mit geschlossenem Visier, Stachelverzierungen, grün-gelbe Platte, Speer und Spitzschild mit Baum/Igeln.",
+      "otherArt": "Drei alternative runde Wappen und ein historisches Ortsbanner erhalten; aktuelle kanonische Wappen nicht überschreiben.",
+      "sourceFigureFile": "draenog-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-wivern",
+      "slug": "wivern",
+      "canonical": {
+        "rank": "Baron",
+        "seat": "Coedlyn",
+        "barony": "Eichenlicht",
+        "liege": "haus-pysgod",
+        "head": "islwyn-wivern",
+        "founder": "ulysses-founder-wivern"
+      },
+      "narrative": [
+        "Eichenlichtfest zur Sommersonnenwende, Erntedank, Spenden für Bedürftige.",
+        "Höfe, Obst- und Nussplantagen, Schnapsbrennerei und Sicherung von Handelswegen.",
+        "Knecht und Hirtin; Fleiß, Handel, Gemeinschaft und Respekt vor Natur."
+      ],
+      "cautions": [
+        "Mögliche Coedwig-/Albenabstammung bleibt ungesicherte Überlieferung; keine neue Genealogie erzeugen.",
+        "Absolute Behauptung alleCenyri friedlich nicht als allgemeines Reichsgesetz wiederholen."
+      ],
+      "art": "Geschlossener dunkelmetallener Visierhelm, rötlicher Eichhörnchenwappenrock, schwere Platte; sitzend an Baumstamm, Eichhörnchen-Spitzschild angelehnt. Originalkomposition unverändert erhalten.",
+      "sourceFigureFile": "wivern-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-morfil",
+      "slug": "morfil",
+      "canonical": {
+        "rank": "Baron",
+        "seat": "Talsarn",
+        "barony": "Grauküste",
+        "liege": "haus-pysgod",
+        "head": "aneurin-morfil",
+        "founder": "trayvion-pysgod"
+      },
+      "narrative": [
+        "Erstes Kadettenhaus der Pysgod; frühere Burg bei Tredegar/Quarzvorkommen und Befestigung Llwydharbwrs, des späteren Talsarn.",
+        "Schiffbau, Fischerei, Holzverarbeitung, Viehzucht und Landwirtschaft.",
+        "Schiffsbauergilde als beschriebene kulturelle Verbindung, keine neue Gildenakte nötig.",
+        "Nimue und Aelrith, Loyalität, Gemeinschaft und Verantwortung."
+      ],
+      "cautions": [
+        "Enkel-Gingalain-I-Geschichte nur als Legende/gegen aktuelle Akte geprüft verwenden, nicht als neue Elternkante.",
+        "Keine Ritterfürstenherabstufung oderwechselnde Quellenränge übernehmen: aktuell Baron."
+      ],
+      "art": "Blauer robuster Plattenharnisch, geschlossener Helm, heller Wappenrock mit Blauwal, Speer und Seitenschwert, kein Schild.",
+      "sourceFigureFile": "morfil-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-lyfant-caer-asgwrn",
+      "slug": "lyfant",
+      "canonical": {
+        "rank": "Ritterfürst",
+        "seat": "Caer Asgwrn",
+        "barony": "Silberwald",
+        "subregion": "Skelettküste",
+        "liege": "haus-pysgod",
+        "head": "cledwyn-lyfant",
+        "founder": "cledwyn-lyfant"
+      },
+      "narrative": [
+        "Vennyrischer Ursprung, Seeschlacht und Flucht nach Tredegar als Geschichte des südlichen Zweigs.",
+        "Wiederaufbau der herrenlosen Burg in Caer Asgwrn, Schiffbau, Fischerei und Holzgewinnung.",
+        "Morwyr-/Seefahrertradition; rote/grüne Hausfarben und grüne Augen.",
+        "Spannungen um Holzschlag nahe dem heiligen Silberwald; Streiter und Knecht, Ehre, Pflicht und Arbeit."
+      ],
+      "cautions": [
+        "Aktuelle Süd-Akte ist haus-lyfant-caer-asgwrn. haus-lyfant bleibt die getrennte geschützte Vennyr-Originakte.",
+        "Cledwyn führt die neue Linie seit1720, Cadwgan ist nur der mitausgewanderte Seitenzweig; Meredydds erloschene Linie bleibt in Derwyddion.",
+        "QuelleHerren ausLlanforwyn ist veraltet/falsch alsLehnsherr: aktuellerLehnsherrPysgod; Draenog bleibt Nachbarhaus.",
+        "Keine neue Großmutter-des-letzten-Königs-Beziehung importieren."
+      ],
+      "art": "Schlichter heller geschlossener Helm, Metallharnisch mit grün/orangefarbenem Froschwappenrock, Schwert und Frosch-Spitzschild; geringe Bodenfläche des Originals erhalten.",
+      "sourceFigureFile": "lyfant-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-dornach",
+      "slug": "dornach",
+      "canonical": {
+        "rank": "Dun Tiarna",
+        "seat": "Ard Ghallon",
+        "barony": "Antike Crannath Clans",
+        "liege": null
+      },
+      "narrative": [
+        "Nur aktuelle geografische/rangbezogene Einordnung plus allgemeiner historischer Crannath-Tiarna-Kontext vorhanden."
+      ],
+      "cautions": [
+        "Alle spezifischen Überblicks-, Geschichts-, Religions-, Besitz- und Werteabschnitte sind Platzhalter. Keine eigene Geschichte/Gründer/Religion aus Bild oder Name erfinden.",
+        "Bestehende ???-Personen im Graph unverändert lassen und keine erfundenen Namenskarten daraus erzeugen."
+      ],
+      "art": "Leichter lederner und fellbesetzter Krieger, offener runder Eisenhelm, rötlichbrauner Pelzumhang, Schwert; unbenannte Hausdarstellung.",
+      "sourceFigureFile": "dornach-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-brathaireann",
+      "slug": "brathaireann",
+      "canonical": {
+        "rank": "Mor Tiarna",
+        "seat": "Mor Mhachair",
+        "barony": "Antike Crannath Clans",
+        "liege": null
+      },
+      "narrative": [
+        "Nur aktuelle geografische/rangbezogene Einordnung plus allgemeiner historischer Crannath-Tiarna-Kontext vorhanden."
+      ],
+      "cautions": [
+        "Alle spezifischen Erzählabschnitte sind Platzhalter. Keine Geschichte des abgebildeten Thronmanns als benannten Herrscher oder Gründervater erfinden.",
+        "Kein heutiges Oberhaupt einsetzen."
+      ],
+      "art": "Schwerer grüner Speerkrieger mit geschlossenem nasal-/visierartigem Helm, Kette/Schuppe, Fellkragen und Rundschild mit Baum. Wappen zeigt bärtigen Thronmann, nicht den Hauskrieger.",
+      "sourceFigureFile": "brathaireann-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-tonnmharra",
+      "slug": "tonnmharra",
+      "canonical": {
+        "rank": "Ritterfürst",
+        "seat": "Dun Liath",
+        "barony": "Antike Crannath Clans",
+        "liege": null
+      },
+      "narrative": [
+        "Nur aktuelle geografische/rangbezogene Einordnung plus allgemeiner historischer Crannath-Tiarna-Kontext vorhanden."
+      ],
+      "cautions": [
+        "Nicht aus dem Tiarnatum-Abschnitt einen anderen Rang als den aktuell registrierten Ritterfürstenrang erfinden.",
+        "Keine eigene Seefahrtschronik oder Götterverehrung allein aus dem maritimen Wappen herleiten."
+      ],
+      "art": "Blauer Schuppenkrieger mit spitzem geschlossenem Helm, blauem Mantel, Schwert auf der Schulter und blau/goldenem Rundschild mit Wellen-/Fischsymbol.",
+      "sourceFigureFile": "tonnmharra-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    },
+    {
+      "id": "haus-tanwyn",
+      "slug": "tanwyn",
+      "canonical": {
+        "rank": "Nicht überliefert",
+        "seat": "",
+        "barony": "Ausgestorbene Häuser",
+        "liege": null
+      },
+      "narrative": [
+        "Historisches zauberkundiges Haus aus Avallorn; Bindung an den Achat-Orden, Zerschlagung in den Magierkriegen.",
+        "Arkane Unterweisung; Dienst als Schreiber, Berater oder Verwalter für die Pysgod; funktionale Ordensstandorte.",
+        "Historischer Familiensitz als Ruine nahe Llanfyn, kein aktueller Registerort.",
+        "Sachliche Glaubenspraxis, Verbindungen zu Rúnda/AchatOrden, Pflicht, Nützlichkeit und arkane Disziplin."
+      ],
+      "cautions": [
+        "Keinen konkreten erblichen Adelsrang ableiten: aktueller Rangunknown.",
+        "Keine neuen Überlebenden oder geheime Fortsetzung der als erloschen geführten Linie erfinden; Quellenformulierungen scheinbar/Zumindest dachte man das begründen keinen belegten Menschen.",
+        "Dienstbindungen in der Prosa begründen keinen neuen aktuellen Lehnsherrn oder Pysgod-Ortsreiter.",
+        "Unbekannte Gründer/Ämter und militärische Ausbildung bleiben unbekannt."
+      ],
+      "art": "Anonymer bärtiger arkaner Kapuzenkrieger mit violettem Kristallstab, violettem Brustkristall und blauer Zauberklinge; gerüstet mit zerrissenem braunem Mantel.",
+      "sourceFigureFile": "tanwyn-figure.png",
+      "reuseOriginal": true,
+      "missingRequiredFigure": false,
+      "genealogyImported": false,
+      "militaryStatisticsImported": false
+    }
+  ],
+  "imageInspection": "Both contact-inspection.png and contact-insets.png actually viewed. All23images downloaded byte-for-byte, hashes in downloads.json. All8houses have suitable figures; no generation required.",
+  "externalLinksChecked": [
+    {
+      "normalizedUrl": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2093",
+      "status": "not accessible via web tool; no extra content inferred"
+    },
+    {
+      "normalizedUrl": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2091",
+      "status": "not accessible via web tool; no extra content inferred"
+    },
+    {
+      "normalizedUrl": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2092",
+      "status": "not accessible via web tool; no extra content inferred"
+    },
+    {
+      "normalizedUrl": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2089",
+      "status": "not accessible via web tool; no extra content inferred"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "houseId": "haus-crefyddol",
+  "source": {
+    "attachmentId": "ec84d68a-07aa-4e31-a856-06e906d108bc",
+    "file": "animexx-original.html",
+    "sha256": "f56c013f1df1629bd8ed7de9e4b170d5684fba7245c8c205cbc9fccf4d0361de",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "url": "https://i.imgur.com/QyU83Aq.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "note": "Geliefertes Original durch Hauptagent heruntergeladen, tatsächlich als Ganzkörper-Kriegerdarstellung angesehen und unverändert eingebunden.",
+      "sha256": "32b1c9979affc67e14a75aecd985f330261048969828499b8b0d3e8726275489",
+      "width": 408,
+      "height": 612
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanges": false,
+    "familyId": "haus-crefyddol"
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-crefyddol-family.js",
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/herrschaft.data.mjs"
+  ],
+  "decisions": [
+    "Die genealogischen Abschnitte „Hierarchie“ und „Stammbaum“ samt alter Stammbaumgrafik werden vollständig ignoriert. Keine neuen Personen, Lebensdaten, Beziehungen oder Graphänderungen.",
+    "Alle Militärstatistiken und Zahlen vollständig ignoriert. Das Militärprofil bleibt ausgeblendet; die literarische Beschreibung von Rittertum und Ausrüstung wird davon getrennt behandelt.",
+    "Aktuelle Familienakten, Haus-IDs, Personen-IDs, Portraitzuordnungen und Ortsprofile haben Vorrang vor alten Kopierfeldern. Amtszeiten werden ausdrücklich von Lebensdaten getrennt.",
+    "Die Kapitel der aktuellen Grafschafts- und Herrschaftsseiten ergänzen belegt die heutige territoriale Einordnung und Lebensgrundlage. Unbenannte Amtsinhaber und historische Platzhalter werden nicht erfunden.",
+    "Crefyddoll/Crefydoll sind Altvarianten des kanonischen Hauses Crefyddol. Die technischen Personen-IDs kimball-crefydoll und andere Altkennungen bleiben unverändert.",
+    "Das kopierte Ursprungsfeld Bors Saith/Gwennan Neidr widerspricht Hausgeschichte und kanonischer Akte. Crefyddol wurde von Llwyarch begründet; Sieffre der Fromme und Jinelle Neidr sind die gemeinsamen Eltern der Bruderhausgründer.",
+    "Die Namen der Gründer werden nach den vorhandenen Akten als Llwyarch Crefyddol und Llwellyn Canwyll geführt. Keine neue Person für Llywarch/Llewelyn-Varianten angelegt.",
+    "Der allgemeine Rittertext verwendet Avallorn statt der veralteten Form Avalon. Offene Kapitel aus Punkten werden nicht als Lore ausgegeben; die bestehende Herrschaftsseite liefert die genannten regionalen Gewerbe."
+  ]
+}

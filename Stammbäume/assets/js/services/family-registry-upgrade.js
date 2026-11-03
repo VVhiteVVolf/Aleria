@@ -1,6 +1,6 @@
 import { normalizeFamily } from '../domain/family-schema.js';
 import { withCwingodHouseNameUpgrade } from '../data/cwingod-house-name-upgrade.js';
-import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261027-uathneach-warriors-v1';
+import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261103-vennyr-warriors-v1';
 
 const ENTITY_COLLECTIONS = Object.freeze([
   'persons',
@@ -171,13 +171,16 @@ export function needsRegisteredFamilyUpgrade(registeredFamily, localFamily) {
 }
 
 export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
-  const registered = withCwingodHouseNameUpgrade(normalizeFamily(registeredInput));
   const local = normalizeFamily(localInput);
+  const sourceFamily = normalizeFamily(registeredInput);
+  const applyManagedEntityFields = shouldApplyManagedEntityFields(sourceFamily, local);
+  // Biography-only revisions must not add fresh naming-upgrade metadata to
+  // otherwise unchanged house nodes. Explicit source field patches remain on
+  // the registered entities and are handled by their existing field revisions.
+  const registered = applyManagedEntityFields ? withCwingodHouseNameUpgrade(sourceFamily) : sourceFamily;
   const registeredRevision = sourceRevision(registered);
   const localRevision = sourceRevision(local);
   if (!needsRegisteredFamilyUpgrade(registered, local)) return local;
-
-  const applyManagedEntityFields = shouldApplyManagedEntityFields(registered, local);
 
   const mergedTombstones = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,

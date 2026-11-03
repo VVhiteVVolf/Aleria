@@ -1,0 +1,27 @@
+{
+  "foreignHousesChecked": 618,
+  "foreignHouseEntriesChanged": 0,
+  "oldGalleryAssetIdsChecked": 1097,
+  "oldGalleryAssetIdsRemoved": 0,
+  "oldGallerySourcePngsChanged": 0,
+  "unselectedAuthoringFilesChecked": 712,
+  "unselectedAuthoringFilesUnchanged": 710,
+  "unexpectedUnselectedAuthoringChanges": 0,
+  "authorizedTypeCorrections": [
+    {
+      "familyId": "haus-grianlaoch",
+      "file": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Grianlaoch/haus.content.mjs",
+      "beforeSha256": "b0ec6f4c69cddb062a156b632f4826bc6e900360b9afeb3611656efd27df0167",
+      "afterSha256": "af044ae6224d84643b6d09b73b0007d7c07e19ca3e7d7373a59373e022cdf9df",
+      "reason": "Explicit Root review correction: canonical knight/Ritterherr type changed from Ritterfürstenhaus to Ritterhaus; generated page follows source."
+    },
+    {
+      "familyId": "haus-grianlaoch",
+      "file": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Grianlaoch/haus.data.js",
+      "beforeSha256": "51d8265e30d2a8b51207affd3c707051e0e2ed03b6cd0210012b117d4e126700",
+      "afterSha256": "ee9582a9218a4679ed479aed7054e3caec75586d4a6a0e6e8f5bd5907eaec1ac",
+      "reason": "Explicit Root review correction: canonical knight/Ritterherr type changed from Ritterfürstenhaus to Ritterhaus; generated page follows source."
+    }
+  ],
+  "passed": true
+}

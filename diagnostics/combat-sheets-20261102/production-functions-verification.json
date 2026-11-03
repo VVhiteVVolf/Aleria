@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "commit": "15296cfce6cee61550d7319f79ef7e2fb39a9ad3",
+  "verifiedAt": "2026-11-03T00:38:07.001Z",
+  "method": "GET",
+  "authenticated": false,
+  "routes": [
+    {
+      "name": "document-publisher",
+      "status": 200
+    },
+    {
+      "name": "family-publisher",
+      "status": 200
+    },
+    {
+      "name": "imgur-album",
+      "status": 400
+    },
+    {
+      "name": "karten-publisher",
+      "status": 200
+    },
+    {
+      "name": "wedding-publisher",
+      "status": 200
+    },
+    {
+      "name": "world-content-publisher",
+      "status": 401
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../modules/klaueninseln/territory-page.mjs?v=klaueninseln-20261019';
+import { createTerritory } from '../../../modules/klaueninseln/territory-page.mjs?v=20261103-klaueninsel-v1';
 
 export default createTerritory({
   "id": "grafschaft-klaueninsel",
@@ -194,7 +194,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-arth"
         },
         {
           "name": "Blodyn O'Aberdail",
@@ -204,7 +205,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blodyn-aberdail"
         },
         {
           "name": "Blodyn O'Talgarth",
@@ -214,7 +216,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blodyn-talgarth"
         },
         {
           "name": "Pawen O'Talgarth",
@@ -224,7 +227,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-pawen"
         },
         {
           "name": "Crafanc O'Talgarth",
@@ -234,7 +238,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-crafanc"
         },
         {
           "name": "Unigol O'Caer Marwor",
@@ -244,7 +249,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-unigol"
         },
         {
           "name": "Morthwyl O'Caer Morben",
@@ -254,7 +260,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-morthwyll"
         },
         {
           "name": "Eirth O'Caer Glaslyn",
@@ -264,7 +271,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-eirth"
         },
         {
           "name": "Sélwyn O'Caer Ebirth",
@@ -274,7 +282,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-selwyn"
         },
         {
           "name": "Diafol O'Talgarth",
@@ -284,7 +293,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-diafol-talgarth"
         },
         {
           "name": "Dianc O'Aberdail",
@@ -294,7 +304,8 @@ export default createTerritory({
           "liege": "Haus Blodyn O'Aberdail",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dianc-aberdail"
         },
         {
           "name": "Arfordir O'Aberdail",
@@ -304,7 +315,8 @@ export default createTerritory({
           "liege": "Haus Blodyn O'Aberdail",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-arfordir-aberdail"
         },
         {
           "name": "Dyfrgi O'Caer Cryftlawd",
@@ -314,7 +326,8 @@ export default createTerritory({
           "liege": "Haus Cwingod",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dyfrgi-caer-cryftlawd"
         },
         {
           "name": "Walwrs O'Caer Deheuol",
@@ -324,7 +337,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-walwrs-caer-deheuol"
         },
         {
           "name": "Cwingod O'Morea",
@@ -334,7 +348,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-cwningod"
         }
       ]
     },
@@ -349,7 +364,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-beryn"
         },
         {
           "name": "Dyger",
@@ -359,7 +375,8 @@ export default createTerritory({
           "liege": "Haus Arth O'Talgarth",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dyger"
         },
         {
           "name": "Morgwynt",
@@ -369,7 +386,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-morgwynt"
         },
         {
           "name": "Cledrann",
@@ -379,7 +397,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cledrann"
         }
       ]
     },
@@ -394,7 +413,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-mathgraig"
         },
         {
           "name": "Prys",
@@ -404,7 +424,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-prys"
         },
         {
           "name": "Morglan",
@@ -414,7 +435,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-morglan"
         },
         {
           "name": "Bowen",
@@ -424,7 +446,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bowen"
         },
         {
           "name": "Penry",
@@ -434,7 +457,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-penry"
         },
         {
           "name": "Gwernhelyd",
@@ -444,7 +468,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwernhelyd"
         },
         {
           "name": "Halenwych",
@@ -454,7 +479,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-halenwych"
         },
         {
           "name": "Torawg",
@@ -464,7 +490,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-torawg"
         },
         {
           "name": "Ddraenen",
@@ -474,7 +501,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ddraenen"
         },
         {
           "name": "Pluen",
@@ -484,7 +512,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-pluen"
         },
         {
           "name": "Morlan",
@@ -494,7 +523,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-morlan"
         }
       ]
     },
@@ -509,7 +539,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwyllt"
         },
         {
           "name": "Bevan",
@@ -519,7 +550,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bevan"
         },
         {
           "name": "Arian",
@@ -529,7 +561,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-arian"
         },
         {
           "name": "Hirschhorn",
@@ -539,7 +572,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hirschhorn"
         },
         {
           "name": "Parry",
@@ -549,7 +583,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-parry"
         }
       ]
     },
@@ -564,7 +599,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-ard-follmhar"
         }
       ]
     }

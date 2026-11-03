@@ -1,0 +1,2663 @@
+{
+  "type": "public-character-archive-projection-audit",
+  "generatedAt": "2026-11-03T12:02:39.290Z",
+  "scope": {
+    "libraryCharacters": 14,
+    "publicRegisterOwnerCharacters": 261,
+    "builtinEntries": 1933,
+    "liveEntries": 812,
+    "standards": 490,
+    "offers": 655,
+    "owned": 220,
+    "registerEntries": 1365,
+    "simulatedOldCopies": 8220
+  },
+  "fresh": {
+    "classified": 4110,
+    "semantic": 2860,
+    "registerProjection": 2560,
+    "weaponProjection": 2507,
+    "viewEntries": 2507,
+    "visibleFamilies": 2351,
+    "multipleVariantFamilies": 80,
+    "kindCounts": {
+      "ability": 13,
+      "ancestry": 28,
+      "attack": 96,
+      "background": 10,
+      "class": 105,
+      "combat-style": 33,
+      "origin": 1,
+      "register-alchemie": 65,
+      "register-arkanes": 55,
+      "register-getraenke": 179,
+      "register-pferde": 74,
+      "register-ruestungen": 243,
+      "register-sonstiges": 132,
+      "register-speisen": 86,
+      "register-vieh": 43,
+      "register-waffen": 74,
+      "register-werkzeuge": 61,
+      "skill": 20,
+      "spell": 207,
+      "technique": 758,
+      "trait": 224
+    },
+    "semanticDigest": "1ce0a27607b8f87ba22a02190422f6346d98fa3281a0959d27e45fa6c5377f6a"
+  },
+  "cached": {
+    "classified": 7035,
+    "semantic": 2860,
+    "registerProjection": 2560,
+    "weaponProjection": 2507,
+    "viewEntries": 2507,
+    "visibleFamilies": 2351,
+    "multipleVariantFamilies": 80,
+    "kindCounts": {
+      "ability": 13,
+      "ancestry": 28,
+      "attack": 96,
+      "background": 10,
+      "class": 105,
+      "combat-style": 33,
+      "origin": 1,
+      "register-alchemie": 65,
+      "register-arkanes": 55,
+      "register-getraenke": 179,
+      "register-pferde": 74,
+      "register-ruestungen": 243,
+      "register-sonstiges": 132,
+      "register-speisen": 86,
+      "register-vieh": 43,
+      "register-waffen": 74,
+      "register-werkzeuge": 61,
+      "skill": 20,
+      "spell": 207,
+      "technique": 758,
+      "trait": 224
+    },
+    "semanticDigest": "1ce0a27607b8f87ba22a02190422f6346d98fa3281a0959d27e45fa6c5377f6a"
+  },
+  "cacheSemanticEqual": true,
+  "cacheAddedVariants": [],
+  "repeatedFreshReadEqual": true,
+  "repeatedCachedReadEqual": true,
+  "registerProjectionIdempotent": true,
+  "weaponProjectionIdempotent": true,
+  "coverageFresh": {
+    "originalRegisterIds": 1365,
+    "retainedRegisterIds": 1365,
+    "registerIdDigest": "a1f77072e09a341fb4b0e3c57a21d5f7c89e91e1abb9e136aa4f0230943bd691",
+    "missing": [],
+    "originalOwnedRows": 220,
+    "originalOwnerIds": 53,
+    "changedOwned": [],
+    "lostOwnedSources": []
+  },
+  "coverageCached": {
+    "originalRegisterIds": 1365,
+    "retainedRegisterIds": 1365,
+    "registerIdDigest": "a1f77072e09a341fb4b0e3c57a21d5f7c89e91e1abb9e136aa4f0230943bd691",
+    "missing": [],
+    "originalOwnedRows": 220,
+    "originalOwnerIds": 53,
+    "changedOwned": [],
+    "lostOwnedSources": []
+  },
+  "exactDuplicates": [],
+  "sameNameFamilies": [
+    {
+      "kind": "register-arkanes",
+      "name": "Ring · unverzaubert",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-arkanes",
+          "name": "Ring · unverzaubert",
+          "dataId": "standard:arkanist:unverzauberter-ring",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-arkanes",
+          "name": "Ring · unverzaubert",
+          "dataId": "owned:person--haus-wyrm--rianna-wyrm:person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+          "variant": "Besitz · Rianna Wyrm",
+          "owner": "Rianna Wyrm"
+        }
+      ]
+    },
+    {
+      "kind": "ability",
+      "name": "Tierbegleiter",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "ability",
+          "name": "Tierbegleiter",
+          "dataId": "starter-serf-animal-companion",
+          "variant": "Regelvorlage",
+          "owner": "",
+          "damage": "",
+          "costs": []
+        },
+        {
+          "kind": "ability",
+          "name": "Tierbegleiter",
+          "dataId": "starter-skytte-animal-companion",
+          "variant": "Figurenfassung · Ylva Wolfshorn",
+          "owner": "Ylva Wolfshorn",
+          "damage": "",
+          "costs": []
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Brandhorn Bier",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Brandhorn Bier",
+          "dataId": "module:824b635fba2534ab:9840bff8195c3530",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Brandhorn Bier",
+          "dataId": "module:824b635fba2534ab:11b510715b3806f5",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Brandhorn Bier",
+          "dataId": "module:824b635fba2534ab:e37bf7ec630894d0",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Brandhorn Bier",
+          "dataId": "module:cd9d8d3689ad3fa0:2cce1c4f9ef49861",
+          "variant": "Vorlage · Zum Roten Drachen - Taverne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:46d1627697d27e06",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:9577eb8919a64db5",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:ee12ee4acdf7718a",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:6530d958e08a3fc4",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:90d5651f1a435877",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:10beb74c7bf46ac8",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+          "dataId": "module:efa48e792020f5f3:93ad66ee0431b830",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+          "dataId": "module:efa48e792020f5f3:c2d2eee347c495a3",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+          "dataId": "module:efa48e792020f5f3:48653a445a31e1dc",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Mòine",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Mòine",
+          "dataId": "module:efa48e792020f5f3:f33fb06becc0036f",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Mòine",
+          "dataId": "module:efa48e792020f5f3:8d3a67b2d8a515fc",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Mòine",
+          "dataId": "module:efa48e792020f5f3:61856b718bec3083",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:a193c8f621765182",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:7a2d003568456eb1",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:f3ed5d501b455aae",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 18 Jahre · Turas",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Turas",
+          "dataId": "module:efa48e792020f5f3:8c6757b927bcc7f5",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Turas",
+          "dataId": "module:efa48e792020f5f3:6bf4eafa3a96dcc6",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 18 Jahre · Turas",
+          "dataId": "module:efa48e792020f5f3:7ee22fd39b69b399",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+          "dataId": "module:efa48e792020f5f3:8a02fdd8e3c14f02",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+          "dataId": "module:efa48e792020f5f3:6e9f15e97b34d991",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+          "dataId": "module:efa48e792020f5f3:c88a2b7ee04eac6e",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:b429e6c3a95717c1",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:3a466b7ec9db0a12",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+          "dataId": "module:efa48e792020f5f3:5f8076398c6af46d",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Ciarbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:3e9f7efe5010a6c0",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:18b410d929844825",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Ciarbharr",
+          "dataId": "module:efa48e792020f5f3:9b995eb8886be000",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Cneacail · Flusshell",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Flusshell",
+          "dataId": "module:2043cc3b7c87b0cd:64296d2617b95e2a",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Flusshell",
+          "dataId": "module:2043cc3b7c87b0cd:652d9a5f6968eaaf",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Flusshell",
+          "dataId": "module:2043cc3b7c87b0cd:b242cb6e09728f0a",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Cneacail · Hügeldunkel",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Hügeldunkel",
+          "dataId": "module:2043cc3b7c87b0cd:e9d60917d3d335a3",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Hügeldunkel",
+          "dataId": "module:2043cc3b7c87b0cd:6fd8dd8840f2fb86",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Cneacail · Hügeldunkel",
+          "dataId": "module:2043cc3b7c87b0cd:3ad4a8b9bb72fda3",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Dämmerkrone",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Dämmerkrone",
+          "dataId": "module:3be12a33e0142b03:b6c5d5527c05d2de",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dämmerkrone",
+          "dataId": "module:3be12a33e0142b03:b7221acb9328319b",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dämmerkrone",
+          "dataId": "module:3be12a33e0142b03:7b0e304ec997fafe",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dämmerkrone",
+          "dataId": "module:cda6f697f4f9fb2f:fef279a3ddfda75b",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Dornblut",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Dornblut",
+          "dataId": "module:bb32da4e725414e6:72ccd7f088612db0",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dornblut",
+          "dataId": "module:bb32da4e725414e6:72a39fcdb089aef5",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dornblut",
+          "dataId": "module:bb32da4e725414e6:b5a0f34cec294a50",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Drachenblut Bier",
+      "members": 5,
+      "distinctSignatures": 5,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Drachenblut Bier",
+          "dataId": "module:824b635fba2534ab:0dd74fc840438c20",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Drachenblut Bier",
+          "dataId": "module:824b635fba2534ab:8a83030d7e9b2765",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Drachenblut Bier",
+          "dataId": "module:824b635fba2534ab:c5716f5cb2cd9ec0",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Drachenblut Bier",
+          "dataId": "module:cda6f697f4f9fb2f:ffea6450206f9710",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Drachenblut Bier",
+          "dataId": "module:cd9d8d3689ad3fa0:a5a6d5dd361c9999",
+          "variant": "Vorlage · Zum Roten Drachen - Taverne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Dubhbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:0965e46509e62867",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:9a883df0115f9b22",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Dubhbharr",
+          "dataId": "module:efa48e792020f5f3:cbf7729da8b129c7",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Frostkamm",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Frostkamm",
+          "dataId": "module:bb32da4e725414e6:279b6309ea95f58f",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Frostkamm",
+          "dataId": "module:bb32da4e725414e6:c6aeb432c8835faa",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Frostkamm",
+          "dataId": "module:bb32da4e725414e6:ce34550f338641cf",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Gealbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Gealbharr",
+          "dataId": "module:efa48e792020f5f3:c92e4163b36d8cc5",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Gealbharr",
+          "dataId": "module:efa48e792020f5f3:944586a82c5606a0",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Gealbharr",
+          "dataId": "module:efa48e792020f5f3:139465390076e905",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Goldhaube",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Goldhaube",
+          "dataId": "module:3be12a33e0142b03:608d9a90df27a3ee",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldhaube",
+          "dataId": "module:3be12a33e0142b03:c5320097849f3dcb",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldhaube",
+          "dataId": "module:3be12a33e0142b03:8882dca8f817bc4e",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldhaube",
+          "dataId": "module:cda6f697f4f9fb2f:aba1bb1b67fc068f",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Goldschuppen Bier",
+      "members": 8,
+      "distinctSignatures": 8,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:824b635fba2534ab:d0f56bf68c7da8f8",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:824b635fba2534ab:b297ba8f7f01433d",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:824b635fba2534ab:c0e5525e4b8bfc18",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:2a43feed37decd3d:045c9456bf5761da",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:33ee466eddb114ac:47a5d84c55684b58",
+          "variant": "Vorlage · Zum Roten Tor",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:6c37eddd73eea15b:790f2771f511ae2b",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:cda6f697f4f9fb2f:ccafbd6e03d2c3ee",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Goldschuppen Bier",
+          "dataId": "module:cd9d8d3689ad3fa0:73e1a577eaf05fe7",
+          "variant": "Vorlage · Zum Roten Drachen - Taverne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Hakenbräu",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Hakenbräu",
+          "dataId": "module:3be12a33e0142b03:db3088020a1d0260",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hakenbräu",
+          "dataId": "module:3be12a33e0142b03:7407d8b3364935a5",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hakenbräu",
+          "dataId": "module:3be12a33e0142b03:0cb4390e0131abc0",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Hellwacht",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:3be12a33e0142b03:37b9a06523eee615",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:3be12a33e0142b03:c3c9a8fe29df7070",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:3be12a33e0142b03:15dd5d7bc6d8b115",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:2a43feed37decd3d:71edf6bca7024404",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:6c37eddd73eea15b:446c250b81590335",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hellwacht",
+          "dataId": "module:cda6f697f4f9fb2f:098429e8a39230f0",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Hjerte",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Hjerte",
+          "dataId": "module:e702db6055e85e02:506fd090cfb83294",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hjerte",
+          "dataId": "module:e702db6055e85e02:00647af5b52cd191",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hjerte",
+          "dataId": "module:e702db6055e85e02:0e66b60443032334",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Honigbreu · Lichtgold",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu · Lichtgold",
+          "dataId": "module:e702db6055e85e02:f9050b1b5081f191",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu · Lichtgold",
+          "dataId": "module:e702db6055e85e02:a55e3ffc2b9badf4",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu · Lichtgold",
+          "dataId": "module:e702db6055e85e02:3b98710509b20491",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Honigbreu Met",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu Met",
+          "dataId": "module:e702db6055e85e02:a101b9436ea2f25f",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu Met",
+          "dataId": "module:e702db6055e85e02:303d739095f5283a",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Honigbreu Met",
+          "dataId": "module:e702db6055e85e02:bf3a642df573901f",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Hopfgold",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:3be12a33e0142b03:6ce76a50d25cb3c6",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:3be12a33e0142b03:b74e8f3d86117383",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:3be12a33e0142b03:3cf877300137bda6",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:2a43feed37decd3d:78121e7dd6ed38d1",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:6c37eddd73eea15b:3255a860ba6b1e00",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Hopfgold",
+          "dataId": "module:cda6f697f4f9fb2f:8ef4f34ff1037dc5",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Kranzgold",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Kranzgold",
+          "dataId": "module:e702db6055e85e02:2dd5c883b736f5cf",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Kranzgold",
+          "dataId": "module:e702db6055e85e02:d30a2d08a5c9906a",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Kranzgold",
+          "dataId": "module:e702db6055e85e02:0e8a49bddba6520f",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Mòine",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Mòine",
+          "dataId": "module:efa48e792020f5f3:1b99805cdc4ab4d8",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Mòine",
+          "dataId": "module:efa48e792020f5f3:1e4216fd9ed1bb5d",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Mòine",
+          "dataId": "module:efa48e792020f5f3:ee718118c56138b8",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Òrbharr",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Òrbharr",
+          "dataId": "module:efa48e792020f5f3:b9d07c70374853be",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Òrbharr",
+          "dataId": "module:efa48e792020f5f3:3114b9cd1cc8a2bb",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Òrbharr",
+          "dataId": "module:efa48e792020f5f3:086c273c7911351e",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Penderyn",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:824b635fba2534ab:2de3a86399147479",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:824b635fba2534ab:a721b3eacaf3c72a",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:824b635fba2534ab:17cbb06dc6b78f15",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:2a43feed37decd3d:31640fa55558f013",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:6c37eddd73eea15b:a48111fb1a4e3f69",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn",
+          "dataId": "module:cda6f697f4f9fb2f:a93ee586a0bdf6cc",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Penderyn · Rhagorol",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:824b635fba2534ab:ec86201fb003ffeb",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:824b635fba2534ab:68e665d2dc66ccf8",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:824b635fba2534ab:8973e113fea40b27",
+          "variant": "Vorlage · Die Penderyn Brauer- & Destillierzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:2a43feed37decd3d:f9b1466610090066",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:6c37eddd73eea15b:beec9d9ae622813c",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Penderyn · Rhagorol",
+          "dataId": "module:cda6f697f4f9fb2f:9b594c5725dc0099",
+          "variant": "Vorlage · Die Krumme Kanne",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Rosenstolz · Rotwein",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Rosenstolz · Rotwein",
+          "dataId": "module:2a43feed37decd3d:47f3faf7098e9ac7",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Rosenstolz · Rotwein",
+          "dataId": "module:2a43feed37decd3d:de6dceaae631af0e",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Schwarzdorn Met",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzdorn Met",
+          "dataId": "module:bb32da4e725414e6:6bfb91525431fab4",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzdorn Met",
+          "dataId": "module:bb32da4e725414e6:f41507bbdbadc9b1",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzdorn Met",
+          "dataId": "module:bb32da4e725414e6:a1c2e10287f2abd4",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Schwarzflut",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzflut",
+          "dataId": "module:bb32da4e725414e6:1d05377796b9beb5",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzflut",
+          "dataId": "module:bb32da4e725414e6:704732ac07ca2350",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Schwarzflut",
+          "dataId": "module:bb32da4e725414e6:38dce66dbd23fb35",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Sonnenglanz",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Sonnenglanz",
+          "dataId": "module:3be12a33e0142b03:3f5f635964b95079",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Sonnenglanz",
+          "dataId": "module:3be12a33e0142b03:6991d1e28a65409c",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Sonnenglanz",
+          "dataId": "module:3be12a33e0142b03:a3aaa54538f79899",
+          "variant": "Vorlage · Die Teyrngarch Brauerzunft",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Sonnenglanz",
+          "dataId": "module:6c37eddd73eea15b:5a7f95d052883938",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Stachelkrone",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Stachelkrone",
+          "dataId": "module:bb32da4e725414e6:7de39ee64994e426",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Stachelkrone",
+          "dataId": "module:bb32da4e725414e6:0383191fa099d523",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Stachelkrone",
+          "dataId": "module:bb32da4e725414e6:15bff0ae54e45886",
+          "variant": "Vorlage · Die Schwarzdorn Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Stillgold",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Stillgold",
+          "dataId": "module:e702db6055e85e02:06cf9b983ea3251e",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Stillgold",
+          "dataId": "module:e702db6055e85e02:155c982539bcbcdb",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Stillgold",
+          "dataId": "module:e702db6055e85e02:72767d4450107b3e",
+          "variant": "Vorlage · Die Goldenglanz Brauerei",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Turas",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Turas",
+          "dataId": "module:efa48e792020f5f3:fee6cb8d5fa90091",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Turas",
+          "dataId": "module:efa48e792020f5f3:61af9b5ee63836f4",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Turas",
+          "dataId": "module:efa48e792020f5f3:add8d567f1ba2c11",
+          "variant": "Vorlage · Die Brauerei der Familie Gortach",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Weinlaub · Jahrgang 1728",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1728",
+          "dataId": "module:2c439c0b409cb43d:ab9904d3a7e6780d",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1728",
+          "dataId": "module:2c439c0b409cb43d:b8d15dc8b7774d64",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1728",
+          "dataId": "module:6c37eddd73eea15b:56b00bf35eb5828d",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1728",
+          "dataId": "module:6c37eddd73eea15b:63cce2b46ff91124",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Weinlaub · Jahrgang 1734",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:2c439c0b409cb43d:f9b28d0360a28d19",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:2c439c0b409cb43d:685833988e9e2570",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:2a43feed37decd3d:bf8f855e8291e410",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:2a43feed37decd3d:e3dd89f9d8084679",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:6c37eddd73eea15b:114d3a8f31e81ed9",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weinlaub · Jahrgang 1734",
+          "dataId": "module:6c37eddd73eea15b:a5de0c06c193b790",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Weissmann · Champagnia",
+      "members": 4,
+      "distinctSignatures": 4,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Champagnia",
+          "dataId": "module:2c439c0b409cb43d:98869efa6cd8e544",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Champagnia",
+          "dataId": "module:2c439c0b409cb43d:040463f418e88148",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Champagnia",
+          "dataId": "module:6c37eddd73eea15b:3ddbfc0c8c790064",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Champagnia",
+          "dataId": "module:6c37eddd73eea15b:299af64c9965f0c8",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-getraenke",
+      "name": "Weissmann · Weißwein",
+      "members": 6,
+      "distinctSignatures": 6,
+      "entries": [
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:2c439c0b409cb43d:78210e503e682902",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:2c439c0b409cb43d:cb84ede7af884cab",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:2a43feed37decd3d:ca7c72fbdb900c19",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:2a43feed37decd3d:cd53ffd8452aad70",
+          "variant": "Vorlage · Die Gestiefelte Muschi",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:6c37eddd73eea15b:ed33bc0024a7a782",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        },
+        {
+          "kind": "register-getraenke",
+          "name": "Weissmann · Weißwein",
+          "dataId": "module:6c37eddd73eea15b:589978d5b5be098b",
+          "variant": "Vorlage · Die Lachende Nixe",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "technique",
+      "name": "Gebundene Spitze",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "technique",
+          "name": "Gebundene Spitze",
+          "dataId": "combat-style-drachentanz-schwertdrache-gebundene-spitze",
+          "variant": "Drachentanz · Tanz des Schwertdrachens",
+          "owner": "",
+          "form": "drachentanz-form-ii-schwertdrache",
+          "level": 10,
+          "costs": [
+            [
+              "reaction",
+              1
+            ],
+            [
+              "special-action",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "technique",
+          "name": "Gebundene Spitze",
+          "dataId": "combat-style-drachentanz-huetender-gebundene-spitze",
+          "variant": "Drachentanz · Tanz des hütenden Drachens",
+          "owner": "",
+          "form": "drachentanz-pfad-huetender-drache",
+          "level": 14,
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "reaction",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "technique",
+          "name": "Gebundene Spitze",
+          "dataId": "combat-style-sirenentanz-derwyn-gebundene-spitze",
+          "variant": "Wyrmtanz · Tanz der jungen Welle",
+          "owner": "",
+          "form": "sirenentanz-junge-welle",
+          "level": 5,
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "reaction",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "technique",
+      "name": "Sattelwacht",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "technique",
+          "name": "Sattelwacht",
+          "dataId": "combat-style-drachentanz-stuermender-sattelwacht",
+          "variant": "Drachentanz · Tanz des stürmenden Drachens",
+          "owner": "",
+          "form": "drachentanz-pfad-stuermender-drache",
+          "level": 9,
+          "costs": [
+            [
+              "reaction",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "technique",
+          "name": "Sattelwacht",
+          "dataId": "combat-style-sirenentanz-rhiddwyr-sattelwacht",
+          "variant": "Wyrmtanz · Tanz der jungen Welle",
+          "owner": "",
+          "form": "sirenentanz-junge-welle",
+          "level": 5,
+          "costs": [
+            [
+              "reaction",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "register-pferde",
+      "name": "Alaw",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-pferde",
+          "name": "Alaw",
+          "dataId": "owned:yLJ0Rr5suTSLa42sL743:carys-alaw",
+          "variant": "Besitz · Carys Draig",
+          "owner": "Carys Draig"
+        },
+        {
+          "kind": "register-pferde",
+          "name": "Alaw",
+          "dataId": "owned:fklEm9zDR9y1LuCaXeeb:tegan-alaw",
+          "variant": "Besitz · Tegan Draig",
+          "owner": "Tegan Draig"
+        }
+      ]
+    },
+    {
+      "kind": "register-ruestungen",
+      "name": "Haus Draig · Jungritter-Plattenrüstung",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-ruestungen",
+          "name": "Haus Draig · Jungritter-Plattenrüstung",
+          "dataId": "standard:cenyr-ruestungen:haus-draig:jungritter",
+          "variant": "Variante",
+          "owner": ""
+        },
+        {
+          "kind": "register-ruestungen",
+          "name": "Haus Draig · Jungritter-Plattenrüstung",
+          "dataId": "owned:y7MBxDiAaesbWHBtmw5Q:item-mqu1vat1-1-exvo",
+          "variant": "Besitz · Rhiannon Draig",
+          "owner": "Rhiannon Draig"
+        }
+      ]
+    },
+    {
+      "kind": "register-ruestungen",
+      "name": "Haus Gafyr · Seniorritter-Plattenrüstung",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-ruestungen",
+          "name": "Haus Gafyr · Seniorritter-Plattenrüstung",
+          "dataId": "standard:cenyr-ruestungen:haus-gafyr:seniorritter",
+          "variant": "Variante",
+          "owner": ""
+        },
+        {
+          "kind": "register-ruestungen",
+          "name": "Haus Gafyr · Seniorritter-Plattenrüstung",
+          "dataId": "owned:tmfBA2zPTc88EMMGkyyA:item-mqu1vat1-1-exvo",
+          "variant": "Besitz · Duncan Gafyr",
+          "owner": "Duncan Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-ruestungen",
+      "name": "Schuppenpanzer",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-ruestungen",
+          "name": "Schuppenpanzer",
+          "dataId": "standard:waffen-rustungen:schuppenpanzer",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-ruestungen",
+          "name": "Schuppenpanzer",
+          "dataId": "owned:FKiXsSWVoV74rTgmpPip:equipment-armor-fenrir-scale-mail",
+          "variant": "Besitz · Fenrir Varulv",
+          "owner": "Fenrir Varulv"
+        }
+      ]
+    },
+    {
+      "kind": "register-sonstiges",
+      "name": "Hopfgold",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-sonstiges",
+          "name": "Hopfgold",
+          "dataId": "module:2c439c0b409cb43d:201a423013e64c58",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-sonstiges",
+          "name": "Hopfgold",
+          "dataId": "module:33ee466eddb114ac:c46c0f527d7d5ed6",
+          "variant": "Vorlage · Zum Roten Tor",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-sonstiges",
+      "name": "Klingende Krone · 5 Jahre",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-sonstiges",
+          "name": "Klingende Krone · 5 Jahre",
+          "dataId": "module:2043cc3b7c87b0cd:594f1f1e8ababa7c",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-sonstiges",
+          "name": "Klingende Krone · 5 Jahre",
+          "dataId": "module:2043cc3b7c87b0cd:d7dda853ca4ae5af",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        },
+        {
+          "kind": "register-sonstiges",
+          "name": "Klingende Krone · 5 Jahre",
+          "dataId": "module:2043cc3b7c87b0cd:beb8ae4069313d90",
+          "variant": "Vorlage · Zur Klingenden Krone",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "register-sonstiges",
+      "name": "Sonnenglanz",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-sonstiges",
+          "name": "Sonnenglanz",
+          "dataId": "module:2c439c0b409cb43d:61accdf0ac5c0960",
+          "variant": "Vorlage · Celtigerns Letzte Rast",
+          "owner": ""
+        },
+        {
+          "kind": "register-sonstiges",
+          "name": "Sonnenglanz",
+          "dataId": "module:33ee466eddb114ac:18e61c625a8052ee",
+          "variant": "Vorlage · Zum Roten Tor",
+          "owner": ""
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Draig-Dolch",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Draig-Dolch",
+          "dataId": "gawain-draig-dagger",
+          "variant": "Figurenfassung · Gawain Draig",
+          "owner": "",
+          "damage": "1d4",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "attack",
+          "name": "Draig-Dolch",
+          "dataId": "gildas-gafyr-dagger",
+          "variant": "Figurenfassung · Gildas Gafyr",
+          "owner": "",
+          "damage": "1d4",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Großaxt",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Großaxt",
+          "dataId": "starter-fathach-greataxe",
+          "variant": "Regelvorlage",
+          "owner": "",
+          "damage": "1d12",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "attack",
+          "name": "Großaxt",
+          "dataId": "fenrir-greataxe",
+          "variant": "Figurenfassung · Fenrir Varulv",
+          "owner": "",
+          "damage": "1d12",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Langschwert",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Langschwert",
+          "dataId": "standard-weapon--langschwert",
+          "variant": "Vorlage",
+          "owner": "",
+          "damage": "1d8"
+        },
+        {
+          "kind": "attack",
+          "name": "Langschwert",
+          "dataId": "starter-uchelwyr-longsword",
+          "variant": "Figurenfassung · Gais Wyrm",
+          "owner": "",
+          "damage": "1d8",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Lanze",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Lanze",
+          "dataId": "standard-weapon--lanze",
+          "variant": "Vorlage",
+          "owner": "",
+          "damage": "1d12"
+        },
+        {
+          "kind": "attack",
+          "name": "Lanze",
+          "dataId": "starter-uchelwyr-lance",
+          "variant": "Figurenfassung · Gais Wyrm",
+          "owner": "",
+          "damage": "1d12",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Nahkampf",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Nahkampf",
+          "dataId": "default-unarmed-melee",
+          "variant": "Figurenfassung · Freya Skald, Fenrir Varulv, Gawain Draig, Gethin, Kane Draig, Rhiannon Draig, Gildas Gafyr, Guinevere Neidr, Gais Wyrm",
+          "owner": "",
+          "damage": "1d4",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "attack",
+          "name": "Nahkampf",
+          "dataId": "default-unarmed-melee",
+          "variant": "Figurenfassung · Asgeir Wolfshorn, Ylva Wolfshorn, Gethin Draig, Duncan Gafyr, Nudd Saethwyr",
+          "owner": "",
+          "damage": "1d4",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "attack",
+      "name": "Wurfspeer",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "attack",
+          "name": "Wurfspeer",
+          "dataId": "starter-serf-throwing-spear",
+          "variant": "Regelvorlage",
+          "owner": "",
+          "damage": "1d6",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        },
+        {
+          "kind": "attack",
+          "name": "Wurfspeer",
+          "dataId": "starter-skeidr-throwing-spear",
+          "variant": "Regelvorlage",
+          "owner": "",
+          "damage": "1d6",
+          "costs": [
+            [
+              "action",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Chwedonol Harpune",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Chwedonol Harpune",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:caralyn-chwedlonol-chwedonol-harpune-4",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Chwedonol Harpune",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:caralyn-chwedlonol-chwedonol-harpune-5",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Chwedonol Harpune",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:caralyn-chwedlonol-chwedonol-harpune-6",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Dolch",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Dolch",
+          "dataId": "owned:y7MBxDiAaesbWHBtmw5Q:rhiannon-draig-dagger-item",
+          "variant": "Besitz · Rhiannon Draig",
+          "owner": "Rhiannon Draig"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Dolch",
+          "dataId": "owned:person--haus-wyrm--rianna-wyrm:rianna-wyrm-rianna-dolch-3",
+          "variant": "Besitz · Rianna Wyrm",
+          "owner": "Rianna Wyrm"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Draig Ritterschwert",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Draig Ritterschwert",
+          "dataId": "owned:person--haus-draig--gethin-1722-draig:equipment-weapon-starter-teulu-longsword",
+          "variant": "Besitz · Gethin Draig",
+          "owner": "Gethin Draig"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Draig Ritterschwert",
+          "dataId": "owned:vk0xAa3ZcEhVvGC1CzNq:oweta-draig-draig-ritterschwert-2",
+          "variant": "Besitz · Oweta Draig",
+          "owner": "Oweta Draig"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Draig-Dolch",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Draig-Dolch",
+          "dataId": "owned:q1QtSIug74FzzwUAqWrs:gawain-draig-dagger-item",
+          "variant": "Besitz · Gawain Draig",
+          "owner": "Gawain Draig"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Draig-Dolch",
+          "dataId": "owned:gildas-gafyr:gildas-gafyr-dagger-item",
+          "variant": "Besitz · Gildas Gafyr",
+          "owner": "Gildas Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Helwyr Kampfdolch",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Kampfdolch",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:lefraye-gafyr-helwyr-kampfdolch-5",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Kampfdolch",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:lefraye-gafyr-helwyr-kampfdolch-6",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Helwyr Kurzbogen",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Kurzbogen",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:lefraye-gafyr-helwyr-kurzbogen-3",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Kurzbogen",
+          "dataId": "owned:person--haus-neidr--guinevere-neidr:equipment-weapon-guinevere-shortbow",
+          "variant": "Besitz · Guinevere Neidr",
+          "owner": "Guinevere Neidr"
+        }
+      ]
+    },
+    {
+      "kind": "register-waffen",
+      "name": "Helwyr Langbogen",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Langbogen",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:lefraye-gafyr-helwyr-langbogen-2",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        },
+        {
+          "kind": "register-waffen",
+          "name": "Helwyr Langbogen",
+          "dataId": "owned:person--haus-neidr--guinevere-neidr:equipment-weapon-guinevere-longbow",
+          "variant": "Besitz · Guinevere Neidr",
+          "owner": "Guinevere Neidr"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Feder & Tinte",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Feder & Tinte",
+          "dataId": "standard:gemischtwarenhandler:feder-tinte",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Feder & Tinte",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Feuerstein & Stahl",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Feuerstein & Stahl",
+          "dataId": "standard:gemischtwarenhandler:feuerstein-stahl",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Feuerstein & Stahl",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Holzkamm",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Holzkamm",
+          "dataId": "standard:gemischtwarenhandler:holzkamm",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Holzkamm",
+          "dataId": "owned:person--haus-wyrm--rianna-wyrm:person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+          "variant": "Besitz · Rianna Wyrm",
+          "owner": "Rianna Wyrm"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Nadel & Faden",
+      "members": 3,
+      "distinctSignatures": 3,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Nadel & Faden",
+          "dataId": "standard:gemischtwarenhandler:nadel-faden",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Nadel & Faden",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Nadel & Faden",
+          "dataId": "owned:vk0xAa3ZcEhVvGC1CzNq:vk0xAa3ZcEhVvGC1CzNq-start-possessions-20261102-2",
+          "variant": "Besitz · Oweta Draig",
+          "owner": "Oweta Draig"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Notizbuch (klein)",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Notizbuch (klein)",
+          "dataId": "standard:gemischtwarenhandler:notizbuch",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Notizbuch (klein)",
+          "dataId": "owned:person--haus-gafyr--lefraye-gafyr:person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+          "variant": "Besitz · Lefraye Gafyr",
+          "owner": "Lefraye Gafyr"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Signalpfeife",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Signalpfeife",
+          "dataId": "standard:gemischtwarenhandler:signalpfeife",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Signalpfeife",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Spiegel (Metall)",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Spiegel (Metall)",
+          "dataId": "standard:gemischtwarenhandler:spiegel",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Spiegel (Metall)",
+          "dataId": "owned:person--haus-wyrm--rianna-wyrm:person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+          "variant": "Besitz · Rianna Wyrm",
+          "owner": "Rianna Wyrm"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Wasserschlauch",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Wasserschlauch",
+          "dataId": "standard:gemischtwarenhandler:wasserschlauch",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Wasserschlauch",
+          "dataId": "owned:Eka4z7TWpzEgx8KjhIzy:Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "variant": "Besitz · Caralyn Chwedonol",
+          "owner": "Caralyn Chwedonol"
+        }
+      ]
+    },
+    {
+      "kind": "register-werkzeuge",
+      "name": "Wetzstein",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "register-werkzeuge",
+          "name": "Wetzstein",
+          "dataId": "standard:gemischtwarenhandler:wetzstein",
+          "variant": "Vorlage",
+          "owner": ""
+        },
+        {
+          "kind": "register-werkzeuge",
+          "name": "Wetzstein",
+          "dataId": "owned:vk0xAa3ZcEhVvGC1CzNq:vk0xAa3ZcEhVvGC1CzNq-start-possessions-20261102-1",
+          "variant": "Besitz · Oweta Draig",
+          "owner": "Oweta Draig"
+        }
+      ]
+    },
+    {
+      "kind": "spell",
+      "name": "Druckstoß",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "spell",
+          "name": "Druckstoß",
+          "dataId": "elemente-druckstoss",
+          "variant": "Eigene Fassung",
+          "owner": "",
+          "level": 3,
+          "damage": "4d6",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "reaction",
+              1
+            ],
+            [
+              "mana-focus",
+              6
+            ]
+          ]
+        },
+        {
+          "kind": "spell",
+          "name": "Druckstoß",
+          "dataId": "rhiannon-druckstoss",
+          "variant": "Figurenfassung · Rhiannon Draig",
+          "owner": "Rhiannon Draig",
+          "level": 1,
+          "damage": "",
+          "costs": [
+            [
+              "reaction",
+              1
+            ],
+            [
+              "bonus-action",
+              1
+            ],
+            [
+              "mana-focus",
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "spell",
+      "name": "Federfall",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "spell",
+          "name": "Federfall",
+          "dataId": "elementarismus-federfall",
+          "variant": "Eigene Fassung",
+          "owner": "",
+          "level": 1,
+          "damage": "",
+          "costs": [
+            [
+              "reaction",
+              1
+            ],
+            [
+              "mana-focus",
+              3
+            ]
+          ]
+        },
+        {
+          "kind": "spell",
+          "name": "Federfall",
+          "dataId": "rhiannon-federfall",
+          "variant": "Figurenfassung · Rhiannon Draig",
+          "owner": "Rhiannon Draig",
+          "level": 1,
+          "damage": "",
+          "costs": [
+            [
+              "reaction",
+              1
+            ],
+            [
+              "mana-focus",
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "spell",
+      "name": "Feuerball",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "spell",
+          "name": "Feuerball",
+          "dataId": "elemente-feuerball",
+          "variant": "Eigene Fassung",
+          "owner": "",
+          "level": 2,
+          "damage": "3d6",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "reaction",
+              1
+            ],
+            [
+              "mana-focus",
+              4
+            ]
+          ]
+        },
+        {
+          "kind": "spell",
+          "name": "Feuerball",
+          "dataId": "feuerball",
+          "variant": "Regelvorlage",
+          "owner": "",
+          "level": 3,
+          "damage": "8d6",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "mana-focus",
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "spell",
+      "name": "Kleine Illusion",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "spell",
+          "name": "Kleine Illusion",
+          "dataId": "freya-kleine-illusion",
+          "variant": "Figurenfassung · Freya Skald",
+          "owner": "Freya Skald",
+          "damage": "",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "mana-focus",
+              2
+            ]
+          ]
+        },
+        {
+          "kind": "spell",
+          "name": "Kleine Illusion",
+          "dataId": "rhiannon-kleine-illusion",
+          "variant": "Figurenfassung · Rhiannon Draig",
+          "owner": "Rhiannon Draig",
+          "damage": "",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "bonus-action",
+              1
+            ],
+            [
+              "mana-focus",
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "spell",
+      "name": "Licht",
+      "members": 2,
+      "distinctSignatures": 2,
+      "entries": [
+        {
+          "kind": "spell",
+          "name": "Licht",
+          "dataId": "freya-licht",
+          "variant": "Figurenfassung · Freya Skald",
+          "owner": "Freya Skald",
+          "damage": "",
+          "costs": [
+            [
+              "action",
+              1
+            ],
+            [
+              "mana-focus",
+              2
+            ]
+          ]
+        },
+        {
+          "kind": "spell",
+          "name": "Licht",
+          "dataId": "rhiannon-licht",
+          "variant": "Figurenfassung · Rhiannon Draig",
+          "owner": "Rhiannon Draig",
+          "damage": "",
+          "costs": [
+            [
+              "bonus-action",
+              1
+            ],
+            [
+              "mana-focus",
+              2
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "expectedStorageBoundary": "Presentation rows are never replayed as raw persistence input; repeated reads project the same unchanged source rows."
+}

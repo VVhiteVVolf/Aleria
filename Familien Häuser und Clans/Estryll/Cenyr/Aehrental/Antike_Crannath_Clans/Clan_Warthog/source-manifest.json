@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "093cca1d-69d4-4f52-b48a-05256a2ce8cb",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "d263bd38fd862b69887445aa485a1ed7dff5b31826f28b9381413196f2ce4d62"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-warthog",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-warthog",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Ri Torraird",
+    "currentRankId": "unknown"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "c490cd3ef5bfc17503f03cdc6d7f881ac5125c45edec31d78dd68a2f42ac01ed",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die dünne Vorlage bleibt eine vorbereitete Seite; anonyme bestehende Figuren werden nicht als benannte Hausmitglieder ausgearbeitet.",
+    "Historischer Clanstatus und unbekannter Rang bleiben erhalten. Ein erloschener Status wird nicht aus den pauschalen alten Tabellen angenommen."
+  ]
+}

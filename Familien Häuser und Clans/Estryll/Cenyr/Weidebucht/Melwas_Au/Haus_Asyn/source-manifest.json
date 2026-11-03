@@ -1,0 +1,44 @@
+{
+  "source": {
+    "attachmentId": "f4701342-6288-4b01-979f-ec7003b2bf60",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "2aeb8e828d06441829d8be1e1aeb16ea7f0b94a58212ffdf603d3938e5645486"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-asyn",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-asyn",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 1,
+    "currentSeat": "Cerrigarth",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/PKhYpD7.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "bf6445504ffe3e100eb4d276be67cc079b0065603fb02ec8bf8b2cb4f7e2e611",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Das Verschwinden der Hauptfamilie 1639 und die Rückkehr von Réiltín, Arlais und Griff 1740 folgen der aktuellen öffentlichen Akte. Asyn wird nicht pauschal als endgültig erloschen geführt.",
+    "Tudwal bleibt historischer letzter Ritterfürst vor dem Verschwinden; kein heutiges Oberhaupt oder neuer Erbe wird erfunden. Der Besitzstreit mit Mochdaer bleibt offen.",
+    "Unhaltbare relative Angaben wie vor wenigen Wochen oder seit zwei Jahrzehnten entfallen. Das Original zeigt offenen Helm, Speer und Rundschild; der abweichende alte Rüstungstext wird korrigiert."
+  ]
+}

@@ -1,0 +1,183 @@
+ISHTARAN – QUELLENBEFUND FÜR EIN KÜNFTIGES SPRACHMODUL
+Stand: 3. November 2026. Redaktioneller Quellenbericht, keine neue Sprachsetzung.
+
+QUELLEN UND GEWICHTUNG
+
+Q1: sources/chat-history.txt, 1.174 Zeilen; vollständiger eingefügter Verlauf.
+Entscheidend sind die ausdrücklichen Nutzerpassagen 545–558 und 1059–1085.
+Die umfangreichen ChatGPT-Ausarbeitungen dazwischen sind keine automatische
+Bestätigung. Die historischen Galater-Passagen sind Inspirationsmaterial,
+kein Quellenbeleg für tatsächlich geltende Aleria-Sprachregeln.
+
+Q2: Aktueller Nutzerauftrag, Namensgebungslogik und beigefügte Amtstabelle.
+Q3: Spätere Nutzerkorrekturen, zusammengeführt in
+sources/confirmed-lore-notes.md und sources/user-decisions-2026-11-03.json.
+realm-context.mjs bildet diese Grundlagen redaktionell für die Seite ab;
+es ersetzt keine ursprüngliche Nutzerfestlegung.
+
+1. GESICHERTE GESCHICHTS- UND SPRACHKETTE
+
+- Maghath bezeichnet die urtümliche Volksgruppe, Maghneach ihr antikes
+  Fürstentum. Der Nutzer setzt ausdrücklich „Maghath (Urtürmliche Volksgruppe)
+  -> Maghneach (antikes Fürstentum)“. [Q1:545]
+- Die Maghath sollen ungefähr den anatolischen Galater-Kelten entsprechen.
+  Das ist eine kulturelle Inspiration, keine vollständige Übernahme realer
+  galatischer Sprache, Religion, Geschichte oder Institutionen. [Q1:558]
+- Zarakhul unterwarf die Völker Tirnaras und die Alben und vereinte die
+  Unterworfenen unter seiner infernalen Sprache. Der celestiale Gott Orin
+  störte diese sprachliche Vereinigung durch Sprachverwirrung; plötzlich
+  fremde Sprachen verhinderten die gemeinsame Organisation. [Q1:545]
+- Nach Zerfall des albischen Königreichs und Zerschlagung Zarakhuls waren
+  die Völker verstreut, „nicht länger albisch aber auch nicht länger
+  infernalisch“. Tirnara liegt südlich von Lothir, Estryll und Aldervan.
+  [Q1:548,558]
+- Aus dem Volk der Maghath entstand ein neues unter einer neuen Sprache,
+  die sich „gänzlich von der albischen und anderen unterschied“.
+  Das Land wurde Istharan; die spätere Kultur ist türkisch und besonders
+  seldschukisch angelehnt. [Q1:551,554,558]
+- Jahreszahlen, konkrete Dauer des Wandels, ein benannter Staatsgründer
+  und konkrete sprachliche Zwischenstufen wurden nicht festgelegt.
+
+Diese Kette unterscheidet Volk, Staat und historische Eingriffe. Sie ist
+keine etymologische Ableitung der Namen Maghath, Maghneach und Ishtaran und
+keine Abfolge von drei benannten Sprachen. Insbesondere wurde keine neue
+Grammatik aus Albisch oder Infernalisch abgeleitet. Auch das genaue Verhältnis
+der ursprünglichen Sprache der Maghath zum Albischen bleibt offen.
+
+2. EINWOHNERBEZEICHNUNG UND NAME DER SPRACHE
+
+Der Nutzer schreibt „Madrasa der Istharaner“. Damit ist Istharaner als
+deutsche Einwohnerbezeichnung ausdrücklich belegt. [Q1:1085; auch Q2]
+Ein eigenständiges sprachinternes Ethnonym wurde nicht festgelegt. Die
+Projektbezeichnung lautet heute Ishtaran; Q1 verwendet überwiegend Istharan
+und einmal Ishtaran. Daraus entstehen weder zwei Länder noch eine weitere
+historische Umbenennung. Ob das Dokument die Einwohnerbezeichnung analog
+zu Ishtaran als Ishtaraner vereinheitlicht, ist eine redaktionelle Schreibfrage.
+Es gibt keinen festgelegten Eigennamen der Sprache und keine bestätigte
+Bezeichnung nach dem Muster „Lingua …“.
+
+3. DUALITÄT, MADRASA UND STAATSORDNUNG
+
+- Der eigene Glaube richtet sich nicht auf Götter, sondern auf zwei
+  gegensätzlich wirkende Entitäten. Genannte Gegensatzpaare sind Gut/Böse,
+  Tag/Nacht und Licht/Dunkelheit. Die Entitäten sind unbenannt. [Q1:1078]
+- Als Motiv nennt der Nutzer die Abkehr von Göttern und Fanatikern.
+  Ishtaran ist weltoffen, gewährt Religionsfreiheit und lässt Religion
+  keine politische Macht und keinen Platz im Staatssystem. [Q1:1081–1082]
+- Anstelle eines höchsten geistlichen Rangs besteht im Herrscherrat ein
+  oberster Bildungsrang. Gelehrsamkeit trägt die Staatsordnung. [Q1:1082]
+- Die Madrasa dient Wissenschaft, Esoterik und weiteren Studien; gemeinsamer
+  Nenner sind „Dualität, Balance und frieden“. [Q1:1085]
+
+Das begründet weder ein neues Götterpantheon noch einen staatlichen
+Tengri-Kult. Die religiöse Haltung bestreitet nicht rückwirkend die im
+Geschichtsbericht handelnden Götter Zarakhul und Orin. Aus den genannten
+Gegensatzpaaren folgen keine Namen, Geschlechter, exakte Hierarchie oder
+sprachlichen Geschlechtsklassen der beiden Entitäten. Nacht muss daher auch
+nicht als grammatisch oder ausnahmslos moralisch böse gesetzt werden.
+Religionsfreiheit ist kein Verbot privater Religion. Madrasa bedeutet hier
+nicht ausschließlich moderne Naturwissenschaft und auch nicht Priesterseminar.
+
+4. FESTGELEGTER WORTSCHATZ: TITEL UND ÄMTER
+
+Bestätigte Rangzuordnung in dieser Reihenfolge:
+König – Sultan; Fürst/Herzog – Emir; Graf – Pascha; Baron – Bey;
+Ritterfürst – Tarkan; Ritterlicher Herr – Timar; Ritter – Sayyid/Sayyida;
+Knappe – Alp; Page – Sabi; freier Bürger – Reaya. [Q1:1063–1075 + Q3]
+Tarkan steht nur etwas unter dem Baron. Timar ist die niedrigste
+landbesitzberechtigte Adelsform; Ritter sind adelig, besitzen aber kein Land.
+
+Die acht hohen Staatsämter lauten nach der beigefügten Nutzertabelle:
+Marschall – Amir; Kämmerer – Müder; Justiziar – Hakim;
+oberster Gelehrter – Sahir; Ratsmagier – Va’iz; Kunst/Unterhaltung – Nedim;
+Spionage/Geheimdienst – Sirban; Herold/Diplomatie – Sefir. [Q2]
+
+Emir und Amir sind verschiedene festgelegte Wörter mit verschiedenen
+Funktionen. Sahir ist das Bildungsamt, kein geistlicher Oberrang.
+Historische oder heutige Fremdsprachenbedeutungen dieser Wörter dürfen die
+Aleria-Zuordnung nicht umdeuten. Sayyid/Sayyida belegt dieses konkrete
+Formenpaar, aber noch keine produktive allgemeine Femininbildung.
+
+Weitere bestätigte Klassenbezeichnungen sind Nefer, Derwisch, Sipahi,
+Ghulam, Aschik, Nizet, Keman und Lewent. Derwisch bezeichnet hier den
+Schwertmeister; Aschik den Fechter, Dichter und Musiker. Daraus folgt kein
+geistliches Amt und keine weitere Wortbildungsregel. [Q3]
+
+5. NAMENSKLANG UND SCHREIBUNG
+
+Der aktuelle Nutzerauftrag bestimmt Namen „alttürkisch und tengrisch im
+Ursprung, aber leicht germanisiert in der Schreibweise“. Sie sollen für
+deutschsprachige Leser gut aussprechbar bleiben. Genannt sind möglichst
+zwei bis drei Silben, kräftige Konsonanten und bevorzugte Endungen -an,
+-ar, -gan, -gut, -bek, -tegin und -lug. [Q2]
+
+Direkte Schreibbeispiele des Nutzers sind Aşina -> Aschina und Kınık -> Kinik;
+für Çepni wird eine Tsch-Schreibung angestrebt. Das dort eingefügte Beispiel
+enthält versehentlich kyrillische Zeichen; es begründet kein gemischtes
+Alphabet. Die lesbare normalisierte Vorschlagsform ist Tschepni. Weitere
+vom Nutzer genannte Formen sind etwa Kutlug, Tarkan, Börtan und Altugan.
+
+„Keine türkischen Sonderzeichen“ ist kein bestätigter ASCII-Zwang. Der
+Nutzer liefert selbst deutsche Umlautformen wie Börtan, Börtegin und
+Kürtegin; das Amt Müder ist ebenfalls ausdrücklich festgelegt. Diese Formen
+dürfen nicht ungefragt zu Bortan, Bortegin, Kurtegin oder Muder werden.
+Eine vollständige Buchstaben- und Lauttabelle ist trotzdem noch offen.
+
+Besonders verbindliche spätere Einzelkorrektur: Haus Köktemir heißt
+Göktemir. [Q3; confirmed-lore-notes.md:287–289]
+Dies ist keine allgemeine Regel Kök -> Gök für sämtliche Wörter. Die stabile
+Vorschlags-ID house-koektemir ist eine technische Alt-ID, keine Aussprache,
+keine weitere Namensform und keine grammatische Festlegung.
+
+Die bevorzugten Endungen sind Klangorientierung, keine bereits definierten
+Morpheme mit verbindlicher Bedeutung. Vorschlagsnamen und ihre historischen
+Anklänge sind kein Wörterbuch der Sprache. Für freie Neuschöpfungen dürfen
+keine exakten Übersetzungen oder historischen Etymologien erfunden werden.
+Ein Name bestimmt weder Rang noch Beruf, Gesinnung oder Tierzugehörigkeit
+seines Hauses. Aktuelle Haus- und Städtenamen sind lokale Besprechungsentwürfe;
+ihre Verwendung ist von einer ausgearbeiteten Grammatik zu unterscheiden.
+
+6. WAS DIE SEITENNOTIZEN NOCH PRÄZISIEREN SOLLTEN
+
+Es wurde keine weitere bestätigte Spracheigenschaft im Originalchat
+gefunden. Gegenüber den kurzen Seitenformulierungen sind folgende Nuancen
+für das Grundlagenpapier nützlich:
+- Q1:551 ist stärker als nur „deutlich verschieden“: Der Nutzer sagt
+  „gänzlich von der albischen und anderen unterschied“.
+- Die direkte Einwohnerbezeichnung Istharaner ist belegt, ein Eigenname der
+  Sprache jedoch nicht.
+- Q1:1085 schließt Esoterik ausdrücklich in die Gelehrsamkeit ein und nennt
+  Frieden neben Dualität und Balance.
+- Die aktuelle Namensregel darf deutsche Umlaute nicht still entfernen.
+- Die Einzelkorrektur Göktemir gehört in das verbindliche Schreibinventar.
+
+Quellenqualität: In user-decisions-2026-11-03.json enthält das Feld houseRenames
+derzeit beschädigte Zeichenfolgen „K?ktemir“ und „G?ktemir“. Für das Dokument
+die intakte Schreibweise aus confirmed-lore-notes.md und den sichtbaren
+Namensdaten verwenden; die beschädigte Kopie nicht als wörtlichen Beleg
+für eine ASCII-Schreibregel zitieren. Dieser Bericht ändert keine Daten.
+
+7. OFFENE FRAGEN UND UNZULÄSSIGE ABLEITUNGEN
+
+Noch offen sind Sprachname/Eigenname, genaues Alphabet, Lautwerte und
+Betonung, Dialekte, Wortstellung, Fälle, Numerus, Artikel, Pronomen,
+Verbformen, produktive Wortbildung, Anrede und Titelfügung sowie belastbare
+Regeln für neue Personen- und Ortsnamen jenseits des bestätigten Klangrahmens.
+
+Nicht als beschlossen übernehmen:
+- die ausführliche ChatGPT-Erzählung über infernale Verwaltungssprache,
+  unlesbare alte Inschriften, erhaltene Institutionen oder eine bestimmte
+  Dauer der kulturellen Neuordnung;
+- reale türkische Grammatik oder galatische Wörter als automatische
+  Ishtaran-Grammatik, erfundene Lautgesetze oder eine sichere Sprachfamilie;
+- neue Entitätennamen, Pantheon, Priesterstaat oder Tengri-Staatsreligion;
+- alte verworfene Rangvorschläge oder externe religiöse Bedeutungen von
+  Amtstiteln anstelle der aktuellen Nutzertabelle;
+- Sprachregeln anderer Länder, etwa Lingua Argenti oder aeldrunmarische
+  Rangpräfixe;
+- bildliche Alters- und Rüstungsvorgaben als Bevölkerungs- oder Sprachgesetze.
+
+Arbeitsfähiges Ergebnis: Der bestätigte Bestand liefert Geschichte,
+kulturellen Kontext, ein kleines Titel-/Amts-/Klasseninventar und einen
+Namensklang. Eine vollständige Sprachbeschreibung muss als neuer Entwurf
+gekennzeichnet und anschließend eigens abgestimmt werden.

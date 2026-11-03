@@ -1,0 +1,154 @@
+{
+  "scope": {
+    "productionChanges": false,
+    "genealogyImported": false,
+    "militaryStatisticsImported": false,
+    "inspection": "All 10 downloaded original source PNGs visually inspected in contact-inspection.png. Byte hashes and URLs in downloads.json; attachment hashes in sources.json."
+  },
+  "sourceAuthority": "Current WEIDEBUCHT_HOUSE_PROFILES and public FAMILY_REGISTRY outrank old source infoboxes and hierarchy tables. No new named people, offices, ancestry, legal outcomes or statistical military profiles may be inferred.",
+  "houses": [
+    {
+      "id": "haus-creyr",
+      "canonical": {
+        "name": "Haus Créyr O’Esgairmor",
+        "rank": "Baron",
+        "county": "Weidebucht",
+        "barony": "Dunstholm",
+        "seat": "Esgairmor",
+        "liege": "haus-wylan"
+      },
+      "usableNarrative": [
+        "Cadet house of Wylan founded by the already registered Rhodhri Wylan.",
+        "Maritime and shipbuilding tradition, long educational voyages before succession, annual shipbuilders’ festival, loyalty and homecoming.",
+        "Shipyards, fisheries, coastal trade and wood supply; Aelrith worship. Source mentions shipbuilders’ and Möwensang guilds; no new guild register entries required."
+      ],
+      "conflicts": [
+        "Source Baronie Esgairmor and Grafschaft Cerrigarth must yield to Dunstholm and Weidebucht.",
+        "Source armor description of red cross on white is copied and visually false: emblem, tabard and shield show a pale long-necked winged bird on red."
+      ],
+      "art": {
+        "main": "creyr-source-warrior.png",
+        "reuse": true,
+        "observed": "Closed pointed metal helmet with narrow visor, plate armor, red fur-collared mantle, red bird tabard and pointed bird shield, drawn sword.",
+        "other": "creyr-source-inset.png is a separate historical source inset/banner of Esgairmor; do not promote it to a replacement canonical regional emblem.",
+        "missingRequiredFigure": false
+      }
+    },
+    {
+      "id": "haus-tannau",
+      "canonical": {
+        "name": "Haus Tannau",
+        "rank": "Bürger",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liege": "haus-wylan"
+      },
+      "usableNarrative": [
+        "Owns tannery Die gebundene Schicht.",
+        "Source motto: Tannau'n Clymu Popeth – Fasern binden alles."
+      ],
+      "conflicts": [
+        "Generic Clan template and empty rank/people/religion/history prompts provide no facts. Current house is commoner, not nobility.",
+        "Do not manufacture a founder, chronology, manor, staff roster or religion from empty source sections or current ??? placeholders."
+      ],
+      "art": {
+        "emblem": "tannau-emblem.png",
+        "observed": "Brown circular wooden emblem: hide, knife and wooden mallet in brown/dark metal.",
+        "missingRequiredFigure": true,
+        "recommendedAnonymousRole": "Commoner leatherworker/tanner in simple workwear and leather apron; no armor/knight status. Preserve anonymity.",
+        "sourceImagesOutsideGenealogy": 1
+      }
+    },
+    {
+      "id": "haus-asyn",
+      "canonical": {
+        "name": "Haus Asyn O’Cerrigarth",
+        "rank": "Ritterfürst",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liege": "haus-wylan"
+      },
+      "usableNarrative": [
+        "Gamon der Tor, already registered founder: farm work, donkey companion, aid of Erim, rescue during a hunt and ennoblement.",
+        "Donkey heraldry, endurance, loyalty, humility, agricultural and livestock tradition, Eselfest.",
+        "Main family vanished at sea on the voyage to Esgairmor in1639; surviving hidden line returned in1740 through already registered Réiltín, Arlais and Griff.",
+        "Historical estates passed to Mochdaer; inheritance and compensation dispute is unresolved. Dolena Wylan is an existing registered witness."
+      ],
+      "conflicts": [
+        "Do not present the house as definitely extinct, Tudwal as current head, or returning descendants as merely invented source placeholders.",
+        "Do not import relative date vor wenigen Wochen or seit zwei Jahrzehnten;1639to1740is101years.",
+        "Castell Asyn may remain a historical house location in prose; canonical seat is Cerrigarth.",
+        "Armor prose incorrectly claims enclosed helmet and sword: original shows open helmet and spear.",
+        "Do not treat a prejudicial nickname as a clinical diagnosis; source head-injury explanation is hearsay."
+      ],
+      "art": {
+        "main": "asyn-source-warrior.png",
+        "reuse": true,
+        "observed": "Open plain helmet with mail hood, mail and plain plate pieces, cream donkey tabard, spear and round donkey shield; sword at belt.",
+        "missingRequiredFigure": false
+      }
+    },
+    {
+      "id": "haus-fhaire",
+      "canonical": {
+        "name": "Clan Ua Fhàire",
+        "rank": "Laird",
+        "county": "Weidebucht",
+        "barony": "Antike Häuser",
+        "seat": "Bhiorach",
+        "liege": null
+      },
+      "usableNarrative": [
+        "Ancient Crannath clan of Bhiorach, religious devotion to Ordates, time and the past.",
+        "Druidic prophecies, disputed warning symbol of a burning ancestral tree between mountains.",
+        "Historical sword and mounted traditions; woodland shrines and shrinking sacred forest associated with Trefyddin.",
+        "Source hypothesizes a cadet connection to Ui Trisceil; retain uncertainty in prose rather than inventing genealogy."
+      ],
+      "conflicts": [
+        "Do not replace current Antike Häuser/Bhiorach location with modern Hochweide administration.",
+        "Current graph status and unknown founders stay unchanged. Source narrative is historical, not a new present-day ruling installation."
+      ],
+      "art": {
+        "main": "fhaire-source-warrior.png",
+        "actualRole": "Druid / religious clan representative, not a sword warrior",
+        "reuse": true,
+        "observed": "White-bearded elderly druid in brown/cream/red robes and hooded mantle, crooked wooden staff, orange flame held above open hand.",
+        "emblem": "fhaire-emblem.png",
+        "emblemObserved": "Burning dark ancestral tree amid white flames between black mountains on red, pale/dark wood frame.",
+        "missingRequiredFigure": false,
+        "optionalCoverage": "Existing druid is an authentic appropriate source house depiction. Do not replace it or infer an extra required knight merely from the generic Tiarnatum heading."
+      }
+    },
+    {
+      "id": "haus-trisceil",
+      "canonical": {
+        "name": "Clan Ui Trisceil",
+        "rank": "Mor Tiarna",
+        "county": "Weidebucht",
+        "barony": "Antike Häuser",
+        "seat": "Antikes Cerrigarth",
+        "liege": null
+      },
+      "usableNarrative": [
+        "Ancient Crannath ruling clan of historical Talamhard, whose destruction in the Norrnaigh wars reduced its influence; arrival of Melwas and Avallornier.",
+        "Pastoral life, agriculture, hospitality, harvest festivals, music, stories and shared meals.",
+        "Traditional spear masters, old pantheon and Tharannis worship.",
+        "Current document already preserves historical absorption of named lines into Ua Fhàire and Wylan; do not reimport relationships."
+      ],
+      "conflicts": [
+        "Use canonical seat Antikes Cerrigarth, retain Talamhard as historical narrative name.",
+        "Do not install a current unnamed Mor Tiarna or revive old regional government. All historical descriptions need past tense."
+      ],
+      "art": {
+        "main": "trisceil-source-warrior.png",
+        "reuse": true,
+        "observed": "Unhelmeted brown-haired and bearded spearman, blue/gold triquetra tunic, blue cloak with fur collar, spear and sheathed sword; no shield.",
+        "emblem": "trisceil-emblem.png",
+        "emblemObserved": "Gold triquetra on blue circular wood, gold circular band and small sacred symbols.",
+        "missingRequiredFigure": false
+      }
+    }
+  ]
+}

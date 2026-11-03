@@ -1,0 +1,41 @@
+{
+  "houseId": "haus-saith",
+  "source": {
+    "attachmentId": "7704814b-d939-4aa0-923b-6c1fb4d33eac",
+    "file": "animexx-original.html",
+    "sha256": "2a6475ed2b24e6e15d71c9650ba024159ad42ecef4d45589e814d191a22f05c3",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "url": "https://i.imgur.com/ZiuoWZr.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "note": "Geliefertes Original durch Hauptagent heruntergeladen, tatsächlich als Ganzkörper-Kriegerdarstellung angesehen und unverändert eingebunden.",
+      "sha256": "9f1795d6aad74ef13bcdb831c5f5a8fb6a863bb09ffd2a291571dfb53172fb2d",
+      "width": 408,
+      "height": 612
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanges": false,
+    "familyId": "haus-saith"
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-saith-family.js",
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/herrschaft.data.mjs"
+  ],
+  "decisions": [
+    "Die genealogischen Abschnitte „Hierarchie“ und „Stammbaum“ samt alter Stammbaumgrafik werden vollständig ignoriert. Keine neuen Personen, Lebensdaten, Beziehungen oder Graphänderungen.",
+    "Alle Militärstatistiken und Zahlen vollständig ignoriert. Das Militärprofil bleibt ausgeblendet; die literarische Beschreibung von Rittertum und Ausrüstung wird davon getrennt behandelt.",
+    "Aktuelle Familienakten, Haus-IDs, Personen-IDs, Portraitzuordnungen und Ortsprofile haben Vorrang vor alten Kopierfeldern. Amtszeiten werden ausdrücklich von Lebensdaten getrennt.",
+    "Die Kapitel der aktuellen Grafschafts- und Herrschaftsseiten ergänzen belegt die heutige territoriale Einordnung und Lebensgrundlage. Unbenannte Amtsinhaber und historische Platzhalter werden nicht erfunden.",
+    "Kanonische Schreibweise und stabile Haus-ID sind Saith/haus-saith. Llanvane ersetzt keine neue zweite Stadt Cerneu.",
+    "Die ältere Behauptung von Einschränkungen und Beschlagnahmungen hängt am Krisenbericht der Neidr-Vorlage. Sie bleibt als ältere Hausüberlieferung erhalten; Zeitpunkt, Güter und heutiger Besitzstand sind unbestimmt. Die Akademie und frühere Investitionen bleiben als eigenständige Sachangaben erhalten.",
+    "Das Sternzeichen der Neun Göttlichen wird als Symbol beschrieben, ohne daraus neue Zahlen, Fähigkeiten oder Kampfformen abzuleiten.",
+    "Die ältere Magiergildenbezeichnung Dämmerwacht bleibt als ausdrücklich historische Angabe erhalten; ein heutiger Gildenstatus wird nicht neu bestimmt."
+  ]
+}

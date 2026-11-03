@@ -1,6 +1,7 @@
 // Gemeinsamer kanonischer Datensatz für die hausübergreifende Ehe. Beide
 // Stammbaumakten erzeugen daraus dieselben Weltpersonen und dieselbe Ehe-ID,
 // ohne die Daten unabhängig voneinander zu duplizieren.
+import { getPatrickBiographySource } from '../../../../AleriaAlmanach/modules/patrick-biographies/biography-source.mjs';
 export const DRAENMELYN_SWYLL_MARRIAGE = Object.freeze({
   id: 'marriage-rhiannon-draenmelyn-iestyn-swyll',
   participantIds: Object.freeze([
@@ -16,6 +17,7 @@ export const DRAENMELYN_SWYLL_MARRIAGE = Object.freeze({
     title: 'Bedienstete des Hauses Draig',
     portrait: 'https://i.imgur.com/cyJqlDG.png',
     notes: 'Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.',
+    ...getPatrickBiographySource('rhiannon-draenmelyn').personFields,
     extensions: Object.freeze({
       registryManagedFields: Object.freeze(['portrait'])
     })

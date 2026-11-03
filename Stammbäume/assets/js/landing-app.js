@@ -4,7 +4,7 @@ import { pickBiographySample } from './services/dashboard-bio-preview.js';
 import { pickFactSample } from './services/dashboard-facts.js';
 import { isAleriaGptAvailable, requestAleriaGptSuggestion } from './services/aleria-gpt-bridge.js';
 import { createFamilyViewLink } from './services/family-links.js';
-import { listFamilyRecords } from './services/family-library.js?v=20261024-vortigerns-v1';
+import { listFamilyRecords } from './services/family-library.js?v=20261103-vennyr-warriors-v1';
 import {
   buildLandingTriviaPrompt,
   buildLocalTriviaBlurb,

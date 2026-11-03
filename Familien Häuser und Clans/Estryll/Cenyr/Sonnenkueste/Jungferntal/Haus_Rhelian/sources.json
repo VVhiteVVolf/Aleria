@@ -1,0 +1,28 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-rhelian",
+  "source": {
+    "kind": "existing named register house; current user-approved liege assignment",
+    "originalAttachment": null
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "graphChanged": false,
+    "treatment": "existing unknown founder pair preserved",
+    "familyId": "haus-rhelian"
+  },
+  "militaryStatistics": "ignored entirely",
+  "biographySourceRevision": 1,
+  "previousFamilySourceRevision": 0,
+  "images": [],
+  "artwork": {
+    "illustration": "assets/hausdarstellung-2026-11-03.png",
+    "reviewAndGeneration": "primary agent",
+    "emblem": "Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-rhelian.png",
+    "emblemOriginal": "https://64.media.tumblr.com/09c30c3873810b4c46d0060d21b3afdc/2ba92da21ba51ec3-fa/s250x400/9b7af8680a00862e421bbef0aa947b1df13111a8.pnj",
+    "emblemSha256": "0e888c4f43258eb5f48e6d6b35d0cce4d43e6d381e24cec4e2ca1b692267f9a7",
+    "emblemVisuallyReviewed": true
+  }
+}

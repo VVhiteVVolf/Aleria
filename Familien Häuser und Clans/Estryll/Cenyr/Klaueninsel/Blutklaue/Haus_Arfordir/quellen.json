@@ -1,0 +1,39 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-arfordir-aberdail",
+  "attachmentId": "cf479146-624a-48fc-9c71-b7ea1979935d",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "3c238d50212c363caa9ae354f09ae8bf123d3612c327d71ad46a35e8a09f441b",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/QalObb9.png",
+      "sha256": "d8e132dbe5703f4d87911544c640d539b3cdc35510066606143401b704630e04",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-arfordir-aberdail",
+    "originFamilyId": "haus-arfordir",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-arfordir-family.js",
+    "Stammbäume/assets/js/data/house-arfordir-portraits.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "biographyWords": 328
+}

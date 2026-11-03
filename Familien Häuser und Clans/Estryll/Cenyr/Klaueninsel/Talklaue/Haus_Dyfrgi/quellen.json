@@ -1,0 +1,39 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-dyfrgi-caer-cryftlawd",
+  "attachmentId": "6062cefb-e048-406e-8bff-cf7ec6203dc4",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "9298390c3fc889446cbe42f6bdc92579dafab3ae71498c4799a231d0167647c6",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/n9bhrFh.png",
+      "sha256": "357dc7d0aea110b652d7576b3a88602dac6036963c69592e3a059f092a4a1420",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-dyfrgi-caer-cryftlawd",
+    "originFamilyId": "haus-dyfrgi",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-dyfrgi-family.js",
+    "Stammbäume/assets/js/data/house-dyfrgi-portraits.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "biographyWords": 329
+}

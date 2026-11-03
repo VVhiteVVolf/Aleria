@@ -1,0 +1,28 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-caerwen",
+  "source": {
+    "kind": "new user-authorized house and family authored on 2026-11-03",
+    "originalAttachment": null
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "graphChanged": true,
+    "treatment": "new isolated three-generation family; no existing graphs changed",
+    "familyId": "haus-caerwen"
+  },
+  "militaryStatistics": "ignored entirely",
+  "biographySourceRevision": 2,
+  "previousFamilySourceRevision": 1,
+  "images": [],
+  "artwork": {
+    "illustration": "assets/hausdarstellung-2026-11-03.png",
+    "reviewAndGeneration": "primary agent",
+    "emblem": "Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-caerwen.png",
+    "emblemOriginal": "new user-authorized design"
+  },
+  "familySource": "Stammbäume/assets/js/data/jungferntal-knight-houses.js",
+  "familySourceSha256": "f37007fb00f2f930b494408bcf933dad1a2b8423a8cc2e788172c3c9d5720ba6"
+}

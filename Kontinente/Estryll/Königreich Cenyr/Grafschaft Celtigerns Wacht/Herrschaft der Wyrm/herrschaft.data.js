@@ -40,22 +40,22 @@
       }),
     ]),
     data.familySection("Bürgerliche Häuser · Llysfaen", [
-      data.family("Jernigan", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Glyn", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Crewe", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Talfryn", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Blevis", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
+      data.family("Jernigan", { familyId: "haus-jernigan", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Glyn", { familyId: "haus-glyn", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Crewe", { familyId: "haus-crewe", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Talfryn", { familyId: "haus-talfryn", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Blevis", { familyId: "haus-blevis", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
       data.family("Argall", {
         familyId: "haus-argall", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/Bürgerliche/Llysfaen/Argall.png`,
         seat: "Llysfaen",
         liege: "Wyrm",
       }),
-      data.family("Brogar", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
+      data.family("Brogar", { familyId: "haus-brogar", housePage: "kleinehaeuser.html", seat: "Llysfaen", liege: "Wyrm" }),
     ]),
     data.familySection("Bürgerliche Häuser · Craithglyn", [
-      data.family("Tynged", { seat: "Craithglyn", liege: "Wyrm", linked: false }),
-      data.family("Tarw", { seat: "Craithglyn", liege: "Wyrm", linked: false }),
+      data.family("Tynged", { familyId: "haus-tynged", housePage: "kleinehaeuser.html", seat: "Craithglyn", liege: "Wyrm" }),
+      data.family("Tarw", { familyId: "haus-tarw", housePage: "kleinehaeuser.html", seat: "Craithglyn", liege: "Wyrm" }),
     ]),
   ]);
 

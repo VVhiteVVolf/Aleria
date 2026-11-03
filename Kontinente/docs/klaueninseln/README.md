@@ -2,6 +2,14 @@
 
 **Ausschließlich lokal vorbereitet. Kein Commit, Push oder Deployment.**
 
+Ergänzung vom 3. November 2026: Alle 37 aktuellen Hausakten besitzen nun eine
+Hausseite und Hausbio mit ihrem bestehenden Stammbaum-Iframe. Die ursprüngliche
+örtliche Auswahl bleibt erhalten; Llafnfor ergänzt ausschließlich die
+Dyfrgi-Unterseite Krallenspitze als Gefolgsfamilie ohne behaupteten eigenen
+Familiensitz. Wappen und Namen öffnen die direkten Hausseiten. Die vollständige
+Übernahme mit Originalbildern und Bildlücken ist unter
+`Familien Häuser und Clans/KLAUENINSEL-2026-11-03.md` dokumentiert.
+
 ## Verwendete Quellen
 
 Die World-Anvil-Grafschaftskarte

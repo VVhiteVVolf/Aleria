@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "f8f14a3f-e95d-42f4-b979-1856437a626e",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "84c49e1fc8e37ca3f4bbc2c5dab98eea37b5695ac709645128327f1c085cd207"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-mochdaer",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-mochdaer",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 3,
+    "currentSeat": "Cerrigarth",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/rwPcrXI.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "e9ff42b3ed79de84ba7ee36176e396a2920c6c1c884fb3c935b6471b87428c2c",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Die Cerrigarth-Linie bleibt von der Gwyliau-Akte getrennt. Aethlem ist der vorhandene Gründer. Veraltete relative Zeitangaben werden nicht fortgeschrieben."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "haus-crewe",
+  "prompt": "Use case: stylized-concept. Asset type: one anonymous civilian fantasy house figure for the Aleria house register. The supplied image is ONLY the approved STYLE reference: copy its quiet matte hand-painted treatment, gently simplified proportions, large clear clothing shapes, thin soft painted contours, restrained soft shading and fine uniform gouache pigment grain. Do not copy armour, weapon, helmet, plume, colours or heraldry. Calm upright three-quarter standing pose, complete full body including head and both feet with clear margin, portrait2:3. Muted earthy palette and practical medieval-fantasy wool/linen clothing suitable for mild wet windy Cenyr. Actual transparent RGBA PNG, alpha=0 outside the silhouette and in every opening. No scenery, ground, floor, external shadow, fog, halo, aura, border, lettering or watermark. No photorealism, CGI, gloss, dramatic lighting, thick comic outlines or paint splashes. This is an unnamed representative: no named person identity, rank insignia, house crest, badge, jewellery emblem, profession symbol or tool. No armour, weapons or crown. One person only.\nHouse: haus-crewe. Context: Llysfaen, Llamreis Ankunft, Celtigerns Wacht, Cenyr. No individual heraldry is known.\nSubject: An anonymous older woman around65, grey hair in a simple bun, warm lined face, dignified calm expression. Muted wine-red ankle-length wool dress, plain grey wool shawl wrapped round shoulders, comfortable brown shoes. One empty hand gathers the edge of the shawl near the chest, the other hangs relaxed. No cane or professional items.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "referenceSha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-crewe.png",
+  "provider": "built-in-imagegen",
+  "status": "visually-and-technically-accepted",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-3c4b-7ac1-94a8-f6c32917a174\\exec-f9317d4e-1482-418f-95b7-91eb71d5d939.png",
+  "sha256": "91ef86db99fb28cf475cd2b9a768303be8f67a8e64d9028778c81d7264a9eff9",
+  "sourceSha256": "91ef86db99fb28cf475cd2b9a768303be8f67a8e64d9028778c81d7264a9eff9",
+  "stylePreset": "fantasy-rpg-character",
+  "anonymousRepresentative": true,
+  "personIdentityCreated": false,
+  "heraldryAdded": false,
+  "professionClaimed": false,
+  "technicalQA": {
+    "familyId": "haus-crewe",
+    "size": [
+      1024,
+      1536
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "borderMaxAlpha": 1,
+    "alpha0": 929194,
+    "alpha250plus": 610789,
+    "bboxesAlphaAbove": {
+      "0": [
+        0,
+        15,
+        1010,
+        1536
+      ],
+      "10": [
+        196,
+        20,
+        786,
+        1523
+      ],
+      "100": [
+        197,
+        21,
+        785,
+        1523
+      ],
+      "250": [
+        198,
+        22,
+        784,
+        1521
+      ]
+    },
+    "sourceBytesPreserved": true
+  },
+  "visualQA": "Tatsächlich auf Hellgrau und Dunkelgrau komponiert angesehen: vollständige Figur, keine sichtbare Außenfahne, keine Wappen, Waffen oder Berufsgeräte.",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Llysfaen/Haus_Crewe/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/haus-crewe.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "namedPerson": false,
+  "createsPersonRecord": false
+}

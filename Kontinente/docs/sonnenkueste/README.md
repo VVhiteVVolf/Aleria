@@ -11,8 +11,11 @@ Einträge ausgegeben; bekannte Ämter ohne Amtsträger behalten ihre Silhouetten
 
 - Grafschaft Sonnenküste – Cwm yr Lleuad: sechs große Häuser, zwölf örtliche
   Ritterhäuser, fünf Bürgerhäuser und das historische Haus Nic Ríordáin.
-- Baronie Jungferntal: Morforwyn sowie Rhelian und Aelryn. Deren belegter Lehnsherr
-  Illewod bleibt erhalten; die beiden Häuser werden nicht auf die Grafschaft gezogen.
+- Baronie Jungferntal: Morforwyn sowie Rhelian, Aelryn, Caerwen und Nerwynn.
+  Nutzerfestlegung vom 3. November 2026: Die vier Ritterhäuser dienen Morforwyn
+  und bleiben ausschließlich im örtlichen Jungferntal-Register. Rhelian und Aelryn
+  behalten ihre vorhandenen Namen, Wappen und Familien-IDs; Caerwen und Nerwynn
+  ergänzen die ausdrücklich beauftragten neuen Dreizackhäuser.
 - Herrschaft Löwenberg: Illwath und das historische Haus Nic Ríordáin.
 - Herrschaften Llwynog, Blach und Teyrngarch: jeweils ihr eigenes herrschendes Haus.
 

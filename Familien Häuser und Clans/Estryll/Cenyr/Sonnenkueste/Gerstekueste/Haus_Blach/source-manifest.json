@@ -1,0 +1,40 @@
+{
+  "houseId": "haus-blach",
+  "source": {
+    "attachmentId": "c5a7135d-5211-43a1-8c43-7813c4c83921",
+    "file": "animexx-original.html",
+    "sha256": "a101a70d1e3ad148936f0dd571cedd6ac4f9806a7de02a6c01d25bdb8cb8d613",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-blach"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/h4STEbG.png",
+      "role": "Hausdarstellung",
+      "sha256": "75a44676822fa37f633d6958d6e7448538a8196e3dec0c46a8f89824a71c07a9",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-blach-family.js",
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/herrschaft.data.mjs"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig ignoriert; nur vorhandene Familien- und Personen-IDs. Amtszeiten bleiben von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken aus Tabellen und Fließtext ausgelassen. Qualitative Kultur-/Ausrüstungsangaben bleiben getrennt davon erhalten.",
+    "Original-Kriegerbilder unverändert lokal übernommen und tatsächlich angesehen; keine Neugenerierung.",
+    "Die Formulierung, die Region sei „durch die Norrnaigh von Feinden befreit“ worden, widerspricht der aktuellen Landesgeschichte. Gemeint ist die Befreiung von den Norrnaigh durch Avallornier und verbliebene Crannath; entsprechend redigiert.",
+    "Gründer, Rang, Sitz, Herkunft und Lehensbindung folgen der bestehenden Akte. Emrys/Emyrs wird bei Personenverweisen als kanonisches Emyrs geführt; es entsteht keine zusätzliche Person.",
+    "Die einmalige Überlieferung der Ausbildung in der Bardenstadt Aviron bleibt ohne neuen Karten- oder Registereintrag erhalten. Die aktuelle Ceirwyn-Quelle beschreibt Calon als Kunstzentrum, beweist aber keine Gleichsetzung beider Ortsnamen. Die genaue heutige Zuordnung Avirons bleibt offen.",
+    "Musik-, Seefahrts-, Fischerei- und Schiffbautraditionen bleiben erhalten. Kein neuer Festkalender, keine neue Gilde und keine zusätzliche Hafen- oder Flottenzahl angelegt."
+  ]
+}

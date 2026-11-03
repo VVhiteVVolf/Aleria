@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=klaueninseln-20261019';
+import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=20261103-klaueninsel-v1';
 
 export default createTerritory({
   "id": "herrschaft-arfordir",
@@ -154,7 +154,8 @@ export default createTerritory({
           "liege": "Haus Blodyn O'Aberdail",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-arfordir-aberdail"
         }
       ]
     }

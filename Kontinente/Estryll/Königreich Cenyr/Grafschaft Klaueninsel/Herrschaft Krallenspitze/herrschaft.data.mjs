@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=klaueninseln-20261019';
+import { createTerritory } from '../../../../modules/klaueninseln/territory-page.mjs?v=20261103-klaueninsel-v1';
 
 export default createTerritory({
   "id": "herrschaft-krallenspitze",
@@ -157,7 +157,21 @@ export default createTerritory({
           "liege": "Haus Cwingod",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dyfrgi-caer-cryftlawd"
+        }
+      ]
+    },
+    {
+      "title": "Ritterhäuser im Gefolge",
+      "houses": [
+        {
+          "name": "Llafnfor",
+          "familyId": "haus-llafnfor",
+          "imageSrc": "/Stammbäume/assets/images/houses/Klaueninsel/haus-llafnfor.png",
+          "liege": "Haus Dyfrgi O'Caer Cryftlawd",
+          "rank": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-llafnfor"
         }
       ]
     }

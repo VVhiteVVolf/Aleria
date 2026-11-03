@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-03",
+  "status": "locally-complete-awaiting-root-final-browser-review",
+  "scope": "Reviewed public Cenyr families, including explicit present exile residence; private/hidden dossiers excluded before serialization.",
+  "summary": {
+    "families": 276,
+    "existingFamilyRecordsPreserved": 266,
+    "newEmptyTerritoryFamilies": 10,
+    "previouslyMissingActivePages": 65,
+    "reusedExistingUnregisteredAuthoring": 37,
+    "newAuthoringSources": 28,
+    "reusedHouseFigures": 248,
+    "newHouseFigures": 28,
+    "allPagesPresent": true,
+    "allEffectiveBiographiesPresent": true,
+    "allFiguresLocal": true,
+    "allIframesCanonical": true,
+    "allSupportedBiographyBacklinksCanonical": true,
+    "territorialGroups": 9,
+    "missingPage": 0,
+    "missingBio": 0,
+    "missingArt": 0,
+    "noLocalArt": 0,
+    "iframeIssues": 0,
+    "biographyBackLinkIssues": 0,
+    "preparedPages": 122,
+    "publishedOwnNull": 0,
+    "unreviewedPublicScopedFamilies": 0,
+    "counties": {
+      "Graue Weite": {
+        "families": 15,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Ährental": {
+        "families": 12,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Vortigerns Ruh": {
+        "families": 19,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Weidebucht": {
+        "families": 20,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Tal der Milane": {
+        "families": 21,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Celtigerns Wacht": {
+        "families": 104,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Sonnenküste": {
+        "families": 30,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Klaueninsel": {
+        "families": 37,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      },
+      "Silberinsel": {
+        "families": 18,
+        "missingPage": 0,
+        "missingBio": 0,
+        "missingArt": 0,
+        "noLocalArt": 0
+      }
+    }
+  },
+  "sourcePaths": {
+    "interfaces": "family-interfaces.json",
+    "coverage": "postbuild-coverage.json",
+    "allowlist": "coverage-audit/public-family-ids.json",
+    "initialCoverage": "coverage-audit/initial-familien.json",
+    "newHouseSources": "created-house-sources.json",
+    "allCompletionIds": "completion-house-ids.json",
+    "originalArtworkMappings": "art-audit/reuse-mappings.json",
+    "newFigureBindings": "figure-bindings.json",
+    "newHouseDefinitions": "coverage-audit/new-ten-public-house-definitions.json",
+    "documentation": "../../Familien Häuser und Clans/CENYR-VOLLSTAENDIGKEIT-2026-11-03.md",
+    "finalCorrections": "final-editorial-corrections.json",
+    "finalArtwork": "art-audit/final-artwork-manifest.json"
+  },
+  "preservation": {
+    "existingFamilyGraphsProfilesResidentialPaths": "canonical-preservation.json",
+    "allExisting266Unchanged": true,
+    "unselectedAuthoringOutputFilesChecked": 712,
+    "changedUnselectedFiles": [],
+    "scopedGallery": "gallery-preservation.json",
+    "foreignGalleryHouseEntriesPreserved": 618,
+    "changedForeignGalleryEntries": [],
+    "biographyPreservation": [
+      "cwingod-biography-preservation.json",
+      "created-house-sources.json"
+    ],
+    "grianlaochOriginal": "grianlaoch-original-fix.json",
+    "customBiographyAndExplicitNullPreservedByTest": true,
+    "finalAuthoringCheck": "final-authoring-preservation.json",
+    "finalUnselectedFilesChecked": 709,
+    "finalChangedUnselectedFiles": []
+  },
+  "territoryLinks": {
+    "newResidentialCards": 10,
+    "existingCountyCardsUpdated": 3,
+    "otherExistingCardsUpdated": 16,
+    "changedMjsCards": "territory-house-links.json",
+    "newCardRealAdapterTest": "../../Stammbäume/tests/cenyr-territory-commoner-families.test.mjs"
+  },
+  "checks": [
+    {
+      "path": "Familien Häuser und Clans/tests/prepared-house-content.test.mjs",
+      "passed": 6
+    },
+    {
+      "path": "Stammbäume/tests/cenyr-territory-commoner-families.test.mjs",
+      "passed": 5
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/house-content-scope.test.mjs",
+      "passed": 8
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/cenyr-house-coverage.test.mjs",
+      "passed": 9
+    },
+    {
+      "path": "Gallerien/krieger/tests/scoped-catalog.test.mjs",
+      "passed": 12
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/weidebucht-house-pages.test.mjs",
+      "passed": 9
+    },
+    {
+      "path": "netlify/tests/house-source-publication.test.mjs",
+      "passed": 4
+    },
+    {
+      "name": "Scoped house builder --check",
+      "scope": 66,
+      "passed": true
+    },
+    {
+      "name": "Scoped gallery --check",
+      "scope": 276,
+      "passed": true
+    },
+    {
+      "name": "Read-only Cenyr coverage CLI --check",
+      "scope": 276,
+      "passed": true
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/cenyr-house-editorial-contracts.test.mjs",
+      "passed": 4
+    }
+  ],
+  "publications": {
+    "push": false,
+    "deploy": false,
+    "firebaseWrite": false
+  },
+  "notes": [
+    "Only current canonical metadata and existing public source biographies were used; no pasted genealogy or military statistics imported.",
+    "Ten new territorial records have zero persons and zero relationships; unknown heraldry uses existing neutral system symbol.",
+    "Prepared pages state missing history openly instead of inventing founders, offices, occupations or lineage.",
+    "Sonnenküste parallel authoring was not regenerated outside the selected completion sources.",
+    "Root owns final browser verification and verification.json.",
+    "Final browser/editorial corrections: Grianlaoch page type matches canonical Ritterhaus; Llythfor reporter is not assigned family leadership; duplicated ten citizen overview paragraphs removed. All changes retain known default fingerprints.",
+    "Cwingod active preserved-biography copy omits only obsolete Truppenstärke/Flotte metadata rows; all prose and the original seed source remain intact."
+  ]
+}

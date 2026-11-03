@@ -1,0 +1,113 @@
+{
+  "schema": "aleria.patrick-biographies-independent-audit",
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-03T17:46:33.201Z",
+  "characters": [
+    {
+      "key": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "title": "Protokollmeister des Herolds von Haus Draig · Vorgesehener Erbe des Hauses Sgrechiwr",
+      "residence": "Gwynthor",
+      "abilityCards": 12,
+      "missingIcons": 0
+    },
+    {
+      "key": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "title": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
+      "residence": "Gwynthor",
+      "abilityCards": 12,
+      "missingIcons": 0
+    },
+    {
+      "key": "person--family-tree--unknown-cadogan-spouse",
+      "id": "person--family-tree--unknown-cadogan-spouse",
+      "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
+      "title": "Malerin",
+      "residence": "Gwynthor",
+      "abilityCards": 10,
+      "missingIcons": 0
+    }
+  ],
+  "familyProjections": [
+    {
+      "id": "haus-hamnett",
+      "persons": 1,
+      "partnerships": 0,
+      "parentages": 0
+    },
+    {
+      "id": "haus-sgrechiwr",
+      "persons": 32,
+      "partnerships": 11,
+      "parentages": 20
+    },
+    {
+      "id": "haus-draenmelyn",
+      "persons": 18,
+      "partnerships": 6,
+      "parentages": 11
+    },
+    {
+      "id": "haus-swyll",
+      "persons": 34,
+      "partnerships": 13,
+      "parentages": 20
+    }
+  ],
+  "pets": [
+    {
+      "name": "Silberstolz",
+      "id": "companion-cadogan-sgrechiwr-silberstolz",
+      "owner": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "bestiary": "tiere/pferde/erlenglanz",
+      "usesImmutableOriginal": true
+    },
+    {
+      "name": "Perle",
+      "id": "companion-rhiannon-draenmelyn-perle",
+      "owner": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "bestiary": "tiere/pferde/rhyfel",
+      "usesImmutableOriginal": true
+    },
+    {
+      "name": "Sir Balthasar",
+      "id": "companion-gwen-hamnett-sir-balthasar",
+      "owner": "person--family-tree--unknown-cadogan-spouse",
+      "bestiary": "tiere/vieh/haustiere/katzen/samtlicht",
+      "usesImmutableOriginal": true
+    },
+    {
+      "name": "Sonnenaufgang",
+      "id": "companion-gwen-hamnett-sonnenaufgang",
+      "owner": "person--family-tree--unknown-cadogan-spouse",
+      "bestiary": "tiere/pferde/goldmaehne",
+      "usesImmutableOriginal": true
+    }
+  ],
+  "crestSha256": "edd5b46c436324e4ef726e9a8ad8f2f7fa5ee628a36ac1294937955fb1d15a95",
+  "figureSha256": "4211d776a51f0f0c3335735f2d375539e914725b52d92801d14164324ca9f24b",
+  "localIconFilesExist": true,
+  "testsPassed": 41,
+  "confirmedLegacyRetirements": 4,
+  "unresolvedLegacyGroup": "Meurig/Odyar: conflicting source identities deliberately unchanged",
+  "externalWrites": 0,
+  "livePublication": {
+    "verifiedDocuments": 7,
+    "characters": 3,
+    "creatures": 4,
+    "readOnlyRecovery": true,
+    "externalRecoveryWrites": 0,
+    "verification": "publication-verification.json"
+  },
+  "localDatabaseProjection": {
+    "selectedCharacters": 3,
+    "newCharacters": 1,
+    "unrelatedCharactersPreserved": 263,
+    "canonicalCombatWrites": 0,
+    "fullInventoryImports": 0,
+    "checkChangedFiles": 0
+  }
+}

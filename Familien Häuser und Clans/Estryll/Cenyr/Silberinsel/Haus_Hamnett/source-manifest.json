@@ -1,0 +1,56 @@
+{
+  "houseId": "haus-hamnett",
+  "source": {
+    "kind": "current-public-canon-and-explicit-user-house-request",
+    "date": "2026-11-03",
+    "files": [
+      "Stammbäume/assets/js/data/house-hamnett-family.js",
+      "Stammbäume/assets/js/data/hamnett-house-profile.js",
+      "AleriaAlmanach/modules/patrick-biographies/biography-source.mjs"
+    ]
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-hamnett",
+    "existingWorldPersonId": "person--family-tree--unknown-cadogan-spouse",
+    "newPeople": false,
+    "newParents": false,
+    "newFounder": false,
+    "marriageAndChildrenRemainIn": "haus-sgrechiwr"
+  },
+  "decisions": [
+    "Hausherkunft Silberinsel; genauer Stammsitz und Baronie bleiben offen.",
+    "Gwens tatsächlicher Wohnort Gwynthor erzeugt keine zweite Hausakte.",
+    "Neidr sind eine Geschäftsbindung; keine Lehnsherrschaft erfunden.",
+    "Bürgerliches Künstler- und Kunsthandwerkerhaus gemäß ausdrücklicher Nutzeranweisung.",
+    "Hausdarstellung repräsentativ und nicht als neues Personenporträt ausgegeben.",
+    "Neueste ausdrückliche Nutzerkorrektur: ausschließlich Hammer und Meißel sind aktives Wappen. Büste und Palette bleiben inaktive Quellen. Das Hauszeichen der Figur entspricht der abschließenden Hammer-und-Meißel-Auswahl.",
+    "Aus Gwens bestätigter Quelle ergänzt: seit Generationen wohlhabendes Künstler-/Kunsthandwerkerhaus mit Werkstätten für Reliefs, Ornament-Schnitzerei und Bildhauerei; wohlhabende Bürger und Adel, besonders Neidr, als Auftraggeber. Keine Standorte, Besitzgrößen oder Gründungsdaten daraus erfunden."
+  ],
+  "images": [
+    {
+      "role": "canonical-house-crest",
+      "source": "diagnostics/patrick-bios-20261103/hamnett-assets/haus-hamnett-hammer-meissel.png",
+      "projectPath": "Stammbäume/assets/images/houses/Silberinsel/haus-hamnett.png",
+      "sha256": "edd5b46c436324e4ef726e9a8ad8f2f7fa5ee628a36ac1294937955fb1d15a95",
+      "byteIdentical": true,
+      "selection": "latest-explicit-user-selection",
+      "motif": "Hammer und Meißel",
+      "colours": [
+        "Dunkelblau",
+        "Elfenbein",
+        "Gold"
+      ]
+    },
+    {
+      "role": "representative-house-figure",
+      "source": "diagnostics/patrick-bios-20261103/hamnett-assets/haus-hamnett-kunsthandwerker-hammer-meissel.png",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "sha256": "4211d776a51f0f0c3335735f2d375539e914725b52d92801d14164324ca9f24b",
+      "byteIdentical": true,
+      "review": "root-accepted-on-light-and-dark",
+      "namedPerson": false,
+      "artManifest": "AleriaAlmanach/docs/art/hamnett-20261103/manifest.json"
+    }
+  ]
+}

@@ -198,7 +198,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-pysgod"
         },
         {
           "name": "Morfil O'Talsarn",
@@ -208,7 +209,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-morfil"
         },
         {
           "name": "Wivern O'Coedlyn",
@@ -218,7 +220,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-wivern"
         },
         {
           "name": "Draenog O'Llanforwyn",
@@ -228,7 +231,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-draenog"
         },
         {
           "name": "Lyfant O'Caer Asgwrn",
@@ -238,7 +242,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-lyfant-caer-asgwrn"
         },
         {
           "name": "Coedwig O'Llanfyn",
@@ -248,7 +253,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-coedwig"
         },
         {
           "name": "Blaidd O'Tredegar",
@@ -258,7 +264,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blaidd-tredegar"
         },
         {
           "name": "Gwaedlyd O'Tredegar",
@@ -268,7 +275,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gwaedlyd-tredegar"
         },
         {
           "name": "Illygoden O'Tredegar",
@@ -278,7 +286,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-illygoden-tredegar"
         },
         {
           "name": "Gwialen O'Tredegar",
@@ -288,7 +297,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gwialen"
         },
         {
           "name": "Brithyll O'Tredegar",
@@ -298,7 +308,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-brithyll"
         }
       ]
     },
@@ -313,7 +324,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Dún Tiarna",
           "featured": false,
-          "featuredLabel": "Dún Tiarna"
+          "featuredLabel": "Dún Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dornach"
         },
         {
           "name": "Clan Brathaireann",
@@ -323,7 +335,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mór Tiarna",
           "featured": false,
-          "featuredLabel": "Mór Tiarna"
+          "featuredLabel": "Mór Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brathaireann"
         },
         {
           "name": "Clan Tonnmharra",
@@ -333,7 +346,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tonnmharra"
         }
       ]
     },
@@ -349,7 +363,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tanwyn"
         }
       ]
     }

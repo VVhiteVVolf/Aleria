@@ -1,0 +1,51 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-nic-riordain",
+  "attachmentId": "eeb1e185-f5cf-402f-b08d-46107e0edf63",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "c840134bae0072113245e65482126d55f101230384dbb787e0dc54b8bcb68e5f",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Antike Clanfigur",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/v26rEmz.png",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "sha256": "f36c118a28bc74a666f3b53e6abe13b4b055d5c69cbaa5fbd1c3be38f0aebdd2"
+    },
+    {
+      "role": "Historisches Portrait muireen",
+      "file": "assets/muireen.png",
+      "source": "https://64.media.tumblr.com/5f9e480ec1e575c7a95bc8e35249e9d2/9402ccb478baf01d-f7/s250x400/79e4594353ac0261d4e5f94d6249552243f6dac4.pnj",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "sha256": "8d3db250afc3ae8ad764cd036ea6affe1383fbca0a3153e245fa36538bbecbc7"
+    },
+    {
+      "role": "Historisches Portrait mallaidh",
+      "file": "assets/mallaidh.png",
+      "source": "https://64.media.tumblr.com/5eec83b4a0d95cda146ea525da6672d4/9402ccb478baf01d-ce/s250x400/da2c4ffbc1607a5ab6bf69ad243ba7b0db13e4ae.pnj",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "sha256": "ca4018a0d6bfd460938411fa235894377e8675f488dfdf804a1d021d3cb968fa"
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-nic-riordain",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Stammbäume/assets/js/data/house-blach-family.js",
+    "Stammbäume/assets/js/data/house-illewod-family.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true
+}

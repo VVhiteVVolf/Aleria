@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "tool": "built-in image_gen.imagegen",
+  "records": [
+    {
+      "id": "warrior-house-apinia",
+      "assetStem": "house-apinia",
+      "category": "warriors",
+      "houseId": "house-apinia",
+      "prototypeId": "prototype-07",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-3051295a-d4ce-4ceb-b727-5d04cee2e516.png",
+      "generatedSha256": "8e3e40c006446fc1aaa6c031ec037ca65ce8c693db1ccd5c47fba6a645075ab7",
+      "copiedOriginal": "assets/warriors/generated/house-apinia.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-apinia",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-3051295a-d4ce-4ceb-b727-5d04cee2e516.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "8e3e40c006446fc1aaa6c031ec037ca65ce8c693db1ccd5c47fba6a645075ab7",
+      "production": "assets/warriors/production/house-apinia.png",
+      "productionSha256": "2d9a7a22f83008b4aac4b947fac77930f854c818cf3c40544f3b7e46f778c4b8",
+      "preview": "assets/warriors/previews/house-apinia.webp",
+      "previewSha256": "edf405cc09a6d78b0c8c9bf8385b841f2dd2bb75f53fc711640c37aa786cea50",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          21,
+          0,
+          1008,
+          1522
+        ],
+        "margins": {
+          "left": 21,
+          "top": 0,
+          "right": 16,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1062715,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 510149,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          94,
+          10,
+          845,
+          1519
+        ],
+        "margins": {
+          "left": 94,
+          "top": 10,
+          "right": 179,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 1097118,
+        "opaquePixels": 470619,
+        "partialAlphaPixels": 5127,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-bolar",
+      "assetStem": "house-bolar",
+      "category": "warriors",
+      "houseId": "house-bolar",
+      "prototypeId": "prototype-01",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-390ee73b-af60-4eee-a3d8-69ebd39d92cb.png",
+      "generatedSha256": "824ce950f4f9424c9a4b8bd16c88c467f324b61f61ffad872e4a6ba833d467cf",
+      "copiedOriginal": "assets/warriors/generated/house-bolar.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-bolar",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-390ee73b-af60-4eee-a3d8-69ebd39d92cb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "824ce950f4f9424c9a4b8bd16c88c467f324b61f61ffad872e4a6ba833d467cf",
+      "production": "assets/warriors/production/house-bolar.png",
+      "productionSha256": "c84b4f4cb767d4c4367824832c4594fc7053fdb9382322aba90fbe8373a1605c",
+      "preview": "assets/warriors/previews/house-bolar.webp",
+      "previewSha256": "025d27de100facfecbac23264697cc77b01bcf5a3b56246f20d6550fb39bef3a",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1018,
+          1526
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 6,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 909583,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 663281,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          68,
+          25,
+          910,
+          1488
+        ],
+        "margins": {
+          "left": 68,
+          "top": 25,
+          "right": 114,
+          "bottom": 48
+        },
+        "minimumMarginPixels": 25,
+        "touchesCanvas": false,
+        "transparentPixels": 951649,
+        "opaquePixels": 615440,
+        "partialAlphaPixels": 5775,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-lex",
+      "assetStem": "house-lex",
+      "category": "warriors",
+      "houseId": "house-lex",
+      "prototypeId": "prototype-02",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-4fef9966-e656-47e6-822e-fcf991bc6d8c.png",
+      "generatedSha256": "0411958d11ca753db4364436725ac7d755a2d20f7536a419fc9a89aa70c104c7",
+      "copiedOriginal": "assets/warriors/generated/house-lex.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-lex",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-4fef9966-e656-47e6-822e-fcf991bc6d8c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "supersededOutputs": [
+        {
+          "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-14ef818e-8c2d-4310-9bca-26c52f586774.png",
+          "generatedSha256": "b2677a62146dc2fff747c5052fe457669e45a500645d9a0785eafb101888e9e5",
+          "archive": "sources/house-warriors-original-archive/house-lex-open-helmet-v1.png",
+          "reason": "Latest user requests closed helmets for some heavy units."
+        }
+      ],
+      "editJobId": "warrior-house-lex-helmet-v2",
+      "copiedOriginalSha256": "0411958d11ca753db4364436725ac7d755a2d20f7536a419fc9a89aa70c104c7",
+      "production": "assets/warriors/production/house-lex.png",
+      "productionSha256": "83a726195a3cf8a71357b3078ca8a45f5eb1ccb0ad43777bd0727014b5fb6646",
+      "preview": "assets/warriors/previews/house-lex.webp",
+      "previewSha256": "ca0ea287cab6a87ce020cd3d1dcce386a0e184837fc303fff8db864e781b7a3c",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          95,
+          5,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 95,
+          "top": 5,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1159530,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 413334,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          269,
+          8,
+          765,
+          1520
+        ],
+        "margins": {
+          "left": 269,
+          "top": 8,
+          "right": 259,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 1182807,
+        "opaquePixels": 385715,
+        "partialAlphaPixels": 4342,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-mede",
+      "category": "warriors",
+      "assetStem": "house-mede",
+      "houseId": "house-mede",
+      "prototypeId": "prototype-01",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-199d28e5-ee80-41ae-8390-f6ed019fa896.png",
+      "generatedSha256": "e5276b3dae798384777d0bc424b29e0fc3413f750adcde37dfc2fee1fd8cc015",
+      "copiedOriginal": "assets/warriors/generated/house-mede.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-mede",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-199d28e5-ee80-41ae-8390-f6ed019fa896.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "e5276b3dae798384777d0bc424b29e0fc3413f750adcde37dfc2fee1fd8cc015",
+      "production": "assets/warriors/production/house-mede.png",
+      "productionSha256": "79bae0e072d337d000c1f7a9ea721ea8d05eff3d9471c51887d7bd0aad548370",
+      "preview": "assets/warriors/previews/house-mede.webp",
+      "previewSha256": "1e03820732b04b1ed38dab02a4e6bbb87fedad0cda6ac38860eb1d6948ed2f06",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1006,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 18,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 849576,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 723288,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          71,
+          15,
+          896,
+          1516
+        ],
+        "margins": {
+          "left": 71,
+          "top": 15,
+          "right": 128,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 873102,
+        "opaquePixels": 695489,
+        "partialAlphaPixels": 4273,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-orania",
+      "assetStem": "house-orania",
+      "category": "warriors",
+      "houseId": "house-orania",
+      "prototypeId": "prototype-03",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-bcb77b16-e63b-4a25-88e0-4349164931d5.png",
+      "generatedSha256": "e473f2f084925ddd577204407ed42fbcf0ab6df7aa6ab8a7d10ed5b4cdd8b635",
+      "copiedOriginal": "assets/warriors/generated/house-orania.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-orania",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-bcb77b16-e63b-4a25-88e0-4349164931d5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "e473f2f084925ddd577204407ed42fbcf0ab6df7aa6ab8a7d10ed5b4cdd8b635",
+      "production": "assets/warriors/production/house-orania.png",
+      "productionSha256": "c0fb35af0ae3c2e8ca7ebdc9e4581a51641e674ebc60fe9d56e8e4377264e268",
+      "preview": "assets/warriors/previews/house-orania.webp",
+      "previewSha256": "f375bbc476a06569506ccb2542fa448b06e821f7e6cda5e781f489f281976d3f",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1018,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 6,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 896417,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 676447,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          30,
+          100,
+          995,
+          1450
+        ],
+        "margins": {
+          "left": 30,
+          "top": 100,
+          "right": 29,
+          "bottom": 86
+        },
+        "minimumMarginPixels": 29,
+        "touchesCanvas": false,
+        "transparentPixels": 968429,
+        "opaquePixels": 596209,
+        "partialAlphaPixels": 8226,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-pelagia",
+      "category": "warriors",
+      "assetStem": "house-pelagia",
+      "houseId": "house-pelagia",
+      "prototypeId": "prototype-05",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-d24bc576-dc70-4c17-8ba4-ab953f2704b2.png",
+      "generatedSha256": "bd123b92ca437c0d4a70d83e20bbbfa2ef84e81c9e97555a273dc5fb678244c9",
+      "copiedOriginal": "assets/warriors/generated/house-pelagia.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-pelagia",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-d24bc576-dc70-4c17-8ba4-ab953f2704b2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "bd123b92ca437c0d4a70d83e20bbbfa2ef84e81c9e97555a273dc5fb678244c9",
+      "production": "assets/warriors/production/house-pelagia.png",
+      "productionSha256": "9150563ae2bfb2b93dbbe9de6635a95313e9853cb44114bfdd0f932cc705ff88",
+      "preview": "assets/warriors/previews/house-pelagia.webp",
+      "previewSha256": "9888088ad9f2aa9d3d97c9e35fc3574db55f1f6954bd5e07c961e2013ce39112",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 887984,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 684880,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          166,
+          5,
+          869,
+          1512
+        ],
+        "margins": {
+          "left": 166,
+          "top": 5,
+          "right": 155,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 916258,
+        "opaquePixels": 652889,
+        "partialAlphaPixels": 3717,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    },
+    {
+      "id": "warrior-house-tremelia",
+      "category": "warriors",
+      "assetStem": "house-tremelia",
+      "houseId": "house-tremelia",
+      "prototypeId": "prototype-04",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-cb536f27-b31e-43e5-9f80-c86479c992b5.png",
+      "generatedSha256": "468aee844a1e335df020db4e04fd588484f3c2186d217163b52e52a29fe04a9a",
+      "copiedOriginal": "assets/warriors/generated/house-tremelia.png",
+      "jobManifest": "sources/house-warriors-original-jobs.json",
+      "jobId": "warrior-house-tremelia",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-cb536f27-b31e-43e5-9f80-c86479c992b5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "copiedOriginalSha256": "468aee844a1e335df020db4e04fd588484f3c2186d217163b52e52a29fe04a9a",
+      "production": "assets/warriors/production/house-tremelia.png",
+      "productionSha256": "28b7e267d3ee06242ff83f18611ec0d94a3f217c2d7bca78c0869359b41ad0df",
+      "preview": "assets/warriors/previews/house-tremelia.webp",
+      "previewSha256": "1fed946508864ac8cf3851ae95d6940e44e14342b75f0f94415d281b1992c503",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          2,
+          1002,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 2,
+          "right": 22,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1117450,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 455414,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          252,
+          12,
+          855,
+          1507
+        ],
+        "margins": {
+          "left": 252,
+          "top": 12,
+          "right": 169,
+          "bottom": 29
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 1160792,
+        "opaquePixels": 405826,
+        "partialAlphaPixels": 6246,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "ready": true
+    }
+  ],
+  "assetReceipts": "sources/asset-receipts.json",
+  "qaDirectory": "diagnostics/argentum-leukonia/assets/runs/20261103T172211Z-1a337399",
+  "status": "Seven complete independent house figures; latest helmet correction applied to Lex and Mede."
+}

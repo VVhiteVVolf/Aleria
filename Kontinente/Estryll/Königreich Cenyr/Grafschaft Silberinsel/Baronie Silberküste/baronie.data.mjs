@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/silberinsel/territory-page.mjs?v=silberinsel-20261019';
+import { createTerritory } from '../../../../modules/silberinsel/territory-page.mjs?v=20261103-silberinsel-v1';
 
 export default createTerritory({
   "id": "baronie-silberkueste",
@@ -146,7 +146,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tiwna"
         }
       ]
     },
@@ -161,7 +162,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mor Tiarna",
           "featured": false,
-          "featuredLabel": "Mor Tiarna"
+          "featuredLabel": "Mor Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tir-an-muirghin"
         }
       ]
     }
