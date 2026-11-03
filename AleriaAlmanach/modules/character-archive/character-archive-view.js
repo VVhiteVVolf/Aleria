@@ -1,3 +1,5 @@
+import { groupCharacterArchiveViewFamilies } from './character-archive-view-projection.js';
+import { isExplicitCharacterArchiveVariant } from './character-archive-entry-equivalence.js';
 import { CHARACTER_ARCHIVE_KINDS } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v4';
 
@@ -25,20 +27,20 @@ export function renderEntryReferenceLinks(links, escapeHtml) {
 export function renderKindNavigation(entries, selectedKind, escapeHtml) {
   const button = (id, label, count, symbol = '▦') => `<button type="button" class="${selectedKind === id ? 'active' : ''}" aria-pressed="${selectedKind === id}" data-character-archive-action="set-kind" data-kind="${id}"><i aria-hidden="true">${symbol}</i><span>${escapeHtml(label)}</span><strong>${count}</strong></button>`;
   return `<nav class="character-archive-kinds" aria-label="Archivkategorien">
-    ${button('all', 'Gesamtarchiv', entries.length)}
+    ${button('all', 'Gesamtarchiv', groupCharacterArchiveViewFamilies(entries).length)}
     ${navigationGroups.map(group => `<div class="character-archive-nav-group"><h3>${group.label}</h3>${group.kinds.map(id => {
       const kind = CHARACTER_ARCHIVE_KINDS.find(item => item.id === id);
-      return button(id, kind.label, entries.filter(entry => matchesCharacterArchiveKind(entry, id)).length, kind.symbol);
+      return button(id, kind.label, groupCharacterArchiveViewFamilies(entries.filter(entry => matchesCharacterArchiveKind(entry, id))).length, kind.symbol);
     }).join('')}</div>`).join('')}
   </nav>`;
 }
 
 export function renderStats(entries) {
   const sourceCount = new Set(entries.flatMap(entry => (entry.sources || []).map(source => `${source.kind}:${source.id || source.name}`))).size;
-  return `<div><strong>${entries.length}</strong><span>Einträge</span></div>
+  return `<div><strong>${groupCharacterArchiveViewFamilies(entries).length}</strong><span>Vorlagen</span></div>
     <div><strong>${CHARACTER_ARCHIVE_KINDS.filter(kind => !kind.navigationKind && entries.some(entry => matchesCharacterArchiveKind(entry, kind.id))).length}</strong><span>Archivbereiche</span></div>
     <div><strong>${sourceCount}</strong><span>Quellen</span></div>
-    <div><strong>${entries.filter(entry => !entry.builtin && (!entry.archivedFromProfile || entry.updatedAt)).length}</strong><span>Eigene Fassungen</span></div>`;
+    <div><strong>${entries.filter(entry => !entry.builtin && isExplicitCharacterArchiveVariant(entry)).length}</strong><span>Eigene Fassungen</span></div>`;
 }
 
 export function renderArchiveShell({ picker, kindLabel }, escapeHtml) {

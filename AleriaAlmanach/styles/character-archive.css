@@ -171,3 +171,8 @@ body.character-archive-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .character-archive-page :where(button), .character-archive-editor button { transition: none; }
 }
+
+.character-archive-family { min-width: 0; }
+.character-archive-variants { margin: .5rem 0 1rem; padding: .75rem; border: 1px solid var(--ca-line); border-radius: .75rem; }
+.character-archive-variants > summary { cursor: pointer; font-weight: 600; }
+.character-archive-variants > .character-archive-grid { margin-top: .75rem; grid-template-columns: minmax(0, 1fr); }

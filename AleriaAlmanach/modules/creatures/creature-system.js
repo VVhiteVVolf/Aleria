@@ -802,12 +802,6 @@ async function saveCurrent() {
     }
     renderLibrary();
     dispatchChanged();
-    try {
-      await window.AleriaCharacterArchive?.archiveRecord?.({ ...saved, entityType: 'creature' }, 'creature');
-    } catch (archiveError) {
-      console.info('Kreatur wurde gespeichert; der Online-Abgleich des Charakterbogen-Archivs folgt später.', archiveError);
-      notify('Kreatur gespeichert. Das Charakterbogen-Archiv wurde vorerst lokal ergänzt.', 'info');
-    }
     notify(`${creature.name} wurde gespeichert.`, 'success');
   } catch (error) {
     console.error('save creature failed:', error);

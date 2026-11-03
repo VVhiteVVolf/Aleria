@@ -5,7 +5,7 @@ import {
 } from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
 import { getArchiveCombatStyles } from './character-archive-combat-catalog.js';
 import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
-import { buildStandardWeaponArchiveEntries } from './character-archive-standard-weapons.js';
+import { buildStandardWeaponArchiveEntries, buildBuiltinStarterWeaponArchiveEntry } from './character-archive-standard-weapons.js';
 import { getArchiveAbilityIconSource } from './character-archive-ability-icons.js';
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
 import {
@@ -71,7 +71,8 @@ function buildTemplateEntries() {
   });
   CHARACTER_CLASS_TEMPLATES.forEach(template => {
     entries.push(templateEntry('class', template));
-    (template.weapons || []).forEach(attack => entries.push(normalizeCharacterArchiveEntry({
+    (template.weapons || []).forEach(attack => entries.push(buildBuiltinStarterWeaponArchiveEntry(attack,
+      { kind: 'class', id: template.id, name: template.label }) || normalizeCharacterArchiveEntry({
       kind: 'attack',
       name: attack.name,
       description: attack.notes || attack.properties || template.description,

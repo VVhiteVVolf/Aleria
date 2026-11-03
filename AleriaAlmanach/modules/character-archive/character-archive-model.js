@@ -1,3 +1,4 @@
+import { projectCharacterArchiveCompanionAliases } from './character-archive-companion-aliases.js';
 import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
 import { getDevelopmentTraitId, getDevelopmentTechniqueId } from '../character-development/development-entry-reference.js';
 import { getCharacterClassIds } from '../character-development/character-training-state.js';
@@ -5,6 +6,7 @@ import { getCharacterCreationTemplate } from '../combat/character-creation-templ
 import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 import { getCharacterArchiveCanonicalKey } from './character-archive-identity.js';
+import { getCharacterArchiveEntrySignature, getCharacterArchiveLogicalIdentity, isExplicitCharacterArchiveVariant } from './character-archive-entry-equivalence.js';
 
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
@@ -160,16 +162,19 @@ export function normalizeCharacterArchiveEntry(value = {}) {
 function mergeArchiveEntry(current, incoming) {
   const left = normalizeCharacterArchiveEntry(current);
   const right = normalizeCharacterArchiveEntry(incoming);
-  const remoteOrEdited = !right.builtin && (!!right.updatedAt || !!right.iconOverride);
-  const isLiveProfileProjection = entry => entry.archivedFromProfile
-    && !entry.createdAt
-    && !entry.updatedAt
-    && !entry.iconOverride;
-  const combinesBuiltinAndLiveProjection = (left.builtin && isLiveProfileProjection(right))
-    || (right.builtin && isLiveProfileProjection(left));
+  const explicitLeft = isExplicitCharacterArchiveVariant(left);
+  const explicitRight = isExplicitCharacterArchiveVariant(right);
   const newerLeftEdit = left.updatedAt && right.updatedAt && left.updatedAt > right.updatedAt;
-  const preferred = remoteOrEdited && !newerLeftEdit ? right : left;
-  const secondary = preferred === right ? left : right;
+  // Source copies carry timestamps too. Only actual manual edits outrank a
+  // current catalog; equivalent legacy copies contribute provenance, not rules.
+  const preferRight = explicitRight !== explicitLeft ? explicitRight
+    : explicitRight ? !newerLeftEdit
+    : right.builtin !== left.builtin ? right.builtin
+    : Object.keys(right.data).length > Object.keys(left.data).length;
+  const preferred = preferRight ? right : left;
+  const secondary = preferRight ? left : right;
+  const combinesBuiltinAndLiveProjection = (left.builtin || right.builtin)
+    && !explicitLeft && !explicitRight;
   const iconOwner = preferred.iconAssignmentVersion ? preferred : secondary.iconAssignmentVersion ? secondary : null;
   const data = Object.keys(preferred.data || {}).length ? { ...preferred.data } : { ...secondary.data };
   if (iconOwner) {
@@ -188,19 +193,63 @@ function mergeArchiveEntry(current, incoming) {
     tags: [...(left.tags || []), ...(right.tags || [])],
     sources: [...(left.sources || []), ...(right.sources || [])],
     builtin: combinesBuiltinAndLiveProjection || (left.builtin && right.builtin),
-    archivedFromProfile: left.archivedFromProfile || right.archivedFromProfile
+    archivedFromProfile: !((explicitLeft && !left.archivedFromProfile) || (explicitRight && !right.archivedFromProfile))
+      && (left.archivedFromProfile || right.archivedFromProfile)
+  });
+}
+
+const IDENTITY_ONLY_KINDS = new Set(['class', 'ancestry', 'background', 'origin']);
+const REFERENCE_FIELDS = new Set(['id', 'name', 'label', 'catalogTechniqueId', 'catalogAbilityId',
+  'sourceAbilityId', 'developmentTraitId', 'icon', 'image']);
+
+function resolveMinimalArchiveReferences(entries) {
+  const families = new Map(), byKey = new Map();
+  for (const entry of entries) {
+    if (isExplicitCharacterArchiveVariant(entry)) continue;
+    if (!families.has(entry.key)) families.set(entry.key, []);
+    families.get(entry.key).push(entry);
+  }
+  for (const [key, family] of families) {
+    if (family.length < 2 || !family.some(entry => Object.keys(entry.data).every(field => REFERENCE_FIELDS.has(field)))) continue;
+    const published = family.filter(entry => entry.builtin);
+    const candidates = published.length ? published : family;
+    const full = candidates.filter(entry => !Object.keys(entry.data).every(field => REFERENCE_FIELDS.has(field)));
+    if (!IDENTITY_ONLY_KINDS.has(candidates[0].kind) && full.length
+      && new Set(full.map(getCharacterArchiveEntrySignature)).size > 1) continue;
+    byKey.set(key, [...candidates].sort((a, b) => Object.keys(b.data).length - Object.keys(a.data).length)[0]);
+  }
+  return entries.map(entry => {
+    const canonical = byKey.get(entry.key);
+    if (!canonical || canonical === entry || isExplicitCharacterArchiveVariant(entry)
+      || !Object.keys(entry.data).every(key => REFERENCE_FIELDS.has(key))) return entry;
+    if (entry.kind === 'ability' && JSON.stringify(JSON.parse(getCharacterArchiveLogicalIdentity(entry)).owner)
+      !== JSON.stringify(JSON.parse(getCharacterArchiveLogicalIdentity(canonical)).owner)) return entry;
+    return normalizeCharacterArchiveEntry({ ...entry, name: canonical.name,
+      description: canonical.description, data: canonical.data });
   });
 }
 
 export function mergeCharacterArchiveEntries(...entryLists) {
-  const entries = new Map();
-  entryLists.flat().filter(Boolean).forEach(raw => {
+  // A saved manual row is mutable by its own persisted ID. Generated/catalog
+  // IDs are references and must never swallow a different rule/form/owner.
+  const persisted = new Map(), projections = [];
+  for (const raw of projectCharacterArchiveCompanionAliases(entryLists.flat().filter(Boolean))) {
     const entry = normalizeCharacterArchiveEntry(raw);
-    if (!entry.name) return;
-    const current = entries.get(entry.key);
-    entries.set(entry.key, current ? mergeArchiveEntry(current, entry) : entry);
-  });
-  return [...entries.values()].sort((a, b) => (
+    if (!entry.name) continue;
+    if (!entry.builtin && !entry.archivedFromProfile && (entry.createdAt || entry.updatedAt)) {
+      const current = persisted.get(entry.id);
+      persisted.set(entry.id, current ? mergeArchiveEntry(current, entry) : entry);
+    } else projections.push(entry);
+  }
+  const groups = new Map();
+  for (const entry of resolveMinimalArchiveReferences([...projections, ...persisted.values()])) {
+    const identityProjection = IDENTITY_ONLY_KINDS.has(entry.kind)
+      && !isExplicitCharacterArchiveVariant(entry);
+    const signature = identityProjection ? `identity::${entry.key}` : getCharacterArchiveEntrySignature(entry);
+    const current = groups.get(signature);
+    groups.set(signature, current ? mergeArchiveEntry(current, entry) : entry);
+  }
+  return [...groups.values()].sort((a, b) => (
     getCharacterArchiveKind(a.kind).label.localeCompare(getCharacterArchiveKind(b.kind).label, 'de')
     || a.name.localeCompare(b.name, 'de', { sensitivity: 'base', numeric: true })
   ));

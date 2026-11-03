@@ -3,18 +3,25 @@
 const ROOT = '/AleriaAlmanach/public/assets/ability-icons';
 const personal = Object.freeze([
   { abilityId: 'freya-arkaner-schrei', owner: 'freya', asset: 'freya-arkaner-schrei',
+    abilityName: 'Arkaner Schrei',
     ids: ['ksJQe8Ai4KbRE9jOAvb7', 'person--haus-skald--freya-skald'], name: 'Freya Skald' },
   { abilityId: 'gildas-gewissenhafte-vorbereitung', owner: 'gildas', asset: 'gildas-gewissenhafte-vorbereitung',
+    abilityName: 'Gewissenhafte Vorbereitung',
     ids: ['gildas-gafyr', 'person--haus-gafyr--gildas-gafyr'], name: 'Gildas Gafyr' },
   { abilityId: 'gildas-schutzpflicht', owner: 'gildas', asset: 'gildas-schutzpflicht',
+    abilityName: 'Schutzpflicht',
     ids: ['gildas-gafyr', 'person--haus-gafyr--gildas-gafyr'], name: 'Gildas Gafyr' },
   { abilityId: 'gawain-liebt-duefte', owner: 'gawain', asset: 'gawain-liebt-duefte',
+    abilityName: 'Liebt Düfte',
     ids: ['q1QtSIug74FzzwUAqWrs', 'person--haus-draig--gawain-draig'], name: 'Gawain Draig' },
   { abilityId: 'gawain-draig-draig-knight-signet', owner: 'gawain', asset: 'gawain-draig-rittersiegelring',
+    abilityName: 'Draig-Rittersiegelring',
     ids: ['q1QtSIug74FzzwUAqWrs', 'person--haus-draig--gawain-draig'], name: 'Gawain Draig' },
   { abilityId: 'wolfshorn-asgeir-border-veteran', owner: 'asgeir', asset: 'asgeir-grenzer-des-dunkelhains',
+    abilityName: 'Grenzer des Dunkelhains',
     ids: ['oUlhJyX6C4Q69mtLS9u1', 'person--haus-wolfshorn--asgeir-wolfshorn'], name: 'Asgeir Wolfshorn' },
   { abilityId: 'wolfshorn-ylva-border-veteran', owner: 'ylva', asset: 'ylva-veteranin-des-dunkelhains',
+    abilityName: 'Veteranin des Dunkelhains',
     ids: ['bSYZYAEOwiRgy44f6OmO', 'person--haus-wolfshorn--ylva-wolfshorn'], name: 'Ylva Wolfshorn' }
 ]);
 const shared = Object.freeze([
@@ -31,6 +38,7 @@ const ownersById = new Map(personal.flatMap(entry => entry.ids.map(id => [id, en
 const ownersByName = new Map(personal.map(entry => [normalized(entry.name), entry.owner]));
 const abilityIds = item => [item.catalogAbilityId, item.sourceAbilityId, item.id].map(id => String(id || '').trim()).filter(Boolean);
 const assetPath = asset => `${ROOT}/${asset}.png`;
+const legacyUuid = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 
 function ownerKeys(item, context) {
   const keys = new Set();
@@ -64,7 +72,13 @@ export function getCharacterAbilityIconSource(item = {}, ownerContext = {}) {
   const explicit = String(item.iconOverride || item.icon || '').trim();
   if (explicit) return explicit;
   const ids = abilityIds(item);
-  const own = personal.find(entry => ids.includes(entry.abilityId));
+  // Old profile copies replaced the authored ID with a UUID before preserving
+  // catalogAbilityId. Recognize only the seven exact published names, only for
+  // such unlinked UUID copies, and still require one confirmed matching owner.
+  const legacyName = !String(item.catalogAbilityId || item.sourceAbilityId || '').trim()
+    && legacyUuid.test(String(item.id || '').trim()) ? String(item.name || '').normalize('NFC').trim() : '';
+  const own = personal.find(entry => ids.includes(entry.abilityId))
+    || (legacyName ? personal.find(entry => entry.abilityName === legacyName) : null);
   if (own) {
     const owners = ownerKeys(item, ownerContext);
     return owners.size === 1 && owners.has(own.owner) ? assetPath(own.asset) : '';

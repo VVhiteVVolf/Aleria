@@ -1,3 +1,5 @@
+import { getWeaponReferenceArchiveEntryForKind } from './character-archive-weapon-reference-projection.js';
+import { getCharacterArchiveViewId, groupCharacterArchiveViewFamilies } from './character-archive-view-projection.js';
 import { createCharacterArchiveIndex, queryCharacterArchive } from './character-archive-query.js?v=20260928-equipment-art-v4';
 import { renderArchiveShell, renderKindNavigation, renderStats, renderEntryDescription, renderEntryMeta, renderEntryReferenceLinks } from './character-archive-view.js?v=20260928-equipment-art-v4';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
@@ -95,7 +97,10 @@ function getVisibleEntries() {
 }
 
 function renderSourceBadges(entry) {
-  const sources = entry.sources || [];
+  const sources = [...new Map((entry.sources || []).map(source => {
+    const name = String(source.name || source.kind).replace(/^[·\s]+/, '');
+    return [name.toLocaleLowerCase('de'), { ...source, name }];
+  })).values()];
   const visible = sources.slice(0, 3);
   return `<div class="character-archive-card-sources">${visible.map(source => `<span>${escapeHtml(source.name || source.kind)}</span>`).join('')}${sources.length > visible.length ? `<span>+${sources.length - visible.length}</span>` : ''}</div>`;
 }
@@ -105,23 +110,33 @@ function renderEntryCard(entry) {
   const image = getEntryIcon(entry);
   const meta = getCharacterArchiveEntryMeta(entry);
   const pickerButton = state.picker
-    ? `<button type="button" class="character-archive-primary" data-character-archive-action="select-entry" data-entry-id="${escapeHtml(entry.id)}">Hinzufügen</button>`
-    : ['standard', 'offer', 'owned'].includes(entry.data?.section)
-      ? `<button type="button" data-character-archive-action="open-register-item" data-entry-id="${escapeHtml(entry.id)}">Im Güterregister öffnen</button>`
-    : `<button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(entry.id)}">${entry.data?.catalogReference ? 'Eigene Fassung anlegen' : 'Bearbeiten'}</button>`;
+    ? `<button type="button" class="character-archive-primary" data-character-archive-action="select-entry" data-entry-id="${escapeHtml(getCharacterArchiveViewId(entry))}">Hinzufügen</button>`
+    : (entry.registerEntry || ['standard', 'offer', 'owned'].includes(entry.data?.section))
+      ? `<button type="button" data-character-archive-action="open-register-item" data-entry-id="${escapeHtml(getCharacterArchiveViewId(entry))}">Im Güterregister öffnen</button>`
+    : `<button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(getCharacterArchiveViewId(entry))}">${entry.data?.catalogReference ? 'Eigene Fassung anlegen' : 'Bearbeiten'}</button>`;
   const rulesButton = !state.picker && kind.editorKind
-    ? `<button type="button" data-character-archive-action="edit-entry-rules" data-entry-id="${escapeHtml(entry.id)}">Regeldetails</button>`
+    ? `<button type="button" data-character-archive-action="edit-entry-rules" data-entry-id="${escapeHtml(getCharacterArchiveViewId(entry))}">Regeldetails</button>`
     : '';
   return `<article class="character-archive-card" data-entry-kind="${escapeHtml(entry.kind)}">
     <div class="character-archive-card-topline"><span>${escapeHtml(kind.group)}</span><span>${escapeHtml(kind.label)}</span></div>
     <div class="character-archive-card-main">
       ${image.source ? `<span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><i>${escapeHtml(kind.symbol)}</i></span>` : ''}
-      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>${escapeHtml(entry.data.school || 'Zauberkatalog')} · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}${renderEntryDescription(entry.description, escapeHtml)}</div>
+      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>${escapeHtml(entry.data.school || 'Zauberkatalog')} · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}${entry.archiveVariantLabel ? `<small>${escapeHtml(entry.archiveVariantLabel)}</small>` : ''}${renderEntryDescription(entry.description, escapeHtml)}</div>
     </div>
     ${renderEntryMeta(meta, escapeHtml)}
     ${renderSourceBadges(entry)}
     <div class="character-archive-card-actions">${pickerButton}${rulesButton}${entry.data?.catalogReference ? `<a href="${escapeHtml(getSpellCatalogPageHref(entry.data.catalogReference))}" target="_blank" rel="noopener">Zum Zauberverzeichnis ↗</a>` : ''}${renderEntryReferenceLinks([...getCharacterArchiveClassLinks(entry), ...getCharacterArchiveOriginLinks(entry)], escapeHtml)}</div>
   </article>`;
+}
+
+function renderEntryFamilies(entries, limit = Infinity) {
+  return groupCharacterArchiveViewFamilies(entries).slice(0, limit).map(family => {
+    if (family.length === 1) return renderEntryCard(family[0]);
+    return `<div class="character-archive-family">${renderEntryCard(family[0])}
+      <details class="character-archive-variants"><summary>${family.length - 1} weitere ${family.length === 2 ? 'Fassung' : 'Fassungen'} · Regeln vergleichen</summary>
+        <div class="character-archive-grid">${family.slice(1).map(renderEntryCard).join('')}</div>
+      </details></div>`;
+  }).join('');
 }
 
 function renderAttackGroupIcon(group) {
@@ -144,8 +159,8 @@ function renderAttackGroup(group, depth = 0, parentKey = '') {
       <span class="character-archive-attack-group-count"><strong>${count}</strong><small>${amountLabel}</small></span>
       <i class="character-archive-attack-group-disclosure" aria-hidden="true"></i>
     </summary>
-    ${group.parentEntry && ['style', 'form'].includes(group.type) ? `<div class="character-archive-group-actions"><button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(group.parentEntry.id)}">${escapeHtml(group.typeLabel)} bearbeiten</button></div>` : ''}
-    ${group.entries.length ? `<div class="character-archive-grid">${group.entries.map(renderEntryCard).join('')}</div>` : ''}
+    ${group.parentEntry && ['style', 'form'].includes(group.type) ? `<div class="character-archive-group-actions"><button type="button" data-character-archive-action="edit-entry" data-entry-id="${escapeHtml(getCharacterArchiveViewId(group.parentEntry))}">${escapeHtml(group.typeLabel)} bearbeiten</button></div>` : ''}
+    ${group.entries.length ? `<div class="character-archive-grid">${renderEntryFamilies(group.entries)}</div>` : ''}
     ${group.children.length ? `<div class="character-archive-group-children">${group.children.map(child => renderAttackGroup(child, depth + 1, groupKey)).join('')}</div>` : ''}
     ${!count && !group.children.length ? '<p class="character-archive-group-empty">Noch keine Attacken hinterlegt.</p>' : ''}
   </details>`;
@@ -155,11 +170,11 @@ function renderVisibleEntries(visible, allEntries) {
   const selectedKind = state.picker?.kind || state.kind;
   // Sheet pickers must retain the exact underlying collection (including natural
   // attacks), regardless of the archive's navigation hierarchy.
-  if (state.picker) return `<div class="character-archive-grid">${visible.slice(0, state.visibleLimit).map(renderEntryCard).join('')}</div>`;
+  if (state.picker) return `<div class="character-archive-grid">${renderEntryFamilies(visible, state.visibleLimit)}</div>`;
   const builders = { technique: getCharacterArchiveAttackGroups, attack: getCharacterArchiveWeaponGroups,
     class: getCharacterArchiveClassGroups, 'register-pferde': getCharacterArchiveHorseGroups };
   if (!builders[selectedKind]) {
-    return `<div class="character-archive-grid">${visible.slice(0, state.visibleLimit).map(renderEntryCard).join('')}</div>`;
+    return `<div class="character-archive-grid">${renderEntryFamilies(visible, state.visibleLimit)}</div>`;
   }
   const groups = builders[selectedKind](visible, allEntries);
   return `<div class="character-archive-attack-groups">${groups.map(group => renderAttackGroup(group)).join('')}</div>`;
@@ -195,7 +210,9 @@ function renderArchiveResults({ preserveGroups = true } = {}) {
   const visible = getVisibleEntries();
   const selectedKind = state.picker?.kind || state.kind;
   archiveElement('category-title').textContent = selectedKind === 'all' ? 'Gesamtarchiv' : getCharacterArchiveKind(selectedKind).label;
-  archiveElement('count').textContent = state.loading ? 'Wird geladen …' : `${visible.length} ${visible.length === 1 ? 'Eintrag' : 'Einträge'}`;
+  const familyCount = groupCharacterArchiveViewFamilies(visible).length;
+  archiveElement('count').textContent = state.loading ? 'Wird geladen …'
+    : `${familyCount} ${familyCount === 1 ? 'Vorlage' : 'Vorlagen'}${visible.length > familyCount ? ` · ${visible.length} Fassungen` : ''}`;
   root.setAttribute('aria-busy', String(state.loading));
   const filtered = state.search || state.source !== 'all';
   archiveElement('filter-summary').textContent = filtered ? 'Suche und Quellenfilter sind aktiv.' : 'Vorlagen entdecken und eigene Fassungen anlegen.';
@@ -211,8 +228,8 @@ function renderArchiveResults({ preserveGroups = true } = {}) {
   });
   const grouped = !state.picker && ['technique', 'attack', 'class', 'register-pferde'].includes(state.kind);
   const pagination = archiveElement('pagination');
-  pagination.hidden = state.loading || Boolean(state.loadError) || grouped || visible.length <= state.visibleLimit;
-  pagination.innerHTML = pagination.hidden ? '' : `<span>${Math.min(state.visibleLimit, visible.length)} von ${visible.length} Einträgen angezeigt</span><button type="button" data-character-archive-action="load-more">Weitere ${Math.min(48, visible.length - state.visibleLimit)} anzeigen</button>`;
+  pagination.hidden = state.loading || Boolean(state.loadError) || grouped || familyCount <= state.visibleLimit;
+  pagination.innerHTML = pagination.hidden ? '' : `<span>${Math.min(state.visibleLimit, familyCount)} von ${familyCount} Vorlagen angezeigt</span><button type="button" data-character-archive-action="load-more">Weitere ${Math.min(48, familyCount - state.visibleLimit)} anzeigen</button>`;
   activateImageFallbacks(root);
 }
 
@@ -249,7 +266,7 @@ function ensureOverlay() {
 }
 
 function findEntry(id) {
-  return state.entryIndex.find(item => String(item.entry.id) === String(id))?.entry || null;
+  return state.entryIndex.find(item => String(getCharacterArchiveViewId(item.entry)) === String(id))?.entry || null;
 }
 
 function emptyDataForKind(kind) {
@@ -296,7 +313,7 @@ function openEntryEditor(entry = null) {
   state.editorReturnFocus = document.activeElement;
   const current = entry ? normalizeCharacterArchiveEntry(entry) : null;
   const selectedKind = current?.kind || (state.kind !== 'all' ? state.kind : 'ability');
-  state.editingId = current?.id || '';
+  state.editingId = entry ? getCharacterArchiveViewId(entry) : '';
   overlay.innerHTML = `<form class="character-archive-editor" data-character-archive-editor-form>
     <header><div><span>Archivvorlage</span><h2 id="character-archive-editor-title">${current ? 'Eintrag bearbeiten' : 'Neuen Eintrag anlegen'}</h2></div><button type="button" data-character-archive-action="close-editor" aria-label="Editor schließen">×</button></header>
     <div class="character-archive-editor-body">
@@ -460,7 +477,7 @@ function handleClick(event) {
   else if (action === 'edit-entry') openEntryEditor(findEntry(trigger.dataset.entryId));
   else if (action === 'open-register-item') {
     const entry = findEntry(trigger.dataset.entryId);
-    if (entry) globalThis.itemDbEnsureGlobalSync?.().then(() => globalThis.AleriaItemRegister?.open(entry.data.id))
+    if (entry) globalThis.itemDbEnsureGlobalSync?.().then(() => globalThis.AleriaItemRegister?.open((entry.registerEntry || entry).data.id))
       .catch(error => globalThis.showAppStatus?.(error.message, 'error'));
   }
   else if (action === 'close-editor') closeEntryEditor();
@@ -469,8 +486,9 @@ function handleClick(event) {
   else if (action === 'select-entry') {
     const entry = findEntry(trigger.dataset.entryId);
     const callback = state.picker?.onSelect;
+    const selected = entry ? getWeaponReferenceArchiveEntryForKind(entry, state.picker?.kind) : null;
     closeArchive();
-    if (entry) callback?.(cloneArchiveValue(entry));
+    if (selected) callback?.(cloneArchiveValue(selected));
   } else if (action === 'create-from-picker') {
     const callback = state.picker?.onCreate;
     closeArchive();

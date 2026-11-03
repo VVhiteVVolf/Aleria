@@ -684,10 +684,9 @@ async function saveCharacterOnce(options = {}) {
       detail: { record: persistedRecord }
     }));
     try {
-      await window.AleriaCharacterArchive?.archiveRecord?.(persistedRecord, 'character');
+      window.AleriaCharacterArchive?.refresh?.();
     } catch (archiveError) {
-      console.info('Charakter wurde gespeichert; der Online-Abgleich des Charakterbogen-Archivs folgt später.', archiveError);
-      showAppStatus('Charakter gespeichert. Das Charakterbogen-Archiv wurde vorerst lokal ergänzt.', 'info');
+      console.info('Charakter wurde gespeichert; die Archivansicht wird beim nächsten Öffnen aktualisiert.', archiveError);
     }
     status.textContent = options.successMessage || 'Gespeichert ✓';
     setTimeout(() => { status.textContent = ''; }, 2000);

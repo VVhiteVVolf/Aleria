@@ -1,12 +1,13 @@
 import { getCharacterArchiveEntrySearchText, getCharacterArchiveKind, normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v4';
+import { isExplicitCharacterArchiveVariant } from './character-archive-entry-equivalence.js';
 
 const collator = new Intl.Collator('de', { sensitivity: 'base', numeric: true });
 
 export function matchesArchiveSource(entry, source = 'all') {
   if (source === 'all') return true;
   if (source === 'system') return entry.builtin === true;
-  if (source === 'custom') return !entry.builtin && (!entry.archivedFromProfile || Boolean(entry.updatedAt));
+  if (source === 'custom') return !entry.builtin && isExplicitCharacterArchiveVariant(entry);
   const kind = source === 'register' ? 'item-register' : source;
   return (entry.sources || []).some(item => item.kind === kind);
 }
@@ -22,7 +23,7 @@ export function queryCharacterArchive(index, { search = '', kind = 'all', source
   const exactCatalogMatch = Boolean(catalogId) && index.some(({ entry }) => entry.data?.catalogReference?.id === catalogId);
   const terms = normalizeArchiveSearchText(search).split(' ').filter(Boolean);
   return index.filter(({ entry, search: text }) => {
-    if (picker ? entry.kind !== picker.kind : !matchesCharacterArchiveKind(entry, kind)) return false;
+    if (picker ? entry.kind !== picker.kind && !entry.alternateKinds?.includes(picker.kind) : !matchesCharacterArchiveKind(entry, kind)) return false;
     if (exactCatalogMatch) return matchesArchiveSource(entry, source) && entry.data?.catalogReference?.id === catalogId;
     return matchesArchiveSource(entry, source) && terms.every(term => text.includes(term));
   }).map(item => item.entry).sort((a, b) => {

@@ -16,7 +16,11 @@ test('a shared template appears under every applicable source instead of only th
   assert.deepEqual(ids({ source: 'creature' }), ['fire-10']);
   assert.deepEqual(ids({ source: 'system' }), ['fire-10']);
   assert.equal(matchesArchiveSource(entries[1], 'custom'), false);
-  assert.equal(matchesArchiveSource({ ...entries[1], updatedAt: '2026-09-12T10:00:00Z' }, 'custom'), true);
+  assert.equal(matchesArchiveSource({ ...entries[1], updatedAt: '2026-09-12T10:00:00Z' }, 'custom'), false);
+  assert.equal(matchesArchiveSource({ ...entries[1], updatedAt: '2026-09-12T10:00:00Z', iconAssignmentVersion: 1 }, 'custom'), true);
+  assert.equal(matchesArchiveSource({ ...entries[1], data: { userAuthored: true } }, 'custom'), true);
+  assert.equal(matchesArchiveSource({ ...entries[0], data: { catalogOrigin: { id: 'legacy', revision: 1 } } }, 'custom'), false);
+  assert.equal(matchesArchiveSource({ ...entries[0], iconAssignmentVersion: 1, data: { userAuthored: true } }, 'custom'), false);
 });
 
 test('search combines words across names, rules and sources with German normalization', () => {
@@ -30,6 +34,18 @@ test('pickers preserve exact character-sheet collection membership despite archi
   assert.deepEqual(ids({ kind: 'attack' }), []);
   assert.deepEqual(ids({ kind: 'technique' }), ['natural']);
   assert.deepEqual(ids({ picker: { kind: 'attack' } }), ['natural']);
+});
+
+test('dual weapon/register references match either picker kind while preserving their view identity', () => {
+  const combined = { id: 'view-standard-sword', kind: 'attack', name: 'Standard-Schwert',
+    alternateKinds: ['attack', 'register-waffen'], weaponEntry: { id: 'attack-sword', kind: 'attack' },
+    registerEntry: { id: 'register-sword', kind: 'register-waffen' }, data: {}, sources: [] };
+  const combinedIndex = createCharacterArchiveIndex([combined, ...entries]);
+  const register = queryCharacterArchive(combinedIndex, { picker: { kind: 'register-waffen' } });
+  assert.deepEqual(register, [combined]);
+  assert.equal(register[0].id, 'view-standard-sword', 'UI resolves the primary view ID before selecting the requested original contract');
+  assert.deepEqual(queryCharacterArchive(combinedIndex, { picker: { kind: 'attack' }, search: 'Standard-Schwert' }), [combined]);
+  assert.deepEqual(queryCharacterArchive(combinedIndex, { picker: { kind: 'trait' }, search: 'Standard-Schwert' }), []);
 });
 
 test('sorting uses numeric German names and chronological dates without modifying the index', () => {

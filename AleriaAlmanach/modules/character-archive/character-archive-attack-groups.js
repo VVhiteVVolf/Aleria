@@ -18,6 +18,7 @@ export function isCharacterArchiveCombatAbility(entry = {}) {
 
 export function matchesCharacterArchiveKind(entry = {}, kind = '') {
   if (kind === 'all' || !kind) return true;
+  if (entry.alternateKinds?.includes(kind)) return true;
   if (kind === 'technique') return !getArchiveWeaponRelation(entry) && (entry.kind === 'technique' || entry.kind === 'combat-style'
     || isCharacterArchiveCombatAbility(entry) || (entry.kind === 'attack' && !isArchiveWeapon(entry)));
   if (kind === 'attack') return isArchiveWeapon(entry) || Boolean(getArchiveWeaponRelation(entry));

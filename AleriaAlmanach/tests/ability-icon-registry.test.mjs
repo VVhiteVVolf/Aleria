@@ -9,6 +9,7 @@ import {
 } from '../modules/character-archive/character-archive-ability-icons.js';
 import { getCombatEntryIconPresentation } from '../modules/combat/combat-entry-icons.js';
 import { getCharacterSheetEntryIconPresentation } from '../modules/character-archive/character-archive-icons.js';
+import { getCharacterArchiveEntrySignature } from '../modules/character-archive/character-archive-entry-equivalence.js';
 
 const root = '/AleriaAlmanach/public/assets/ability-icons/';
 const freya = { id: 'ksJQe8Ai4KbRE9jOAvb7', name: 'Freya Skald' };
@@ -80,4 +81,37 @@ test('all eleven ability assets have preserved prompts, original PNGs and active
     assert.equal(bytes.readUInt32BE(20), 256, job.asset);
     assert.equal(bytes[25], 6, `RGBA ${job.asset}`);
   }
+});
+
+test('all seven public personal abilities recognize old unlinked UUID copies only with one confirmed matching owner', () => {
+  const library = JSON.parse(fs.readFileSync(new URL('../data/spell-attack-library.json', import.meta.url), 'utf8'));
+  const personalIds = ['freya-arkaner-schrei', 'gildas-gewissenhafte-vorbereitung', 'gildas-schutzpflicht',
+    'gawain-liebt-duefte', 'gawain-draig-draig-knight-signet', 'wolfshorn-asgeir-border-veteran', 'wolfshorn-ylva-border-veteran'];
+  personalIds.forEach((id, index) => {
+    const current = library.allTechniques.find(item => item.id === id);
+    assert.ok(current, id);
+    const owner = { id: current.sourceCharacterId, name: current.sourceCharacter };
+    const foreign = owner.id === freya.id ? gawain : freya;
+    const old = { ...structuredClone(current), id: `570ef618-981d-4f69-8a38-${String(index + 1).padStart(12, '0')}` };
+    for (const key of ['catalogAbilityId', 'sourceAbilityId', 'icon', 'iconOverride', 'sourceCharacterId', 'sourceCharacter',
+      'ownerCharacterId', 'ownerCharacterName', 'characterId', 'characterName']) delete old[key];
+    const expected = getCharacterAbilityIconSource({ id }, owner);
+    assert.ok(expected, id);
+    assert.equal(getCharacterAbilityIconSource(old, owner), expected, id);
+    assert.equal(getCharacterAbilityIconSource({ ...old, sourceCharacterId: owner.id, sourceCharacter: owner.name }), expected, id);
+    assert.equal(getArchiveAbilityIconSource({ kind: 'ability', name: old.name, data: old, sources: [{ kind: 'character', ...owner }] }), expected, id);
+    assert.equal(getCharacterAbilityIconSource(old, foreign), '', `foreign owner: ${id}`);
+    assert.equal(getCharacterAbilityIconSource(old), '', `missing owner: ${id}`);
+    assert.equal(getCharacterAbilityIconSource({ name: old.name }, owner), '', `missing UUID: ${id}`);
+    assert.equal(getCharacterAbilityIconSource({ ...old, id: 'other-custom-ability' }, owner), '', `non-UUID identity: ${id}`);
+    assert.equal(getCharacterAbilityIconSource({ ...old, catalogAbilityId: 'another-explicit-template' }, owner), '', `different reference: ${id}`);
+    assert.equal(getCharacterAbilityIconSource({ ...old, name: `${old.name} Variante` }, owner), '', `different exact name: ${id}`);
+    assert.equal(getArchiveAbilityIconSource({ kind: 'ability', name: old.name, data: old,
+      sources: [{ kind: 'character', ...owner }, { kind: 'character', ...foreign }] }), '', `ambiguous owners: ${id}`);
+    const currentEntry = { kind: 'ability', name: current.name, data: current, builtin: true,
+      sources: [{ kind: 'character', ...owner }] };
+    const oldEntry = { kind: 'ability', name: old.name, data: old, archivedFromProfile: true,
+      sources: [{ kind: 'character', ...owner }] };
+    assert.equal(getCharacterArchiveEntrySignature(oldEntry), getCharacterArchiveEntrySignature(currentEntry), `same personal binding: ${id}`);
+  });
 });

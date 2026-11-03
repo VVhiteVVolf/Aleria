@@ -1133,6 +1133,12 @@ function getAttribute(profile, key) {
 
 // Archive copies need the same spell rules before receiving a new instance ID.
 // Keep unrelated archive metadata outside this normalized mechanical snapshot.
+// Shared entry normalization for rule catalogs and read-only archive comparisons.
+// These functions do not resolve a character or mutate its resources.
+export function normalizeCombatAbility(value = {}) { return sanitizeAbility(value); }
+export function normalizeCombatTechnique(value = {}) { return sanitizeTechnique(value); }
+export function normalizeCombatTrait(value = {}) { return sanitizeQuirk(value); }
+
 export function normalizeCombatSpell(value = {}, manaResourceId = 'mana-focus') {
   const revised = reconcileClassDamageRevisions({ magic: { spells: [value] } });
   return sanitizeSpell(revised.magic.spells[0], 0, manaResourceId);

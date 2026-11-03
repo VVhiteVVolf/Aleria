@@ -81,13 +81,24 @@ test('linked companions have one card and use current creature sheet data', () =
 
 test('saved Rossmarkt breed duplicates merge into the standard entry and preserve provenance; variants stay distinct', () => {
   const horse=STANDARD_ITEMS.find(item=>item.title==='Afol');
-  const legacy={...createArchiveMountEntry({id:horse.mountId,name:'Afol',uses:[],section:'roesser'}),builtin:false,updatedAt:'2026-09-21',description:'Gespeicherte Rassenbeschreibung'};
+  const legacy={...createArchiveMountEntry({id:horse.mountId,name:'Afol',uses:[],section:'roesser'}),builtin:false,archivedFromProfile:true,updatedAt:'2026-09-21',description:'Alte automatisch gespeicherte Rassenbeschreibung'};
   const entry=data=>normalizeCharacterArchiveEntry({kind:'register-pferde',name:data.title,data,builtin:true});
   const actual=mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([entry(horse),legacy,entry({...horse,id:'offer:custom',section:'offer'}),entry({...horse,id:'owned:a:horse',section:'owned'})]));
   assert.equal(actual.length,3);
   const standard=actual.find(item=>item.data.section==='standard');
-  assert.equal(standard.description,legacy.description);
+  assert.equal(standard.description,horse.description);
   assert.ok(standard.sources.some(source=>source.id===`rossmarkt:${horse.mountId}`));
+});
+
+test('a manually saved Rossmarkt description stays an independent user version', () => {
+  const horse=STANDARD_ITEMS.find(item=>item.title==='Afol');
+  const manual={...createArchiveMountEntry({id:horse.mountId,name:'Afol',uses:[],section:'roesser'}),builtin:false,updatedAt:'2026-09-21',description:'Eigene Rassenbeschreibung'};
+  const current=normalizeCharacterArchiveEntry({kind:'register-pferde',name:horse.title,data:horse,builtin:true});
+  const before=structuredClone(manual);
+  const actual=mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([current,manual]));
+  assert.equal(actual.length,2);
+  assert.ok(actual.some(entry=>entry.description===manual.description));
+  assert.deepEqual(manual,before);
 });
 
 test('Gawains modest quality bonuses and descriptions survive both equipment directions and match his cards', async () => {

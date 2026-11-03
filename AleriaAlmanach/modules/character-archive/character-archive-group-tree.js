@@ -14,7 +14,7 @@ export function ensureArchiveGroup(groups, type, name, parentEntry = null) {
 }
 
 export function addArchiveGroupEntry(group, entry) {
-  const key = value => value.key || value.id || `${value.kind}:${value.name}`;
+  const key = value => value.archiveViewId || value.key || value.id || `${value.kind}:${value.name}`;
   if (!group.entries.some(item => key(item) === key(entry))) group.entries.push(entry);
 }
 

@@ -8,7 +8,11 @@ const tests = [
   'character-development', 'character-development-audit', 'ability-icon-registry',
   'character-archive-catalog-integrity', 'character-archive-attack-groups',
   'character-archive-class-training', 'character-archive-query', 'character-archive-library-revision', 'combat-entry-icons',
-  'character-archive-card-presentation',
+  'character-archive-card-presentation', 'character-archive-builtin-weapon-aliases',
+  'character-archive-companion-aliases', 'character-archive-duplicate-regressions',
+  'character-archive-equivalence', 'character-archive-register-projection',
+  'character-archive-weapon-reference-projection', 'character-archive-mount-classification',
+  'character-archive-view-projection', 'character-archive-store', 'character-archive-skill-projection',
   'combat-technique-icon-ui', 'item-register', 'character-inventory-itemization'
 ].map(frontend);
 
@@ -33,7 +37,9 @@ export const CHARACTER_REFERENCE_TASKS = [{
     'AleriaAlmanach/public/assets/weapon-standards/',
     'AleriaAlmanach/modules/character-origins/', ...culturalInputs,
     'AleriaAlmanach/public/assets/character-origins/',
-    'AleriaAlmanach/modules/character-archive/',
+    'AleriaAlmanach/modules/character-archive/', 'AleriaAlmanach/styles/character-archive.css',
+    'AleriaAlmanach/modules/characters/character-profile.js',
+    'AleriaAlmanach/modules/creatures/creature-system.js',
     'AleriaAlmanach/modules/character-trait-review/reviewed-character-traits.js',
     'AleriaAlmanach/tools/character-library/',
     'AleriaAlmanach/tools/build-spell-attack-library.mjs',
