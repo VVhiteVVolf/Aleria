@@ -59,6 +59,7 @@ import {
 import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260928-equipment-art-v4';
 import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260909-dragon-parent-v2';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
+import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
 import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v4';
 import {
@@ -202,7 +203,7 @@ function getSafeImageSource(source, fallback = '') {
 }
 
 function renderEntryIcon(kind, item, className = '') {
-  const presentation = getCharacterSheetEntryIconPresentation(kind, item);
+  const presentation = getCharacterSheetEntryIconPresentation(kind, item, null, activeCharacter || {});
   const fallbackSource = getSafeImageSource(presentation.fallbackSource);
   const source = getSafeImageSource(presentation.source, fallbackSource);
   return `<span class="cp-entry-icon-frame ${escapeMarkup(className)}" aria-hidden="true"${source ? '' : ' hidden'}><img class="cp-entry-icon" data-combat-entry-icon data-combat-entry-id="${escapeMarkup(item.id || '')}" data-combat-entry-kind="${escapeMarkup(kind)}" data-combat-entry-name="${escapeMarkup(item.name || '')}"${source ? ` src="${escapeMarkup(source)}"` : ' hidden'} data-fallback-src="${escapeMarkup(fallbackSource)}" alt="" loading="lazy" decoding="async"></span>`;
@@ -236,7 +237,9 @@ function refreshArchiveLinkedEntryIcons(root = document.getElementById('cp-comba
     const item = collectionPath && getAtPath(draftProfile, collectionPath)?.find(entry => entry.id === image.dataset.combatEntryId);
     const presentation = getCharacterSheetEntryIconPresentation(
       image.dataset.combatEntryKind,
-      item || { name: image.dataset.combatEntryName }
+      item || { name: image.dataset.combatEntryName },
+      null,
+      activeCharacter || {}
     );
     if (!presentation.linked) return;
     const fallbackSource = getSafeImageSource(presentation.fallbackSource);
@@ -682,8 +685,9 @@ function renderPresentationDetailCards(collection, title, kicker, kind, addLabel
         : [getActivationLabel(item.activationType), costs].filter(Boolean).join(' · ');
       const activeWeapon = draftProfile.weapons.find(weapon => weapon.equipped) || draftProfile.weapons[0];
       const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon);
-      const damage = kind === 'technique' ? describeTechniqueDamage(item, draftProfile) : '';
-      const damageRoll = kind === 'technique' && compatible ? resolveTechniqueDamageFormula(item, activeWeapon || {}, draftProfile).toUpperCase().replace(/D/g, 'W') : '';
+      const damageContext = kind === 'technique' ? resolveCenyrTechniqueWeaponRules(draftProfile, item, activeWeapon || {}) : {};
+      const damage = kind === 'technique' ? describeTechniqueDamage(item, draftProfile, damageContext) : '';
+      const damageRoll = kind === 'technique' && compatible ? resolveTechniqueDamageFormula(item, activeWeapon || {}, draftProfile, damageContext).toUpperCase().replace(/D/g, 'W') : '';
       const mechanics = renderMechanicsSummary(item.mechanics);
       const propertyRows = kind === 'ability' || kind === 'technique'
         ? [

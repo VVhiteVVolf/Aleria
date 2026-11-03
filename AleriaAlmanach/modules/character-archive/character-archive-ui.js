@@ -1,5 +1,5 @@
 import { createCharacterArchiveIndex, queryCharacterArchive } from './character-archive-query.js?v=20260928-equipment-art-v4';
-import { renderArchiveShell, renderKindNavigation, renderStats, renderEntryDescription } from './character-archive-view.js?v=20260928-equipment-art-v4';
+import { renderArchiveShell, renderKindNavigation, renderStats, renderEntryDescription, renderEntryMeta, renderEntryReferenceLinks } from './character-archive-view.js?v=20260928-equipment-art-v4';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
 import { getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/spell-catalog.js';
 import { getSpellCatalogSchool } from '../spell-catalog/spell-catalog-schools.js';
@@ -8,9 +8,9 @@ import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-grou
 import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260928-equipment-art-v4';
 import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260928-equipment-art-v4';
 import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260928-equipment-art-v4';
+import { getCharacterArchiveOriginLinks } from './character-archive-origin-presentation.js';
+import { getCharacterArchiveEntryMeta } from './character-archive-entry-meta.js';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
-import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
-import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 import { getCharacterArchiveAttackGroups } from './character-archive-attack-groups.js?v=20260928-equipment-art-v4';
 import {
   CHARACTER_ARCHIVE_KINDS,
@@ -94,18 +94,6 @@ function getVisibleEntries() {
     && entry.data.catalogReference.revision === catalogEntry.revision) : entries;
 }
 
-function getEntryMeta(entry) {
-  const data = entry.data || {};
-  if (entry.kind === 'spell') return [Number(data.level) ? `Grad ${data.level}` : 'Zaubertrick', data.school, data.damageType].filter(Boolean);
-  if (entry.kind === 'technique') return [getCombatFormPresentation(data)?.label, describeTechniqueDamage(data), data.damageType].filter(Boolean);
-  if (entry.kind === 'attack') return [data.weaponType, data.damageFormula?.toUpperCase?.(), data.damageType].filter(Boolean);
-  if (entry.kind === 'class') return [data.baseClass ? 'Standardklasse' : (data.cultures || []).join(' · '), data.subtitle].filter(Boolean);
-  if (entry.kind === 'condition') return [data.duration, data.source].filter(Boolean);
-  if (entry.kind === 'ability') return [data.activationType, data.recovery].filter(Boolean);
-  if (entry.kind.startsWith('register-')) return [data.type, data.origin, [data.price, data.currency].filter(Boolean).join(' ')].filter(Boolean);
-  return [data.group, data.subtitle, data.appliesWhen].filter(Boolean);
-}
-
 function renderSourceBadges(entry) {
   const sources = entry.sources || [];
   const visible = sources.slice(0, 3);
@@ -115,7 +103,7 @@ function renderSourceBadges(entry) {
 function renderEntryCard(entry) {
   const kind = getCharacterArchiveKind(entry.kind);
   const image = getEntryIcon(entry);
-  const meta = getEntryMeta(entry);
+  const meta = getCharacterArchiveEntryMeta(entry);
   const pickerButton = state.picker
     ? `<button type="button" class="character-archive-primary" data-character-archive-action="select-entry" data-entry-id="${escapeHtml(entry.id)}">Hinzufügen</button>`
     : ['standard', 'offer', 'owned'].includes(entry.data?.section)
@@ -130,9 +118,9 @@ function renderEntryCard(entry) {
       ${image.source ? `<span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><i>${escapeHtml(kind.symbol)}</i></span>` : ''}
       <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>${escapeHtml(entry.data.school || 'Zauberkatalog')} · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}${renderEntryDescription(entry.description, escapeHtml)}</div>
     </div>
-    ${meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
+    ${renderEntryMeta(meta, escapeHtml)}
     ${renderSourceBadges(entry)}
-    <div class="character-archive-card-actions">${pickerButton}${rulesButton}${entry.data?.catalogReference ? `<a href="${escapeHtml(getSpellCatalogPageHref(entry.data.catalogReference))}" target="_blank" rel="noopener">Zum Zauberverzeichnis ↗</a>` : ''}${getCharacterArchiveClassLinks(entry).map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>
+    <div class="character-archive-card-actions">${pickerButton}${rulesButton}${entry.data?.catalogReference ? `<a href="${escapeHtml(getSpellCatalogPageHref(entry.data.catalogReference))}" target="_blank" rel="noopener">Zum Zauberverzeichnis ↗</a>` : ''}${renderEntryReferenceLinks([...getCharacterArchiveClassLinks(entry), ...getCharacterArchiveOriginLinks(entry)], escapeHtml)}</div>
   </article>`;
 }
 

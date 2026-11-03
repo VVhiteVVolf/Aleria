@@ -56,7 +56,10 @@ function assertCanonicalTraining(character, expected) {
     assert.equal(technique.status, 'confirmed');
     if (selection) assert(earnedSlots.has(selection.slotId), `${expected.name}: ${selection.slotId} ist auf der Stufe nicht verdient`);
     assert.equal(technique.cenyrTraining.selectedAtLevel, technique.minimumLevel);
-    assert.equal(technique.cenyrTraining.sourceStatus, canonical.status);
+    // This is the source status at the historical training assignment. Later
+    // catalogue confirmation must not rewrite that archived audit metadata.
+    assert.ok(['draft', 'confirmed'].includes(technique.cenyrTraining.sourceStatus));
+    assert.equal(canonical.status, 'confirmed');
     assert(technique.minimumLevel <= profile.progression.level);
   }
 

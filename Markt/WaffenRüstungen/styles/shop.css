@@ -450,6 +450,13 @@ input:focus {
   color: var(--iron);
 }
 
+.profile-note {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: .7rem;
+  line-height: 1.35;
+}
+
 .radar {
   width: 100%;
   max-width: 210px;

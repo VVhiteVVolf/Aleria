@@ -1,5 +1,6 @@
 import { WORLD_CONTENT_TASKS } from './world-content-tasks.mjs';
 import { ADVENTURE_SYSTEM_TASKS } from './adventure-system-tasks.mjs';
+import { CHARACTER_REFERENCE_TASKS } from './character-reference-tasks.mjs';
 import { readFileSync } from 'node:fs';
 const questCatalogInputs = JSON.parse(readFileSync(new URL('../../AleriaAlmanach/modules/quests/quest-catalog.json', import.meta.url), 'utf8')).sourceFiles || [];
 
@@ -222,7 +223,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
     inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
-    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs')]
+    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs', 'netlify/tests/reference-art-publication.test.mjs')]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,
@@ -385,6 +386,9 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/item-register/item-register-standard.js',
       'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
+      'AleriaAlmanach/modules/weapon-standards/weapon-standard-catalog.js',
+      'AleriaAlmanach/modules/weapon-standards/weapon-standard-presentation.js',
+      'AleriaAlmanach/modules/character-archive/character-archive-ability-icons.js',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
       'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
@@ -543,6 +547,7 @@ export const SITE_BUILD_TASKS = [
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]
   },
+  ...CHARACTER_REFERENCE_TASKS,
   ...WORLD_CONTENT_TASKS,
   ...ADVENTURE_SYSTEM_TASKS
 ];

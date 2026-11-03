@@ -20,7 +20,7 @@ export function hasWeaponTechniqueControl(spec = {}) {
   return getWeaponTechniqueControlTier(spec) !== 'none';
 }
 
-function trainingSteps(spec, light) {
+export function getWeaponTechniqueTrainingSteps(spec = {}, light = false) {
   if (light || spec.maximumTargets > 1) return [];
   const milestones = spec.allowedClassIds?.includes('milwr')
     ? [[6, 4], [10, 6], [15, 8]] : [[7, 4], [9, 6], [13, 8], [17, 10]];
@@ -53,8 +53,8 @@ export function createWeaponTechniqueDamageProfile(spec = {}, costs = []) {
     ...(minorPosition ? { bonusModifier: -1 } : {}),
     ...(light ? { baseDieCap: 4, lightAttack: true } : {}),
     weaponBonuses, bonusWeaponDice: 0, bonusWeaponDieCap: 12,
-    scalingSteps: trainingSteps(spec, light)
+    scalingSteps: getWeaponTechniqueTrainingSteps(spec, light)
   } };
 }
 
-export const weaponTechniqueBudgetInternals = Object.freeze({ trainingSteps });
+export const weaponTechniqueBudgetInternals = Object.freeze({ trainingSteps: getWeaponTechniqueTrainingSteps });

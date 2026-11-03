@@ -1,3 +1,6 @@
+import { getCombatTechniqueIconSource } from '../combat-styles/combat-technique-icons.js';
+import { getCharacterAbilityIconSource } from '../character-archive/character-archive-ability-icons.js';
+
 const ICON_ROOT = '../../../IconOrdner';
 const CARD_ICON_ROOT = '../../../IconOrdner/Zauberkarten Icons';
 
@@ -124,7 +127,15 @@ function getDamageAssetKey(damageType, fallback = 'Force') {
   return DAMAGE_TYPE_MAPPINGS.find(([keywords]) => keywords.some(keyword => searchText.includes(keyword)))?.[1] || fallback;
 }
 
-function getAutomaticEntryIconSource(kind, entry = {}) {
+function getAutomaticEntryIconSource(kind, entry = {}, ownerContext = {}) {
+  if (kind === 'ability') {
+    const abilityIcon = getCharacterAbilityIconSource(entry, ownerContext);
+    if (abilityIcon) return abilityIcon;
+  }
+  if (kind === 'technique' || kind === 'ability') {
+    const techniqueIcon = getCombatTechniqueIconSource(entry);
+    if (techniqueIcon) return techniqueIcon;
+  }
   const searchText = entrySearchText(entry);
   if (kind === 'spell') {
     return matchAsset(searchText, SPELL_ICON_MAPPINGS, 'Zauber Icons/Oblivion Style/OB-icon-Fortifymagic.png');
@@ -138,11 +149,11 @@ function getAutomaticEntryIconSource(kind, entry = {}) {
   return matchAsset(searchText, TRAIT_ICON_MAPPINGS, kind === 'ability' ? 'Traits Icon/Strategist.png' : 'Traits Icon/Conscientious.png');
 }
 
-export function getCombatEntryIconPresentation(kind, entry = {}) {
+export function getCombatEntryIconPresentation(kind, entry = {}, ownerContext = {}) {
   if (kind === 'spell' && entry.catalogReference) {
     return { source: String(entry.icon || ''), fallbackSource: '', custom: Boolean(entry.icon) };
   }
-  const fallbackSource = getAutomaticEntryIconSource(kind, entry);
+  const fallbackSource = getAutomaticEntryIconSource(kind, entry, ownerContext);
   const customSource = String(entry.icon || '').trim();
   return {
     source: customSource || fallbackSource,

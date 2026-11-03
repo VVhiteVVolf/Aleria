@@ -9,9 +9,9 @@ import { damageMetrics } from '../modules/combat-balance/combat-balance-metrics.
 
 test('Kontrollrettungen aller drei Kampfstile folgen derselben Waffen-Ausbildung', () => {
   const entries = listCombatTechniqueCatalog();
-  assert.equal(entries.length, 816);
+  assert.equal(entries.length, 985);
   const controls = entries.filter(entry => entry.secondarySave?.enabled);
-  assert.equal(controls.length, 137);
+  assert.equal(controls.length, 165);
   for (const technique of controls) {
     const save = technique.secondarySave;
     assert.equal(save.useWeaponAttribute, true, technique.name);

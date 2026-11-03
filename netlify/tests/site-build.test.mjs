@@ -61,8 +61,8 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('gameplay-guides'));
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
-  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
 });
 
 
@@ -184,11 +184,11 @@ test('publication never removes an unowned directory', async t => {
 });
 
 test('only private, unconsumed changes can skip an entire deploy', () => {
-  assert.equal(changesRequireBuild(['netlify/docs/build-performance.md', 'AGENTS.md']), false);
+  assert.equal(changesRequireBuild(['netlify/docs/build-performance.md']), false);
   for (const files of [['index.html'], ['Stammbäume/assets/images/portraits/person.png'],
     ['AleriaAlmanach/modules/archive/archive-dashboard.js'], ['Stammbäume/tests/geometry.test.js'],
     ['Karten/tools/build-media-library.mjs'], ['netlify/build/ignore-site-build.mjs'],
-    ['netlify.toml'], ['shared/calendar.js'], ['firebase/tests/publisher-access.test.mjs']]) {
+    ['netlify.toml'], ['AGENTS.md'], ['shared/calendar.js'], ['firebase/tests/publisher-access.test.mjs']]) {
     assert.equal(changesRequireBuild(files), true, files.join(','));
   }
 });

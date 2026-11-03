@@ -24,13 +24,13 @@ test('Derwyn has an explicit shared foundation budget and four own expert paths'
   assert.equal(getDerwynClassDefinition().pathSelection.allowedFormIds.length, 4);
 });
 
-test('each Wyrm path has eight usable weapon-specific choices and no automatic spell or free attack', () => {
+test('each Wyrm path has twelve usable weapon-specific choices and no automatic spell or free attack', () => {
   const weaponByForm = new Map([[F.flowing, 'sword'], [F.breaking, 'trident'], [F.rising, 'staff'], [F.whipping, 'morningstar']]);
   const techniques = WYRMTANZ_COMBAT_STYLE.forms.flatMap(form => form.techniques);
   assert.equal(WYRMTANZ_COMBAT_STYLE.name, 'Wyrmtanz');
   assert.equal(new Set(techniques.map(attack => attack.id)).size, techniques.length);
   for (const form of WYRMTANZ_COMBAT_STYLE.forms.filter(form => form.kind === 'path')) {
-    assert.equal(form.techniques.length, 8);
+    assert.equal(form.techniques.length, 12);
     assert(form.techniques.every(attack => attack.cultureTraining.weaponProfileIds.includes(weaponByForm.get(form.id))));
   }
   for (const attack of techniques) {

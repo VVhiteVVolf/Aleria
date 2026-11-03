@@ -89,7 +89,7 @@ function definition(config) {
       allowedFormIds: militia ? [F.militia] : SIRENENTANZ_EXPERT_PATH_IDS,
       rule: militia ? 'Nach der Grundform folgt ausschließlich die Küstenwache, Stufe 6–15.' : 'Ab Stufe 9 erster Expertenpfad ohne Slotkosten; jeder weitere Pfad kostet einen Experten-Attackenslot. Pfadboni gleichen Typs verwenden nur den höheren Wert.' },
     techniqueBudget: { total: slots.length, slots, bands: Object.fromEntries(Object.entries(config.bands).map(([band, levels]) => [band, { levels, count: levels.length }])) },
-    techniquePool: { totalSlots: slots.length, description: `${slots.length} gemeinsam verteilte Waffentechniken bis Stufe 20; Katalogoptionen sind keine zusätzlich erlernten Attacken.` },
+    techniquePool: { totalSlots: slots.length, description: 'Techniken werden einzeln aus dem erweiterten Waffen- und Formenkatalog gewählt. Mehrere Waffenwege teilen dieselben Aktionsressourcen.' },
     weaponTraining: { primary: config.primary, secondary: config.secondary, note: config.note }, weaponVariants: config.variants || [],
     trainingBranches: config.primary.map((name, index) => ({ id: `${config.classId}-weapon-${index + 1}`, name, minimumLevel: 1, status: 'draft' })),
     classFeatures: [...config.features, ARMOR_ROUTINE], combatStyleGrants: [],

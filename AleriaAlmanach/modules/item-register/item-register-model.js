@@ -101,7 +101,9 @@ export function createGrantedItem(template, { id, characterId, characterName, qu
     ownerCharacterId: characterId || '', ownerCharacterName: characterName || '', acquiredAt: now || '',
     name: template.title, type: template.type || categoryLabel(template.category),
     category: inventoryCategory(template.category), description: [template.description, template.details].filter(Boolean).join('\n\n'),
-    image: template.image || '', quantity: String(quantity), weight: String(template.hiddenMeta?.weight || ''),
+    image: template.image || '', quantity: String(quantity),
+    weight: template.category === 'waffen' && typeof template.weight === 'number' && Number.isFinite(template.weight)
+      ? String(template.weight) : String(template.hiddenMeta?.weight || ''),
     tags: (template.tags || []).join(', '), combatDefinition: template.combatDefinition ? structuredClone(template.combatDefinition) : null, equipped: false,
     inventoryUseMode: template.inventoryUseMode || 'auto', mechanicsStatus: template.mechanicsStatus || '',
     valuation: template.priceRange || null,

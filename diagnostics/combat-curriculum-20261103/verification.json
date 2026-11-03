@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "scope": "Cenyr/Vennyr martial curricula aligned with existing Teulu scope",
+  "additionalTechniques": 169,
+  "drachentanzTechniques": 378,
+  "wyrmtanzTechniques": 327,
+  "comicIconMotifs": 21,
+  "maximumAuthoredLevel": 20,
+  "militiaTrainingCap": 15,
+  "checks": {
+    "frontendCombatTests": { "passed": 752, "failed": 0, "skipped": 0, "log": "combat-tests-final.tap" },
+    "classTests": { "passed": 23, "failed": 0, "skipped": 0, "log": "class-tests-final.tap" },
+    "serverTests": { "passed": 25, "failed": 0, "skipped": 0 },
+    "totalTests": 800,
+    "productionBuild": { "result": "passed", "command": "node node_modules/vite/bin/vite.js build --configLoader native", "log": "production-build.log" },
+    "iconReproduction": "prepare-combat-technique-icons.ps1 -Check passed for all 21 icons",
+    "builtIconHashes": "all 21 public asset PNGs equal their production copies",
+    "browser": "Helwyr level 20: 176 options; Morwyr level 20: 54 options; comic icons visually inspected"
+  },
+  "liveWrites": false,
+  "pushed": false,
+  "deployed": false,
+  "limits": [
+    "Conditional environmental requirements still need the actual scene context.",
+    "Class features with mechanics:null remain manually adjudicated.",
+    "The review does not claim equal win rates across all equipment and terrain combinations."
+  ]
+}

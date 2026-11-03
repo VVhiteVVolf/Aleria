@@ -49,6 +49,23 @@
     return rarity === 'Selten' ? 'sel' : '';
   }
 
+  function weaponDamage(item) {
+    const combat = item.combatDefinition;
+    if (combat?.kind !== 'weapon') return '';
+    const dice = value => String(value || '').replace(/d/gi, 'W');
+    return dice(combat.damageFormula) + ' ' + combat.damageType
+      + (combat.versatileDamageFormula ? ' · zweihändig ' + dice(combat.versatileDamageFormula) : '');
+  }
+
+  function weaponFacts(item) {
+    const combat = item.combatDefinition;
+    if (combat?.kind !== 'weapon') return '';
+    return fact('Grundschaden', weaponDamage(item))
+      + fact('Führung', combat.properties)
+      + fact('Reichweite', combat.range)
+      + fact('Angriffsattribut', combat.attackAttribute === 'dexterity' ? 'Geschicklichkeit' : 'Kraft');
+  }
+
   function normalise(value) {
     return String(value || '')
       .toLowerCase()
@@ -97,6 +114,7 @@
       fact('Typ', item.type),
       fact('Gewicht', weight),
       fact('Material', item.material),
+      weaponFacts(item),
       '      </div>',
       '      <p class="desc">' + item.desc + '</p>',
       '      <div class="tag-row">' + item.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') + '</div>',
@@ -106,7 +124,7 @@
       '      </div>',
       '    </div>',
       '    <aside class="profile-panel">',
-      '      <h4>' + profile.title + '</h4>',
+      renderProfileHeading(profile),
       renderRadar(profile.labels, profile.values),
       renderBars(profile.labels, profile.values),
       '    </aside>',
@@ -132,12 +150,17 @@
     }
     return {
       title: 'Waffenprofil',
+      note: 'Qualitativer Vergleich · Skala 1–10',
       labels: ['Schaden', 'Durchschlag', 'Tempo', 'Reichweite', 'Handhabung', 'Vielseitigkeit'],
       values: weaponStats(item)
     };
   }
 
   function weaponStats(item) {
+    if (item.weaponDisplayProfile) {
+      return ['damage', 'penetration', 'speed', 'reach', 'handling', 'versatility']
+        .map(axis => item.weaponDisplayProfile[axis]);
+    }
     const table = {
       stahlschwert: [5, 4, 7, 5, 8, 8],
       langschwert: [6, 5, 6, 7, 6, 8],
@@ -188,6 +211,11 @@
       pavese: [10, 2, 8, 1, 8, 1]
     };
     return table[item.id] || [5, 5, 5, 5, 5, 5];
+  }
+
+  function renderProfileHeading(profile) {
+    return '<div><h4>' + profile.title + '</h4>'
+      + (profile.note ? '<p class="profile-note">' + profile.note + '</p>' : '') + '</div>';
   }
 
   function renderRadar(labels, values) {
@@ -283,12 +311,13 @@
       fact('Preis', formatPrice(item)),
       fact('Gewicht', weight),
       fact('Material', item.material),
+        weaponFacts(item),
       fact('Verzauberung', item.enchantment),
       fact('Mana', item.mana),
       '    </div>',
       '  </div>',
       '  <aside class="profile-panel modal-profile">',
-      '      <h4>' + profile.title + '</h4>',
+      renderProfileHeading(profile),
       renderRadar(profile.labels, profile.values),
       renderBars(profile.labels, profile.values),
       '  </aside>',
@@ -335,10 +364,16 @@
   function openCompare() {
     if (state.compare.length < 2) return;
     const [a, b] = state.compare;
+    const weaponRows = [a, b].some(item => item.combatDefinition?.kind === 'weapon') ? [
+      ['Grundschaden', weaponDamage(a) || '–', weaponDamage(b) || '–'],
+      ['Führung', a.combatDefinition?.properties || '–', b.combatDefinition?.properties || '–'],
+      ['Reichweite', a.combatDefinition?.range || '–', b.combatDefinition?.range || '–']
+    ] : [];
     const rows = [
       ['Bild', '<img src="' + a.image + '" alt="' + a.name + '">', '<img src="' + b.image + '" alt="' + b.name + '">'],
       ['Kategorie', a.category, b.category],
       ['Typ', a.type, b.type],
+      ...weaponRows,
       ['Seltenheit', displayRarity(a.rarity), displayRarity(b.rarity)],
       ['Gewicht', a.weight === null ? '-' : a.weight + ' kg', b.weight === null ? '-' : b.weight + ' kg'],
       ['Material', a.material, b.material],

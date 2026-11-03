@@ -1,6 +1,7 @@
 import { getCenyrClassDefinitionForProfile, getCenyrClassDefinition } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { hasEquippedCombatShield as hasEquippedShield } from '../../combat/combat-weapon-loadout.js';
 import { getDevelopmentTechniqueId } from '../../character-development/development-entry-reference.js';
+import { isCombatWeaponProfileAllowed } from '../../combat/combat-weapon-profile-family.js';
 
 const WEAPON_PROFILE_ALIASES = Object.freeze([
   ['halberd', /hellebarde/],
@@ -57,8 +58,7 @@ function validateClassAndWeapon(definition, technique, weaponProfileId, weapon =
   }
   const allowedProfiles = training.classWeaponProfiles?.[definition.classId] || [];
   if (!allowedProfiles.length) return '';
-  const actualProfile = weaponProfileId || String(weapon.weaponType || '');
-  return allowedProfiles.includes(actualProfile)
+  return isCombatWeaponProfileAllowed(allowedProfiles, weaponProfileId, weapon.weaponType)
     ? ''
     : `Benötigt eine für diese Klassenfolge zugelassene Waffe (${allowedProfiles.join(', ')}).`;
 }

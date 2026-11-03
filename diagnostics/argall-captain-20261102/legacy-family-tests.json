@@ -1,0 +1,248 @@
+{
+    "command":  "node tests/run-tests.js",
+    "exitCode":  1,
+    "total":  1246,
+    "passed":  1191,
+    "failed":  55,
+    "failedTestNamesCaptured":  55,
+    "failedTests":  [
+                        {
+                            "name":  "weist jede registrierte strikte Stammbaumakte mit fehlerhaften Layout-Ankern zurück",
+                            "category":  "chart-layout"
+                        },
+                        {
+                            "name":  "bildet das Ritterherrenhaus Tlawd mit Überlieferungslücke und silbernem Wappenrahmen ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "liefert für Haus Tlawd alle belegten Portraits lokal aus",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "führt Meirawen und Morwella als junge Zwillinge mit stimmiger Elterngeneration",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "aktualisiert Gwyllachs alte Altersangaben ohne Verlust eigener Ergänzungen oder Identitäten",
+                            "category":  "registry-upgrade"
+                        },
+                        {
+                            "name":  "verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hierarchie",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bewahrt die ursprünglichen neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "bildet Haus Falchdyn mit drei Großvätern, vier wegverheirateten Töchtern und unverheirateten Sprösslingen ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Haus Swyll baut Meredith als mittleres Kind auf, ohne sie zur Diagrammwurzel zu machen",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Swyll führt fünf Tanten, drei Onkel sowie Großtante und Großonkel exakt nach Vorgabe",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Swyll-Registryupgrade entfernt den veralteten direkten Gründerpfad zu Iestyn",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Draenmelyn-Registryupgrade ersetzt den alten Einlinien-Fokus und den leeren Zeitsprung",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Haus Pendrwn bleibt bis zu Emyrs Großvater begrenzt und lässt die gesamte junge Generation unverheiratet",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Haus Maerllys bleibt bis zu Nias Großvater begrenzt und lässt die junge Generation unverheiratet",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "Haus Tonnarth bildet Llewarchs kleine Familie mit allen Tanten-, Onkel- und Vetternzweigen ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Haus Arth vollständig mit vier strikt seriellen Zeitsprüngen und allen direkt gebundenen Hausknoten ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "liefert die neuen Wappen der Klaueninseln und Tir Gogledd als lokale PNG-Dateien aus",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "liefert alle Wappen und Regionsicons der Grauen Weite lokal als PNG aus",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "liefert alle Tal-der-Milane-Herrschaftsicons und Hauswappen lokal aus",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "liefert alle Silberinsel-Regions- und Hauswappen lokal aus",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vorhandenen Gegenakten",
+                            "category":  "cross-family-sync"
+                        },
+                        {
+                            "name":  "synchronisiert Marwolaeths vorhandene Gegenakten und korrigiert deren Lebensdaten",
+                            "category":  "cross-family-sync"
+                        },
+                        {
+                            "name":  "registriert und migriert Haus Marwolaeth genau einmal als Ritterfürstenhaus in Mathragon",
+                            "category":  "registry-upgrade"
+                        },
+                        {
+                            "name":  "migriert eine lokal gespeicherte Pendrag-Akte in die neue Mathragon-Hierarchie",
+                            "category":  "registry-upgrade"
+                        },
+                        {
+                            "name":  "registriert von Hochreuth als Ritterherrenhaus unter Goldmund und zeigt das Goldmund-Wappen am Verzeichnis",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "liefert Hochreuth-, Roden- und Goldmund-Wappen sowie alle drei belegten Portraits lokal aus",
+                            "category":  "source-projection"
+                        },
+                        {
+                            "name":  "registriert Weinlaub unter Weisenfluh und ordnet das Stammwappen vor Josiahs Familienzweigen an",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "registriert Scandyn einmalig unter Aeldrunmar und Scandmere",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "registriert Thornwick einmalig unter Talyndor und Thornholt",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "registriert Kendryck als Königshaus im Königlichen Jarltum und zeigt den gesamten Exportgraphen",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "registriert Aeldrunmars Earltumshäuser und Seolfor in der neuen Jarltumsstruktur",
+                            "category":  "registry-placement"
+                        },
+                        {
+                            "name":  "ordnet veröffentlichte Aeldrunmar-Häuser kanonisch ein und entfernt ihre statischen Doppelakten",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bewahrt beim GitHub-Ersatz die kanonische Projekt-ID und den Projektpfad",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet die Lehnspyramide von Tir na Sinsear mit Ua’Gaelach, Gallchobhair und Na’Mhuir ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Tir na Gortanna mit erloschenen Vorgängern und Somhairles Herkunft ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "ordnet Tir na Tonn mit Fir An’Tarvo und zwei unmittelbar unterstellten Lairds ein",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "ordnet Tir na Sruth mit Tir An’Cuinn, Tir An’Airgid und Ua’Amhran ein",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Dal T’Saor vollständig von Lorcan bis zur Auslöschung von 1735 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Ruin’Laidir vollständig vom unbekannten Elternpaar bis zur Generation von 1726 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Clan Mac Airt vollständig von Colman bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Ua’Choinnich vollständig von Sweeneys Eltern bis zur Generation ab 1720 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Fir An’Tarvo vom angenommenen Ahnherrn bis zur jüngsten Generation vollständig ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Ru’Gortach vom Gründer bis zu den fünf jüngsten Kindern vollständig ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Dál’Ruitheach vom Biber-Gründer bis zur Generation von 1726 vollständig ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Clan Dál’Cruthin vollständig vom Gründer bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet die Ard Frisealach vollständig vom Gründer bis zur Generation von 1728 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Ard Trodach vollständig vom Gründer bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Nic Caoimhe vollständig und matriarchal vom Gründerpaar bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Fir An’Gallchobhair vollständig vom Gründerpaar bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Clan Ua’Gaelach vollständig vom Cumhaill-Gründer bis zur Generation von 1740 ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Clan Ua’Eirce vollständig mit Überlieferungslücke, Erbfolge und Mündel ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Clan Uí Fiachrach vollständig mit Affäre, Erbfolge und korrigierter Elternschaft ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Ruin Ua Laoch vollständig mit Überlieferungslücke, Erbfolge und Mündel ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet die drei Gallchobhair-Kadetten vollständig als eigene Laird-Stammbäume ab",
+                            "category":  "family-content"
+                        },
+                        {
+                            "name":  "bildet Leitheachs sechs Herrschaftsgebiete als eigene Registerzweige ab",
+                            "category":  "registry-placement"
+                        }
+                    ],
+    "argallLegacyRegression":  {
+                                   "status":  "passed",
+                                   "exactResult":  [
+                                                       "✓ gliedert Haus Argall als kleines Bürgerhaus aus Llysfaen mit Draig-Gegenakte ein"
+                                                   ]
+                               },
+    "argallFocusedRegression":  {
+                                    "command":  "node --test --experimental-test-isolation=none tests/argall-gwynthor.test.js tests/family-chart-partnerships.test.js tests/relationship-matrix.test.js tests/family-chart-reading.test.js",
+                                    "total":  28,
+                                    "passed":  28,
+                                    "failed":  0,
+                                    "argallTests":  6
+                                },
+    "assessment":  {
+                       "baselineComparison":  "Not performed; these failures are not claimed to be preexisting.",
+                       "confirmed":  "The exact legacy Argall regression and all six focused Argall regressions passed. Failed test names target other families or shared register/layout behavior.",
+                       "limitation":  "Shared-system failures are recorded without claiming causal independence from all local changes. No unrelated systems were changed to resolve them."
+                   }
+}

@@ -44,13 +44,13 @@ const lines = [
   '',
   '> Diese Datei wird aus dem Drachentanz-Register erzeugt. Änderungen gehören in die jeweiligen Technikmodule unter `AleriaAlmanach/modules/combat-styles/drachentanz/techniques/`.',
   '',
-  `Der Katalog enthält **${techniques.length} Attacken** in **${forms.length} Formen und Pfaden**. Davon sind **${confirmedCount} historisch bestätigt** und **${techniques.length - confirmedCount} Balanceentwürfe**. Cenyr-Charakterbögen wählen passende Einträge automatisch nach Klasse, Stufe, Waffen und verfügbaren Slots; der redaktionelle Entwurfsstatus bleibt erhalten.`,
+  `Der Katalog enthält **${techniques.length} Attacken** in **${forms.length} Formen und Pfaden**. Davon sind **${confirmedCount} bestätigt** und **${techniques.length - confirmedCount} Balanceentwürfe**. Im individuellen Kaufmodus werden passende Techniken bewusst einzeln gekauft. Ältere Bögen behalten ihre bestehende Formausbildung; ein bestätigter Katalogeintrag erzeugt keinen zusätzlichen automatischen Grant.`,
   '',
   'Die Vergleichsspalten verwenden einheitlich eine Waffe mit 1W10. Sie zeigen reine Schadenswürfel ohne Attribut-, Waffen- und Klassenboni. In der Szene gilt die tatsächliche Waffe. Ältere Formen erhalten genau einen wachsenden Ausbildungswürfel. Details: [Schadensbalance](COMBAT_DAMAGE_BALANCE.md).',
   '',
   '## Klassenübersicht',
   '',
-  '| Klasse | Lernbudget | Katalogoptionen | Bestätigt und automatisch vergeben |',
+  '| Klasse | Historische Technikslots | Katalogoptionen | Explizite Grundform-Grants |',
   '| --- | ---: | ---: | ---: |'
 ];
 

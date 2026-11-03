@@ -2,6 +2,7 @@ import { getDerwynBasicTechniques } from './derwyn-techniques.js?v=20260909-drag
 export { getDerwynCenyrFoundationTechniques } from './derwyn-techniques.js?v=20260909-dragon-parent-v2';
 import { createSirenentanzTechnique } from './sirenentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { SIRENENTANZ_FORM_IDS as F } from './sirenentanz-forms.js?v=20260909-dragon-parent-v2';
+import { getWyrmtanzBasicWeaponLessons } from './wyrmtanz-weapon-lessons.js';
 
 const entry = (slug, name, level, weapon, cost, description, effect, options = {}) => ({
   slug, name, level, weapon, cost, description, effect,
@@ -9,19 +10,19 @@ const entry = (slug, name, level, weapon, cost, description, effect, options = {
 });
 const specs = {
   morwyr: [
-    entry('kurzer-wellenstoss', 'Kurzer Wellenstoß', 1, 'polearm', 'light', 'Die Partisane stößt aus ruhigem Stand nur eine Handbreit vor.', 'Schwacher Bonusangriff: 1W6 statt Waffenwürfeln; feste Boni einmal.'),
+    entry('kurzer-wellenstoss', 'Kurzer Wellenstoß', 1, 'polearm', 'light', 'Die Partisane stößt aus ruhigem Stand nur eine Handbreit vor.', 'Schwacher Bonusangriff: Waffenbasis höchstens W4 je Würfel; halbe positive feste Boni, kein Ausbildungswürfel.'),
     entry('plankenspalter', 'Plankenspalter', 2, 'axe', 'strike', 'Ein kurzer Enteraxthieb nutzt die Lücke zwischen Tauwerk und Reling.', 'Ein regulärer Treffer mit Enteraxt und begrenztem Technikbonus.'),
-    entry('leinenwurf', 'Leinenwurf', 3, 'harpoon', 'pressure', 'Der Speer wird geworfen, während die freie Leine kontrolliert ausläuft.', 'Technikschaden; nach Treffer KRF-Rettungswurf gegen 8 + KRF-Modifikator + Kompetenz. Bei Misserfolg bis 2 m heranziehen.', { requirement: 'Intakte, befestigte Leine und freier Zugweg.', manual: 'Leine, Rettungswurf und Zugweg prüfen; kein automatisches Überbordwerfen.' }),
+    entry('leinenwurf', 'Leinenwurf', 3, 'harpoon', 'pressure', 'Der Speer wird geworfen, während die freie Leine kontrolliert ausläuft.', 'Technikschaden; nach Treffer KRF-Rettungswurf gegen 10 + tatsächliches Waffenattribut + Kompetenz. Ein misslungener Rettungswurf stört den Stand einmalig.', { disruptPosition: true, requirement: 'Intakte, befestigte Leine und freier Zugweg.', manual: 'Leine und Zugweg prüfen; kein automatisches Überbordwerfen.' }),
     entry('relingwacht', 'Relingwacht', 4, 'polearm', 'guard', 'Schaft und Körper schließen die schmale Passage.', 'Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1 }),
     entry('haken-im-tau', 'Haken im Tau', 5, 'axe', 'pressure', 'Der Axtkopf zieht die gegnerische Waffenlinie kurz zur Seite.', 'Technikschaden; ein misslungener KRF-Rettungswurf gibt dem Ziel −1 Angriff bis zum Ende seines nächsten Beitrags.', { penalty: 1 }),
     entry('bugbrecher', 'Bugbrecher', 6, 'polearm', 'committed', 'Ein ganzer Körperschritt trägt die Partisane durch die Deckung.', 'Kräftiger Grundabschluss mit Technikschaden; kein weiterer Treffer.'),
-    entry('kehrender-enterhieb', 'Kehrender Enterhieb', 7, 'axe', 'flowing', 'Die Axt folgt einer Drehung hinter die eigene Schulter.', 'Technikschaden; anschließend bis 2 m freie Eigenbewegung innerhalb der verfügbaren Bewegung.', { manual: 'Freien Bewegungsweg und verbleibende Bewegung prüfen.' }),
+    entry('kehrender-enterhieb', 'Kehrender Enterhieb', 7, 'axe', 'flowing', 'Die Axt folgt einer Drehung hinter die eigene Schulter.', 'Technikschaden; anschließend bis 2 m freie Eigenbewegung innerhalb der verfügbaren Bewegung.', { position: true }),
     entry('harpunenanker', 'Harpunenanker', 8, 'harpoon', 'preparation', 'Die Harpune wird an einer sicheren Stelle angesetzt und der Wurf vorbereitet.', 'Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Kein sofortiger Harpunenwurf.', { noDamage: true, aim: true }),
     entry('kehrende-partisane', 'Kehrende Partisane', 7, 'polearm', 'strike', 'Der lange Schaft führt die Spitze ruhig in die neue Linie.', 'Ein regulärer Partisanentreffer mit Aufbau-Technikbonus.'),
     entry('flutwurf', 'Flutwurf', 8, 'harpoon', 'pressure', 'Der Wurf trifft aus tiefem Stand gegen die gegnerische Waffenlinie.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 })
   ],
   rhyfelwyr: [
-    entry('kurzer-anschlag', 'Kurzer Anschlag', 1, 'heavyOrSword', 'light', 'Ein knapper Schlag mit verkürztem Griff prüft die Deckung.', 'Schwacher Bonusangriff: 1W6 statt Waffenwürfeln.'),
+    entry('kurzer-anschlag', 'Kurzer Anschlag', 1, 'heavyOrSword', 'light', 'Ein knapper Schlag mit verkürztem Griff prüft die Deckung.', 'Schwacher Bonusangriff: Waffenbasis höchstens W4 je Würfel; halbe positive feste Boni, kein Ausbildungswürfel.'),
     entry('felsenschlag', 'Felsenschlag', 2, 'heavy', 'strike', 'Die Waffe trifft mit dem Gewicht des Körpers hinter dem Griff.', 'Ein Treffer mit Waffenwürfeln und begrenztem Technikbonus.'),
     entry('geschlossene-kante', 'Geschlossene Kante', 3, 'heavyOrSword', 'guard', 'Die Waffe bleibt quer vor der offenen Flanke.', 'Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1 }),
     entry('schildbrecheransatz', 'Schildbrecheransatz', 4, 'heavy', 'pressure', 'Der Schlag drückt gegen den Rand der gegnerischen Deckung.', 'Technikschaden; Zielverteidigung für diesen Angriff −1. Kein Schild wird zerstört.', { defenseModifier: -1 }),
@@ -31,7 +32,7 @@ const specs = {
     entry('eisenatem', 'Eisenatem', 8, 'heavy', 'preparation', 'Der Kämpfer setzt den Stand neu und hält die schwere Waffe dicht.', 'Kein Schaden; +1 RK und +1 Angriff bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1, aim: true })
   ],
   ceidwyn: [
-    entry('gischtpfeil', 'Gischtpfeil', 1, 'shortbow', 'light', 'Ein kurzer Pfeilflug stört den ersten Schritt des Gegners.', 'Schwacher Bonusangriff mit 1W6; ein Pfeil wird benötigt.'),
+    entry('gischtpfeil', 'Gischtpfeil', 1, 'shortbow', 'light', 'Ein kurzer Pfeilflug stört den ersten Schritt des Gegners.', 'Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel; ein Pfeil wird benötigt.'),
     entry('relingbolzen', 'Relingbolzen', 2, 'crossbow', 'strike', 'Die Armbrust wird ruhig an der Deckung vorbeigeführt.', 'Regulärer Technikschuss; geladene Armbrust und ein Bolzen erforderlich.'),
     entry('saebel-der-gasse', 'Säbel der Gasse', 3, 'sabre', 'strike', 'Die Klinge zieht einen engen Bogen durch die Deckpassage.', 'Regulärer Nahkampftreffer mit Säbelwürfeln; kein Fernkampfbonus.'),
     entry('dreizackwacht', 'Dreizackwacht', 4, 'trident', 'pressure', 'Die drei Spitzen halten den Gegner aus der eigenen Linie.', 'Nahkampfschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 }),
@@ -43,7 +44,7 @@ const specs = {
     entry('flutbolzen', 'Flutbolzen', 8, 'crossbow', 'pressure', 'Die Armbrust wird aus ruhigem Stand an die gegnerische Deckung geführt.', 'Technikschaden; −1 Zielverteidigung nur für diesen Schuss.', { defenseModifier: -1 })
   ],
   rhiddwyr: [
-    entry('kurzer-weghieb', 'Kurzer Weghieb', 1, 'rider', 'light', 'Ein kurzer Schlag hält den Gegner vom Sattel oder Stand fern.', 'Schwacher Bonusangriff mit 1W6; auch zu Fuß möglich.'),
+    entry('kurzer-weghieb', 'Kurzer Weghieb', 1, 'rider', 'light', 'Ein kurzer Schlag hält den Gegner vom Sattel oder Stand fern.', 'Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel; auch zu Fuß möglich.'),
     entry('hueter-des-pfads', 'Hüter des Pfads', 2, 'rider', 'strike', 'Der Ritter setzt einen festen Schlag aus eigener Deckung.', 'Regulärer Nahkampftreffer; auch abgesessen nutzbar.'),
     entry('kuestenbolzen', 'Küstenbolzen', 3, 'crossbow', 'strike', 'Ein Bolzen hält einen Gegner auf Abstand, bevor der Nahkampf beginnt.', 'Regulärer Armbrustschuss; Nachladen und Munition bleiben erforderlich.'),
     entry('streifender-anritt', 'Streifender Anritt', 4, 'riderPolearm', 'flowing', 'Der Reiter führt die Spitze seitlich an der gegnerischen Linie vorbei.', 'Ein Techniktreffer aus dem Sattel. Anlauf mindestens 3 m; kein kostenloser Rossangriff.', { mounted: true }),
@@ -56,14 +57,14 @@ const specs = {
     entry('bolzen-des-reisenden', 'Bolzen des Reisenden', 8, 'crossbow', 'pressure', 'Ein sorgfältiger Bolzen bedrängt den Gegner aus sicherem Stand.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 })
   ],
   milwr: [
-    entry('kurzer-wachstoss', 'Kurzer Wachstoß', 1, 'militia', 'light', 'Ein kurzer Stoß hält den unmittelbaren Abstand.', 'Schwacher Bonusangriff mit 1W6.'),
+    entry('kurzer-wachstoss', 'Kurzer Wachstoß', 1, 'militia', 'light', 'Ein kurzer Stoß hält den unmittelbaren Abstand.', 'Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel.'),
     entry('plankenschritt', 'Plankenschritt', 2, 'militia', 'strike', 'Die Wache schlägt mit festem Schritt aus ihrer Linie.', 'Regulärer Techniktreffer mit der geführten Nahwaffe.'),
     entry('gedeckter-stand', 'Gedeckter Stand', 3, 'militia', 'guard', 'Der Milwr schließt die Lücke zwischen Waffe und Körper.', 'Kein Schaden; +1 RK für einen eigenen Beitrag.', { noDamage: true, guard: 1 }),
     entry('schulterdruck', 'Schulterdruck', 4, 'militia', 'pressure', 'Waffe und Schulter drücken die gegnerische Linie fort.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 }),
     entry('wacher-griff', 'Wacher Griff', 5, 'militia', 'preparation', 'Der Griff wird verkürzt und das Ziel ruhig beobachtet.', 'Kein Schaden; +1 Angriff für einen eigenen Beitrag.', { noDamage: true, aim: true }),
     entry('letzter-grundhieb', 'Letzter Grundhieb', 6, 'militia', 'committed', 'Die Grundfolge endet in einem entschlossenen, einzelnen Hieb.', 'Kräftiger Grundabschluss ohne Zusatzattacke.'),
     entry('kuestenwall', 'Küstenwall', 6, 'militia', 'preparation', 'Die Wache macht sich schmal hinter ihrer Waffenlinie.', 'Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag.', { formId: F.militia, noDamage: true, guard: 1, aim: true }),
-    entry('enge-planke', 'Enge Planke', 8, 'militia', 'flowing', 'Der Hieb wird aus einem kleinen Seitenschritt geführt.', 'Technikschaden; danach bis 1 m freie Eigenbewegung.', { formId: F.militia, manual: 'Verfügbare Bewegung und freien Weg prüfen.' }),
+    entry('enge-planke', 'Enge Planke', 8, 'militia', 'flowing', 'Der Hieb wird aus einem kleinen Seitenschritt geführt.', 'Technikschaden; danach bis 1 m freie Eigenbewegung.', { formId: F.militia, position: true }),
     entry('rauer-hafen', 'Rauer Hafen', 10, 'militia', 'pressure', 'Eine schlichte Bindung erschwert dem Gegner seine Antwort.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { formId: F.militia, penalty: 1 }),
     entry('wachtwechsel', 'Wachtwechsel', 12, 'militia', 'preparation', 'Der Milwr übernimmt die Deckung neben einem Kameraden.', 'Kein Schaden; +2 RK für einen eigenen Beitrag. Kein kostenloser Waffenwechsel.', { formId: F.militia, noDamage: true, guard: 2 }),
     entry('stand-der-alten-wache', 'Stand der alten Wache', 15, 'militia', 'finisher', 'Die vollständige Erfahrung der Küstenwache trägt einen letzten festen Hieb.', 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kostet zusätzlich eine Besondere Aktion.', { formId: F.militia, guard: 1 })
@@ -72,5 +73,5 @@ const specs = {
 
 export function getSirenentanzBasicTechniques(classId) {
   if (classId === 'derwyn') return getDerwynBasicTechniques();
-  return (specs[classId] || []).map(spec => createSirenentanzTechnique(classId, spec));
+  return [...(specs[classId] || []).map(spec => createSirenentanzTechnique(classId, spec)), ...getWyrmtanzBasicWeaponLessons(classId)];
 }

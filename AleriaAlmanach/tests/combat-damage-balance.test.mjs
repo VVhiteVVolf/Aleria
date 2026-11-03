@@ -30,8 +30,8 @@ class MaximumDice {
   async rollSavingThrow({ modifier }) { return { natural: 1, total: 1 + modifier, keptDice: [1] }; }
 }
 
-test('alle 325 Drachentanz-Attacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
-  assert.equal(attacks.length, 325);
+test('alle 378 Drachentanz-Attacken bleiben mit jeder regulären Waffengröße innerhalb ihrer Ausbildungsbudgets', () => {
+  assert.equal(attacks.length, 378);
   for (const attack of attacks) for (const formula of ['1d4', '1d6', '1d8', '1d10', '1d12', '2d6']) {
     const stats = totals(resolveTechniqueDamageFormula(attack, { damageFormula: formula }, { progression: { level: attack.minimumLevel } }));
     const points = attack.costs.reduce((sum, cost) => sum + cost.amount * (cost.resourceId === 'aura-focus' ? 2 : 1), 0);

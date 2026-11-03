@@ -1,12 +1,13 @@
 import { createSirenentanzTechnique } from './sirenentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { DERWYN_FORM_IDS as F } from './sirenentanz-forms.js?v=20260909-dragon-parent-v2';
 import { DRACHENTANZ_FORM_IDS as D } from '../drachentanz/drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { getWyrmtanzBasicWeaponLessons, getWyrmtanzExpertWeaponLessons } from './wyrmtanz-weapon-lessons.js';
 
 const lesson = (slug, name, level, weapon, cost, description, effect, extra = {}) =>
   ({ slug, name, level, weapon, cost, description, effect, ...extra });
 
 const foundation = [
-  lesson('leiser-stab', 'Leiser Stab', 1, 'derwynStaff', 'light', 'Ein kurzer Schaftschlag prüft die Entfernung.', 'Ein schwacher physischer Bonusangriff mit 1W6; keine Magie.'),
+  lesson('leiser-stab', 'Leiser Stab', 1, 'derwynStaff', 'light', 'Ein kurzer Schaftschlag prüft die Entfernung.', 'Ein schwacher physischer Bonusangriff mit höchstens W4 je Waffenwürfel; keine Magie.'),
   lesson('erste-spitze', 'Erste Spitze', 2, 'trident', 'strike', 'Der Dreizack folgt geradlinig dem ersten sicheren Schritt.', 'Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus.'),
   lesson('erster-morgenstern', 'Erster Morgenstern', 3, 'morningstar', 'strike', 'Der kurze Hieb kehrt eng vor den eigenen Körper zurück.', 'Ein regulärer physischer Treffer; kein pauschales Umgehen von Rüstung.'),
   lesson('stab-der-schwelle', 'Stab der Schwelle', 4, 'derwynStaff', 'guard', 'Der Schaft schließt den Zugang vor dem Körper.', 'Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags.', { noDamage: true, guard: 1 }),
@@ -15,7 +16,7 @@ const foundation = [
 ];
 
 const cenyrFoundation = [
-  lesson('jungdrache-erste-schuppe', 'Erste Schuppe', 1, 'sword', 'light', 'Der kurze Schwertschnitt prüft die Deckung.', 'Ein schwacher Bonusangriff mit 1W6.'),
+  lesson('jungdrache-erste-schuppe', 'Erste Schuppe', 1, 'sword', 'light', 'Der kurze Schwertschnitt prüft die Deckung.', 'Ein schwacher Bonusangriff mit höchstens W4 je Waffenwürfel.'),
   lesson('jungdrache-ruhige-klaue', 'Ruhige Klaue', 2, 'sword', 'strike', 'Ein gerader Lehrhieb verbindet sicheren Griff und Stand.', 'Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus.'),
   lesson('jungdrache-geschlossene-hut', 'Geschlossene Hut', 3, 'sword', 'guard', 'Die Klinge bleibt schräg vor dem Körper.', 'Kein Schaden; +1 RK für einen eigenen Beitrag.', { noDamage: true, guard: 1 }),
   lesson('jungdrache-kleine-wende', 'Kleine Wende', 4, 'sword', 'flowing', 'Ein kurzer Hieb endet in einer gedeckten Wendung.', 'Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag.', { guard: 1 }),
@@ -47,7 +48,7 @@ const paths = {
     lesson('drang-der-zinken', 'Drang der Zinken', 9, 'trident', 'pressure', 'Die drei Spitzen drängen gegen die fremde Waffenlinie.', 'Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag.', { penalty: 1 }),
     lesson('brandender-stich', 'Brandender Stich', 10, 'trident', 'strike', 'Ein gesetzter Stoß folgt dem Wechsel von Nähe und Abstand.', 'Ein regulärer Techniktreffer mit Dreizackwürfeln.'),
     lesson('ruhende-zinken', 'Ruhende Zinken', 11, 'trident', 'preparation', 'Die Spitzen stehen ruhig vor der nächsten Stoßlinie.', 'Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag.', { noDamage: true, guard: 1, aim: true }),
-    lesson('umspuelende-spitze', 'Umspülende Spitze', 13, 'trident', 'flowing', 'Ein kurzer Stoß kehrt hinter die schützenden Zinken zurück.', 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag.', { guard: 1 }),
+    lesson('umspuelende-spitze', 'Umspülende Spitze', 12, 'trident', 'flowing', 'Ein kurzer Stoß kehrt hinter die schützenden Zinken zurück.', 'Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag.', { guard: 1 }),
     lesson('brandungskeil', 'Brandungskeil', 13, 'trident', 'specialStrike', 'Die mittlere Spitze sucht eine schmale Lücke in der Deckung.', 'Technikschaden gegen −1 Zielverteidigung nur für diesen Wurf.', { defenseModifier: -1 }),
     lesson('fesselnde-zinken', 'Fesselnde Zinken', 15, 'trident', 'pressure', 'Der feste Schaft bindet die gegnerische Führung ohne magische Fesseln.', 'Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag.', { penalty: 2 }),
     lesson('brandende-sperrlinie', 'Brandende Sperrlinie', 17, 'trident', 'finisher', 'Ein entschlossener Stoß schließt den Raum hinter den Zinken.', 'Ein starker Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag.', { guard: 1 }),
@@ -77,9 +78,9 @@ const paths = {
 
 const create = (spec, formId) => createSirenentanzTechnique('derwyn', { ...spec, formId });
 export function getDerwynBasicTechniques() {
-  return [...foundation.map(spec => create(spec, F.foundation)), ...creative.map(spec => create(spec, F.creative))];
+  return [...foundation.map(spec => create(spec, F.foundation)), ...creative.map(spec => create(spec, F.creative)), ...getWyrmtanzBasicWeaponLessons('derwyn')];
 }
 export function getDerwynCenyrFoundationTechniques() { return cenyrFoundation.map(spec => create(spec, D.jungdrache)); }
 export function getDerwynExpertTechniques() {
-  return Object.entries(paths).flatMap(([formId, specs]) => specs.map(spec => create(spec, formId)));
+  return [...Object.entries(paths).flatMap(([formId, specs]) => specs.map(spec => create(spec, formId))), ...getWyrmtanzExpertWeaponLessons('derwyn')];
 }

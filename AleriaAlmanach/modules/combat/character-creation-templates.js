@@ -2,6 +2,7 @@
 // Die Vorlagen enthalten nur strukturierte Startdaten; individuelle Regeln bleiben im Charakterbogen editierbar.
 import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { applyArmorBalance } from '../character-equipment/equipment-armor-rules.js';
+import { CHARACTER_CULTURAL_ORIGINS } from '../character-origins/cultural-origin-catalog.js';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 
@@ -41,44 +42,7 @@ const armor = (id, name, training, baseArmorClass, dexterityMode, dexterityCap =
   equipped: true
 });
 
-export const CHARACTER_ANCESTRY_TEMPLATES = Object.freeze([
-  {
-    id: 'cenyr',
-    label: 'Cenyr',
-    aliases: ['Cenyri'],
-    description: 'Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.',
-    attributeBonuses: { strength: 2, charisma: 1 },
-    skillProficiencies: ['Überzeugen', 'Auftreten', 'Religion'],
-    culturalTraits: ['Cenyri Kultur', 'Höfische und religiöse Prägung']
-  },
-  {
-    id: 'alben',
-    label: 'Alben',
-    aliases: [],
-    description: 'Alben sind beweglich, naturverbunden und für ein Leben zwischen Wildnis und Tierwelt geschult.',
-    attributeBonuses: { dexterity: 2, wisdom: 1 },
-    skillProficiencies: ['Mit Tieren umgehen', 'Naturkunde', 'Überleben'],
-    culturalTraits: ['Albische Naturverbundenheit']
-  },
-  {
-    id: 'aldrimarer',
-    label: 'Aldrimarer',
-    aliases: [],
-    description: 'Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.',
-    attributeBonuses: { strength: 2, constitution: 1 },
-    skillProficiencies: ['Athletik', 'Mit Tieren umgehen', 'Überleben'],
-    culturalTraits: ['Aldrimarische Widerstandskraft']
-  },
-  {
-    id: 'nordmann',
-    label: 'Nordmann',
-    aliases: ['Nordmänner'],
-    description: 'Nordmänner sind widerstandsfähig, kraftvoll und an entbehrungsreiche Lebensräume gewöhnt.',
-    attributeBonuses: { constitution: 2, strength: 1 },
-    skillProficiencies: ['Überleben', 'Einschüchtern', 'Körperbeherrschung'],
-    culturalTraits: ['Nordische Zähigkeit']
-  }
-]);
+export const CHARACTER_ANCESTRY_TEMPLATES = CHARACTER_CULTURAL_ORIGINS;
 
 export const CHARACTER_BACKGROUND_TEMPLATES = Object.freeze([
   {

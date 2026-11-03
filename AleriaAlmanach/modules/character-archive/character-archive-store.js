@@ -1,4 +1,5 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260928-equipment-art-v4';
+import { loadBuiltinCharacterArchiveSnapshot } from './character-archive-catalog.js?v=20260928-equipment-art-v4';
+import { reconcileCharacterArchiveLibraryEntries } from './character-archive-library-revision.js';
 import { detachCatalogSpell } from '../spell-catalog/spell-catalog.js';
 import {
   cloneArchiveValue,
@@ -14,6 +15,7 @@ const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';
 
 const state = {
   builtin: [],
+  libraryRevision: '',
   remote: [],
   live: [],
   register: [],
@@ -46,9 +48,10 @@ function dispatchChanged() {
 }
 
 function mergeRemoteEntries(entries, { replace = true } = {}) {
-  state.remote = replace
+  const merged = replace
     ? mergeCharacterArchiveEntries(entries, readLocalEntries())
     : mergeCharacterArchiveEntries(state.remote, entries);
+  state.remote = reconcileCharacterArchiveLibraryEntries(merged, { entries: state.builtin, libraryRevision: state.libraryRevision });
   writeLocalEntries(state.remote);
   dispatchChanged();
 }
@@ -85,11 +88,12 @@ export async function ensureCharacterArchiveLoaded() {
   if (state.loaded) return getCharacterArchiveEntries();
   if (!state.loadingPromise) {
     state.loadingPromise = Promise.all([
-      loadBuiltinCharacterArchiveEntries(),
+      loadBuiltinCharacterArchiveSnapshot(),
       loadRemoteEntries()
-    ]).then(([builtin, remote]) => {
-      state.builtin = builtin;
-      state.remote = mergeCharacterArchiveEntries(remote, readLocalEntries());
+    ]).then(([snapshot, remote]) => {
+      state.builtin = snapshot.entries;
+      state.libraryRevision = snapshot.libraryRevision;
+      state.remote = reconcileCharacterArchiveLibraryEntries(mergeCharacterArchiveEntries(remote, readLocalEntries()), snapshot);
       state.register = extractItemRegisterArchiveEntries();
       state.loaded = true;
       writeLocalEntries(state.remote);

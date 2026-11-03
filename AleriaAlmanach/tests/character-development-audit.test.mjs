@@ -20,16 +20,23 @@ import { renderCreationClassOptions } from '../modules/character-development/cre
 import { createCharacterArchiveProfileItem, extractCharacterArchiveEntries } from '../modules/character-archive/character-archive-model.js';
 import { getDevelopmentTraitId, findDevelopmentArchiveDuplicate } from '../modules/character-development/development-entry-reference.js';
 import { resolveCenyrTechniqueWeaponRules } from '../modules/classes/cenyr/cenyr-technique-weapon-rules.js';
+import { getHuskarlBasicTechniques } from '../modules/combat-styles/huskarl/huskarl-basic-techniques.js';
 import { sanitizeCharacterCombatProfile as serverSanitize, getSpellcastingValues as serverSpells } from '../../firebase/functions/src/generated/combat/combat-profile-model.js';
 
 const base=()=>sanitizeCharacterCombatProfile({templateSelections:{classId:'teulu'},hitPoints:{hitDie:10,current:4}});
 const choose=ids=>previewCharacterLevelUp(base(),{targetLevel:1,traitIds:ids.map(id=>`development-trait-${id}`)});
 const catalog=getDevelopmentAttackCatalog();
 
-test('only released techniques can be bought; draft catalogues are never promoted to confirmed',()=>{
- assert.equal(catalog.length,193);assert.ok(catalog.every(e=>e.technique.live===true&&e.technique.status==='confirmed'));
- const draft='cenyr-milwr::combat-style-drachentanz-milwr-jungdrache-erster-soldhieb';
- const result=previewCharacterLevelUp(base(),{targetLevel:5,purchaseIds:[draft]});
+test('confirmed purchase options do not require automatic grants; draft catalogues stay unavailable',()=>{
+ assert.ok(catalog.length>=1028);assert.ok(catalog.every(e=>e.technique.status==='confirmed'));
+ const confirmed='cenyr-milwr::combat-style-drachentanz-milwr-jungdrache-erster-soldhieb';
+ const offer=catalog.find(entry=>entry.id===confirmed);
+ assert.ok(offer);assert.equal(offer.technique.live,false);
+ const bought=previewCharacterLevelUp(base(),{targetLevel:5,purchaseIds:[confirmed]});
+ assert.equal(bought.ready,true);assert.ok(bought.profile.techniques.some(entry=>entry.id===offer.technique.id));
+ const draft=getHuskarlBasicTechniques('skjoldr').find(entry=>entry.status==='draft');
+ assert.ok(draft);
+ const result=previewCharacterLevelUp(base(),{targetLevel:5,purchaseIds:[`aldrimar-skjoldr::${draft.id}`]});
  assert.equal(result.ready,false);assert.equal(result.profile.techniques.length,0);
 });
 

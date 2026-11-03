@@ -4,6 +4,14 @@ import { actionDescription } from './combat-arsenal-model.js?v=20261015-scenario
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderWeaponCrest } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
 import { getActionWeaponSections } from './combat-action-taxonomy.js?v=20261015-scenarios-v2';
+import { getCombatTechniqueIconSource } from '../../combat-styles/combat-technique-icons.js';
+
+function renderTechniqueIcon(choice, detail = false) {
+  if (choice.action.kind !== 'technique') return '';
+  const entry = choice.entry || choice.action;
+  const source = entry.icon || getCombatTechniqueIconSource(entry);
+  return source ? `<img class="combat-arsenal-technique-icon${detail ? ' combat-arsenal-technique-icon-detail' : ''}" src="${escape(source)}" alt="" loading="lazy" decoding="async">` : '';
+}
 
 export function renderArsenalNavigation(groups) {
   return [...groups].map(([key, choices]) => `<div class="combat-arsenal-nav-group"><button type="button" data-arsenal-section="${escape(key)}" aria-pressed="false"><span data-arsenal-label>${escape(choices[0].group)}</span><b data-arsenal-count>${choices.length}</b></button>${getActionWeaponSections(choices).map(section => `<button type="button" class="combat-arsenal-nav-weapon" data-arsenal-section="${escape(section.key)}" aria-pressed="false">${renderWeaponCrest(section.weapon)}<span data-arsenal-label>${escape(section.weapon.label)}</span><b data-arsenal-count>${section.choices.length}</b></button>`).join('')}</div>`).join('');
@@ -17,7 +25,7 @@ export function renderArsenalCard(actor, choice, selectedId) {
   const { action, label, group, groupKey, minimumLevel, weaponCategory } = choice;
   return `<article class="combat-arsenal-card" data-arsenal-card="${escape(action.id)}" data-group-key="${escape(groupKey)}" data-weapon-category="${escape(weaponCategory?.id)}"${action.compatible === false ? ' data-unavailable' : ''}>
     <button type="button" class="combat-arsenal-inspect" data-combat-action-option="${escape(action.id)}" aria-pressed="${action.id === selectedId}">
-      <small class="combat-arsenal-card-group">${escape(group)}</small><span class="combat-arsenal-card-title">${renderWeaponCrest(weaponCategory)}<strong>${escape(label)}</strong></span>
+      <small class="combat-arsenal-card-group">${escape(group)}</small><span class="combat-arsenal-card-title">${renderTechniqueIcon(choice) || renderWeaponCrest(weaponCategory)}<strong>${escape(label)}</strong></span>
       <small class="combat-arsenal-card-weapon">${escape(weaponCategory?.label || 'Waffenbereich')}${weaponCategory?.mounted ? ' · Beritten' : ''}</small>
       <span class="combat-arsenal-description">${escape(actionDescription(choice) || 'Wirkung und Voraussetzungen in der Detailansicht.')}</span>
       <span class="combat-arsenal-card-bottom"><small>${minimumLevel ? `Stufe ${minimumLevel}` : 'Grundhandlung'}${action.compatible === false ? ' · Gesperrt' : ''}</small>${renderActionCosts(actor, action)}</span>
@@ -31,7 +39,7 @@ export function renderArsenalDetail(actor, choice) {
   const { action, label, group, weaponCategory } = choice;
   const preview = { ...actor, selectedAction: action, weapon: action.weapon || actor.weapon, actionResolutionMode: action.resolutionMode, attackModifier: action.attackModifier ?? actor.attackModifier, damageModifier: action.damageModifier ?? actor.damageModifier };
   const unavailableTechnique = action.kind === 'technique' && action.compatible === false;
-  return `<div class="combat-arsenal-detail-body"><button type="button" class="combat-arsenal-back" data-action="back-to-arsenal">← Zur Übersicht</button><small>${escape(group)}</small><h3>${escape(label)}</h3>${renderWeaponCrest(weaponCategory, { withLabel: true })}<p class="combat-arsenal-weapon-requirements">${escape(weaponCategory?.title || '')}</p>
+  return `<div class="combat-arsenal-detail-body"><button type="button" class="combat-arsenal-back" data-action="back-to-arsenal">← Zur Übersicht</button><small>${escape(group)}</small><h3>${renderTechniqueIcon(choice, true)}${escape(label)}</h3>${renderWeaponCrest(weaponCategory, { withLabel: true })}<p class="combat-arsenal-weapon-requirements">${escape(weaponCategory?.title || '')}</p>
     <div class="combat-arsenal-detail-costs"><span>Reguläre Kosten</span>${renderActionCosts(actor, action)}</div>
     ${unavailableTechnique ? '<p class="combat-action-notice">Die Kampfwerte werden mit einer passenden Waffenführung aktualisiert.</p>' : action.formula || action.nonDamaging || action.kind === 'weapon' ? renderCombatValueStrip(preview) : ''}
     ${renderActionDetails(preview, { open: true })}

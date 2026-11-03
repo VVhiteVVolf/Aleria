@@ -10,6 +10,7 @@ import { selectHealthTrait } from '../character-health/health-trait-policy.js';
 import { getHealthTraitOrigin } from '../character-health/health-trait-catalog.js';
 import { getPsychologicalTraitOrigin, PSYCHOLOGICAL_TRAIT_NOTE } from './development-psychological-traits.js';
 import { selectPsychologicalTrait } from './development-psychological-policy.js';
+import { getCombatTechniqueIconSource } from '../combat-styles/combat-technique-icons.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const sign = n => n > 0 ? `+${n}` : n;
 export function renderDevelopmentAttacks(profile, preview) {
@@ -19,7 +20,10 @@ export function renderDevelopmentAttacks(profile, preview) {
   const choices = getDevelopmentAttackCatalog().filter(e => (e.minimumLevel <= plan.targetLevel || plan.purchaseIds.includes(e.id)) && !known.has(e.technique.id))
     .filter(e => !plan.purchaseClass || (plan.purchaseClass === 'selected' ? plan.purchaseIds.includes(e.id) : plan.purchaseClass === 'own' ? isOwnDevelopmentClass(profile, e) : e.curriculumId === plan.purchaseClass))
     .filter(e => !needle || `${e.technique.name} ${e.className} ${e.formName}`.toLocaleLowerCase('de').includes(needle));
-  return choices.length ? choices.map(e => `<label class="development-attack"><input type="checkbox" data-development-purchase="${escape(e.id)}"${plan.purchaseIds.includes(e.id) ? ' checked' : ''}><span><b>${escape(e.technique.name)}</b><small>${escape(e.className)} · ${escape(e.formName)} · ab ${e.minimumLevel}</small>${e.minimumLevel>plan.targetLevel?'<small>Die Zielstufe ist für diesen Kauf zu niedrig. Auswahl hier abwählen oder Zielstufe erhöhen.</small>':''}<small>${escape(e.technique.description || e.technique.notes || '')}</small></span><strong>${getDevelopmentAttackCost(profile, e, plan.development)} P</strong></label>`).join('') : '<p>Keine passenden neuen Attacken. Klasse oder Suche ändern.</p>';
+  return choices.length ? choices.map(e => {
+    const icon = e.technique.icon || getCombatTechniqueIconSource(e.technique);
+    return `<label class="development-attack"><input type="checkbox" data-development-purchase="${escape(e.id)}"${plan.purchaseIds.includes(e.id) ? ' checked' : ''}>${icon ? `<img class="development-attack-icon" src="${escape(icon)}" alt="" loading="lazy" decoding="async">` : ''}<span><b>${escape(e.technique.name)}</b><small>${escape(e.className)} · ${escape(e.formName)} · ab ${e.minimumLevel}</small>${e.minimumLevel>plan.targetLevel?'<small>Die Zielstufe ist für diesen Kauf zu niedrig. Auswahl hier abwählen oder Zielstufe erhöhen.</small>':''}<small>${escape(e.technique.description || e.technique.notes || '')}</small></span><strong>${getDevelopmentAttackCost(profile, e, plan.development)} P</strong></label>`;
+  }).join('') : '<p>Keine passenden neuen Attacken. Klasse oder Suche ändern.</p>';
 }
 export function renderDevelopmentBalance(preview) {
   const b = preview.balance;

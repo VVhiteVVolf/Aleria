@@ -19,6 +19,16 @@ for (const name of ['normalizer', 'extractors']) {
 }
 const sources = vm.runInContext('ITEM_DB_MARKET_SOURCES', context);
 for (const source of sources) vm.runInContext(await readFile(resolve(frontend, source.path), 'utf8'), context);
+// Weight is authored in kg in this exact versioned source. Do not infer weights
+// from arbitrary item prose or reinterpret the metadata of other market goods.
+const authoredArmoryWeights = new Map(vm.runInContext('window.ARMORY_DATA?.items || []', context)
+  .filter(item => item.category === 'Waffen' && typeof item.weight === 'number' && Number.isFinite(item.weight) && item.weight > 0)
+  .map(item => [String(item.id), item.weight]));
+function authoredWeaponWeight(item) {
+  const source = item.sourceRefs?.[0];
+  return item.category === 'waffen' && source?.market === 'Waffen & Rüstungen'
+    ? authoredArmoryWeights.get(source.sourceId) ?? null : null;
+}
 const candidates = vm.runInContext('itemDbCollectMarketCandidates()', context);
 const mounts = extractRossmarktEntries(await readFile(resolve(root, 'Markt/Rossmarkt/Rossmarkt.html'), 'utf8'));
 const slug = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-');
@@ -57,6 +67,7 @@ const items = reconcileMarketItems([...candidates.filter(candidate => candidate.
     ...(candidate.mountId ? { mountId: candidate.mountId, mountSection: candidate.mountSection } : {}),
     image: resolveStandardItemImage({ id }, normalized.image),
     title: umlauts(normalized.title), type: umlauts(normalized.type), description: umlauts(normalized.description),
+    ...(authoredWeaponWeight(candidate) != null ? { weight: authoredWeaponWeight(candidate) } : {}),
     details: umlauts(normalized.details), tags: normalized.tags.map(umlauts),
     priceRange, stock: null, combatDefinition: candidate.combatDefinition || null, updatedAt: 0,
     sourceRefs: candidate.sourceRefs, hiddenMeta: { ...normalized.hiddenMeta, rarity: umlauts(normalized.hiddenMeta.rarity) } };
@@ -64,7 +75,7 @@ const items = reconcileMarketItems([...candidates.filter(candidate => candidate.
 items.push(...buildHouseArmorTemplates());
 for (let index = 0; index < items.length; index++) items[index] = withRegisterGameplayDefaults(items[index]);
 for (const item of items) {
-  const definition = normalizeItemDefinition({ ...item, kind: 'shared', weight: null,
+  const definition = normalizeItemDefinition({ ...item, kind: 'shared', weight: authoredWeaponWeight(item),
     description: [item.description, item.details].filter(Boolean).join('\n\n') }, { id: item.id, revision: 'draft' });
   item.definitionRef = { id: item.id, revision: createHash('sha256').update(itemDefinitionContent(definition)).digest('hex').slice(0, 24) };
   item.definitionKind = 'shared';

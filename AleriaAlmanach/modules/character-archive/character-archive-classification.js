@@ -2,6 +2,8 @@ import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-p
 import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
 import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js?v=20260913-morgorn-names-v1';
+import { getCulturalOriginTemplate } from '../character-origins/cultural-origin-catalog.js';
+import { getSkillIdentity, SKILL_DEFINITIONS } from '../skill-checks/skill-definitions.js';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const classById = new Map(ARCHIVE_PAGE_CLASSES.flatMap(entry => [
@@ -9,6 +11,7 @@ const classById = new Map(ARCHIVE_PAGE_CLASSES.flatMap(entry => [
   ...entry.cultures.map(culture => [normalizeArchiveSearchText(`${culture}-${entry.id}`), entry])
 ]));
 const mountByName = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
+const mountById = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [entry.id, entry]));
 const genericHumanNames = new Set(['mensch', 'menschen', 'human']);
 
 export function getArchiveClassDefinition(entry = {}) {
@@ -23,7 +26,7 @@ export function createArchiveMountEntry(mount) {
   return normalizeCharacterArchiveEntry({
     id: `rossmarkt--${mount.id}`, kind, name: mount.name, description: mount.description, icon: mount.image,
     tags: [mount.type, mount.origin, ...mount.uses],
-    data: { ...mount, category: kind === 'register-pferde' ? 'pferde' : 'vieh', title: mount.name },
+    data: { ...mount, archiveMountId: mount.id, category: kind === 'register-pferde' ? 'pferde' : 'vieh', title: mount.name },
     sources: [{ kind: 'item-register', id: `rossmarkt:${mount.id}`, name: 'Rossmarkt' }], builtin: true
   });
 }
@@ -37,7 +40,11 @@ export function classifyCharacterArchiveEntries(entries = []) {
   return entries.flatMap(entry => {
     // Register variants and individual possessions own their identity and imagery.
     // A matching breed name must never replace their stable ID or custom fields.
-    if (['standard', 'offer', 'owned'].includes(entry.data?.section)) return [entry];
+    if (['standard', 'offer', 'owned'].includes(entry.data?.section)) {
+      const mount = entry.data.section === 'standard' && mountById.get(entry.data.mountId);
+      return [mount ? normalizeCharacterArchiveEntry({ ...entry, data: { ...mount, ...entry.data,
+        origin: entry.data.origin || mount.origin } }) : entry];
+    }
     if (entry.kind === 'combat-style' && entry.archivedFromProfile
       && !entry.data?.id && !entry.data?.archivePlacement) return [];
     if (entry.kind === 'class') {
@@ -50,10 +57,17 @@ export function classifyCharacterArchiveEntries(entries = []) {
           pageLinks: page.pageLinks, ...(cultureClassProfiles.length ? { cultureClassProfiles } : {}) }
       })];
     }
+    if (entry.kind === 'skill') {
+      const skill = SKILL_DEFINITIONS.find(skill => skill.id === getSkillIdentity(entry.name));
+      return [skill ? normalizeCharacterArchiveEntry({ ...entry, name: skill.label, data: { ...entry.data, name: skill.label } }) : entry];
+    }
     const name = normalizeArchiveSearchText(entry.name);
     const mount = mountByName.get(name);
     if (entry.kind === 'ancestry') {
       if (genericHumanNames.has(name)) return [];
+      const origin = getCulturalOriginTemplate(entry.data?.id) || getCulturalOriginTemplate(entry.name);
+      if (origin) return [normalizeCharacterArchiveEntry({ ...entry, name: origin.label,
+        icon: entry.iconOverride || origin.icon, data: { ...origin, ...entry.data, id: origin.id, name: origin.label, icon: entry.iconOverride || origin.icon } })];
       if (mount) {
         const canonical = mountEntry(mount);
         return [{ ...canonical, sources: [...canonical.sources, ...(entry.sources || [])] }];

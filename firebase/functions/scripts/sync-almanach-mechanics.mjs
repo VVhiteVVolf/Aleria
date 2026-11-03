@@ -107,6 +107,9 @@ const files = [
   'combat/combat-ammunition.js',
   'combat/combat-profile-context.js',
   'combat/combat-profile-model.js',
+  // Keep the selectable reference packages available to backend validation and
+  // parity checks, even though profile reads do not grant creation templates.
+  'combat/character-creation-templates.js',
   'combat/combat-hit-point-progression.js',
   'combat/combat-profile-resolver.js',
   'combat/combat-resource-progression.js',

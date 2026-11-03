@@ -173,6 +173,12 @@ export const HELWYR_FOUNDATION_TECHNIQUES = Object.freeze(HELWYR_BRANCHES.flatMa
 }))));
 
 export const BARDDWYR_FOUNDATION_TECHNIQUES = Object.freeze([
+  foundation({ slug: 'barddwyr-jungdrache-antwortvers', name: 'Antwortvers', minimumLevel: 2,
+    description: 'Ein schlichter Schwertkonter beantwortet die gegnerische Eröffnung.', effect: 'Reaktionsangriff mit Technikschaden.',
+    costs: ['reaction'], allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['sword'] }, branchId: 'barddwyr-sword', weaponTypes: ['sword'] }),
+  foundation({ slug: 'barddwyr-jungdrache-abschlusshieb', name: 'Abschlusshieb der Strophe', minimumLevel: 6,
+    description: 'Die verkürzte Schwertlehre endet in einem einzelnen entschlossenen Hieb.', effect: 'Verstärkter Technikschaden nach dem gemeinsamen Kostenbudget.',
+    costs: ['action', 'special-action'], allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['sword'] }, branchId: 'barddwyr-sword', weaponTypes: ['sword'] }),
   foundation({ slug: 'barddwyr-jungdrache-auftaktstich', name: 'Auftaktstich', minimumLevel: 1,
     description: 'Ein leichter Rapierstoß setzt Tempo und Abstand wie den ersten Schlag eines Liedes.', effect: 'Verursacht Technikschaden und erlaubt 1 Meter Eigenbewegung.', activationType: 'bonus-action', costs: ['bonus-action'], effects: [movementEffect('barddwyr-auftakt', 1, 'move', 'self')], allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['rapier'] }, branchId: 'barddwyr-rapier', weaponTypes: ['sword'] }),
   foundation({ slug: 'barddwyr-jungdrache-synkope', name: 'Synkope der Klinge', minimumLevel: 2,

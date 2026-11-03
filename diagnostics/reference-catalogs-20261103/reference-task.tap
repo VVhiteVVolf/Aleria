@@ -1,0 +1,959 @@
+# character-reference-catalogs started 2026-11-03T00:05:16.4605361Z
+# command 1: node AleriaAlmanach/scripts/build-weapon-standards.mjs --check
+35 neue Waffenstandards; 16 bestehende Waffen mit sichtbaren Regelwerten.
+# exit 0
+# command 2: node AleriaAlmanach/scripts/check-weapon-standard-art.mjs
+35 weapon standards verified: 512px RGBA, source/script/manifest/asset hashes match.
+# exit 0
+# command 3: node AleriaAlmanach/scripts/check-ability-icons.mjs
+11 ability icon sources and active RGBA PNGs verified.
+# exit 0
+# command 4: node AleriaAlmanach/scripts/build-item-register.mjs --check
+304 Standardgüter, 186 länderspezifische Vorlagen, Version a552199792df875e
+# exit 0
+# command 5: node AleriaAlmanach/tools/build-spell-attack-library.mjs --check
+Bibliothek geprüft: 31 Zauber, 396 Techniken/Fähigkeiten (E:\Aleria\AleriaAlmanach\data\spell-attack-library.json)
+# exit 0
+# command 6: node --test --experimental-test-isolation=none AleriaAlmanach/tests/weapon-standard-expansion.test.mjs AleriaAlmanach/tests/weapon-standard-art.test.mjs AleriaAlmanach/tests/combat-weapon-profile-family.test.mjs AleriaAlmanach/tests/vennyr-technique-weapon-rules.test.mjs AleriaAlmanach/tests/wyrmtanz-weapon-curriculum.test.mjs AleriaAlmanach/tests/standard-tool-artwork.test.mjs AleriaAlmanach/tests/equipment-standards-2026-11.test.mjs AleriaAlmanach/tests/cultural-origin-catalog.test.mjs AleriaAlmanach/tests/character-creation.test.mjs AleriaAlmanach/tests/character-development.test.mjs AleriaAlmanach/tests/character-development-audit.test.mjs AleriaAlmanach/tests/ability-icon-registry.test.mjs AleriaAlmanach/tests/character-archive-catalog-integrity.test.mjs AleriaAlmanach/tests/character-archive-attack-groups.test.mjs AleriaAlmanach/tests/character-archive-class-training.test.mjs AleriaAlmanach/tests/character-archive-query.test.mjs AleriaAlmanach/tests/character-archive-library-revision.test.mjs AleriaAlmanach/tests/combat-entry-icons.test.mjs AleriaAlmanach/tests/combat-technique-icon-ui.test.mjs AleriaAlmanach/tests/item-register.test.mjs AleriaAlmanach/tests/character-inventory-itemization.test.mjs
+TAP version 13
+# Subtest: personal ability artwork requires the stable ability ID and its documented owner
+ok 1 - personal ability artwork requires the stable ability ID and its documented owner
+  ---
+  duration_ms: 1.7861
+  type: 'test'
+  ...
+# Subtest: Gawain ring artwork does not become a generic ring-bearer picture
+ok 2 - Gawain ring artwork does not become a generic ring-bearer picture
+  ---
+  duration_ms: 0.1935
+  type: 'test'
+  ...
+# Subtest: shared recovery, rage and companions use shared motifs across characters
+ok 3 - shared recovery, rage and companions use shared motifs across characters
+  ---
+  duration_ms: 0.161
+  type: 'test'
+  ...
+# Subtest: archive owner sources resolve personal icons without changing source records
+ok 4 - archive owner sources resolve personal icons without changing source records
+  ---
+  duration_ms: 1.0361
+  type: 'test'
+  ...
+# Subtest: explicit individual icons retain priority in character and archive presentations
+ok 5 - explicit individual icons retain priority in character and archive presentations
+  ---
+  duration_ms: 0.9895
+  type: 'test'
+  ...
+# Subtest: all eleven ability assets have preserved prompts, original PNGs and active 256px PNGs
+ok 6 - all eleven ability assets have preserved prompts, original PNGs and active 256px PNGs
+  ---
+  duration_ms: 3.8316
+  type: 'test'
+  ...
+# Subtest: ascending form and its attacks are nested only beneath the flying dragon, including filtered searches
+ok 7 - ascending form and its attacks are nested only beneath the flying dragon, including filtered searches
+  ---
+  duration_ms: 130.8487
+  type: 'test'
+  ...
+# Subtest: canonical Drachentanz keeps every Cenyr attack under class, style and form
+ok 8 - canonical Drachentanz keeps every Cenyr attack under class, style and form
+  ---
+  duration_ms: 94.2299
+  type: 'test'
+  ...
+# Subtest: the attack archive routes class forms only to their permitted curricula
+ok 9 - the attack archive routes class forms only to their permitted curricula
+  ---
+  duration_ms: 85.7485
+  type: 'test'
+  ...
+# Subtest: filtered attack retains its canonical parents even when those are not visible search results
+ok 10 - filtered attack retains its canonical parents even when those are not visible search results
+  ---
+  duration_ms: 1.3324
+  type: 'test'
+  ...
+# Subtest: new archive styles and forms can be selected and resolve through the same hierarchy
+ok 11 - new archive styles and forms can be selected and resolve through the same hierarchy
+  ---
+  duration_ms: 1.1678
+  type: 'test'
+  ...
+# Subtest: weapons group by actual weapon, and explicit weapon attacks are children of that weapon
+ok 12 - weapons group by actual weapon, and explicit weapon attacks are children of that weapon
+  ---
+  duration_ms: 0.8951
+  type: 'test'
+  ...
+# Subtest: combat abilities remain with their owners; explicit personal placement overrides previous form
+ok 13 - combat abilities remain with their owners; explicit personal placement overrides previous form
+  ---
+  duration_ms: 0.34
+  type: 'test'
+  ...
+# Subtest: all base classes precede cultural classes; aliases merge and shared Milwr belongs to both cultures
+ok 14 - all base classes precede cultural classes; aliases merge and shared Milwr belongs to both cultures
+  ---
+  duration_ms: 1.1221
+  type: 'test'
+  ...
+# Subtest: horse breeds never become peoples; current Rossmarkt prices, images and origins replace old context tables
+ok 15 - horse breeds never become peoples; current Rossmarkt prices, images and origins replace old context tables
+  ---
+  duration_ms: 177.8689
+  type: 'test'
+  ...
+# Subtest: legacy spell icons reset once; future manual assignments and explicit clearing survive merge and reload
+ok 16 - legacy spell icons reset once; future manual assignments and explicit clearing survive merge and reload
+  ---
+  duration_ms: 1.4856
+  type: 'test'
+  ...
+# Subtest: CK2 suggestions cover actual archived traits and reference existing local files
+ok 17 - CK2 suggestions cover actual archived traits and reference existing local files
+  ---
+  duration_ms: 29.4886
+  type: 'test'
+  ...
+# Subtest: editor rejects ambiguous placement and a form from a different style
+ok 18 - editor rejects ambiguous placement and a form from a different style
+  ---
+  duration_ms: 15.6352
+  type: 'test'
+  ...
+# Subtest: canonical form and technique identities never collapse different entries with the same label
+ok 19 - canonical form and technique identities never collapse different entries with the same label
+  ---
+  duration_ms: 0.4121
+  type: 'test'
+  ...
+# Subtest: breed identity is stable before register loading, while offers and owned horses remain independent
+ok 20 - breed identity is stable before register loading, while offers and owned horses remain independent
+  ---
+  duration_ms: 1.056
+  type: 'test'
+  ...
+# Subtest: weapon standards remain separate from class and personal weapons of the same name
+ok 21 - weapon standards remain separate from class and personal weapons of the same name
+  ---
+  duration_ms: 0.483
+  type: 'test'
+  ...
+# Subtest: all confirmed Vennyr purchase techniques appear under the correct class and form
+ok 22 - all confirmed Vennyr purchase techniques appear under the correct class and form
+  ---
+  duration_ms: 6.0034
+  type: 'test'
+  ...
+# Subtest: ancestry aliases use canonical culture art and skill aliases use the actual skill icon
+ok 23 - ancestry aliases use canonical culture art and skill aliases use the actual skill icon
+  ---
+  duration_ms: 0.4576
+  type: 'test'
+  ...
+# Subtest: the public library reads only confirmed current records and never touches an unknown private record
+ok 24 - the public library reads only confirmed current records and never touches an unknown private record
+  ---
+  duration_ms: 1.0855
+  type: 'test'
+  ...
+# Subtest: generated library contains current public abilities, preserving Gafyr identity and retired Gawain corrections
+ok 25 - generated library contains current public abilities, preserving Gafyr identity and retired Gawain corrections
+  ---
+  duration_ms: 39.7654
+  type: 'test'
+  ...
+# Subtest: personal abilities retain stable identity and their actual owner through archive and sheet copies
+ok 26 - personal abilities retain stable identity and their actual owner through archive and sheet copies
+  ---
+  duration_ms: 1.2649
+  type: 'test'
+  ...
+# Subtest: raw live characters use the same current class attacks in the archive and the scene without writing their record
+ok 27 - raw live characters use the same current class attacks in the archive and the scene without writing their record
+  ---
+  duration_ms: 792.5918
+  type: 'test'
+  ...
+# Subtest: stored archive entries retire only canonical old IDs and preserve manual icon and source metadata
+ok 28 - stored archive entries retire only canonical old IDs and preserve manual icon and source metadata
+  ---
+  duration_ms: 0.541
+  type: 'test'
+  ...
+# Subtest: versioned library reconciliation retires automatic rows and refreshes current rules without changing its inputs
+ok 29 - versioned library reconciliation retires automatic rows and refreshes current rules without changing its inputs
+  ---
+  duration_ms: 0.4702
+  type: 'test'
+  ...
+# Subtest: explicit archive edits, manual artwork and ambiguous user-owned rows survive a retired library source
+ok 30 - explicit archive edits, manual artwork and ambiguous user-owned rows survive a retired library source
+  ---
+  duration_ms: 0.3102
+  type: 'test'
+  ...
+# Subtest: offline or legacy unversioned source loading cannot retire cached entries
+ok 31 - offline or legacy unversioned source loading cannot retire cached entries
+  ---
+  duration_ms: 0.1293
+  type: 'test'
+  ...
+# Subtest: archive bootstrap and later backend snapshots reconcile automatic local copies without backend writes
+ok 32 - archive bootstrap and later backend snapshots reconcile automatic local copies without backend writes
+  ---
+  duration_ms: 1794.0451
+  type: 'test'
+  ...
+# Subtest: a shared template appears under every applicable source instead of only the first
+ok 33 - a shared template appears under every applicable source instead of only the first
+  ---
+  duration_ms: 0.6042
+  type: 'test'
+  ...
+# Subtest: search combines words across names, rules and sources with German normalization
+ok 34 - search combines words across names, rules and sources with German normalization
+  ---
+  duration_ms: 0.2271
+  type: 'test'
+  ...
+# Subtest: pickers preserve exact character-sheet collection membership despite archive grouping
+ok 35 - pickers preserve exact character-sheet collection membership despite archive grouping
+  ---
+  duration_ms: 0.2433
+  type: 'test'
+  ...
+# Subtest: sorting uses numeric German names and chronological dates without modifying the index
+ok 36 - sorting uses numeric German names and chronological dates without modifying the index
+  ---
+  duration_ms: 0.2162
+  type: 'test'
+  ...
+# Subtest: ein leerer Charakterbogen besitzt die vollständige Schema-11-Grundlage
+ok 37 - ein leerer Charakterbogen besitzt die vollständige Schema-11-Grundlage
+  ---
+  duration_ms: 4.0522
+  type: 'test'
+  ...
+# Subtest: der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und Klassen
+ok 38 - der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und Klassen
+  ---
+  duration_ms: 0.1612
+  type: 'test'
+  ...
+# Subtest: alle neuen Alben- und Aldrimar-Klassen besitzen gültige Startausrüstung
+ok 39 - alle neuen Alben- und Aldrimar-Klassen besitzen gültige Startausrüstung
+  ---
+  duration_ms: 6.4115
+  type: 'test'
+  ...
+# Subtest: die vier universellen Klassen sind korrekt an Mana, Fokus und Paktpunkte angebunden
+ok 40 - die vier universellen Klassen sind korrekt an Mana, Fokus und Paktpunkte angebunden
+  ---
+  duration_ms: 1.3697
+  type: 'test'
+  ...
+# Subtest: Punktekauf beginnt bei acht und blockiert Ausgaben über 27 Punkte
+ok 41 - Punktekauf beginnt bei acht und blockiert Ausgaben über 27 Punkte
+  ---
+  duration_ms: 5.595
+  type: 'test'
+  ...
+# Subtest: 4W6 streicht exakt den niedrigsten Würfel
+ok 42 - 4W6 streicht exakt den niedrigsten Würfel
+  ---
+  duration_ms: 0.1965
+  type: 'test'
+  ...
+# Subtest: Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung
+ok 43 - Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung
+  ---
+  duration_ms: 21.4006
+  type: 'test'
+  ...
+# Subtest: AleriaGPT erhält Vorlagen, Ausbildungen und alle Zaubergrade ohne Boni doppelt anzuwenden
+ok 44 - AleriaGPT erhält Vorlagen, Ausbildungen und alle Zaubergrade ohne Boni doppelt anzuwenden
+  ---
+  duration_ms: 18.2604
+  type: 'test'
+  ...
+# Subtest: Starthilfe verwendet denselben Stufenkauf mit negativem Saldo und reversiblen Traits
+ok 45 - Starthilfe verwendet denselben Stufenkauf mit negativem Saldo und reversiblen Traits
+  ---
+  duration_ms: 92.7789
+  type: 'test'
+  ...
+# Subtest: alle Klassen lassen individuellen Besitz und Ausrüstungszustand unverändert
+ok 46 - alle Klassen lassen individuellen Besitz und Ausrüstungszustand unverändert
+  ---
+  duration_ms: 273.5149
+  type: 'test'
+  ...
+# Subtest: confirmed purchase options do not require automatic grants; draft catalogues stay unavailable
+ok 47 - confirmed purchase options do not require automatic grants; draft catalogues stay unavailable
+  ---
+  duration_ms: 47.8418
+  type: 'test'
+  ...
+# Subtest: paid training can be restored without replacing its old price or original class receipt
+ok 48 - paid training can be restored without replacing its old price or original class receipt
+  ---
+  duration_ms: 7.7071
+  type: 'test'
+  ...
+# Subtest: skill identities work in character totals, scene checks and AI without changing base training
+ok 49 - skill identities work in character totals, scene checks and AI without changing base training
+  ---
+  duration_ms: 13.9382
+  type: 'test'
+  ...
+# Subtest: arcane focus penalizes weapons only and giant blood does not add spell damage
+ok 50 - arcane focus penalizes weapons only and giant blood does not add spell damage
+  ---
+  duration_ms: 17.9201
+  type: 'test'
+  ...
+# Subtest: fire phobia recognizes typed damage effects on primary and secondary saves
+ok 51 - fire phobia recognizes typed damage effects on primary and secondary saves
+  ---
+  duration_ms: 12.0323
+  type: 'test'
+  ...
+# Subtest: nonstacking weakness, resistance, expertise and advantage receive only one balance valuation
+ok 52 - nonstacking weakness, resistance, expertise and advantage receive only one balance valuation
+  ---
+  duration_ms: 17.2757
+  type: 'test'
+  ...
+# Subtest: legacy personal traits are not replaced or charged twice merely by opening the level assistant
+ok 53 - legacy personal traits are not replaced or charged twice merely by opening the level assistant
+  ---
+  duration_ms: 63.8088
+  type: 'test'
+  ...
+# Subtest: same-level edits keep attacks and resources while updating experience and pool selections
+ok 54 - same-level edits keep attacks and resources while updating experience and pool selections
+  ---
+  duration_ms: 4.6496
+  type: 'test'
+  ...
+# Subtest: existing characters open creation in preserve mode; fresh resets remain explicit
+ok 55 - existing characters open creation in preserve mode; fresh resets remain explicit
+  ---
+  duration_ms: 11.244
+  type: 'test'
+  ...
+# Subtest: class foundation preserves spell/focus/pact/celestial routing without adding equipment or spells
+ok 56 - class foundation preserves spell/focus/pact/celestial routing without adding equipment or spells
+  ---
+  duration_ms: 37.2637
+  type: 'test'
+  ...
+# Subtest: every catalogue trait has source and web images and survives the browser/server profile boundary
+ok 57 - every catalogue trait has source and web images and survives the browser/server profile boundary
+  ---
+  duration_ms: 118.7084
+  type: 'test'
+  ...
+# Subtest: class skills are suggestions; only explicit manual choices or accepting suggestions applies them
+ok 58 - class skills are suggestions; only explicit manual choices or accepting suggestions applies them
+  ---
+  duration_ms: 30.0116
+  type: 'test'
+  ...
+# Subtest: multiple classes and a custom education persist, supply own-class prices and never supply gear
+ok 59 - multiple classes and a custom education persist, supply own-class prices and never supply gear
+  ---
+  duration_ms: 12.1358
+  type: 'test'
+  ...
+# Subtest: archived catalogue traits retain their identity and exact duplicates consolidate visibly
+ok 60 - archived catalogue traits retain their identity and exact duplicates consolidate visibly
+  ---
+  duration_ms: 15.1742
+  type: 'test'
+  ...
+# Subtest: archived techniques retain paid class requirements and multi-class archive entries stay separate
+ok 61 - archived techniques retain paid class requirements and multi-class archive entries stay separate
+  ---
+  duration_ms: 13.832
+  type: 'test'
+  ...
+# Subtest: multi-level preview preserves source, existing attacks and spent resources without automatic techniques
+ok 62 - multi-level preview preserves source, existing attacks and spent resources without automatic techniques
+  ---
+  duration_ms: 32.4972
+  type: 'test'
+  ...
+# Subtest: own and foreign attacks use configurable costs and negative balances never gate purchases
+ok 63 - own and foreign attacks use configurable costs and negative balances never gate purchases
+  ---
+  duration_ms: 35.8438
+  type: 'test'
+  ...
+# Subtest: unknown or premature attacks are rejected independently of the balance
+ok 64 - unknown or premature attacks are rejected independently of the balance
+  ---
+  duration_ms: 23.4244
+  type: 'test'
+  ...
+# Subtest: traits are reversible, do not mutate base skill training, and persist mechanics
+ok 65 - traits are reversible, do not mutate base skill training, and persist mechanics
+  ---
+  duration_ms: 16.2571
+  type: 'test'
+  ...
+# Subtest: fire phobia doubles fire damage and only penalizes an actual fire saving throw
+ok 66 - fire phobia doubles fire damage and only penalizes an actual fire saving throw
+  ---
+  duration_ms: 8.9967
+  type: 'test'
+  ...
+# Subtest: every catalogue trait survives a profile roundtrip; conditional penalties and weapon bonuses work
+ok 67 - every catalogue trait survives a profile roundtrip; conditional penalties and weapon bonuses work
+  ---
+  duration_ms: 111.0291
+  type: 'test'
+  ...
+# Subtest: manual level changes and editing at maximum level do not acquire attacks
+ok 68 - manual level changes and editing at maximum level do not acquire attacks
+  ---
+  duration_ms: 11.8645
+  type: 'test'
+  ...
+# Subtest: twenty physical traits include the requested ten and use the same body mechanics on browser and server
+ok 69 - twenty physical traits include the requested ten and use the same body mechanics on browser and server
+  ---
+  duration_ms: 166.4156
+  type: 'test'
+  ...
+# Subtest: same-level edits apply custom resource changes and can reactivate a selected trait
+ok 70 - same-level edits apply custom resource changes and can reactivate a selected trait
+  ---
+  duration_ms: 5.6014
+  type: 'test'
+  ...
+# Subtest: additional phobias, talents, affinities and vulnerabilities use actual save and damage contexts
+ok 71 - additional phobias, talents, affinities and vulnerabilities use actual save and damage contexts
+  ---
+  duration_ms: 56.5544
+  type: 'test'
+  ...
+# Subtest: trade values follow explicit estimates, legacy values and register ranges without inventing a purchase receipt
+ok 72 - trade values follow explicit estimates, legacy values and register ranges without inventing a purchase receipt
+  ---
+  duration_ms: 2.1182
+  type: 'test'
+  ...
+# Subtest: inventory and register resolve the same image by equipment or template identity, without changing the stored instance
+ok 73 - inventory and register resolve the same image by equipment or template identity, without changing the stored instance
+  ---
+  duration_ms: 1.4893
+  type: 'test'
+  ...
+# Subtest: four coin denominations round-trip legacy fractional copper and exact penny transfers
+ok 74 - four coin denominations round-trip legacy fractional copper and exact penny transfers
+  ---
+  duration_ms: 1.2546
+  type: 'test'
+  ...
+# Subtest: classic editor preserves pennies, card copy, equipment and companion links through a double save
+ok 75 - classic editor preserves pennies, card copy, equipment and companion links through a double save
+  ---
+  duration_ms: 10.4675
+  type: 'test'
+  ...
+# Subtest: linked companions have one card and use current creature sheet data
+ok 76 - linked companions have one card and use current creature sheet data
+  ---
+  duration_ms: 1.5032
+  type: 'test'
+  ...
+# Subtest: saved Rossmarkt breed duplicates merge into the standard entry and preserve provenance; variants stay distinct
+ok 77 - saved Rossmarkt breed duplicates merge into the standard entry and preserve provenance; variants stay distinct
+  ---
+  duration_ms: 0.6515
+  type: 'test'
+  ...
+# Subtest: Gawains modest quality bonuses and descriptions survive both equipment directions and match his cards
+ok 78 - Gawains modest quality bonuses and descriptions survive both equipment directions and match his cards
+  ---
+  duration_ms: 91.2825
+  type: 'test'
+  ...
+# Subtest: ordnet Duncans Eigenschaften passenden Trait-Icons zu
+ok 79 - ordnet Duncans Eigenschaften passenden Trait-Icons zu
+  ---
+  duration_ms: 0.4943
+  type: 'test'
+  ...
+# Subtest: ordnet Zauber, Zustände und Regelwerte ihren Bildbibliotheken zu
+ok 80 - ordnet Zauber, Zustände und Regelwerte ihren Bildbibliotheken zu
+  ---
+  duration_ms: 0.4907
+  type: 'test'
+  ...
+# Subtest: leitet aus Auflösungsart und Rettungswurf-Attribut das passende Angriffs-/Rettungswurf-Icon ab (nicht mehr den Schadenstyp)
+ok 81 - leitet aus Auflösungsart und Rettungswurf-Attribut das passende Angriffs-/Rettungswurf-Icon ab (nicht mehr den Schadenstyp)
+  ---
+  duration_ms: 0.2648
+  type: 'test'
+  ...
+# Subtest: leitet aus Dauer-Text und Konzentration das passende Dauer-Icon ab
+ok 82 - leitet aus Dauer-Text und Konzentration das passende Dauer-Icon ab
+  ---
+  duration_ms: 0.2928
+  type: 'test'
+  ...
+# Subtest: respektiert ein explizites Zaubericon und behält einen automatischen Fallback
+ok 83 - respektiert ein explizites Zaubericon und behält einen automatischen Fallback
+  ---
+  duration_ms: 0.131
+  type: 'test'
+  ...
+# Subtest: canonical martial icons survive sheet and archive projections while explicit artwork wins
+ok 84 - canonical martial icons survive sheet and archive projections while explicit artwork wins
+  ---
+  duration_ms: 1.0721
+  type: 'test'
+  ...
+# Subtest: class pages show martial icons and explain individual purchases with the current damage progression
+ok 85 - class pages show martial icons and explain individual purchases with the current damage progression
+  ---
+  duration_ms: 16.856
+  type: 'test'
+  ...
+# Subtest: purchase choices and arsenal cards render the technique artwork without changing choice identities
+ok 86 - purchase choices and arsenal cards render the technique artwork without changing choice identities
+  ---
+  duration_ms: 2.0826
+  type: 'test'
+  ...
+# Subtest: a confirmed Morwyr purchase displays its new icon and executes its paid axe attack
+ok 87 - a confirmed Morwyr purchase displays its new icon and executes its paid axe attack
+  ---
+  duration_ms: 25.5268
+  type: 'test'
+  ...
+# Subtest: weapon-family access is narrow and keeps bow lengths, harpoons and specialized blades distinct
+ok 88 - weapon-family access is narrow and keeps bow lengths, harpoons and specialized blades distinct
+  ---
+  duration_ms: 0.1984
+  type: 'test'
+  ...
+# Subtest: Cenyr sword training accepts real normalized sword sizes without rewriting profile identities
+ok 89 - Cenyr sword training accepts real normalized sword sizes without rewriting profile identities
+  ---
+  duration_ms: 24.8124
+  type: 'test'
+  ...
+# Subtest: actual rapier and halberd variants retain their own critical and target rules after the family lookup
+ok 90 - actual rapier and halberd variants retain their own critical and target rules after the family lookup
+  ---
+  duration_ms: 40.9289
+  type: 'test'
+  ...
+# Subtest: all existing countries and albic origins use one equal cultural budget, not new biological species
+ok 91 - all existing countries and albic origins use one equal cultural budget, not new biological species
+  ---
+  duration_ms: 17.9744
+  type: 'test'
+  ...
+# Subtest: legacy IDs and the four existing attribute and skill packages retain their values
+ok 92 - legacy IDs and the four existing attribute and skill packages retain their values
+  ---
+  duration_ms: 0.4435
+  type: 'test'
+  ...
+# Subtest: all origin selections supply exactly one bonus package and suggestions without automatic equipment or learned techniques
+ok 93 - all origin selections supply exactly one bonus package and suggestions without automatic equipment or learned techniques
+  ---
+  duration_ms: 369.1986
+  type: 'test'
+  ...
+# Subtest: the archive receives every cultural package with its actual image and source metadata
+ok 94 - the archive receives every cultural package with its actual image and source metadata
+  ---
+  duration_ms: 407.7929
+  type: 'test'
+  ...
+# Subtest: new weapon standards use approved dice, identity and hands without changing personal junior swords
+ok 95 - new weapon standards use approved dice, identity and hands without changing personal junior swords
+  ---
+  duration_ms: 3.8885
+  type: 'test'
+  ...
+# Subtest: new armor bases stay differentiated while the existing category and level Dexterity limits still apply
+ok 96 - new armor bases stay differentiated while the existing category and level Dexterity limits still apply
+  ---
+  duration_ms: 9.3478
+  type: 'test'
+  ...
+# Subtest: buckler: the displayed shield rules survive inventory projection and affect only actual equipped combat
+ok 97 - buckler: the displayed shield rules survive inventory projection and affect only actual equipped combat
+  ---
+  duration_ms: 26.9802
+  type: 'test'
+  ...
+# Subtest: rundschild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+ok 98 - rundschild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+  ---
+  duration_ms: 17.8792
+  type: 'test'
+  ...
+# Subtest: kite-schild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+ok 99 - kite-schild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+  ---
+  duration_ms: 15.7372
+  type: 'test'
+  ...
+# Subtest: turmschild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+ok 100 - turmschild: the displayed shield rules survive inventory projection and affect only actual equipped combat
+  ---
+  duration_ms: 16.9961
+  type: 'test'
+  ...
+# Subtest: pavese: the displayed shield rules survive inventory projection and affect only actual equipped combat
+ok 101 - pavese: the displayed shield rules survive inventory projection and affect only actual equipped combat
+  ---
+  duration_ms: 16.7329
+  type: 'test'
+  ...
+# Subtest: Buckler protects against actual melee hits only, including range overrides and inactive/blocked shields
+ok 102 - Buckler protects against actual melee hits only, including range overrides and inactive/blocked shields
+  ---
+  duration_ms: 38.3828
+  type: 'test'
+  ...
+# Subtest: authored throwing techniques, inherited repeated throws and alternating held weapons keep their actual attack ranges
+ok 103 - authored throwing techniques, inherited repeated throws and alternating held weapons keep their actual attack ranges
+  ---
+  duration_ms: 15.5971
+  type: 'test'
+  ...
+# Subtest: a prepared counter uses its actual held weapon instead of the preceding throwing technique range
+ok 104 - a prepared counter uses its actual held weapon instead of the preceding throwing technique range
+  ---
+  duration_ms: 7.984
+  type: 'test'
+  ...
+# Subtest: conditional shields register at zero static RK, old Buckler revisions and unfiltered trigger contracts remain unchanged
+ok 105 - conditional shields register at zero static RK, old Buckler revisions and unfiltered trigger contracts remain unchanged
+  ---
+  duration_ms: 1.57
+  type: 'test'
+  ...
+# Subtest: pavise deployment pays the same action and bonus action shown by inventory and combat, with no resource refill on reselection
+ok 106 - pavise deployment pays the same action and bonus action shown by inventory and combat, with no resource refill on reselection
+  ---
+  duration_ms: 6.8813
+  type: 'test'
+  ...
+# Subtest: only the selected new shield contributes, and legacy equipment never acquires new penalties
+ok 107 - only the selected new shield contributes, and legacy equipment never acquires new penalties
+  ---
+  duration_ms: 12.3419
+  type: 'test'
+  ...
+# Subtest: the previously released standard knight sword remains pinned to its original one-handed and versatile damage
+ok 108 - the previously released standard knight sword remains pinned to its original one-handed and versatile damage
+  ---
+  duration_ms: 0.2356
+  type: 'test'
+  ...
+# Subtest: a consciously saved armor builder revision preserves edited bases and editable shield setup costs
+ok 109 - a consciously saved armor builder revision preserves edited bases and editable shield setup costs
+  ---
+  duration_ms: 1.3194
+  type: 'test'
+  ...
+# Subtest: all actual Rossmarkt rows retain their existing images, descriptions and currency-correct prices
+ok 110 - all actual Rossmarkt rows retain their existing images, descriptions and currency-correct prices
+  ---
+  duration_ms: 4.8028
+  type: 'test'
+  ...
+# Subtest: archive merges legacy breed projections while retaining customized possessions and provider images
+ok 111 - archive merges legacy breed projections while retaining customized possessions and provider images
+  ---
+  duration_ms: 0.7174
+  type: 'test'
+  ...
+# Subtest: German prices, ranges, unknown prices and fractional copper use exact minor units
+ok 112 - German prices, ranges, unknown prices and fractional copper use exact minor units
+  ---
+  duration_ms: 0.2362
+  type: 'test'
+  ...
+# Subtest: standards have unique stable identities and authoritative categories
+ok 113 - standards have unique stable identities and authoritative categories
+  ---
+  duration_ms: 1.957
+  type: 'test'
+  ...
+# Subtest: buying subtracts money and creates owned identity without altering the template
+ok 114 - buying subtracts money and creates owned identity without altering the template
+  ---
+  duration_ms: 1.0867
+  type: 'test'
+  ...
+# Subtest: trades reject invalid quantity, stale price, insufficient money and exhausted stock
+ok 115 - trades reject invalid quantity, stale price, insufficient money and exhausted stock
+  ---
+  duration_ms: 0.4988
+  type: 'test'
+  ...
+# Subtest: renamed horse keeps purchase price and template, both creature and inventory project the same identity
+ok 116 - renamed horse keeps purchase price and template, both creature and inventory project the same identity
+  ---
+  duration_ms: 1.341
+  type: 'test'
+  ...
+# Subtest: selling returns 50 percent of actual purchase price and preserves a receipt of customization
+ok 117 - selling returns 50 percent of actual purchase price and preserves a receipt of customization
+  ---
+  duration_ms: 0.5095
+  type: 'test'
+  ...
+# Subtest: provider variants stay separate and configured buyback overrides the default
+ok 118 - provider variants stay separate and configured buyback overrides the default
+  ---
+  duration_ms: 0.5206
+  type: 'test'
+  ...
+# Subtest: weapons with explicit game values enter the sheet and retain edits through inventory sync
+ok 119 - weapons with explicit game values enter the sheet and retain edits through inventory sync
+  ---
+  duration_ms: 0.8969
+  type: 'test'
+  ...
+# Subtest: transfers preserve individual identities and never merge two customized copies
+ok 120 - transfers preserve individual identities and never merge two customized copies
+  ---
+  duration_ms: 0.8699
+  type: 'test'
+  ...
+# Subtest: historic standard overrides become separate offers, character copies do not become shop stock
+ok 121 - historic standard overrides become separate offers, character copies do not become shop stock
+  ---
+  duration_ms: 0.8944
+  type: 'test'
+  ...
+# Subtest: all readers receive metadata edits and deletes; cached data does not permit transactions
+ok 122 - all readers receive metadata edits and deletes; cached data does not permit transactions
+  ---
+  duration_ms: 14.058
+  type: 'test'
+  ...
+# Subtest: image frames distinguish portrait, landscape and square without cropping extreme formats
+ok 123 - image frames distinguish portrait, landscape and square without cropping extreme formats
+  ---
+  duration_ms: 0.22
+  type: 'test'
+  ...
+# Subtest: all 43 exact tool standards reuse matching previously validated transparent inventory art; no names infer identity
+ok 124 - all 43 exact tool standards reuse matching previously validated transparent inventory art; no names infer identity
+  ---
+  duration_ms: 83.619
+  type: 'test'
+  ...
+# Subtest: pinned old inventory gets a read-only image projection while custom pictures, custom definitions and old rules remain intact
+ok 125 - pinned old inventory gets a read-only image projection while custom pictures, custom definitions and old rules remain intact
+  ---
+  duration_ms: 0.535
+  type: 'test'
+  ...
+# Subtest: register, template picker, individual and communal cards share the exact standard image without altering stored inventories
+ok 126 - register, template picker, individual and communal cards share the exact standard image without altering stored inventories
+  ---
+  duration_ms: 2.0424
+  type: 'test'
+  ...
+# Subtest: the existing classic item picker delegates only image projection to the shared register API
+ok 127 - the existing classic item picker delegates only image projection to the shared register API
+  ---
+  duration_ms: 1.3507
+  type: 'test'
+  ...
+# Subtest: Vennyr equipment requirements follow canonical data even for foreign-class purchases
+ok 128 - Vennyr equipment requirements follow canonical data even for foreign-class purchases
+  ---
+  duration_ms: 4.6834
+  type: 'test'
+  ...
+# Subtest: a mounted Rhiddwyr attack needs a real mounted state; foot alternatives remain usable
+ok 129 - a mounted Rhiddwyr attack needs a real mounted state; foot alternatives remain usable
+  ---
+  duration_ms: 3.5574
+  type: 'test'
+  ...
+# Subtest: Vennyr aliases preserve real weapon distinctions and recognize existing authored equipment
+ok 130 - Vennyr aliases preserve real weapon distinctions and recognize existing authored equipment
+  ---
+  duration_ms: 10.9051
+  type: 'test'
+  ...
+# Subtest: real hammer, flail and crossbow standards retain precise family access and icons
+ok 131 - real hammer, flail and crossbow standards retain precise family access and icons
+  ---
+  duration_ms: 9.7935
+  type: 'test'
+  ...
+# Subtest: Derwyn staff techniques reserve both hands after sanitization removes copied training
+ok 132 - Derwyn staff techniques reserve both hands after sanitization removes copied training
+  ---
+  duration_ms: 2.6649
+  type: 'test'
+  ...
+# Subtest: all 35 original weapon sources and prepared 512px RGBA assets match their preparation receipt
+ok 133 - all 35 original weapon sources and prepared 512px RGBA assets match their preparation receipt
+  ---
+  duration_ms: 39.8002
+  type: 'test'
+  ...
+# Subtest: the portable art gate rejects wrong dimensions, RGB and non-PNG assets
+ok 134 - the portable art gate rejects wrong dimensions, RGB and non-PNG assets
+  ---
+  duration_ms: 0.9156
+  type: 'test'
+  ...
+# Subtest: 35 neutral standards cover missing blade, claw, polearm and eastern forms without replacing released goods
+ok 135 - 35 neutral standards cover missing blade, claw, polearm and eastern forms without replacing released goods
+  ---
+  duration_ms: 3.2886
+  type: 'test'
+  ...
+# Subtest: every new standard survives definitions, inventory attachment and real combat-profile normalization
+ok 136 - every new standard survives definitions, inventory attachment and real combat-profile normalization
+  ---
+  duration_ms: 134.2066
+  type: 'test'
+  ...
+# Subtest: archive references expose every standard as an unequipped base attack with its actual artwork and no ownership write
+ok 137 - archive references expose every standard as an unequipped base attack with its actual artwork and no ownership write
+  ---
+  duration_ms: 4.0642
+  type: 'test'
+  ...
+# Subtest: cultural silhouettes retain ordinary budgets and manufactured claws remain weapons
+ok 138 - cultural silhouettes retain ordinary budgets and manufactured claws remain weapons
+  ---
+  duration_ms: 0.327
+  type: 'test'
+  ...
+# Subtest: authored weapon kg survive the real register, unique-item builder and inventory without replacing pinned history
+ok 139 - authored weapon kg survive the real register, unique-item builder and inventory without replacing pinned history
+  ---
+  duration_ms: 7.3814
+  type: 'test'
+  ...
+# Subtest: new standard-art fallback uses exact identities and never overwrites a personal unique illustration
+ok 140 - new standard-art fallback uses exact identities and never overwrites a personal unique illustration
+  ---
+  duration_ms: 0.128
+  type: 'test'
+  ...
+# Subtest: Vennyr experts offer a weapon lesson on each Teulu training level through 20
+ok 141 - Vennyr experts offer a weapon lesson on each Teulu training level through 20
+  ---
+  duration_ms: 20.555
+  type: 'test'
+  ...
+# Subtest: the broad weapon classes retain damaging options for each route before expert training
+ok 142 - the broad weapon classes retain damaging options for each route before expert training
+  ---
+  duration_ms: 4.4869
+  type: 'test'
+  ...
+# Subtest: additional options keep replacement scaling, light-attack caps and real resource costs
+ok 143 - additional options keep replacement scaling, light-attack caps and real resource costs
+  ---
+  duration_ms: 133.6357
+  type: 'test'
+  ...
+# Subtest: learning more named guards or preparations does not create stacking condition sources
+ok 144 - learning more named guards or preparations does not create stacking condition sources
+  ---
+  duration_ms: 4.8344
+  type: 'test'
+  ...
+1..144
+# tests 144
+# suites 0
+# pass 144
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8146.5888
+# exit 0
+# command 7: node --test --experimental-test-isolation=none firebase/functions/tests/reference-catalog-parity.test.js
+TAP version 13
+# Subtest: all 28 cultural packages retain their exact budgets and selected attributes on the server without granting possessions
+ok 1 - all 28 cultural packages retain their exact budgets and selected attributes on the server without granting possessions
+  ---
+  duration_ms: 457.6178
+  type: 'test'
+  ...
+# Subtest: all 52 standard armory weapons preserve their catalog, equipped attack and action costs on browser and server
+ok 2 - all 52 standard armory weapons preserve their catalog, equipped attack and action costs on browser and server
+  ---
+  duration_ms: 324.3794
+  type: 'test'
+  ...
+# Subtest: server weapon families accept explicit variants while rejecting nearby specialized profiles
+ok 3 - server weapon families accept explicit variants while rejecting nearby specialized profiles
+  ---
+  duration_ms: 0.4515
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1466.1602
+# exit 0
+# command 8: node --test --experimental-test-isolation=none netlify/tests/character-reference-tasks.test.mjs
+TAP version 13
+# Subtest: each weapon, origin, public library, archive and art input invalidates the independent catalog gate
+ok 1 - each weapon, origin, public library, archive and art input invalidates the independent catalog gate
+  ---
+  duration_ms: 34.1476
+  type: 'test'
+  ...
+# Subtest: country dependencies follow documented origin sources and artwork without watching unrelated drafts
+ok 2 - country dependencies follow documented origin sources and artwork without watching unrelated drafts
+  ---
+  duration_ms: 1.2863
+  type: 'test'
+  ...
+# Subtest: gameplay guides watch their two new imported definitions without coupling unrelated archive UI or image changes
+ok 3 - gameplay guides watch their two new imported definitions without coupling unrelated archive UI or image changes
+  ---
+  duration_ms: 5.2837
+  type: 'test'
+  ...
+# Subtest: catalog commands validate authored generators, portable image receipts and all owner regression tests
+ok 4 - catalog commands validate authored generators, portable image receipts and all owner regression tests
+  ---
+  duration_ms: 0.2785
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 116.6427
+# exit 0
+# character-reference-catalogs completed 2026-11-03T00:05:27.9707298Z

@@ -17,7 +17,9 @@ export function getDevelopmentAttackCatalog() {
     catalog = sources.flatMap(([definitions, progression]) => definitions().flatMap(definition => {
       const plan = progression(definition.id, 20);
       return [...new Map((plan?.styles || []).flatMap(style => style.forms.filter(f => !f.blocked&&!['unavailable','eligibility-pending'].includes(f.accessStatus))
-        .flatMap(form => form.techniques.filter(technique=>technique.live===true&&technique.status==='confirmed').map(technique => ({ id: `${definition.id}::${technique.id}`,
+        // `live` describes an automatic grant, not whether a confirmed authored
+        // technique can be bought. Purchase mode deliberately grants nothing.
+        .flatMap(form => form.techniques.filter(technique=>technique.status==='confirmed').map(technique => ({ id: `${definition.id}::${technique.id}`,
           classId: definition.classId, curriculumId: definition.id, className: definition.name, templateId: definition.templateId,
           culture: definition.culture || definition.cultureId, formName: form.shortName || form.name,
           minimumLevel: Math.max(form.minimumLevel || 1, technique.minimumLevel || 1), technique

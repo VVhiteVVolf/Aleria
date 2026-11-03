@@ -57,7 +57,7 @@ function initializeCultureTraining(root) {
       card.dataset.available = String(available.has(card.dataset.trainingAttack));
       const attack = attacksById.get(card.dataset.trainingAttack);
       const damage = card.querySelector('[data-training-damage]');
-      if (damage && attack) damage.textContent = describeTechniqueDamage(attack, { progression: { level: plan.selectedLevel } });
+      if (damage && attack) damage.textContent = describeTechniqueDamage(attack, { progression: { level: plan.selectedLevel }, templateSelections: { classId: plan.templateId }, identity: { archetype: plan.classId } });
     });
     root.querySelectorAll('[data-training-feature-level]').forEach(feature => {
       feature.dataset.available = String(Number(feature.dataset.trainingFeatureLevel) <= plan.selectedLevel);

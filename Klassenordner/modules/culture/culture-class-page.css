@@ -95,6 +95,8 @@
 .cenyr-attack[data-available="true"] { border-color: #8a773e; box-shadow: inset 3px 0 #8a773e; background: #f9f1dd; }
 .cenyr-attack-heading { display: flex; gap: 12px; align-items: start; justify-content: space-between; }
 .cenyr-attack-heading h4 { font-size: 17px; line-height: 1.4; color: #594629; }
+.cenyr-attack-heading .cenyr-attack-icon { width:56px; height:56px; flex:none; object-fit:contain; border-radius:10px; }
+.cenyr-attack-heading:has(.cenyr-attack-icon) h4 { flex:1; min-width:0; }
 .cenyr-attack-heading > span { flex-shrink: 0; color: #82663a; font-size: 11px; padding-top: 4px; }
 .cenyr-attack p { font-size: 13px; line-height: 1.7; margin-top: 12px; }
 .cenyr-attack dl { display: grid; gap: 10px; font-size: 12px; margin: 14px 0; border-block: 1px solid #ddd0b4; padding-block: 12px; }

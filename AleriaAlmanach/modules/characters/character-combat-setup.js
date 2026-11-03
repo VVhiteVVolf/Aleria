@@ -57,9 +57,12 @@ function templatePreview(title, template, emptyText) {
   const proficiencies = template.proficiencies || {};
   return `<article class="cp-setup-template-preview">
     <span>${escapeHtml(title)}</span>
+    ${template.originKind === 'culture' && template.icon ? `<img src="${escapeHtml(template.icon)}" alt="" width="40" height="40" loading="lazy">` : ''}
     <h4>${escapeHtml(template.label)}${template.subtitle ? ` · ${escapeHtml(template.subtitle)}` : ''}</h4>
     <p>${escapeHtml(template.description)}</p>
     ${template.attributeBonuses ? `<strong>${escapeHtml(attributeBonusText(template))}</strong>` : ''}
+    ${template.rulesNote ? `<small>${escapeHtml(template.rulesNote)}</small>` : ''}
+    ${template.originKind === 'culture' && template.pagePath ? `<small><a href="${escapeHtml(template.pagePath)}" target="_blank" rel="noopener">Kultur und Herkunft im Almanach ↗</a></small>` : ''}
     ${skills.length ? `<small>Fertigkeitsvorschläge: ${escapeHtml(skills.join(', '))}</small>` : ''}
     ${proficiencies.armor?.length ? `<small>Rüstungsausbildung: ${escapeHtml(proficiencies.armor.map(id=>getCreationProficiencyLabel('armor',id)).join(', '))}</small>` : ''}
     ${proficiencies.weapons?.length ? `<small>Waffenausbildung: ${escapeHtml(proficiencies.weapons.map(id=>getCreationProficiencyLabel('weapons',id)).join(', '))}</small>` : ''}

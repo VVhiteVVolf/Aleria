@@ -1,26 +1,19 @@
-// Stellt alle Zauber, Techniken und besonderen Fähigkeiten aus den Charakter-Archiv-Exporten
+// Stellt alle Zauber, Techniken und besonderen Fähigkeiten der bestätigten öffentlichen Figuren
 // als durchsuchbaren Fundus zusammen (nach Klasse, Zauberschule, Waffentyp).
-// Neue Charaktere in CHARACTERS ergänzen und erneut ausführen:
+// Neue bestätigte öffentliche Charakterquellen ergänzen und erneut ausführen:
 //   node ./AleriaAlmanach/tools/build-spell-attack-library.mjs
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { loadPublicCharacterLibrarySources } from './character-library/public-character-library-source.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const almanachRoot = path.resolve(scriptDir, '..');
-const projectRoot = path.resolve(almanachRoot, '..');
-const exportsDir = path.join(projectRoot, 'Charakter Archiv Exporte');
 const outputFile = path.join(almanachRoot, 'data', 'spell-attack-library.json');
 const checkOnly = process.argv.includes('--check');
 
-const CHARACTERS = [
-  { file: 'gawain-draig.json', classId: 'teulu', className: 'Teulu (Ritter)' },
-  { file: 'gildas-gafyr.json', classId: 'teulu', className: 'Teulu (Ritter)' },
-  { file: 'fenrir-varulv.json', classId: 'skjaldr', className: 'Skjaldr (Schildbeißer)' },
-  { file: 'freya-skald.json', classId: 'skalde', className: 'Skalde/Skaldin' },
-  { file: 'guinevere-neidr.json', classId: 'helwyr', className: 'Helwyr (Bogenschütze)' },
-  { file: 'rhiannon-draig.json', classId: 'magier', className: 'Magier/Magierin' }
-];
+const sources = await loadPublicCharacterLibrarySources();
 
 const byClass = {};
 const bySpellSchool = {};
@@ -28,16 +21,22 @@ const byWeaponType = {};
 const allSpells = [];
 const allTechniques = [];
 
-for (const { file, classId, className } of CHARACTERS) {
-  const raw = JSON.parse(await readFile(path.join(exportsDir, file), 'utf8'));
-  const character = raw.character;
+function libraryEntry(item, sourceCharacter, sourceClassId, sourceCharacterId) {
+  const copy = { ...item, sourceCharacter, sourceCharacterId, sourceClassId };
+  if (/^(?:file:|[A-Za-z]:[\\/])/.test(String(copy.icon || ''))) {
+    throw new Error(`Lokaler Dateipfad ist kein veröffentlichbares Icon: ${sourceCharacter} · ${item.name}`);
+  }
+  return copy;
+}
+
+for (const { character, classId, className } of sources) {
   const profile = character.combatProfile;
   const sourceCharacterName = character.name;
 
   byClass[classId] ||= { className, spells: [], techniques: [] };
 
   (profile.magic?.spells || []).forEach(spell => {
-    const entry = { ...spell, sourceCharacter: sourceCharacterName, sourceClassId: classId };
+    const entry = libraryEntry(spell, sourceCharacterName, classId, character.id);
     allSpells.push(entry);
     byClass[classId].spells.push(entry);
     const school = spell.school || 'unbekannt';
@@ -45,7 +44,7 @@ for (const { file, classId, className } of CHARACTERS) {
   });
 
   (profile.techniques || []).forEach(technique => {
-    const entry = { ...technique, sourceCharacter: sourceCharacterName, sourceClassId: classId };
+    const entry = libraryEntry(technique, sourceCharacterName, classId, character.id);
     allTechniques.push(entry);
     byClass[classId].techniques.push(entry);
     (technique.weaponTypes || []).forEach(weaponType => {
@@ -54,7 +53,7 @@ for (const { file, classId, className } of CHARACTERS) {
   });
 
   (profile.abilities || []).forEach(ability => {
-    const entry = { ...ability, sourceCharacter: sourceCharacterName, sourceClassId: classId };
+    const entry = libraryEntry(ability, sourceCharacterName, classId, character.id);
     allTechniques.push(entry);
     byClass[classId].techniques.push(entry);
   });
@@ -62,11 +61,15 @@ for (const { file, classId, className } of CHARACTERS) {
 
 const previousOutput = checkOnly ? await readFile(outputFile, 'utf8') : '';
 const previousLibrary = previousOutput ? JSON.parse(previousOutput) : {};
+const sourceRecords = sources.map(source => ({ id: source.character.id, name: source.character.name, path: source.sourceRecord }));
+const sourceRevision = createHash('sha256').update(JSON.stringify({ sourceRecords, allSpells, allTechniques })).digest('hex').slice(0, 24);
 const library = {
   schemaVersion: 1,
   type: 'aleria-spell-attack-library',
   generatedAt: checkOnly ? previousLibrary.generatedAt : new Date().toISOString(),
-  notes: 'Sammlung aller Zauber, Techniken und besonderen Fähigkeiten, die bislang für Spielercharaktere gebaut wurden - als Fundus für künftige Charaktere derselben Klasse/Waffe/Zauberschule. Direkt aus den Charakter-Archiv-Exporten zusammengestellt; jede Kopie trägt sourceCharacter/sourceClassId zur Herkunft. Änderungen hier wirken sich NICHT auf die lebenden Charaktere aus (keine Referenz, reine Ablage). Zum Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs (CHARACTERS-Liste im Skript um neue Charaktere ergänzen).',
+  sourceRevision,
+  notes: 'Fundus bestätigter öffentlicher Figuren aus ihren aktuellen lokalen Charakterdatensätzen. Jede Kopie trägt sourceCharacter/sourceCharacterId/sourceClassId zur Herkunft. Historische Exporte sind keine aktuelle Regelquelle. Die Bibliothek vergibt keine Fähigkeiten und verändert keine lebenden Figuren. Aktualisieren: node ./AleriaAlmanach/tools/build-spell-attack-library.mjs.',
+  sourceRecords,
   byClass,
   bySpellSchool,
   byWeaponType,

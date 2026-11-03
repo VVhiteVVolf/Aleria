@@ -2,18 +2,18 @@
 
 > Aus den Wyrmtanz-Technikmodulen erzeugt. Bearbeitung: `AleriaAlmanach/modules/combat-styles/sirenentanz/`. Die bestehenden Dateipfade bleiben für alte Verweise erhalten.
 
-**211 Katalogoptionen** in sechs Klassenplänen. Derwyn wählen Jungdrache oder junge Welle, eine freie kreative Phase auf Stufe 7–8 und vier eigene Wyrmpfade ab Stufe 9. Ihre Auswahl ist an Charakterbogen und Kampfsystem angebunden. Die übrigen Vennyr-Waffenfolgen behalten ihren bisherigen Entwurfsstand.
+**327 Katalogoptionen** in sechs Klassenplänen. Derwyn wählen Jungdrache oder junge Welle, eine freie kreative Phase auf Stufe 7–8 und vier eigene Wyrmpfade ab Stufe 9. Alle ausgearbeiteten Waffenfolgen sind für bewusste Einzelkäufe bestätigt; der Katalog selbst vergibt keine Techniken.
 
-Die Vergleichswerte verwenden eine Waffe mit 1W10 ohne feste Attribut-, Waffen- oder Klassenboni. In einer späteren Kampfvergabe gelten die echte Waffe, ihr Typ, ihre Reichweite und die ausgewiesenen Voraussetzungen. Der Schaden folgt dem gemeinsamen, gebremsten Drachentanz-Budget. Reine Vorbereitungen verursachen keinen Schaden.
+Die Vergleichswerte verwenden eine Waffe mit 1W10 ohne feste Attribut-, Waffen- oder Klassenboni. Im Kampf gelten die echte Waffe, ihr Typ, ihre Reichweite und die ausgewiesenen Voraussetzungen. Der Schaden folgt dem gemeinsamen, gebremsten Drachentanz-Budget. Reine Vorbereitungen verursachen keinen Schaden.
 
 | Klasse | Slots bis 20 | Optionen |
 | --- | ---: | ---: |
-| Milwr | 9 | 11 |
-| Morwyr | 16 | 34 |
-| Rhyfelwyr | 16 | 32 |
-| Ceidwyn | 12 | 34 |
-| Rhiddwyr | 14 | 35 |
-| Derwyn | 10 | 65 |
+| Milwr | 9 | 23 |
+| Morwyr | 16 | 54 |
+| Rhyfelwyr | 16 | 52 |
+| Ceidwyn | 12 | 54 |
+| Rhiddwyr | 14 | 55 |
+| Derwyn | 10 | 89 |
 
 Die Anzahl der Katalogoptionen ist keine Anzahl erlernter Attacken. Erster Expertenpfad ab Stufe 9 ohne zusätzliche Slotkosten; weitere Pfade kosten jeweils einen Experten-Slot. Mehrere Pfade vergrößern das Budget nicht.
 
@@ -37,12 +37,18 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Wachstoß | Speer, Axt, Streitkolben oder Schwert | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit 1W6. Speer, Axt, Streitkolben oder Schwert |
+| 1 | Kurzer Wachstoß | Speer, Axt, Streitkolben oder Schwert | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel. Speer, Axt, Streitkolben oder Schwert |
 | 2 | Plankenschritt | Speer, Axt, Streitkolben oder Schwert | 1 Aktion | 1W10 | 1W10+1W8 | — | Regulärer Techniktreffer mit der geführten Nahwaffe. Speer, Axt, Streitkolben oder Schwert |
 | 3 | Gedeckter Stand | Speer, Axt, Streitkolben oder Schwert | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK für einen eigenen Beitrag. Speer, Axt, Streitkolben oder Schwert |
 | 4 | Schulterdruck | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Reaktion | 1W10 | 1W10+1W8 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Speer, Axt, Streitkolben oder Schwert |
 | 5 | Wacher Griff | Speer, Axt, Streitkolben oder Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff für einen eigenen Beitrag. Speer, Axt, Streitkolben oder Schwert |
 | 6 | Letzter Grundhieb | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6+2W4 | 1W10+1W6+1W4+1W8 | — | Kräftiger Grundabschluss ohne Zusatzattacke. Speer, Axt, Streitkolben oder Schwert |
+| 1 | Gerader Wachtspeer | Speer | 1 Aktion | 1W10 | 1W10+1W8 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Speer |
+| 2 | Kurze Wachtaxt | Axt | 1 Bonusaktion | 1W4 | 1W4 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Axt |
+| 3 | Ruhiger Wachtkolben | Streitkolben | 1 Aktion | 1W10 | 1W10+1W8 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Streitkolben |
+| 4 | Geschlossene Wachtklinge | Schwert | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Schwert |
+| 5 | Wache Spitze | Speer | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Speer |
+| 6 | Axt an der Schwelle | Axt | 1 Aktion + 1 Reaktion | 1W10+1W4 | 1W10+1W8 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Axt |
 
 ### Tanz der Küstenwache · 6–15
 
@@ -52,10 +58,16 @@ Vereinfachte, direkte Fortsetzung für Milwr. Deckung, kurze Stöße und gemeins
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 6 | Küstenwall | Speer, Axt, Streitkolben oder Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Speer, Axt, Streitkolben oder Schwert |
-| 8 | Enge Planke | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Bonusaktion | 1W10+2W4 | 1W10+1W4+1W8 | — | Technikschaden; danach bis 1 m freie Eigenbewegung. Speer, Axt, Streitkolben oder Schwert |
+| 8 | Enge Planke | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 1W10+1W4+1W8-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Speer, Axt, Streitkolben oder Schwert |
 | 10 | Rauer Hafen | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Reaktion | 1W10+1W6 | 1W10+1W8 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Speer, Axt, Streitkolben oder Schwert |
 | 12 | Wachtwechsel | Speer, Axt, Streitkolben oder Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK für einen eigenen Beitrag. Kein kostenloser Waffenwechsel. Speer, Axt, Streitkolben oder Schwert |
 | 15 | Stand der alten Wache | Speer, Axt, Streitkolben oder Schwert | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 2W10+1W8 | 2W10+1W8 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kostet zusätzlich eine Besondere Aktion. Speer, Axt, Streitkolben oder Schwert |
+| 7 | Küstenspeer | Speer | 1 Aktion + 1 Reaktion | 1W10+1W4 | 1W10+1W8 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Speer |
+| 9 | Wachtaxtwende | Axt | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 1W10+1W4+1W8-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Axt |
+| 11 | Kolben der Küste | Streitkolben | 1 Aktion | 1W10+1W6 | 1W10+1W8 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Streitkolben |
+| 13 | Klingenwacht der Küste | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Schwert |
+| 14 | Letzte Speerschwelle | Speer | 1 Aktion + 1 Besondere Aktion | 2W10+1W6 | 2W10+1W8 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Speer |
+| 15 | Axt der alten Wache | Axt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 2W10+1W8 | 2W10+1W8 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Axt |
 
 ## Morwyr
 
@@ -76,12 +88,18 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Wellenstoß | Partisane | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff: 1W6 statt Waffenwürfeln; feste Boni einmal. Partisane |
+| 1 | Kurzer Wellenstoß | Partisane | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff: Waffenbasis höchstens W4 je Würfel; halbe positive feste Boni, kein Ausbildungswürfel. Partisane |
 | 2 | Plankenspalter | Enteraxt | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer Treffer mit Enteraxt und begrenztem Technikbonus. Enteraxt |
-| 3 | Leinenwurf | Harpunenspeer | 1 Aktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | — | Technikschaden; nach Treffer KRF-Rettungswurf gegen 8 + KRF-Modifikator + Kompetenz. Bei Misserfolg bis 2 m heranziehen. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. · Intakte, befestigte Leine und freier Zugweg. |
+| 3 | Leinenwurf | Harpunenspeer | 1 Aktion + 1 Reaktion | 1W10+1W6-1 | 2W10+1W6-1 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; nach Treffer KRF-Rettungswurf gegen 10 + tatsächliches Waffenattribut + Kompetenz. Ein misslungener Rettungswurf stört den Stand einmalig. Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. · Intakte, befestigte Leine und freier Zugweg. |
 | 4 | Relingwacht | Partisane | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Partisane |
 | 5 | Haken im Tau | Enteraxt | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; ein misslungener KRF-Rettungswurf gibt dem Ziel −1 Angriff bis zum Ende seines nächsten Beitrags. Enteraxt |
 | 6 | Bugbrecher | Partisane | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6+1W4 | 2W10+1W6+1W4 | — | Kräftiger Grundabschluss mit Technikschaden; kein weiterer Treffer. Partisane |
+| 1 | Sicherer Partisanenstoß | Partisane | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Partisane |
+| 2 | Kurzer Enterhaken | Axt | 1 Bonusaktion | 1W4 | 1W4 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Axt |
+| 3 | Freier Harpunenwurf | Harpunenspeer | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 3 | Axt vor der Brust | Enteraxt | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Enteraxt |
+| 4 | Plankenwinkel | Partisane | 1 Aktion + 1 Bonusaktion | 1W10+1W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Partisane |
+| 5 | Harpunenruhe | Harpunenspeer | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 
 ### Tanz der kehrenden Flut · 7–8
 
@@ -90,10 +108,12 @@ Druck aufnehmen, umlenken und zurückgeben. Waffenwechsel und Ausweichschritte v
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 7 | Kehrender Enterhieb | Enteraxt | 1 Aktion + 1 Bonusaktion | 1W10+2W4 | 2W10+1W4 | — | Technikschaden; anschließend bis 2 m freie Eigenbewegung innerhalb der verfügbaren Bewegung. Enteraxt |
+| 7 | Kehrender Enterhieb | Enteraxt | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 2W10+1W4-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Enteraxt |
 | 8 | Harpunenanker | Harpunenspeer | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Kein sofortiger Harpunenwurf. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 7 | Kehrende Partisane | Partisane | 1 Aktion | 1W10+1W4 | 2W10 | — | Ein regulärer Partisanentreffer mit Aufbau-Technikbonus. Partisane |
 | 8 | Flutwurf | Harpunenspeer | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 7 | Rückkehr der Enteraxt | Enteraxt | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Enteraxt |
+| 8 | Stille Partisanenlinie | Partisane | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Partisane |
 
 ### Tanz der brechenden Brandung · 9–20
 
@@ -113,6 +133,10 @@ Wucht und Durchbruch. Kontrollierte Überdehnung erkauft stärkere Treffer mit m
 | 15 | Leinenruck | Harpunenspeer | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 17 | Mastbrecher | Enteraxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion. Enteraxt |
 | 20 | Sturm am Bug | Partisane | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt. Partisane |
+| 14 | Taukeil | Enteraxt | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Enteraxt |
+| 16 | Harpunenkante | Harpunenspeer | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 18 | Partisanendrang | Partisane | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Partisane |
+| 19 | Enteraxt der Brandung | Enteraxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Enteraxt |
 
 ### Tanz der kreisenden Strömung · 9–20
 
@@ -125,13 +149,17 @@ Flanke, Rückzug und wechselnde Distanzen. Fernwaffe, Seitenwaffe und Reiterbewe
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 9 | Gischtwende | Enteraxt | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Enteraxt |
-| 10 | Fliegende Leine | Harpunenspeer | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 10 | Fliegende Leine | Harpunenspeer | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit höchstens W4 je Waffenwürfel. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 11 | Plankenruhe | Partisane | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Partisane |
-| 12 | Seitengang | Enteraxt | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10 | 1W4+1W10 | — | Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung. Enteraxt |
+| 12 | Seitengang | Enteraxt | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Enteraxt |
 | 13 | Drehender Schaft | Partisane | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Partisane |
 | 15 | Kehrender Wurf | Harpunenspeer | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 17 | Engpassbogen | Enteraxt | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 3W10+1W4 | 3W10+1W4 | — | Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion. Enteraxt |
 | 20 | Meister der Planken | Partisane | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand. Partisane |
+| 14 | Gleitende Partisane | Partisane | 1 Aktion + 1 Bonusaktion | 1W10+1W4+1W8-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Partisane |
+| 16 | Enge Axtwende | Enteraxt | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Enteraxt |
+| 18 | Wurf durch die Gischt | Harpunenspeer | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 19 | Schirmende Bugspitze | Partisane | 1 Aktion + 1 Reaktion | 2W10+1W6-1 | 2W10+1W6-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Partisane |
 
 ### Tanz des stillen Tiefwassers · 9–20
 
@@ -151,6 +179,10 @@ Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegena
 | 15 | Deckung der Reling | Partisane | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert. Partisane |
 | 17 | Ankerhieb | Enteraxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion. Enteraxt |
 | 20 | Bastion des Decks | Partisane | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | KRF SG 11 + Waffenattribut + Kompetenz | Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag. Partisane |
+| 14 | Ruhiger Harpunengriff | Harpunenspeer | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 16 | Geschlossene Enteraxt | Enteraxt | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Enteraxt |
+| 18 | Partisane vor dem Mast | Partisane | 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Partisane |
+| 19 | Stillgehaltener Wurf | Harpunenspeer | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Harpunenspeer · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 
 ## Rhyfelwyr
 
@@ -171,12 +203,18 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Anschlag | Schwere Hiebwaffe oder Ritterschwert | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff: 1W6 statt Waffenwürfeln. Schwere Hiebwaffe oder Ritterschwert |
+| 1 | Kurzer Anschlag | Schwere Hiebwaffe oder Ritterschwert | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff: Waffenbasis höchstens W4 je Würfel; halbe positive feste Boni, kein Ausbildungswürfel. Schwere Hiebwaffe oder Ritterschwert |
 | 2 | Felsenschlag | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion | 1W10 | 2W10 | — | Ein Treffer mit Waffenwürfeln und begrenztem Technikbonus. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 3 | Geschlossene Kante | Schwere Hiebwaffe oder Ritterschwert | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Schwere Hiebwaffe oder Ritterschwert |
 | 4 | Schildbrecheransatz | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W6 | 2W10+1W6 | — | Technikschaden; Zielverteidigung für diesen Angriff −1. Kein Schild wird zerstört. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 5 | Gegen den Rausch | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Schwere Hiebwaffe oder Ritterschwert |
 | 6 | Brechender Bug | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6+1W4 | 2W10+1W6+1W4 | — | Kräftiger Grundabschluss; −1 Angriff auf diesen Wurf. Die eigene RK sinkt danach für einen Beitrag um 1. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
+| 1 | Sicherer Schwerthieb | Schwert | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Schwert |
+| 2 | Axt der Kante | Großaxt oder Streitaxt | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Großaxt oder Streitaxt |
+| 3 | Hammerhut | Kriegshammer oder Rabenschnabel | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Kriegshammer oder Rabenschnabel |
+| 4 | Stern am Griff | Flegel oder Morgenstern | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Flegel oder Morgenstern |
+| 5 | Ruhender Kolben | Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Streitkolben |
+| 6 | Schwert am Fels | Schwert | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Schwert |
 
 ### Tanz der kehrenden Flut · 7–8
 
@@ -187,6 +225,8 @@ Druck aufnehmen, umlenken und zurückgeben. Waffenwechsel und Ausweichschritte v
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 7 | Umkehr der Wucht | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Ein Techniktreffer; keine zweite Attacke. Auf Treffer +1 RK für einen eigenen Beitrag. Schwere Hiebwaffe oder Ritterschwert |
 | 8 | Eisenatem | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
+| 7 | Kehrender Hammer | Kriegshammer oder Rabenschnabel | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kriegshammer oder Rabenschnabel |
+| 8 | Ruhe des Sternbogens | Flegel oder Morgenstern | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Flegel oder Morgenstern |
 
 ### Tanz der brechenden Brandung · 9–20
 
@@ -206,6 +246,10 @@ Wucht und Durchbruch. Kontrollierte Überdehnung erkauft stärkere Treffer mit m
 | 15 | Gegen den Schildwall | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 17 | Eisenflut | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 20 | Letzter Wellenbrecher | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
+| 14 | Hammer der Brandung | Kriegshammer oder Rabenschnabel | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kriegshammer oder Rabenschnabel |
+| 16 | Axt im Keil | Großaxt oder Streitaxt | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Großaxt oder Streitaxt |
+| 18 | Stern der Front | Flegel oder Morgenstern | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Flegel oder Morgenstern |
+| 19 | Kolbenbrecher | Streitkolben | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Streitkolben |
 
 ### Tanz der kreisenden Strömung · 9–20
 
@@ -218,13 +262,17 @@ Flanke, Rückzug und wechselnde Distanzen. Fernwaffe, Seitenwaffe und Reiterbewe
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 9 | Schwerer Kreisel | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Schwere Hiebwaffe oder Ritterschwert |
-| 10 | Kurzer Nachhall | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
+| 10 | Kurzer Nachhall | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit höchstens W4 je Waffenwürfel. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 11 | Gewicht lesen | Schwere Hiebwaffe oder Ritterschwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Schwere Hiebwaffe oder Ritterschwert |
-| 12 | Felsumgang | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10 | 1W4+1W10 | — | Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
+| 12 | Felsumgang | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 13 | Umgeleitete Last | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 15 | Kehrende Schwere | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Schwere Hiebwaffe oder Ritterschwert |
 | 17 | Engster Bogen | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 3W10+1W4 | 3W10+1W4 | — | Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 20 | Tanzender Fels | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand. Schwere Hiebwaffe oder Ritterschwert |
+| 14 | Wandernde Klinge | Schwert | 1 Aktion + 1 Bonusaktion | 1W10+1W4+1W8-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Schwert |
+| 16 | Kurzer Hammerkreis | Kriegshammer oder Rabenschnabel | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kriegshammer oder Rabenschnabel |
+| 18 | Axt um den Fels | Großaxt oder Streitaxt | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Großaxt oder Streitaxt |
+| 19 | Gedeckter Sternbogen | Flegel oder Morgenstern | 1 Aktion + 1 Reaktion | 2W10+1W6-1 | 2W10+1W6-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Flegel oder Morgenstern |
 
 ### Tanz des stillen Tiefwassers · 9–20
 
@@ -244,6 +292,10 @@ Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegena
 | 15 | Unbewegter Wall | Schwere Hiebwaffe oder Ritterschwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert. Schwere Hiebwaffe oder Ritterschwert |
 | 17 | Felsantwort | Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion. Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel |
 | 20 | Grund unter dem Sturm | Schwere Hiebwaffe oder Ritterschwert | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | KRF SG 11 + Waffenattribut + Kompetenz | Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag. Schwere Hiebwaffe oder Ritterschwert |
+| 14 | Fester Schwertgrund | Schwert | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Schwert |
+| 16 | Kolbenvorhalt | Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Streitkolben |
+| 18 | Hammer der Schwelle | Kriegshammer oder Rabenschnabel | 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Kriegshammer oder Rabenschnabel |
+| 19 | Ruhende Axtlinie | Großaxt oder Streitaxt | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Großaxt oder Streitaxt |
 
 ## Ceidwyn
 
@@ -264,12 +316,18 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Gischtpfeil | Kurzbogen | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit 1W6; ein Pfeil wird benötigt. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 1 | Gischtpfeil | Kurzbogen | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel; ein Pfeil wird benötigt. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 2 | Relingbolzen | Armbrust | 1 Aktion | 1W10 | 2W10 | — | Regulärer Technikschuss; geladene Armbrust und ein Bolzen erforderlich. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 3 | Säbel der Gasse | Säbel | 1 Aktion | 1W10 | 2W10 | — | Regulärer Nahkampftreffer mit Säbelwürfeln; kein Fernkampfbonus. Säbel |
 | 4 | Dreizackwacht | Dreizack | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Nahkampfschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
 | 5 | Windlesen | Kurzbogen | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 6 | Ankerbolzen | Armbrust | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6+1W4 | 2W10+1W6+1W4 | — | Kräftiger Grundschuss; Zielverteidigung für diesen Wurf −1. Kein zusätzlicher Bolzen. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 1 | Erster Sehnenzug | Kurzbogen | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 2 | Kurzer Säbelschnitt | Säbel | 1 Bonusaktion | 1W4 | 1W4 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Säbel |
+| 2 | Gerade Zinke | Dreizack | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
+| 3 | Ruhiger Armbrustabzug | Armbrust | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 4 | Säbelhut der Reling | Säbel | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Säbel |
+| 5 | Schritt hinter die Zinken | Dreizack | 1 Aktion + 1 Bonusaktion | 1W10+1W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Dreizack |
 
 ### Tanz der kehrenden Flut · 7–8
 
@@ -282,6 +340,8 @@ Druck aufnehmen, umlenken und zurückgeben. Waffenwechsel und Ausweichschritte v
 | 8 | Stille Spitzen | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Dreizack |
 | 7 | Kehrender Pfeil | Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 8 | Flutbolzen | Armbrust | 1 Aktion + 1 Reaktion | 1W10+1W6+1W4 | 2W10+1W6 | — | Technikschaden; −1 Zielverteidigung nur für diesen Schuss. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 7 | Sehnenwacht | Kurzbogen | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 8 | Säbel gegen den Schaft | Säbel | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Säbel |
 
 ### Tanz der brechenden Brandung · 9–20
 
@@ -301,6 +361,10 @@ Wucht und Durchbruch. Kontrollierte Überdehnung erkauft stärkere Treffer mit m
 | 15 | Dreizackdruck | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Dreizack |
 | 17 | Sturmsehne | Kurzbogen | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 20 | Brecherbolzen | Armbrust | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 14 | Säbelkeil | Säbel | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Säbel |
+| 16 | Kurze Sehnenwucht | Kurzbogen | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 18 | Drang der Armbrust | Armbrust | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 19 | Dreifache Brandung | Dreizack | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
 
 ### Tanz der kreisenden Strömung · 9–20
 
@@ -313,13 +377,17 @@ Flanke, Rückzug und wechselnde Distanzen. Fernwaffe, Seitenwaffe und Reiterbewe
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 9 | Relinglauf | Säbel | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Säbel |
-| 10 | Gischtfunke | Kurzbogen | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 10 | Gischtfunke | Kurzbogen | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit höchstens W4 je Waffenwürfel. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 11 | Ruhender Abzug | Armbrust | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
-| 12 | Zwischen den Masten | Säbel | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10 | 1W4+1W10 | — | Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung. Säbel |
+| 12 | Zwischen den Masten | Säbel | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Säbel |
 | 13 | Kreisende Zinken | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
 | 15 | Wellenpfeil | Kurzbogen | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 17 | Silberne Deckspur | Säbel | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 3W10+1W4 | 3W10+1W4 | — | Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion. Säbel |
 | 20 | Auge der Strömung | Armbrust | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 14 | Bolzen aus der Wende | Armbrust | 1 Aktion + 1 Bonusaktion | 1W10+1W4+1W8-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 16 | Schritt der drei Zinken | Dreizack | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
+| 18 | Säbel durch die Gischt | Säbel | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Säbel |
+| 19 | Pfeil der neuen Linie | Kurzbogen | 1 Aktion + 1 Reaktion | 2W10+1W6-1 | 2W10+1W6-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 
 ### Tanz des stillen Tiefwassers · 9–20
 
@@ -339,6 +407,10 @@ Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegena
 | 15 | Säbelwacht | Säbel | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert. Säbel |
 | 17 | Stiller Fernruf | Kurzbogen | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 20 | Hüter der Reling | Dreizack | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | KRF SG 11 + Waffenattribut + Kompetenz | Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag. Dreizack |
+| 14 | Ruhige Armbrustlinie | Armbrust | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 16 | Geschlossener Sehnenblick | Kurzbogen | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Kurzbogen · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 18 | Säbel vor der Schwelle | Säbel | 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Säbel |
+| 19 | Wartende Dreizackspitze | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Dreizack |
 
 ## Rhiddwyr
 
@@ -359,12 +431,18 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Kurzer Weghieb | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit 1W6; auch zu Fuß möglich. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
+| 1 | Kurzer Weghieb | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Bonusaktion | 1W4 | 1W4 | — | Schwacher Bonusangriff mit höchstens W4 je Waffenwürfel; auch zu Fuß möglich. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 2 | Hüter des Pfads | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion | 1W10 | 2W10 | — | Regulärer Nahkampftreffer; auch abgesessen nutzbar. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 3 | Küstenbolzen | Armbrust | 1 Aktion | 1W10 | 2W10 | — | Regulärer Armbrustschuss; Nachladen und Munition bleiben erforderlich. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 4 | Streifender Anritt | Glefe oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10+1W4 | — | Ein Techniktreffer aus dem Sattel. Anlauf mindestens 3 m; kein kostenloser Rossangriff. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 5 | Sattelwacht | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; beritten +1 RK für einen eigenen Beitrag. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 6 | Felsgratstoß | Glefe oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion | 1W10+1W6+1W4 | 2W10+1W6+1W4 | — | Kräftiger Grundabschluss aus dem Sattel; ein Ziel, ein Angriffswurf. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
+| 1 | Erster Reisebolzen | Armbrust | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 2 | Abgesessene Glefe | Glefe oder Reiterspieß | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Glefe oder Reiterspieß |
+| 3 | Hammer des Reisenden | Kriegshammer oder Rabenschnabel | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Kriegshammer oder Rabenschnabel |
+| 4 | Wanderers Hut | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
+| 5 | Kurzer Reiteraxtbogen | Reiteraxt | 1 Bonusaktion | 1W4 | 1W4 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Reiteraxt |
+| 6 | Sicherer Flegelgriff | Flegel oder Morgenstern | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Flegel oder Morgenstern |
 
 ### Tanz der kehrenden Flut · 7–8
 
@@ -378,6 +456,8 @@ Druck aufnehmen, umlenken und zurückgeben. Waffenwechsel und Ausweichschritte v
 | 7 | Kehrender Reiterspieß | Glefe oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 8 | Wanderers Antwort | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion | 1W10+1W4 | 2W10 | — | Regulärer Techniktreffer mit der Reiterwaffe; zu Fuß oder im Sattel. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 8 | Bolzen des Reisenden | Armbrust | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 7 | Abgesessene Schaftwende | Glefe oder Reiterspieß | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Glefe oder Reiterspieß |
+| 8 | Ruhiger Sattelbolzen | Armbrust | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Armbrust · Beritten; für Anritte mindestens 3 m freier Anlauf. · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 
 ### Tanz der brechenden Brandung · 9–20
 
@@ -397,6 +477,10 @@ Wucht und Durchbruch. Kontrollierte Überdehnung erkauft stärkere Treffer mit m
 | 15 | Wegedruck | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 17 | Küstenlanze | Glefe oder Reiterspieß | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Starker Abschluss mit −1 Angriff gegen −1 Zielverteidigung. Zusätzlich eine Besondere Aktion. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 20 | Sturm über dem Grat | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Meisterabschluss mit begrenztem Technikschaden; −1 Angriff und danach eigene RK −1 für einen Beitrag. Alle aufgeführten Kosten oder alternativ 1 Aura-Fokuspunkt. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben · Beritten; für Anritte mindestens 3 m freier Anlauf. |
+| 14 | Reitflegelkeil | Flegel oder Morgenstern | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Flegel oder Morgenstern |
+| 16 | Schwerer Wegeschaft | Glefe oder Reiterspieß | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Glefe oder Reiterspieß |
+| 18 | Gratbolzen | Armbrust | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 19 | Reiteraxt der Brandung | Reiteraxt | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Reiteraxt |
 
 ### Tanz der kreisenden Strömung · 9–20
 
@@ -409,13 +493,17 @@ Flanke, Rückzug und wechselnde Distanzen. Fernwaffe, Seitenwaffe und Reiterbewe
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 9 | Sattelwende | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben · Beritten; für Anritte mindestens 3 m freier Anlauf. |
-| 10 | Wegfunke | Armbrust | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit 1W6. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 10 | Wegfunke | Armbrust | 1 Bonusaktion | 1W4 | 1W4 | — | Kurzer Bonusangriff mit höchstens W4 je Waffenwürfel. Kein vollständiger Waffenwürfel und kein zusätzlicher Wurf. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 11 | Wanderers Ruhe | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
-| 12 | Hügelbogen | Glefe oder Reiterspieß | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10 | 1W4+1W10 | — | Technikschaden; anschließend bis 2 m Eigenbewegung innerhalb der verfügbaren Bewegung. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
+| 12 | Hügelbogen | Glefe oder Reiterspieß | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 13 | Kehrender Flegel | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 15 | Abgesessener Flankenschuss | Armbrust | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
 | 17 | Enger Zügel | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Reaktion + 1 Bonusaktion + 1 Besondere Aktion | 3W10+1W4 | 3W10+1W4 | — | Gebündelter Techniktreffer mit +1 Angriff; kostet Reaktion, Bonusaktion und eine Besondere Aktion. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 20 | Sieben Küstenwege | Glefe oder Reiterspieß | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine Mehrfachattacke und keine kostenlose Waffe in der zweiten Hand. Glefe oder Reiterspieß · Beritten; für Anritte mindestens 3 m freier Anlauf. |
+| 14 | Wandernder Hammer | Kriegshammer oder Rabenschnabel | 1 Aktion + 1 Bonusaktion | 1W10+1W4+1W8-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kriegshammer oder Rabenschnabel |
+| 16 | Bolzen in der Wende | Armbrust | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 18 | Glefe des Reisenden | Glefe oder Reiterspieß | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Glefe oder Reiterspieß |
+| 19 | Gedeckter Reitkolben | Streitkolben | 1 Aktion + 1 Reaktion | 2W10+1W6-1 | 2W10+1W6-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Streitkolben |
 
 ### Tanz des stillen Tiefwassers · 9–20
 
@@ -435,6 +523,10 @@ Deckung, Bindung und Schutz. Kurze Verteidigungsfenster statt kostenloser Gegena
 | 15 | Lagerwacht | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird ersetzt, nicht addiert. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
 | 17 | Fester Reitersitz | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Starker Techniktreffer; auf Treffer +2 RK für einen eigenen Beitrag. Zusätzlich eine Besondere Aktion. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben · Beritten; für Anritte mindestens 3 m freier Anlauf. |
 | 20 | Letzter Hüter des Weges | Flegel, Rabenschnabel, Reiteraxt oder Streitkolben | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | KRF SG 11 + Waffenattribut + Kompetenz | Ein Meistertreffer und auf Treffer +2 RK für einen Beitrag. Das Ziel erhält nach misslungenem KRF-Rettungswurf −1 Angriff für einen Beitrag. Flegel, Rabenschnabel, Reiteraxt oder Streitkolben |
+| 14 | Ruhiger Schaftgrund | Glefe oder Reiterspieß | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Glefe oder Reiterspieß |
+| 16 | Reiterhammerhut | Kriegshammer oder Rabenschnabel | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Kriegshammer oder Rabenschnabel |
+| 18 | Bolzen vor der Schwelle | Armbrust | 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Armbrust · Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich. |
+| 19 | Wartender Flegel | Flegel oder Morgenstern | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Flegel oder Morgenstern |
 
 ## Derwyn
 
@@ -468,7 +560,7 @@ Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaf
 | 6 | Drachenklammer |  | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 1W10 | 1W10 | KON SG 11 + Waffenattribut + Kompetenz | Normaler Waffenschaden; KON-Rettung SG 11 + Waffenattribut + Kompetenz, bei Scheitern Benommen: im nächsten eigenen Beitrag keine Aktion. Bonusaktion und Reaktion bleiben verfügbar. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 6 | Brechender Widerhall |  | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | Kein Schaden | Kein Schaden | — | Nach dem nächsten verfehlten Waffen- oder Technikangriff folgt einmal ein automatischer Gegenangriff mit Vorteil: Waffenbasis + 1 zusätzlicher Waffenwürfel + Ausbildungswürfel + Schadensbonus der dann geführten Waffe. Bei Treffer: KON-Rettung SG 11 + Waffenattribut + Kompetenz; bei Scheitern Im nächsten eigenen Beitrag ist die Aktion gesperrt. Bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 1 | Kurze Drachenspur |  | 1 Bonusaktion | 1W4 | 1W4 | — | Leichter Einzelangriff mit dem Schaden einer schnellen Grundtechnik; kein kostenloser Folgeangriff. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
-| 1 | Erste Schuppe | Schwert | 1 Bonusaktion | 1W4 | 1W4 | — | Ein schwacher Bonusangriff mit 1W6. Schwert |
+| 1 | Erste Schuppe | Schwert | 1 Bonusaktion | 1W4 | 1W4 | — | Ein schwacher Bonusangriff mit höchstens W4 je Waffenwürfel. Schwert |
 | 2 | Ruhige Klaue | Schwert | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. Schwert |
 | 3 | Geschlossene Hut | Schwert | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK für einen eigenen Beitrag. Schwert |
 | 4 | Kleine Wende | Schwert | 1 Aktion + 1 Bonusaktion | 1W10 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
@@ -482,12 +574,16 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Leiser Stab | Kampfstab oder nahkampftauglicher Zauberstab | 1 Bonusaktion | 1W4 | 1W4 | — | Ein schwacher physischer Bonusangriff mit 1W6; keine Magie. Kampfstab oder nahkampftauglicher Zauberstab |
+| 1 | Leiser Stab | Kampfstab oder nahkampftauglicher Zauberstab | 1 Bonusaktion | 1W4 | 1W4 | — | Ein schwacher physischer Bonusangriff mit höchstens W4 je Waffenwürfel; keine Magie. Kampfstab oder nahkampftauglicher Zauberstab |
 | 2 | Erste Spitze | Dreizack | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. Dreizack |
 | 3 | Erster Morgenstern | Morgenstern | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer physischer Treffer; kein pauschales Umgehen von Rüstung. Morgenstern |
 | 4 | Stab der Schwelle | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
 | 5 | Gebundene Spitze | Dreizack | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; nach misslungenem KRF-Rettungswurf −1 Angriff für einen eigenen Beitrag. Dreizack |
 | 6 | Erste Klingenwelle | Schwert | 1 Aktion + 1 Bonusaktion | 1W10 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
+| 1 | Erste ruhige Klinge | Schwert | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Schwert |
+| 3 | Sternhut des Schülers | Morgenstern | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Morgenstern |
+| 4 | Schwellenstoß | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kampfstab oder nahkampftauglicher Zauberstab |
+| 6 | Ruhe der drei Spitzen | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Dreizack |
 
 ### Wyrmtanz Form · Freie kreative Phase · 7–8
 
@@ -500,6 +596,10 @@ Eigene Übergänge, Waffenwechsel und Übungen vertiefen das gewählte Fundament
 | 7 | Kehrende Zinken | Dreizack | 1 Aktion | 1W10+1W4 | 2W10 | — | Ein regulärer Techniktreffer mit Aufbau-Technikbonus. Dreizack |
 | 8 | Freie Klingenlinie | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Schwert |
 | 8 | Freie Morgensternwende | Morgenstern | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern |
+| 7 | Freie Stabwacht | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Kampfstab oder nahkampftauglicher Zauberstab |
+| 7 | Freie Schwertwende | Schwert | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Schwert |
+| 8 | Freier Sternhieb | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern |
+| 8 | Freie Zinkenwacht | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Dreizack |
 
 ### Wyrmtanz Pfad · Tanz des fließenden Wyrms · 9–20
 
@@ -516,6 +616,10 @@ Schwertform aus dem Tanz des abwartenden Drachens: ruhig aufnehmen, die gegneris
 | 15 | Unbewegte Schwerthut | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK für einen eigenen Beitrag. Gleichartige Deckung wird nicht addiert. Schwert |
 | 17 | Antwort des Wyrms | Schwert | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Ein starker Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
 | 20 | Meister des Rückflusses | Schwert | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | KRF SG 11 + Waffenattribut + Kompetenz | Ein Meistertreffer; auf Treffer +2 RK. KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Schwert |
+| 14 | Klinge im Rücklauf | Schwert | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Schwert |
+| 16 | Stiller Schwertring | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Schwert |
+| 18 | Gebundene Schwertlinie | Schwert | 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | KRF SG 11 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Schwert |
+| 19 | Ruhende Meisterhut | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +2 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Schwert |
 
 ### Wyrmtanz Pfad · Tanz des brandenden Wyrms · 9–20
 
@@ -527,11 +631,15 @@ Der Dreizack bestimmt Abstand und Waffenbindung. Gerichtete Stöße wechseln mit
 | 9 | Drang der Zinken | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W6 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Dreizack |
 | 10 | Brandender Stich | Dreizack | 1 Aktion | 1W10+1W6 | 2W10 | — | Ein regulärer Techniktreffer mit Dreizackwürfeln. Dreizack |
 | 11 | Ruhende Zinken | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Dreizack |
-| 13 | Umspülende Spitze | Dreizack | 1 Aktion + 1 Bonusaktion | 1W10+1W8 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Dreizack |
+| 12 | Umspülende Spitze | Dreizack | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Dreizack |
 | 13 | Brandungskeil | Dreizack | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Technikschaden gegen −1 Zielverteidigung nur für diesen Wurf. Dreizack |
 | 15 | Fesselnde Zinken | Dreizack | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Dreizack |
 | 17 | Brandende Sperrlinie | Dreizack | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Ein starker Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Dreizack |
 | 20 | Drei stille Ströme | Dreizack | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Genau ein Angriffswurf. Dreizack |
+| 14 | Zinken im Rücklauf | Dreizack | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
+| 16 | Stiller Dreizackring | Dreizack | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
+| 18 | Gebundene Brandungslinie | Dreizack | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Dreizack |
+| 19 | Ruhende Zinkenkrone | Dreizack | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Dreizack |
 
 ### Wyrmtanz Pfad · Tanz des steigenden Wyrms · 9–20
 
@@ -548,6 +656,10 @@ Kampfstab oder ein für Nahkampf geeigneter Zauberstab: kurze Griffwechsel, aufs
 | 15 | Steigende Stabwacht | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +2 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
 | 17 | Saphirantwort | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10 | 3W10 | — | Ein starker physischer Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
 | 20 | Flut des Schaftes | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6 | 5W10+1W6 | — | Ein Meistertreffer mit +1 Angriff; auf Treffer +2 RK für einen eigenen Beitrag. Keine zusätzliche Zauberwirkung. Kampfstab oder nahkampftauglicher Zauberstab |
+| 14 | Schaft im Rücklauf | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion | 1W10+1W4+1W8-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
+| 16 | Stiller Stabring | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kampfstab oder nahkampftauglicher Zauberstab |
+| 18 | Gebundene Schaftlinie | Kampfstab oder nahkampftauglicher Zauberstab | 1 Bonusaktion + 1 Besondere Aktion | 1W4+1W10-1 | 1W4+1W10-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
+| 19 | Ruhende Stabkrone | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Reaktion | 2W10+1W6-1 | 2W10+1W6-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
 
 ### Wyrmtanz Pfad · Tanz des peitschenden Wyrms · 9–20
 
@@ -564,3 +676,7 @@ Morgensternform mit beschleunigten, eng zurückgenommenen Hieben. Offensiver Dru
 | 15 | Drang des Morgensterns | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Morgenstern |
 | 17 | Peitschenruf | Morgenstern | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein starker Techniktreffer; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern |
 | 20 | Meister des Sternbogens | Morgenstern | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Ein Meistertreffer; −1 eigener Angriff, −1 Zielverteidigung und danach eigene RK −1 für einen Beitrag. Morgenstern |
+| 14 | Stern im Rücklauf | Morgenstern | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |
+| 16 | Stiller Sternring | Morgenstern | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |
+| 18 | Gebundene Sternlinie | Morgenstern | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern |
+| 19 | Ruhender Meisterstern | Morgenstern | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |

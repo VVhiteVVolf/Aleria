@@ -17950,13 +17950,6 @@
                 },
                 {
                   "type": "connection",
-                  "name": "Angharad",
-                  "detail": "Speisemeisterin · Tischdienst und Bankette",
-                  "image": "./assets/letzte-rast/portraits/angharad.png",
-                  "imageFormat": "portrait"
-                },
-                {
-                  "type": "connection",
                   "name": "Owain Vann",
                   "detail": "Keller und Importbezug",
                   "image": "./assets/letzte-rast/references/owain.png",
@@ -18191,7 +18184,6 @@
                         {
                           "id": "rast-angharad",
                           "portrait": "./assets/letzte-rast/portraits/angharad.png",
-                          "title": "Angharad",
                           "subtitle": "Speisemeisterin · Tischdienst und Bankette",
                           "text": "Speisemeisterin · Tischdienst und Bankette"
                         }
@@ -18222,7 +18214,6 @@
                         {
                           "id": "rast-ffion",
                           "portrait": "./assets/letzte-rast/staff/ffion.png",
-                          "title": "Ffion",
                           "subtitle": "Kellnerin · Abendtische",
                           "text": "Kellnerin · Abendtische"
                         },
@@ -28782,7 +28773,6 @@
                         },
                         {
                           "id": "theater-person-eleri",
-                          "title": "Eleri",
                           "subtitle": "Schauspielerin · Komödie und jugendliche Rollen",
                           "portrait": "./assets/gwynthor-theater/portraits/eleri.png",
                           "text": "Schauspielerin · Komödie und jugendliche Rollen"
@@ -54505,11 +54495,6 @@
                   "image": "./assets/rotes-tor/portraits/gwilym.png"
                 },
                 {
-                  "name": "Enid",
-                  "detail": "Altenteil · Vorräte und Einmachen",
-                  "image": "./assets/rotes-tor/portraits/enid.png"
-                },
-                {
                   "name": "Tudur Penrudd",
                   "detail": "Hofwirt · Gwilyms jüngerer Bruder",
                   "image": "./assets/rotes-tor/portraits/tudur.png"
@@ -54723,7 +54708,6 @@
                       "nodes": [
                         {
                           "id": "tor-ffion-penrudd",
-                          "title": "Ffion",
                           "subtitle": "Gästezimmer und Wäsche",
                           "portrait": "./assets/rotes-tor/portraits/ffion.png",
                           "text": "<p>36 Jahre. Hywels Gemahlin, Mutter Iwans und Eleris. Organisiert Wäsche und Zimmerpflege gemeinsam mit weiteren Bediensteten. Ihr Herkunftshaus bleibt unbekannt.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view&amp;person=ffion-penrudd\" target=\"_blank\" rel=\"noopener\">Zur vorhandenen Familienakte</a></p>"
@@ -57092,29 +57076,6 @@
                     "boardDaily": 0.5,
                     "lodgingWeekly": 0,
                     "fairDaily": 0,
-                    "ownerShare": 0,
-                    "anonymous": false,
-                    "salesShare": 0,
-                    "salesChannelIds": []
-                  },
-                  {
-                    "id": "person-ffion",
-                    "label": "",
-                    "note": "Vergütete Familienarbeit; gewöhnliche persönliche Kost und Logis zusätzlich angesetzt.",
-                    "source": "Aktuelle Hierarchie · Zum Roten Tor · Herberge",
-                    "name": "Ffion",
-                    "role": "Gästezimmer und Wäsche",
-                    "areas": [
-                      "Herberge"
-                    ],
-                    "kind": "family",
-                    "count": 1,
-                    "days": 6,
-                    "dailyCash": 4.5,
-                    "boardDays": 9,
-                    "boardDaily": 0.5,
-                    "lodgingWeekly": 1,
-                    "fairDaily": 4.5,
                     "ownerShare": 0,
                     "anonymous": false,
                     "salesShare": 0,

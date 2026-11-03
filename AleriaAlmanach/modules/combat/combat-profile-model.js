@@ -751,6 +751,21 @@ function sanitizeCenyrTechniqueTraining(value = {}) {
   };
 }
 
+function sanitizeCultureTechniqueTraining(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  const ids = field => sanitizeList(source[field], item => normalizeText(item, 80).toLowerCase(), 20).filter(Boolean);
+  return {
+    schemaVersion: 1,
+    cultureIds: ids('cultureIds'), allowedClassIds: ids('allowedClassIds'),
+    branchId: normalizeText(source.branchId, 120),
+    weaponProfileIds: ids('weaponProfileIds'), slotBands: ids('slotBands'),
+    requiresMounted: normalizeBoolean(source.requiresMounted),
+    requiresTwoHands: normalizeBoolean(source.requiresTwoHands),
+    requiresDualWield: normalizeBoolean(source.requiresDualWield),
+    requiresShield: normalizeBoolean(source.requiresShield)
+  };
+}
+
 function sanitizeClassTraining(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const selections = sanitizeList(source.selections, (selection = {}) => ({
@@ -789,6 +804,9 @@ function sanitizeTechnique(value = {}, index = 0) {
     id: normalizeId(source.id, `technique-${index + 1}`),
     name: normalizeText(source.name, 140),
     status: ['confirmed', 'draft', 'deprecated'].includes(normalizeText(source.status, 30)) ? normalizeText(source.status, 30) : 'confirmed',
+    ...(source.icon ? { icon: normalizeText(source.icon, 1000) } : {}),
+    ...(source.weaponLabel ? { weaponLabel: normalizeText(source.weaponLabel, 160) } : {}),
+    ...(source.cultureTraining ? { cultureTraining: sanitizeCultureTechniqueTraining(source.cultureTraining) } : {}),
     trainingForm: normalizeText(source.trainingForm, 140),
     ...(normalizeText(source.combatStyleId, 120) ? { combatStyleId: normalizeText(source.combatStyleId, 120) } : {}),
     ...(source.catalogTechniqueId?{catalogTechniqueId:normalizeText(source.catalogTechniqueId,180)}:{}),

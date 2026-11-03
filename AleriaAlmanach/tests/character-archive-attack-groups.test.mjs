@@ -170,7 +170,7 @@ test('horse breeds never become peoples; current Rossmarkt prices, images and or
   assert(!projected.some(entry => entry.kind === 'register-pferde' && ['Kamel', 'Fellfarbe'].includes(entry.name)));
   assert(projected.some(entry => entry.kind === 'register-vieh' && entry.name === 'Kamel'));
   const horses = mergeCharacterArchiveEntries(projected).filter(entry => entry.kind === 'register-pferde');
-  assert.equal(horses.length, 28, '24 breeds, three ponies and one known crossbreed');
+  assert.equal(horses.length, 29, '24 breeds, three ponies, the ordinary workhorse and one known crossbreed');
   const rhyfel = horses.find(entry => entry.name === 'Rhyfel');
   assert.equal(rhyfel.data.price, '800 – 4.000');
   assert.equal(rhyfel.data.currency, 'Kupferstück');

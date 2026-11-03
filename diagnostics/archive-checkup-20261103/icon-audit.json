@@ -1,0 +1,3125 @@
+{
+  "sourceFiles": [
+    "CharakterDatenbank/records/familien/haus-skald/freya-skald--ksJQe8Ai4KbRE9jOAvb7/character.json",
+    "CharakterDatenbank/records/familien/haus-varulv/fenrir-varulv--FKiXsSWVoV74rTgmpPip/character.json",
+    "CharakterDatenbank/records/familien/haus-wolfshorn/asgeir-wolfshorn--oUlhJyX6C4Q69mtLS9u1/character.json",
+    "CharakterDatenbank/records/familien/haus-wolfshorn/ylva-wolfshorn--bSYZYAEOwiRgy44f6OmO/character.json",
+    "CharakterDatenbank/records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
+    "CharakterDatenbank/records/familien/haus-draig/gethin-draig--person--haus-draig--gethin-1722-draig/character.json",
+    "CharakterDatenbank/records/orte/gwynthor/gethin--6atOllMA637Z2VNAZAxf/character.json",
+    "CharakterDatenbank/records/familien/haus-draig/kane-draig--HjDXMMexahez1G0rJrBE/character.json",
+    "CharakterDatenbank/records/familien/haus-draig/rhiannon-draig--y7MBxDiAaesbWHBtmw5Q/character.json",
+    "CharakterDatenbank/records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
+    "CharakterDatenbank/records/familien/haus-gafyr/gildas-gafyr--gildas-gafyr/character.json",
+    "CharakterDatenbank/records/familien/haus-neidr/guinevere-neidr--person--haus-neidr--guinevere-neidr/character.json",
+    "CharakterDatenbank/records/familien/haus-saethwyr/nudd-saethwyr--person--haus-saethwyr--nudd-saethwyr/character.json",
+    "CharakterDatenbank/records/familien/haus-wyrm/gais-wyrm--person--haus-wyrm--gais-wyrm/character.json"
+  ],
+  "counts": {
+    "entries": 1997,
+    "missing": 0,
+    "missingTraits": 0,
+    "missingAbilities": 0
+  },
+  "missing": [],
+  "existing": [
+    {
+      "id": "ability--ability::catalog::freya-arkaner-schrei",
+      "key": "ability::catalog::freya-arkaner-schrei",
+      "kind": "ability",
+      "name": "Arkaner Schrei",
+      "description": "Ein durchdringender, magisch verstärkter Schrei, der als Schockwelle nach vorne rast.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/freya-arkaner-schrei.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/freya-arkaner-schrei.png",
+      "owners": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7",
+          "name": "Freya Skald",
+          "portrait": "https://i.imgur.com/EAkV9TW.png"
+        }
+      ],
+      "dataId": "freya-arkaner-schrei"
+    },
+    {
+      "id": "ability--ability::catalog::fenrir-berserkergang",
+      "key": "ability::catalog::fenrir-berserkergang",
+      "kind": "ability",
+      "name": "Berserkergang · Entfesselter Zorn",
+      "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/berserkergang.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/berserkergang.png",
+      "owners": [
+        {
+          "id": "FKiXsSWVoV74rTgmpPip",
+          "name": "Fenrir Varulv",
+          "portrait": "https://i.imgur.com/uAY6AgV.png"
+        }
+      ],
+      "dataId": "fenrir-berserkergang"
+    },
+    {
+      "id": "ability--ability::catalog::aldrimar-skjaldr-berserkergang",
+      "key": "ability::catalog::aldrimar-skjaldr-berserkergang",
+      "kind": "ability",
+      "name": "Berserkergang · Entfesselter Zorn",
+      "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/berserkergang.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/berserkergang.png",
+      "owners": [
+        {
+          "id": "oUlhJyX6C4Q69mtLS9u1",
+          "name": "Asgeir Wolfshorn",
+          "portrait": "https://i.imgur.com/tlufXWn.png"
+        }
+      ],
+      "dataId": "aldrimar-skjaldr-berserkergang"
+    },
+    {
+      "id": "ability--ability::catalog::gawain-draig-draig-knight-signet",
+      "key": "ability::catalog::gawain-draig-draig-knight-signet",
+      "kind": "ability",
+      "name": "Draig-Rittersiegelring",
+      "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/gawain-draig-rittersiegelring.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/gawain-draig-rittersiegelring.png",
+      "owners": [
+        {
+          "id": "q1QtSIug74FzzwUAqWrs",
+          "name": "Gawain Draig",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+        }
+      ],
+      "dataId": "gawain-draig-draig-knight-signet"
+    },
+    {
+      "id": "ability--ability::catalog::martial-durchschnaufen",
+      "key": "ability::catalog::martial-durchschnaufen",
+      "kind": "ability",
+      "name": "Durchschnaufen",
+      "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/durchschnaufen.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/durchschnaufen.png",
+      "owners": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7",
+          "name": "Freya Skald",
+          "portrait": "https://i.imgur.com/EAkV9TW.png"
+        },
+        {
+          "id": "FKiXsSWVoV74rTgmpPip",
+          "name": "Fenrir Varulv",
+          "portrait": "https://i.imgur.com/uAY6AgV.png"
+        },
+        {
+          "id": "oUlhJyX6C4Q69mtLS9u1",
+          "name": "Asgeir Wolfshorn",
+          "portrait": "https://i.imgur.com/tlufXWn.png"
+        },
+        {
+          "id": "bSYZYAEOwiRgy44f6OmO",
+          "name": "Ylva Wolfshorn",
+          "portrait": "https://i.imgur.com/zQmDv85.png"
+        },
+        {
+          "id": "q1QtSIug74FzzwUAqWrs",
+          "name": "Gawain Draig",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+        },
+        {
+          "id": "person--haus-draig--gethin-1722-draig",
+          "name": "Gethin Draig",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg"
+        },
+        {
+          "id": "6atOllMA637Z2VNAZAxf",
+          "name": "Gethin",
+          "portrait": "https://64.media.tumblr.com/57cc8749c37a66116a2a8c243be34ef0/f7cc597c74572057-02/s250x400/f81abb391c8e310e135c3198d6a8967573cda903.pnj"
+        },
+        {
+          "id": "HjDXMMexahez1G0rJrBE",
+          "name": "Kane Draig",
+          "portrait": "https://64.media.tumblr.com/9456a3ab2e0d8df05af1367f39c360f2/18fb17b5724618d9-b9/s250x400/6d9d93a89d8d496b5f8a227fcfb84ccfb06e9029.pnj"
+        },
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q",
+          "name": "Rhiannon Draig",
+          "portrait": "https://i.imgur.com/oR99BIS.png"
+        },
+        {
+          "id": "tmfBA2zPTc88EMMGkyyA",
+          "name": "Duncan Gafyr",
+          "portrait": "https://i.imgur.com/zdChj0a.png"
+        },
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        },
+        {
+          "id": "person--haus-neidr--guinevere-neidr",
+          "name": "Guinevere Neidr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg"
+        },
+        {
+          "id": "person--haus-saethwyr--nudd-saethwyr",
+          "name": "Nudd Saethwyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg"
+        },
+        {
+          "id": "person--haus-wyrm--gais-wyrm",
+          "name": "Gais Wyrm",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg"
+        }
+      ],
+      "dataId": "martial-durchschnaufen"
+    },
+    {
+      "id": "ability--ability::catalog::gildas-gewissenhafte-vorbereitung",
+      "key": "ability::catalog::gildas-gewissenhafte-vorbereitung",
+      "kind": "ability",
+      "name": "Gewissenhafte Vorbereitung",
+      "description": "Gildas geht Abläufe, Ausrüstung und mögliche Fehlerquellen vor einer Aufgabe durch. Sein erster passender Angriffs- oder Fertigkeitswurf einer Szene erhält +1.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/gildas-gewissenhafte-vorbereitung.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/gildas-gewissenhafte-vorbereitung.png",
+      "owners": [
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        }
+      ],
+      "dataId": "gildas-gewissenhafte-vorbereitung"
+    },
+    {
+      "id": "ability--ability::catalog::gildas-gafyr-draig-knight-signet",
+      "key": "ability::catalog::gildas-gafyr-draig-knight-signet",
+      "kind": "ability",
+      "name": "Gildas Siegelring",
+      "description": "Das offen getragene Gafyr-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+      "explicit": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+      "resolved": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+      "exactFallback": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fhouse-signets-3d0ba0b07e90bdb6%2Foriginal.png?alt=media",
+      "owners": [
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        }
+      ],
+      "dataId": "gildas-gafyr-draig-knight-signet"
+    },
+    {
+      "id": "ability--ability::catalog::wolfshorn-asgeir-border-veteran",
+      "key": "ability::catalog::wolfshorn-asgeir-border-veteran",
+      "kind": "ability",
+      "name": "Grenzer des Dunkelhains",
+      "description": "+14 maximale TP; +1 Nahkampfwaffenschaden, auch bei Techniken; +2 gegen Furcht, Niederwerfen und erzwungene Bewegung.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/asgeir-grenzer-des-dunkelhains.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/asgeir-grenzer-des-dunkelhains.png",
+      "owners": [
+        {
+          "id": "oUlhJyX6C4Q69mtLS9u1",
+          "name": "Asgeir Wolfshorn",
+          "portrait": "https://i.imgur.com/tlufXWn.png"
+        }
+      ],
+      "dataId": "wolfshorn-asgeir-border-veteran"
+    },
+    {
+      "id": "ability--ability::catalog::gawain-liebt-duefte",
+      "key": "ability::catalog::gawain-liebt-duefte",
+      "kind": "ability",
+      "name": "Liebt Düfte",
+      "description": "Beim Benutzen eines Dufts oder Parfüms regeneriert Gawain einen Punkt Besondere Aktion.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/gawain-liebt-duefte.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/gawain-liebt-duefte.png",
+      "owners": [
+        {
+          "id": "q1QtSIug74FzzwUAqWrs",
+          "name": "Gawain Draig",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+        }
+      ],
+      "dataId": "gawain-liebt-duefte"
+    },
+    {
+      "id": "ability--ability::catalog::gildas-schutzpflicht",
+      "key": "ability::catalog::gildas-schutzpflicht",
+      "kind": "ability",
+      "name": "Schutzpflicht",
+      "description": "Wird ein naher Verbündeter getroffen, tritt Gildas mit Schildarm, Schulter oder Klinge in die Angriffslinie und reduziert den Schaden um 3.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/gildas-schutzpflicht.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/gildas-schutzpflicht.png",
+      "owners": [
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        }
+      ],
+      "dataId": "gildas-schutzpflicht"
+    },
+    {
+      "id": "ability--ability::catalog::starter-serf-animal-companion",
+      "key": "ability::catalog::starter-serf-animal-companion",
+      "kind": "ability",
+      "name": "Tierbegleiter",
+      "description": "Ein abgerichtetes Tier begleitet den Serf durch die Wildnis.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/tierbegleiter.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/tierbegleiter.png",
+      "owners": [],
+      "dataId": "starter-serf-animal-companion"
+    },
+    {
+      "id": "ability--ability::catalog::starter-skytte-animal-companion",
+      "key": "ability::catalog::starter-skytte-animal-companion",
+      "kind": "ability",
+      "name": "Tierbegleiter",
+      "description": "Ein abgerichtetes Tier begleitet den Skytte auf der Jagd.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/tierbegleiter.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/tierbegleiter.png",
+      "owners": [
+        {
+          "id": "bSYZYAEOwiRgy44f6OmO",
+          "name": "Ylva Wolfshorn",
+          "portrait": "https://i.imgur.com/zQmDv85.png"
+        }
+      ],
+      "dataId": "starter-skytte-animal-companion"
+    },
+    {
+      "id": "ability--ability::catalog::wolfshorn-ylva-border-veteran",
+      "key": "ability::catalog::wolfshorn-ylva-border-veteran",
+      "kind": "ability",
+      "name": "Veteranin des Dunkelhains",
+      "description": "+20 maximale TP; +2 Angriff und +1 Schaden mit Bogen und Speer, auch bei Techniken; +3 Wahrnehmung; +3 gegen Furcht; +2 gegen Niederwerfen und erzwungene Bewegung.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/ylva-veteranin-des-dunkelhains.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/ylva-veteranin-des-dunkelhains.png",
+      "owners": [
+        {
+          "id": "bSYZYAEOwiRgy44f6OmO",
+          "name": "Ylva Wolfshorn",
+          "portrait": "https://i.imgur.com/zQmDv85.png"
+        }
+      ],
+      "dataId": "wolfshorn-ylva-border-veteran"
+    },
+    {
+      "id": "ability--ability::catalog::starter-ceidwynr-bird-companion",
+      "key": "ability::catalog::starter-ceidwynr-bird-companion",
+      "kind": "ability",
+      "name": "Vogelbegleiter",
+      "description": "Ein abgerichteter Vogel unterstützt Aufklärung und Jagd.",
+      "explicit": "",
+      "resolved": "/AleriaAlmanach/public/assets/ability-icons/vogelbegleiter.png",
+      "exactFallback": "/AleriaAlmanach/public/assets/ability-icons/vogelbegleiter.png",
+      "owners": [],
+      "dataId": "starter-ceidwynr-bird-companion"
+    },
+    {
+      "id": "development-trait-aberglaeubisch",
+      "key": "trait::catalog::development-trait-aberglaeubisch",
+      "kind": "trait",
+      "name": "Abergläubisch",
+      "description": "Du kennst viele Omen und deutest Magie schnell als schlechtes Zeichen: +2 auf Religion, −1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/aberglaeubisch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/aberglaeubisch.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Zealous.png",
+      "owners": [],
+      "dataId": "development-trait-aberglaeubisch"
+    },
+    {
+      "id": "builtin--trait--alben--albische-naturverbundenheit",
+      "key": "trait::albische naturverbundenheit",
+      "kind": "trait",
+      "name": "Albische Naturverbundenheit",
+      "description": "Alben sind beweglich, naturverbunden und für ein Leben zwischen Wildnis und Tierwelt geschult.",
+      "explicit": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "resolved": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Hunter.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-alchemistisches-gespuer",
+      "key": "trait::catalog::development-trait-alchemistisches-gespuer",
+      "kind": "trait",
+      "name": "Alchemistisches Gespür",
+      "description": "Stoffe und ihre magischen Eigenheiten erschließen sich dir leicht: +2 auf Naturkunde und +1 auf Arkane Kunde.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/alchemistisches-gespuer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/alchemistisches-gespuer.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-alchemistisches-gespuer"
+    },
+    {
+      "id": "builtin--trait--huskarl--aldrimarische-gefolgschaftstreue",
+      "key": "trait::aldrimarische gefolgschaftstreue",
+      "kind": "trait",
+      "name": "Aldrimarische Gefolgschaftstreue",
+      "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Defensive_leader.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Defensive_leader.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--aldrimarer--aldrimarische-widerstandskraft",
+      "key": "trait::aldrimarische widerstandskraft",
+      "kind": "trait",
+      "name": "Aldrimarische Widerstandskraft",
+      "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+      "explicit": "/Stammbäume/assets/images/regions/aldrimar.png",
+      "resolved": "/Stammbäume/assets/images/regions/aldrimar.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-1",
+      "key": "trait::catalog::development-trait-abhaengigkeit-alcohol-1",
+      "kind": "trait",
+      "name": "Alkoholiker (I. Stadium)",
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-1.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-1.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Drunkard.png",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-alcohol-1"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-2",
+      "key": "trait::catalog::development-trait-abhaengigkeit-alcohol-2",
+      "kind": "trait",
+      "name": "Alkoholiker (II. Stadium)",
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-2.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-2.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Drunkard.png",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-alcohol-2"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-3",
+      "key": "trait::catalog::development-trait-abhaengigkeit-alcohol-3",
+      "kind": "trait",
+      "name": "Alkoholiker (III. Stadium)",
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-3.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-alcohol-3.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Drunkard.png",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-alcohol-3"
+    },
+    {
+      "id": "development-trait-glutgewoehnt",
+      "key": "trait::catalog::development-trait-glutgewoehnt",
+      "kind": "trait",
+      "name": "An Glut gewöhnt",
+      "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/glutgewoehnt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/glutgewoehnt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-glutgewoehnt"
+    },
+    {
+      "id": "development-trait-knochenbruechigkeit",
+      "key": "trait::catalog::development-trait-knochenbruechigkeit",
+      "kind": "trait",
+      "name": "Angeborene Knochenbrüchigkeit",
+      "description": "−4 maximale TP und −1 auf STÄ-Rettungswürfe. Keine pauschale Verdoppelung sämtlichen Schadens.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/knochenbruechigkeit.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/knochenbruechigkeit.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-knochenbruechigkeit"
+    },
+    {
+      "id": "development-trait-wirbelsaeulenverkruemmung",
+      "key": "trait::catalog::development-trait-wirbelsaeulenverkruemmung",
+      "kind": "trait",
+      "name": "Angeborene Wirbelsäulenverkrümmung",
+      "description": "−1 auf Athletik und Körperbeherrschung sowie −1 m Bewegung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/wirbelsaeulenverkruemmung.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/wirbelsaeulenverkruemmung.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-wirbelsaeulenverkruemmung"
+    },
+    {
+      "id": "development-trait-handtremor",
+      "key": "trait::catalog::development-trait-handtremor",
+      "kind": "trait",
+      "name": "Angeborener Handtremor",
+      "description": "Anhaltendes Zittern: −2 auf Fingerfertigkeit und −1 auf Angriffe mit Bögen, Armbrüsten und Feuerwaffen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/handtremor.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/handtremor.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-handtremor"
+    },
+    {
+      "id": "development-trait-angeborener-herzfehler",
+      "key": "trait::catalog::development-trait-angeborener-herzfehler",
+      "kind": "trait",
+      "name": "Angeborener Herzfehler",
+      "description": "−3 maximale TP und −1 auf KON-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/angeborener-herzfehler.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/angeborener-herzfehler.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-angeborener-herzfehler"
+    },
+    {
+      "id": "development-trait-bluterleiden",
+      "key": "trait::catalog::development-trait-bluterleiden",
+      "kind": "trait",
+      "name": "Angeborenes Bluterleiden",
+      "description": "−2 maximale TP und −2 auf Rettungswürfe gegen Blutungsfolgen. Bestehende feste Kritfolgen werden nicht verstärkt oder verlängert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluterleiden.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluterleiden.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluterleiden"
+    },
+    {
+      "id": "development-trait-arkanistenfieber-anzeichen",
+      "key": "trait::catalog::development-trait-arkanistenfieber-anzeichen",
+      "kind": "trait",
+      "name": "Anzeichen vom Arkanistenfieber",
+      "description": "Beginnende arkane Überreizung: +1 Zauberangriff, −1 Initiative. Eine Beobachtung, noch kein sicher festgestelltes Hauptstadium.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanistenfieber-anzeichen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanistenfieber-anzeichen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanistenfieber-anzeichen"
+    },
+    {
+      "id": "development-trait-arkan-geschult",
+      "key": "trait::catalog::development-trait-arkan-geschult",
+      "kind": "trait",
+      "name": "Arkan geschult",
+      "description": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q",
+          "name": "Rhiannon Draig",
+          "portrait": "https://i.imgur.com/oR99BIS.png"
+        }
+      ],
+      "dataId": "development-trait-arkan-geschult"
+    },
+    {
+      "id": "development-trait-arkaner-fokus",
+      "key": "trait::catalog::development-trait-arkaner-fokus",
+      "kind": "trait",
+      "name": "Arkaner Fokus",
+      "description": "+1 Zauberangriff, −1 Waffenangriff.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkaner-fokus.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkaner-fokus.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkaner-fokus"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-1",
+      "key": "trait::catalog::development-trait-arkanes-fieber-human-1",
+      "kind": "trait",
+      "name": "Arkanes Fieber I. Stadium",
+      "description": "Müdigkeit, Blässe und entzündete Augen. −1 auf Fertigkeiten, Rettungswürfe und Initiative; −1 m Bewegung. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-1.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-1.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-human-1"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-1",
+      "key": "trait::catalog::development-trait-arkanes-fieber-druid-1",
+      "kind": "trait",
+      "name": "Arkanes Fieber I. Stadium (Druidenvariante)",
+      "description": "Erschöpfung und gestörte Aura. −1 auf Fertigkeiten, Rettungswürfe und Initiative; −1 m Bewegung; zusätzlich −1 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-1.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-1.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-druid-1"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-2",
+      "key": "trait::catalog::development-trait-arkanes-fieber-human-2",
+      "kind": "trait",
+      "name": "Arkanes Fieber II. Stadium",
+      "description": "Krämpfe, Fieber und Organstörungen. −2 auf Fertigkeiten, Rettungswürfe und Initiative; −2 m Bewegung; −2 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-2.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-2.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-human-2"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-2",
+      "key": "trait::catalog::development-trait-arkanes-fieber-druid-2",
+      "kind": "trait",
+      "name": "Arkanes Fieber II. Stadium (Druidenvariante)",
+      "description": "Halluzinationen und instabile Instinkte. −2 auf Fertigkeiten, Rettungswürfe und Initiative; −2 m Bewegung; zusätzlich −2 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-2.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-2.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-druid-2"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-3",
+      "key": "trait::catalog::development-trait-arkanes-fieber-human-3",
+      "kind": "trait",
+      "name": "Arkanes Fieber III. Stadium",
+      "description": "Fortschreitende Nekrose und geistiger Verfall. −3 auf Fertigkeiten, Rettungswürfe und Initiative; −3 m Bewegung; −6 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-3.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-3.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-human-3"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-3",
+      "key": "trait::catalog::development-trait-arkanes-fieber-druid-3",
+      "kind": "trait",
+      "name": "Arkanes Fieber III. Stadium (Druidenvariante)",
+      "description": "Schwerer geistiger Verfall ohne Nekrose. −3 auf Fertigkeiten, Rettungswürfe und Initiative; −3 m Bewegung; zusätzlich −3 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-3.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-3.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-druid-3"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-4",
+      "key": "trait::catalog::development-trait-arkanes-fieber-human-4",
+      "kind": "trait",
+      "name": "Arkanes Fieber IV. Stadium",
+      "description": "Vollständiger Ich-Verlust. −4 auf Fertigkeiten, Rettungswürfe und Initiative; −4 m Bewegung; −8 maximale TP. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt möglich. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-4.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-4.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-human-4"
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-4",
+      "key": "trait::catalog::development-trait-arkanes-fieber-druid-4",
+      "kind": "trait",
+      "name": "Arkanes Fieber IV. Stadium (Druidenvariante)",
+      "description": "Vollständiger Ich-Verlust ohne Nekrose. −4 auf Fertigkeiten, Rettungswürfe und Initiative; −4 m Bewegung; zusätzlich −4 auf WEI-Rettungswürfe. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt möglich. Keine Heilung durch TP-Heilung oder Rast.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-4.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-4.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanes-fieber-druid-4"
+    },
+    {
+      "id": "builtin--trait--bauer--b-uerliche-z-higkeit-und-bodenst-ndigkeit",
+      "key": "trait::bauerliche zahigkeit und bodenstandigkeit",
+      "kind": "trait",
+      "name": "Bäuerliche Zähigkeit und Bodenständigkeit",
+      "description": "Aufgewachsen auf dem Land, mit harter Feldarbeit, Vieh und den Launen der Jahreszeiten vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-blind",
+      "key": "trait::catalog::development-trait-blind",
+      "kind": "trait",
+      "name": "Blind",
+      "description": "Dauerhafter Verlust des Sehvermögens. Nachteil auf Angriffswürfe; −2 Initiative. Rein visuelle Aufgaben sind ohne geeigneten Ersatzsinn unmöglich.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/blind.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/blind.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-blind"
+    },
+    {
+      "id": "development-trait-blitzaffinitaet",
+      "key": "trait::catalog::development-trait-blitzaffinitaet",
+      "kind": "trait",
+      "name": "Blitzaffinität",
+      "description": "Resistenz gegen Blitzschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/blitzaffinitaet.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/blitzaffinitaet.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-blitzaffinitaet"
+    },
+    {
+      "id": "development-trait-blitzempfindlich",
+      "key": "trait::catalog::development-trait-blitzempfindlich",
+      "kind": "trait",
+      "name": "Blitzempfindlich",
+      "description": "Doppelter Blitzschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/blitzempfindlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/blitzempfindlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-blitzempfindlich"
+    },
+    {
+      "id": "development-trait-blitz-phobie",
+      "key": "trait::catalog::development-trait-blitz-phobie",
+      "kind": "trait",
+      "name": "Blitzphobie",
+      "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/blitz-phobie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/blitz-phobie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-blitz-phobie"
+    },
+    {
+      "id": "development-trait-bluttraeger-aelvarspross",
+      "key": "trait::catalog::development-trait-bluttraeger-aelvarspross",
+      "kind": "trait",
+      "name": "Blutträger (Aelvarspross)",
+      "description": "Angeborenes menschliches Erbe einer Aelvar: +1 Zauber-SG, +2 auf Heimlichkeit und +1 auf Religion. Die infernale Anlage ist von subtiler Magie und verborgenen Riten geprägt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-aelvarspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-aelvarspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-aelvarspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-bergspross",
+      "key": "trait::catalog::development-trait-bluttraeger-bergspross",
+      "kind": "trait",
+      "name": "Blutträger (Bergspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Berge: +1 Zauber-SG, +2 maximale TP und +1 auf STÄ-Rettungswürfe. Aktuelle TP werden nicht aufgefüllt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-bergspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-bergspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-bergspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-donnerspross",
+      "key": "trait::catalog::development-trait-bluttraeger-donnerspross",
+      "kind": "trait",
+      "name": "Blutträger (Donnerspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen des Donners: +1 Zauberangriff und Resistenz gegen Blitzschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-donnerspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-donnerspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-donnerspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-flammenspross",
+      "key": "trait::catalog::development-trait-bluttraeger-flammenspross",
+      "kind": "trait",
+      "name": "Blutträger (Flammenspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Flamme: +1 Zauberangriff und Resistenz gegen Feuerschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-flammenspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-flammenspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-flammenspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-formlingsspross",
+      "key": "trait::catalog::development-trait-bluttraeger-formlingsspross",
+      "kind": "trait",
+      "name": "Blutträger (Formlingsspross)",
+      "description": "Angeborenes menschliches Erbe eines Formlings oder Formwandlers: +1 Zauber-SG und +2 auf Täuschen. Die Anlage begünstigt Illusion und Verstellung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-formlingsspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-formlingsspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-formlingsspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-nymphenspross",
+      "key": "trait::catalog::development-trait-bluttraeger-nymphenspross",
+      "kind": "trait",
+      "name": "Blutträger (Nymphenspross)",
+      "description": "Angeborenes menschliches Erbe einer celestialen Nymphe: +1 Zauber-SG und jeweils +1 auf Naturkunde, Heilkunde und Mit Tieren umgehen. Die Anlage ist lebens- und naturverbunden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-nymphenspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-nymphenspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-nymphenspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-satyrspross",
+      "key": "trait::catalog::development-trait-bluttraeger-satyrspross",
+      "kind": "trait",
+      "name": "Blutträger (Satyrspross)",
+      "description": "Angeborenes menschliches Erbe eines Satyrs: +1 Zauberangriff, +2 auf Auftreten und +1 auf Akrobatik. Magische Begabung zeigt sich besonders in Klang und Rhythmus.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-satyrspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-satyrspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-satyrspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-succubusspross",
+      "key": "trait::catalog::development-trait-bluttraeger-succubusspross",
+      "kind": "trait",
+      "name": "Blutträger (Succubusspross)",
+      "description": "Angeborenes menschliches Erbe eines Sukkubus oder Inkubus: +1 Zauber-SG, +2 auf Flirten und +1 auf Motiv erkennen. Die Anlage begünstigt Traum- und Gefühlsmagie.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-succubusspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-succubusspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-succubusspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-vampirspross",
+      "key": "trait::catalog::development-trait-bluttraeger-vampirspross",
+      "kind": "trait",
+      "name": "Blutträger (Vampirspross)",
+      "description": "Angeborenes menschliches Erbe eines vampirischen Vorfahren: +1 Zauberangriff, +1 auf Arkane Kunde und KON-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-vampirspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-vampirspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-vampirspross"
+    },
+    {
+      "id": "development-trait-bluttraeger-windspross",
+      "key": "trait::catalog::development-trait-bluttraeger-windspross",
+      "kind": "trait",
+      "name": "Blutträger (Windspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 m Bewegung und +1 auf Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-windspross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-windspross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-bluttraeger-windspross"
+    },
+    {
+      "id": "development-trait-breitschultrig",
+      "key": "trait::catalog::development-trait-breitschultrig",
+      "kind": "trait",
+      "name": "Breitschultrig",
+      "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/breitschultrig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/breitschultrig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-breitschultrig"
+    },
+    {
+      "id": "development-trait-gelehrt",
+      "key": "trait::catalog::development-trait-gelehrt",
+      "kind": "trait",
+      "name": "Bücherwurm",
+      "description": "Expertise in Geschichte; −1 auf Athletik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gelehrt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gelehrt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gelehrt"
+    },
+    {
+      "id": "development-trait-buehnenbegabt",
+      "key": "trait::catalog::development-trait-buehnenbegabt",
+      "kind": "trait",
+      "name": "Bühnenbegabt",
+      "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/buehnenbegabt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/buehnenbegabt.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [],
+      "dataId": "development-trait-buehnenbegabt"
+    },
+    {
+      "id": "builtin--trait--musikerin--b-hnenerfahrung-und-publikumsgesp-r",
+      "key": "trait::buhnenerfahrung und publikumsgespur",
+      "kind": "trait",
+      "name": "Bühnenerfahrung und Publikumsgespür",
+      "description": "Auf Marktplätzen, in Hallen und Wirtshäusern ausgebildete Musikerin oder Bardin, mit Vortrag, Instrument und dem Umgang mit Publikum vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-buehnenmensch",
+      "key": "trait::catalog::development-trait-buehnenmensch",
+      "kind": "trait",
+      "name": "Bühnenmensch",
+      "description": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7",
+          "name": "Freya Skald",
+          "portrait": "https://i.imgur.com/EAkV9TW.png"
+        }
+      ],
+      "dataId": "development-trait-buehnenmensch"
+    },
+    {
+      "id": "development-trait-buehnensicher",
+      "key": "trait::catalog::development-trait-buehnensicher",
+      "kind": "trait",
+      "name": "Bühnensicher",
+      "description": "Vorteil bei Auftreten-Proben. Mehrere Quellen von Vorteil geben keine zusätzlichen Würfel.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/buehnensicher.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/buehnensicher.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [],
+      "dataId": "development-trait-buehnensicher"
+    },
+    {
+      "id": "builtin--trait--cenyr--cenyri-kultur",
+      "key": "trait::cenyri kultur",
+      "kind": "trait",
+      "name": "Cenyri Kultur",
+      "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+      "explicit": "/Stammbäume/assets/images/regions/koenigreich-cenyr.png",
+      "resolved": "/Stammbäume/assets/images/regions/koenigreich-cenyr.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Cavalry_leader.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-vernarbtes-gewebe",
+      "key": "trait::catalog::development-trait-vernarbtes-gewebe",
+      "kind": "trait",
+      "name": "Chronisch vernarbtes Gewebe",
+      "description": "−2 maximale TP und −1 auf Akrobatik durch dauerhaft eingeschränkte Gewebeelastizität.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/vernarbtes-gewebe.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/vernarbtes-gewebe.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-vernarbtes-gewebe"
+    },
+    {
+      "id": "development-trait-leberschwaeche",
+      "key": "trait::catalog::development-trait-leberschwaeche",
+      "kind": "trait",
+      "name": "Chronische Leberschwäche",
+      "description": "−2 auf Rettungswürfe gegen Gift. Alkoholbelastung zählt zusätzlich um 25 % stärker; Toleranz verändert nicht diesen Nachteil.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/leberschwaeche.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/leberschwaeche.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-leberschwaeche"
+    },
+    {
+      "id": "development-trait-lungenschwaeche",
+      "key": "trait::catalog::development-trait-lungenschwaeche",
+      "kind": "trait",
+      "name": "Chronische Lungenschwäche",
+      "description": "−2 auf KON-Rettungswürfe und −1 auf Athletik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/lungenschwaeche.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/lungenschwaeche.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-lungenschwaeche"
+    },
+    {
+      "id": "development-trait-chronische-migraene",
+      "key": "trait::catalog::development-trait-chronische-migraene",
+      "kind": "trait",
+      "name": "Chronische Migräne",
+      "description": "Anhaltende Beschwerden: −1 Initiative und −1 auf Nachforschungen. Einzelne schwere Schübe werden gesondert geführt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/chronische-migraene.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/chronische-migraene.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-chronische-migraene"
+    },
+    {
+      "id": "development-trait-nierenschwaeche",
+      "key": "trait::catalog::development-trait-nierenschwaeche",
+      "kind": "trait",
+      "name": "Chronische Nierenschwäche",
+      "description": "−2 auf Rettungswürfe gegen Gift und −1 auf Körperbeherrschung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/nierenschwaeche.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/nierenschwaeche.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-nierenschwaeche"
+    },
+    {
+      "id": "development-trait-schlaf-wach-stoerung",
+      "key": "trait::catalog::development-trait-schlaf-wach-stoerung",
+      "kind": "trait",
+      "name": "Chronische Schlaf-Wach-Störung",
+      "description": "−2 Initiative. Schlafanfälle werden ausdrücklich als eigener Zustand vergeben, niemals zufällig beim Laden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schlaf-wach-stoerung.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schlaf-wach-stoerung.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schlaf-wach-stoerung"
+    },
+    {
+      "id": "development-trait-chronisches-hinken",
+      "key": "trait::catalog::development-trait-chronisches-hinken",
+      "kind": "trait",
+      "name": "Chronisches Hinken",
+      "description": "Dauerhaft beeinträchtigter Gang: −1 m Bewegung und −1 auf Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/chronisches-hinken.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/chronisches-hinken.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-chronisches-hinken"
+    },
+    {
+      "id": "development-trait-verdauungsleiden",
+      "key": "trait::catalog::development-trait-verdauungsleiden",
+      "kind": "trait",
+      "name": "Chronisches Verdauungsleiden",
+      "description": "−2 maximale TP und −1 auf KON-Rettungswürfe. Passende Nahrung ist eine individuelle Erleichterung, keine automatische Heilung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/verdauungsleiden.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/verdauungsleiden.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-verdauungsleiden"
+    },
+    {
+      "id": "development-trait-lichtempfindliche-augen",
+      "key": "trait::catalog::development-trait-lichtempfindliche-augen",
+      "kind": "trait",
+      "name": "Dauerhaft lichtempfindliche Augen",
+      "description": "−1 auf Wahrnehmung und Fernkampf-Waffenangriffe. Schutz vor grellem Licht wird individuell berücksichtigt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/lichtempfindliche-augen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/lichtempfindliche-augen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-lichtempfindliche-augen"
+    },
+    {
+      "id": "development-trait-arkane-vernarbung",
+      "key": "trait::catalog::development-trait-arkane-vernarbung",
+      "kind": "trait",
+      "name": "Dauerhafte arkane Vernarbung",
+      "description": "−1 Zauberangriff und −1 auf Rettungswürfe gegen Magie. Keine automatische Infektion mit Arkanistenfieber.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkane-vernarbung.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkane-vernarbung.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkane-vernarbung"
+    },
+    {
+      "id": "development-trait-nervenverletzung",
+      "key": "trait::catalog::development-trait-nervenverletzung",
+      "kind": "trait",
+      "name": "Dauerhafte Nervenverletzung",
+      "description": "−1 auf Fingerfertigkeit und Körperbeherrschung; −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/nervenverletzung.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/nervenverletzung.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-nervenverletzung"
+    },
+    {
+      "id": "development-trait-chronische-sehschwaeche",
+      "key": "trait::catalog::development-trait-chronische-sehschwaeche",
+      "kind": "trait",
+      "name": "Dauerhafte Sehschwäche",
+      "description": "−1 auf Wahrnehmung und Nachforschungen. Individuell angepasste Sehhilfen werden gesondert vereinbart.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/chronische-sehschwaeche.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/chronische-sehschwaeche.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-chronische-sehschwaeche"
+    },
+    {
+      "id": "development-trait-deckungssucher",
+      "key": "trait::catalog::development-trait-deckungssucher",
+      "kind": "trait",
+      "name": "Deckungssucher",
+      "description": "Du bewegst dich bedächtig und schützt dich vor Beschuss: −1 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/deckungssucher.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/deckungssucher.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-deckungssucher"
+    },
+    {
+      "id": "development-trait-duennhaeutig",
+      "key": "trait::catalog::development-trait-duennhaeutig",
+      "kind": "trait",
+      "name": "Dünnhäutig",
+      "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/duennhaeutig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/duennhaeutig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-duennhaeutig"
+    },
+    {
+      "id": "development-trait-ehrenhafter-zweikampf",
+      "key": "trait::catalog::development-trait-ehrenhafter-zweikampf",
+      "kind": "trait",
+      "name": "Ehrenhafter Zweikampf",
+      "description": "Du bevorzugst die direkte Begegnung: +1 auf Nahkampf-Waffenangriffe, −1 auf Fernkampf-Waffenangriffe. Das gilt auch für entsprechende Techniken, nicht für Zauber.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/ehrenhafter-zweikampf.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/ehrenhafter-zweikampf.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Just.png",
+      "owners": [],
+      "dataId": "development-trait-ehrenhafter-zweikampf"
+    },
+    {
+      "id": "development-trait-eidetisches-gedaechtnis",
+      "key": "trait::catalog::development-trait-eidetisches-gedaechtnis",
+      "kind": "trait",
+      "name": "Eidetisches Gedächtnis",
+      "description": "+1 INT-Attributswert, +3 Geschichte und +2 auf Arkane Kunde, Naturkunde, Religion und Heilkunde. Erinnern setzt vorherige Wahrnehmung voraus; keine automatisch bekannten Geheimnisse.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/eidetisches-gedaechtnis.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/eidetisches-gedaechtnis.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-eidetisches-gedaechtnis"
+    },
+    {
+      "id": "development-trait-eigensinn",
+      "key": "trait::catalog::development-trait-eigensinn",
+      "kind": "trait",
+      "name": "Eigensinn",
+      "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Stubborn.png",
+      "owners": [
+        {
+          "id": "q1QtSIug74FzzwUAqWrs",
+          "name": "Gawain Draig",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+        },
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        },
+        {
+          "id": "person--haus-saethwyr--nudd-saethwyr",
+          "name": "Nudd Saethwyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg"
+        },
+        {
+          "id": "person--haus-wyrm--gais-wyrm",
+          "name": "Gais Wyrm",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg"
+        }
+      ],
+      "dataId": "development-trait-eigensinn"
+    },
+    {
+      "id": "development-trait-einarmig",
+      "key": "trait::catalog::development-trait-einarmig",
+      "kind": "trait",
+      "name": "Einarmig",
+      "description": "Ein Arm fehlt oder ist dauerhaft unbrauchbar: −2 auf Athletik. Tätigkeiten mit zwei benötigten Händen sind ohne geeigneten Ersatz nicht möglich.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/einarmig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/einarmig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-einarmig"
+    },
+    {
+      "id": "development-trait-einaeugig",
+      "key": "trait::catalog::development-trait-einaeugig",
+      "kind": "trait",
+      "name": "Einäugig",
+      "description": "Eingeschränktes räumliches Sehen: −1 auf Fernkampf-Waffenangriffe und −1 passive Wahrnehmung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/einaeugig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/einaeugig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-einaeugig"
+    },
+    {
+      "id": "development-trait-einseitig-taub",
+      "key": "trait::catalog::development-trait-einseitig-taub",
+      "kind": "trait",
+      "name": "Einseitig taub",
+      "description": "Schallquellen lassen sich schwer orten: −1 Initiative und −1 passive Wahrnehmung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/einseitig-taub.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/einseitig-taub.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-einseitig-taub"
+    },
+    {
+      "id": "development-trait-eisaffinitaet",
+      "key": "trait::catalog::development-trait-eisaffinitaet",
+      "kind": "trait",
+      "name": "Eisaffinität",
+      "description": "Resistenz gegen Kälteschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/eisaffinitaet.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/eisaffinitaet.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-eisaffinitaet"
+    },
+    {
+      "id": "development-trait-konzentriert",
+      "key": "trait::catalog::development-trait-konzentriert",
+      "kind": "trait",
+      "name": "Eiserne Konzentration",
+      "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/konzentriert.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/konzentriert.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-konzentriert"
+    },
+    {
+      "id": "development-trait-eiserne-lunge",
+      "key": "trait::catalog::development-trait-eiserne-lunge",
+      "kind": "trait",
+      "name": "Eiserne Lunge",
+      "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/eiserne-lunge.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/eiserne-lunge.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-eiserne-lunge"
+    },
+    {
+      "id": "development-trait-arkanistenfieber-symptome",
+      "key": "trait::catalog::development-trait-arkanistenfieber-symptome",
+      "kind": "trait",
+      "name": "Erste Symptome des Arkanistenfiebers",
+      "description": "Der kurzzeitige Magieschub bleibt: +1 Zauberangriff; −1 Initiative und −1 auf KON-Rettungswürfe. Weitere Magie gefährdet die Figur.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/arkanistenfieber-symptome.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/arkanistenfieber-symptome.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-arkanistenfieber-symptome"
+    },
+    {
+      "id": "development-trait-fehlende-finger",
+      "key": "trait::catalog::development-trait-fehlende-finger",
+      "kind": "trait",
+      "name": "Fehlende Finger",
+      "description": "Mehrere Finger fehlen oder sind dauerhaft unbeweglich: −2 auf Fingerfertigkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fehlende-finger.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fehlende-finger.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-fehlende-finger"
+    },
+    {
+      "id": "development-trait-fehlende-hand",
+      "key": "trait::catalog::development-trait-fehlende-hand",
+      "kind": "trait",
+      "name": "Fehlende Hand",
+      "description": "Eine Hand fehlt oder ist dauerhaft unbrauchbar: −1 auf Fingerfertigkeit. Handabhängige Ausrüstung benötigt eine passende Alternative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fehlende-hand.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fehlende-hand.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-fehlende-hand"
+    },
+    {
+      "id": "development-trait-fehlender-fuss",
+      "key": "trait::catalog::development-trait-fehlender-fuss",
+      "kind": "trait",
+      "name": "Fehlender Fuß",
+      "description": "Ein Fuß fehlt oder ist dauerhaft unbrauchbar: −3 m Bewegung und −2 auf Körperbeherrschung. Hilfsmittel werden individuell abgebildet.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fehlender-fuss.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fehlender-fuss.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-fehlender-fuss"
+    },
+    {
+      "id": "development-trait-feines-musikgehoer",
+      "key": "trait::catalog::development-trait-feines-musikgehoer",
+      "kind": "trait",
+      "name": "Feines Musikgehör",
+      "description": "Du nimmst Rhythmus und emotionale Zwischentöne sicher auf: +2 auf Auftreten und +1 auf Motiv erkennen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/feines-musikgehoer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/feines-musikgehoer.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [],
+      "dataId": "development-trait-feines-musikgehoer"
+    },
+    {
+      "id": "development-trait-feuer-phobie",
+      "key": "trait::catalog::development-trait-feuer-phobie",
+      "kind": "trait",
+      "name": "Feuer Phobie",
+      "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/feuer-phobie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/feuer-phobie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-feuer-phobie"
+    },
+    {
+      "id": "development-trait-feueraffinitaet",
+      "key": "trait::catalog::development-trait-feueraffinitaet",
+      "kind": "trait",
+      "name": "Feueraffinität",
+      "description": "Resistenz gegen Feuerschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/feueraffinitaet.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/feueraffinitaet.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-feueraffinitaet"
+    },
+    {
+      "id": "development-trait-fit",
+      "key": "trait::catalog::development-trait-fit",
+      "kind": "trait",
+      "name": "Fit",
+      "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fit.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fit.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "oUlhJyX6C4Q69mtLS9u1",
+          "name": "Asgeir Wolfshorn",
+          "portrait": "https://i.imgur.com/tlufXWn.png"
+        }
+      ],
+      "dataId": "development-trait-fit"
+    },
+    {
+      "id": "development-trait-flinke-finger",
+      "key": "trait::catalog::development-trait-flinke-finger",
+      "kind": "trait",
+      "name": "Flinke Finger",
+      "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/flinke-finger.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/flinke-finger.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-flinke-finger"
+    },
+    {
+      "id": "development-trait-flink",
+      "key": "trait::catalog::development-trait-flink",
+      "kind": "trait",
+      "name": "Flinke Füße",
+      "description": "+2 m Bewegung, −1 RK.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/flink.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/flink.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-flink"
+    },
+    {
+      "id": "development-trait-fragil",
+      "key": "trait::catalog::development-trait-fragil",
+      "kind": "trait",
+      "name": "Fragil",
+      "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fragil.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fragil.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-fragil"
+    },
+    {
+      "id": "development-trait-fremde-erinnerungen",
+      "key": "trait::catalog::development-trait-fremde-erinnerungen",
+      "kind": "trait",
+      "name": "Fremde Erinnerungen",
+      "description": "Bruchstücke fremder Geschichten und Runen drängen sich in deinen Geist: +2 auf Geschichte und Arkane Kunde, −2 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/fremde-erinnerungen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/fremde-erinnerungen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-fremde-erinnerungen"
+    },
+    {
+      "id": "development-trait-frohnatur",
+      "key": "trait::catalog::development-trait-frohnatur",
+      "kind": "trait",
+      "name": "Frohnatur",
+      "description": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Gregarious.png",
+      "owners": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7",
+          "name": "Freya Skald",
+          "portrait": "https://i.imgur.com/EAkV9TW.png"
+        }
+      ],
+      "dataId": "development-trait-frohnatur"
+    },
+    {
+      "id": "development-trait-frostempfindlich",
+      "key": "trait::catalog::development-trait-frostempfindlich",
+      "kind": "trait",
+      "name": "Frostempfindlich",
+      "description": "Doppelter Kälteschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/frostempfindlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/frostempfindlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-frostempfindlich"
+    },
+    {
+      "id": "development-trait-frost-phobie",
+      "key": "trait::catalog::development-trait-frost-phobie",
+      "kind": "trait",
+      "name": "Frostphobie",
+      "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/frost-phobie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/frost-phobie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-frost-phobie"
+    },
+    {
+      "id": "development-trait-faehrtenleser",
+      "key": "trait::catalog::development-trait-faehrtenleser",
+      "kind": "trait",
+      "name": "Geborener Fährtenleser",
+      "description": "Expertise in Überleben und +1 auf Naturkunde.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "bSYZYAEOwiRgy44f6OmO",
+          "name": "Ylva Wolfshorn",
+          "portrait": "https://i.imgur.com/zQmDv85.png"
+        }
+      ],
+      "dataId": "development-trait-faehrtenleser"
+    },
+    {
+      "id": "development-trait-geistig-beschraenkt",
+      "key": "trait::catalog::development-trait-geistig-beschraenkt",
+      "kind": "trait",
+      "name": "Geistig beschränkt",
+      "description": "−4 auf sämtliche Fertigkeitsproben. Die wirksamen Attributswerte INT und WEI sind auf höchstens 3 begrenzt, auch mit Boni oder freien Modifikatoren. Andere Handlungen werden nicht pauschal gesperrt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/geistig-beschraenkt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/geistig-beschraenkt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-geistig-beschraenkt"
+    },
+    {
+      "id": "development-trait-gelaehmte-beine",
+      "key": "trait::catalog::development-trait-gelaehmte-beine",
+      "kind": "trait",
+      "name": "Gelähmte Beine",
+      "description": "Eigenständige Fortbewegung mit den Beinen ist nicht möglich. −3 auf Akrobatik; Rollstuhl, Reittier, Tragen oder Magie benötigen eine eigene Bewegungsregel.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gelaehmte-beine.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gelaehmte-beine.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gelaehmte-beine"
+    },
+    {
+      "id": "builtin--trait--gelehrter--gelehrtes-grundwissen",
+      "key": "trait::gelehrtes grundwissen",
+      "kind": "trait",
+      "name": "Gelehrtes Grundwissen",
+      "description": "Jahre in Bibliotheken, Skriptorien oder als Lehrling eines Gelehrten verbracht; vertraut mit Schrift, Theorie und arkanem Grundwissen.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Scholar.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Scholar.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-gelenkig",
+      "key": "trait::catalog::development-trait-gelenkig",
+      "kind": "trait",
+      "name": "Gelenkig",
+      "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gelenkig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gelenkig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gelenkig"
+    },
+    {
+      "id": "development-trait-genie",
+      "key": "trait::catalog::development-trait-genie",
+      "kind": "trait",
+      "name": "Genie",
+      "description": "+1 auf jeden der sechs Attributswerte und zusätzlich +1 auf sämtliche Fertigkeitsproben. Daraus entstehende Attributsmodifikatoren gelten ebenfalls. Keine automatische Ausbildung, Fähigkeiten oder Gegenstände.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/genie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/genie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-genie"
+    },
+    {
+      "id": "development-trait-geruchssinnverlust",
+      "key": "trait::catalog::development-trait-geruchssinnverlust",
+      "kind": "trait",
+      "name": "Geruchssinnverlust",
+      "description": "Gerüche werden nicht wahrgenommen. Rein geruchsbasierte Aufgaben sind ohne Ersatz unmöglich.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/geruchssinnverlust.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/geruchssinnverlust.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-geruchssinnverlust"
+    },
+    {
+      "id": "development-trait-geschmackssinnverlust",
+      "key": "trait::catalog::development-trait-geschmackssinnverlust",
+      "kind": "trait",
+      "name": "Geschmackssinnverlust",
+      "description": "Geschmack wird nicht wahrgenommen. Verdorbene oder veränderte Speisen können nicht allein durch Kosten erkannt werden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/geschmackssinnverlust.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/geschmackssinnverlust.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-geschmackssinnverlust"
+    },
+    {
+      "id": "development-trait-giftanfaellig",
+      "key": "trait::catalog::development-trait-giftanfaellig",
+      "kind": "trait",
+      "name": "Giftanfällig",
+      "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/giftanfaellig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/giftanfaellig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-giftanfaellig"
+    },
+    {
+      "id": "development-trait-giftfest",
+      "key": "trait::catalog::development-trait-giftfest",
+      "kind": "trait",
+      "name": "Giftfeste Konstitution",
+      "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/giftfest.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/giftfest.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-giftfest"
+    },
+    {
+      "id": "development-trait-gift-phobie",
+      "key": "trait::catalog::development-trait-gift-phobie",
+      "kind": "trait",
+      "name": "Giftphobie",
+      "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gift-phobie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gift-phobie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gift-phobie"
+    },
+    {
+      "id": "development-trait-glueckspilz",
+      "key": "trait::catalog::development-trait-glueckspilz",
+      "kind": "trait",
+      "name": "Glückspilz",
+      "description": "+1 auf alle Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/glueckspilz.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/glueckspilz.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-glueckspilz"
+    },
+    {
+      "id": "development-trait-gross",
+      "key": "trait::catalog::development-trait-gross",
+      "kind": "trait",
+      "name": "Groß",
+      "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gross.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gross.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gross"
+    },
+    {
+      "id": "development-trait-gutaussehend",
+      "key": "trait::catalog::development-trait-gutaussehend",
+      "kind": "trait",
+      "name": "Gutaussehend",
+      "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/gutaussehend.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/gutaussehend.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-gutaussehend"
+    },
+    {
+      "id": "development-trait-haesslich",
+      "key": "trait::catalog::development-trait-haesslich",
+      "kind": "trait",
+      "name": "Hässlich",
+      "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/haesslich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/haesslich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-haesslich"
+    },
+    {
+      "id": "development-trait-heilerhaende",
+      "key": "trait::catalog::development-trait-heilerhaende",
+      "kind": "trait",
+      "name": "Heilerhände",
+      "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/heilerhaende.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/heilerhaende.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-heilerhaende"
+    },
+    {
+      "id": "builtin--trait--cenyr--h-fische-und-religi-se-pr-gung",
+      "key": "trait::hofische und religiose pragung",
+      "kind": "trait",
+      "name": "Höfische und religiöse Prägung",
+      "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+      "explicit": "/Stammbäume/assets/images/regions/koenigreich-cenyr.png",
+      "resolved": "/Stammbäume/assets/images/regions/koenigreich-cenyr.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Zealous.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-huenenhaft",
+      "key": "trait::catalog::development-trait-huenenhaft",
+      "kind": "trait",
+      "name": "Hünenhaft",
+      "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/huenenhaft.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/huenenhaft.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-huenenhaft"
+    },
+    {
+      "id": "development-trait-kampfbereit",
+      "key": "trait::catalog::development-trait-kampfbereit",
+      "kind": "trait",
+      "name": "Immer kampfbereit",
+      "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/kampfbereit.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/kampfbereit.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-kampfbereit"
+    },
+    {
+      "id": "development-trait-naturkind",
+      "key": "trait::catalog::development-trait-naturkind",
+      "kind": "trait",
+      "name": "In der Natur aufgewachsen",
+      "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/naturkind.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/naturkind.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-naturkind"
+    },
+    {
+      "id": "builtin--trait--klerus--kirchliche-erziehung",
+      "key": "trait::kirchliche erziehung",
+      "kind": "trait",
+      "name": "Kirchliche Erziehung",
+      "description": "Im Dienst eines Tempels oder Schreins aufgewachsen, mit Liturgie, Seelsorge und den Pflichten des Klerus vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Zealous.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Zealous.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-klein",
+      "key": "trait::catalog::development-trait-klein",
+      "kind": "trait",
+      "name": "Klein",
+      "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/klein.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/klein.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-klein"
+    },
+    {
+      "id": "development-trait-klingenmut",
+      "key": "trait::catalog::development-trait-klingenmut",
+      "kind": "trait",
+      "name": "Klingenmut",
+      "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/klingenmut.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/klingenmut.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-klingenmut"
+    },
+    {
+      "id": "development-trait-kraftpaket",
+      "key": "trait::catalog::development-trait-kraftpaket",
+      "kind": "trait",
+      "name": "Kraftpaket",
+      "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/kraftpaket.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/kraftpaket.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-kraftpaket"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-1",
+      "key": "trait::catalog::development-trait-abhaengigkeit-kriss-1",
+      "kind": "trait",
+      "name": "Kriss-süchtig (I. Stadium)",
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-1.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-1.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-kriss-1"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-2",
+      "key": "trait::catalog::development-trait-abhaengigkeit-kriss-2",
+      "kind": "trait",
+      "name": "Kriss-süchtig (II. Stadium)",
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-2.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-2.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-kriss-2"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-3",
+      "key": "trait::catalog::development-trait-abhaengigkeit-kriss-3",
+      "kind": "trait",
+      "name": "Kriss-süchtig (III. Stadium)",
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-3.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-kriss-3.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-kriss-3"
+    },
+    {
+      "id": "builtin--trait--aeldrunmar--kulturelle-pr-gung-aeldrunmar",
+      "key": "trait::kulturelle pragung aeldrunmar",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Aeldrunmar",
+      "description": "Aeldrunmars friedlich zusammengewachsene Kultur verbindet Felder, Viehzucht, Reitkunst und Seewege. Dieses Paket betont Tierkenntnis, umsichtiges Versorgen und praktische körperliche Arbeit; es verleiht kein Pferd.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aeldrunmar.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aeldrunmar.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--aislearneach--kulturelle-pr-gung-alben-aus-aislearneach",
+      "key": "trait::kulturelle pragung alben aus aislearneach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Aislearneach",
+      "description": "Das albische Fürstentum Aislearneach wird aus der vorhandenen Fürstenclan-Akte um Gaelan geführt. Solange keine abweichende Ausbildung festgelegt ist, verwendet seine Herkunft das allgemeine albische Paket.",
+      "explicit": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+      "resolved": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--blaithneach--kulturelle-pr-gung-alben-aus-blaithneach",
+      "key": "trait::kulturelle pragung alben aus blaithneach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Blaithneach",
+      "description": "Blaithneach gehört zum Kulturkreis der Cruinach. Die überlieferten Bräuche, religiöse Bildung und die vermittelnde Rolle im Clanleben bilden hier die kulturellen Ausgangswerte.",
+      "explicit": "/Stammbäume/assets/images/regions/Blaithneach/blaithneach.png",
+      "resolved": "/Stammbäume/assets/images/regions/Blaithneach/blaithneach.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--ceitheach--kulturelle-pr-gung-alben-aus-ceitheach",
+      "key": "trait::kulturelle pragung alben aus ceitheach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Ceitheach",
+      "description": "Das historische Ceitheach war ein Fürstentum der Glaennath, der Flussalben. Naturkenntnis und überlieferte religiöse Praxis bestimmen dieses Paket. Überlebende behalten ihre Herkunft; aus dem heutigen Dunkelhain wird kein neues Volk abgeleitet.",
+      "explicit": "/Stammbäume/assets/images/regions/Ceitheach/ceitheach.png",
+      "resolved": "/Stammbäume/assets/images/regions/Ceitheach/ceitheach.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--deitheach--kulturelle-pr-gung-alben-aus-deitheach",
+      "key": "trait::kulturelle pragung alben aus deitheach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Deitheach",
+      "description": "Die Herkunft Deitheachs erinnert an das albische Fürstentum zwischen bewaldeten Gebirgen, Tälern und westlicher Küste. Belastbarkeit und umsichtige Geländepraxis bilden dieses Paket; die gegenwärtige Besatzung ersetzt die kulturelle Herkunft nicht.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/deitheach.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/deitheach.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--hain-der-druiden--kulturelle-pr-gung-alben-aus-dem-hain-der-druiden",
+      "key": "trait::kulturelle pragung alben aus dem hain der druiden",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus dem Hain der Druiden",
+      "description": "Hain der Druiden ist im bestehenden Verzeichnis als albisches fürstliches Gebiet genannt. Seine nähere Ausarbeitung bleibt offen. Bis dahin verwendet diese Herkunft das allgemeine albische Paket; der Ortsname verleiht weder einen Beruf noch Zauber.",
+      "explicit": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "resolved": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--dunfal--kulturelle-pr-gung-alben-aus-dunfal",
+      "key": "trait::kulturelle pragung alben aus dunfal",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Dunfal",
+      "description": "Dunfal ist das Fürstentum Cú Chulainns und der Hauptsitz der Fianna. Körperliche Übung und das Bewahren der Kriegerüberlieferung prägen dieses Paket; Fianna-Zugehörigkeit oder besondere Techniken werden nicht automatisch verliehen.",
+      "explicit": "/Stammbäume/assets/images/regions/Dunfal/dunfal.png",
+      "resolved": "/Stammbäume/assets/images/regions/Dunfal/dunfal.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--faelaorn--kulturelle-pr-gung-alben-aus-faelaorn",
+      "key": "trait::kulturelle pragung alben aus faelaorn",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Faelaorn",
+      "description": "Faelaorns albische Kultur besteht um Piobarach fort. Das Paket verbindet bewegliche Geländeausbildung mit der Kenntnis der überlieferten Heimat; Besatzung oder Vertreibung begründen keinen Wechsel zum nordmännischen Paket.",
+      "explicit": "/Stammbäume/assets/images/regions/Faelaorn/faelaorn.png",
+      "resolved": "/Stammbäume/assets/images/regions/Faelaorn/faelaorn.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--iathneach--kulturelle-pr-gung-alben-aus-iathneach",
+      "key": "trait::kulturelle pragung alben aus iathneach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Iathneach",
+      "description": "Iathneachs bewaldete Gebirgstäler, Flusswege und Inselküsten prägen eine weiterhin albische Kultur. Bewegliche Geländearbeit und Ortskenntnis stehen im Mittelpunkt dieses Herkunftspakets.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--leitheach--kulturelle-pr-gung-alben-aus-leitheach",
+      "key": "trait::kulturelle pragung alben aus leitheach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Leitheach",
+      "description": "Leitheach ist ein Kernland der Cruinach, der Kronalben. Überlieferung, religiöse Bildung und das Bewahren alter Bräuche bilden den Schwerpunkt dieses regionalen Kulturpakets.",
+      "explicit": "/Stammbäume/assets/images/regions/Leitheach/leitheach.png",
+      "resolved": "/Stammbäume/assets/images/regions/Leitheach/leitheach.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--lichthain--kulturelle-pr-gung-alben-aus-lichthain",
+      "key": "trait::kulturelle pragung alben aus lichthain",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Lichthain",
+      "description": "Lichthain ist im bestehenden Verzeichnis als albisches fürstliches Gebiet genannt. Seine nähere Ausarbeitung bleibt offen. Bis dahin verwendet diese Herkunft das allgemeine albische Paket; der Ortsname verleiht weder einen Beruf noch Zauber.",
+      "explicit": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "resolved": "/AleriaAlmanach/public/assets/character-origins/alben.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--moinneach--kulturelle-pr-gung-alben-aus-moinneach",
+      "key": "trait::kulturelle pragung alben aus moinneach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Moinneach",
+      "description": "Moinneachs große Sumpflandschaft verlangt Umsicht zwischen schwarzem Wasser, Pilzen, Mangroven und versunkenen Wegen. Das Paket betont Umweltkenntnis und Ausdauer; es erzeugt keine Gift- oder Krankheitsimmunität.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--uathneach--kulturelle-pr-gung-alben-aus-uathneach",
+      "key": "trait::kulturelle pragung alben aus uathneach",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alben aus Uathneach",
+      "description": "Uathneach bewahrt seine albische Kultur an der nördlichen Küste um Dunnean. Umsicht im Gelände und die vertraute Natur- und Wildnisausbildung bilden dieses regionale Paket.",
+      "explicit": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
+      "resolved": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--aldinger--kulturelle-pr-gung-aldinger",
+      "key": "trait::kulturelle pragung aldinger",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Aldinger",
+      "description": "Aldingens kaiserliches Erbe verbindet militärischen Anspruch mit Häfen, Pferdezucht und geordneter Verwaltung. Körperliche Übung und planvolles Handeln bilden die Ausgangswerte; persönliche Ausrüstung oder Adel folgen daraus nicht.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/aldingen.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/aldingen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--alwener--kulturelle-pr-gung-alwener",
+      "key": "trait::kulturelle pragung alwener",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Alwener",
+      "description": "Die Alwener Goldmunds leben in einem goldreichen Gebirgsland mit ausgeprägtem Bankwesen und kaiserlicher Verwaltungstradition. Dieses Paket schult Berechnung, Verhandlung und das Lesen gesellschaftlicher Interessen; es gewährt weder Vermögen noch Stand.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/goldmund.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/goldmund.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--blutstadt--kulturelle-pr-gung-blutst-dter",
+      "key": "trait::kulturelle pragung blutstadter",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Blutstädter",
+      "description": "Die Blutstadt ist aus Gildenbund und Kaiserstadt hervorgegangen und bildet heute ein Zentrum von Kirche, Gilden, Orden und Zünften. Ihr kulturelles Paket fördert städtische Bildung, öffentliche Rede und Kenntnis der überlieferten Institutionen.",
+      "explicit": "/Vorschau/Blutstadt/assets/crests/blutstadt.webp",
+      "resolved": "/Vorschau/Blutstadt/assets/crests/blutstadt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--brevanor--kulturelle-pr-gung-brevanor",
+      "key": "trait::kulturelle pragung brevanor",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Brevanor",
+      "description": "Aus den Briath und dem Fürstentum Brethneach erwuchs Brevanors eigenständige Hof- und Ritterkultur. Feiner Auftritt, Heldengeschichten und gesellige Tafeltraditionen prägen dieses Paket. Herkunft begründet weder Sektenzugehörigkeit noch Zustimmung zur Triarchie.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/brevanor.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/brevanor.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--morgorn--kulturelle-pr-gung-morgorn",
+      "key": "trait::kulturelle pragung morgorn",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Morgorn",
+      "description": "Morgorns Hallen- und Kastenkultur betont verlässlichen Dienst, Handwerk und die Verantwortung für anvertrautes Gut. Das Paket verbindet Ausdauer mit sorgfältiger, sachkundiger Arbeit; eine Kaste oder ein Adelstitel wird dadurch nicht vergeben.",
+      "explicit": "/Stammbäume/assets/images/regions/morgorn.png",
+      "resolved": "/Stammbäume/assets/images/regions/morgorn.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--fjordheim--kulturelle-pr-gung-nordm-nner-aus-fjordheim",
+      "key": "trait::kulturelle pragung nordmanner aus fjordheim",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Nordmänner aus Fjordheim",
+      "description": "Dieses Paket beschreibt die nordmännische Küstenkultur Fjordheims mit Seefahrt, Wachsamkeit und Ausdauer. Es wird bewusst als nordmännische Herkunft gewählt; ein Bewohner vennyriischer Herkunft behält stattdessen sein eigenes Paket.",
+      "explicit": "/Stammbäume/assets/images/regions/Fjordheim/fjordheim.png",
+      "resolved": "/Stammbäume/assets/images/regions/Fjordheim/fjordheim.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--skjaerheim--kulturelle-pr-gung-nordm-nner-aus-skjaerheim",
+      "key": "trait::kulturelle pragung nordmanner aus skjaerheim",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Nordmänner aus Skjaerheim",
+      "description": "Das nordmännische Paket Skjaerheims betont Belastbarkeit, körperliche Übung und das Leben im eroberten Grenzland. Die dort lebenden Alben behalten ihre eigene Herkunft; das Reiktum ist keine biologische Spezies.",
+      "explicit": "/Stammbäume/assets/images/regions/Skjaerheim/skjaerheim.png",
+      "resolved": "/Stammbäume/assets/images/regions/Skjaerheim/skjaerheim.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--talyndor--kulturelle-pr-gung-talyndor",
+      "key": "trait::kulturelle pragung talyndor",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Talyndor",
+      "description": "Talyndors Reiter- und Agrarkultur ist eng mit Aeldrunmar verwandt und besitzt eine eigene Tradition schwer gerüsteter Ritter und Fußkämpfer. Kraft, Tierkenntnis und die Erinnerung an die frühere Ordnung prägen das Paket. Die Besatzung durch die Triarchie bedeutet keine freiwillige Gefolgschaft.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--venalys--kulturelle-pr-gung-venalier",
+      "key": "trait::kulturelle pragung venalier",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Venalier",
+      "description": "Venalys entstand aus einer Handelskolonie des Marktes der Fortuna. Verhandlung, kaufmännische Bildung und das Verständnis konkurrierender Interessen prägen dieses Stadtkulturpaket. Hauszugehörigkeit, Patrizierrang und Gildenzugang bleiben eigene Angaben.",
+      "explicit": "/Vorschau/Venalys/assets/crests/venalys.webp",
+      "resolved": "/Vorschau/Venalys/assets/crests/venalys.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--vennyr--kulturelle-pr-gung-vennyr",
+      "key": "trait::kulturelle pragung vennyr",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Vennyr",
+      "description": "Vennyri bewahren die Küsten- und Rittertradition ihres früheren Königreichs. Seefahrt, Wachsamkeit und der Umgang mit wechselndem Untergrund prägen dieses Ausbildungspaket; die heutige Herrschaft Fjordheims ändert die Herkunft nicht.",
+      "explicit": "/Stammbäume/assets/images/regions/vennyr.png",
+      "resolved": "/Stammbäume/assets/images/regions/vennyr.png",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "builtin--trait--weisenfluh--kulturelle-pr-gung-weisenfluh",
+      "key": "trait::kulturelle pragung weisenfluh",
+      "kind": "trait",
+      "name": "Kulturelle Prägung · Weisenfluh",
+      "description": "Weisenfluh verbindet bewirtschaftetes Land, Flusswege und Handel mit der Ordnung des Erlenkönigtums. Ausdauer im Alltag und der verständige Umgang mit Nachbarn und Handelspartnern prägen dieses Paket.",
+      "explicit": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weisenfluh.webp",
+      "resolved": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weisenfluh.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-lebhafter-geist",
+      "key": "trait::catalog::development-trait-lebhafter-geist",
+      "kind": "trait",
+      "name": "Lebhafter Geist",
+      "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/lebhafter-geist.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/lebhafter-geist.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-lebhafter-geist"
+    },
+    {
+      "id": "development-trait-aengstlich",
+      "key": "trait::catalog::development-trait-aengstlich",
+      "kind": "trait",
+      "name": "Leicht zu erschrecken",
+      "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/aengstlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/aengstlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-aengstlich"
+    },
+    {
+      "id": "development-trait-luegenriecher",
+      "key": "trait::catalog::development-trait-luegenriecher",
+      "kind": "trait",
+      "name": "Lügenriecher",
+      "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/luegenriecher.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/luegenriecher.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-luegenriecher"
+    },
+    {
+      "id": "development-trait-magie-phobie",
+      "key": "trait::catalog::development-trait-magie-phobie",
+      "kind": "trait",
+      "name": "Magiephobie",
+      "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/magie-phobie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/magie-phobie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-magie-phobie"
+    },
+    {
+      "id": "development-trait-magiescheu",
+      "key": "trait::catalog::development-trait-magiescheu",
+      "kind": "trait",
+      "name": "Magiescheu",
+      "description": "−1 Zauberangriff und −1 Zauber-SG.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/magiescheu.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/magiescheu.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Shy.png",
+      "owners": [],
+      "dataId": "development-trait-magiescheu"
+    },
+    {
+      "id": "development-trait-magische-resonanz",
+      "key": "trait::catalog::development-trait-magische-resonanz",
+      "kind": "trait",
+      "name": "Magische Resonanz",
+      "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/magische-resonanz.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/magische-resonanz.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-magische-resonanz"
+    },
+    {
+      "id": "development-trait-magische-wetterfuehligkeit",
+      "key": "trait::catalog::development-trait-magische-wetterfuehligkeit",
+      "kind": "trait",
+      "name": "Magische Wetterfühligkeit",
+      "description": "Magische Spannungen machen dich unruhig: +1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder, −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/magische-wetterfuehligkeit.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/magische-wetterfuehligkeit.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-magische-wetterfuehligkeit"
+    },
+    {
+      "id": "development-trait-mechanisches-verstaendnis",
+      "key": "trait::catalog::development-trait-mechanisches-verstaendnis",
+      "kind": "trait",
+      "name": "Mechanisches Verständnis",
+      "description": "Du begreifst das Zusammenspiel kleiner Bauteile: +2 auf Fingerfertigkeit und +1 auf Nachforschungen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/mechanisches-verstaendnis.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/mechanisches-verstaendnis.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-mechanisches-verstaendnis"
+    },
+    {
+      "id": "development-trait-empathisch",
+      "key": "trait::catalog::development-trait-empathisch",
+      "kind": "trait",
+      "name": "Menschenkenner",
+      "description": "+2 auf Motiv erkennen und Überzeugen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/empathisch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/empathisch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-empathisch"
+    },
+    {
+      "id": "development-trait-mutig",
+      "key": "trait::catalog::development-trait-mutig",
+      "kind": "trait",
+      "name": "Mutiges Herz",
+      "description": "+2 auf Rettungswürfe gegen Furcht.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/mutig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/mutig.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Brave.png",
+      "owners": [],
+      "dataId": "development-trait-mutig"
+    },
+    {
+      "id": "development-trait-namenhueter",
+      "key": "trait::catalog::development-trait-namenhueter",
+      "kind": "trait",
+      "name": "Namenhüter",
+      "description": "Namen und Lebensgeschichten bleiben dir im Gedächtnis: +2 auf Geschichte und +1 auf Überzeugen, −1 auf Wahrnehmung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/namenhueter.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/namenhueter.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-namenhueter"
+    },
+    {
+      "id": "development-trait-narzisstisch",
+      "key": "trait::catalog::development-trait-narzisstisch",
+      "kind": "trait",
+      "name": "Narzisstisch",
+      "description": "Selbstdarstellung und Durchsetzung: +3 Auftreten, +2 Einschüchtern und +2 auf CHA-Rettungswürfe; −3 Überzeugen und Motiv erkennen, −2 Flirten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/narzisstisch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/narzisstisch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-narzisstisch"
+    },
+    {
+      "id": "development-trait-neugier-vor-vorsicht",
+      "key": "trait::catalog::development-trait-neugier-vor-vorsicht",
+      "kind": "trait",
+      "name": "Neugier vor Vorsicht",
+      "description": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Scholar.png",
+      "owners": [
+        {
+          "id": "q1QtSIug74FzzwUAqWrs",
+          "name": "Gawain Draig",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg"
+        }
+      ],
+      "dataId": "development-trait-neugier-vor-vorsicht"
+    },
+    {
+      "id": "builtin--trait--nordmann--nordische-z-higkeit",
+      "key": "trait::nordische zahigkeit",
+      "kind": "trait",
+      "name": "Nordische Zähigkeit",
+      "description": "Nordmänner sind widerstandsfähig, kraftvoll und an entbehrungsreiche Lebensräume gewöhnt.",
+      "explicit": "/AleriaAlmanach/public/assets/character-origins/nordmann.png",
+      "resolved": "/AleriaAlmanach/public/assets/character-origins/nordmann.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-ordnungszwang",
+      "key": "trait::catalog::development-trait-ordnungszwang",
+      "kind": "trait",
+      "name": "Ordnungszwang",
+      "description": "Du erkennst Unstimmigkeiten, verlierst aber Zeit mit Einzelheiten: +2 auf Nachforschungen, −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/ordnungszwang.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/ordnungszwang.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-ordnungszwang"
+    },
+    {
+      "id": "development-trait-pazifistische-ader",
+      "key": "trait::catalog::development-trait-pazifistische-ader",
+      "kind": "trait",
+      "name": "Pazifistische Ader",
+      "description": "Du suchst eher Versöhnung als Verletzung: +2 auf Heilkunde und Überzeugen, −1 Waffenschaden. Zauberschaden bleibt unverändert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/pazifistische-ader.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/pazifistische-ader.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-pazifistische-ader"
+    },
+    {
+      "id": "development-trait-pechvogel",
+      "key": "trait::catalog::development-trait-pechvogel",
+      "kind": "trait",
+      "name": "Pechvogel",
+      "description": "−1 auf alle Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/pechvogel.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/pechvogel.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-pechvogel"
+    },
+    {
+      "id": "development-trait-psychopath",
+      "key": "trait::catalog::development-trait-psychopath",
+      "kind": "trait",
+      "name": "Psychopath",
+      "description": "Analytische Distanz: +4 Nachforschungen, +2 Motiv erkennen und +2 auf Rettungswürfe gegen Furcht; −2 Überzeugen und Flirten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/psychopath.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/psychopath.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-psychopath"
+    },
+    {
+      "id": "development-trait-raumgefuehl",
+      "key": "trait::catalog::development-trait-raumgefuehl",
+      "kind": "trait",
+      "name": "Raumgefühl",
+      "description": "Du schätzt Abstände und räumliche Zusammenhänge gut ein: +2 auf Akrobatik und +1 auf Nachforschungen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/raumgefuehl.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/raumgefuehl.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-raumgefuehl"
+    },
+    {
+      "id": "development-trait-riesenblut",
+      "key": "trait::catalog::development-trait-riesenblut",
+      "kind": "trait",
+      "name": "Riesenblut",
+      "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/riesenblut.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/riesenblut.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-riesenblut"
+    },
+    {
+      "id": "builtin--trait--ritter--ritterliche-herkunft-und-standespflicht",
+      "key": "trait::ritterliche herkunft und standespflicht",
+      "kind": "trait",
+      "name": "Ritterliche Herkunft und Standespflicht",
+      "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Cavalry_leader.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Cavalry_leader.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-ritualgebunden",
+      "key": "trait::catalog::development-trait-ritualgebunden",
+      "kind": "trait",
+      "name": "Ritualgebunden",
+      "description": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "person--haus-saethwyr--nudd-saethwyr",
+          "name": "Nudd Saethwyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg"
+        }
+      ],
+      "dataId": "development-trait-ritualgebunden"
+    },
+    {
+      "id": "development-trait-robuste-haut",
+      "key": "trait::catalog::development-trait-robuste-haut",
+      "kind": "trait",
+      "name": "Robuste Haut",
+      "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/robuste-haut.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/robuste-haut.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-robuste-haut"
+    },
+    {
+      "id": "development-trait-scharfschuetze",
+      "key": "trait::catalog::development-trait-scharfschuetze",
+      "kind": "trait",
+      "name": "Ruhige Sehne",
+      "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/scharfschuetze.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/scharfschuetze.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-scharfschuetze"
+    },
+    {
+      "id": "development-trait-saeureaffinitaet",
+      "key": "trait::catalog::development-trait-saeureaffinitaet",
+      "kind": "trait",
+      "name": "Säureaffinität",
+      "description": "Resistenz gegen Säureschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/saeureaffinitaet.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/saeureaffinitaet.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-saeureaffinitaet"
+    },
+    {
+      "id": "development-trait-saeureempfindlich",
+      "key": "trait::catalog::development-trait-saeureempfindlich",
+      "kind": "trait",
+      "name": "Säureempfindlich",
+      "description": "Doppelter Säureschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/saeureempfindlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/saeureempfindlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-saeureempfindlich"
+    },
+    {
+      "id": "development-trait-schallaffinitaet",
+      "key": "trait::catalog::development-trait-schallaffinitaet",
+      "kind": "trait",
+      "name": "Schallaffinität",
+      "description": "Resistenz gegen Donnerschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schallaffinitaet.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schallaffinitaet.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schallaffinitaet"
+    },
+    {
+      "id": "development-trait-schallempfindlich",
+      "key": "trait::catalog::development-trait-schallempfindlich",
+      "kind": "trait",
+      "name": "Schallempfindlich",
+      "description": "Doppelter Donnerschaden.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schallempfindlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schallempfindlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schallempfindlich"
+    },
+    {
+      "id": "development-trait-scharfe-augen",
+      "key": "trait::catalog::development-trait-scharfe-augen",
+      "kind": "trait",
+      "name": "Scharfe Augen",
+      "description": "+2 auf Wahrnehmung und zusätzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "person--haus-neidr--guinevere-neidr",
+          "name": "Guinevere Neidr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg"
+        }
+      ],
+      "dataId": "development-trait-scharfe-augen"
+    },
+    {
+      "id": "development-trait-schatten-von-morgen",
+      "key": "trait::catalog::development-trait-schatten-von-morgen",
+      "kind": "trait",
+      "name": "Schatten von Morgen",
+      "description": "Unbestimmte Vorahnungen treiben dich an, erschweren aber klare Gedanken: +2 Initiative, −2 auf INT-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schatten-von-morgen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schatten-von-morgen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schatten-von-morgen"
+    },
+    {
+      "id": "development-trait-schmaechtig",
+      "key": "trait::catalog::development-trait-schmaechtig",
+      "kind": "trait",
+      "name": "Schmächtig",
+      "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schmaechtig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schmaechtig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schmaechtig"
+    },
+    {
+      "id": "development-trait-schneller-stoffwechsel",
+      "key": "trait::catalog::development-trait-schneller-stoffwechsel",
+      "kind": "trait",
+      "name": "Schneller Stoffwechsel",
+      "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schneller-stoffwechsel.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schneller-stoffwechsel.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schneller-stoffwechsel"
+    },
+    {
+      "id": "development-trait-schroff",
+      "key": "trait::catalog::development-trait-schroff",
+      "kind": "trait",
+      "name": "Schroffe Ehrlichkeit",
+      "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schroff.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schroff.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Honest.png",
+      "owners": [],
+      "dataId": "development-trait-schroff"
+    },
+    {
+      "id": "development-trait-schuldengewissen",
+      "key": "trait::catalog::development-trait-schuldengewissen",
+      "kind": "trait",
+      "name": "Schuldengewissen",
+      "description": "Versprechen und offene Gefallen beschäftigen dich: +2 auf Motiv erkennen, −2 auf Täuschen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schuldengewissen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schuldengewissen.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Diligent.png",
+      "owners": [],
+      "dataId": "development-trait-schuldengewissen"
+    },
+    {
+      "id": "development-trait-schwarzseher",
+      "key": "trait::catalog::development-trait-schwarzseher",
+      "kind": "trait",
+      "name": "Schwarzseher",
+      "description": "Du rechnest mit Schwierigkeiten und wirkst entsprechend düster: +1 Initiative und +1 auf Motiv erkennen, −2 auf Überzeugen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schwarzseher.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schwarzseher.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schwarzseher"
+    },
+    {
+      "id": "development-trait-schweigegeluebde",
+      "key": "trait::catalog::development-trait-schweigegeluebde",
+      "kind": "trait",
+      "name": "Schweigegelübde",
+      "description": "Du setzt auf Beobachtung und Zurückhaltung: +2 auf Heimlichkeit und Motiv erkennen, −3 auf Überzeugen und −2 auf Auftreten. Die Abzüge gelten allgemein, auch bei nonverbalen Versuchen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schweigegeluebde.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schweigegeluebde.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schweigegeluebde"
+    },
+    {
+      "id": "development-trait-schwere-knochen",
+      "key": "trait::catalog::development-trait-schwere-knochen",
+      "kind": "trait",
+      "name": "Schwere Knochen",
+      "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schwere-knochen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schwere-knochen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schwere-knochen"
+    },
+    {
+      "id": "development-trait-schwerhoerig",
+      "key": "trait::catalog::development-trait-schwerhoerig",
+      "kind": "trait",
+      "name": "Schwerhörig",
+      "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/schwerhoerig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/schwerhoerig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-schwerhoerig"
+    },
+    {
+      "id": "development-trait-sehnig",
+      "key": "trait::catalog::development-trait-sehnig",
+      "kind": "trait",
+      "name": "Sehnig",
+      "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/sehnig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/sehnig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-sehnig"
+    },
+    {
+      "id": "development-trait-silberzunge",
+      "key": "trait::catalog::development-trait-silberzunge",
+      "kind": "trait",
+      "name": "Silberzunge",
+      "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "person--haus-wyrm--gais-wyrm",
+          "name": "Gais Wyrm",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg"
+        }
+      ],
+      "dataId": "development-trait-silberzunge"
+    },
+    {
+      "id": "development-trait-symbiose-haig-baer",
+      "key": "trait::catalog::development-trait-symbiose-haig-baer",
+      "kind": "trait",
+      "name": "Silvanische Symbiose der Dál Haig (Bär)",
+      "description": "Seltenes, schwach ausgeprägtes Bärenerbe der Haig; in der Clanüberlieferung nicht für jeden Angehörigen belegt. Grundprägung: +2 auf Athletik und +1 auf Körperbeherrschung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/symbiose-haig-baer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/symbiose-haig-baer.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-symbiose-haig-baer"
+    },
+    {
+      "id": "development-trait-symbiose-diuid-baer",
+      "key": "trait::catalog::development-trait-symbiose-diuid-baer",
+      "kind": "trait",
+      "name": "Silvanische Symbiose der Mac Ard Diuid (Bär)",
+      "description": "Überliefertes Bärenerbe der Mhathain in der Diuid-Linie. Grundprägung: +2 maximale TP, +1 auf Athletik und STÄ-Rettungswürfe. Stärkere Manifestationen sind selten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/symbiose-diuid-baer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/symbiose-diuid-baer.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-symbiose-diuid-baer"
+    },
+    {
+      "id": "development-trait-symbiose-lockart-baer",
+      "key": "trait::catalog::development-trait-symbiose-lockart-baer",
+      "kind": "trait",
+      "name": "Silvanische Symbiose der Ó Lockart (Bär)",
+      "description": "Abgeschwächtes Bärenerbe aus der Diuid-Linie. Grundprägung: +1 auf KON-Rettungswürfe, Körperbeherrschung und passive Wahrnehmung. Die Überlieferung beschreibt seltene Träger.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/symbiose-lockart-baer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/symbiose-lockart-baer.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-symbiose-lockart-baer"
+    },
+    {
+      "id": "development-trait-symbiose-varulv-wolf",
+      "key": "trait::catalog::development-trait-symbiose-varulv-wolf",
+      "kind": "trait",
+      "name": "Silvanische Symbiose der Varulv (Wolf)",
+      "description": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "FKiXsSWVoV74rTgmpPip",
+          "name": "Fenrir Varulv",
+          "portrait": "https://i.imgur.com/uAY6AgV.png"
+        }
+      ],
+      "dataId": "development-trait-symbiose-varulv-wolf"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-1",
+      "key": "trait::catalog::development-trait-abhaengigkeit-smaragdflux-1",
+      "kind": "trait",
+      "name": "Smaragdflux-süchtig (I. Stadium)",
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-1.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-1.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-smaragdflux-1"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-2",
+      "key": "trait::catalog::development-trait-abhaengigkeit-smaragdflux-2",
+      "kind": "trait",
+      "name": "Smaragdflux-süchtig (II. Stadium)",
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-2.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-2.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-smaragdflux-2"
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-3",
+      "key": "trait::catalog::development-trait-abhaengigkeit-smaragdflux-3",
+      "kind": "trait",
+      "name": "Smaragdflux-süchtig (III. Stadium)",
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-3.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/abhaengigkeit-smaragdflux-3.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-abhaengigkeit-smaragdflux-3"
+    },
+    {
+      "id": "builtin--trait--soeldner--s-ldnerh-rte",
+      "key": "trait::soldnerharte",
+      "kind": "trait",
+      "name": "Söldnerhärte",
+      "description": "Kämpft gegen Bezahlung für wechselnde Auftraggeber; kennt Feldlagerleben, Verträge und das Geschäft des Krieges.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Sturdy.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-soziopath",
+      "key": "trait::catalog::development-trait-soziopath",
+      "kind": "trait",
+      "name": "Soziopath",
+      "description": "Starker analytischer Schwerpunkt: +4 Nachforschungen und +2 Wahrnehmung. −4 Überzeugen und Motiv erkennen; −3 Täuschen, Einschüchtern, Auftreten und Flirten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/soziopath.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/soziopath.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-soziopath"
+    },
+    {
+      "id": "development-trait-sprachgefuehl",
+      "key": "trait::catalog::development-trait-sprachgefuehl",
+      "kind": "trait",
+      "name": "Sprachgefühl",
+      "description": "Du findest leicht den passenden Ausdruck: +2 auf Überzeugen und +1 auf Täuschen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/sprachgefuehl.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/sprachgefuehl.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-sprachgefuehl"
+    },
+    {
+      "id": "development-trait-spuernase",
+      "key": "trait::catalog::development-trait-spuernase",
+      "kind": "trait",
+      "name": "Spürnase",
+      "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "person--haus-neidr--guinevere-neidr",
+          "name": "Guinevere Neidr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg"
+        }
+      ],
+      "dataId": "development-trait-spuernase"
+    },
+    {
+      "id": "development-trait-standfest",
+      "key": "trait::catalog::development-trait-standfest",
+      "kind": "trait",
+      "name": "Standfest",
+      "description": "+1 RK, −1 m Bewegung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/standfest.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/standfest.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Unyielding_leader.png",
+      "owners": [],
+      "dataId": "development-trait-standfest"
+    },
+    {
+      "id": "development-trait-steife-gelenke",
+      "key": "trait::catalog::development-trait-steife-gelenke",
+      "kind": "trait",
+      "name": "Steife Gelenke",
+      "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/steife-gelenke.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/steife-gelenke.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-steife-gelenke"
+    },
+    {
+      "id": "development-trait-stille-zeugin",
+      "key": "trait::catalog::development-trait-stille-zeugin",
+      "kind": "trait",
+      "name": "Stille Zeugin",
+      "description": "Du beobachtest lieber vom Rand aus: +2 passive Wahrnehmung, −2 auf Auftreten. Der Bonus verändert keine aktiven Wahrnehmungsproben.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/stille-zeugin.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/stille-zeugin.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-stille-zeugin"
+    },
+    {
+      "id": "development-trait-stimmkuenstler",
+      "key": "trait::catalog::development-trait-stimmkuenstler",
+      "kind": "trait",
+      "name": "Stimmkünstler",
+      "description": "Du variierst Stimme und Ausdruck mühelos: +2 auf Täuschen und +1 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/stimmkuenstler.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/stimmkuenstler.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Poet.png",
+      "owners": [],
+      "dataId": "development-trait-stimmkuenstler"
+    },
+    {
+      "id": "builtin--trait--gassenkind--stra-enschl-ue",
+      "key": "trait::strassenschlaue",
+      "kind": "trait",
+      "name": "Straßenschläue",
+      "description": "Auf der Straße groß geworden, mit Verstecken, kleinen Diebstählen und dem Überleben in Gassen und Hinterhöfen vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Shrewd.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Shrewd.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-stumm",
+      "key": "trait::catalog::development-trait-stumm",
+      "kind": "trait",
+      "name": "Stumm",
+      "description": "Die Figur kann keine Stimme erzeugen. Schrift und Gebärden funktionieren; ausdrücklich stimmgebundene Handlungen benötigen eine Alternative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/stumm.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/stumm.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-stumm"
+    },
+    {
+      "id": "development-trait-substanztoleranz-alcohol",
+      "key": "trait::catalog::development-trait-substanztoleranz-alcohol",
+      "kind": "trait",
+      "name": "Substanztoleranz (Alkohol)",
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-alcohol.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-alcohol.webp",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Drunkard.png",
+      "owners": [],
+      "dataId": "development-trait-substanztoleranz-alcohol"
+    },
+    {
+      "id": "development-trait-substanztoleranz-kriss",
+      "key": "trait::catalog::development-trait-substanztoleranz-kriss",
+      "kind": "trait",
+      "name": "Substanztoleranz (Kriss)",
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-kriss.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-kriss.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-substanztoleranz-kriss"
+    },
+    {
+      "id": "development-trait-substanztoleranz-smaragdflux",
+      "key": "trait::catalog::development-trait-substanztoleranz-smaragdflux",
+      "kind": "trait",
+      "name": "Substanztoleranz (Smaragdflux)",
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-smaragdflux.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/substanztoleranz-smaragdflux.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-substanztoleranz-smaragdflux"
+    },
+    {
+      "id": "development-trait-symboldenker",
+      "key": "trait::catalog::development-trait-symboldenker",
+      "kind": "trait",
+      "name": "Symboldenker",
+      "description": "Du erkennst Beziehungen zwischen Zeichen, Riten und Runen: +2 auf Religion und +1 auf Arkane Kunde.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/symboldenker.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/symboldenker.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-symboldenker"
+    },
+    {
+      "id": "development-trait-taktisches-gespuer",
+      "key": "trait::catalog::development-trait-taktisches-gespuer",
+      "kind": "trait",
+      "name": "Taktisches Gespür",
+      "description": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "tmfBA2zPTc88EMMGkyyA",
+          "name": "Duncan Gafyr",
+          "portrait": "https://i.imgur.com/zdChj0a.png"
+        }
+      ],
+      "dataId": "development-trait-taktisches-gespuer"
+    },
+    {
+      "id": "development-trait-taub",
+      "key": "trait::catalog::development-trait-taub",
+      "kind": "trait",
+      "name": "Taub",
+      "description": "Dauerhafter Verlust des Hörvermögens. −1 Initiative. Rein akustische Aufgaben sind ohne Ersatzwahrnehmung unmöglich; visuelle Wahrnehmung bleibt unverändert.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/taub.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/taub.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-taub"
+    },
+    {
+      "id": "development-trait-tierisches-taktgefuehl",
+      "key": "trait::catalog::development-trait-tierisches-taktgefuehl",
+      "kind": "trait",
+      "name": "Tierisches Taktgefühl",
+      "description": "Du passt deine Bewegungen und Ruhe gut an Tiere an: +2 auf Mit Tieren umgehen und +1 auf Körperbeherrschung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/tierisches-taktgefuehl.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/tierisches-taktgefuehl.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-tierisches-taktgefuehl"
+    },
+    {
+      "id": "development-trait-totengraeberhumor",
+      "key": "trait::catalog::development-trait-totengraeberhumor",
+      "kind": "trait",
+      "name": "Totengräberhumor",
+      "description": "Du kennst Bestattungsbräuche und begegnest dem Unheimlichen mit unpassenden Scherzen: +2 auf Religion und +1 auf Rettungswürfe gegen Furcht, −2 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/totengraeberhumor.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/totengraeberhumor.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-totengraeberhumor"
+    },
+    {
+      "id": "development-trait-uebervorsichtig",
+      "key": "trait::catalog::development-trait-uebervorsichtig",
+      "kind": "trait",
+      "name": "Übervorsichtig",
+      "description": "Du suchst zuerst einen sicheren Ausweg: +2 auf GES-Rettungswürfe, −2 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/uebervorsichtig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/uebervorsichtig.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-uebervorsichtig"
+    },
+    {
+      "id": "development-trait-unverbesserlicher-optimist",
+      "key": "trait::catalog::development-trait-unverbesserlicher-optimist",
+      "kind": "trait",
+      "name": "Unverbesserlicher Optimist",
+      "description": "Du erwartest stets das Beste: +2 auf Rettungswürfe gegen Furcht und +1 auf Überzeugen, −2 auf Motiv erkennen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/unverbesserlicher-optimist.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/unverbesserlicher-optimist.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-unverbesserlicher-optimist"
+    },
+    {
+      "id": "builtin--trait--kultist--verschwiegene-zirkelbindung",
+      "key": "trait::verschwiegene zirkelbindung",
+      "kind": "trait",
+      "name": "Verschwiegene Zirkelbindung",
+      "description": "Mitglied oder ehemaliges Mitglied eines geheimen Zirkels mit eigenen Riten, Zeichen und einer verschwiegenen Loyalität.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Intrigue_focus.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Intrigue_focus.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-versteiftes-knie",
+      "key": "trait::catalog::development-trait-versteiftes-knie",
+      "kind": "trait",
+      "name": "Versteiftes Knie",
+      "description": "−2 m Bewegung und −2 auf Akrobatik. Die Einschränkung bleibt nach Rasten bestehen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/versteiftes-knie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/versteiftes-knie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-versteiftes-knie"
+    },
+    {
+      "id": "development-trait-vertraeumt",
+      "key": "trait::catalog::development-trait-vertraeumt",
+      "kind": "trait",
+      "name": "Verträumt",
+      "description": "−2 Initiative; +2 auf Arkane Kunde.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/vertraeumt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/vertraeumt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-vertraeumt"
+    },
+    {
+      "id": "development-trait-vollbusig",
+      "key": "trait::catalog::development-trait-vollbusig",
+      "kind": "trait",
+      "name": "Vollbusig",
+      "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "ksJQe8Ai4KbRE9jOAvb7",
+          "name": "Freya Skald",
+          "portrait": "https://i.imgur.com/EAkV9TW.png"
+        }
+      ],
+      "dataId": "development-trait-vollbusig"
+    },
+    {
+      "id": "development-trait-vollidiot",
+      "key": "trait::catalog::development-trait-vollidiot",
+      "kind": "trait",
+      "name": "Vollidiot",
+      "description": "Stärkere alternative Einschränkung: −6 auf sämtliche Fertigkeitsproben. INT und WEI höchstens 2, auch mit Boni oder freien Modifikatoren. Ersetzt die Ausprägung „Geistig beschränkt“; keine zusätzliche Punktgutschrift für beide.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/vollidiot.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/vollidiot.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-vollidiot"
+    },
+    {
+      "id": "development-trait-wachsam",
+      "key": "trait::catalog::development-trait-wachsam",
+      "kind": "trait",
+      "name": "Wachsamer Blick",
+      "description": "+2 passive Wahrnehmung und +1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp",
+      "exactFallback": "",
+      "owners": [
+        {
+          "id": "gildas-gafyr",
+          "name": "Gildas Gafyr",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg"
+        }
+      ],
+      "dataId": "development-trait-wachsam"
+    },
+    {
+      "id": "development-trait-wanderlust",
+      "key": "trait::catalog::development-trait-wanderlust",
+      "kind": "trait",
+      "name": "Wanderlust",
+      "description": "Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf Überleben, −2 auf Nachforschungen.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/wanderlust.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/wanderlust.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-wanderlust"
+    },
+    {
+      "id": "development-trait-zaeh",
+      "key": "trait::catalog::development-trait-zaeh",
+      "kind": "trait",
+      "name": "Zäh wie Leder",
+      "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/zaeh.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/zaeh.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-zaeh"
+    },
+    {
+      "id": "development-trait-zaehe-magie",
+      "key": "trait::catalog::development-trait-zaehe-magie",
+      "kind": "trait",
+      "name": "Zähe Magie",
+      "description": "+1 Zauber-SG; −1 m Bewegung.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/zaehe-magie.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/zaehe-magie.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-zaehe-magie"
+    },
+    {
+      "id": "development-trait-zahlenintuition",
+      "key": "trait::catalog::development-trait-zahlenintuition",
+      "kind": "trait",
+      "name": "Zahlenintuition",
+      "description": "Du erkennst Mengenverhältnisse und Zahlenmuster schnell: +2 auf Nachforschungen und +1 auf Geschichte.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/zahlenintuition.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/zahlenintuition.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-zahlenintuition"
+    },
+    {
+      "id": "development-trait-theriantrophie-werbaer-fluch",
+      "key": "trait::catalog::development-trait-theriantrophie-werbaer-fluch",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werbär) · Fluchform",
+      "description": "Zatrachs Fluch des Bären: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +3 maximale TP, +1 auf Athletik und −2 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werbaer-fluch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werbaer-fluch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werbaer-fluch"
+    },
+    {
+      "id": "development-trait-theriantrophie-werbaer-segen",
+      "key": "trait::catalog::development-trait-theriantrophie-werbaer-segen",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werbär) · Jüngersegen",
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +3 maximale TP und +1 auf KON-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werbaer-segen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werbaer-segen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werbaer-segen"
+    },
+    {
+      "id": "development-trait-theriantrophie-wereber-fluch",
+      "key": "trait::catalog::development-trait-theriantrophie-wereber-fluch",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Wereber) · Fluchform",
+      "description": "Zatrachs Fluch des Ebers: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Athletik, +1 auf Körperbeherrschung, −2 auf Motiv erkennen und −1 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-wereber-fluch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-wereber-fluch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-wereber-fluch"
+    },
+    {
+      "id": "development-trait-theriantrophie-wereber-segen",
+      "key": "trait::catalog::development-trait-theriantrophie-wereber-segen",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Wereber) · Jüngersegen",
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +1 auf STÄ- und KON-Rettungswürfe, −1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-wereber-segen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-wereber-segen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-wereber-segen"
+    },
+    {
+      "id": "development-trait-theriantrophie-werluchs-fluch",
+      "key": "trait::catalog::development-trait-theriantrophie-werluchs-fluch",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werluchs) · Fluchform",
+      "description": "Zatrachs Fluch des Luchses: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Heimlichkeit, +1 auf Akrobatik und −2 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werluchs-fluch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werluchs-fluch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werluchs-fluch"
+    },
+    {
+      "id": "development-trait-theriantrophie-werluchs-segen",
+      "key": "trait::catalog::development-trait-theriantrophie-werluchs-segen",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werluchs) · Jüngersegen",
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +2 auf Heimlichkeit und +1 Initiative.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werluchs-segen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werluchs-segen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werluchs-segen"
+    },
+    {
+      "id": "development-trait-theriantrophie-werwolf-fluch",
+      "key": "trait::catalog::development-trait-theriantrophie-werwolf-fluch",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werwolf) · Fluchform",
+      "description": "Zatrachs Fluch des Wolfes: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Wahrnehmung, +1 Initiative und −2 auf WEI-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werwolf-fluch.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werwolf-fluch.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werwolf-fluch"
+    },
+    {
+      "id": "development-trait-theriantrophie-werwolf-segen",
+      "key": "trait::catalog::development-trait-theriantrophie-werwolf-segen",
+      "kind": "trait",
+      "name": "Zatracher Theriantrophie (Werwolf) · Jüngersegen",
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +1 auf Wahrnehmung, Überleben und STÄ-Rettungswürfe.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werwolf-segen.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/theriantrophie-werwolf-segen.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-theriantrophie-werwolf-segen"
+    },
+    {
+      "id": "development-trait-zerbrechlich",
+      "key": "trait::catalog::development-trait-zerbrechlich",
+      "kind": "trait",
+      "name": "Zerbrechlich",
+      "description": "−3 maximale TP, +2 auf Akrobatik.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/zerbrechlich.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/zerbrechlich.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-zerbrechlich"
+    },
+    {
+      "id": "builtin--trait--handwerker--z-nftisches-handwerksgeschick",
+      "key": "trait::zunftisches handwerksgeschick",
+      "kind": "trait",
+      "name": "Zünftisches Handwerksgeschick",
+      "description": "Ausgebildet in einer Zunft oder Werkstatt, mit einem eigenen Handwerk und dessen Werkzeugen bestens vertraut.",
+      "explicit": "",
+      "resolved": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Diligent.png",
+      "exactFallback": "file:///E:/Aleria/IconOrdner/Traits%20Icon/Diligent.png",
+      "owners": [],
+      "dataId": ""
+    },
+    {
+      "id": "development-trait-ungeschickt",
+      "key": "trait::catalog::development-trait-ungeschickt",
+      "kind": "trait",
+      "name": "Zwei linke Hände",
+      "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+      "explicit": "/AleriaAlmanach/assets/development-traits/web/ungeschickt.webp",
+      "resolved": "/AleriaAlmanach/assets/development-traits/web/ungeschickt.webp",
+      "exactFallback": "",
+      "owners": [],
+      "dataId": "development-trait-ungeschickt"
+    }
+  ]
+}

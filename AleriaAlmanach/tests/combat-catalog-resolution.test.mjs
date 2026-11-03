@@ -89,7 +89,7 @@ async function checkActions(profile, kind, seen) {
   }
 }
 
-test('all 816 form techniques: hit, miss, critical, costs, support and damage preview', async () => {
+test('all form techniques: hit, miss, critical, costs, support and damage preview', async () => {
   const catalog = getBalanceCatalog();
   const seen = new Set();
   // Profile storage deliberately caps learned techniques; test in bounded batches.

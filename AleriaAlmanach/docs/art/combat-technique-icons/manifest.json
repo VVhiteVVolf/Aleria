@@ -1,0 +1,161 @@
+{
+    "schemaVersion":  1,
+    "createdAt":  "2026-11-03",
+    "generator":  "built-in image_gen",
+    "purpose":  "Originale Comicicons für Drachentanz- und Wyrmtanztechniken",
+    "style":  "Abgerundeter quadratischer Rahmen, einfache Waffen- und Handlungsmotive. Verwandte Techniken verwenden dasselbe passende Motiv.",
+    "resolution":  256,
+    "commonPrompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep BACKGROUND_COLOR background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). SUBJECT.",
+    "initialPrompt":  "Use case: stylized-concept. Asset: one square 1:1 fantasy RPG ATTACK BUTTON ICON, sword slash. Simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two tones per material. Center one silver sword cutting diagonally upward, with ONE broad curved pale-blue motion stroke. Deep muted teal background INSIDE one rounded square thin ivory frame, frame occupies 92% canvas, even 4% margin. Actual transparent background OUTSIDE rounded square. Large readable silhouette at 48 pixels. No lettering, numbers, watermark, scenery, anatomy, embellishments, photorealism, 3D, gradients or glossy rendering. User reference defines only the simple rounded-square ability-icon layout, do not copy stock imagery. This is an ORIGINAL martial icon, not magic.",
+    "reference":  "Das erste eigene sword-slash-Motiv ist die Stilreferenz aller weiteren Generierungen; der Nutzer-Screenshot liefert nur das Rahmenlayout.",
+    "sources":  [
+                    {
+                        "id":  "sword-slash",
+                        "prompt":  "Use case: stylized-concept. Asset: one square 1:1 fantasy RPG ATTACK BUTTON ICON, sword slash. Simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two tones per material. Center one silver sword cutting diagonally upward, with ONE broad curved pale-blue motion stroke. Deep muted teal background INSIDE one rounded square thin ivory frame, frame occupies 92% canvas, even 4% margin. Actual transparent background OUTSIDE rounded square. Large readable silhouette at 48 pixels. No lettering, numbers, watermark, scenery, anatomy, embellishments, photorealism, 3D, gradients or glossy rendering. User reference defines only the simple rounded-square ability-icon layout, do not copy stock imagery. This is an ORIGINAL martial icon, not magic.",
+                        "source":  "sources/sword-slash.png",
+                        "asset":  "../../../assets/combat-technique-icons/sword-slash.png",
+                        "backgroundColor":  "#0e5460"
+                    },
+                    {
+                        "id":  "parry",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted navy background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). two simple steel sword blades crossing at a single pale yellow impact star.",
+                        "source":  "sources/parry.png",
+                        "asset":  "../../../assets/combat-technique-icons/parry.png",
+                        "backgroundColor":  "#273d5d"
+                    },
+                    {
+                        "id":  "shield-guard",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted blue background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple round wooden blue shield held in front of a small upward chevron, defensive protection.",
+                        "source":  "sources/shield-guard.png",
+                        "asset":  "../../../assets/combat-technique-icons/shield-guard.png",
+                        "backgroundColor":  "#244a64"
+                    },
+                    {
+                        "id":  "spear-thrust",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted teal background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one broad silver spearhead thrusting diagonally upward with two short pale-blue speed strokes.",
+                        "source":  "sources/spear-thrust.png",
+                        "asset":  "../../../assets/combat-technique-icons/spear-thrust.png",
+                        "backgroundColor":  "#165661"
+                    },
+                    {
+                        "id":  "bow-shot",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted forest green background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple wooden drawn longbow releasing a single white arrow diagonally upward.",
+                        "source":  "sources/bow-shot.png",
+                        "asset":  "../../../assets/combat-technique-icons/bow-shot.png",
+                        "backgroundColor":  "#12462b"
+                    },
+                    {
+                        "id":  "axe-cleave",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted burnt umber background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple steel axe swinging downward with one broad rust orange arc.",
+                        "source":  "sources/axe-cleave.png",
+                        "asset":  "../../../assets/combat-technique-icons/axe-cleave.png",
+                        "backgroundColor":  "#52301f"
+                    },
+                    {
+                        "id":  "hammer-strike",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted ochre background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple square-headed steel warhammer striking one small golden impact star.",
+                        "source":  "sources/hammer-strike.png",
+                        "asset":  "../../../assets/combat-technique-icons/hammer-strike.png",
+                        "backgroundColor":  "#67461d"
+                    },
+                    {
+                        "id":  "harpoon-pull",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted sea blue background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one barbed harpoon tip attached to a curved rope with one simple small arrow pulling back.",
+                        "source":  "sources/harpoon-pull.png",
+                        "asset":  "../../../assets/combat-technique-icons/harpoon-pull.png",
+                        "backgroundColor":  "#22495c"
+                    },
+                    {
+                        "id":  "crossbow-shot",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted olive green background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple wooden crossbow seen from above with a single short silver bolt.",
+                        "source":  "sources/crossbow-shot.png",
+                        "asset":  "../../../assets/combat-technique-icons/crossbow-shot.png",
+                        "backgroundColor":  "#414b25"
+                    },
+                    {
+                        "id":  "mounted-charge",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted burgundy background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple cream horse head silhouette and a diagonal lowered spear with two forward speed strokes.",
+                        "source":  "sources/mounted-charge.png",
+                        "asset":  "../../../assets/combat-technique-icons/mounted-charge.png",
+                        "backgroundColor":  "#5a2533"
+                    },
+                    {
+                        "id":  "sidestep",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted turquoise background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). two simple tan bootprints side by side with one large curved arrow showing a side step.",
+                        "source":  "sources/sidestep.png",
+                        "asset":  "../../../assets/combat-technique-icons/sidestep.png",
+                        "backgroundColor":  "#1b5a60"
+                    },
+                    {
+                        "id":  "focus",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted violet background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple calm eye over a pale upward chevron and two small breath marks, steady concentration.",
+                        "source":  "sources/focus.png",
+                        "asset":  "../../../assets/combat-technique-icons/focus.png",
+                        "backgroundColor":  "#46335c"
+                    },
+                    {
+                        "id":  "staff-strike",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted jade background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple brown wooden quarterstaff diagonally sweeping with one broad pale-yellow stroke.",
+                        "source":  "sources/staff-strike.png",
+                        "asset":  "../../../assets/combat-technique-icons/staff-strike.png",
+                        "backgroundColor":  "#1b554a"
+                    },
+                    {
+                        "id":  "trident-lock",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted sea green background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple silver three-pronged trident catching a small dark sword blade between its prongs.",
+                        "source":  "sources/trident-lock.png",
+                        "asset":  "../../../assets/combat-technique-icons/trident-lock.png",
+                        "backgroundColor":  "#24564d"
+                    },
+                    {
+                        "id":  "rapier-thrust",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted plum background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one slender silver rapier with a clearly simple round guard making a straight forward thrust, two short movement marks.",
+                        "source":  "sources/rapier-thrust.png",
+                        "asset":  "../../../assets/combat-technique-icons/rapier-thrust.png",
+                        "backgroundColor":  "#512d55"
+                    },
+                    {
+                        "id":  "paired-swords",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted indigo background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). two short silver sword blades crossed symmetrically, one broad pale blue strike arc.",
+                        "source":  "sources/paired-swords.png",
+                        "asset":  "../../../assets/combat-technique-icons/paired-swords.png",
+                        "backgroundColor":  "#2e345d"
+                    },
+                    {
+                        "id":  "shield-bash",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted copper background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple wooden round shield shown at an angle with one small pale orange impact star at its edge.",
+                        "source":  "sources/shield-bash.png",
+                        "asset":  "../../../assets/combat-technique-icons/shield-bash.png",
+                        "backgroundColor":  "#6a3f2a"
+                    },
+                    {
+                        "id":  "bow-volley",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted green background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). exactly three simple white feathered arrows flying in parallel diagonally upward.",
+                        "source":  "sources/bow-volley.png",
+                        "asset":  "../../../assets/combat-technique-icons/bow-volley.png",
+                        "backgroundColor":  "#245135"
+                    },
+                    {
+                        "id":  "flail-swing",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted burgundy background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple brown-handled flail with ONE dark iron spiked ball on a very short chain, swinging in one orange arc.",
+                        "source":  "sources/flail-swing.png",
+                        "asset":  "../../../assets/combat-technique-icons/flail-swing.png",
+                        "backgroundColor":  "#5a2533"
+                    },
+                    {
+                        "id":  "dagger-strike",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted night blue background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one short broad silver dagger thrusting diagonally upward, two small pale mint movement strokes.",
+                        "source":  "sources/dagger-strike.png",
+                        "asset":  "../../../assets/combat-technique-icons/dagger-strike.png",
+                        "backgroundColor":  "#243d58"
+                    },
+                    {
+                        "id":  "spear-sweep",
+                        "prompt":  "Use case: stylized-concept. Asset: ONE square 1:1 fantasy RPG ATTACK BUTTON ICON. ORIGINAL simple flat playful 2D comic drawing, bold dark drawn outlines, just a few large flat color shapes and at most two flat tones per material. Readable at 48 pixels. One rounded square thin ivory frame fills 92% of canvas with even 4% margin; solid deep muted deep blue background inside; genuine alpha transparency only outside frame. No text, lettering, numbers, watermark, scenery, gradients, 3D, photorealism or decorative clutter. Same visual family as the supplied sword-slash icon (reference solely for layout/style, replace subject completely). one simple broad silver spearhead on a brown shaft, making ONE broad sweeping pale turquoise arc.",
+                        "source":  "sources/spear-sweep.png",
+                        "asset":  "../../../assets/combat-technique-icons/spear-sweep.png",
+                        "backgroundColor":  "#25475c"
+                    }
+                ],
+    "preparation":  "256px PNG; transparent exterior retained, accidental alpha voids inside the opaque rounded button filled with its background color. Generated originals remain unchanged."
+}

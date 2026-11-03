@@ -14,6 +14,14 @@ export function renderEntryDescription(description, escapeHtml) {
   return `<details class="character-archive-description"><summary><span>${escapeHtml(excerpt)} …</span><em>Beschreibung lesen</em></summary><p>${escapeHtml(text)}</p></details>`;
 }
 
+export function renderEntryMeta(meta, escapeHtml) {
+  return meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : '';
+}
+
+export function renderEntryReferenceLinks(links, escapeHtml) {
+  return links.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('');
+}
+
 export function renderKindNavigation(entries, selectedKind, escapeHtml) {
   const button = (id, label, count, symbol = '▦') => `<button type="button" class="${selectedKind === id ? 'active' : ''}" aria-pressed="${selectedKind === id}" data-character-archive-action="set-kind" data-kind="${id}"><i aria-hidden="true">${symbol}</i><span>${escapeHtml(label)}</span><strong>${count}</strong></button>`;
   return `<nav class="character-archive-kinds" aria-label="Archivkategorien">

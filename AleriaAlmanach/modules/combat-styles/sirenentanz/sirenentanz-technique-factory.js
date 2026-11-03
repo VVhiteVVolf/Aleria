@@ -1,5 +1,6 @@
 // Wyrmtanz shares the Drachentanz damage budget and combat effect contracts.
-// Derwyn techniques are selectable; the other Vennyr catalogues remain drafts.
+// Reviewed weapon techniques are selectable; class features retain their own
+// publication status and this catalogue does not grant a character any entry.
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
 import { hasWeaponTechniqueControl, getWeaponTechniqueControlTier } from '../weapon-technique-budget.js';
 import { reviseWeaponTechniqueSave } from '../weapon-technique-control.js';
@@ -21,9 +22,15 @@ export const SIRENENTANZ_COSTS = Object.freeze({
 export const SIRENENTANZ_WEAPONS = Object.freeze({
   polearm: { name: 'Partisane', types: ['polearm', 'spear'], profiles: ['partisan'] },
   axe: { name: 'Enteraxt', types: ['axe'], profiles: ['axe', 'boarding-axe'] },
+  simpleAxe: { name: 'Axt', types: ['axe'], profiles: [] },
+  riderAxe: { name: 'Reiteraxt', types: ['axe'], profiles: [] },
   harpoon: { name: 'Harpunenspeer', types: ['spear'], profiles: ['harpoon'], ranged: true },
-  heavy: { name: 'Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel', types: ['axe', 'mace', 'hammer', 'flail'], profiles: ['battleaxe', 'greataxe', 'warhammer', 'morningstar', 'mace', 'flail'] },
-  heavyOrSword: { name: 'Schwere Hiebwaffe oder Ritterschwert', types: ['axe', 'mace', 'hammer', 'flail', 'sword'], profiles: [] },
+  heavy: { name: 'Großaxt, Kriegshammer, Morgenstern, Streitkolben oder Flegel', types: ['axe', 'mace'], profiles: ['battleaxe', 'greataxe', 'warhammer', 'morningstar', 'mace', 'flail'] },
+  heavyAxe: { name: 'Großaxt oder Streitaxt', types: ['axe'], profiles: ['greataxe', 'battleaxe'] },
+  hammer: { name: 'Kriegshammer oder Rabenschnabel', types: ['mace'], profiles: ['warhammer', 'raven-beak'] },
+  flail: { name: 'Flegel oder Morgenstern', types: ['mace'], profiles: ['flail', 'morningstar'] },
+  spear: { name: 'Speer', types: ['spear'], profiles: ['spear'] },
+  heavyOrSword: { name: 'Schwere Hiebwaffe oder Ritterschwert', types: ['axe', 'mace', 'sword'], profiles: [] },
   shortbow: { name: 'Kurzbogen', types: ['bow'], profiles: ['shortbow'], ranged: true },
   crossbow: { name: 'Armbrust', types: ['crossbow'], profiles: ['crossbow'], ranged: true },
   sabre: { name: 'Säbel', types: ['sword'], profiles: ['sabre'] },
@@ -31,9 +38,9 @@ export const SIRENENTANZ_WEAPONS = Object.freeze({
   staff: { name: 'Stab oder Saphirstab', types: ['staff'], profiles: ['staff'], twoHanded: true },
   derwynStaff: { name: 'Kampfstab oder nahkampftauglicher Zauberstab', types: ['staff'], profiles: ['staff', 'quarterstaff', 'magic-staff'], twoHanded: true },
   sword: { name: 'Schwert', types: ['sword'], profiles: ['sword'] },
-  morningstar: { name: 'Morgenstern', types: ['mace', 'flail'], profiles: ['morningstar'] },
+  morningstar: { name: 'Morgenstern', types: ['mace'], profiles: ['morningstar'] },
   mace: { name: 'Streitkolben', types: ['mace'], profiles: ['mace'] },
-  rider: { name: 'Flegel, Rabenschnabel, Reiteraxt oder Streitkolben', types: ['flail', 'hammer', 'axe', 'mace'], profiles: [] },
+  rider: { name: 'Flegel, Rabenschnabel, Reiteraxt oder Streitkolben', types: ['axe', 'mace'], profiles: [] },
   riderPolearm: { name: 'Glefe oder Reiterspieß', types: ['polearm', 'spear'], profiles: ['glaive', 'rider-spear'] },
   militia: { name: 'Speer, Axt, Streitkolben oder Schwert', types: ['spear', 'axe', 'mace', 'sword'], profiles: [] }
 });
@@ -46,11 +53,14 @@ function conditionEffects(id, spec) {
   if (spec.guard) effects.push(temporaryCondition(id, 'Gedeckte Wellenstellung', `+${spec.guard} RK bis zum Ende des nächsten eigenen Beitrags. Gleichartige Deckung wird nur erneuert, nicht addiert.`, { armorClass: spec.guard }, self));
   if (spec.aim) effects.push(temporaryCondition(id, 'Gesammelte Zielruhe', '+1 Angriff bis zum Ende des nächsten eigenen Beitrags; erneute Vorbereitung verlängert nur die Dauer.', { attack: 1 }, { ...self, slug: 'aim' }));
   if (spec.exposed) effects.push(temporaryCondition(id, 'Offene Flanke', '−1 RK bis zum Ende des nächsten eigenen Beitrags.', { armorClass: -1 }, { ...self, type: 'debuff', slug: 'exposed', on: 'always' }));
-  if (spec.sharedConditions) effects.forEach(effect => {
+  // Named preparations of the same class refresh one source. Learning more
+  // catalogue options must not multiply their otherwise identical bonuses.
+  effects.forEach(effect => {
     const mechanics = effect.condition.mechanics;
     const key = mechanics.attack ? 'aim' : mechanics.armorClass < 0 ? 'exposed' : 'guard';
-    effect.condition.id = `wyrmtanz-derwyn-${key}`;
+    effect.condition.id = `wyrmtanz-${spec.classId}-${key}`;
   });
+  if (spec.position) effects.push(temporaryCondition(id, 'Gedeckter Stellungswechsel', 'Ein einmaliger Stellungsschutz deckt die neue Waffenlinie.', { movement: 1 }, { ...self, slug: 'position' }));
   return effects;
 }
 
@@ -64,20 +74,23 @@ export function createSirenentanzTechnique(classId, spec) {
   const styleName = cenyrFoundation ? 'Drachentanz' : 'Wyrmtanz';
   const slotBand = [F.foundation, DRACHENTANZ_FORM_IDS.jungdrache].includes(form.id) ? 'foundation'
     : form.id === D.creative ? 'duelist' : form.id === F.advanced ? 'advanced' : form.id === F.militia ? 'militia' : 'expert';
-  const save = spec.penalty ? secondarySave(id, 'Gestörter Rhythmus', `−${spec.penalty} Angriff bis zum Ende des nächsten eigenen Beitrags; nicht additiv.`, { attack: -spec.penalty }, { tags: styleName }) : { enabled: false };
-  if (classId === 'derwyn' && save.enabled) save.failureCondition.id = 'wyrmtanz-derwyn-rhythm-penalty';
+  const save = spec.penalty ? secondarySave(id, 'Gestörter Rhythmus', `−${spec.penalty} Angriff bis zum Ende des nächsten eigenen Beitrags; nicht additiv.`, { attack: -spec.penalty }, { tags: styleName })
+    : spec.disruptPosition ? secondarySave(id, 'Gestörter Stand', 'Der Zug an der gesicherten Leine bringt die Waffenlinie einmalig aus der Stellung.', { movement: -1 }, { tags: styleName })
+      : { enabled: false };
+  if (save.enabled) save.failureCondition.id = `wyrmtanz-${classId}-rhythm-penalty`;
   const costs = SIRENENTANZ_COSTS[spec.cost].map((cost, index) => techniqueCost(id, cost, index));
+  const effects = [...(spec.noDamage ? [] : [weaponDamageEffect(id)]), ...conditionEffects(id, { ...spec, classId, styleName })];
   const damage = spec.noDamage
     ? { damageFormula: '', damageModel: { mode: 'fixed', scalingSteps: [] } }
     : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: [classId], maximumTargets: spec.targets || 1,
-      damageControl: hasWeaponTechniqueControl(spec), damageControlTier: getWeaponTechniqueControlTier(spec) }, costs);
+      damageControl: hasWeaponTechniqueControl({ ...spec, effects, secondarySave: save }), damageControlTier: getWeaponTechniqueControlTier({ ...spec, effects, secondarySave: save }) }, costs);
   const requirements = [weapon.name, spec.mounted ? 'Beritten; für Anritte mindestens 3 m freier Anlauf.' : '',
     weapon.ranged ? 'Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich.' : '',
     spec.requirement || ''].filter(Boolean).join(' · ');
   return reviseMartialPositionEntry({
     id, name: spec.name, combatStyleId: styleId, combatStyleFormId: form.id,
     trainingForm: `${styleName} · ${form.name}`, minimumLevel: spec.level,
-    category: spec.noDamage ? 'support' : 'technique', status: classId === 'derwyn' ? 'confirmed' : 'draft', active: false, live: false,
+    category: spec.noDamage ? 'support' : 'technique', status: 'confirmed', active: false, live: false,
     description: spec.description, effect: spec.effect, activationType: costs[0].resourceId,
     weaponTypes: weapon.types, compatibleWeaponIds: [], weaponLabel: weapon.name,
     ...damage, damageType: '', attackBonus: spec.attackBonus || 0, damageBonus: 0,
@@ -86,11 +99,11 @@ export function createSirenentanzTechnique(classId, spec) {
     ...(weapon.ranged && !spec.noDamage ? { attackRange: 'ranged' } : {}),
     target: spec.noDamage ? 'Selbst' : 'Ein Gegner', duration: spec.noDamage ? '1 eigener Beitrag' : 'Sofort',
     requirements, costs, auraBypass: { allowed: true, resourceId: 'aura-focus', cost: 1 },
-    effects: [...(spec.noDamage ? [] : [weaponDamageEffect(id)]), ...conditionEffects(id, { ...spec, styleName, sharedConditions: classId === 'derwyn' })],
+    effects,
     secondarySave: reviseWeaponTechniqueSave(save, costs.some(cost => cost.resourceId === 'special-action')),
     followUpAttack: { enabled: false }, mechanics: {}, triggerRules: [],
     tags: [styleName, classId, form.name, weapon.name].join(' · '),
-    mechanicNotes: [spec.manual ? `Situativ auszuwerten: ${spec.manual}` : '', 'Erlernen verbraucht einen passenden Attackenslot; keine automatische Aktivierung.'].filter(Boolean),
+    mechanicNotes: [spec.manual ? `Situativ auszuwerten: ${spec.manual}` : '', 'Techniken werden einzeln aus dem Klassenkatalog gewählt; keine automatische Aktivierung.'].filter(Boolean),
     ...(classId === 'derwyn' ? { cenyrTraining: {
       allowedClassIds: ['derwyn'], branchId: `derwyn-${spec.weapon === 'derwynStaff' ? 'staff' : spec.weapon}`, slotBands: [slotBand],
       classWeaponProfiles: { derwyn: weapon.profiles }, requiresTwoHands: Boolean(weapon.twoHanded),

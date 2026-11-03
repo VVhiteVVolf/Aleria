@@ -44,7 +44,8 @@ function styleOwners(style, entries, explicitClass = '', allowedClassIds = [], f
   const allowedClasses = new Set(Array.isArray(allowedClassIds) ? allowedClassIds : []);
   return entries.filter(entry => entry.kind === 'class').flatMap(entry => {
     const cultural = entry.data?.cultureClassProfiles;
-    if (cultural?.length) return cultural.filter(profile => profile.combatStyleGrants.some(grant => grant.styleId === style.data?.id)
+      if (cultural?.length) return cultural.filter(profile => (profile.combatStyleGrants.some(grant => grant.styleId === style.data?.id)
+        || profile.formIds?.some(id => style.data?.forms?.some(form => form.id === id)))
         && (!allowedClasses.size || allowedClasses.has(profile.classId)) && profileAllowsForm(profile, formId))
       .map(profile => ({ name: entry.data.cultures?.length > 1 ? `${entry.name} · ${profile.culture}` : entry.name, entry }));
     return entry.data?.combatStyleGrants?.some(grant => grant.styleId === style.data?.id) ? [{ name: entry.name, entry }] : [];
@@ -67,7 +68,7 @@ function canonicalPaths(groups, entry, entries) {
   const style = isDefinition && !form ? entry : lookup(entries, 'combat-style', styleId);
   if (!style) return [];
   const styles = stylePaths(groups, style, entries, placement.className || style.data?.archivePlacement?.className,
-    isDefinition ? [] : data.cenyrTraining?.allowedClassIds, form?.data?.id || data.combatStyleFormId);
+    isDefinition ? [] : data.cenyrTraining?.allowedClassIds || data.cultureTraining?.allowedClassIds, form?.data?.id || data.combatStyleFormId);
   if (!form) return styles;
   const parentForm = lookup(entries, 'combat-style', form.data?.parentPathId);
   return styles.map(group => {

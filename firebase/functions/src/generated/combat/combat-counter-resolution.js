@@ -5,6 +5,7 @@ import { compactCombatResolution } from './combat-resolution-storage.js';
 import { resolveTechniqueDamageFormula } from './combat-technique-damage.js';
 import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getConditionArmorBonus } from './combat-armor-stances.js';
+import { getJungdracheSharedCounterOrigin } from '../combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js?v=20261103-curriculum-v1';
 
 function afterProfile(profile, result, role) {
   const conditions = result[`${role}ConditionSnapshot`]?.after || profile.temporaryConditions || [];
@@ -29,7 +30,8 @@ export function resolvePreparedCounterProfile(defender, stance) {
   const heldAction = { ...prepared.selectedAction, secondarySave: stance.counterAttack.secondarySave
     ? { ...stance.counterAttack.secondarySave, dc: resolveTechniqueSaveDc(stance.counterAttack.secondarySave, defender, prepared.weapon) } : null };
   const model = stance.counterAttack.damageModel;
-  const formula = model ? resolveTechniqueDamageFormula({ damageModel: model }, heldAction.weapon, defender) : heldAction.weapon.damageFormula;
+  const origin = getJungdracheSharedCounterOrigin(stance);
+  const formula = model ? resolveTechniqueDamageFormula({ ...origin, damageModel: model }, heldAction.weapon, defender) : heldAction.weapon.damageFormula;
   const action = model ? { ...heldAction, formula, weapon: { ...heldAction.weapon, damageFormula: formula } } : heldAction;
   return { ...prepared, weapon: action.weapon, selectedAction: action };
 }

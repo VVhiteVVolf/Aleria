@@ -49,14 +49,14 @@ test('Vennyr plans contain coherent 1–20 progression and class-specific expert
   }
 });
 
-test('draft plans never grant or activate abilities and have stable unique IDs', () => {
+test('read-only plans expose reviewed techniques without granting or activating abilities', () => {
   assert.equal(new Set(attacks.map(attack => attack.id)).size, attacks.length);
   for (const plan of plans) {
     if (plan.classId === 'derwyn') continue;
     assert.equal(plan.status, 'draft');
     assert.deepEqual(plan.combatStyleGrants, []);
     assert.deepEqual(plan.availableAttacks, []);
-    assert(plan.attackCatalog.every(attack => attack.status === 'draft' && !attack.active && !attack.live));
+    assert(plan.attackCatalog.every(attack => attack.status === 'confirmed' && !attack.active && !attack.live));
   }
   const changed = getVennyrClassProgression('morwyr', 5);
   changed.attackCatalog[0].name = 'Changed';

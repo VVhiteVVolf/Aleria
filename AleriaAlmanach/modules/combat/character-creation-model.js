@@ -220,6 +220,7 @@ function templateTraits(ancestry, background) {
     name,
     type: 'trait',
     description: ancestry.description,
+    ...(ancestry.icon ? { icon: ancestry.icon } : {}),
     appliesWhen: 'Dauerhafte kulturelle Prägung',
     target: 'self',
     active: true,

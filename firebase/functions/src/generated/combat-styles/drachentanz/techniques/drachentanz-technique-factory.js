@@ -113,7 +113,7 @@ export function createDrachentanzTechnique(spec) {
     combatStyleFormId: spec.formId,
     minimumLevel: spec.minimumLevel,
     category: spec.category || 'technique',
-    status: spec.status || 'draft',
+    status: spec.status || 'confirmed',
     description: spec.description,
     effect: spec.effect,
     activationType: ['action', 'reaction', 'bonus-action'].find(id => costs.some(cost => cost.resourceId === id)) || spec.activationType || 'action',

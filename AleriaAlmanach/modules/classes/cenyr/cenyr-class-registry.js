@@ -155,7 +155,7 @@ const DEFINITIONS = [
     weaponTraining: { primary: ['flexible melee'], secondary: [], note: 'Weniger Grazie und Expertise; brachialer und für Söldner flexibler.' },
     classFeatures: [feature('milwr-drachling-path', 'Pfad des Drachlings', 6, 'Schwächere, direktere Drachentanz-Ausbildung für Nicht-Ritter und Söldner.', null, 'partial')],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance und endgültige Freigabe der neun Attacken', 'Schilddisziplin und Formationskampf', 'Startausrüstung und Klassenwerte']
+    pending: ['Weitere passive Formationsmerkmale']
   }),
   curriculum({
     classId: 'teulu', name: 'Teulu', focus: 'Schwertkunst und Duell', trainingFocus: 'Tiefste Ausbildung und größter Technikpool',
@@ -167,7 +167,7 @@ const DEFINITIONS = [
     weaponTraining: { primary: ['sword'], secondary: [], note: 'Vollständige Schwertausbildung.' },
     classFeatures: [feature('teulu-sword-damage', 'Meisterschaft der Klinge', 6, '+2 Schaden mit Drachentanz-Angriffen, wenn ein Schwert geführt wird.', { damageBonus: 2, styleId: 'drachentanz', weaponTypes: ['sword'] })],
     combatStyleGrants: [jungdracheGrant([1, 2, 3, 4, 5, 6, 2, 3, 4, 6])],
-    pending: ['Feinbalance der freien Vertiefungen und Expertenattacken', 'Auswahlregeln für die zwölf Experten-Slots']
+    pending: []
   }),
   curriculum({
     classId: 'cantref', name: 'Cantref', focus: 'Speer, Distanz und Linie', trainingFocus: 'Drachentanz mit Speer und Stangenwaffen',
@@ -179,7 +179,7 @@ const DEFINITIONS = [
     weaponVariants: CANTREF_WEAPON_VARIANTS,
     classFeatures: [feature('cantref-weapon-adaptation', 'Drachentanz der Stangenwaffen', 1, 'Cantref können ihre Speerattacken mit Lanze, Partisane, Dreizack oder Hellebarde ausführen.', null, 'partial')],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance der Stangenwaffenfolgen', 'Automatischer Entwaffnungsablauf für den Dreizack']
+    pending: ['Automatischer Entwaffnungsablauf für den Dreizack']
   }),
   curriculum({
     classId: 'uchelwyr', name: 'Uchelwyr', focus: 'Lanze, Anritt und Reiterkampf', trainingFocus: 'Zweitgrößter Pool mit berittenen Techniken',
@@ -195,7 +195,7 @@ const DEFINITIONS = [
     weaponVariants: [CANTREF_WEAPON_VARIANTS[0]],
     classFeatures: [feature('uchelwyr-mounted-training', 'Ritter des hohen Sattels', 9, 'Stürmender und schweifender Drache ergänzen die drei gemeinsamen Speerformen. Alle Formen teilen dasselbe Attackenbudget.', null, 'partial')],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance der berittenen Attacken', 'Weitere passive Reiterboni', 'Zusammenspiel von Reiter und Ross']
+    pending: ['Weitere passive Reiterboni', 'Zusammenspiel von Reiter und Ross']
   }),
   curriculum({
     classId: 'helwyr', name: 'Helwyr', focus: 'Bogen, Gelände und Zielwahl', trainingFocus: 'Halber Drachentanz-Pool mit eigenem Fernkampfpfad',
@@ -211,7 +211,7 @@ const DEFINITIONS = [
     weaponTraining: { primary: ['Langbogen', 'Kurzbogen'], secondary: ['Beidhändige Schwerter oder Dolche', 'Schwert'], note: 'Alle vier Zweige teilen sich dasselbe Budget; die Waffe bestimmt Schadenswürfel und zulässige Attacken.' },
     classFeatures: [feature('helwyr-ranged-accuracy', 'Auge des Helwyr', 1, '+2 auf Trefferwürfe mit Fernkampfangriffen.', { attackBonus: 2, range: 'ranged' })],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance der vier Waffenfolgen', 'Munitionsbesonderheiten der Spezialschüsse']
+    pending: ['Munitionsbesonderheiten der Spezialschüsse']
   }),
   curriculum({
     classId: 'arthwyr', name: 'Arthwyr', focus: 'Vorhut, Enterkampf und Durchbruch', trainingFocus: 'Brachiale Drachentanz-Variante mit eigener Bärenklaue und frühem Brüllenden Drachen',
@@ -229,7 +229,7 @@ const DEFINITIONS = [
       feature('arthwyr-roaring-entry', 'Früher Ruf des Brüllenden Drachen', 6, 'Eine Attacke dieses Pfades wird bereits auf Stufe 6 zugänglich.', null, 'partial')
     ],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Feinbalance der brachialen Waffenwerte']
+    pending: []
   }),
   curriculum({
     classId: 'barddwyr', name: 'Barddwyr', focus: 'Klang, Magie und Rapier', trainingFocus: 'Kleinster Drachentanz-Pool und wachsende Zauberkunst',
@@ -260,7 +260,7 @@ const DEFINITIONS = [
       feature('barddwyr-rapier-critical', 'Rapiertechnik des Barddwyr', 1, 'Drachentanz-Angriffe mit dem Rapier sind bei einer natürlichen 19 oder 20 kritisch.', { criticalThreshold: 19, styleId: 'drachentanz', weaponProfileIds: ['rapier'] })
     ],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Grundzauber, Buffs und Rituale 6–20', 'Feinbalance der Rapier- und Schwertpfade']
+    pending: ['Grundzauber, Buffs und Rituale 6–20']
   })
 ];
 

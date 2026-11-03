@@ -88,6 +88,25 @@ export const ARTHWYR_DUELIST_TECHNIQUES = Object.freeze([
 ]);
 
 export const HELWYR_DUELIST_TECHNIQUES = Object.freeze([
+  duel({ slug: 'helwyr-vertiefung-ruhiger-auszug', name: 'Ruhiger Auszug', minimumLevel: 8,
+    description: 'Der Langbogen wird ohne Hast auf die nächste offene Schusslinie ausgerichtet.',
+    effect: 'Kein Angriff; +1 Angriff bis zum Ende des nächsten eigenen Beitrags. Erfordert einen geführten Langbogen.',
+    costs: ['bonus-action'], noPrimaryDamage: true, target: 'Selbst', range: 'Selbst',
+    effects: [temporaryCondition('helwyr-auszug', 'Ruhiger Auszug', '+1 Angriff bis zum Ende des nächsten eigenen Beitrags.', { attack: 1 }, { target: 'self', on: 'always' })],
+    allowedClassIds: ['helwyr'], classWeaponProfiles: { helwyr: ['longbow'] }, branchId: 'helwyr-longbow', weaponTypes: ['bow'] }),
+  duel({ slug: 'helwyr-vertiefung-kurze-sehnenantwort', name: 'Kurze Sehnenantwort', minimumLevel: 8,
+    description: 'Ein knapper Kurzbogenpfeil beantwortet die offene gegnerische Bewegung.', effect: 'Reaktionsschuss mit Technikschaden.',
+    costs: ['reaction'], range: 'Fernkampf', allowedClassIds: ['helwyr'], classWeaponProfiles: { helwyr: ['shortbow'] }, branchId: 'helwyr-shortbow', weaponTypes: ['bow'] }),
+  duel({ slug: 'helwyr-vertiefung-doppelter-ausfall', name: 'Doppelter Ausfall', minimumLevel: 8,
+    description: 'Beide geführten Klingen begleiten denselben knappen Ausfallschritt.',
+    effect: 'Technikschaden mit den beiden geführten Klingen nach der gemeinsamen Zweiwaffenregel; bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget.',
+    costs: ['action', 'bonus-action'], requiresDualWield: true, effects: [movementEffect('helwyr-ausfall', 2)],
+    allowedClassIds: ['helwyr'], classWeaponProfiles: { helwyr: ['dual-swords', 'dual-daggers'] }, branchId: 'helwyr-dual-blades', weaponTypes: ['sword', 'dagger'] }),
+  duel({ slug: 'helwyr-vertiefung-schwertsaum', name: 'Schwertsaum', minimumLevel: 8,
+    description: 'Eine kleine Schwertparade hält den Verfolger vor der eigenen Waffenlinie.',
+    effect: 'Kein Angriff; +1 RK bis zum Ende des nächsten eigenen Beitrags.', costs: ['reaction'], noPrimaryDamage: true, target: 'Selbst',
+    effects: [temporaryCondition('helwyr-schwertsaum', 'Schwertsaum', '+1 RK bis zum Ende des nächsten eigenen Beitrags.', { armorClass: 1 }, { target: 'self', on: 'always' })],
+    allowedClassIds: ['helwyr'], classWeaponProfiles: { helwyr: ['sword'] }, branchId: 'helwyr-classic-sword', weaponTypes: ['sword'] }),
   duel({ slug: 'helwyr-schwertdrache-duellschuss', name: 'Duellschuss', minimumLevel: 7,
     description: 'Ein einzelner Langbogenpfeil wird auf den Moment gesetzt, in dem der Gegner seine Deckung für den eigenen Angriff öffnet.', effect: 'Reaktionsschuss mit Technikschaden.', activationType: 'reaction', costs: ['reaction', 'bonus-action'], range: 'Fernkampf',
     allowedClassIds: ['helwyr'], classWeaponProfiles: { helwyr: ['longbow'] }, branchId: 'helwyr-longbow', weaponTypes: ['bow'] }),
@@ -102,6 +121,14 @@ export const HELWYR_DUELIST_TECHNIQUES = Object.freeze([
 ]);
 
 export const BARDDWYR_SWORD_DUELIST_TECHNIQUES = Object.freeze([
+  duel({ slug: 'barddwyr-vertiefung-zwischentakt', name: 'Zwischentakt', minimumLevel: 7,
+    description: 'Ein kurzer Schwertschnitt setzt zwischen den größeren Takten der Folge nach.', effect: 'Leichter Ergänzungshieb mit Technikschaden.',
+    costs: ['bonus-action'], allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['sword'] }, branchId: 'barddwyr-sword', weaponTypes: ['sword'] }),
+  duel({ slug: 'barddwyr-vertiefung-pausenwacht', name: 'Pausenwacht', minimumLevel: 8,
+    description: 'Die Schwertlinie schließt die kurze Pause zwischen zwei Angriffen.', effect: 'Kein Angriff; +1 RK bis zum Ende des nächsten eigenen Beitrags.',
+    costs: ['reaction'], noPrimaryDamage: true, target: 'Selbst',
+    effects: [temporaryCondition('barddwyr-pausenwacht', 'Pausenwacht', '+1 RK bis zum Ende des nächsten eigenen Beitrags.', { armorClass: 1 }, { target: 'self', on: 'always' })],
+    allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['sword'] }, branchId: 'barddwyr-sword', weaponTypes: ['sword'] }),
   duel({ slug: 'barddwyr-schwertdrache-versmass', name: 'Versmaß der Klinge', minimumLevel: 7,
     description: 'Der Barddwyr ordnet eine verkürzte Duellfolge in zwei klare Takte.', effect: 'Verursacht Technikschaden und erhält +1 Angriff.', costs: ['action', 'bonus-action'], attackBonus: 1,
     allowedClassIds: ['barddwyr'], classWeaponProfiles: { barddwyr: ['sword'] }, branchId: 'barddwyr-sword', weaponTypes: ['sword'] }),

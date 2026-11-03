@@ -3,11 +3,15 @@ import {
   CHARACTER_BACKGROUND_TEMPLATES,
   CHARACTER_CLASS_TEMPLATES
 } from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
-import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
+import { getArchiveCombatStyles } from './character-archive-combat-catalog.js';
+import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
+import { buildStandardWeaponArchiveEntries } from './character-archive-standard-weapons.js';
+import { getArchiveAbilityIconSource } from './character-archive-ability-icons.js';
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
 import {
   mergeCharacterArchiveEntries,
-  normalizeCharacterArchiveEntry
+  normalizeCharacterArchiveEntry,
+  projectItemRegisterArchiveEntries
 } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
 import { DEVELOPMENT_TRAITS } from '../character-development/development-traits.js';
@@ -32,12 +36,13 @@ function templateEntry(kind, template, description = '') {
   });
 }
 
-function namedTrait(name, description, sourceId, sourceName) {
+function namedTrait(name, description, sourceId, sourceName, icon = '') {
   return normalizeCharacterArchiveEntry({
     id: `builtin--trait--${sourceId}--${String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
     kind: 'trait',
     name,
     description,
+    icon,
     data: {
       name,
       type: 'trait',
@@ -46,6 +51,7 @@ function namedTrait(name, description, sourceId, sourceName) {
       target: 'Selbst',
       duration: 'Dauerhaft',
       active: true,
+      ...(icon ? { icon } : {}),
       mechanics: {}
     },
     sources: [{ kind: 'template', id: sourceId, name: sourceName }],
@@ -57,7 +63,7 @@ function buildTemplateEntries() {
   const entries = [];
   CHARACTER_ANCESTRY_TEMPLATES.forEach(template => {
     entries.push(templateEntry('ancestry', template));
-    (template.culturalTraits || []).forEach(name => entries.push(namedTrait(name, template.description, template.id, template.label)));
+    (template.culturalTraits || []).forEach(name => entries.push(namedTrait(name, template.description, template.id, template.label, template.icon)));
   });
   CHARACTER_BACKGROUND_TEMPLATES.forEach(template => {
     entries.push(templateEntry('background', template));
@@ -89,7 +95,7 @@ function buildTemplateEntries() {
     icon: page.icon, data: { ...page, pageOrder: page.order }, tags: page.cultures,
     sources: [{ kind: 'system', id: page.sourcePage, name: 'Klassenseite' }], builtin: true
   })));
-  return classifyCharacterArchiveEntries(entries);
+  return entries;
 }
 
 function buildFireSpellArsenalEntries() {
@@ -107,8 +113,7 @@ function buildFireSpellArsenalEntries() {
 
 function buildCombatStyleEntries() {
   const entries = [];
-  const registry = getCombatStyleRegistry();
-  (registry.styles || []).forEach(style => {
+  getArchiveCombatStyles().forEach(style => {
     entries.push(normalizeCharacterArchiveEntry({
       id: `builtin--combat-style--${style.id}`,
       kind: 'combat-style',
@@ -145,11 +150,13 @@ function buildCombatStyleEntries() {
 }
 
 function entryFromLibrary(kind, item, classId, className) {
+  const icon = item.icon || (kind === 'ability' ? getArchiveAbilityIconSource({ kind, name: item.name, data: item,
+    sources: [{ kind: 'character-library', id: classId, name: item.sourceCharacter || className }] }) : '');
   return normalizeCharacterArchiveEntry({
     kind,
     name: item.name,
     description: item.description || item.effect || '',
-    icon: item.icon || '',
+    icon,
     data: item,
     tags: [className, item.school, item.trainingForm, item.tags],
     sources: [{
@@ -174,18 +181,19 @@ async function loadSpellAttackLibraryEntries() {
         entries.push(entryFromLibrary(kind, item, classId, group.className));
       });
     });
-    return entries;
+    return { entries, libraryRevision: String(library.sourceRevision || '') };
   } catch (error) {
     console.info('Zauber- und Attackenbibliothek konnte nicht geladen werden.', error);
-    return [];
+    return { entries: [], libraryRevision: '' };
   }
 }
 
 let catalogPromise = null;
 
-export function loadBuiltinCharacterArchiveEntries() {
+export function loadBuiltinCharacterArchiveSnapshot() {
   if (!catalogPromise) {
-    catalogPromise = loadSpellAttackLibraryEntries().then(libraryEntries => mergeCharacterArchiveEntries(
+    catalogPromise = loadSpellAttackLibraryEntries().then(({ entries: libraryEntries, libraryRevision }) => ({ libraryRevision,
+      entries: mergeCharacterArchiveEntries(classifyCharacterArchiveEntries([
       buildTemplateEntries(),
       buildCombatStyleEntries(),
       buildFireSpellArsenalEntries(),
@@ -194,8 +202,14 @@ export function loadBuiltinCharacterArchiveEntries() {
         description: trait.description, icon: trait.icon, data: trait, builtin: true,
         sources: [{ kind: 'system', id: 'character-development', name: 'Individuelle Charakterentwicklung' }] })),
       libraryEntries,
+      projectItemRegisterArchiveEntries(STANDARD_ITEMS),
+      buildStandardWeaponArchiveEntries(),
       ARCHIVE_PAGE_MOUNTS.map(createArchiveMountEntry)
-    ));
+    ].flat())) }));
   }
   return catalogPromise;
+}
+
+export async function loadBuiltinCharacterArchiveEntries() {
+  return (await loadBuiltinCharacterArchiveSnapshot()).entries;
 }

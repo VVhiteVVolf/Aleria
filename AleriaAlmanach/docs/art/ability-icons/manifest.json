@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "mode": "builtin-imagegen",
+  "styleReference": "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+  "preset": "fantasy-class-icon; current user request: rounded square ability panels",
+  "sourceDirectory": "sources",
+  "outputDirectory": "../../../public/assets/ability-icons",
+  "size": 256,
+  "jobs": [
+    {
+      "asset": "freya-arkaner-schrei",
+      "name": "Arkaner Schrei",
+      "owner": "Freya Skald",
+      "background": "#493760",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-skald\\freya-skald.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Freya Skald, not a style reference. Preserve her long golden blonde hair and bangs, brown eyes, blue cape and gold breastplate. Show recognizable Freya from chest up, mouth open in a powerful arcane shout, one large simple blue-violet concentric soundwave projecting from her mouth. Keep her face readable. Muted purple panel."
+    },
+    {
+      "asset": "gildas-gewissenhafte-vorbereitung",
+      "name": "Gewissenhafte Vorbereitung",
+      "owner": "Gildas Gafyr",
+      "background": "#454c5b",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-gafyr\\gildas-gafyr.jpg"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Gildas Gafyr, not a style reference. Preserve reddish brown layered hair with his short low ponytail, brown eyes and dark plate armor with gold trim. Chest-up recognizable Gildas looks down in thoughtful concentration while checking and tightening his sword belt buckle with one hand. The deliberately checked buckle conveys careful preparation. No checklist text. Muted slate-blue panel."
+    },
+    {
+      "asset": "gildas-schutzpflicht",
+      "name": "Schutzpflicht",
+      "owner": "Gildas Gafyr",
+      "background": "#354653",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-gafyr\\gildas-gafyr.jpg"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Gildas Gafyr, not a style reference. Preserve reddish brown layered hair with his short low ponytail, brown eyes and dark plate armor with gold trim. Chest-up recognizable resolute Gildas raises a broad dark shield with gold rim toward a single incoming arrow; his face remains fully visible above the shield. Clear protective interception gesture, minimal single impact stroke. Muted dark blue panel."
+    },
+    {
+      "asset": "gawain-liebt-duefte",
+      "name": "Liebt Düfte",
+      "owner": "Gawain Draig",
+      "background": "#603850",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-draig\\gawain-draig.jpg"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Gawain Draig, not a style reference. Preserve his long fiery orange-red spiky hair, vivid blue eyes, red scarf and dark armor. Chest-up recognizable cheerful Gawain holds a small open perfume vial near his nose and enjoys the scent with a relaxed smile; two simple curled aroma lines rise from the vial. Face and vial both prominent. Muted burgundy-purple panel."
+    },
+    {
+      "asset": "gawain-draig-rittersiegelring",
+      "name": "Draig-Rittersiegelring",
+      "owner": "Gawain Draig",
+      "background": "#5a343c",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-draig\\gawain-draig.jpg",
+        "E:\\Aleria\\AleriaAlmanach\\assets\\house-knight-rings\\haus-draig-siegelring-v1.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Gawain Draig. Preserve long fiery orange-red spiky hair, vivid blue eyes, red scarf and dark armor. Image 3 is OBJECT DESIGN ONLY: his gold signet ring with a dark round face and a simple curled dragon seal. Show recognizable chest-up Gawain proudly holding his ringed hand forward near his shoulder, his smiling face and the visibly enlarged gold dragon signet ring both readable. The ring is worn on his finger, not floating. Simplify the actual dragon engraving into one bold dark dragon mark. Muted dark red panel."
+    },
+    {
+      "asset": "asgeir-grenzer-des-dunkelhains",
+      "name": "Grenzer des Dunkelhains",
+      "owner": "Asgeir Wolfshorn",
+      "background": "#354b42",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-wolfshorn\\asgeir-wolfshorn.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Asgeir Wolfshorn. Preserve long dirty-blonde hair with side braids, blue-grey eyes, stern weathered adult face, grey fur mantle, dark cloak and chainmail. Recognizable chest-up Asgeir stands firmly alert, gripping an axe close to one shoulder, with one very simple dark pine silhouette as a small border-forest cue behind him. Clear steady border guardian. No magic, no new heraldry. Muted forest-green panel."
+    },
+    {
+      "asset": "ylva-veteranin-des-dunkelhains",
+      "name": "Veteranin des Dunkelhains",
+      "owner": "Ylva Wolfshorn",
+      "background": "#324d50",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-wolfshorn\\ylva-wolfshorn.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: Image 2 is the canonical IDENTITY AND CLOTHING reference for Ylva Wolfshorn. Preserve long dark-blonde hair, crown braid and two long front braids, grey-blue eyes, grey fur mantle, dark teal clothing and muted bronze trim. Recognizable chest-up confident veteran Ylva calmly holds her bow upright at her side, face unobstructed; a single simple dark pine silhouette hints at her forest border experience. Absolutely no shield. No magic or new heraldry. Muted dark teal panel."
+    },
+    {
+      "asset": "durchschnaufen",
+      "name": "Durchschnaufen",
+      "background": "#3c5961",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: A shared ability, no named or recognizable character. One anonymous plain armored adventurer in simple neutral clothing shown chest-up, eyes closed, one hand on chest and exhaling one large soft curved breath stroke. A tiny simple heart with a single small upward spark suggests recovery. Calm rest after effort, no potion. Muted blue-teal panel."
+    },
+    {
+      "asset": "berserkergang",
+      "name": "Berserkergang",
+      "background": "#673b3a",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: A shared ability, no named or recognizable character. Anonymous dark-haired adult warrior chest-up, clenched teeth and fierce expression, gripping the short handle of one axe while two simple angular red rage strokes flare beside the head. Strength and unleashed fury read clearly, no blood, no gore, no magical runes. Muted dark oxblood panel."
+    },
+    {
+      "asset": "tierbegleiter",
+      "name": "Tierbegleiter",
+      "background": "#4d593a",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: A shared ability, no named character. One friendly generic brown hunting dog in three-quarter profile, head and shoulders large and readable, with a simple human hand resting gently near its shoulder. Loyal animal companionship and cooperation, not a new named pet. No collar lettering or scenery. Muted moss-green panel."
+    },
+    {
+      "asset": "vogelbegleiter",
+      "name": "Vogelbegleiter",
+      "background": "#3b5163",
+      "refs": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\combat-technique-icons\\focus.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: one small fantasy roleplaying ability icon, square 1:1.\nImage 1 is STYLE REFERENCE ONLY: match its simple flat playful 2D comic drawing and its single thin warm ivory rounded-square frame. Use few large matte color shapes, bold dark drawn outlines and at most two flat tones per material. No gradients, 3D, realistic rendering, intricate texture, text, letters, numbers, watermark or scenery.\nCenter one readable ability motif inside a solid muted dark colored rounded-square panel, the entire ivory frame sits inside the canvas with about 4% clear margin. Truly transparent outside the rounded square only; the interior panel is completely opaque. All details stay inside the frame. Make the icon clear even at 48 pixels.\nPrimary request: A shared ability, no named character. One friendly small brown-grey hawk perched on a simply drawn leather-gloved forearm, bird body and alert head clearly readable in side view, slightly lifted wing. Loyal bird companionship, not a named specific bird. No lettering, no scenery. Muted slate-blue panel."
+    }
+  ]
+}

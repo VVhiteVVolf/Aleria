@@ -1,0 +1,184 @@
+{
+    "schemaVersion":  1,
+    "tool":  "prepare-weapon-standard-art.ps1",
+    "size":  512,
+    "scriptSha256":  "6ae391d5aa1636906520e4fe0346f99665b521ebca214bfe00a562b359d37839",
+    "manifestSha256":  "e6f39e98c595c67477076f137900cbe181f7ed12ab430cea2b18f88929a36cf2",
+    "images":  [
+                   {
+                       "id":  "degen",
+                       "sourceSha256":  "2c4b083e7bf9d53135af8f63d27694f35c2dd768e7817a3d4902fddbee59481c",
+                       "assetSha256":  "fae5bfd981c042f0763c184cf330a72c4a26051ba7f75961f20f46a8638fb320"
+                   },
+                   {
+                       "id":  "rapier",
+                       "sourceSha256":  "6e2a4854f219ab52388dfa40e66d6baddc393cf695c724364959165d8a77fb98",
+                       "assetSha256":  "5d137e2c92646319601188a32f222140b46d95b4eb0af70751e8e40a0ec00369"
+                   },
+                   {
+                       "id":  "saebel",
+                       "sourceSha256":  "6c7c16c2ada6c14f731e04ef9b07a23c4fbb5d0049ffb6e38f10de38854da064",
+                       "assetSha256":  "c6d48c2dace40c5ce080a40eb1e1b76be8424d11278eab5be82618755830673b"
+                   },
+                   {
+                       "id":  "dolch",
+                       "sourceSha256":  "1c0d729e9ffcb96375f8e1e342965afffb104f8e201ea1b0cc133875d8f3dc00",
+                       "assetSha256":  "25ed7695e10da364b714b1d8384f113858edb235ce5b5b648e930db12c8d94bd"
+                   },
+                   {
+                       "id":  "kurzschwert",
+                       "sourceSha256":  "2f7185be637a543fa07bfd09dfe271943ee65213b45562e9b73ebeb932d891ca",
+                       "assetSha256":  "6229c09320373cf893fec1915db3343074f6a2b1e63ee35960e2c60c9fa6d3dd"
+                   },
+                   {
+                       "id":  "parierdolch",
+                       "sourceSha256":  "3c5123db331b786808552ba488c3fc4c8378a11fc510d0a7057c9b458d595557",
+                       "assetSha256":  "60678f593d13d649f424bb947fc531a77d6906343981be769d44886fcd0787be"
+                   },
+                   {
+                       "id":  "kampfklauen",
+                       "sourceSha256":  "e7a532e66289243b9580b1f3fefe41435ff061ef3c8ba0e6cd0204d902440d90",
+                       "assetSha256":  "c5ba17c0b4067886ec47ee611dc3cea6764ad4f6135feb2c8fb36feb8b513491"
+                   },
+                   {
+                       "id":  "handaxt",
+                       "sourceSha256":  "aebf9183afdb5085468e595d0ca5797b02d535bec6ed249b7f9bd8de196e9522",
+                       "assetSha256":  "9b0c090a814279646cf77b7efeae9de6eabed4ffcdf20b5c501cde96917460a4"
+                   },
+                   {
+                       "id":  "enteraxt",
+                       "sourceSha256":  "0772186fbfd99cde7821c40e383b1b1a2e71c50219222d5da29bb896929d8a5e",
+                       "assetSha256":  "3c37e6ca795b446837e284cfd6b804458df01a933ec4d8ffc93ba11e887e8e60"
+                   },
+                   {
+                       "id":  "einhand-kriegshammer",
+                       "sourceSha256":  "022bd9a70cd6d1489dbd9d0a3e9eea128cfe4fe19e97623df9b6e86868ff3350",
+                       "assetSha256":  "dc96323139162d596a94fb064e62c94b02643da31e09d4736490f66591169dac"
+                   },
+                   {
+                       "id":  "rabenschnabel",
+                       "sourceSha256":  "cb7946ee3c191970da1789cae05cd2b75a308e3f83ad544265baecae20873ad2",
+                       "assetSha256":  "bc1b7ecceca6fe729e0539d2df50f98afd46150330f4114ebcfd9f25889e08db"
+                   },
+                   {
+                       "id":  "speer",
+                       "sourceSha256":  "c863bb4329b81b9d0e716a563b55cd193b6b0db7ebd92cce4f061fd427f11315",
+                       "assetSha256":  "c3a50e804b18dc31506629c0581e74c97de959ebf27331779edbf36a47df727c"
+                   },
+                   {
+                       "id":  "partisane",
+                       "sourceSha256":  "fd5fc7105efa1fe222aebe312ece171edb889600f64f8c548c1ddd76c00f116b",
+                       "assetSha256":  "2edf2d5c1967aa86058485258cd9d428993c329635421f90421390c09ed8f9b0"
+                   },
+                   {
+                       "id":  "glefe",
+                       "sourceSha256":  "5568ebc7bc2564373e8df27ba04f2e63023534cc0c7aac21e7f7a5a7ea80412c",
+                       "assetSha256":  "d00cf34d02df640cad7d507b8bda86e502893e6894dd0067dd27047a470f4b0d"
+                   },
+                   {
+                       "id":  "harpunenspeer",
+                       "sourceSha256":  "b3e715ce9ed96ae78159179bd7a59f1277f94dca43bda02646ead8199cf4543a",
+                       "assetSha256":  "29ba43a006f65365e1d4a18765312f885ff1dd3ce5868209aad11a618c1b30ea"
+                   },
+                   {
+                       "id":  "kampfstab",
+                       "sourceSha256":  "c26d00dc3e1a17e55bbf66a39f0e76ed4958b4a9face2571259e4ce81c7d498f",
+                       "assetSha256":  "12be222a3e0d060dc4bfb35d343d10d1f63010ee3c1a95365ac548d9d643fe11"
+                   },
+                   {
+                       "id":  "schwere-armbrust",
+                       "sourceSha256":  "a8a019b67f7869b2d865995e97dd387dd3a46a05569e95c990308c4d70fe9511",
+                       "assetSha256":  "d630714bbf7f53cdd3b95d0257a962f304eb0dc87bdf9c47a5e4974139db545b"
+                   },
+                   {
+                       "id":  "handarmbrust",
+                       "sourceSha256":  "28dd440b3176f16022ce9098dc84b0dc2bcf678f0f02271e8bb699a089f01567",
+                       "assetSha256":  "8305fc822e28aa39824c3ad527a01eb02cf0443f5fa6239c55fd04bfe5ce81c7"
+                   },
+                   {
+                       "id":  "peitsche",
+                       "sourceSha256":  "4625262dc02562d8bea3242851e87ef624aeb103b97b52d64c8ccde2d843d7f8",
+                       "assetSha256":  "f0e50a6ca9ff0622b15018f796e69644fa9c2be83bbe1aaea9ff9d0988ebd1d1"
+                   },
+                   {
+                       "id":  "schleuder",
+                       "sourceSha256":  "dd1705a0a6933d6be17c2cc4c5057eac88ade0993badc07042743d640b24215e",
+                       "assetSha256":  "1ce7bae47038d8b681171603d07d57fe654832f8c1bdbbb624534eefc9fc6067"
+                   },
+                   {
+                       "id":  "khopesh",
+                       "sourceSha256":  "5e267a9c63a3428c218d71622c2370dd407b72852d007e0cae4b4954d55bb176",
+                       "assetSha256":  "c635130590abc9471184004f200fe2ea23fb53b7b854995322efcb73ba76986e"
+                   },
+                   {
+                       "id":  "shamshir",
+                       "sourceSha256":  "0f90e8798e72f1f37304d4ad0bd0c71a0dfc9343e074613e59778bcd24e4c27e",
+                       "assetSha256":  "6e29e178e5f31b80ce21eefbedb8c7db64da4c51d0741627e9cee965693fc7b6"
+                   },
+                   {
+                       "id":  "kukri",
+                       "sourceSha256":  "695e7e6211cbb836cbc126bd35dcc542c90b83af30836600ea4b6de856cd623f",
+                       "assetSha256":  "3ba4952d1ad085f31bc1fef91f7f1604e68fe0f8831a2e377d362ed55309e55f"
+                   },
+                   {
+                       "id":  "chakram",
+                       "sourceSha256":  "68a342503bdcd2ac70f26389a7d625b1a84d42b0f63e9e613102d2c648702bde",
+                       "assetSha256":  "83558ff44ebd89d6b99ad8362cba2fd256d6c9df7396b08e6482b23c42b49400"
+                   },
+                   {
+                       "id":  "katana",
+                       "sourceSha256":  "bbb7cb6e5a105e91a64c0ffcad485d725e67eec8a23a5311dff31d415e10a465",
+                       "assetSha256":  "8facf8ebf4f0b68196fb75a555179ac52134e8caa8ff599d5f0bb6ea464d8618"
+                   },
+                   {
+                       "id":  "wakizashi",
+                       "sourceSha256":  "854f01b11d802562a2cc904c2bde9fc364ab94bb5f700b79e6ff118daf547feb",
+                       "assetSha256":  "d61809869ca8851f9d13498cc6d77a873d983e0dbf86d23c39a8be3cf226f009"
+                   },
+                   {
+                       "id":  "tanto",
+                       "sourceSha256":  "a1c780353dbf601875de12f77e5a5fd8bc7cb57a8d77f8c7a9dc6fceea3773db",
+                       "assetSha256":  "deb9cae2bf5cdd22a37b8740ef610919171b26283d1da87bbd449612530cc228"
+                   },
+                   {
+                       "id":  "nodachi",
+                       "sourceSha256":  "ef5723a60b0b5eafba93ecb12c3f2cfffed2c1835f37fa01e612e767854de603",
+                       "assetSha256":  "82eb1cde8910d172a17dc3c479c3c45a356680200244158011e371095ea71bce"
+                   },
+                   {
+                       "id":  "naginata",
+                       "sourceSha256":  "d17cd1541ae53b64acc6e0b1fb5ae3e1fb28a06998272578f1457af95b0535ff",
+                       "assetSha256":  "a192a42ecceb3daca64cc684ef5bcb069f91fc17300a69ed56b51211e823df6d"
+                   },
+                   {
+                       "id":  "jian",
+                       "sourceSha256":  "66efd97e947430333b99773d753aaaa5b4338c1a39ccc0b47aa7b24c632e6497",
+                       "assetSha256":  "2164aa3619f40c31707016ec70a2bb4579efaf78e0683804e533f2446d69d84f"
+                   },
+                   {
+                       "id":  "dao",
+                       "sourceSha256":  "343cbf356e6b748d42b22b548b7cbb9d96f68fe9e6af9d69b84fec0c9fda007e",
+                       "assetSha256":  "baa514f122bed1be774579d935cb056a4f70d2d78ed772fb785654d1ec6d6ad1"
+                   },
+                   {
+                       "id":  "yari",
+                       "sourceSha256":  "06ca8bdc2866e9f0c9aad28c99305ccc625e220dd2a36b92753c1b7423431cbd",
+                       "assetSha256":  "41caa3bab1161e1e73e09d45806174d015008b639589f10f65ae4953cb528286"
+                   },
+                   {
+                       "id":  "tonfa",
+                       "sourceSha256":  "eb98fb699f86b4765a4f1c301c3e780281243be8a5d6e1f64b2f2821c2ab60f8",
+                       "assetSha256":  "fcf36ba1afeb19ed14718ef1ffee2543195e99442d65ae9d7c6375989bff78ae"
+                   },
+                   {
+                       "id":  "nunchaku",
+                       "sourceSha256":  "2041425b86e00bf27e83bf33b9265deecc0e8b6a99aec73382476d3cac7499e9",
+                       "assetSha256":  "22d6b8df0157a12633f7a2a7e4afedfce823b00554ed7e4ed3388233dea4fff7"
+                   },
+                   {
+                       "id":  "wurfstern",
+                       "sourceSha256":  "82291ba6fd8e910e049d35250677e2f7e212c7ab43d4b72d4635662b36e08587",
+                       "assetSha256":  "8d02b95fc0a73a84a51b18af815f1ce4eaea9b539df035ecb41b25de5457158e"
+                   }
+               ]
+}

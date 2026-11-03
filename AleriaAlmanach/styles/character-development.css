@@ -3,6 +3,7 @@
 .development-balance .development-negative { color:#ffbba9; }
 .development-attacks { display:grid; gap:.5rem; max-height:25rem; overflow:auto; margin:1rem 0; }
 .development-attack { display:flex; align-items:start; gap:.7rem; padding:.75rem; border:1px solid #9b845f66; border-radius:.4rem; cursor:pointer; }
+.development-attack-icon { width:48px; height:48px; flex:none; object-fit:contain; border-radius:9px; }
 .development-attack span { flex:1; display:grid; gap:.25rem; }
 .development-attack small, .development-trait small { display:block; }
 .development-traits { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:.6rem; }

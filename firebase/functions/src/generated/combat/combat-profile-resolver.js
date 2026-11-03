@@ -29,6 +29,7 @@ import { COMBAT_WAIT_ACTION, hasActionBlockingCondition, getActionBlockingCondit
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
+import { getVennyrTechniqueUnavailableReason } from '../classes/vennyr/vennyr-technique-weapon-rules.js';
 import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
 import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
@@ -113,12 +114,13 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique)
         || (requiresPairedCombatWeapons(technique) && !loadout.dualWield ? 'Benötigt zwei gleichzeitig geführte Waffen.' : '')
         || (technique.followUpAttack?.alternateHands && (!loadout.dualWield || loadout.left?.weaponType !== 'axe' || loadout.right?.weaponType !== 'axe') ? 'Benoetigt zwei gleichzeitig gefuehrte Aexte.' : '');
-      const compatible = weaponCompatible && levelCompatible && weaponRules.compatible && !huskarlError;
+      const vennyrError = getVennyrTechniqueUnavailableReason(calculation, technique, activeWeapon || {});
+      const compatible = weaponCompatible && levelCompatible && weaponRules.compatible && !huskarlError && !vennyrError;
       const damageWeapon = getPairedAttackWeapon(activeWeapon || {}, profile, technique);
-      const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile);
-      const scaling = getTechniqueDamageScaling(technique, profile);
+      const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile, weaponRules);
+      const scaling = getTechniqueDamageScaling(technique, profile, weaponRules);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
-        ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile) : '';
+        ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile, weaponRules) : '';
       const secondarySaveDc = resolveTechniqueSaveDc(technique.secondarySave, calculation, activeWeapon || {});
       const classModifiers = getCenyrClassActionModifiers(calculation, {
         technique,
@@ -186,7 +188,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
           ? ''
           : (!levelCompatible
               ? `Wird ab Stufe ${technique.minimumLevel} freigeschaltet.`
-              : (huskarlError || weaponRules.disabledReason || `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`)),
+              : (huskarlError || vennyrError || weaponRules.disabledReason || `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`)),
         default: false
       };
     });

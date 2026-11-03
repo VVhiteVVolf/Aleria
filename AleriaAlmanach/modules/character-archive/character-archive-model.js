@@ -4,6 +4,7 @@ import { getCharacterClassIds } from '../character-development/character-trainin
 import { getCharacterCreationTemplate } from '../combat/character-creation-templates.js';
 import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
+import { getCharacterArchiveCanonicalKey } from './character-archive-identity.js';
 
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
@@ -117,7 +118,8 @@ export function normalizeCharacterArchiveEntry(value = {}) {
     Object.assign(data, normalizeCombatSpell(data));
   }
   const name = String((kind === 'spell' && data.catalogReference ? data.name : '') || value.name || data.name || data.label || '').trim();
-  const id = String(value.id || '').trim() || makeCharacterArchiveId(kind, name);
+  const canonicalKey = getCharacterArchiveCanonicalKey(kind, data, name);
+  const id = String(value.id || '').trim() || (canonicalKey ? `${kind}--${canonicalKey}` : makeCharacterArchiveId(kind, name));
   const iconAssignmentVersion = Number(value.iconAssignmentVersion) === CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION ? CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION : 0;
   const resetSpellIcon = kind === 'spell' && !iconAssignmentVersion;
   if (resetSpellIcon) delete data.icon;
@@ -134,13 +136,11 @@ export function normalizeCharacterArchiveEntry(value = {}) {
   return {
     schemaVersion: CHARACTER_ARCHIVE_SCHEMA_VERSION,
     id,
-    key: data.section && ['standard', 'offer', 'owned'].includes(data.section) && data.id
-      ? `item-register::${data.id}`
-      : kind === 'spell' && normalizeSpellCatalogReference(data.catalogReference)
+    key: canonicalKey || (kind === 'spell' && normalizeSpellCatalogReference(data.catalogReference)
       ? `spell::catalog::${data.catalogReference.id}@${data.catalogReference.revision}`
       : kind === 'spell' && normalizeSpellCatalogReference(data.catalogOrigin)
         ? `spell::custom::${data.catalogOrigin.id}@${data.catalogOrigin.revision}::${normalizeArchiveSearchText(name)}`
-      : makeCharacterArchiveKey(kind, name),
+      : makeCharacterArchiveKey(kind, name)),
     kind,
     name,
     description: getDescription(data, kind === 'spell' ? data.description || value.description : value.description),
@@ -287,6 +287,10 @@ function entryFromRegisterItem(item = {}) {
 // Charakterbogen-Archiv, damit z.B. Pferderassen oder Alchemie-Waren dort neben den
 // Kampfregel-Bausteinen auffindbar sind. Fehlt der globale Registerindex (Modul noch nicht
 // geladen), bleibt die Liste einfach leer statt zu werfen.
+export function projectItemRegisterArchiveEntries(items = []) {
+  return mergeCharacterArchiveEntries((Array.isArray(items) ? items : []).map(entryFromRegisterItem).filter(Boolean));
+}
+
 export function extractItemRegisterArchiveEntries() {
   const buildIndex = globalThis.itemDbBuildIndex;
   if (typeof buildIndex !== 'function') return [];
@@ -297,7 +301,7 @@ export function extractItemRegisterArchiveEntries() {
     console.info('Inventar-Register konnte nicht ins Charakterbogen-Archiv gespiegelt werden.', error);
     return [];
   }
-  return mergeCharacterArchiveEntries((Array.isArray(items) ? items : []).map(entryFromRegisterItem).filter(Boolean));
+  return projectItemRegisterArchiveEntries(items);
 }
 
 export function createCharacterArchiveProfileItem(entry, collection = '') {
@@ -305,6 +309,8 @@ export function createCharacterArchiveProfileItem(entry, collection = '') {
   const data = cloneArchiveValue(normalized.data, {});
   const traitId=normalized.kind==='trait'?getDevelopmentTraitId(data):'';
   if(traitId)data.developmentTraitId=traitId;
+  const abilityId = normalized.kind === 'ability' ? String(data.catalogAbilityId || data.sourceAbilityId || data.id || '') : '';
+  if (abilityId) data.catalogAbilityId = abilityId;
   if(normalized.kind==='technique'&&getDevelopmentTechniqueId(data).startsWith('combat-style-'))data.catalogTechniqueId=getDevelopmentTechniqueId(data);
   const prefix = collection || getCharacterArchiveKind(normalized.kind).collection || normalized.kind;
   const id = globalThis.crypto?.randomUUID?.()
@@ -314,6 +320,7 @@ export function createCharacterArchiveProfileItem(entry, collection = '') {
   if (normalized.description && !data.description) data.description = normalized.description;
   if (normalized.icon) data.icon = normalized.icon;
   delete data.sourceCharacter;
+  delete data.sourceCharacterId;
   delete data.sourceClassId;
   return data;
 }

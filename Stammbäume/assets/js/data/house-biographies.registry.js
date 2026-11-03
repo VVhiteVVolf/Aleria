@@ -37,7 +37,7 @@ import { HOUSE_BIOGRAPHY as haus_trydar } from "../../../../Familien Häuser und
 import { HOUSE_BIOGRAPHY as haus_ymladd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_draig } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20261102-court-offices-v1";
 import { HOUSE_BIOGRAPHY as haus_aelmor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aelmor/haus.biography.mjs?v=20261024-housebio-v1";
-import { HOUSE_BIOGRAPHY as haus_argall } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.biography.mjs?v=20261024-housebio-v1";
+import { HOUSE_BIOGRAPHY as haus_argall } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.biography.mjs?v=20261102-argall-gwynthor-v2";
 import { HOUSE_BIOGRAPHY as haus_awenor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_awenydd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_balchder } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/haus.biography.mjs?v=20261024-housebio-v1";

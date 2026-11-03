@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "inputs": {
+    "docs/art/ability-icons/manifest.json": "4ef2e9aebc896b1745aa077bc74329302652907c7fcb57dbfee48a3287ec0004",
+    "docs/art/ability-icons/generation-receipts.json": "99ea49863a5ac0e7f83756f39d2d2f3d31e942280eded988c9887c59fd6f3679",
+    "scripts/prepare-ability-icons.ps1": "66da433750c14e5f4a70eda36ffed1351aebe1707db0b46dc630502c09824146",
+    "scripts/check-ability-icons.mjs": "c808edf8d6fede40430132a3fdf6e0fa5e448162f81f8c02916bf317a81f1adf"
+  },
+  "icons": [
+    {
+      "asset": "freya-arkaner-schrei",
+      "sourceSha256": "2f250d2cdae7203eaeee788029c81ea5bdbfecaf20765dbcacd30dee1fbca2b0",
+      "outputSha256": "aa16243ef66c60c0837172988c49d973a82ae1be7315d5c0a5307a5b4ab55c9a"
+    },
+    {
+      "asset": "gildas-gewissenhafte-vorbereitung",
+      "sourceSha256": "e105b1c5f95382e18649155c5890484c1044e83ecb5d574519cd0688788884ef",
+      "outputSha256": "bc9733177aa3f8611a7d962931d556dabd6fe316d456bb7c5b5d5b0ef2426f45"
+    },
+    {
+      "asset": "gildas-schutzpflicht",
+      "sourceSha256": "0c6b92cbf8ec9ed7af99d1cb44c22979f8e27cf60f9f0c9e90ba4939ed34b33d",
+      "outputSha256": "c78ee863266b5f385965652ae07cd68717cd48331ba0886a2078f66fcaf50131"
+    },
+    {
+      "asset": "gawain-liebt-duefte",
+      "sourceSha256": "92e77eb1971312b40e51502902466f3705d7896c831b91a1969f16c8a911ada5",
+      "outputSha256": "e259216cf8e30245791977db3790b4f19e28222ab282f6d12364256d41168f83"
+    },
+    {
+      "asset": "gawain-draig-rittersiegelring",
+      "sourceSha256": "125c25928fe9712172ff7b810ac89f13b530c18f59ce8352c28714fc488435e3",
+      "outputSha256": "ed474f34a800e39cc66db8495b59789c35df62cccbf6b01ad194ac79b0dd1428"
+    },
+    {
+      "asset": "asgeir-grenzer-des-dunkelhains",
+      "sourceSha256": "0f34efcd855b9638ba8fff85403d956339502969a29f315c5c83634db0f3a7f5",
+      "outputSha256": "65a7697ddfe718ceeb29098bd2036a6fbac8ece442dd649afc172747bc08e618"
+    },
+    {
+      "asset": "ylva-veteranin-des-dunkelhains",
+      "sourceSha256": "34ba99b7ab17d200cf8a86795f6c2cf73372b663f1796496a9535b4f6325e902",
+      "outputSha256": "2a7fa8f3cbeb84cfcc40c52e0d6352c98e18c193e1254a45b91016cfde850404"
+    },
+    {
+      "asset": "durchschnaufen",
+      "sourceSha256": "9135d1180aafca9fb143ce8ad0f6a4cae0c7e431b5e1ae7ce4d0401fb3f5f6b1",
+      "outputSha256": "4d3dd0da2560e92b0aa94c5b24fd82d5f15ec4ea70ba2a7c2d2fe998f7a9f5fe"
+    },
+    {
+      "asset": "berserkergang",
+      "sourceSha256": "46afa9f4cd784ab7d6169fcb2e4044e96f73723fb5394d86000ab53c4f9fc938",
+      "outputSha256": "7dec33c96899acd627ed869f405ada85f7c33dfaebe37074dc906256796affb6"
+    },
+    {
+      "asset": "tierbegleiter",
+      "sourceSha256": "bb7d113328070b5356d39c633f4a4a440ba6e30aa622861188a3516d97252e84",
+      "outputSha256": "604251c51bfc8f8d15efc77c894a11adf4cf6a809880395017c1b7a30f6a004d"
+    },
+    {
+      "asset": "vogelbegleiter",
+      "sourceSha256": "1e1b9506630409f9e014e4df38ca6f66c62f212618341b0b064add741235c8a4",
+      "outputSha256": "5bce5940c0b49fae18c67a6b2bf248d88b5a40f9a532a08ecaee5ba30c9ff901"
+    }
+  ]
+}

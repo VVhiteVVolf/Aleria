@@ -4,8 +4,9 @@ import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './c
 export function isArchiveWeapon(entry = {}) {
   if (entry.kind !== 'attack') return false;
   const type = normalizeArchiveSearchText(entry.data?.weaponType);
-  return !['natural', 'unarmed', 'naturlich', 'waffenlos'].includes(type)
-    && !/^(biss|klauen|krallen|huftritt|hufschlag|faustschlag|tentakel)( |$)/.test(normalizeArchiveSearchText(entry.name));
+  if (['natural', 'unarmed', 'naturlich', 'waffenlos'].includes(type)) return false;
+  if (entry.data?.archiveStandardWeaponId) return true;
+  return !/^(biss|klauen|krallen|huftritt|hufschlag|faustschlag|tentakel)( |$)/.test(normalizeArchiveSearchText(entry.name));
 }
 
 export function getArchiveWeaponRelation(entry = {}) {

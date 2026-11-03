@@ -1,3 +1,5 @@
+import { WEAPON_STANDARD_CATALOG } from '../weapon-standards/weapon-standard-catalog.js';
+
 // Existing, independently verified inventory art. Identity is an exact standard
 // ID; a similar name or an arbitrary provider item never establishes a match.
 const sourceIds = [
@@ -11,6 +13,10 @@ const sourceIds = [
 export const STANDARD_TOOL_ARTWORK = Object.freeze(Object.fromEntries(sourceIds.map(id => [
   `standard:gemischtwarenhandler:${id}`, `/AleriaAlmanach/assets/pendrwn-general-store/goods/${id}.png`
 ])));
+export const STANDARD_WEAPON_ARTWORK = Object.freeze(Object.fromEntries(WEAPON_STANDARD_CATALOG.map(row => [
+  `standard:waffen-rustungen:${row.id}`, row.image
+])));
+const standardArtwork = Object.freeze({ ...STANDARD_TOOL_ARTWORK, ...STANDARD_WEAPON_ARTWORK });
 const MARKET_PLACEHOLDER = 'https://i.imgur.com/UbjFi5T.png';
 
 export function resolveStandardItemImage(item = {}, image = item.image || '') {
@@ -19,6 +25,6 @@ export function resolveStandardItemImage(item = {}, image = item.image || '') {
   // A pinned custom/unique definition is authoritative even if its historical
   // possession also carries the standard template from which it was derived.
   const id = item.definitionRef?.id || [item.id, item.templateId, item.itemDbKey, item.originItemDbKey, item.canonicalKey]
-    .find(value => Object.hasOwn(STANDARD_TOOL_ARTWORK, value));
-  return STANDARD_TOOL_ARTWORK[id] || current;
+    .find(value => Object.hasOwn(standardArtwork, value));
+  return standardArtwork[id] || current;
 }

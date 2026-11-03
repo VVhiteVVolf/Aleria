@@ -8,28 +8,28 @@ Die Klassenregeln, Waffenvarianten, Lernbudgets und Pfadzugänge liegen getrennt
 
 | Form oder Pfad | Attacken im Gesamtpool | Ausbildung |
 | --- | ---: | --- |
-| Tanz des Jungdrachens | 60 | Stufe 1–6, einschließlich des cenyrischen Derwyn-Pfades |
-| Freie Vertiefung | 24 | Stufe 7–8 |
+| Tanz des Jungdrachens | 98 | Stufe 1–6, einschließlich gemeinsamer Waffen- und cenyrischer Derwyn-Techniken |
+| Freie Vertiefung | 30 | Stufe 7–8 |
 | Tanz des Schwertdrachens | 24 | Stufe 9–20, einschließlich Barddwyr-Schwertoptionen |
 | Tanz des abwartenden Drachens | 18 | Stufe 9–20 |
 | Tanz des fliegenden Drachens | 18 | Stufe 9–20 |
-| ↳ Tanz des aufsteigenden Drachens | 6 | Unterform des fliegenden Drachens, Stufe 9–20; setzt dessen Wahl voraus |
+| ↳ Tanz des aufsteigenden Drachens | 12 | Unterform des fliegenden Drachens, Stufe 9–20; setzt dessen Wahl voraus |
 | Tanz des brüllenden Drachens | 22 | Stufe 9–20; eine Arthwyr-Attacke ab 6 |
 | Tanz des ausgeglichenen Drachens | 18 | Stufe 9–20 |
 | Tanz des Zwillingsdrachens | 12 | Stufe 9–20 |
 | Tanz des Speerdrachens | 12 | Erste Expertenform von Cantref und Uchelwyr, Stufe 9–20 |
-| Tanz des peitschenden Drachens | 8 | Cantref und Uchelwyr, Stufe 9–20 |
-| Tanz des hütenden Drachens | 8 | Cantref und Uchelwyr, Stufe 9–20 |
-| Tanz des stürmenden Drachens | 6 | Berittener Uchelwyr, Stufe 9–20 |
+| Tanz des peitschenden Drachens | 12 | Cantref und Uchelwyr, Stufe 9–20 |
+| Tanz des hütenden Drachens | 12 | Cantref und Uchelwyr, Stufe 9–20 |
+| Tanz des stürmenden Drachens | 12 | Berittener Uchelwyr, Stufe 9–20 |
 | Tanz des schweifenden Drachens | 12 | Uchelwyr zu Fuß und mit Reiteroptionen, Stufe 9–20 |
 | Tanz des lauernden Drachens | 14 | Helwyr: zwölf Bogen-, zwei Schwertoptionen, Stufe 9–20 |
-| Tanz des jagenden Drachens | 8 | Helwyr: Bogen, kurze Klingen und gedeckte Bewegung, Stufe 9–20 |
-| Tanz der Bärenklaue | 6 | Eigene Arthwyr-Form, Stufe 9–20 |
-| Tanz des Drachlings | 5 | Milwr, unverändert Stufe 6–15 |
+| Tanz des jagenden Drachens | 12 | Helwyr: Bogen, kurze Klingen und gedeckte Stellung, Stufe 9–20 |
+| Tanz der Bärenklaue | 12 | Eigene Arthwyr-Form, Stufe 9–20 |
+| Tanz des Drachlings | 12 | Milwr, unverändert Stufe 6–15 |
 | Tanz des trällernden Drachens | 4 | Barddwyr, Stufe 7–8 |
 | Tanz des kreischenden Drachens | 12 | Barddwyr, Stufe 9–20 |
 
-Das Register enthält 297 Techniken: zehn bestätigte historische/ergänzende Teulu-Techniken, sechs bestätigte Derwyn-Grundtechniken sowie 281 als `draft` geführte Ausbildungsoptionen. Auswahl über verdiente Slots macht Entwürfe auf einem konkreten Charakter nutzbar und bewahrt den Katalogstatus als `sourceStatus`. Kein neuer Pfad erhöht das Lernbudget.
+Das Register enthält 378 bestätigte Techniken. Der Abgleich ergänzt 53 Optionen gegenüber dem vorhandenen Stand von 325: Waffen- und Formationstechniken des Milwr, getrennte Helwyr-Übergänge für vier Waffenwege, einen ausgeglichenen Barddwyr-Schwertzweig und vollere kleine Expertenformen. Alle Expertenformen enthalten mindestens zwölf Optionen. Der Trällernde Drache bleibt wie die Teulu-Vertiefung eine kurze Übergangsform mit vier Optionen. Keine neue Technik überschreitet die bestehende Teulu-Grenze 20; Milwr endet weiterhin auf 15. Kein neuer Pfad erhöht das Lernbudget.
 
 ## Klassen und Technikmodule
 
@@ -43,7 +43,7 @@ Das Register enthält 297 Techniken: zehn bestätigte historische/ergänzende Te
 - `uchelwyr-mounted-techniques.js` teilt die bisherigen Reiteroptionen auf Stürmenden und Schweifenden Drachen auf. Jungdrache und freie Vertiefung behalten ihre frühen Reiteroptionen.
 - `class-specialist-techniques.js` ergänzt Fußtechniken des Schweifenden, Schwertantworten des Lauernden, die Jagdform und die Bärenklaue. Unterstützende Techniken erzeugen keinen ungewollten Waffenwurf. Verbergen bleibt eine eigene Probe und wird nicht durch einen bloßen Beschreibungstext automatisch gewährt.
 - `barddwyr-techniques.js` führt Trällernden und Kreischenden Drachen; übernommene Schwerttechniken liegen jetzt ausschließlich im Schwertdrachen.
-- `helwyr-expert-techniques.js`, `bruellender-shield-techniques.js`, `aufsteigender-techniques.js` und `zwillingsdrachen-techniques.js` erhalten die passenden klassischen Erweiterungen. `milwr-techniques.js` bleibt unverändert.
+- `helwyr-expert-techniques.js`, `bruellender-shield-techniques.js`, `aufsteigender-techniques.js` und `zwillingsdrachen-techniques.js` erhalten die passenden klassischen Erweiterungen. `milwr-techniques.js` bewahrt die fünf ursprünglichen Drachling-Techniken; `milwr-formation-techniques.js` ergänzt bezahlte Schild-, Speer-, Axt-, Kolben- und Schwertoptionen in beiden Milwr-Formen.
 - `drachentanz-technique-factory.js` normalisiert Kosten, Waffenwürfel, Effekte und Klassenmetadaten.
 
 ## Bestehende Bögen
@@ -62,7 +62,7 @@ Ein früherer Sattel- oder Lanzenpfad kann auf zwei neue Formen verteilt sein. E
 
 `getCombatStyleTechniquesForGrants()` verteilt nur bestätigte Techniken. Ein Grant mit `techniqueUnlockLevels` muss eine Technik zusätzlich ausdrücklich einer Stufe zuordnen. Formzugang, Pfadwahl und ein Entwurf im Katalog reichen daher nicht zur Vergabe.
 
-Für Cenyr-Klassen führt `cenyr-technique-selection.js` die eigentliche Ausbildung aus. Es bindet jede gewählte Attacke an einen verdienten Slot und prüft Formzugang, Pfad, Barddwyr-Waffenweg, Mindeststufe, Slotband und eine vorhandene passende Waffe. Geführter und manueller Stufenaufstieg verwenden dieselbe Logik.
+Für ältere Cenyr-Bögen führt `cenyr-technique-selection.js` die slotgebundene Ausbildung aus. Es prüft Formzugang, Pfad, Barddwyr-Waffenweg, Mindeststufe, Slotband und eine vorhandene passende Waffe. Im gespeicherten Kaufmodus werden Techniken bewusst einzeln über `modules/character-development/` gekauft. Ein bestätigter Katalogeintrag ist kein automatischer Grant; explizite `techniqueUnlockLevels` bleiben verbindlich. Geführter und manueller Stufenaufstieg verwenden dieselbe Ausbildungslogik.
 
 Waffenabhängige Attacken speichern `damageModel.mode: "weapon-dice"`. Die Kampfauflösung berechnet die Formel aus der aktuell geführten Waffe. `cenyrTraining.allowedClassIds` und `classWeaponProfiles` begrenzen Klasse und Waffenprofil; `weaponRuleSetId: "cantref-polearm"` aktiviert die Sonderregeln der Stangenwaffen. Reiterattacken verlangen `requiresMounted: true`, Zwillingsdrachen-Techniken zwei geführte Klingen und Schildtechniken einen tatsächlich geführten Schild.
 

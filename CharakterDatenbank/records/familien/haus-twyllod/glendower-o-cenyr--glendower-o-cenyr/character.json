@@ -6,16 +6,36 @@
   "identity": {
     "name": "Glendower O'Cenyr",
     "aliases": [],
-    "worldPersonId": ""
+    "worldPersonId": "person--glendower-o-cenyr"
   },
   "classification": {
     "primary": {
-      "kind": "unassigned",
-      "id": "unassigned",
-      "label": "Unzugeordnet"
+      "kind": "family",
+      "id": "haus-twyllod",
+      "label": "Familie Twyllod"
     },
-    "familyStatus": "pending",
-    "families": [],
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-twyllod",
+        "familyTitle": "Familie Twyllod",
+        "personId": "glendower-o-cenyr",
+        "worldPersonId": "person--glendower-o-cenyr",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view&person=glendower-o-cenyr",
+        "fingerprint": "{\"name\":\"Glendower O'Cenyr\",\"title\":\"Paladin · Eithnes Sohn · kein leiblicher Twyllod\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"https://i.imgur.com/vSRYHg1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"eithne-glendower-mother\",\"type\":\"step\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-glendower-mother\",\"name\":\"Eithne\"},{\"personId\":\"unknown-biological-father-glendower\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-biological-father-glendower\",\"name\":\"Unbekannter leiblicher Vater Glendowers\"},{\"personId\":\"arian-twyllod\",\"type\":\"step\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-twyllod--arian-twyllod\",\"name\":\"Arian Twyllod\"}],\"partners\":[],\"children\":[]}}",
+        "score": 235
+      }
+    ],
     "familyAlternatives": [],
     "groups": [],
     "places": [],
@@ -41,7 +61,14 @@
         }
       ]
     },
-    "familyTree": [],
+    "familyTree": [
+      {
+        "familyId": "haus-twyllod",
+        "personId": "glendower-o-cenyr",
+        "worldPersonId": "person--glendower-o-cenyr",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view&person=glendower-o-cenyr"
+      }
+    ],
     "profile": ""
   },
   "sync": {
@@ -52,7 +79,7 @@
     "sourceDocumentIds": [
       "glendower-o-cenyr"
     ],
-    "contentHash": "64a8acc2de5a643ef0cfe4f589c199d10c4d347cdf9d067404c53a6e46f87833"
+    "contentHash": "9b49108bda644dcde5b9b73bb50b8da0f8ac3fda65fae65bd0614e21982a12e8"
   },
   "local": {
     "notes": "",
@@ -842,17 +869,53 @@
     "genealogy": {
       "birth": "1713",
       "death": "",
-      "familyRole": "",
+      "familyRole": "core",
       "houseId": "",
       "houseName": "",
       "portraitPlaceholder": "auto",
       "relationships": {
-        "children": [],
-        "parents": [],
-        "partners": []
+        "parents": [
+          {
+            "personId": "eithne-glendower-mother",
+            "type": "step",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--eithne-glendower-mother",
+            "name": "Eithne"
+          },
+          {
+            "personId": "unknown-biological-father-glendower",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-biological-father-glendower",
+            "name": "Unbekannter leiblicher Vater Glendowers"
+          },
+          {
+            "personId": "arian-twyllod",
+            "type": "step",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-twyllod--arian-twyllod",
+            "name": "Arian Twyllod"
+          }
+        ],
+        "partners": [],
+        "children": []
       },
       "sex": "male",
-      "sources": [],
+      "sources": [
+        {
+          "familyId": "haus-twyllod",
+          "personId": "glendower-o-cenyr",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view&person=glendower-o-cenyr",
+          "fingerprint": "{\"name\":\"Glendower O'Cenyr\",\"title\":\"Paladin · Eithnes Sohn · kein leiblicher Twyllod\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"https://i.imgur.com/vSRYHg1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"eithne-glendower-mother\",\"type\":\"step\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-glendower-mother\",\"name\":\"Eithne\"},{\"personId\":\"unknown-biological-father-glendower\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-biological-father-glendower\",\"name\":\"Unbekannter leiblicher Vater Glendowers\"},{\"personId\":\"arian-twyllod\",\"type\":\"step\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-twyllod--arian-twyllod\",\"name\":\"Arian Twyllod\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
       "status": "alive",
       "tags": [
         "O'Cenyr",
@@ -861,11 +924,11 @@
         "Bußgänger",
         "Kirchenritter"
       ],
-      "worldPersonId": ""
+      "worldPersonId": "person--glendower-o-cenyr"
     },
     "id": "glendower-o-cenyr",
     "identity": {
-      "worldPersonId": ""
+      "worldPersonId": "person--glendower-o-cenyr"
     },
     "imageSets": [
       {

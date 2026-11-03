@@ -16,6 +16,7 @@ import { BRUELLENDER_SHIELD_TECHNIQUES } from './techniques/bruellender-shield-t
 import { LAUERNDER_BOW_TECHNIQUES, SHARED_SPEAR_LEGACY_TECHNIQUES } from './techniques/exclusive-path-techniques.js?v=20260909-dragon-parent-v2';
 import { UCHELWYR_MOUNTED_TECHNIQUES } from './techniques/uchelwyr-mounted-techniques.js?v=20260909-dragon-parent-v2';
 import { DRACHLING_TECHNIQUES } from './techniques/milwr-techniques.js?v=20260909-dragon-parent-v2';
+import { MILWR_FORMATION_TECHNIQUES } from './techniques/milwr-formation-techniques.js';
 import { BARDDWYR_STANDARD_PATH_TECHNIQUES, KREISCHENDER_TECHNIQUES, TRAELLERNDER_TECHNIQUES } from './techniques/barddwyr-techniques.js?v=20260909-dragon-parent-v2';
 import { HELWYR_EXPERT_TECHNIQUES } from './techniques/helwyr-expert-techniques.js?v=20260909-dragon-parent-v2';
 
@@ -23,7 +24,7 @@ import { SPEERDRACHEN_TECHNIQUES, SPEAR_SPECIALIST_TECHNIQUES } from './techniqu
 import { BAERENKLAUEN_TECHNIQUES, JAGENDER_TECHNIQUES, LAUERNDER_SWORD_TECHNIQUES, SCHWEIFENDER_FOOT_TECHNIQUES } from './techniques/class-specialist-techniques.js?v=20260909-dragon-parent-v2';
 import { getDerwynCenyrFoundationTechniques } from '../sirenentanz/sirenentanz-basic-techniques.js?v=20260909-dragon-parent-v2';
 
-export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 10;
+export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 11;
 
 const FORM_I_NAME = 'Drachentanz Form I · Tanz des Jungdrachens';
 
@@ -204,6 +205,7 @@ const ALL_DRAFT_TECHNIQUES = Object.freeze([
   ...BAERENKLAUEN_TECHNIQUES,
   ...SCHWEIFENDER_FOOT_TECHNIQUES,
   ...DRACHLING_TECHNIQUES,
+  ...MILWR_FORMATION_TECHNIQUES,
   ...TRAELLERNDER_TECHNIQUES,
   ...KREISCHENDER_TECHNIQUES,
   ...BARDDWYR_STANDARD_PATH_TECHNIQUES,

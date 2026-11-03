@@ -1,6 +1,10 @@
 // Authoring sources remain in the source repository. Their public counterparts
 // (crests, previews, production images and explicit original downloads) stay live.
 const SOURCE_ARCHIVE_ROOTS = [
+  'AleriaAlmanach/docs/art/combat-technique-icons/',
+  'AleriaAlmanach/docs/art/weapon-standards/',
+  'AleriaAlmanach/docs/art/ability-icons/',
+  'AleriaAlmanach/docs/art/character-origins/',
   'AleriaAlmanach/modules/character-inventory/scripts/',
   'AleriaAlmanach/assets/inventory-ui/',
   'js/biography/sources/',

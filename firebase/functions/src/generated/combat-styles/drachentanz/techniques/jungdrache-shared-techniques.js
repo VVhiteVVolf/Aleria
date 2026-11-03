@@ -111,3 +111,15 @@ export const JUNGDRACHE_SHARED_TECHNIQUES = Object.freeze([
   make({ slug: 'kurze-drachenspur', name: 'Kurze Drachenspur', minimumLevel: 1, costs: ['bonus-action'], fullTechniqueDamage: true,
     description: 'Ein schneller Angriff prüft die gegnerische Deckung.', effect: 'Leichter Einzelangriff mit dem Schaden einer schnellen Grundtechnik; kein kostenloser Folgeangriff.' })
 ]);
+
+const counterOrigins = new Map(JUNGDRACHE_SHARED_TECHNIQUES.flatMap(technique =>
+  (technique.effects || []).filter(effect => effect.condition?.counterAttack?.damageModel)
+    .map(effect => [effect.condition.id, { id: technique.id, minimumLevel: technique.minimumLevel,
+      combatStyleId: technique.combatStyleId, combatStyleFormId: technique.combatStyleFormId }])));
+
+// A prepared stance retains its stable source condition ID through storage.
+// Expose only identity; the stored counter model and historical receipt stay intact.
+export function getJungdracheSharedCounterOrigin(stance = {}) {
+  const origin = counterOrigins.get(String(stance.sourceConditionId || stance.id || ''));
+  return origin ? { ...origin } : null;
+}
