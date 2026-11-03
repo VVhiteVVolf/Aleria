@@ -52,9 +52,14 @@ const builtinSpell = normalizeCharacterArchiveEntry({
   kind: 'spell',
   name: 'Licht',
   builtin: true,
+  data: { ...liveSpell.data, id: 'builtin-light' },
   sources: [{ kind: 'system', id: 'magic', name: 'Aleria-Regelvorlagen' }]
 });
-const builtinWithUsage = mergeCharacterArchiveEntries(builtinSpell, liveSpell)[0];
+const equivalentSpells = mergeCharacterArchiveEntries(builtinSpell, liveSpell);
+assert.equal(equivalentSpells.length, 1, 'Gleiche Regeln müssen unabhängig von Kopie-IDs eine Vorlage bilden.');
+const builtinWithUsage = equivalentSpells[0];
+const changedSpell = normalizeCharacterArchiveEntry({ ...liveSpell, data: { ...liveSpell.data, rollFormula: '1d8' } });
+assert.equal(mergeCharacterArchiveEntries(builtinSpell, changedSpell).length, 2, 'Gleiche Namen dürfen unterschiedliche Regeln nicht überschreiben.');
 assert.equal(builtinWithUsage.builtin, true, 'Die bloße Verwendung einer Regelvorlage darf sie nicht als eigene Anpassung markieren.');
 assert.equal(builtinWithUsage.sources.length, 2, 'Vorlagen- und Figurenquelle müssen gemeinsam erhalten bleiben.');
 const editedSpell = normalizeCharacterArchiveEntry({
