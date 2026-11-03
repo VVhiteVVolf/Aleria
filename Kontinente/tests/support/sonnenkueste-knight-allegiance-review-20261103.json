@@ -1,0 +1,104 @@
+{
+  "reviewedAt": "2026-11-03",
+  "reason": "Explicit user correction: the existing Rhelian and Aelryn knight houses remain in Jungferntal and serve Morforwyn. Only the exact liege ID/name pairs in both profile projections are restored for the older proof; ranks, people, world IDs, all relationships and other allegiances stay hashed.",
+  "reviews": [
+    {
+      "familyId": "haus-rhelian",
+      "fields": [
+        {
+          "path": [
+            "houseProfile",
+            "liegeHouseId"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "haus-illewod",
+          "after": "haus-morforwyn"
+        },
+        {
+          "path": [
+            "houseProfile",
+            "liegeHouseName"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Haus Illewod O'Aberon",
+          "after": "Haus Morforwyn O'Carngol"
+        },
+        {
+          "path": [
+            "family",
+            "document",
+            "houseProfile",
+            "liegeHouseId"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "haus-illewod",
+          "after": "haus-morforwyn"
+        },
+        {
+          "path": [
+            "family",
+            "document",
+            "houseProfile",
+            "liegeHouseName"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Haus Illewod O'Aberon",
+          "after": "Haus Morforwyn O'Carngol"
+        }
+      ]
+    },
+    {
+      "familyId": "haus-aelryn",
+      "fields": [
+        {
+          "path": [
+            "houseProfile",
+            "liegeHouseId"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "haus-illewod",
+          "after": "haus-morforwyn"
+        },
+        {
+          "path": [
+            "houseProfile",
+            "liegeHouseName"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Haus Illewod O'Aberon",
+          "after": "Haus Morforwyn O'Carngol"
+        },
+        {
+          "path": [
+            "family",
+            "document",
+            "houseProfile",
+            "liegeHouseId"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "haus-illewod",
+          "after": "haus-morforwyn"
+        },
+        {
+          "path": [
+            "family",
+            "document",
+            "houseProfile",
+            "liegeHouseName"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Haus Illewod O'Aberon",
+          "after": "Haus Morforwyn O'Carngol"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@
   const familyTreePage = "/Stammbäume/Stammbaum.html";
   const housePage = "/Familien%20H%C3%A4user%20und%20Clans/";
   const houseImageRoot = "/Stammbäume/assets/images/houses";
+  const neutralCrest = "/Stammbäume/assets/images/placeholders/neutral-crest.png";
 
   function family(id, name, emblem, options = {}) {
     return Object.freeze({
@@ -85,6 +86,14 @@
       family("haus-torvik", "Torvik", "/AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-celynfor", "Celynfor", "/AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-blevis", "Blevis", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-brogar", "Brogar", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-crewe", "Crewe", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-glyn", "Glyn", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-jernigan", "Jernigan", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-talfryn", "Talfryn", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-tarw", "Tarw", neutralCrest, { seat: "Craithglyn", liege: "Wyrm" }),
+      family("haus-tynged", "Tynged", neutralCrest, { seat: "Craithglyn", liege: "Wyrm" }),
     ]),
     familySection("Ausgestorbene Häuser", [
       family("haus-ard-conbhron", "Ard Conbhrón", "Antike Crannath Clans/haus-ard-conbhron.png", { seat: "Lycath", page: "haus.html" }),

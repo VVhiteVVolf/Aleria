@@ -277,7 +277,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
+  "sourceExportedAt": "2026-11-03T18:19:10.948674Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -46889,10 +46889,114 @@
       "activeImageSetId": "standard",
       "aliases": [],
       "archived": false,
-      "bio": "Rhiannon Draenmelyn ist eine Bedienstete des Hauses Draig aus Gwynthor. Die 1702 geborene Tochter von Ifor Draenmelyn und Nest ist mit Iestyn Swyll verheiratet und Mutter von Gareth, Meredith und Rhydwen Swyll.",
+      "bio": "Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.",
       "biography": {
+        "schema": "aleria.biography-module",
+        "revision": 1793726717128,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Rhiannon Swyll (geb. Draenmelyn)"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1702 · 38 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Draenmelyn"
+          },
+          {
+            "label": "Rolle",
+            "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+          },
+          {
+            "label": "Ehepartner",
+            "value": "Iestyn Swyll"
+          },
+          {
+            "label": "Kinder",
+            "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Gwynthor"
+          }
+        ],
+        "quote": "",
         "schemaVersion": 1,
         "biography": {
+          "sideWidth": 100,
+          "abilities": [
+            {
+              "title": "Ordnungsliebend",
+              "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-order-loving-1d41dcb93e08a59e%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Gewissenhaft",
+              "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
+              "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+            },
+            {
+              "title": "Beobachtend",
+              "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Selbstbewusst",
+              "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Freundlich",
+              "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-friendly-91d77259a7e48e05%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Zurückhaltend",
+              "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-reserved-a9956d13036056dd%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Humorvoll",
+              "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Diszipliniert",
+              "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-disciplined-de5ba372e8d66cf5%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Familienverbunden",
+              "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
+              "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
+            },
+            {
+              "title": "Bestimmend",
+              "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-assertive-organizer-cad1a153766d6d4c%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Nachtragend",
+              "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-holds-grudges-16db94761d941708%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Perfektionistisch",
+              "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+            }
+          ],
           "trivia": [
             "Rhiannon trägt nahezu immer ein kleines, ledergebundenes Notizbuch bei sich, in dem sie Beobachtungen, Auffälligkeiten und wichtige Informationen festhält.",
             "Sie besitzt die Angewohnheit, schief liegende oder ungleichmäßig angeordnete Gegenstände beinahe unbewusst geradezurücken.",
@@ -46911,10 +47015,77 @@
             "Trotz ihrer gelegentlich bestimmenden Art ist Rhiannon eine ausgesprochen liebevolle Mutter, die sich aufrichtig um das Wohlergehen ihrer Kinder sorgt."
           ],
           "connectionTextOffset": 0,
+          "footer": "Personenakte · Rhiannon Draenmelyn",
+          "portraitFit": "contain",
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            },
+            {
+              "title": "Haus Draenmelyn",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+              "text": "Rhiannons Herkunftsfamilie.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
+            }
+          ],
+          "quotesTitle": "Zitate",
+          "quotes": [
+            "„Ich kann verzeihen. Aber ich vergesse niemals.“"
+          ],
+          "portrait": "https://i.imgur.com/cyJqlDG.png",
+          "historyTitle": "Charakter",
           "historyText": "<p>Rhiannon Swyll ist eine freundliche, selbstbewusste und gewissenhafte Frau, deren Persönlichkeit in besonderem Maße von ihrer Liebe zu Ordnung, Genauigkeit<br>und Verlässlichkeit geprägt wird.</p><br><p>Im gewöhnlichen Umgang zeigt sie sich höflich und zugänglich, wahrt jedoch eine gewisse persönliche Distanz. Sie kann durchaus gesellig sein und schätzt anregende Gespräche, lässt aber nur wenige Menschen wirklich an ihren Gedanken und Gefühlen teilhaben.</p><br><p>Besonders auffällig ist ihr ausgeprägter Ordnungssinn.</p><br><p>Rhiannon bevorzugt eine saubere, übersichtliche und möglichst symmetrische Umgebung. Gegenstände besitzen für sie einen bestimmten Platz, und sie empfindet es als ausgesprochen störend, wenn sie ohne erkennbaren Grund anders angeordnet werden.</p><br><p>Diese Vorliebe äußert sich häufig in kleinen, beinahe unbewussten Handlungen. Liegt ein Schreibgerät schief auf einem Tisch, richtet sie es gerade. Hängt ein Bild nicht waagerecht, korrigiert sie seine Position. Stehen mehrere Bücher ungleichmäßig nebeneinander, bringt sie diese in eine ordentliche Reihe.</p><p>Dabei handelt es sich nicht um eine krankhafte Zwanghaftigkeit. Rhiannon ist durchaus in der Lage, Unordnung zu ertragen, wenn die Umstände es verlangen. Sie bevorzugt jedoch entschieden, sie möglichst rasch zu beseitigen.</p><br><p>Extreme Unordnung kann sie tatsächlich aus der Fassung bringen. Besonders chaotische Räumlichkeiten betrachtet sie mit einer Mischung aus Fassungslosigkeit und aufrichtigem Unverständnis.</p><br><p>Trotz ihrer Genauigkeit besitzt Rhiannon einen ausgeprägten Sinn für Humor. Ihre Bemerkungen fallen häufig trocken und überraschend treffend aus, ohne dass<br>sie ihr Gegenüber absichtlich verletzen möchte.</p><br><p>Eine weniger angenehme Eigenschaft ist ihr bemerkenswert gutes Gedächtnis für persönliche Enttäuschungen.</p><br><p>Rhiannon ist durchaus bereit, Fehler zu verzeihen und Menschen eine zweite Chance zu gewähren. Ein einmal erschüttertes Vertrauen lässt sich bei ihr jedoch nur schwer vollständig wiederherstellen.</p><br><p>„Ich kann verzeihen. Aber ich vergesse niemals.“</p><br><p>Dieser Grundsatz beschreibt ihre Haltung recht treffend.</p><br><p>Innerhalb ihrer Familie zeigt Rhiannon eine ausgesprochen fürsorgliche Seite. Sie liebt ihren Gemahl und ihre Kinder und möchte ihnen ein möglichst sicheres, geordnetes und angenehmes Leben ermöglichen.</p><br><p>Allerdings neigt sie dazu, auch deren Alltag nach ihren eigenen Vorstellungen organisieren zu wollen. Insbesondere ihre Kinder können sich dadurch gelegentlich bevormundet fühlen.</p><br><p>Rhiannon handelt dabei gewöhnlich aus Fürsorge und nicht aus dem Wunsch heraus, andere Menschen zu beherrschen. Dennoch fällt es ihr manchmal schwer, hinzunehmen, dass ihre Angehörigen eigene Vorstellungen von Ordnung und Lebensführung besitzen.</p>",
+          "abilitiesTitle": "Persönlichkeit",
+          "works": [
+            "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
+            "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
+            "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
+            "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
+            "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
+            "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
+            "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
+            "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
+            "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
+            "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
+            "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
+          ],
           "triviaTitle": "Trivia",
-          "documentsTitle": "Stammbaum",
-          "biographyTitle": "Hintergrund – Wer ist sie?",
+          "worksTitle": "Können & Fähigkeiten",
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Geschichte & Vergangenheit",
+              "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Geschichte & Wirkung",
+              "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
+              "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
+              "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
+              "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
+            }
+          ],
           "connections": [
             {
               "type": "connection",
@@ -47046,191 +47217,20 @@
               "imageFormat": "portrait"
             }
           ],
-          "abilitiesTitle": "Persönlichkeit",
-          "portraitFit": "contain",
-          "footer": "Personenakte · Rhiannon Draenmelyn",
-          "worksTitle": "Können & Fähigkeiten",
-          "extraSections": [
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Geschichte & Vergangenheit",
-              "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Geschichte & Wirkung",
-              "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
-              "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
-              "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
-              "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
-            }
-          ],
-          "works": [
-            "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
-            "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
-            "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
-            "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
-            "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
-            "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
-            "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
-            "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
-            "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
-            "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
-            "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
-          ],
-          "connectionsTitle": "Familie Draenmelyn",
-          "knightMentors": [],
-          "portrait": "https://i.imgur.com/cyJqlDG.png",
-          "abilities": [
-            {
-              "title": "Ordnungsliebend",
-              "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-order-loving-1d41dcb93e08a59e%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Gewissenhaft",
-              "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
-              "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
-            },
-            {
-              "title": "Beobachtend",
-              "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Selbstbewusst",
-              "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Freundlich",
-              "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-friendly-91d77259a7e48e05%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Zurückhaltend",
-              "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-reserved-a9956d13036056dd%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Humorvoll",
-              "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Diszipliniert",
-              "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-disciplined-de5ba372e8d66cf5%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Familienverbunden",
-              "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
-              "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
-            },
-            {
-              "title": "Bestimmend",
-              "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-assertive-organizer-cad1a153766d6d4c%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Nachtragend",
-              "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-holds-grudges-16db94761d941708%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Perfektionistisch",
-              "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
-            }
-          ],
-          "historyTitle": "Charakter",
-          "sideWidth": 100,
           "biographyText": "<p>Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.</p><p>Sie entstammt dem kleinen Bürgerhaus Draenmelyn, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt der Draigs tätig sind. Ihr Vater Ifor Draenmelyn steht der Zofen- und Kammerdienerschaft vor und arbeitet unmittelbar unter dem Vogt. Auch ihre drei älteren Brüder stehen im Dienst des Hauses Draig.</p><p><br></p><p>Rhiannon begann ihre eigene Laufbahn ebenfalls im persönlichen Dienst der gräflichen Familie. Ihre außergewöhnliche Beobachtungsgabe und ihr ausgeprägtes Gespür für Formen und kleinste Abweichungen erregten schließlich die Aufmerksamkeit des damaligen Herolds Trahern, der ihre weitere Ausbildung förderte.</p><p></p><p>Seit sieben Jahren bekleidet Rhiannon das Amt der Wappen- und Zeichenmeisterin. Sie ist unmittelbar Sir Cadfan, dem gegenwärtigen Herold und Chefdiplomaten des Hauses Draig, unterstellt und führt ein eigenständiges, den übrigen Kernämtern des Herolds gleichrangiges Amt.</p><p></p><p>Zu ihren Aufgaben gehören die Prüfung und Bestätigung von Wappen, Siegelidentitäten und Geleitzeichen sowie die Überprüfung der damit verbundenen Beglaubigungen und Vollmachten. Sie sorgt dafür, dass fremde Gesandtschaften, Bevollmächtigte und Schriftstücke nicht aufgrund falscher oder unzureichender</p><p>Zeichen anerkannt werden.</p><p></p><p>Rhiannon gilt als gewissenhafte, sachkundige und außerordentlich genaue Fachfrau, deren Urteil innerhalb ihres Zuständigkeitsbereichs großes Vertrauen genießt.</p>",
-          "connectionPortraitHeight": 74,
-          "quotes": [
-            "„Ich kann verzeihen. Aber ich vergesse niemals.“"
-          ],
-          "documents": [
-            {
-              "title": "Haus Swyll",
-              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
-              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
-              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
-            },
-            {
-              "title": "Haus Draenmelyn",
-              "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
-              "text": "Rhiannons Herkunftsfamilie.",
-              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
-            }
-          ],
+          "biographyTitle": "Hintergrund – Wer ist sie?",
           "portraitStages": [
             "",
             "",
             "",
             ""
           ],
-          "quotesTitle": "Zitate"
+          "documentsTitle": "Stammbaum",
+          "connectionPortraitHeight": 74,
+          "connectionsTitle": "Familie Draenmelyn",
+          "knightMentors": []
         },
-        "quoteBy": "",
-        "quote": "",
-        "revision": 1793726717128,
-        "stats": [
-          {
-            "label": "Vollständiger Name",
-            "value": "Rhiannon Swyll (geb. Draenmelyn)"
-          },
-          {
-            "label": "Geboren / Alter",
-            "value": "1702 · 38 Jahre (1740)"
-          },
-          {
-            "label": "Stand",
-            "value": "Bürgerlich"
-          },
-          {
-            "label": "Herkunft",
-            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
-          },
-          {
-            "label": "Haus",
-            "value": "Haus Draenmelyn"
-          },
-          {
-            "label": "Rolle",
-            "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
-          },
-          {
-            "label": "Ehepartner",
-            "value": "Iestyn Swyll"
-          },
-          {
-            "label": "Kinder",
-            "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
-          },
-          {
-            "label": "Wohnsitz",
-            "value": "Gwynthor"
-          }
-        ],
-        "schema": "aleria.biography-module"
+        "quoteBy": ""
       },
       "createdAt": "2026-09-03T17:47:36.579Z",
       "currentLocation": "Gwynthor",
@@ -47635,17 +47635,18 @@
       "portrait": "https://i.imgur.com/cyJqlDG.png",
       "profileLink": "",
       "relevance": "",
-      "role": "Bedienstete des Hauses Draig",
+      "role": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
       "status": "active",
       "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
       "title": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
-      "updatedAt": "2026-11-03T17:25:17.128Z",
+      "updatedAt": "2026-11-03T18:15:46.330Z",
       "localRecord": {
         "recordId": "character--person--haus-draenmelyn--rhiannon-draenmelyn",
         "path": "records/familien/haus-draenmelyn/rhiannon-draenmelyn--person--haus-draenmelyn--rhiannon-draenmelyn/character.json",
         "schemaVersion": 1,
-        "contentHash": "e44f06c7a4ca56b9e24f0d8d22e639f07821f83cee8a9c7f31ebb95cc97231b9",
+        "contentHash": "0525a0f3eea2986ec00da29aa411623120fb5d2479e86dcb7cc028ee06cbb508",
         "firestoreDocumentIds": [
+          "person--haus-draenmelyn--rhiannon-draenmelyn",
           "person--haus-draenmelyn--rhiannon-draenmelyn",
           "person--haus-draenmelyn--rhiannon-draenmelyn"
         ],
@@ -142553,170 +142554,19 @@
       "archived": false,
       "bio": "",
       "biography": {
-        "quote": "",
-        "revision": 1793726717128,
-        "stats": [
-          {
-            "label": "Vollständiger Name",
-            "value": "Cadogan Sgrechiwr"
-          },
-          {
-            "label": "Haus",
-            "value": "Haus Sgrechiwr"
-          },
-          {
-            "label": "Titel / Anrede",
-            "value": "Vorgesehener Erbe des Hauses Sgrechiwr"
-          },
-          {
-            "label": "Geboren",
-            "value": "1690"
-          },
-          {
-            "label": "Geburtsort",
-            "value": "Lynthor"
-          },
-          {
-            "label": "Gestorben",
-            "value": "Lebend"
-          },
-          {
-            "label": "Geschlecht",
-            "value": "Männlich"
-          },
-          {
-            "label": "Familienstand",
-            "value": "verheiratet"
-          },
-          {
-            "label": "Rang / Stand",
-            "value": ""
-          },
-          {
-            "label": "Tätigkeit",
-            "value": "Protokollmeister des Herolds des Grafen"
-          },
-          {
-            "label": "Wohnsitz",
-            "value": "Gwynthor"
-          }
-        ],
         "schemaVersion": 1,
         "biography": {
-          "footer": "Personenakte · Cadogan Sgrechiwr",
-          "connectionTextOffset": 0,
-          "biographyTitle": "Hintergrund – Wer ist er?",
-          "connectionsTitle": "Verbindungen",
-          "abilities": [
-            {
-              "title": "Eitel",
-              "detail": "Cadogan legt außerordentlichen Wert auf ein gepflegtes Äußeres. Seine Kleidung, sein Schnurrbart und sein gesamtes Auftreten müssen stets tadellos sein.",
-              "icon": "/IconOrdner/Traits%20Icon/Groomed.png"
-            },
-            {
-              "title": "Perfektionistisch",
-              "detail": "Selbst kleinste Fehler in Rangordnung, Anrede oder Sitzordnung können ihn erheblich verärgern. Nachlässigkeit betrachtet er als vermeidbares Ärgernis.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Gewissenhaft",
-              "detail": "Seine beruflichen Pflichten nimmt Cadogan ausgesprochen ernst. Gerade bei diplomatischen Angelegenheiten lässt er äußerste Sorgfalt walten.",
-              "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
-            },
-            {
-              "title": "Ehrgeizig",
-              "detail": "Er hat hart gearbeitet, um seine Stellung zu erreichen. Sein Ehrgeiz richtet sich inzwischen weniger auf weiteren Aufstieg als auf die vollkommene Beherrschung seines Amtes.",
-              "icon": "/IconOrdner/Traits%20Icon/Ambitious.png"
-            },
-            {
-              "title": "Charmant",
-              "detail": "Cadogan besitzt ausgezeichnete Umgangsformen und versteht es, Menschen mit Höflichkeit, Witz und gewandter Sprache für sich einzunehmen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-charming-131f5a12fbffcf8b%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Redegewandt",
-              "detail": "Er spricht gerne, ausführlich und mit sichtlicher Begeisterung. Nicht immer bemerkt er, dass seine Zuhörer das Gespräch längst beenden möchten.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-eloquent-71919b4c2095a972%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Gesellig",
-              "detail": "Cadogan schätzt anregende Unterhaltungen, gesellschaftliche Veranstaltungen und die Gesellschaft kultivierter Menschen.",
-              "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
-            },
-            {
-              "title": "Klatschfreudig",
-              "detail": "Er interessiert sich lebhaft für Neuigkeiten, kleine Skandale und persönliche Angelegenheiten am Hof, wahrt jedoch die Vertraulichkeit dienstlicher Informationen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-gossip-loving-2c49aa00db0e6346%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Kunstliebend",
-              "detail": "Theateraufführungen, Gemäldegalerien und andere kulturelle Veranstaltungen gehören zu seinen größten Vergnügungen.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-art-loving-3f3181c366013051%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Empfindlich gegenüber Fehlern",
-              "detail": "Missgeschicke, insbesondere solche, die sein sorgfältig vorbereitetes Protokoll betreffen, beschäftigen ihn häufig länger, als eigentlich notwendig wäre.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-sensitive-to-mistakes-f2bd4f32238597dc%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Romantisch",
-              "detail": "Hinter seiner Eitelkeit verbirgt sich ein aufmerksamer und liebevoller Ehemann, der seine Gemahlin aufrichtig bewundert.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-romantic-3b4433574d3b1ccd%2Foriginal.png?alt=media"
-            },
-            {
-              "title": "Schlecht im Delegieren",
-              "detail": "Obwohl ihm Mitarbeiter zur Verfügung stehen, fällt es Cadogan schwer, wichtige Aufgaben vollständig aus der Hand zu geben.",
-              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-poor-at-delegating-995f63afaeae7285%2Foriginal.png?alt=media"
-            }
-          ],
-          "worksTitle": "Können & Fähigkeiten",
-          "quotes": [],
-          "connectionPortraitHeight": 68,
-          "historyTitle": "Charakter",
-          "works": [
-            "Diplomatisches Protokoll - Cadogan verfügt über umfassende Kenntnisse höfischer Rangordnungen, Anreden, Audienzregeln und diplomatischer Gepflogenheiten.",
-            "Organisation von Empfängen - Er bereitet Sitzordnungen, Ehrenbezeugungen und den protokollarischen Ablauf offizieller Zusammenkünfte vor.",
-            "Verhandlungsdokumentation - Cadogan besitzt große Erfahrung darin, Gesprächsverläufe und förmliche Erklärungen präzise und nachvollziehbar festzuhalten.",
-            "Unterscheidung von Zusagen - Er erkennt den Unterschied zwischen höflichen Absichtserklärungen, unverbindlichen Ehrenbezeugungen und rechtsverbindlichen Zusagen.",
-            "Diplomatische Bildung - Durch sein Studium bei den Staufenberg verfügt er über fundierte Kenntnisse diplomatischer Verfahren, politischer Geschichte und zwischenherrschaftlicher Beziehungen.",
-            "Sprachkenntnisse - Neben der Gemeinen Zunge beherrscht er die Sprache der Cenyri, die Sprache der Alben sowie die Sprachen Morgorns, Baldreskas und Aeldrunmars.",
-            "Schriftliche Ausdrucksfähigkeit - Cadogan ist ein geübter Schreiber, der besonderen Wert auf eindeutige Formulierungen und die korrekte Verwendung von Titeln legt.",
-            "Menschenkenntnis - Seine langjährige Tätigkeit am Hof hat ihn gelehrt, gesellschaftliche Spannungen und mögliche protokollarische Schwierigkeiten frühzeitig zu erkennen.",
-            "Diplomatisches Geschick - Auch bei bewussten Verstößen gegen das Protokoll versteht er es, unangenehme Situationen ohne öffentliche Bloßstellung der Beteiligten zu entschärfen.",
-            "Schauspielerische Begabung - Obwohl Cadogan kein Musiker ist, besitzt er ein gewisses Talent für Darstellung, Mimik und wirkungsvolle Auftritte.",
-            "Kunstverständnis - Er verfügt über ein ausgeprägtes Interesse an Malerei, Theater und anderen Künsten, das durch seine Herkunft und seine Ehe zusätzlich gefördert wurde.",
-            "Personalführung - Cadogan leitet die ihm unterstellten Mitarbeiter und überwacht deren Arbeit, neigt allerdings dazu, zu viele Aufgaben selbst kontrollieren zu wollen."
-          ],
-          "portraitStages": [
-            "",
-            "",
-            "",
-            ""
-          ],
-          "documentsTitle": "Eigentum & Besitz",
-          "knightMentors": [],
-          "trivia": [
-            "Cadogan beginnt Gespräche häufig mit den Worten „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“, selbst wenn niemand eine entsprechende Frage gestellt hat.",
-            "Sein sorgfältig gepflegter Schnurrbart gehört zu seinen auffälligsten äußeren Merkmalen. Er verwendet beträchtliche Mühe darauf, ihn stets in tadellosem Zustand zu halten.",
-            "Cadogan besitzt eine ausgesprochene Vorliebe für elegante, maßgeschneiderte Kleidung und besucht gerne seinen Schneider.",
-            "Obwohl die Sgrechiwr für ihre musikalische Tradition bekannt sind, ist Cadogan selbst ausgesprochen unmusikalisch. Dieser Umstand stellt eine seiner wenigen persönlichen Enttäuschungen dar.",
-            "Er besucht leidenschaftlich gerne Theateraufführungen. Fehlerhafte Anreden oder unpassende Rangordnungen in historischen Stücken können ihn allerdings erheblich aus der Fassung bringen.",
-            "Cadogan liebt Klatsch und Tratsch, unterscheidet jedoch streng zwischen gesellschaftlichen Gerüchten und vertraulichen Informationen aus seinem Amt.",
-            "Selbst bei privaten Gesellschaften fällt es ihm schwer, eine ungeschickte Sitzordnung einfach hinzunehmen.",
-            "Seine Gemahlin Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett. Cadogan ist außerordentlich stolz auf ihren künstlerischen Ruf.",
-            "Gelegentlich versucht er, Gwen bei der Anordnung ihrer Gemälde zu beraten. Seine Vorstellungen von einer korrekten Reihenfolge decken sich allerdings nicht immer mit ihren künstlerischen Absichten.",
-            "Cadogan versteht sich gut mit Prinz Gawain, dessen Sinn für gepflegte Kleidung und ein ansprechendes Äußeres er besonders schätzt. Gespräche über Schneider, Stoffe und Düfte gehören zu ihren gemeinsamen Interessen.",
-            "Obwohl Cadogan mehrere Mitarbeiter beschäftigt, kontrolliert er wichtige Aufzeichnungen häufig persönlich. Er ist überzeugt, dass eine zusätzliche Überprüfung niemals schaden könne.",
-            "Er kann sich noch lange über protokollarische Verstöße ärgern, selbst wenn die betreffenden Veranstaltungen bereits seit Wochen vorüber sind.",
-            "Sir Dalvin Balchder gehört zu den wenigen Menschen, deren Kritik Cadogan auch dann ernst nimmt, wenn sie seinen Stolz verletzt.",
-            "Cadogan betrachtet seine Stellung als Protokollmeister als den Höhepunkt seiner beruflichen Laufbahn. Ein höheres Amt strebt er nicht an.",
-            "Sein größter beruflicher Wunsch besteht darin, eines Tages als der gewissenhafteste Protokollmeister in der Geschichte des Hauses Draig in Erinnerung zu bleiben."
-          ],
-          "biographyText": "<p>Cadogan Sgrechiwr ist ein fünfzigjähriger Angehöriger des wohlhabenden und angesehenen Bürgerhauses Sgrechiwr aus Lynthor und  ekleidet das Amt des Protokollmeisters des Herolds von Haus Draig. In dieser Funktion gehört er zu den erfahrenen Beamten des gräflichen Hofstaates und arbeitet unmittelbar für Sir Cadfan, den obersten Diplomaten des Hauses Draig.</p><br><p>Seine Verantwortung umfasst die Einhaltung höfischer Rangordnungen, die korrekte Anrede hochrangiger Persönlichkeiten, die Vorbereitung diplomatischer Audienzen sowie die gewissenhafte Dokumentation offizieller Verhandlungen. Dabei achtet Cadogan besonders darauf, dass höfische Ehrenbezeugungen nicht mit rechtsverbindlichen Zusagen verwechselt werden und diplomatische Erklärungen eindeutig festgehalten sind.</p><br><p>Cadogan stammt aus einer Familie, deren Mitglieder seit Generationen als Herolde, Hofschreier, Musiker, Zeremonienmeister und  nstrumentenbauer bekannt sind. Sein Vater Gareth Sgrechiwr steht dem Familienhaus in Lynthor vor, während Cadogan selbst seine berufliche Laufbahn am Hof der Draigs eingeschlagen hat.</p><div><br></div><p>Die enge Verbindung zwischen den Häusern Sgrechiwr und Balchder ermöglichte ihm eine hervorragende Ausbildung. Nach dem Besuch der Schreiberschule des Ritterhauses Balchder studierte er an der Schule der Staufenberg in der Blutstadt mit dem Schwerpunkt Diplomatie.</p><br><p>Seit rund zehn Jahren bekleidet er sein gegenwärtiges Amt, in das er noch unter Trahern, dem Vorgänger und Großvater Sir Cadfans, berufen wurde.</p><p>Cadogan ist mit der angesehenen Malerin Gwen Hamnett verheiratet, die von den Silberinseln stammt. Gemeinsam haben sie zwei erwachsene Töchter, Eluned und Meinwen.</p>",
-          "portrait": "",
-          "quotesTitle": "Zitate",
           "triviaTitle": "Trivia",
+          "historyTitle": "Charakter",
+          "documents": [],
+          "worksTitle": "Können & Fähigkeiten",
+          "portrait": "",
+          "documentsTitle": "Eigentum & Besitz",
+          "connectionPortraitHeight": 68,
           "historyText": "<p>Cadogan Sgrechiwr ist ein Mann, der von sich selbst und seiner Arbeit eine außerordentlich hohe Meinung besitzt, ohne deshalb  grundsätzlich überheblich oder unangenehm zu sein. Seine Eitelkeit ist unverkennbar, doch hinter seinem gepflegten Äußeren und seinen gelegentlich  usschweifenden Ausführungen verbirgt sich ein erfahrener, gebildeter und pflichtbewusster Hofbeamter.</p><br><p>Bereits als junger Mann zeigte Cadogan eine ausgeprägte Vorliebe für schöne Kleidung, gepflegte Umgangsformen und die Kunst der  ffentlichen Rede. Diese Eigenschaften haben ihn sein gesamtes Leben begleitet. Noch heute achtet er peinlich genau auf den Sitz seines Gewandes, die Pflege seines Schnurrbartesund den Eindruck, den er auf andere hinterlässt.</p><br><p>Seine größte Leidenschaft gilt jedoch seinem Beruf. Cadogan betrachtet das diplomatische Protokoll keineswegs als bloße Ansammlung  öfischer Vorschriften. Für ihn ist es eine anspruchsvolle Kunst, deren Regeln den geordneten Umgang zwischen Adelshäusern, Gesandtschaften und Herrschaften überhaupt erst ermöglichen.</p><br><p>Er weiß, dass eine falsch gewählte Anrede, eine unbedachte Ehrenbezeugung oder eine missverständliche Formulierung erhebliche  iplomatische Folgen haben können. Entsprechend gewissenhaft bereitet er seine Aufgaben vor und erwartet von seinen Mitarbeitern dieselbe Sorgfalt.</p><br><p>Dabei kann Cadogan durchaus anstrengend sein. Seine Neigung, jede Kleinigkeit persönlich zu überprüfen, führt gelegentlich zu Spannungen mit seinen Untergebenen. Besonders ärgert er sich, wenn andere seine sorgfältigen Vorbereitungen durch Nachlässigkeit oder eigenmächtige  Änderungen durcheinanderbringen.</p><br><p>Dennoch ist Cadogan kein unbeherrschter Mann. Seine langjährige Erfahrung hat ihn gelehrt, auch in schwierigen Situationen die äußere Form zu wahren. Verstößt ein hochrangiger Gast gegen das Protokoll, wird er diesen kaum öffentlich zurechtweisen. Stattdessen versucht er, die Angelegenheit mit diplomatischem Geschick zu bereinigen.</p><br><p>Dass er sich anschließend noch wochenlang darüber beschweren kann, steht auf einem anderen Blatt.</p><br><p>Eine seiner auffälligsten Eigenheiten ist seine Angewohnheit, Gespräche mit Formulierungen wie „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“ einzuleiten. Häufig hat sein Gegenüber allerdings überhaupt keine Frage gestellt. Cadogan verwendet diese Wendungen vielmehr, um ein Thema anzuschneiden, über das er selbst unbedingt sprechen möchte.</p><br><p>Seine Kollegen kennen diese Angewohnheit inzwischen nur zu gut.</p><br><p>Abseits seiner beruflichen Pflichten ist Cadogan ein geselliger, kultivierter und durchaus humorvoller Mann. Er liebt das Theater, besucht regelmäßig Kunstausstellungen und interessiert sich für die neuesten gesellschaftlichen Entwicklungen. Auch einem gepflegten Klatsch ist er nicht abgeneigt, wobei er zwischen privaten Neuigkeiten und dienstlich vertraulichen Informationen streng unterscheidet.</p><br><p>Seiner Familie gegenüber zeigt er sich liebevoll und aufmerksam, wenngleich seine ausgeprägte Hingabe an sein Amt gelegentlich dazu führt, dass er mehr Zeit mit diplomatischen Aufzeichnungen als mit seiner Gemahlin verbringt.</p><br><p>Cadogan ist mit seinem Leben zufrieden. Er hat eine angesehene Stellung erreicht, eine Familie gegründet und genießt den Respekt seiner Kollegen. Höhere Ämter strebt er nicht an. Vielmehr ist er davon überzeugt, dass es kaum eine ehrenvollere Aufgabe gibt, als das diplomatische Protokoll des Hauses Draig in vollkommener Ordnung zu halten.</p>",
+          "quotesTitle": "Zitate",
+          "footer": "Personenakte · Cadogan Sgrechiwr",
+          "knightMentors": [],
           "connections": [
             {
               "type": "heading",
@@ -142799,8 +142649,32 @@
               "imageFormat": "portrait"
             }
           ],
+          "trivia": [
+            "Cadogan beginnt Gespräche häufig mit den Worten „Schön, dass du fragst!“ oder „Gut, dass wir darüber sprechen!“, selbst wenn niemand eine entsprechende Frage gestellt hat.",
+            "Sein sorgfältig gepflegter Schnurrbart gehört zu seinen auffälligsten äußeren Merkmalen. Er verwendet beträchtliche Mühe darauf, ihn stets in tadellosem Zustand zu halten.",
+            "Cadogan besitzt eine ausgesprochene Vorliebe für elegante, maßgeschneiderte Kleidung und besucht gerne seinen Schneider.",
+            "Obwohl die Sgrechiwr für ihre musikalische Tradition bekannt sind, ist Cadogan selbst ausgesprochen unmusikalisch. Dieser Umstand stellt eine seiner wenigen persönlichen Enttäuschungen dar.",
+            "Er besucht leidenschaftlich gerne Theateraufführungen. Fehlerhafte Anreden oder unpassende Rangordnungen in historischen Stücken können ihn allerdings erheblich aus der Fassung bringen.",
+            "Cadogan liebt Klatsch und Tratsch, unterscheidet jedoch streng zwischen gesellschaftlichen Gerüchten und vertraulichen Informationen aus seinem Amt.",
+            "Selbst bei privaten Gesellschaften fällt es ihm schwer, eine ungeschickte Sitzordnung einfach hinzunehmen.",
+            "Seine Gemahlin Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett. Cadogan ist außerordentlich stolz auf ihren künstlerischen Ruf.",
+            "Gelegentlich versucht er, Gwen bei der Anordnung ihrer Gemälde zu beraten. Seine Vorstellungen von einer korrekten Reihenfolge decken sich allerdings nicht immer mit ihren künstlerischen Absichten.",
+            "Cadogan versteht sich gut mit Prinz Gawain, dessen Sinn für gepflegte Kleidung und ein ansprechendes Äußeres er besonders schätzt. Gespräche über Schneider, Stoffe und Düfte gehören zu ihren gemeinsamen Interessen.",
+            "Obwohl Cadogan mehrere Mitarbeiter beschäftigt, kontrolliert er wichtige Aufzeichnungen häufig persönlich. Er ist überzeugt, dass eine zusätzliche Überprüfung niemals schaden könne.",
+            "Er kann sich noch lange über protokollarische Verstöße ärgern, selbst wenn die betreffenden Veranstaltungen bereits seit Wochen vorüber sind.",
+            "Sir Dalvin Balchder gehört zu den wenigen Menschen, deren Kritik Cadogan auch dann ernst nimmt, wenn sie seinen Stolz verletzt.",
+            "Cadogan betrachtet seine Stellung als Protokollmeister als den Höhepunkt seiner beruflichen Laufbahn. Ein höheres Amt strebt er nicht an.",
+            "Sein größter beruflicher Wunsch besteht darin, eines Tages als der gewissenhafteste Protokollmeister in der Geschichte des Hauses Draig in Erinnerung zu bleiben."
+          ],
+          "biographyText": "<p>Cadogan Sgrechiwr ist ein fünfzigjähriger Angehöriger des wohlhabenden und angesehenen Bürgerhauses Sgrechiwr aus Lynthor und  ekleidet das Amt des Protokollmeisters des Herolds von Haus Draig. In dieser Funktion gehört er zu den erfahrenen Beamten des gräflichen Hofstaates und arbeitet unmittelbar für Sir Cadfan, den obersten Diplomaten des Hauses Draig.</p><br><p>Seine Verantwortung umfasst die Einhaltung höfischer Rangordnungen, die korrekte Anrede hochrangiger Persönlichkeiten, die Vorbereitung diplomatischer Audienzen sowie die gewissenhafte Dokumentation offizieller Verhandlungen. Dabei achtet Cadogan besonders darauf, dass höfische Ehrenbezeugungen nicht mit rechtsverbindlichen Zusagen verwechselt werden und diplomatische Erklärungen eindeutig festgehalten sind.</p><br><p>Cadogan stammt aus einer Familie, deren Mitglieder seit Generationen als Herolde, Hofschreier, Musiker, Zeremonienmeister und  nstrumentenbauer bekannt sind. Sein Vater Gareth Sgrechiwr steht dem Familienhaus in Lynthor vor, während Cadogan selbst seine berufliche Laufbahn am Hof der Draigs eingeschlagen hat.</p><div><br></div><p>Die enge Verbindung zwischen den Häusern Sgrechiwr und Balchder ermöglichte ihm eine hervorragende Ausbildung. Nach dem Besuch der Schreiberschule des Ritterhauses Balchder studierte er an der Schule der Staufenberg in der Blutstadt mit dem Schwerpunkt Diplomatie.</p><br><p>Seit rund zehn Jahren bekleidet er sein gegenwärtiges Amt, in das er noch unter Trahern, dem Vorgänger und Großvater Sir Cadfans, berufen wurde.</p><p>Cadogan ist mit der angesehenen Malerin Gwen Hamnett verheiratet, die von den Silberinseln stammt. Gemeinsam haben sie zwei erwachsene Töchter, Eluned und Meinwen.</p>",
+          "connectionTextOffset": 0,
           "sideWidth": 100,
-          "documents": [],
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
           "extraSections": [
             {
               "position": "afterWorks",
@@ -142827,9 +142701,136 @@
               "text": "Eine weitere wichtige Bindung besteht zu Iestyn Swyll, einem Angehörigen des gleichnamigen Bürgerhauses aus Gwynthor.\n\nBeide Männer kennen den Hofstaat seit vielen Jahren und verbindet eine persönliche Freundschaft, die über ihre beruflichen Aufgaben hinausgeht.\n\nIestyn gehört zu den Menschen, in deren Gegenwart Cadogan weniger auf die Förmlichkeiten seines Amtes achtet. Dennoch kann er es auch bei seinem Freund selten lassen, ausführlich über die Schwierigkeiten des höfischen Protokolls zu sprechen.\n\nGerade diese Vertrautheit macht ihre Freundschaft wertvoll. Iestyn muss Cadogan weder beeindrucken noch ihm in jeder Angelegenheit zustimmen.\n\nCadogan wiederum schätzt die Gesellschaft seines Freundes und die Möglichkeit, sich abseits seiner beruflichen Verpflichtungen auszutauschen."
             }
           ],
-          "abilitiesTitle": "Persönlichkeit"
+          "abilities": [
+            {
+              "title": "Eitel",
+              "detail": "Cadogan legt außerordentlichen Wert auf ein gepflegtes Äußeres. Seine Kleidung, sein Schnurrbart und sein gesamtes Auftreten müssen stets tadellos sein.",
+              "icon": "/IconOrdner/Traits%20Icon/Groomed.png"
+            },
+            {
+              "title": "Perfektionistisch",
+              "detail": "Selbst kleinste Fehler in Rangordnung, Anrede oder Sitzordnung können ihn erheblich verärgern. Nachlässigkeit betrachtet er als vermeidbares Ärgernis.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Gewissenhaft",
+              "detail": "Seine beruflichen Pflichten nimmt Cadogan ausgesprochen ernst. Gerade bei diplomatischen Angelegenheiten lässt er äußerste Sorgfalt walten.",
+              "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+            },
+            {
+              "title": "Ehrgeizig",
+              "detail": "Er hat hart gearbeitet, um seine Stellung zu erreichen. Sein Ehrgeiz richtet sich inzwischen weniger auf weiteren Aufstieg als auf die vollkommene Beherrschung seines Amtes.",
+              "icon": "/IconOrdner/Traits%20Icon/Ambitious.png"
+            },
+            {
+              "title": "Charmant",
+              "detail": "Cadogan besitzt ausgezeichnete Umgangsformen und versteht es, Menschen mit Höflichkeit, Witz und gewandter Sprache für sich einzunehmen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-charming-131f5a12fbffcf8b%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Redegewandt",
+              "detail": "Er spricht gerne, ausführlich und mit sichtlicher Begeisterung. Nicht immer bemerkt er, dass seine Zuhörer das Gespräch längst beenden möchten.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-eloquent-71919b4c2095a972%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Gesellig",
+              "detail": "Cadogan schätzt anregende Unterhaltungen, gesellschaftliche Veranstaltungen und die Gesellschaft kultivierter Menschen.",
+              "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+            },
+            {
+              "title": "Klatschfreudig",
+              "detail": "Er interessiert sich lebhaft für Neuigkeiten, kleine Skandale und persönliche Angelegenheiten am Hof, wahrt jedoch die Vertraulichkeit dienstlicher Informationen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-gossip-loving-2c49aa00db0e6346%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Kunstliebend",
+              "detail": "Theateraufführungen, Gemäldegalerien und andere kulturelle Veranstaltungen gehören zu seinen größten Vergnügungen.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-art-loving-3f3181c366013051%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Empfindlich gegenüber Fehlern",
+              "detail": "Missgeschicke, insbesondere solche, die sein sorgfältig vorbereitetes Protokoll betreffen, beschäftigen ihn häufig länger, als eigentlich notwendig wäre.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-sensitive-to-mistakes-f2bd4f32238597dc%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Romantisch",
+              "detail": "Hinter seiner Eitelkeit verbirgt sich ein aufmerksamer und liebevoller Ehemann, der seine Gemahlin aufrichtig bewundert.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-romantic-3b4433574d3b1ccd%2Foriginal.png?alt=media"
+            },
+            {
+              "title": "Schlecht im Delegieren",
+              "detail": "Obwohl ihm Mitarbeiter zur Verfügung stehen, fällt es Cadogan schwer, wichtige Aufgaben vollständig aus der Hand zu geben.",
+              "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-poor-at-delegating-995f63afaeae7285%2Foriginal.png?alt=media"
+            }
+          ],
+          "connectionsTitle": "Verbindungen",
+          "biographyTitle": "Hintergrund – Wer ist er?",
+          "abilitiesTitle": "Persönlichkeit",
+          "quotes": [],
+          "works": [
+            "Diplomatisches Protokoll - Cadogan verfügt über umfassende Kenntnisse höfischer Rangordnungen, Anreden, Audienzregeln und diplomatischer Gepflogenheiten.",
+            "Organisation von Empfängen - Er bereitet Sitzordnungen, Ehrenbezeugungen und den protokollarischen Ablauf offizieller Zusammenkünfte vor.",
+            "Verhandlungsdokumentation - Cadogan besitzt große Erfahrung darin, Gesprächsverläufe und förmliche Erklärungen präzise und nachvollziehbar festzuhalten.",
+            "Unterscheidung von Zusagen - Er erkennt den Unterschied zwischen höflichen Absichtserklärungen, unverbindlichen Ehrenbezeugungen und rechtsverbindlichen Zusagen.",
+            "Diplomatische Bildung - Durch sein Studium bei den Staufenberg verfügt er über fundierte Kenntnisse diplomatischer Verfahren, politischer Geschichte und zwischenherrschaftlicher Beziehungen.",
+            "Sprachkenntnisse - Neben der Gemeinen Zunge beherrscht er die Sprache der Cenyri, die Sprache der Alben sowie die Sprachen Morgorns, Baldreskas und Aeldrunmars.",
+            "Schriftliche Ausdrucksfähigkeit - Cadogan ist ein geübter Schreiber, der besonderen Wert auf eindeutige Formulierungen und die korrekte Verwendung von Titeln legt.",
+            "Menschenkenntnis - Seine langjährige Tätigkeit am Hof hat ihn gelehrt, gesellschaftliche Spannungen und mögliche protokollarische Schwierigkeiten frühzeitig zu erkennen.",
+            "Diplomatisches Geschick - Auch bei bewussten Verstößen gegen das Protokoll versteht er es, unangenehme Situationen ohne öffentliche Bloßstellung der Beteiligten zu entschärfen.",
+            "Schauspielerische Begabung - Obwohl Cadogan kein Musiker ist, besitzt er ein gewisses Talent für Darstellung, Mimik und wirkungsvolle Auftritte.",
+            "Kunstverständnis - Er verfügt über ein ausgeprägtes Interesse an Malerei, Theater und anderen Künsten, das durch seine Herkunft und seine Ehe zusätzlich gefördert wurde.",
+            "Personalführung - Cadogan leitet die ihm unterstellten Mitarbeiter und überwacht deren Arbeit, neigt allerdings dazu, zu viele Aufgaben selbst kontrollieren zu wollen."
+          ]
         },
         "schema": "aleria.biography-module",
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Cadogan Sgrechiwr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Sgrechiwr"
+          },
+          {
+            "label": "Titel / Anrede",
+            "value": "Vorgesehener Erbe des Hauses Sgrechiwr"
+          },
+          {
+            "label": "Geboren",
+            "value": "1690"
+          },
+          {
+            "label": "Geburtsort",
+            "value": "Lynthor"
+          },
+          {
+            "label": "Gestorben",
+            "value": "Lebend"
+          },
+          {
+            "label": "Geschlecht",
+            "value": "Männlich"
+          },
+          {
+            "label": "Familienstand",
+            "value": "verheiratet"
+          },
+          {
+            "label": "Rang / Stand",
+            "value": ""
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Protokollmeister des Herolds des Grafen"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Gwynthor"
+          }
+        ],
+        "quote": "",
+        "revision": 1793726717128,
         "quoteBy": ""
       },
       "createdAt": "2026-09-02T20:37:58.808Z",
@@ -143136,8 +143137,9 @@
         "recordId": "character--person--haus-sgrechiwr--cadogan-sgrechiwr",
         "path": "records/familien/haus-sgrechiwr/cadogan-sgrechiwr--person--haus-sgrechiwr--cadogan-sgrechiwr/character.json",
         "schemaVersion": 1,
-        "contentHash": "02fce50b61f36cc1bada457d08335dc2c64b97f9eae40f13dabb2a3cc27aa248",
+        "contentHash": "ed5b249dfca1a5a1b2ac6428e65702dfd65426216cb5cd5bab5ad6c610de7822",
         "firestoreDocumentIds": [
+          "person--haus-sgrechiwr--cadogan-sgrechiwr",
           "person--haus-sgrechiwr--cadogan-sgrechiwr",
           "person--haus-sgrechiwr--cadogan-sgrechiwr"
         ],
@@ -208411,6 +208413,133 @@
       }
     },
     {
+      "id": "rob-gwynthor-tageloehner",
+      "name": "Rob",
+      "title": "Tagelöhner",
+      "fraktion": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+      "bio": "Rob ist ein dreiunddreißigjähriger Tagelöhner, der sich in Gwynthor mit wechselnden Hilfsarbeiten verdingt. Er trägt braunes Haar, ist glatt rasiert und kleidet sich schlicht. Mit seinem lockeren Mundwerk kommt er rasch ins Gespräch und hat zu vielen Dingen eine freche Bemerkung bereit.\n\nEr nimmt kleinere Besorgungen und Botengänge an und ist bei der Suche nach Tagesarbeit im Hafen und den umliegenden Straßen anzutreffen.",
+      "status": "Lebend",
+      "archived": false,
+      "createdAt": "2026-10-31T00:00:00Z",
+      "updatedAt": "2026-10-31T00:00:00Z",
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+          "emotes": []
+        }
+      ],
+      "activeImageSetId": "standard",
+      "imageSetSchemaVersion": 1,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Rob"
+          },
+          {
+            "label": "Alter",
+            "value": "33 Jahre"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Tagelöhner"
+          },
+          {
+            "label": "Aufenthalt",
+            "value": "Gwynthor"
+          }
+        ],
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+          "portraitFit": "cover",
+          "crestImage": "",
+          "biographyTitle": "Rob",
+          "biographyText": "<p>Rob verdient sich in Gwynthor seinen Unterhalt mit wechselnden Tagesarbeiten. Er hilft bei kleineren Besorgungen, übernimmt Botengänge und sucht im Hafenviertel nach dem nächsten Verdienst.</p><p>Der dreiunddreißigjährige Mann trägt braunes Haar und ein glatt rasiertes Gesicht. Seine Kleidung ist schlicht und alltagstauglich. Er redet ungezwungen, grinst gern und lässt eine Gelegenheit für eine freche Antwort selten aus. Im Gespräch gibt er sich umgänglich und findet schnell Anschluss.</p>",
+          "abilitiesTitle": "Auftreten",
+          "abilities": [
+            {
+              "title": "Gesprächig",
+              "detail": "Kommt mit anderen Leuten rasch ins Gespräch.",
+              "icon": ""
+            },
+            {
+              "title": "Freches Mundwerk",
+              "detail": "Hat oft eine spöttische oder schlagfertige Bemerkung bereit.",
+              "icon": ""
+            },
+            {
+              "title": "Wechselnde Arbeit",
+              "detail": "Nimmt kleinere Hilfsarbeiten und Besorgungen an.",
+              "icon": ""
+            }
+          ],
+          "worksTitle": "Tätigkeit",
+          "works": [],
+          "backgroundTitle": "Weitere Angaben",
+          "backgroundText": "",
+          "portraitStages": [],
+          "portraitCaptions": []
+        }
+      },
+      "aliases": [],
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--rob-gwynthor-tageloehner",
+        "path": "records/orte/gwynthor/rob--rob-gwynthor-tageloehner/character.json",
+        "schemaVersion": 1,
+        "contentHash": "961b691c1473c79a8a4eb5b097caff219db7f9f1c761c11cfe84425af1a6fa59",
+        "firestoreDocumentIds": [
+          "rob-gwynthor-tageloehner"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-lotsensuche"
+      }
+    },
+    {
       "id": "person--haus-llythfor--cynddelw-llythfor",
       "name": "Cynddelw Llythfor",
       "title": "Berichterstatter bei Celtigerns Echo",
@@ -218284,52 +218413,16 @@
         }
       },
       "biography": {
+        "schemaVersion": 1,
+        "schema": "aleria.biography-module",
         "quote": "",
         "revision": 1793726717128,
         "biography": {
-          "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
-          "extraSections": [
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Geschichte & Vergangenheit",
-              "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Geschichte & Wirkung",
-              "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
-              "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
-            }
-          ],
-          "historyTitle": "Charakter",
-          "connectionTextOffset": 0,
-          "connectionsTitle": "Verbindungen",
-          "worksTitle": "Können & Fähigkeiten",
-          "triviaTitle": "Trivia",
-          "quotes": [],
-          "documentsTitle": "Eigentum & Besitz",
-          "sideWidth": 100,
-          "footer": "Personenakte · Gwen Hamnett",
-          "documents": [],
-          "works": [
-            "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
-            "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
-            "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
-            "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
-            "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
-            "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
-            "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
-            "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
-          ],
           "biographyTitle": "Hintergrund – Wer ist sie?",
+          "sideWidth": 100,
           "quotesTitle": "Zitate",
+          "historyTitle": "Charakter",
+          "knightMentors": [],
           "abilities": [
             {
               "title": "Künstlerisch",
@@ -218382,30 +218475,53 @@
               "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-loving-5f329a6a6ae0021c%2Foriginal.png?alt=media"
             }
           ],
-          "trivia": [
-            "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
-            "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
-            "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
-            "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
-            "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
-            "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
-            "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
-            "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
-            "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
-            "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
-            "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
-            "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
-            "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+          "connectionTextOffset": 0,
+          "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+          "documentsTitle": "Eigentum & Besitz",
+          "documents": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Geschichte & Vergangenheit",
+              "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Geschichte & Wirkung",
+              "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
+              "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
+            }
           ],
-          "connectionPortraitHeight": 68,
-          "knightMentors": [],
+          "footer": "Personenakte · Gwen Hamnett",
+          "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
+          "connectionsTitle": "Verbindungen",
+          "worksTitle": "Können & Fähigkeiten",
+          "works": [
+            "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
+            "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
+            "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
+            "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
+            "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
+            "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
+            "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
+            "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
+          ],
+          "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>",
           "portraitStages": [
             "",
             "",
             "",
             ""
           ],
-          "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+          "abilitiesTitle": "Persönlichkeit",
+          "connectionPortraitHeight": 68,
           "connections": [
             {
               "type": "heading",
@@ -218468,10 +218584,24 @@
               "imageFormat": "portrait"
             }
           ],
-          "abilitiesTitle": "Persönlichkeit",
-          "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>"
+          "quotes": [],
+          "trivia": [
+            "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
+            "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
+            "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
+            "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
+            "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
+            "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
+            "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
+            "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
+            "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
+            "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
+            "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
+            "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
+            "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+          ],
+          "triviaTitle": "Trivia"
         },
-        "schemaVersion": 1,
         "stats": [
           {
             "label": "Vollständiger Name",
@@ -218522,8 +218652,7 @@
             "value": "Gwynthor"
           }
         ],
-        "quoteBy": "",
-        "schema": "aleria.biography-module"
+        "quoteBy": ""
       },
       "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
       "currentLocation": "Gwynthor",
@@ -218533,8 +218662,9 @@
         "recordId": "character--person--family-tree--unknown-cadogan-spouse",
         "path": "records/orte/gwynthor/gwen-hamnett--person--family-tree--unknown-cadogan-spouse/character.json",
         "schemaVersion": 1,
-        "contentHash": "6251a2f1f3fd8d14f964d168552ad6b6d430da38f9a8047caef856e082c882ee",
+        "contentHash": "a08444161f3d02a33471c3db88145e2787085fff8e51d4383840f44884cf1397",
         "firestoreDocumentIds": [
+          "person--family-tree--unknown-cadogan-spouse",
           "person--family-tree--unknown-cadogan-spouse"
         ],
         "classification": {

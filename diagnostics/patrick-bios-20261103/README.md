@@ -36,8 +36,9 @@ Die anschließende rein lesende Wiederholungsprüfung bestätigte alle sieben
 Dokumente, ihren gemeinsamen Commit-Zeitpunkt und drei Kampfsperren.
 Firestore stellt leere REST-Arrays/-Maps teilweise ohne leere Unterfelder dar;
 die Prüfung berücksichtigt ausschließlich diese gleichwertige Darstellung.
-Andere Datentypen und unbeteiligte Hauptfelder wurden exakt verglichen. Es
-wurde kein zweites Apply ausgeführt. `externalWrites: 0` im Prüfbeleg bezieht
+Andere Datentypen und unbeteiligte Hauptfelder wurden exakt verglichen. Der
+ursprüngliche Sieben-Dokumente-Plan wurde nicht erneut angewandt.
+`externalWrites: 0` im Prüfbeleg bezieht
 sich auf diese reine Nachprüfung, nicht auf den vorausgegangenen Commit.
 Der öffentliche, inhaltlich begrenzte Beleg ist
 [`publication-verification.json`](publication-verification.json).
@@ -51,6 +52,36 @@ enthalten Metadaten und vier additive Begleiterbindungen. Sie enthalten keine
 vollständigen Inventare, privaten Besitzerkennungen oder Kampfschnappschüsse.
 Es gab null kanonische Kampfschreibzugriffe und null vollständige
 Inventarimporte. Der erneute `--check` bestätigt null veraltete Ausgaben.
+
+## Getrennter Nachtrag zur Profilkurzfassung
+
+Die Browserprüfung zeigte noch Rhiannons frühere Dienstbotenrolle in den
+separaten flachen Profilfeldern, obwohl Titel und vollständige Biografie
+bereits ihr heutiges Amt nannten. Ein eigener geprüfter Nachtragsplan
+`267d5332b331a0b468b2c5d84b808c769fa0c5da960ff83ebe524f8009c73f4a`
+berichtigt ausschließlich Rhiannons `role`, `bio` und das Änderungsdatum
+`updatedAt`. Die Rolle stammt aus dem belegten Amtstitel; die Kurzfassung
+ist wortgetreu der erste Absatz ihrer gelieferten vollständigen Biografie.
+Andere Personen erhalten keine neuen Kurztexte durch diese Ergänzung.
+
+Der Nachtrag wurde um `18:19:10.948674Z` mit einem gezielten Update und
+sechs atomaren Versionsprüfungen gespeichert. Nach verschlüsselter
+Originalsicherung wurden alle sieben Akten erneut gelesen: sämtliche
+unbeteiligten REST-Felder und die sechs übrigen Akten blieben exakt erhalten.
+Es gab keine Inventar- oder Kampfschreibzugriffe. Der ursprüngliche
+Sieben-Dokumente-Plan wurde nicht erneut angewandt, sein privater
+Bestätigungsbeleg blieb unverändert erhalten. Der gesonderte öffentliche
+Nachweis ist
+[`metadata-followup-verification.json`](metadata-followup-verification.json).
+
+Ein neuer, getrennt gespeicherter privater Bestätigungsbeleg wurde aus den
+tatsächlich nachgelesenen drei Personen und vier Tieren erstellt. Der erneute
+begrenzte lokale Archivabgleich änderte genau neun Ausgaben für dieselben
+drei Personen, ohne neue Charakterakte. Alle 263 unbeteiligten Charaktere
+blieben erhalten; null vollständige Inventarimporte und null kanonische
+Kampfschreibzugriffe. Ein anschließender `--check` meldet null Änderungen.
+31 betroffene Tests sowie die Prüfungen der gemeinsamen Quelle und der
+öffentlichen Biografiebrücke sind erfolgreich.
 
 ## Weitere Identitäten und Abschlussprüfung
 

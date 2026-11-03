@@ -1,7 +1,10 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 
 export function applyFamilyMetadataReview(record, review) {
-  for (const field of review.fields) {
+  // Validate the complete review before restoring anything. Two profile paths
+  // can deliberately share the same object in a registry record.
+  const operations = review.fields.map(field => {
     let parent = record;
     for (const segment of field.path.slice(0, -1)) {
       if (segment.startsWith('@')) {
@@ -14,7 +17,13 @@ export function applyFamilyMetadataReview(record, review) {
     assert(!Array.isArray(parent));
     const key = field.path.at(-1), label = `${review.familyId}/${field.path.join('/')}/approved-metadata`;
     assert.equal(Object.hasOwn(parent, key), field.afterPresent, label);
-    if (field.afterPresent) assert.deepEqual(parent[key], field.after, label);
+    if (field.afterPresent) {
+      if (field.afterSha256) assert.equal(createHash('sha256').update(JSON.stringify(parent[key])).digest('hex'), field.afterSha256, label);
+      else assert.deepEqual(parent[key], field.after, label);
+    }
+    return { field, parent, key };
+  });
+  for (const { field, parent, key } of operations) {
     if (field.beforePresent) parent[key] = structuredClone(field.before);
     else delete parent[key];
   }

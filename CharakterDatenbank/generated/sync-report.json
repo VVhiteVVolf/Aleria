@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
+  "sourceExportedAt": "2026-11-03T18:19:10.948674Z",
   "summary": {
-    "sourceDocuments": 492,
-    "total": 261,
+    "sourceDocuments": 496,
+    "total": 262,
     "mergedSameNameGroups": 45,
     "familyLinked": 170,
     "familyAmbiguous": 0,
-    "familyPending": 91,
+    "familyPending": 92,
     "primaryFamily": 169,
     "primaryGroup": 31,
-    "primaryPlace": 27,
+    "primaryPlace": 28,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -982,6 +982,18 @@
     {
       "recordId": "character--vebrand-wolfsruf",
       "name": "Vébrand Wolfsruf",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--rob-gwynthor-tageloehner",
+      "name": "Rob",
       "status": "pending",
       "primary": {
         "kind": "place",

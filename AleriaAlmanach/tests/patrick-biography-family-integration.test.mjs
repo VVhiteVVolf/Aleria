@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { PATRICK_BIOGRAPHY_ASSETS, PATRICK_BIOGRAPHY_ASSET_ALIASES } from '../modules/patrick-biographies/biography-assets.mjs';
-import { PATRICK_BIOGRAPHY_ENTRIES, buildPatrickBiographyModule, preparePatrickBiographyModule, preparePatrickBiographyCharacters, getPatrickBiographyPersonFields } from '../modules/patrick-biographies/biography-source.mjs';
+import { PATRICK_BIOGRAPHY_ENTRIES, buildPatrickBiographyModule, preparePatrickBiographyModule, preparePatrickBiographyCharacters, getPatrickBiographyPersonFields,resolvePatrickBiographyAsset } from '../modules/patrick-biographies/biography-source.mjs';
 import { CADOGAN_CHARACTER_ID, RHIANNON_CHARACTER_ID, GWEN_CHARACTER_ID } from '../modules/patrick-biographies/biography-identities.mjs';
 import { HOUSE_SGRECHIWR_FAMILY } from '../../Stammbäume/assets/js/data/house-sgrechiwr-family.js';
 import { HOUSE_DRAENMELYN_FAMILY } from '../../Stammbäume/assets/js/data/house-draenmelyn-family.js';
@@ -36,15 +36,16 @@ test('every mapped trait file exists and only proven local image casing or the m
   for(const [key,path]of Object.entries(PATRICK_BIOGRAPHY_ASSETS))if(key.startsWith('trait:')){
     if(path.startsWith('/'))assert(existsSync(new URL(`.${decodeURIComponent(path)}`,root)),key);
     else{
-      const receipt=receipts.entries.find(entry=>entry.key===key&&entry.url===path);assert(receipt,key);
+      const receipt=receipts.entries.find(entry=>entry.key===key&&PATRICK_BIOGRAPHY_ASSET_ALIASES[entry.url]===path);assert(receipt,key);
       assert(receipt.localPath.startsWith('AleriaAlmanach/public/assets/biography-trait-icons/')&&!receipt.localPath.includes('..'));
       const bytes=readFileSync(new URL(receipt.localPath,root));assert.equal(createHash('sha256').update(bytes).digest('hex'),receipt.sha256,key);
     }
   }
   const originals=JSON.parse(readFileSync(new URL('../modules/patrick-biographies/biography-assets.originals.json',import.meta.url),'utf8'));
-  assert.equal(originals.entries.length,5);assert.equal(Object.keys(PATRICK_BIOGRAPHY_ASSET_ALIASES).length,5);
+  assert.equal(originals.entries.length,5);
   for(const original of originals.entries){
-    assert.equal(PATRICK_BIOGRAPHY_ASSET_ALIASES[original.sourceUrl],original.url);
+    assert.equal(PATRICK_BIOGRAPHY_ASSET_ALIASES[original.sourceUrl],PATRICK_BIOGRAPHY_ASSETS[original.key]);
+    assert.equal(PATRICK_BIOGRAPHY_ASSET_ALIASES[original.url],PATRICK_BIOGRAPHY_ASSETS[original.key]);
     assert(original.localPath.startsWith('AleriaAlmanach/assets/biographies/patrick-20261103/originals/')&&!original.localPath.includes('..'));
     assert.equal(createHash('sha256').update(readFileSync(new URL(original.localPath,root))).digest('hex'),original.sha256);
   }
@@ -64,6 +65,29 @@ test('every mapped trait file exists and only proven local image casing or the m
   assert.match(gwen.biography.connections.find(row=>row.name==='Myrddin Draig').image,/myrddin-draig\.jpg$/);
   const own=structuredClone(gwen);own.biography.connections.find(row=>row.name==='Myrddin Draig').image='/own-art.png';
   assert.equal(preparePatrickBiographyModule(own,GWEN_CHARACTER_ID).biography.connections.find(row=>row.name==='Myrddin Draig').image,'/own-art.png');
+});
+
+test('all reviewed static images retain their original bytes and all authored Imgur or historical artwork URLs resolve through one exact alias map',()=>{
+  const manifest=JSON.parse(readFileSync(new URL('../modules/patrick-biographies/biography-assets.static.json',import.meta.url),'utf8'));
+  assert.equal(manifest.schema,'aleria.biography-static-assets');assert.equal(manifest.schemaVersion,1);
+  assert.equal(manifest.entries.length,36);assert.equal(new Set(manifest.entries.map(row=>row.key)).size,36);
+  const aliases=Object.fromEntries(manifest.entries.flatMap(row=>row.aliases.map(alias=>[alias,row.url])));
+  assert.deepEqual(PATRICK_BIOGRAPHY_ASSET_ALIASES,aliases);assert.equal(Object.keys(aliases).length,41);
+  for(const row of manifest.entries){
+    assert(!row.localPath.startsWith('/')&&!row.localPath.split('/').includes('..'));
+    assert.equal(row.url,new URL('/'+row.localPath,'https://dieweltvonaleria.netlify.app').href);
+    assert.equal(PATRICK_BIOGRAPHY_ASSETS[row.key],row.url);
+    assert.equal(createHash('sha256').update(readFileSync(new URL(row.localPath,root))).digest('hex'),row.sha256);
+    for(const alias of row.aliases){assert.equal(resolvePatrickBiographyAsset(alias),row.url);assert.equal(resolvePatrickBiographyAsset(row.url),row.url);}
+  }
+  const imageSources=[];
+  const visit=(value,key='')=>{
+    if(Array.isArray(value)){value.forEach(child=>visit(child,key));return;}
+    if(value&&typeof value==='object'){for(const [field,child]of Object.entries(value))visit(child,field);return;}
+    if(typeof value==='string'&&['portrait','portraitStages','image','icon'].includes(key))imageSources.push(value);
+  };
+  for(const row of PATRICK_BIOGRAPHY_ENTRIES)visit(buildPatrickBiographyModule(row.key));
+  assert(!imageSources.some(value=>/^https:\/\/(?:i\.)?imgur\.com\//i.test(value)||value.includes('firebasestorage.googleapis.com')));
 });
 
 test('Gwen replaces the existing spouse identity, retaining Cadogan marriage and both daughters without invented parents',()=>{

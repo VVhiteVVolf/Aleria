@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import vm from 'node:vm';
-import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { loadPublicCenyrCoverageInputs } from '../modules/house-coverage/cenyr-house-coverage-node.mjs';
 import { normalizeFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
 import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
 import { withHouseBiographyDefault } from '../../Stammbäume/assets/js/modules/house-biography/house-biography-registry-default.js';
@@ -12,7 +12,8 @@ const project = new URL('../../', import.meta.url);
 const registryContext = { window: {} };
 vm.runInNewContext(await readFile(new URL('haeuser.registry.js', feature), 'utf8'), registryContext);
 const registry = registryContext.window.HaeuserRegistry;
-const areaFamilies = FAMILY_REGISTRY.filter(r => r.folderPath.includes('Celtigerns Wacht') || r.id === 'haus-von-hochreuth');
+const { project: publicFamilyRegistry } = loadPublicCenyrCoverageInputs();
+const areaFamilies = publicFamilyRegistry.filter(r => r.folderPath.includes('Celtigerns Wacht') || r.id === 'haus-von-hochreuth');
 const families = areaFamilies.filter(record => registry.byId(record.id));
 const familiesWithoutHousePage = areaFamilies.filter(record => !registry.byId(record.id));
 const sources = new Map();
@@ -23,8 +24,14 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Jede der 93 Familien besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio', async () => {
-  assert.equal(families.length, 93);
+test('Jede der 104 öffentlichen Familien besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio', async () => {
+  const completedPageIds = [
+    'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
+    'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod',
+  ];
+  assert.equal(families.length, 104);
+  assert.equal(families.filter(record => !completedPageIds.includes(record.id)).length, 93);
+  for (const id of completedPageIds) assert.ok(sources.has(id), id);
   for (const record of families) {
     const entry = registry.byId(record.id);
     assert.equal(entry.status, 'active', record.id);
@@ -44,21 +51,24 @@ test('Jede der 93 Familien besitzt eine erreichbare Hausseite und eine korrekt v
 });
 
 test('Neue Cochdon-, Llythfor- und Twyllod-Akten besitzen Familienbeschreibungen und eine gezielt ausgearbeitete Twyllod-Bio', () => {
-  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), ['haus-cochdon', 'haus-llythfor', 'haus-twyllod']);
-  for (const record of familiesWithoutHousePage) {
+  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), []);
+  for (const id of ['haus-cochdon', 'haus-llythfor', 'haus-twyllod']) {
+    const record = areaFamilies.find(record => record.id === id);
+    assert.ok(record, id);
+    assert.equal(registry.byId(id).page, 'kleinehaeuser.html', id);
     assert.ok(record.family.document.description.length > 150, record.id);
     assert.ok(record.family.persons.length > 0, record.id);
   }
-  assert.ok(familiesWithoutHousePage.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
+  assert.ok(areaFamilies.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft führt ihre 56 ausgewählten Häuser mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
+test('Grafschaft führt ihre 64 ausgewählten Häuser mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
   const cards = sections.flatMap(section => section.cards);
-  assert.equal(cards.length, 56);
-  assert.equal(new Set(cards.map(c => c.id)).size, 56);
+  assert.equal(cards.length, 64);
+  assert.equal(new Set(cards.map(c => c.id)).size, 64);
   for (const card of cards) {
     assert.ok(areaFamilies.some(record => record.id === card.id), card.id);
     if (registry.byId(card.id)) {
@@ -77,6 +87,10 @@ test('Grafschaft führt ihre 56 ausgewählten Häuser mit direkten Seiten- oder 
 
 test('Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfundenen Chroniken', async () => {
   const added = [...sources.values()].filter(c => c.registerPage);
+  const neutralPreparedHistories = new Set([
+    'Folgt …',
+    'Über die Anfänge und die weitere Geschichte der Familie ist bislang wenig überliefert.',
+  ]);
   assert.ok(added.length >= 79);
   for (const content of added) {
     if (content.historySource) {
@@ -85,9 +99,10 @@ test('Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfunde
       assert.equal(content.sections.history, family.document.description.replace('Ritterherrenhaus', 'Ministerialenhaus'));
       for (const head of content.heads) assert.ok(family.persons.some(person => person.id === head.id));
     } else if (content.prepared) {
-      assert.equal(content.sections.history, 'Folgt …');
-      assert.equal(content.profile.founding, '');
-      assert.equal(content.heads.length, 0);
+      assert.ok(neutralPreparedHistories.has(content.sections.history), content.id);
+      assert.equal(content.profile.founding, '', content.id);
+      assert.equal(content.founder ?? null, null, content.id);
+      assert.equal(content.heads.length, 0, content.id);
     } else if (content.sourceBatch) {
       const entry = registry.byId(content.id);
       const archive = new URL(entry.data.replace('haus.data.js', 'animexx-original.html'), feature);
@@ -105,7 +120,7 @@ test('Neue Bilder, Banner und Personenlinks zeigen auf vorhandene Projektdateien
     if (content.territoryHref) await access(new URL(content.territoryHref, feature));
     for (const entry of [...content.heads, ...content.heirs, ...content.offices, ...content.figures]) {
       if (!entry.id) continue;
-      assert.ok(FAMILY_REGISTRY.find(f => f.id === entry.familyId)?.family.persons.some(p => p.id === entry.id), entry.id);
+      assert.ok(publicFamilyRegistry.find(f => f.id === entry.familyId)?.family.persons.some(p => p.id === entry.id), entry.id);
     }
   }
 });

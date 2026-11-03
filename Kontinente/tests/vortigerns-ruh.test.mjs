@@ -37,7 +37,9 @@ test('Family selection respects the county and subordinate territories', () => {
       if (house.imageSrc) assert.ok(fs.existsSync(new URL('.' + house.imageSrc, root)), house.imageSrc);
     }
   }
-  assert.ok(pages[4].view.familySections.flatMap(section => section.cards).some(house => house.name === 'Swynol' && !house.href));
+  const swynol = pages[4].view.familySections.flatMap(section => section.cards).find(house => house.name === 'Swynol');
+  assert.ok(swynol);
+  assert.match(swynol.href, /kleinehaeuser\.html\?haus=haus-swynol$/);
 });
 test('The county register contains all 47 unique markers, including two ancestor trees', () => {
   const places = pages[0].view.geography.domains.flatMap(domain => domain.sections.flatMap(section => section.places));

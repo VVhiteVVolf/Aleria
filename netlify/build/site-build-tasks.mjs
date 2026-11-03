@@ -382,6 +382,7 @@ export const SITE_BUILD_TASKS = [
     // These feature boundaries are checked against actual Node imports by the
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
+      'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'AleriaAlmanach/modules/item-register/item-register-standard.js',
       'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
@@ -531,6 +532,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
+      'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'AleriaAlmanach/modules/character-trait-review/', 'AleriaAlmanach/modules/character-development/',
       'AleriaAlmanach/modules/character-health/', 'AleriaAlmanach/modules/biography/',

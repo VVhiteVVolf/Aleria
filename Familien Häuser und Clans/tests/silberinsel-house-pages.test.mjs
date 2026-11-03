@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
@@ -35,9 +35,9 @@ const normalizedGraph = family => Object.fromEntries(graphKeys.map(key => [key,
 const registryContext = vm.createContext({ window: {} });
 vm.runInContext(readFileSync(new URL('haeuser.registry.js', feature), 'utf8'), registryContext);
 
-test('Alle 18 Silberinsel-Häuser haben aktive Hausseite, Hausbio und das eigene kanonische Iframe', () => {
-  assert.equal(sources.size, 18);
-  assert.deepEqual([...sources.keys()].sort(), [...baselineById.keys()].sort());
+test('Alle 18 überlieferten Silberinsel-Häuser und das belegte Haus Hamnett haben Hausseite, Hausbio und kanonisches Iframe', () => {
+  assert.equal(sources.size, 19);
+  assert.deepEqual([...sources.keys()].sort(), [...baselineById.keys(), 'haus-hamnett'].sort());
   for (const { content, url } of sources.values()) {
     const record = records.get(content.id);
     const page = createHousePageData(content);
@@ -45,7 +45,12 @@ test('Alle 18 Silberinsel-Häuser haben aktive Hausseite, Hausbio und das eigene
     const registered = registryContext.window.HaeuserRegistry.byId(content.id);
     assert.equal(registered?.status, 'active', content.id);
     assert.equal(content.registerPage, true, content.id);
-    assert.equal(content.biographySourceRevision, baselineById.get(content.id).sourceRevision + 1, content.id);
+    const baseline = baselineById.get(content.id);
+    if (baseline) assert.equal(content.biographySourceRevision, baseline.sourceRevision + 1, content.id);
+    else {
+      assert.equal(content.id, 'haus-hamnett');
+      assert.equal(content.biographySourceRevision, record.family.extensions.sourceRevision);
+    }
     const tree = new URL(page.familyTreeEmbed.src, feature);
     assert.equal(tree.pathname, new URL('Stammbäume/Stammbaum.html', root).pathname, content.id);
     assert.equal(tree.searchParams.get('family'), content.id);
@@ -72,7 +77,8 @@ test('Das Bio-Upgrade erhält eigene Personenbearbeitungen, eigene Hausbios und 
   for (const { content } of sources.values()) {
     const record = records.get(content.id);
     const local = structuredClone(record.family);
-    local.extensions.sourceRevision = baselineById.get(record.id).sourceRevision;
+    local.extensions.sourceRevision = baselineById.get(record.id)?.sourceRevision
+      ?? record.family.extensions.sourceRevision - 1;
     delete local.extensions.houseBiographyModule;
     local.persons[0].name = 'Eigene Personenbearbeitung';
     local.persons[0].notes = 'Eigene unveränderte Personennotiz';
@@ -100,8 +106,16 @@ test('Sämtliche Bilder und Gebietsrücklinks sind lokal; Personenlinks verwende
     const page = createHousePageData(content);
     for (const image of Object.values(page.images)) {
       if (!image.src) continue;
-      assert.doesNotMatch(image.src, /^(?:https?:)?\/\//, content.id);
-      assert.ok(existsSync(new URL(image.src, feature)), `${content.id}: ${image.src}`);
+      let asset;
+      if (/^https?:\/\//.test(image.src)) {
+        const hosted = new URL(image.src);
+        assert.equal(hosted.origin, 'https://dieweltvonaleria.netlify.app', content.id);
+        asset = new URL('.' + hosted.pathname, root);
+      } else {
+        assert.doesNotMatch(image.src, /^\/\//, content.id);
+        asset = image.src.startsWith('/') ? new URL('.' + image.src, root) : new URL(image.src, feature);
+      }
+      assert.ok(statSync(asset).isFile(), `${content.id}: ${image.src}`);
     }
     assert.ok(existsSync(new URL(content.territoryHref, feature)), `${content.id}: ${content.territoryHref}`);
     for (const member of [content.founder, ...content.heads, ...content.heirs,
@@ -140,7 +154,7 @@ test('Canwyll und Tiwna behalten ihre kanonischen Hausränge; Tir An Muirghin wi
   assert.ok(!createHouseBiography(tir).stats.some(([label, value]) => label === 'Status' && /ausgestorben/i.test(value)));
 });
 
-test('Die Galerie ordnet alle 18 aktiven Hauptbilder ihren bestehenden Silberinsel-Häusern zu', () => {
+test('Die Galerie ordnet alle 19 aktiven Hauptbilder ihren belegten Silberinsel-Häusern zu', () => {
   const catalog = JSON.parse(readFileSync(new URL('Gallerien/krieger/data/catalog.json', root), 'utf8'));
   for (const { content } of sources.values()) {
     const hash = sha256(readFileSync(new URL(content.images.scene, feature)));

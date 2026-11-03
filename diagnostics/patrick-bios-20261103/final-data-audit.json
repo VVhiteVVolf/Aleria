@@ -109,5 +109,34 @@
     "canonicalCombatWrites": 0,
     "fullInventoryImports": 0,
     "checkChangedFiles": 0
+  },
+  "metadataFollowup": {
+    "verified": true,
+    "planId": "267d5332b331a0b468b2c5d84b808c769fa0c5da960ff83ebe524f8009c73f4a",
+    "committedAt": "2026-11-03T18:19:10.948674Z",
+    "characterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+    "fieldMask": [
+      "bio",
+      "role",
+      "updatedAt"
+    ],
+    "verifiedDocuments": 7,
+    "updatedDocuments": 1,
+    "verifyOnlyDocuments": 6,
+    "unrelatedRawFieldsExact": true,
+    "inventoryWrites": 0,
+    "combatWrites": 0,
+    "historicalReceiptPreserved": true,
+    "testsPassed": 31,
+    "verification": "metadata-followup-verification.json",
+    "localDatabaseProjection": {
+      "changedFiles": 9,
+      "selectedCharacters": 3,
+      "newCharacters": 0,
+      "unrelatedCharactersPreserved": 263,
+      "canonicalCombatWrites": 0,
+      "fullInventoryImports": 0,
+      "checkChangedFiles": 0
+    }
   }
 }

@@ -118,7 +118,7 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-figur-1": {
-      "src": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+      "src": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-hamnett&mode=view&person=unknown-cadogan-spouse",
       "alt": "Gwen Hamnett",
       "format": "portrait"

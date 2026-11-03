@@ -1,7 +1,7 @@
 import { PATRICK_BIOGRAPHY_ASSETS, PATRICK_BIOGRAPHY_LOCAL_ASSETS } from '../../AleriaAlmanach/modules/patrick-biographies/biography-assets.mjs';
 
 const tests=[
-  'patrick-biography-family-integration','patrick-biographies','patrick-biography-database','patrick-biography-publication',
+  'patrick-biography-family-integration','patrick-biographies','patrick-biography-database','patrick-biography-publication','patrick-biography-metadata-followup','patrick-biography-static-assets',
   'character-identity-retirements','gethin-character-links',
   'character-database-sync','character-database-overlays','character-export-sources',
   'creature-bestiary','biography-editions','biography-transfer'
@@ -67,6 +67,11 @@ export const PATRICK_BIOGRAPHY_TASKS=[{
     'firebase/scripts/content/patrick-biography-publication-plan.mjs',
     'firebase/scripts/content/patrick-biography-publication.mjs',
     'firebase/scripts/content/publish-patrick-biographies.mjs',
+    'firebase/scripts/content/patrick-biography-metadata-followup.mjs',
+    'firebase/scripts/content/publish-patrick-biography-metadata.mjs',
+    'firebase/scripts/content/patrick-biography-static-assets-plan.mjs',
+    'firebase/scripts/content/patrick-biography-static-assets.mjs',
+    'firebase/scripts/content/publish-patrick-biography-static-assets.mjs',
     'firebase/scripts/content/content-publication-client.mjs',
     'firebase/scripts/backup/firestore-value-codec.mjs',
     'firebase/scripts/backup/project-backup-crypto.mjs',

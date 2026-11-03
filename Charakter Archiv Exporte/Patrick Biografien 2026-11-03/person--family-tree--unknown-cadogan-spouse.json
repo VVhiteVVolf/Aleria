@@ -1,7 +1,7 @@
 {
   "type": "aleria-character",
   "version": 1,
-  "exportedAt": "2026-11-03T17:26:06.547268Z",
+  "exportedAt": "2026-11-03T18:19:10.948674Z",
   "mergeStrategy": "replace-reviewed-metadata-fields",
   "sourcePath": "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--family-tree--unknown-cadogan-spouse.json",
   "assignedTab": "Gwynthor",
@@ -23,12 +23,13 @@
       "worldPersonId": "person--family-tree--unknown-cadogan-spouse"
     },
     "genealogy": {
-      "birth": "1694",
+      "status": "alive",
       "worldPersonId": "person--family-tree--unknown-cadogan-spouse",
-      "familyRole": "married",
+      "houseName": "Haus Hamnett",
       "houseId": "house-hamnett",
-      "sex": "female",
-      "tags": [],
+      "portraitPlaceholder": "auto",
+      "birth": "1694",
+      "familyRole": "married",
       "sources": [
         {
           "familyId": "haus-sgrechiwr",
@@ -49,11 +50,20 @@
           "lastSyncedAt": "2026-11-03T17:25:17.128Z"
         }
       ],
-      "status": "alive",
-      "portraitPlaceholder": "auto",
       "death": "",
-      "houseName": "Haus Hamnett",
+      "tags": [],
       "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "cadogan-sgrechiwr",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+            "name": "Cadogan Sgrechiwr"
+          }
+        ],
         "children": [
           {
             "personId": "eluned-sgrechiwr",
@@ -71,67 +81,21 @@
             "worldPersonId": "person--haus-sgrechiwr--meinwen-sgrechiwr",
             "name": "Meinwen Sgrechiwr"
           }
-        ],
-        "partners": [
-          {
-            "personId": "cadogan-sgrechiwr",
-            "type": "marriage",
-            "status": "active",
-            "certainty": "confirmed",
-            "worldPersonId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
-            "name": "Cadogan Sgrechiwr"
-          }
-        ],
-        "parents": []
-      }
+        ]
+      },
+      "sex": "female"
     },
     "biography": {
+      "schemaVersion": 1,
+      "schema": "aleria.biography-module",
       "quote": "",
       "revision": 1793726717128,
       "biography": {
-        "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
-        "extraSections": [
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Geschichte & Vergangenheit",
-            "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Geschichte & Wirkung",
-            "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
-            "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
-          }
-        ],
-        "historyTitle": "Charakter",
-        "connectionTextOffset": 0,
-        "connectionsTitle": "Verbindungen",
-        "worksTitle": "Können & Fähigkeiten",
-        "triviaTitle": "Trivia",
-        "quotes": [],
-        "documentsTitle": "Eigentum & Besitz",
-        "sideWidth": 100,
-        "footer": "Personenakte · Gwen Hamnett",
-        "documents": [],
-        "works": [
-          "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
-          "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
-          "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
-          "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
-          "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
-          "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
-          "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
-          "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
-        ],
         "biographyTitle": "Hintergrund – Wer ist sie?",
+        "sideWidth": 100,
         "quotesTitle": "Zitate",
+        "historyTitle": "Charakter",
+        "knightMentors": [],
         "abilities": [
           {
             "title": "Künstlerisch",
@@ -184,30 +148,53 @@
             "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-loving-5f329a6a6ae0021c%2Foriginal.png?alt=media"
           }
         ],
-        "trivia": [
-          "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
-          "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
-          "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
-          "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
-          "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
-          "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
-          "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
-          "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
-          "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
-          "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
-          "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
-          "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
-          "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+        "connectionTextOffset": 0,
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Gwen wurde auf den Silberinseln als Angehörige des angesehenen Bürgerhauses Hamnett geboren. Ihre Familie gehörte zu den bedeutenden Kunsthandwerkerfamilien der Region und unterhielt seit Generationen enge geschäftliche Beziehungen zum gräflichen Haus Neidr.\n\nSchon während ihrer Kindheit war Gwen von Kunst und handwerklicher Gestaltung umgeben. In den Werkstätten ihrer Familie konnte sie beobachten, wie aus Holz und Stein kunstvolle Reliefs, Ornamente und Bildnisse entstanden.\n\nFrüh zeigte sich jedoch, dass ihre eigentliche Leidenschaft der Malerei galt.\n\nIhre Familie erkannte ihre Begabung und ermöglichte ihr eine weiterführende künstlerische Ausbildung in Celtigerns Wacht. Dort vertiefte Gwen ihre Kenntnisse, entwickelte ihren eigenen künstlerischen Ausdruck und knüpfte erste Kontakte zu anderen Malern und Kunstliebhabern.\n\nWährend ihres Aufenthalts lernte sie den jungen Cadogan Sgrechiwr kennen, der bereits damals durch seine Redegewandtheit, sein gepflegtes Auftreten und seine Begeisterung für höfische Umgangsformen auffiel.\n\nAus ihrer Bekanntschaft entwickelte sich eine Liebesbeziehung, die schließlich zur Ehe führte. Gwen entschied sich, dauerhaft in Gwynthor zu bleiben, ohne ihre Verbindung zu den Silberinseln aufzugeben.\n\nIm Laufe der folgenden Jahre bekamen Gwen und Cadogan zwei Töchter, Eluned und Meinwen. Gleichzeitig setzte Gwen ihre künstlerische Laufbahn fort und erarbeitete sich durch ihre Gemälde zunehmend einen ausgezeichneten Ruf.\n\nSchließlich eröffnete sie ein eigenes Atelier in Gwynthor, in dem sie bis heute arbeitet und Schüler ausbildet.\n\nIhre Herkunft und die Landschaften der Silberinseln sind ihr weiterhin wichtig geblieben und finden immer wieder Eingang in ihre Werke."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Gwen Hamnett gehört zu den angesehenen Künstlerinnen von Celtigerns Wacht und genießt insbesondere für ihre Porträt- und Landschaftsmalerei große Anerkennung.\n\nIhre Werke befinden sich in den Sammlungen wohlhabender Bürger, kunstliebender Persönlichkeiten und adeliger Familien. Besonders geschätzt wird ihre Fähigkeit, Menschen nicht ausschließlich in repräsentativer Würde, sondern mit ihren individuellen Eigenheiten darzustellen.\n\nAls Landschaftsmalerin widmet sie sich bevorzugt eindrucksvollen Naturansichten und dem wechselnden Zusammenspiel von Licht und Farbe.\n\nDurch ihr Atelier in Gwynthor trägt sie zudem zur Ausbildung einer neuen Generation von Malern bei. Ihre Schüler profitieren nicht nur von ihrem handwerklichen Können, sondern auch von ihrer Begeisterung für die Kunst.\n\nGwen unterhält weiterhin Verbindungen zu ihrer Familie auf den Silberinseln und arbeitet gelegentlich mit deren Werkstätten zusammen.\n\nInnerhalb der Gesellschaft von Gwynthor ist sie sowohl durch ihre eigene künstlerische Tätigkeit als auch durch ihre Ehe mit Cadogan Sgrechiwr bekannt. Dabei beruht ihr Ansehen in erster Linie auf ihren persönlichen Leistungen und nicht auf der Stellung ihres Gemahls."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung - Cadogan Sgrechiwr – ihr Gemahl",
+            "text": "Die wichtigste persönliche Bindung in Gwens Leben besteht zu ihrem Gemahl Cadogan Sgrechiwr, mit dem sie seit vielen Jahren eine glückliche Ehe führt.\n\nObwohl ihre Persönlichkeiten in mancher Hinsicht kaum unterschiedlicher sein könnten, verbindet die beiden eine tiefe gegenseitige Zuneigung.\n\nCadogan liebt Ordnung, feste Abläufe und die genaue Einhaltung gesellschaftlicher Regeln. Gwen hingegen folgt häufig ihrer Intuition und lässt sich nur ungern durch Termine oder Verpflichtungen von einer künstlerischen Eingebung abhalten.\n\nGerade diese Gegensätze sorgen im gemeinsamen Alltag immer wieder für amüsante, gelegentlich aber auch anstrengende Situationen.\n\nWährend Cadogan seine beruflichen Aufgaben mit größter Gewissenhaftigkeit plant, kann Gwen vollkommen überraschend beschließen, für mehrere Wochen zu einer Landschaftsreise aufzubrechen.\n\nCadogan reagiert auf solche Entscheidungen gewöhnlich mit erheblichem Unverständnis. Dennoch respektiert er ihre künstlerische Freiheit und bewundert ihre Begabung aufrichtig.\n\nGwen wiederum schätzt den Ehrgeiz, die Bildung und die Verlässlichkeit ihres Gemahls. Seine Eitelkeit und seine Angewohnheit, ungefragt ausführliche Erklärungen abzugeben, begegnet sie meist mit einem liebevollen Lächeln oder einer trockenen Bemerkung.\n\nBeide verbindet außerdem eine ausgeprägte Liebe zur Kunst und zum gesellschaftlichen Leben.\n\nIhre Ehe ist nicht frei von Meinungsverschiedenheiten, doch gerade die gegenseitige Anerkennung ihrer unterschiedlichen Leidenschaften bildet eine wesentliche Grundlage ihres Zusammenlebens."
+          }
         ],
-        "connectionPortraitHeight": 68,
-        "knightMentors": [],
+        "footer": "Personenakte · Gwen Hamnett",
+        "historyText": "<p>Gwen Hamnett ist eine selbstbewusste, kultivierte und lebensfrohe Frau,\nderen Persönlichkeit in besonderem Maße von ihrer Leidenschaft für die Kunst\ngeprägt wird.<o:p></o:p></p>\n\n<p>Im gewöhnlichen Umgang zeigt sie sich freundlich, aufmerksam und gesellig.\nSie besitzt eine ausgeprägte Beobachtungsgabe und versteht es, Menschen mit\nwenigen Blicken einzuschätzen. Dabei betrachtet sie ihre Mitmenschen häufig\nunbewusst mit den Augen einer Porträtmalerin und achtet auf Gesichtszüge,\nKörperhaltungen und kleinste Veränderungen ihres Ausdrucks.<o:p></o:p></p>\n\n<p>Gwen kann ausgesprochen ruhig und nachdenklich sein, insbesondere wenn sie\nan einem Gemälde arbeitet. Ebenso kann sie bei gesellschaftlichen\nZusammenkünften temperamentvoll, schlagfertig und unterhaltsam auftreten.<o:p></o:p></p>\n\n<p>Ihre wohl auffälligste Eigenheit zeigt sich jedoch, sobald sie von der Muse\ngeküsst wird.<o:p></o:p></p>\n\n<p>Erfasst Gwen eine künstlerische Eingebung, tritt für sie nahezu alles andere\nin den Hintergrund. Sie vergisst Mahlzeiten, verliert jedes Zeitgefühl und kann\nsich tagelang mit einem einzigen Gemälde beschäftigen. Glaubt sie, an einem\nbestimmten Ort ein außergewöhnliches Motiv gefunden zu haben, reist sie\nmitunter vollkommen spontan dorthin, ohne ihre Familie vorher ausreichend\ndarüber zu informieren.<o:p></o:p></p>\n\n<p>Solche Reisen können wenige Tage, gelegentlich aber auch mehrere Wochen\ndauern. Wann sie zurückkehrt, weiß Gwen häufig selbst nicht.<o:p></o:p></p>\n\n<p>Dabei handelt sie keineswegs aus mangelnder Zuneigung zu ihrer Familie.\nVielmehr besitzt ihre schöpferische Begeisterung eine solche Macht über sie,\ndass sie während dieser Phasen ihre Umgebung beinahe vollständig ausblendet.<o:p></o:p></p>\n\n<p>Diese Eigenschaft führt gelegentlich zu Schwierigkeiten, insbesondere mit\nihrem Gemahl Cadogan, der als gewissenhafter Protokollmeister größten Wert auf\nPlanung, Ordnung und Verlässlichkeit legt.<o:p></o:p></p>\n\n<p>Gwen nimmt seine gelegentliche Verzweiflung mit Humor, weiß jedoch durchaus,\ndass ihre Unberechenbarkeit für andere Menschen anstrengend sein kann.<o:p></o:p></p>\n\n<p>Trotz ihrer unterschiedlichen Temperamente führt sie mit Cadogan eine\nglückliche Ehe. Sie bewundert seine beruflichen Leistungen und liebt ihn\naufrichtig, auch wenn sie sich von seiner Eitelkeit und seinen gelegentlich\nausschweifenden Ausführungen nur selten beeindrucken lässt.<o:p></o:p></p>",
+        "connectionsTitle": "Verbindungen",
+        "worksTitle": "Können & Fähigkeiten",
+        "works": [
+          "Porträtmalerei - Gwen besitzt eine besondere Begabung dafür, Menschen lebendig und charaktergetreu darzustellen. Ihre Porträts gehören zu ihren bekanntesten Werken.",
+          "Landschaftsmalerei - Besonders Küstenlandschaften, wechselnde Lichtverhältnisse und eindrucksvolle Naturansichten zählen zu ihren bevorzugten Motiven.",
+          "Vielseitigkeit - Obwohl sie vor allem für Porträts und Landschaften bekannt ist, beherrscht Gwen unterschiedliche malerische Techniken und Themen.",
+          "Beobachtungsgabe -  Sie erkennt kleinste Veränderungen von Licht, Farbe, Ausdruck und Körperhaltung.",
+          "Kunsthandwerkliche Kenntnisse - Durch ihre Herkunft aus dem Haus Hamnett besitzt sie ein grundlegendes Verständnis für Reliefkunst, Schnitzerei und dekorative Gestaltung.",
+          "Künstlerische Ausbildung - Gwen verfügt über umfangreiche praktische Erfahrung und unterrichtet eigene Schüler in ihrem Atelier.",
+          "Menschenkenntnis - Ihre Tätigkeit als Porträtmalerin hat ihre Fähigkeit geschärft, Stimmungen und persönliche Eigenheiten wahrzunehmen.",
+          "Künstlerische Ausdauer - Während schöpferischer Phasen kann sie mit bemerkenswerter Beharrlichkeit an einem Werk arbeiten, bis es ihren Vorstellungen entspricht."
+        ],
+        "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>",
         "portraitStages": [
           "",
           "",
           "",
           ""
         ],
-        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+        "abilitiesTitle": "Persönlichkeit",
+        "connectionPortraitHeight": 68,
         "connections": [
           {
             "type": "heading",
@@ -270,10 +257,24 @@
             "imageFormat": "portrait"
           }
         ],
-        "abilitiesTitle": "Persönlichkeit",
-        "biographyText": "<p>Gwen Sgrechiwr (geb. Hamnett) ist eine 46-jährige, hochangesehene Malerin,\ndie ursprünglich von den Silberinseln stammt und heute in Gwynthor, der\nHauptstadt von Celtigerns Wacht, lebt und arbeitet. Sie ist die Gemahlin von\nCadogan Sgrechiwr, dem Protokollmeister des Herolds von Haus Draig, und Mutter\nzweier erwachsener Töchter, Eluned und Meinwen.</p><p><span style=\"font-size: 1rem;\">&nbsp;</span></p>\n\n<p>Gwen entstammt dem wohlhabenden Bürgerhaus Hamnett, einer traditionsreichen\nKünstler- und Kunsthandwerkerfamilie der Silberinseln. Die Familie ist\ninsbesondere für ihre kunstvollen Reliefarbeiten, ornamentalen Schnitzereien\nund dekorativen Bildhauerarbeiten bekannt. Seit Generationen fertigen ihre\nWerkstätten aufwendige Kunstwerke für wohlhabende Bürger, Adelsfamilien und\ninsbesondere das gräfliche Haus Neidr.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Bereits in jungen Jahren zeigte Gwen eine außergewöhnliche Begabung für die\nMalerei. Zur Erweiterung ihrer künstlerischen Fähigkeiten verließ sie ihre\nHeimat und reiste nach Celtigerns Wacht, wo sie schließlich Cadogan Sgrechiwr\nkennenlernte und sich dauerhaft niederließ.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Heute zählt Gwen zu den angesehenen Malerinnen der Grafschaft. Besonders\nihre Porträts und Landschaftsgemälde genießen einen ausgezeichneten Ruf, der\nüber die Grenzen Celtigerns Wacht hinausreicht. In Gwynthor unterhält sie ein\neigenes Atelier, in dem sie sowohl eigene Werke schafft als auch Schüler in der\nMalerei unterrichtet.<o:p></o:p></p>\n\n<p><o:p>&nbsp;</o:p></p>\n\n<p>Trotz ihres gesellschaftlichen Ansehens betrachtet Gwen die Malerei nicht\nbloß als Beruf, sondern als ihre größte Leidenschaft.<o:p></o:p></p>"
+        "quotes": [],
+        "trivia": [
+          "Gwen signiert ihre Gemälde weiterhin mit ihrem Geburtsnamen Gwen Hamnett, unter dem sie als Künstlerin bekannt geworden ist.",
+          "Wenn sie von einer künstlerischen Eingebung erfasst wird, vergisst sie mitunter Mahlzeiten, Verabredungen und sogar die Tageszeit.",
+          "Gelegentlich reist Gwen ohne größere Vorankündigung für mehrere Wochen fort, weil sie ein bestimmtes Landschaftsmotiv malen möchte.",
+          "Ihr Gemahl Cadogan hat sich bis heute nicht vollständig an diese spontanen Reisen gewöhnt.",
+          "Gwen beobachtet Menschen häufig so aufmerksam, dass diese sich fragen, ob etwas mit ihrem Äußeren nicht stimmt. Tatsächlich überlegt sie lediglich, wie sie deren Gesicht malen würde.",
+          "Obwohl sie eine angesehene Künstlerin ist, besitzt Gwen wenig Geduld mit Menschen, die Kunst ausschließlich als Zeichen gesellschaftlichen Wohlstands betrachten.",
+          "Sie besucht gerne Theateraufführungen und Kunstausstellungen, häufig gemeinsam mit ihrem Gemahl.",
+          "Cadogan versucht gelegentlich, ihr bei der Anordnung ihrer Gemälde behilflich zu sein. Seine Vorschläge zur korrekten Reihenfolge stoßen allerdings nicht immer auf Begeisterung.",
+          "Gwen ist die eigentliche Besitzerin von Sir Balthasar, einem außerordentlich kostspieligen Samtlicht-Kater aus Weisenfluh.",
+          "Den Rittertitel erhielt der Kater von ihren Töchtern Eluned und Meinwen, die ihn als Kinder kurzerhand zum „Sir“ erklärten.",
+          "Sir Balthasar sucht bevorzugt Gwens Nähe und lässt sich gerne in ihrem Atelier nieder, wo er ihre Arbeit gelegentlich durch seine Anwesenheit behindert.",
+          "Gwen betrachtet ihren Kater in erster Linie als geliebtes Haustier. Dass er ein Vermögen gekostet hat, ist für sie weit weniger bedeutend als für Cadogan.",
+          "Ihre größte persönliche Leidenschaft ist und bleibt die Malerei. Selbst nach vielen Jahren erfolgreicher Arbeit kann sie sich noch immer wie ein junges Mädchen über ein besonders schönes Motiv begeistern."
+        ],
+        "triviaTitle": "Trivia"
       },
-      "schemaVersion": 1,
       "stats": [
         {
           "label": "Vollständiger Name",
@@ -324,8 +325,7 @@
           "value": "Gwynthor"
         }
       ],
-      "quoteBy": "",
-      "schema": "aleria.biography-module"
+      "quoteBy": ""
     },
     "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
     "currentLocation": "Gwynthor",
@@ -340,8 +340,8 @@
       "notes": "Sir Balthasar ist Gwen Hamnetts geliebter, kostspieliger Samtlicht-Kater aus Weisenfluh. Eluned und Meinwen verliehen ihm als Kinder den Namenstitel „Sir“. Er sucht Gwens Nähe und hält sich gerne in ihrem Atelier auf. Alter und besondere Ausbildung sind nicht festgelegt.",
       "bestiaryReference": {
         "name": "Samtlicht",
-        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/samtlicht/index.html",
-        "id": "tiere/vieh/haustiere/katzen/samtlicht"
+        "id": "tiere/vieh/haustiere/katzen/samtlicht",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/samtlicht/index.html"
       },
       "classification": {
         "genus": "Katzen"
@@ -365,9 +365,9 @@
       "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-sonnenaufgang-3f887817421ab673%2Foriginal.jpeg?alt=media",
       "notes": "Sonnenaufgang ist Gwen Hamnetts Goldmähne. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
       "bestiaryReference": {
+        "name": "Goldmähne",
         "id": "tiere/pferde/goldmaehne",
-        "url": "/Bestiarium/tiere/pferde/goldmaehne/index.html",
-        "name": "Goldmähne"
+        "url": "/Bestiarium/tiere/pferde/goldmaehne/index.html"
       },
       "classification": {
         "genus": "Pferde"
@@ -389,7 +389,7 @@
     "schema": "aleria.patrick-biography-publication-confirmation",
     "schemaVersion": 1,
     "verified": true,
-    "committedAt": "2026-11-03T17:26:06.547268Z",
-    "planId": "7b02856c20c23d9606f0bf8a4b257bfd74769dcbfef6e36788da5ba93f446162"
+    "committedAt": "2026-11-03T18:19:10.948674Z",
+    "planId": "267d5332b331a0b468b2c5d84b808c769fa0c5da960ff83ebe524f8009c73f4a"
   }
 }

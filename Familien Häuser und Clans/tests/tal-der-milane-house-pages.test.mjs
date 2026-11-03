@@ -30,8 +30,9 @@ const normalizedGraph = family => Object.fromEntries(graphKeys.map(key => [key,
 const context = vm.createContext({ window: {} });
 vm.runInContext(readFileSync(new URL('haeuser.registry.js', feature), 'utf8'), context);
 
-test('19 Häuser haben verknüpfte Hausseite, Bio und das eigene kanonische Iframe', () => {
-  assert.equal(sources.size, 19);
+test('Alle 21 bereits belegten Familien haben Hausseite, Bio und das eigene kanonische Iframe', () => {
+  assert.equal(sources.size, 21);
+  assert.deepEqual([...sources.keys()].sort(), before.map(record => record.id).sort());
   for (const { content, url } of sources.values()) {
     const page = createHousePageData(content);
     const bio = createHouseBiography(content);
@@ -95,22 +96,28 @@ test('Alle Bild- und Personenlinks sind lokal vorhanden und verwenden echte Iden
   }
 });
 
-test('Die 11 knappen Vorbereitungen erfinden weder Gründer noch Amtsinhaber', () => {
+test('Die 13 knappen Vorbereitungen einschließlich beider antiker Clans erfinden weder Gründer noch Amtsinhaber', () => {
   const prepared = [...sources.values()].map(entry => entry.content).filter(content => content.prepared && !['haus-sliabh'].includes(content.id));
-  assert.equal(prepared.length, 11);
+  assert.equal(prepared.length, 13);
+  const ancientClans = ['haus-ua-fionnghal', 'haus-gormard'];
+  for (const id of ancientClans) {
+    assert.equal(sources.get(id).content.prepared, true);
+    assert.equal(sources.get(id).content.type, 'Clan');
+  }
   for (const content of prepared) {
     assert.equal(content.founder, null);
     assert.deepEqual(content.heads, []);
     assert.deepEqual(content.offices, []);
     assert.equal(content.profile.founding, '');
-    assert.match(content.biographySummary.history, /bislang nicht vor/);
+    if (ancientClans.includes(content.id)) assert.equal(content.biographySummary.history, 'Über die Anfänge und die weitere Geschichte der Familie ist bislang wenig überliefert.');
+    else assert.match(content.biographySummary.history, /bislang nicht vor/);
   }
   assert.equal(sources.get('haus-ffwnarch').content.type, 'Bürgerliches Haus');
   assert.match(sources.get('haus-durdynn').content.biographySummary.relations, /Caryl Durdynn.*Cónán Sliabh/);
   assert.equal(sources.get('haus-faelwyn').content.liege, "Haus Tylluan O'Penbryn");
 });
 
-test('Die Galerie weist alle 19 Hauptbilder genau ihren bestehenden Häusern zu', () => {
+test('Die Galerie weist alle 21 Hauptbilder genau ihren bestehenden Häusern zu', () => {
   const catalog = JSON.parse(readFileSync(new URL('Gallerien/krieger/data/catalog.json', root), 'utf8'));
   for (const { content } of sources.values()) {
     const hash = sha256(readFileSync(new URL(content.images.scene, feature)));

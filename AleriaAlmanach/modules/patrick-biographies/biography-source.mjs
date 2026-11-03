@@ -22,6 +22,17 @@ export function getPatrickBiographyPersonFields(identity){
   return fields;
 }
 
+// The profile's short introduction is separate from its complete authored
+// biography. Rhiannon's former service role predates her reviewed heraldic
+// office; derive both current values from that same approved source.
+export function getPatrickBiographyCharacterMetadata(identity){
+  const source=getPatrickBiographySource(identity);
+  if(source?.characterId!==RHIANNON_CHARACTER_ID)return {};
+  const opening=source.biographyModule.biography.biographyText.match(/^<p>([^<>]+)<\/p>/);
+  if(!opening||!source.personFields.title)throw Error('Die belegte Rollen-Kurzfassung fehlt.');
+  return {role:source.personFields.title,bio:opening[1]};
+}
+
 // This standalone function is also emitted into the existing classic-script
 // biography bridge. One implementation owns the exact approved table repairs.
 export function applyPatrickBiographyStatCorrections(stats=[],corrections=[]) {
@@ -90,6 +101,7 @@ export function preparePatrickBiographyCharacters(currentCharacters,{now,assetMa
     character.name=source.name;
     character.title=source.personFields.title;
     character.currentLocation=source.residence;
+    Object.assign(character,getPatrickBiographyCharacterMetadata(source.key));
     if(source.personFields.portrait&&!character.portrait)character.portrait=source.personFields.portrait;
     if(character.portrait)character.portrait=resolvePatrickBiographyAsset(character.portrait);
     character.identity={...(character.identity||{}),worldPersonId:source.worldPersonId};

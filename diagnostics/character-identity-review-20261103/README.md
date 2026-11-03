@@ -85,3 +85,12 @@ importiert und keine kanonischen Kampfdaten geschrieben. Der erneute
 `--check` meldete null veraltete Ausgaben. Push und Netlify-Deploy sind der
 anschließende gemeinsame Releaseschritt; dieser Bericht behauptet noch
 keinen erfolgten Frontend-Deploy.
+
+Die spätere Browserprüfung führte zusätzlich zu einem getrennten, streng
+begrenzten Nachtrag für Rhiannons veraltete flache Rolle und Kurzfassung.
+Nur `role`, `bio` und `updatedAt` ihrer Hauptakte wurden mit Versionsguards
+geschrieben; die sechs anderen geprüften Personen-/Tierakten und alle
+unbeteiligten REST-Felder blieben exakt erhalten. Der erneute lokale Abgleich
+derselben drei Personen erzeugte keine weitere Akte und erhält wiederum
+263 unbeteiligte Charaktere. Der separate Beleg ist
+[`metadata-followup-verification.json`](../patrick-bios-20261103/metadata-followup-verification.json).

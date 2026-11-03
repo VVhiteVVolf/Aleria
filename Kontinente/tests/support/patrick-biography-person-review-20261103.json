@@ -1,0 +1,414 @@
+{
+  "reviewedAt": "2026-11-03",
+  "beforeCommit": "3bc537307",
+  "reason": "Explicit three-biography identity and portrait review. Exact metadata is checked before restoring predecessor values for historical territorial proofs. Existing people, world IDs, relationships and unrelated fields remain protected. No historical baseline hashes are replaced.",
+  "reviews": [
+    {
+      "familyId": "haus-sgrechiwr",
+      "personCount": 32,
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadogan-sgrechiwr",
+            "title"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Vorgesehener Erbe des Hauses Sgrechiwr",
+          "after": "Protokollmeister des Herolds von Haus Draig · Vorgesehener Erbe des Hauses Sgrechiwr"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadogan-sgrechiwr",
+            "extensions",
+            "biographyModule"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "8d0ec0b28a39b7a6985243fa63512e8f901a8540d35eca8fa5947d41f0f1eeb8"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadogan-sgrechiwr",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadogan-sgrechiwr",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 2
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadogan-sgrechiwr",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 2
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "name"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Unbekannte Ehefrau",
+          "after": "Gwen Hamnett"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "title"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "",
+          "after": "Malerin"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "status"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "unknown",
+          "after": "alive"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "birth"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "????",
+          "after": "1694"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "death"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "????",
+          "after": ""
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "",
+          "after": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "houseId"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "",
+          "after": "house-hamnett"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "extensions",
+            "biographyModule"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "a31c11d613fa70337acd991d13f298c105ac97bad048ca6d89529e4c3d7922b5"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "name",
+            "birth",
+            "death",
+            "status",
+            "sex",
+            "title",
+            "portrait",
+            "houseId"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 2
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@unknown-cadogan-spouse",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 2,
+            "birth": 2,
+            "death": 2,
+            "status": 2,
+            "sex": 2,
+            "title": 2,
+            "portrait": 2,
+            "houseId": 2
+          }
+        }
+      ],
+      "houseAddition": {
+        "index": 5,
+        "afterCount": 6,
+        "house": {
+          "id": "house-hamnett",
+          "name": "Haus Hamnett",
+          "motto": "",
+          "emblem": "assets/images/houses/Silberinsel/haus-hamnett.png",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "familyId": "haus-draenmelyn",
+      "personCount": 18,
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "name"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Rhiannon Draenmelyn",
+          "after": "Rhiannon (geb. Draenmelyn) Swyll"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "title"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Bedienstete des Hauses Draig",
+          "after": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "portrait"
+          ],
+          "after": [
+            "portrait",
+            "name",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "biographyModule"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "81eb3f793b1a55ee5b6cdad1be408adc9c591250bb836086f75ecb17f429de5b"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 10
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 10,
+            "title": 10
+          }
+        }
+      ]
+    },
+    {
+      "familyId": "haus-swyll",
+      "personCount": 34,
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "name"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Rhiannon Draenmelyn",
+          "after": "Rhiannon (geb. Draenmelyn) Swyll"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "title"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": "Bedienstete des Hauses Draig",
+          "after": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "portrait"
+          ],
+          "after": [
+            "portrait",
+            "name",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "biographyModule"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "81eb3f793b1a55ee5b6cdad1be408adc9c591250bb836086f75ecb17f429de5b"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 15
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhiannon-draenmelyn",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 15,
+            "title": 15
+          }
+        }
+      ]
+    }
+  ]
+}

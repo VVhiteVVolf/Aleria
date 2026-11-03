@@ -5,7 +5,7 @@ import { confirmCharacterRecordProjection } from '../../../CharakterDatenbank/li
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { mergeOnlineAndLocalCharacter } from '../../../CharakterDatenbank/assets/js/character-database-client.mjs';
 import { markCharacterCompanionOverlay, applyCharacterCompanionOverlays } from '../../../CharakterDatenbank/lib/character-companion-overlays.mjs';
-import { patrickBiographyCharacterIds, GWEN_CHARACTER_ID } from './biography-identities.mjs';
+import { patrickBiographyCharacterIds, GWEN_CHARACTER_ID, RHIANNON_CHARACTER_ID } from './biography-identities.mjs';
 import { getPatrickBiographySource } from './biography-source.mjs';
 import { getPatrickBiographyPetSpecs } from './biography-companions.mjs';
 import { resolveCreatureBestiaryReference } from '../creatures/creature-bestiary-reference.js';
@@ -43,7 +43,7 @@ export function createPatrickBiographyExports(confirmation){
     return {type:'aleria-character',version:1,exportedAt:confirmation.committedAt,mergeStrategy:'replace-reviewed-metadata-fields',
       sourcePath:`${PATRICK_BIOGRAPHY_EXPORT_DIRECTORY}/${id}.json`,assignedTab:id===GWEN_CHARACTER_ID?'Gwynthor':'',
       ...(id===GWEN_CHARACTER_ID?{residencePlacement:{kind:'place',id:'gwynthor',label:'Gwynthor',source:'confirmed-residence'}}:{}),
-      character:pick(character,publicFields),companionBindings:confirmation.creatures.filter(c=>c.itemOrigin.ownerCharacterId===id).map(publicBinding),
+      character:pick(character,id===RHIANNON_CHARACTER_ID?[...publicFields,'role','bio']:publicFields),companionBindings:confirmation.creatures.filter(c=>c.itemOrigin.ownerCharacterId===id).map(publicBinding),
       confirmedPublication:{schema:confirmation.schema,schemaVersion:1,verified:true,committedAt:confirmation.committedAt,planId:confirmation.planId}};
   });
 }

@@ -10,6 +10,9 @@ import kingdomMetadata from './kingdom-metadata-review-20261101.json' with { typ
 import traitCards from './character-trait-card-review-20261102.json' with { type: 'json' };
 import gwyllachAges from './gwyllach-age-review-20261102.json' with { type: 'json' };
 import currentMetadata from './current-family-metadata-review-20261102.json' with { type: 'json' };
+import patrickBiographies from './patrick-biography-person-review-20261103.json' with { type: 'json' };
+import houseBiographyOwnership from './house-biography-ownership-review-20261103.json' with { type: 'json' };
+import sonnenkuesteAllegiance from './sonnenkueste-knight-allegiance-review-20261103.json' with { type: 'json' };
 import { applyFamilyMetadataReview } from './apply-family-metadata-review.mjs';
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -17,6 +20,24 @@ export const reviewHash = value => createHash('sha256').update(JSON.stringify(va
 export function protectedAlbicFamilies(records) {
   return records.map(record => {
     const copy = structuredClone(record);
+    const ownershipReview = houseBiographyOwnership.reviews.find(review => review.familyId === record.id);
+    if (ownershipReview) applyFamilyMetadataReview(copy, ownershipReview);
+    const allegianceReview = sonnenkuesteAllegiance.reviews.find(review => review.familyId === record.id);
+    if (allegianceReview) applyFamilyMetadataReview(copy, allegianceReview);
+    // Three approved biography identities changed presentation metadata only.
+    // Validate their exact new fields before the older proof sees predecessor
+    // values. Person/world IDs, all family edges and unrelated fields stay hashed.
+    const patrickReview = patrickBiographies.reviews.find(review => review.familyId === record.id);
+    if (patrickReview) {
+      assert.equal(copy.family.persons.length, patrickReview.personCount, `${record.id}/approved-biography-person-count`);
+      applyFamilyMetadataReview(copy, patrickReview);
+      const addition = patrickReview.houseAddition;
+      if (addition) {
+        assert.equal(copy.family.houses.length, addition.afterCount, `${record.id}/approved-hamnett-house-count`);
+        assert.deepEqual(copy.family.houses[addition.index], addition.house, `${record.id}/approved-hamnett-house`);
+        copy.family.houses.splice(addition.index, 1);
+      }
+    }
     const metadata = currentMetadata.reviews.find(review => review.familyId === record.id);
     if (metadata) applyFamilyMetadataReview(copy, metadata);
     // Validate the narrowly approved trait-card and age edits, then restore

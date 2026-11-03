@@ -64,7 +64,11 @@ test('29 distinct descriptions are shared by map and registers, without filling 
 
 test('house selection, ranks, heads and council seats follow the individual sources', () => {
   assert.equal(pages.length,6);
-  assert.deepEqual(pages.map(p=>p.view.familySections.flatMap(s=>s.cards).length),[18,1,1,1,1,2]);
+  assert.deepEqual(pages.map(p=>p.view.familySections.flatMap(s=>s.cards).length),[19,1,1,1,1,2]);
+  const hamnett = pages[0].view.familySections.flatMap(section=>section.cards).find(house=>house.id==='haus-hamnett');
+  assert.ok(hamnett && !hamnett.featured);
+  assert.match(hamnett.href, /kleinehaeuser\.html\?haus=haus-hamnett$/);
+  assert.ok(pages.slice(1).every(page=>!page.view.familySections.flatMap(section=>section.cards).some(house=>house.id==='haus-hamnett')));
   for (const page of pages) assert.equal(page.view.familySections.flatMap(s=>s.cards).filter(h=>h.featured).length,1);
   const heads = ['Yvain Neidr','Duny Saith','Kimball Crefyddol','Eiddyl Canwyll','Yspaddaden Pyrth','Morholt Tiwna'];
   for (const [i,page] of pages.entries()) assert.equal(page.view.article.infobox.flatMap(g=>g.rows).find(r=>r.label==='Oberhaupt').value,heads[i]);

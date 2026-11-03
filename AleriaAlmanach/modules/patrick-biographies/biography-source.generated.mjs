@@ -1187,7 +1187,7 @@ export const PATRICK_BIOGRAPHY_SOURCE = {
         "status": "alive",
         "birth": "1694",
         "death": "",
-        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media",
+        "portrait": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
         "portraitPlaceholder": "auto",
         "houseId": "house-hamnett",
         "houseName": "Haus Hamnett",
@@ -1225,20 +1225,20 @@ export const PATRICK_BIOGRAPHY_SOURCE = {
           ]
         },
         "birthYear": 1694,
-        "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
+        "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
       },
       "familySources": [
         {
           "familyId": "haus-sgrechiwr",
           "personId": "unknown-cadogan-spouse",
           "url": "../Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view&person=unknown-cadogan-spouse",
-          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
+          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadogan-sgrechiwr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--cadogan-sgrechiwr\",\"name\":\"Cadogan Sgrechiwr\"}],\"children\":[{\"personId\":\"eluned-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--eluned-sgrechiwr\",\"name\":\"Eluned Sgrechiwr\"},{\"personId\":\"meinwen-sgrechiwr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgrechiwr--meinwen-sgrechiwr\",\"name\":\"Meinwen Sgrechiwr\"}]}}"
         },
         {
           "familyId": "haus-hamnett",
           "personId": "unknown-cadogan-spouse",
           "url": "../Stammbäume/Stammbaum.html?family=haus-hamnett&mode=view&person=unknown-cadogan-spouse",
-          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-gwen-hamnett-8dcd4ee3ff9065d9%2Foriginal.jpeg?alt=media\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          "fingerprint": "{\"name\":\"Gwen Hamnett\",\"title\":\"Malerin\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-hamnett\",\"portrait\":\"https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
         }
       ],
       "residenceFolderPath": [

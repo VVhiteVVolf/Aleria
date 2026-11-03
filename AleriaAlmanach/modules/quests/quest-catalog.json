@@ -2479,6 +2479,10 @@
       "title": "Draig Leibgarde"
     },
     {
+      "id": "oweta-quartett",
+      "title": "Owetas Quartett"
+    },
+    {
       "id": "drachentanz-volkstanz",
       "title": "Drachentanz (Volkstanz)"
     },
@@ -2971,6 +2975,31 @@
       "id": "draig-leibgarde::page:3",
       "title": "Draig Leibgarde · IV. — Dienstordnung & Namen",
       "moduleId": "draig-leibgarde"
+    },
+    {
+      "id": "oweta-quartett",
+      "title": "Owetas Quartett",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:quartett",
+      "title": "Owetas Quartett · Owetas Quartett",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:rangfolge",
+      "title": "Owetas Quartett · Die Gemeinschaft",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:gruppenuebersicht",
+      "title": "Owetas Quartett · Gruppenübersicht",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::session:mittagsrast",
+      "title": "Owetas Quartett · Mittagsrast am Lagerfeuer",
+      "moduleId": "oweta-quartett"
     },
     {
       "id": "drachentanz-volkstanz",
@@ -5419,19 +5448,21 @@
     },
     {
       "schemaVersion": 1,
+      "id": "notice:cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel:gwynthor-fleischsammler",
+      "title": "Achtung vor dem Fleischsammler!",
+      "summary": "An die Bürger Gwynthors und die Bewohner seines Bannkreises. Seit einem Monat werden im östlichen Umland Frauen ermordet aufgefunden. Was anfangs als einzelne, voneinander unabhängige Verbrechen behandelt wurde, hat sich nach dem Abgleich der Funde als zusammenhängende Mordserie erwiesen. Der Täter ist unter dem Beinamen Fleischsammler bekannt. Er ist noch nicht gefasst. Den Göttern sei Dank ist innerhalb Gwynthors bislang keinerlei Tätigkeit dieses Mörders festgestellt worden. Die bekannten Taten betreffen den östlichen Bannkreis: die Bauernhöfe, Straßen und Felder jenseits unserer Mauern. Gerade dort ist nach Einbruch der Dunkelheit äußerste Vorsicht geboten. Die Fahndung arbeitet mit Nachdruck. Meine Cochllamwyr haben Gwynthor-Stadt zu sichern; dies ist ihr Auftrag, und diesen werden sie erfüllen. Für das Umland sind die dortigen Ortswachen zuständig. Ich habe dort doppelte Wachgänge und doppelte Schichten anordnen lassen. Kein Mann wird seinen Posten aus Bequemlichkeit räumen. Doch auch eine verdoppelte Wache kann nicht gleichzeitig an jedem Feldweg stehen. Jeder Haushalt hat seinen Teil zu leisten. Lasst Eure Töchter, Mütter und Schwestern des Nachts nicht allein auf die Straße. Organisiert Begleitung. Wer spät heimkehren muss, soll den Heimweg in Gesellschaft antreten. Das gilt vorübergehend, bis dieser Mörder gefasst ist; bis dahin erwarte ich, dass diese Warnung ernst genommen wird. Umsicht ist keine Feigheit. Für die Euren einzustehen ist Pflicht. Wir versehen unseren Dienst; verseht Ihr den Euren. Gezeichnet: Sir Ferydnand Gafyr Kommandant der Stadtwache von Gwynthor",
       "patron": "Sir Ferydnand Gafyr · Kommandant der Stadtwache von Gwynthor",
       "links": {
         "modules": [],
-        "maps": [
-          "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis"
-        ],
+        "maps": [],
         "boards": [
           "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel"
         ],
         "scenes": [],
         "notices": [
           {
-            "boardId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel"
+            "boardId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",
+            "noticeId": "gwynthor-fleischsammler"
           }
         ]
       },
@@ -5447,124 +5478,12 @@
           "amount": 1
         }
       ],
-      "objectives": [
-        {
-          "id": "report-commandant",
-          "title": "Als Suchwillige beim Kommandanten der Stadtwache melden"
-        },
-        {
-          "id": "submit-observations",
-          "title": "Eigene Beobachtungen vollständig und ohne Ausschmückung an den Hof melden"
-        },
-        {
-          "id": "find-perpetrator",
-          "title": "Den gesuchten Täter auffinden und zur Strecke bringen; Feststellungen durch den Hof prüfen lassen"
-        }
-      ],
-      "dossier": {
-        "tagline": "Mordserie im östlichen Bannkreis · Täter unbekannt",
-        "preparation": "Söldner, Kopfgeldjäger und andere zur Übernahme der Suche bereite Personen melden sich zunächst beim Kommandanten der Stadtwache. Vorhandene Hinweise sind unmittelbar an den Hof von Gwynthor zu richten. Nennt, was Ihr selbst wahrgenommen habt, wo und wann. Kennzeichnet Vermutungen, ungenaue Zeitangaben und fremde Mitteilungen. Frauen sollen nachts nicht allein unterwegs sein; organisiert Begleitung.",
-        "invitation": "Umsicht ist keine Feigheit. Für die Euren einzustehen ist Pflicht.",
-        "rewardPromise": "Drei Goldmünzen für das Auffinden und Zurstreckebringen des Täters; eine Silbermünze für ernsthafte, nachweislich hilfreiche Informationen. Der Hof prüft Identität, Leistung und Anspruch. Eine bloße Beschuldigung oder ein unbestätigtes Gerücht begründet keinen Anspruch. Vorsätzliche Falschaussagen und Täuschungen werden streng geahndet.",
-        "participants": [
-          {
-            "name": "Neithon Draig",
-            "role": "Adjutant des Justiziars von Gwynthor",
-            "description": "Adjutant des Justiziars von Gwynthor. Die Verfügung zur Belohnung verlangt eine Prüfung durch den Hof; bloße Beschuldigungen und unbestätigte Gerüchte genügen nicht.",
-            "kind": "character",
-            "recordId": "person--haus-draig--neithon-1718-draig",
-            "image": "/Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg",
-            "profile": ""
-          },
-          {
-            "name": "Meredydd Gwyllach",
-            "role": "Netzmeister der Fahndung",
-            "description": "Netzmeister der Fahndung. Hinweise zum östlichen Bannkreis, zu den späten Abend- und Nachtstunden und zum vergangenen Monat sind unmittelbar an den Hof von Gwynthor zu richten.",
-            "kind": "character",
-            "recordId": "person--haus-gwyllach--meredydd-gwyllach",
-            "image": "/Stammbäume/assets/images/portraits/haus-gwyllach/meredydd-gwyllach.jpg",
-            "profile": ""
-          },
-          {
-            "name": "Sir Ferydnand Gafyr",
-            "role": "Kommandant der Stadtwache von Gwynthor",
-            "description": "Kommandant der Stadtwache von Gwynthor. Söldner, Kopfgeldjäger und andere Suchwillige melden sich zunächst bei ihm; er leitet sie gegebenenfalls an die Fahndung weiter.",
-            "kind": "character",
-            "recordId": "person--haus-gafyr--ferydnand-gafyr",
-            "image": "/Stammbäume/assets/images/portraits/haus-gafyr/ferydnand-gafyr.jpg",
-            "profile": ""
-          }
-        ],
-        "route": null,
-        "coverCaption": "Sinnbild · keine Zeichnung nach Zeugenaussage",
-        "cardImageStyle": "avatar",
-        "participantsTitle": "Kontaktpersonen",
-        "area": {
-          "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
-          "title": "Höfe und Landwege im östlichen Bannkreis",
-          "image": "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/display/gwynthor-normal-4096-q90.webp",
-          "width": 8192,
-          "height": 6300,
-          "center": {
-            "x": 6028,
-            "y": 2784
-          },
-          "radius": 1024,
-          "note": "Die bekannten Taten betreffen das östliche Umland außerhalb der Stadt: Bauernhöfe, Straßen und Felder. Innerhalb Gwynthors ist bislang keine Tätigkeit dieses Mörders festgestellt worden.",
-          "locations": [
-            {
-              "name": "Caer Ysgellfor",
-              "pinId": "gwynthor-marking-091",
-              "x": 0.744384765625,
-              "y": 0.4300825396825397
-            },
-            {
-              "name": "Jagdhaus Helfaen",
-              "pinId": "gwynthor-marking-115",
-              "x": 0.78936767578125,
-              "y": 0.4658539682539683
-            },
-            {
-              "name": "Marchwern-Gestüt",
-              "pinId": "gwynthor-marking-092",
-              "x": 0.647705078125,
-              "y": 0.4323365079365079
-            },
-            {
-              "name": "Tirfelyn-Hof",
-              "pinId": "gwynthor-marking-107",
-              "x": 0.67431640625,
-              "y": 0.5049015873015873
-            },
-            {
-              "name": "Dolweth-Kate",
-              "pinId": "gwynthor-marking-118",
-              "x": 0.70703125,
-              "y": 0.5494349206349206
-            },
-            {
-              "name": "Brynial-Kate",
-              "pinId": "gwynthor-marking-086",
-              "x": 0.82373046875,
-              "y": 0.4069396825396825
-            },
-            {
-              "name": "Brauerhof Bragwen & Eiddfer",
-              "pinId": "gwynthor-marking-074",
-              "x": 0.791015625,
-              "y": 0.3292063492063492
-            }
-          ]
-        },
-        "informationSources": [],
-        "pois": [],
-        "encounters": [],
-        "rewardArt": []
-      },
+      "objectives": [],
       "revision": 0,
       "boardAvailability": {
         "notices": [
           {
+            "id": "gwynthor-fleischsammler",
             "publishedOn": {
               "year": 1740,
               "month": 3,
@@ -5572,6 +5491,7 @@
             }
           },
           {
+            "id": "gwynthor-fleischsammler-belohnung",
             "publishedOn": {
               "year": 1740,
               "month": 3,
@@ -5579,6 +5499,7 @@
             }
           },
           {
+            "id": "gwynthor-fleischsammler-fahndung",
             "publishedOn": {
               "year": 1740,
               "month": 3,
@@ -5586,6 +5507,7 @@
             }
           },
           {
+            "id": "gwynthor-fleischsammler-taeterblatt",
             "publishedOn": {
               "year": 1740,
               "month": 3,
@@ -6188,6 +6110,7 @@
     "AleriaAlmanach/modules/name-list/name-list-data.js",
     "AleriaAlmanach/modules/natural-resources/natural-resources-data.js",
     "AleriaAlmanach/modules/organization-network/organization-network-data.js",
+    "AleriaAlmanach/modules/oweta-quartett/oweta-quartett-data.js",
     "AleriaAlmanach/modules/pendrwn-general-store/store-data.js",
     "AleriaAlmanach/modules/piracy/piracy-entries.js",
     "AleriaAlmanach/modules/religion/gruener-bund/gruener-bund-entry.js",

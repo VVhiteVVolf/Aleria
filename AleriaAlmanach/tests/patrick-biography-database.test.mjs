@@ -9,7 +9,7 @@ import { readCharacterExportOverlays } from '../../CharakterDatenbank/lib/charac
 import { markCharacterCompanionOverlay } from '../../CharakterDatenbank/lib/character-companion-overlays.mjs';
 import { markCharacterResidenceOverlay } from '../../CharakterDatenbank/lib/character-residence-overlays.mjs';
 import { markReviewedCharacterMetadata } from '../../CharakterDatenbank/lib/character-reviewed-metadata-overlays.mjs';
-import { PATRICK_BIOGRAPHY_ENTRIES,preparePatrickBiographyCharacters,buildPatrickBiographyModule } from '../modules/patrick-biographies/biography-source.mjs';
+import { PATRICK_BIOGRAPHY_ENTRIES,preparePatrickBiographyCharacters,buildPatrickBiographyModule,getPatrickBiographyCharacterMetadata } from '../modules/patrick-biographies/biography-source.mjs';
 import { planPatrickBiographies } from '../modules/patrick-biographies/biography-plan.mjs';
 import { CADOGAN_CHARACTER_ID,RHIANNON_CHARACTER_ID,GWEN_CHARACTER_ID } from '../modules/patrick-biographies/biography-identities.mjs';
 import { createPatrickBiographyExports,confirmationFromPatrickBiographyExports,projectPatrickBiographyDatabase } from '../modules/patrick-biographies/biography-database-projection.mjs';
@@ -72,6 +72,24 @@ test('replaying registered public sources is fully idempotent and keeps local re
   const second=projectPatrickBiographyDatabase({...first,existingRecords:first.records.map(row=>row.record),exports,familyCandidates:candidates});
   assert.deepEqual(second.registry,first.registry);assert.deepEqual(second.snapshot,first.snapshot);assert.deepEqual(second.report,first.report);
   assert.deepEqual(second.records,first.records);assert.equal(second.verification.newCharacters,0);
+});
+
+test('only Rhiannons confirmed flat role and summary replace stale local metadata',()=>{
+  const input=fixture();
+  for(const id of [CADOGAN_CHARACTER_ID,RHIANNON_CHARACTER_ID]){
+    for(const character of [input.snapshot.characters.find(row=>row.id===id),input.existingRecords.find(row=>row.character.id===id).character]){
+      character.role='Local previous role';character.bio='Local previous short summary';
+    }
+  }
+  const cadogan=input.confirmation.characters.find(row=>row.id===CADOGAN_CHARACTER_ID);
+  cadogan.role='Different unrelated online role';cadogan.bio='Different unrelated online summary';
+  const result=projectPatrickBiographyDatabase({...input,exports:createPatrickBiographyExports(input.confirmation)});
+  const rhiannon=result.snapshot.characters.find(row=>row.id===RHIANNON_CHARACTER_ID);
+  const metadata=getPatrickBiographyCharacterMetadata(RHIANNON_CHARACTER_ID);
+  assert.equal(rhiannon.role,metadata.role);assert.equal(rhiannon.bio,metadata.bio);
+  const kept=result.snapshot.characters.find(row=>row.id===CADOGAN_CHARACTER_ID);
+  assert.equal(kept.role,'Local previous role');assert.equal(kept.bio,'Local previous short summary');
+  assert.deepEqual(rhiannon.biography,input.confirmation.characters.find(row=>row.id===RHIANNON_CHARACTER_ID).biography);
 });
 
 test('general archive overlays add exact pet bindings through shared identity helpers and preserve later full inventory snapshots',()=>{

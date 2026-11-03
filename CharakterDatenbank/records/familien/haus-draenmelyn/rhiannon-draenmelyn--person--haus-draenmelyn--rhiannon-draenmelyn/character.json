@@ -71,6 +71,7 @@
       "documentId": "person--haus-draenmelyn--rhiannon-draenmelyn",
       "documentIds": [
         "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "person--haus-draenmelyn--rhiannon-draenmelyn",
         "person--haus-draenmelyn--rhiannon-draenmelyn"
       ],
       "documents": [
@@ -83,6 +84,11 @@
           "documentId": "person--haus-draenmelyn--rhiannon-draenmelyn",
           "createdAt": "",
           "updatedAt": "2026-11-03T17:25:17.128Z"
+        },
+        {
+          "documentId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "createdAt": "",
+          "updatedAt": "2026-11-03T18:15:46.330Z"
         }
       ]
     },
@@ -105,13 +111,14 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-draenmelyn--rhiannon-draenmelyn.json",
-    "sourceExportedAt": "2026-11-03T17:26:06.547268Z",
-    "sourceUpdatedAt": "2026-11-03T17:25:17.128Z",
+    "sourceExportedAt": "2026-11-03T18:19:10.948674Z",
+    "sourceUpdatedAt": "2026-11-03T18:15:46.330Z",
     "sourceDocumentIds": [
+      "person--haus-draenmelyn--rhiannon-draenmelyn",
       "person--haus-draenmelyn--rhiannon-draenmelyn",
       "person--haus-draenmelyn--rhiannon-draenmelyn"
     ],
-    "contentHash": "e44f06c7a4ca56b9e24f0d8d22e639f07821f83cee8a9c7f31ebb95cc97231b9"
+    "contentHash": "0525a0f3eea2986ec00da29aa411623120fb5d2479e86dcb7cc028ee06cbb508"
   },
   "local": {
     "notes": "",
@@ -1106,6 +1113,452 @@
         "portrait": "https://i.imgur.com/cyJqlDG.png",
         "currentLocation": "Gwynthor",
         "updatedAt": "2026-11-03T17:25:17.128Z"
+      },
+      {
+        "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "name": "Rhiannon (geb. Draenmelyn) Swyll",
+        "title": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
+        "aliases": [],
+        "identity": {
+          "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
+        },
+        "genealogy": {
+          "houseId": "house-draenmelyn",
+          "houseName": "Haus Draenmelyn",
+          "birth": "1702",
+          "sources": [
+            {
+              "familyId": "haus-draenmelyn",
+              "personId": "rhiannon-draenmelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-03T17:47:36.579Z",
+              "lastSyncedAt": "2026-09-03T17:47:36.579Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+              "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-swyll",
+              "personId": "rhiannon-draenmelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-18T14:09:06.794Z",
+              "lastSyncedAt": "2026-10-18T14:09:06.794Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+              "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}"
+            }
+          ],
+          "familyRole": "core",
+          "status": "alive",
+          "tags": [],
+          "sex": "female",
+          "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "death": "",
+          "portraitPlaceholder": "auto",
+          "relationships": {
+            "partners": [
+              {
+                "personId": "iestyn-swyll",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--iestyn-swyll",
+                "name": "Iestyn Swyll"
+              }
+            ],
+            "parents": [
+              {
+                "personId": "ifor-draenmelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn",
+                "name": "Ifor Draenmelyn"
+              },
+              {
+                "personId": "nest-spouse-draenmelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--nest-spouse-draenmelyn",
+                "name": "Nest"
+              }
+            ],
+            "children": [
+              {
+                "personId": "gareth-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--gareth-swyll",
+                "name": "Gareth Swyll"
+              },
+              {
+                "personId": "meredith-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--meredith-swyll",
+                "name": "Meredith Swyll"
+              },
+              {
+                "personId": "rhydwen-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+                "name": "Rhydwen Swyll"
+              }
+            ]
+          }
+        },
+        "biography": {
+          "schema": "aleria.biography-module",
+          "revision": 1793726717128,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Rhiannon Swyll (geb. Draenmelyn)"
+            },
+            {
+              "label": "Geboren / Alter",
+              "value": "1702 · 38 Jahre (1740)"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Draenmelyn"
+            },
+            {
+              "label": "Rolle",
+              "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+            },
+            {
+              "label": "Ehepartner",
+              "value": "Iestyn Swyll"
+            },
+            {
+              "label": "Kinder",
+              "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            }
+          ],
+          "quote": "",
+          "schemaVersion": 1,
+          "biography": {
+            "sideWidth": 100,
+            "abilities": [
+              {
+                "title": "Ordnungsliebend",
+                "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-order-loving-1d41dcb93e08a59e%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Gewissenhaft",
+                "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
+                "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+              },
+              {
+                "title": "Beobachtend",
+                "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Selbstbewusst",
+                "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Freundlich",
+                "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-friendly-91d77259a7e48e05%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Zurückhaltend",
+                "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-reserved-a9956d13036056dd%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Humorvoll",
+                "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Diszipliniert",
+                "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-disciplined-de5ba372e8d66cf5%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Familienverbunden",
+                "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
+                "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
+              },
+              {
+                "title": "Bestimmend",
+                "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-assertive-organizer-cad1a153766d6d4c%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Nachtragend",
+                "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-holds-grudges-16db94761d941708%2Foriginal.png?alt=media"
+              },
+              {
+                "title": "Perfektionistisch",
+                "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+              }
+            ],
+            "trivia": [
+              "Rhiannon trägt nahezu immer ein kleines, ledergebundenes Notizbuch bei sich, in dem sie Beobachtungen, Auffälligkeiten und wichtige Informationen festhält.",
+              "Sie besitzt die Angewohnheit, schief liegende oder ungleichmäßig angeordnete Gegenstände beinahe unbewusst geradezurücken.",
+              "Besonders schief hängende Bilder empfindet sie als ausgesprochen störend. Es fällt ihr schwer, einen Raum zu verlassen, ohne sie vorher auszurichten.",
+              "Ihr eigener Schreibtisch ist stets sorgfältig geordnet. Jedes Schreibgerät und jedes Schriftstück besitzt einen festen Platz.",
+              "Extreme Unordnung kann Rhiannon tatsächlich aus der Fassung bringen. Besonders chaotische Wohnräume betrachtet sie mit aufrichtigem Entsetzen.",
+              "Sie legt ihrem Gemahl Iestyn gelegentlich bereits am Vorabend die Kleidung für den nächsten Tag bereit.",
+              "Ihr trockener Humor kommt häufig vollkommen unerwartet und wird meist von einem kaum merklichen Lächeln begleitet.",
+              "Mit Cadogan Sgrechiwr versteht sie sich grundsätzlich gut. Allerdings geraten die beiden gelegentlich aneinander, wenn ihre unterschiedlichen Vorstellungen von Ordnung aufeinandertreffen.",
+              "Sie liebt Gartenarbeit und bevorzugt dabei harmonische Formen, saubere Wege und sorgfältig angeordnete Beete.",
+              "Der Gartenmeister des Hauses Draig dürfte ihre gut gemeinten Anregungen zur Gestaltung der Gartenanlagen inzwischen nur allzu gut kennen.",
+              "Rhiannon stickt gerne und besitzt eine besondere Vorliebe für geometrische Muster und symmetrische Ornamente.",
+              "Sie schätzt die Gemälde ihrer Freundin Gwen Hamnett sehr, kann deren unordentliches Atelier jedoch nur schwer ertragen.",
+              "Innerhalb ihrer Familie ist bekannt, dass Rhiannon selbst kleine Verfehlungen über erstaunlich lange Zeit in Erinnerung behält.",
+              "Ihr persönlicher Grundsatz lautet: „Ich kann verzeihen. Aber ich vergesse niemals.“",
+              "Trotz ihrer gelegentlich bestimmenden Art ist Rhiannon eine ausgesprochen liebevolle Mutter, die sich aufrichtig um das Wohlergehen ihrer Kinder sorgt."
+            ],
+            "connectionTextOffset": 0,
+            "footer": "Personenakte · Rhiannon Draenmelyn",
+            "portraitFit": "contain",
+            "documents": [
+              {
+                "title": "Haus Swyll",
+                "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+                "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+              },
+              {
+                "title": "Haus Draenmelyn",
+                "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+                "text": "Rhiannons Herkunftsfamilie.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
+              }
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Ich kann verzeihen. Aber ich vergesse niemals.“"
+            ],
+            "portrait": "https://i.imgur.com/cyJqlDG.png",
+            "historyTitle": "Charakter",
+            "historyText": "<p>Rhiannon Swyll ist eine freundliche, selbstbewusste und gewissenhafte Frau, deren Persönlichkeit in besonderem Maße von ihrer Liebe zu Ordnung, Genauigkeit<br>und Verlässlichkeit geprägt wird.</p><br><p>Im gewöhnlichen Umgang zeigt sie sich höflich und zugänglich, wahrt jedoch eine gewisse persönliche Distanz. Sie kann durchaus gesellig sein und schätzt anregende Gespräche, lässt aber nur wenige Menschen wirklich an ihren Gedanken und Gefühlen teilhaben.</p><br><p>Besonders auffällig ist ihr ausgeprägter Ordnungssinn.</p><br><p>Rhiannon bevorzugt eine saubere, übersichtliche und möglichst symmetrische Umgebung. Gegenstände besitzen für sie einen bestimmten Platz, und sie empfindet es als ausgesprochen störend, wenn sie ohne erkennbaren Grund anders angeordnet werden.</p><br><p>Diese Vorliebe äußert sich häufig in kleinen, beinahe unbewussten Handlungen. Liegt ein Schreibgerät schief auf einem Tisch, richtet sie es gerade. Hängt ein Bild nicht waagerecht, korrigiert sie seine Position. Stehen mehrere Bücher ungleichmäßig nebeneinander, bringt sie diese in eine ordentliche Reihe.</p><p>Dabei handelt es sich nicht um eine krankhafte Zwanghaftigkeit. Rhiannon ist durchaus in der Lage, Unordnung zu ertragen, wenn die Umstände es verlangen. Sie bevorzugt jedoch entschieden, sie möglichst rasch zu beseitigen.</p><br><p>Extreme Unordnung kann sie tatsächlich aus der Fassung bringen. Besonders chaotische Räumlichkeiten betrachtet sie mit einer Mischung aus Fassungslosigkeit und aufrichtigem Unverständnis.</p><br><p>Trotz ihrer Genauigkeit besitzt Rhiannon einen ausgeprägten Sinn für Humor. Ihre Bemerkungen fallen häufig trocken und überraschend treffend aus, ohne dass<br>sie ihr Gegenüber absichtlich verletzen möchte.</p><br><p>Eine weniger angenehme Eigenschaft ist ihr bemerkenswert gutes Gedächtnis für persönliche Enttäuschungen.</p><br><p>Rhiannon ist durchaus bereit, Fehler zu verzeihen und Menschen eine zweite Chance zu gewähren. Ein einmal erschüttertes Vertrauen lässt sich bei ihr jedoch nur schwer vollständig wiederherstellen.</p><br><p>„Ich kann verzeihen. Aber ich vergesse niemals.“</p><br><p>Dieser Grundsatz beschreibt ihre Haltung recht treffend.</p><br><p>Innerhalb ihrer Familie zeigt Rhiannon eine ausgesprochen fürsorgliche Seite. Sie liebt ihren Gemahl und ihre Kinder und möchte ihnen ein möglichst sicheres, geordnetes und angenehmes Leben ermöglichen.</p><br><p>Allerdings neigt sie dazu, auch deren Alltag nach ihren eigenen Vorstellungen organisieren zu wollen. Insbesondere ihre Kinder können sich dadurch gelegentlich bevormundet fühlen.</p><br><p>Rhiannon handelt dabei gewöhnlich aus Fürsorge und nicht aus dem Wunsch heraus, andere Menschen zu beherrschen. Dennoch fällt es ihr manchmal schwer, hinzunehmen, dass ihre Angehörigen eigene Vorstellungen von Ordnung und Lebensführung besitzen.</p>",
+            "abilitiesTitle": "Persönlichkeit",
+            "works": [
+              "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
+              "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
+              "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
+              "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
+              "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
+              "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
+              "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
+              "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
+              "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
+              "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
+              "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
+            ],
+            "triviaTitle": "Trivia",
+            "worksTitle": "Können & Fähigkeiten",
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Vergangenheit",
+                "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Geschichte & Wirkung",
+                "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
+                "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
+                "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
+              },
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
+                "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
+              }
+            ],
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Ifor Draenmelyn",
+                "detail": "Belegtes Elternteil.",
+                "image": "https://i.imgur.com/6YW06jU.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Nest Draenmelyn",
+                "detail": "Belegtes Elternteil.",
+                "image": "/Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Afan Draenmelyn",
+                "detail": "Älterer Bruder",
+                "image": "https://i.imgur.com/yu4DXTn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meurig Draenmelyn",
+                "detail": "Älterer Bruder",
+                "image": "/Stammbäume/assets/images/placeholders/male.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Caradog  Draenmelyn",
+                "detail": "Älterer Bruder",
+                "image": "/Stammbäume/assets/images/placeholders/male.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Sioned Draenmelyn",
+                "detail": "Nichte",
+                "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Taliesin Draenmelyn",
+                "detail": "Neffe",
+                "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gethin Draenmelyn",
+                "detail": "Neffe",
+                "image": "https://i.imgur.com/IEHF8TV.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Owain Draenmelyn",
+                "detail": "Neffe",
+                "image": "/Stammbäume/assets/images/placeholders/male.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Myfanwy Draenmelyn",
+                "detail": "Nichte",
+                "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eleri Draenmelyn",
+                "detail": "Nichte",
+                "image": "/Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Familie Swyll",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Iestyn Swyll",
+                "detail": "Ehemann",
+                "image": "https://i.imgur.com/VpjeTe7.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gareth Swyll",
+                "detail": "Sohn",
+                "image": "https://i.imgur.com/DpqoWhn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meredith Swyll",
+                "detail": "Tochter",
+                "image": "/Stammbäume/assets/images/portraits/haus-swyll/meredith-swyll.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rhydwen Swyll",
+                "detail": "Tochter",
+                "image": "https://i.imgur.com/NR8HKxj.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Emyr  Swyll",
+                "detail": "Schwiegervater",
+                "image": "https://i.imgur.com/OaeQeCG.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Tierische Begleiter",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Perle",
+                "detail": "Ihr Ryfel.",
+                "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-originals-20261103-perle-9b340d62a64ce9f0%2Foriginal.png?alt=media",
+                "imageFormat": "portrait"
+              }
+            ],
+            "biographyText": "<p>Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.</p><p>Sie entstammt dem kleinen Bürgerhaus Draenmelyn, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt der Draigs tätig sind. Ihr Vater Ifor Draenmelyn steht der Zofen- und Kammerdienerschaft vor und arbeitet unmittelbar unter dem Vogt. Auch ihre drei älteren Brüder stehen im Dienst des Hauses Draig.</p><p><br></p><p>Rhiannon begann ihre eigene Laufbahn ebenfalls im persönlichen Dienst der gräflichen Familie. Ihre außergewöhnliche Beobachtungsgabe und ihr ausgeprägtes Gespür für Formen und kleinste Abweichungen erregten schließlich die Aufmerksamkeit des damaligen Herolds Trahern, der ihre weitere Ausbildung förderte.</p><p></p><p>Seit sieben Jahren bekleidet Rhiannon das Amt der Wappen- und Zeichenmeisterin. Sie ist unmittelbar Sir Cadfan, dem gegenwärtigen Herold und Chefdiplomaten des Hauses Draig, unterstellt und führt ein eigenständiges, den übrigen Kernämtern des Herolds gleichrangiges Amt.</p><p></p><p>Zu ihren Aufgaben gehören die Prüfung und Bestätigung von Wappen, Siegelidentitäten und Geleitzeichen sowie die Überprüfung der damit verbundenen Beglaubigungen und Vollmachten. Sie sorgt dafür, dass fremde Gesandtschaften, Bevollmächtigte und Schriftstücke nicht aufgrund falscher oder unzureichender</p><p>Zeichen anerkannt werden.</p><p></p><p>Rhiannon gilt als gewissenhafte, sachkundige und außerordentlich genaue Fachfrau, deren Urteil innerhalb ihres Zuständigkeitsbereichs großes Vertrauen genießt.</p>",
+            "biographyTitle": "Hintergrund – Wer ist sie?",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "documentsTitle": "Stammbaum",
+            "connectionPortraitHeight": 74,
+            "connectionsTitle": "Familie Draenmelyn",
+            "knightMentors": []
+          },
+          "quoteBy": ""
+        },
+        "portrait": "https://i.imgur.com/cyJqlDG.png",
+        "currentLocation": "Gwynthor",
+        "updatedAt": "2026-11-03T18:15:46.330Z",
+        "role": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
+        "bio": "Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder."
       }
     ]
   },
@@ -1113,10 +1566,114 @@
     "activeImageSetId": "standard",
     "aliases": [],
     "archived": false,
-    "bio": "Rhiannon Draenmelyn ist eine Bedienstete des Hauses Draig aus Gwynthor. Die 1702 geborene Tochter von Ifor Draenmelyn und Nest ist mit Iestyn Swyll verheiratet und Mutter von Gareth, Meredith und Rhydwen Swyll.",
+    "bio": "Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.",
     "biography": {
+      "schema": "aleria.biography-module",
+      "revision": 1793726717128,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhiannon Swyll (geb. Draenmelyn)"
+        },
+        {
+          "label": "Geboren / Alter",
+          "value": "1702 · 38 Jahre (1740)"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Draenmelyn"
+        },
+        {
+          "label": "Rolle",
+          "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+        },
+        {
+          "label": "Ehepartner",
+          "value": "Iestyn Swyll"
+        },
+        {
+          "label": "Kinder",
+          "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        }
+      ],
+      "quote": "",
       "schemaVersion": 1,
       "biography": {
+        "sideWidth": 100,
+        "abilities": [
+          {
+            "title": "Ordnungsliebend",
+            "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-order-loving-1d41dcb93e08a59e%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Gewissenhaft",
+            "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
+            "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+          },
+          {
+            "title": "Beobachtend",
+            "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Selbstbewusst",
+            "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Freundlich",
+            "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-friendly-91d77259a7e48e05%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Zurückhaltend",
+            "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-reserved-a9956d13036056dd%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Humorvoll",
+            "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Diszipliniert",
+            "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-disciplined-de5ba372e8d66cf5%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Familienverbunden",
+            "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
+            "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
+          },
+          {
+            "title": "Bestimmend",
+            "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-assertive-organizer-cad1a153766d6d4c%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Nachtragend",
+            "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-holds-grudges-16db94761d941708%2Foriginal.png?alt=media"
+          },
+          {
+            "title": "Perfektionistisch",
+            "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
+          }
+        ],
         "trivia": [
           "Rhiannon trägt nahezu immer ein kleines, ledergebundenes Notizbuch bei sich, in dem sie Beobachtungen, Auffälligkeiten und wichtige Informationen festhält.",
           "Sie besitzt die Angewohnheit, schief liegende oder ungleichmäßig angeordnete Gegenstände beinahe unbewusst geradezurücken.",
@@ -1135,10 +1692,77 @@
           "Trotz ihrer gelegentlich bestimmenden Art ist Rhiannon eine ausgesprochen liebevolle Mutter, die sich aufrichtig um das Wohlergehen ihrer Kinder sorgt."
         ],
         "connectionTextOffset": 0,
+        "footer": "Personenakte · Rhiannon Draenmelyn",
+        "portraitFit": "contain",
+        "documents": [
+          {
+            "title": "Haus Swyll",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+            "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+          },
+          {
+            "title": "Haus Draenmelyn",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+            "text": "Rhiannons Herkunftsfamilie.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
+          }
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [
+          "„Ich kann verzeihen. Aber ich vergesse niemals.“"
+        ],
+        "portrait": "https://i.imgur.com/cyJqlDG.png",
+        "historyTitle": "Charakter",
         "historyText": "<p>Rhiannon Swyll ist eine freundliche, selbstbewusste und gewissenhafte Frau, deren Persönlichkeit in besonderem Maße von ihrer Liebe zu Ordnung, Genauigkeit<br>und Verlässlichkeit geprägt wird.</p><br><p>Im gewöhnlichen Umgang zeigt sie sich höflich und zugänglich, wahrt jedoch eine gewisse persönliche Distanz. Sie kann durchaus gesellig sein und schätzt anregende Gespräche, lässt aber nur wenige Menschen wirklich an ihren Gedanken und Gefühlen teilhaben.</p><br><p>Besonders auffällig ist ihr ausgeprägter Ordnungssinn.</p><br><p>Rhiannon bevorzugt eine saubere, übersichtliche und möglichst symmetrische Umgebung. Gegenstände besitzen für sie einen bestimmten Platz, und sie empfindet es als ausgesprochen störend, wenn sie ohne erkennbaren Grund anders angeordnet werden.</p><br><p>Diese Vorliebe äußert sich häufig in kleinen, beinahe unbewussten Handlungen. Liegt ein Schreibgerät schief auf einem Tisch, richtet sie es gerade. Hängt ein Bild nicht waagerecht, korrigiert sie seine Position. Stehen mehrere Bücher ungleichmäßig nebeneinander, bringt sie diese in eine ordentliche Reihe.</p><p>Dabei handelt es sich nicht um eine krankhafte Zwanghaftigkeit. Rhiannon ist durchaus in der Lage, Unordnung zu ertragen, wenn die Umstände es verlangen. Sie bevorzugt jedoch entschieden, sie möglichst rasch zu beseitigen.</p><br><p>Extreme Unordnung kann sie tatsächlich aus der Fassung bringen. Besonders chaotische Räumlichkeiten betrachtet sie mit einer Mischung aus Fassungslosigkeit und aufrichtigem Unverständnis.</p><br><p>Trotz ihrer Genauigkeit besitzt Rhiannon einen ausgeprägten Sinn für Humor. Ihre Bemerkungen fallen häufig trocken und überraschend treffend aus, ohne dass<br>sie ihr Gegenüber absichtlich verletzen möchte.</p><br><p>Eine weniger angenehme Eigenschaft ist ihr bemerkenswert gutes Gedächtnis für persönliche Enttäuschungen.</p><br><p>Rhiannon ist durchaus bereit, Fehler zu verzeihen und Menschen eine zweite Chance zu gewähren. Ein einmal erschüttertes Vertrauen lässt sich bei ihr jedoch nur schwer vollständig wiederherstellen.</p><br><p>„Ich kann verzeihen. Aber ich vergesse niemals.“</p><br><p>Dieser Grundsatz beschreibt ihre Haltung recht treffend.</p><br><p>Innerhalb ihrer Familie zeigt Rhiannon eine ausgesprochen fürsorgliche Seite. Sie liebt ihren Gemahl und ihre Kinder und möchte ihnen ein möglichst sicheres, geordnetes und angenehmes Leben ermöglichen.</p><br><p>Allerdings neigt sie dazu, auch deren Alltag nach ihren eigenen Vorstellungen organisieren zu wollen. Insbesondere ihre Kinder können sich dadurch gelegentlich bevormundet fühlen.</p><br><p>Rhiannon handelt dabei gewöhnlich aus Fürsorge und nicht aus dem Wunsch heraus, andere Menschen zu beherrschen. Dennoch fällt es ihr manchmal schwer, hinzunehmen, dass ihre Angehörigen eigene Vorstellungen von Ordnung und Lebensführung besitzen.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "works": [
+          "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
+          "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
+          "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
+          "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
+          "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
+          "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
+          "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
+          "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
+          "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
+          "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
+          "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
+        ],
         "triviaTitle": "Trivia",
-        "documentsTitle": "Stammbaum",
-        "biographyTitle": "Hintergrund – Wer ist sie?",
+        "worksTitle": "Können & Fähigkeiten",
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
+            "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
+            "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
+            "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
+          }
+        ],
         "connections": [
           {
             "type": "connection",
@@ -1270,191 +1894,20 @@
             "imageFormat": "portrait"
           }
         ],
-        "abilitiesTitle": "Persönlichkeit",
-        "portraitFit": "contain",
-        "footer": "Personenakte · Rhiannon Draenmelyn",
-        "worksTitle": "Können & Fähigkeiten",
-        "extraSections": [
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Geschichte & Vergangenheit",
-            "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Geschichte & Wirkung",
-            "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
-            "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
-            "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
-          },
-          {
-            "position": "afterWorks",
-            "mode": "text",
-            "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
-            "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
-          }
-        ],
-        "works": [
-          "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
-          "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
-          "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
-          "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
-          "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
-          "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
-          "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
-          "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
-          "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
-          "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
-          "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
-        ],
-        "connectionsTitle": "Familie Draenmelyn",
-        "knightMentors": [],
-        "portrait": "https://i.imgur.com/cyJqlDG.png",
-        "abilities": [
-          {
-            "title": "Ordnungsliebend",
-            "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-order-loving-1d41dcb93e08a59e%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Gewissenhaft",
-            "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
-            "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
-          },
-          {
-            "title": "Beobachtend",
-            "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-observant-211b7aa5eaa14d00%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Selbstbewusst",
-            "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-self-confident-fd7e10cc4d79b99c%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Freundlich",
-            "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-friendly-91d77259a7e48e05%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Zurückhaltend",
-            "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-reserved-a9956d13036056dd%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Humorvoll",
-            "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-humorous-f0f114d565c837a3%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Diszipliniert",
-            "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-disciplined-de5ba372e8d66cf5%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Familienverbunden",
-            "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
-            "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
-          },
-          {
-            "title": "Bestimmend",
-            "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-assertive-organizer-cad1a153766d6d4c%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Nachtragend",
-            "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-holds-grudges-16db94761d941708%2Foriginal.png?alt=media"
-          },
-          {
-            "title": "Perfektionistisch",
-            "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
-            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-sgrechiwr%2Fpatrick-traits-20261103-perfectionist-8c109f7012be50eb%2Foriginal.png?alt=media"
-          }
-        ],
-        "historyTitle": "Charakter",
-        "sideWidth": 100,
         "biographyText": "<p>Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.</p><p>Sie entstammt dem kleinen Bürgerhaus Draenmelyn, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt der Draigs tätig sind. Ihr Vater Ifor Draenmelyn steht der Zofen- und Kammerdienerschaft vor und arbeitet unmittelbar unter dem Vogt. Auch ihre drei älteren Brüder stehen im Dienst des Hauses Draig.</p><p><br></p><p>Rhiannon begann ihre eigene Laufbahn ebenfalls im persönlichen Dienst der gräflichen Familie. Ihre außergewöhnliche Beobachtungsgabe und ihr ausgeprägtes Gespür für Formen und kleinste Abweichungen erregten schließlich die Aufmerksamkeit des damaligen Herolds Trahern, der ihre weitere Ausbildung förderte.</p><p></p><p>Seit sieben Jahren bekleidet Rhiannon das Amt der Wappen- und Zeichenmeisterin. Sie ist unmittelbar Sir Cadfan, dem gegenwärtigen Herold und Chefdiplomaten des Hauses Draig, unterstellt und führt ein eigenständiges, den übrigen Kernämtern des Herolds gleichrangiges Amt.</p><p></p><p>Zu ihren Aufgaben gehören die Prüfung und Bestätigung von Wappen, Siegelidentitäten und Geleitzeichen sowie die Überprüfung der damit verbundenen Beglaubigungen und Vollmachten. Sie sorgt dafür, dass fremde Gesandtschaften, Bevollmächtigte und Schriftstücke nicht aufgrund falscher oder unzureichender</p><p>Zeichen anerkannt werden.</p><p></p><p>Rhiannon gilt als gewissenhafte, sachkundige und außerordentlich genaue Fachfrau, deren Urteil innerhalb ihres Zuständigkeitsbereichs großes Vertrauen genießt.</p>",
-        "connectionPortraitHeight": 74,
-        "quotes": [
-          "„Ich kann verzeihen. Aber ich vergesse niemals.“"
-        ],
-        "documents": [
-          {
-            "title": "Haus Swyll",
-            "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
-            "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
-            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
-          },
-          {
-            "title": "Haus Draenmelyn",
-            "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
-            "text": "Rhiannons Herkunftsfamilie.",
-            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
-          }
-        ],
+        "biographyTitle": "Hintergrund – Wer ist sie?",
         "portraitStages": [
           "",
           "",
           "",
           ""
         ],
-        "quotesTitle": "Zitate"
+        "documentsTitle": "Stammbaum",
+        "connectionPortraitHeight": 74,
+        "connectionsTitle": "Familie Draenmelyn",
+        "knightMentors": []
       },
-      "quoteBy": "",
-      "quote": "",
-      "revision": 1793726717128,
-      "stats": [
-        {
-          "label": "Vollständiger Name",
-          "value": "Rhiannon Swyll (geb. Draenmelyn)"
-        },
-        {
-          "label": "Geboren / Alter",
-          "value": "1702 · 38 Jahre (1740)"
-        },
-        {
-          "label": "Stand",
-          "value": "Bürgerlich"
-        },
-        {
-          "label": "Herkunft",
-          "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
-        },
-        {
-          "label": "Haus",
-          "value": "Haus Draenmelyn"
-        },
-        {
-          "label": "Rolle",
-          "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
-        },
-        {
-          "label": "Ehepartner",
-          "value": "Iestyn Swyll"
-        },
-        {
-          "label": "Kinder",
-          "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
-        },
-        {
-          "label": "Wohnsitz",
-          "value": "Gwynthor"
-        }
-      ],
-      "schema": "aleria.biography-module"
+      "quoteBy": ""
     },
     "createdAt": "2026-09-03T17:47:36.579Z",
     "currentLocation": "Gwynthor",
@@ -1859,10 +2312,10 @@
     "portrait": "https://i.imgur.com/cyJqlDG.png",
     "profileLink": "",
     "relevance": "",
-    "role": "Bedienstete des Hauses Draig",
+    "role": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
-    "updatedAt": "2026-11-03T17:25:17.128Z"
+    "updatedAt": "2026-11-03T18:15:46.330Z"
   }
 }

@@ -38,8 +38,14 @@ const sourceModules = walk(new URL('Estryll/Cenyr/Klaueninsel/', feature))
   .filter(url => url.pathname.endsWith('/haus.content.mjs'));
 const sources = new Map(await Promise.all(sourceModules.map(async url => {
   const { HOUSE_CONTENT: content } = await import(url);
-  return [content.id, { content, url }];
+  // Externally curated originals are intentionally not regenerated from the
+  // shorter house-page summary. Exercise the same canonical module as the registry.
+  const biography = content.biographyManagedExternally
+    ? (await import(new URL('haus.biography.mjs', url))).HOUSE_BIOGRAPHY
+    : createHouseBiography(content);
+  return [content.id, { content, url, biography }];
 })));
+const expectedBiography = content => sources.get(content.id).biography;
 const allRecords = new Map(FAMILY_REGISTRY.map(record => [record.id, record]));
 const records = new Map(FAMILY_REGISTRY.filter(record => record.folderPath?.[0] === 'Cenyr'
   && record.folderPath?.[1] === 'Klaueninsel').map(record => [record.id, record]));
@@ -64,7 +70,11 @@ test('Cwingods genaue alte Standardbio wird ersetzt, ihre bearbeitete Fassung bl
   local.extensions.sourceRevision = baselineById.get('haus-cwningod').sourceRevision;
   local.extensions.houseBiographyModule = previous;
   const upgraded = resolveRegisteredFamilyUpgrade(registered, local);
-  assert.deepEqual(upgraded.extensions.houseBiographyModule, createHouseBiography(sources.get('haus-cwningod').content));
+  const approved = expectedBiography(sources.get('haus-cwningod').content);
+  assert.deepEqual(upgraded.extensions.houseBiographyModule, approved);
+  assert.equal(approved.description, previous.description, 'vorhandene ausführliche Einleitung erhalten');
+  assert.equal(approved.house.biographyText, previous.house.biographyText, 'vorhandene Hausgeschichte erhalten');
+  assert.equal(approved.house.historyText, previous.house.historyText, 'vorhandene historische Prosa erhalten');
   const edited = structuredClone(previous);
   edited.description = 'Eigene überarbeitete Hausgeschichte';
   edited.house.biographyText = 'Eigene ausführliche Hausgeschichte';
@@ -74,7 +84,7 @@ test('Cwingods genaue alte Standardbio wird ersetzt, ihre bearbeitete Fassung bl
   assert.ok(!registered.extensions.registryManagedExtensionFields.includes('houseBiographyModule'));
 });
 
-test('37 bestehende Klaueninsel-Akten erhalten Hausseiten, eigene Iframes und genau eine Bio-Revision', () => {
+test('37 bestehende Klaueninsel-Akten erhalten Hausseiten, eigene Iframes und belegte Bio-Revisionen', () => {
   assert.equal(before.length, 37);
   assert.equal(sourceModules.length, 37);
   assert.deepEqual([...records.keys()].sort(), expectedIds, 'keine zusätzlichen Familienakten');
@@ -84,7 +94,12 @@ test('37 bestehende Klaueninsel-Akten erhalten Hausseiten, eigene Iframes und ge
     assert.ok(record, content.id);
     assert.equal(content.registerPage, true, content.id);
     assert.equal(registry.byId(content.id)?.status, 'active', content.id);
-    assert.equal(content.biographySourceRevision, baseline.sourceRevision + 1, content.id);
+    if (content.id === 'haus-cwningod') {
+      assert.equal(baseline.sourceRevision, 7);
+      assert.equal(content.biographySourceRevision, 9, 'Hausbio und späterer belegter Cwingod-Aliasabgleich');
+      assert.equal(content.contentVersion, '20261103-cenyr-cwingod-alias-v3');
+      assert.equal(content.biographyManagedExternally, true);
+    } else assert.equal(content.biographySourceRevision, baseline.sourceRevision + 1, content.id);
     const page = createHousePageData(content), biography = createHouseBiography(content);
     const frame = new URL(page.familyTreeEmbed.src, feature);
     assert.equal(frame.pathname, new URL('Stammbaum.html', treeRoot).pathname, content.id);
@@ -94,7 +109,7 @@ test('37 bestehende Klaueninsel-Akten erhalten Hausseiten, eigene Iframes und ge
     const generated = { window: {} };
     vm.runInNewContext(readFileSync(new URL('haus.data.js', url), 'utf8'), generated);
     assert.deepEqual(JSON.parse(JSON.stringify(generated.window.HAEUSER_DATA)), page, content.id);
-    assert.deepEqual(record.family.extensions.houseBiographyModule, biography, content.id);
+    assert.deepEqual(record.family.extensions.houseBiographyModule, expectedBiography(content), content.id);
     const backlink = new URL(biography.house.documents[0].link, treeRoot);
     assert.equal(backlink.searchParams.get('haus'), content.id);
     assert.ok(existsSync(new URL(backlink.pathname, backlink)), content.id);
@@ -252,8 +267,8 @@ test('Bio-Upgrades erhalten eigene Graphbearbeitungen, eigene Hausbios und bewus
     const expected = normalizeFamily(local);
     const upgraded = resolveRegisteredFamilyUpgrade(registered, local);
     assert.deepEqual(normalizedGraph(upgraded), normalizedGraph(expected), content.id);
-    assert.deepEqual(upgraded.extensions.houseBiographyModule, createHouseBiography(content), content.id);
-    const custom = structuredClone(createHouseBiography(content));
+    assert.deepEqual(upgraded.extensions.houseBiographyModule, expectedBiography(content), content.id);
+    const custom = structuredClone(expectedBiography(content));
     custom.description = 'Eigene Hausgeschichte';
     custom.house.biographyText = 'Eigener ausführlicher Text';
     custom.commentSequence = [{ text: 'Eigene Notiz' }];

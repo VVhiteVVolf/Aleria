@@ -30,7 +30,7 @@ test('Hamnett retains its known Silberinsel origin and Gwen identity without inv
   assert.equal(gwen.worldPersonId, 'person--family-tree--unknown-cadogan-spouse');
   assert.equal(content.figures[0].id, gwen.id); assert.equal(content.figures[0].role, 'Malerin');
   assert.equal(content.figures[0].image, getPatrickBiographyPersonFields('unknown-cadogan-spouse').portrait);
-  assert.match(content.figures[0].image, /^https:\/\/firebasestorage\.googleapis\.com\//);
+  assert.equal(content.figures[0].image, 'https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg');
   assert.match(content.sections.overview, /lebt als Malerin in Gwynthor/);
   assert.match(page.familyTreeEmbed.src, /family=haus-hamnett&mode=view/);
 });
