@@ -195,12 +195,12 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'quest-journal', label: 'Quest sources, prepared travel, landing bridges and atomic rewards',
     inputs: ['AleriaAlmanach/quests.html', 'AleriaAlmanach/modules/quests/', 'AleriaAlmanach/modules/landing/',
-      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
+
       'AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/modules/item-definitions/',
       'AleriaAlmanach/scripts/build-quest-catalog.mjs', 'AleriaAlmanach/scripts/build-troetzli-quest.mjs',
-      'AleriaAlmanach/scripts/build-fleischsammler-quest.mjs', 'AleriaAlmanach/scripts/build-quest-preparations.mjs',
-      'Stammb?ume/assets/js/data/gwynthor-fleischsammler/',
-      'Stammb?ume/assets/images/houses/Llamreis Ankunft/B?rgerliche/Gwynthor/fleischsammler/',
+      'AleriaAlmanach/scripts/build-quest-preparations.mjs',
+
+
       'Anzeigetafeln/', 'Karten/karten.registry.js', 'Karten/assets/js/lsb/',
       'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', 'Karten/assets/js/karto-app.js',
       'Stammbäume/assets/data/published-families/haus-penrudd.json', ...questCatalogInputs,
@@ -404,7 +404,7 @@ export const SITE_BUILD_TASKS = [
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
-      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
+
       'AleriaAlmanach/modules/item-register/item-register-standard.js',
       'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
       'AleriaAlmanach/modules/weapon-standards/weapon-standard-catalog.js',

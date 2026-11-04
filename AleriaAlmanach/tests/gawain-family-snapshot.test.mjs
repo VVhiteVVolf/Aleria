@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { projectGawainFamilySnapshot } from '../modules/gawain-duncan/gawain-family-snapshot.mjs';
 import { gawainFamilyBackupPath } from '../modules/gawain-duncan/gawain-family-backup.mjs';
-import { GAWAIN_WORLD_ID, GAWAIN_PUBLIC_SUMMARY, GAWAIN_PUBLIC_BIOGRAPHY } from '../modules/gawain-duncan/gawain-public-biography.mjs';
+import { GAWAIN_ID, GAWAIN_WORLD_ID, GAWAIN_PUBLIC_SUMMARY, GAWAIN_PUBLIC_BIOGRAPHY } from '../modules/gawain-duncan/gawain-public-biography.mjs';
+import { reviewedCharacterTraitAssignment } from '../modules/character-trait-review/reviewed-character-traits.js';
+import { PREVIOUS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-source.js';
 
 const input = () => ({
   envelope: { schemaVersion: 1, familyId: 'haus-draig', revision: 2, updatedAt: '2026-09-28T15:05:59.250Z', family: {
@@ -53,6 +55,68 @@ test('immutable backups distinguish reused historical revisions and exact line e
   assert.notEqual(gawainFamilyBackupPath(envelope, first), gawainFamilyBackupPath(envelope, first.replace(/\n/g, '\r\n')));
   assert.notEqual(gawainFamilyBackupPath(envelope, first), gawainFamilyBackupPath(envelope, first + ' '));
   assert.throws(() => gawainFamilyBackupPath({ ...envelope, familyId: '../other' }, first));
+});
+
+test('exact current, historical and mixed published cards never create a new family revision', () => {
+  const previousCards = reviewedCharacterTraitAssignment(GAWAIN_ID).traits.map(id => {
+    const trait = PREVIOUS_DEVELOPMENT_TRAITS.find(row => row.id === `development-trait-${id}`);
+    return { title: trait.name, detail: trait.description, icon: trait.icon };
+  });
+  assert.notDeepEqual(previousCards, GAWAIN_PUBLIC_BIOGRAPHY.biography.abilities);
+  for (const mask of [0, 1, 2, 3]) {
+    const data = structuredClone(input()), first = projectGawainFamilySnapshot(data);
+    const envelope = structuredClone(first.envelope), body = envelope.family.persons[0].extensions.biographyModule.biography;
+    body.abilities = body.abilities.map((card, index) => structuredClone(mask & (1 << index) ? card : previousCards[index]));
+    const current = { ...data, envelope, registry: first.registry, now: '2027-01-01T00:00:00.000Z' };
+    const before = structuredClone(current), result = projectGawainFamilySnapshot(current);
+    assert.deepEqual(current, before);
+    assert.equal(result.changed, false);
+    assert.equal(result.registryChanged, false);
+    assert.strictEqual(result.envelope, envelope);
+    assert.deepEqual(result.envelope.family.persons[0].extensions.biographyModule.biography.abilities, body.abilities);
+  }
+});
+
+test('card preservation never exempts changed source biography, icon, cost or modifier fields', () => {
+  for (const mutate of [
+    biography => { biography.biography.abilities[0].title += ' Unapproved'; },
+    biography => { biography.biography.abilities[0].detail += ' Unapproved'; },
+    biography => { biography.biography.abilities[0].icon = 'unapproved.png'; },
+    biography => { biography.biography.abilities[0].cost = 0; },
+    biography => { biography.biography.abilities[0].mechanics = { skillModifiers: { sword: 1 } }; },
+    biography => { biography.biography.abilities.reverse(); },
+    biography => { biography.biography.abilities.pop(); },
+    biography => { biography.biography.abilitiesTitle += ' Unapproved'; },
+    biography => { biography.biography.biographyText += '<p>Unapproved source</p>'; },
+    biography => { biography.quote += ' Unapproved'; },
+  ]) {
+    const data = structuredClone(input());
+    mutate(data.sourceFamily.persons[0].extensions.biographyModule);
+    const before = structuredClone(data);
+    assert.throws(() => projectGawainFamilySnapshot(data));
+    assert.deepEqual(data, before);
+  }
+});
+
+test('an unapproved saved card is replaced by the exact canonical source rather than preserved', () => {
+  for (const mutate of [
+    cards => { cards[0].title += ' Unapproved'; },
+    cards => { cards[0].detail += ' Unapproved'; },
+    cards => { cards[0].icon = 'unapproved.png'; },
+    cards => { cards[0].cost = 0; },
+    cards => { cards[0].mechanics = { skillModifiers: { sword: 1 } }; },
+    cards => { cards.reverse(); },
+    cards => { cards.pop(); },
+  ]) {
+    const data = structuredClone(input()), first = projectGawainFamilySnapshot(data);
+    const envelope = structuredClone(first.envelope);
+    mutate(envelope.family.persons[0].extensions.biographyModule.biography.abilities);
+    const current = { ...data, envelope, registry: first.registry }, before = structuredClone(current);
+    const result = projectGawainFamilySnapshot(current);
+    assert.deepEqual(current, before);
+    assert.equal(result.changed, true);
+    assert.deepEqual(result.envelope.family.persons[0].extensions.biographyModule, GAWAIN_PUBLIC_BIOGRAPHY);
+  }
 });
 
 test('wrong or duplicated Gawain identity and unrelated source content are rejected rather than reconciled', () => {

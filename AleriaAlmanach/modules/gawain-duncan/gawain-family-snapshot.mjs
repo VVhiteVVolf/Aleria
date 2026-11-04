@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { GAWAIN_WORLD_ID, GAWAIN_PUBLIC_SUMMARY, GAWAIN_PUBLIC_BIOGRAPHY } from './gawain-public-biography.mjs';
+import { GAWAIN_ID, GAWAIN_WORLD_ID, GAWAIN_PUBLIC_SUMMARY, GAWAIN_PUBLIC_BIOGRAPHY } from './gawain-public-biography.mjs';
+import { hasExactReviewedBiographyTraitCards } from '../character-trait-review/character-trait-review-model.js';
 
 // This projection deliberately does not reconcile the rest of Haus Draig.
 // Other persons may have pending independent lineage edits in FAMILY_REGISTRY.
@@ -22,7 +23,10 @@ export function projectGawainFamilySnapshot({ envelope, registry, sourceFamily, 
   const person = family.persons.find(person => person.worldPersonId === GAWAIN_WORLD_ID);
   person.title = 'Sir';
   person.notes = GAWAIN_PUBLIC_SUMMARY;
-  person.extensions = { ...person.extensions, biographyModule: structuredClone(GAWAIN_PUBLIC_BIOGRAPHY) };
+  const biography = structuredClone(GAWAIN_PUBLIC_BIOGRAPHY);
+  const cards = previous.extensions?.biographyModule?.biography?.abilities;
+  if (hasExactReviewedBiographyTraitCards(cards, GAWAIN_ID)) biography.biography.abilities = structuredClone(cards);
+  person.extensions = { ...person.extensions, biographyModule: biography };
   for (const field of ['registryManagedSourceRevision', 'registryManagedFields', 'registryManagedFieldRevisions', 'registryManagedExtensionFields']) {
     assert.ok(Object.hasOwn(source.extensions, field), `Gawains Quellmetadatum fehlt: ${field}`);
     person.extensions[field] = structuredClone(source.extensions[field]);

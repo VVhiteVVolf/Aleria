@@ -6074,66 +6074,6 @@
       }
     },
     {
-      "id": "rob-gwynthor-tageloehner",
-      "name": "Rob",
-      "worldPersonId": "",
-      "biography": {
-        "schema": "aleria.biography-module",
-        "schemaVersion": 1,
-        "stats": [
-          {
-            "label": "Name",
-            "value": "Rob"
-          },
-          {
-            "label": "Alter",
-            "value": "33 Jahre"
-          },
-          {
-            "label": "Tätigkeit",
-            "value": "Tagelöhner"
-          },
-          {
-            "label": "Aufenthalt",
-            "value": "Gwynthor"
-          }
-        ],
-        "quote": "",
-        "quoteBy": "",
-        "biography": {
-          "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
-          "portraitFit": "cover",
-          "crestImage": "",
-          "biographyTitle": "Rob",
-          "biographyText": "<p>Rob verdient sich in Gwynthor seinen Unterhalt mit wechselnden Tagesarbeiten. Er hilft bei kleineren Besorgungen, übernimmt Botengänge und sucht im Hafenviertel nach dem nächsten Verdienst.</p><p>Der dreiunddreißigjährige Mann trägt braunes Haar und ein glatt rasiertes Gesicht. Seine Kleidung ist schlicht und alltagstauglich. Er redet ungezwungen, grinst gern und lässt eine Gelegenheit für eine freche Antwort selten aus. Im Gespräch gibt er sich umgänglich und findet schnell Anschluss.</p>",
-          "abilitiesTitle": "Auftreten",
-          "abilities": [
-            {
-              "title": "Gesprächig",
-              "detail": "Kommt mit anderen Leuten rasch ins Gespräch.",
-              "icon": ""
-            },
-            {
-              "title": "Freches Mundwerk",
-              "detail": "Hat oft eine spöttische oder schlagfertige Bemerkung bereit.",
-              "icon": ""
-            },
-            {
-              "title": "Wechselnde Arbeit",
-              "detail": "Nimmt kleinere Hilfsarbeiten und Besorgungen an.",
-              "icon": ""
-            }
-          ],
-          "worksTitle": "Tätigkeit",
-          "works": [],
-          "backgroundTitle": "Weitere Angaben",
-          "backgroundText": "",
-          "portraitStages": [],
-          "portraitCaptions": []
-        }
-      }
-    },
-    {
       "id": "person--haus-llythfor--cynddelw-llythfor",
       "name": "Cynddelw Llythfor",
       "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
@@ -18184,6 +18124,7 @@
                         {
                           "id": "rast-angharad",
                           "portrait": "./assets/letzte-rast/portraits/angharad.png",
+                          "title": "Angharad",
                           "subtitle": "Speisemeisterin · Tischdienst und Bankette",
                           "text": "Speisemeisterin · Tischdienst und Bankette"
                         }
@@ -18214,6 +18155,7 @@
                         {
                           "id": "rast-ffion",
                           "portrait": "./assets/letzte-rast/staff/ffion.png",
+                          "title": "Ffion",
                           "subtitle": "Kellnerin · Abendtische",
                           "text": "Kellnerin · Abendtische"
                         },
@@ -28773,6 +28715,7 @@
                         },
                         {
                           "id": "theater-person-eleri",
+                          "title": "Eleri",
                           "subtitle": "Schauspielerin · Komödie und jugendliche Rollen",
                           "portrait": "./assets/gwynthor-theater/portraits/eleri.png",
                           "text": "Schauspielerin · Komödie und jugendliche Rollen"
@@ -54708,6 +54651,7 @@
                       "nodes": [
                         {
                           "id": "tor-ffion-penrudd",
+                          "title": "Ffion",
                           "subtitle": "Gästezimmer und Wäsche",
                           "portrait": "./assets/rotes-tor/portraits/ffion.png",
                           "text": "<p>36 Jahre. Hywels Gemahlin, Mutter Iwans und Eleris. Organisiert Wäsche und Zimmerpflege gemeinsam mit weiteren Bediensteten. Ihr Herkunftshaus bleibt unbekannt.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view&amp;person=ffion-penrudd\" target=\"_blank\" rel=\"noopener\">Zur vorhandenen Familienakte</a></p>"

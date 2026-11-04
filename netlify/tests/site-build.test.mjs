@@ -77,7 +77,6 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
 });
 
-
 test('chart CSS triggers the browser audit, portraits do not trigger geometry that blocks image requests', () => {
   assert.deepEqual(checks(select(changed('Stammbäume/assets/css/layout.css'))), ['family-charts']);
   assert.deepEqual(checks(select(changed('Stammbäume/assets/images/portraits/person.png'))), []);

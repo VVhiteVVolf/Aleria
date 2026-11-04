@@ -1,0 +1,29 @@
+# Archive duplicate correction checkpoint
+
+- Public isolated worktree: C:/Users/fhg_r/AppData/Local/Temp/aleria-archive-dedupe-20261103, task/archive-dedupe-20261103, base 2fb5a2ff206879ca18788935436f3e19e581882c.
+- Root E:/Aleria contains unrelated/private pending changes. Do not stage or publish that whole tree. No root production writes in this correction so far.
+- Public task changes: semantic equivalence, conservative rule/default normalization, stable view IDs, manual icon/authorship preservation, minimal reference ownership guards, exact starter weapon aliases, register+weapon template projections, corrected horse classification, automatic-save archive write removal, safer persisted snapshot replacement, spell icon-only edit protection, expandable same-name variants and family counts, ref-based read-model cache.
+- New shared combat exports normalizeCombatAbility/Technique/Trait; generated backend source synced, 278 source modules identical. No behavior change to live combat or inventories.
+- First full reference gate was 215/215 frontend + 3/3 parity + 4/4 task selection. Later UI defaults/family counting have focused guards green (31); full official gate must rerun on final commit.
+- Active follow-ups: archive_audit finishes neutral known-skill projection + Query !builtin custom filter; weapon_standards finishes exact personal-name+confirmed-owner fallback for 7 legacy UUID abilities; final_integration_audit finishes picker manual-art overlay and reruns aggregate public projection audit.
+- Before personal UUID fix: audit found 2540 fresh vs2547 simulated-cache entries but same2351 families; 1365 original register IDs,220 possessions and53 owners retained. Aim exact equal fresh/cache counts.
+- Temporary local preview server exec session98998 at http://127.0.0.1:4175. Local browser tab1982820649; production duplicateTab1982820645. CUA runtime bindings duplicateTab/localArchiveTab/qaBrowser/qaViewport. Restore viewport override before final. No UI saves or cache deletion performed.
+- Latest remote/master checked still2fb5a2ff2. No current correction commit/push/deploy yet. All Git staging must occur only in public C worktree, targeted feature files/tests/docs +generated export file +build task. Diagnostics are source-only and untracked/ignored.
+- Release: final commit [skip netlify], clean public master tree, ALERIA_NETLIFY_CLI=E:/Aleria/netlify/.cli/node_modules/netlify-cli/bin/run.js, node netlify/release/release.mjs --publish --push. Official checks run before push. Preserve root dirty files and index; integrate only verified clean target paths with index backup/CAS fast-forward, never blanket checkout/reset/add root.
+
+## Release in progress after final fixes
+
+- Feature commit70f81ea6fd5b9644b5ac865f249a3fbd35418125 integrated by CAS fast-forward into shared master;36 targeted public files synchronized into E authoring tree after checking they were clean; root index backed up. Unrelated root edits untouched.
+- First official release passed all earlier gates including221 frontend catalog tests, but stopped in culture-classes/check-character-archive.mjs: old fixture expected name-only merge of empty spell rules. Corrected fixture to include actual equivalent rules and added differing-rule inverse guard. Script now green.
+- Follow-up3bc537307276e6ecd52cf102c46b70a5d984f416 integrated similarly (1 checker file). C public worktree currently on master, same shared master as E. Remote remained2fb5a2ff2 before retry; no push yet at retry start.
+- Official retry runs exec session16837; log diagnostics/archive-dedupe-20261103/release-final.log. Command node netlify/release/release.mjs --publish --push with approved existing Netlify CLI path from E. Check completion, fix genuine failures if any, then verify actual live page.
+- All agent writes finished. Final read-only aggregate audit: fresh and8220 realistic UUID/cache copies both2507 rule cards in2351 name families, same semantic digest, zero identical signature duplicates;20 neutral skills. All1365 register IDs and220 possessions from53 owners preserved. Evidence public-projection-audit.json and audit-public-projection.mjs.
+- All material fixes present: skill neutral projection, strict7 personal UUID name+owner fallback, source custom filter excludes builtin, pickermanualart overlay, same-name family pagination/counts, defaults empty physical damage handled.
+- CUA runtime reset on user continue. Old tabs1982820645/1982820649 are no longer attached, old local server session98998 no longer exists. Do not reuse old bindings. Create fresh Chrome tab for production verification after deployment. Previous temporary viewport override may have expired with cleanup; inspect/reset viewport before final if still set.
+- After deploy: copy final metadata/diagnostics to E local diagnostics/.release-state without copying generated public overlays into dirty root sources. Switch C back to task/archive-dedupe-20261103 at same final commit after release to avoid keeping master checked out twice. E remains master with private pending work preserved. Final German answer should explain cause and concrete fix, actual publish status, regression audit, and normal reload needed for already open pages.
+
+## Publication verified
+
+Commit 3bc537307276e6ecd52cf102c46b70a5d984f416 pushed to origin/master. Deploy 6ae9d1dadba556edf5f5a301 is active; 33313 files and six Netlify functions verified at 2026-11-03T12:22:33.988Z. All48 release gates passed. Browser final smoke check pending.
+
+Browser smoke check completed successfully on the verified active deploy: one visible Tierbegleiter template with expandable personal version, one Katana reference with goods-register link,20 skills, one current Rhyfel breed template while individual horses remain separate. No UI saves or cache deletion. Public C worktree returned to its task branch; E remains master and its staged count is zero.

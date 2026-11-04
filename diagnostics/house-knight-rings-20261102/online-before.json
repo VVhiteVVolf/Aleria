@@ -195639,7 +195639,9 @@
                                 "worldPersonId": {
                                   "stringValue": "person--craigddu--person-0774c56b"
                                 },
-                                "name": {}
+                                "name": {
+                                  "stringValue": "Eleri"
+                                }
                               }
                             }
                           }
@@ -368389,7 +368391,9 @@
                                 "worldPersonId": {
                                   "stringValue": "person--family-tree--angharad-rhodri-spouse"
                                 },
-                                "name": {}
+                                "name": {
+                                  "stringValue": "Angharad"
+                                }
                               }
                             }
                           }
@@ -726247,7 +726251,16 @@
               "name": "Mared Craigddu"
             }
           ],
-          "partners": [],
+          "partners": [
+            {
+              "personId": "person-0774c56b",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--craigddu--person-0774c56b",
+              "name": "Eleri"
+            }
+          ],
           "children": [
             {
               "personId": "person-36234a87",
@@ -783885,6 +783898,14 @@
               "certainty": "confirmed",
               "worldPersonId": "person--haus-beryn--rhodri-beryn",
               "name": "Rhodri Beryn"
+            },
+            {
+              "personId": "angharad-rhodri-spouse",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--family-tree--angharad-rhodri-spouse",
+              "name": "Angharad"
             }
           ],
           "partners": [],
