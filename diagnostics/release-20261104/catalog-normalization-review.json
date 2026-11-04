@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "target": ".tmp/release-public-20261104",
+  "status": "frozen-ready-for-official-release-gates",
+  "finding": "Authored and standard item generator checks were sensitive to Windows CRLF checkouts. Regeneration restored generator-emitted LF. git diff --quiet and git diff --cached --quiet both returned 0: no new semantic Git-blob changes.",
+  "generators": [
+    {
+      "command": "node AleriaAlmanach/scripts/build-authored-item-catalog.mjs",
+      "checkPassed": true,
+      "itemDefinitions": 45
+    },
+    {
+      "command": "node AleriaAlmanach/scripts/build-item-register.mjs",
+      "checkPassed": true,
+      "standardGoods": 304,
+      "regionalTemplates": 186,
+      "version": "a552199792df875e"
+    }
+  ],
+  "backend": {
+    "syncCommand": "npm run sync:mechanics --prefix firebase/functions",
+    "syncPassed": true,
+    "byteParity": {
+      "checked": 289,
+      "byteIdentical": true,
+      "mismatches": []
+    },
+    "testCommand": "npm test --prefix firebase/functions",
+    "tests": 357,
+    "passed": 357,
+    "failed": 0,
+    "environmentNote": "Initial sandboxed Node child-process launch failed with EPERM before tests ran. The authorized unsandboxed run passed the complete standard suite. No live writes performed."
+  },
+  "privacy": {
+    "commitContentAudit": {
+      "checked": 5698,
+      "findings": [],
+      "verified": true
+    },
+    "databaseAndCatalogAudit": {
+      "checked": 506,
+      "databaseFiles": 265,
+      "publicGeneratedFiles": 241,
+      "households": {
+        "file": "Karten/modules/households/households.generated.json",
+        "sha256": "706ad224ce9b968a32310b3733d4845d5415899149fff702584c527dcf5f10a0"
+      },
+      "findings": [],
+      "verified": true,
+      "parentDeltas": []
+    }
+  },
+  "baselineReview": {
+    "comparisonBase": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+    "normalizedCurrentFilesEqualBase": 21,
+    "grouping": {
+      "mixedPrivateHouseFilesAtLastPublicVersion": 4,
+      "intentionallyRetainedPublicMapBaseline": 1,
+      "questDocsAndPreparationLoadersWithOnlyWithheldPreparationAdded": 3,
+      "filteredDiagnosticAndBiographyJsonSourcesMatchingPublicBaseline": 13
+    },
+    "regeneratedPublicCatalogs": [
+      "households",
+      "regional-equipment",
+      "public-biographies",
+      "quest-catalog",
+      "authored-item-catalog",
+      "standard-item-register"
+    ],
+    "classSpellOrGeneralItemCodeAtOldWholeFileFallback": false,
+    "note": "Matching the old public baseline after private-record filtering is not itself a lost public change. New private household/source narrative augmentation remains withheld. Shared public feature code and current public item sources are retained."
+  },
+  "git": {
+    "indexChangedByReviewer": false,
+    "refsChangedByReviewer": false,
+    "commitPerformed": false,
+    "generatedSemanticFixCommitRequired": false,
+    "reviewerCommitCandidate": "diagnostics/release-20261104/catalog-normalization-review.json",
+    "rootOwnedReleaseNote": "netlify/docs/releases/2026-11-04-countries-and-world.md"
+  },
+  "scope": {
+    "mainSourcesChanged": false,
+    "privateSourcesChanged": false,
+    "junctionsChanged": false,
+    "liveWrites": false,
+    "uiChanges": false,
+    "releaseCoreChanges": false
+  },
+  "handoff": "No further reviewer checks or writes planned. Root may canonicalize eligible non-original text from the already-clean Git index with per-call core.autocrlf=false, preserving -text attributes and declared original bytehashes, then resume full official release gates."
+}
