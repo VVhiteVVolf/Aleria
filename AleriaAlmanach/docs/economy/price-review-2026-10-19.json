@@ -4,9 +4,9 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1278,
+    "rows": 1313,
     "adjusted": 144,
-    "retained": 927,
+    "retained": 962,
     "notOffered": 205,
     "unavailable": 2,
     "eligibleVenues": 15,
@@ -5199,6 +5199,636 @@
       ],
       "decision": "angepasst",
       "reason": "Gutes einschneidiges Langmesser unter einem vollständigen Standardschwert."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:degen",
+      "name": "Degen",
+      "unit": "",
+      "price": {
+        "minCopper": 650,
+        "maxCopper": 650
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        650,
+        650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:rapier",
+      "name": "Rapier",
+      "unit": "",
+      "price": {
+        "minCopper": 850,
+        "maxCopper": 850
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        850,
+        850
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:saebel",
+      "name": "Säbel",
+      "unit": "",
+      "price": {
+        "minCopper": 500,
+        "maxCopper": 500
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        500,
+        500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:dolch",
+      "name": "Dolch",
+      "unit": "",
+      "price": {
+        "minCopper": 80,
+        "maxCopper": 80
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        80,
+        80
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:kurzschwert",
+      "name": "Kurzschwert",
+      "unit": "",
+      "price": {
+        "minCopper": 250,
+        "maxCopper": 250
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        250,
+        250
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:parierdolch",
+      "name": "Parierdolch",
+      "unit": "",
+      "price": {
+        "minCopper": 140,
+        "maxCopper": 140
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        140,
+        140
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:kampfklauen",
+      "name": "Kampfklauen",
+      "unit": "",
+      "price": {
+        "minCopper": 250,
+        "maxCopper": 250
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        250,
+        250
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:handaxt",
+      "name": "Handaxt",
+      "unit": "",
+      "price": {
+        "minCopper": 160,
+        "maxCopper": 160
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        160,
+        160
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:enteraxt",
+      "name": "Enteraxt",
+      "unit": "",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:einhand-kriegshammer",
+      "name": "Einhand-Kriegshammer",
+      "unit": "",
+      "price": {
+        "minCopper": 400,
+        "maxCopper": 400
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        400,
+        400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:rabenschnabel",
+      "name": "Rabenschnabel",
+      "unit": "",
+      "price": {
+        "minCopper": 450,
+        "maxCopper": 450
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        450,
+        450
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:speer",
+      "name": "Speer",
+      "unit": "",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        100,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:partisane",
+      "name": "Partisane",
+      "unit": "",
+      "price": {
+        "minCopper": 550,
+        "maxCopper": 550
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        550,
+        550
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:glefe",
+      "name": "Glefe",
+      "unit": "",
+      "price": {
+        "minCopper": 500,
+        "maxCopper": 500
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        500,
+        500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:harpunenspeer",
+      "name": "Harpunenspeer",
+      "unit": "",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:kampfstab",
+      "name": "Kampfstab",
+      "unit": "",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:schwere-armbrust",
+      "name": "Schwere Armbrust",
+      "unit": "",
+      "price": {
+        "minCopper": 800,
+        "maxCopper": 800
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        800,
+        800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:handarmbrust",
+      "name": "Handarmbrust",
+      "unit": "",
+      "price": {
+        "minCopper": 650,
+        "maxCopper": 650
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        650,
+        650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:peitsche",
+      "name": "Peitsche",
+      "unit": "",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        100,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:schleuder",
+      "name": "Schleuder",
+      "unit": "",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:khopesh",
+      "name": "Khopesh",
+      "unit": "",
+      "price": {
+        "minCopper": 600,
+        "maxCopper": 600
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        600,
+        600
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:shamshir",
+      "name": "Shamshir",
+      "unit": "",
+      "price": {
+        "minCopper": 650,
+        "maxCopper": 650
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        650,
+        650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:kukri",
+      "name": "Kukri",
+      "unit": "",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:chakram",
+      "name": "Chakram",
+      "unit": "",
+      "price": {
+        "minCopper": 200,
+        "maxCopper": 200
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        200,
+        200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:katana",
+      "name": "Katana",
+      "unit": "",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 1000
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        1000,
+        1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:wakizashi",
+      "name": "Wakizashi",
+      "unit": "",
+      "price": {
+        "minCopper": 500,
+        "maxCopper": 500
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        500,
+        500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:tanto",
+      "name": "Tantō",
+      "unit": "",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:nodachi",
+      "name": "Nodachi",
+      "unit": "",
+      "price": {
+        "minCopper": 1800,
+        "maxCopper": 1800
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        1800,
+        1800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:naginata",
+      "name": "Naginata",
+      "unit": "",
+      "price": {
+        "minCopper": 650,
+        "maxCopper": 650
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        650,
+        650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:jian",
+      "name": "Jian",
+      "unit": "",
+      "price": {
+        "minCopper": 800,
+        "maxCopper": 800
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        800,
+        800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:dao",
+      "name": "Dao",
+      "unit": "",
+      "price": {
+        "minCopper": 550,
+        "maxCopper": 550
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        550,
+        550
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:yari",
+      "name": "Yari",
+      "unit": "",
+      "price": {
+        "minCopper": 450,
+        "maxCopper": 450
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        450,
+        450
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:tonfa",
+      "name": "Tonfa",
+      "unit": "",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        100,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:nunchaku",
+      "name": "Nunchaku",
+      "unit": "",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Waffen & Rüstungen",
+      "id": "standard:waffen-rustungen:wurfstern",
+      "name": "Wurfstern",
+      "unit": "",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "waffen",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
     },
     {
       "source": "Rossmarkt",
