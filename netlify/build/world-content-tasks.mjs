@@ -104,6 +104,8 @@ export const WORLD_CONTENT_TASKS = [
       'Stammbäume/tests/fjordheim-structure.test.js',
       'Stammbäume/tests/skjaerheim-structure.test.js',
       'Stammbäume/tests/albic-fief-placements.test.js',
+      'Stammbäume/tests/source-family-metadata-boundaries.test.mjs',
+      'Stammbäume/tests/source-family-metadata-provenance.test.mjs',
       'Stammbäume/tests/dunfal-portrait-upgrade.test.js']]
   },
   {

@@ -1,0 +1,96 @@
+{
+  "schema": "aleria.reviewed-house-lore-source-annotations",
+  "date": "2026-11-04",
+  "authority": "User-authorized chronology corrections; source comments explain the same resolved conflicts, without any extra person or relationship change.",
+  "historicalPublicCommit": "1b75c8f54e5135dffdc39e62adae3ee7c495570a",
+  "evidence": [
+    "Stammbäume/assets/data/source-inventories/house-lore-corrections-20261104.json",
+    "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-correction-fields.js: extensionFields",
+    "diagnostics/house-lore-fixes-20261104/leitheach-changes.json: fieldUpgradeRequests.extensions"
+  ],
+  "reviews": [
+    {
+      "familyId": "haus-gallchobhair",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Genealogie, Lebensdaten, Hausoberhäupter, Amtszeiten und Erbfolge folgen der bereitgestellten Gallchobhair-Hausseite und ihrer Stammbaumgrafik. Die Amtszeitentafel wird nicht als Lebensdatentafel missverstanden. Gilleóns Geburtsjahr 1170 und Aonghus’ Geburtsjahr 1635 folgen den ausdrücklichen Nutzerkorrekturen. Die unmöglichen Quellfolgen Laoise 1125–1698 und Nolan 1678–1633 wurden zu 1125–1198 und 1678–1733 normalisiert. Taerlach, Gilleón und Aonghus besitzen personengebundene Gründerknoten zu den drei Gallchobhair unterstehenden Laird-Clans. Elf Gallchobhair-Frauen ohne lokal fortgeführte Nachkommen besitzen direkte Wegverheiratet-Knoten. Tynan und Anali verweisen stattdessen auf das neue Haus Grianlaoch unter Haus Illewod; Dymphna und Deaglan werden nicht dupliziert und bleiben ausschließlich in den Grianlaoch- und Illewod-Akten. Lochlainn und Oonagh verwenden ihre nun vorhandenen kanonischen Na’Mhuir-Porträts; Lochlainns Lebensdaten wurden aus dieser Gegenakte ergänzt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.",
+          "afterPresent": true,
+          "after": "Genealogie, Lebensdaten, Hausoberhäupter, Amtszeiten und Erbfolge folgen der bereitgestellten Gallchobhair-Hausseite und ihrer Stammbaumgrafik. Die Amtszeitentafel wird nicht als Lebensdatentafel missverstanden. Gilleóns Geburtsjahr 1170 folgt der ausdrücklichen Nutzerkorrektur. Die neue Nutzerkorrektur vom 4. November 2026 gibt Aonghus’ Kindern von 1630, 1632 und 1634 Vorrang: Seine frühere Datierung 1610–1672 wird wiederhergestellt, Ètáin wird auf 1612–1695 datiert. Die unmöglichen Quellfolgen Laoise 1125–1698 und Nolan 1678–1633 wurden zu 1125–1198 und 1678–1733 normalisiert. Taerlach, Gilleón und Aonghus besitzen personengebundene Gründerknoten zu den drei Gallchobhair unterstehenden Laird-Clans. Elf Gallchobhair-Frauen ohne lokal fortgeführte Nachkommen besitzen direkte Wegverheiratet-Knoten. Tynan und Anali verweisen stattdessen auf das neue Haus Grianlaoch unter Haus Illewod; Dymphna und Deaglan werden nicht dupliziert und bleiben ausschließlich in den Grianlaoch- und Illewod-Akten. Lochlainn und Oonagh verwenden ihre nun vorhandenen kanonischen Na’Mhuir-Porträts; Lochlainns Lebensdaten wurden aus dieser Gegenakte ergänzt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceCorrections"
+          ],
+          "beforePresent": true,
+          "before": [
+            "Gilleón Gallchobhair wurde 1170 statt 1125 geboren.",
+            "Aonghus Gallchobhair wurde 1635 statt 1610 geboren.",
+            "Laoise Lagas unmögliches Todesjahr 1698 wurde als Zahlendreher zu 1198 normalisiert.",
+            "Nolan Gallchobhairs unmögliches Todesjahr 1633 wurde als Zahlendreher zu 1733 normalisiert."
+          ],
+          "afterPresent": true,
+          "after": [
+            "Gilleón Gallchobhair wurde 1170 statt 1125 geboren.",
+            "Nutzerkorrektur 4. November 2026: Aonghus Gallchobhair wurde auf 1610 statt 1635 und Ètáin auf 1612 statt 1622 datiert, damit die unveränderten Kinderjahre 1630, 1632 und 1634 kohärent bleiben.",
+            "Laoise Lagas unmögliches Todesjahr 1698 wurde als Zahlendreher zu 1198 normalisiert.",
+            "Nolan Gallchobhairs unmögliches Todesjahr 1633 wurde als Zahlendreher zu 1733 normalisiert."
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Genealogie, Lebensdaten, Oberhäupter und Erbfolge folgen der bereitgestellten Dál’Ceardaíocht-Hierarchie. Aonghus wird entsprechend der bereits ausdrücklich festgelegten Datierung 1635–1672 geführt; dadurch liegen die übernommenen Geburtsjahre seiner ersten drei Nachkommen vor seinem eigenen und bleiben als offener Quellenwiderspruch dokumentiert. Die offenkundig vertauschten Todesjahre des jüngeren Aonghus und Brónas werden zu 1733 normalisiert. Cari bleibt biologisches Kind des Hauses Llwynog und erscheint ausschließlich als Rógáns aufgenommenes Mündel. Sämtliche Bilder der bereitgestellten Ceardaíocht-Quelle werden als veraltet ignoriert; nur bereits bestehende Porträts identischer Weltpersonen werden wiederverwendet. Glaine und Dúna verwenden nun ihre kanonischen Na’Mhuir-Porträts und die einheitliche Na’Mhuir-Hauskennung. Lornas Hauskennung verweist nun auf die ausgearbeitete Hauptakte Dal T’Saor.",
+          "afterPresent": true,
+          "after": "Genealogie, Lebensdaten, Oberhäupter und Erbfolge folgen der bereitgestellten Dál’Ceardaíocht-Hierarchie. Gemäß Nutzerkorrektur vom 4. November 2026 haben die Kinderjahre 1630, 1632 und 1634 Vorrang: Aonghus wird wieder auf 1610–1672 und Ètáin auf 1612–1695 datiert. Damit ist der zuvor bewusst erhaltene Eltern-Kinder-Datierungskonflikt gelöst; die Amtsfolge und sämtliche Verbindungen bleiben unverändert. Die offenkundig vertauschten Todesjahre des jüngeren Aonghus und Brónas werden zu 1733 normalisiert. Cari bleibt biologisches Kind des Hauses Llwynog und erscheint ausschließlich als Rógáns aufgenommenes Mündel. Sämtliche Bilder der bereitgestellten Ceardaíocht-Quelle werden als veraltet ignoriert; nur bereits bestehende Porträts identischer Weltpersonen werden wiederverwendet. Glaine und Dúna verwenden nun ihre kanonischen Na’Mhuir-Porträts und die einheitliche Na’Mhuir-Hauskennung. Lornas Hauskennung verweist nun auf die ausgearbeitete Hauptakte Dal T’Saor."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceCorrections"
+          ],
+          "beforePresent": true,
+          "before": [
+            "Aonghus Gallchobhair wurde mit der bereits festgelegten Datierung 1635–1672 statt der alten Tabellenangabe 1610–1672 übernommen.",
+            "Die Todesjahre 1633 des jüngeren Aonghus und Brónas wurden als offenkundige Zahlendreher zu 1733 berichtigt."
+          ],
+          "afterPresent": true,
+          "after": [
+            "Nutzerkorrektur 4. November 2026: Aonghus Gallchobhair wird auf 1610–1672 und Ètáin auf 1612–1695 datiert; die Geburtsjahre ihrer Kinder 1630, 1632 und 1634 bleiben unverändert.",
+            "Die Todesjahre 1633 des jüngeren Aonghus und Brónas wurden als offenkundige Zahlendreher zu 1733 berichtigt."
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceDiscrepancies"
+          ],
+          "beforePresent": true,
+          "before": [
+            "Wíomar (1630), Wúnaire (1632) und Séamus (1634) werden als Kinder des auf 1635 datierten Gründers Aonghus überliefert. Die widersprüchlichen Kinderdaten bleiben bis zu einer inhaltlichen Klärung unverändert."
+          ],
+          "afterPresent": true,
+          "after": []
+        }
+      ]
+    }
+  ]
+}

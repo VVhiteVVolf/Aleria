@@ -2619,6 +2619,391 @@ export const STANDARD_PRICE_REFERENCE = [
     ]
   },
   {
+    "id": "standard:waffen-rustungen:degen",
+    "title": "Degen",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      650,
+      650
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:rapier",
+    "title": "Rapier",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      850,
+      850
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:saebel",
+    "title": "Säbel",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      500,
+      500
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:dolch",
+    "title": "Dolch",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      80,
+      80
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:kurzschwert",
+    "title": "Kurzschwert",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      250,
+      250
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:parierdolch",
+    "title": "Parierdolch",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      140,
+      140
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:kampfklauen",
+    "title": "Kampfklauen",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      250,
+      250
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:handaxt",
+    "title": "Handaxt",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      160,
+      160
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:enteraxt",
+    "title": "Enteraxt",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      220,
+      220
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:einhand-kriegshammer",
+    "title": "Einhand-Kriegshammer",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      400,
+      400
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:rabenschnabel",
+    "title": "Rabenschnabel",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      450,
+      450
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:speer",
+    "title": "Speer",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      100,
+      100
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:partisane",
+    "title": "Partisane",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      550,
+      550
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:glefe",
+    "title": "Glefe",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      500,
+      500
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:harpunenspeer",
+    "title": "Harpunenspeer",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      180,
+      180
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:kampfstab",
+    "title": "Kampfstab",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      30,
+      30
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:schwere-armbrust",
+    "title": "Schwere Armbrust",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      800,
+      800
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:handarmbrust",
+    "title": "Handarmbrust",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      650,
+      650
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:peitsche",
+    "title": "Peitsche",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      100,
+      100
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:schleuder",
+    "title": "Schleuder",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      20,
+      20
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:khopesh",
+    "title": "Khopesh",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      600,
+      600
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:shamshir",
+    "title": "Shamshir",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      650,
+      650
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:kukri",
+    "title": "Kukri",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      180,
+      180
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:chakram",
+    "title": "Chakram",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      200,
+      200
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:katana",
+    "title": "Katana",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      1000,
+      1000
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:wakizashi",
+    "title": "Wakizashi",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      500,
+      500
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:tanto",
+    "title": "Tantō",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      180,
+      180
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:nodachi",
+    "title": "Nodachi",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      1800,
+      1800
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:naginata",
+    "title": "Naginata",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      650,
+      650
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:jian",
+    "title": "Jian",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      800,
+      800
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:dao",
+    "title": "Dao",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      550,
+      550
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:yari",
+    "title": "Yari",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      450,
+      450
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:tonfa",
+    "title": "Tonfa",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      100,
+      100
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:nunchaku",
+    "title": "Nunchaku",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      180,
+      180
+    ]
+  },
+  {
+    "id": "standard:waffen-rustungen:wurfstern",
+    "title": "Wurfstern",
+    "market": "Waffen & Rüstungen",
+    "category": "waffen",
+    "unit": "",
+    "range": [
+      25,
+      25
+    ]
+  },
+  {
     "id": "standard:rossmarkt:pferde-hross",
     "title": "Hross",
     "market": "Rossmarkt",

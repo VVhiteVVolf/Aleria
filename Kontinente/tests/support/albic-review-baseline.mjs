@@ -1,5 +1,8 @@
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { isDeepStrictEqual } from 'node:util';
+import { REVIEWED_CHARACTER_TRAITS } from '../../../AleriaAlmanach/modules/character-trait-review/reviewed-character-traits.js';
+import { hasExactReviewedBiographyTraitCards } from '../../../AleriaAlmanach/modules/character-trait-review/character-trait-review-model.js';
 import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
 import balchderPeople from './balchder-person-review-20261029.json' with { type: 'json' };
 import gawainPublic from './gawain-public-person-review-20261101.json' with { type: 'json' };
@@ -14,12 +17,20 @@ import patrickBiographies from './patrick-biography-person-review-20261103.json'
 import houseBiographyOwnership from './house-biography-ownership-review-20261103.json' with { type: 'json' };
 import sonnenkuesteAllegiance from './sonnenkueste-knight-allegiance-review-20261103.json' with { type: 'json' };
 import { applyFamilyMetadataReview } from './apply-family-metadata-review.mjs';
+import { getRegisteredSourceMetadataProvenance } from '../../../Stammbäume/assets/js/data/families.registry.js';
+import { projectReviewedHouseCorrections } from './reviewed-house-correction-projection.mjs';
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function protectedAlbicFamilies(records) {
   return records.map(record => {
     const copy = structuredClone(record);
+    // Migration versions remain source-owned. Admit only the exact metadata
+    // produced by the canonical wrapper pipeline, then retain the explicit
+    // pre-existing versions for the historical content proof.
+    const provenance = getRegisteredSourceMetadataProvenance(record.id);
+    if (provenance.fields.length) applyFamilyMetadataReview(copy, { familyId: record.id, ...provenance });
+    projectReviewedHouseCorrections(copy);
     const ownershipReview = houseBiographyOwnership.reviews.find(review => review.familyId === record.id);
     if (ownershipReview) applyFamilyMetadataReview(copy, ownershipReview);
     const allegianceReview = sonnenkuesteAllegiance.reviews.find(review => review.familyId === record.id);
@@ -46,7 +57,17 @@ export function protectedAlbicFamilies(records) {
     for (const review of traitCards.cards.filter(review => review.familyId === record.id)) {
       const body = copy.family.persons.find(person => person.id === review.personId)?.extensions?.biographyModule?.biography;
       assert(body, `${record.id}/${review.personId}/trait-cards`);
-      assert.deepEqual({ abilitiesTitle: body.abilitiesTitle, abilities: body.abilities }, review.after, `${record.id}/${review.personId}/trait-cards`);
+      const current = { abilitiesTitle: body.abilitiesTitle, abilities: body.abilities };
+      if (!isDeepStrictEqual(current, review.after)) {
+        // A catalog revision may replace complete approved cards. Tie both
+        // versions to the same exact reviewed assignment before projecting.
+        const assignments = REVIEWED_CHARACTER_TRAITS.filter(assignment =>
+          hasExactReviewedBiographyTraitCards(review.after.abilities, assignment.id)
+          && hasExactReviewedBiographyTraitCards(current.abilities, assignment.id));
+        assert.equal(assignments.length, 1, `${record.id}/${review.personId}/trait-cards`);
+        current.abilities = review.after.abilities;
+      }
+      assert.deepEqual(current, review.after, `${record.id}/${review.personId}/trait-cards`);
       Object.assign(body, structuredClone(review.before));
     }
     if (record.id === gwyllachAges.familyId) {

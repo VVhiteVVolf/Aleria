@@ -6,7 +6,7 @@ import { isDeepStrictEqual } from 'node:util';
 import { mergeCharacterRecordProjections } from '../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { REVIEWED_CHARACTER_TRAITS } from '../modules/character-trait-review/reviewed-character-traits.js';
 import { projectTraitReviewRecord } from '../modules/character-trait-review/character-trait-review-database.mjs';
-import { reviewedBiographyTraitCards } from '../modules/character-trait-review/character-trait-review-model.js';
+import { hasExactReviewedBiographyTraitCards, reviewedBiographyTraitCards } from '../modules/character-trait-review/character-trait-review-model.js';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const checking = process.argv.includes('--check'), inputs = new Map(), outputs = new Map();
 async function json(path) { const full = resolve(root, path), text = await readFile(full, 'utf8'); inputs.set(full, text); return JSON.parse(text); }
@@ -43,14 +43,20 @@ for (const entry of canonical.entries) {
   if (!assignment) continue;
   const old = canonicalBefore.entries.find(row => row.key === entry.key);
   const cards = reviewedBiographyTraitCards(assignment.id), body = entry.biography.biography;
+  if (hasExactReviewedBiographyTraitCards(body.abilities, assignment.id)) continue;
   if (!isDeepStrictEqual(body.abilities, cards)) assert.deepEqual(body.abilities, old.biography.biography.abilities, `${assignment.name}: Persönlichkeitstext inzwischen bearbeitet.`);
   body.abilities = cards; body.abilitiesTitle = 'Eigenschaften';
 }
 output('js/biography/sources/public-biographies.json', canonical);
 const gawainExportPath = 'Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json';
 const gawainExport = await json(gawainExportPath);
-gawainExport.character.biography.biography.abilities = reviewedBiographyTraitCards('q1QtSIug74FzzwUAqWrs');
-gawainExport.character.biography.biography.abilitiesTitle = 'Eigenschaften';
+const gawainId = 'q1QtSIug74FzzwUAqWrs', gawainBody = gawainExport.character.biography.biography;
+if (!hasExactReviewedBiographyTraitCards(gawainBody.abilities, gawainId)) {
+  const original = canonicalBefore.entries.find(entry => entry.characterIds.includes(gawainId));
+  assert.deepEqual(gawainBody.abilities, original?.biography.biography.abilities, 'Gawain: Persönlichkeitstext im Quellbeleg inzwischen bearbeitet.');
+  gawainBody.abilities = reviewedBiographyTraitCards(gawainId);
+  gawainBody.abilitiesTitle = 'Eigenschaften';
+}
 output(gawainExportPath, gawainExport);
 const changed = [];
 for (const [path, value] of outputs) {

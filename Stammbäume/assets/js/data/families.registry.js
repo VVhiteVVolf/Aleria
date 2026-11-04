@@ -97,7 +97,10 @@ import { withLagaCounterpartUpgrade } from '../modules/laga-family/laga-counterp
 import { withHouseLoreCorrections } from '../modules/house-lore-corrections/house-lore-corrections.js?v=20261104-content-lore-v1';
 import { withHouseLifeStatusCorrections } from '../modules/house-lore-corrections/house-life-status-corrections.js?v=20261104-content-lore-v1';
 
+import { withoutInheritedBiographyMaps, sourceMetadataProvenance } from './source-family-metadata-provenance.js';
+
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
+const metadataProvenance = Object.create(null);
 
 function hierarchyFor(path, familyId, familyTitle) {
   const levels = ['kingdom', 'county', 'barony', 'holding'];
@@ -140,11 +143,15 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withBrannSourceCounterUpgrade(family);
   family = withDunfalPortraitUpgrade(family);
   family = withLagaCounterpartUpgrade(family);
+  const beforeBiography = family;
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULT_CATALOG);
+  const previousMetadata = withoutInheritedBiographyMaps(beforeBiography, family);
   family = withHouseLoreCorrections(family);
   family = withHouseLifeStatusCorrections(family);
   family = withReviewedAlbicPlacement(family);
   family = withAcceptedRealmPlacement(family);
+  const previousPlacement = withAcceptedRealmPlacement(withReviewedAlbicPlacement(previousMetadata));
+  metadataProvenance[id] = sourceMetadataProvenance(previousPlacement, family);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family, territorialPlacements);
   return Object.freeze({
@@ -555,4 +562,9 @@ export const FAMILY_REGISTRY = Object.freeze([
 
 export function getRegisteredFamily(familyId) {
   return FAMILY_REGISTRY.find(record => record.id === familyId) || null;
+}
+
+/** Read-only provenance for source-generated migration metadata, never graph data. */
+export function getRegisteredSourceMetadataProvenance(familyId) {
+  return structuredClone(metadataProvenance[familyId] || { fields: [], historicalObjectOrders: [] });
 }

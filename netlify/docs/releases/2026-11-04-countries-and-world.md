@@ -41,3 +41,14 @@ CUA-`timeoutMs`-Fehler eingeschränkt. Bildübersichten, statische Abhängigkeit
 Quellhashes und lokale HTTP-Audits sind geprüft; ein Browser-Pass wird nicht
 behauptet. Die tatsächliche Veröffentlichung wird über den etablierten
 Releasebeleg samt Commit, Paketdateihashes und Functions verifiziert.
+
+Die Gesamtprüfung erhält exakt genehmigte ältere Trait-Kopien, ohne ihre Werte
+nachträglich umzuschreiben. Ein Hausbiografie-Update überträgt seine eigene
+Revisionsnummer nicht mehr auf einen zuvor lokal gewählten Stammbaumfokus.
+Historische Prüfbelege projizieren ausschließlich nachgewiesene, abgeleitete
+Metadaten zurück; Inhalts- und Beziehungsschutz bleiben wirksam.
+
+Die vorhandene Preisreferenz wurde aus den aktuellen Waffenstandards neu
+erzeugt: 35 zusätzliche Einträge, keine Preisänderung oder Entfernung unter den
+269 bisherigen Referenzen. Generierte Browser- und Serverprojektionen werden
+gegen dieselben freigegebenen Quellen geprüft.

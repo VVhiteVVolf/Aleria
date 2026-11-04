@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-01T06:10:48.232Z",
-  "dataRevision": 14,
+  "reviewedAt": "2026-11-04T05:50:21.173Z",
+  "dataRevision": 15,
   "policy": "Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.",
   "sources": [
     "house-seat-sources.json",
     "Stammbäume/assets/js/data/families.registry.js",
-    "Familien Häuser und Clans/haeuser.registry.js",
-    "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js"
+    "Familien Häuser und Clans/haeuser.registry.js"
   ],
   "pins": [
     {
@@ -553,7 +552,7 @@
       "familyName": "Familie Twyllod",
       "liegeHouseId": "",
       "dominionId": "msa3c53vo1h89v",
-      "source": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
       "houseProfile": {
         "rankId": "commoner",
         "seat": "Twyllod-Hof",
@@ -576,7 +575,7 @@
           "kingdom": ""
         }
       },
-      "note": "Nutzerauftrag vom 30.10.2026: bestehende Fischerei mit der nun ausgearbeiteten Familie verbunden; Position, Pin-ID und Herrschaft erhalten."
+      "note": ""
     },
     {
       "pinId": "gwynthor-marking-141",

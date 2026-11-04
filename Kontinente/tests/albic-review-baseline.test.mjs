@@ -4,8 +4,50 @@ import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.regis
 import review from './support/gwynthor-troetzli-family-review-20261031.json' with { type: 'json' };
 import { protectedAlbicFamilies, reviewHash } from './support/albic-review-baseline.mjs';
 import gawainReview from './support/gawain-public-person-review-20261101.json' with { type: 'json' };
+import traitCards from './support/character-trait-card-review-20261102.json' with { type: 'json' };
 
 const penrudd = () => structuredClone(FAMILY_REGISTRY.find(record => record.id === 'haus-penrudd'));
+
+test('exact current, historical and mixed approved cards preserve the same historical person proof', () => {
+  for (const review of traitCards.cards) {
+    const source = FAMILY_REGISTRY.find(record => record.id === review.familyId);
+    const sourceBefore = structuredClone(source);
+    const currentCards = source.family.persons.find(person => person.id === review.personId).extensions.biographyModule.biography.abilities;
+    const expected = protectedAlbicFamilies([source]);
+    assert.notDeepEqual(currentCards, review.after.abilities, 'The regression includes an actual approved catalog revision');
+    for (const mask of [0, 1, 2, 3]) {
+      const record = structuredClone(source);
+      const body = record.family.persons.find(person => person.id === review.personId).extensions.biographyModule.biography;
+      body.abilities = currentCards.map((card, index) => structuredClone(mask & (1 << index) ? card : review.after.abilities[index]));
+      const before = structuredClone(record);
+      assert.deepEqual(protectedAlbicFamilies([record]), expected, `${review.personId}/approved-card-version-${mask}`);
+      assert.deepEqual(record, before, 'The historical proof never changes its input');
+    }
+    assert.deepEqual(source, sourceBefore, 'The current family registry is unchanged');
+  }
+});
+
+test('approved card revisions reject altered text, icons, costs, modifiers and structure', () => {
+  for (const review of traitCards.cards) {
+    for (const mutate of [
+      body => { body.abilitiesTitle += ' Unapproved'; },
+      body => { body.abilities[0].title += ' Unapproved'; },
+      body => { body.abilities[0].detail += ' Unapproved'; },
+      body => { body.abilities[0].icon = 'unapproved.png'; },
+      body => { body.abilities[0].cost = 0; },
+      body => { body.abilities[0].mechanics = { skillModifiers: { sword: 1 } }; },
+      body => { body.abilities[0].unapproved = true; },
+      body => { body.abilities.reverse(); },
+      body => { body.abilities.pop(); },
+    ]) {
+      const record = structuredClone(FAMILY_REGISTRY.find(record => record.id === review.familyId));
+      mutate(record.family.persons.find(person => person.id === review.personId).extensions.biographyModule.biography);
+      const before = structuredClone(record);
+      assert.throws(() => protectedAlbicFamilies([record]), /trait-cards/);
+      assert.deepEqual(record, before, 'Rejected cards never change their source record');
+    }
+  }
+});
 
 test('approved Penrudd location revision metadata preserves the original historical family proof', () => {
   const current = penrudd(), before = structuredClone(current);

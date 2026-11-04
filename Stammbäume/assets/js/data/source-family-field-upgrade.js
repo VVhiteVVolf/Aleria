@@ -12,11 +12,16 @@ export function sourceManagedFields(extensions = {}, fields, revision) {
 /** Keep existing metadata ownership separate from a later biography revision. */
 export function preserveSourceMetadataBoundaries(family, revision = Number(family.extensions.sourceRevision) || 0) {
   const extensions = { ...family.extensions };
+  const entityRevision = Number.isInteger(extensions.registryManagedEntitySourceRevision)
+    ? extensions.registryManagedEntitySourceRevision : revision;
   for (const area of ['Document', 'HouseProfile', 'Extension', 'View', 'Lineage']) {
     const fields = extensions[`registryManaged${area}Fields`] || [];
     const key = `registryManaged${area}FieldRevisions`;
+    // These areas previously followed the structural boundary in the upgrader.
+    // A biography snapshot must not turn older layout ownership into a new edit.
+    const inheritedRevision = area === 'View' || area === 'Lineage' ? entityRevision : revision;
     extensions[key] = {
-      ...Object.fromEntries(fields.map(field => [field, revision])),
+      ...Object.fromEntries(fields.map(field => [field, inheritedRevision])),
       ...extensions[key]
     };
   }

@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { projectGawainCharacterDatabase } from '../modules/gawain-duncan/gawain-character-database.mjs';
 import { GAWAIN_ID, GAWAIN_WORLD_ID, GAWAIN_PUBLIC_TITLE, GAWAIN_PUBLIC_SUMMARY, withGawainPublicBiography } from '../modules/gawain-duncan/gawain-public-biography.mjs';
+import { reviewedCharacterTraitAssignment } from '../modules/character-trait-review/reviewed-character-traits.js';
+import { PREVIOUS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-source.js';
 
 function fixture() {
   const sourcePath = 'Charakter Archiv Exporte/gawain-public.json', exportedAt = '2026-11-01T03:46:32.000Z';
@@ -71,6 +73,45 @@ test('a later confirmed trait review owns biography, resources and provenance ov
   for (const field of ['registry', 'snapshot', 'report']) assert.deepEqual(result[field], before[field]);
   input.exported.character.inventory = {};
   assert.throws(() => projectGawainCharacterDatabase(input), /keine weiteren Profilfelder/);
+});
+
+test('exact approved historical and mixed export cards retain their content and replay idempotently', () => {
+  const previous = reviewedCharacterTraitAssignment(GAWAIN_ID).traits.map(id => {
+    const trait = PREVIOUS_DEVELOPMENT_TRAITS.find(row => row.id === `development-trait-${id}`);
+    return { title: trait.name, detail: trait.description, icon: trait.icon };
+  });
+  for (const mask of [0, 1, 2, 3]) {
+    const input = fixture(), body = input.exported.character.biography.biography;
+    const current = body.abilities;
+    body.abilities = current.map((card, index) => structuredClone(mask & (1 << index) ? card : previous[index]));
+    const before = structuredClone(input), result = projectGawainCharacterDatabase(input);
+    assert.deepEqual(input, before);
+    assert.deepEqual(result.records[0].record.character.biography, before.exported.character.biography);
+    const replay = projectGawainCharacterDatabase({ ...input, registry: result.registry, snapshot: result.snapshot,
+      report: result.report, record: result.records[0].record });
+    assert.deepEqual(replay, result);
+    for (const field of ['inventory', 'combatProfile', 'attributes', 'localRecord']) assert.deepEqual(result.records[0].record.character[field], before.record.character[field]);
+  }
+});
+
+test('the public export proof rejects actual card, prose, icon, cost and modifier changes', () => {
+  for (const mutate of [
+    biography => { biography.biography.abilities[0].title += ' Unapproved'; },
+    biography => { biography.biography.abilities[0].detail += ' Unapproved'; },
+    biography => { biography.biography.abilities[0].icon = 'unapproved.png'; },
+    biography => { biography.biography.abilities[0].cost = 0; },
+    biography => { biography.biography.abilities[0].mechanics = { skillModifiers: { sword: 1 } }; },
+    biography => { biography.biography.abilities.reverse(); },
+    biography => { biography.biography.abilitiesTitle += ' Unapproved'; },
+    biography => { biography.biography.biographyText += '<p>Unapproved biography</p>'; },
+    biography => { biography.quote += ' Unapproved'; },
+  ]) {
+    const input = fixture();
+    mutate(input.exported.character.biography);
+    const before = structuredClone(input);
+    assert.throws(() => projectGawainCharacterDatabase(input), /freigegebenen Biografie/);
+    assert.deepEqual(input, before);
+  }
 });
 
 test('unexpected gameplay source fields or ambiguous identity abort instead of broadening a biography import', () => {

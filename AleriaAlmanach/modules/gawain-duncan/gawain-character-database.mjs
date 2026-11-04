@@ -3,6 +3,7 @@ import { characterDatabaseContentHash } from '../../../CharakterDatenbank/lib/ch
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { hasNewerCharacterRecordProjection } from '../../../CharakterDatenbank/lib/character-record-confirmation.mjs';
 import { GAWAIN_ID, GAWAIN_WORLD_ID, GAWAIN_PUBLIC_TITLE, GAWAIN_PUBLIC_SUMMARY, withGawainPublicBiography } from './gawain-public-biography.mjs';
+import { hasExactReviewedBiographyTraitCards } from '../character-trait-review/character-trait-review-model.js';
 
 const biographyFields = ['title', 'bio', 'biography'];
 const latestTimestamp = (...values) => values.filter(value => Number.isFinite(Date.parse(value))).sort((a, b) => Date.parse(a) - Date.parse(b)).at(-1) || '';
@@ -18,7 +19,10 @@ export function projectGawainCharacterDatabase({ registry, snapshot, report, rec
   assert.deepEqual(Object.keys(exported.character).sort(), ['id', 'name', 'title', 'bio', 'biography', 'updatedAt'].sort(), 'Der biografische Export darf keine weiteren Profilfelder liefern.');
   assert.equal(exported.character.title, GAWAIN_PUBLIC_TITLE);
   assert.equal(exported.character.bio, GAWAIN_PUBLIC_SUMMARY);
-  assert.deepEqual(exported.character.biography, withGawainPublicBiography({ id: GAWAIN_ID }).biography);
+  const approvedBiography = withGawainPublicBiography({ id: GAWAIN_ID }).biography;
+  const cards = exported.character.biography?.biography?.abilities;
+  if (hasExactReviewedBiographyTraitCards(cards, GAWAIN_ID)) approvedBiography.biography.abilities = structuredClone(cards);
+  assert.deepEqual(exported.character.biography, approvedBiography, 'Gawains Export muss der vollstaendigen freigegebenen Biografie entsprechen.');
   assert.ok(Number.isFinite(Date.parse(exported.exportedAt)) && Number.isFinite(Date.parse(exported.character.updatedAt)));
   assert.ok(typeof sourcePath === 'string' && sourcePath.startsWith('Charakter Archiv Exporte/') && sourcePath.endsWith('.json') && !sourcePath.includes('..'));
   assert.equal(record.character.id, GAWAIN_ID);

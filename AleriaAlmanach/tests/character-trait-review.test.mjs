@@ -4,13 +4,14 @@ import { isDeepStrictEqual } from 'node:util';
 import { access, readFile } from 'node:fs/promises';
 import { buildCharacterDatabase, markCharacterDatabaseOverlay } from '../../CharakterDatenbank/lib/character-database-model.mjs';
 import { REVIEWED_CHARACTER_TRAITS } from '../modules/character-trait-review/reviewed-character-traits.js';
-import { reviewedCharacterTraits, reviewedBiographyTraitCards, hasAuthoredCombatProfile, projectReviewedCharacterTraits } from '../modules/character-trait-review/character-trait-review-model.js';
+import { hasExactReviewedTraitCopies, hasExactReviewedBiographyTraitCards, reviewedCharacterTraits, reviewedBiographyTraitCards, hasAuthoredCombatProfile, projectReviewedCharacterTraits } from '../modules/character-trait-review/character-trait-review-model.js';
 import { createTraitReviewExport, projectTraitReviewRecord } from '../modules/character-trait-review/character-trait-review-database.mjs';
 import { mergeCharacterRecordProjections } from '../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { sanitizeCharacterCombatProfile, getMaximumHitPoints } from '../modules/combat/combat-profile-model.js';
 import { reconcileClassDamageRevisions } from '../modules/classes/class-damage-revisions.js';
 import { correctExistingSignetAbility } from '../modules/character-trait-review/character-trait-publication-plan.mjs';
 import { PREVIOUS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-source.js';
+import { isExactDevelopmentTraitCatalogCopy } from '../modules/character-development/development-trait-revisions.js';
 import { reviseDevelopmentTraitBiography, reviseDevelopmentTraitBiographyCards } from '../modules/character-development/development-trait-biography-revisions.js';
 
 const root = new URL('../../', import.meta.url);
@@ -27,9 +28,9 @@ const previousTraits = new Map(PREVIOUS_DEVELOPMENT_TRAITS.map(trait => [trait.i
 function projectExactReviewedTraitCopies(copies, expected, name) {
   assert.equal(copies.length, expected.length, `${name}: trait count`);
   return copies.map((copy, index) => {
-    const current = expected[index], previous = previousTraits.get(current.id);
+    const current = expected[index];
     assert.equal(copy.id, current.id, `${name}: trait identity/order`);
-    assert.ok(isDeepStrictEqual(copy, current) || (previous && isDeepStrictEqual(copy, previous)),
+    assert.ok(isExactDevelopmentTraitCatalogCopy(copy, current.id),
       `${name}: ${copy.id} must exactly match the current or fully preserved historical catalog definition`);
     return isDeepStrictEqual(copy, current) ? copy : structuredClone(current);
   });
@@ -240,5 +241,78 @@ test('a concurrent trait edit aborts the bounded data projector; exports contain
     const result = merge([structuredClone(before(selected.id)), replay]);
     assert.deepEqual(result.combatProfile.quirks, reviewedCharacterTraits(selected));
     assert.deepEqual(result.combatProfile.conditions, projectReviewedCharacterTraits(before(selected.id), selected).combatProfile.conditions);
+  }
+});
+
+test('already applied current, historical and mixed complete trait copies keep every stored field and export receipt', async () => {
+  const row = assignment('Freya Skald'), current = reviewedCharacterTraits(row);
+  const variants = [current, current.map(trait => structuredClone(previousTraits.get(trait.id) || trait)),
+    current.map((trait, index) => structuredClone(index === 0 ? previousTraits.get(trait.id) || trait : trait))];
+  const source = baseline.profiles.find(profile => profile.id === row.id);
+  for (const copies of variants) {
+    const record = await json(`CharakterDatenbank/${source.path}`);
+    record.character.combatProfile.quirks = structuredClone(copies);
+    record.character.biography = { biography: { biographyText: 'Persönliche Prosa bleibt erhalten.',
+      abilitiesTitle: 'Eigenschaften', abilities: reviewedBiographyTraitCards(row.id, copies) } };
+    const original = structuredClone(record), person = structuredClone(record.character);
+    assert.equal(hasExactReviewedTraitCopies(copies, row), true);
+    assert.equal(hasExactReviewedBiographyTraitCards(person.biography.biography.abilities, row.id), true);
+    const next = projectTraitReviewRecord({ record, snapshotCharacter: person, baseline: before(row.id), assignment: row,
+      reviewedAt: '2026-11-02T00:00:00Z', sourcePath: 'review-source.json', path: source.path });
+    assert.equal(next.changed, false);
+    assert.equal(next.record, record);
+    assert.equal(next.snapshotCharacter, person);
+    assert.deepEqual(record, original);
+    assert.deepEqual(next.exported.character.combatProfile.quirks, copies);
+    assert.deepEqual(next.exported.character.biography.biography.abilities, reviewedBiographyTraitCards(row.id, copies));
+  }
+});
+
+test('all fourteen stored reviews, including Gildas mixed catalog generations, replay without any data write', async () => {
+  const { reviewedAt } = await json('diagnostics/character-trait-review-20261102/review-meta.json');
+  for (const row of REVIEWED_CHARACTER_TRAITS) {
+    const source = baseline.profiles.find(profile => profile.id === row.id);
+    const record = await json(`CharakterDatenbank/${source.path}`), person = after(row.id);
+    const original = structuredClone(record), originalPerson = structuredClone(person);
+    const sourcePath = `Charakter Archiv Exporte/Traitabgleich 2026-11-02/${row.id}.json`;
+    const next = projectTraitReviewRecord({ record, snapshotCharacter: person, baseline: before(row.id), assignment: row,
+      reviewedAt, sourcePath, path: source.path });
+    assert.equal(next.changed, false, row.name);
+    assert.deepEqual(next.record, original, row.name);
+    assert.deepEqual(next.snapshotCharacter, originalPerson, row.name);
+    assert.deepEqual(next.exported, await json(sourcePath), row.name);
+  }
+});
+
+test('complete-copy replay rejects changed modifiers, text, icons, costs and partial historical mixtures', async () => {
+  const row = assignment('Freya Skald'), source = baseline.profiles.find(profile => profile.id === row.id);
+  const current = reviewedCharacterTraits(row), historical = current.map(trait => structuredClone(previousTraits.get(trait.id) || trait));
+  for (const mutate of [trait => { trait.description += ' Persönlich bearbeitet.'; }, trait => { trait.icon = '/personal.png'; },
+    trait => { trait.cost += 1; }, trait => { trait.mechanics.skillModifiers = { ...trait.mechanics.skillModifiers, performance: 99 }; },
+    trait => { trait.description = current[0].description; }]) {
+    const record = await json(`CharakterDatenbank/${source.path}`);
+    record.character.combatProfile.quirks = structuredClone(historical);
+    mutate(record.character.combatProfile.quirks[0]);
+    const original = structuredClone(record);
+    assert.equal(hasExactReviewedTraitCopies(record.character.combatProfile.quirks, row), false);
+    assert.throws(() => projectTraitReviewRecord({ record, snapshotCharacter: record.character, baseline: before(row.id), assignment: row,
+      reviewedAt: '2026-11-02T00:00:00Z' }), /inzwischen geändert/);
+    assert.deepEqual(record, original);
+  }
+});
+
+test('manual biography card edits are never accepted as historical generated cards', async () => {
+  const row = assignment('Freya Skald'), source = baseline.profiles.find(profile => profile.id === row.id);
+  for (const mutate of [card => { card.detail += ' Persönlicher Text.'; }, card => { card.icon = '/personal.png'; },
+    card => { card.personal = true; }]) {
+    const record = await json(`CharakterDatenbank/${source.path}`);
+    record.character.biography = { biography: { biographyText: 'Persönlicher Text bleibt erhalten.',
+      abilitiesTitle: 'Eigenschaften', abilities: reviewedBiographyTraitCards(row.id, record.character.combatProfile.quirks) } };
+    mutate(record.character.biography.biography.abilities[0]);
+    const original = structuredClone(record);
+    assert.equal(hasExactReviewedBiographyTraitCards(record.character.biography.biography.abilities, row.id), false);
+    assert.throws(() => projectTraitReviewRecord({ record, snapshotCharacter: record.character, baseline: before(row.id), assignment: row,
+      reviewedAt: '2026-11-02T00:00:00Z' }), /Persönlichkeitstext.*geändert/);
+    assert.deepEqual(record, original);
   }
 });

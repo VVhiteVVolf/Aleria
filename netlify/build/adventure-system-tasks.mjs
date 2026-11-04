@@ -17,7 +17,8 @@ const mechanicalFeatures = ['combat', 'combat-critical', 'combat-status', 'comba
   .map(name => `AleriaAlmanach/modules/${name}/`);
 const groupTests = ['group-adventure-content', 'group-community', 'group-roster-window', 'group-scene-state',
   'group-landing-model', 'group-landing-inventory', 'group-landing-integration', 'group-account',
-  'group-section-migration', 'gawain-duncan', 'landing-folio-view', 'landing-presentation', 'landing-quest-journal', 'currency-art'];
+  'group-section-migration', 'gawain-duncan', 'gawain-content-source-projection', 'gawain-character-database', 'gawain-family-snapshot',
+  'landing-folio-view', 'landing-presentation', 'landing-quest-journal', 'currency-art'];
 const itemTests = ['item-definitions', 'item-system-readiness', 'item-system-checkup', 'item-register', 'item-register-text',
   'item-register-integration', 'item-register-modules', 'item-register-providers', 'item-register-template-search',
   'item-use-definitions', 'inventory-use-model', 'scene-inventory-transfer', 'scene-item-authoring',
