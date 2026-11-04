@@ -85,6 +85,9 @@ test('workspace guard rejects uncommitted application changes and allows a diagn
   await mkdir(path.join(root, 'diagnostics'));
   await writeFile(path.join(root, 'diagnostics/status.json'), '{}');
   assertReleaseWorkspace(root);
+  assert.throws(() => assertReleaseWorkspace(root, {
+    isBuildInput: file => file === 'diagnostics/status.json'
+  }), /Commit application/);
   await writeFile(path.join(root, 'index.html'), 'unreviewed');
   assert.throws(() => assertReleaseWorkspace(root), /Commit application/);
   assertReleaseWorkspace(root, { generated: ['index.html'] });

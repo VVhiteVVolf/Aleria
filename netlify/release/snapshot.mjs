@@ -3,9 +3,28 @@ import { createHash } from 'node:crypto';
 import { mkdir, lstat, realpath, readFile, writeFile, link, rm, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { shouldPublish, PUBLISH_DIRECTORY } from '../build/site-publish.mjs';
+import { canLinkCanonicalAsset, openCanonicalSource } from './canonical-source.mjs';
 
 const OWNER_FILE = '.aleria-publish-stage';
 const OWNER = 'aleria-site-build-v1\n';
+
+export const isFunctionSource = file => file === 'netlify.toml'
+  || file.startsWith('netlify/functions/') || file.startsWith('netlify/lib/');
+
+// Inspect existing stages without creating, replacing or deleting anything.
+export async function inspectOwnedStage(root, { support = false } = {}) {
+  const resolved = await realpath(root);
+  const parent = support ? path.join(resolved, '.release-state') : resolved;
+  const stage = path.join(parent, support ? 'function-source' : PUBLISH_DIRECTORY);
+  const existing = await lstat(stage).catch(error => { if (error.code !== 'ENOENT') throw error; });
+  if (!existing) return null;
+  if (await realpath(parent) !== parent || !existing.isDirectory() || existing.isSymbolicLink()
+    || await realpath(stage) !== stage
+    || await readFile(path.join(stage, OWNER_FILE), 'utf8').catch(() => '') !== OWNER) {
+    throw Error('Publication stage is unowned or redirected.');
+  }
+  return stage;
+}
 
 export function safePublicationPath(root, file) {
   if (!shouldPublish(file)) throw Error(`Not a publication path: ${file}`);
@@ -64,11 +83,11 @@ class GitOutput {
 
 // Read committed blobs, never hard-link a live working file. A concurrent edit
 // can therefore neither alter this snapshot nor leak into an in-flight upload.
-export async function snapshotPublication(root, tree, { overlays = [], log = console.log } = {}) {
+export async function snapshotPublication(root, tree, { overlays = [], log = console.log, canonicalSource = false, commit } = {}) {
+  const canonical = canonicalSource ? await openCanonicalSource(root, commit) : null;
   const stage = await ownedStage(root);
   const support = await ownedStage(root, { support: true });
-  const isSupport = file => file === 'netlify.toml' || file.startsWith('netlify/functions/') || file.startsWith('netlify/lib/');
-  const selected = tree.filter(entry => shouldPublish(entry.file) || isSupport(entry.file));
+  const selected = tree.filter(entry => shouldPublish(entry.file) || isFunctionSource(entry.file));
   const child = spawn('git', ['cat-file', '--batch'], { cwd: root, stdio: ['pipe', 'pipe', 'pipe'] });
   let failure = ''; child.stderr.on('data', value => { failure += value; });
   const completion = new Promise((resolve, reject) => {
@@ -77,7 +96,14 @@ export async function snapshotPublication(root, tree, { overlays = [], log = con
   });
   completion.catch(() => {});
   const output = new GitOutput(child.stdout);
-  const firstCopy = new Map(), manifest = [];
+  const firstCopy = new Map(), manifest = [], directories = new Set();
+  let canonicalBinaryLinks = 0, canonicalBinaryBytes = 0;
+  const ensureDirectory = async directory => {
+    if (!directories.has(directory)) {
+      await mkdir(directory, { recursive: true });
+      directories.add(directory);
+    }
+  };
   try {
     for (const entry of selected) {
       const [, type, id] = entry.object.split(' ');
@@ -85,13 +111,23 @@ export async function snapshotPublication(root, tree, { overlays = [], log = con
       const publicFile = shouldPublish(entry.file);
       const target = publicFile ? safePublicationPath(stage, entry.file) : path.resolve(support, entry.file);
       if (!publicFile && !target.startsWith(support + path.sep)) throw Error('Private source escapes snapshot.');
-      await mkdir(path.dirname(target), { recursive: true });
+      await ensureDirectory(path.dirname(target));
       let digest;
-      if (firstCopy.has(id)) {
-        const previous = firstCopy.get(id);
+      const previous = firstCopy.get(id);
+      const canReusePrevious = previous && (!previous.canonicalLinked
+        || (publicFile && !overlays.includes(entry.file) && canLinkCanonicalAsset(entry.file, previous.digest.bytes)));
+      if (canReusePrevious) {
         await link(previous.target, target);
         digest = previous.digest;
       } else {
+        const linked = publicFile && !overlays.includes(entry.file) && canonical
+          ? await canonical.linkAsset(entry.file, id, target) : null;
+        if (linked) {
+          digest = linked;
+          canonicalBinaryLinks++;
+          canonicalBinaryBytes += linked.bytes;
+          firstCopy.set(id, { target, digest, canonicalLinked: true });
+        } else {
         child.stdin.write(id + '\n');
         const header = await output.line();
         const match = header.match(/^([a-f0-9]{40}) blob (\d+)$/);
@@ -101,7 +137,8 @@ export async function snapshotPublication(root, tree, { overlays = [], log = con
         if (createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex') !== id) throw Error('Git object hash mismatch.');
         await writeFile(target, bytes);
         digest = { sha: createHash('sha1').update(bytes).digest('hex'), bytes: bytes.length };
-        firstCopy.set(id, { target, digest });
+        firstCopy.set(id, { target, digest, canonicalLinked: false });
+        }
       }
       if (publicFile) manifest.push({ file: entry.file, ...digest });
       if (manifest.length % 4000 === 0) log(`[release] Snapshot: ${manifest.length}/${selected.length} files`);
@@ -110,7 +147,7 @@ export async function snapshotPublication(root, tree, { overlays = [], log = con
     for (const file of overlays) {
       const target = safePublicationPath(stage, file);
       const bytes = await readFile(path.join(root, file));
-      await mkdir(path.dirname(target), { recursive: true });
+      await ensureDirectory(path.dirname(target));
       await unlink(target).catch(error => { if (error.code !== 'ENOENT') throw error; });
       await writeFile(target, bytes);
       const item = { file, sha: createHash('sha1').update(bytes).digest('hex'), bytes: bytes.length };
@@ -121,9 +158,10 @@ export async function snapshotPublication(root, tree, { overlays = [], log = con
     // The support tree is outside the upload directory and contains no secrets.
     for (const item of manifest.filter(item => /\.(?:js|mjs|json)$/.test(item.file))) {
       const target = safePublicationPath(support, item.file);
-      await mkdir(path.dirname(target), { recursive: true });
+      await ensureDirectory(path.dirname(target));
       await link(safePublicationPath(stage, item.file), target);
     }
-    return { directory: stage, support, files: manifest };
+    await canonical?.validate();
+    return { directory: stage, support, files: manifest, canonicalBinaryLinks, canonicalBinaryBytes };
   } catch (error) { child.kill(); await completion.catch(() => {}); throw error; }
 }

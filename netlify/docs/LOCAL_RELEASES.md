@@ -117,3 +117,35 @@ python netlify/tests/temporary-cleanup.test.py
 Geprüft werden unter anderem parallele Bearbeitungen, private Functions,
 Katalog-Overlays, Archivfilter, Verzeichniseigentum, Verknüpfungen und die
 selektive Skip-Markierung.
+
+## Kanonische ?ffentliche Bin?rquelle
+
+Die optional markierte ?ffentliche Arbeitskopie liegt direkt unter der
+.release-state des getrennten Hauptworkspaces. Nach allen Checks wird sie
+eingefroren. Nur gro?e, regul?re Bin?rassets mit genau einem Link werden
+gegen ihren vollst?ndigen Git-Blob gepr?ft und im Stage hardgelinkt. Main,
+Code, JSON und erzeugte Overlays bleiben ausgeschlossen. Ohne g?ltigen
+Eigentumsmarker gilt der bisherige Git-Blob-Pfad. Overlays werden weiterhin
+vor dem Schreiben entkoppelt. Bei verwendeten Bin?rlinks verlangt der
+Publisher vor Push/Upload die vollst?ndige native Byte-/Git-/Ownerpr?fung.
+
+Der Marker .release-state/public-source.json enth?lt owner
+aleria-canonical-public-source-v1, checkout (?ffentliche Arbeitskopie),
+sourceWorkspace (separater Hauptworkspace) und den endg?ltigen Commit.
+Er wird erst nach dem finalen Commit erstellt. Ver?nderte oder bereits
+fremd verlinkte Assets werden aus Git kopiert, nicht aus Main ?bernommen.
+Die Quelle bleibt bis zum best?tigten Produktionsabschluss unver?ndert.
+
+Vorbereitete Pakete d?rfen nur nach vollst?ndiger nativer Pr?fung
+wiederverwendet werden; Commit, Runtime, Inputfingerprints und alle
+urspr?nglichen Pr?fzeiten bleiben gebunden. Ung?ltige oder fehlende Pakete
+autorisieren keine generierten Arbeits?nderungen. Im normalen Ablauf wird
+einmal --publish --push nach komplettem Source-/Test-/Input-Freeze verwendet.
+
+Gemeinsam genutzte node_modules werden bei passendem Lock/Modulstand nur
+wiederverwendet. Ein Mismatch darf niemals npm ci durch eine Junction
+ausl?sen; die Runtime- und Stammbaum-Preparer stoppen dann ausdr?cklich.
+Vor dem Lauf kann prepare-runtime-checks.mjs --check installationsfrei
+pr?fen. Nach Bin?rlinks aktualisiert der Publisher einmal den Statcache
+der eigenen ?ffentlichen Quelle mit update-index --refresh; echte
+Arbeits?nderungen bleiben durch den normalen Workspaceguard gesch?tzt.

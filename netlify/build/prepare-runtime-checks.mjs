@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { lstat, readFile, realpath } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { spawn } from 'node:child_process';
 import { resolve } from 'node:path';
@@ -50,10 +50,21 @@ function npmCi(directory) {
   });
 }
 
+export async function assertLocalInstallDirectory(directory) {
+  const local = resolve(directory);
+  if (await realpath(local) !== local) throw Error('Refusing dependency installation in a redirected package directory.');
+  const modules = resolve(local, 'node_modules');
+  const info = await lstat(modules).catch(error => { if (error.code !== 'ENOENT') throw error; });
+  if (info && (!info.isDirectory() || info.isSymbolicLink() || await realpath(modules) !== modules)) {
+    throw Error('Refusing npm ci through shared node_modules; retain Main dependencies and prepare a separate local installation.');
+  }
+}
+
 export async function prepareRuntimeCheckDependencies({ root = repositoryRoot, scope = 'all', check = false, run = npmCi, log = console.log } = {}) {
   for (const entry of await runtimeCheckDependencyPlan(root, scope)) {
     if (!entry.missing.length) { log(`[site-build] Reuse locked ${entry.name} test dependencies.`); continue; }
     if (check) throw Error(`Missing locked ${entry.name} test dependencies: ${entry.missing.join(', ')}`);
+    await assertLocalInstallDirectory(entry.directory);
     log(`[site-build] Prepare locked ${entry.name} test dependencies.`);
     await run(entry.directory);
     const [after] = await runtimeCheckDependencyPlan(root, entry.name);

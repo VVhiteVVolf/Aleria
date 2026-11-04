@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { prepareChartReleaseDependencies } from './prepare-release-dependencies.mjs';
 
 const cwd = fileURLToPath(new URL('../', import.meta.url));
 function run(command, args) {
@@ -11,13 +12,11 @@ function run(command, args) {
 }
 const prepareBrowser = process.argv.includes('--prepare-browser');
 if (prepareBrowser) {
-  if (process.platform === 'win32') await run(process.env.ComSpec || 'cmd.exe', ['/d', '/s', '/c', 'npm ci --include=dev --ignore-scripts --no-audit --no-fund']);
-  else await run('npm', ['ci', '--include=dev', '--ignore-scripts', '--no-audit', '--no-fund']);
   // Build images provide the shared libraries; installing system packages
   // would require root privileges that hosted Netlify builds do not grant.
-  await run(process.execPath, ['node_modules/playwright-core/cli.js', 'install', 'chromium']);
+  await prepareChartReleaseDependencies({ directory: cwd, run: ({ command, args }) => run(command, args) });
 }
 // Publication is staged from versioned website files; installed tools cannot
 // become public assets and no longer need to be deleted after every check.
-await run(process.execPath, ['--test', '--experimental-test-isolation=none', 'tests/family-chart-reading.test.js', 'tests/family-chart-partnerships.test.js', 'tests/relationship-matrix.test.js', 'tests/chart-geometry-audit.test.js', 'tests/family-chart-overview.test.js', 'tests/person-entry-viewport.test.js']);
+await run(process.execPath, ['--test', '--experimental-test-isolation=none', 'tests/release-dependencies.test.js', 'tests/family-chart-reading.test.js', 'tests/family-chart-partnerships.test.js', 'tests/relationship-matrix.test.js', 'tests/chart-geometry-audit.test.js', 'tests/family-chart-overview.test.js', 'tests/person-entry-viewport.test.js']);
 await run(process.execPath, ['tools/check-chart-geometry.mjs']);

@@ -191,7 +191,7 @@ test('unavailable browser storage prevents any checkout and definitive rejection
   assert.equal(storage.size(), 0); assert.equal(rejected.pending(), null);
 });
 
-test('view confines offers to merchant, escapes content and labels unavailable foreign payers', () => {
+test('view confines offers to merchant, escapes content and requires debit rights in payer pickers', () => {
   const { state, data, product, makeId } = setup();
   data.offers.push({ ...product, id: 'other', listId: 'other-provider', title: 'Fremdes Sortiment' });
   data.offers[0].title = '<img src=x onerror=alert(1)>';
@@ -200,7 +200,8 @@ test('view confines offers to merchant, escapes content and labels unavailable f
   assert.ok(markup.includes('&lt;img src=x onerror=alert(1)&gt;'));
   assert.equal(markup.includes('<img src=x'), false);
   assert.equal(markup.includes('Fremdes Sortiment'), false);
-  assert.match(markup, /value="character:ylva"\s+disabled/);
+  assert.match(markup, /data-picker-field="payerKey"[^>]+data-picker-debit="true"/);
+  assert.match(markup, /data-picker-field="recipientKey"[^>]+data-picker-debit="false"/);
   assert.ok(markup.includes('Bestellung prüfen'));
 });
 

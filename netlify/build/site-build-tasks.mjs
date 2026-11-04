@@ -228,7 +228,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
     inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
-    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs', 'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs', 'netlify/tests/language-package-publication.test.mjs')]
+    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/canonical-source.test.mjs', 'netlify/tests/prepared-release.test.mjs', 'netlify/tests/runtime-checks.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs', 'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs', 'netlify/tests/language-package-publication.test.mjs')]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,

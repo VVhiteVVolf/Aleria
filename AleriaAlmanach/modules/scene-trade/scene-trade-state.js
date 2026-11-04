@@ -11,7 +11,7 @@ function referencePrice(direction, product, item = null) {
 }
 export function createSceneTradeState(threadId) {
   return { threadId, merchantId: '', actorCharacterId: '', payerKey: '', recipientKey: '', sellerKey: '',
-    mode: 'buy', mobile: 'catalog', search: '', limit: 24, stage: 'edit', lines: [], openLine: '', status: '', error: false };
+    mode: 'buy', mobile: 'catalog', search: '', limit: 24, offset: 0, stage: 'edit', lines: [], openLine: '', status: '', error: false };
 }
 export function sceneTradeGroupAvailability(data) {
   const access = data.access || {}, editorial = ['admin', 'moderator', 'editor'].includes(access.role);
@@ -36,9 +36,9 @@ export function sceneTradeAccounts(data) {
       .map(record => account(record, 'group', !!access.uid && (groupEditor || record.managerUids?.includes(access.uid))))
   ];
 }
-export function initializeSceneTradeDefaults(state, data, actorId = '') {
+export function initializeSceneTradeDefaults(state, data, actorId = '', selectableAccounts = null) {
   data.tradeThreadId = state.threadId; data.tradeActorCharacterId = state.actorCharacterId || actorId;
-  const accounts = sceneTradeAccounts(data), managed = accounts.filter(account => account.canDebit);
+  const accounts = selectableAccounts || sceneTradeAccounts(data), managed = accounts.filter(account => account.canDebit);
   const actor = managed.find(account => account.kind === 'character' && account.id === actorId)
     || managed.find(account => account.kind === 'character');
   if (!accounts.some(account => account.key === state.payerKey && account.canDebit)) state.payerKey = actor?.key || managed[0]?.key || '';
@@ -118,8 +118,8 @@ export function updateSceneTradeLine(line, field, value, accounts) {
     line[field] = value;
   }
 }
-export function sceneTradeSummary(state, data) {
-  const accounts = new Map(sceneTradeAccounts(data).map(account => [account.key, { ...account, pays: 0, receives: 0, goods: [] }]));
+export function sceneTradeSummary(state, data, availableAccounts = sceneTradeAccounts(data)) {
+  const accounts = new Map(availableAccounts.map(account => [account.key, { ...account, pays: 0, receives: 0, goods: [] }]));
   const errors = [], touched = new Set(); let buys = 0, sells = 0;
   for (const line of state.lines) {
     const total = lineTotalMinor(line);
@@ -148,7 +148,7 @@ export function sceneTradeSummary(state, data) {
   if (![buys, sells, ...rows.flatMap(account => [account.pays, account.receives, account.minor + account.receives - account.pays])].every(Number.isSafeInteger)) errors.push('Der Gesamtbetrag ist zu groß. Bitte die Bestellung verkleinern.');
   for (const account of rows) if (account.minor + account.receives - account.pays < 0) errors.push(`${account.name} besitzt nicht genug Geld.`);
   if (!state.lines.length) errors.push('Die Bestellung enthält noch keine Waren.');
-  if (!sceneTradeAccounts(data).some(account => account.kind === 'character' && account.id === state.actorCharacterId && account.canDebit)) errors.push('Bitte eine berechtigte bestellende Figur wählen.');
+  if (!availableAccounts.some(account => account.kind === 'character' && account.id === state.actorCharacterId && account.canDebit)) errors.push('Bitte eine berechtigte bestellende Figur wählen.');
   return { rows, buys, sells, errors: [...new Set(errors)] };
 }
 export function buildSceneTradeCheckout(state, data) {

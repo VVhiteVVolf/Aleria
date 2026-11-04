@@ -7,10 +7,15 @@ async function openTradeFromInventory() {
   const threadId = dialog?.dataset?.sceneInventoryThreadId || getCurrentCommentThreadId();
   if (!threadId) return setSceneInventoryStatus('Kein aktiver Szenen-Thread gefunden.', 'error');
   const actorCharacterId = document.getElementById('scene-transfer-giver')?.value || '';
+  const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
+  const entry = thread?.threadId === threadId ? thread.entry : null;
+  const participantThreadIds = entry && typeof getModuleCommentThreadIds === 'function' ? getModuleCommentThreadIds(entry) : [threadId];
   closeSceneInventoryDialog();
   try {
     const { openSceneTradeDialog } = await import('../scene-trade/scene-trade-controller.js');
     await openSceneTradeDialog({ threadId, actorCharacterId, characters: getSceneInventoryCharacters(),
+      entry, moduleId: entry?.id || '', participantThreadIds: [...new Set([threadId, ...participantThreadIds])],
+      getCachedComments: id => typeof _commentCache !== 'undefined' && Array.isArray(_commentCache[id]) ? _commentCache[id] : null,
       onCommitted: async ({ result }) => {
         for (const character of result.characters || []) {
           const index = _characters.findIndex(existing => existing.id === character.id);

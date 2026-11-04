@@ -18,6 +18,18 @@ aufklappbaren Handelsbeleg mit zwei Miniaturbildern.
   öffentliche Händler, Verfügbarkeit, Gruppenbestände und Verkaufsseiten.
 - `scene-trade-view.js`: escaped Dialogdarstellung; eigene Styles in
   `styles/scene-trade.css`.
+- `scene-trade-context.js`, `scene-trade-catalog.js`: vorgabebasierte
+  Modul-/Händlerzuordnung und indizierte, auf 24 sichtbare Waren begrenzte Suche.
+- `scene-trade-participants.js`, `scene-trade-participant-state.js`: Besetzung
+  aus Modulhierarchie, Szenenbesetzung und bisherigen Beiträgen; kleine
+  Identitätsreferenzen statt gespeicherter Gesprächsprotokolle.
+- `scene-trade-actor-picker.js`, `scene-trade-people-manager.js`: suchbare
+  Avatar-Auswahl und persönliche Ergänzungen/Ausblendungen pro Anmeldung und
+  Szenenthread. Änderungen betreffen weder Figurenakten noch die kanonische
+  Modulbesetzung. Geschlossene Wähler enthalten keine Archivlisten.
+- `scene-trade-account-readiness.js`: nur ausgewählte Personen- und
+  Gruppeninventare laden historische Definitionen; unfertige Bestände bleiben
+  für Warenaktionen gesperrt.
 - `scene-trade-model.js`: reine gemeinsame Buchungsregeln. Der bestehende
   Mechanics-Sync übernimmt dieselbe Quelle in die Functions.
 - `scene-trade-summary.js`, `scene-trade-notification.js` und
@@ -92,11 +104,31 @@ Transaktionsprüfungen unter
 ausschließlich `FIRESTORE_EMULATOR_HOST=127.0.0.1:8187` und das lokale
 `demo-aleria-scene-trade`-Projekt.
 
-Für eine spätere Veröffentlichung müssen Frontend, Functions, Regeln und der
-neue Verkaufsindex gemeinsam durch den bestehenden öffentlichen Releaseweg.
-Der bekannte Functions-Deployblocker `BILLING_DISABLED` ist durch diese lokale
-Implementierung nicht aufgehoben. Es wurden keine produktiven Inventare oder
-Kreaturen migriert und keine Abrechnungseinstellungen geändert.
+Backend, Regeln und Verkaufsindex wurden mit dem öffentlichen Stand
+`7ee2f8ec0e0a5a86bf276cde0c25aaf2f244c1a2` veröffentlicht. Die folgende
+Fensteroptimierung ändert keine serverseitige Buchungsregel und erfordert
+keine Inventarmigration. Die Abrechnung wird für diese Arbeiten nicht geändert.
+
+## Kontext, Auswahl und Darstellung
+
+Das aktive Modul bestimmt sein Sortiment automatisch. Fehlt ein eigenes
+Register, darf nur ein eindeutiger nächster Vorfahr beziehungsweise Bereich
+eine Vorgabe liefern; mehrere passende Händler verlangen eine bewusste Wahl.
+Ein gefüllter Warenkorb wechselt seinen Händler nicht automatisch.
+
+Die Vorauswahl enthält gespeicherte Figuren aus Besetzung, Hierarchie und
+bisherigen Modulbeiträgen. Explizite Identitäten haben Vorrang; mehrdeutige
+Namensgleiche werden nicht automatisch vermischt. Weitere Figuren lassen sich
+gezielt suchen und ergänzen; bestehende Warenkorbpersonen bleiben geschützt.
+Ausblendungen sind persönliche Komforteinstellungen und verleihen keine
+Zahlberechtigung. Bei einer unterbrochenen Kommentaraktualisierung bleibt die
+letzte bestätigte Auswahl erhalten.
+
+Der breite Dialog trennt Angebot und Bestellung in eigene Scrollbereiche.
+Warensuche aktualisiert ausschließlich die Ergebnisliste, behält Fokus und
+Warenkorb und verwendet einen Cache pro unverändertem Angebotsstand. Preis-
+und Personenbearbeitung werden erst bei Bedarf aufgeklappt. Mobile Ansichten
+wechseln zwischen Waren und Bestellung; die Ergebnisliste bleibt paginiert.
 ## Öffentliche Standardmodule
 
 Mitgelieferte Händler und Szenen müssen keinen künstlichen Online-Override

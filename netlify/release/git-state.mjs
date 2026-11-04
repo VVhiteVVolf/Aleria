@@ -14,13 +14,13 @@ export function assertLocalReleaseMessage(message) {
   }
 }
 
-export function assertReleaseWorkspace(root, { generated = [], expectedCommit } = {}) {
+export function assertReleaseWorkspace(root, { generated = [], expectedCommit, isBuildInput = () => false } = {}) {
   if (expectedCommit && releaseCommit(root) !== expectedCommit) throw Error('HEAD changed during release. Prepare again.');
   const changed = [...new Set([
     ...git(root, ['diff', '--name-only', '-z', 'HEAD']).split('\0'),
     ...git(root, ['ls-files', '--others', '--exclude-standard', '-z']).split('\0'),
   ].filter(Boolean))];
-  const blocked = changed.filter(file => !file.startsWith('diagnostics/') && !generated.includes(file));
+  const blocked = changed.filter(file => (!file.startsWith('diagnostics/') || isBuildInput(file)) && !generated.includes(file));
   if (blocked.length) throw Error('Commit application changes before releasing:\n' + blocked.join('\n'));
   return releaseCommit(root);
 }

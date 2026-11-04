@@ -14,8 +14,10 @@ const currencyArtInputs = ['AleriaAlmanach/modules/currency/', 'AleriaAlmanach/a
   'AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png'];
 const mechanicalFeatures = ['combat', 'combat-critical', 'combat-status', 'combat-styles', 'characters', 'classes',
   'creatures', 'character-equipment', 'character-inventory', 'item-definitions', 'item-register', 'item-builder',
-  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'scene-regeneration', 'trade-catalog', 'house-armor']
+  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'scene-regeneration', 'scene-trade', 'trade-catalog', 'house-armor']
   .map(name => `AleriaAlmanach/modules/${name}/`);
+const sceneTradeTests = readdirSync(new URL('../../AleriaAlmanach/tests/', import.meta.url))
+  .filter(name => /^scene-trade-[a-z0-9-]+\.test\.mjs$/.test(name)).sort().map(name => name.slice(0, -'.test.mjs'.length));
 const groupTests = ['group-adventure-content', 'group-community', 'group-roster-window', 'group-scene-state',
   'group-landing-model', 'group-landing-inventory', 'group-landing-integration', 'group-account',
   'group-section-migration', 'gawain-duncan', 'gawain-content-source-projection', 'gawain-character-database', 'gawain-family-snapshot',
@@ -24,7 +26,7 @@ const itemTests = ['item-definitions', 'item-system-readiness', 'item-system-che
   'item-register-integration', 'item-register-modules', 'item-register-providers', 'item-register-template-search',
   'item-use-definitions', 'inventory-use-model', 'scene-inventory-transfer', 'scene-item-authoring',
   'character-inventory-itemization', 'character-equipment-sync', 'equipment-standards-2026-11', 'inventory-equipment-effects',
-  'combat-action-card', 'combat-support-equipment', 'combat-defense-balance', 'weapon-action-balancing', 'combat-critical-damage', 'standard-tool-artwork', 'trade-catalog-money', 'scene-item-equipment-preservation'];
+  'combat-action-card', 'combat-support-equipment', 'combat-defense-balance', 'weapon-action-balancing', 'combat-critical-damage', 'standard-tool-artwork', 'trade-catalog-money', 'scene-item-equipment-preservation', 'item-register-trade-projection', ...sceneTradeTests];
 
 export const ADVENTURE_SYSTEM_TASKS = [
   {
@@ -56,6 +58,7 @@ export const ADVENTURE_SYSTEM_TASKS = [
     inputs: [...mechanicalFeatures, ...mechanicalSourceInputs, ...goodsModuleInputs, ...BUILTIN_TRADE_SOURCE_FILES, ...currencyArtInputs, 'AleriaAlmanach/modules/regional-equipment/',
       'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/economy-calculator/',
       'AleriaAlmanach/modules/economy-pricing/', 'AleriaAlmanach/modules/gwynthor-geography/',
+      'AleriaAlmanach/styles/scene-trade.css', 'AleriaAlmanach/styles/scene-trade-notification.css',
       'Anzeigetafeln/tools/build-notice-reward-catalog.mjs', 'Anzeigetafeln/assets/data/notice-reward-catalog.json', 'Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs',
       'AleriaAlmanach/scripts/build-item-register.mjs', 'AleriaAlmanach/scripts/source-pages/', 'AleriaAlmanach/docs/inventory/',
       'AleriaAlmanach/scripts/build-scene-trade-builtins.mjs', 'AleriaAlmanach/scripts/scene-trade/',
