@@ -29,6 +29,15 @@ nur den lokalen Push. Netlify dokumentiert das unter
 [Skip a deploy](https://docs.netlify.com/deploy/manage-deploys/manage-deploys-overview/#skip-a-deploy).
 Bei gemeinsam gepushten Commits gilt die Markierung des jüngsten Commits.
 
+Eine zusätzliche öffentliche Release-Arbeitskopie unter Windows mit
+`git -c core.autocrlf=false worktree add --detach <Pfad> HEAD` erstellen.
+Die Prüfungen erzeugter JSON-, Biografie- und Katalogdateien erwarten die
+kanonischen Git-Zeilenenden. Die Option gilt nur für diesen Checkout; globale
+Git-Einstellungen und die vollständigen Hauptarbeitsquellen bleiben unverändert.
+Die ausdrücklich als `-text` markierten Originale behalten ihre gespeicherten
+Bytes. Eine bereits bestehende Kopie bei Bedarf aus ihren geprüften Git-Blobs
+materialisieren, ohne Inhalte oder geschützte Originale zu normalisieren.
+
 Die featurebezogenen Prüfungen `group-community` und `item-mechanics` validieren
 die gemeinsamen Gruppen-/Storyprojektionen, Gawains öffentliche Quellen,
 Itemversionen, Schildstandards und autoritative Bestandsoperationen. Die
