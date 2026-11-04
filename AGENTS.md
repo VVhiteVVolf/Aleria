@@ -1,3 +1,307 @@
+# Gemeinsamer öffentlicher Release nach Solestia und Venalys
+
+Nutzerfreigabe vom 4. November 2026: Nach Abschluss Solestias und der
+überarbeiteten Venalys-Karten samt Ständecomics **„Pushe und Deploy Samt allen
+lokalen neuerungen Online“**. Die Freigabe umfasst den aktuellen öffentlichen
+Gesamtstand. Unveröffentlichte Fleischsammler-Inhalte und andere private
+Arbeitsquellen bleiben vollständig lokal; gemischte Register und erzeugte
+Dateien werden vor Commit und Veröffentlichung öffentlich projiziert.
+Der bestehende geprüfte Releaseweg bleibt verbindlich.
+
+Danach nachweislich entbehrliche temporäre Buildkopien gemäß
+`netlify/docs/TEMPORARY_STORAGE.md` bereinigen. Quellen, Methoden, Originale,
+private Sicherungen und Browserentwürfe erhalten. Das ausdrücklich gewünschte
+Herunterfahren erfolgt erst nach erfolgreichem Abschluss aller Arbeiten.
+
+# Narrative Lorekorrekturen vom 4. November 2026
+
+Der Nutzer hat vier gezielte Inhaltskorrekturen freigegeben: **Varulv gehört
+zu Arn Vaeren und den Grünen**; die **Feuerherz besitzen eine vielfältige
+Wirtschaft** und leben nicht allein vom Zoll; **Gwaedlyd verwendet das
+Haimotiv**; die **Fiadhrach sind albischen Blutes, keine Elfen**.
+Die beiden redaktionellen Leitheach-Hinweise hat der Nutzer als
+„unwichtig“ eingestuft; sie bleiben unverändert.
+
+Der Auftrag betrifft Inhalte und Hausbios. Bestehende IDs, Identitäten,
+Verwandtschaftszuordnungen, Daten und Bilder erhalten. Entscheidungen und
+Änderungsbelege stehen unter `diagnostics/house-content-lore-fixes-20261104/`
+und im [Quellinventar](Stammbäume/assets/data/source-inventories/house-content-lore-corrections-20261104.json).
+Die Umsetzung bleibt **lokal, ohne Push oder Deploy**.
+
+# Lebensstatus: Nutzerregel vom 4. November 2026
+
+Neueste Nutzeranweisung: **Bei unklarem Lebensstatus im Zweifel von lebend
+ausgehen; eindeutig belegte Todesfälle haben Vorrang.** Für die zuvor nur
+aufgelisteten Gegenaktenkonflikte ist damit der gezielte Abgleich der
+**15 Lebensstatusfälle** freigegeben: **13 Personen leben**, **Hadvar Varangr
+ist 1713 verstorben**, **Afanen Arth (Jahrgang 1660) ist 1710 verstorben**.
+Die übrigen **fünf Jahres- und Geschlechtskonflikte bleiben offen**.
+Die ausdrücklich ignorierten mitgelieferten Altstammbäume erhalten dabei
+keine Evidenzpriorität gegenüber den aktuellen Akten.
+
+IDs, Identitäten, Beziehungen und andere Jahresdaten erhalten; historische
+Quellen und bisherige Prüfbelege nicht überschreiben. Die nachfolgende
+Anweisung „20 Gegenaktenabweichungen zunächst nur konkret auflisten“
+dokumentiert den vorherigen Stand. Neue Entscheidungen und Änderungsbelege
+stehen unter `diagnostics/house-life-status-20261104/` und im
+[Quellinventar](Stammbäume/assets/data/source-inventories/house-life-status-corrections-20261104.json).
+Die Umsetzung bleibt **lokal, ohne Push oder Deploy**.
+
+# Öffentliche Lorekorrekturen vom 4. November 2026
+
+Nutzerfreigabe für gezielte lokale Lorekorrekturen in Leitheach, Cenyr und
+Aldrimar: Bei den benannten Chronologiekonflikten haben die Geburtsjahre der
+Kinder Vorrang. Die jüngsten belegten Nachfahren als Anker erhalten und die
+betroffene Elternlinie zusammenhängend prüfen; keine Kante auf Kosten der
+nächsten Generation korrigieren. Bestehende IDs, Identitäten, Beziehungen,
+Ränge und Ortsstruktur erhalten. Die übrigen **20 Gegenaktenabweichungen
+zunächst nur konkret auflisten**, ohne eigenmächtige Datums-, Geschlechts-
+oder Lebensstatusangleichungen.
+
+Ausdrücklicher Kanon: **Wunbhna, Maolmhuire und Morgan Dyngwn leben.**
+Morgan bleibt das amtierende Oberhaupt seines Hauses; der Name Morgan wird
+beibehalten. **Dál T’Saors Hausverwaltung ist seit 1735 erloschen**, ohne den
+belegten auswärtigen Überlebenden ihren lebenden Status zu nehmen.
+**Wolfshorn sitzt mit Hornhall unmittelbar in Dämmergrund unter Vangandr**,
+nicht im Dämmertal. Der Cenyr-Exilzweig Bleiddorn bleibt eine eigene Akte.
+
+Der geprüfte Korrekturstand umfasst **71 gezielte Felder in 28 verwalteten
+Familienakten und 30 Hausquellen**, einschließlich der identischen
+Ofranton-Kopie in der Marmue-Nebenakte. **15 geschützte Kinderanker** bleiben
+erhalten. Persönliche Notizen und bearbeitete beziehungsweise ausdrücklich
+gelöschte Hausbios bleiben geschützt; alte Standardnotizen werden nur bei
+exakter Übereinstimmung ersetzt. Ursprüngliche Importfixtures und
+Auditbelege nicht umschreiben: autorisierte Änderungen sind separat im
+[Quellinventar](Stammbäume/assets/data/source-inventories/house-lore-corrections-20261104.json)
+und in den Änderungsbelegen unter `diagnostics/house-lore-fixes-20261104/`
+dokumentiert. Die übrigen 20 Fälle stehen in `remaining-twenty-counterparts.json`.
+
+Abschlussstand: **250 Tests (144 + 106) bestanden**; Sonnenküste abschließend
+11/11 nach Ergänzung der freigegebenen Amendment-Fingerprints. Die
+Browser-Sichtprüfung bleibt wegen des CUA-`timeoutMs`-Fehlers eingeschränkt;
+kein Browser-Pass ist belegt. Dieser Auftrag bleibt **lokal, ohne Push oder
+Deploy**.
+
+# Aktuelle Freigabe für Biografien, Identitätsabgleich und Veröffentlichung
+
+Nutzeranweisung vom 3. November 2026: Die von Patrick hochgeladenen Biografien
+von Gwen Hamnett, Cadogan Sgrechiwr und Rhiannon Draenmelyn prüfen, fehlende
+Icons und belegte Haustiere ergänzen, Stammbaumverbindungen abgleichen und
+anschließend pushen und deployen. Gwen anhand der gelieferten Datei sowohl
+im Stammbaum als auch im Charakterarchiv ergänzen; ihre bereits vorhandene
+Ehefrau-Identität und alle Familienverbindungen erhalten. Die beiden Gethin-
+Einträge zusammenführen und weitere Dubletten prüfen; tatsächliche
+Namensgleiche nicht vermischen. Bestätigte Altakten reversibel archivieren,
+aktuelle Hauptakten, Inventare und Live-Ressourcen erhalten.
+
+Diese ausdrückliche Freigabe hebt den folgenden Veröffentlichungsstopp für
+den aktuellen geprüften öffentlichen Arbeitsstand auf. Der etablierte
+Releaseweg und sämtliche Geheimhaltungsregeln bleiben verbindlich.
+Temporäre Build- und Paketkopien erst nach erfolgreicher Prüfung gemäß
+`netlify/docs/TEMPORARY_STORAGE.md` bereinigen; Quellen und Originale erhalten.
+
+# Vorheriger Veröffentlichungsstopp
+
+Nutzeranweisung vom 3. November 2026: **„Okay erstmal keine Deploys mehr!“**
+Bis zu einer neuen ausdrücklichen Freigabe keine Deploys ausführen.
+Die älteren Veröffentlichungsfreigaben weiter unten heben diesen Stopp nicht auf.
+Lokale Umsetzung, Bildarbeit und Prüfung werden fortgesetzt.
+
+# Vollständiger Cenyr-Hausabgleich
+
+Nutzerauftrag vom 3. November 2026: Für jede öffentlich geführte Familie mit
+belegtem Aufenthalt in Cenyr alle drei Bausteine bereitstellen: vorbereitete
+oder ausgefüllte Hausbiografie, vorbereitete oder ausgefüllte Hausseite sowie
+passende Krieger- oder Bürgerdarstellung. Auch kleine Ritter- und Bürgerhäuser
+aller Grafschaften erfassen, unabhängig von den gelieferten HTML-Vorlagen.
+Bestehende Originaldarstellungen zuerst suchen und unverändert verwenden;
+Grianlaochs früher gelieferten Ritter ausdrücklich wieder einbinden. Nur echte
+Bildlücken neu illustrieren, nach Wappen, Region und belegtem Hintergrund.
+Alias-IDs, eigenständige Linien und heutige Exilaufenthalte korrekt abgleichen;
+keine genealogischen Daten oder privaten Inhalte durch diesen Abgleich ändern.
+Der Veröffentlichungsstopp bleibt bestehen.
+
+Sonnenküste-Hausübernahme vom 3. November 2026: Vorhandene Kriegerdarstellungen
+unverändert erhalten; ausschließlich Bildlücken neu illustrieren. Gelieferte
+Stammbäume vollständig ignorieren und kanonische Familienakten per iframe
+einbetten. Aktuelle Strukturen, Ränge, Orte und Hierarchien haben Vorrang vor
+alten Infotabellen; sämtliche Militärstatistiken auslassen. Die vier Ritterhäuser
+Rhelian, Aelryn, Caerwen und Nerwynn gehören nach Jungferntal und dienen
+Morforwyn. Rhelian und Aelryn behalten ihre bestehenden IDs und Wappen; Caerwen
+und Nerwynn sind ausdrücklich neu beauftragte Häuser mit Dreizackheraldik.
+
+# Leitheach: Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Alle 29 öffentlichen Leitheach-Familien
+mit Hausseite, Hausbio und Darstellung erfassen: 26 fortbestehende und drei
+historische Hausverwaltungen. Die 28 Vorlagen enthalten 26 Originalbilder;
+diese unverändert erhalten und nur die drei echten Bildlücken Suileach,
+Dal T’Saor und Sept Grünhand ergänzen. Diese drei Ergänzungen verwenden nach
+Nutzerkorrektur normale runde menschliche Ohren; aktiv ist Bildrevision v2.
+Leitheach ist ein eigenständiges
+Fürstentum auf Estryll, kein Alias von Ceitheach. Territorialquelle ist
+`Kontinente/modules/leitheach`, Haupt-ID `fuerstentum-leitheach`.
+
+Aktuelle albische Ränge und Ebenen Fürstentum, Oberherrschaft, Lehensherrschaft
+und Herrschaft verwenden. IDs `haus-amrhan`, `haus-dal-t-saor` und
+`haus-nic-blar-leitheach` erhalten; die Leitheacher Nic’Blar nicht mit
+Ceitheachs `haus-nic-blar` oder Ua’Cleir mit Blaithneachs Cléirigh vermischen.
+Historische Hausverwaltungen: Suileach als Mor Tiarna in Lochansail, Iomrach
+als Laird in Broch an Clais und Dal T’Saor als Laird in Sruthlann.
+`historicalStatus: extinct` bedeutet hier keine biologische Vollauslöschung:
+Ybhna und Cónán Iomrach sowie Quona und Junaid T’Saoir überleben auswärts.
+Sept Grünhand bleibt bürgerlich und Na’Mhuir in Broch an Coill verbunden.
+
+Gelieferte Stammbäume und Militärstatistiken vollständig auslassen; kanonische
+Familienakten per Iframe einbetten. Bestehende Graphen, Personen, Profile,
+Ränge, Wappen, IDs und öffentliche Gegenakten schützen. Die Umsetzung bleibt
+lokal, ohne Push oder Deploy. 115 Node-Tests und vier Wartungstests sind bestanden;
+nach Bildrevision v2 bestanden die 31 betroffenen Tests erneut. Beide begrenzten
+29er-Generatorprüfungen sind bestanden. Browserstatus bleibt `limited` wegen eines CUA-
+Verbindungsfehlers; die lokale HTTP-Vorschau antwortet mit 200. Drei überholte
+PNG-Workspacekopien mit insgesamt 6.454.730 Byte wurden entfernt, Tooloriginale
+erhalten; die Prüfung zwölf älterer Builds ergab null geeignete Dateien.
+Quellen, Originale und Methoden bleiben erhalten; Einzelheiten stehen in
+[Leitheach-Clanübernahme](<Familien Häuser und Clans/docs/LEITHEACH_CLAN_IMPORT.md>).
+
+# Kronental / Heldenwacht: Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Alle 29 öffentlichen Kronental-Familien
+mit Hausseite, Hausbio und Darstellung erfassen: 24 lebende und fünf historische
+Clans. Die 19 Vorlagen enthalten 19 Originalbilder für 18 Häuser, darunter zwei
+Wellensänger-Figuren. Originale unverändert erhalten; nur die elf echten
+Bildlücken ergänzen. Die vorhandenen Seiten und Originalbilder von Südstahl
+und Albholz samt belegten Inhalten und Aliaslinks erhalten beziehungsweise
+gezielt in die gemeinsame Quelle überführen.
+
+Registerpfad und Hausprofile bleiben **Kronental**; die aktuelle Territorialseite
+heißt **Jarltum Heldenwacht** und verwendet `jarltum-heldenwacht`. Keine neue
+Territorial-ID oder umbenannte Ortsstruktur daraus erzeugen. Graphen, Personen,
+Profile, Ränge, Wappen und IDs unverändert lassen. Gelieferte Stammbäume und
+Militärstatistiken auslassen; kanonische Familienakten per Iframe einbetten.
+Grimr, Skaife, Holmr, Isvanyr und Mac Mamhar sind erloschen; Kulturkategorien
+sind keine Sitze. Torrenheim bleibt der letzte Ort der ersten drei Clans.
+
+Sigurd Vaeren ist König und Clanoberhaupt, Skjor Vaeren territorialer Jarl.
+1697 ist das Geburtsjahr des heutigen Vorn Frostzorn, kein Amtsbeginn; Frostzorn
+bleibt ein lebender abtrünniger Clan mit offenem Rang. Spindelschlag bleibt
+bürgerlicher Thengr ohne Adelsbrief und mit bestehender Vaeren-Bindung; sein
+Sitz ist Spindelheim. 105 Fach- und Regressionstests sowie die begrenzten Builds
+und die Browserprüfung mit geladenem Stammbaum-Iframe sind bestanden. Ablauf und
+Belege: [Kronental-Clanübernahme](<Familien Häuser und Clans/docs/KRONENTAL_CLAN_IMPORT.md>).
+
+# Krähenmoor-Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Alle 26 öffentlichen Familien Krähenmoors
+mit Hausseite, Hausbio und passender Darstellung erfassen: 21 lebende und fünf
+historische Clans. Die 14 gelieferten Vorlagen enthalten 13 Originaldarstellungen;
+diese unverändert übernehmen. Nur die 13 echten Bildlücken einschließlich
+Järnblod im freigegebenen Hausfigurenstil ergänzen. Bestehende Familiengraphen,
+Personen, Profile, Ränge, Orte, Wappen und IDs bleiben unverändert.
+
+Gelieferte Stammbäume und Militärstatistiken vollständig auslassen; ausschließlich
+aktuelle Familienakten als Iframe einbetten. Aktueller Kontext hat Vorrang vor
+Alttabellen. Järnblod verwendet `haus-jaernblod`, Mac Môrfhia `haus-mac-morfhia`
+und Mac Corcaigh `haus-mac-corcaigh`. Hjerte und Järnblod behalten den Thanenrang;
+Kaldhrafn und beide Mac-Clans erhalten keinen erfundenen Rang. Kulturordner sind
+keine Sitze. Goldglanz dient beiden Häusern Blutstahl und Silberblut; Goldzunge
+bleibt bürgerlich. Die Umsetzung bleibt lokal, ohne Push oder Deploy. Die
+Abschlussprüfung bestanden: 93 Fach- und Regressionstests, begrenzte Hausseiten-
+und Galerieprüfung sowie Browserprüfung mit tatsächlich geladenem Stammbaum-Iframe.
+
+# Wolfsklamm / Schwarzfenn: Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Die elf Vorlagen zu Wolfsklamms Clans nach
+dem bestehenden Verfahren übernehmen und den gesamten örtlichen Registerbestand
+einschließen. Kanonischer Jarltumsname ist **Schwarzfenn**; **Wolfsklamm** ist
+der Hauptsitz im Wolfsfenn. Diese Ebenen nicht umbenennen oder vermischen.
+Die elf Vorlagen decken alle vorhandenen Schwarzfenn-Akten ab. Vorhandene
+Originalbilder unverändert übernehmen, einschließlich Eisbrands Gruppenbild
+und der berittenen Darstellungen von Graumähne und Schmetterschild.
+
+Gelieferte Stammbäume und Militärstatistiken nicht importieren. Aktuelle Akten
+als Iframe einbetten; IDs, Graphen, Orte, Wappen und Ränge erhalten. Graumähne
+verwendet `haus-graumahne`. Arnvild ist erloschen, behält aber den Hesirenrang.
+Svartholmr und Mac Bronaigh sind antike Clans mit offenem Rang; Kulturkategorien
+sind keine Sitze. Eisbrand bleibt ein nicht anerkanntes Bastard-/Banditenhaus
+ohne Adelsrang und ohne Lehnsherrschaft. Hjerte gehört nach Krähenmoor und wird
+nicht wegen Kummerherz' Herkunft zusätzlich nach Schwarzfenn kopiert.
+
+# Ivarsheim-Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Die zwölf vorhandenen öffentlichen Häuser
+Ivarsheims einschließlich Trachwyll und fünf erloschener Häuser mit Hausseite,
+Hausbio und vorhandener Originaldarstellung erfassen. Elf neue Vorlagen und
+Trachwylls früher gelieferte Figur verwenden; keine Originale ersetzen. Alte
+Stammbäume und Militärstatistiken ignorieren. Aktuelle Orte, Hierarchien und
+stabile IDs bleiben maßgeblich; Hyrmgarthr verwendet weiterhin `haus-hyrmgardr`.
+Blutklinge und Windhüter sind jüngst erloschen, Morkvard, Mac Luin und An Borach
+antike Häuser. Kulturordner sind keine historischen Stammsitze.
+
+Zusätzlich beauftragter neuer Clan: **Hrafnvald** (`haus-hrafnvald`), kleiner
+Huskarlclan unter Wargh in Ivarsfels/Ivarsklamm. Er konkretisiert Livs bisher
+namenlosen Herkunftsclan im Norden Aldrimars. Die genaue Ivarsheim-Zuordnung,
+Name, Hof, Gastrecht, Raben-und-Schlüssel-Wappen, Motto „Unser Tor bleibt offen.“
+und Clanherr Torleif Hrafnvald (1681, lebend) sind neue autorisierte Ausarbeitung.
+Liv bleibt `liv` / `person--family-tree--liv`, geboren 1688; keine neue Person
+oder Namensänderung daraus machen. Nur in der neuen Akte wird ihre Zugehörigkeit
+zu Hrafnvald geführt. Wolfshorn, Bleiddorn und alle bestehenden Verbindungen
+bleiben erhalten. Keine Verwandtschaft zwischen Torleif und Liv erfinden.
+
+# Roriksheim-Clanübernahme
+
+Nutzerauftrag vom 3. November 2026: Sämtliche 33 öffentlich geführten Familien
+des Jarltums Roriksheim einschließlich der fünf ausgestorbenen Clans mit
+Clanseite, Hausbio und passender Hausdarstellung erfassen. Die 18 gelieferten
+Vorlagen enthalten 19 Originalfiguren; diese unverändert übernehmen. Auch die
+übrigen 15 Clans einbeziehen und nur ihre tatsächlich fehlenden Darstellungen
+im freigegebenen Figurenstil ergänzen. Wappen, Region und belegte Kultur
+bestimmen das Motiv; Helme, Rüstungen und Ausrüstung variieren.
+
+Gelieferte Stammbäume vollständig ignorieren und bestehende Familienakten per
+Iframe einbetten. Keine genealogischen Datensätze verändern. Aktuelle IDs,
+Strukturen, Ränge und Orte haben Vorrang vor alten Infotabellen; Militärzahlen
+auslassen. Kulturkategorien der historischen Registerordner sind keine Sitze.
+Wolfshorn bleibt von seinem Cenyr-Exilzweig Bleiddorn getrennt. Die ausführliche
+Eisenjungfer-Bio erhalten; Bild und Hausseitenverweis gezielt ergänzen.
+
+# Klaueninsel-Hausübernahme
+
+Für die Klaueninsel-Vorlagen vom 3. November 2026 gilt derselbe lokale Ablauf:
+bestehende Darstellungen erhalten, nur Bildlücken ergänzen, kanonische Iframes
+statt alter Stammbaumabschnitte, aktuelle Strukturen vor kopierten Infotabellen
+und keine Militärstatistiken. Die heutigen Exilzweige von Diafol, Dianc,
+Arfordir, Dyfrgi, Walwrs und beiden Blodyn-Häusern bleiben von ihren
+Vennyr-Ursprungsakten getrennt. Unbelegte Hausränge bleiben offen; eine
+persönliche Ritterwürde begründet keinen Adel für die ganze Familie.
+
+# Aktuelle Graue-Weite-Hausübernahme
+
+Für die 15 weiteren Vorlagen vom 3. November 2026 gelten derselbe lokale
+Übernahmeweg und der Veröffentlichungsstopp. Bestehende Figuren unverändert
+erhalten und nur echte Bildlücken ergänzen. Alte Stammbäume und Militärstatistiken
+auslassen; aktuelle Familienakten als iframe verwenden. Die südlichen Blaidd-,
+Illygoden- und Gwaedlyd-Akten in Tredegar sowie Lyfants Caer-Asgwrn-Akte bleiben
+von ihren Vennyr-Ursprungsakten getrennt; aktuelle Haus-IDs, Orte, Ränge und
+Hierarchien sind maßgeblich.
+
+# Weidebucht-Hausübernahme
+
+Nutzeranweisung vom 3. November 2026 für die zehn weiteren Hausvorlagen:
+Bestehende Krieger- und Hausdarstellungen unverändert behalten; ausschließlich
+fehlende Darstellungen ergänzen. Neue Figuren berücksichtigen Wappen, Beruf,
+Hausgeschichte und Region. Aktuelle Strukturen, Orte und Ränge gehen alten
+Infotabellen vor. Keine gelieferten Stammbäume oder Militärstatistiken
+übernehmen; vorhandene Familienakten per iframe einbetten. Alles bleibt lokal.
+
+# Ährental-Hausübernahme
+
+Die zwölf gelieferten alten Hausvorlagen sind ergänzende Quellen. Vorhandener
+aktueller Kontext für Strukturen, Daten, Titel, Orte und Hierarchien hat Vorrang;
+Infotabellen können kopierte oder falsche Angaben enthalten. Militärstatistiken
+vollständig aus dieser Übernahme ausnehmen. Gelieferte Stammbaumtabellen nicht
+übernehmen, sondern die vorhandenen Familienakten per iframe einbetten.
+
 # Venalys: Republik, Hausstände und Geschlechtsnamen
 
 Nutzerfestlegung vom 2. November 2026: Venalys liegt auf **Tirnara** und entstand
@@ -218,7 +522,23 @@ Stil ohne erneute Erinnerung verwenden:
 
 - **Clan-, Haus- und Familienwappen:** `fantasy-heraldic-emblem`, 1:1, **ausnahmslos kreisrund**, damit alle Wappen in die vorhandenen Frames passen (Nutzervorgabe vom 16. Oktober 2026). Auch bei italienischer oder anderer kultureller Ornamentik bleibt die äußere Kontur ein exakter Kreis; keine Spitzschilde oder überstehenden Verzierungen. Nordisch-keltische Fantasy-Heraldik auf bemalten Holzbrettern mit vollständig geschlossenem Rahmen, sofern der aktuelle Auftrag keine andere Kultur vorgibt. Den vollständigen Universellen Wappen-Prompt aus dem Preset verwenden. Vor Vorschlägen die Wappen der passenden Kultur oder Region aus der **Stammbaum-Liste** tatsächlich ansehen; Registerquellen und Ablauf stehen im Preset. Für einen neuen Aldrimar-Clan die vorhandenen Aldrimar-Clanwappen heranziehen (lokale Bilder unter `Stammbäume/assets/images/houses/Aldrimar`). Zuerst konkrete Vorschläge für Symbol, Farben, Rahmenmaterial und Verzierungen machen, danach den gewählten Entwurf gemeinsam erstellen. Das vollständige Wappen frontal und mittig bei ungefähr 85–90 % Bildbreite zeigen. Ausschließlich außerhalb der äußersten Kontur Alpha = 0; die gesamte Fläche innerhalb des Rahmens einschließlich aller Zwischenräume bleibt deckend (Alpha = 255). Keine äußeren Schatten, Glows, überstehenden Elemente oder transparenten Innenlöcher. Eigenständige Wappen verwenden diesen Stil; Ausrüstungsschilde bleiben im Inventarstil.
 
+**Ohrenanatomie (Nutzerkorrektur vom 3. November 2026):** Elfen existieren in Aleria nicht. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe gilt für Hausfiguren, Szenen und Porträts und hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen.
+
 **Kulturelles Ausrüstungsdesign (Klarstellung vom 24. Oktober 2026):** Die neue Freigabe betrifft den künstlerischen Stil. Rüstung, Helm, Waffen und Kleidung folgen unabhängig davon Kultur, Beruf und Hausgeschichte. Venalysisch geprägte Häuser wie Cymrath kombinieren Ritter-, Legionärs- und byzantinische Lamellenrüstung mit geschlossenen legionärsartigen Helmen. Die westliche Plattenrüstung des freigegebenen Referenzritters ist keine allgemeine Designvorgabe.
+
+**Vielfalt der Hauskrieger (Nutzerkorrektur vom 3. November 2026):**
+Nutzerkorrektur vom 3. November 2026: Neue Hauskrieger erhalten unterschiedliche
+Ritterhelmtypen und zur Heraldik passende, zurückhaltende Helmformen. Nicht
+serienweise denselben Visierhelm mit Federbusch wiederholen. Wappentiere und
+Wappenthemen dürfen Helmprofil, Beschläge oder kleine Kämme prägen. Schilde sind
+optional; Waffen, freie Hände und Ausrüstung abwechslungsreich gestalten. Der
+freigegebene Hausritter bestimmt den Zeichenstil, nicht eine einheitliche
+Helm-, Schild- oder Ausrüstungsschablone.
+
+Weitere Nutzerklarstellung vom 3. November 2026: Bei neuen Hausfiguren zusätzlich
+Region, Witterung, Situation und belegte Hausbeschreibung berücksichtigen.
+Rüstungsaufbau und Kleidung ebenso variieren wie den Helm; Wappenthemen sind
+Gestaltungsgrundlagen, keine Belege für erfundene Berufe oder Hausgeschichte.
 
 **Vorhandene Hausdarstellungen zuerst (weitere Klarstellung vom 24. Oktober 2026):**
 Liegt einer Hausvorlage bereits eine passende Rüstung oder Darstellung bei, diese

@@ -1,0 +1,442 @@
+{
+  "format": "ideenwerk-project",
+  "version": 1,
+  "id": "7c69ee15-c0a8-4277-95d9-c55943fab721",
+  "name": "Patricks Ideenwerk",
+  "updatedAt": "2026-11-03T20:50:48.065Z",
+  "boards": [
+    {
+      "id": "c54a8fcc-cc0a-4708-84ba-3ab3d946de3b",
+      "name": "Dein Ideenraum",
+      "example": true,
+      "modules": [
+        {
+          "id": "59f9d5a4-4624-4599-b221-efd66444a1ba",
+          "type": "character",
+          "title": "Mara, die Kartografin",
+          "subtitle": "Sie zeichnet Orte, die es noch nicht gibt.",
+          "color": "peach",
+          "status": "developing",
+          "tags": "Protagonistin, Entdeckung",
+          "collapsed": false,
+          "x": 40,
+          "y": 34,
+          "pages": [
+            {
+              "id": "d048010b-bdae-4ff8-8a04-80575586c5b6",
+              "title": "Die Figur",
+              "blocks": [
+                {
+                  "id": "72ad142e-303f-468b-9444-9dadb541a7cf",
+                  "kind": "image",
+                  "label": "Portrait",
+                  "value": ""
+                },
+                {
+                  "id": "b31bb051-ce16-491e-a79c-640e7835953e",
+                  "kind": "text",
+                  "label": "Wer ist diese Figur?",
+                  "value": "Eine junge Kartografin entdeckt, dass ihre Karten die Welt verändern. Jeder neue Strich hat einen Preis."
+                },
+                {
+                  "id": "375b1159-42d1-43e1-a4ed-72511821991d",
+                  "kind": "bullets",
+                  "label": "Eigenschaften",
+                  "value": "Unstillbar neugierig\nSieht Muster, wo andere Chaos sehen\nVertraut lieber Karten als Menschen"
+                },
+                {
+                  "id": "233a0797-5c9d-4519-9c4f-62cdb4669be0",
+                  "kind": "text",
+                  "label": "Stimme & Auftreten",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "c548b480-f687-4232-ac7b-6a85a7c3cee0",
+              "title": "Unter der Oberfläche",
+              "blocks": [
+                {
+                  "id": "416754c4-8e32-4a67-a24f-3e006fcbe6ad",
+                  "kind": "text",
+                  "label": "Größter Wunsch",
+                  "value": ""
+                },
+                {
+                  "id": "59981ad1-d031-45d1-a5b3-0d061668085e",
+                  "kind": "text",
+                  "label": "Ängste & Widersprüche",
+                  "value": ""
+                },
+                {
+                  "id": "d727724e-a1b8-4e15-9523-4464401447b9",
+                  "kind": "bullets",
+                  "label": "Stärken & Schwächen",
+                  "value": ""
+                },
+                {
+                  "id": "41213019-bc39-40ea-92bc-0cfb11b24c9e",
+                  "kind": "text",
+                  "label": "Ein Geheimnis",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "f329a02b-fa5a-4507-af69-f0329b603210",
+              "title": "Entwicklung",
+              "blocks": [
+                {
+                  "id": "0916bbb3-45ea-414a-acf9-121c077d06a0",
+                  "kind": "text",
+                  "label": "Wo beginnt die Reise?",
+                  "value": ""
+                },
+                {
+                  "id": "3b7fb233-2709-4889-966f-29c52cbd6f43",
+                  "kind": "text",
+                  "label": "Was verändert die Figur?",
+                  "value": ""
+                },
+                {
+                  "id": "0c4d2357-f9ba-4ca4-97ad-1641799d09ce",
+                  "kind": "text",
+                  "label": "Wo könnte sie ankommen?",
+                  "value": ""
+                },
+                {
+                  "id": "0f9cb3f3-7efb-45d4-a1d5-9bcb12a90320",
+                  "kind": "bullets",
+                  "label": "Offene Fragen",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "mindmap": {
+            "nodes": [],
+            "edges": []
+          }
+        },
+        {
+          "id": "b4ff027a-e998-46cb-9326-8b63dad68ee7",
+          "type": "story",
+          "title": "Die letzte Kartografin",
+          "subtitle": "Was, wenn eine Karte kein Abbild ist, sondern ein Versprechen?",
+          "color": "sage",
+          "status": "sketch",
+          "tags": "Abenteuer, Magischer Realismus",
+          "collapsed": false,
+          "x": 365,
+          "y": 70,
+          "pages": [
+            {
+              "id": "8c82fae2-aa1b-40e1-9e7b-b16c90a8f4e0",
+              "title": "Der Funke",
+              "blocks": [
+                {
+                  "id": "209759c7-1452-4e77-bd07-f3238981d50d",
+                  "kind": "text",
+                  "label": "Die Idee in einem Satz",
+                  "value": "Eine verschwundene Stadt. Eine Karte ohne Grenzen. Und eine Frau, die lernen muss, sich zu verirren."
+                },
+                {
+                  "id": "556140ce-fb55-4771-9d98-be82eb5c2960",
+                  "kind": "text",
+                  "label": "Was wäre, wenn …",
+                  "value": ""
+                },
+                {
+                  "id": "ba89f348-f19a-4ff1-88b7-4ad08dd7cbed",
+                  "kind": "bullets",
+                  "label": "Themen & Motive",
+                  "value": "Heimat & Aufbruch\nDie Macht von Erinnerungen\nMut zum Unbekannten"
+                },
+                {
+                  "id": "5a9c770b-4bbc-4577-8aca-a189a00346da",
+                  "kind": "text",
+                  "label": "Die Atmosphäre",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "a164ac43-9c8e-42dc-8c1d-a3f21410bf5d",
+              "title": "Der Konflikt",
+              "blocks": [
+                {
+                  "id": "49f433ef-7b9e-47ea-af7f-25bdde4e49b5",
+                  "kind": "text",
+                  "label": "Was steht auf dem Spiel?",
+                  "value": ""
+                },
+                {
+                  "id": "2769bf8f-4f87-41ca-9aa7-8e349d3f1370",
+                  "kind": "text",
+                  "label": "Wer will was – und warum?",
+                  "value": ""
+                },
+                {
+                  "id": "27f1d6cb-5a82-43c0-9b48-f0268f191e7f",
+                  "kind": "bullets",
+                  "label": "Hindernisse",
+                  "value": ""
+                },
+                {
+                  "id": "833beb57-5e54-46da-a1c5-e5ca9523d064",
+                  "kind": "text",
+                  "label": "Der Wendepunkt",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "4c2842ea-92de-4bf1-8d24-263117d86b71",
+              "title": "Der rote Faden",
+              "blocks": [
+                {
+                  "id": "07bd22d1-be1a-4828-9eeb-db59c3345168",
+                  "kind": "text",
+                  "label": "Anfang",
+                  "value": ""
+                },
+                {
+                  "id": "080a694b-6634-40b3-a9cc-c2e08dd9ccfe",
+                  "kind": "text",
+                  "label": "Mitte",
+                  "value": ""
+                },
+                {
+                  "id": "580eb07e-00d4-4e46-9dd4-31026c2a4b55",
+                  "kind": "text",
+                  "label": "Ende",
+                  "value": ""
+                },
+                {
+                  "id": "04641e57-44fe-447f-9721-2764ce764481",
+                  "kind": "bullets",
+                  "label": "Szenen, die unbedingt vorkommen sollen",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "mindmap": {
+            "nodes": [],
+            "edges": []
+          }
+        },
+        {
+          "id": "4a9dab24-c3e0-4da4-9017-1cd4ee848bf2",
+          "type": "mindmap",
+          "title": "Alles hängt zusammen",
+          "subtitle": "Erste Fäden zwischen Figur, Welt und Konflikt",
+          "color": "lavender",
+          "status": "sketch",
+          "tags": "",
+          "collapsed": false,
+          "x": 700,
+          "y": 35,
+          "pages": [
+            {
+              "id": "092c953b-9e92-4e00-bb7d-83d95e2ef551",
+              "title": "Gedankennetz",
+              "blocks": []
+            },
+            {
+              "id": "5903a42d-42c5-46cd-b847-555cf08d1d4a",
+              "title": "Weiterdenken",
+              "blocks": [
+                {
+                  "id": "ec40b611-03a7-4830-a821-43045a130e81",
+                  "kind": "bullets",
+                  "label": "Neue Ansätze",
+                  "value": ""
+                },
+                {
+                  "id": "bef90e42-00df-46ec-b1d2-810fd6ea3d65",
+                  "kind": "text",
+                  "label": "Was verbindet diese Ideen?",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "mindmap": {
+            "nodes": [
+              {
+                "id": "20a54b4d-7cd2-445b-9ab7-92e2168473a6",
+                "text": "Die Karte",
+                "x": 410,
+                "y": 220,
+                "color": "lavender"
+              },
+              {
+                "id": "33f1f34d-1e54-437c-aedb-418845505fda",
+                "text": "Mara",
+                "x": 120,
+                "y": 100,
+                "color": "peach"
+              },
+              {
+                "id": "a370b543-6ade-4e79-bb96-e15155bea4a0",
+                "text": "Die verlorene Stadt",
+                "x": 730,
+                "y": 80,
+                "color": "sage"
+              },
+              {
+                "id": "1f213ade-1d5b-4df3-a368-03346310991d",
+                "text": "Ein Versprechen",
+                "x": 720,
+                "y": 400,
+                "color": "butter"
+              },
+              {
+                "id": "267caa23-393e-475a-9b0d-56d2e1363637",
+                "text": "Erinnerung",
+                "x": 140,
+                "y": 410,
+                "color": "rose"
+              }
+            ],
+            "edges": [
+              {
+                "id": "2d0dc3b1-390e-47a5-b4a6-7d5333984582",
+                "from": "20a54b4d-7cd2-445b-9ab7-92e2168473a6",
+                "to": "33f1f34d-1e54-437c-aedb-418845505fda",
+                "label": "zeichnet"
+              },
+              {
+                "id": "5c469772-8ad0-48b3-81e5-572df6b6a207",
+                "from": "20a54b4d-7cd2-445b-9ab7-92e2168473a6",
+                "to": "a370b543-6ade-4e79-bb96-e15155bea4a0",
+                "label": "verbirgt"
+              },
+              {
+                "id": "8c1731d1-7f5f-41d3-ba56-518dc27745d9",
+                "from": "20a54b4d-7cd2-445b-9ab7-92e2168473a6",
+                "to": "1f213ade-1d5b-4df3-a368-03346310991d",
+                "label": "fordert"
+              },
+              {
+                "id": "4c89ae8b-1e6b-4534-a95c-f11dc127562f",
+                "from": "20a54b4d-7cd2-445b-9ab7-92e2168473a6",
+                "to": "267caa23-393e-475a-9b0d-56d2e1363637",
+                "label": "bewahrt"
+              }
+            ]
+          }
+        },
+        {
+          "id": "22882d03-6d21-4e22-9944-c64c43d25e8e",
+          "type": "note",
+          "title": "Ein Gedanke für später",
+          "subtitle": "Dialogidee · Kapitel 1",
+          "color": "butter",
+          "status": "sketch",
+          "tags": "",
+          "collapsed": true,
+          "x": 400,
+          "y": 460,
+          "pages": [
+            {
+              "id": "ef669dc8-dc59-4979-8f25-96ecab614606",
+              "title": "Gedanken",
+              "blocks": [
+                {
+                  "id": "bcc46c10-b317-4403-b794-bdf43be87e31",
+                  "kind": "text",
+                  "label": "Platz für deinen Gedanken",
+                  "value": "„Vielleicht sind die Orte, die wir suchen, gar nicht die, die wir brauchen.“"
+                },
+                {
+                  "id": "7f506262-5e4f-4548-95a3-2f7d01d556c6",
+                  "kind": "bullets",
+                  "label": "Zum Weiterdenken",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "mindmap": {
+            "nodes": [],
+            "edges": []
+          }
+        },
+        {
+          "id": "1a3b1e5b-8eee-466b-967b-22c689a75a0d",
+          "type": "place",
+          "title": "Die Stadt ohne Namen",
+          "subtitle": "Ein Ort, der nur in Erinnerungen existiert.",
+          "color": "sand",
+          "status": "sketch",
+          "tags": "Weltenbau",
+          "collapsed": true,
+          "x": 740,
+          "y": 420,
+          "pages": [
+            {
+              "id": "e0d14eac-f542-43ee-9c79-bdc93bfc7a2e",
+              "title": "Ein Ort entsteht",
+              "blocks": [
+                {
+                  "id": "c62f4784-09b8-4593-8ee4-e2f879dc5261",
+                  "kind": "image",
+                  "label": "Ansicht oder Inspiration",
+                  "value": ""
+                },
+                {
+                  "id": "904789a0-a260-420a-82eb-8ad216763ecc",
+                  "kind": "text",
+                  "label": "Der erste Eindruck",
+                  "value": "Salz in der Luft. Schiefe Dächer. Straßen, die im Nebel ihre Richtung ändern."
+                },
+                {
+                  "id": "f7ddd708-e264-4a3f-9445-78cf1a76b50d",
+                  "kind": "bullets",
+                  "label": "Sehen, hören, riechen",
+                  "value": ""
+                },
+                {
+                  "id": "07d9b705-9e55-4fb7-a027-2503d9340957",
+                  "kind": "text",
+                  "label": "Was macht diesen Ort besonders?",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "65b340aa-85bc-4a93-9d3b-f5c92a094ef8",
+              "title": "Hinter den Kulissen",
+              "blocks": [
+                {
+                  "id": "53b12723-5c36-41d8-aa8f-ad680ba1aa3b",
+                  "kind": "text",
+                  "label": "Geschichte & Geheimnisse",
+                  "value": ""
+                },
+                {
+                  "id": "9fe973ee-9fc8-4f37-8f8a-630580b29b30",
+                  "kind": "bullets",
+                  "label": "Menschen & Begegnungen",
+                  "value": ""
+                },
+                {
+                  "id": "e84c9a27-756a-4809-a876-08dab3351571",
+                  "kind": "text",
+                  "label": "Regeln dieser Welt",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "mindmap": {
+            "nodes": [],
+            "edges": []
+          }
+        }
+      ]
+    }
+  ]
+}

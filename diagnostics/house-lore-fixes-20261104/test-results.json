@@ -1,0 +1,221 @@
+{
+  "schema": "aleria.house-lore-correction-tests",
+  "date": "2026-11-04",
+  "status": "pass",
+  "totalTests": 250,
+  "totalPassed": 250,
+  "suites": [
+    {
+      "path": "Familien Häuser und Clans/tests/leitheach-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/kronental-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/kraehenmoor-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/schwarzfenn-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/ivarsheim-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/roriksheim-house-pages.test.mjs",
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Stammbäume/tests/vennyr-warrior-images.test.js",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/prepared-house-content.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/house-content-scope.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Gallerien/krieger/tests/gallery-catalog.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Gallerien/krieger/tests/scoped-catalog.test.mjs",
+      "tests": 12,
+      "passed": 12,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "netlify/tests/house-source-publication.test.mjs",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "netlify/tests/frontend-source-publication.test.mjs",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "netlify/tests/reference-art-publication.test.mjs",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Stammbäume/tests/house-lore-corrections.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Stammbäume/tests/family-snapshot-corrections.test.js",
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Kontinente/tests/leitheach.test.mjs",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Kontinente/tests/roriksheim.test.mjs",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/celtigerns-house-pages.test.mjs",
+      "tests": 21,
+      "passed": 21,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/celtigerns-complete-inventory.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/aehrental-house-pages.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/graue-weite-house-pages.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/klaueninsel-house-pages.test.mjs",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/silberinsel-house-pages.test.mjs",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/weidebucht-house-pages.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/sonnenkueste-house-pages.test.mjs",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/cenyr-house-coverage.test.mjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/celtigerns-house-refresh.test.mjs",
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "status": "pass"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/cenyr-house-editorial-contracts.test.mjs",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "status": "pass"
+    }
+  ],
+  "buildChecks": {
+    "houseSources": 30,
+    "galleryHouseScope": 30,
+    "leitheachPages": 27,
+    "status": "pass",
+    "taskWhitespace": "pass"
+  },
+  "baselinePolicy": "Original import baselines remain unchanged. Separately reviewed amendment fingerprints account for the explicitly authorized source corrections.",
+  "initialTestOnlyFailuresResolved": "Five obsolete graph/revision expectations in three Cenyr import suites were amended; the public Marmue counterpart received its own two-field saved-record upgrade."
+}

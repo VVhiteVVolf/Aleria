@@ -4,6 +4,8 @@ import { normalizeCombatEffects, resolveCombatEffectDamageType } from './combat-
 import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
 import { getCombatAttackRange } from './combat-attack-range.js';
 import { getCombatSupportEquipment } from './combat-support-equipment.js';
+import { getCombatReactionBlock } from './combat-action-permission.js';
+import '../scene-regeneration/scene-regeneration-policy.js';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
   'pre-roll', 'pre-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
@@ -257,7 +259,7 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
   if (rule.attackRange && rule.attackRange !== getCombatAttackRange(state.actorProfile)) return false;
   if (rule.damageTypes?.length) {
     const actor=state.actorProfile || {},weapon=actor.weapon || {};
-    const damageTypes=[weapon.damageType,...(actor.selectedAction?.effects || actor.actionEffects || [])
+    const damageTypes=state.saveContext ? [state.saveContext.damageType].filter(Boolean) : [weapon.damageType,...(actor.selectedAction?.effects || actor.actionEffects || [])
       .filter(effect=>effect.type==='damage').map(effect=>resolveCombatEffectDamageType(effect,weapon))]
       .filter(Boolean).map(type=>String(type).toLowerCase());
     if(!rule.damageTypes.some(type=>damageTypes.includes(type)))return false;
@@ -268,7 +270,8 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
     if (weapon?.id !== rule.requiredWeaponId
       && !(rule.requiredInventoryItemId && weapon?.inventoryItemId === rule.requiredInventoryItemId)) return false;
   }
-  if (rule.actionKinds.length && !rule.actionKinds.includes(actionKind)) return false;
+  if (rule.actionKinds.length && !rule.actionKinds.includes(actionKind)
+    && !(actionKind === 'saving-throw' && rule.saveAttributes?.length && rule.actionKinds.includes(state.saveContext?.actionKind))) return false;
   if (rule.skillIds.length && (actionKind !== 'skill' || !rule.skillIds.includes(String(state.skillId || '').toLocaleLowerCase('de')))) return false;
   if (rule.actionScope === 'entry' && !rule.requiredActionId) return false;
   return !rule.requiredActionId || rule.requiredActionId === String(profileActionId || '');
@@ -318,10 +321,14 @@ export function collectApplicableCombatRules({
   sources.forEach(source => {
     const rules = ruleCache?.get(source.profile) || collectCombatTriggerRules(source.profile);
     if (ruleCache && source.profile) ruleCache.set(source.profile, rules);
+    const sourceActorId = String(source.actorId || '');
+    const currentPermissionProfile = (sourceActorId && [...(state.reactionProfiles || []), state.actorProfile, state.targetProfile]
+      .find(profile => profile && String(profile.characterId || '') === sourceActorId)) || source.profile;
+    const reactionBlocked = getCombatReactionBlock(currentPermissionProfile);
     rules.forEach(rule => {
       if (rule.phase !== phase || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
       if (!relationAllows(rule, source) || !distanceAllows(rule, source) || !conditionAllows(rule, state)) return;
-      if (rule.activation === 'reaction' && !selectedRule(source, rule)) return;
+      if (rule.activation === 'reaction' && (reactionBlocked || !selectedRule(source, rule))) return;
       if (rule.activation === 'passive' && source.passiveRulesAllowed === false) return;
       if (usedInPeriod(source, rule, context)) return;
       const applicationKey = getCombatRuleApplicationKey(source, rule);
@@ -411,11 +418,26 @@ export function markCombatRuleApplications(applications = [], usedFrequencyKeys 
 
 export function deriveCombatRuleFrequencyKeys(comments = []) {
   const keys = new Set();
+  const owners = new Map();
   (Array.isArray(comments) ? comments : []).forEach(comment => {
+    if (globalThis.AleriaSceneRegenerationPolicy.isComment(comment)) {
+      const regenerated = new Set(comment.sceneRegeneration.participants.map(participant => String(participant?.actorId || '')).filter(Boolean));
+      for (const [key, actorId] of owners) if (regenerated.has(actorId)) {
+        keys.delete(key);
+        owners.delete(key);
+      }
+      return;
+    }
     for (const root of getCommentCombatResolutionGroups(comment).flat()) for (const { resolution } of getCombatResolutionTree(root)) {
       for (const application of resolution.ruleApplications || []) {
         const storedKey = text(application.usedKey, 500);
-        if (storedKey) keys.add(storedKey);
+        if (!storedKey) continue;
+        keys.add(storedKey);
+        // Modern receipts carry the owning source explicitly, including support
+        // rules. Older used-key-only receipts retain it before the entry kind.
+        const owner = text(application.sourceActorId, 160)
+          || storedKey.match(/^(.*?):(?:quirk|condition|ability|technique|weapon|armor):/)?.[1] || '';
+        owners.set(storedKey, owner);
       }
     }
   });

@@ -1,0 +1,47 @@
+{
+  "id": "haus-wolfshorn",
+  "source": null,
+  "authority": {
+    "familyId": "haus-wolfshorn",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "knight",
+      "seat": "Hornhall",
+      "barony": "Dämmergrund",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "Clan Vangandr",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-wolfshorn",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "wolfshorn",
+    "id": "haus-wolfshorn",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-6252eff6-ab60-4ad1-97f2-2b58ea8a2f76.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-wolfshorn/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "preset": "fantasy-rpg-character",
+    "promptManifest": "diagnostics/roriksheim-clans-20261103/image-prompts.json",
+    "sha256": "7c69638f872b3d30da36eb5ae89ee6d1c60b5d25981b02fcb0fbc40abe38fbe8"
+  },
+  "decisions": [
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

@@ -11,10 +11,10 @@ export const SAVING_THROW_DEFINITIONS = Object.freeze(COMBAT_ATTRIBUTE_DEFINITIO
   attributeKey: attribute.key, attributeLabel: attribute.label, checkType: 'saving-throw'
 })));
 
-export function resolveAttributeCheckModifier(profile, definition) {
+export function resolveAttributeCheckModifier(profile, definition, context = {}) {
   const savingThrow = definition.checkType === 'saving-throw';
   return { definition, profile, profileSkill: null,
-    modifier: savingThrow ? getSavingThrowTotal(profile, definition.attributeKey)
+    modifier: savingThrow ? getSavingThrowTotal(profile, definition.attributeKey, context)
       : getSkillTotal(profile, { id: definition.id, name: definition.attributeLabel,
         attributeKey: definition.attributeKey, proficiency: 'none', bonus: 0 }),
     source: savingThrow ? 'saving-throw' : 'attribute-check' };

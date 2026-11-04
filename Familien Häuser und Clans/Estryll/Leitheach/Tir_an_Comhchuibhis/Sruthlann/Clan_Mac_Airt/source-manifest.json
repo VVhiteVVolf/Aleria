@@ -1,0 +1,150 @@
+{
+  "id": "haus-mac-airt",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "0554ce4a-70db-4080-944c-369e5ed3c8a8",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\0554ce4a-70db-4080-944c-369e5ed3c8a8\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/mac-airt/animexx-original.html",
+    "bytes": 139757,
+    "sha256": "5beff4e1c0d649e04eb7043802d679cd35c14ec86de56b30488498f1691aa231",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-mac-airt",
+    "baselineSourceRevision": 9,
+    "profile": {
+      "rankId": "mor-tiarna",
+      "seat": "Sruthlann",
+      "barony": "",
+      "county": "Tir an Comhchuibhis",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "barony": "",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Sruthlann"
+      ]
+    },
+    "graphFingerprint": "f8eb9b95468c8711152583bef596c7e8c60b7f80626a46321fa42ca8ad34141c",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-mac-airt",
+    "title": "Clan Mac Airt",
+    "territoryId": "leitheach-tir-na-comhchuibhis",
+    "territoryName": "Tir an Comhchuibhis",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+    "territoryType": "Oberherrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-mac-airt",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-mac-airt",
+    "slug": "mac-airt",
+    "canonicalSlug": "mac-airt",
+    "attachmentId": "0554ce4a-70db-4080-944c-369e5ed3c8a8",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/UKlWOZ5.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 252875,
+    "sha256": "7b3b1d253590640a36c17558c005b745ac3ac68b92c8e71fd4130c28fba25d3c",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-mac-airt",
+    "title": "Clan Mac Airt",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir an Comhchuibhis",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/UKlWOZ5.png",
+    "path": "Stammbäume/assets/images/references/haus-mac-airt/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-mac-airt/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "7b3b1d253590640a36c17558c005b745ac3ac68b92c8e71fd4130c28fba25d3c",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Schwarz-goldener gerüsteter Hauskrieger mit Helm in der Hand.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "5beff4e1c0d649e04eb7043802d679cd35c14ec86de56b30488498f1691aa231",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-mac-airt, Rang Mor Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Die individuelle Hausvorlage ist leer. Ergänzte Prosa beschreibt ausschließlich die eigene, ausdrücklich belegte Oberherrschaft aus aktuellen Territorialquellen; regionale Kultur und Wirtschaft nicht als neue persönliche Clanrituale oder Eigentum an jedem Ort ausgeben.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

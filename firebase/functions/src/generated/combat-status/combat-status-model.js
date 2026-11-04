@@ -48,6 +48,7 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '', 
 }
 
 export function formatStatusDuration(condition = {}) {
+  if (condition.durationModel?.expiresAt === 'actor-start') return 'Bis zum Beginn des nächsten eigenen Beitrags';
   if (condition.usage) return condition.usage.scope === 'attack' ? 'Nächster passender Angriff' : 'Nächste passende Kampfaktion';
   if (condition.berserk) return `Bis Kampfende / ruhiger eigener Post · Rettung ${Number(condition.berserk.survivalCharges) > 0 ? '1/1' : '0/1'}`;
   const duration = normalizeRuntimeCondition(condition).durationModel;

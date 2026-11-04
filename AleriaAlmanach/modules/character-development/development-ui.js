@@ -11,6 +11,7 @@ import { getHealthTraitOrigin } from '../character-health/health-trait-catalog.j
 import { getPsychologicalTraitOrigin, PSYCHOLOGICAL_TRAIT_NOTE } from './development-psychological-traits.js';
 import { selectPsychologicalTrait } from './development-psychological-policy.js';
 import { getCombatTechniqueIconSource } from '../combat-styles/combat-technique-icons.js';
+import { renderDevelopmentAttributePreview } from './development-attribute-preview.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const sign = n => n > 0 ? `+${n}` : n;
 export function renderDevelopmentAttacks(profile, preview) {
@@ -22,7 +23,7 @@ export function renderDevelopmentAttacks(profile, preview) {
     .filter(e => !needle || `${e.technique.name} ${e.className} ${e.formName}`.toLocaleLowerCase('de').includes(needle));
   return choices.length ? choices.map(e => {
     const icon = e.technique.icon || getCombatTechniqueIconSource(e.technique);
-    return `<label class="development-attack"><input type="checkbox" data-development-purchase="${escape(e.id)}"${plan.purchaseIds.includes(e.id) ? ' checked' : ''}>${icon ? `<img class="development-attack-icon" src="${escape(icon)}" alt="" loading="lazy" decoding="async">` : ''}<span><b>${escape(e.technique.name)}</b><small>${escape(e.className)} · ${escape(e.formName)} · ab ${e.minimumLevel}</small>${e.minimumLevel>plan.targetLevel?'<small>Die Zielstufe ist für diesen Kauf zu niedrig. Auswahl hier abwählen oder Zielstufe erhöhen.</small>':''}<small>${escape(e.technique.description || e.technique.notes || '')}</small></span><strong>${getDevelopmentAttackCost(profile, e, plan.development)} P</strong></label>`;
+    return `<label class="development-attack"><input type="checkbox" data-development-purchase="${escape(e.id)}"${plan.purchaseIds.includes(e.id) ? ' checked' : ''}>${icon ? `<img class="development-attack-icon" src="${escape(icon)}" alt="" loading="lazy" decoding="async">` : ''}<span><b>${escape(e.technique.name)}</b><small>${escape(e.className)} · ${escape(e.formName)} · ab ${e.minimumLevel}</small>${e.minimumLevel>plan.targetLevel?'<small>Die Zielstufe ist für diesen Kauf zu niedrig. Auswahl hier abwählen oder Zielstufe erhöhen.</small>':''}<small>${escape(e.technique.description || e.technique.notes || '')}</small>${e.technique.requirements ? `<small>Voraussetzungen: ${escape(e.technique.requirements)}</small>` : ''}</span><strong>${getDevelopmentAttackCost(profile, e, plan.development)} P</strong></label>`;
   }).join('') : '<p>Keine passenden neuen Attacken. Klasse oder Suche ändern.</p>';
 }
 export function renderDevelopmentBalance(preview) {
@@ -87,6 +88,7 @@ export function renderDevelopmentShop(profile, preview) {
   return `<section class="cp-level-up-section development-shop" data-development-role="shop">
     <div class="cp-level-up-section-head"><div><span>Individuelle Ausbildung</span><h4>Attacken kaufen</h4></div><small>Vorhandene Attacken bleiben erhalten. Neue Attacken werden ausschließlich gewählt.</small></div>
     <div class="development-balance" data-development-role="balance" aria-live="polite">${renderDevelopmentBalance(preview)}</div>
+    <details class="development-effective-attributes"><summary>Wirksame Attribute nach der Entwicklung</summary><p>Grundwerte enthalten die gewählten Steigerungen. Aktive Merkmale und ihre Obergrenzen bestimmen die wirksamen Werte.</p>${renderDevelopmentAttributePreview(preview.profile)}</details>
     ${renderDevelopmentSelections(p)}
     <details><summary>Balance und Preise anpassen</summary><div class="cp-level-up-fields">${settings.map(([key, label, min, max]) => `<label><span>${label}</span><input type="number" min="${min}" max="${max}" data-level-up-path="development.${key}" value="${p.development[key]}"></label>`).join('')}</div><p>Die Einstellungen gelten für diese Figur. Bereits bezahlte Käufe behalten ihren damaligen Preis. Bestehende Attacken kosten rückwirkend keine Punkte. Die Bilanz bewertet Käufe und hier gewählte Katalogtraits; persönliche Sondermerkmale und freie Grundausbildung werden nicht pauschal nachberechnet.</p></details>
     <div class="cp-level-up-fields"><label><span>Klasse</span><select data-level-up-path="purchaseClass"><option value="own"${p.purchaseClass === 'own' ? ' selected' : ''}>Eigene Klasse</option><option value=""${p.purchaseClass === '' ? ' selected' : ''}>Alle Klassen</option><option value="selected"${p.purchaseClass==='selected'?' selected':''}>Gewählte Käufe (${p.purchaseIds.length})</option>${classes.map(([id, name]) => `<option value="${escape(id)}"${p.purchaseClass === id ? ' selected' : ''}>${escape(name)}</option>`).join('')}</select></label><label><span>Attacke suchen</span><input type="search" data-level-up-path="purchaseSearch" value="${escape(p.purchaseSearch)}" placeholder="Name oder Form"></label></div>
@@ -111,6 +113,8 @@ export function refreshDevelopmentShop(root, profile, preview, changedTarget = n
   const balance = root?.querySelector('[data-development-role="balance"]');
   if (attacks && !changedTarget?.dataset.developmentPurchase) attacks.innerHTML = renderDevelopmentAttacks(profile, preview);
   if (balance) balance.innerHTML = renderDevelopmentBalance(preview);
+  const attributes = root?.querySelector('[data-development-role="effective-attributes"]');
+  if (attributes) attributes.outerHTML = renderDevelopmentAttributePreview(preview.profile);
   const selections = root?.querySelector('[data-development-role="selections"]');
   if (selections) selections.outerHTML = renderDevelopmentSelections(preview.plan);
   const selected=root?.querySelector('[data-level-up-path="purchaseClass"] option[value="selected"]');

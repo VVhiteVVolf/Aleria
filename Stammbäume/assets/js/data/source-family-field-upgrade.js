@@ -9,6 +9,20 @@ export function sourceManagedFields(extensions = {}, fields, revision) {
   };
 }
 
+/** Keep existing metadata ownership separate from a later biography revision. */
+export function preserveSourceMetadataBoundaries(family, revision = Number(family.extensions.sourceRevision) || 0) {
+  const extensions = { ...family.extensions };
+  for (const area of ['Document', 'HouseProfile', 'Extension', 'View', 'Lineage']) {
+    const fields = extensions[`registryManaged${area}Fields`] || [];
+    const key = `registryManaged${area}FieldRevisions`;
+    extensions[key] = {
+      ...Object.fromEntries(fields.map(field => [field, revision])),
+      ...extensions[key]
+    };
+  }
+  return { ...family, extensions };
+}
+
 export function preserveSourceEntityBoundaries(family) {
   const boundary = Number.isInteger(family.extensions.registryManagedEntitySourceRevision)
     ? family.extensions.registryManagedEntitySourceRevision : Number(family.extensions.sourceRevision) || 0;
@@ -33,7 +47,7 @@ export function preserveSourceEntityBoundaries(family) {
 }
 
 /** Correct explicit source fields without reopening earlier genealogy revisions. */
-export function withSourceFamilyFieldUpgrade(family, patch, { inventory, marker }) {
+export function withSourceFamilyFieldUpgrade(family, patch, { inventory, marker, confirmUnchangedFields = false }) {
   if (!patch || family.extensions[marker] === inventory && family.extensions.sourceRevision >= patch.revision) return family;
   const previous = family;
   const bounded = preserveSourceEntityBoundaries(family);
@@ -50,7 +64,11 @@ export function withSourceFamilyFieldUpgrade(family, patch, { inventory, marker 
     collection,
     bounded[collection].map(entity => {
       const fields = entities[entity.id];
-      if (!fields || Object.entries(fields).every(([field, value]) => JSON.stringify(entity[field]) === JSON.stringify(value))) return entity;
+      if (!fields) return entity;
+      const valuesMatch = Object.entries(fields).every(([field, value]) => JSON.stringify(entity[field]) === JSON.stringify(value));
+      const revisionsMatch = Object.keys(fields).every(field => entity.extensions?.registryManagedFields?.includes(field)
+        && entity.extensions?.registryManagedFieldRevisions?.[field] >= patch.revision);
+      if (valuesMatch && (!confirmUnchangedFields || revisionsMatch)) return entity;
       if (fields.worldPersonId && fields.worldPersonId !== entity.worldPersonId) throw new Error(`Abweichende Quellenidentität ${entity.id}.`);
       changed = true;
       return { ...entity, ...fields, extensions: sourceManagedFields(entity.extensions, Object.keys(fields), patch.revision) };

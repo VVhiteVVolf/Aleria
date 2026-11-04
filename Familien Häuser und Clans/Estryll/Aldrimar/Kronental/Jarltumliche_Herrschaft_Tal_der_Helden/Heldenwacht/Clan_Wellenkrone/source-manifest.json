@@ -1,0 +1,148 @@
+{
+  "id": "haus-wellenkrone",
+  "contentVersion": "20261103-kronental-v1",
+  "source": {
+    "attachmentId": "0dda578f-4546-45c3-9b92-1756af730be2",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\0dda578f-4546-45c3-9b92-1756af730be2\\Eingefügter Text.txt",
+    "archive": "diagnostics/kronental-clans-20261103/sources/wellenkrone/animexx-original.html",
+    "bytes": 90034,
+    "sha256": "6af11e44fed4ac2d7b89b0bc53b00d6ee6a094edffc02e3bf810369abb2a5f6c",
+    "byteIdentical": true
+  },
+  "initialPage": null,
+  "authority": {
+    "familyId": "haus-wellenkrone",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Heldenwacht",
+      "barony": "Jarltümliche Herrschaft – Tal der Helden",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "06fb991ddc9177b3f3b24232a0ad2583ef10712eafa0155ecf566641eb5dead4"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-wellenkrone",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-wellenkrone",
+    "slug": "wellenkrone",
+    "canonicalSlug": "wellenkrone",
+    "attachmentId": "0dda578f-4546-45c3-9b92-1756af730be2",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/fVc4D5w.png",
+    "sourceImageIndex": 2,
+    "sourceStyle": "",
+    "context": "Einführungsbild",
+    "bytes": 275624,
+    "sha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-wellenkrone",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Kronental",
+    "sourceUrl": "https://i.imgur.com/fVc4D5w.png",
+    "path": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Geweihhelm-Krieger mit Speer, Köcher und wellenverziertem Rundschild.",
+    "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "6af11e44fed4ac2d7b89b0bc53b00d6ee6a094edffc02e3bf810369abb2a5f6c",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "illustrations": [
+    {
+      "id": "haus-wellenkrone",
+      "slug": "wellenkrone",
+      "canonicalSlug": "wellenkrone",
+      "attachmentId": "0dda578f-4546-45c3-9b92-1756af730be2",
+      "imageIndex": 1,
+      "url": "https://i.imgur.com/fVc4D5w.png",
+      "sourceImageIndex": 2,
+      "sourceStyle": "",
+      "context": "Einführungsbild",
+      "bytes": 275624,
+      "sha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "familyId": "haus-wellenkrone",
+      "canonicalKingdom": "Aldrimar",
+      "canonicalCounty": "Kronental",
+      "sourceUrl": "https://i.imgur.com/fVc4D5w.png",
+      "path": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+      "role": "warrior",
+      "primary": true,
+      "existing": false,
+      "status": "new",
+      "sha": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "w": 408,
+      "h": 612,
+      "unchangedOriginal": true,
+      "downloadTool": "curl.exe --noproxy *",
+      "visuallyInspected": true,
+      "visualDescription": "Geweihhelm-Krieger mit Speer, Köcher und wellenverziertem Rundschild.",
+      "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+      "sourceAttachmentSha256": "6af11e44fed4ac2d7b89b0bc53b00d6ee6a094edffc02e3bf810369abb2a5f6c",
+      "format": "PNG",
+      "original": true,
+      "representative": true,
+      "namedPersonId": ""
+    }
+  ],
+  "decisions": [
+    "Die moderne Vorlage enthält ausschließlich Platzhalter und keinen individuellen Erzähltext. Nur die aktuelle Rang-, Sitz- und Dienstbindung übernehmen.",
+    "Kein Motto, Gründungsdatum, Beruf, Ritual, eigener Hof oder Clanführer aus dem Namen oder der Darstellung erfinden.",
+    "Beispieldialog, Titelplatzhalter und leere Hof-/Genealogietabellen vollständig ausgeschlossen. Keine Militärstatistiken.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

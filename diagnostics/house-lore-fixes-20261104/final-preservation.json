@@ -1,0 +1,14 @@
+{
+  "schema": "aleria.house-lore-final-preservation",
+  "reviewedAt": "2026-11-03T23:40:46.084Z",
+  "status": "pass",
+  "publicRecordsReviewed": 424,
+  "publicPersonEntriesReviewed": 10312,
+  "unmanagedRecordsWithExactOriginalCollectionHashes": 397,
+  "managedFamiliesIncludingPublicMarmueLine": 28,
+  "authorizedFields": 71,
+  "targetedBiologicalParentChecks": 98,
+  "explicitGenerationGapsSkipped": 1,
+  "note": "Managed entity metadata changes are intentional. Regional before/after receipts and migration tests cover targeted relationship fields; unmodified records retain exact original collection hashes.",
+  "failures": []
+}

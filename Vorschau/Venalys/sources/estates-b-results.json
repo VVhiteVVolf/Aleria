@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "built-in image_gen.imagegen",
+  "records": [
+    {
+      "id": "estate-plebejer",
+      "assetStem": "plebejer",
+      "category": "estates",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-292a2387-f048-474a-81f2-addc25399743.png",
+      "copiedOriginal": "assets/estates/generated/plebejer.png",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-plebejer",
+      "sha256": "04a86c948531f35125bebea75331ab4db3f4fbed5c37fd5f083af9a789dda30b",
+      "toolOriginalSha256": "04a86c948531f35125bebea75331ab4db3f4fbed5c37fd5f083af9a789dda30b",
+      "byteIdenticalCopy": true,
+      "bytes": 2481316,
+      "fileValidation": {
+        "stem": "plebejer",
+        "format": "PNG",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          254
+        ],
+        "alphaZeroPixels": 760815
+      },
+      "referenceEvidence": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f",
+          "role": "Comic style only; viewed before generation"
+        }
+      ],
+      "visualReview": "Junge freundliche menschliche Handwerkerin mit normalem rundem Ohr, schlichter italischer Arbeitskleidung, Kopftuch, Werkzeugkorb und Holzhammer. Genau eine Figur; beide Schuhe und alle Requisiten vollständig sichtbar. Kein Adel, kein Elend und keine spanische Hofkleidung.",
+      "styleReview": "Große ausdrucksvolle Comic-Köpfe, kräftige dunkelbraune Konturen, flache warme gedeckte Farben und gleichmäßige Druckkörnung passend zu den drei tatsächlich angesehenen und übergebenen Leukonia-Referenzen. Keine realistische RPG-Hausfigur oder Anime.",
+      "transparencyReview": "Rohes PNG mit echtem RGBA-Alphakanal, Alpha 0..254; Tool-RGB und Alpha bytegetreu erhalten. Sichtbarer Viewer-Farbhof und knapper seitlicher Rand bei Advena bleiben der autorisierten gemeinsamen Alpha-/Freirand-Aufbereitung von Root vorbehalten; keine technische Bildänderung durch diesen Agenten.",
+      "status": "raw-ready-for-shared-processing"
+    },
+    {
+      "id": "estate-advena",
+      "assetStem": "advena",
+      "category": "estates",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-f52ef9a6-3731-4414-a20f-c54d92947321.png",
+      "copiedOriginal": "assets/estates/generated/advena.png",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-advena",
+      "sha256": "2a5c0f90febb4d6fa3706bda41c6a567968ed58f73dbcd667d41289075dd52d7",
+      "toolOriginalSha256": "2a5c0f90febb4d6fa3706bda41c6a567968ed58f73dbcd667d41289075dd52d7",
+      "byteIdenticalCopy": true,
+      "bytes": 2476536,
+      "fileValidation": {
+        "stem": "advena",
+        "format": "PNG",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          254
+        ],
+        "alphaZeroPixels": 710065
+      },
+      "referenceEvidence": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f",
+          "role": "Comic style only; viewed before generation"
+        }
+      ],
+      "visualReview": "Zwei vollständig sichtbare junge menschliche Ankömmlinge in freundlicher gleichwertiger Begegnung. Links schlichte Reisekleidung, Reisebündel und kleiner Mantelflicken; rechts wohlhabende Händlerin mit Kaftan, Turban, Gürtelbeutel und Stoffrolle. Gleiche Höhe, aufrechte zuversichtliche Haltung, vier Hände und vier Füße. Keine Grenze, Wache, Unterwürfigkeit oder feste Kastenhierarchie.",
+      "styleReview": "Große ausdrucksvolle Comic-Köpfe, kräftige dunkelbraune Konturen, flache warme gedeckte Farben und gleichmäßige Druckkörnung passend zu den drei tatsächlich angesehenen und übergebenen Leukonia-Referenzen. Keine realistische RPG-Hausfigur oder Anime.",
+      "transparencyReview": "Rohes PNG mit echtem RGBA-Alphakanal, Alpha 0..254; Tool-RGB und Alpha bytegetreu erhalten. Sichtbarer Viewer-Farbhof und knapper seitlicher Rand bei Advena bleiben der autorisierten gemeinsamen Alpha-/Freirand-Aufbereitung von Root vorbehalten; keine technische Bildänderung durch diesen Agenten.",
+      "status": "raw-ready-for-shared-processing"
+    }
+  ]
+}

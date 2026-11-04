@@ -1,0 +1,158 @@
+{
+  "id": "haus-nic-blar-leitheach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "f0c1afe9-7e2d-4940-8f57-354492eb4fba",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f0c1afe9-7e2d-4940-8f57-354492eb4fba\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/nic-blar/animexx-original.html",
+    "bytes": 98503,
+    "sha256": "110fdfae5e6db31edee9bdb74e51a38bec59d1897ba0c8a20453902fdffb6132",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-nic-blar-leitheach",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Sruthlann",
+      "barony": "Tir na Rún",
+      "county": "Tir an Comhchuibhis",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-airt",
+      "liegeHouseName": "Clan Mac Airt",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na Rún",
+        "Sruthlann"
+      ]
+    },
+    "graphFingerprint": "c73331e3d5c18d8fd903c220976cba7ff033384600c092ac1498cf0242ce927d",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-nic-blar-leitheach",
+    "title": "Nic’Blar · Leitheach",
+    "territoryId": "leitheach-herrschaft-nic-blar",
+    "territoryName": "Tir na Rún",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Rún",
+        "slug": "leitheach-herrschaft-nic-blar"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-nic-blar-leitheach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-nic-blar-leitheach",
+    "slug": "nic-blar",
+    "canonicalSlug": "nic-blar-leitheach",
+    "attachmentId": "f0c1afe9-7e2d-4940-8f57-354492eb4fba",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Pxjk3vn.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 270646,
+    "sha256": "c4cef9911743cb687e81c630f06ff345bd20a7fa4a0f734809432d96645ddaf0",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-nic-blar-leitheach",
+    "title": "Nic’Blar · Leitheach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir an Comhchuibhis",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/Pxjk3vn.png",
+    "path": "Stammbäume/assets/images/references/haus-nic-blar-leitheach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-nic-blar-leitheach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "c4cef9911743cb687e81c630f06ff345bd20a7fa4a0f734809432d96645ddaf0",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Rote Speerträgerin mit Helm in der Armbeuge und Schottenmuster.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "110fdfae5e6db31edee9bdb74e51a38bec59d1897ba0c8a20453902fdffb6132",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-nic-blar-leitheach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug nic-blar wird der bestehenden ID haus-nic-blar-leitheach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Die Leitheach-Akte haus-nic-blar-leitheach ist eigenständig und sitzt als Lairdhaus in Sruthlann. Die historische Ceitheach-Akte haus-nic-blar ist keine alternative ID, kein Umzug und keine Quelle für neue Leitheach-Genealogie.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

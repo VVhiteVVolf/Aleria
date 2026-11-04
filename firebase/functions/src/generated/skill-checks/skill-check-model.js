@@ -77,13 +77,13 @@ export function findProfileSkill(profile, definition) {
   return (profile?.skills || []).find(skill => getSkillIdentity(skill?.name) === definition.id) || null;
 }
 
-export function resolveSkillModifier(character = {}, skillId = '') {
+export function resolveSkillModifier(character = {}, skillId = '', context = {}) {
   const definition = getCheckDefinition(skillId);
   if (!definition) throw new Error('Die gewählte Fertigkeit ist nicht verfügbar.');
   const profile = character?.characterId && Array.isArray(character?.attributes) && Array.isArray(character?.skills)
     ? character
     : resolveCharacterCombatProfile(character);
-  if (definition.checkType) return resolveAttributeCheckModifier(profile, definition);
+  if (definition.checkType) return resolveAttributeCheckModifier(profile, definition, context);
   const profileSkill = findProfileSkill(profile, definition);
   const syntheticSkill = {
     id: `derived-${definition.id}`,
@@ -122,7 +122,15 @@ export function normalizeSkillChallenge(source = {}) {
 }
 
 export function normalizeSkillCheckSettings(source = {}) {
+  const saveContext = source.saveContext && typeof source.saveContext === 'object' ? source.saveContext : {};
+  const actionKind = ['spell', 'prayer', 'song', 'weapon', 'technique'].includes(saveContext.actionKind) ? saveContext.actionKind : '';
+  const damageType = String(saveContext.damageType || '').trim().toLocaleLowerCase('de');
+  const allowedDamageTypes = ['hieb', 'stich', 'wucht', 'feuer', 'kälte', 'blitz', 'gift', 'säure', 'donner', 'nekrotisch', 'strahlend', 'psychisch'];
+  const allowedSaveTags = ['fear', 'poison', 'bleeding', 'prone', 'forced-movement'];
+  const saveTags = [...new Set((Array.isArray(saveContext.saveTags) ? saveContext.saveTags : []).filter(tag => allowedSaveTags.includes(tag)))];
+  if (damageType === 'gift' && !saveTags.includes('poison')) saveTags.push('poison');
   return {
+    saveContext: { actionKind, damageType: allowedDamageTypes.includes(damageType) ? damageType : '', saveTags },
     ...(['vision', 'hearing', 'smell', 'taste', 'touch'].includes(source.requiredSense) ? { requiredSense: source.requiredSense } : {}),
     skillId: CHECKS_BY_ID.has(String(source.skillId || '')) ? String(source.skillId) : '',
     // Retain the wire field for old clients, but never accept a free bonus on
@@ -139,9 +147,9 @@ export function getChallengeAffinityModifier(challenge, skillId) {
   return 0;
 }
 
-export function classifySkillCheck({ natural = 0, total = 0, difficulty = 10 } = {}) {
+export function classifySkillCheck({ natural = 0, total = 0, difficulty = 10, criticalFailureMaximum = 1 } = {}) {
   if (Number(natural) === 20) return 'critical-success';
-  if (Number(natural) === 1) return 'critical-failure';
+  if (Number(natural) <= Math.max(1, Math.min(3, Number(criticalFailureMaximum) || 1))) return 'critical-failure';
   return Number(total) >= Number(difficulty) ? 'success' : 'failure';
 }
 

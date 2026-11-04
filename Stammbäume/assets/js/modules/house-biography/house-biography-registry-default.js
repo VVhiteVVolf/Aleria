@@ -1,6 +1,7 @@
 // Attach source defaults at the registry boundary without mutating a family graph.
 // Saved biographies still use the existing upgrade policy, including explicit null.
 import { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
+import { preserveSourceMetadataBoundaries } from '../../data/source-family-field-upgrade.js?v=20261104-content-lore-v1';
 
 export function withHouseBiographyDefault(family, defaults) {
   const entry = defaults[family.document.id];
@@ -12,13 +13,20 @@ export function withHouseBiographyDefault(family, defaults) {
     if (!entry.replacedDefaultFingerprints?.includes(fingerprint)
       && fingerprint !== houseBiographyDefaultFingerprint(entry.biography)) return family;
   }
+  const bounded = preserveSourceMetadataBoundaries(family);
   return Object.freeze({
-    ...family,
+    ...bounded,
     extensions: {
-      ...family.extensions,
+      ...bounded.extensions,
       // A biography-only revision must not reapply older managed person fields.
       registryManagedEntitySourceRevision: family.extensions?.registryManagedEntitySourceRevision
         ?? family.extensions?.sourceRevision ?? 0,
+      // The fingerprint policy owns biography replacement. Legacy sources must
+      // not force this field over an edited or explicitly removed saved bio.
+      ...(family.extensions?.registryManagedExtensionFields?.includes('houseBiographyModule') ? {
+        registryManagedExtensionFields: family.extensions.registryManagedExtensionFields
+          .filter(field => field !== 'houseBiographyModule')
+      } : {}),
       sourceRevision: Math.max(family.extensions?.sourceRevision || 0, entry.sourceRevision),
       houseBiographyModule: entry.biography,
     },

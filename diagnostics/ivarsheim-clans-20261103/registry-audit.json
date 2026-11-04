@@ -1,0 +1,918 @@
+{
+  "schema": "aleria.ivarsheim-registry-house-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T17:57:37.346Z",
+  "publicOnly": true,
+  "baseline": "diagnostics/ivarsheim-clans-20261103/baseline.json",
+  "summary": {
+    "existingFamilies": 12,
+    "activeFamilies": 7,
+    "extinctFamilies": 5,
+    "suppliedAttachments": 11,
+    "existingHousePages": 0,
+    "existingHouseBiographies": 1,
+    "existingFamiliesWithGalleryFigure": 1,
+    "originalFiguresVerified": 12,
+    "plannedNewFamilies": 1,
+    "expectedFamilyCountAfterAddition": 13
+  },
+  "plannedNewClan": {
+    "familyId": "haus-hrafnvald",
+    "title": "Clan Hrafnvald",
+    "rankId": "huskarl",
+    "kingdom": "Aldrimar",
+    "county": "Ivarsheim",
+    "barony": "Ivarsklamm",
+    "seat": "Ivarsfels",
+    "liegeFamilyId": "haus-wargh",
+    "liegeHouseName": "Clan Wargh",
+    "originOfAssignment": "Neue Nutzerfestlegung fuer Livs bisher namenlosen Herkunftsclan, durch Root am 03.11.2026 konkretisiert.",
+    "notAnOldSourceClaim": true
+  },
+  "plannedNewClanEvidence": "diagnostics/ivarsheim-clans-20261103/liv-origin-reference.json",
+  "excludedHistoricalOrServiceReferences": [
+    {
+      "id": "haus-trachwyll-talfronwyn",
+      "reason": "Eigenstaendige Vennyr-Ursprungsakte, kein heutiger Ivarsheim-Wohnort."
+    },
+    {
+      "id": "haus-hirschhorn",
+      "reason": "Aktueller Familienort Talgarth in Cenyr; nur Sigrids persoenliche Herkunft ist Ivarsheim. Kein zweiter Registereintrag oder erfundener Exilzweig."
+    }
+  ],
+  "imageReview": {
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg",
+    "actuallyViewed": true,
+    "allTwelvePngHashesVerified": true,
+    "originalsUnchanged": true
+  },
+  "records": [
+    {
+      "id": "haus-wargh",
+      "title": "Clan Wargh",
+      "rankId": "jarl",
+      "seat": "Ivarsfels",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ivarsklamm",
+        "Ivarsfels"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-ivarsheim.png",
+          "assets/images/regions/aldrimar-ivarsklamm.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "description": "Jarlsclan von Ivarsheim und Herren von Ivarsfels. Die Hauptlinie führt ihre Gründung auf Ivar Wargh und Méabh Mac Lúin zurück.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-wargh-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "62e2037a-12bc-40d9-939a-a19090116dca",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Clan_Wargh/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/clan-wargh.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-wargh/krieger.png",
+            "url": "https://i.imgur.com/WTWILYV.png",
+            "sha256": "eef68e479edbbb13fa1bc379e9865081c36af00635164722f4b2c80edbefd2dc",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 60,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-feuerhaar",
+      "title": "Clan Feuerhaar",
+      "rankId": "thane",
+      "seat": "Jägersruh",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Rothain",
+        "Jägersruh"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Jägersruh",
+        "barony": "Rothain",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rothain.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "description": "Thanenclan von Rothain mit Sitz in Jägersruh. Seine Gründung wird auf den cenyriischen Bogenschützen Robyn Pengoch zurückgeführt.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-feuerhaar-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "197e0a06-9e16-4835-9605-db3652a76e29",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Rothain/Jagersruh/Clan_Feuerhaar/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-feuerhaar.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-feuerhaar/krieger.png",
+            "url": "https://i.imgur.com/RC4eBtK.png",
+            "sha256": "92dd4a0b68592e3c2019f2d1cc4c00feddd469935af9dc02108beca59fc4fe50",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 39,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-skogg",
+      "title": "Clan Skogg",
+      "rankId": "thane",
+      "seat": "Kornweiler",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Saatgrund",
+        "Kornweiler"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Kornweiler",
+        "barony": "Saatgrund",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-saatgrund.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "description": "Thanenclan von Saatgrund mit Sitz in Kornweiler. Heimdall, ein von Cíaran Tir An Bórach ausgebildeter Nordmann, begründete den Clan gemeinsam mit Uathach Bórach.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-skogg-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "4ff13624-f39f-48db-9671-228f57196186",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Saatgrund/Kornweiler/Clan_Skogg/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-skogg.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-skogg/krieger.png",
+            "url": "https://i.imgur.com/VdDKLQl.png",
+            "sha256": "0e856d44a9179c80487b4515932088a4469e216542769bf3bb3a1e19102062ec",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 55,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-silberzunge",
+      "title": "Clan Silberzunge",
+      "rankId": "hesire",
+      "seat": "Ivarsfels",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ivarsklamm",
+        "Ivarsfels"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "description": "Wohlhabender Hesirenclan von Ivarsfels, begründet durch Surtr die Silberzunge. Der Clan dient den Wargh als Verwalter, Händler und Diplomatengeschlecht.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-silberzunge-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "e157f696-1233-415b-a294-3ec695b9022b",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Clan_Silberzunge/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-silberzunge.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-silberzunge/krieger.png",
+            "url": "https://i.imgur.com/fJlzp6J.png",
+            "sha256": "b0306dcb6e2866a01f92d580aa78dfa73054af115224f832e8944ff93e1d16f9",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 41,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-trachwyll",
+      "title": "Haus Trachwyll",
+      "rankId": "hesire",
+      "seat": "Ivarsfels",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ivarsklamm",
+        "Ivarsfels"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "description": "Die seit 1720 von Kenyon Trachwyll geführte Hesirenlinie in Ivarsfels. Nur Kenyon, Leikn, ihre vier Kinder und deren belegte Nachkommen gehören in diese neue Akte.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-trachwyll-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js",
+        "Stammbäume/assets/js/data/vennyr-warrior-biography-defaults.js"
+      ],
+      "attachmentId": null,
+      "houseBiography": {
+        "present": true,
+        "field": "family.extensions.houseBiographyModule",
+        "image": "assets/images/references/haus-trachwyll/krieger.png"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Haus_Trachwyll/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-trachwyll.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-trachwyll/krieger.png",
+            "url": "https://i.imgur.com/WG2uS0O.png",
+            "sha256": "65f36d698041aa6a830b6a3f3a92311370a1f3c97b1b5b187ea330c9e2042b0c",
+            "hashVerified": true,
+            "existingBeforeBatch": true,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 15,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [
+          "bild-65f36d698041aa6a"
+        ]
+      },
+      "safeguards": [
+        "Heutige Ivarsfels-Akte bleibt von Vennyr-Ursprungsakte haus-trachwyll-talfronwyn getrennt; vorhandenes Original wiederverwenden."
+      ]
+    },
+    {
+      "id": "haus-grendel",
+      "title": "Clan Grendel",
+      "rankId": "thane",
+      "seat": "Hjerimsheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Klippenschlag",
+        "Hjerimsheim"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Hjerimsheim",
+        "barony": "Klippenschlag",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-klippenschlag.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "description": "Thanenclan von Hjerimsheim im Thanentum Klippenschlag, hervorgegangen aus dem alten Hesirenclan der Grendel. Die Grendel dienen den Wargh als Seefahrer, Küstenwächter und Verteidiger der westlichen Grenzen Ivarsheims.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-grendel-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "9b6b9df8-877f-4bb8-b7e5-ece306a95888",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Klippenschlag/Hjerimsheim/Clan_Grendel/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-grendel.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-grendel/krieger.png",
+            "url": "https://i.imgur.com/tIgKo7K.png",
+            "sha256": "409aa7cb1fb647b025b35e880515405c63512f9b8840e62c405be6ac551ba28e",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 42,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "title": "Clan Hyrmgarthr",
+      "rankId": "hesire",
+      "seat": "Winterfeste",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Saatgrund",
+        "Winterwacht",
+        "Winterfeste"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Winterfeste",
+        "barony": "Saatgrund",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-skogg",
+        "liegeHouseName": "Clan Skogg",
+        "folderPath": [
+          "Aldrimar",
+          "Ivarsheim",
+          "Saatgrund",
+          "Winterwacht",
+          "Winterfeste"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-winterwacht.png",
+          "barony": "assets/images/regions/aldrimar-saatgrund.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "description": "Zurückgezogener Magierclan von Winterfeste. Die Hyrmgarthr herrschen über Winterwacht, dienen dem Clan Skogg und führen ihre außergewöhnliche magische Begabung auf Gunnhildr und Niflhel den Arkanisten zurück.",
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-hyrmgarthr-family.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "d0e5fd78-1569-4a24-a143-fae2193fcf78",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Saatgrund/Winterwacht/Winterfeste/Clan_Hyrmgarthr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-hyrmgarthr.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-hyrmgardr/krieger.png",
+            "url": "https://i.imgur.com/QisLQiU.png",
+            "sha256": "499f6b755a53651525d786961c45e9ee017920de7f6e16c1b3ae610334e90b28",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 50,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Stabile Familien-ID haus-hyrmgardr trotz Anzeige Clan Hyrmgarthr; keine neue Aliasfamilie erzeugen."
+      ]
+    },
+    {
+      "id": "haus-blutklinge",
+      "title": "Haus Blutklinge",
+      "rankId": "unknown",
+      "seat": "Aldrimarer (jüngst ausgestorben)",
+      "secondarySeats": [
+        "Ivarsfels"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ausgestorbene Häuser",
+        "Aldrimarer (jüngst ausgestorben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Aldrimarer (jüngst ausgestorben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ivarsfels"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "description": "Vorbereitete historische Familienakte für Haus Blutklinge, ein erst kürzlich erloschenes aldrimarisches Haus aus Ivarsfels im Jarltum Ivarsheim.",
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "c8c55b2c-ee49-4fca-9a55-3a2b78fabf76",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-blutklinge.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-blutklinge/krieger.png",
+            "url": "https://i.imgur.com/NUsb9Fc.png",
+            "sha256": "29a8a2b62a04eff285b40edb9032c59e923394b73af05b64af8e83cfbb82c8c9",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 0,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturelle Kategorie im Profil ist kein realer Sitz; belegte historische Orte stehen in secondarySeats."
+      ]
+    },
+    {
+      "id": "haus-windhueter",
+      "title": "Haus Windhüter",
+      "rankId": "unknown",
+      "seat": "Aldrimarer (jüngst ausgestorben)",
+      "secondarySeats": [
+        "Ivarsfels"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ausgestorbene Häuser",
+        "Aldrimarer (jüngst ausgestorben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Aldrimarer (jüngst ausgestorben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ivarsfels"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "description": "Vorbereitete historische Familienakte für Haus Windhüter, ein erst kürzlich erloschenes aldrimarisches Haus aus Ivarsfels im Jarltum Ivarsheim.",
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "f43fd362-3e21-43a3-964c-236458abdc52",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-windhueter.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-windhueter/krieger.png",
+            "url": "https://i.imgur.com/cFuY5tg.png",
+            "sha256": "41ce6ef25a2d9ad48f492b6738916ac827eb05a0bc2eba1d9900045d066ea379",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 0,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturelle Kategorie im Profil ist kein realer Sitz; belegte historische Orte stehen in secondarySeats."
+      ]
+    },
+    {
+      "id": "haus-morkvard",
+      "title": "Haus Morkvard",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [
+        "Ort unbekannt"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ausgestorbene Häuser",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ort unbekannt"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "description": "Vorbereitete historische Familienakte für Haus Morkvard, ein erloschenes Norrnaigh-Haus aus einem unbekannten Ort im Jarltum Ivarsheim.",
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "f31f2f1d-e6e3-4356-8cc3-52db7dddb617",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Norrnaigh_Nordmanner/Haus_Morkvard/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-morkvard.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-morkvard/krieger.png",
+            "url": "https://i.imgur.com/zHDrhSf.png",
+            "sha256": "30714075274e9750c929f403b3ba19892d4b24d595fbef4dc31b2e8b6ce422f2",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 0,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturelle Kategorie im Profil ist kein realer Sitz; belegte historische Orte stehen in secondarySeats."
+      ]
+    },
+    {
+      "id": "haus-mac-luin",
+      "title": "Haus Mac Luin",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Ard Eabhraig"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ausgestorbene Häuser",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ard Eabhraig"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "description": "Vorbereitete historische Familienakte für Haus Mac Luin, ein erloschenes Glaennath-Haus aus Ard Eabhraig im Jarltum Ivarsheim.",
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "e2609f4d-693f-4204-814b-da7170b20a05",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_Mac_Luin/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-mac-luin.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-mac-luin/krieger.png",
+            "url": "https://i.imgur.com/vsmuPQe.png",
+            "sha256": "2db024714d2f12903ed6d2d7760079d0578af783d3df8d4dceef7cc4460df2a3",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 0,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturelle Kategorie im Profil ist kein realer Sitz; belegte historische Orte stehen in secondarySeats."
+      ]
+    },
+    {
+      "id": "haus-an-borach",
+      "title": "Haus An Borach",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Kornweiler"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ausgestorbene Häuser",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Kornweiler"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "description": "Vorbereitete historische Familienakte für Haus An Borach, ein erloschenes Glaennath-Haus aus Kornweiler im Jarltum Ivarsheim.",
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+        "Stammbäume/assets/js/data/ivarsheim-house-profiles.js"
+      ],
+      "attachmentId": "8ea9c37f-00db-4e8b-b02f-12f3ab543e45",
+      "houseBiography": {
+        "present": false,
+        "field": null,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_An_Borach/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-an-borach.png",
+        "crestExists": true,
+        "originals": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-an-borach/krieger.png",
+            "url": "https://i.imgur.com/Eecy7iY.png",
+            "sha256": "eac653938799f9222f5b8044ca332681d1f0eaaed404dddf682fa5e29936fab8",
+            "hashVerified": true,
+            "existingBeforeBatch": false,
+            "primary": true
+          }
+        ],
+        "personPortraitCount": 0,
+        "missingPersonPortraits": []
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturelle Kategorie im Profil ist kein realer Sitz; belegte historische Orte stehen in secondarySeats."
+      ]
+    }
+  ]
+}

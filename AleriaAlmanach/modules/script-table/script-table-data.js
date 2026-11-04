@@ -4,7 +4,7 @@ const SCRIPT_TABLE_SYLLABLE_LIMIT = 400;
 
 function sanitizeScriptTableStyle(value) {
   const style = String(value || 'plain').trim();
-  return ['rheunwaith', 'ogham', 'karnrith', 'laerelis', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'arcane', 'plain'].includes(style) ? style : 'plain';
+  return ['rheunwaith', 'ogham', 'karnrith', 'laerelis', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'arcane', 'tlapanui', 'ishtaran', 'plain'].includes(style) ? style : 'plain';
 }
 
 function sanitizeScriptTableRows(rows) {

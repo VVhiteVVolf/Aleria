@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { createAssignmentState, DRAFT_SCHEMA } from '../Venalys/assignment-state.mjs';
 import { renderTargets, renderTargetOptions } from '../Venalys/assignment-view.mjs';
 import { commitDistrictName } from '../Venalys/assignment-controls.mjs';
+import { districts,pointsOfInterest,legacyPointIds,mapGeometry } from '../Venalys/territory-data.mjs';
+import { createVenalysMap } from '../Venalys/map-view.mjs';
 
 const config = {
   houseIds: ['vinicius', 'avenicci', 'magnarier'],
@@ -10,6 +12,69 @@ const config = {
   pointIds: ['dorf-01', 'burg-01'],
 };
 const create = () => createAssignmentState(config);
+
+test('the complete older Venalys draft upgrades additively without changing district names or losing old tower assignments',() => {
+  const previous = createAssignmentState({ houseIds:config.houseIds,districts,pointIds:legacyPointIds });
+  previous.renameDistrict('district-04','Mein Hafenviertel');
+  previous.assign('avenicci','district-04');previous.assign('avenicci','poi-r01');previous.assign('vinicius','poi-d02');
+  const payload = JSON.parse(previous.serialize());
+  const revised = createAssignmentState({ houseIds:config.houseIds,districts,pointIds:pointsOfInterest.map(point => point.id),legacyPointIds });
+  revised.restore(payload,{recordHistory:false});
+  assert.deepEqual(revised.current().districtNames,previous.current().districtNames);
+  for (const [id,entries] of Object.entries(previous.current().assignments)) assert.deepEqual(revised.current().assignments[id],entries,id);
+  for (const point of pointsOfInterest.filter(point => !legacyPointIds.includes(point.id))) assert.deepEqual(revised.current().assignments[point.id],[]);
+  assert.equal(revised.canUndo(),false);
+  assert.equal(Object.keys(JSON.parse(revised.serialize()).assignments).length,115);
+  revised.assign('avenicci','poi-d16');revised.undo();
+  assert.deepEqual(revised.current().assignments['poi-r01'],['avenicci']);
+  const before = revised.current();
+  for (const corrupt of [value => {delete value.assignments['poi-r01'];},value => {value.assignments.foreign=[];},value => {value.assignments['poi-r01']=['unknown'];}]) {
+    const invalid = structuredClone(payload);corrupt(invalid);assert.throws(() => revised.restore(invalid));assert.deepEqual(revised.current(),before);
+  }
+});
+
+test('unmapped old places appear separately only when occupied and never offer a phantom map target',() => {
+  const state = createAssignmentState({ houseIds:config.houseIds,districts,pointIds:pointsOfInterest.map(point => point.id),legacyPointIds });
+  const houses = config.houseIds.map(id => ({id,name:id,crest:`${id}.webp`}));
+  assert(!renderTargets(pointsOfInterest,state.current(),houses,null).includes('Noch nicht verortete Orte'));
+  assert(!renderTargetOptions(pointsOfInterest,state.current()).includes('value="poi-r01"'));
+  state.assign('avenicci','poi-r01');
+  const html = renderTargets(pointsOfInterest,state.current(),houses,'avenicci');
+  assert(html.includes('Noch nicht verortete Orte'));
+  assert(html.includes('Torre Levante'));
+  assert(html.includes('data-action="remove-assignment" data-house="avenicci" data-target="poi-r01"'));
+  assert(!html.includes('data-drop-seat="poi-r01"'));
+  assert(!html.includes('data-action="locate-target" data-target="poi-r01"'));
+  assert(renderTargetOptions(pointsOfInterest,state.current()).includes('Torre Levante · Nicht verortet'));
+});
+
+test('both revised map variants render only measured targets even if an old tower still holds a house assignment',() => {
+  const previousWindow = globalThis.window;
+  globalThis.window = {innerWidth:1200,innerHeight:900,addEventListener() {}};
+  try {
+    const surface = {innerHTML:'',style:{},closest:() => null,addEventListener() {}};
+    const full = {innerHTML:'',style:{},closest:() => dialog,addEventListener() {}};
+    const zoom = {textContent:''},caption = {textContent:''};
+    const dialog = {querySelector:selector => selector.includes('zoom-label') ? zoom : full,addEventListener() {}};
+    const root = {querySelector:selector => selector === '#map-dialog' ? dialog : caption,querySelectorAll:() => [surface,full]};
+    const state = createAssignmentState({ houseIds:config.houseIds,districts,pointIds:pointsOfInterest.map(point => point.id),legacyPointIds });
+    state.assign('avenicci','poi-r01');state.assign('avenicci','poi-d16');
+    const map = createVenalysMap({root,targets:[...districts,...pointsOfInterest],districts,
+      houses:[{id:'avenicci',name:'Avenicci',crest:'avenicci.webp'}],geometry:mapGeometry,getDraft:state.current,onTarget() {}});
+    map.render();
+    for (const content of [surface.innerHTML,full.innerHTML]) {
+      assert(!content.includes('data-target="poi-r01"'));
+      assert(content.includes('data-target="poi-d16"'));
+      assert(content.includes('data-house="avenicci"'));
+      assert(!content.includes('NaN'));assert(!content.includes('null%'));
+    }
+    assert.match(caption.textContent,/13 Stadtbezirke · 98 Außenorte/);
+    assert(surface.innerHTML.includes('assets/map-districts.webp'));
+    map.toggleMode({setAttribute() {},textContent:''});
+    assert(surface.innerHTML.includes('assets/map.webp'));
+    assert(full.innerHTML.includes('assets/map-full.webp'));
+  } finally {globalThis.window = previousWindow;}
+});
 
 test('one house can occupy several districts and outside places, and a district can contain several houses', () => {
   const state = create();

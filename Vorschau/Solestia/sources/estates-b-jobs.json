@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Drei anonyme spanisch-iberische Standescomicfiguren im freigegebenen Leukonia-Kastencomicstil.",
+  "stylePreset": "fantasy-class-icon",
+  "styleReferences": "Leukonia castes production: magnarier, mercantrier, patrizier; style only.",
+  "jobs": [
+    {
+      "id": "estate-hidalgo",
+      "assetStem": "hidalgo",
+      "name": "Hidalgo",
+      "rank": "Ritterfürst",
+      "description": "Stolzer junger Hidalgo in gepufftem Wams, Mantel und großem Federhut mit Landbrief und gegürtetem geradem Schwert.",
+      "palette": [
+        "Olivgrün",
+        "Weinrot",
+        "Elfenbein",
+        "Mattgold"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Einzelne ulkige Standescomicfigur für die Solestia-Vorbereitungsseite. Alle drei Referenzbilder liefern ausschließlich denselben flachen humorvollen Leukonia-Kastencomicstil: große Köpfe, kurze Proportionen, kräftige dunkelbraune Konturen, warme matte Flächen, feine gleichmäßige Druckkörnung. NICHT ihre römische Kleidung, Lorbeerkränze, Sandalen oder Schuppenpanzer kopieren. Neues Motiv ist spanisch-iberisch. Es ist eine anonyme junge erwachsene Standesvertreterfigur, kein benannter Amtsinhaber, keine neue Person der Lore.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv und kulturelle Gestaltung: Ein junger stolzer kleiner Ritterfürst (Hidalgo), aufrecht und mit spitzbübisch hochgerecktem Kinn. Er trägt ein edles olivgrün-elfenbeinfarbenes gepufftes spanisches Wams, kurze gepuffte Hose über dunklen Strümpfen, braune kniehohe Stiefel, einen weinroten kurzen Mantel mit goldener Kordel. Ein lustig riesiger breiter weinroter Federhut mit langem ockerfarbenem Federbüschel sitzt auf seinem großen dunkelhaarigen Kopf. Die linke Hand präsentiert einen übergroßen offenen, gut lesbar als gerolltes Pergament gezeichneten LANDBRIEF mit rotem Siegel, aber OHNE jegliche Schrift. Die rechte Hand liegt selbstzufrieden an der Hüfte. Dort hängt ein gerades Schwert in einer schlichten dunklen Scheide mit Kreuzparierstange; keine Krummsäbel. Humor aus dem übertrieben wichtigen kleinen Fürsten und seinem großen Landbrief. Zwei Arme, zwei Hände.\n\nEine einzelne Figur, charmant und würdevoll komisch, junge menschliche Erwachsene 20–28, keine fette oder alte Person. Der Kopf ist groß, etwa ein Viertel der gesamten Körperhöhe, dicke weiche gezeichnete dunkelbraune Kontur und einfache Mimik wie in den drei Referenzen. Anatomisch runde menschliche Ohren. Kein Anime, keine Elfenohren, keine feine realistische Hauskrieger-Gouache. 2:3 Hochformat exakt 1024×1536. Die ganze Figur vom höchsten Kopfschmuck bis zu beiden vollständigen Stiefeln und alle Waffen/Objekte sichtbar, mindestens 7 Prozent leerer Sicherheitsrand. Echter transparenter PNG-Hintergrund und offene transparente Zwischenräume, keinerlei Hintergrunddunst, Farbhof oder Schlagschatten der Referenzen übernehmen. Keine Bühne, Bodenfläche, Rahmen, Schrift, Labels, Sprechblasen oder Wasserzeichen. Keine Feuerwaffen, Säbel, griechische oder römische Rüstung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png"
+      ]
+    },
+    {
+      "id": "estate-senor",
+      "assetStem": "senor",
+      "name": "Señor",
+      "rank": "Ritterlicher Herr",
+      "description": "Junge Ritterherrin im spanischen Teilharnisch mit Burgmodell und aufwärts gehaltenem geradem Zeremonienschwert.",
+      "palette": [
+        "Stahlgrau",
+        "Burgunderrot",
+        "Creme",
+        "Ocker"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Einzelne ulkige Standescomicfigur für die Solestia-Vorbereitungsseite. Alle drei Referenzbilder liefern ausschließlich denselben flachen humorvollen Leukonia-Kastencomicstil: große Köpfe, kurze Proportionen, kräftige dunkelbraune Konturen, warme matte Flächen, feine gleichmäßige Druckkörnung. NICHT ihre römische Kleidung, Lorbeerkränze, Sandalen oder Schuppenpanzer kopieren. Neues Motiv ist spanisch-iberisch. Es ist eine anonyme junge erwachsene Standesvertreterfigur, kein benannter Amtsinhaber, keine neue Person der Lore.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv und kulturelle Gestaltung: Eine junge Ritterherrin als anonyme Vertreterin des Standes Señor. Braunes Haar als kurzer Zopf, freches stolzes Lächeln, offene sichtbare menschliche Ohren. Sie trägt ein burgunderrot-cremefarbenes spanisches Wams mit kleinen gepufften Schulterärmeln unter einem einfachen silbergrauen Brustpanzer, separaten Schulterplatten und gepanzerten Unterarmen; dunkle Strümpfe und feste braune Stiefel. Kein Helm, damit ihr großer charmanter Kopf klar zu sehen ist. Die linke Hand trägt auf flacher Handfläche ein lustig kleines sandsteinfarbenes BURGMODELL mit zwei Türmen und Zinnen. Die rechte Hand hält ein vollständiges gerades ZEREMONIENSCHWERT mit Kreuzparierstange fast senkrecht aufwärts neben dem Körper, bereit zum Ritterschlag. Die eigene Faust umfasst den Griff unterhalb der Parierstange, die Klinge geht deutlich gerade nach OBEN und endet frei sichtbar. Keine zweite Person, keine Angriffsszene. Das Burgmodell ist ein handliches Symbol, kein Hintergrundbauwerk. Zwei Arme und zwei Hände, ein Objekt pro Hand.\n\nEine einzelne Figur, charmant und würdevoll komisch, junge menschliche Erwachsene 20–28, keine fette oder alte Person. Der Kopf ist groß, etwa ein Viertel der gesamten Körperhöhe, dicke weiche gezeichnete dunkelbraune Kontur und einfache Mimik wie in den drei Referenzen. Anatomisch runde menschliche Ohren. Kein Anime, keine Elfenohren, keine feine realistische Hauskrieger-Gouache. 2:3 Hochformat exakt 1024×1536. Die ganze Figur vom höchsten Kopfschmuck bis zu beiden vollständigen Stiefeln und alle Waffen/Objekte sichtbar, mindestens 7 Prozent leerer Sicherheitsrand. Echter transparenter PNG-Hintergrund und offene transparente Zwischenräume, keinerlei Hintergrunddunst, Farbhof oder Schlagschatten der Referenzen übernehmen. Keine Bühne, Bodenfläche, Rahmen, Schrift, Labels, Sprechblasen oder Wasserzeichen. Keine Feuerwaffen, Säbel, griechische oder römische Rüstung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png"
+      ]
+    },
+    {
+      "id": "estate-caballero",
+      "assetStem": "caballero",
+      "name": "Caballero",
+      "rank": "Ritter",
+      "description": "Junger Caballero in spanischem Plattenharnisch und Morion mit rundem Federbusch, beide Hände auf dem geraden Großschwert.",
+      "palette": [
+        "Stahlgrau",
+        "Nachtblau",
+        "Ocker",
+        "Rostrot"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Einzelne ulkige Standescomicfigur für die Solestia-Vorbereitungsseite. Alle drei Referenzbilder liefern ausschließlich denselben flachen humorvollen Leukonia-Kastencomicstil: große Köpfe, kurze Proportionen, kräftige dunkelbraune Konturen, warme matte Flächen, feine gleichmäßige Druckkörnung. NICHT ihre römische Kleidung, Lorbeerkränze, Sandalen oder Schuppenpanzer kopieren. Neues Motiv ist spanisch-iberisch. Es ist eine anonyme junge erwachsene Standesvertreterfigur, kein benannter Amtsinhaber, keine neue Person der Lore.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv und kulturelle Gestaltung: Ein junger tapferer Ritter (Caballero), komisch würdevoll mit großen entschlossenen Augen und einem kleinen selbstbewussten Lächeln, keine alte Person. Er trägt einen spanischen MORION mit klarer geschwungener Krempe und hohem Längskamm, offenem Gesicht und einem lustig BAUCHIGEN RUNDEN rostrot-ockerfarbenen Federbusch. Der Kopf ist groß und der ganze Harnisch kurz und kompakt wie bei den Comicreferenzen. Schlichter aber solider silbergrauer spanischer Plattenharnisch mit Brust, runden Schulterplatten, Ellbogen- und Knieschutz, nachtblaue gepuffte Unterkleidung und vollständige gepanzerte Stiefel. Er stützt sich mit BEIDEN behandschuhten HÄNDEN übereinander auf den Knauf eines sehr großen GERADE senkrecht vor ihm aufgestellten GROßSCHWERTES, dessen Spitze zwischen seinen Füßen ruht. Die gerade breite Klinge, Kreuzparierstange, Griff und Knauf anatomisch sauber und komplett sichtbar. Kein Schild, keine weitere Waffe in einer Hand. Der übertrieben üppige Federbusch und seine ernste kleine Heldenpose erzeugen die Komik. Zwei Arme, genau zwei Hände auf EINEM Schwertknauf.\n\nEine einzelne Figur, charmant und würdevoll komisch, junge menschliche Erwachsene 20–28, keine fette oder alte Person. Der Kopf ist groß, etwa ein Viertel der gesamten Körperhöhe, dicke weiche gezeichnete dunkelbraune Kontur und einfache Mimik wie in den drei Referenzen. Anatomisch runde menschliche Ohren. Kein Anime, keine Elfenohren, keine feine realistische Hauskrieger-Gouache. 2:3 Hochformat exakt 1024×1536. Die ganze Figur vom höchsten Kopfschmuck bis zu beiden vollständigen Stiefeln und alle Waffen/Objekte sichtbar, mindestens 7 Prozent leerer Sicherheitsrand. Echter transparenter PNG-Hintergrund und offene transparente Zwischenräume, keinerlei Hintergrunddunst, Farbhof oder Schlagschatten der Referenzen übernehmen. Keine Bühne, Bodenfläche, Rahmen, Schrift, Labels, Sprechblasen oder Wasserzeichen. Keine Feuerwaffen, Säbel, griechische oder römische Rüstung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png"
+      ]
+    }
+  ]
+}

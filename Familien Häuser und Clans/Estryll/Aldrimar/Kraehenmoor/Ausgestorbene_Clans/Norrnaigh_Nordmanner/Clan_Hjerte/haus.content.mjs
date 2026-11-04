@@ -1,0 +1,186 @@
+// Geprüfte redaktionelle Quelle; kanonische Familienakten bleiben maßgeblich.
+export const HOUSE_CONTENT = {
+  "id": "haus-hjerte",
+  "name": "Clan Hjerte",
+  "type": "Clan",
+  "page": "haus.html",
+  "county": "Krähenmoor",
+  "liege": "",
+  "territoryId": "jarltum-kraehenmoor",
+  "territoryName": "Jarltum Krähenmoor",
+  "territoryHref": "../Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Jarltum Krähenmoor.html",
+  "parentHouseId": "",
+  "extinct": true,
+  "showMotto": true,
+  "registerPage": true,
+  "prepared": false,
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "biographyManagedExternally": false,
+  "biographySourceRevision": 4,
+  "biographyPreviousDefaultFingerprints": [],
+  "biographyIntroTitle": "Über den Clan",
+  "biographyHistoryTitle": "Geschichte",
+  "biographySummary": {
+    "overview": "Clan Hjerte war ein Norrnaigh-Thanenclan im Gebiet des späteren Krähenmoors. Der erloschene Stammclan lebt in den Nachfolgehäusern Kummerherz, Schattenherz, Feuerherz und Kaltherz fort. Seine Geschichte verbindet große Ansprüche mit territorialem Rückzug und innerer Spaltung.",
+    "history": "Die Hjerte zogen mit anderen Norrnaigh nach Süden und suchten neues Land und Reichtum. Im späteren Krähenmoor kämpften sie gemeinsam mit Varangr, Järnblod und Kaldhrafn gegen die örtlichen Glaennath-Herrschaften. Der Sieg führte zu neuen Konflikten um Sümpfe, Küsten und Gebirge. Die Varangr banden Verbündete an sich und drängten die Hjerte in ärmere Gebiete zurück. Politische Ehen begleiteten die Entstehung von Kummerherz und Schattenherz. Schließlich zerbrach die verbliebene Einheit im Streit der Brüder Fjalmar und Kjalmar in Feuerherz und Kaltherz.",
+    "character": "Stolz, Durchsetzungskraft und eiserne Sturheit bestimmten das Selbstbild. Nachgeben galt als Schwäche, selbst wenn der eigene Anspruch kaum zu halten war. Derselbe Wille, der Erfolge ermöglicht hatte, erschwerte den Ausgleich mit Rivalen und innerhalb des Clans.",
+    "customs": "In der Nacht des Eisernen Willens mussten junge Angehörige Schmerz und Demütigung ohne sichtbare Regung ertragen. Raue Feste und Wettkämpfe feierten Stärke. Die Krieger bevorzugten schwere Rüstungen, Äxte und Langschwerter; auch abgerichtete Kampfwölfe gehörten zur Überlieferung.",
+    "holdings": "Ansprüche auf Gramfenn, das Land um Moortal und Rabenweide gingen in politischen Rückzügen und der Bildung neuer Linien auf. Ein geschlossenes Hjerte-Herrschaftsgebiet blieb nicht bestehen.",
+    "culture": "Tyrdras wurde als Gott der Dominanz und Unterwerfung verehrt. Der Wahlspruch „Behaupte dich, bis es wahr wird“ verkörperte die Härte des Hauses.",
+    "relations": "Bündnisse mit Ragnulf und Varangr konnten den Machtverlust nicht aufhalten. Das gemeinsame Erbe verbindet die Nachfolgehäuser, während besonders Feuerherz und Kaltherz erbittert um seine Deutung streiten.",
+    "trivia": [],
+    "influence": [],
+    "achievements": []
+  },
+  "placeholders": {
+    "male": "../Stammbäume/assets/images/placeholders/male.png",
+    "female": "../Stammbäume/assets/images/placeholders/female.png"
+  },
+  "allies": [],
+  "hierarchy": [
+    {
+      "type": "Sammlung",
+      "name": "Familien Häuser und Clans",
+      "slug": "familien-hauser-und-clans"
+    },
+    {
+      "type": "Kontinent",
+      "name": "Estryll",
+      "slug": "estryll"
+    },
+    {
+      "type": "Königreich",
+      "name": "Aldrimar",
+      "slug": "aldrimar"
+    },
+    {
+      "type": "Jarltum",
+      "name": "Krähenmoor",
+      "slug": "krahenmoor"
+    },
+    {
+      "type": "Historischer Bestand",
+      "name": "Ausgestorbene Clans",
+      "slug": "ausgestorbene-clans"
+    },
+    {
+      "type": "Kultur",
+      "name": "Norrnaigh (Nordmänner)",
+      "slug": "norrnaigh-nordmanner"
+    },
+    {
+      "type": "Clan",
+      "name": "Clan Hjerte",
+      "slug": "haus-hjerte"
+    }
+  ],
+  "profile": {
+    "highestTitle": "Thane",
+    "rank": "Thane",
+    "houseType": "Ausgestorbener Clan",
+    "motto": "Behaupte dich, bis es wahr wird",
+    "quoteAuthor": "",
+    "seat": "",
+    "affiliation": "Krähenmoor",
+    "liege": "",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
+    "founding": "",
+    "milestoneOne": "",
+    "milestoneTwo": "",
+    "patron": "",
+    "knightingPatron": "",
+    "people": "",
+    "wealth": "",
+    "religion": "",
+    "patronDeities": "",
+    "origin": "Norrnaigh",
+    "cadetBranches": "",
+    "allies": "",
+    "enemies": ""
+  },
+  "omitMilitaryProfile": true,
+  "sections": {
+    "overview": "Clan Hjerte war ein Norrnaigh-Thanenclan im Gebiet des späteren Krähenmoors. Der Stammclan ist erloschen; sein Erbe lebt in Kummerherz, Schattenherz, Feuerherz und Kaltherz fort.\n\nDer Hjerte Clan war einst einer der mächtigsten Clans der Norrnaigh, bekannt für seinen Ehrgeiz und seine unbändige Stärke. Doch durch Intrigen und Verrat wurden sie in die Sümpfe verdrängt und zerfielen in Kadettenlinien, deren einstige Größe nur noch in Legenden weiterlebt.",
+    "history": "Es heißt, die Hjerte waren von Anfang an ein Volk voller Ambitionen und unbändiger Stärke. Sie gehörten zu den Norrnaigh, jenen Seefahrern aus dem hohen Norden, die vom eisigen Wind und den rauen Küsten ihrer Heimat geprägt waren. Als das Zeitalter der Seefahrer begann und die Norrnaigh gen Süden aufbrachen, um neues Land zu finden, waren es die Hjerte, die an vorderster Front segelten, getrieben von einer unstillbaren Neugier und dem Wunsch nach Reichtum und Macht.\n\nZusammen mit anderen großen Clans wie den Ragnulf und den Wargh überquerten sie die Berge des heutigen Vennyrs. Diese mächtigen Gipfel, deren schneebedeckte Häupter den Himmel zu berühren schienen, bildeten die Grenze zu einer neuen, fruchtbaren Welt. Viele der Norrnaigh fanden in den grünen Ebenen und an den Hängen der Berge ihre neue Heimat. Die Ragnulf ließen sich in den fruchtbaren Tälern nieder und begannen schnell, Wohlstand und Macht anzuhäufen. Doch die Hjerte träumten von mehr.\n\nVon den alten Sagen der Norrnaigh inspiriert, die von goldhaltigen Gebirgen und reichen Sumpfländern erzählten, wandten sie sich weiter gen Süden, tiefer in das unbekannte Land. Dort fanden sie das, wonach sie gesucht hatten: Weite Sumpfgebiete, durchzogen von glitzernden Flüssen und von dichten, geheimnisvollen Wäldern umgeben. Doch das Land war nicht unbewohnt.\n\nHier lebten die Glaennath-Alben, ein altes Volk, das tief mit der Natur und den magischen Kräften der Welt verbunden war. Ihre Städte waren aus den Bäumen gewoben, ihre Festungen aus Stein und Moos und ihre Magie so alt wie die Zeit selbst. Die Hjerte sahen in ihnen jedoch nicht ein Volk, das es zu respektieren galt, sondern Feinde, die das beanspruchten, was ihnen zustehen sollte.\n\nEs dauerte nicht lange, bis Krieg ausbrach. Doch die Hjerte waren nicht die einzigen Eindringlinge. Auch die Varangr, Järnblod und Kaldhrafn hatten ihren Weg in diese Lande gefunden. Anfangs waren sie Feinde, kämpften um das Territorium und das Recht, über die Sumpfländer zu herrschen. Doch die Glaennath-Alben waren stark und ihre Magie mächtig.\n\nAngesichts dieser gemeinsamen Bedrohung schlossen die Norrnaigh-Clans ein Bündnis. Sie legten ihre Streitigkeiten bei und vereinten ihre Kräfte, um die Alben zu bezwingen. Der Krieg gegen die Glaennath war lang und blutig. Die Alben kämpften mit einem Wissen um die Natur und die Magie, das die Norrnaigh nicht verstehen konnten. Doch die rohe Kraft und die unnachgiebige Entschlossenheit der Norrnaigh-Clans waren stärker. Am Ende brach die Herrschaft der örtlichen Glaennath-Clans zusammen; ihre Städte lagen in Trümmern, und viele ihrer alten Machtzentren gingen verloren.\n\nDer Sieg brachte jedoch kein Ende des Blutvergießens. Die Hjerte und ihre Verbündeten standen nun vor einem neuen Problem: dem Machtvakuum. Jeder Clan wollte ein Stück des eroberten Landes. Die Hjerte beanspruchten die Sumpfländer und das goldreiche Gebirge, während die Varangr die Hauptstätte der Alben für sich forderten. Die Järnblod wollten die Küstenregionen kontrollieren und die Kaldhrafn erhoben Anspruch auf das Flussgebiet im Süden.\n\nDie Hjerte waren stark und stolz. Sie waren diejenigen, die am tiefsten in die Sumpfländer vorgedrungen waren, die am härtesten gegen die Alben gekämpft hatten. In ihrem Hochmut waren sie überzeugt, dass ihnen das meiste Land zustehen sollte. Doch sie hatten die List und Macht der Varangr unterschätzt.\n\nIntrigen und geheime Allianzen waren die Waffen der Varangr. Während die Hjerte mit offener Stärke kämpften, banden die Varangr die Järnblod durch Ehen und Versprechungen an sich. Sie säten Misstrauen zwischen den Hjerte und den anderen Clans und begannen im Geheimen, ihre Macht zu festigen. Als der Konflikt eskalierte, standen die Hjerte isoliert und ohne Verbündete da. Die Varangr schlugen zu und zwangen die Hjerte in die Knie. Das Sumpfland, das einst ihr Traum und ihr Ziel war, wurde zu ihrem Gefängnis.\n\nDie Varangr übernahmen die Hauptstätte der Alben und gründeten das Jarltum von Krähenmoor, während die Hjerte in die armen und gefährlichen Sümpfe zurückgedrängt wurden. Einst mächtig und stolz, begannen die Hjerte zu verarmen. Sie hatten ihre Macht und ihren Einfluss verloren, doch ihr Stolz und ihre Erinnerung an frühere Größe blieben bestehen.\n\nDoch der Fall der Hjerte war noch nicht vollständig. Sie überlebten, wenn auch geschwächt und gedemütigt. In den Sümpfen gründeten sie Kadettenlinien, die weiterhin das Erbe der Hjerte trugen. Doch die Spaltung war unvermeidlich. Die letzten Erben, Kjalmar und Fjalmar, konnten sich nicht einigen, wer die Führung übernehmen sollte. In ihrem Stolz und ihrer Sturheit teilten sie den Clan in zwei: Feuerherz und Kaltherz.\n\nDie Hjerte waren gefallen, doch sie waren nicht vergessen. In den Geschichten und Liedern der Norrnaigh und der Aldrimarer lebten ihre Taten und ihre Tragödie weiter. Sie galten als verhinderte Anwärter auf die Vorherrschaft, und das Volk, das von Stolz und Hochmut zu Armut und Spaltung fiel. Doch es gab solche, die flüsterten, dass das Erbe der Hjerte noch immer stark sei, verborgen in den Sümpfen und in den Herzen ihrer Nachkommen, die nur darauf warteten, ihr Recht und ihre Macht zurückzufordern.",
+    "traditions": "Die Hjerte waren bekannt für ihren unerschütterlichen Stolz und ihre eiserne Sturheit. Sie verehrten Tyrdras, den Gott der Dominanz und Unterwerfung, und glaubten fest daran, dass Macht und Durchsetzungskraft der Weg zur Größe waren. Für die Hjerte war Nachgeben keine Option – selbst im Unrecht hielten sie an ihrer Überzeugung fest und lebten nach dem Motto: \"Behaupte dich, bis es wahr wird.\" Diese Einstellung verlieh ihnen eine unerschütterliche Aura der Stärke und machte sie zu gefürchteten Gegnern, aber auch zu schwierigen Verbündeten.\n\nIhre Rituale spiegelten diesen unbeugsamen Willen wider. In der Nacht des Eisernen Willens mussten die jungen Hjerte beweisen, dass sie Schmerz und Demütigung ertragen konnten, ohne eine Regung zu zeigen. Schwäche galt als größtes Versagen, und wer nachgab, wurde verachtet. Doch in ihrem stolzen Herzen waren sie tief miteinander verbunden, überzeugt davon, dass nur ein vereinter Clan wahre Stärke zeigen konnte. Ihr Hochmut und ihr unerschütterlicher Glaube an ihre Überlegenheit führten sie zu großen Erfolgen, doch letztlich auch zu ihrem Fall und ihrer Spaltung, als ihre Sturheit stärker war als ihre Einigkeit.",
+    "knighthood": "Das Huskarltum der Hjerte war bekannt für seine brutale Direktheit und unerschütterliche Kampfbereitschaft. Im Gegensatz zu den Varangr, die oft im Schatten agierten und ihre Pläne hinter vorgehaltener Hand schmiedeten, waren die Hjerte offen und unverblümt in ihren Absichten. Wenn sie ankündigten, zur Schlacht anzutreten, dann taten sie es auch – ohne Täuschung und ohne Hinterhalt, sondern mit erhobenem Haupt und unerschütterlichem Stolz.\n\nIhre Krieger waren bekannt für ihre unerbittliche Härte und ihre Bereitschaft, sich die Hände schmutzig zu machen. In den Reihen der Hjerte kämpften Frontkämpfer, die es verstanden, direkt und kompromisslos auf den Feind zuzustürmen. Sie trugen schwere Rüstungen, die den Sumpfmatsch und Blut der Schlacht mühelos abschüttelten, und schwangen breite Äxte und Langschwerter, mit denen sie Schilde spalteten und Rüstungen zerschmetterten.\n\nEine besondere Stärke der Hjerte waren ihre Kampfwölfe, wilde Bestien aus den Sümpfen und Wäldern, die von Anführern oder Waldpirschern des Clans domestiziert und trainiert wurden. Diese treuen Gefährten stürmten gemeinsam mit ihren Herren in die Schlacht, zerfetzten Feinde mit reißenden Kiefern und verbreiteten Furcht und Chaos unter den gegnerischen Reihen. Mensch und Wolf kämpften Seite an Seite, verbunden durch ein Band aus Blut und Krieg, das die Hjerte als besonderen Ausdruck ihrer Wildheit und Entschlossenheit rühmten.",
+    "holdings": "Die Hjerte waren von Anfang an kämpferisch und ehrgeizig, als es um Herrschaftsgebiete ging. Ihr erster Streit entbrannte mit den Ragnulf um die Kontrolle über Gramfenn, eine wilde Region voller Sümpfe und Wälder. Die Hjerte sahen darin eine strategische Position, während die Ragnulf das Land wegen seiner fruchtbaren Böden beanspruchten. Doch anstatt den Krieg bis zum bitteren Ende zu führen, entschieden sich die Hjerte für Diplomatie – oder zumindest für das, was sie dafür hielten. Durch eine politische Ehe mit den Ragnulf gaben sie Gramfenn auf und gründeten das Kadettenhaus Kummerherz, das als Vasall der Ragnulf diente. In Wahrheit jedoch verloren sie an Einfluss, während die Ragnulf ihre Oberhoheit sicherten.\n\nMit ihrem Fokus nun auf den Süden gerichtet, wollten die Hjerte die Region um Moortal erobern, in der sie das Gold der Alben vermuteten. Doch als die Alben besiegt waren, fanden sie dort keine Schätze, sondern nur karges Land und gefallene Städte. Enttäuscht, aber nicht entmutigt, wandten sich die Hjerte den fruchtbaren Ebenen im Süden von Krähenmoor zu. Auch hier gerieten sie in Konflikt, diesmal mit den Varangr, die ebenfalls Ansprüche erhoben. Erneut gaben die Hjerte nach und fügten sich einer Ehe mit den Varangr, um Rabenweide an ihre Kadettenlinie Schattenherz abzutreten. Was als strategische Allianz gedacht war, stellte sich als Verlust von Macht und Einfluss heraus, während die Varangr ihre Dominanz weiter ausbauten.\n\nDoch all diese Kompromisse und politischen Ehen brachten den Hjerten rein gar nichts, denn innere Zwistigkeiten zerrissen den Clan. Die Zwillingsbrüder Fjalmar und Kjalmar waren stolz und stur, beide überzeugt, der rechtmäßige Erbe des Clans zu sein. In ihrer Rivalität zerbrach der Hjerte Clan und teilte sich in zwei Linien: Feuerherz und Kaltherz. Was einst ein großer und mächtiger Clan war, zerfiel in gesprenkelte Splitter, gespalten durch Hochmut und Zwist. Die Hjerte verloren ihren Zusammenhalt und ihre Macht, und das Land, um das sie so verbissen gekämpft hatten, wurde von ihren Feinden und Rivalen beherrscht. Der Stammclan erlosch, während seine Nachfolgehäuser ein umstrittenes gemeinsames Erbe bewahren. Was einst als geschlossene Macht auftrat, lebt seither in getrennten, teils verfeindeten Linien weiter.",
+    "cultureReligion": "Die Kultur der Hjerte war geprägt von Stolz, Härte und unerschütterlicher Sturheit. Sie sahen sich selbst als Erben des Nordens, die das Recht auf Herrschaft und Eroberung in ihrem Blut trugen. Ehre und Stärke waren ihre höchsten Werte, doch Ehre bedeutete für sie Durchsetzungskraft und Standhaftigkeit, nicht Aufrichtigkeit oder Gnade. Sie glaubten fest daran, dass Macht nur denen zusteht, die sie sich nehmen, und lebten nach dem Motto: \"Behaupte dich, bis es wahr wird.\" Ihre Offenheit und Direktheit machten sie zu gefürchteten Feinden und schwierigen Verbündeten, da sie niemals zurückwichen, selbst wenn sie im Unrecht waren.\n\nIn ihrer Kunst und ihren Ritualen spiegelte sich diese stolze Härte wider. Ihre Lieder und Sagen erzählten von Eroberungen und Schlachten, in denen sie als unbezwingbare Krieger gefeiert wurden. Ihre Feste waren wild und rau, geprägt von Wettkämpfen und Herausforderungen, bei denen sie ihre Stärke und Ausdauer unter Beweis stellten. Schwäche und Nachgiebigkeit waren verachtet, ebenso wie Demut und Zurückhaltung. Selbst in ihrer Spiritualität zeigte sich ihr unbezwingbarer Wille, da sie Tyrdras, den Gott der Dominanz und Unterwerfung, verehrten und glaubten, dass Macht und Herrschaft ihr göttliches Recht seien.",
+    "conflictsAlliances": "Die Hjerte waren geschickte Diplomaten, wenn es darum ging, Allianzen zu schmieden, doch sie taten dies nie aus Vertrauen oder Freundschaft, sondern aus strategischer Berechnung. Für sie waren Bündnisse nur Werkzeuge, um Macht und Einfluss zu sichern oder Feinde zu schwächen. Ihre Allianzen waren stets zweckgebunden und wurden ohne Zögern gebrochen, wenn sie keinen Vorteil mehr boten. Mit dieser rücksichtslosen Haltung banden sie sich durch politische Ehen an die Ragnulf und Varangr, gaben jedoch stets Macht und Land im Austausch auf und verloren mehr, als sie gewannen. Ihr Hochmut und ihre Sturheit ließen sie glauben, sie könnten alle manipulieren, doch ihre Offenheit und Arroganz machten sie berechenbar und zu leichten Zielen für die Intrigen ihrer Verbündeten.\n\nLetztlich brachten ihnen diese Allianzen nichts als Kummer und Schmerz. Die Ragnulf, an die sie durch eine politische Ehe Gramfenn verloren, sahen sie stets als Vasallen, während die Varangr ihre Dominanz in Krähenmoor ausbauten und die Hjerte in Bedeutungslosigkeit drängten. Ihre politischen Ehen führten zur Gründung der Kadettenlinien Kummerherz und Schattenherz, doch anstatt Macht zu sichern, schwächten sie nur den Zusammenhalt des Clans. Als ihre Feinde an Einfluss gewannen, zerbrach auch ihre innere Einheit. Die Zwillingsbrüder Fjalmar und Kjalmar entzweit durch Stolz und Machtgier, teilten den Clan in Feuerherz und Kaltherz, was den endgültigen Fall der Hjerte besiegelte. Ihre einstige Größe verblasste, und was blieb, waren gespaltene Häuser und eine tragische Erinnerung an verlorene Macht und zerbrochene Allianzen.",
+    "values": "Die Hjerte glaubten an Stärke, Dominanz und unbeugsamen Stolz und waren überzeugt, dass Macht nur denen zusteht, die niemals nachgeben. Ihre Sturheit und Entschlossenheit machten sie zu unbeugsamen Kriegern, doch auch zu stolzen Einzelgängern, die lieber untergingen, als Kompromisse einzugehen.",
+    "succession": "Die Familie ist erloschen.",
+    "court": "Die Familie besitzt keine heutigen Amtsinhaber.",
+    "familyTree": "Der Stammbaum zeigt die überlieferten Angehörigen und Verbindungen der Familie.",
+    "historicalFigures": "Einzelne historische Persönlichkeiten sind bislang nicht näher überliefert."
+  },
+  "images": {
+    "crest": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-hjerte.png",
+    "scene": "../Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+    "sceneAlt": "Historische Hausdarstellung · Clan Hjerte",
+    "banner": "../Stammbäume/assets/images/regions/aldrimar-kraehenmoor.png"
+  },
+  "illustrationCategory": "Historische Hausdarstellung",
+  "cadets": [],
+  "founder": {
+    "id": "brynjar-hjerte",
+    "familyId": "haus-hjerte",
+    "name": "Brynjar Hjerte",
+    "role": "Begründung der Familie",
+    "detail": "Hjerte-Spross · Begründer der Kummerherz-Linie",
+    "image": "../Stammbäume/assets/images/portraits/haus-hjerte/brynjar-hjerte.png",
+    "silhouette": "male"
+  },
+  "heads": [
+    {
+      "id": "fafnir-hjerte",
+      "familyId": "haus-hjerte",
+      "name": "Fafnir Hjerte",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Erster namentlich überlieferter Hjerte",
+      "image": "../Stammbäume/assets/images/portraits/haus-hjerte/fafnir-hjerte.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "urdar-hjerte",
+      "familyId": "haus-hjerte",
+      "name": "Urdar Hjerte",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Oberhaupt des Clans Hjerte",
+      "image": "",
+      "silhouette": "male"
+    },
+    {
+      "id": "kolskegg-hjerte",
+      "familyId": "haus-hjerte",
+      "name": "Kolskegg Hjerte",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Oberhaupt des Clans Hjerte",
+      "image": "",
+      "silhouette": "male"
+    },
+    {
+      "id": "woldrim-hjerte",
+      "familyId": "haus-hjerte",
+      "name": "Woldrim Hjerte",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Letztes ungeteiltes Oberhaupt des Clans Hjerte",
+      "image": "",
+      "silhouette": "male"
+    }
+  ],
+  "heirs": [],
+  "offices": [],
+  "figuresTitle": "Historische Persönlichkeiten",
+  "figures": [],
+  "trivia": [],
+  "currentHead": "",
+  "firstHeir": "",
+  "countyLabel": "Jarltum",
+  "sectionTitles": {
+    "knighthood": "4. Huskarltum"
+  },
+  "extinctionText": "Ausgestorben · Zeitpunkt offen"
+};

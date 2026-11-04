@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_HWYADEN_PORTRAITS } from './house-hwyaden-portraits.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   WEIDEBUCHT_HOUSE_EMBLEMS,
   WEIDEBUCHT_HOUSE_PROFILES

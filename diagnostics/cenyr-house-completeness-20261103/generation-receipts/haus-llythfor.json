@@ -1,0 +1,52 @@
+{
+  "id": "haus-llythfor",
+  "refs": [
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png"
+  ],
+  "prompt": "Create ONE anonymous everyday craft-house representative for House Llythfor in Gwynthor, Cenyr; no named person or canonical portrait. Its family has documented shoe-mending, sewing and reporting work; depict one plausible craft representative, without asserting a single profession for the whole family. Reference 1 is ONLY the approved quiet matte painted house-figure STYLE: simple readable forms, lightly stylised full-body proportions, soft thin painted edges, limited shading, muted colours and very fine even grain. Reference 2 is ONLY heraldry and palette: three pale bundled feathers on blue, dark metal rim. Draw an anonymous adult craftswoman in a muted dusty-blue wool dress, simple cream work apron and worn brown shoes. Quiet upright three-quarter pose. She holds one repaired leather shoe at waist height and a small folded piece of cloth; a very simple sewing/tool pouch hangs from her belt. A small three-feather motif embroidered at the apron top refers to the house. Keep props few and large, no furniture. Entire full body visible with clear margin. 2:3 portrait PNG at least 1024x1536, true transparent background and transparent open gaps. No location, ground, shadow, halo, haze, text, frame, ornate noble costume, armour, weapon, photorealism, thick comic outlines, CGI or glossy modelling. The image is a modest occupational house illustration, not any existing individual.",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "providerOriginalPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-c9259631-fca4-4345-919b-2dcdf535c4ef.png",
+  "stagedPath": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-llythfor.png",
+  "selected": true,
+  "qaPending": false,
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-c9259631-fca4-4345-919b-2dcdf535c4ef.png",
+  "sha256": "a268cbb19f64c9148ec1f7453d353d9c158df39a72cefb43cbaab7eddc1eccfb",
+  "bytes": 2166780,
+  "size": [
+    1024,
+    1536
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaZeroPixels": 975208,
+  "alphaOneToThreePixels": 10867,
+  "alphaCorners": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visibleAlphaAbove8BBox": [
+    190,
+    19,
+    794,
+    1522
+  ],
+  "pixelEdits": false,
+  "sourceJobManifest": "diagnostics/cenyr-house-completeness-20261103/art-audit/remaining-six-generation-jobs.json",
+  "visualReview": "Actual white-background composite inspected; role, full body, house palette and transparency accepted. Anonymous representative only.",
+  "referenceFiles": [
+    {
+      "path": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+    },
+    {
+      "path": "E:/Aleria/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
+      "sha256": "4aefeda9f8920bb24f35304ad8e083e691005c32156dd5102b74f3eca152f749"
+    }
+  ]
+}

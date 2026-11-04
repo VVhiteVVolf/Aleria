@@ -1,0 +1,92 @@
+{
+  "id": "haus-feuerherz",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "7cfdacea-b4fd-4584-b14c-ec50deb8429b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\7cfdacea-b4fd-4584-b14c-ec50deb8429b\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/feuerherz/animexx-original.html",
+    "bytes": 109385,
+    "sha256": "fa656f00e283bc712a6cfc34ed2ca91ded8fe760b987dc7b4e5738f8a4238be0",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-feuerherz",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "32082824c3b689cb8b5b589813e21ed816fa5cdac32c38778d060b581527f4aa"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-feuerherz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-feuerherz",
+    "familyId": "haus-feuerherz",
+    "slug": "feuerherz",
+    "canonicalSlug": "feuerherz",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "7cfdacea-b4fd-4584-b14c-ec50deb8429b",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/lbVUg03.png",
+    "sourceUrl": "https://i.imgur.com/lbVUg03.png",
+    "path": "Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 234409,
+    "sha256": "2112b40bcaaebf8cbc20aa06c24d1bd49daa9cc750ccca56f50609783dbab80a",
+    "sha": "2112b40bcaaebf8cbc20aa06c24d1bd49daa9cc750ccca56f50609783dbab80a",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Krieger mit geschlossenem Helm, Schwert und rotem Herz auf schwarzem Schild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Sitz Moortal/Nebelmoor und Rang Hesire unter Varangr bleiben erhalten; die südlichen Sumpfbesitzungen schaffen keinen zweiten Registerort.",
+    "Fjalmar und Kjalmar bleiben bestehende Personen. Die historische Spaltung ist Fließtext, keine Genealogieübernahme.",
+    "Offenheit und Ehrlichkeit sind kulturelle Ideale des Clans, keine Garantie, dass jedes einzelne Mitglied niemals lügen könne.",
+    "Die Quellenfloskel stritten wie Kinder wird zu einer sachlichen Wiederaufnahme der Rivalität nach dem Krieg redigiert. Militärstatistiken und Hofdaten ausgenommen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

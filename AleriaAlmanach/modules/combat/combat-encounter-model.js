@@ -1,4 +1,6 @@
 import { splitEncounterExperience } from './combat-progression.js?v=20260807-magic-system-v1';
+import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
+import { normalizeCombatEncounterStartApplications, applyCombatEncounterStartApplicationsToStateMap } from './combat-encounter-start-effects.js';
 import {
   applyCombatEncounterAuraApplicationsToStateMap,
   normalizeCombatEncounterAuraApplication
@@ -63,6 +65,7 @@ export function normalizeCombatEncounterEvent(value = {}) {
     expectedRevision: text(source.expectedRevision, 240),
     summary: normalizeCombatEncounterSummary(source.summary),
     participants,
+    startApplications: normalizeCombatEncounterStartApplications(source.startApplications),
     auraApplications: (Array.isArray(source.auraApplications) ? source.auraApplications : [])
       .slice(0, 500)
       .map(normalizeCombatEncounterAuraApplication),
@@ -127,6 +130,16 @@ function applyCombatResolutionToEncounters(encounters, resolution = {}) {
 export function deriveCombatEncounterState(comments = []) {
   const encounters = new Map();
   (Array.isArray(comments) ? comments : []).forEach(comment => {
+    if (isSilentSceneRegeneration(comment)) {
+      for (const participant of comment.sceneRegeneration.participants) {
+        if (!(Number(participant.after?.current) > 0)) continue;
+        const encounter = [...encounters.values()].reverse().find(candidate => candidate.active && candidate.participants.has(participant.actorId));
+        const previous = encounter?.participants.get(participant.actorId);
+        if (previous?.status === 'defeated') encounter.participants.set(participant.actorId, { ...previous, status: 'active' });
+      }
+      encounters.forEach(encounter => { if (encounter.active) encounter.revision = String(comment.id || encounter.revision); });
+      return;
+    }
     const release = getCombatRulesRelease(comment);
     if (release) {
       const encounter = encounters.get(String(release.encounterId));
@@ -249,6 +262,7 @@ export function applyCombatEncounterCommentToStateMap(states, comment = {}) {
       || state.temporaryConditions?.some(condition => condition.durationModel?.encounterId === event.encounterId)) participantIds.add(actorId);
   });
   if (['start', 'add', 'remove', 'end'].includes(event.operation)) {
+    applyCombatEncounterStartApplicationsToStateMap(states, event);
     applyCombatEncounterAuraApplicationsToStateMap(states, event);
   }
   if (!['remove', 'end'].includes(event.operation)) return states;

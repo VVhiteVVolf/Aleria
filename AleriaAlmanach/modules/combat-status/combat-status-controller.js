@@ -3,6 +3,7 @@ import { STATUS_DURATIONS, createManualCombatCondition } from './combat-status-m
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v4';
 import { getSceneConditionClock } from '../scene-time/scene-condition-clock.js';
 import { escapeCombatMarkup as e, renderCombatCondition as renderMiniProfileCondition } from './combat-status-view.js?v=20260906-effect-rolls-v1';
+import { getCombatStatusFormDraft } from './combat-status-dialog-model.js';
 
 let dialog = null;
 let draft = null;
@@ -27,19 +28,18 @@ function formMarkup() {
     <label>Quelle<input name="source" maxlength="160" placeholder="Zauber, Gegenstand oder Situation"></label>
     <label>Wirkung / Hinweise<textarea name="description" rows="3" maxlength="1600"></textarea></label>
     <fieldset class="combat-status-roll-modes"><legend>Vorteil & Nachteil</legend><div class="combat-status-fields">${STATUS_ROLL_MODES.map(([key, label]) => `<label>${e(label)}<select name="${key}"><option value="normal">Keine Änderung</option><option value="advantage">Vorteil</option><option value="disadvantage">Nachteil</option></select></label>`).join('')}</div><p>Gilt automatisch, solange dieser Effekt aktiv ist. Vorteil und Nachteil heben sich gegenseitig auf.</p></fieldset>
-    <details class="combat-status-modifiers"><summary>Boni & Mali automatisch einrechnen</summary><p>Nur eingetragene Zahlen werden automatisch verrechnet. Weitere Wirkungen wie Folgeschaden, Bewegung oder Handlungssperren werden als Hinweis verfolgt.</p><div class="combat-status-fields">${STATUS_MODIFIERS.map(([key, label]) => `<label>${e(label)}<input type="number" name="modifier-${key}" min="-30" max="30" value="0"></label>`).join('')}</div></details>`;
+    <details class="combat-status-modifiers"><summary>Boni & Mali automatisch einrechnen</summary><p>Die eingetragenen Werte und feste Regeln der gewählten Vorlage wirken automatisch. Zusätzlicher Freitext beschreibt die Wirkung, vergibt aber keine weiteren Regeln.</p><div class="combat-status-fields">${STATUS_MODIFIERS.map(([key, label]) => `<label>${e(label)}<input type="number" name="modifier-${key}" min="-30" max="30" value="0"></label>`).join('')}</div></details>`;
 }
 
 function renderPresetPreview(form) {
   const preset = COMBAT_STATUS_PRESETS.find(item => item.id === form.elements.presetId.value);
   const host = form.querySelector('[data-status-preview]');
-  if (!preset) { host.innerHTML = ''; return; }
+  if (!preset && !form.elements.name.value.trim()) { host.innerHTML = ''; return; }
   try {
     // The preview needs a relative duration only; submission checks the real scene clock.
-    const condition = preset.sceneMinutes ? createManualCombatCondition({ presetId: preset.id, durationAmount: form.elements.durationAmount.value },
-      { actorId: 'preview', sceneClockSeconds: 0 }) : { ...preset, presetId: preset.id };
-    if (preset.sceneMinutes) form.elements.source.value = condition.source;
-    host.innerHTML = `<ul class="comment-combat-conditions">${renderMiniProfileCondition(condition, { temporary: Boolean(preset.sceneMinutes) })}</ul>`;
+    const condition = createManualCombatCondition(getCombatStatusFormDraft(form), { id: 'preview', actorId: 'preview', sceneClockSeconds: 0 });
+    if (preset?.sceneMinutes) form.elements.source.value = condition.source;
+    host.innerHTML = `<ul class="comment-combat-conditions">${renderMiniProfileCondition(condition, { temporary: true })}</ul>`;
   } catch (error) { host.innerHTML = `<p role="status">${e(error.message)}</p>`; }
 }
 
@@ -81,7 +81,10 @@ function ensureDialog() {
       dialog.querySelector('[data-status-amount]').hidden = !counted;
       form.elements.durationAmount.disabled = !counted;
     }
-    if (['presetId', 'durationAmount'].includes(event.target.name)) renderPresetPreview(form);
+    renderPresetPreview(form);
+  });
+  dialog.addEventListener('input', event => {
+    if (event.target.closest('form') && draft?.operation === 'add') renderPresetPreview(dialog.querySelector('form'));
   });
   dialog.addEventListener('submit', event => { event.preventDefault(); void submit(); });
 }
@@ -105,9 +108,7 @@ async function submit() {
   try {
     let condition = null;
     if (current.operation === 'add') {
-      condition = Object.fromEntries(new FormData(form));
-      condition.mechanics = Object.fromEntries(STATUS_MODIFIERS.map(([key]) => [key, form.elements[`modifier-${key}`].value]));
-      for (const [key] of STATUS_ROLL_MODES) condition.mechanics[key] = form.elements[key].value;
+      condition = getCombatStatusFormDraft(form);
       createManualCombatCondition(condition, { id: 'preview', actorId: current.characterId, sceneId: current.threadId,
         sceneClockSeconds: getSceneConditionClock(comments(current.threadId)).seconds });
     }

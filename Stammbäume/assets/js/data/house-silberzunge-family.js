@@ -12,7 +12,7 @@ import { HOUSE_SILBERZUNGE_PORTRAITS } from './house-silberzunge-portraits.js';
 import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 
 const SILBERZUNGE_HOUSE_ID = 'house-silberzunge';

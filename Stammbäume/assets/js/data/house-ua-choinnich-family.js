@@ -249,7 +249,7 @@ export const HOUSE_UA_CHOINNICH_FAMILY = withAislearneachSourceCounterUpgrade(Ob
     awayWoman('beibhinn-choinnich', 'Beibhinn Choinnich', '????', '????', 'gwefrydd'),
     spouse('wynfor-gwefrydd', 'Wynfor Gwefrydd', 'male', '????', '????', 'house-gwefrydd'),
     person('murchadh-ancient-choinnich', 'Murchadh Choinnich', 'male', '????', '????'),
-    spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '????'),
+    spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '', '', { status: 'alive' }),
 
     person('garbhan-choinnich', 'Garbhán Choinnich', 'male', '1603', '1659'),
     spouse('tegwen-airt', 'Tegwen Airt', 'female', '1607', '1684', 'house-mac-airt'),

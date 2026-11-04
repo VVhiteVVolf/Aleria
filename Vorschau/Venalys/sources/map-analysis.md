@@ -1,5 +1,12 @@
 # Venalys: Karte, Bezirke und äußere Orte
 
+**Fortschreibung vom 4. November 2026:** Die aktive Karte und die neuen
+Messungen stehen unter `map-revision-20261104/DECISIONS.md` sowie
+`active-map-sources.json`. Der folgende Text bleibt der unveränderte
+historische Beleg der ersten 13-Bezirke-/78-Orte-Fassung. Aktuell sind es
+13 Bezirke, 98 kartierte Orte und vier unkartierte Altorte; alte IDs und Namen
+bleiben erhalten, neue Punkte werden ergänzt.
+
 Kartensichtung vom 2. November 2026. Grundlage sind die vom Nutzer gelieferten
 Dateien `C:\Users\fhg_r\Downloads\Venalys\Venalys Normal.png` und
 `Venalys (Bezirke).png`, beide **8192 × 4698 Pixel**. Beide wurden tatsächlich

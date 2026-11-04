@@ -1,0 +1,61 @@
+{
+  "id": "haus-guldskar",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": null,
+  "authority": {
+    "familyId": "haus-guldskar",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "79f8ab6febc0c21340dca5ef6517b6bc3e2d3f491c1b6dccd5f2cd7bc5454542"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-guldskar",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-guldskar",
+    "slug": "guldskar",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2ea61a90-4b5b-4e56-a696-d938cad8d11a.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-guldskar/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kraehenmoor-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-guldskar.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "ac4df2ed3a1a00ab6ebc18f9ce8d238b4fb1c30c5dd65b05ec3931fdcd7083c3",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2089341,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

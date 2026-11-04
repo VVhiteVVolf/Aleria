@@ -1,0 +1,166 @@
+{
+  "schema": "aleria.ivarsheim-final-content-review",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseCount": 13,
+  "rows": [
+    {
+      "id": "haus-wargh",
+      "extinct": false,
+      "biographyWords": 233,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-wargh&mode=view",
+      "generatedMatches": true,
+      "localImages": 16,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-feuerhaar",
+      "extinct": false,
+      "biographyWords": 237,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-feuerhaar&mode=view",
+      "generatedMatches": true,
+      "localImages": 16,
+      "seat": "Jägersruh"
+    },
+    {
+      "id": "haus-skogg",
+      "extinct": false,
+      "biographyWords": 238,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-skogg&mode=view",
+      "generatedMatches": true,
+      "localImages": 11,
+      "seat": "Kornweiler"
+    },
+    {
+      "id": "haus-silberzunge",
+      "extinct": false,
+      "biographyWords": 228,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-silberzunge&mode=view",
+      "generatedMatches": true,
+      "localImages": 12,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-hrafnvald",
+      "extinct": false,
+      "biographyWords": 235,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-hrafnvald&mode=view",
+      "generatedMatches": true,
+      "localImages": 5,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-trachwyll",
+      "extinct": false,
+      "biographyWords": 104,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-trachwyll&mode=view",
+      "generatedMatches": true,
+      "localImages": 5,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-grendel",
+      "extinct": false,
+      "biographyWords": 230,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-grendel&mode=view",
+      "generatedMatches": true,
+      "localImages": 16,
+      "seat": "Hjerimsheim"
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "extinct": false,
+      "biographyWords": 230,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-hyrmgardr&mode=view",
+      "generatedMatches": true,
+      "localImages": 15,
+      "seat": "Winterfeste"
+    },
+    {
+      "id": "haus-blutklinge",
+      "extinct": true,
+      "biographyWords": 54,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-blutklinge&mode=view",
+      "generatedMatches": true,
+      "localImages": 3,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-windhueter",
+      "extinct": true,
+      "biographyWords": 102,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-windhueter&mode=view",
+      "generatedMatches": true,
+      "localImages": 3,
+      "seat": "Ivarsfels"
+    },
+    {
+      "id": "haus-morkvard",
+      "extinct": true,
+      "biographyWords": 209,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-morkvard&mode=view",
+      "generatedMatches": true,
+      "localImages": 3,
+      "seat": ""
+    },
+    {
+      "id": "haus-mac-luin",
+      "extinct": true,
+      "biographyWords": 212,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-mac-luin&mode=view",
+      "generatedMatches": true,
+      "localImages": 3,
+      "seat": "Ard Eabhraig"
+    },
+    {
+      "id": "haus-an-borach",
+      "extinct": true,
+      "biographyWords": 57,
+      "iframe": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-an-borach&mode=view",
+      "generatedMatches": true,
+      "localImages": 3,
+      "seat": "Kornweiler"
+    }
+  ],
+  "protectedGraphsAndProfilesChecked": 14,
+  "protectedSourceFiles": [
+    {
+      "path": "Stammbäume/assets/js/data/house-wolfshorn-family.js",
+      "byteIdentical": true
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-bleiddorn-family.js",
+      "byteIdentical": true
+    }
+  ],
+  "liv": {
+    "vitalFieldsChecked": [
+      "id",
+      "worldPersonId",
+      "name",
+      "sex",
+      "birth",
+      "death",
+      "status",
+      "portrait",
+      "portraitPlaceholder"
+    ],
+    "vitalIdentityUnchanged": true,
+    "newLocalHouseId": "house-hrafnvald",
+    "newLocalRole": "core",
+    "name": "Liv",
+    "birth": "1688"
+  },
+  "hrafnvaldRelationships": {
+    "partnerships": 0,
+    "parentages": 0
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "file": "diagnostics/ivarsheim-clans-20261103/hrafnvald-content.json",
+      "field": "sourceDecisions.identityModel",
+      "problem": "Documentation still describes the earlier empty houseId/roles although the new local Hrafnvald membership is now authorized."
+    }
+  ]
+}

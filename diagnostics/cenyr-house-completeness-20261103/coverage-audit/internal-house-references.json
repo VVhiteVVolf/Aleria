@@ -1,0 +1,3494 @@
+{
+  "summary": {
+    "reviewedAt": "2026-11-03T15:30:44.493Z",
+    "publicCenyrFamilies": 276,
+    "inspectedGraphHouseRecords": 1720,
+    "inspectedTerritoryDataModules": 73,
+    "parsedTerritoryFamilyCards": 363,
+    "unresolvedNamedReferences": 44,
+    "hierarchyBackedUnregistered": 0,
+    "registeredExternalHouses": 125,
+    "registeredLocationConflicts": 0,
+    "reviewedExternalTerritoryReferences": 1,
+    "ignoredUnidentifiedReferences": 146,
+    "excludedProtectedReferences": 0,
+    "unindexedCenyrSnapshots": 0,
+    "territoryEvaluationErrors": 0
+  },
+  "unresolved": [
+    {
+      "candidateId": "haus-dewrdd",
+      "title": "Familie Dewrdd",
+      "rawIds": [
+        "house-dewrdd"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-bradrhith"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-doeth",
+      "title": "Familie Doeth",
+      "rawIds": [
+        "house-doeth"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwregysdu"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-adorin",
+      "title": "Haus Adorin",
+      "rawIds": [
+        "house-adorin"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-airt",
+      "title": "Haus Airt",
+      "rawIds": [
+        "haus-airt"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-illwath"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-ashina",
+      "title": "Haus Ashina",
+      "rawIds": [
+        "house-ashina"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-balguen",
+      "title": "Haus Balguen",
+      "rawIds": [
+        "house-balguen",
+        "haus-balguen"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-awenydd"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-awenydd"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-baerenfell",
+      "title": "Haus Bärenfell",
+      "rawIds": [
+        "house-baerenfell"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-blar",
+      "title": "Haus Blár",
+      "rawIds": [
+        "house-blar",
+        "haus-blar"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-grawn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-camoran",
+      "title": "Haus Camoran",
+      "rawIds": [
+        "house-camoran"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mwyalchen"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-conochbhair",
+      "title": "Haus Conochbhair",
+      "rawIds": [
+        "house-conochbhair",
+        "haus-conochbhair"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-couldwin",
+      "title": "Haus Couldwin",
+      "rawIds": [
+        "house-couldwin"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grael"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-cumhail",
+      "title": "Haus Cumhail",
+      "rawIds": [
+        "haus-cumhail"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ui-talamh"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-diulb",
+      "title": "Haus Diulb",
+      "rawIds": [
+        "house-diulb",
+        "haus-diulb"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ui-talamh"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ui-talamh"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-dreigiau",
+      "title": "Haus Dreigiau",
+      "rawIds": [
+        "house-dreigiau"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-duibhne",
+      "title": "Haus Duibhne",
+      "rawIds": [
+        "house-duibhne"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-eldrath",
+      "title": "Haus Eldrath",
+      "rawIds": [
+        "house-eldrath"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illysywen"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-eoghhainn",
+      "title": "Haus Eóghhainn",
+      "rawIds": [
+        "house-eoghhainn",
+        "haus-eoghhainn"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illewod"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-illewod"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-follmhar",
+      "title": "Haus Follmhar",
+      "rawIds": [
+        "house-follmhar"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-goldbaer",
+      "title": "Haus Goldbär",
+      "rawIds": [
+        "house-goldbaer"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-hebog"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-heaghra",
+      "title": "Haus Heaghra",
+      "rawIds": [
+        "house-heaghra",
+        "haus-heaghra"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-teyrngarch"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-teyrngarch"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-illyswen",
+      "title": "Haus Illyswen",
+      "rawIds": [
+        "house-illyswen",
+        "haus-illyswen"
+      ],
+      "emblem": "assets/images/houses/Rhonwens Tränen/haus-illysywen.png",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwefrydd"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwyvern"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-saethwyr"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-saethwyr"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-krigsfodt",
+      "title": "Haus Krigsfodt",
+      "rawIds": [
+        "house-krigsfodt"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-loganne",
+      "title": "Haus Loganne",
+      "rawIds": [
+        "house-loganne",
+        "haus-loganne"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tylluan"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-tylluan"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-luitpolding",
+      "title": "Haus Luitpolding",
+      "rawIds": [
+        "house-luitpolding"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-mac-eala",
+      "title": "Haus Mac Eala",
+      "rawIds": [
+        "house-mac-eala",
+        "haus-mac-eala"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-sgwarnog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-sgwarnog"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-magath",
+      "title": "Haus Magath",
+      "rawIds": [
+        "house-magath"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-mwnci",
+      "title": "Haus Mwnci",
+      "rawIds": [
+        "house-mwnci"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-cenyr",
+      "title": "Haus O'Cenyr",
+      "rawIds": [
+        "house-cenyr"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cath"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-o-cenyr",
+      "title": "Haus O'Cenyr",
+      "rawIds": [
+        "house-o-cenyr"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-paun",
+      "title": "Haus Paun",
+      "rawIds": [
+        "house-paun",
+        "haus-paun"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-ridderspore",
+      "title": "Haus Ridderspore",
+      "rawIds": [
+        "house-ridderspore",
+        "haus-ridderspore"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-hebog"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-riordain",
+      "title": "Haus Ríordáin",
+      "rawIds": [
+        "house-riordain"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-fhaire"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-trisceil"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illewod"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-rosenblueht",
+      "title": "Haus Rosenblüht",
+      "rawIds": [
+        "house-rosenblueht"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wyrm"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-roth",
+      "title": "Haus Roth",
+      "rawIds": [
+        "house-roth",
+        "haus-roth"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-wylan"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-runda",
+      "title": "Haus Rúnda",
+      "rawIds": [
+        "house-runda",
+        "haus-runda"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grael"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-grael"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-schoenbergen",
+      "title": "Haus Schönbergen",
+      "rawIds": [
+        "house-schoenbergen"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-seldryn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-searlait",
+      "title": "Haus Searlait",
+      "rawIds": [
+        "house-searlait",
+        "haus-searlait"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ard-conbhron"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ard-conbhron"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ui-talamh"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ui-talamh"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-seymour",
+      "title": "Haus Seymour",
+      "rawIds": [
+        "house-seymour"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-sokaren",
+      "title": "Haus Sökaren",
+      "rawIds": [
+        "house-sokaren"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-sokering",
+      "title": "Haus Sökering",
+      "rawIds": [
+        "house-sokering"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-teigr",
+      "title": "Haus Teigr",
+      "rawIds": [
+        "house-teigr",
+        "haus-teigr"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-tir-fiachiontach",
+      "title": "Haus Tir Fiachiontach",
+      "rawIds": [
+        "house-tir-fiachiontach"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-tylwyth",
+      "title": "Haus Tylwyth",
+      "rawIds": [
+        "house-tylwyth",
+        "haus-tylwyth"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-asyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-asyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-coedwig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draenog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draenog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tiwna"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wivern"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-wivern"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-wylan"
+        }
+      ]
+    },
+    {
+      "candidateId": "haus-ui-cruithneacht",
+      "title": "Haus Ui Cruithneacht",
+      "rawIds": [
+        "house-ui-cruithneacht"
+      ],
+      "emblem": "",
+      "classification": "unplaced-internal-house-reference",
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        }
+      ]
+    }
+  ],
+  "registeredExternalReferences": [
+    {
+      "id": "haus-duilb",
+      "title": "Clan Ui’Duilb",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Rithe",
+        "Ausgestorbene Clans",
+        "Dunfal"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-oglivy",
+      "title": "Clan Fir An Oglivy",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Damh",
+        "Tir na Seabhac",
+        "Inniscaer"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-tairise",
+      "title": "Nic Tairise",
+      "folderPath": [
+        "Iathneach",
+        "Tir nam Beann",
+        "Mharaich"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-mata",
+      "title": "Clan Tir an Máta",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Faire",
+        "Temair"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gaeth"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-gaeth"
+        }
+      ]
+    },
+    {
+      "id": "haus-feuerhaar",
+      "title": "Clan Feuerhaar",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Rothain",
+        "Jägersruh"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-eryr"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-eryr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-hebog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mwyalchen"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tylluan"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-tylluan"
+        }
+      ]
+    },
+    {
+      "id": "haus-midgna",
+      "title": "Clan Mac Midgna",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Machairí",
+        "Rinnmara"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-baedd"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-baedd"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-baedd"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        }
+      ]
+    },
+    {
+      "id": "haus-rosenstolz",
+      "title": "Haus Rosenstolz",
+      "folderPath": [
+        "Weisenfluh",
+        "Freiherrentum Ewiggrün",
+        "Ewiggrün"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-blodyn",
+      "title": "Haus Blodyn O'Llyndor",
+      "folderPath": [
+        "Vennyr",
+        "Blütenland",
+        "Baronie Hoyers Krone",
+        "Lyndor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arfordir-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blaidd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blodyn-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blodyn-talgarth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyfrgi-caer-cryftlawd"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        }
+      ]
+    },
+    {
+      "id": "haus-goidin",
+      "title": "Clan Ua’Goidin",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Beatha",
+        "Tir na nÚll",
+        "Sioran"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-aderyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-arfordir",
+      "title": "Haus Arfordir O'Serenlyn",
+      "folderPath": [
+        "Vennyr",
+        "Tir Arfordir",
+        "Serenlyn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arfordir-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blaidd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-gwaedlyd",
+      "title": "Haus Gwaedlyd O'Caer Gorwel",
+      "folderPath": [
+        "Vennyr",
+        "Tir Arfordir",
+        "Caer Gorwel"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arfordir-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwaedlyd-tredegar"
+        }
+      ]
+    },
+    {
+      "id": "haus-trachwyll-talfronwyn",
+      "title": "Haus Trachwyll O'Talfronwyn",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gogledd",
+        "Talfronwyn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arfordir-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-morthwyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-neidr"
+        }
+      ]
+    },
+    {
+      "id": "haus-diuid",
+      "title": "Clan Mac Ard Diuid",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Mathgham",
+        "Balgavrie"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-unigol"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-unigol"
+        }
+      ]
+    },
+    {
+      "id": "haus-lockart",
+      "title": "Clan Ó Lockart",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Mathgham",
+        "Tir na mBroc",
+        "Cnosbubh"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-unigol"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-unigol"
+        }
+      ]
+    },
+    {
+      "id": "haus-haig",
+      "title": "Clan Ó / Dál Haig",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Mathgham",
+        "Tir na Mac Tíre",
+        "Tur na Fala"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        }
+      ]
+    },
+    {
+      "id": "haus-ardmhair",
+      "title": "Tir an Ardmhair",
+      "folderPath": [
+        "Deitheach",
+        "Coill Fhasgair",
+        "Creag Uamhar"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-arth"
+        }
+      ]
+    },
+    {
+      "id": "haus-nuadat",
+      "title": "Clan Nic’Nuadat",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Fathach",
+        "Cradh na Fírinne"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-dianc",
+      "title": "Haus Dianc O'Gwynlann",
+      "folderPath": [
+        "Vennyr",
+        "Tir Mynddoedd",
+        "Gwynlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blaidd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blodyn-talgarth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dianc-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mochdaer"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-morgacht",
+      "title": "Clan Na’Morgacht",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Geach",
+        "Tir na nGeataí",
+        "Broch an Geata"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        }
+      ]
+    },
+    {
+      "id": "haus-wargh",
+      "title": "Clan Wargh",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ivarsklamm",
+        "Ivarsfels"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-arth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        }
+      ]
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "title": "Clan Ua’Ghaiscíoch",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na nArmúr",
+        "Dun Laog"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blach"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-llwynog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-llwynog"
+        }
+      ]
+    },
+    {
+      "id": "haus-fiachrach",
+      "title": "Clan Uí Fiachrach",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na Seamróige",
+        "Mârbail"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blach"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wyrm"
+        }
+      ]
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "title": "Clan Dál’Ceardaíocht",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na hInneonach",
+        "Dun Laog"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blach"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illwath"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-illwath"
+        }
+      ]
+    },
+    {
+      "id": "haus-blaidd",
+      "title": "Haus Blaidd O'Branon",
+      "folderPath": [
+        "Vennyr",
+        "Tir Dwyrain",
+        "Branon"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blaidd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blodyn-aberdail"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mochdaer"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-wolfshorn",
+      "title": "Clan Wolfshorn",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Hornhall"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-bleiddorn"
+        }
+      ]
+    },
+    {
+      "id": "haus-diafol",
+      "title": "Haus Diafol O'Trefgoch",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gogledd",
+        "Trefgoch"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-blodyn-talgarth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-diafol-talgarth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwaedlyd-tredegar"
+        }
+      ]
+    },
+    {
+      "id": "haus-drewi",
+      "title": "Haus Drewi",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gogledd",
+        "Dyfryn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cwningod"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-cwningod"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illygoden-tredegar"
+        }
+      ]
+    },
+    {
+      "id": "haus-gwenyen",
+      "title": "Haus Gwenyen",
+      "folderPath": [
+        "Vennyr",
+        "Tir Arfordir",
+        "Gwych"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwaedlyd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-walwrs-caer-deheuol"
+        }
+      ]
+    },
+    {
+      "id": "haus-silberzunge",
+      "title": "Clan Silberzunge",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Ivarsklamm",
+        "Ivarsfels"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        }
+      ]
+    },
+    {
+      "id": "haus-blodeuwedd",
+      "title": "Haus Blodeuwedd",
+      "folderPath": [
+        "Vennyr",
+        "Blütenland",
+        "Baronie Hoyers Krone",
+        "Lyndor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwialen"
+        }
+      ]
+    },
+    {
+      "id": "haus-treada",
+      "title": "Clan Ua’Tréada",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Tirth",
+        "Tir na Sméar",
+        "Lorai"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-brithyll"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-sterkr",
+      "title": "Clan Sterkr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-skald",
+      "title": "Clan Skald",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-urquhart",
+      "title": "Clan Ui Urquhart",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Rann",
+        "Piobarach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "id": "haus-bhaird",
+      "title": "Clan Ó / Dál Bhaird",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Rann",
+        "Herrschaft der Bhaird",
+        "Piobarach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-brathfengr",
+      "title": "Clan Brathfengr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illysywen"
+        }
+      ]
+    },
+    {
+      "id": "haus-morath",
+      "title": "Clan Ruin’Morath",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Rithe",
+        "Tir na nEalaíon",
+        "Iarthar"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ceirwyn"
+        }
+      ]
+    },
+    {
+      "id": "haus-morna",
+      "title": "Clan Ui’Morna",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Geach",
+        "Gaelan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-rioga",
+      "title": "Clan An’Rioga",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Geach",
+        "Tir na nAncairí",
+        "Broch an Duhbach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cwningod"
+        }
+      ]
+    },
+    {
+      "id": "haus-fiantorc",
+      "title": "Clan Ua’Fiáintorc",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Tirth",
+        "Tir na gCnoc",
+        "Lorai"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-choinnich",
+      "title": "Ua’Choinnich",
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na gCrúb",
+        "Sruthlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwefrydd"
+        }
+      ]
+    },
+    {
+      "id": "haus-suiste",
+      "title": "Clan Ua’Suiste",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Tir na nGéanna",
+        "Eorach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-coedwig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mwyalchen"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-mwyalchen"
+        }
+      ]
+    },
+    {
+      "id": "haus-gairner",
+      "title": "Clan Dal’Gáirnér",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Tir na Linnte",
+        "Eorach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mwyalchen"
+        }
+      ]
+    },
+    {
+      "id": "haus-cleirigh",
+      "title": "Clan Faill’ Cléirigh",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Eorach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-eryr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gaeth"
+        }
+      ]
+    },
+    {
+      "id": "haus-ailella",
+      "title": "Clan Mac Sidhe’Ailella",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Rithe",
+        "Tir na bPeiteal",
+        "Braighmòr"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-marwolaeth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-neidr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        }
+      ]
+    },
+    {
+      "id": "haus-aonghusa",
+      "title": "Clan Dál’Aonghusa",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Fathach",
+        "Herrschaft der Dál’Aonghusa",
+        "Cradh na Frinne"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-cadhla",
+      "title": "Clan An Cadhla",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Machairí",
+        "Tir na Líonta",
+        "Broch an Cuan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-ceallaigh",
+      "title": "Clan Tir An’Ceallaigh",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Iomaire",
+        "Koldair"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draenog"
+        }
+      ]
+    },
+    {
+      "id": "haus-tartarfhuil",
+      "title": "Clan Dal’Tartarfhuil",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Iomaire",
+        "Tir na Loingseoireachta",
+        "Koldair"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-casur",
+      "title": "Clan Ua’Casur",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Fathach",
+        "Herrschaft der Ua’Casur",
+        "Cradh na Frinne"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-anbhair",
+      "title": "Clan Ua’Anbhair",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Fathach",
+        "Herrschaft der Ua’Anbhair",
+        "Cradh na Frinne"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-ciarog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwialen"
+        }
+      ]
+    },
+    {
+      "id": "haus-fiachiontach",
+      "title": "Clan Na’Fiachiontach",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Iomaire",
+        "Tir na Leabhar",
+        "Koldair"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ciarog"
+        }
+      ]
+    },
+    {
+      "id": "haus-schmetterschild",
+      "title": "Clan Schmetterschild",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-coedwig"
+        }
+      ]
+    },
+    {
+      "id": "haus-duff",
+      "title": "Clan Ó Ard Duff",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Damh",
+        "Tir na gCuileann",
+        "Dalriadh"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-coedwig"
+        }
+      ]
+    },
+    {
+      "id": "haus-mochdaer-gwyliau",
+      "title": "Haus Mochdaer O' Gwyliau",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gorllewin",
+        "Tir Brocair",
+        "Gwyliau"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-coedwig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-coedwig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mochdaer"
+        }
+      ]
+    },
+    {
+      "id": "haus-walwrs",
+      "title": "Haus Walwrs O'Traeth",
+      "folderPath": [
+        "Vennyr",
+        "Tir Mynddoedd",
+        "Traeth"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-crafanc"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draenog"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-walwrs-caer-deheuol"
+        }
+      ]
+    },
+    {
+      "id": "haus-lyfant",
+      "title": "Haus Lyfant O'Derwyddion",
+      "folderPath": [
+        "Vennyr",
+        "Tir Mynddoedd",
+        "Derwyddion"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cwningod"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        }
+      ]
+    },
+    {
+      "id": "haus-serenoc",
+      "title": "Haus Serenoc",
+      "folderPath": [
+        "Vennyr",
+        "Blütenland",
+        "Baronie Hoyers Krone",
+        "Lyndor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cwningod"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        }
+      ]
+    },
+    {
+      "id": "haus-morlais",
+      "title": "Haus Morlais",
+      "folderPath": [
+        "Vennyr",
+        "Blütenland",
+        "Baronie Hoyers Krone",
+        "Lyndor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cwningod"
+        }
+      ]
+    },
+    {
+      "id": "haus-falveri",
+      "title": "Haus Falveri",
+      "folderPath": [
+        "Venalys"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-cymrath-o-traethlan"
+        }
+      ]
+    },
+    {
+      "id": "haus-caerdyn",
+      "title": "Haus Caerdyn",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gogledd",
+        "Talfronwyn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-diafol-talgarth"
+        }
+      ]
+    },
+    {
+      "id": "haus-birn",
+      "title": "Clan Dál’Birn",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Rithe",
+        "Tir na Mionn",
+        "Dùnthàirne"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dienyddiwr"
+        }
+      ]
+    },
+    {
+      "id": "haus-ness",
+      "title": "Clan An Ness",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Mathgham",
+        "Tir na gClaímhte",
+        "Glenshear"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dienyddiwr"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-dienyddiwr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-draig"
+        }
+      ]
+    },
+    {
+      "id": "haus-muileach",
+      "title": "Clan Ua’Muileach",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Tirth",
+        "Tir na Srianta",
+        "Athan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dienyddiwr"
+        }
+      ]
+    },
+    {
+      "id": "haus-fintain",
+      "title": "Clan Mac’Fintain",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Faela",
+        "Croga"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dinefwr"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-dinefwr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tir-addawol"
+        }
+      ]
+    },
+    {
+      "id": "haus-stwatchn",
+      "title": "Clan Ru Stwatchn",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Rann",
+        "Tir na Sionnach",
+        "Invercalda"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dinefwr"
+        }
+      ]
+    },
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "title": "Clan Mac Ard Cumhaill",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Dun Athar"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-ui-talamh"
+        }
+      ]
+    },
+    {
+      "id": "haus-mac-airt",
+      "title": "Clan Mac Airt",
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Sruthlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwyvern"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illwath"
+        }
+      ]
+    },
+    {
+      "id": "haus-ua-eirce",
+      "title": "Clan Ua’Eirce",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na nIúr",
+        "Senanbail"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gafyr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wyrm"
+        }
+      ]
+    },
+    {
+      "id": "eisenherz",
+      "title": "Eisenherz",
+      "folderPath": [
+        "Morgorn",
+        "Region Felsbreche",
+        "Felsbreche"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-varulv",
+      "title": "Clan Varulv",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        }
+      ]
+    },
+    {
+      "id": "haus-ui-faill-duibhne",
+      "title": "Clan Ui Faill Duibhne",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Tirth",
+        "Cliath"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-draig"
+        }
+      ]
+    },
+    {
+      "id": "haus-dubhan",
+      "title": "Clan Dubhan",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Brann",
+        "Tir na Fuil",
+        "Caer Dubhan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dubhan-gwynthor"
+        }
+      ]
+    },
+    {
+      "id": "haus-dyfrgi",
+      "title": "Haus Dyfrgi O'Mynyddharbwr",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gorllewin",
+        "Mynyddharbwr"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyfrgi-caer-cryftlawd"
+        }
+      ]
+    },
+    {
+      "id": "haus-udgorn",
+      "title": "Haus Udgorn",
+      "folderPath": [
+        "Vennyr",
+        "Tir Gorllewin",
+        "Mynyddharbwr"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyfrgi-caer-cryftlawd"
+        }
+      ]
+    },
+    {
+      "id": "haus-luga",
+      "title": "Clan Ua’Luga",
+      "folderPath": [
+        "Uathneach",
+        "Tir na gClog",
+        "Kharanor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-neidr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-teyrngarch"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-teyrngarch"
+        }
+      ]
+    },
+    {
+      "id": "haus-gallchobhair",
+      "title": "Fir An’Gallchobhair",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Dun Laog"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-dyngwn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gafyr"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grianlaoch"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illewod"
+        }
+      ]
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "title": "Clan Nachtjäger",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Dämmertal",
+        "Horunn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-dyngwn"
+        }
+      ]
+    },
+    {
+      "id": "haus-luachra",
+      "title": "Clan Nic Luachra",
+      "folderPath": [
+        "Uathneach",
+        "Tir na nGleannta",
+        "Tir na Raithní",
+        "Treabhair"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gaeth"
+        }
+      ]
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "title": "Dal T’Saor",
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Herrschaft der Dál T’Saor",
+        "Sruthlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-saith"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-saith"
+        }
+      ]
+    },
+    {
+      "id": "haus-durachd",
+      "title": "Clan Tir An Durachd",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Faerna",
+        "Tir na mBuailteán",
+        "Culrain"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-grawn"
+        }
+      ]
+    },
+    {
+      "id": "haus-earncynne",
+      "title": "Haus Earncynne",
+      "folderPath": [
+        "Aeldrunmar",
+        "Earltum Earnemnet",
+        "Glenfara"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        }
+      ]
+    },
+    {
+      "id": "haus-skogg",
+      "title": "Clan Skogg",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Saatgrund",
+        "Kornweiler"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-grawn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morfil"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-morfil"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        }
+      ]
+    },
+    {
+      "id": "haus-morgryn",
+      "title": "Haus Morgryn",
+      "folderPath": [
+        "Vennyr",
+        "Tir Arfordir",
+        "Serenlyn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwaedlyd-tredegar"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wivern"
+        }
+      ]
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "title": "Ruin Ua Laoch",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na gCoiréal",
+        "Broch an Abhainn"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwefrydd"
+        }
+      ]
+    },
+    {
+      "id": "haus-gortach",
+      "title": "Ru’Gortach",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Tir na Breithe",
+        "Broch an Ear"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwefrydd"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-gwefrydd"
+        }
+      ]
+    },
+    {
+      "id": "haus-frisealach",
+      "title": "Ard Frisealach",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Lúibe",
+        "Lasbun"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwefrydd"
+        }
+      ]
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "title": "Clan Sturmgeborene",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwialen"
+        }
+      ]
+    },
+    {
+      "id": "haus-airgid",
+      "title": "Tir An’Airgid",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sruth",
+        "Tir na gCorr",
+        "Cel Leagan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-gwyvern"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-gwyvern"
+        }
+      ]
+    },
+    {
+      "id": "haus-airdmhor",
+      "title": "Clan Dál Airdmhor",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Brann",
+        "Tir na Sceire",
+        "Carnascal"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-hebog"
+        }
+      ]
+    },
+    {
+      "id": "haus-cleir",
+      "title": "Clan Ua’Cleir",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na bhFiach",
+        "Cairn Fàire"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illwath"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-llwynog"
+        }
+      ]
+    },
+    {
+      "id": "haus-na-mhuir",
+      "title": "Clan Na’Mhuir",
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Fancha",
+        "Broch an Coill"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illwath"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-illwath"
+        }
+      ]
+    },
+    {
+      "id": "haus-illygoden",
+      "title": "Haus Illygoden O'Tirwedd",
+      "folderPath": [
+        "Vennyr",
+        "Tir Dwyrain",
+        "Tirwedd"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illygoden-tredegar"
+        }
+      ]
+    },
+    {
+      "id": "haus-bochdew",
+      "title": "Haus Bochdew",
+      "folderPath": [
+        "Vennyr",
+        "Tir Dwyrain",
+        "Caer Ynys"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illygoden-tredegar"
+        }
+      ]
+    },
+    {
+      "id": "haus-seaghda",
+      "title": "Mallacht Seaghda",
+      "folderPath": [
+        "Ceitheach",
+        "Tir na Dorcha",
+        "Tir na Leon",
+        "Glaennmor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illysywen"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-illysywen"
+        }
+      ]
+    },
+    {
+      "id": "haus-ui-rochraide",
+      "title": "Clan Ui’Rochraide",
+      "folderPath": [
+        "Ceitheach",
+        "Tir na Cruach",
+        "Carraigreach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illysywen"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "id": "haus-eldath",
+      "title": "Fáill Ua’Eldath",
+      "folderPath": [
+        "Ceitheach",
+        "Tir na Cruach",
+        "Herrschaft der Fáill Ua’Eldath",
+        "Carraigreach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-illysywen"
+        }
+      ]
+    },
+    {
+      "id": "haus-eisenbieger",
+      "title": "Clan Eisenbieger",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        }
+      ]
+    },
+    {
+      "id": "haus-drummond",
+      "title": "Clan Breac Drummond",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Rann",
+        "Tir na Sceiche",
+        "Dun Grealach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-lyfant-caer-asgwrn"
+        }
+      ]
+    },
+    {
+      "id": "haus-veltrane",
+      "title": "Haus Veltrane",
+      "folderPath": [
+        "Kaiserreich Argentum",
+        "Unsortiert"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-maerllys"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-raves"
+        }
+      ]
+    },
+    {
+      "id": "haus-weissmann",
+      "title": "Haus Weißmann",
+      "folderPath": [
+        "Weisenfluh",
+        "Freiherrentum Weislauf",
+        "Weislauf"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        }
+      ]
+    },
+    {
+      "id": "haus-helgr",
+      "title": "Clan Helgr",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Lichtfenn",
+        "Finstermoor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-marwolaeth"
+        }
+      ]
+    },
+    {
+      "id": "haus-rosenblueth",
+      "title": "Haus Rosenblüth",
+      "folderPath": [
+        "Weisenfluh",
+        "Freiherrentum Ewiggrün",
+        "Ewiggrün"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morfil"
+        }
+      ]
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "title": "Clan Hyrmgarthr",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Saatgrund",
+        "Winterwacht",
+        "Winterfeste"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        }
+      ]
+    },
+    {
+      "id": "haus-grendel",
+      "title": "Clan Grendel",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Klippenschlag",
+        "Hjerimsheim"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-morthwyll"
+        }
+      ]
+    },
+    {
+      "id": "haus-nessa",
+      "title": "Clan Ard’Nessa",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Beatha",
+        "Sioran"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-mwyalchen"
+        }
+      ]
+    },
+    {
+      "id": "haus-magach",
+      "title": "Clan Sidhe’Magach",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Méinnear",
+        "Cairmor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-neidr"
+        }
+      ]
+    },
+    {
+      "id": "haus-haeghra",
+      "title": "Clan An’Haeghra",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Beatha",
+        "Tir na Braiche",
+        "Réadlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-penderyn"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-teyrngarch"
+        }
+      ]
+    },
+    {
+      "id": "haus-vaeren",
+      "title": "Clan Vaeren",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        }
+      ]
+    },
+    {
+      "id": "haus-cetchathach",
+      "title": "Ui Nic Cétchathach",
+      "folderPath": [
+        "Iathneach",
+        "Tir na Sgeire",
+        "Botharin"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pendrag"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        }
+      ]
+    },
+    {
+      "id": "haus-coronach",
+      "title": "Clan Ua’Coronach",
+      "folderPath": [
+        "Aislearneach",
+        "Tir na Geach",
+        "Tir na Nathrach",
+        "Gaelan"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pyrth"
+        }
+      ]
+    },
+    {
+      "id": "haus-culloch",
+      "title": "Clan Mac Culloch",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Braigh",
+        "Eldrimuir"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-roich",
+      "title": "Clan Mac Roich",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Seolta",
+        "Orglen"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tiwna"
+        }
+      ]
+    },
+    {
+      "id": "haus-ronain",
+      "title": "Clan Mac Ard’Ronain",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Eorach"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-estmere",
+      "title": "Haus Estmere",
+      "folderPath": [
+        "Aeldrunmar",
+        "Earltum Estmere",
+        "Eldramar"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-pysgod"
+        }
+      ]
+    },
+    {
+      "id": "haus-eala",
+      "title": "Clan Ua’Eala",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Méinnear",
+        "Tir na hEala",
+        "Cel Bearradh"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-sgwarnog"
+        }
+      ]
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "title": "Clan Schwarzdorn",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-teyrngarch"
+        }
+      ]
+    },
+    {
+      "id": "haus-marcaigh",
+      "title": "Clan Ruin Marcaigh",
+      "folderPath": [
+        "Uathneach",
+        "Tir na gClog",
+        "Herrschaft der Ruin Marcaigh",
+        "Kharanor"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-teyrngarch"
+        }
+      ]
+    },
+    {
+      "id": "haus-reannachain",
+      "title": "Clan Ua Reannachain",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Seolta",
+        "Herrschaft der Ua Reannachain",
+        "Orglen"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tiwna"
+        }
+      ]
+    },
+    {
+      "id": "haus-cuilen",
+      "title": "Clan Ua Cuilen",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Machairí",
+        "Herrschaft der Ua Cuilen",
+        "Rinnmara"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tiwna"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-tiwna"
+        }
+      ]
+    },
+    {
+      "id": "haus-erskine",
+      "title": "Clan An Erskine",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Braigh",
+        "Tir na Liús",
+        "Garadhain"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tiwna"
+        }
+      ]
+    },
+    {
+      "id": "haus-laga",
+      "title": "Clan Mac Ard’Lága",
+      "folderPath": [
+        "Uathneach",
+        "Tir na Dála",
+        "Dunnean"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-tylluan"
+        }
+      ]
+    },
+    {
+      "id": "haus-crwynog",
+      "title": "Haus Crwynog",
+      "folderPath": [
+        "Vennyr",
+        "Tir Mynddoedd",
+        "Gwynlann"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-walwrs-caer-deheuol"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wivern"
+        }
+      ]
+    },
+    {
+      "id": "haus-borthwick",
+      "title": "Clan Tir An Borthwick",
+      "folderPath": [
+        "Faelaorn",
+        "Tir na Braigh",
+        "Tir na Deilfe",
+        "Morvay"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wivern"
+        }
+      ]
+    },
+    {
+      "id": "haus-cein",
+      "title": "Clan Mac’Céin",
+      "folderPath": [
+        "Dunfal",
+        "Tir na Rithe",
+        "Tir na dTeorainneacha",
+        "Caerthalas"
+      ],
+      "sources": [
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wylan"
+        },
+        {
+          "sourceType": "current-family-linked-house",
+          "source": "haus-wylan"
+        },
+        {
+          "sourceType": "current-family-internal-house",
+          "source": "haus-wyrm"
+        }
+      ]
+    }
+  ],
+  "registeredLocationConflicts": [],
+  "reviewedExternalTerritoryReferences": [
+    {
+      "title": "Salach",
+      "seat": "Oilean",
+      "kingdom": "Leitheach",
+      "region": "Tír na Sleagh",
+      "evidence": {
+        "sourceType": "current-territory-family-card",
+        "source": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js?v=panels-20260911a",
+        "folderPath": [
+          "Cenyr",
+          "insel-camruisge"
+        ],
+        "isFamilyCard": true
+      },
+      "geographySource": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js:173",
+      "decision": "Do not invent a Cenyr record from the joint-island overview."
+    }
+  ],
+  "unindexedCenyrSnapshots": [],
+  "territoryEvaluationErrors": []
+}

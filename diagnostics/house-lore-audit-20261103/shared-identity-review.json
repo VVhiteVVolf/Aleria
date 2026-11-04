@@ -1,0 +1,1705 @@
+{
+  "schema": "aleria.public-house-identity-review",
+  "reviewedAt": "2026-11-03T22:35:08.807Z",
+  "readOnly": true,
+  "publicRelationshipsOnly": true,
+  "candidateCount": 23,
+  "confirmedCount": 20,
+  "unresolvedCount": 3,
+  "findings": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "birth": [
+          "1100",
+          "1099"
+        ],
+        "death": [
+          "1177",
+          "1166"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-draig--tryffin-draig"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "familyTitle": "Haus Draig",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "????",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-draig-family.js",
+            "line": 254,
+            "declaration": "person('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '????', '????', 'house-saethwyr'),"
+          }
+        },
+        {
+          "familyId": "haus-wyrm",
+          "familyTitle": "Haus Wyrm",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "1100",
+          "death": "1177",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin Draig",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wyrm-family.js",
+            "line": 166,
+            "declaration": "spouse('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '1100', '1177', 'house-saethwyr'),"
+          }
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "familyTitle": "Haus Saethwyr",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "birth": "1099",
+          "death": "1166",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin Draig",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-saethwyr-family.js",
+            "line": 128,
+            "declaration": "person('rhianwyn-saethwyr', 'Rhianwyn', 'female', '1099', '1166', SAETHWYR_HOUSE_ID, {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-gwyvern--delyth-gwyvern"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "familyTitle": "Haus Gwyvern",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "delyth-gwyvern",
+              "name": "Delyth",
+              "worldPersonId": "person--haus-gwyvern--delyth-gwyvern"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gwyvern-family.js",
+            "line": 166,
+            "declaration": "person('afal-arth', 'Afal Arth', 'male', '1675', '????', 'house-arth'),"
+          }
+        },
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "delyth-gwyvern",
+              "name": "Delyth Gwyvern",
+              "worldPersonId": "person--haus-gwyvern--delyth-gwyvern"
+            },
+            {
+              "id": "ysbail-cenyr",
+              "name": "Ysbail O'Cenyr",
+              "worldPersonId": "person--haus-cenyr--ysbail-cenyr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-arth-family.js",
+            "line": 342,
+            "declaration": "person('afal-arth', 'Afal Arth', 'male', '1675', '', ARTH_HOUSE_ID, {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "birth": [
+          "1698",
+          "1701"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-vaeren--eydis-vaeren"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "familyTitle": "Clan Vaeren",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "eydis-vaeren",
+              "name": "Eydis Vaeren",
+              "worldPersonId": "person--haus-vaeren--eydis-vaeren"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-vaeren-family.js",
+            "line": 406,
+            "declaration": "spouse('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1698', '', 'house-ragnulf'),"
+          }
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "familyTitle": "Clan Ragnulf",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1701",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Zweiter Erbe · ambitionierter Herausforderer Gunnars",
+          "publicPartners": [
+            {
+              "id": "eydis-vaeren",
+              "name": "Eydis Vaeren",
+              "worldPersonId": "person--haus-vaeren--eydis-vaeren"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-ragnulf-family.js",
+            "line": 465,
+            "declaration": "person('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1701', '', {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-kummerherz--hogrand-kummerherz"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Kummerherz",
+          "publicPartners": [
+            {
+              "id": "hogrand-kummerherz",
+              "name": "Hogrand Kummerherz",
+              "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 388,
+            "declaration": "awayWoman('bylga-wargh', 'Bylga Wargh', '1673', '????', 'Clan Kummerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "hogrand-kummerherz",
+              "name": "Hogrand Kummerherz",
+              "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-kummerherz-family.js",
+            "line": 340,
+            "declaration": "spouse('bylga-wargh', 'Bylga Wargh', 'female', '1673', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--bylga-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "bylga-wargh",
+              "name": "Bylga Wargh",
+              "worldPersonId": "person--haus-wargh--bylga-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 389,
+            "declaration": "spouse('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '????', 'house-kummerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Thane des Clans Kummerherz seit 1733",
+          "publicPartners": [
+            {
+              "id": "bylga-wargh",
+              "name": "Bylga Wargh",
+              "worldPersonId": "person--haus-wargh--bylga-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-kummerherz-family.js",
+            "line": 334,
+            "declaration": "person('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '', {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wellenschild--laufey-wellenschild"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "laufey-wellenschild",
+              "name": "Laufey Wellenschild",
+              "worldPersonId": "person--haus-wellenschild--laufey-wellenschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 398,
+            "declaration": "person('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "laufey-wellenschild",
+              "name": "Laufey Wellenschild",
+              "worldPersonId": "person--haus-wellenschild--laufey-wellenschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wellenschild-family.js",
+            "line": 320,
+            "declaration": "spouse('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--hallbjorn-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "hallbjorn-wargh",
+              "name": "Hallbjorn Wargh",
+              "worldPersonId": "person--haus-wargh--hallbjorn-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 399,
+            "declaration": "spouse('laufey-wellenschild', 'Laufey Wellenschild', 'female', '1674', '????', 'house-wellenschild'),"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "hallbjorn-wargh",
+              "name": "Hallbjorn Wargh",
+              "worldPersonId": "person--haus-wargh--hallbjorn-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wellenschild-family.js",
+            "line": 317,
+            "declaration": "awayWoman('laufey-wellenschild', 'Laufey Wellenschild', '1674', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-gullvig--asahel-gullvig"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "asahel-gullvig",
+              "name": "Ásahel Gullvig",
+              "worldPersonId": "person--haus-gullvig--asahel-gullvig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 409,
+            "declaration": "person('olmar-wargh', 'Olmar Wargh', 'male', '1699', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "asahel-gullvig",
+              "name": "Ásahel Gullvig",
+              "worldPersonId": "person--haus-gullvig--asahel-gullvig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gullvig-family.js",
+            "line": 352,
+            "declaration": "spouse('olmar-wargh', 'Olmar Wargh', 'male', '1699', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--olmar-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "olmar-wargh",
+              "name": "Olmar Wargh",
+              "worldPersonId": "person--haus-wargh--olmar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 410,
+            "declaration": "spouse('asahel-gullvig', 'Ásahel Gullvig', 'female', '1704', '????', 'house-gullvig'),"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "olmar-wargh",
+              "name": "Olmar Wargh",
+              "worldPersonId": "person--haus-wargh--olmar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gullvig-family.js",
+            "line": 347,
+            "declaration": "awayWoman('asahel-gullvig', 'Ásahel Gullvig', '1704', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-todbrand--ormrun-todbrand"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ormrun-todbrand",
+              "name": "Ormrún Todbrand",
+              "worldPersonId": "person--haus-todbrand--ormrun-todbrand"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 411,
+            "declaration": "person('agnar-wargh', 'Agnar Wargh', 'male', '1698', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ormrun-todbrand",
+              "name": "Ormrún Todbrand",
+              "worldPersonId": "person--haus-todbrand--ormrun-todbrand"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-todbrand-family.js",
+            "line": 345,
+            "declaration": "spouse('agnar-wargh', 'Agnar Wargh', 'male', '1698', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--agnar-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "agnar-wargh",
+              "name": "Agnar Wargh",
+              "worldPersonId": "person--haus-wargh--agnar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 412,
+            "declaration": "spouse('ormrun-todbrand', 'Ormrún Todbrand', 'female', '1703', '????', 'house-todbrand'),"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "agnar-wargh",
+              "name": "Agnar Wargh",
+              "worldPersonId": "person--haus-wargh--agnar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-todbrand-family.js",
+            "line": 336,
+            "declaration": "awayWoman('ormrun-todbrand', 'Ormrún Todbrand', '1703', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-silberblut--einar-silberblut"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Silberblut",
+          "publicPartners": [
+            {
+              "id": "einar-silberblut",
+              "name": "Einar Silberblut",
+              "worldPersonId": "person--haus-silberblut--einar-silberblut"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 430,
+            "declaration": "awayWoman('kjellfrid-varangr', 'Kjellfrid Varangr', '1563', '', 'Clan Silberblut'),"
+          }
+        },
+        {
+          "familyId": "haus-silberblut",
+          "familyTitle": "Clan Silberblut",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "einar-silberblut",
+              "name": "Einar Silberblut",
+              "worldPersonId": "person--haus-silberblut--einar-silberblut"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-silberblut-family.js",
+            "line": 225,
+            "declaration": "spouse('kjellfrid-varangr', 'Kjellfrid Varangr', 'female', '1563', '????', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-varangr--torvald-1585-varangr"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "torvald-1585-varangr",
+              "name": "Torvald Varangr",
+              "worldPersonId": "person--haus-varangr--torvald-1585-varangr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 445,
+            "declaration": "spouse('gulda-goldglanz', 'Gulda Goldglanz', 'female', '1588', '', 'house-goldglanz'),"
+          }
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "familyTitle": "Clan Goldglanz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Varangr",
+          "publicPartners": [
+            {
+              "id": "torvald-1585-varangr",
+              "name": "Torvald Varangr",
+              "worldPersonId": "person--haus-varangr--torvald-1585-varangr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-goldglanz-family.js",
+            "line": 261,
+            "declaration": "awayWoman('gulda-goldglanz', 'Gulda Goldglanz', '1588', '????', 'Clan Varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-feuerherz--drengur-feuerherz"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Feuerherz",
+          "publicPartners": [
+            {
+              "id": "drengur-feuerherz",
+              "name": "Drengur Feuerherz",
+              "worldPersonId": "person--haus-feuerherz--drengur-feuerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 451,
+            "declaration": "awayWoman('vanadis-varangr', 'Vanadis Varangr', '1609', '', 'Clan Feuerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "familyTitle": "Clan Feuerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "drengur-feuerherz",
+              "name": "Drengur Feuerherz",
+              "worldPersonId": "person--haus-feuerherz--drengur-feuerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-feuerherz-family.js",
+            "line": 251,
+            "declaration": "spouse('vanadis-varangr', 'Vanadis Varangr', 'female', '1609', '????', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "1713",
+          "status": "dead",
+          "sex": "male",
+          "title": "Jarl von 1704 bis 1713",
+          "publicPartners": [
+            {
+              "id": "ingeborg-sturmgeborene",
+              "name": "Ingeborg Sturmgeborene",
+              "worldPersonId": "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 497,
+            "declaration": "person('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '1713', {"
+          }
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ingeborg-sturmgeborene",
+              "name": "Ingeborg Sturmgeborene",
+              "worldPersonId": "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+            "line": 343,
+            "declaration": "spouse('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1565",
+          "1578"
+        ],
+        "death": [
+          "1734",
+          "1634"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1565",
+          "death": "1734",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "runar-1562-sturmgeborener",
+              "name": "Runar Sturmgeborener",
+              "worldPersonId": "person--haus-sturmgeborene--runar-1562-sturmgeborener"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+            "line": 278,
+            "declaration": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1565', '1734', 'house-holmr'),"
+          }
+        },
+        {
+          "familyId": "haus-frostauge",
+          "familyTitle": "Clan Frostauge",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1578",
+          "death": "1634",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vilhjalm-frostauge",
+              "name": "Vilhjalm Frostauge",
+              "worldPersonId": "person--haus-frostauge--vilhjalm-frostauge"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-frostauge-family.js",
+            "line": 307,
+            "declaration": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1578', '1634', 'house-holmr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-hrafn--osvald-hrafn"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "familyTitle": "Clan Helgr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Hrafn",
+          "publicPartners": [
+            {
+              "id": "osvald-hrafn",
+              "name": "Osvald Hrafn",
+              "worldPersonId": "person--haus-hrafn--osvald-hrafn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-helgr-family.js",
+            "line": 373,
+            "declaration": "awayWoman('leikny-helgr', 'Leikny Helgr', '1655', '????', 'Clan Hrafn'),"
+          }
+        },
+        {
+          "familyId": "haus-hrafn",
+          "familyTitle": "Clan Hrafn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "osvald-hrafn",
+              "name": "Osvald Hrafn",
+              "worldPersonId": "person--haus-hrafn--osvald-hrafn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-hrafn-family.js",
+            "line": 228,
+            "declaration": "spouse('leikny-helgr', 'Leikny Helgr', 'female', '1655', '', 'house-helgr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "sex": [
+          "female",
+          "male"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-graumahne--helmskald-graumahne"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "familyTitle": "Clan Graumähne",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "helmskald-graumahne",
+              "name": "Helmskald Graumähne",
+              "worldPersonId": "person--haus-graumahne--helmskald-graumahne"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-graumahne-family.js",
+            "line": 452,
+            "declaration": "spouse('ljotunn-sterkr', 'Ljotunn Sterkr', 'female', '1677', '', 'house-sterkr'),"
+          }
+        },
+        {
+          "familyId": "haus-sterkr",
+          "familyTitle": "Clan Sterkr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "helmskald-graumahne",
+              "name": "Helmskald Graumähne",
+              "worldPersonId": "person--haus-graumahne--helmskald-graumahne"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sterkr-family.js",
+            "line": 351,
+            "declaration": "person('ljotunn-sterkr', 'Ljotunn Sterkr', 'male', '1677', ''),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--family-tree--gunnhildr",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1700",
+          "1652"
+        ],
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-schmetterschild",
+          "familyTitle": "Clan Schmetterschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1700",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "valtyr-schmetterschild",
+              "name": "Valtyr Schmetterschild",
+              "worldPersonId": "person--haus-schmetterschild--valtyr-schmetterschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-schmetterschild-family.js",
+            "line": 375,
+            "declaration": "spouse('gunnhildr', 'Gunnhildr', 'female', '1700', ''),"
+          }
+        },
+        {
+          "familyId": "haus-nachtjaeger",
+          "familyTitle": "Clan Nachtjäger",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1652",
+          "death": "1729",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "kjartan-nachtjaeger",
+              "name": "Kjartan Nachtjäger",
+              "worldPersonId": "person--haus-nachtjaeger--kjartan-nachtjaeger"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+            "line": 280,
+            "declaration": "spouse('gunnhildr', 'Gunnhildr', 'female', '1652', '1729'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    },
+    {
+      "worldPersonId": "person--family-tree--gwelda",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1674",
+          "1697"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-schwarzdorn",
+          "familyTitle": "Clan Schwarzdorn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "gormund-schwarzdorn",
+              "name": "Gormund Schwarzdorn",
+              "worldPersonId": "person--haus-schwarzdorn--gormund-schwarzdorn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-schwarzdorn-family.js",
+            "line": 312,
+            "declaration": "spouse('gwelda', 'Gwelda', 'female', '1674', ''),"
+          }
+        },
+        {
+          "familyId": "haus-frostgeborene",
+          "familyTitle": "Haus Frostgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1697",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "bjorn-frostgeborene",
+              "name": "Bjorn Frostgeborener",
+              "worldPersonId": "person--haus-frostgeborene--bjorn-frostgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-frostgeborene-family.js",
+            "line": 145,
+            "declaration": "spouse('gwelda', 'Gwelda', 'female', '1697', ''),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "death": [
+          "1182",
+          "1172"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-illewod--ysolde-illewod"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1182",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ysolde-illewod",
+              "name": "Ysolde Illewod",
+              "worldPersonId": "person--haus-illewod--ysolde-illewod"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wylan-family.js",
+            "line": 217,
+            "declaration": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1182', WYLAN_HOUSE_ID, {"
+          }
+        },
+        {
+          "familyId": "haus-illewod",
+          "familyTitle": "Haus Illewod",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1172",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ysolde-illewod",
+              "name": "Ysolde Illewod",
+              "worldPersonId": "person--haus-illewod--ysolde-illewod"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 205,
+            "declaration": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1172', 'house-wylan'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": true,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "sex": [
+          "male",
+          "female"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wylan--vorath-wylan"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vorath-wylan",
+              "name": "Vorath Wylan",
+              "worldPersonId": "person--haus-wylan--vorath-wylan"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wylan-family.js",
+            "line": 238,
+            "declaration": "person('iesin-pendrag', 'Iesin Pendrag', 'male', '1575', '1656', 'house-pendrag'),"
+          }
+        },
+        {
+          "familyId": "haus-pendrag",
+          "familyTitle": "Haus Pendrag",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vorath-wylan",
+              "name": "Vorath Wylan",
+              "worldPersonId": "person--haus-wylan--vorath-wylan"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+            "line": 284,
+            "declaration": "person('iesin-pendrag', 'Iesin Pendrag', 'female', '1575', '1656'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-crafanc--elisud-crafanc"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "elisud-crafanc",
+              "name": "Elisud Crafanc",
+              "worldPersonId": "person--haus-crafanc--elisud-crafanc"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-arth-family.js",
+            "line": 311,
+            "declaration": "person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', ''),"
+          }
+        },
+        {
+          "familyId": "haus-crafanc",
+          "familyTitle": "Haus Crafanc O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "1710",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "elisud-crafanc",
+              "name": "Elisud Crafanc",
+              "worldPersonId": "person--haus-crafanc--elisud-crafanc"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-crafanc-family.js",
+            "line": 262,
+            "declaration": "spouse('afanen-1660-arth', 'Afanen Arth', 'female', '1660', '1710', 'house-arth'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    }
+  ]
+}

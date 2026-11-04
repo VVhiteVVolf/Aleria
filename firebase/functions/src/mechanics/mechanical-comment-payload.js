@@ -11,6 +11,7 @@ export function containsPersistentMechanics(comment = {}) {
     || comment.inventoryTransaction
     || comment.restTransaction
     || comment.sceneRest
+    || comment.sceneRegeneration
     || comment.combatEncounter
     || comment.combatStatus
     || comment.encounterTransaction

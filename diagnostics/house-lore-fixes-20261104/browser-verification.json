@@ -1,0 +1,14 @@
+{
+  "schema": "aleria.house-lore-browser-verification",
+  "date": "2026-11-04",
+  "status": "limited",
+  "uiVerified": false,
+  "attemptedPage": "http://127.0.0.1:8897/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-dyngwn",
+  "httpHead": 200,
+  "reason": "Die Chrome-Steuerung bricht beim Öffnen der Prüfseite mit einem timeoutMs-Fehler ab. Keine erfolgreiche Browser-Sichtprüfung behauptet.",
+  "automatedEvidence": [
+    "test-results.json",
+    "final-preservation.json",
+    "independent-review.json"
+  ]
+}

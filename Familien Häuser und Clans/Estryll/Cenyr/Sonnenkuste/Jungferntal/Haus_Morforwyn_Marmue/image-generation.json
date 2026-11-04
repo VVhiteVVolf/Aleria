@@ -1,0 +1,53 @@
+{
+  "id": "haus-morforwyn-linie-marmue",
+  "refs": [
+    "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Jungferntal/Haus_Morforwyn/assets/hausdarstellung-original.png",
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/morforwyn-linie-marmue.png"
+  ],
+  "prompt": "EDIT reference image 1 non-destructively into the Marmue branch variant of House Morforwyn. Image 1 is the target: keep its anonymous armoured knight, calm upright full-body pose, closed helm, plume, long banner-spear, shield position, complete silhouette and proportions. Image 2 is ONLY the approved quiet matte painted style reference: simplified readable forms, soft thin painted edges, restrained shading, fine uniform dry pigment grain. Image 3 supplies the Marmue branch heraldry: silver/cream mermaid and kneeling armoured knight on clear blue, with a silver circle border. Repaint the banner and shield blue, with pale silver/cream branch emblem; introduce restrained blue and pale silver cloth/plume details. The branch must be distinctly blue/silver, not the original dark field/white parent design and not the teal/cream Elimue variant. Armour remains subdued iron grey with discreet silver edging, no glitter. Preserve the actual original weapon, armour and pose design. No individual portrait identity or additional character. One entire full-body figure with margin around spear tip, banner and boots. 2:3 portrait at least 1024x1536. True transparent PNG, alpha zero outside the exact silhouette and open spaces. No environment, ground plane, exterior shadow, halo, haze, lettering, border, photorealism, thick comic outlines or CGI.",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "providerOriginalPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-c4699290-97d7-4815-be5c-1599202095cc.png",
+  "stagedPath": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-morforwyn-linie-marmue.png",
+  "selected": true,
+  "qaPending": false,
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-c4699290-97d7-4815-be5c-1599202095cc.png",
+  "sha256": "c08f23cd3111c4336c13bad9af9fb7cdaa0c6b73e9ee4574a4e471c73c1aee0d",
+  "bytes": 2268676,
+  "size": [
+    1024,
+    1536
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaZeroPixels": 962284,
+  "alphaOneToThreePixels": 27932,
+  "alphaCorners": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visibleAlphaAbove8BBox": [
+    132,
+    7,
+    852,
+    1451
+  ],
+  "pixelEdits": false,
+  "sourceJobManifest": "diagnostics/cenyr-house-completeness-20261103/art-audit/remaining-six-generation-jobs.json",
+  "visualReview": "Actual white-background composite inspected; role, full body, house palette and transparency accepted. Anonymous representative only.",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkuste/Jungferntal/Haus_Morforwyn_Marmue/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/haus-morforwyn-linie-marmue.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "namedPerson": false,
+  "createsPersonRecord": false
+}

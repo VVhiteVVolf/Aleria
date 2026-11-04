@@ -1,0 +1,606 @@
+{
+  "schema": "aleria.reviewed-house-lore-corrections",
+  "date": "2026-11-04",
+  "authority": "User decisions: child chronology takes priority; Wunbhna, Maolmhuire and Morgan live; Dál T’Saor administration ended; Wolfshorn belongs to Dämmergrund/Vangandr.",
+  "remainingTwentyCounterpartConflicts": "List only; no alignment authorized.",
+  "changes": [
+    {
+      "familyId": "haus-gallchobhair",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "birth",
+      "before": "1635",
+      "after": "1610"
+    },
+    {
+      "familyId": "haus-gallchobhair",
+      "collection": "persons",
+      "entityId": "etain-ancient",
+      "field": "birth",
+      "before": "1622",
+      "after": "1612"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "birth",
+      "before": "1635",
+      "after": "1610"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "notes",
+      "before": "Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Das bereits festgelegte Geburtsjahr 1635 ersetzt die erneute Altangabe 1610.",
+      "after": "Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Die Nutzerkorrektur vom 4. November 2026 gibt den Kinderjahren 1630, 1632 und 1634 Vorrang; dafür wird seine frühere Datierung 1610–1672 wiederhergestellt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "etain-ancient",
+      "field": "birth",
+      "before": "1622",
+      "after": "1612"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-seamus-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "collection": "persons",
+      "entityId": "wunbhna-spouse-tsaoir",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "collection": "persons",
+      "entityId": "wunbhna-spouse-tsaoir",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-choinnich",
+      "collection": "persons",
+      "entityId": "maolmhuire-spouse-choinnich",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-choinnich",
+      "collection": "persons",
+      "entityId": "maolmhuire-spouse-choinnich",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-draig",
+      "collection": "persons",
+      "entityId": "sylvia-cenyr",
+      "field": "death",
+      "before": "1719",
+      "after": "1725"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "annegrit-vaeren",
+      "field": "birth",
+      "before": "1548",
+      "after": "1533"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "birth",
+      "before": "1547",
+      "after": "1530"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "death",
+      "before": "1613",
+      "after": "1599"
+    },
+    {
+      "familyId": "haus-wylan",
+      "collection": "persons",
+      "entityId": "daffyd-neidr",
+      "field": "death",
+      "before": "????",
+      "after": "1608"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "annegrit-vaeren",
+      "field": "birth",
+      "before": "1548",
+      "after": "1533"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "birth",
+      "before": "????",
+      "after": "1530"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "death",
+      "before": "????",
+      "after": "1599"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "daffyd-neidr",
+      "field": "death",
+      "before": "1593",
+      "after": "1608"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "notes",
+      "before": "Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+      "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+    },
+    {
+      "familyId": "haus-arth",
+      "collection": "persons",
+      "entityId": "sylvia-cenyr",
+      "field": "death",
+      "before": "1719",
+      "after": "1725"
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "collection": "persons",
+      "entityId": "ofranton-1599-morforwyn",
+      "field": "death",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "notes",
+      "before": "Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+      "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+    },
+    {
+      "familyId": "haus-canwyll",
+      "collection": "persons",
+      "entityId": "cynwrig-canwyll",
+      "field": "birth",
+      "before": "1662",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-canwyll",
+      "collection": "persons",
+      "entityId": "dylis-tiwna",
+      "field": "birth",
+      "before": "1662",
+      "after": "1650"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "morwen-pawen",
+      "field": "birth",
+      "before": "1642",
+      "after": "1632"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "dylis-tiwna",
+      "field": "birth",
+      "before": "1662",
+      "after": "1650"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "cynwrig-canwyll",
+      "field": "birth",
+      "before": "1662",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-pawen",
+      "collection": "persons",
+      "entityId": "morwen-pawen",
+      "field": "birth",
+      "before": "1642",
+      "after": "1632"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "end",
+      "before": "",
+      "after": "1630"
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "collection": "partnerships",
+      "entityId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "field": "end",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "partnerships",
+      "entityId": "marriage-rhonwen-morgan-grael",
+      "field": "status",
+      "before": "widowed",
+      "after": "active"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "end",
+      "before": "",
+      "after": "1630"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-rhonwen-morgan-grael",
+      "field": "status",
+      "before": "widowed",
+      "after": "active"
+    },
+    {
+      "familyId": "haus-wolfshorn",
+      "collection": "document",
+      "entityId": "",
+      "field": "description",
+      "before": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.",
+      "after": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Thanentum Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging."
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "partnerships",
+      "entityId": "marriage-kormak-magdis-sturmgeborene",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "partnerships",
+      "entityId": "marriage-magdis-kormak-wellenschild",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-vangandr",
+      "collection": "persons",
+      "entityId": "annegret",
+      "field": "birth",
+      "before": "1700",
+      "after": "1680"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "persons",
+      "entityId": "ofranton-1599-morforwyn",
+      "field": "death",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "partnerships",
+      "entityId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "field": "end",
+      "before": "1630",
+      "after": "1633"
+    }
+  ],
+  "familyRevisions": {
+    "haus-gallchobhair": 13,
+    "haus-dal-ceardaiocht": 7,
+    "haus-dal-t-saor": 6,
+    "haus-choinnich": 8,
+    "haus-draig": 16,
+    "haus-vaeren": 12,
+    "haus-wylan": 12,
+    "haus-pendrag": 8,
+    "haus-neidr": 11,
+    "haus-arth": 19,
+    "haus-morforwyn": 7,
+    "haus-grael": 3,
+    "haus-dyngwn": 7,
+    "haus-canwyll": 5,
+    "haus-tiwna": 6,
+    "haus-pawen": 6,
+    "haus-wolfshorn": 7,
+    "haus-wargh": 8,
+    "haus-varangr": 11,
+    "haus-riesentod": 8,
+    "haus-sturmgeborene": 5,
+    "haus-wellenschild": 6,
+    "haus-grendel": 6,
+    "haus-schattenherz": 8,
+    "haus-feuerherz": 6,
+    "haus-vangandr": 3,
+    "haus-nachtjaeger": 4,
+    "haus-morforwyn-linie-marmue": 7
+  }
+}

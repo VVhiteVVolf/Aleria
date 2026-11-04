@@ -47,6 +47,7 @@
     const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
+    const commitSceneRegenerationCallable = httpsCallable(functions, 'commitSceneRegeneration', { timeout: 30000 });
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
     const commitSceneItemCallable = httpsCallable(functions, 'commitSceneItem', { timeout: 30000 });
     const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
@@ -550,7 +551,7 @@
     }
 
     function sortCommentsByRecentActivity(comments) {
-      return (Array.isArray(comments) ? comments : [])
+      return (globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || (Array.isArray(comments) ? comments : []))
         .map((comment, index) => ({ comment, index }))
         .sort((a, b) => {
           const av = getCommentActivityMs(a.comment, a.index);
@@ -623,6 +624,10 @@
         return committed.data;
 
 
+      },
+      async regenerateSceneParticipants(data) {
+        await requireFirebaseUser();
+        return (await commitSceneRegenerationCallable(cloneSerializableValue(data))).data;
       },
       async addCombatEncounter(entryId, text, deleteCode, metadata = {}) {
         await requireFirebaseUser();

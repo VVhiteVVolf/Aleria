@@ -1,0 +1,2915 @@
+{
+  "schema": "aleria.roriksheim-registry-house-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T17:22:33.279Z",
+  "scope": {
+    "kingdom": "Aldrimar",
+    "county": "Roriksheim",
+    "publicOnly": true,
+    "canonicalRegistry": "Stammbäume/assets/js/data/families.registry.js",
+    "baseline": "diagnostics/roriksheim-clans-20261103/baseline.json",
+    "baselinePreserves": [
+      "graphs",
+      "profiles",
+      "biographies",
+      "titles"
+    ],
+    "privateRecordsIncluded": false
+  },
+  "summary": {
+    "families": 33,
+    "livingFamilies": 28,
+    "extinctClans": 5,
+    "suppliedAttachments": 18,
+    "notSupplied": 15,
+    "initialRegisteredHousePages": 0,
+    "initialHouseBiographies": 1,
+    "initialGalleryIllustrations": 0,
+    "originalReferencesAddedDuringCurrentBatch": 19,
+    "newFiguresAlreadyPresent": 4
+  },
+  "findings": [
+    "Alle 33 Familien sind oeffentlich im Register und in der Galerie als Haus erfasst; vor diesem Batch keine registrierten Hausseiten und keine Galerie-Abbildungen.",
+    "Nur Eisenjungfer besitzt vor diesem Batch eine ausgearbeitete Hausbiografie; ihr Hauptbild ist das Wappen. Diese Bio ist vollstaendig zu erhalten.",
+    "15 nicht mitgelieferte Hausfiguren benoetigen eine Illustration. Die aktuellen Wappen wurden im Kontaktblatt tatsaechlich angesehen; keine passenden vorhandenen Ganzkoerperoriginale gefunden.",
+    "Vorhandene Wolfshorn-/Eisenjungfer-Bilder sind Personenportraets oder Reaktionssheets und keine freigestellten Haus-Ganzkoerperfiguren.",
+    "Neue Originaldownloads und Generierungen laufen parallel; deshalb werden diese Arbeitsassets getrennt von der initialen aktiven Abdeckung erfasst."
+  ],
+  "records": [
+    {
+      "id": "haus-wolfshorn",
+      "title": "Clan Wolfshorn",
+      "documentTitle": "Clan Wolfshorn",
+      "rankId": "knight",
+      "seat": "Hornhall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Hornhall"
+      ],
+      "profile": {
+        "rankId": "knight",
+        "seat": "Hornhall",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "Clan Vangandr",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-wolfshorn-family.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 5,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/clan-wolfshorn.png",
+          "exists": true
+        },
+        "portraitCount": 4,
+        "localPortraitCount": 4,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Technischer Profilrang knight bleibt erhalten; Text bezeichnet die lokale Tradition als Huskarlgeschlecht. Bjoern ist bestehender gegenwaertiger Herr, kein neuer Personendatensatz."
+      ],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Grauer Wolfskopf mit roter Zunge auf Gruen im Runenrand.",
+        "designRecommendation": "Hornhaller Grenzwaechter in nordischer funktionaler Ruestung mit Wolfsmotiv. Bjoern fuehrt den verbliebenen Clan; Hrolfs Bleiddorn-Exilzweig bleibt eigenstaendig.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false,
+        "viewedNonFigureExample": "Stammbäume/assets/images/portraits/haus-wolfshorn/hrolf-wolfshorn.png",
+        "rejectionReason": "Angeschnittenes Personenportrait mit Umgebung; kein Haus-Ganzkoerperoriginal."
+      }
+    },
+    {
+      "id": "haus-varulv",
+      "title": "Clan Varulv",
+      "documentTitle": "Clan Varulv",
+      "rankId": "jarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-roriksheim.png",
+          "assets/images/regions/aldrimar-rorikstal.png",
+          "assets/images/regions/aldrimar-roriksheim-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Jarlsclan von Roriksheim und Herren von Rorikshall. Der Clan führt seine Herkunft auf Rorik zurück; Nachtjäger und Freiwinter gingen als Kadettenzweige aus Fannarr beziehungsweise Vigulf Varulv hervor.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-varulv-family.js",
+        "Stammbäume/assets/js/data/aldrimar-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Varulv O'Rorikshall (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "e44c88a7-2869-4cd2-bff0-c46105324b31",
+        "slug": "varulv"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+          "exists": true
+        },
+        "portraitCount": 64,
+        "localPortraitCount": 64,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-varulv/krieger.png",
+            "url": "https://i.imgur.com/vorvvTP.png",
+            "sha256": "3b00838760a9b5910f4bb0f1d52d329c1886600ce2522231e32bcaba4bdd1f81",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          },
+          {
+            "path": "Stammbäume/assets/images/references/haus-varulv/krieger-2.png",
+            "url": "https://i.imgur.com/Q0nfZSC.png",
+            "sha256": "c2dd49239f0aaa8fa3de2416034bade03b8c6125014d9de1638f6a947a7d0b58",
+            "exists": true,
+            "primary": false,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "title": "Clan Schwarzdorn",
+      "documentTitle": "Clan Schwarzdorn",
+      "rankId": "hesire",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Wohlhabender Hesire-Clan von Rorikshall, Betreiber der Schwarzdorn-Brauerei und Vasall der Varulv.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-schwarzdorn-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Schwarzdorn (bereitgestellte Altdaten)",
+      "sourceRevision": 6,
+      "attachment": {
+        "attachmentId": "62831b4b-a992-4637-8ed5-3b037a2a14d8",
+        "slug": "schwarzdorn"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Schwarzdorn/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+          "exists": true
+        },
+        "portraitCount": 52,
+        "localPortraitCount": 52,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-schwarzdorn/krieger.png",
+            "url": "https://i.imgur.com/FTy7xeb.png",
+            "sha256": "90527e1d032370349e877630e9a88a673a215a5bff16018933c7825ac96bf3a8",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-kampfgeborene",
+      "title": "Clan Kampfgeborene",
+      "documentTitle": "Clan Kampfgeborene",
+      "rankId": "hesire",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Rorikshall, Vasall der Varulv und Ursprung des bürgerlichen Bastardhauses Frostgeborene.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-kampfgeborene-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 6,
+      "attachment": {
+        "attachmentId": "65e5c39f-34cf-4664-ab35-9bfcc758c3ee",
+        "slug": "kampfgeborene"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Kampfgeborene/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-kampfgeborene.png",
+          "exists": true
+        },
+        "portraitCount": 45,
+        "localPortraitCount": 45,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+            "url": "https://i.imgur.com/NcibyKy.png",
+            "sha256": "0a800c065d4886516026e0aa44f6cf2c773dc2abdda30b1e6bdb2f2c3d7f06e1",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-brathfengr",
+      "title": "Clan Brathfengr",
+      "documentTitle": "Clan Brathfengr",
+      "rankId": "thane",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Thanenclan von Klangheim im Thanentum Skaldenheim. Die Brathfengr führen ihre Gründung auf Kvasir den Trommler und Gefjon Skald zurück.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-brathfengr-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Brathfengr (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "852a8eeb-7efc-4cb4-800b-d23e7970ead7",
+        "slug": "brathfengr"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Brathfengr/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-brathfengr.png",
+          "exists": true
+        },
+        "portraitCount": 39,
+        "localPortraitCount": 39,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-brathfengr/krieger.png",
+            "url": "https://i.imgur.com/jmjPBZt.png",
+            "sha256": "2dcce02aa9552f5ff6542265fb0dcebe6c3d7829160c0356c0755ef5f6c02606",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-sterkr",
+      "title": "Clan Sterkr",
+      "documentTitle": "Clan Sterkr",
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Klangheim im Thanentum Skaldenheim. Der Clan geht auf Aegir den Streicher, einen Schüler Jurgens Windrufers, zurück.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-sterkr-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Sterkr (bereitgestellte Altdaten)",
+      "sourceRevision": 4,
+      "attachment": {
+        "attachmentId": "f383dfe8-6b32-4c83-b870-01c6b69506ac",
+        "slug": "sterkr"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sterkr/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-sterkr.png",
+          "exists": true
+        },
+        "portraitCount": 38,
+        "localPortraitCount": 38,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-sterkr/krieger.png",
+            "url": "https://i.imgur.com/FmfCkCf.png",
+            "sha256": "1c19d734e3443950aa9cba0b5bd00ae630380b325ea06482d32dcdc962eafd9a",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-soekeren",
+      "title": "Clan Sökeren",
+      "documentTitle": "Clan Sökeren",
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Klangheim im Thanentum Skaldenheim. Der Clan geht auf Forseti den Trompeter, einen Schüler Jurgens Windrufers, zurück.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-soekeren-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Sökaren/Sökeren (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "8add9f60-93b7-4156-99ab-329362eb671f",
+        "slug": "soekeren"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sokeren/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-soekeren.png",
+          "exists": true
+        },
+        "portraitCount": 38,
+        "localPortraitCount": 38,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-soekeren/krieger.png",
+            "url": "https://i.imgur.com/8eQC7mz.png",
+            "sha256": "edd8fa3343376f03ac18ff52c18e1dc7235204cbce611f24f8b93ad272c93a14",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-skald",
+      "title": "Clan Skald",
+      "documentTitle": "Clan Skald",
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Klangheim im Thanentum Skaldenheim. Der Clan geht auf Jurgen „Windrufer“ zurück, dessen Schüler die späteren Clans Brathfengr, Sökeren und Sterkr begründeten.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-skald-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Skald (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "72d0e77f-461c-4ab4-9b42-a77baa9001f0",
+        "slug": "skald"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Skald/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+          "exists": true
+        },
+        "portraitCount": 68,
+        "localPortraitCount": 68,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-skald/krieger.png",
+            "url": "https://i.imgur.com/1XhQ5ZF.png",
+            "sha256": "02802d281c75fb57aebbfb31d7a99b176e6fc1ff458a85ee820dd98e8db9c9e6",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-vangandr",
+      "title": "Clan Vangandr",
+      "documentTitle": "Clan Vangandr",
+      "rankId": "thane",
+      "seat": "Wolfspfad",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Wolfspfad"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Wolfspfad",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Thanenclan von Wolfspfad im Dämmergrund, aus den verfluchten Überlebenden des alten Vanir-Clans hervorgegangen.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-vangandr-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Vangandr (bereitgestellte Altdaten)",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "fb656f5b-fe28-4491-b1cc-e73110cd021f",
+        "slug": "vangandr"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Wolfspfad/Clan_Vangandr/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-vangandr.png",
+          "exists": true
+        },
+        "portraitCount": 43,
+        "localPortraitCount": 43,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-vangandr/krieger.png",
+            "url": "https://i.imgur.com/8Pp8GsW.png",
+            "sha256": "9103c730f6c5eab486249548f250496cbacdddd885a3c19b3df8567a07281808",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "title": "Clan Nachtjäger",
+      "documentTitle": "Clan Nachtjäger",
+      "rankId": "hesire",
+      "seat": "Horunn",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Dämmertal",
+        "Horunn"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Horunn",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vangandr",
+        "liegeHouseName": "Clan Vangandr",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Dämmergrund",
+          "Dämmertal",
+          "Horunn"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-daemmertal.png",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Burg Horunn im Dämmertal, Kadettenclan der Varulv und Vasall der Vangandr.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Nachtjäger (bereitgestellte Altdaten)",
+      "sourceRevision": 2,
+      "attachment": {
+        "attachmentId": "42185341-945e-4f5a-80af-9e19af0f1957",
+        "slug": "nachtjaeger"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Dammertal/Horunn/Clan_Nachtjager/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-nachtjaeger.png",
+          "exists": true
+        },
+        "portraitCount": 31,
+        "localPortraitCount": 31,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-nachtjaeger/krieger.png",
+            "url": "https://i.imgur.com/NXNB91D.png",
+            "sha256": "fcdbd8a6ab0289ae3db5873d54791014109c58f4d35590acbd2cdf28f9661cf4",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-skaal",
+      "title": "Clan Skaal",
+      "documentTitle": "Clan Skaal",
+      "rankId": "thane",
+      "seat": "Schwertfall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Schwerthohn",
+        "Schwertfall"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Schwertfall",
+        "barony": "Schwerthohn",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwerthohn.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Alter Thanenclan von Schwertfall in Schwerthohn, Bewahrer norrnaighischer Glaubens- und Kriegertraditionen und Lehnsherren der Skjegg.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-skaal-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Skaal (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "126111e4-b107-4a9a-939c-7f1c12a98afa",
+        "slug": "skaal"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Schwerthohn/Schwertfall/Clan_Skaal/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skaal.png",
+          "exists": true
+        },
+        "portraitCount": 40,
+        "localPortraitCount": 40,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-skaal/krieger.png",
+            "url": "https://i.imgur.com/ATWOuy4.png",
+            "sha256": "fbb73cb07cdf95534ea3fa4ee2104ba59e8cae01e4f511c2de7cdf1dce76862b",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-skjegg",
+      "title": "Clan Skjegg",
+      "documentTitle": "Clan Skjegg",
+      "rankId": "hesire",
+      "seat": "Grabesruh",
+      "secondarySeats": [
+        "Klangheim"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Schwarzacker",
+        "Grabesruh"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Grabesruh",
+        "barony": "Schwarzacker",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Klangheim"
+        ],
+        "liegeHouseId": "house-skaal",
+        "liegeHouseName": "Clan Skaal",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzacker.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Frommer Hesire-Clan von Grabesruh in Schwarzacker, Grabeshüter und Vasallen des Thanenclans Skaal.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-skjegg-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Skjegg (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "d94c18c3-8318-43dd-9bda-aa5a0ab288ea",
+        "slug": "skjegg"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Schwarzacker/Grabesruh/Clan_Skjegg/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skjegg.png",
+          "exists": true
+        },
+        "portraitCount": 35,
+        "localPortraitCount": 35,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-skjegg/krieger.png",
+            "url": "https://i.imgur.com/j73Fljm.png",
+            "sha256": "1ddce1067ff3d2eb5cf7cd65daffacda6155d948254e8a1c33f926c0f5fa5555",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-freiwinter",
+      "title": "Clan Freiwinter",
+      "documentTitle": "Clan Freiwinter",
+      "rankId": "hesire",
+      "seat": "Wolfswacht",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Winterfänge",
+        "Wolfswacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfswacht",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Rorikstal",
+          "Winterfänge",
+          "Wolfswacht"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Hesire-Clan von Wolfswacht und Kadettenclan der Varulv. Die Freiwinter sichern die Winterfänge im Rorikstal und führen ihre Linie auf Vigulf Varulv und Sif zurück.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-freiwinter-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Freiwinter (bereitgestellte Altdaten)",
+      "sourceRevision": 5,
+      "attachment": {
+        "attachmentId": "fe1f9ce8-b186-41aa-aeb9-762efda7c58d",
+        "slug": "freiwinter"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Winterfange/Wolfswacht/Clan_Freiwinter/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png",
+          "exists": true
+        },
+        "portraitCount": 43,
+        "localPortraitCount": 43,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-freiwinter/krieger.png",
+            "url": "https://i.imgur.com/yDlnKuk.png",
+            "sha256": "7dcc5107f398ab252523dead94532e6191d56392d52ecbaf82bf7206dbf963a4",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-gruenklang",
+      "title": "Clan Grünklang",
+      "documentTitle": "Clan Grünklang",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Grünklang aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Grunklang/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-gruenklang.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-gruenklang/krieger-generated-v1.png",
+            "exists": true,
+            "addedInCurrentBatch": true
+          }
+        ],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Gekreuzte goldene Floeten und Blaetter auf Gruen.",
+        "designRecommendation": "Aldrimarische Huskarlfigur mit schlichtem Floeten-/Blattabzeichen; das Motiv begruendet keinen neuen Musikerberuf.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-flammenschritt",
+      "title": "Clan Flammenschritt",
+      "documentTitle": "Clan Flammenschritt",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Flammenschritt aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Flammenschritt/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-flammenschritt.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-flammenschritt/krieger-generated-v1.png",
+            "exists": true,
+            "addedInCurrentBatch": true
+          }
+        ],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Dunkle Tanzfiguren und Flammen auf Rot.",
+        "designRecommendation": "Huskarlfigur in gedecktem Rot und Schwarz, Flammenmotiv als Stickerei; keine neue Feuerfaehigkeit.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-runensaenger",
+      "title": "Clan Runensänger",
+      "documentTitle": "Clan Runensänger",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Runensänger aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Runensanger/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-runensaenger.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-runensaenger/krieger-generated-v1.png",
+            "exists": true,
+            "addedInCurrentBatch": true
+          }
+        ],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Profilkopf, Mondboegen und Runen in Gold auf Braunrot.",
+        "designRecommendation": "Huskarlfigur mit Runen-/Mondsymbol am Stoff; kein erfundener Zauberrang.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-sturmsaenger",
+      "title": "Clan Sturmsänger",
+      "documentTitle": "Clan Sturmsänger",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Sturmsänger aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sturmsanger/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-sturmsaenger.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-sturmsaenger/krieger-generated-v1.png",
+            "exists": true,
+            "addedInCurrentBatch": true
+          }
+        ],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldene Leier mit Spiralen auf dunklem Blaugruen.",
+        "designRecommendation": "Huskarlfigur mit Leierabzeichen, praktische aldrimarische Kleidung und Ruestung.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-liedtrinker",
+      "title": "Clan Liedtrinker",
+      "documentTitle": "Clan Liedtrinker",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Liedtrinker aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Liedtrinker/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-liedtrinker.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldene Feder und Trinkschale auf Gruen.",
+        "designRecommendation": "Huskarlfigur mit Feder-/Schalenmotiv; kein unbelegter Brauerbetrieb.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-spottzunge",
+      "title": "Clan Spottzunge",
+      "documentTitle": "Clan Spottzunge",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Spottzunge aus Klangheim im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Spottzunge/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-spottzunge.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Helle Theatermasken auf Gruen.",
+        "designRecommendation": "Huskarlfigur mit kleinem Maskenabzeichen; kein erfundenes Hofnarrenamt.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-eisenjungfer",
+      "title": "Clan Eisenjungfer",
+      "documentTitle": "Clan Eisenjungfer",
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "secondarySeats": [
+        "Forsthain"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Forsthain"
+        ],
+        "liegeHouseId": "house-skald",
+        "liegeHouseName": "Clan Skald",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Matriarchal geführter Huskarlclan aus Klangheim. Die Eisenjungfern dienen Clan Skald, wahren die Schildmaidtradition und verwalten zusätzlich die südliche Lehensstätte Forsthain.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-eisenjungfer-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "Clan Eisenjungfer (Ausarbeitung 1740)",
+      "sourceRevision": 3,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Eisenjungfer/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": true,
+        "sourceModule": "Stammbäume/assets/js/data/house-eisenjungfer-family.js",
+        "field": "family.extensions.houseBiographyModule",
+        "image": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+        "imageIsCrest": true,
+        "retainExistingFullText": true
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+          "exists": true
+        },
+        "portraitCount": 4,
+        "localPortraitCount": 4,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Schildmaid mit Hammer und Rundschild, Runenkranz, Stahlgrau und Blau.",
+        "designRecommendation": "Erwachsene Schildmaid mit Hammer und Rundschild; Matriarchat, Dienst fuer Skald und Forsthain sind aus der bestehenden Bio belegt.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false,
+        "viewedNonFigureExample": "Stammbäume/assets/images/portraits/haus-eisenjungfer/aslaug-eisenjungfer-v2.png",
+        "rejectionReason": "Angeschnittenes Personenportrait mit Umgebung; kein Haus-Ganzkoerperoriginal."
+      }
+    },
+    {
+      "id": "haus-blutdorn",
+      "title": "Clan Blutdorn",
+      "documentTitle": "Clan Blutdorn",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Blutdorn aus Rorikshall im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Blutdorn/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-blutdorn.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldenes Trinkhorn und schwarze Dornen auf Rot.",
+        "designRecommendation": "Huskarlfigur mit Horn-/Dornabzeichen; keine unbelegte Blutmagie oder Clanchronik.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-dornacker",
+      "title": "Clan Dornacker",
+      "documentTitle": "Clan Dornacker",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Dornacker aus Rorikshall im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Dornacker/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-dornacker.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldene Getreideaehren zwischen dunklen Dornen auf Gruen.",
+        "designRecommendation": "Huskarlfigur mit Aehren-/Dornstickerei; der Hausrang bleibt Huskarl, das Wappen allein begruendet keinen Familienberuf.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-baerenherz",
+      "title": "Clan Bärenherz",
+      "documentTitle": "Clan Bärenherz",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Ragna und ihre jüngere Schwester Svala gehören Skallis Gefolge an. Die Bärenherz tragen hellblondes Haar mit einem weißen Verlauf zu den Spitzen. Die weitere Clanfolge ist noch nicht ausgearbeitet.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js",
+        "Stammbäume/assets/js/data/rorikshall-skalli-retinue-families.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 2,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Barenherz/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-baerenherz.png",
+          "exists": true
+        },
+        "portraitCount": 2,
+        "localPortraitCount": 2,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldener Baerenkopf auf Blau.",
+        "designRecommendation": "Huskarlfigur in Blau mit Baerenmotiv; hellblondes Haar mit weissen Spitzen ist clanbezogen belegt. Kein neues Portrait Ragnas oder Svalas.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-kraehenrufer",
+      "title": "Clan Krähenrufer",
+      "documentTitle": "Clan Krähenrufer",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Krähenrufer aus Rorikshall im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Krahenrufer/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-kraehenrufer.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Kraehenmotiv im Runenrand auf dunklem Purpur.",
+        "designRecommendation": "Huskarlfigur mit Kraehenmotiv; keine neuen Tierbegleiter oder Beschwoerungsfaehigkeiten.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-unholdbann",
+      "title": "Clan Unholdbann",
+      "documentTitle": "Clan Unholdbann",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Hakon Unholdbann gehört als Reiter und Kundschafter zu Skallis Kriegerschar. Seine Eltern und die übrige Clanfolge sind noch nicht ausgearbeitet.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js",
+        "Stammbäume/assets/js/data/rorikshall-skalli-retinue-families.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 2,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Unholdbann/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-unholdbann.png",
+          "exists": true
+        },
+        "portraitCount": 1,
+        "localPortraitCount": 1,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Krieger ueber bezwungenem Unhold auf Gold im Runenrand.",
+        "designRecommendation": "Huskarlfigur als bodenstaendiger Kundschafter; Hakon ist als Reiter und Kundschafter bekannt. Keine neue Beute oder historische Schlacht erfinden.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-rotstahl",
+      "title": "Clan Rotstahl",
+      "documentTitle": "Clan Rotstahl",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Torben Rotstahl dient als Skallis Linke Hand; der vierzehnjährige Kjell lernt bei ihm als Drengr. Die ältere Clanfolge und der genaue Verwandtschaftsweg zwischen beiden bleiben offen.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js",
+        "Stammbäume/assets/js/data/rorikshall-skalli-retinue-families.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 2,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Rotstahl/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-rotstahl.png",
+          "exists": true
+        },
+        "portraitCount": 2,
+        "localPortraitCount": 2,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Hammer vor Sonnen-/Scheibenmotiv auf dunklem Rot.",
+        "designRecommendation": "Huskarlfigur in Rotgrau mit Hammersymbol; Torbens Ausbildung Kjells ist belegt, ein Schmiedebetrieb nicht.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-bogenhand",
+      "title": "Clan Bogenhand",
+      "documentTitle": "Clan Bogenhand",
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete Familienakte des Huskarlclans Bogenhand aus Rorikshall im Jarltum Roriksheim. Nachkommen und Quellenlücken werden erst bei der gesonderten Ausarbeitung dieses Clans ergänzt.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": null,
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Bogenhand/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-bogenhand.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [],
+        "newGeneratedReferences": [],
+        "initialFigureGap": true
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [],
+      "missingFigureRecommendation": {
+        "crestActuallyViewed": true,
+        "emblemDescription": "Goldener Bogenschuetze auf Blau im Runenrand.",
+        "designRecommendation": "Aldrimarische Huskarlfigur mit Bogen entsprechend dem aktuellen Wappen; keine neue Person oder Amtsfolge.",
+        "newLoreAuthorized": false,
+        "existingFullBodyOriginalFound": false
+      }
+    },
+    {
+      "id": "haus-frostgeborene",
+      "title": "Haus Frostgeborene",
+      "documentTitle": "Haus Frostgeborene",
+      "rankId": "commoner",
+      "seat": "Rorikshall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": false,
+      "extinctCulture": "",
+      "operationalRegistryStatus": "active",
+      "description": "Bürgerliches Bastardhaus in Rorikshall, hervorgegangen aus Jokul Kampfgeboreners unehelichem Sohn Thorim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-frostgeborene-family.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "ad57068a-a9a8-46fb-a42e-5f79076739b5",
+        "slug": "frostgeborene"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Haus_Frostgeborene/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/haus-frostgeborene.png",
+          "exists": true
+        },
+        "portraitCount": 13,
+        "localPortraitCount": 13,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-frostgeborene/krieger.png",
+            "url": "https://i.imgur.com/mq6s9st.png",
+            "sha256": "cfa7d13cdad452ce4ac05e57b86d5e2f9c282a954ad0c8fee371f55156fe321d",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-ulvasar",
+      "title": "Clan Ulvasar",
+      "documentTitle": "Clan Ulvasar",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": true,
+      "extinctCulture": "Norrnaigh",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Norrnaigh-Clans Ulvasar aus Roriksheim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "64994baa-d80c-44e6-ac45-70ff0ea94ac3",
+        "slug": "ulvasar"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Ulvasar/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-ulvasar.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ulvasar/krieger.png",
+            "url": "https://i.imgur.com/p5WN6kU.png",
+            "sha256": "b0b5afedb6768906643eefa243f0c394b924be2f1af70fa73ea0ec997965b2ac",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Kulturordner Norrnaigh/Glaennath im Profil ist kein belegter realer Stammsitz. Rang bleibt unknown; keine heutige Amtsfolge."
+      ]
+    },
+    {
+      "id": "haus-bjornskar",
+      "title": "Clan Bjornskar",
+      "documentTitle": "Clan Bjornskar",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": true,
+      "extinctCulture": "Norrnaigh",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Norrnaigh-Clans Bjornskar aus Roriksheim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "f976bb7b-2355-4808-b6ea-3297380fa25b",
+        "slug": "bjornskar"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Bjornskar/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-bjornskar.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-bjornskar/krieger.png",
+            "url": "https://i.imgur.com/U3PJwvg.png",
+            "sha256": "2a8d54f0bb27139a18db56d5fc3ccfe979ffa04b901dc18dc9ab9a30dc2a33ff",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Kulturordner Norrnaigh/Glaennath im Profil ist kein belegter realer Stammsitz. Rang bleibt unknown; keine heutige Amtsfolge."
+      ]
+    },
+    {
+      "id": "haus-vanir",
+      "title": "Clan Vanir",
+      "documentTitle": "Clan Vanir",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [
+        "Connair bei Wolfspfad"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Connair bei Wolfspfad"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": true,
+      "extinctCulture": "Norrnaigh",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Norrnaigh-Clans Vanir aus Roriksheim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "b7a0c540-30a9-4812-9b0b-6f8b7dbcf6a6",
+        "slug": "vanir"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Vanir/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-vanir.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-vanir/krieger.png",
+            "url": "https://i.imgur.com/nT8C88I.png",
+            "sha256": "e3aed123dfaf5955425680144e0241429539c460c46af0775344367437615791",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Kulturordner Norrnaigh/Glaennath im Profil ist kein belegter realer Stammsitz. Rang bleibt unknown; keine heutige Amtsfolge.",
+        "Ausgestorbener Ursprungsclan bleibt von Nachfolger haus-vangandr getrennt."
+      ]
+    },
+    {
+      "id": "haus-tiogar",
+      "title": "Clan Tíogar",
+      "documentTitle": "Clan Tíogar",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Tigairan bei Rorikshall"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Tigairan bei Rorikshall"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": true,
+      "extinctCulture": "Glaennath",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Glaennath-Clans Tíogar aus Roriksheim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "91fb13f3-5627-4e37-92d0-47110faef616",
+        "slug": "tiogar"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Tiogar/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-tiogar.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-tiogar/krieger.png",
+            "url": "https://i.imgur.com/hPZN7S8.png",
+            "sha256": "5fbf52739317441bb7db48c469c218e43b4ea2aa0a6584abe63babe5b1dab72f",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Kulturordner Norrnaigh/Glaennath im Profil ist kein belegter realer Stammsitz. Rang bleibt unknown; keine heutige Amtsfolge."
+      ]
+    },
+    {
+      "id": "haus-fiadhrach",
+      "title": "Clan Fiadhrach",
+      "documentTitle": "Clan Fiadhrach",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Connair bei Wolfspfad"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Connair bei Wolfspfad"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "extinct": true,
+      "extinctCulture": "Glaennath",
+      "operationalRegistryStatus": "active",
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Glaennath-Clans Fiadhrach aus Roriksheim.",
+      "sourceModules": [
+        "Stammbäume/assets/js/data/roriksheim-house-families.js",
+        "Stammbäume/assets/js/data/roriksheim-house-profiles.js"
+      ],
+      "sourceModuleNote": "",
+      "sourceRevision": 1,
+      "attachment": {
+        "attachmentId": "1fc1a71d-f4de-43f5-9e8d-9f2ab06a1c74",
+        "slug": "fiadhrach"
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "initiallyRegistered": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+        "authoringSourceExists": false
+      },
+      "houseBiography": {
+        "present": false,
+        "sourceModule": null,
+        "field": null,
+        "image": "",
+        "imageIsCrest": false,
+        "retainExistingFullText": false
+      },
+      "images": {
+        "crest": {
+          "path": "Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-fiadhrach.png",
+          "exists": true
+        },
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalReferences": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-fiadhrach/krieger.png",
+            "url": "https://i.imgur.com/ao9YSC4.png",
+            "sha256": "1c9b3b7d8718078ec19c5286bac27a0de775030cf48af7ae44322ee46c4aa542",
+            "exists": true,
+            "primary": true,
+            "addedInCurrentBatch": true,
+            "role": "warrior"
+          }
+        ],
+        "newGeneratedReferences": [],
+        "initialFigureGap": false
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": [],
+        "illustrations": []
+      },
+      "safeguards": [
+        "Kulturordner Norrnaigh/Glaennath im Profil ist kein belegter realer Stammsitz. Rang bleibt unknown; keine heutige Amtsfolge."
+      ]
+    }
+  ]
+}

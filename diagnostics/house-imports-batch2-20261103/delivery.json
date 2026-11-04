@@ -1,0 +1,428 @@
+{
+  "localOnly": true,
+  "push": false,
+  "deploy": false,
+  "firebaseWrites": false,
+  "houseCount": 10,
+  "mainAndGalleryImages": 10,
+  "originalIllustrations": 9,
+  "newIllustrations": 1,
+  "existingFamilyGraphsUnchanged": true,
+  "sourceGenealogyImported": false,
+  "militaryStatisticsImported": false,
+  "directTerritoryHouseLinks": 18,
+  "territoryFiles": [
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Borkenstein/baronie.data.mjs",
+      "links": 2
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Dunstholm/baronie.data.mjs",
+      "links": 1
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Hochweide/baronie.data.mjs",
+      "links": 2
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/grafschaft.data.mjs",
+      "links": 10
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Dinefwr/herrschaft.data.mjs",
+      "links": 1
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Mochdaer/herrschaft.data.mjs",
+      "links": 2
+    }
+  ],
+  "galleryPreservation": {
+    "otherHouseRecordsUnchanged": 872,
+    "otherImageRecordsUnchanged": 1008,
+    "beforeImages": 1008,
+    "afterImages": 1018,
+    "selectedImageCount": 10
+  },
+  "checks": {
+    "houseFocus": "9/9 passed",
+    "territoryRegression": "7/7 passed",
+    "scopedGalleryRegression": "9/9 passed",
+    "houseOutputs": "10/10 scoped page and biography outputs match authoring",
+    "scopedGalleryDrift": "passed",
+    "publicationRegression": "4/4 independently passed",
+    "globalHouseBuilderDrift": {
+      "status": "unrelated-authoring-drift",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Bellyn/haus.data.js",
+      "note": "Reported to Root; no unrelated authoring or generated files changed to conceal drift."
+    }
+  },
+  "houses": [
+    {
+      "id": "haus-fhaire",
+      "name": "Clan Ua Fhàire",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Antike_Haeuser/Clan_Ua_Fhaire/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Bhiorach",
+      "rank": "Laird",
+      "parentHouseId": "",
+      "sourceSha256": "28449e947e4b1934cebc97a40a799d5886143dfe9174014c0ba1c061e43ba8f0",
+      "graphFingerprint": "9b41d56d090cae7d21d734c74df0d14b5b48569621988666dcb11de5a147b952",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Antike_Haeuser/Clan_Ua_Fhaire/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "b88167ae498b13837cf54d37d7092ec64298e6e834ad4db63f777c06ee2e1ed2",
+          "role": "Druide des Clans",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": null,
+      "currentHead": "",
+      "headIds": [
+        "gearoid-fhaire",
+        "fachtna-ua-fhaire-trisceil",
+        "aonghus-fhaire"
+      ],
+      "heirIds": []
+    },
+    {
+      "id": "haus-trisceil",
+      "name": "Clan Ui Trisceil",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Antike_Haeuser/Clan_Ui_Trisceil/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Antikes Cerrigarth",
+      "rank": "Mor Tiarna",
+      "parentHouseId": "",
+      "sourceSha256": "1d191835f94ca04b3b7562485adbd418d6c6e8b4af3b9936b9494d117ebe7d15",
+      "graphFingerprint": "322b45cb836fe4c753fcd8c46761408187db9b9502951c18fc10328ff5c397df",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Antike_Haeuser/Clan_Ui_Trisceil/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "c9a952343d3cf2621248ac2aeabf6b908557334f997f4084ad08711fa3932a1d",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": null,
+      "currentHead": "",
+      "headIds": [
+        "phelim-trisceil",
+        "fergal-trisceil"
+      ],
+      "heirIds": []
+    },
+    {
+      "id": "haus-hwyaden",
+      "name": "Haus Hwyaden O'Trefyddin",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Borkenstein/Haus_Hwyaden/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Trefyddin",
+      "rank": "Baron",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "66deaa14882306119fd8e032ce992e720aa9343bb361e71afd0365fd8d7d483d",
+      "graphFingerprint": "0ebc1867a108b32bdc581c97f853d65696902df6b0c720352421a895ce65d1d6",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Borkenstein/Haus_Hwyaden/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "5c7a8ae24084d49d57cb8039ad5f75e63ef0e787a2ce702ebc7cd3bb4a889a2b",
+          "role": "Speerritter des Hauses",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 4,
+      "founderId": null,
+      "currentHead": "Catwg Hwyaden",
+      "headIds": [
+        "owain-hwyaden",
+        "gwiawn-hwyaden",
+        "run-hwyaden",
+        "collen-hwyaden",
+        "grugyn-hwyaden",
+        "catwg-hwyaden"
+      ],
+      "heirIds": [
+        "peibyn-hwyaden",
+        "alun-hwyaden",
+        "eiryn-hwyaden"
+      ]
+    },
+    {
+      "id": "haus-creyr",
+      "name": "Haus Créyr O'Esgairmor",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Dunstholm/Haus_Creyr/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Esgairmor",
+      "rank": "Baron",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "2aea5dd9b90c638a817d93b6690ddc13ba73ff3663e061786b2405ee7e9dabea",
+      "graphFingerprint": "d344158c04fa078e0f67e3ec83fe358c632dcc3efd2c68060f79bad976e0e1ad",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Dunstholm/Haus_Creyr/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "044ba3a86ff4deba4a1a908c941f432aba7de76994fd7f7c94c0cfeb2a6834e2",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 5,
+      "founderId": "rhodhri-wylan",
+      "currentHead": "Goronwy Créyr",
+      "headIds": [
+        "rhodhri-wylan",
+        "maldwyn-creyr-dinefwr",
+        "cadwaladr-creyr",
+        "grippiud-creyr",
+        "armel-creyr",
+        "goronwy-creyr"
+      ],
+      "heirIds": [
+        "cadoc-creyr",
+        "evan-creyr"
+      ]
+    },
+    {
+      "id": "haus-tir-addawol",
+      "name": "Haus Tir Addawol",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Hochweide/Haus_Tir_Addawol/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Glyndale",
+      "rank": "Baron",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "0c49d11f5508a168f5d60a25249571f2d9c1008ea11a43291dcb0a7792a01433",
+      "graphFingerprint": "88ec06cda8907ece30d9f16628026e6bb1c74a453a1320be5b37375969f3d4d4",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Hochweide/Haus_Tir_Addawol/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "dd83a82c59c406aa13663118de378d2f6afc7380e44cc04d5fb830f47afa1b25",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": "eynon-tarw-dinefwr",
+      "currentHead": "Gwynham Tir Addawol",
+      "headIds": [
+        "eynon-tarw-dinefwr",
+        "gwyndor-tir-addawol",
+        "ennissyen-tir-addawol",
+        "drwst-tir-addawol",
+        "gwynham-tir-addawol"
+      ],
+      "heirIds": [
+        "merryn-tir-addawol",
+        "bhreac-tir-addawol",
+        "kynan-tir-addawol",
+        "arian-tir-addawol",
+        "ivor-tir-addawol"
+      ]
+    },
+    {
+      "id": "haus-asyn",
+      "name": "Haus Asyn O'Cerrigarth",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Asyn/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Cerrigarth",
+      "rank": "Ritterfürst",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "2aeb8e828d06441829d8be1e1aeb16ea7f0b94a58212ffdf603d3938e5645486",
+      "graphFingerprint": "9e2f4367dd37f58d8285551075d6a94140f426f80e5a07ce27a046662d63ecc2",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Asyn/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "bf6445504ffe3e100eb4d276be67cc079b0065603fb02ec8bf8b2cb4f7e2e611",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": "gamon-der-tor-asyn",
+      "currentHead": "",
+      "headIds": [
+        "gamon-der-tor-asyn",
+        "griff-ancient-asyn",
+        "anarawd-asyn",
+        "eiddyl-asyn",
+        "tudwal-asyn"
+      ],
+      "heirIds": []
+    },
+    {
+      "id": "haus-dinefwr",
+      "name": "Haus Dinefwr O'Cerrigarth",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Dinefwr/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Cerrigarth",
+      "rank": "Ritterfürst",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "a15652e8da5963648a310b21a8f8ce62caaa5bc9cdd5b653af48846547cc8466",
+      "graphFingerprint": "4319058b5ee37a9d405de472a0b8f4ee14fa464892d301ec4409cc7a82eff60f",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Dinefwr/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "c8eb1b7e8a779b43369de85684cbf1a60f1f4edb196b71dec9f769971f089cbb",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 4,
+      "founderId": "beynon-tarw-dinefwr",
+      "currentHead": "Cardoc Dinefwr",
+      "headIds": [
+        "beynon-tarw-dinefwr",
+        "taredd-dinefwr",
+        "gwrtheyrn-dinefwr",
+        "govynyon-dinefwr",
+        "carnedyr-dinefwr",
+        "cardoc-dinefwr"
+      ],
+      "heirIds": [
+        "trevelyan-dinefwr",
+        "neithon-dinefwr",
+        "corin-dinefwr"
+      ]
+    },
+    {
+      "id": "haus-mochdaer",
+      "name": "Haus Mochdaer O'Cerrigarth",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Mochdaer/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Cerrigarth",
+      "rank": "Ritterfürst",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "84c49e1fc8e37ca3f4bbc2c5dab98eea37b5695ac709645128327f1c085cd207",
+      "graphFingerprint": "4c86538b54dc0710bd35749c3122b514920f5455bcd8f9c5f8569610decb5bfc",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Mochdaer/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "e9ff42b3ed79de84ba7ee36176e396a2920c6c1c884fb3c935b6471b87428c2c",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 4,
+      "founderId": "aethlem-mochdaer",
+      "currentHead": "Aethlem Mochdaer",
+      "headIds": [
+        "aethlem-mochdaer"
+      ],
+      "heirIds": [
+        "micah-1693-mochdaer",
+        "jareth-mochdaer",
+        "cadel-mochdaer"
+      ]
+    },
+    {
+      "id": "haus-tannau",
+      "name": "Haus Tannau",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Tannau/haus.content.mjs",
+      "page": "kleinehaeuser.html",
+      "prepared": true,
+      "extinct": false,
+      "seat": "Cerrigarth",
+      "rank": "Bürger",
+      "parentHouseId": "haus-wylan",
+      "sourceSha256": "9f5160de1d356eb9f57d317366d335a5855efe4bd970cb3f3d7ab68bc00acb4b",
+      "graphFingerprint": "7399ec22c1174c22204184daf5dcb02678607762005a8706264e0a5cbf40c06c",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Tannau/assets/hausdarstellung-2026-11-03.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-2026-11-03.png",
+          "sha256": "ae5d8e11cc1896efa01898789bfff48a73e80a0b8877b46c0139241f6e9a7dec",
+          "role": "Bürgerliche Gerberdarstellung",
+          "status": "generated-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 1,
+      "founderId": null,
+      "currentHead": "",
+      "headIds": [],
+      "heirIds": []
+    },
+    {
+      "id": "haus-wylan",
+      "name": "Haus Wylan O'Cerrigarth",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Wylan/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Cerrigarth",
+      "rank": "Graf",
+      "parentHouseId": "",
+      "sourceSha256": "2c982e38e2b24c39db932011f9c839b9579958ba99c12529935efb667f460a2f",
+      "graphFingerprint": "2d1cd806e9cd8650e3a7bc9cb962bc116d93937f65b82ffdad98940403e0ef97",
+      "graphUnchanged": true,
+      "generatedOutputsMatch": true,
+      "mainImage": "Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Wylan/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "4c8b6af57cf4958bfb94ea199a413a6c8c3d1866b0665e21e234f60c1a659fe8",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 11,
+      "founderId": "melwas-wylan",
+      "currentHead": "Bedivere Wylan",
+      "headIds": [
+        "melwas-wylan",
+        "breandan-wylan",
+        "merlion-wylan",
+        "rheidwn-wylan",
+        "rhun-wylan",
+        "eiddyl-wylan",
+        "vorath-wylan",
+        "macsen-wylan",
+        "trachmyr-wylan",
+        "gendry-wylan",
+        "hewet-wylan",
+        "bedivere-wylan"
+      ],
+      "heirIds": []
+    }
+  ]
+}

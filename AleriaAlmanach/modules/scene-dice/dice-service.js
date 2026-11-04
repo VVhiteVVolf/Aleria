@@ -10,7 +10,9 @@ function normalizeRollContext(context = {}) {
   return {
     roller: String(context.roller || '').trim().slice(0, 80),
     purpose: String(context.purpose || '').trim().slice(0, 140),
-    rollType: ['general', 'attack', 'death-save'].includes(context.rollType) ? context.rollType : 'general'
+    rollType: ['general', 'attack', 'saving-throw', 'skill', 'death-save'].includes(context.rollType) ? context.rollType : 'general',
+    ...(context.naturalRollPolicy ? { naturalRollPolicy: { naturalOneReroll: context.naturalRollPolicy.naturalOneReroll === true,
+      criticalFailureMaximum: Math.max(1, Math.min(3, Math.trunc(Number(context.naturalRollPolicy.criticalFailureMaximum) || 1))) } } : {})
   };
 }
 
@@ -19,6 +21,11 @@ function applyRollContext(result, context) {
   Object.assign(result, normalized);
   if (normalized.rollType === 'attack' && result.natural === 20) result.special = 'Natürliche 20 · Kritischer Treffer';
   if (normalized.rollType === 'attack' && result.natural === 1) result.special = 'Natürliche 1 · Angriff verfehlt automatisch';
+  if (['attack', 'saving-throw', 'skill'].includes(normalized.rollType)) {
+    if (result.natural <= normalized.naturalRollPolicy?.criticalFailureMaximum && normalized.naturalRollPolicy.criticalFailureMaximum > 1)
+      result.special = `Natürliche ${result.natural} · Pechvogel: automatischer Fehlschlag`;
+    if (result.natural === 1 && normalized.naturalRollPolicy?.naturalOneReroll) result.special = 'Natürliche 1 · Glückswiederholung folgt';
+  }
   if (normalized.rollType === 'death-save' && result.natural === 20) result.special = 'Natürliche 20 · 1 Trefferpunkt zurückerlangt';
   if (normalized.rollType === 'death-save' && result.natural === 1) result.special = 'Natürliche 1 · Zwei Fehlschläge';
   return result;

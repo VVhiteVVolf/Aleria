@@ -1,0 +1,150 @@
+{
+  "id": "haus-daemmerrufer",
+  "contentVersion": "20261103-kronental-v1",
+  "source": {
+    "attachmentId": "b075b012-189a-47a3-b2ad-17a3c0f06b49",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\b075b012-189a-47a3-b2ad-17a3c0f06b49\\Eingefügter Text.txt",
+    "archive": "diagnostics/kronental-clans-20261103/sources/daemmerrufer/animexx-original.html",
+    "bytes": 90039,
+    "sha256": "3cf6bec40046e282b34c1b7c9fb0acd18114954997bcb16389f7d6b26089354d",
+    "byteIdentical": true
+  },
+  "initialPage": null,
+  "authority": {
+    "familyId": "haus-daemmerrufer",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Heldenwacht",
+      "barony": "Jarltümliche Herrschaft – Tal der Helden",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "5aefb6f8851821467313d46b8375cf7a12ee3b1cb47fb21bd000d43725f70f5b"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-daemmerrufer",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-daemmerrufer",
+    "slug": "daemmerrufer",
+    "canonicalSlug": "daemmerrufer",
+    "attachmentId": "b075b012-189a-47a3-b2ad-17a3c0f06b49",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/kbX9DpR.png",
+    "sourceImageIndex": 2,
+    "sourceStyle": "",
+    "context": "Einführungsbild",
+    "bytes": 278656,
+    "sha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-daemmerrufer",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Kronental",
+    "sourceUrl": "https://i.imgur.com/kbX9DpR.png",
+    "path": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Musikerpaar in grüner Alltagskleidung mit Dudelsack und Laute.",
+    "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "3cf6bec40046e282b34c1b7c9fb0acd18114954997bcb16389f7d6b26089354d",
+    "portrayalType": "civilian-pair",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "illustrations": [
+    {
+      "id": "haus-daemmerrufer",
+      "slug": "daemmerrufer",
+      "canonicalSlug": "daemmerrufer",
+      "attachmentId": "b075b012-189a-47a3-b2ad-17a3c0f06b49",
+      "imageIndex": 1,
+      "url": "https://i.imgur.com/kbX9DpR.png",
+      "sourceImageIndex": 2,
+      "sourceStyle": "",
+      "context": "Einführungsbild",
+      "bytes": 278656,
+      "sha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "familyId": "haus-daemmerrufer",
+      "canonicalKingdom": "Aldrimar",
+      "canonicalCounty": "Kronental",
+      "sourceUrl": "https://i.imgur.com/kbX9DpR.png",
+      "path": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+      "role": "warrior",
+      "primary": true,
+      "existing": false,
+      "status": "new",
+      "sha": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "w": 408,
+      "h": 612,
+      "unchangedOriginal": true,
+      "downloadTool": "curl.exe --noproxy *",
+      "visuallyInspected": true,
+      "visualDescription": "Musikerpaar in grüner Alltagskleidung mit Dudelsack und Laute.",
+      "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+      "sourceAttachmentSha256": "3cf6bec40046e282b34c1b7c9fb0acd18114954997bcb16389f7d6b26089354d",
+      "portrayalType": "civilian-pair",
+      "format": "PNG",
+      "original": true,
+      "representative": true,
+      "namedPersonId": ""
+    }
+  ],
+  "decisions": [
+    "Die moderne Vorlage enthält ausschließlich Platzhalter und keinen individuellen Erzähltext. Nur die aktuelle Rang-, Sitz- und Dienstbindung übernehmen.",
+    "Kein Motto, Gründungsdatum, Beruf, Ritual, eigener Hof oder Clanführer aus dem Namen oder der Darstellung erfinden.",
+    "Beispieldialog, Titelplatzhalter und leere Hof-/Genealogietabellen vollständig ausgeschlossen. Keine Militärstatistiken.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

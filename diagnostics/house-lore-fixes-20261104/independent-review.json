@@ -1,0 +1,212 @@
+{
+  "schema": "aleria.independent-house-lore-correction-review",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T23:43:57.330Z",
+  "status": "pass-no-open-blockers",
+  "scope": "Only current authorized Leitheach/Cenyr/Aldrimar corrections and their migration infrastructure; no renewed lore search.",
+  "productReadOnly": true,
+  "privateContentCopied": false,
+  "inputs": [
+    "diagnostics/house-lore-fixes-20261104/before-public-data.json",
+    "diagnostics/house-lore-fixes-20261104/before-biography-defaults.json",
+    "diagnostics/house-lore-fixes-20261104/integration-plan.json",
+    "Stammbäume/assets/data/source-inventories/house-lore-corrections-20261104.json",
+    "diagnostics/house-lore-fixes-20261104/auxiliary-scope-supplement.json"
+  ],
+  "counts": {
+    "canonicalFieldCorrections": 71,
+    "managedFamilies": 28,
+    "updatedHouseAuthoringSources": 30,
+    "publicBaselineRecordsCompared": 424,
+    "additionalPublicLinkedOnlyRecords": 1
+  },
+  "checks": [
+    {
+      "id": "canonical-ownership",
+      "status": "pass",
+      "details": "All original 69 values and the two supplemental linked-line values match the approved inventory. Definitions own fields and prior editorial defaults; current values remain in canonical families."
+    },
+    {
+      "id": "already-correct-fresh-sources",
+      "status": "pass",
+      "cases": 28,
+      "details": "Removing target field markers while retaining corrected values still installs the required field revisions. Reapplying the installed lore wrapper is idempotent."
+    },
+    {
+      "id": "legacy-field-migrations",
+      "status": "pass",
+      "cases": 71,
+      "details": "Saved before values upgrade to all 71 authorized after values across the original 27 families and the supplemental public linked-only Marmue record."
+    },
+    {
+      "id": "personal-text",
+      "status": "pass",
+      "cases": 6,
+      "details": "Known old defaults are replaced; differing local notes/title text is retained."
+    },
+    {
+      "id": "own-biographies",
+      "status": "pass",
+      "cases": 28
+    },
+    {
+      "id": "explicit-null-biographies",
+      "status": "pass",
+      "cases": 28
+    },
+    {
+      "id": "deleted-person-tombstones",
+      "status": "pass",
+      "cases": 27,
+      "details": "Explicitly deleted corrected persons are not resurrected. Wolfshorn has a document-only correction, hence no corrected-person case."
+    },
+    {
+      "id": "biography-replacement-coverage",
+      "status": "pass",
+      "cases": 30,
+      "details": "Each prior default fingerprint occurs in the updated authoring source and generated biography catalog; source revisions match the integration plan."
+    },
+    {
+      "id": "pipeline-order",
+      "status": "pass",
+      "details": "House-biography defaults are attached before lore field revisions."
+    },
+    {
+      "id": "unapproved-vital-alignment",
+      "status": "pass",
+      "families": 424,
+      "unexpectedChanges": 0,
+      "details": "Public ID/worldPersonId/name/birth/death/status/sex/title fields were compared against the saved baseline with the approved inventory as the only allowlist. No extra alignment of the other counterpart conflicts was found."
+    },
+    {
+      "id": "local-metadata-boundaries",
+      "status": "pass-after-root-fix",
+      "seatDraftsPreserved": 28,
+      "emblemDraftsPreserved": 28,
+      "viewDraftsPreserved": 28,
+      "inheritanceDraftsPreserved": 4,
+      "overwrittenDrafts": 0,
+      "additionalLinkedLineExtensionDraftsPreserved": 1
+    }
+  ],
+  "resolvedIssues": [
+    {
+      "id": "metadata-revision-spillover",
+      "initialStatus": "blocker",
+      "initialObservedOverwrites": {
+        "profileSeats": 24,
+        "documentEmblems": 4,
+        "extensionInheritanceDrafts": 4,
+        "viewAncestorDepth": 0
+      },
+      "resolution": "Feature-scoped metadata boundaries retain previous revision ownership for unchanged document/profile/view/lineage/extension fields. Explicit corrected document/source extension fields and the inventory marker retain the new revision. The browser extension merge now evaluates per-field metadata revisions.",
+      "retestedStatus": "pass",
+      "open": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-corrections.js",
+      "line": 7,
+      "quote": "function withMetadataBoundaries(family, definition) {"
+    },
+    {
+      "path": "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-corrections.js",
+      "line": 70,
+      "quote": "const patch = { revision: definition.revision, collections: canonicalCollections(bounded, definition) };"
+    },
+    {
+      "path": "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-corrections.js",
+      "line": 72,
+      "quote": "inventory: INVENTORY, marker: MARKER, confirmUnchangedFields: true"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/source-family-field-upgrade.js",
+      "line": 55,
+      "quote": "const revisionsMatch = Object.keys(fields).every(field => entity.extensions?.registryManagedFields?.includes(field)"
+    },
+    {
+      "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+      "line": 101,
+      "quote": "const previousValues = entity.extensions?.registryManagedFieldPreviousValues?.[fieldName];"
+    },
+    {
+      "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+      "line": 226,
+      "quote": "metadataFieldsForUpgrade(registered, localRevision, 'registryManagedExtensionFields')"
+    },
+    {
+      "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+      "line": 233,
+      "quote": "'registryManagedExtensionFieldRevisions',"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "line": 143,
+      "quote": "family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULT_CATALOG);"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "line": 144,
+      "quote": "family = withHouseLoreCorrections(family);"
+    }
+  ],
+  "reviewedFiles": [
+    {
+      "path": "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-corrections.js",
+      "sha256": "040e9655e9757f31c68168ad76c18f764e1d3e7b7fca82d883a341de34f765dd"
+    },
+    {
+      "path": "Stammbäume/assets/js/modules/house-lore-corrections/house-lore-correction-fields.js",
+      "sha256": "3e1334c0fb78c1e7dec50477b48af59ac939bfa215f2e99729bc660525708fec"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/source-family-field-upgrade.js",
+      "sha256": "84a7a296b2299bbc6f4a7058e2fa4d7bcfc8728407bbcea0480a5c9252252d3f"
+    },
+    {
+      "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+      "sha256": "edc289fba2a426a9869d96b47579bab3e9832b02a36d74b08c10169312fc9990"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "sha256": "8670b79663c823c2e987f79c5c29b695cd00e365a7807cc2c1b6848cae8ead0a"
+    },
+    {
+      "path": "Stammbäume/assets/js/modules/house-biography/house-biography-registry-default.js",
+      "sha256": "06ba88fa94e3c4dc6d08db8898b48970a443980fa74e1ec3a55c43c1555a6e50"
+    },
+    {
+      "path": "Stammbäume/assets/js/modules/house-biography/house-biography-default-upgrade.js",
+      "sha256": "1b159420d8adbc46433a4ebc8d900ea1ca8c6bcbae98e9d5b955597071d95475"
+    },
+    {
+      "path": "Stammbäume/assets/data/source-inventories/house-lore-corrections-20261104.json",
+      "sha256": "0b37a4705a693005c4c5737beebbf6d02c8288b7f06e15b3eb37d47b3d9eef9b"
+    }
+  ],
+  "limitations": [
+    "This is a bounded code and runtime migration review, not a browser UI pass or a new whole-world lore audit.",
+    "Regression-suite execution and final generated-publication checks remain with root.",
+    "Runtime probes used in-memory clones; no saved browser data, live resources or product files were altered by this review."
+  ],
+  "supplement": {
+    "path": "diagnostics/house-lore-fixes-20261104/auxiliary-scope-supplement.json",
+    "familyId": "haus-morforwyn-linie-marmue",
+    "sourceRevisionBefore": 6,
+    "sourceRevisionAfter": 7,
+    "approvedFields": 2,
+    "status": "pass",
+    "checks": [
+      "Same existing worldPersonId as the main Morforwyn source",
+      "death and marriage.end saved 1630 migrate to 1633",
+      "Already corrected fresh values still receive field revisions",
+      "Local seat, emblem, view, succession extension and research note preserved",
+      "Personal biography and explicit null biography preserved",
+      "Deleted person and deleted marriage tombstones preserved independently",
+      "Prior default biography fingerprint appears in both authoring source and generated catalog"
+    ],
+    "additionalPartnershipTombstoneCases": 1,
+    "noOtherFieldsEditedByReview": true
+  }
+}

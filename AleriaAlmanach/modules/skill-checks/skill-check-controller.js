@@ -2,10 +2,12 @@ import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-
 import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
 import { renderChallengeManeuverReceipts, formatChallengeStandaloneRewards } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
 import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
-import { renderSkillAttemptHeader, renderSkillAttemptBreakdown } from './skill-attempt-view.js?v=20261016-check-policy-v1';
+import { renderSkillAttemptHeader, renderSkillAttemptBreakdown, renderSkillRecordedRoll } from './skill-attempt-view.js?v=20261016-check-policy-v1';
+import { renderSkillSaveContext, describeSkillSaveContext } from './skill-save-context-view.js';
 import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
+import { getSkillActionPermissionBlock, renderSkillActionPermissionBlock } from './skill-action-permission-view.js';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
 import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261016-check-policy-v1';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
@@ -43,11 +45,12 @@ bindSkillIconTooltips(document);
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({
-  async rollSkill({ notation, actorName, skillName, container }) {
+  async rollSkill({ notation, actorName, skillName, container, naturalRollPolicy, checkType }) {
     return sceneDiceService.roll(notation, container, {
       roller: actorName || 'Unbekannt',
       purpose: skillName || 'Fertigkeitsversuch',
-      rollType: 'general'
+      rollType: checkType === 'saving-throw' ? 'saving-throw' : 'skill',
+      naturalRollPolicy
     });
   }
 });
@@ -299,6 +302,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || kindSkills[0]?.id,
     requiredSense: segment.skillRequiredSense,
+    saveContext: segment.skillSaveContext,
     customModifier: segment.skillCustomModifier,
     difficulty: segment.skillDifficulty,
     rollMode: segment.skillRollMode,
@@ -308,6 +312,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   segment.skillCustomModifier = settings.customModifier;
   segment.skillDifficulty = settings.difficulty;
   segment.skillRollMode = 'normal';
+  segment.skillSaveContext = settings.saveContext;
   segment.skillTargetChallengeId = settings.targetChallengeId;
   const actorKey = String(actor?.id || '');
   const encounter = getActiveCombatEncounter(globalThis.getCachedCommentsForThread?.(latestComposerContext?.threadId || '') || []);
@@ -338,16 +343,18 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   let profileDetail = 'Charakterbogen fehlt';
   let rollModes = [];
   let automaticModifier = null;
+  let permissionBlock = null;
   const supportOptions = prepareSkillSupport(segment, actor, settings, target, actors, sceneResolver);
   if (actor && segment.skillId) {
     const actorProfile = sceneResolver.resolve(actor);
     const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
     const rollContext = getSkillRollContext({ actor, settings }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
     const skill = rollContext.skill;
+    permissionBlock = getSkillActionPermissionBlock(actorProfile, skill.definition);
     profileModifier = skill.modifier;
     ruleModifier = Number(rollContext.preEffects[rollContext.modifierKey] || 0);
     automaticModifier = profileModifier + ruleModifier + checkRule.modifier;
-    for (const check of CHECK_DEFINITIONS) checkValues[check.id] = resolveSkillModifier(actorProfile, check.id).modifier;
+    for (const check of CHECK_DEFINITIONS) checkValues[check.id] = resolveSkillModifier(actorProfile, check.id, settings.saveContext).modifier;
     rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
     const sign = skill.modifier >= 0 ? '+' : '';
     profileDetail = `${sign}${skill.modifier} aus ${describeCheckModifierSource(skill.source)}`;
@@ -356,6 +363,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
     <section class="skill-check-composer" data-skill-composer>
       ${renderSkillAttemptHeader({ actor, target, targetActor: actors.find(candidate => candidate.id === target?.authorId), skillId: segment.skillId })}
       ${actor ? '' : '<p class="skill-check-warning">Wähle zuerst eine Figur mit Charakter- oder Kreaturenbogen.</p>'}
+      ${renderSkillActionPermissionBlock(permissionBlock)}
       <div class="skill-check-fields">
         ${renderSkillChoiceGroup({ skills: kindSkills, selectedId: segment.skillId, segmentId: segment.id, target, profileDetail, checkValues })}
         <label class="skill-check-target-search">${target?.source === 'herausforderung' ? 'Herausforderung suchen' : 'Figur durchsuchen'}
@@ -378,6 +386,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
           <small>${target ? 'Wird von der Herausforderung vorgegeben' : 'SG 10 ist ein einfacher Standardversuch'}</small>
         </label>
         ${renderAutomaticRollMode(rollModes)}
+        ${getCheckDefinition(settings.skillId)?.checkType === 'saving-throw' ? renderSkillSaveContext(settings) : ''}
         ${['perception', 'investigation'].includes(settings.skillId) ? `<label>Wahrnehmungsweg<select data-skill-input="requiredSense">${Object.entries({ '': 'Gemischt / passende Alternative', vision: 'Sehen erforderlich', hearing: 'Hören erforderlich', smell: 'Riechen erforderlich', taste: 'Schmecken erforderlich', touch: 'Tasten erforderlich' }).map(([id, name]) => `<option value="${id}"${settings.requiredSense === id ? ' selected' : ''}>${name}</option>`).join('')}</select></label>` : ''}
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${target.source === 'herausforderung' ? 'Freigegebene Proben' : `${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}`}</b>${renderPreferredSkillHints(target)}</div>` : ''}
@@ -470,6 +479,10 @@ function updateSegmentField(segment, field, value) {
   if (field === 'targetChallengeId') segment.skillTargetChallengeId = String(value || '');
   if (field === 'difficulty') segment.skillDifficulty = clampNumber(value, 10, 1, 40);
   if (field === 'requiredSense') segment.skillRequiredSense = String(value || '');
+  if (field === 'saveActionKind' || field === 'saveDamageType') {
+    const key = field === 'saveActionKind' ? 'actionKind' : 'damageType';
+    segment.skillSaveContext = normalizeSkillCheckSettings({ skillId: segment.skillId, saveContext: { ...segment.skillSaveContext, [key]: value } }).saveContext;
+  }
   if (field === 'customModifier') return;
   if (field === 'rollMode') return;
   if (field === 'challengeEnabled') {
@@ -583,6 +596,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || allowed[0]?.id,
     requiredSense: segment.skillRequiredSense,
+    saveContext: segment.skillSaveContext,
     customModifier: segment.skillCustomModifier,
     difficulty: segment.skillDifficulty,
     rollMode: segment.skillRollMode,
@@ -762,6 +776,8 @@ function renderEvaluation(source = {}) {
       <p>${escapeHtml(narrative)}</p>
       ${challenge ? '<details class="skill-evaluation-details"><summary>Wurf &amp; Auswirkungen ansehen</summary>' : ''}
       <div class="skill-evaluation-mechanics">
+        ${renderSkillRecordedRoll(resolution)}
+        ${describeSkillSaveContext(resolution) ? `<span>${escapeHtml(describeSkillSaveContext(resolution))}</span>` : ''}
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>
         <span>gegen <b>SG ${escapeHtml(resolution.difficulty)}</b></span>
         ${opposedDefense}
@@ -796,6 +812,14 @@ document.addEventListener('change', event => {
   const field = event.target;
   const segment = findComposerSegment(field);
   if (!segment) return;
+  if (field?.matches?.('[data-skill-save-tag]')) {
+    const tags = new Set(segment.skillSaveContext?.saveTags || []);
+    if (field.checked) tags.add(field.dataset.skillSaveTag); else tags.delete(field.dataset.skillSaveTag);
+    segment.skillSaveContext = normalizeSkillCheckSettings({ skillId: segment.skillId, saveContext: { ...segment.skillSaveContext, saveTags: [...tags] } }).saveContext;
+    globalThis.persistCommentDraft?.();
+    remountAll();
+    return;
+  }
   if (field?.matches?.('[data-skill-rule-toggle]')) {
     updateSkillRuleSelection(segment, field);
     remountAll();
@@ -806,7 +830,7 @@ document.addEventListener('change', event => {
     updateSegmentField(segment, field.dataset.skillInput, field.type === 'checkbox' ? field.checked : field.value);
     if (field.dataset.skillInput === 'skillId' && previousKind !== segment.kind) { rerenderSegmentEditor(); return; }
     if (field.dataset.skillInput === 'challengeEnabled') rerenderSegmentEditor();
-    else if (['skillId', 'targetActorKey', 'targetChallengeId'].includes(field.dataset.skillInput)) {
+    else if (['skillId', 'targetActorKey', 'targetChallengeId', 'saveActionKind', 'saveDamageType'].includes(field.dataset.skillInput)) {
       remountAll();
       if (field.dataset.skillInput === 'skillId') latestComposerContext?.list?.querySelector(`[data-segment-id="${CSS.escape(String(segment.id))}"] [data-skill-input="skillId"]:checked`)?.focus({ preventScroll: true });
     }

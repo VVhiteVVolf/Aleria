@@ -155,7 +155,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-creyr"
         }
       ]
     }

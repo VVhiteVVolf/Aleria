@@ -34,6 +34,20 @@ test('fehlende Szenenzeit lehnt Rauschmittel atomar ab und verändert keinen Bes
   assert.deepEqual((await record(ids[0])).inventory, before.inventory);
   assert.equal((await history()).length, count);
 });
+
+test('ein ausdrücklicher null-Zeitanker erzeugt keine Rauschuhr und Konsum bleibt atomar ohne Bestandsverlust', async () => {
+  const { item } = await prepare('standard:alchemist:kriss');
+  const orderKey = Math.max(...(await history()).map(comment => Number(comment.orderKey || comment.createdAtClient || 0))) + 1;
+  await database.collection('comments').doc(`health-null-time-${randomUUID()}`).set({ entryId: threadId, text: 'Unvollständiger lokaler Zeitanker',
+    commentMode: 'scene-time', serverValidatedMechanics: true, serverCommitted: true, mechanicalAudit: true,
+    sceneTimeEvent: { anchorDay: 1, anchorSeconds: null }, orderKey });
+  const before = await record(ids[0]), count = (await history()).length;
+  await assert.rejects(consume(item), /Szenenzeit/);
+  assert.deepEqual((await record(ids[0])).inventory, before.inventory);
+  assert.deepEqual((await record(ids[0])).combatProfile, before.combatProfile);
+  assert.equal((await history()).length, count);
+  assert.ok(!(await current(ids[0])).temporaryConditions.some(condition => condition.substance));
+});
 test('echter Konsum berücksichtigt den 0,5-l-Krug, speichert Rausch und erhält historische Belege', async () => {
   const { item } = await prepare('standard:taverne:klosterbier'); await clock(100);
   await consume(item); const saved = await consume(item);

@@ -11,6 +11,6 @@ export function psychologicalSelectionWarnings(traits) {
     .map(group => `${group.map(entry => entry.name).join(' / ')}: Alternative Ausprägungen; nur die stärkere wirkt und zählt zur Balance.`);
   const has = id => traits.some(entry => getPsychologicalTraitOrigin(entry)?.id === `development-trait-${id}`);
   if ((has('geistig-beschraenkt') || has('vollidiot')) && (has('genie') || has('eidetisches-gedaechtnis'))) warnings.push('Die kognitive Obergrenze gilt auch zusammen mit Genie oder Eidetischem Gedächtnis. Attributsboni heben diese Grenze nicht auf; die übrigen Fertigkeitsboni bleiben wirksam.');
-  if (has('psychopath') && has('soziopath')) warnings.push('Psychopath und Soziopath sind zwei getrennte Spielprägungen. Ihre Zahlen addieren sich; prüfe, ob die doppelte analytische Verstärkung und die sozialen Mali zusammen gewollt sind.');
+  if (has('psychopath') && has('soziopath')) warnings.push('Psychopath und Soziopath sind zwei getrennte Spielprägungen. Ihre Rettungswurfboni und sozialen Mali addieren sich; prüfe, ob beide Ausprägungen zusammen gewollt sind.');
   return warnings;
 }

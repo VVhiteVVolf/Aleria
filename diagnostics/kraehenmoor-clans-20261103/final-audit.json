@@ -1,0 +1,117 @@
+{
+  "schema": "aleria.kraehenmoor-final-integration-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T19:39:39.363Z",
+  "status": "pass",
+  "publicOnly": true,
+  "productDataModified": false,
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "baseline": {
+    "path": "diagnostics/kraehenmoor-clans-20261103/baseline.json",
+    "fileSha256": "32acc7b1ff8ee681551613aa7c6a9504c6c5bc0a248973a5b38bd8c033995361",
+    "families": 26,
+    "aggregateProtectedGraphAndProfileFingerprint": "b581db8b60f66ab7ca71caaa9a99ee26e26f9523e233963967754d78dae9d728",
+    "graphsUnchanged": 26,
+    "profilesUnchanged": 26,
+    "titlesAndFoldersUnchanged": 26
+  },
+  "integration": {
+    "registeredFullHousePages": 26,
+    "linkedHouseBiographies": 26,
+    "canonicalIframes": 26,
+    "correctlyWiredGalleryHouses": 26,
+    "unchangedOriginalFigures": 13,
+    "generatedRepresentativeFigures": 13,
+    "generatedBytesMatchToolOutputs": true,
+    "byteIdenticalSourceArchives": 14
+  },
+  "specificCases": {
+    "currentHeads": {
+      "haus-varangr": "Hakon Varangr",
+      "haus-schattenherz": "Ulfrik Schattenherz",
+      "haus-kaltherz": "Jorvik Kaltherz",
+      "haus-feuerherz": "Lythar Feuerherz",
+      "haus-schwarzblut": "Styrbjorn Schwarzblut"
+    },
+    "historicalClans": [
+      {
+        "id": "haus-hjerte",
+        "rank": "Thane",
+        "currentHead": "",
+        "heirs": 0
+      },
+      {
+        "id": "haus-jaernblod",
+        "rank": "Thane",
+        "currentHead": "",
+        "heirs": 0
+      },
+      {
+        "id": "haus-kaldhrafn",
+        "rank": "Offen",
+        "currentHead": "",
+        "heirs": 0
+      },
+      {
+        "id": "haus-mac-morfhia",
+        "rank": "Offen",
+        "currentHead": "",
+        "heirs": 0
+      },
+      {
+        "id": "haus-mac-corcaigh",
+        "rank": "Offen",
+        "currentHead": "",
+        "heirs": 0
+      }
+    ],
+    "primaryHeirs": {
+      "haus-schattenherz": "Isbrand Schattenherz",
+      "haus-kaltherz": "Njvar Kaltherz",
+      "haus-feuerherz": "Rolfur Feuerherz",
+      "haus-schwarzblut": "Svanur Schwarzblut"
+    },
+    "goldglanz": {
+      "display": "Clan Blutstahl und Clan Silberblut",
+      "primaryId": "house-blutstahl",
+      "profileUnchanged": true
+    },
+    "goldzunge": {
+      "rank": "Bürgerlich",
+      "liege": "",
+      "currentHead": ""
+    },
+    "schwarzstolz": {
+      "sindreIsClanHead": false,
+      "newFigureIsAnonymous": true
+    },
+    "blutstahl": {
+      "comparativeFleetSizeRemoved": true,
+      "qualitativeSeafaringHistoryRetained": true,
+      "originalArchiveUnchanged": true
+    }
+  },
+  "tests": {
+    "command": "node \"Familien Häuser und Clans/tests/kraehenmoor-house-pages.test.mjs\"",
+    "passed": 10,
+    "failed": 0
+  },
+  "imageReview": {
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/all-clan-figures.jpg",
+    "visuallyInspected": true,
+    "allGeneratedPngRgba2to3": true,
+    "allGeneratedAlphaRange": [
+      0,
+      254
+    ],
+    "allGeneratedCornerAlpha": 0,
+    "distinctFacesAndEquipment": true,
+    "civilGoldzungeAppropriate": true,
+    "existingMinorSourceEdgeArtifactsPreserved": true
+  },
+  "findings": [],
+  "limits": [
+    "Read-only Daten-, Dateihash- und Integrationspruefung; kein eigener Browserdurchlauf.",
+    "Quellenarme Zusatzhaeuser behalten kurze Vorbereitungsbios und offene Amtsbesetzungen."
+  ]
+}

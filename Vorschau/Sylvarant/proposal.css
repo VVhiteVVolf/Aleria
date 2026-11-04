@@ -1,0 +1,18 @@
+@import url('../shared/country-workbench/workbench.css');
+@import url('../Leukonia/realm-context.css');
+@import url('./sylvarant-art.css');
+@import url('./sylvarant-map.css');
+@import url('./sylvarant-context.css');
+
+.sylvarant-workbench{--paper:#f4efdf;--ink:#30352e;--muted:#697063;--accent:#66704d;--line:#cdc8ad;background:#d9d9cb}
+.sylvarant-workbench .hero{grid-template-columns:1fr;background:radial-gradient(ellipse at 90% 25%,#c6cba388,transparent 70%)}
+.sylvarant-workbench .hero-with-art{grid-template-columns:1.3fr .85fr;gap:40px}
+.sylvarant-workbench .lead{max-width:850px}
+.sylvarant-workbench .toolbar nav{gap:16px}
+.skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.skip-link:focus{top:12px}
+@media(max-width:1100px){.sylvarant-workbench .toolbar{flex-wrap:wrap}}
+@media(max-width:850px){.sylvarant-workbench .toolbar nav{width:100%;justify-content:space-between;margin:0}}
+@media(max-width:650px){.sylvarant-workbench .hero-with-art{grid-template-columns:1fr}}
+@media(max-width:420px){.sylvarant-workbench .toolbar nav{gap:7px;font-size:10px}}
+@media print{.skip-link{display:none}}

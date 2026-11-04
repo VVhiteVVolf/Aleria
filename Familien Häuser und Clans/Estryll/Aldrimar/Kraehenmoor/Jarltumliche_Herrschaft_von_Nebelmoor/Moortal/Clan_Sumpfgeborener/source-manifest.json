@@ -1,0 +1,61 @@
+{
+  "id": "haus-sumpfgeborener",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": null,
+  "authority": {
+    "familyId": "haus-sumpfgeborener",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-feuerherz",
+      "liegeHouseName": "Clan Feuerherz",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "d61c6e4d03ca94030bd8ff19fc956ad57440d5d6ec8eb4094561334a8027102e"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-sumpfgeborener",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-sumpfgeborener",
+    "slug": "sumpfgeborener",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2c21b7cc-7c09-4413-899b-2eeb9fdb7fac.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-sumpfgeborener/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kraehenmoor-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-sumpfgeborener.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "0c4dbe596ee9197776010d8f8b88914821e90a0801562fedc37a2aff0af71cbe",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1916694,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

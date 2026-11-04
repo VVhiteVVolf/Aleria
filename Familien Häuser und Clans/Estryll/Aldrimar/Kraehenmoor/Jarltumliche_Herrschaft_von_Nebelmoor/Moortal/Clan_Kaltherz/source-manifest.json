@@ -1,0 +1,94 @@
+{
+  "id": "haus-kaltherz",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "f06880dc-4d38-47ec-b3ca-d6cc8d46bd70",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f06880dc-4d38-47ec-b3ca-d6cc8d46bd70\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/kaltherz/animexx-original.html",
+    "bytes": 116120,
+    "sha256": "8056e8e6ff33433ececbc55eab97f6dfd930eb87f6148844eb5fbade32d74d6f",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-kaltherz",
+    "baselineSourceRevision": 6,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "b38542b18c3f2d7ef48666865f766174bd54e4d871bdb334956af6e15eaf4e57"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-kaltherz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-kaltherz",
+    "familyId": "haus-kaltherz",
+    "slug": "kaltherz",
+    "canonicalSlug": "kaltherz",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "f06880dc-4d38-47ec-b3ca-d6cc8d46bd70",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/me1uC4q.png",
+    "sourceUrl": "https://i.imgur.com/me1uC4q.png",
+    "path": "Stammbäume/assets/images/references/haus-kaltherz/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-kaltherz/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 285226,
+    "sha256": "9ed88bbf8986757fb6a49fedf160dec3fddd3fc17778b725a69be55c7351a0f1",
+    "sha": "9ed88bbf8986757fb6a49fedf160dec3fddd3fc17778b725a69be55c7351a0f1",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Grün gerüsteter Hauskrieger mit Axt, Schild und Wolf als Bestandteil der Originaldarstellung.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Sitz Moortal/Nebelmoor, Rang Hesire und Bindung an Varangr haben Vorrang. Mortal ist eine fehlerhafte Quellschreibweise von Moortal.",
+    "Die Brüder Fjalmar und Kjalmar sind bestehende Hjerte-Identitäten. Ihre überlieferte Spaltung wird nur textlich wiedergegeben; keine neuen Familienverbindungen aus der Vorlage.",
+    "Relative Datierung des Bürgerkriegs vor hundert Jahren ausgelassen, keine neue Chronologie errechnet.",
+    "Wölfe und Jagdhunde sind allgemeine Hauskultur; keine individuellen Begleiter, Bestiariumsakten oder automatisch zugeordneten Haustiere anlegen.",
+    "Die Quellenwertung als irrelevanter Clan ist keine Welttatsache. Die belegte Verzögerung gegnerischer Vorstöße bleibt als begrenzte, strategische Beteiligung erhalten.",
+    "Keine Militärstatistiken und keine Hof- oder Genealogiedaten übernommen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

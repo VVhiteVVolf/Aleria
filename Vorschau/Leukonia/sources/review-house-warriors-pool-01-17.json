@@ -1,0 +1,753 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T17:59:28.947025+00:00",
+  "scope": "Only warrior-pool-01 through warrior-pool-17. No runtime or canonical register changes.",
+  "status": "complete",
+  "generatedWith": "built-in image_gen.imagegen; one call per missing asset",
+  "recoveredWithoutRegeneration": [
+    "pool-01",
+    "pool-02",
+    "pool-03",
+    "pool-04",
+    "pool-05",
+    "pool-06",
+    "pool-07",
+    "pool-08",
+    "pool-09",
+    "pool-10",
+    "pool-11",
+    "pool-12"
+  ],
+  "newlyGenerated": [
+    "pool-13",
+    "pool-14",
+    "pool-15",
+    "pool-16",
+    "pool-17"
+  ],
+  "missing": [],
+  "failures": [],
+  "records": [
+    {
+      "id": "warrior-pool-01",
+      "role": "Schwerer Infanterist",
+      "source": "assets/warriors/generated/pool-01.png",
+      "sourceSha256": "f8bd3564f93fcd356e4c90109680543919aea208bda22c7242279c80089f7ec5",
+      "production": "assets/warriors/production/pool-01.png",
+      "productionSha256": "7a5d51bfc01c65180a33e1e0c1fda29189d6b21ed72c3f33098856d04ff7a2a8",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-01.webp",
+      "previewSha256": "72efb147a26828f7c013f0faa09c16c58a6d6c39e5828a60c57608e7217dabd5",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 32,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete silver infantry figure and tower shield; plausible sword grip; blade tip separate from boots; restrained wolf motif and Greek nasal/cheek helmet."
+      }
+    },
+    {
+      "id": "warrior-pool-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "source": "assets/warriors/generated/pool-02.png",
+      "sourceSha256": "c31946b115e634cd2b9c495d0a3dac54540697a366eaabff9ad872de3dfd64b8",
+      "production": "assets/warriors/production/pool-02.png",
+      "productionSha256": "4f2e30fc8e1c94a64a1ab086949e23c25d9623ba4b369c758b45ad9e08306d84",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-02.webp",
+      "previewSha256": "d438bb135a3ffa57a81e3e1851ce52fefd4b99295df2011365c42daf10c578cd",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 13,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete bronze scale lance bearer; straight full-length lance; natural gripping hand and free hip hand; enclosing cheek/chin helmet."
+      }
+    },
+    {
+      "id": "warrior-pool-03",
+      "role": "Schwerer Infanterist",
+      "source": "assets/warriors/generated/pool-03.png",
+      "sourceSha256": "81ea1a9cbb9c2429b709204de25f1f59d3e14f35f5af2dd08e4dbc5866be089a",
+      "production": "assets/warriors/production/pool-03.png",
+      "productionSha256": "2d4429f8bcf411646abd393ddd1d6dc42d266cf2fefda50b1b91b99812bb7569",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-03.webp",
+      "previewSha256": "dbf416485f49781b22bec02ee5dfb0d244c744a55fadca0986b9914e038200d6",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 41,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete dark scale infantry; simple human faceplate; separate hand axe head and shaft; natural hands; both boots present."
+      }
+    },
+    {
+      "id": "warrior-pool-04",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "source": "assets/warriors/generated/pool-04.png",
+      "sourceSha256": "dc95f4fedf7f7919af19440979960139abf7c11cf44cb5dff7fd531feb8618a1",
+      "production": "assets/warriors/production/pool-04.png",
+      "productionSha256": "27ef3057c69666a2afe06608c6564e42a7969c6b3c7a5d9641f1ea88acc1447d",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-04.webp",
+      "previewSha256": "e72f994130187f09b5e065216ac51c2759dea17badb1f9b23d96bd124c3e6010",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 20,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete spear bearer; back quiver and arrow fletchings present; diagonal shaft readable through grip; both boots and all weapon tips present."
+      }
+    },
+    {
+      "id": "warrior-pool-05",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "source": "assets/warriors/generated/pool-05.png",
+      "sourceSha256": "9c65553f570d835ceb33fd2d83314f33baf4b04c5679ed69b0be9c0fab469f60",
+      "production": "assets/warriors/production/pool-05.png",
+      "productionSha256": "0d51764d939f30a7e446ac77199d62333c6daaddebe0b62164f497a55152a699",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-05.webp",
+      "previewSha256": "34f4eed918b56ea6333b68c05d1b24b6f482d7113942d62474775c14760dcf66",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 20,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete red/silver spear bearer; back quiver with arrow fletching visible; normal Attic helmet; full shaft, blade and butt cap; natural hands."
+      }
+    },
+    {
+      "id": "warrior-pool-06",
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "source": "assets/warriors/generated/pool-06.png",
+      "sourceSha256": "55d475043adb3bce7c7029bdae7fa984bf44a81ead970303564ccea08cf462c0",
+      "production": "assets/warriors/production/pool-06.png",
+      "productionSha256": "0ce52cd79eb9be72021079eb669a3e05d9b6c470883712e605a50d2557f3d980",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-06.webp",
+      "previewSha256": "300aaec8eac199cfbd42cef72ae1dc0af613cac88fdc0697c797d8905b65b523",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 22,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": true,
+        "notes": "Complete mounted sword bearer on compact dark Equo; four separately readable complete legs and hooves; ears and tail present; functional saddle/stirrup; reins and raised sword distinct."
+      }
+    },
+    {
+      "id": "warrior-pool-07",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "source": "assets/warriors/generated/pool-07.png",
+      "sourceSha256": "c842455ca7719814043fa22d8d1ec0b572e6777ea1c900ed6eed2cee9078d130",
+      "production": "assets/warriors/production/pool-07.png",
+      "productionSha256": "3aafedb860f8ee7999ffc4147a7e7f866c3f93086e47e76ad2c88222cab49082",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-07.webp",
+      "previewSha256": "296e0d97085b41b50c3888cfd5c1123dbd7d7fc49ecee8629db5e4c8ea5811be",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 18,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete ivory/teal heavy lance bearer; both hands plausibly grip aligned shaft; spear head and butt clear; varied Corinthian helmet and scale build."
+      }
+    },
+    {
+      "id": "warrior-pool-08",
+      "role": "Schwerer Infanterist",
+      "source": "assets/warriors/generated/pool-08.png",
+      "sourceSha256": "5826af3b9c37a9b5750011bb38c9e732c08e35e4fe7b9e631257668d2badc3aa",
+      "production": "assets/warriors/production/pool-08.png",
+      "productionSha256": "b88417ca14360117c2b2956ca7b5e67ff905e216c9dab0f908de3f730ac3bed2",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-08.webp",
+      "previewSha256": "33bedc90450cb7104ab52c5fb4ffe948f81973ffa0700393c39ec4e4ddeaad0e",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 10,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete silver/red infantry and tall oval shield; sword fully visible with natural hilt grip; both legs intact; helmet is human and not a lion mask."
+      }
+    },
+    {
+      "id": "warrior-pool-09",
+      "role": "Miliz · einfacher Legionär",
+      "source": "assets/warriors/generated/pool-09.png",
+      "sourceSha256": "35ca4067b45e624db1850a500d46e7a6de3efb72fd112ac39b7120cb93f88e03",
+      "production": "assets/warriors/production/pool-09.png",
+      "productionSha256": "aa891e210741174b74e8b8e73526d94e8dc3bdc0747597e6018c73edd7d5d681",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-09.webp",
+      "previewSha256": "abdb68d7eddd706d4e5bdb8ced41a841e89d95af728f66066e8b618f695b2f2f",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 21,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete simple militia with open Montefortino helmet, short mail, modest shield and lowered sword; natural bare hands and full sandal-clad feet."
+      }
+    },
+    {
+      "id": "warrior-pool-10",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "source": "assets/warriors/generated/pool-10.png",
+      "sourceSha256": "53e9df6c95bab27d4a692016b2008e13af335875f1339ff710e61b9ee627b0a3",
+      "production": "assets/warriors/production/pool-10.png",
+      "productionSha256": "7ef15669ef9cb3e96d9d8a87a5377c4c244bc7fd8cf541f7461606d03f051084",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-10.webp",
+      "previewSha256": "3b090cf9254803cf664e080fa34281f49600227c3d60c5bebc5326ce96abd4e6",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 16,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete ranged fighter with crimson crab, back quiver and distinct arrows; full spear held in one hand; natural free hand and complete boots."
+      }
+    },
+    {
+      "id": "warrior-pool-11",
+      "role": "Schwerer Infanterist",
+      "source": "assets/warriors/generated/pool-11.png",
+      "sourceSha256": "f72f17eaf900926b35ea89e039a701b22e8897e796d468e13a34bd45229dd895",
+      "production": "assets/warriors/production/pool-11.png",
+      "productionSha256": "85ae9c9e6a21c84e99fc1e56959c6914e96bd62724727525ad49fa9ac4a3b164",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-11.webp",
+      "previewSha256": "93af24e521ec6cf8d9867d83c39fb8292f4661895015e35ca2aa580c2f16b2af",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 27,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete black/bronze infantry; closed ordinary human helmet; plausible hand axe grip; small buckler; all blade edges and boots retained."
+      }
+    },
+    {
+      "id": "warrior-pool-12",
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "source": "assets/warriors/generated/pool-12.png",
+      "sourceSha256": "80f98c4193547ae10c716737eab004c1eb222b6610a0adc1168a6661cdf36280",
+      "production": "assets/warriors/production/pool-12.png",
+      "productionSha256": "a391aa3ca4581ab86b7e943a1a805170a9d3b29c12fbed76802292f306e3b3ed",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-12.webp",
+      "previewSha256": "c49e12077fb964d9b58e2c22bbeb8d79af13e3a15fac0f7eb18722c6bbe605a9",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 7,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": true,
+        "notes": "Complete mounted sword bearer facing opposite pool-06; four distinct complete hooves, full ears/tail, reins and saddle; lowered straight sword separate from horse limbs."
+      }
+    },
+    {
+      "id": "warrior-pool-13",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "source": "assets/warriors/generated/pool-13.png",
+      "sourceSha256": "b0005dcab20479ff705764a9ab00efc99f8c4886bad4148bf088fb2df1d71b63",
+      "production": "assets/warriors/production/pool-13.png",
+      "productionSha256": "9cc483f462e7007fc57b38d4f348a591836fdd89b0f1b21dd53f6a021fa403b8",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-13.webp",
+      "previewSha256": "0d594691bfa1f2feab1bc587f7be5de1133395a2b52ed36508e177f957235445",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 16,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete navy/ivory lance bearer; full lance head, shaft and lower end; both hands aligned; enclosed bronze cheek/chin helmet; complete boots."
+      }
+    },
+    {
+      "id": "warrior-pool-14",
+      "role": "Miliz · einfacher Legionär",
+      "source": "assets/warriors/generated/pool-14.png",
+      "sourceSha256": "9655861c4d510fb77990b2d04d7feb49222ad8b4528ec1fe3cbdeba1b2a9b778",
+      "production": "assets/warriors/production/pool-14.png",
+      "productionSha256": "a46604e381a0270c6469eb44641b6ede2030be92c66b9da53369e122799d4427",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-14.webp",
+      "previewSha256": "7c4bd92c090a9e51a89ac4dfe8aa60f1d97581e2b6d0b40513064b42bbf915d7",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 38,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete plainly equipped militia woman with bronze pilos helmet; correct ivory amphora on terracotta shield; natural shield and sword hands; complete boots."
+      }
+    },
+    {
+      "id": "warrior-pool-15",
+      "role": "Römischer Kampfbarde",
+      "source": "assets/warriors/generated/pool-15.png",
+      "sourceSha256": "c0acb7fc6739420842560698e8688047c1f3339f3b70f74c31d41a15b2b6f458",
+      "production": "assets/warriors/production/pool-15.png",
+      "productionSha256": "b54bdda115707202fb92410995563943fd4888a7e17e5c8c9c2a6efa70ed4643",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-15.webp",
+      "previewSha256": "2a509ff0acbb74e1ebd30f2059e375b5285c3849a852f8ae70efdb92b97b3649",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 26,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete purple/gold battle bard; saber clear of both lyre and legs; lyre has coherent open frame, strings and supporting hand; complete feet."
+      }
+    },
+    {
+      "id": "warrior-pool-16",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "source": "assets/warriors/generated/pool-16.png",
+      "sourceSha256": "070b6e5cfec1facb04b32e3b7f98fa38cdc3691ce514b2b10989c56e8d0d6534",
+      "production": "assets/warriors/production/pool-16.png",
+      "productionSha256": "6dd539915c210fa5675184ddcf89b570faa5b3a384107418928a4b9448658fc0",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-16.webp",
+      "previewSha256": "42ae7d86e927cf73187a7e4204ebcb1bb15af241fef02688275879c847c623ce",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 12,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete ivory/green heavy lance bearer; Chalcidian nasal/cheek helmet; long shaft aligned to hand; both spear tips complete and both boots present."
+      }
+    },
+    {
+      "id": "warrior-pool-17",
+      "role": "Römischer Kampfbarde",
+      "source": "assets/warriors/generated/pool-17.png",
+      "sourceSha256": "efc044dbc48dc8df8dfb09cf440728d48341ae7c532abbebad5e9fc9d2bab462",
+      "production": "assets/warriors/production/pool-17.png",
+      "productionSha256": "ac5f209a5fc6b64ee4d147f1f35e92fd7475b66a9e82da4ffe091221ba9574d7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "preview": "assets/warriors/previews/pool-17.webp",
+      "previewSha256": "326c2a614c0d01691b477d4362bea74c66295db57f9387481f5127f067a3301c",
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "minimumTransparentMarginPx": 42,
+      "technicalChecks": {
+        "originalBytesPreserved": true,
+        "productionRgbUnchanged": true,
+        "productionDimensionsCorrect": true,
+        "previewDimensionsCorrect": true,
+        "productionHashMatchesReceipt": true,
+        "previewHashMatchesReceipt": true,
+        "fullyTransparentOuterBorder": true,
+        "opaqueFigureMaterialPresent": true,
+        "promptHashMatches": true,
+        "referenceHashesMatch": true
+      },
+      "visualReview": {
+        "actuallyViewed": true,
+        "lightAndDarkContactsViewed": true,
+        "fullSilhouette": true,
+        "youngAdultAthleticHuman": true,
+        "traditionalHumanHelmet": true,
+        "requiredEquipment": true,
+        "anatomyHandsAndWeaponGeometry": true,
+        "horsesReviewed": false,
+        "notes": "Complete burgundy/blue-grey battle bard; kithara body, upright arms and strings readable; natural supporting hand; separate saber blade and full boots; Montefortino helmet."
+      }
+    }
+  ],
+  "qaDirectory": "diagnostics/argentum-leukonia/assets/runs/20261103T175655Z-60edc0c6",
+  "warnings": [
+    "warrior-pool-02: tight but intact transparent margin (13 px)",
+    "warrior-pool-08: tight but intact transparent margin (10 px)",
+    "warrior-pool-12: tight but intact transparent margin (7 px)",
+    "warrior-pool-16: tight but intact transparent margin (12 px)"
+  ]
+}

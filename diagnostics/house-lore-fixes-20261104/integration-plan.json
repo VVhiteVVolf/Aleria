@@ -1,0 +1,249 @@
+{
+  "schema": "aleria.house-lore-integration-plan",
+  "contentVersion": "20261104-lore-fixes-v1",
+  "canonicalChanges": 71,
+  "managedFamilies": [
+    "haus-gallchobhair",
+    "haus-dal-ceardaiocht",
+    "haus-dal-t-saor",
+    "haus-choinnich",
+    "haus-draig",
+    "haus-vaeren",
+    "haus-wylan",
+    "haus-pendrag",
+    "haus-neidr",
+    "haus-arth",
+    "haus-morforwyn",
+    "haus-grael",
+    "haus-dyngwn",
+    "haus-canwyll",
+    "haus-tiwna",
+    "haus-pawen",
+    "haus-wolfshorn",
+    "haus-wargh",
+    "haus-varangr",
+    "haus-riesentod",
+    "haus-sturmgeborene",
+    "haus-wellenschild",
+    "haus-grendel",
+    "haus-schattenherz",
+    "haus-feuerherz",
+    "haus-vangandr",
+    "haus-nachtjaeger",
+    "haus-morforwyn-linie-marmue"
+  ],
+  "affectedHouseIds": [
+    "haus-arth",
+    "haus-blutklinge",
+    "haus-canwyll",
+    "haus-choinnich",
+    "haus-dal-ceardaiocht",
+    "haus-dal-t-saor",
+    "haus-draig",
+    "haus-dyngwn",
+    "haus-feuerherz",
+    "haus-gallchobhair",
+    "haus-grael",
+    "haus-grendel",
+    "haus-morforwyn",
+    "haus-morforwyn-linie-marmue",
+    "haus-nachtjaeger",
+    "haus-neidr",
+    "haus-pawen",
+    "haus-pendrag",
+    "haus-riesentod",
+    "haus-schattenherz",
+    "haus-sturmgeborene",
+    "haus-tiwna",
+    "haus-vaeren",
+    "haus-vangandr",
+    "haus-varangr",
+    "haus-wargh",
+    "haus-wellenschild",
+    "haus-windhueter",
+    "haus-wolfshorn",
+    "haus-wylan"
+  ],
+  "sources": [
+    {
+      "id": "haus-arth",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Klaueninsel/Sturmklaue/Haus_Arth/haus.content.mjs",
+      "previousSha256": "70135b1af2844c5ca3794c6cf8f0f0eb71eccdf85c4742ee9909b2e3b5c08fb4",
+      "revision": 19
+    },
+    {
+      "id": "haus-blutklinge",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+      "previousSha256": "a7b345c8cbea0087dcbcf58ba248d98facf8ef25f7f635813c2dc44028c029bd",
+      "revision": 3
+    },
+    {
+      "id": "haus-canwyll",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Silberinsel/Silberbucht/Haus_Canwyll/haus.content.mjs",
+      "previousSha256": "7a29244871ef97e82c32646b07a63f65035b9dbcdffdf970ccacb3322e1a7fdc",
+      "revision": 5
+    },
+    {
+      "id": "haus-choinnich",
+      "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.content.mjs",
+      "previousSha256": "568bda8f2a992742d05570e899a81ed4ed085c29988add1a9c3a5efc315077bf",
+      "revision": 8
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs",
+      "previousSha256": "cba24da2011afc3a0d4266f9c6ad40d6d19334aa5107c62422adfca04bd0d2fe",
+      "revision": 7
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+      "previousSha256": "691a1b2117aafd3f1f3a57ef0278636b0fa26626666a42adb79b7ceb91b8d940",
+      "revision": 6
+    },
+    {
+      "id": "haus-draig",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.content.mjs",
+      "previousSha256": "ac9e993c9c8c818ac605063a2fd7b15c7d08c12d0781618ef27bd12bc6dbf093",
+      "revision": 16
+    },
+    {
+      "id": "haus-dyngwn",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Dyngwn/haus.content.mjs",
+      "previousSha256": "c67b9c9de53ceed0f178e3a2f12eb1bb81d4014e7abc0753e2b02e70e1d11100",
+      "revision": 7
+    },
+    {
+      "id": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "previousSha256": "80e180ef161d9c6716550f95227d949924957e23c6cbdbe9958317df4a86b28b",
+      "revision": 6
+    },
+    {
+      "id": "haus-gallchobhair",
+      "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.content.mjs",
+      "previousSha256": "faef621982a42ecf95d6652dac777a7b7c8f3ab4eb657dfe5556702596973969",
+      "revision": 13
+    },
+    {
+      "id": "haus-grael",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Grael/haus.content.mjs",
+      "previousSha256": "44295ab674614b3fc332acaddb9b9a4eedcf2138a09245ad9a8cc659b7e30c9c",
+      "revision": 3
+    },
+    {
+      "id": "haus-grendel",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Klippenschlag/Hjerimsheim/Clan_Grendel/haus.content.mjs",
+      "previousSha256": "011ab00a70867c5b88969453a6e07304d465af0ab1bbed938acd2c7ef9c9bf4b",
+      "revision": 6
+    },
+    {
+      "id": "haus-morforwyn",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Jungferntal/Haus_Morforwyn/haus.content.mjs",
+      "previousSha256": "105e73f1f668898fe0bc8739fede76216a9569c529c54dfbdb337b387e0d2a1e",
+      "revision": 7
+    },
+    {
+      "id": "haus-morforwyn-linie-marmue",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkuste/Jungferntal/Haus_Morforwyn_Marmue/haus.content.mjs",
+      "previousSha256": "041c95a92d1e14a97ed9e40d8c8eceb2b1ff37436f12231c7cf5b7e025a39416",
+      "revision": 7
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Dammertal/Horunn/Clan_Nachtjager/haus.content.mjs",
+      "previousSha256": "367d651595d8764178c97613ad8630732d391ea63889e1e45a73ff39ce6c69f3",
+      "revision": 4
+    },
+    {
+      "id": "haus-neidr",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Silberinsel/Silberbucht/Haus_Neidr/haus.content.mjs",
+      "previousSha256": "6773cf1551b7580dc892b98199136d8f5528ab7bb790239c9d8fecd0577ca817",
+      "revision": 11
+    },
+    {
+      "id": "haus-pawen",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Klaueninsel/Sturmklaue/Haus_Pawen/haus.content.mjs",
+      "previousSha256": "d4c1547a80a454b2c4cd0ff314f0e6ff0078665f29fd1dbabcc306083847781d",
+      "revision": 6
+    },
+    {
+      "id": "haus-pendrag",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Pendrag/haus.content.mjs",
+      "previousSha256": "f523e267810aa30e406b0e50bd1e43b4231ee39f8f6f6c07ec6cea7bed1b7d43",
+      "revision": 8
+    },
+    {
+      "id": "haus-riesentod",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Riesentod/haus.content.mjs",
+      "previousSha256": "5024a515f03945bba6677438a8760d2cc9cbdd7cfb4dca05902f4d99d4896520",
+      "revision": 8
+    },
+    {
+      "id": "haus-schattenherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Rabenweide/Rabenfurt/Clan_Schattenherz/haus.content.mjs",
+      "previousSha256": "fffc7dcc1bf5e8e06820b2c4b31d2913f6039eb72139d9036365820a3c405034",
+      "revision": 8
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Sturmgeborene/haus.content.mjs",
+      "previousSha256": "481bd7286db992deef827badf19afcb825452196c5f825b9ed9e9d7e40e78d58",
+      "revision": 5
+    },
+    {
+      "id": "haus-tiwna",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Silberinsel/Silberkueste/Haus_Tiwna/haus.content.mjs",
+      "previousSha256": "74e9fcd2a62e0583bb72a4e2699eda051264697ec7846a16fd4542de4614b5f9",
+      "revision": 6
+    },
+    {
+      "id": "haus-vaeren",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Vaeren/haus.content.mjs",
+      "previousSha256": "fbf392cfdd727423e1022caa440003d631c88b9d801886d7cf49ac3d9a53ef29",
+      "revision": 12
+    },
+    {
+      "id": "haus-vangandr",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Wolfspfad/Clan_Vangandr/haus.content.mjs",
+      "previousSha256": "f28fcc88805336819ae128551ef2f2010a5ad325ed4ae3a4ab53ccda6af18744",
+      "revision": 3
+    },
+    {
+      "id": "haus-varangr",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Varangr/haus.content.mjs",
+      "previousSha256": "77e81ce66acb09ca619b67f5bc92cc399b7cc9c561c9e84d12b6d58ffc4a9782",
+      "revision": 11
+    },
+    {
+      "id": "haus-wargh",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Clan_Wargh/haus.content.mjs",
+      "previousSha256": "a34f47fc4eb53aca5b922ec5ca079af7a95968a7a9eb469bacfb80b7a7da4e22",
+      "revision": 8
+    },
+    {
+      "id": "haus-wellenschild",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Klageschild_Inseln/Wellenruh/Clan_Wellenschild/haus.content.mjs",
+      "previousSha256": "17cd02db6101f1922cccc4bc6fb6012a7dddc9e6bc2c243b6f05e0be9c660293",
+      "revision": 6
+    },
+    {
+      "id": "haus-windhueter",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+      "previousSha256": "7e3d4ee304deb268cdb4ecfd2eb25e10b39144125ed59aa282950d6a5a56ee24",
+      "revision": 3
+    },
+    {
+      "id": "haus-wolfshorn",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+      "previousSha256": "9b6b3d40420c62764ad3eb82d084e1415608f95d00c6574f03220336aa366468",
+      "revision": 7
+    },
+    {
+      "id": "haus-wylan",
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Weidebucht/Melwas_Au/Haus_Wylan/haus.content.mjs",
+      "previousSha256": "92daa40a9a591aca5a5f31d467592183e59b38917a39c6ca0b4f8493f6952c2e",
+      "revision": 12
+    }
+  ]
+}

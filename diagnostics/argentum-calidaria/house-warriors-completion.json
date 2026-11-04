@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-03",
+  "namedNewHouses": 28,
+  "tlapanuiNames": 17,
+  "argentumNames": 11,
+  "houseWarriors": 29,
+  "newHouseWarriors": 28,
+  "medeUnchanged": true,
+  "generatorIntegrity": "house-warrior-generator-integrity.json",
+  "namingIntegrity": "naming-verification.json",
+  "warriorTechnicalAudit": "warriors/audit.json",
+  "visualReview": {
+    "reviewer": "root",
+    "contactSheets": [
+      "house-warriors/argentum-pairs.jpg",
+      "house-warriors/tlapanui-01-09-pairs.jpg",
+      "house-warriors/tlapanui-10-17-pairs.jpg"
+    ],
+    "all29PairsActuallyViewed": true,
+    "completeFiguresAndWeapons": true,
+    "matchingHousePalettesAndHeraldry": true,
+    "distinctArmourAndHelmetDesigns": true,
+    "demonicAnimalMasksForThemedBerserkers": true
+  },
+  "tests": {
+    "passed": 9,
+    "failed": 0,
+    "scope": [
+      "territory-placement",
+      "house-warrior-assets",
+      "source-publication"
+    ]
+  },
+  "browserReview": {
+    "status": "blocked",
+    "reason": "Browser controller raises undefined.timeoutMs for binding/navigation/AX; native pipe unavailable; reset did not resolve.",
+    "report": "browser-qa/house-warriors-ui-qa.json",
+    "oldDesktopAndMobileEvidenceNotReusedForNewChanges": true
+  },
+  "publication": "local only"
+}

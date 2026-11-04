@@ -13,7 +13,8 @@ export const NOTICE_HANDWRITING = Object.freeze([
   url: new URL(`../../../../Fonts/Handwriting/${id}/regular.ttf`, import.meta.url).href })));
 
 const workshopFamilies = { arcane: 'Aleria Arcana', rheunwaith: 'Rheunwaith', karnrith: 'Karnrith Hochschnitt',
-  infernal: 'Nharazim', kanaanith: 'Kanaanith Monumental', argenti: 'Lingua Argenti Monumental', stoicheia: 'Stoicheia Polis', faehrtenlaut: 'Faehrtenlaut' };
+  infernal: 'Nharazim', kanaanith: 'Kanaanith Monumental', argenti: 'Lingua Argenti Monumental', stoicheia: 'Stoicheia Polis',
+  tlapanui: 'Tavarua Bildschnitt', ishtaran: 'Ayluun Mondbogen', faehrtenlaut: 'Faehrtenlaut' };
 const extraSources = {
   laerelis: '../../../../AleriaAlmanach/modules/language/laerelis/assets/LaerelisLichtfluss-Regular.woff',
   runic: '../../../../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf',

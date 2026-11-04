@@ -1,0 +1,14 @@
+[
+  {
+    "path": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-permission-probe-700-2d5bf353d5f1454a9bf6f8e5397025f8",
+    "operation": "remove previously created proven-empty probe directory",
+    "removed": true
+  },
+  {
+    "mode": "0o700",
+    "childCreation": "passed",
+    "emptyDirectoryRemoval": "passed",
+    "processToken": "unrestricted tool execution",
+    "aclChanged": false
+  }
+]

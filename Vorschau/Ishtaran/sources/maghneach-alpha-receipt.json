@@ -1,0 +1,34 @@
+{
+  "id": "maghneach",
+  "authorization": "2026-11-03: Ja, Transparenz technisch bereinigen",
+  "helper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+  "source": "assets/emblems/generated/maghneach-margin-edit.png",
+  "sourceSha256": "ffce0cd0e80bb22f24efd65cfb693cbb8926db21db27469c04ddab9d6d5e586f",
+  "sourceUnchanged": true,
+  "production": "assets/emblems/production/maghneach.png",
+  "productionSha256": "b7ac4a428e8b41d9033a6883aa4bb8cdf00c96156953f20b0632be1d79315b6c",
+  "preview": "assets/emblems/previews/maghneach.webp",
+  "previewSha256": "cbca24c69f8419ac349d58bbc86cb5d757e0a04c8f620d44b71cbd3c51ffeb1c",
+  "processing": {
+    "size": [
+      1260,
+      1260
+    ],
+    "padding": {
+      "left": 4,
+      "top": 3
+    },
+    "circle": {
+      "centre": [
+        630,
+        630
+      ],
+      "radius": 515
+    },
+    "rgbUnchanged": true,
+    "alphaValues": [
+      0,
+      255
+    ]
+  }
+}

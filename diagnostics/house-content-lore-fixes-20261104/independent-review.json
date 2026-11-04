@@ -1,0 +1,50 @@
+{
+  "schema": "aleria.house-content-lore-independent-review",
+  "date": "2026-11-04",
+  "status": "pass",
+  "scope": {
+    "approvedCorrections": 4,
+    "houseSourceTextFields": 6,
+    "territorialCultureParagraphs": 1,
+    "housePages": 3,
+    "changedBiographies": 2,
+    "exactPublicFamilyGraphHashes": 424,
+    "exactPublicFamilyDocumentHashes": 424,
+    "otherBiographiesPreserved": 422,
+    "leitheachEditorialNotesPreserved": 2
+  },
+  "contentReview": [
+    "Varulv now join the green faction under Arn; the reviewed wording removes the contradictory abandonment of that same faction without adding another war event.",
+    "Feuerherz retain the harsh swamp setting while the economy also reflects existing territorial evidence for hunting, leatherwork, crafts, tolls and the named mining sites. The correction does not invent a new holding or office.",
+    "Fiadhrach changes only elbisches to albisches in the house overview. Its biography is byte-equivalent in the registered object and retains revision 2.",
+    "Gwaedlyd territorial culture now names Agravaine the Shark and the black shark with blood at its mouth above waves. The active crest was visually inspected during the targeted correction."
+  ],
+  "pipelineReview": [
+    "Independent recursive source comparison found exactly the six inventoried house text fields, plus the scoped content-version, biography-revision and known-default fingerprint metadata.",
+    "All three generated house-page objects and biography objects match the existing generators' output exactly. Only Varulv and Feuerherz biographies change, to revisions 7 and 8; their captured old-default fingerprints are retained in the replacement allowlists.",
+    "Independent hash comparison confirms all 424 public family graphs and documents are identical to the before receipt; the other 422 biographies are also identical.",
+    "The existing two Leitheach editorial placeholder fields still exactly match their audit quotations. No unapproved speculative Cenyr narrative correction was applied.",
+    "The extracted preserveSourceMetadataBoundaries helper preserves earlier individual field revisions and fills absent ownership boundaries with the previous source revision. Both biography-default application and reviewed field corrections reuse it.",
+    "The regression checks demonstrate that recognized old biographies update while local seats, emblems, view settings, lineage descriptions, inheritance notes, person research, and authored or explicitly removed biographies survive. Repeated upgrades are idempotent and inputs are not mutated.",
+    "The two owners importing the new helper export use the new module version. Registry/catalog and application entry-point cache versions propagate the reviewed defaults; unchanged legacy exports remain compatible with other consumers.",
+    "Earlier chronology and life-status correction manifests remain separate. The original audit and import fixtures remain evidence, while the new content amendment records the new fingerprints and predecessor biographies explicitly."
+  ],
+  "independentExecution": {
+    "biographyMetadataRegressionTests": { "passed": 3, "failed": 0 },
+    "priorChronologyTests": { "passed": 8, "failed": 0 },
+    "lifeStatusTests": { "passed": 7, "failed": 0 },
+    "directReadOnlyAssertions": "424 exact graphs, 424 exact documents, 422 other identical biographies, exactly six approved source fields, three generator-matching pages and biographies, two unchanged Leitheach notes, Gwaedlyd final source hash matches its correction receipt."
+  },
+  "evidence": [
+    "before.json",
+    "integration-plan.json",
+    "preservation.json",
+    "gwaedlyd-changes.json",
+    "cache-version-changes.json",
+    "../../Stammbäume/assets/data/source-inventories/house-content-lore-corrections-20261104.json",
+    "../../Familien Häuser und Clans/tests/fixtures/house-content-lore-corrections-20261104.json",
+    "../../Stammbäume/tests/house-biography-metadata-boundaries.test.mjs"
+  ],
+  "browserReview": "Not required for these text and data-ownership corrections; no browser pass is claimed.",
+  "publication": "Local only; no push or deploy. This independent review changed only this report."
+}

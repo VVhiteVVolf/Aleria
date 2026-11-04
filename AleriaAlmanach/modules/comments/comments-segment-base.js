@@ -26,6 +26,17 @@ function commentSegmentUsesCombatResolution(segment = {}) {
   return mode === 'combat' || mode === 'magic';
 }
 
+// A detached, bounded transport value shared by compose, edit and local drafts.
+function normalizeCommentSkillSaveContext(value = {}) {
+  const actionKind = ['spell', 'prayer', 'song', 'weapon', 'technique'].includes(value?.actionKind) ? value.actionKind : '';
+  const type = String(value?.damageType || '').trim().toLocaleLowerCase('de');
+  const damageType = ['hieb', 'stich', 'wucht', 'feuer', 'kälte', 'blitz', 'gift', 'säure', 'donner', 'nekrotisch', 'strahlend', 'psychisch'].includes(type) ? type : '';
+  const saveTags = [...new Set((Array.isArray(value?.saveTags) ? value.saveTags : []).filter(tag => ['fear', 'poison', 'bleeding', 'prone', 'forced-movement'].includes(tag)))].sort();
+  if (damageType === 'gift' && !saveTags.includes('poison')) saveTags.push('poison');
+  saveTags.sort();
+  return { actionKind, damageType, saveTags };
+}
+
 function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, language = COMMENT_LANGUAGE_DEFAULT, languageColor = '', combatSettings = {}) {
   const normalizedKind = normalizeCommentKind(kind);
   const mechanicMode = normalizeCommentSegmentMechanicMode(combatSettings?.mechanicMode, normalizedKind, combatSettings);
@@ -49,6 +60,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     skillId: String(combatSettings?.skillId || ''),
     skillCustomModifier: Number(combatSettings?.skillCustomModifier || 0),
     skillDifficulty: Number(combatSettings?.skillDifficulty || 10),
+    ...(combatSettings?.skillSaveContext ? { skillSaveContext: normalizeCommentSkillSaveContext(combatSettings.skillSaveContext) } : {}),
     ...(combatSettings?.skillRequiredSense ? { skillRequiredSense: String(combatSettings.skillRequiredSense).slice(0, 20) } : {}),
     skillRollMode: ['advantage', 'disadvantage'].includes(combatSettings?.skillRollMode) ? combatSettings.skillRollMode : 'normal',
     skillTargetActorKey: String(combatSettings?.skillTargetActorKey || ''),

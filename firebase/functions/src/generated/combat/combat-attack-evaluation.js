@@ -1,6 +1,7 @@
 // Shared deterministic attack evaluation: the real roll and the preview use the same rules.
 import { evaluateAttackRoll } from './rules/combat-mvp-rules.js';
-import { getSavingThrowTotal } from './combat-profile-model.js?v=20260928-equipment-art-v4';
+import { getSavingThrowTotal, getNaturalRollPolicy } from './combat-profile-model.js?v=20260928-equipment-art-v4';
+import { succeedsProfileSavingThrow } from './combat-natural-roll-policy.js';
 import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 
 export function evaluateSavingThrowRoll(roll, targetDefense) {
@@ -12,7 +13,7 @@ export function evaluateSavingThrowRoll(roll, targetDefense) {
   return {
     criticalFailure: false,
     criticalSuccess: false,
-    hit: total >= Number(targetDefense)
+    hit: succeedsProfileSavingThrow(roll, Number(targetDefense))
   };
 }
 
@@ -69,7 +70,7 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
   const { targetDefense } = numbers;
     const evaluatedRoll = savingThrowMode
       ? evaluateSavingThrowRoll(attackRoll, targetDefense)
-      : evaluateAttackRoll(attackRoll, targetDefense, actor.selectedAction?.criticalThreshold);
+      : evaluateAttackRoll(attackRoll, targetDefense, actor.selectedAction?.criticalThreshold, getNaturalRollPolicy(actor).criticalFailureMaximum);
     const cheatEnabled = actor.cheats?.enabled === true;
     let attack = savingThrowMode ? {
       ...evaluatedRoll,
@@ -97,7 +98,7 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
       const reevaluated = (savingThrowMode ? evaluateSavingThrowRoll : evaluateAttackRoll)({
         ...attackRoll,
         total: Number(attackRoll.total) + postAttackModifier
-      }, targetDefense + postDefenseModifier, actor.selectedAction?.criticalThreshold);
+      }, targetDefense + postDefenseModifier, actor.selectedAction?.criticalThreshold, getNaturalRollPolicy(actor).criticalFailureMaximum);
       attack = savingThrowMode ? {
         ...attack,
         ...reevaluated,

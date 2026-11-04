@@ -1,6 +1,7 @@
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getAttributeModifier,
+  getEffectiveCombatAttribute,
   getEffectiveCombatLevel,
   getMaximumHitPoints,
   getArmorClass,
@@ -201,7 +202,7 @@ function applyResourceIncreases(profile, plan, changes) {
 
 export function getSuggestedHitPointGain(profile = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
-  const constitution = getAttribute(normalized, 'constitution');
+  const constitution = getEffectiveCombatAttribute(normalized, 'constitution');
   const average = normalized.hitPoints.averagePerLevelOverride
     ?? Math.floor(normalized.hitPoints.hitDie / 2) + 1;
   return Math.max(1, average + getAttributeModifier(constitution));

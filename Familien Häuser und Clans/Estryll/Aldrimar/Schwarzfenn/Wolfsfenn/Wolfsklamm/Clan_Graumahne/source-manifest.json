@@ -1,0 +1,87 @@
+{
+  "id": "haus-graumahne",
+  "source": {
+    "attachmentId": "11f468d3-b264-4f3f-8f13-42ed8bc427aa",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\11f468d3-b264-4f3f-8f13-42ed8bc427aa\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/graumaehne/animexx-original.html",
+    "bytes": 144721,
+    "sha256": "1fd65a3edf5513233fd4bcdd879b0ef5b1e6467d3fb58217699324598851742d",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-graumahne",
+    "baselineSourceRevision": 7,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Wolfsklamm",
+      "barony": "Wolfsfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-graumahne",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-graumahne",
+    "familyId": "haus-graumahne",
+    "slug": "graumaehne",
+    "canonicalSlug": "graumahne",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "11f468d3-b264-4f3f-8f13-42ed8bc427aa",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/OybhN9R.png",
+    "sourceUrl": "https://i.imgur.com/OybhN9R.png",
+    "path": "Stammbäume/assets/images/references/haus-graumahne/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-graumahne/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 317237,
+    "sha256": "0d78ef80c5f7f781986217ad574b9c897e5961b93dd5edc6f4e3113eabcafb11",
+    "sha": "0d78ef80c5f7f781986217ad574b9c897e5961b93dd5edc6f4e3113eabcafb11",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Berittener Hauskrieger auf gelb gerüstetem Pferd mit Axt und Sonnenschild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Stabile ID haus-graumahne und sichtbarer Titel Clan Graumähne. Quellslug graumaehne und Mehrzahl Graumähnen begründen keine neuen Registerakten.",
+    "Der Familiensitz bleibt Wolfsklamm. Gråmborg und die verbundenen Orte im westlichen und südlichen Wolfsfenn sind eigener Besitz, kein Anlass für eine neue Ortsakte des gesamten Clans.",
+    "Hrothgars fast augenblickliches Bändigen jedes Hengstes ist legendarische Überhöhung. In der redigierten Fassung bleibt sein Ruf als außergewöhnlicher Pferdebrecher erhalten, keine übernatürliche Fähigkeit.",
+    "Pferdeprüfung, Armreif und Handwerk sind konkrete Traditionen. Kein zusätzliches persönliches Pferd, Zuchtprofil oder Inventar aus dem allgemeinen Brauch erzeugen.",
+    "Erzgrund und Dunkelkluft gehören laut aktuellem Gebietstext zur Ragnulf-Eigenverwaltung; Rovensfeld ist eine Pachtsiedlung von Rhosmeres Rösser. Nicht allein aus Reitthema oder Nachbarschaft den Graumähnen zuschlagen.",
+    "Ulfars Verhalten gehört zur Kriegsgeschichte. Heutige Hausführung und Personenidentitäten ausschließlich aus dem bestehenden Register; keine neue Amtsfolge übernehmen.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

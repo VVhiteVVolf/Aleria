@@ -19,7 +19,7 @@ import {
 import { LEITHEACH_HOUSE_EMBLEMS } from './leitheach-house-profiles.js';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   TIR_NA_SINSEAR_HOUSE_EMBLEMS,
   TIR_NA_SINSEAR_HOUSE_PROFILES,
@@ -336,11 +336,11 @@ export const HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY = withAlbenSourcePortraitUpgrade(w
 
     person('meallan-gallchobhair', 'Meallán Gallchobhair', 'male', '1600', '1670'),
     spouse('grainne-durthacht', 'Gráinne Durthacht', 'female', '1604', '1679', 'house-durthacht'),
-    person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1635', '1672', GALLCHOBHAIR_HOUSE_ID, {
+    person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1610', '1672', GALLCHOBHAIR_HOUSE_ID, {
       tags: ['Unehelich'],
       notes: 'Sohn Gorns und Aoifes aus einer Affäre; Begründer des Laird-Clans Dál’Ceardaíocht.'
     }),
-    spouse('etain-ancient', 'Ètáin', 'female', '1622', '1695'),
+    spouse('etain-ancient', 'Ètáin', 'female', '1612', '1695'),
     person('hiarnan-gallchobhair', 'Hiarnán Gallchobhair', 'male', '1604', '1671'),
     spouse('hoibre-craobhan', 'Hoibre Craobhan', 'female', '1608', '1669', 'house-craobhan'),
 
@@ -583,13 +583,13 @@ export const HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY = withAlbenSourcePortraitUpgrade(w
   },
   extensions: {
     sourceModule: 'Fir An’Gallchobhair (bereitgestellte Altdaten)',
-    sourceNote: 'Genealogie, Lebensdaten, Hausoberhäupter, Amtszeiten und Erbfolge folgen der bereitgestellten Gallchobhair-Hausseite und ihrer Stammbaumgrafik. Die Amtszeitentafel wird nicht als Lebensdatentafel missverstanden. Gilleóns Geburtsjahr 1170 und Aonghus’ Geburtsjahr 1635 folgen den ausdrücklichen Nutzerkorrekturen. Die unmöglichen Quellfolgen Laoise 1125–1698 und Nolan 1678–1633 wurden zu 1125–1198 und 1678–1733 normalisiert. Taerlach, Gilleón und Aonghus besitzen personengebundene Gründerknoten zu den drei Gallchobhair unterstehenden Laird-Clans. Elf Gallchobhair-Frauen ohne lokal fortgeführte Nachkommen besitzen direkte Wegverheiratet-Knoten. Tynan und Anali verweisen stattdessen auf das neue Haus Grianlaoch unter Haus Illewod; Dymphna und Deaglan werden nicht dupliziert und bleiben ausschließlich in den Grianlaoch- und Illewod-Akten. Lochlainn und Oonagh verwenden ihre nun vorhandenen kanonischen Na’Mhuir-Porträts; Lochlainns Lebensdaten wurden aus dieser Gegenakte ergänzt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Hausoberhäupter, Amtszeiten und Erbfolge folgen der bereitgestellten Gallchobhair-Hausseite und ihrer Stammbaumgrafik. Die Amtszeitentafel wird nicht als Lebensdatentafel missverstanden. Gilleóns Geburtsjahr 1170 folgt der ausdrücklichen Nutzerkorrektur. Die neue Nutzerkorrektur vom 4. November 2026 gibt Aonghus’ Kindern von 1630, 1632 und 1634 Vorrang: Seine frühere Datierung 1610–1672 wird wiederhergestellt, Ètáin wird auf 1612–1695 datiert. Die unmöglichen Quellfolgen Laoise 1125–1698 und Nolan 1678–1633 wurden zu 1125–1198 und 1678–1733 normalisiert. Taerlach, Gilleón und Aonghus besitzen personengebundene Gründerknoten zu den drei Gallchobhair unterstehenden Laird-Clans. Elf Gallchobhair-Frauen ohne lokal fortgeführte Nachkommen besitzen direkte Wegverheiratet-Knoten. Tynan und Anali verweisen stattdessen auf das neue Haus Grianlaoch unter Haus Illewod; Dymphna und Deaglan werden nicht dupliziert und bleiben ausschließlich in den Grianlaoch- und Illewod-Akten. Lochlainn und Oonagh verwenden ihre nun vorhandenen kanonischen Na’Mhuir-Porträts; Lochlainns Lebensdaten wurden aus dieser Gegenakte ergänzt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     blankFamily: false,
     preparedMainLine: false,
     sourceRevision: 6,
     sourceCorrections: Object.freeze([
       'Gilleón Gallchobhair wurde 1170 statt 1125 geboren.',
-      'Aonghus Gallchobhair wurde 1635 statt 1610 geboren.',
+      'Nutzerkorrektur 4. November 2026: Aonghus Gallchobhair wurde auf 1610 statt 1635 und Ètáin auf 1612 statt 1622 datiert, damit die unveränderten Kinderjahre 1630, 1632 und 1634 kohärent bleiben.',
       'Laoise Lagas unmögliches Todesjahr 1698 wurde als Zahlendreher zu 1198 normalisiert.',
       'Nolan Gallchobhairs unmögliches Todesjahr 1633 wurde als Zahlendreher zu 1733 normalisiert.'
     ]),

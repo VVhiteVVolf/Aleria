@@ -1,0 +1,157 @@
+{
+  "id": "haus-laidir",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "d5493995-95a8-4d3c-b332-ee8b2a9cb25b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\d5493995-95a8-4d3c-b332-ee8b2a9cb25b\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ruin-laidir/animexx-original.html",
+    "bytes": 88998,
+    "sha256": "fbb88ad984137e6495629ce8c564ee9ce89d302a8783b890f8c4ac3e3d6661fc",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-laidir",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "dun-tiarna",
+      "seat": "Claisean",
+      "barony": "Tir na Dídine",
+      "county": "Tir an Comhchuibhis",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-airt",
+      "liegeHouseName": "Clan Mac Airt",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "barony": "assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na Dídine",
+        "Claisean"
+      ]
+    },
+    "graphFingerprint": "6af448a443819cbec47ee58084aff574096bc131c6ca31128e09ac747fbe9223",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-laidir",
+    "title": "Ruin’Laidir",
+    "territoryId": "leitheach-herrschaft-laidir",
+    "territoryName": "Tir na Dídine",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
+    "territoryType": "Lehensherrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Dídine",
+        "slug": "leitheach-herrschaft-laidir"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-laidir",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-laidir",
+    "slug": "ruin-laidir",
+    "canonicalSlug": "laidir",
+    "attachmentId": "d5493995-95a8-4d3c-b332-ee8b2a9cb25b",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/4Xvyl3C.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 245126,
+    "sha256": "89bb9804dcbd619155d203ce7843efc38324f6189d9213da5eaf3cde0a8bb093",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-laidir",
+    "title": "Ruin’Laidir",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir an Comhchuibhis",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/4Xvyl3C.png",
+    "path": "Stammbäume/assets/images/references/haus-laidir/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-laidir/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "89bb9804dcbd619155d203ce7843efc38324f6189d9213da5eaf3cde0a8bb093",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Grün-goldener Speerträger mit Schottenmuster und Baumschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "fbb88ad984137e6495629ce8c564ee9ce89d302a8783b890f8c4ac3e3d6661fc",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-laidir, Rang Dún Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug ruin-laidir wird der bestehenden ID haus-laidir zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

@@ -1,0 +1,3596 @@
+{
+  "publicHousesChecked": 276,
+  "method": "Only explicit contradictions in authored/generated type and title labels. Generic Ritterhaus/Clan/Familie and unknown ranks do not imply a different rank.",
+  "conflicts": [],
+  "passed": true,
+  "houses": [
+    {
+      "familyId": "haus-brathaireann",
+      "canonicalRankId": "mor-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Mor Tiarna",
+        "generatedHighestTitle": "Mor Tiarna",
+        "authoredRank": "Mor Tiarna",
+        "generatedRank": "Mor Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cruithenaech",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Nicht überliefert",
+        "generatedHighestTitle": "Nicht überliefert",
+        "authoredRank": "Nicht überliefert",
+        "generatedRank": "Nicht überliefert"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dornach",
+      "canonicalRankId": "dun-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Dún Tiarna",
+        "generatedHighestTitle": "Dún Tiarna",
+        "authoredRank": "Dún Tiarna",
+        "generatedRank": "Dún Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-fiachraoin",
+      "canonicalRankId": "dun-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Dún-Tiarna",
+        "generatedHighestTitle": "Dún-Tiarna",
+        "authoredRank": "Dún-Tiarna",
+        "generatedRank": "Dún-Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tonnmharra",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-fhaire",
+      "canonicalRankId": "laird",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Laird",
+        "generatedHighestTitle": "Laird",
+        "authoredRank": "Laird",
+        "generatedRank": "Laird"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ua-fionnghal",
+      "canonicalRankId": "dun-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Dún Tiarna",
+        "generatedHighestTitle": "Dún Tiarna",
+        "authoredRank": "Dún Tiarna",
+        "generatedRank": "Dún Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gormard",
+      "canonicalRankId": "mor-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Mor Tiarna",
+        "generatedHighestTitle": "Mor Tiarna",
+        "authoredRank": "Mor Tiarna",
+        "generatedRank": "Mor Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-trisceil",
+      "canonicalRankId": "mor-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Mor Tiarna",
+        "generatedHighestTitle": "Mor Tiarna",
+        "authoredRank": "Mor Tiarna",
+        "generatedRank": "Mor Tiarna"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-warthog",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Nicht überliefert",
+        "generatedHighestTitle": "Nicht überliefert",
+        "authoredRank": "Nicht überliefert",
+        "generatedRank": "Nicht überliefert"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-blevis",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-brogar",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-celynfor",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-creithiog",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-crewe",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-fearnan",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-glyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-jernigan",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-swynol",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-talfryn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tarw",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-torvik",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-twyllod",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tynged",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-aderyn",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-aelmor",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-aelryn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-almarch",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-althin",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-annwyl",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ard-conbhron",
+      "canonicalRankId": "dun-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "",
+        "generatedHighestTitle": "",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ard-follmhar",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-arfordir-aberdail",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-argall",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-argyllan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-arian",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Familie",
+        "generatedType": "Familie",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-aroglyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürger",
+        "generatedHighestTitle": "Bürger",
+        "authoredRank": "Bürger",
+        "generatedRank": "Bürger"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-arth",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-arven",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-arwydd",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-asyn",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-awenor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-awenydd",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-baedd",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-balchder",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-barcud",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-barus",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bekab",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bellyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-beryn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bevan",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Familie",
+        "generatedType": "Familie",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-blach",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-blaidd-tredegar",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bleiddorn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-blodyn-aberdail",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-blodyn-talgarth",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bowen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bradrhith",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-braglas",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-brinmarch",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-brithfaen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-brithyll",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-bronnor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-caerfran",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-caerlaen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-caerthwyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-caerwen",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-canwyll",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-carwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cath",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ceirwyn",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cenfig",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-chiffyddlon",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-chwedlonol",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ciarog",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cledrann",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cludwyr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cochdon",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-coeddu",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-coedrudd",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-coedvarn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-coedwig",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-corant",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-corlyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-crafanc",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "craigddu",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-crefyddol",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-creyr",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cwningod",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cyfrif",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cymrath-o-traethlan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cyrwain",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-cysgodion",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-daran",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ddraenen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-delvor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-derlan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-deyrn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-diafol-talgarth",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dianc-aberdail",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dienyddiwr",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dinefwr",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-donvael",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-donwyr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-draenmelyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-draenog",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-draig",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dubhan-gwynthor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dubhdarach",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-durdynn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dyfrgi-caer-cryftlawd",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dyger",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-edmy",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-eirfael",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-eirth",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-eneiniog",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-eryr",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-faelcaran",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-faelwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-falchdyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-fenor",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ferlan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ffwnarch",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-fontani",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gaeth",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gafyr",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-garan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-garrael",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gelyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ghorswyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gofrann",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gostyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-grael",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-grawn",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-grianlaoch",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwaedlyd-tredegar",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwaedryn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwarchod",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwardin",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwared",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwefrydd",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwernhelyd",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwialen",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwregysdu",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwylen",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyliadwr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyllach",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyllt",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Familie",
+        "generatedType": "Familie",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwynrhos",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyntell",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyntog",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwythiad",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-gwyvern",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-halenwych",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-hebog",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-helyg",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-hirschhorn",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Familie",
+        "generatedType": "Familie",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-hwyaden",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-illewod",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-illwath",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-illygoden-tredegar",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-illysywen",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ausgestorbenes Ritterfürstenhaus",
+        "generatedType": "Ausgestorbenes Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ilyuncu",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-iorwen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-iwrell",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-kelan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-llafnfor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-llurien",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-llwynog",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-llyncar",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-llythfor",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-loer",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-loryn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-lyfant-caer-asgwrn",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-madryn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-maerllys",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-maethan",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-marchog",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-maredwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-marwolaeth",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-mathgraig",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-merek",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-mochdaer",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morcanhuc",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morfil",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baronesse",
+        "generatedHighestTitle": "Baronesse",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morfynn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morglan",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morgwynt",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morlan",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morthwyll",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morveth",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-mwyalchen",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-neddair",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-neidr",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-nerwynn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-nic-riordain",
+      "canonicalRankId": "dun-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Dún Tiarna (Baron)",
+        "generatedHighestTitle": "Dún Tiarna (Baron)",
+        "authoredRank": "Dún Tiarna (Baron)",
+        "generatedRank": "Dún Tiarna (Baron)"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-oenfyr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-orlen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-parry",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Familie",
+        "generatedType": "Familie",
+        "authoredHighestTitle": "Offen",
+        "generatedHighestTitle": "Offen",
+        "authoredRank": "Offen",
+        "generatedRank": "Offen"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pawen",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pellan",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-penderyn",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pendrag",
+      "canonicalRankId": "royal",
+      "labels": {
+        "authoredType": "Königshaus",
+        "generatedType": "Königshaus",
+        "authoredHighestTitle": "König",
+        "generatedHighestTitle": "König",
+        "authoredRank": "König",
+        "generatedRank": "König"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pendrwn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pengair",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-penrudd",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-penry",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-penwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pergarn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pluen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-prys",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pwllor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pyrth",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-pysgod",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-raves",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-renvyn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhavaen",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhavorn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhelian",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhen",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhenith",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhenna",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhuddgar",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhwyd",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-rhyddid",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-saethwyr",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-saith",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-saivor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-selaeth",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-seldryn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-selog",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-selwyn",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-serin",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-sgrechiwr",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-sgwarnog",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-skellor",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-sliabh",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-svathamar",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-swyll",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-talinvyr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-talmeirch",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tannau",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürger",
+        "generatedHighestTitle": "Bürger",
+        "authoredRank": "Bürger",
+        "generatedRank": "Bürger"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tanwyn",
+      "canonicalRankId": "unknown",
+      "labels": {
+        "authoredType": "Haus",
+        "generatedType": "Haus",
+        "authoredHighestTitle": "Nicht vermerkt",
+        "generatedHighestTitle": "Nicht vermerkt",
+        "authoredRank": "Nicht vermerkt",
+        "generatedRank": "Nicht vermerkt"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-taranvyr",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tawelgar",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-teyrngarch",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tir-addawol",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tirwyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tiwna",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tlawd",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tonnarth",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-torawg",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-trevoryn",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-trydar",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tylluan",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-uffyrn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ui-talamh",
+      "canonicalRankId": "ard-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Ard Tiarna (Fürst)",
+        "generatedHighestTitle": "Ard Tiarna (Fürst)",
+        "authoredRank": "Ard Tiarna (Fürst)",
+        "generatedRank": "Ard Tiarna (Fürst)"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-uldyn",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-unigol",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-valerus",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-vann",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-walwrs-caer-deheuol",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "Ritterfürst",
+        "generatedRank": "Ritterfürst"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-wivern",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-wylan",
+      "canonicalRankId": "county",
+      "labels": {
+        "authoredType": "Grafenhaus",
+        "generatedType": "Grafenhaus",
+        "authoredHighestTitle": "Graf",
+        "generatedHighestTitle": "Graf",
+        "authoredRank": "Graf",
+        "generatedRank": "Graf"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-wyrm",
+      "canonicalRankId": "knight-prince",
+      "labels": {
+        "authoredType": "Ritterfürstenhaus",
+        "generatedType": "Ritterfürstenhaus",
+        "authoredHighestTitle": "Ritterfürst",
+        "generatedHighestTitle": "Ritterfürst",
+        "authoredRank": "",
+        "generatedRank": ""
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-yllen",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ymladd",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ynllym",
+      "canonicalRankId": "knight",
+      "labels": {
+        "authoredType": "Ritterhaus",
+        "generatedType": "Ritterhaus",
+        "authoredHighestTitle": "Ritterherr",
+        "generatedHighestTitle": "Ritterherr",
+        "authoredRank": "Ritterherr",
+        "generatedRank": "Ritterherr"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-ysgrif",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Bürgerlich",
+        "generatedHighestTitle": "Bürgerlich",
+        "authoredRank": "Bürgerlich",
+        "generatedRank": "Bürgerlich"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morforwyn-linie-elimue",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "canonicalRankId": "barony",
+      "labels": {
+        "authoredType": "Baronenhaus",
+        "generatedType": "Baronenhaus",
+        "authoredHighestTitle": "Baron",
+        "generatedHighestTitle": "Baron",
+        "authoredRank": "Baron",
+        "generatedRank": "Baron"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "sept-cneacail",
+      "canonicalRankId": "commoner",
+      "labels": {
+        "authoredType": "Bürgerliches Haus",
+        "generatedType": "Bürgerliches Haus",
+        "authoredHighestTitle": "Septoberhaupt (bürgerlicher Rang)",
+        "generatedHighestTitle": "Septoberhaupt (bürgerlicher Rang)",
+        "authoredRank": "Septoberhaupt (bürgerlicher Rang)",
+        "generatedRank": "Septoberhaupt (bürgerlicher Rang)"
+      },
+      "conflicts": []
+    },
+    {
+      "familyId": "haus-tir-an-muirghin",
+      "canonicalRankId": "mor-tiarna",
+      "labels": {
+        "authoredType": "Clan",
+        "generatedType": "Clan",
+        "authoredHighestTitle": "Mor Tiarna (Graf)",
+        "generatedHighestTitle": "Mor Tiarna (Graf)",
+        "authoredRank": "Mor Tiarna (Graf)",
+        "generatedRank": "Mor Tiarna (Graf)"
+      },
+      "conflicts": []
+    }
+  ]
+}

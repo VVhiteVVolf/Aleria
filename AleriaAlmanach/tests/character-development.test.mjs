@@ -45,14 +45,14 @@ test('unknown or premature attacks are rejected independently of the balance',()
 test('traits are reversible, do not mutate base skill training, and persist mechanics',()=>{
  const profile=base();const selected=previewCharacterLevelUp(profile,{targetLevel:1,traitIds:['development-trait-naturkind']});
  const nature=selected.profile.skills.find(s=>s.name==='Naturkunde');const animals=selected.profile.skills.find(s=>s.name==='Mit Tieren umgehen');
- assert.equal(getSkillTotal(selected.profile,nature),4);assert.equal(getSkillTotal(selected.profile,animals),2);
+ assert.equal(getSkillTotal(selected.profile,nature),1);assert.equal(getSkillTotal(selected.profile,animals),1);
  assert.equal(nature.proficiency,'none');assert.equal(selected.profile.quirks[0].icon.includes('naturkind'),true);
  const removed=previewCharacterLevelUp(selected.profile,{targetLevel:1,traitIds:[]});
  assert.equal(getSkillTotal(removed.profile,nature),0);assert.equal(getSkillTotal(removed.profile,animals),0);
 });
-test('fire phobia doubles fire damage and only penalizes an actual fire saving throw',()=>{
+test('fire phobia affects actual fire saving throws without changing physical damage susceptibility',()=>{
  const profile=previewCharacterLevelUp(base(),{targetLevel:1,traitIds:['development-trait-feuer-phobie']}).profile;
- assert.equal(applyTypedCombatDamage({current:30,maximum:30},4,profile,{damageType:'Feuer'}).after.current,22);
+ assert.equal(applyTypedCombatDamage({current:30,maximum:30},4,profile,{damageType:'Feuer'}).after.current,26);
  assert.equal(applyTypedCombatDamage({current:30,maximum:30},4,profile,{damageType:'Kälte'}).after.current,26);
  const rules=collectCombatTriggerRules({...profile,characterId:'target'});
  const mode=(saving,damage)=>getCombatRollContext({characterId:'actor',profileActionKind:'spell',actionResolutionMode:saving?'saving-throw':'weapon-attack',actionSaveAttribute:'dexterity',weapon:{damageType:damage}}, {...profile,characterId:'target'}).safeRollMode;
@@ -106,5 +106,5 @@ test('additional phobias, talents, affinities and vulnerabilities use actual sav
  assert.equal(damage(choose(['blitzaffinitaet']),'Blitz'),26);assert.equal(damage(choose(['blitzaffinitaet']),'Lightning'),26);
  assert.equal(damage(choose(['saeureempfindlich']),'Säure'),14);
  assert.equal(damage(choose(['magische-resonanz']),'Hieb',true),14);assert.equal(damage(choose(['magische-resonanz']),'Hieb',false),22);
- const healer=choose(['heilerhaende']);assert.equal(getSkillTotal(healer,healer.skills.find(s=>s.name==='Heilkunde')),4);
+ const healer=choose(['heilerhaende']);assert.equal(getSkillTotal(healer,healer.skills.find(s=>s.name==='Heilkunde')),2);
 });

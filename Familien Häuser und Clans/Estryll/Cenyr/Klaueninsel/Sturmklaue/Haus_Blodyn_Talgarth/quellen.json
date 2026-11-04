@@ -1,0 +1,40 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-blodyn-talgarth",
+  "attachmentId": "15768d87-66a5-4aef-8a1b-3d7f2371a3a5",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "955bcbf8f2e399c8507abacc885836af31604720fd6ae15d63572f2a4b796b77",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/1bY3cVs.png",
+      "sha256": "3cd4b1cc77b6bb0f54cb1fc326340fb43aa8630cb7e58b7fce097cf49d225ed1",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-blodyn-talgarth",
+    "originFamilyId": "haus-blodyn",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-blodyn-family.js",
+    "Stammbäume/assets/js/data/house-blodyn-talgarth-family.js",
+    "Stammbäume/assets/js/data/house-blodyn-aberdail-family.js",
+    "Stammbäume/assets/js/data/blodyn-house-profiles.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "biographyWords": 338
+}

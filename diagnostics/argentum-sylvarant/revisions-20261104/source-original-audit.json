@@ -1,0 +1,2663 @@
+{
+  "schemaVersion": 1,
+  "auditedAtUtc": "2026-11-04T00:42:27.276Z",
+  "scope": "Read-only provenance and selection audit of seven Sylvarant house warrior corrections and prototype-03-v2. Only this report is written. No source, catalogue, pipeline or image changes.",
+  "method": "SHA-256 plus byte length compares each new workspace RAW with its recorded built-in image_gen tool original. Old manifest entries validate all retained RAW/production/preview bytes. Earlier independent 35-RAW audit separately anchors retained RAW hashes. Active metadata is compared with base jobs plus the exact selected revisions; Mede is compared with Leukonia runtime and manifest.",
+  "baselines": {
+    "currentManifest": "Vorschau/Sylvarant/assets/warriors/manifest.json",
+    "previousRawAudit": "diagnostics/argentum-sylvarant/source-original-audit.json",
+    "previousRawAuditTime": "2026-11-04T00:15:49.324722+00:00",
+    "oldDerivativeEvidence": "The 35 retained prior entries inside the current 43-entry manifest provide recorded production and preview hashes. No separate historical derivative-manifest snapshot was discovered; independent historical RAW hashes are available in the earlier source audit."
+  },
+  "summary": {
+    "pass": true,
+    "newRawImagesChecked": 8,
+    "newRawImagesByteIdentical": 8,
+    "retainedOldManifestEntries": 35,
+    "retainedOldFileTriplesValid": 35,
+    "supersededOriginalsChecked": 8,
+    "currentManifestEntries": 43,
+    "activeHouseWarriors": 30,
+    "revisedHouseWarriors": 7,
+    "unchangedHouseWarriorsIncludingMede": 23,
+    "activeClassPrototypes": 7,
+    "revisedClassPrototypes": 1,
+    "protectedInputFilesUnchanged": true,
+    "errorCount": 0
+  },
+  "findings": [],
+  "revisions": [
+    {
+      "id": "house-cerunia-v2",
+      "houseId": "house-cerunia",
+      "assetStem": "house-cerunia-v2",
+      "supersedesAssetStem": "house-cerunia",
+      "resultManifest": "sources/warrior-revisions-20261104-a-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-a-jobs.json",
+      "jobId": "house-cerunia-v2",
+      "workspaceFile": "assets/warriors/generated/house-cerunia-v2.png",
+      "toolOriginalFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-0cc5fa14-053d-4ca2-a8c0-db979ec1f7d6.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 2072009,
+        "sha256": "0c3d53a947539c8650f8547c7670ea496d4e7735b4a7233575333b94a0c2902b"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 2072009,
+        "sha256": "0c3d53a947539c8650f8547c7670ea496d4e7735b4a7233575333b94a0c2902b"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-cerunia-v2.png",
+          "expectedSha256": "0c3d53a947539c8650f8547c7670ea496d4e7735b4a7233575333b94a0c2902b",
+          "exists": true,
+          "bytes": 2072009,
+          "sha256": "0c3d53a947539c8650f8547c7670ea496d4e7735b4a7233575333b94a0c2902b",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-cerunia-v2.png",
+          "expectedSha256": "2aa1ce092ed4050ac61fb4807f918a8aa395fe0918260141cf94a2f73c2f751f",
+          "exists": true,
+          "bytes": 1923208,
+          "sha256": "2aa1ce092ed4050ac61fb4807f918a8aa395fe0918260141cf94a2f73c2f751f",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-cerunia-v2.webp",
+          "expectedSha256": "1e4d7b087f862f59af61fd5b62e8e5c10ec4111f7c762f9ba11df00b6c0086db",
+          "exists": true,
+          "bytes": 170168,
+          "sha256": "1e4d7b087f862f59af61fd5b62e8e5c10ec4111f7c762f9ba11df00b6c0086db",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-cerunia",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-cerunia.png",
+            "expectedSha256": "9330669290aba06451ca26fefdd7f4e8a9ea4ab204bdd47d8cca2ed36ed987ec",
+            "exists": true,
+            "bytes": 1910636,
+            "sha256": "9330669290aba06451ca26fefdd7f4e8a9ea4ab204bdd47d8cca2ed36ed987ec",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-cerunia.png",
+            "expectedSha256": "45a5c16e21188899ce589875f3f179fcc31e2cd8fe31d2618a14bef01719b09f",
+            "exists": true,
+            "bytes": 1750097,
+            "sha256": "45a5c16e21188899ce589875f3f179fcc31e2cd8fe31d2618a14bef01719b09f",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-cerunia.webp",
+            "expectedSha256": "0abef42f1ba4729fa6f54f6b3309e32938bc066bbe7663825358fa0e1dccecf3",
+            "exists": true,
+            "bytes": 146888,
+            "sha256": "0abef42f1ba4729fa6f54f6b3309e32938bc066bbe7663825358fa0e1dccecf3",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-rinia-v2",
+      "houseId": "house-rinia",
+      "assetStem": "house-rinia-v2",
+      "supersedesAssetStem": "house-rinia",
+      "resultManifest": "sources/warrior-revisions-20261104-a-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-a-jobs.json",
+      "jobId": "house-rinia-v2",
+      "workspaceFile": "assets/warriors/generated/house-rinia-v2.png",
+      "toolOriginalFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-da79b78a-a35d-4a60-973a-c19e61bd8518.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 1926701,
+        "sha256": "393b3b455b3ead18d988ceea2ba05029f5ca65138658803cd85a4c70a480e811"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 1926701,
+        "sha256": "393b3b455b3ead18d988ceea2ba05029f5ca65138658803cd85a4c70a480e811"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-rinia-v2.png",
+          "expectedSha256": "393b3b455b3ead18d988ceea2ba05029f5ca65138658803cd85a4c70a480e811",
+          "exists": true,
+          "bytes": 1926701,
+          "sha256": "393b3b455b3ead18d988ceea2ba05029f5ca65138658803cd85a4c70a480e811",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-rinia-v2.png",
+          "expectedSha256": "9f0cfc1860a80b200e41b1420fbce1a6fa81f1d175856f2e121e0ddfe752b9a9",
+          "exists": true,
+          "bytes": 1775102,
+          "sha256": "9f0cfc1860a80b200e41b1420fbce1a6fa81f1d175856f2e121e0ddfe752b9a9",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-rinia-v2.webp",
+          "expectedSha256": "321ff02216a078d5435c7c059719500cae1817705b204551ff43a5600aa63cd3",
+          "exists": true,
+          "bytes": 147642,
+          "sha256": "321ff02216a078d5435c7c059719500cae1817705b204551ff43a5600aa63cd3",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-rinia",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-rinia.png",
+            "expectedSha256": "3b1376c1dce429bde0650f1650166dc00b9c18187f6f028a7f156baae4d65666",
+            "exists": true,
+            "bytes": 1766188,
+            "sha256": "3b1376c1dce429bde0650f1650166dc00b9c18187f6f028a7f156baae4d65666",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-rinia.png",
+            "expectedSha256": "98ce432754032c6dfdcff83885856b354e94366329f569a0cc223533cfafbed5",
+            "exists": true,
+            "bytes": 1607285,
+            "sha256": "98ce432754032c6dfdcff83885856b354e94366329f569a0cc223533cfafbed5",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-rinia.webp",
+            "expectedSha256": "032202290c7238252e8fca1f1f5026b19cba3b11d82e1d8ba5406f972c3d1b36",
+            "exists": true,
+            "bytes": 124202,
+            "sha256": "032202290c7238252e8fca1f1f5026b19cba3b11d82e1d8ba5406f972c3d1b36",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-maborel-v2",
+      "houseId": "house-maborel",
+      "assetStem": "house-maborel-v2",
+      "supersedesAssetStem": "house-maborel",
+      "resultManifest": "sources/warrior-revisions-20261104-b-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-b-jobs.json",
+      "jobId": "house-maborel-v2",
+      "workspaceFile": "assets/warriors/generated/house-maborel-v2.png",
+      "toolOriginalFile": "C:/Users/fhg_r/.codex/generated_images/01a1a3f5-4e7b-7012-b041-aba7d7957c6b/exec-1ccbd14c-6dfb-411c-9248-a30eaa87edb7.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 2157584,
+        "sha256": "de7d8f8a08069f60e8320711c84b5ebe0fac676b4a1823d8f6f6353414121488"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 2157584,
+        "sha256": "de7d8f8a08069f60e8320711c84b5ebe0fac676b4a1823d8f6f6353414121488"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-maborel-v2.png",
+          "expectedSha256": "de7d8f8a08069f60e8320711c84b5ebe0fac676b4a1823d8f6f6353414121488",
+          "exists": true,
+          "bytes": 2157584,
+          "sha256": "de7d8f8a08069f60e8320711c84b5ebe0fac676b4a1823d8f6f6353414121488",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-maborel-v2.png",
+          "expectedSha256": "99895d1a4eb1cd10199a1dfb7d3c5aedc8c7798f9c324611190d12248502fabb",
+          "exists": true,
+          "bytes": 2015398,
+          "sha256": "99895d1a4eb1cd10199a1dfb7d3c5aedc8c7798f9c324611190d12248502fabb",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-maborel-v2.webp",
+          "expectedSha256": "99970595ec71ffd9e5e2e75238f51c2b5047d178eea2adfcf0a47c10cb47a887",
+          "exists": true,
+          "bytes": 179216,
+          "sha256": "99970595ec71ffd9e5e2e75238f51c2b5047d178eea2adfcf0a47c10cb47a887",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-maborel",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-maborel.png",
+            "expectedSha256": "9811c08c0242ccee0b9479a79f92a67bc6be37fa26735b388acaa56d3256af94",
+            "exists": true,
+            "bytes": 2093629,
+            "sha256": "9811c08c0242ccee0b9479a79f92a67bc6be37fa26735b388acaa56d3256af94",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-maborel.png",
+            "expectedSha256": "395309c482b5de2590b0f8557c37335569d8c4ab12563a51848ccfe80b512c01",
+            "exists": true,
+            "bytes": 1940540,
+            "sha256": "395309c482b5de2590b0f8557c37335569d8c4ab12563a51848ccfe80b512c01",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-maborel.webp",
+            "expectedSha256": "dd13d00c7ac5d2e93c0376a0e47f466fc38355e8028f30746f2ea9b169c372d6",
+            "exists": true,
+            "bytes": 167930,
+            "sha256": "dd13d00c7ac5d2e93c0376a0e47f466fc38355e8028f30746f2ea9b169c372d6",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-stalitia-v2",
+      "houseId": "house-stalitia",
+      "assetStem": "house-stalitia-v2",
+      "supersedesAssetStem": "house-stalitia",
+      "resultManifest": "sources/warrior-revisions-20261104-b-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-b-jobs.json",
+      "jobId": "house-stalitia-v2",
+      "workspaceFile": "assets/warriors/generated/house-stalitia-v2.png",
+      "toolOriginalFile": "C:/Users/fhg_r/.codex/generated_images/01a1a3f5-4e7b-7012-b041-aba7d7957c6b/exec-6571ca6c-4381-4074-8b4c-37327d58c68a.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 2183209,
+        "sha256": "6b59a45255aaddcd79a1556c83d14d591a120d214baf0374db9ea6897ad307db"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 2183209,
+        "sha256": "6b59a45255aaddcd79a1556c83d14d591a120d214baf0374db9ea6897ad307db"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-stalitia-v2.png",
+          "expectedSha256": "6b59a45255aaddcd79a1556c83d14d591a120d214baf0374db9ea6897ad307db",
+          "exists": true,
+          "bytes": 2183209,
+          "sha256": "6b59a45255aaddcd79a1556c83d14d591a120d214baf0374db9ea6897ad307db",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-stalitia-v2.png",
+          "expectedSha256": "ebb17a592584889768a4d304ca8294d8c921d1c4d4c5c18c385a69e820f5ed4b",
+          "exists": true,
+          "bytes": 2030243,
+          "sha256": "ebb17a592584889768a4d304ca8294d8c921d1c4d4c5c18c385a69e820f5ed4b",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-stalitia-v2.webp",
+          "expectedSha256": "6a88e2a9125720a482f0b6a0c524283b6d297c6a8a2c99f1117148f828750b10",
+          "exists": true,
+          "bytes": 178114,
+          "sha256": "6a88e2a9125720a482f0b6a0c524283b6d297c6a8a2c99f1117148f828750b10",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-stalitia",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-stalitia.png",
+            "expectedSha256": "e1ab614e06685edfaa92c771e3a1d90e44d3daf7bab002bc7c5cec2c2d9ac375",
+            "exists": true,
+            "bytes": 1767684,
+            "sha256": "e1ab614e06685edfaa92c771e3a1d90e44d3daf7bab002bc7c5cec2c2d9ac375",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-stalitia.png",
+            "expectedSha256": "9c9824915bd0d654cea10bf61d391507e59eb56dfab04dbf66a7164e1ec0b033",
+            "exists": true,
+            "bytes": 1610102,
+            "sha256": "9c9824915bd0d654cea10bf61d391507e59eb56dfab04dbf66a7164e1ec0b033",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-stalitia.webp",
+            "expectedSha256": "75ebcdc6ff4ba15c284024dd3a17fd34d681bfc23f58e3d741a7079bdc5b5884",
+            "exists": true,
+            "bytes": 120054,
+            "sha256": "75ebcdc6ff4ba15c284024dd3a17fd34d681bfc23f58e3d741a7079bdc5b5884",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "pool-07-v2",
+      "houseId": "pool-07",
+      "assetStem": "house-pool-07-v2",
+      "supersedesAssetStem": "house-pool-07",
+      "resultManifest": "sources/warrior-revisions-20261104-c-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-c-jobs.json",
+      "jobId": "pool-07-v2",
+      "workspaceFile": "assets/warriors/generated/house-pool-07-v2.png",
+      "toolOriginalFile": "C:/Users/fhg_r/.codex/generated_images/01a1a3f5-d2e0-7bc1-b339-0d6ddcbe913e/exec-522c6b16-d309-49c0-a321-951046b63d96.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 1898366,
+        "sha256": "22bf199bceed1898fec323e89012900957fd52ef014fababb7ed5eb4067f7d5d"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 1898366,
+        "sha256": "22bf199bceed1898fec323e89012900957fd52ef014fababb7ed5eb4067f7d5d"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-07-v2.png",
+          "expectedSha256": "22bf199bceed1898fec323e89012900957fd52ef014fababb7ed5eb4067f7d5d",
+          "exists": true,
+          "bytes": 1898366,
+          "sha256": "22bf199bceed1898fec323e89012900957fd52ef014fababb7ed5eb4067f7d5d",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-07-v2.png",
+          "expectedSha256": "d0d2be0cec82dc107395ea2282941594ffb92cdc232ccb0108f7cedc27f2c92c",
+          "exists": true,
+          "bytes": 1746398,
+          "sha256": "d0d2be0cec82dc107395ea2282941594ffb92cdc232ccb0108f7cedc27f2c92c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-07-v2.webp",
+          "expectedSha256": "32f7159398e2204d021b5f910cc034f2b079baf7d89afd59060dc2cf861b159e",
+          "exists": true,
+          "bytes": 142188,
+          "sha256": "32f7159398e2204d021b5f910cc034f2b079baf7d89afd59060dc2cf861b159e",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-pool-07",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-pool-07.png",
+            "expectedSha256": "d8ab9e877ad403a8a9e0249c0c23f4fb89327bdec7c1672be51198a522b3725f",
+            "exists": true,
+            "bytes": 1959326,
+            "sha256": "d8ab9e877ad403a8a9e0249c0c23f4fb89327bdec7c1672be51198a522b3725f",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-pool-07.png",
+            "expectedSha256": "f3d6dad87f896b1a30501d40e81bef0fe6c27fe959753bd9e463706de956ccdb",
+            "exists": true,
+            "bytes": 1797538,
+            "sha256": "f3d6dad87f896b1a30501d40e81bef0fe6c27fe959753bd9e463706de956ccdb",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-pool-07.webp",
+            "expectedSha256": "1acd0bbbfb434fda959cb18e73c917552895c2b296e098a8efcb80f26bbb0a2d",
+            "exists": true,
+            "bytes": 147406,
+            "sha256": "1acd0bbbfb434fda959cb18e73c917552895c2b296e098a8efcb80f26bbb0a2d",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "pool-10-v2",
+      "houseId": "pool-10",
+      "assetStem": "house-pool-10-v2",
+      "supersedesAssetStem": "house-pool-10",
+      "resultManifest": "sources/warrior-revisions-20261104-c-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-c-jobs.json",
+      "jobId": "pool-10-v2",
+      "workspaceFile": "assets/warriors/generated/house-pool-10-v2.png",
+      "toolOriginalFile": "C:/Users/fhg_r/.codex/generated_images/01a1a3f5-d2e0-7bc1-b339-0d6ddcbe913e/exec-0c822d91-617f-4e8a-ab7e-efdb9c2f0a21.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 2069129,
+        "sha256": "f4cbf4896d23c33a95a9b3c0e93332d5249164501f3c334325230f07b5fcce46"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 2069129,
+        "sha256": "f4cbf4896d23c33a95a9b3c0e93332d5249164501f3c334325230f07b5fcce46"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-10-v2.png",
+          "expectedSha256": "f4cbf4896d23c33a95a9b3c0e93332d5249164501f3c334325230f07b5fcce46",
+          "exists": true,
+          "bytes": 2069129,
+          "sha256": "f4cbf4896d23c33a95a9b3c0e93332d5249164501f3c334325230f07b5fcce46",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-10-v2.png",
+          "expectedSha256": "1cc0ce303c0927dc6ec1f503fc656c62fb5d87a062a49c6175ce7d977a0150ad",
+          "exists": true,
+          "bytes": 1918733,
+          "sha256": "1cc0ce303c0927dc6ec1f503fc656c62fb5d87a062a49c6175ce7d977a0150ad",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-10-v2.webp",
+          "expectedSha256": "b18e19e9cfb93185bd9017562dd724a5b2885abf58a58b58ad9c447e46719ea8",
+          "exists": true,
+          "bytes": 162466,
+          "sha256": "b18e19e9cfb93185bd9017562dd724a5b2885abf58a58b58ad9c447e46719ea8",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-pool-10",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-pool-10.png",
+            "expectedSha256": "fa798b900c604da3c3d59ef1a345fef23e938ccb6bf2e5931039f0a8755a5b77",
+            "exists": true,
+            "bytes": 2150283,
+            "sha256": "fa798b900c604da3c3d59ef1a345fef23e938ccb6bf2e5931039f0a8755a5b77",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-pool-10.png",
+            "expectedSha256": "dfe4a4b461581e3be5737f418d2f7af3bff037e22927b375f0a06e0f04960296",
+            "exists": true,
+            "bytes": 1989202,
+            "sha256": "dfe4a4b461581e3be5737f418d2f7af3bff037e22927b375f0a06e0f04960296",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-pool-10.webp",
+            "expectedSha256": "0ca4150adce3d5f2c2226a91278de8ee3bb4240135645e66659009184adcfe0b",
+            "exists": true,
+            "bytes": 175366,
+            "sha256": "0ca4150adce3d5f2c2226a91278de8ee3bb4240135645e66659009184adcfe0b",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "pool-11-v2",
+      "houseId": "pool-11",
+      "assetStem": "house-pool-11-v2",
+      "supersedesAssetStem": "house-pool-11",
+      "resultManifest": "sources/warrior-revisions-20261104-root-results.json",
+      "jobManifest": "sources/warrior-revisions-20261104-root-jobs.json",
+      "jobId": "pool-11-v2",
+      "workspaceFile": "assets/warriors/generated/house-pool-11-v2.png",
+      "toolOriginalFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-f0acb737-03a3-4f12-b9c4-96be0cbe9ed9.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 2200736,
+        "sha256": "1e8246f21b9a179c26179659834f6387021f3d142356932dee17edf9be6b026b"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 2200736,
+        "sha256": "1e8246f21b9a179c26179659834f6387021f3d142356932dee17edf9be6b026b"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-11-v2.png",
+          "expectedSha256": "1e8246f21b9a179c26179659834f6387021f3d142356932dee17edf9be6b026b",
+          "exists": true,
+          "bytes": 2200736,
+          "sha256": "1e8246f21b9a179c26179659834f6387021f3d142356932dee17edf9be6b026b",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-11-v2.png",
+          "expectedSha256": "c2788ab93d42725f705b86b4bd97ee1762b835e56fb16ae94ae72f292cbb1d14",
+          "exists": true,
+          "bytes": 2041523,
+          "sha256": "c2788ab93d42725f705b86b4bd97ee1762b835e56fb16ae94ae72f292cbb1d14",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-11-v2.webp",
+          "expectedSha256": "b596446d96f93c215ab27e4e4a24584ef7e3b85ec340f264cf13ba67361823ed",
+          "exists": true,
+          "bytes": 182340,
+          "sha256": "b596446d96f93c215ab27e4e4a24584ef7e3b85ec340f264cf13ba67361823ed",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "house-pool-11",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/house-pool-11.png",
+            "expectedSha256": "907a34238d1d82de244f5f42dcdcf54e086b4eb0e85bf1096b0211752e9fd39a",
+            "exists": true,
+            "bytes": 1967785,
+            "sha256": "907a34238d1d82de244f5f42dcdcf54e086b4eb0e85bf1096b0211752e9fd39a",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/house-pool-11.png",
+            "expectedSha256": "ac7cd671f095e6a52f0dfcd23c89701d723c4ffc8a31b991dd5b84449a6c9a48",
+            "exists": true,
+            "bytes": 1800389,
+            "sha256": "ac7cd671f095e6a52f0dfcd23c89701d723c4ffc8a31b991dd5b84449a6c9a48",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/house-pool-11.webp",
+            "expectedSha256": "85bc9afe59c34af1e19e32f32cf49185731b7149aabc61d73f763eef26c5e426",
+            "exists": true,
+            "bytes": 152084,
+            "sha256": "85bc9afe59c34af1e19e32f32cf49185731b7149aabc61d73f763eef26c5e426",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "prototype-03-v2",
+      "houseId": null,
+      "assetStem": "prototype-03-v2",
+      "supersedesAssetStem": "prototype-03",
+      "resultManifest": "sources/prototype-03-v2-result.json",
+      "jobManifest": "sources/prototype-03-v2-job.json",
+      "jobId": "prototype-03-v2",
+      "workspaceFile": "assets/warriors/generated/prototype-03-v2.png",
+      "toolOriginalFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-0f41385c-8ec6-4771-9717-9f98a9c033ea.png",
+      "workspace": {
+        "exists": true,
+        "bytes": 1867626,
+        "sha256": "1aebad15236b9e2778f31bb94c7f07b56d23eebf70179ccd030f767cee43192a"
+      },
+      "toolOriginal": {
+        "exists": true,
+        "bytes": 1867626,
+        "sha256": "1aebad15236b9e2778f31bb94c7f07b56d23eebf70179ccd030f767cee43192a"
+      },
+      "byteIdenticalToToolOriginal": true,
+      "recordedAndManifestHashesMatch": true,
+      "newDerivativeFiles": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-03-v2.png",
+          "expectedSha256": "1aebad15236b9e2778f31bb94c7f07b56d23eebf70179ccd030f767cee43192a",
+          "exists": true,
+          "bytes": 1867626,
+          "sha256": "1aebad15236b9e2778f31bb94c7f07b56d23eebf70179ccd030f767cee43192a",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-03-v2.png",
+          "expectedSha256": "e829e9b23959497a3bda327e1d84c2a015f06cc79e206676b9584e8e01e7e0d3",
+          "exists": true,
+          "bytes": 1718263,
+          "sha256": "e829e9b23959497a3bda327e1d84c2a015f06cc79e206676b9584e8e01e7e0d3",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-03-v2.webp",
+          "expectedSha256": "e5243af69e2ca7669938f01eecaeb8f57a2431024f38af884ff0d30d4c05d7c5",
+          "exists": true,
+          "bytes": 141324,
+          "sha256": "e5243af69e2ca7669938f01eecaeb8f57a2431024f38af884ff0d30d4c05d7c5",
+          "matchesRecordedManifestHash": true
+        }
+      ],
+      "preservedOriginal": {
+        "assetStem": "prototype-03",
+        "rawMatchesEarlierAudit": true,
+        "files": [
+          {
+            "kind": "raw",
+            "path": "assets/warriors/generated/prototype-03.png",
+            "expectedSha256": "57cc61276d29477d2d84373487e8bd66451a3c8cbedc898a7d5148071e43ce40",
+            "exists": true,
+            "bytes": 1850123,
+            "sha256": "57cc61276d29477d2d84373487e8bd66451a3c8cbedc898a7d5148071e43ce40",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "production",
+            "path": "assets/warriors/production/prototype-03.png",
+            "expectedSha256": "8eb1b4023ed6234ce18dd65b0aa506608e3a15ad6a4fb21a88192cdbe0134dd8",
+            "exists": true,
+            "bytes": 1688042,
+            "sha256": "8eb1b4023ed6234ce18dd65b0aa506608e3a15ad6a4fb21a88192cdbe0134dd8",
+            "matchesRecordedManifestHash": true
+          },
+          {
+            "kind": "preview",
+            "path": "assets/warriors/previews/prototype-03.webp",
+            "expectedSha256": "cba3ccc859ec4e58faa246f4549436bdfcdb534c2a25cf93846b2630afa68315",
+            "exists": true,
+            "bytes": 136132,
+            "sha256": "cba3ccc859ec4e58faa246f4549436bdfcdb534c2a25cf93846b2630afa68315",
+            "matchesRecordedManifestHash": true
+          }
+        ]
+      }
+    }
+  ],
+  "originalIntegrity": [
+    {
+      "assetStem": "house-afronia",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-afronia.png",
+          "expectedSha256": "e19e0300092500da6ba1065b73bdd5e9502be51da87616ac0758913fe07bdae9",
+          "exists": true,
+          "bytes": 2265057,
+          "sha256": "e19e0300092500da6ba1065b73bdd5e9502be51da87616ac0758913fe07bdae9",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-afronia.png",
+          "expectedSha256": "5cc411d397ceb2a21ba44bf8f00e7c3c22334da604b1723ba23524805669f56a",
+          "exists": true,
+          "bytes": 2125363,
+          "sha256": "5cc411d397ceb2a21ba44bf8f00e7c3c22334da604b1723ba23524805669f56a",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-afronia.webp",
+          "expectedSha256": "7c4137191f769ef9c9595be724b466fe5ae77139f6f08d12ae1540b97244c7a1",
+          "exists": true,
+          "bytes": 197468,
+          "sha256": "7c4137191f769ef9c9595be724b466fe5ae77139f6f08d12ae1540b97244c7a1",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-avidius",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-avidius.png",
+          "expectedSha256": "d19e2bddc880a421f3c5cad8553683eec9ee45e707a01dc3af311a2e56f0de82",
+          "exists": true,
+          "bytes": 2192943,
+          "sha256": "d19e2bddc880a421f3c5cad8553683eec9ee45e707a01dc3af311a2e56f0de82",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-avidius.png",
+          "expectedSha256": "847cdf30c2698f3041bf61cfb279838425f8eabe0e81be76b5711713d14f6257",
+          "exists": true,
+          "bytes": 2036177,
+          "sha256": "847cdf30c2698f3041bf61cfb279838425f8eabe0e81be76b5711713d14f6257",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-avidius.webp",
+          "expectedSha256": "fd558fc37a9d8f8b091a92e812c41287ac4ecad36140720e20a4edd3be11597c",
+          "exists": true,
+          "bytes": 193562,
+          "sha256": "fd558fc37a9d8f8b091a92e812c41287ac4ecad36140720e20a4edd3be11597c",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-bruttia",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-bruttia.png",
+          "expectedSha256": "572153bcef76e0fe83acdbf1ca2ddb424dec8c5281b300070a5f98903d7f7deb",
+          "exists": true,
+          "bytes": 1836120,
+          "sha256": "572153bcef76e0fe83acdbf1ca2ddb424dec8c5281b300070a5f98903d7f7deb",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-bruttia.png",
+          "expectedSha256": "e16711a21e65c22796a41db71eb7817b06ae8e59f43ccad0d2ff999d3b797657",
+          "exists": true,
+          "bytes": 1685298,
+          "sha256": "e16711a21e65c22796a41db71eb7817b06ae8e59f43ccad0d2ff999d3b797657",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-bruttia.webp",
+          "expectedSha256": "170e60aaf5f26e87200586e16e660359fd73986665538c9c62c81c3797a310c8",
+          "exists": true,
+          "bytes": 135082,
+          "sha256": "170e60aaf5f26e87200586e16e660359fd73986665538c9c62c81c3797a310c8",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-caepo",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-caepo.png",
+          "expectedSha256": "9c07b402a5ff560c614fd3ab8a80da8b5d372779b2b38886f722c13ac0ec6234",
+          "exists": true,
+          "bytes": 2008437,
+          "sha256": "9c07b402a5ff560c614fd3ab8a80da8b5d372779b2b38886f722c13ac0ec6234",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-caepo.png",
+          "expectedSha256": "8b8cd626634469ce15fb7590ed987fd3cda215ac800e2803c605d0cc7ba94f77",
+          "exists": true,
+          "bytes": 1833529,
+          "sha256": "8b8cd626634469ce15fb7590ed987fd3cda215ac800e2803c605d0cc7ba94f77",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-caepo.webp",
+          "expectedSha256": "9471fa8650a0ad0d9cd89b445aebaa4056db933410bf73724a4c9c6fd52b565f",
+          "exists": true,
+          "bytes": 169074,
+          "sha256": "9471fa8650a0ad0d9cd89b445aebaa4056db933410bf73724a4c9c6fd52b565f",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-cerunia",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-cerunia.png",
+          "expectedSha256": "9330669290aba06451ca26fefdd7f4e8a9ea4ab204bdd47d8cca2ed36ed987ec",
+          "exists": true,
+          "bytes": 1910636,
+          "sha256": "9330669290aba06451ca26fefdd7f4e8a9ea4ab204bdd47d8cca2ed36ed987ec",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-cerunia.png",
+          "expectedSha256": "45a5c16e21188899ce589875f3f179fcc31e2cd8fe31d2618a14bef01719b09f",
+          "exists": true,
+          "bytes": 1750097,
+          "sha256": "45a5c16e21188899ce589875f3f179fcc31e2cd8fe31d2618a14bef01719b09f",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-cerunia.webp",
+          "expectedSha256": "0abef42f1ba4729fa6f54f6b3309e32938bc066bbe7663825358fa0e1dccecf3",
+          "exists": true,
+          "bytes": 146888,
+          "sha256": "0abef42f1ba4729fa6f54f6b3309e32938bc066bbe7663825358fa0e1dccecf3",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-faleria",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-faleria.png",
+          "expectedSha256": "07fa2038a1eef3bc15ff8b950d8f6885d2eabe90f356ddb8d050083ef6f420f1",
+          "exists": true,
+          "bytes": 2090525,
+          "sha256": "07fa2038a1eef3bc15ff8b950d8f6885d2eabe90f356ddb8d050083ef6f420f1",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-faleria.png",
+          "expectedSha256": "f70848584925de86a492d1dfad5e86153306f7bad2a00abe6a384cbc11ec7252",
+          "exists": true,
+          "bytes": 1926205,
+          "sha256": "f70848584925de86a492d1dfad5e86153306f7bad2a00abe6a384cbc11ec7252",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-faleria.webp",
+          "expectedSha256": "76f48041a3e73f790fcea4ce04901914a60409402e084404567e12cd58afab88",
+          "exists": true,
+          "bytes": 173502,
+          "sha256": "76f48041a3e73f790fcea4ce04901914a60409402e084404567e12cd58afab88",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-flamen",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-flamen.png",
+          "expectedSha256": "a071638a28fa3bc0cd4f52fce0d08f73fef3959e4ffe2b83fde6496bad1dad7f",
+          "exists": true,
+          "bytes": 2188436,
+          "sha256": "a071638a28fa3bc0cd4f52fce0d08f73fef3959e4ffe2b83fde6496bad1dad7f",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-flamen.png",
+          "expectedSha256": "e18ac477ab1787bd5f5de1b3091b0ebf4526782b805aeb6c41f62f10575361b6",
+          "exists": true,
+          "bytes": 2057660,
+          "sha256": "e18ac477ab1787bd5f5de1b3091b0ebf4526782b805aeb6c41f62f10575361b6",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-flamen.webp",
+          "expectedSha256": "23032e6efbe634a34b79f34329a76ed27bf76e54d7c9abcfd048b593caf49390",
+          "exists": true,
+          "bytes": 186120,
+          "sha256": "23032e6efbe634a34b79f34329a76ed27bf76e54d7c9abcfd048b593caf49390",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-maborel",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-maborel.png",
+          "expectedSha256": "9811c08c0242ccee0b9479a79f92a67bc6be37fa26735b388acaa56d3256af94",
+          "exists": true,
+          "bytes": 2093629,
+          "sha256": "9811c08c0242ccee0b9479a79f92a67bc6be37fa26735b388acaa56d3256af94",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-maborel.png",
+          "expectedSha256": "395309c482b5de2590b0f8557c37335569d8c4ab12563a51848ccfe80b512c01",
+          "exists": true,
+          "bytes": 1940540,
+          "sha256": "395309c482b5de2590b0f8557c37335569d8c4ab12563a51848ccfe80b512c01",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-maborel.webp",
+          "expectedSha256": "dd13d00c7ac5d2e93c0376a0e47f466fc38355e8028f30746f2ea9b169c372d6",
+          "exists": true,
+          "bytes": 167930,
+          "sha256": "dd13d00c7ac5d2e93c0376a0e47f466fc38355e8028f30746f2ea9b169c372d6",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-01",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-01.png",
+          "expectedSha256": "fb1ca67276c638c4e8cc0ba5bd6ca62c0a5e822da206d14bdac0965ef47d4bfc",
+          "exists": true,
+          "bytes": 2473175,
+          "sha256": "fb1ca67276c638c4e8cc0ba5bd6ca62c0a5e822da206d14bdac0965ef47d4bfc",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-01.png",
+          "expectedSha256": "4fc3e2bf763195ac9136a0c59b121add071c0abff750a06f213de414ef70e0cb",
+          "exists": true,
+          "bytes": 2338792,
+          "sha256": "4fc3e2bf763195ac9136a0c59b121add071c0abff750a06f213de414ef70e0cb",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-01.webp",
+          "expectedSha256": "828d178ba6b6d93a38755112715a44afef93925dc3febcd3a07465b5c579bed4",
+          "exists": true,
+          "bytes": 219006,
+          "sha256": "828d178ba6b6d93a38755112715a44afef93925dc3febcd3a07465b5c579bed4",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-02",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-02.png",
+          "expectedSha256": "c247ec37f2d6a6a5acbda05422c16decbb8a834f28b7779268858d8422d90337",
+          "exists": true,
+          "bytes": 2092980,
+          "sha256": "c247ec37f2d6a6a5acbda05422c16decbb8a834f28b7779268858d8422d90337",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-02.png",
+          "expectedSha256": "d2d9c6319a516f685fc1ec4d2914b181e00f4e280ec639a5e5ffd627377dd8e7",
+          "exists": true,
+          "bytes": 1921841,
+          "sha256": "d2d9c6319a516f685fc1ec4d2914b181e00f4e280ec639a5e5ffd627377dd8e7",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-02.webp",
+          "expectedSha256": "fa4c0eac52e8728507dddca48679ef58394a3231793c2a84a3b468e8f1de9147",
+          "exists": true,
+          "bytes": 177980,
+          "sha256": "fa4c0eac52e8728507dddca48679ef58394a3231793c2a84a3b468e8f1de9147",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-03",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-03.png",
+          "expectedSha256": "887e8c84ee2987376183aef49835fa6dde27d9abecd29edb2253dc92ed579cb7",
+          "exists": true,
+          "bytes": 2465253,
+          "sha256": "887e8c84ee2987376183aef49835fa6dde27d9abecd29edb2253dc92ed579cb7",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-03.png",
+          "expectedSha256": "c6efde5723c2f725a7fc269641f2ee3103f96a91a66f73584e28f3d9049ef2b3",
+          "exists": true,
+          "bytes": 2320864,
+          "sha256": "c6efde5723c2f725a7fc269641f2ee3103f96a91a66f73584e28f3d9049ef2b3",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-03.webp",
+          "expectedSha256": "a7a941900e271d8f58e95dc5ea6a29d776f151ad59f1b496e4f1b5f553459692",
+          "exists": true,
+          "bytes": 233648,
+          "sha256": "a7a941900e271d8f58e95dc5ea6a29d776f151ad59f1b496e4f1b5f553459692",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-04",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-04.png",
+          "expectedSha256": "5063098ba5c0137fa2c8694494bb69b3c37ba71172376de070fbb2531973985c",
+          "exists": true,
+          "bytes": 2263977,
+          "sha256": "5063098ba5c0137fa2c8694494bb69b3c37ba71172376de070fbb2531973985c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-04.png",
+          "expectedSha256": "62d0001c628d38b84eab23ff90b90bd83a2f287d5b7229e12e0e8482d2999429",
+          "exists": true,
+          "bytes": 2079133,
+          "sha256": "62d0001c628d38b84eab23ff90b90bd83a2f287d5b7229e12e0e8482d2999429",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-04.webp",
+          "expectedSha256": "58676a24cb77cb9e12cef2f45a23de3a2efcbded7bf7c8afdbb18363d9b76251",
+          "exists": true,
+          "bytes": 202548,
+          "sha256": "58676a24cb77cb9e12cef2f45a23de3a2efcbded7bf7c8afdbb18363d9b76251",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-05",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-05.png",
+          "expectedSha256": "f3f8ed46d34a602408284b51d2c86348db3741b9df5d78c1ffcd9003ffa1599c",
+          "exists": true,
+          "bytes": 2036934,
+          "sha256": "f3f8ed46d34a602408284b51d2c86348db3741b9df5d78c1ffcd9003ffa1599c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-05.png",
+          "expectedSha256": "6755640fa1af5b7674d0ecc086b7ebdc114c37c1e4ead959453e410391d2bd7e",
+          "exists": true,
+          "bytes": 1885121,
+          "sha256": "6755640fa1af5b7674d0ecc086b7ebdc114c37c1e4ead959453e410391d2bd7e",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-05.webp",
+          "expectedSha256": "85d08f3fae37c22803b4e40764393a85a027b4ad618bfd30802d1dfad669cfe4",
+          "exists": true,
+          "bytes": 161430,
+          "sha256": "85d08f3fae37c22803b4e40764393a85a027b4ad618bfd30802d1dfad669cfe4",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-06",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-06.png",
+          "expectedSha256": "c6d1b90430738b9dd7ff25e59daf3361fb7db7e4b718cbd9f1ec5928cd9f069c",
+          "exists": true,
+          "bytes": 1969912,
+          "sha256": "c6d1b90430738b9dd7ff25e59daf3361fb7db7e4b718cbd9f1ec5928cd9f069c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-06.png",
+          "expectedSha256": "a24870cd4821afd1a1129b8c111745d964cfdb2573e009cbe1c7eaf15a014797",
+          "exists": true,
+          "bytes": 1814005,
+          "sha256": "a24870cd4821afd1a1129b8c111745d964cfdb2573e009cbe1c7eaf15a014797",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-06.webp",
+          "expectedSha256": "9fde5317479497de999f53d97a3af2a3ca099260cc82b635335f79dbc7eb1307",
+          "exists": true,
+          "bytes": 153966,
+          "sha256": "9fde5317479497de999f53d97a3af2a3ca099260cc82b635335f79dbc7eb1307",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-07",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-07.png",
+          "expectedSha256": "d8ab9e877ad403a8a9e0249c0c23f4fb89327bdec7c1672be51198a522b3725f",
+          "exists": true,
+          "bytes": 1959326,
+          "sha256": "d8ab9e877ad403a8a9e0249c0c23f4fb89327bdec7c1672be51198a522b3725f",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-07.png",
+          "expectedSha256": "f3d6dad87f896b1a30501d40e81bef0fe6c27fe959753bd9e463706de956ccdb",
+          "exists": true,
+          "bytes": 1797538,
+          "sha256": "f3d6dad87f896b1a30501d40e81bef0fe6c27fe959753bd9e463706de956ccdb",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-07.webp",
+          "expectedSha256": "1acd0bbbfb434fda959cb18e73c917552895c2b296e098a8efcb80f26bbb0a2d",
+          "exists": true,
+          "bytes": 147406,
+          "sha256": "1acd0bbbfb434fda959cb18e73c917552895c2b296e098a8efcb80f26bbb0a2d",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-08",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-08.png",
+          "expectedSha256": "2245eb2aa80d0bbae44c734ded9066efcc16529046bb3f8823b5be4e77f5fd0a",
+          "exists": true,
+          "bytes": 2038564,
+          "sha256": "2245eb2aa80d0bbae44c734ded9066efcc16529046bb3f8823b5be4e77f5fd0a",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-08.png",
+          "expectedSha256": "b79c50cae394c49451dd2db6005cbc7ea2252c23310dc3c5c65a4e14ad89cc68",
+          "exists": true,
+          "bytes": 1881979,
+          "sha256": "b79c50cae394c49451dd2db6005cbc7ea2252c23310dc3c5c65a4e14ad89cc68",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-08.webp",
+          "expectedSha256": "a69618c5f9f892e49655c4010b1ad2e63270b616581988c802ebbfd3a30bb30d",
+          "exists": true,
+          "bytes": 174954,
+          "sha256": "a69618c5f9f892e49655c4010b1ad2e63270b616581988c802ebbfd3a30bb30d",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-09",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-09.png",
+          "expectedSha256": "45edea3fbbe43c5e2e6d983c33896382a7658ff7be298df34c3590cc1d1ac86f",
+          "exists": true,
+          "bytes": 2131357,
+          "sha256": "45edea3fbbe43c5e2e6d983c33896382a7658ff7be298df34c3590cc1d1ac86f",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-09.png",
+          "expectedSha256": "7c769448033f8b49de2eeeda807f27771d31a46ec17cc2c0791fb563a64206e1",
+          "exists": true,
+          "bytes": 1965313,
+          "sha256": "7c769448033f8b49de2eeeda807f27771d31a46ec17cc2c0791fb563a64206e1",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-09.webp",
+          "expectedSha256": "38cb5823c713a63b9bd176330180704087488f59e01048c9124564c353ab8516",
+          "exists": true,
+          "bytes": 184270,
+          "sha256": "38cb5823c713a63b9bd176330180704087488f59e01048c9124564c353ab8516",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-10",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-10.png",
+          "expectedSha256": "fa798b900c604da3c3d59ef1a345fef23e938ccb6bf2e5931039f0a8755a5b77",
+          "exists": true,
+          "bytes": 2150283,
+          "sha256": "fa798b900c604da3c3d59ef1a345fef23e938ccb6bf2e5931039f0a8755a5b77",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-10.png",
+          "expectedSha256": "dfe4a4b461581e3be5737f418d2f7af3bff037e22927b375f0a06e0f04960296",
+          "exists": true,
+          "bytes": 1989202,
+          "sha256": "dfe4a4b461581e3be5737f418d2f7af3bff037e22927b375f0a06e0f04960296",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-10.webp",
+          "expectedSha256": "0ca4150adce3d5f2c2226a91278de8ee3bb4240135645e66659009184adcfe0b",
+          "exists": true,
+          "bytes": 175366,
+          "sha256": "0ca4150adce3d5f2c2226a91278de8ee3bb4240135645e66659009184adcfe0b",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-11",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-11.png",
+          "expectedSha256": "907a34238d1d82de244f5f42dcdcf54e086b4eb0e85bf1096b0211752e9fd39a",
+          "exists": true,
+          "bytes": 1967785,
+          "sha256": "907a34238d1d82de244f5f42dcdcf54e086b4eb0e85bf1096b0211752e9fd39a",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-11.png",
+          "expectedSha256": "ac7cd671f095e6a52f0dfcd23c89701d723c4ffc8a31b991dd5b84449a6c9a48",
+          "exists": true,
+          "bytes": 1800389,
+          "sha256": "ac7cd671f095e6a52f0dfcd23c89701d723c4ffc8a31b991dd5b84449a6c9a48",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-11.webp",
+          "expectedSha256": "85bc9afe59c34af1e19e32f32cf49185731b7149aabc61d73f763eef26c5e426",
+          "exists": true,
+          "bytes": 152084,
+          "sha256": "85bc9afe59c34af1e19e32f32cf49185731b7149aabc61d73f763eef26c5e426",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-12",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-12.png",
+          "expectedSha256": "95b42ded4704bc56bf8eecc97ef470de9a2afe9a01e38ec080f8d04753958493",
+          "exists": true,
+          "bytes": 2261143,
+          "sha256": "95b42ded4704bc56bf8eecc97ef470de9a2afe9a01e38ec080f8d04753958493",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-12.png",
+          "expectedSha256": "3b459fcdd56538a8a5fc01ff5ba35dcfe38ad803926be5de85fda7a256497f32",
+          "exists": true,
+          "bytes": 2086040,
+          "sha256": "3b459fcdd56538a8a5fc01ff5ba35dcfe38ad803926be5de85fda7a256497f32",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-12.webp",
+          "expectedSha256": "8a0cae3b3c7c630ff3c87e58be79f71d3357adc896d235fc27a1f0182fa49938",
+          "exists": true,
+          "bytes": 205792,
+          "sha256": "8a0cae3b3c7c630ff3c87e58be79f71d3357adc896d235fc27a1f0182fa49938",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pool-13",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pool-13.png",
+          "expectedSha256": "f4e9b5bb4bc9d5d26b68c62a44ef50cc77ad93f1ffd0fa560112aa661c7e46b1",
+          "exists": true,
+          "bytes": 2106800,
+          "sha256": "f4e9b5bb4bc9d5d26b68c62a44ef50cc77ad93f1ffd0fa560112aa661c7e46b1",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pool-13.png",
+          "expectedSha256": "a59b1c956c7d5cf2865f104cb6d6d12d2ca02d9f46c37eb8ba40530d79c8c8f7",
+          "exists": true,
+          "bytes": 1924593,
+          "sha256": "a59b1c956c7d5cf2865f104cb6d6d12d2ca02d9f46c37eb8ba40530d79c8c8f7",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pool-13.webp",
+          "expectedSha256": "929010e435b4943c49700c0f379461bef43767c355fdfb6868e17f06791011e0",
+          "exists": true,
+          "bytes": 180210,
+          "sha256": "929010e435b4943c49700c0f379461bef43767c355fdfb6868e17f06791011e0",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-pullo",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-pullo.png",
+          "expectedSha256": "b9a49b1942e322320d09bc1c4bd60c92289f3223e2b48ed1fde6d8e57af32ff7",
+          "exists": true,
+          "bytes": 2281200,
+          "sha256": "b9a49b1942e322320d09bc1c4bd60c92289f3223e2b48ed1fde6d8e57af32ff7",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-pullo.png",
+          "expectedSha256": "427381417cc3e84344418fa40873329be9ff7d3fdcd74b5b4314b251a3ddd7ab",
+          "exists": true,
+          "bytes": 2107692,
+          "sha256": "427381417cc3e84344418fa40873329be9ff7d3fdcd74b5b4314b251a3ddd7ab",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-pullo.webp",
+          "expectedSha256": "b535d879f470bf6c5f1cc97bf2507afbb8d33cf5191fead1eccf3c50d8a63354",
+          "exists": true,
+          "bytes": 188508,
+          "sha256": "b535d879f470bf6c5f1cc97bf2507afbb8d33cf5191fead1eccf3c50d8a63354",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-rinia",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-rinia.png",
+          "expectedSha256": "3b1376c1dce429bde0650f1650166dc00b9c18187f6f028a7f156baae4d65666",
+          "exists": true,
+          "bytes": 1766188,
+          "sha256": "3b1376c1dce429bde0650f1650166dc00b9c18187f6f028a7f156baae4d65666",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-rinia.png",
+          "expectedSha256": "98ce432754032c6dfdcff83885856b354e94366329f569a0cc223533cfafbed5",
+          "exists": true,
+          "bytes": 1607285,
+          "sha256": "98ce432754032c6dfdcff83885856b354e94366329f569a0cc223533cfafbed5",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-rinia.webp",
+          "expectedSha256": "032202290c7238252e8fca1f1f5026b19cba3b11d82e1d8ba5406f972c3d1b36",
+          "exists": true,
+          "bytes": 124202,
+          "sha256": "032202290c7238252e8fca1f1f5026b19cba3b11d82e1d8ba5406f972c3d1b36",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-stalitia",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-stalitia.png",
+          "expectedSha256": "e1ab614e06685edfaa92c771e3a1d90e44d3daf7bab002bc7c5cec2c2d9ac375",
+          "exists": true,
+          "bytes": 1767684,
+          "sha256": "e1ab614e06685edfaa92c771e3a1d90e44d3daf7bab002bc7c5cec2c2d9ac375",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-stalitia.png",
+          "expectedSha256": "9c9824915bd0d654cea10bf61d391507e59eb56dfab04dbf66a7164e1ec0b033",
+          "exists": true,
+          "bytes": 1610102,
+          "sha256": "9c9824915bd0d654cea10bf61d391507e59eb56dfab04dbf66a7164e1ec0b033",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-stalitia.webp",
+          "expectedSha256": "75ebcdc6ff4ba15c284024dd3a17fd34d681bfc23f58e3d741a7079bdc5b5884",
+          "exists": true,
+          "bytes": 120054,
+          "sha256": "75ebcdc6ff4ba15c284024dd3a17fd34d681bfc23f58e3d741a7079bdc5b5884",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-sylvian",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-sylvian.png",
+          "expectedSha256": "74b67d9fa91b92868bb6eb98ec7b8d453d49ff1bb29d2f9a6cf963d53a72cfdb",
+          "exists": true,
+          "bytes": 2257730,
+          "sha256": "74b67d9fa91b92868bb6eb98ec7b8d453d49ff1bb29d2f9a6cf963d53a72cfdb",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-sylvian.png",
+          "expectedSha256": "a3d7bf632579308416ed60ddbc9b7ff17db7d6ea689a0d9b11b36789396f9707",
+          "exists": true,
+          "bytes": 2118011,
+          "sha256": "a3d7bf632579308416ed60ddbc9b7ff17db7d6ea689a0d9b11b36789396f9707",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-sylvian.webp",
+          "expectedSha256": "b9c48f70a742c3402342c9dc4938bafeeee2073502ccf26b628a568d3b421204",
+          "exists": true,
+          "bytes": 191666,
+          "sha256": "b9c48f70a742c3402342c9dc4938bafeeee2073502ccf26b628a568d3b421204",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-syx",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-syx.png",
+          "expectedSha256": "d72ff7eceb3c851e1cbee7a51c0dbb8a82c5f43c97f702fc39317b5019a7928c",
+          "exists": true,
+          "bytes": 2094103,
+          "sha256": "d72ff7eceb3c851e1cbee7a51c0dbb8a82c5f43c97f702fc39317b5019a7928c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-syx.png",
+          "expectedSha256": "806a2703e574e619d00c45b936875caa6eac5a43bd457fcde7defb3b1f5919ef",
+          "exists": true,
+          "bytes": 1948039,
+          "sha256": "806a2703e574e619d00c45b936875caa6eac5a43bd457fcde7defb3b1f5919ef",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-syx.webp",
+          "expectedSha256": "18742d6782bad771768d9e4307e8d96ec2b2197e40762d1651a16e3b1b03fc5d",
+          "exists": true,
+          "bytes": 165456,
+          "sha256": "18742d6782bad771768d9e4307e8d96ec2b2197e40762d1651a16e3b1b03fc5d",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-umbranox",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-umbranox.png",
+          "expectedSha256": "db0dabbd2d261f83e6565ffa7aafced498416dd7a273bf0749acc9c2d15cdb4a",
+          "exists": true,
+          "bytes": 2145563,
+          "sha256": "db0dabbd2d261f83e6565ffa7aafced498416dd7a273bf0749acc9c2d15cdb4a",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-umbranox.png",
+          "expectedSha256": "f665ca16d5ae48d3aeaa8ed8fa38e2012f5dd34d3cf36d089c18a5fa894caf37",
+          "exists": true,
+          "bytes": 1964382,
+          "sha256": "f665ca16d5ae48d3aeaa8ed8fa38e2012f5dd34d3cf36d089c18a5fa894caf37",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-umbranox.webp",
+          "expectedSha256": "2b87a0f91702eb9d79169cdaf834ba460df21c8143f0a62e1e0fd53f275899d5",
+          "exists": true,
+          "bytes": 190194,
+          "sha256": "2b87a0f91702eb9d79169cdaf834ba460df21c8143f0a62e1e0fd53f275899d5",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-vineben",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-vineben.png",
+          "expectedSha256": "3ec480c0c59c94bf8f5896612e4e732c422a175fa24208f30b4df92b936ec98c",
+          "exists": true,
+          "bytes": 2250199,
+          "sha256": "3ec480c0c59c94bf8f5896612e4e732c422a175fa24208f30b4df92b936ec98c",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-vineben.png",
+          "expectedSha256": "1cfbc7695f6aca7737bb955fa7024619bd8b8e4d4396fe33f6954c2a47ccbee3",
+          "exists": true,
+          "bytes": 2100666,
+          "sha256": "1cfbc7695f6aca7737bb955fa7024619bd8b8e4d4396fe33f6954c2a47ccbee3",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-vineben.webp",
+          "expectedSha256": "9e6238a6ecad0a7128a14ca7bc44357ab36dfff1702b354d53bc3d5e3134d2e3",
+          "exists": true,
+          "bytes": 188670,
+          "sha256": "9e6238a6ecad0a7128a14ca7bc44357ab36dfff1702b354d53bc3d5e3134d2e3",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "house-vulpin",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/house-vulpin.png",
+          "expectedSha256": "f5e21cf3bb04b99214ba50dd222b5e48e2c3587e699173c9fc7a06048207d267",
+          "exists": true,
+          "bytes": 2232534,
+          "sha256": "f5e21cf3bb04b99214ba50dd222b5e48e2c3587e699173c9fc7a06048207d267",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/house-vulpin.png",
+          "expectedSha256": "8005d6bea0da4b319dd35d6b088de7d5b817b54a52158994d6a1bdb361e7d74e",
+          "exists": true,
+          "bytes": 2095262,
+          "sha256": "8005d6bea0da4b319dd35d6b088de7d5b817b54a52158994d6a1bdb361e7d74e",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/house-vulpin.webp",
+          "expectedSha256": "171f955c76df637a5f426c9bd8fb6eca19b2144e81541dd453771133f7c66fce",
+          "exists": true,
+          "bytes": 187122,
+          "sha256": "171f955c76df637a5f426c9bd8fb6eca19b2144e81541dd453771133f7c66fce",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-01",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-01.png",
+          "expectedSha256": "f703693d51edaa058680306cd29ded46643552a0573fc3a3b93df15670414c47",
+          "exists": true,
+          "bytes": 1676551,
+          "sha256": "f703693d51edaa058680306cd29ded46643552a0573fc3a3b93df15670414c47",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-01.png",
+          "expectedSha256": "c98d74f39d6dcbfe06cfded8b398b613488286c5d1c33421834f75e64a947cab",
+          "exists": true,
+          "bytes": 1523382,
+          "sha256": "c98d74f39d6dcbfe06cfded8b398b613488286c5d1c33421834f75e64a947cab",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-01.webp",
+          "expectedSha256": "17257f16272380261b356355c10f7682006a4c0989793d70d974e0fd0f94a4e0",
+          "exists": true,
+          "bytes": 114596,
+          "sha256": "17257f16272380261b356355c10f7682006a4c0989793d70d974e0fd0f94a4e0",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-02",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-02.png",
+          "expectedSha256": "5c6b3566e66f015eed5fd37c403083635c4226725e9b3affcdd80966903c66ed",
+          "exists": true,
+          "bytes": 2181583,
+          "sha256": "5c6b3566e66f015eed5fd37c403083635c4226725e9b3affcdd80966903c66ed",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-02.png",
+          "expectedSha256": "5131d36e8109e3908dc268f3d1b3369a69d1b780f7dbb6b677afc62748830d71",
+          "exists": true,
+          "bytes": 2048731,
+          "sha256": "5131d36e8109e3908dc268f3d1b3369a69d1b780f7dbb6b677afc62748830d71",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-02.webp",
+          "expectedSha256": "41a1f3ea85b27ac5e5708f1b9e7947297cf2f91aa847d247efc2f12979a3096e",
+          "exists": true,
+          "bytes": 175330,
+          "sha256": "41a1f3ea85b27ac5e5708f1b9e7947297cf2f91aa847d247efc2f12979a3096e",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-03",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-03.png",
+          "expectedSha256": "57cc61276d29477d2d84373487e8bd66451a3c8cbedc898a7d5148071e43ce40",
+          "exists": true,
+          "bytes": 1850123,
+          "sha256": "57cc61276d29477d2d84373487e8bd66451a3c8cbedc898a7d5148071e43ce40",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-03.png",
+          "expectedSha256": "8eb1b4023ed6234ce18dd65b0aa506608e3a15ad6a4fb21a88192cdbe0134dd8",
+          "exists": true,
+          "bytes": 1688042,
+          "sha256": "8eb1b4023ed6234ce18dd65b0aa506608e3a15ad6a4fb21a88192cdbe0134dd8",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-03.webp",
+          "expectedSha256": "cba3ccc859ec4e58faa246f4549436bdfcdb534c2a25cf93846b2630afa68315",
+          "exists": true,
+          "bytes": 136132,
+          "sha256": "cba3ccc859ec4e58faa246f4549436bdfcdb534c2a25cf93846b2630afa68315",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-04",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-04.png",
+          "expectedSha256": "653388456c256e37b1b89b4919b07d30c2f72f9340fd0b7e1bf99815dd690ce9",
+          "exists": true,
+          "bytes": 2080635,
+          "sha256": "653388456c256e37b1b89b4919b07d30c2f72f9340fd0b7e1bf99815dd690ce9",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-04.png",
+          "expectedSha256": "43a117c04644787a8a146dc1685f41cb44e0c3561c80584ceb4a173dd99ffeac",
+          "exists": true,
+          "bytes": 1906412,
+          "sha256": "43a117c04644787a8a146dc1685f41cb44e0c3561c80584ceb4a173dd99ffeac",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-04.webp",
+          "expectedSha256": "f5adc8633a9ccb6af69c748510934ffd2b982672a71e2d808233999f2007da3c",
+          "exists": true,
+          "bytes": 170222,
+          "sha256": "f5adc8633a9ccb6af69c748510934ffd2b982672a71e2d808233999f2007da3c",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-05",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-05.png",
+          "expectedSha256": "c9789a0b7bb239d9fcbf032f5d84f266e2c74e675e1783b1f68320eea6505549",
+          "exists": true,
+          "bytes": 2069729,
+          "sha256": "c9789a0b7bb239d9fcbf032f5d84f266e2c74e675e1783b1f68320eea6505549",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-05.png",
+          "expectedSha256": "860e60a166531869aff62d97147482f3f9e0066234248881b150a8bffda238ee",
+          "exists": true,
+          "bytes": 1881001,
+          "sha256": "860e60a166531869aff62d97147482f3f9e0066234248881b150a8bffda238ee",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-05.webp",
+          "expectedSha256": "6096d4d26ce6a3fa304bf413e3457b46b10a66b6c847742395955c418404caa7",
+          "exists": true,
+          "bytes": 174108,
+          "sha256": "6096d4d26ce6a3fa304bf413e3457b46b10a66b6c847742395955c418404caa7",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    },
+    {
+      "assetStem": "prototype-06",
+      "rawMatchesEarlierAudit": true,
+      "files": [
+        {
+          "kind": "raw",
+          "path": "assets/warriors/generated/prototype-06.png",
+          "expectedSha256": "96018ea2a49f4da8162f7091a5e3a93290aad510899c06026c26591ac11537de",
+          "exists": true,
+          "bytes": 1787063,
+          "sha256": "96018ea2a49f4da8162f7091a5e3a93290aad510899c06026c26591ac11537de",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "assets/warriors/production/prototype-06.png",
+          "expectedSha256": "39d986bed01527c50f59e40777b2c8700e59299b04166390c510850e0002e495",
+          "exists": true,
+          "bytes": 1626514,
+          "sha256": "39d986bed01527c50f59e40777b2c8700e59299b04166390c510850e0002e495",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "assets/warriors/previews/prototype-06.webp",
+          "expectedSha256": "883b9aa698baf1cb2f66618189198422a590ac7eca56d98ff9c00506e6a678e4",
+          "exists": true,
+          "bytes": 137086,
+          "sha256": "883b9aa698baf1cb2f66618189198422a590ac7eca56d98ff9c00506e6a678e4",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    }
+  ],
+  "catalogChecks": [
+    {
+      "houseId": "house-afronia",
+      "baseAssetStem": "house-afronia",
+      "selectedAssetStem": "house-afronia",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-afronia.webp",
+      "fullsize": "assets/warriors/production/house-afronia.png"
+    },
+    {
+      "houseId": "house-avidius",
+      "baseAssetStem": "house-avidius",
+      "selectedAssetStem": "house-avidius",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-avidius.webp",
+      "fullsize": "assets/warriors/production/house-avidius.png"
+    },
+    {
+      "houseId": "house-bruttia",
+      "baseAssetStem": "house-bruttia",
+      "selectedAssetStem": "house-bruttia",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-bruttia.webp",
+      "fullsize": "assets/warriors/production/house-bruttia.png"
+    },
+    {
+      "houseId": "house-caepo",
+      "baseAssetStem": "house-caepo",
+      "selectedAssetStem": "house-caepo",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-caepo.webp",
+      "fullsize": "assets/warriors/production/house-caepo.png"
+    },
+    {
+      "houseId": "house-cerunia",
+      "baseAssetStem": "house-cerunia",
+      "selectedAssetStem": "house-cerunia-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-cerunia-v2.webp",
+      "fullsize": "assets/warriors/production/house-cerunia-v2.png"
+    },
+    {
+      "houseId": "house-faleria",
+      "baseAssetStem": "house-faleria",
+      "selectedAssetStem": "house-faleria",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-faleria.webp",
+      "fullsize": "assets/warriors/production/house-faleria.png"
+    },
+    {
+      "houseId": "house-flamen",
+      "baseAssetStem": "house-flamen",
+      "selectedAssetStem": "house-flamen",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-flamen.webp",
+      "fullsize": "assets/warriors/production/house-flamen.png"
+    },
+    {
+      "houseId": "house-maborel",
+      "baseAssetStem": "house-maborel",
+      "selectedAssetStem": "house-maborel-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-maborel-v2.webp",
+      "fullsize": "assets/warriors/production/house-maborel-v2.png"
+    },
+    {
+      "houseId": "house-rinia",
+      "baseAssetStem": "house-rinia",
+      "selectedAssetStem": "house-rinia-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-rinia-v2.webp",
+      "fullsize": "assets/warriors/production/house-rinia-v2.png"
+    },
+    {
+      "houseId": "house-stalitia",
+      "baseAssetStem": "house-stalitia",
+      "selectedAssetStem": "house-stalitia-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-stalitia-v2.webp",
+      "fullsize": "assets/warriors/production/house-stalitia-v2.png"
+    },
+    {
+      "houseId": "house-sylvian",
+      "baseAssetStem": "house-sylvian",
+      "selectedAssetStem": "house-sylvian",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-sylvian.webp",
+      "fullsize": "assets/warriors/production/house-sylvian.png"
+    },
+    {
+      "houseId": "house-syx",
+      "baseAssetStem": "house-syx",
+      "selectedAssetStem": "house-syx",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-syx.webp",
+      "fullsize": "assets/warriors/production/house-syx.png"
+    },
+    {
+      "houseId": "house-umbranox",
+      "baseAssetStem": "house-umbranox",
+      "selectedAssetStem": "house-umbranox",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-umbranox.webp",
+      "fullsize": "assets/warriors/production/house-umbranox.png"
+    },
+    {
+      "houseId": "house-vineben",
+      "baseAssetStem": "house-vineben",
+      "selectedAssetStem": "house-vineben",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-vineben.webp",
+      "fullsize": "assets/warriors/production/house-vineben.png"
+    },
+    {
+      "houseId": "house-vulpin",
+      "baseAssetStem": "house-vulpin",
+      "selectedAssetStem": "house-vulpin",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-vulpin.webp",
+      "fullsize": "assets/warriors/production/house-vulpin.png"
+    },
+    {
+      "houseId": "pool-01",
+      "baseAssetStem": "house-pool-01",
+      "selectedAssetStem": "house-pool-01",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-01.webp",
+      "fullsize": "assets/warriors/production/house-pool-01.png"
+    },
+    {
+      "houseId": "pool-02",
+      "baseAssetStem": "house-pool-02",
+      "selectedAssetStem": "house-pool-02",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-02.webp",
+      "fullsize": "assets/warriors/production/house-pool-02.png"
+    },
+    {
+      "houseId": "pool-03",
+      "baseAssetStem": "house-pool-03",
+      "selectedAssetStem": "house-pool-03",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-03.webp",
+      "fullsize": "assets/warriors/production/house-pool-03.png"
+    },
+    {
+      "houseId": "pool-04",
+      "baseAssetStem": "house-pool-04",
+      "selectedAssetStem": "house-pool-04",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-04.webp",
+      "fullsize": "assets/warriors/production/house-pool-04.png"
+    },
+    {
+      "houseId": "pool-05",
+      "baseAssetStem": "house-pool-05",
+      "selectedAssetStem": "house-pool-05",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-05.webp",
+      "fullsize": "assets/warriors/production/house-pool-05.png"
+    },
+    {
+      "houseId": "pool-06",
+      "baseAssetStem": "house-pool-06",
+      "selectedAssetStem": "house-pool-06",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-06.webp",
+      "fullsize": "assets/warriors/production/house-pool-06.png"
+    },
+    {
+      "houseId": "pool-07",
+      "baseAssetStem": "house-pool-07",
+      "selectedAssetStem": "house-pool-07-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-07-v2.webp",
+      "fullsize": "assets/warriors/production/house-pool-07-v2.png"
+    },
+    {
+      "houseId": "pool-08",
+      "baseAssetStem": "house-pool-08",
+      "selectedAssetStem": "house-pool-08",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-08.webp",
+      "fullsize": "assets/warriors/production/house-pool-08.png"
+    },
+    {
+      "houseId": "pool-09",
+      "baseAssetStem": "house-pool-09",
+      "selectedAssetStem": "house-pool-09",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-09.webp",
+      "fullsize": "assets/warriors/production/house-pool-09.png"
+    },
+    {
+      "houseId": "pool-10",
+      "baseAssetStem": "house-pool-10",
+      "selectedAssetStem": "house-pool-10-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-10-v2.webp",
+      "fullsize": "assets/warriors/production/house-pool-10-v2.png"
+    },
+    {
+      "houseId": "pool-11",
+      "baseAssetStem": "house-pool-11",
+      "selectedAssetStem": "house-pool-11-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-11-v2.webp",
+      "fullsize": "assets/warriors/production/house-pool-11-v2.png"
+    },
+    {
+      "houseId": "pool-12",
+      "baseAssetStem": "house-pool-12",
+      "selectedAssetStem": "house-pool-12",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-12.webp",
+      "fullsize": "assets/warriors/production/house-pool-12.png"
+    },
+    {
+      "houseId": "pool-13",
+      "baseAssetStem": "house-pool-13",
+      "selectedAssetStem": "house-pool-13",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-13.webp",
+      "fullsize": "assets/warriors/production/house-pool-13.png"
+    },
+    {
+      "houseId": "house-pullo",
+      "baseAssetStem": "house-pullo",
+      "selectedAssetStem": "house-pullo",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pullo.webp",
+      "fullsize": "assets/warriors/production/house-pullo.png"
+    }
+  ],
+  "unchangedHouseChecks": [
+    {
+      "houseId": "house-afronia",
+      "baseAssetStem": "house-afronia",
+      "selectedAssetStem": "house-afronia",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-afronia.webp",
+      "fullsize": "assets/warriors/production/house-afronia.png"
+    },
+    {
+      "houseId": "house-avidius",
+      "baseAssetStem": "house-avidius",
+      "selectedAssetStem": "house-avidius",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-avidius.webp",
+      "fullsize": "assets/warriors/production/house-avidius.png"
+    },
+    {
+      "houseId": "house-bruttia",
+      "baseAssetStem": "house-bruttia",
+      "selectedAssetStem": "house-bruttia",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-bruttia.webp",
+      "fullsize": "assets/warriors/production/house-bruttia.png"
+    },
+    {
+      "houseId": "house-caepo",
+      "baseAssetStem": "house-caepo",
+      "selectedAssetStem": "house-caepo",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-caepo.webp",
+      "fullsize": "assets/warriors/production/house-caepo.png"
+    },
+    {
+      "houseId": "house-faleria",
+      "baseAssetStem": "house-faleria",
+      "selectedAssetStem": "house-faleria",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-faleria.webp",
+      "fullsize": "assets/warriors/production/house-faleria.png"
+    },
+    {
+      "houseId": "house-flamen",
+      "baseAssetStem": "house-flamen",
+      "selectedAssetStem": "house-flamen",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-flamen.webp",
+      "fullsize": "assets/warriors/production/house-flamen.png"
+    },
+    {
+      "houseId": "house-sylvian",
+      "baseAssetStem": "house-sylvian",
+      "selectedAssetStem": "house-sylvian",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-sylvian.webp",
+      "fullsize": "assets/warriors/production/house-sylvian.png"
+    },
+    {
+      "houseId": "house-syx",
+      "baseAssetStem": "house-syx",
+      "selectedAssetStem": "house-syx",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-syx.webp",
+      "fullsize": "assets/warriors/production/house-syx.png"
+    },
+    {
+      "houseId": "house-umbranox",
+      "baseAssetStem": "house-umbranox",
+      "selectedAssetStem": "house-umbranox",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-umbranox.webp",
+      "fullsize": "assets/warriors/production/house-umbranox.png"
+    },
+    {
+      "houseId": "house-vineben",
+      "baseAssetStem": "house-vineben",
+      "selectedAssetStem": "house-vineben",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-vineben.webp",
+      "fullsize": "assets/warriors/production/house-vineben.png"
+    },
+    {
+      "houseId": "house-vulpin",
+      "baseAssetStem": "house-vulpin",
+      "selectedAssetStem": "house-vulpin",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-vulpin.webp",
+      "fullsize": "assets/warriors/production/house-vulpin.png"
+    },
+    {
+      "houseId": "pool-01",
+      "baseAssetStem": "house-pool-01",
+      "selectedAssetStem": "house-pool-01",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-01.webp",
+      "fullsize": "assets/warriors/production/house-pool-01.png"
+    },
+    {
+      "houseId": "pool-02",
+      "baseAssetStem": "house-pool-02",
+      "selectedAssetStem": "house-pool-02",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-02.webp",
+      "fullsize": "assets/warriors/production/house-pool-02.png"
+    },
+    {
+      "houseId": "pool-03",
+      "baseAssetStem": "house-pool-03",
+      "selectedAssetStem": "house-pool-03",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-03.webp",
+      "fullsize": "assets/warriors/production/house-pool-03.png"
+    },
+    {
+      "houseId": "pool-04",
+      "baseAssetStem": "house-pool-04",
+      "selectedAssetStem": "house-pool-04",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-04.webp",
+      "fullsize": "assets/warriors/production/house-pool-04.png"
+    },
+    {
+      "houseId": "pool-05",
+      "baseAssetStem": "house-pool-05",
+      "selectedAssetStem": "house-pool-05",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-05.webp",
+      "fullsize": "assets/warriors/production/house-pool-05.png"
+    },
+    {
+      "houseId": "pool-06",
+      "baseAssetStem": "house-pool-06",
+      "selectedAssetStem": "house-pool-06",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-06.webp",
+      "fullsize": "assets/warriors/production/house-pool-06.png"
+    },
+    {
+      "houseId": "pool-08",
+      "baseAssetStem": "house-pool-08",
+      "selectedAssetStem": "house-pool-08",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-08.webp",
+      "fullsize": "assets/warriors/production/house-pool-08.png"
+    },
+    {
+      "houseId": "pool-09",
+      "baseAssetStem": "house-pool-09",
+      "selectedAssetStem": "house-pool-09",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-09.webp",
+      "fullsize": "assets/warriors/production/house-pool-09.png"
+    },
+    {
+      "houseId": "pool-12",
+      "baseAssetStem": "house-pool-12",
+      "selectedAssetStem": "house-pool-12",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-12.webp",
+      "fullsize": "assets/warriors/production/house-pool-12.png"
+    },
+    {
+      "houseId": "pool-13",
+      "baseAssetStem": "house-pool-13",
+      "selectedAssetStem": "house-pool-13",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pool-13.webp",
+      "fullsize": "assets/warriors/production/house-pool-13.png"
+    },
+    {
+      "houseId": "house-pullo",
+      "baseAssetStem": "house-pullo",
+      "selectedAssetStem": "house-pullo",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pullo.webp",
+      "fullsize": "assets/warriors/production/house-pullo.png"
+    },
+    {
+      "houseId": "house-mede",
+      "selectedAssetStem": "house-mede-v2",
+      "revised": false,
+      "allRuntimeMetadataMatchesLeukonia": true,
+      "image": "../Leukonia/assets/warriors/previews/house-mede-v2.webp",
+      "fullsize": "../Leukonia/assets/warriors/production/house-mede-v2.png",
+      "files": [
+        {
+          "kind": "raw",
+          "path": "../Leukonia/assets/warriors/generated/house-mede-v2.png",
+          "expectedSha256": "f8b2b90670316d02418b6831fa33667f978d9a10b8e369eebe5979e628a21a8e",
+          "exists": true,
+          "bytes": 2847435,
+          "sha256": "f8b2b90670316d02418b6831fa33667f978d9a10b8e369eebe5979e628a21a8e",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "production",
+          "path": "../Leukonia/assets/warriors/production/house-mede-v2.png",
+          "expectedSha256": "d868aafd48070c639fb9d87447840079de44801028d2c210c4b72bc3ec3021a3",
+          "exists": true,
+          "bytes": 2720425,
+          "sha256": "d868aafd48070c639fb9d87447840079de44801028d2c210c4b72bc3ec3021a3",
+          "matchesRecordedManifestHash": true
+        },
+        {
+          "kind": "preview",
+          "path": "../Leukonia/assets/warriors/previews/house-mede-v2.webp",
+          "expectedSha256": "4c725b97fb18469013548da19aef7e00561fe18055387bfd5f103c3476e024b4",
+          "exists": true,
+          "bytes": 297514,
+          "sha256": "4c725b97fb18469013548da19aef7e00561fe18055387bfd5f103c3476e024b4",
+          "matchesRecordedManifestHash": true
+        }
+      ]
+    }
+  ],
+  "prototypeChecks": [
+    {
+      "id": "prototype-01",
+      "baseAssetStem": "prototype-01",
+      "selectedAssetStem": "prototype-01",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-01.webp",
+      "fullsize": "assets/warriors/production/prototype-01.png"
+    },
+    {
+      "id": "prototype-02",
+      "baseAssetStem": "prototype-02",
+      "selectedAssetStem": "prototype-02",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-02.webp",
+      "fullsize": "assets/warriors/production/prototype-02.png"
+    },
+    {
+      "id": "prototype-06",
+      "baseAssetStem": "prototype-06",
+      "selectedAssetStem": "prototype-06",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-06.webp",
+      "fullsize": "assets/warriors/production/prototype-06.png"
+    },
+    {
+      "id": "prototype-03",
+      "baseAssetStem": "prototype-03",
+      "selectedAssetStem": "prototype-03-v2",
+      "revised": true,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-03-v2.webp",
+      "fullsize": "assets/warriors/production/prototype-03-v2.png"
+    },
+    {
+      "id": "prototype-04",
+      "baseAssetStem": "prototype-04",
+      "selectedAssetStem": "prototype-04",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-04.webp",
+      "fullsize": "assets/warriors/production/prototype-04.png"
+    },
+    {
+      "id": "prototype-05",
+      "baseAssetStem": "prototype-05",
+      "selectedAssetStem": "prototype-05",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/prototype-05.webp",
+      "fullsize": "assets/warriors/production/prototype-05.png"
+    },
+    {
+      "id": "prototype-07",
+      "baseAssetStem": "house-pullo",
+      "selectedAssetStem": "house-pullo",
+      "revised": false,
+      "allRuntimeMetadataMatchesSelectedJob": true,
+      "image": "assets/warriors/previews/house-pullo.webp",
+      "fullsize": "assets/warriors/production/house-pullo.png"
+    }
+  ],
+  "protectedFileChecks": [
+    {
+      "path": "Vorschau/Sylvarant/sources/additional-emblem-jobs.json",
+      "sha256Before": "0a2512fd64805fea65b12330344a7409af783cac6e1ee2162467d01009a7c2c3",
+      "sha256After": "0a2512fd64805fea65b12330344a7409af783cac6e1ee2162467d01009a7c2c3",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/additional-emblem-results.json",
+      "sha256Before": "c60e2504934cf0170e80961f94d6ffacdcc89b2a9a59afc61b1fa563b10af769",
+      "sha256After": "c60e2504934cf0170e80961f94d6ffacdcc89b2a9a59afc61b1fa563b10af769",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/artwork-revisions.json",
+      "sha256Before": "5887ae8cbdf7a3156ca9e5da981deded453dfad77a8412b02f1565ae261a3c06",
+      "sha256After": "5887ae8cbdf7a3156ca9e5da981deded453dfad77a8412b02f1565ae261a3c06",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/emblem-asset-receipts.json",
+      "sha256Before": "066f6ac2c09c0a3c067739fb0ec885f203cdfa19c193cd6f31d4007522b09544",
+      "sha256After": "066f6ac2c09c0a3c067739fb0ec885f203cdfa19c193cd6f31d4007522b09544",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warrior-revisions.json",
+      "sha256Before": "880bc6dfa7922a7ba0f613ee39993d857f85f86c40b2c2536330989d3141e3f7",
+      "sha256After": "880bc6dfa7922a7ba0f613ee39993d857f85f86c40b2c2536330989d3141e3f7",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warriors-additional-jobs.json",
+      "sha256Before": "1d440d18d40426e32cac392f699c3c9e99dbe2a4dea4e6f813a74fa5abbf3cc6",
+      "sha256After": "1d440d18d40426e32cac392f699c3c9e99dbe2a4dea4e6f813a74fa5abbf3cc6",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warriors-additional-results.json",
+      "sha256Before": "7d89821754fb4751e916b78cf32c532bd1f18ad821f6695c8b051fffeeb36a71",
+      "sha256After": "7d89821754fb4751e916b78cf32c532bd1f18ad821f6695c8b051fffeeb36a71",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warriors-root-results.json",
+      "sha256Before": "907d8815f84c6f48f4d974b3f43426befab2b4d4f2b3fa26be7f39b21da3689b",
+      "sha256After": "907d8815f84c6f48f4d974b3f43426befab2b4d4f2b3fa26be7f39b21da3689b",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warriors-supplied-jobs.json",
+      "sha256Before": "893b7b2384258990e75d1a2844ef5303d38121ce6986ef003cdfdc5e53a92ff9",
+      "sha256After": "893b7b2384258990e75d1a2844ef5303d38121ce6986ef003cdfdc5e53a92ff9",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/house-warriors-supplied-results.json",
+      "sha256Before": "49486d06268d45840bc997ec46c3beff28a1c5724485983aa46dc56f80fff275",
+      "sha256After": "49486d06268d45840bc997ec46c3beff28a1c5724485983aa46dc56f80fff275",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/map-sources.json",
+      "sha256Before": "e46b8972d2fe8cba09061c3917b5f476e63ae62de50500263b4740c6102e5df8",
+      "sha256After": "e46b8972d2fe8cba09061c3917b5f476e63ae62de50500263b4740c6102e5df8",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/measured-map-markers.json",
+      "sha256Before": "56fb93d324a12c52c2b6df3a242f83f0acb720d6c128d1a10a4df219333139a7",
+      "sha256After": "56fb93d324a12c52c2b6df3a242f83f0acb720d6c128d1a10a4df219333139a7",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototype-03-v2-job.json",
+      "sha256Before": "8f5342e7f393571d6a43ef8915c1ad98973b1848869bc1a8141e0e8c61342181",
+      "sha256After": "8f5342e7f393571d6a43ef8915c1ad98973b1848869bc1a8141e0e8c61342181",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototype-03-v2-result.json",
+      "sha256Before": "49a14352df621f5ed95f00c71b7ff4f63507b411457a4e92d542bfdbc18ea1bb",
+      "sha256After": "49a14352df621f5ed95f00c71b7ff4f63507b411457a4e92d542bfdbc18ea1bb",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototype-revisions.json",
+      "sha256Before": "7a492dd4d45b378c9be1999dac8535c86328af1ec7c0a92f49fdd8a38759231a",
+      "sha256After": "7a492dd4d45b378c9be1999dac8535c86328af1ec7c0a92f49fdd8a38759231a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-a-jobs.json",
+      "sha256Before": "11d40d39812802b9be598ea247aa0f96163ffebf381d376241081fe1680f64a5",
+      "sha256After": "11d40d39812802b9be598ea247aa0f96163ffebf381d376241081fe1680f64a5",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-a-results.json",
+      "sha256Before": "94667f0f52aa8303875e678ec3618fdd537f5998f81e274902e35e26fb39efd7",
+      "sha256After": "94667f0f52aa8303875e678ec3618fdd537f5998f81e274902e35e26fb39efd7",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-b-jobs.json",
+      "sha256Before": "fa58c7015997089b90bd0d5543fc149049e67756606d7b72f906060c74cc5a42",
+      "sha256After": "fa58c7015997089b90bd0d5543fc149049e67756606d7b72f906060c74cc5a42",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-b-results.json",
+      "sha256Before": "d920d33f26ad1b46a80a7add1e2157d682a9828b89c2149ee2725de0668c5340",
+      "sha256After": "d920d33f26ad1b46a80a7add1e2157d682a9828b89c2149ee2725de0668c5340",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-root-jobs.json",
+      "sha256Before": "44f5c251ffcab549c9a04b8a33d83551813a8bd444ccc2a587b5e6bb5a8f3b54",
+      "sha256After": "44f5c251ffcab549c9a04b8a33d83551813a8bd444ccc2a587b5e6bb5a8f3b54",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/prototypes-root-results.json",
+      "sha256Before": "badcdf29760eb2247a0952de7d4610933a7b6c31dbbb7d953b70ea3bd1fe2d09",
+      "sha256After": "badcdf29760eb2247a0952de7d4610933a7b6c31dbbb7d953b70ea3bd1fe2d09",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/province-emblem-job.json",
+      "sha256Before": "26348c5dcfd052b27fbdbd4c48b1b7ceab805a374b6dfe2b99c824a5c04a81ef",
+      "sha256After": "26348c5dcfd052b27fbdbd4c48b1b7ceab805a374b6dfe2b99c824a5c04a81ef",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/province-emblem-result.json",
+      "sha256Before": "6b73dd7cee3de334d1dc920fc93940aee3d0f09028eafd12d21eab3cd1cf0f59",
+      "sha256After": "6b73dd7cee3de334d1dc920fc93940aee3d0f09028eafd12d21eab3cd1cf0f59",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/province-emblem-v2-job.json",
+      "sha256Before": "d7d613b4759fb243d9feb5a51ae096a45a858459697b0293895c6311772f793a",
+      "sha256After": "d7d613b4759fb243d9feb5a51ae096a45a858459697b0293895c6311772f793a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/province-emblem-v2-result.json",
+      "sha256Before": "c47c2e0071636f859d9112b19ad391cda7d062a465dcce81ae722acca832688b",
+      "sha256After": "c47c2e0071636f859d9112b19ad391cda7d062a465dcce81ae722acca832688b",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/supplied-emblems.json",
+      "sha256Before": "1015502991bdf6defac1294446bd050a1461c3bec1dfe9c44edc59854ea90c7d",
+      "sha256After": "1015502991bdf6defac1294446bd050a1461c3bec1dfe9c44edc59854ea90c7d",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/supplied-house-notes.json",
+      "sha256Before": "ed2cbca2a345e83cee6584b53259926000c08913d2f07ec4c0493f309555ba02",
+      "sha256After": "ed2cbca2a345e83cee6584b53259926000c08913d2f07ec4c0493f309555ba02",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-a-jobs.json",
+      "sha256Before": "0386d852c5f15775b9c1a1f974a0f49dcf292f5ed2b39c9cf90b897776325183",
+      "sha256After": "0386d852c5f15775b9c1a1f974a0f49dcf292f5ed2b39c9cf90b897776325183",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-a-results.json",
+      "sha256Before": "f875d3d8b984ad6f688ae1323fd3dfd7f56f7c25a7903a716e1b194b767b101a",
+      "sha256After": "f875d3d8b984ad6f688ae1323fd3dfd7f56f7c25a7903a716e1b194b767b101a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-b-jobs.json",
+      "sha256Before": "58d7a10558a42bafde53789f90a4427c7dc64ae290a3e455b0c7450484f22f6a",
+      "sha256After": "58d7a10558a42bafde53789f90a4427c7dc64ae290a3e455b0c7450484f22f6a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-b-results.json",
+      "sha256Before": "5202a7526fc044f14a69cc6fe941eb96a5fba1210784956f28d37e19fe4e87df",
+      "sha256After": "5202a7526fc044f14a69cc6fe941eb96a5fba1210784956f28d37e19fe4e87df",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-c-jobs.json",
+      "sha256Before": "db5f095d6414d9a34d79a273c1d3c369e2cd7034537aa92466463e9032224145",
+      "sha256After": "db5f095d6414d9a34d79a273c1d3c369e2cd7034537aa92466463e9032224145",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-c-results.json",
+      "sha256Before": "bd0e9d1decad68f58ae25135b9ea814e2194c45b939e660a16ec7cd0536b917a",
+      "sha256After": "bd0e9d1decad68f58ae25135b9ea814e2194c45b939e660a16ec7cd0536b917a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-root-jobs.json",
+      "sha256Before": "1fc1fda2e3f6e188d25154aea7ca904af25e99ebef2cf37b7603df81dc3cf061",
+      "sha256After": "1fc1fda2e3f6e188d25154aea7ca904af25e99ebef2cf37b7603df81dc3cf061",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/sources/warrior-revisions-20261104-root-results.json",
+      "sha256Before": "3bc48979b5312223120f503e9797cc259103d8e5cf2d5ab1704e480240ca07f5",
+      "sha256After": "3bc48979b5312223120f503e9797cc259103d8e5cf2d5ab1704e480240ca07f5",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/assets/warriors/manifest.json",
+      "sha256Before": "0b9384653e66de02e3755e245bd9af3765d25e6c58e7389d0a8271bb3cb1579b",
+      "sha256After": "0b9384653e66de02e3755e245bd9af3765d25e6c58e7389d0a8271bb3cb1579b",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/warrior-data.mjs",
+      "sha256Before": "b16f6cea2264b2f2405b36f4a69ab12722e6b6acbe808dc261e7a16ddc4d1f2a",
+      "sha256After": "b16f6cea2264b2f2405b36f4a69ab12722e6b6acbe808dc261e7a16ddc4d1f2a",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Sylvarant/scripts/build-art-catalog.mjs",
+      "sha256Before": "2f4cc78372627e614d8dd81868e381fa23ee6f9f5abeceed1ca26a16a538407f",
+      "sha256After": "2f4cc78372627e614d8dd81868e381fa23ee6f9f5abeceed1ca26a16a538407f",
+      "unchanged": true
+    }
+  ]
+}

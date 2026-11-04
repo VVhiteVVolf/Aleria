@@ -4,16 +4,18 @@ export function getConditionConcentrationOwnerId(condition = {}) {
   return String(condition.concentrationOwnerId || condition.durationModel?.concentrationOwnerId || '');
 }
 
+export function replacesRuntimeCondition(condition = {}, incoming = {}) {
+  return Boolean(incoming.stanceGroup && condition.stanceGroup === incoming.stanceGroup)
+    || Boolean(incoming.sourceConditionId && condition.sourceConditionId === incoming.sourceConditionId
+      && condition.sourceActorId === incoming.sourceActorId);
+}
+
 export function refreshRuntimeCondition(conditions = [], incoming) {
   if (getActionLockPrevention(conditions, incoming)) return conditions;
   if (incoming.blockedResource === 'action') incoming = { ...incoming, grantsActionRecovery: true };
   // Recasting one effect by the same caster refreshes it. Manual effects have
   // independent identities and remain explicitly managed by the player.
-  return conditions.filter(condition => {
-    if (incoming.stanceGroup && condition.stanceGroup === incoming.stanceGroup) return false;
-    return !incoming.sourceConditionId || condition.sourceConditionId !== incoming.sourceConditionId
-      || condition.sourceActorId !== incoming.sourceActorId;
-  }).concat(incoming);
+  return conditions.filter(condition => !replacesRuntimeCondition(condition, incoming)).concat(incoming);
 }
 
 export function reconcileConcentrationConditions(states, { pruneEmpty = false } = {}) {

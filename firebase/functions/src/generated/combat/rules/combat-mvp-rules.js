@@ -88,15 +88,15 @@ export function buildVerifiedModifiers(action = {}) {
   };
 }
 
-export function evaluateAttackRoll(roll, targetDefense, criticalThreshold = 20) {
+export function evaluateAttackRoll(roll, targetDefense, criticalThreshold = 20, criticalFailureMaximum = 1) {
   const naturalRoll = Number(roll?.natural);
   const total = Number(roll?.total);
   if (!Number.isFinite(naturalRoll) || !Number.isFinite(total)) {
     throw new Error('Der Angriffswurf enthält kein gültiges W20-Ergebnis.');
   }
-  const criticalFailure = naturalRoll === 1;
+  const criticalFailure = naturalRoll <= Math.max(1, Math.min(3, Number(criticalFailureMaximum) || 1));
   const safeCriticalThreshold = Math.max(2, Math.min(20, Math.trunc(Number(criticalThreshold) || 20)));
-  const criticalSuccess = naturalRoll >= safeCriticalThreshold;
+  const criticalSuccess = !criticalFailure && naturalRoll >= safeCriticalThreshold;
   return {
     criticalFailure,
     criticalSuccess,

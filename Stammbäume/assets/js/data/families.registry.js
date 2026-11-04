@@ -1,9 +1,10 @@
-import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=hausbio-20260911b';
+import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_GARRAEL_FAMILY } from './house-garrael-family.js';
 import { HOUSE_GWYLLACH_FAMILY } from './house-gwyllach-family.js';
 import { HOUSE_SGRECHIWR_FAMILY } from './house-sgrechiwr-family.js';
+import { HOUSE_HAMNETT_FAMILY } from './house-hamnett-family.js';
 import { HOUSE_GWEFRYDD_FAMILY } from './house-gwefrydd-family.js?v=hausbio-20260911c';
-import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js?v=hausbio-20260911c';
+import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js?v=20261104-life-status-v1';
 import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js?v=hausbio-20260911c';
 import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js?v=hausbio-20260911c';
 import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
@@ -13,8 +14,8 @@ import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=gais-bio-20260912';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js?v=anwyll-bio-20260912';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
 import { HOUSE_DUBHAN_GWYNTHOR_FAMILY } from './house-dubhan-gwynthor-family.js';
-import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
-import { HOUSE_BLEIDDORN_FAMILY } from './house-bleiddorn-family.js';
+import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js?v=20261104-lore-fixes-v1';
+import { HOUSE_BLEIDDORN_FAMILY } from './house-bleiddorn-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_CYMRATH_O_TRAETHLAN_FAMILY } from './house-cymrath-o-traethlan-family.js';
 import { HOUSE_HOCHREUTH_FAMILY } from './house-hochreuth-family.js';
 import { WEISENFLUH_HOUSE_FAMILIES } from './weisenfluh-house-families.js';
@@ -22,24 +23,24 @@ import { ACCEPTED_REALM_FAMILIES, withAcceptedRealmPlacement } from './accepted-
 import { VENALYS_HOUSE_FAMILIES } from './venalys-house-families.js';
 import { MORGORN_HOUSE_FAMILIES } from './morgorn-house-families.js';
 import { AELDRUNMAR_HOUSE_FAMILIES } from './aeldrunmar-house-families.js';
-import { ALDRIMAR_HOUSE_FAMILIES } from './aldrimar-house-families.js';
-import { KRONENTAL_DEPENDENT_HOUSE_FAMILIES } from './kronental-house-families.js';
+import { ALDRIMAR_HOUSE_FAMILIES } from './aldrimar-house-families.js?v=20261104-life-status-v1';
+import { KRONENTAL_DEPENDENT_HOUSE_FAMILIES } from './kronental-house-families.js?v=20261104-life-status-v1';
 import {
   IVARSHEIM_DEPENDENT_HOUSE_FAMILIES,
   IVARSHEIM_ORIGIN_HOUSE_FAMILIES
-} from './ivarsheim-house-families.js';
-import { SCHWARZFENN_DEPENDENT_HOUSE_FAMILIES } from './schwarzfenn-house-families.js';
-import { KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES } from './kraehenmoor-house-families.js';
-import { RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES } from './roriksheim-house-families.js';
+} from './ivarsheim-house-families.js?v=20261104-lore-fixes-v1';
+import { SCHWARZFENN_DEPENDENT_HOUSE_FAMILIES } from './schwarzfenn-house-families.js?v=20261104-life-status-v1';
+import { KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES } from './kraehenmoor-house-families.js?v=20261104-life-status-v1';
+import { RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES } from './roriksheim-house-families.js?v=20261104-lore-fixes-v1';
 import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
 import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
-import { LEITHEACH_HOUSE_FAMILIES } from './leitheach-house-families.js';
+import { LEITHEACH_HOUSE_FAMILIES } from './leitheach-house-families.js?v=20261104-lore-fixes-v1';
 import { DUNFAL_HOUSE_FAMILIES } from './dunfal-house-families.js';
 import { AISLEARNEACH_HOUSE_FAMILIES } from './aislearneach-house-families.js';
 import { BLAITHNEACH_HOUSE_FAMILIES } from './blaithneach-house-families.js';
 import { BLAITHNEACH_ADDITIONAL_PLACEMENTS } from './blaithneach-house-profiles.js';
 import { FAELAORN_HOUSE_FAMILIES } from './faelaorn-house-families.js';
-import { UATHNEACH_HOUSE_FAMILIES } from './uathneach-house-families.js';
+import { UATHNEACH_HOUSE_FAMILIES } from './uathneach-house-families.js?v=20261104-lore-fixes-v1';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -58,16 +59,17 @@ import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.j
 import { GWYNTHOR_ERBSTREIT_FAMILIES } from './gwynthor-erbstreit/family-records.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
+import { CENYR_TERRITORY_COMMONER_FAMILIES } from './cenyr-territory-commoner-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js?v=20261027-uathneach-warriors-v1';
-import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
+import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js?v=20261104-life-status-v1';
 import {
   SONNENKUESTE_DEPENDENT_HOUSE_FAMILIES,
   SONNENKUESTE_LINKED_LINE_FAMILIES
-} from './sonnenkueste-house-families.js';
-import { VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES } from './vortigerns-ruh-house-families.js';
+} from './sonnenkueste-house-families.js?v=20261104-lore-fixes-v1';
+import { VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES } from './vortigerns-ruh-house-families.js?v=20261104-lore-fixes-v1';
 import { WEIDEBUCHT_DEPENDENT_HOUSE_FAMILIES } from './weidebucht-house-families.js';
 import { AEHRENTAL_DEPENDENT_HOUSE_FAMILIES } from './aehrental-house-families.js';
-import { SILBERINSEL_DEPENDENT_HOUSE_FAMILIES } from './silberinsel-house-families.js';
+import { SILBERINSEL_DEPENDENT_HOUSE_FAMILIES } from './silberinsel-house-families.js?v=20261104-lore-fixes-v1';
 import { TAL_DER_MILANE_DEPENDENT_HOUSE_FAMILIES } from './tal-der-milane-house-families.js';
 import {
   GRAUE_WEITE_DEPENDENT_HOUSE_FAMILIES,
@@ -76,13 +78,13 @@ import {
 import {
   KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES,
   KLAUENINSEL_ORIGIN_HOUSE_FAMILIES
-} from './klaueninseln-house-families.js?v=parzifal-gwyllt-20261006';
+} from './klaueninseln-house-families.js?v=20261104-life-status-v1';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261027-uathneach-warriors-v1';
-import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
+import { HOUSE_BIOGRAPHY_DEFAULT_CATALOG } from '../modules/house-biography/house-biography-default-catalog.js?v=20261104-content-lore-v1';
+import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js?v=20261104-content-lore-v1';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
 import { withDunfalPortraitUpgrade } from './dunfal-portrait-upgrade.js';
 import { withMathghamSourceCounterUpgrade } from './mathgham-source-counter-upgrade.js';
@@ -92,6 +94,8 @@ import { withDamhSourceCounterUpgrade } from './damh-source-counter-upgrade.js';
 import { withBrannSourceCounterUpgrade } from './brann-source-counter-upgrade.js';
 import { withReviewedAlbicPlacement, reviewedAlbicAdditionalPlacements } from '../modules/albic-territories/family-placements.js';
 import { withLagaCounterpartUpgrade } from '../modules/laga-family/laga-counterpart-upgrade.js';
+import { withHouseLoreCorrections } from '../modules/house-lore-corrections/house-lore-corrections.js?v=20261104-content-lore-v1';
+import { withHouseLifeStatusCorrections } from '../modules/house-lore-corrections/house-life-status-corrections.js?v=20261104-content-lore-v1';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
 
@@ -136,7 +140,9 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withBrannSourceCounterUpgrade(family);
   family = withDunfalPortraitUpgrade(family);
   family = withLagaCounterpartUpgrade(family);
-  family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
+  family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULT_CATALOG);
+  family = withHouseLoreCorrections(family);
+  family = withHouseLifeStatusCorrections(family);
   family = withReviewedAlbicPlacement(family);
   family = withAcceptedRealmPlacement(family);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
@@ -157,6 +163,10 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
 }
 
 export const FAMILY_REGISTRY = Object.freeze([
+  familyRecord({id:'haus-hamnett',title:'Haus Hamnett',family:HOUSE_HAMNETT_FAMILY,type:'commoner'}),
+  ...CENYR_TERRITORY_COMMONER_FAMILIES.map(family => familyRecord({
+    id: family.document.id, title: family.document.title, family, type: 'commoner'
+  })),
   ...ACCEPTED_REALM_FAMILIES.map(family => familyRecord({ id: family.document.id, title: family.document.title, family })),
   familyRecord({
     id: 'haus-arwydd',

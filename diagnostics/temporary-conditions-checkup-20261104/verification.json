@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "checkupDate": "2026-11-04",
+  "passed": true,
+  "localOnly": true,
+  "push": false,
+  "deploy": false,
+  "productionDataWrites": false,
+  "historicalReceiptRewrite": false,
+  "suites": {
+    "domain": {
+      "log": "domain-tests.txt",
+      "tests": 946,
+      "passed": 946,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "log": "backend-tests.txt",
+      "tests": 223,
+      "passed": 223,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "diceAndBundle": {
+      "log": "dice-bundle-tests.txt",
+      "tests": 19,
+      "passed": 19,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "combatTransactions": {
+      "log": "emulator-tests.txt",
+      "tests": 84,
+      "passed": 84,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "healthTransactions": {
+      "log": "health-emulator-tests.txt",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "finalSourceOwnershipTransactions": {
+      "log": "final-source-ownership-emulator-tests.txt",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    }
+  },
+  "overlappingFinalTransactionCases": 11,
+  "uniqueTransactionCases": 90,
+  "uniqueAutomatedCases": 1278,
+  "mechanicsParity": {
+    "checked": 289,
+    "mismatches": [],
+    "passed": true
+  },
+  "browser": {
+    "path": ".tmp/temporary-condition-interface-20261104/browser-1793750232395",
+    "desktopWidth": 1440,
+    "phoneWidth": 390,
+    "screenshotsVisuallyInspected": true,
+    "passed": true,
+    "waitShortcut": true,
+    "voluntaryCheckReason": true,
+    "narrativeEscape": true,
+    "savingThrowsAllowed": true,
+    "manualPreviewMatchesDraft": true,
+    "mobileOverflow": false,
+    "sourceProfilePreserved": true,
+    "externalWritesBlocked": true,
+    "errors": []
+  },
+  "emulatorProjects": [
+    "127.0.0.1:8180 / demo-aleria-combat-checkup",
+    "127.0.0.1:8182 / demo-aleria-item-duels"
+  ],
+  "ownedEmulatorsStopped": true,
+  "independentFinalReview": "No remaining concrete defect found in current permission/runtime rules or final profile-source extraction.",
+  "report": "AleriaAlmanach/docs/combat/TEMPORARY_CONDITIONS_CHECKUP_2026-11-04.md"
+}

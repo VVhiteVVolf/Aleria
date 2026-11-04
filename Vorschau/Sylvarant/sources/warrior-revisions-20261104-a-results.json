@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "provider": "built-in image_gen",
+  "records": [
+    {
+      "id": "house-cerunia-v2",
+      "houseId": "house-cerunia",
+      "assetStem": "house-cerunia-v2",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-0cc5fa14-053d-4ca2-a8c0-db979ec1f7d6.png",
+      "jobManifest": "sources/warrior-revisions-20261104-a-jobs.json",
+      "jobId": "house-cerunia-v2",
+      "copiedOriginal": "assets/warriors/generated/house-cerunia-v2.png",
+      "visualReview": "Tatsächlich angesehen: gerader symmetrischer zweischneidiger Gladius mit schmaler Spitze, vollständig sichtbar und natürlich in derselben rechten Hand gehalten. Junger Mann, Pose, offener römischer Helm, weiße Schulterstoffe, Segmentpanzer, navyfarbene Tunika mit silbernen Ranken, kleines Dreizackwappen und Rückenköcher erhalten; beide Füße vollständig im Bild.",
+      "sha256": "0c3d53a947539c8650f8547c7670ea496d4e7735b4a7233575333b94a0c2902b",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "originalBytePreserved": true,
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "house-rinia-v2",
+      "houseId": "house-rinia",
+      "assetStem": "house-rinia-v2",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-da79b78a-a35d-4a60-973a-c19e61bd8518.png",
+      "jobManifest": "sources/warrior-revisions-20261104-a-jobs.json",
+      "jobId": "house-rinia-v2",
+      "copiedOriginal": "assets/warriors/generated/house-rinia-v2.png",
+      "visualReview": "Tatsächlich angesehen: langer gerader Dreizackschaft mit vollständig sichtbarem Kopf und genau drei getrennten Zinken; Hand umschließt den Schaft natürlich. Gleiche junge Frau mit Zopf, offenem römischem Rippenhelm, Schuppenpanzer, petrolfarbenem Umhang, kleinem Dreizack-Lorbeerwappen und Rückenköcher erhalten. Beide Füße und Dreizackende vollständig im Bild.",
+      "sha256": "393b3b455b3ead18d988ceea2ba05029f5ca65138658803cd85a4c70a480e811",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "originalBytePreserved": true,
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ]
+}

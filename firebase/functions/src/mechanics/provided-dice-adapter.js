@@ -18,6 +18,32 @@ function validateDieResults(values, expectedCount, sides, label) {
   });
 }
 
+// Validate final dice and each single-use replacement, then reconstruct originals
+// for the shared resolver. Submitted policy flags never grant a reroll.
+function providedD20(source, { modifier = 0, rollMode = 'normal', naturalRollPolicy = {} }, label, naturalField = 'naturalRoll') {
+  const count = rollMode === 'normal' ? 1 : 2;
+  const finalDice = validateDieResults(source.diceResults, count, 20, label);
+  const choose = dice => rollMode === 'advantage' ? Math.max(...dice) : rollMode === 'disadvantage' ? Math.min(...dice) : dice[0];
+  if (Number(source[naturalField]) !== choose(finalDice)) invalid(`${label}: Der ausgewählte W20 stimmt nicht mit dem Würfelbeleg überein.`);
+  const replacements = source.rerolls == null ? [] : source.rerolls;
+  if (!Array.isArray(replacements) || replacements.length > count || (replacements.length && !naturalRollPolicy.naturalOneReroll)) invalid(`${label}: Unzulässiger Glückswiederholungswurf.`);
+  const originals = finalDice.slice();
+  const seen = new Set();
+  const validatedNaturalOneReplacements = replacements.map(entry => {
+    const index = entry?.dieIndex;
+    if (!Number.isInteger(index) || index < 0 || index >= count || seen.has(index)
+      || entry.original !== 1 || !Number.isInteger(entry.replacement) || entry.replacement < 1 || entry.replacement > 20
+      || finalDice[index] !== entry.replacement) invalid(`${label}: Ungültiger Beleg für den einmaligen Glückswiederholungswurf.`);
+    seen.add(index);
+    originals[index] = 1;
+    return { dieIndex: index, replacement: entry.replacement, rollId: String(entry.rollId || '').slice(0, 160) };
+  });
+  if (naturalRollPolicy.naturalOneReroll && originals.some((face, index) => face === 1 && !seen.has(index))) invalid(`${label}: Der verpflichtende Glückswiederholungswurf fehlt.`);
+  const natural = choose(originals);
+  return { id: String(source.rollId || ''), natural, dice: originals, keptDice: [natural],
+    total: natural + Number(modifier || 0), visualMode: 'server-validated', validatedNaturalOneReplacements };
+}
+
 export class ProvidedDiceAdapter {
   constructor(submittedResolution = {}) {
     this.submitted = submittedResolution;
@@ -44,24 +70,11 @@ export class ProvidedDiceAdapter {
     this.damageSources = damageSources;
   }
 
-  async rollAttack({ modifier = 0, rollMode = 'normal' } = {}) {
+  async rollAttack(options = {}) {
     const source = this.attackIndex++ === 0
       ? (this.submitted.attack || {})
       : (this.submitted.followUpAttacks?.[this.attackIndex - 2]?.attack || {});
-    const expectedCount = rollMode === 'normal' ? 1 : 2;
-    const dice = validateDieResults(source.diceResults, expectedCount, 20, 'Angriffswurf');
-    const natural = rollMode === 'advantage'
-      ? Math.max(...dice)
-      : (rollMode === 'disadvantage' ? Math.min(...dice) : dice[0]);
-    if (Number(source.naturalRoll) !== natural) invalid('Der ausgewählte W20 stimmt nicht mit dem Würfelbeleg überein.');
-    return {
-      id: String(source.rollId || ''),
-      natural,
-      dice,
-      keptDice: [natural],
-      total: natural + Number(modifier || 0),
-      visualMode: 'server-validated'
-    };
+    return providedD20(source, options, 'Angriffswurf');
   }
 
   forCounter(index = 0) {
@@ -70,22 +83,8 @@ export class ProvidedDiceAdapter {
     return new ProvidedDiceAdapter(receipt);
   }
 
-  async rollSkill({ modifier = 0, rollMode = 'normal' } = {}) {
-    const source = this.submitted;
-    const expectedCount = rollMode === 'normal' ? 1 : 2;
-    const dice = validateDieResults(source.diceResults, expectedCount, 20, 'Fertigkeitswurf');
-    const natural = rollMode === 'advantage'
-      ? Math.max(...dice)
-      : (rollMode === 'disadvantage' ? Math.min(...dice) : dice[0]);
-    if (Number(source.natural) !== natural) invalid('Der ausgew\u00e4hlte W20 des Fertigkeitswurfs stimmt nicht mit dem W\u00fcrfelbeleg \u00fcberein.');
-    return {
-      id: String(source.rollId || ''),
-      natural,
-      dice,
-      keptDice: [natural],
-      total: natural + Number(modifier || 0),
-      visualMode: 'server-validated'
-    };
+  async rollSkill(options = {}) {
+    return providedD20(this.submitted, options, 'Fertigkeitswurf', 'natural');
   }
 
   async rollDamage({ damageFormula, bonus = 0, critical = false } = {}) {
@@ -115,22 +114,9 @@ export class ProvidedDiceAdapter {
     };
   }
 
-  async rollSavingThrow({ modifier = 0, rollMode = 'normal' } = {}) {
+  async rollSavingThrow(options = {}) {
     const source = this.submitted.secondarySaves?.[this.savingThrowIndex++] || {};
-    const expectedCount = rollMode === 'normal' ? 1 : 2;
-    const dice = validateDieResults(source.diceResults, expectedCount, 20, 'Sekundärer Rettungswurf');
-    const natural = rollMode === 'advantage'
-      ? Math.max(...dice)
-      : (rollMode === 'disadvantage' ? Math.min(...dice) : dice[0]);
-    if (Number(source.naturalRoll) !== natural) invalid('Der ausgewählte W20 des sekundären Rettungswurfs stimmt nicht mit dem Würfelbeleg überein.');
-    return {
-      id: String(source.rollId || ''),
-      natural,
-      dice,
-      keptDice: [natural],
-      total: natural + Number(modifier || 0),
-      visualMode: 'server-validated'
-    };
+    return providedD20(source, options, 'Sekund?rer Rettungswurf');
   }
 
   // Eigener Kanal für Abwehrladungen-Ablenkungswürfe (Spiegelbilder u. Ä.) - bewusst getrennt

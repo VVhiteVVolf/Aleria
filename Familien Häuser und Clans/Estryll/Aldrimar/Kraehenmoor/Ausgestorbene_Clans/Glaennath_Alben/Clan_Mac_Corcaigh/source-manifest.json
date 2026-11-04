@@ -1,0 +1,95 @@
+{
+  "id": "haus-mac-corcaigh",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "60250c79-5276-4fa3-960d-95e126f1be3a",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\60250c79-5276-4fa3-960d-95e126f1be3a\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/corcaigh/animexx-original.html",
+    "bytes": 45054,
+    "sha256": "7d3b2dec19faee18146d922ac7ed162ef95822b878db2e8345093fd1d7c726ce",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-mac-corcaigh",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Moortal"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "dc52b5a62fd848962eabeaf26d0802857549adf7de8300546d6a91e24e29c312"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-mac-corcaigh",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-mac-corcaigh",
+    "familyId": "haus-mac-corcaigh",
+    "slug": "corcaigh",
+    "canonicalSlug": "mac-corcaigh",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "60250c79-5276-4fa3-960d-95e126f1be3a",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/djsYPLC.png",
+    "sourceUrl": "https://i.imgur.com/djsYPLC.png",
+    "path": "Stammbäume/assets/images/references/haus-mac-corcaigh/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-mac-corcaigh/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:360px; vertical-align:top; width:240px",
+    "context": "Tiarnatum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 263135,
+    "sha256": "94e678dd70804dd84b2ccca47866fda7a66b28fe6c35d975fd3be82047c410f6",
+    "sha": "94e678dd70804dd84b2ccca47866fda7a66b28fe6c35d975fd3be82047c410f6",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Albenkrieger mit Federhelm, Speer und rundem Wappenschild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Stabile ID haus-mac-corcaigh und sichtbarer Name Mac Corcaigh. Historischer Glaennath-Clan mit Rang unknown; Kulturordner ist kein Sitz, Moortal der belegte historische Nebenbezug.",
+    "Die Vorlage enthält außer dem allgemeinen Tiarnatum-Text fast nur Platzhalter. Der belegte Widerstand gegen Varangr und verbündete Norrnaigh folgt dem bestehenden Krähenmoor-Gebietstext.",
+    "Die Quelle nennt beim letzten Widerstand ausdrücklich den Fall Mac Môrfhias, nicht denselben datierten Todesvorgang für Mac Corcaigh. Kein gemeinsames neues Vernichtungsdatum und keine ungenannten letzten Angehörigen erfinden.",
+    "Tiarnatum wird als allgemeine ältere Glaennath-Kriegskultur erhalten und kontextgerecht Kriegskunst genannt, ohne daraus persönlichen Rang oder eine individuelle Ausrüstungsliste abzuleiten.",
+    "Keine Hof-/Genealogietabellen, Militärstatistiken oder private Quellen übernehmen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

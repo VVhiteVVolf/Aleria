@@ -1,0 +1,42 @@
+{
+  "houseId": "haus-neidr",
+  "source": {
+    "attachmentId": "21a37d56-6614-4208-8a93-cb17f76fbf6d",
+    "file": "animexx-original.html",
+    "sha256": "815503ddb4b5b301d7268ba50a55ffab81c9ab69dc9f88320e545260c17944b6",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "url": "https://i.imgur.com/dGXptHo.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "note": "Geliefertes Original durch Hauptagent heruntergeladen, tatsächlich als Ganzkörper-Kriegerdarstellung angesehen und unverändert eingebunden.",
+      "sha256": "910fd66912fe2f1d99753a1f47ff63293ea88714d942da45066adc98224058bb",
+      "width": 408,
+      "height": 612
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanges": false,
+    "familyId": "haus-neidr"
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-neidr-family.js",
+    "Stammbäume/assets/js/data/silberinsel-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs"
+  ],
+  "decisions": [
+    "Die genealogischen Abschnitte „Hierarchie“ und „Stammbaum“ samt alter Stammbaumgrafik werden vollständig ignoriert. Keine neuen Personen, Lebensdaten, Beziehungen oder Graphänderungen.",
+    "Alle Militärstatistiken und Zahlen vollständig ignoriert. Das Militärprofil bleibt ausgeblendet; die literarische Beschreibung von Rittertum und Ausrüstung wird davon getrennt behandelt.",
+    "Aktuelle Familienakten, Haus-IDs, Personen-IDs, Portraitzuordnungen und Ortsprofile haben Vorrang vor alten Kopierfeldern. Amtszeiten werden ausdrücklich von Lebensdaten getrennt.",
+    "Die Kapitel der aktuellen Grafschafts- und Herrschaftsseiten ergänzen belegt die heutige territoriale Einordnung und Lebensgrundlage. Unbenannte Amtsinhaber und historische Platzhalter werden nicht erfunden.",
+    "Der als Gwyneed beschriftete Graf ab 1720 ist in der kanonischen Akte und Grafschaft als Yvain Neidr identifiziert. Die vorhandene stabile Person yvain-neidr wird verwendet.",
+    "Sitz und Hauptstadt sind Llanvane. Die Altbezeichnungen Cerneu/Cerneus werden nicht als neue aktuelle Stadt oder Insel geführt; die aktuelle Gliederung nennt Silberbucht, Silberpfad und Silberküste sowie Eiddon und Caer Clwyd. Liwtune wird nicht als neue Ortschaft angelegt.",
+    "Die historische Episode „Abendmal der Viper“ (redaktionell „Abendmahl der Viper“) bleibt ausdrücklich als ältere Hausüberlieferung erhalten: früherer Handelsvorrang, Embargo vieler Gilden/Fraktionen sowie des Festlands, Schulden im Zusammenhang mit der Ermordung eines nicht benannten Barons. Die Quelle nennt weder Datum noch Opfer oder Täter; heutiger Fortbestand und genauer Zusammenhang bleiben offen. Der ältere Baron-/Cerneu-Kontext wird nicht mit einem erfundenen Amtsinhaber der aktuellen Grafenherrschaft gleichgesetzt.",
+    "Die Mutter ist im ausgeführten Kulturtext als weitere verehrte Gottheit genannt. Die Kurzzeile Dame der See/Nimue nennt zweimal dieselbe Patronin; die Darstellung führt Dame der See und Mutter.",
+    "Verwandtschaft zu den Inselhäusern wird nicht pauschal als Kadettenzuordnung behandelt. Die bestehenden differenzierten Akten bleiben maßgeblich."
+  ]
+}

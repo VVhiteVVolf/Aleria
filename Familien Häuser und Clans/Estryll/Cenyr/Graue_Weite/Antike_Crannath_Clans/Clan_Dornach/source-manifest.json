@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "e7f78465-691f-4435-8644-7a531a306294",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "8a1877d4e4e74ec322c81dfe8aaba987b43a69769fed011a7905fd37a31df8fd"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-dornach",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-dornach",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Ard Ghallon",
+    "currentRankId": "dun-tiarna"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/QihO7vR.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "2bb630a768aa7fdbd5f545fffede8041af79ad62ae2bdf161dde6bc5dbfef13e",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Die dünne Clanvorlage bleibt ohne erfundene Gründer oder eigene Chronik; aktueller Dún-Tiarna-Rang bleibt erhalten.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

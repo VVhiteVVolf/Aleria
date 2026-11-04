@@ -10,11 +10,14 @@ import { resolveGuideTaxonomy } from './guide-taxonomy.mjs';
 import { buildGuideArsenal } from './guide-arsenal-model.mjs';
 import { entryIcon, publicAsset } from './guide-assets.mjs';
 import { COST_LABELS } from './guide-format.mjs';
+import { withCurrentGuideTraits } from './guide-trait-rules.mjs';
+import { resolveSkillModifier } from '../../AleriaAlmanach/modules/skill-checks/skill-check-model.js';
 
 export const diceText = text => String(text || '').replace(/(\d)d(\d)/g, '$1W$2');
 
 export function buildGuideModel(guide, character) {
   assert.equal(character.id, guide.id);
+  character = withCurrentGuideTraits(character);
   const registration = findGuideRegistration(character);
   assert.ok(registration, `Guide fehlt im Register: ${character.id}`);
   const taxonomy = resolveGuideTaxonomy(registration, character, FAMILY_REGISTRY);
@@ -65,6 +68,11 @@ export function buildGuideModel(guide, character) {
     attack: base.profile.attackModifier, resources: base.profile.resources.filter(r => Object.hasOwn(COST_LABELS, r.id)),
     recovery: `1W${base.profile.hitPoints.hitDie} + ${Math.ceil(base.profile.maximumHitPoints / 10)}`,
     combos, companions,
+    checkExamples: (guide.checkExamples || []).map(id => {
+      const check = resolveSkillModifier(base.profile, id);
+      return { id, label: check.definition.label, formula: `1W20 ${check.modifier >= 0 ? '+' : ''}${check.modifier}`,
+        modifier: check.modifier, kind: check.definition.checkType === 'saving-throw' ? 'save' : 'skill' };
+    }),
     weapons: loadouts.filter(l => !l.mounted).map(l => ({ name: l.profile.weapon.name,
       image: publicAsset(l.profile.weapon.image), attack: l.profile.attackModifier,
       formula: diceText(l.profile.weapon.damageFormula) + (l.profile.damageModifier >= 0 ? '+' : '') + l.profile.damageModifier })),

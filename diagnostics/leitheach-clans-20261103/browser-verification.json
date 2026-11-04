@@ -1,0 +1,25 @@
+{
+  "schema": "aleria.leitheach-browser-verification",
+  "reviewedAt": "2026-11-03T22:00:46.524Z",
+  "status": "limited",
+  "uiVerified": false,
+  "reason": "Die Browsersteuerung bricht nach Wiederverbindung, Session-Neustart und erneuter Tabbindung vor der Navigation ab (Cannot read properties of undefined: timeoutMs). Keine erfolgreiche visuelle UI-Prüfung behauptet.",
+  "attempts": [
+    "Chrome extension reconnected; selected browser 2",
+    "Existing own blank tab bound; goto failed before navigation",
+    "CUA runtime reset and documentation refreshed",
+    "Browser 2 unavailable; current inventory browser 1 selected",
+    "getTab and direct tabs.get/goto both failed before navigation"
+  ],
+  "localPreview": {
+    "httpHeadStatus": 200,
+    "evidence": "cleanup-review.json",
+    "uiRenderingEstablished": false
+  },
+  "otherEvidence": [
+    "final-audit.json",
+    "image-verification.json",
+    "test-results.json"
+  ],
+  "canonicalIframeIntegrationAutomatedTests": "pass"
+}

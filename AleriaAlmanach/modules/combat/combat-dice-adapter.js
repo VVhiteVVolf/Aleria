@@ -10,12 +10,13 @@ export class CombatDiceAdapter {
     return new CombatDiceAdapter({ roll: (notation, _container, context) => this.service.rollSilent(notation, context) });
   }
 
-  async rollAttack({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null } = {}) {
+  async rollAttack({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null, checkType = 'attack', naturalRollPolicy, naturalOneReplacement = false } = {}) {
     const notation = buildAttackNotation(modifier, rollMode);
     return this.service.roll(notation, container, {
       roller: actorName,
-      purpose: `Angriff gegen ${targetName}`,
-      rollType: 'attack'
+      purpose: `${naturalOneReplacement ? 'Glückswiederholung · ' : ''}${checkType === 'saving-throw' ? 'Rettungswurf' : 'Angriff'} gegen ${targetName}`,
+      rollType: checkType === 'saving-throw' ? 'saving-throw' : 'attack',
+      naturalRollPolicy
     });
   }
 
@@ -29,12 +30,13 @@ export class CombatDiceAdapter {
     return { ...roll, ...(plan.criticalDamage ? { criticalDamage: plan.criticalDamage } : {}) };
   }
 
-  async rollSavingThrow({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null } = {}) {
+  async rollSavingThrow({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null, naturalRollPolicy, naturalOneReplacement = false } = {}) {
     const notation = buildAttackNotation(modifier, rollMode);
     return this.service.roll(notation, container, {
       roller: targetName,
-      purpose: `Rettungswurf gegen ${actorName}`,
-      rollType: 'saving-throw'
+      purpose: `${naturalOneReplacement ? 'Glückswiederholung · ' : ''}Rettungswurf gegen ${actorName}`,
+      rollType: 'saving-throw',
+      naturalRollPolicy
     });
   }
 

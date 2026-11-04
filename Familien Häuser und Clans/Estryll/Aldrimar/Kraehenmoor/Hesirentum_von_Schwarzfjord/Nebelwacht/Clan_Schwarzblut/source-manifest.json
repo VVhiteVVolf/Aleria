@@ -1,0 +1,93 @@
+{
+  "id": "haus-schwarzblut",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "18476498-cb27-49e5-9471-1fe412a502b6",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\18476498-cb27-49e5-9471-1fe412a502b6\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/schwarzblut/animexx-original.html",
+    "bytes": 110038,
+    "sha256": "293fcf2debe99a647fa9aea0178e3b40dfc24cca69cff18a7d1c0bbbe3075160",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-schwarzblut",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Nebelwacht",
+      "barony": "Hesirentum von Schwarzfjord",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "1d09f8e1d43ad0c53d29425ef85545223b2f700f3a517bbcd37b14c09e9ef3f0"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-schwarzblut",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-schwarzblut",
+    "familyId": "haus-schwarzblut",
+    "slug": "schwarzblut",
+    "canonicalSlug": "schwarzblut",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "18476498-cb27-49e5-9471-1fe412a502b6",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Tir7bJU.png",
+    "sourceUrl": "https://i.imgur.com/Tir7bJU.png",
+    "path": "Stammbäume/assets/images/references/haus-schwarzblut/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-schwarzblut/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 290272,
+    "sha256": "1839877dcd392fe422843f937852e1c912fc2067a4d95d5d18a726397fe6d35c",
+    "sha": "1839877dcd392fe422843f937852e1c912fc2067a4d95d5d18a726397fe6d35c",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Krieger mit Krakenhelm und zweihändiger Axt.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Sitz Nebelwacht, Hesirentum Schwarzfjord an der nordöstlichen Küste, Lehnsherr Varangr. Nicht den gesamten Küstenraum oder unabhängige Ordensburgen dem Clan zuschreiben.",
+    "Järnblod/Eisenblut bezeichnen dasselbe historische Herkunftshaus. Die alte Passage über neue aktuelle Ehen mit Eisenblut wird nicht wörtlich übernommen, da der Stammclan erloschen ist.",
+    "Quelle widerspricht sich zwischen angeblich schon beigelegten Konflikten und bis heute kalten Beziehungen. Redigiert als langfristige Annäherung bei fortbestehendem Misstrauen, ohne neue Friedensverträge oder Eheschließungen.",
+    "Detlaffs Tod durch Fenrir Wellenschild bleibt ein überliefertes Kriegsgeschehen. Keine Personen- oder Todesdatenänderungen und keine neuen Familienkanten.",
+    "Relative Datierung vor hundert Jahren und Militärstatistiken ausgenommen. Ruf als unbesiegbar bzw. unangefochtener Herr aller Meere wird als Stolz und Anspruch, nicht objektive Unbesiegbarkeit dargestellt.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

@@ -1,25 +1,49 @@
+const SCRIPT_TABLE_EDITOR_HELP = 'Eine Zeile pro Eintrag. Spalten mit | trennen. Für | innerhalb eines Feldes \\| eingeben, für einen Backslash \\\\.';
+
+function escapeScriptTableCell(value) {
+  return String(value).replaceAll('\\', '\\\\').replaceAll('|', '\\|');
+}
+
+function parseScriptTableCells(line) {
+  const cells = [];
+  let cell = '';
+  for (let index = 0; index < line.length; index++) {
+    const character = line[index];
+    const next = line[index + 1];
+    if (character === '\\' && (next === '\\' || next === '|')) {
+      cell += next;
+      index++;
+    } else if (character === '|') {
+      cells.push(cell.trim());
+      cell = '';
+    } else cell += character;
+  }
+  cells.push(cell.trim());
+  return cells;
+}
+
 function formatScriptTableRows(rows = []) {
   return sanitizeScriptTableRows(rows)
-    .map(row => [row.symbol, row.name, row.sound, row.meaning].join(' | '))
+    .map(row => [row.symbol, row.name, row.sound, row.meaning].map(escapeScriptTableCell).join(' | '))
     .join('\n');
 }
 
 function parseScriptTableRows(value) {
   return String(value || '').split(/\r?\n/).map(line => {
-    const [symbol = '', name = '', sound = '', ...meaning] = line.split('|').map(part => part.trim());
+    const [symbol = '', name = '', sound = '', ...meaning] = parseScriptTableCells(line);
     return { symbol, name, sound, meaning: meaning.join(' | ') };
   });
 }
 
 function formatScriptTableSyllables(rows = []) {
   return sanitizeScriptTableSyllables(rows)
-    .map(row => [row.syllable, row.meaning, row.usage].join(' | '))
+    .map(row => [row.syllable, row.meaning, row.usage].map(escapeScriptTableCell).join(' | '))
     .join('\n');
 }
 
 function parseScriptTableSyllables(value) {
   return String(value || '').split(/\r?\n/).map(line => {
-    const [syllable = '', meaning = '', ...usage] = line.split('|').map(part => part.trim());
+    const [syllable = '', meaning = '', ...usage] = parseScriptTableCells(line);
     return { syllable, meaning, usage: usage.join(' | ') };
   });
 }
@@ -27,7 +51,8 @@ function parseScriptTableSyllables(value) {
 function buildScriptTableStyleOptions(selected) {
   return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'], ['laerelis', 'Laerelis · Lichtfluss'],
     ['infernal', 'Infernal · Nharazim'], ['futhark', 'Futhark'], ['kanaanith', 'Kana’anith'],
-    ['argenti', 'Lingua Argenti'], ['stoicheia', 'Stoicheia'], ['arcane', 'Arkanes Alphabet · Alte Zunge'], ['plain', 'Normal']]
+    ['argenti', 'Lingua Argenti'], ['stoicheia', 'Stoicheia'], ['arcane', 'Arkanes Alphabet · Alte Zunge'],
+    ['tlapanui', 'Nuatlapa · Tavarua'], ['ishtaran', 'Tirghan · Ayluun'], ['plain', 'Normal']]
     .map(([value, label]) => `<option value="${value}"${selected === value ? ' selected' : ''}>${label}</option>`).join('');
 }
 
@@ -36,7 +61,7 @@ function buildScriptTableModuleEditorFields(page) {
   return `
     <div class="module-page-type-block${inferModulePageType(page) === 'script-table' ? ' visible' : ''}" data-page-type="script-table">
       <div class="module-editor-grid">
-        <div class="module-editor-field wide"><div class="module-editor-kicker">Schriftzeichen-Tabelle</div><div class="module-editor-help">Eine Zeile pro Eintrag. Spalten mit | trennen: Zeichen | Name | Laut | Bedeutung.</div></div>
+        <div class="module-editor-field wide"><div class="module-editor-kicker">Schriftzeichen-Tabelle</div><div class="module-editor-help">${escapeHtml(SCRIPT_TABLE_EDITOR_HELP)}</div></div>
         <div class="module-editor-field"><label>Archivzeile</label><input class="me-script-table-archive" type="text" value="${escapeHtml(data.archiveLabel)}"></div>
         <div class="module-editor-field"><label>Schriftstil</label><select class="me-script-table-style">${buildScriptTableStyleOptions(data.scriptStyle)}</select></div>
         <div class="module-editor-field"><label>Titel</label><input class="me-script-table-title" type="text" value="${escapeHtml(data.title)}"></div>

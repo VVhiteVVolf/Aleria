@@ -1,0 +1,702 @@
+{
+  "schema": "aleria.public-house-lore-review",
+  "schemaVersion": 1,
+  "scope": "Leitheach",
+  "reviewedAt": "2026-11-03T22:40:39.584Z",
+  "status": "complete-read-only-review-no-corrections",
+  "publicOnly": true,
+  "exclusions": [
+    "Supplied original genealogy sections",
+    "Military statistics",
+    "Private dossiers and hidden/private/restricted/secret entities or relationships",
+    "Archived text treated as current authority solely by name match"
+  ],
+  "coverage": {
+    "publicFamilies": 29,
+    "currentAdministrations": 26,
+    "historicalAdministrations": 3,
+    "activeHouseSourcesRead": 29,
+    "activeBiographiesChecked": 29,
+    "territorialPagesReviewed": 27,
+    "nonemptyCurrentSeatDescriptionsRead": [
+      "Broch an Coill",
+      "Cairn Fàire",
+      "Broch an Abhainn",
+      "Dun Athar",
+      "Mârbail",
+      "Senanbail"
+    ],
+    "localRawChronologyCandidatesReviewed": 5,
+    "localChronologyIssueGroups": 1,
+    "sharedIdentityCandidateReviewOwnedBy": "root/shared-identity-review.json"
+  },
+  "counts": {
+    "accept": 4,
+    "uncertain": 1,
+    "reject": 8
+  },
+  "findings": [
+    {
+      "id": "LEI-001",
+      "classification": "accept",
+      "category": "current-rule-versus-ended-administration",
+      "confidence": "high",
+      "familyIds": [
+        "haus-dal-t-saor"
+      ],
+      "title": "Dal T’Saor is simultaneously presented as current territorial ruler and as an administration ended in 1735",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5160,
+          "quote": "Herrschaft der Dál T’Saor ist die städtische Herrschaft des Clans in Sruthlann."
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5177,
+          "quote": "\"label\": \"Herrschender Clan\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5178,
+          "quote": "\"value\": \"Dal T’Saor\""
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+          "line": 107,
+          "quote": "1735 fiel die Stammburg des Hauses einem finsteren Unheil aus dem Dunkelhain zum Opfer. ... Damit endete die dortige Hauptlinie und Hausverwaltung."
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 384,
+          "quote": "administrativeExtinction: true,"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 396,
+          "quote": "historicalStatus: 'extinct',"
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3559,
+          "quote": "\"title\": \"Ausgestorbene Clans\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3563,
+          "quote": "\"name\": \"Dal T’Saor\""
+        }
+      ],
+      "explanation": "This is active territorial authoring data, not an archived old article. Its child page and ruling-clan box imply present rule, while the active house narrative, canonical extinction metadata, and even the parent territory classify the administration as historical. The disagreement concerns rule, not the biological survival of Quona and Junaid.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 381
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+          "line": 107
+        }
+      ],
+      "safeResolution": "Authorial decision on how to mark the existing territorial page as historical; do not delete the family, surviving persons, historical rank, seat, or canonical iframe."
+    },
+    {
+      "id": "LEI-002",
+      "classification": "accept",
+      "category": "current-office-links-deceased-canonical-identity",
+      "confidence": "high-for-active-data-conflict",
+      "familyIds": [
+        "haus-dal-t-saor"
+      ],
+      "personIds": [
+        "wunbhna-spouse-tsaoir"
+      ],
+      "territoryId": "leitheach-tir-na-gortanna",
+      "title": "Wunbhna is listed as current council mage but linked to a deceased canonical person",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 2095,
+          "quote": "\"office\": \"Ratsmagier des Mor Tiarna\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 2098,
+          "quote": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=wunbhna-spouse-tsaoir\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 254,
+          "quote": "spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "quote": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "publicRuntimeObservation": {
+        "familyId": "haus-dal-t-saor",
+        "personId": "wunbhna-spouse-tsaoir",
+        "name": "Wunbhna",
+        "birth": "????",
+        "death": "????",
+        "status": "dead"
+      },
+      "explanation": "The active council group uses an exact family/person link, so this is not merely a similar name. The linked record has the nonempty unknown-death marker ???? and is normalized to status dead. No death year is claimed here. This confirms contradictory active data, but cannot decide whether the council entry selected an older namesake, the office list is historical, or the life-state data need authorial review.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 254
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33
+        }
+      ],
+      "safeResolution": "Verify the intended office-holder identity and time frame. Do not create a new person or resurrect the linked historical person from the name alone."
+    },
+    {
+      "id": "LEI-003",
+      "classification": "accept",
+      "category": "current-office-links-deceased-canonical-identity",
+      "confidence": "high-for-active-data-conflict",
+      "familyIds": [
+        "haus-choinnich"
+      ],
+      "personIds": [
+        "maolmhuire-spouse-choinnich"
+      ],
+      "territoryId": "leitheach-tir-na-comhchuibhis",
+      "title": "Maolmhuire is listed as current council mage but linked to a deceased canonical person",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3630,
+          "quote": "\"office\": \"Ratsmagier des Mor Tiarna\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3633,
+          "quote": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view&person=maolmhuire-spouse-choinnich\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+          "line": 252,
+          "quote": "spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "quote": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "publicRuntimeObservation": {
+        "familyId": "haus-choinnich",
+        "personId": "maolmhuire-spouse-choinnich",
+        "name": "Maolmhuire",
+        "birth": "????",
+        "death": "????",
+        "status": "dead"
+      },
+      "explanation": "The active council group uses an exact family/person link, so this is not merely a similar name. The linked record has the nonempty unknown-death marker ???? and is normalized to status dead. No death year is claimed here. This confirms contradictory active data, but cannot decide whether the council entry selected an older namesake, the office list is historical, or the life-state data need authorial review.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+          "line": 252
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33
+        }
+      ],
+      "safeResolution": "Verify the intended office-holder identity and time frame. Do not create a new person or resurrect the linked historical person from the name alone."
+    },
+    {
+      "id": "LEI-004",
+      "classification": "accept",
+      "category": "known-unresolved-canonical-chronology",
+      "confidence": "high",
+      "familyIds": [
+        "haus-dal-ceardaiocht"
+      ],
+      "title": "The confirmed children of Aonghus are born before their father; the first two would also have a mother aged eight or ten",
+      "knownBeforeCurrentHouseImport": true,
+      "rawCandidateCount": 5,
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 125,
+          "quote": "person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1635', '1672', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 130,
+          "quote": "spouse('etain-ancient', 'Ètáin', 'female', '1622', '1695'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 132,
+          "quote": "person('wiomar-ceardaiocht', 'Wíomar Ceardaíocht', 'male', '1630', '1681'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 134,
+          "quote": "awayWoman('wunaire-ceardaiocht', 'Wúnaire Ceardaíocht', '1632', '1704', TARGETS.ruitheach),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 136,
+          "quote": "person('seamus-ceardaiocht', 'Séamus Ceardaíocht', 'male', '1634', '1659'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 215,
+          "quote": "...childrenOf(['wiomar-ceardaiocht', 'wunaire-ceardaiocht', 'seamus-ceardaiocht'], AONGHUS_FOUNDER_IDS, 'marriage-aonghus-etain', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 216,
+          "quote": "notes: 'Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.'"
+        }
+      ],
+      "publicRuntimeChildren": [
+        {
+          "personId": "wiomar-ceardaiocht",
+          "name": "Wíomar Ceardaíocht",
+          "birth": "1630",
+          "parentageId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -5,
+          "motherAgeAtBirth": 8
+        },
+        {
+          "personId": "wunaire-ceardaiocht",
+          "name": "Wúnaire Ceardaíocht",
+          "birth": "1632",
+          "parentageId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -3,
+          "motherAgeAtBirth": 10
+        },
+        {
+          "personId": "seamus-ceardaiocht",
+          "name": "Séamus Ceardaíocht",
+          "birth": "1634",
+          "parentageId": "ceardaiocht-parentage-seamus-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -1,
+          "motherAgeAtBirth": 12
+        }
+      ],
+      "explanation": "The existing public canonical graph marks these three links as biological and confirmed. Aonghus 1635 is five, three and one years younger than his children (1630/1632/1634). Etain 1622 is eight or ten at the first two births. The source explicitly documents this contradiction as intentionally unresolved; it is one issue, not five independent newly introduced errors.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 128
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 216
+        }
+      ],
+      "safeResolution": "Retain the already explicit correction of Aonghus to 1635 until an authorial chronology decision also settles the children/parent links. The superseded old year 1610 is not an authorized automatic fix. No original supplied genealogy was used in this review."
+    },
+    {
+      "id": "LEI-U01",
+      "classification": "uncertain",
+      "category": "territorial-wording",
+      "confidence": "medium",
+      "familyIds": [
+        "haus-dal-cruthin"
+      ],
+      "title": "Gortanna brewing paragraph may still imply that Leitheach is part of Aldrimar",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1924,
+          "quote": "... starke Brauerzünfte, die regelmäßig in Wettstreit mit den Brauern aus anderen Teilen Aldrimars treten."
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 7,
+          "quote": "\"type\": \"Fürstentum\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1917,
+          "quote": "Tir na Gortanna ist das fruchtbare Herz Leitheachs ... Kornkammer des Fürstentums"
+        }
+      ],
+      "explanation": "The phrase anderen Teilen Aldrimars suggests inclusion, whereas the active hierarchy places Gortanna under the independent Leitheach principality on Estryll. Trade or competition with Aldrimar is entirely possible, so this is an ambiguous wording issue rather than proof of a different sovereign relationship. The active Cruthin house text itself uses Leitheach correctly.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1896
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs",
+          "line": 24
+        }
+      ],
+      "safeResolution": "Clarify whether the intended comparison is simply with brewers in Aldrimar. No political-border change can be inferred from this sentence."
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "id": "LEI-R01",
+      "classification": "reject",
+      "topic": "Historical administration versus surviving descendants",
+      "explanation": "Suileach lost administration and was exiled. Iomrach ended in 1733 but Ybhna and Conan survive. Dal T’Saor ended in 1735 but Quona and Junaid survive. Active pages expressly distinguish political/administrative extinction from all descendants dying.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.content.mjs",
+          "line": 25,
+          "quote": "... Ybhna und Cónán gehören zu den Überlebenden ..."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+          "line": 30,
+          "quote": "\"relations\": \"Quona und Junaid überlebten außerhalb der Burg und führten ihr Leben an anderen Orten fort. Der Untergang der Hauptlinie war deshalb keine vollständige Auslöschung aller Angehörigen.\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R02",
+      "classification": "reject",
+      "topic": "Somhairle migration from Glaennmor",
+      "explanation": "The canonical origin is Glaennmor in Tir na Dun, Ceitheach, and the current seat is Broch an Clais, Leitheach. The current Ceitheach territory source independently marks the Somhairle origin territory historical under Tir na Dun. These are past and present residences, not contradictory current seats.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-sidhe-somhairle-family.js",
+          "line": 179,
+          "quote": "description: 'Aus Glaennmor in Tir na Dun stammender Laird-Clan und gegenwärtiger Verwalter von Broch an Clais.',"
+        },
+        {
+          "path": "Kontinente/modules/ceitheach/pages.source.json",
+          "line": 2212,
+          "quote": "\"kicker\": \"Historisches Herrschaft · Clan Sidhe Somhairle\""
+        },
+        {
+          "path": "Kontinente/modules/ceitheach/pages.source.json",
+          "line": 2214,
+          "quote": "\"parentLabel\": \"Oberherrschaft Tir na Dun\""
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.content.mjs",
+          "line": 24,
+          "quote": "\"overview\": \"Sidhe Somhairle ist ein Haus im Rang Laird mit Sitz in Broch an Clais in Tir na Gortanna, Leitheach. Es dient Clan Dál’Cruthin.\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R03",
+      "classification": "reject",
+      "topic": "Laoch seat relocation",
+      "explanation": "The active house text says the earlier lands around the princely city were exchanged for the frontier at Broch an Abhainn. The current place description independently says the Laoch moved there and the castle is still under construction. The old and new locations are explicitly chronological.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+          "line": 110,
+          "quote": "\"holdings\": \"Ursprünglich wurden den Laoch die fruchtbaren Ländereien im Umland der Fürstenstadt zugesprochen. In jüngerer Zeit jedoch wurde ihre Herrschaft an die wilde Grenzregion verlegt, wo heute Broch an Abhainn errichtet wird – genau an jenem Ort, an dem Senan einst die Bestie erschlug. Zwar verfügen sie dort über weniger Besitz, doch ihre Aufgabe ist umso ehrvoller: den Außenposten festigen und die Region aufbauen – wie einst ihr Ahnherr.\","
+        },
+        {
+          "path": "Karten/Leitheach/places.source.json",
+          "line": 1917,
+          "quote": "Errichtet vom Ruin’Laoch Clan, der hierher zog ... Noch ist die Burg unvollendet."
+        }
+      ]
+    },
+    {
+      "id": "LEI-R04",
+      "classification": "reject",
+      "topic": "Amhran exile versus present Cuinn allegiance",
+      "explanation": "The marriage legend explicitly proceeds from exile to later recognition as a cadet clan. Current Cuinn allegiance does not contradict the earlier banishment.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+          "line": 107,
+          "quote": "\"history\": \"Die Ua’Amhran sind die Kadetten des ehrwürdigen Clans Tir An’Cuinn und blicken auf eine bewegte Vergangenheit zurück, die aus einer verbotenen Liebe hervorging. Einst verliebte sich der Erbe des Clans Cuinn in eine unbedeutende Bardin – eine Verbindung, die aufgrund seiner Verantwortung als Erbe und ihres hohen Alters als unmöglich galt, da man wegen des Alters der Bardin keine Nachkommen erwartete.\\n\\nEntgegen dem Willen der Tir An’Cuinn und selbst auf das Anraten der Fianna hin, entschied sich der Erbe dennoch, die Bardin zur Frau zu nehmen. Er verließ seinen Clan und nahm die Verbannung und Enterbung durch die Cuinn in Kauf. Inmitten der Kritik griffen schließlich die Fianna ein und arrangierten, dass er seine Tage als Kadett des Clans verbringen sollte, sollte dies der Wille der Götter sein.\\n\\nEntgegen aller Erwartungen entsprangen dieser Verbindung zahlreiche Nachkommen. In der Überlieferung sahen Druiden und Fianna dies als göttliches Zeichen und bezeichneten die Ehe nachträglich als „ gottgepriesen “, als ob die Götter selbst diese Liebe gesegnet hätten. Aus dieser beinahe totgeglaubten Beziehung entstanden die Ua’Amhran, die nun als anerkannte und gesegnete Kadetten des Tir An’Cuinn Clans gelten.\\n\\nHeute sind die Ua’Amhran ein bedeutender Akteur ihrer Region und ein unverzichtbarer Kadettenclan der Tir An’Cuinn. Bekannt sind sie vor allem für ihre enge Verbindung zur Göttin der Liebe und Barmherzigkeit (die Mutter) sowie zur Göttin der Musik und Kunst (die Maid). Ihren Traditionen folgend, bringen sie oft talentierte Musiker und Barden hervor und verkörpern die Magie der Melodien und Geschichten, die sie als göttliche Gabe betrachten.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+          "line": 30,
+          "quote": "\"relations\": \"Ua’Amhran gilt heute als anerkannter, bedeutender Kadettenclan der Cuinn. Die ältere Ausstoßung ist Teil seiner Geschichte und hebt die bestehende Bindung nicht auf.\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R05",
+      "classification": "reject",
+      "topic": "Leitheach versus Ceitheach and similar family identifiers",
+      "explanation": "Leitheach is a separate principality. haus-nic-blar-leitheach is its Laird line and must not be treated as the Ceitheach Mor-Tiarna line haus-nic-blar. Ua’Cleir is not automatically Blaithneach Cléirigh. Stable ID spelling haus-amrhan is not itself a lore contradiction.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.content.mjs",
+          "line": 24,
+          "quote": "\"overview\": \"Nic’Blar · Leitheach ist ein Haus im Rang Laird mit Sitz in Sruthlann in Tir an Comhchuibhis, Leitheach. Es dient Clan Mac Airt.\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R06",
+      "classification": "reject",
+      "topic": "Princely head Fionn and regional office Tairdelbach",
+      "explanation": "Fionn is Ard Tiarna of Leitheach, while Tairdelbach is named Regent of the prince and Mor Tiarna of Tir na Sleagh. Different offices within the same clan do not require the same holder.",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 190,
+          "quote": "\"office\": \"Ard Tiarna von Leitheach\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 599,
+          "quote": "\"office\": \"Mor Tiarna von Tir na Sleagh\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 269,
+          "quote": "\"office\": \"Regent des Fürsten\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R07",
+      "classification": "reject",
+      "topic": "Gruenhand social rank",
+      "explanation": "The active house prose consistently presents Gruenhand as a commoner sept serving Na’Mhuir in Broch an Coill. Sept leadership and a druid-grove origin do not confer noble rank.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.content.mjs",
+          "line": 24,
+          "quote": "\"overview\": \"Die Grünhand aus Leith bilden ein bürgerliches Sept mit Sitz in Broch an Coill, im Herrschaftsgebiet Tir na Fancha der Oberherrschaft Tir na Sinsear. Sie stammen aus dem Druidenhain und dienen dem Laird des Clans Na’Mhuir.\","
+        }
+      ]
+    },
+    {
+      "id": "LEI-R08",
+      "classification": "reject",
+      "topic": "Alben versus elves and sparse house histories",
+      "explanation": "The active reviewed texts use Alben/Cruinach as cultural names, not as a statement of elves or pointed ears. Sparse default history paragraphs are missing detail, not proof of an inconsistent past. No contradiction was inferred merely from an omission or a cultural term.",
+      "evidence": []
+    }
+  ],
+  "reviewedFamilies": [
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ua-eirce",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_nIur/Senanbail/Clan_Ua_Eirce/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_nIur/Senanbail/Clan_Ua_Eirce/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-fiachrach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_Seamroige/Marbail/Clan_Ui_Fiachrach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_Seamroige/Marbail/Clan_Ui_Fiachrach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ua-gaelach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Nossail/Clan_Ua_Gaelach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Nossail/Clan_Ua_Gaelach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-gallchobhair",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-cleir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_bhFiach/Cairn_Faire/Clan_Ua_Cleir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_bhFiach/Cairn_Faire/Clan_Ua_Cleir/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_nArmur/Dun_Laog/Clan_Ua_Ghaiscioch/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_nArmur/Dun_Laog/Clan_Ua_Ghaiscioch/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-na-mhuir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Clan_Na_Mhuir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Clan_Na_Mhuir/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-gruenhand",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-dal-cruthin",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-suileach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": true
+    },
+    {
+      "id": "haus-frisealach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Luibe/Lasbun/Ard_Frisealach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Luibe/Lasbun/Ard_Frisealach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ard-trodach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_gComhrac/Lochansail/Ard_Trodach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_gComhrac/Lochansail/Ard_Trodach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-nic-caoimhe",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Lasrach/Lochansail/Nic_Caoimhe/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Lasrach/Lochansail/Nic_Caoimhe/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-iomrach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": true
+    },
+    {
+      "id": "haus-somhairle",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-fir-an-tarvo",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Dun_Rothar/Clan_Fir_An_Tarvo/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Dun_Rothar/Clan_Fir_An_Tarvo/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-ruitheach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-gortach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_Breithe/Broch_an_Ear/Ru_Gortach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_Breithe/Broch_an_Ear/Ru_Gortach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-mac-airt",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Sruthlann/Clan_Mac_Airt/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Sruthlann/Clan_Mac_Airt/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-choinnich",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-nic-blar-leitheach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-laidir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Didine/Claisean/Ruin_Laidir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Didine/Claisean/Ruin_Laidir/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": true
+    },
+    {
+      "id": "haus-tir-an-cuinn",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Ceanntire/Clan_Tir_An_Cuinn/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Ceanntire/Clan_Tir_An_Cuinn/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-airgid",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_gCorr/Cel_Leagan/Tir_An_Airgid/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_gCorr/Cel_Leagan/Tir_An_Airgid/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    },
+    {
+      "id": "haus-amrhan",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.biography.mjs",
+      "generatedBiographySummaryMatches": true,
+      "historicalAdministration": false
+    }
+  ],
+  "limitations": [
+    "No corrective edits or genealogy imports were made.",
+    "The current council/person life-state conflicts are confirmed as data disagreements; the intended living office-holder cannot be inferred safely.",
+    "The Aldrimar brewing phrase is intentionally classified uncertain, not a proven border change.",
+    "Not all 304 minor settlements have narrative descriptions; this review compared the territorial narratives and the populated current seat descriptions relevant to the 29 families."
+  ]
+}

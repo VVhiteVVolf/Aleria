@@ -286,7 +286,7 @@ export const HOUSE_GRAEL_FAMILY = Object.freeze({
     spouse('eurolwyn-morforwyn', 'Eurolwyn Morforwyn', 'female', '1610', '1714', {
       houseId: 'house-morforwyn'
     }),
-    spouse('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '????', {
+    spouse('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '', {
       houseId: 'house-dyngwn'
     }),
 
@@ -361,7 +361,7 @@ export const HOUSE_GRAEL_FAMILY = Object.freeze({
     createMarriage('marriage-talaith-greidyawl', ...COUPLES.greidyawl, { status: 'widowed', end: '1667' }),
     createMarriage('marriage-gareth-olwyna', ...COUPLES.olwyna, { status: 'widowed', end: '1634' }),
     createMarriage('marriage-gwlyddyn-eurolwyn-grael', ...COUPLES.gwlyddyn, { status: 'ended', end: '1684' }),
-    createMarriage('marriage-rhonwen-morgan-grael', ...COUPLES.rhonwen, { status: 'widowed' }),
+    createMarriage('marriage-rhonwen-morgan-grael', ...COUPLES.rhonwen),
     createMarriage('marriage-lynesse-galahad', ...COUPLES.galahad, { status: 'widowed', end: '1698' }),
     createMarriage('marriage-kelyddon-cerridwyn-ceirwyn', ...COUPLES.kelyddon, { status: 'widowed', end: '1720' }),
     createMarriage('marriage-ariana-taliesin-ceirwyn', ...COUPLES.ariana, { status: 'widowed', end: '1700' }),

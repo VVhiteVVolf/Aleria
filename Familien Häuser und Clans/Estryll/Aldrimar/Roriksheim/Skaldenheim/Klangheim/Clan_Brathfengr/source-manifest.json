@@ -1,0 +1,79 @@
+{
+  "id": "haus-brathfengr",
+  "source": {
+    "attachmentId": "852a8eeb-7efc-4cb4-800b-d23e7970ead7",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\852a8eeb-7efc-4cb4-800b-d23e7970ead7\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/brathfengr/animexx-original.html",
+    "bytes": 112629,
+    "sha256": "9a89153d21635805758771b066c95c4a182a1833806ac50183d134722abcf7a2",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-brathfengr",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-brathfengr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "brathfengr",
+    "familyId": "haus-brathfengr",
+    "attachmentId": "852a8eeb-7efc-4cb4-800b-d23e7970ead7",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/jmjPBZt.png",
+    "path": "Stammbäume/assets/images/references/haus-brathfengr/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 252781,
+    "sha256": "2dcce02aa9552f5ff6542265fb0dcebe6c3d7829160c0356c0755ef5f6c02606",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-brathfengr",
+    "url": "https://i.imgur.com/jmjPBZt.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-brathfengr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Musizierender Hauskrieger mit Trommel und regionaler Heraldik.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-2.png"
+  },
+  "decisions": [
+    "Kvasir der Trommler ist der kanonische Gründer Brathfengrs. Die Windrufer-Erzählung beschreibt den gemeinsamen kulturellen Zusammenhang und macht Jurgen nicht zum Gründer jedes darin genannten Hauses.",
+    "Klangheim ist der Sitz, Skaldenheim das Thanentum; die alte Bezeichnung Provinz Klangheim wird nicht als zusätzliche Verwaltungsebene übernommen.",
+    "Neutralität, Vermittlung und bardische Verbindungen sind konkrete übernehmbare Kapitel. Bjarn Brathfengrs historische Rolle und die Herdwächter bleiben Erzählung; aktuelle Hausführung aus dem kanonischen Register übernehmen.",
+    "Traditionen, Huskarltum, Besitztum, Religion und Werte sind überwiegend leer. Aus der musikalischen Herkunft keine zusätzlichen Instrumentenriten, Götter oder Besitzungen erfinden.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

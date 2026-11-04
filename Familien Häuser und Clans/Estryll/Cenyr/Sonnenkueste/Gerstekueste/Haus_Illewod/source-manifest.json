@@ -1,0 +1,48 @@
+{
+  "houseId": "haus-illewod",
+  "source": {
+    "attachmentId": "e0afe3bf-ed68-421a-9c28-046f84c28571",
+    "file": "animexx-original.html",
+    "sha256": "aad52260e7135bb833b107bcd69be5d401d86af13d57e624265cd6f6d985f126",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-illewod"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/7COokVZ.png",
+      "role": "Hausdarstellung",
+      "sha256": "fbc4051f53014bba3e412eeec31ce4b51b94d31cc99d4e8f8cdcf11d96878932",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "file": "assets/ulfrik-original.png",
+      "url": "https://64.media.tumblr.com/a542034f0023667d7c5b908ccbb37f8f/84ca50c459359fb7-c3/s400x600/8ee25f6e19684336ee20c879c5d66331d44e8f14.pnj",
+      "role": "Kommandant Ulfrik",
+      "sha256": "5ccd6cb6cd7de04dc8eedcfa26da94855db92b48b1b6e81309097b0f310fc641",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-illewod-family.js",
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/grafschaft.data.mjs"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig ignoriert; nur vorhandene Familien- und Personen-IDs. Amtszeiten bleiben von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken aus Tabellen und Fließtext ausgelassen. Qualitative Kultur-/Ausrüstungsangaben bleiben getrennt davon erhalten.",
+    "Original-Kriegerbilder unverändert lokal übernommen und tatsächlich angesehen; keine Neugenerierung.",
+    "Powis, Baronenrang und die Behauptung der ärmsten Baronie widersprechen dem aktuellen Grafengeschlecht mit Sitz Aberon und der bestehenden Sonnenküstenstruktur. Der Grafenrang, Gersteküste und der belegte hohe Wohlstand haben Vorrang. Bescheidene Lebenshaltung und zweckmäßige Ausrüstung bleiben als eigenständige kulturelle Angaben erhalten.",
+    "Die einmalige Turniergeschichte zur Schlichtung eines Herrschaftsstreits bleibt erhalten. Die unklare Ordinalangabe „10. Graf Cenyrs“ begründet keine zusätzliche zehnte Grafschaft oder neue Amtsdatierung.",
+    "Ulfrik steht im dritten Namensfeld unter der ersten Fünfergruppe der Hofämter und gehört damit zum Kommandanten der Garde. Kein eindeutig identifizierbarer kanonischer Ulfrik; Name und Originalportrait bleiben ohne erfundene Personen-ID erhalten.",
+    "Gallchobhair-Verbindung wird anhand der bestehenden Illewod/Grianlaoch-Akten konkretisiert, ohne Stammbaumänderungen oder neue Beziehungen. Illwath ist das ausdrücklich benannte Kadettenhaus."
+  ]
+}

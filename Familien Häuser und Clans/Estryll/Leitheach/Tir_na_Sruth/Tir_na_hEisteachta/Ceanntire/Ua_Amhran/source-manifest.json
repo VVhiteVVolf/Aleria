@@ -1,0 +1,159 @@
+{
+  "id": "haus-amrhan",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "ae72d1e7-6804-4952-abc4-45cb2245bc57",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\ae72d1e7-6804-4952-abc4-45cb2245bc57\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ua-amhran/animexx-original.html",
+    "bytes": 99135,
+    "sha256": "01fa28aff3446dcb7d5f82d1f59447af73aa43b812011bf1866ac88dce731b85",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-amrhan",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Ceanntire",
+      "barony": "Tir na hÉisteachta",
+      "county": "Tir na Sruth",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-tir-an-cuinn",
+      "liegeHouseName": "Clan Tir An’Cuinn",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sruth.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sruth.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sruth",
+        "Tir na hÉisteachta",
+        "Ceanntire"
+      ]
+    },
+    "graphFingerprint": "9abc04a2bfef7e6aab3f43d9c87e27e19c59ba8a69fc86a5a1824d4bf3eba707",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-amrhan",
+    "title": "Ua’Amhran",
+    "territoryId": "leitheach-herrschaft-amhran",
+    "territoryName": "Tir na hÉisteachta",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruth",
+        "slug": "leitheach-tir-na-sruth"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na hÉisteachta",
+        "slug": "leitheach-herrschaft-amhran"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-amrhan",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-amrhan",
+    "slug": "ua-amhran",
+    "canonicalSlug": "amrhan",
+    "attachmentId": "ae72d1e7-6804-4952-abc4-45cb2245bc57",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/ejfdx9A.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 253661,
+    "sha256": "e861e59a0ab29a860f48b9a073be8f4d27239c720985363b2f6090104bc75543",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-amrhan",
+    "title": "Ua’Amhran",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sruth",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/ejfdx9A.png",
+    "path": "Stammbäume/assets/images/references/haus-amrhan/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-amrhan/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "e861e59a0ab29a860f48b9a073be8f4d27239c720985363b2f6090104bc75543",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Gerüstete Hausfigur mit Laute, Schottenmuster und figurengeschmücktem Schild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "01fa28aff3446dcb7d5f82d1f59447af73aa43b812011bf1866ac88dce731b85",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-amrhan, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug ua-amhran wird der bestehenden ID haus-amrhan zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Stabile ID haus-amrhan trotz sichtbarem Namen Ua’Amhran unverändert. Keine Korrektur der ID oder neue Familie.",
+    "Die unerwarteten Nachkommen sind Gründungsüberlieferung und religiöse Deutung, kein neuer Fruchtbarkeitswert oder Beweis göttlichen Eingreifens. Unbenannte Gründer bleiben unbenannt; keine Daten aus Hof-/Stammbaumtabellen.",
+    "Mutter und Maid als gelieferte Glaubensbindung erhalten. Musikalisches Erbe nicht in neue Personenklassen oder Zaubergaben übersetzen.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

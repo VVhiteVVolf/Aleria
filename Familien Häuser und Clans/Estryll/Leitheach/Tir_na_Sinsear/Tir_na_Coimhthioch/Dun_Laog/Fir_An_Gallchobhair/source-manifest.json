@@ -1,0 +1,157 @@
+{
+  "id": "haus-gallchobhair",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "8216ef13-7549-4802-b85a-c24232678de9",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\8216ef13-7549-4802-b85a-c24232678de9\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/fir-an-gallchobhair/animexx-original.html",
+    "bytes": 132085,
+    "sha256": "cef6dc1b34a0c0dbee7b12e3389950e9f65f98dcabd20be3462763d323ea029b",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-gallchobhair",
+    "baselineSourceRevision": 11,
+    "profile": {
+      "rankId": "dun-tiarna",
+      "seat": "Dun Laog",
+      "barony": "Tir na Coimhthioch",
+      "county": "Tir na Sinsear",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-ua-gaelach",
+      "liegeHouseName": "Clan Ua’Gaelach",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Dun Laog"
+      ]
+    },
+    "graphFingerprint": "e96e61a38c2526a9a37e4e131d628f225e30c35d165f7302ebdc0fec83ece39b",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-gallchobhair",
+    "title": "Fir An’Gallchobhair",
+    "territoryId": "leitheach-tir-na-coimhthioch",
+    "territoryName": "Tir na Coimhthioch",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
+    "territoryType": "Lehensherrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-gallchobhair",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-gallchobhair",
+    "slug": "fir-an-gallchobhair",
+    "canonicalSlug": "gallchobhair",
+    "attachmentId": "8216ef13-7549-4802-b85a-c24232678de9",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/IQoksLd.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 210998,
+    "sha256": "fe6a829a3226161e6144845ff138f648ccd1f7a96a1834274c8b6cd1ee42b044",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-gallchobhair",
+    "title": "Fir An’Gallchobhair",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sinsear",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/IQoksLd.png",
+    "path": "Stammbäume/assets/images/references/haus-gallchobhair/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-gallchobhair/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "fe6a829a3226161e6144845ff138f648ccd1f7a96a1834274c8b6cd1ee42b044",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Dunkler Schwertkämpfer mit geschlossenem Helm und goldenem Vogelzeichen.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "cef6dc1b34a0c0dbee7b12e3389950e9f65f98dcabd20be3462763d323ea029b",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-gallchobhair, Rang Dún Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug fir-an-gallchobhair wird der bestehenden ID haus-gallchobhair zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

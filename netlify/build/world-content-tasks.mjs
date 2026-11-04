@@ -119,6 +119,12 @@ export const WORLD_CONTENT_TASKS = [
   {
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
-    commands: [tests('Vorschau/tests')]
+    commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),
+      tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),
+      ['--test','--experimental-test-isolation=none',
+        'netlify/tests/leukonia-source-publication.test.mjs',
+        'netlify/tests/calidaria-source-publication.test.mjs',
+        'netlify/tests/sylvarant-source-publication.test.mjs',
+        'netlify/tests/solestia-source-publication.test.mjs']]
   }
 ];

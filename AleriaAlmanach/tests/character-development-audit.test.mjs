@@ -55,8 +55,8 @@ test('skill identities work in character totals, scene checks and AI without cha
  const persuasion=profile.skills.find(s=>getSkillIdentity(s.name)==='persuasion');
  const survival=profile.skills.find(s=>getSkillIdentity(s.name)==='survival');
  assert.equal(persuasion.proficiency,'none');assert.equal(getEffectiveSkillProficiency(profile,persuasion),'expertise');
- assert.equal(getSkillTotal(profile,persuasion),6);assert.equal(getSkillTotal(profile,survival),4);
- assert.equal(resolveSkillModifier({combatProfile:profile},'persuasion').modifier,6);
+ assert.equal(getSkillTotal(profile,persuasion),4);assert.equal(getSkillTotal(profile,survival),2);
+ assert.equal(resolveSkillModifier({combatProfile:profile},'persuasion').modifier,4);
  const ai=buildCombatProfileAiSnapshot({id:'test',combatProfile:profile});
  assert.equal(ai.skills.find(s=>s.id===persuasion.id).effectiveProficiency,'expertise');
  assert.equal(getSkillIdentity('Überlebenskunst'),getSkillIdentity('Überleben'));
@@ -85,9 +85,10 @@ test('fire phobia recognizes typed damage effects on primary and secondary saves
 
 test('nonstacking weakness, resistance, expertise and advantage receive only one balance valuation',()=>{
  const cold=choose(['frost-phobie','frostempfindlich']);
- assert.equal(cold.balance.nominalCost,-5);assert.equal(cold.balance.traitCost,-3);assert.ok(cold.balance.warnings.length);
- const fire=choose(['feueraffinitaet','glutgewoehnt']);assert.equal(fire.balance.traitCost,2);
- const cancelled=choose(['feueraffinitaet','feuer-phobie']);assert.equal(cancelled.balance.traitCost,-1);
+ assert.equal(cold.balance.nominalCost,-4);assert.equal(cold.balance.traitCost,-4);
+ const fire=choose(['feueraffinitaet','glutgewoehnt']);assert.equal(fire.balance.traitCost,3);
+ const duplicate=choose(['feueraffinitaet','bluttraeger-flammenspross']);assert.equal(duplicate.balance.traitCost,5);assert.ok(duplicate.balance.warnings.length);
+ const cancelled=choose(['eisaffinitaet','frostempfindlich']);assert.equal(cancelled.balance.traitCost,0);
  const contradictory=choose(['klein','gross','haesslich','gutaussehend']);assert.equal(contradictory.ready,true);assert.ok(contradictory.balance.warnings.length>=2);
 });
 
@@ -103,7 +104,7 @@ test('legacy personal traits are not replaced or charged twice merely by opening
  assert.ok(result.profile.quirks.some(q=>q.id==='freya-kuenstlerische-ausbildung'));
  assert.deepEqual(freya.combatProfile,before);
  const matches=findExistingDevelopmentTraitMatches(gildas.combatProfile,DEVELOPMENT_TRAITS);
- assert.ok(matches.some(m=>m.traitId==='development-trait-glueckspilz'&&m.sourceNames.includes('Erarbeitete Standfestigkeit')));
+ assert.equal(matches.some(m=>m.traitId==='development-trait-glueckspilz'&&m.sourceNames.includes('Erarbeitete Standfestigkeit')),false,'saving-throw training alone is not the new luck reroll');
 });
 
 test('same-level edits keep attacks and resources while updating experience and pool selections',()=>{

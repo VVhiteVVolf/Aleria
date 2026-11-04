@@ -1,0 +1,93 @@
+{
+  "id": "haus-kaldhrafn",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "0fd764b4-2773-4b25-92bb-cbf3c281e1ed",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\0fd764b4-2773-4b25-92bb-cbf3c281e1ed\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/kaldhrafn/animexx-original.html",
+    "bytes": 77309,
+    "sha256": "12f03a0af61b31bda2858a66723d15f9d242d93f890af2042f68999c0a718699",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-kaldhrafn",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "667ba9453c7730464399e7204ae809667e22d22b10f25026cb7c5ac271ea21b6"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-kaldhrafn",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-kaldhrafn",
+    "familyId": "haus-kaldhrafn",
+    "slug": "kaldhrafn",
+    "canonicalSlug": "kaldhrafn",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "0fd764b4-2773-4b25-92bb-cbf3c281e1ed",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/wAZpWE4.png",
+    "sourceUrl": "https://i.imgur.com/wAZpWE4.png",
+    "path": "Stammbäume/assets/images/references/haus-kaldhrafn/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-kaldhrafn/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 225346,
+    "sha256": "b9e0ddf55698099f59bad3d1f4cf4f24998131fe5fc3938e0ae78e227f108300",
+    "sha": "b9e0ddf55698099f59bad3d1f4cf4f24998131fe5fc3938e0ae78e227f108300",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Ältere Hausfigur mit langem grauem Haar, dunklem Mantel, Stab, Schwert und Rabenbegleiter.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Historischer Hausrang unknown bleibt offen; Begriffe wie Kult, Kriegerpriester oder Huskarltum erzeugen keinen neuen Adelstitel.",
+    "Rabensweide wird zur aktuellen Regionsschreibweise Rabenweide berichtigt. Rabenhort ist als historische Quellbezeichnung nicht sicher einem heutigen Ort zuzuordnen und wird nicht stillschweigend zu Rabenhain/Rabenfurt erklärt.",
+    "Glaennath (Alben) ist nicht die Kaldhrafn-Kultur; diese sind Norrnaigh. Varangr/Järnblod als Gegner und Vragi als geistige Nachfolger textlich erhalten, ohne Abstammungskanten zu behaupten.",
+    "Wodin-/Lokan-Verehrung und Totenrituale sind der überlieferte Kult, keine neuen Magiefähigkeiten oder gegenwärtigen Personen. Die heutige weltliche Kontrolle Rabenweides wird klar von der geistlichen Rolle der Vragi getrennt.",
+    "Keine pauschale Ausrottung aller Glaennath-Alben und keine Militärzahlen übernehmen. Die ältere geistliche Kriegsform wird als Kriegskunst beschrieben.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

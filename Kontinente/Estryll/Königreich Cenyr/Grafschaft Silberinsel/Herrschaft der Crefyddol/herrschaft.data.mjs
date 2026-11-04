@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/silberinsel/territory-page.mjs?v=silberinsel-20261019';
+import { createTerritory } from '../../../../modules/silberinsel/territory-page.mjs?v=20261103-silberinsel-v1';
 
 export default createTerritory({
   "id": "herrschaft-crefyddol",
@@ -119,7 +119,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-crefyddol"
         }
       ]
     }

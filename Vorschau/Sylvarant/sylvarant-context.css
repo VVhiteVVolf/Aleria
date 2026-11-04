@@ -1,0 +1,9 @@
+.culture-grid,.region-grid,.caste-copy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.culture-grid{margin-top:35px;padding-top:30px;border-top:1px solid var(--line)}
+.culture-grid article,.caste-copy-grid article{padding:22px;border:1px solid var(--line);background:#e9e7d8}
+.culture-grid p,.region-card p,.caste-copy-grid p{font-size:15px;color:var(--muted);margin-bottom:0}
+.region-card{padding:24px;border:1px solid var(--line);border-top:5px solid var(--region-colour);background:#faf6e8;min-width:0}
+.region-card .region-cities{font:12px/1.8 var(--sans);margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.imperial-context>summary{padding:30px 7%;cursor:pointer;font-size:25px;border-bottom:1px solid var(--line);color:var(--accent)}
+@media(max-width:650px){.culture-grid,.region-grid,.caste-copy-grid{grid-template-columns:1fr}.sylvarant-workbench .history-grid{grid-template-columns:1fr}}
+@media print{.region-card{break-inside:avoid}}

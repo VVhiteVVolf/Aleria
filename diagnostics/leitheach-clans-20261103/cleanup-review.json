@@ -1,0 +1,93 @@
+{
+  "schema": "aleria.leitheach-cleanup-review",
+  "reviewedAt": "2026-11-03T21:50:28.086539+00:00",
+  "policy": "netlify/docs/TEMPORARY_STORAGE.md",
+  "scope": {
+    "workspace": "E:\\Aleria",
+    "allowedOldBuilds": 12,
+    "ownTestSandbox": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox",
+    "arbitraryTempFoldersTargeted": false,
+    "cTempTouched": false
+  },
+  "plan": {
+    "planPath": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-plan.json",
+    "root": "E:\\Aleria",
+    "planSha256": "444ee8de131011b9c2bf170ebbb64490f8cd54c1b679c098530242cd9433828e",
+    "version": 1,
+    "files": 0,
+    "selectedLogicalBytes": 0,
+    "approvedBuildCount": 12,
+    "allBuildNamesAllowlisted": true,
+    "allBuildIdentitiesValid": true,
+    "retainedFilesReportedByPlan": 14623,
+    "remoteCommitMatches": true,
+    "resultFileAlreadyExists": false,
+    "applied": true,
+    "planUnchanged": true,
+    "applyResult": "diagnostics/leitheach-clans-20261103/cleanup-plan.result.json",
+    "removedFiles": 0,
+    "removedLogicalBytes": 0,
+    "skipped": [],
+    "freeBefore": 88251023360,
+    "freeAfter": 88251023360
+  },
+  "maintenanceTests": {
+    "suite": "netlify/tests/temporary-cleanup.test.py",
+    "testsRun": 4,
+    "passed": 4,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "productionTestsChanged": false,
+    "runner": "diagnostics/leitheach-clans-20261103/cleanup-test-sandbox/run-maintenance-tests.py",
+    "result": "diagnostics/leitheach-clans-20261103/cleanup-test-sandbox/maintenance-test-result.json",
+    "standardMode0700CreationPreserved": true,
+    "recursiveRemovalUsed": false
+  },
+  "testEnvironmentDiagnosis": {
+    "runtime": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "observations": [
+      "Im eingeschränkten Prozesstoken erlaubt mkdir(0o755) Unterordner und leeres rmdir.",
+      "mkdir(0o700) erzeugt im eingeschränkten Token einen anschließend unzugänglichen Ordner; Unterordner und rmdir scheitern mit WinError 5.",
+      "Derselbe eigene 0o700-Probeordner ist im normalen Benutzerprozess zugänglich und leer entfernbar, ohne bestehende ACLs zu ändern.",
+      "Die unveränderten Maintenance-Tests bestehen im normalen Benutzerprozess mit Standard-0700-Testordnern im expliziten Sandboxpfad."
+    ],
+    "conclusion": "Nachgewiesene Zugriffsbeschränkung des Testprozesstokens; kein reproduzierter Fehler in der Cleanup-Fachlogik.",
+    "aclOrGlobalSecurityChanged": false,
+    "probeEvidence": [
+      "diagnostics/leitheach-clans-20261103/cleanup-test-sandbox/permissions-probe.json",
+      "diagnostics/leitheach-clans-20261103/cleanup-test-sandbox/unrestricted-permissions-probe.json"
+    ]
+  },
+  "ownTestResidues": {
+    "earlierRootAuthorizedEmptyDirectoriesRemoved": 4,
+    "rootPrefixIdentityReparseEmptinessVerified": true,
+    "individualFileAndEmptyDirectoryRemovalOnly": true,
+    "allOwnProbeAndRunnerDirectoriesRemoved": true,
+    "remainingTestDirectories": [],
+    "methodsAndDiagnosticReceiptsPreserved": true
+  },
+  "preview": {
+    "processId": 20144,
+    "processName": "python",
+    "localEndpoint": "127.0.0.1:8897",
+    "method": "HEAD",
+    "requestedPublicPath": "/Kontinente/Estryll/F%C3%BCrstentum%20Leitheach/F%C3%BCrstentum%20Leitheach.html",
+    "commandLinesInspected": false,
+    "processStopped": false,
+    "status": 200,
+    "server": "SimpleHTTP/0.6 Python/3.12.10",
+    "statusAfterCleanup": 200,
+    "processPreserved": true
+  },
+  "preservation": {
+    "originalImagesPreserved": true,
+    "sourcesAndMethodsPreserved": true,
+    "privateBackupsAndBrowserDataUntouched": true,
+    "activePreviewAndLiveDataPreserved": true,
+    "productionSourceMutations": false,
+    "supersededImageCopiesHandledBy": "Root separately, outside this cleanup task"
+  },
+  "conclusion": "Keine nach Policy entbehrliche Build- oder Quelldatei im geprüften Plan. Alle 14.623 dort verzeichneten zurückbehaltenen Dateien bleiben erhalten; 0 Projektdateien und 0 Bytes entfernt.",
+  "status": "passed"
+}

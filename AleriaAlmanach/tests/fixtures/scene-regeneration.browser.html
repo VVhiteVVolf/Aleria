@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/AleriaAlmanach/">
+<title>Lokale Prüfung · Szenenregeneration</title>
+<link rel="stylesheet" href="styles/scene-time.css">
+<link rel="stylesheet" href="styles/scene-rest.css">
+<style>body{font-family:Georgia,serif;background:#eee2c6;color:#47351f;padding:2rem}button,input{font:inherit}*{box-sizing:border-box}</style>
+<body>
+<h1>Lokale Testszene</h1>
+<p>Diese Prüfung verwendet ausschließlich Testfiguren und einen simulierten Speicher.</p>
+<button type="button" data-scene-rest-action="open">Szenenerholung öffnen</button>
+<p id="test-result">Noch keine Regeneration.</p>
+<script type="module">
+  import { buildSceneRegenerationState } from './modules/scene-regeneration/scene-regeneration-model.js';
+  const actors = ['Testfigur A', 'Testfigur B', 'Unbeteiligte Figur'].map((name, index) => ({
+    id: `local-regen-${index}`, name,
+    combatProfile: { hitPoints: { current: index + 1, maximumOverride: 30 },
+      resources: [{ id: 'mana', name: 'Mana', current: 0, maximum: 10, recovery: 'long-rest' }] }
+  }));
+  let history = actors.slice(0, 2).map((actor, index) => ({
+    id: `test-comment-${index}`, characterId: actor.id, charName: actor.name,
+    serverCommitted: true, orderKey: index + 1, text: 'Übungskampf.'
+  }));
+  globalThis.getAvailableCommentCharacters = () => actors;
+  globalThis.getCurrentCommentThread = () => ({ kind: 'session' });
+  globalThis.getCurrentCommentThreadId = () => 'local-regeneration-test';
+  globalThis.getCachedCommentsForThread = () => history;
+  globalThis.activateDialog = id => {
+    const element = document.getElementById(id);
+    element.classList.add('active'); element.setAttribute('aria-hidden', 'false');
+  };
+  globalThis.deactivateDialog = id => {
+    const element = document.getElementById(id);
+    element.classList.remove('active'); element.setAttribute('aria-hidden', 'true');
+  };
+  globalThis.loadCommentsIntoPage = async () => {};
+  globalThis.showAppStatus = () => { throw Error('Unerwartete Benachrichtigung'); };
+  globalThis.loadSidebarFeed = () => { throw Error('Unerwartete Feedänderung'); };
+  globalThis.getCommentBackend = async () => ({
+    regenerateSceneParticipants: async ({ participants }) => {
+      history = [...history, { id: 'quiet-reset', serverValidatedMechanics: true,
+        commentKind: 'scene-regeneration-event', sceneRegeneration: { participants: participants.map(participant => ({
+          actorId: participant.actorId, after: buildSceneRegenerationState({ maximumHitPoints: 30 })
+        })) } }];
+      document.getElementById('test-result').textContent = `Regeneriert: ${participants.map(participant => actors.find(actor => actor.id === participant.actorId).name).join(', ')}. Kein Beitrag und keine Benachrichtigung.`;
+      return { id: 'quiet-reset', profileUpdates: [] };
+    }
+  });
+  await import('./modules/scene-rest/scene-rest-controller.js');
+</script>
+</html>

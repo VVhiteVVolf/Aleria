@@ -1,3 +1,3 @@
-import { createTerritory } from '../../../../modules/leitheach/territory-page.mjs?v=albic-fiefs-20261024';
+import { createTerritory } from '../../../../modules/leitheach/territory-page.mjs?v=20261104-lore-fixes-v1';
 
 export default createTerritory('leitheach-herrschaft-dal-t-saor');

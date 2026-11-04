@@ -1,0 +1,70 @@
+{
+  "schema": "aleria.ivarsheim-source-content",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "status": "editorially-reviewed-ready",
+  "id": "haus-trachwyll",
+  "title": "Haus Trachwyll",
+  "separateOriginFamilyId": "haus-trachwyll-talfronwyn",
+  "source": {
+    "attachmentId": "5f13f61f-3159-42d9-8dff-5485570cba9a",
+    "originalAttachment": "C:/Users/fhg_r/.codex/attachments/5f13f61f-3159-42d9-8dff-5485570cba9a/Eingefügter Text.txt",
+    "previousArchive": "diagnostics/vennyr-warrior-import-20261103/sources/trachwyll.html",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/trachwyll/animexx-original.html",
+    "sha256": "7c5d2e050e920cbc98b397541554578c96ddf8e75d77b87ec4fe1759db718675",
+    "bytes": 134773,
+    "byteIdentical": true
+  },
+  "canonical": {
+    "id": "haus-trachwyll",
+    "title": "Haus Trachwyll",
+    "folderPath": ["Aldrimar", "Ivarsheim", "Ivarsklamm", "Ivarsfels"],
+    "rankId": "hesire",
+    "seat": "Ivarsfels",
+    "liegeHouseId": "house-wargh",
+    "liegeHouseName": "Clan Wargh",
+    "founderPersonIds": ["kenyon-trachwyll", "leikn-eisenbieger"],
+    "establishedInIvarsfels": "1720",
+    "emblem": "assets/images/houses/Aldrimar/Ivarsheim/haus-trachwyll.png",
+    "image": "assets/images/references/haus-trachwyll/krieger.png",
+    "imageSource": "https://i.imgur.com/WG2uS0O.png",
+    "imageSha256": "65f36d698041aa6a830b6a3f3a92311370a1f3c97b1b5b187ea330c9e2042b0c",
+    "sourceFiles": [
+      "Stammbäume/assets/js/data/house-trachwyll-family.js",
+      "Stammbäume/assets/js/data/ivarsheim-house-profiles.js",
+      "Kontinente/modules/ivarsheim/pages.source.json"
+    ]
+  },
+  "reviewedSections": {
+    "overview": "Haus Trachwyll ist seit 1720 als Hesirenhaus in Ivarsfels ansässig und dient Clan Wargh. Kenyon Trachwyll und Leikn Eisenbieger stehen am Anfang dieser Linie. Ihre Ländereien liegen im westlichen Teil Ivarsklamms um Caer Trachwyll.",
+    "history": "Kenyon Trachwyll stammt aus dem vennyrianischen Haus Trachwyll von Talfronwyn. Seit 1720 führt er die Linie in Ivarsfels. Leikn Eisenbieger begründete sie an seiner Seite. Die Familie verband sich in Ivarsheim mit den Wargh, Silberzungen, Skogg und Grendel und wurde Teil des dortigen Adelslebens.",
+    "traditions": "",
+    "knighthood": "",
+    "holdings": "Ivarsfels ist der Familiensitz. Im westlichen Teil Ivarsklamms liegen die eigenen Ländereien um Caer Trachwyll. Svartgil und Järnsgjot tragen als Bergbauorte zur Wirtschaft bei. Hochfeld, Birkfeld und Trachweiler sichern die landwirtschaftliche Versorgung; Llangarwyn und Trevalgan verbinden die Siedlungen wirtschaftlich. Die Verbindung von Bergbau, Höfen und Handelsorten prägt diesen Herrschaftsraum.",
+    "cultureReligion": "",
+    "conflictsAlliances": "Als Hesirenhaus stehen die Trachwyll unter den Wargh. Rhodri Trachwylls Verbindung mit Oddny Silberzunge verbindet die Familie mit dem dortigen Verwalter- und Händlergeschlecht. Gwenlyn Trachwyll ist mit Torvar Wargh, Gwendolyn mit Skeldar Skogg verbunden. Gwilym Trachwyll und Ingrid Grendel knüpfen eine weitere Verbindung nach Klippenschlag.",
+    "values": ""
+  },
+  "reviewedTrivia": [],
+  "biographySummary": {
+    "overview": "Haus Trachwyll ist ein Hesirenhaus von Ivarsfels in Ivarsklamm und Vasall der Wargh. Kenyon Trachwyll führt diese Linie seit 1720; Leikn Eisenbieger begründete sie an seiner Seite.",
+    "history": "Kenyon stammt aus dem Haus Trachwyll von Talfronwyn in Vennyr. In Ivarsheim entwickelte sich das Familienleben im Umfeld des Jarlsclans und seiner Vasallen.",
+    "character": "",
+    "customs": "",
+    "holdings": "Die eigenen Ländereien liegen im westlichen Ivarsklamm um Caer Trachwyll. Bergbauorte wie Svartgil und Järnsgjot ergänzen die landwirtschaftlichen Siedlungen Hochfeld, Birkfeld und Trachweiler. Llangarwyn und Trevalgan verbinden das Gebiet wirtschaftlich.",
+    "culture": "",
+    "relations": "Ehen verbinden die Trachwyll mit den Wargh, Silberzungen, Skogg und Grendel. Diese Beziehungen verknüpfen ihre Stellung in Ivarsfels mit den anderen Adelsfamilien des Jarltums.",
+    "trivia": []
+  },
+  "decisions": [
+    "Ziel ist ausschließlich haus-trachwyll, die Ivarsfels-Linie ab Kenyon und Leikn. Die bestehende Herkunftsakte haus-trachwyll-talfronwyn bleibt eigenständig und unverändert.",
+    "Heutiger Rang Hesire, Familiensitz Ivarsfels, Lehnsherr Wargh. Der frühere vennyrianische Penron-/Grafenrang und die ältere Talfronwyn-Hierarchie werden nicht übertragen.",
+    "Der einzige ausgefüllte erzählende Abschnitt des Anhangs behandelt die politische Geschichte des früheren Vennyr-Hauses im Prätendentenkrieg und dessen Ehen ab 1647. Diese Vorgänge liegen vor der Ivarsfels-Linie und werden nicht als ihre eigene Kriegsgeschichte übernommen.",
+    "Gelieferte Stammbäume, Hof- und Hierarchietabellen sowie Militärstatistiken bleiben vollständig ausgeschlossen. Die genannten heutigen Verbindungen stammen ausschließlich aus der vorhandenen kanonischen Ivarsfels-Familie.",
+    "Die Territoriumsangaben zu Caer Trachwyll, Svartgil, Järnsgjot, Hochfeld, Birkfeld, Trachweiler, Llangarwyn und Trevalgan stammen aus dem aktuellen Ivarsheim-Gebietstext. Der Familiensitz bleibt Ivarsfels; die eigene Burg erzeugt keinen neuen Registerpfad.",
+    "Hårfjel westlich von Caer Trachwyll bleibt das überlieferte Grendel-Ahnengrab im übergeordneten Ivarsklamm und wird nicht als Trachwyll-Eigentum ausgegeben.",
+    "Besondere Traditionen, Ritterrituale, Religion, Werte und neue Kriegstaten sind für die Ivarsfels-Linie nicht belegt und bleiben leer. Die knappe Bio wird deshalb nicht auf 200 Wörter aufgefüllt.",
+    "Die vorhandene Originaldarstellung WG2uS0O wird unverändert referenziert. Kein Download, keine Neugenerierung und keine Übertragung des Bildes auf den Talfronwyn-Ursprung.",
+    "Produkttexte enthalten keine technischen Grenzen der Familienakte oder Arbeitsanweisungen. Die Dokumentbeschreibung dient nur als kanonische Grundlage; ihr Satz über die zulässigen Personen der neuen Akte wird nicht veröffentlicht."
+  ]
+}

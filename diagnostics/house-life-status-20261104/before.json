@@ -1,0 +1,4219 @@
+{
+  "schema": "aleria.life-status-review-before",
+  "authority": "User: Im Zweifel lebend; Tod nur bei eindeutiger Evidenz. Jahres- und Geschlechtskonflikte weiterhin nicht angleichen.",
+  "cases": [
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-silberblut",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "dead",
+      "death": "1713"
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-hrafn",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ],
+      "decision": "alive",
+      "death": ""
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-crafanc",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ],
+      "decision": "dead",
+      "death": "1710"
+    }
+  ],
+  "targets": {
+    "haus-gwyvern/afal-arth": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-arth/afal-arth": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/bylga-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-kummerherz/bylga-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/hogrand-kummerherz": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-kummerherz/hogrand-kummerherz": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/hallbjorn-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wellenschild/hallbjorn-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/laufey-wellenschild": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wellenschild/laufey-wellenschild": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/olmar-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-gullvig/olmar-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/asahel-gullvig": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-gullvig/asahel-gullvig": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/agnar-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-todbrand/agnar-wargh": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-wargh/ormrun-todbrand": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-todbrand/ormrun-todbrand": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-varangr/kjellfrid-varangr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-silberblut/kjellfrid-varangr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-varangr/gulda-goldglanz": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-goldglanz/gulda-goldglanz": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-varangr/vanadis-varangr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-feuerherz/vanadis-varangr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-varangr/hadvar-varangr": {
+      "status": "dead",
+      "death": "1713"
+    },
+    "haus-sturmgeborene/hadvar-varangr": {
+      "status": "dead",
+      "death": "1713"
+    },
+    "haus-helgr/leikny-helgr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-hrafn/leikny-helgr": {
+      "status": "alive",
+      "death": ""
+    },
+    "haus-arth/afanen-1660-arth": {
+      "status": "dead",
+      "death": "1710"
+    },
+    "haus-crafanc/afanen-1660-arth": {
+      "status": "dead",
+      "death": "1710"
+    }
+  },
+  "partnerships": {
+    "haus-arth/marriage-afanen-elisud": {
+      "status": "ended",
+      "end": "1710"
+    },
+    "haus-sturmgeborene/marriage-ingeborg-hadvar-sturmgeborene": {
+      "status": "ended",
+      "end": "1713"
+    }
+  },
+  "records": [
+    {
+      "id": "haus-hamnett",
+      "sourceRevision": 5,
+      "graphFingerprint": "9a729af381fa32e9837e044f1464dd934505f6f7ab72b18f41b3091cb07fcd38",
+      "protectedHash": "9c28f507b7b5c430a8afc1ffc4524131f12a1b8144cdabc093c5772981cfc4fa",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-jernigan",
+      "sourceRevision": 3,
+      "graphFingerprint": "4663c2d3417d053146fcc308c7eab20ffb6db229f36480371d9a120e5648ae8a",
+      "protectedHash": "9051589b2f8cf082321897211b427def8087b02788022b7c213646e88938298e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-glyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "0765dcb7b6da4fc4c99914471356985744e6fe5c4727670f37feb7eea19d8533",
+      "protectedHash": "c857146ff8c08f7e3da83fdd49a80c8eb3eedb689f58aabd44510013ff806b6a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-crewe",
+      "sourceRevision": 3,
+      "graphFingerprint": "b20998235ad77fd26798fc51574d552021bd84b4d3d5691c3292f5bf85fd4a7c",
+      "protectedHash": "75e907e8d77f6d367cbf46ab3f3434aec9e5498920ad955010ca5fe8db44e6d7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-talfryn",
+      "sourceRevision": 3,
+      "graphFingerprint": "e7e1b524985918512eb90956b9f65c38cdb6810a99f4d4924a3fa59c6b7f37ba",
+      "protectedHash": "3cd47979eaa7f7228ca19b3fba3ad36d26c96df10d2995b413060fda997ce151",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blevis",
+      "sourceRevision": 3,
+      "graphFingerprint": "7529bc825b2318f11d5d8198e2c565cf91a11de1576cf1dba347a777c9e2d5f9",
+      "protectedHash": "c77e336e4d3b484ca385f4033c71a8a345f72920d9e776aab78ae60a466c4320",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brogar",
+      "sourceRevision": 3,
+      "graphFingerprint": "01cb225983cca0e81837924a1cf06f8e56638ad2b2b235e32511fbfee1de379f",
+      "protectedHash": "08f8ef037dec39380e10175bc357d384aa3714a82358de6824e7e1bb609119c1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tynged",
+      "sourceRevision": 3,
+      "graphFingerprint": "e14255cc0da0ff3b426689d73eee4a7aa8ff4f54481378e3ccb427523cc229af",
+      "protectedHash": "2a9f75eccb4e69b262ad9cb2d19c9a29d8b078798c8f02f3cd9ef48df99476cf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tarw",
+      "sourceRevision": 3,
+      "graphFingerprint": "8af0a148d758132ea59a351a0a14f2a07dbaae16363d0cb9b9b0e2e083fef15a",
+      "protectedHash": "db999dfc91469a0f0eab278595470ce1784de7a5b38b155a6882425f7e2e742d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-swynol",
+      "sourceRevision": 3,
+      "graphFingerprint": "1af5727b4623c8bb2cb7d66887bb214d22d5068a7dc137816255aef524804d0c",
+      "protectedHash": "aba29ff6e51c13a076a5e5609d9b1bffa89c5588d9afd40964b392dccd100181",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-creithiog",
+      "sourceRevision": 3,
+      "graphFingerprint": "1719dde5c138de915dd34135bb04e8c3b9743f2ac0ad3896afcc11a5aaac22ba",
+      "protectedHash": "630b7444687e6a3eb5a4091c4edba3c0ab095dceb3f2a839bdcfbc390555807b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arwydd",
+      "sourceRevision": 4,
+      "graphFingerprint": "cf4c58a5e7b410ae38ad1879f8f4db5d8a364c4390ba1fd3c3ad40bebebdecdb",
+      "protectedHash": "f02580643829987a0eac8beb772e8faee2faab598ddccc9c4b8f118c454b8fb3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-draig",
+      "sourceRevision": 16,
+      "graphFingerprint": "33098556edaf12e87e9ba70ae328d8a13f7a1fa2e098579b92eb3148d604b3eb",
+      "protectedHash": "23c88dbdedefcc41ec0bc254a715e5673c8ece27e198df97ac7f11827e1856cd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wyrm",
+      "sourceRevision": 5,
+      "graphFingerprint": "62445ad1418280463a3176c83bf39eb6cc123dd493c8165c9952f6c34ab92714",
+      "protectedHash": "2d6f8c3be78d4557afce1b3fc323550950776b2b625f60df3d076a8d21c6b0e9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-saethwyr",
+      "sourceRevision": 6,
+      "graphFingerprint": "bcd39613cd67e124d7f63fb0bb54435c7dcf9d1fb3d0187f3c61ab14f8441a91",
+      "protectedHash": "556718fc474463ecde6b2fa5bba8688de9b508d6daa34cfd6c6240908c7f94cb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gafyr",
+      "sourceRevision": 7,
+      "graphFingerprint": "fb70b29bdf1032e5eed36dee7d51b04e9dcf374dd9c0adf05ad4f14c8bf0c965",
+      "protectedHash": "014b381069aec4c912ca30b5a9f28a8e60a2b516a1a489f8f89423344a6a6e4c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwefrydd",
+      "sourceRevision": 6,
+      "graphFingerprint": "a622871341d931a4a29b10e30c9cf42a718ba4527aed497cad8f4c8df589730e",
+      "protectedHash": "66c3709ca3a246c73645997dc7e99eedd752ea10da03b915dfa253add907daeb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyvern",
+      "sourceRevision": 6,
+      "graphFingerprint": "038f3cfc992b4a91ad486b4f96f789060edec35f5466b89fc49a40b9cbaf9eb2",
+      "protectedHash": "14f5e73c5ccb2cce091cdcbef82f10fb359b1a4aa7e655916399d2495ff5d8e8",
+      "targets": [
+        {
+          "id": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "birth": "1675",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-illysywen",
+      "sourceRevision": 6,
+      "graphFingerprint": "c8071b3935f13adfab9c7780c91e86f0fe3098181083933fc3d06805d5d43ee1",
+      "protectedHash": "49ad0419dbec5304982cd3e2c0d19e2ed82ca91f0e144ccf58400a7bd223dafb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ard-conbhron",
+      "sourceRevision": 2,
+      "graphFingerprint": "885e3fe54020f3594a2ab72b1ff1303670e8f41462484353790ce07fcf3698de",
+      "protectedHash": "65cbdea9c87c2139597ae1ef96bec410687ac4e284fa0149824191284d9df069",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ui-talamh",
+      "sourceRevision": 2,
+      "graphFingerprint": "a269255712d5dc8789f9636708ac5197d6480762a7d0554b01495b5487f5b366",
+      "protectedHash": "97093bdd930fdd777a76832abd987aad5fb0604b75a10e26c97bf04413365b1a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-garrael",
+      "sourceRevision": 4,
+      "graphFingerprint": "13e79428fa6a511e7c914ea62bd38e17cf3530e085072a6d2f583474a9d91aad",
+      "protectedHash": "b7c5dbdb742d345c0651bfa67f39b149c4a34a141e02ad47dfc4a1b73419a372",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dubhan-gwynthor",
+      "sourceRevision": 5,
+      "graphFingerprint": "55085e15b65c27d288ffdf39f4726edb895e9002254f1f3437304e217c97ad8a",
+      "protectedHash": "62dc43efd8d045e12ecd3fb71fa06097c574c516783014ba473d82dfcfd40f4e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wolfshorn",
+      "sourceRevision": 7,
+      "graphFingerprint": "534c518536aa4d5a88632feac371b8e85a5e6c691b6afa8f514f435cec72903d",
+      "protectedHash": "7fb4df79a751fed111246ebc4c0c62978153089bcf65810c4b69f13f18bb6788",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bleiddorn",
+      "sourceRevision": 5,
+      "graphFingerprint": "1d54f26eb0d15d88d7fdcc283e5a75ba6650f47f852fefb962e62b33f3b8f433",
+      "protectedHash": "4ae0fbb2734b04e5640055f93c9212b671bd427d2d7cc8b2bd052fc94791c9e3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cymrath-o-traethlan",
+      "sourceRevision": 3,
+      "graphFingerprint": "a6653f056d706625be223cde4eb16e9e635604d1065c4985852feda8630f0f40",
+      "protectedHash": "68a4a7f48ffbd4d5c896e36f8d411df33f8567643369de6ad49f88acc9bd13b5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-vaeren",
+      "sourceRevision": 12,
+      "graphFingerprint": "2a8b7aa5c8034943bad5efb3a1f9cf9634058f6192674a900201b88ed44ae944",
+      "protectedHash": "199f3a9a7b083bfc829ca0b88e7946dd290ad1742c1058de1fd28832b89a177a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wargh",
+      "sourceRevision": 8,
+      "graphFingerprint": "57071ddb160bc94ee9de374e524f0912f53541b497d01746079f01290f55a3d8",
+      "protectedHash": "8a08554261314c9b5baa45978a2235f1cbdcf204301f9bfe3517727397b7b786",
+      "targets": [
+        {
+          "id": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "birth": "1673",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        },
+        {
+          "id": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        },
+        {
+          "id": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "birth": "1674",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "birth": "1699",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        },
+        {
+          "id": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "birth": "1704",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "birth": "1698",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        },
+        {
+          "id": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "birth": "1703",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ragnulf",
+      "sourceRevision": 5,
+      "graphFingerprint": "7b7d14658ce8db252a8065ec6cf96e2aa19db418e7b0c82ae112313ad8806f89",
+      "protectedHash": "a52323dccb1d4f5e44ac8786d9b5e15eede159136058ca281f5c040efcbf17b8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-varangr",
+      "sourceRevision": 11,
+      "graphFingerprint": "42a2b6ed7bf458e3933a42f146b29fb0c9d4122d1f2fb30d3dd18c832b30461e",
+      "protectedHash": "7218868faaed2228695a59d23e392452a83aa6636f8c5384696ba7ecb597945c",
+      "targets": [
+        {
+          "id": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "birth": "1563",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "birth": "1588",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "birth": "1609",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "birth": "1642",
+          "death": "1713",
+          "status": "dead",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-varulv",
+      "sourceRevision": 6,
+      "graphFingerprint": "7409256d8716d4280c08ffaba4efadbf0472cd87f61f0f7aea3780b32f0854f5",
+      "protectedHash": "33d07c6408d954c46db3ae84717553406803c9663fa41af7774b71f052381cb5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-riesentod",
+      "sourceRevision": 8,
+      "graphFingerprint": "34d27648210b11e170cef62edb2b74c43995dd2680c0283af4e08590fdc837a5",
+      "protectedHash": "77047b0a859fcc423f2cfa4589265424a313edf1813728b25065a66192a5628d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eisenbieger",
+      "sourceRevision": 5,
+      "graphFingerprint": "d29493704336b00c0e4279520c24132bf117a0c3448e3b17f2ac03b753a61840",
+      "protectedHash": "27c346da0052ddba844fcd78abaa217864624f9cbae7c845c1dd5a4182486837",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "sourceRevision": 5,
+      "graphFingerprint": "6e24578319a003663d6cb3095b6b06f6dbdeaa1bffc08dcf6ba92cbed4ea433d",
+      "protectedHash": "284d98e94b76343b92114099b067238bacd3603d94df29efcd2c398081704375",
+      "targets": [
+        {
+          "id": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "birth": "1642",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-ingeborg-hadvar-sturmgeborene",
+          "status": "active",
+          "end": ""
+        }
+      ]
+    },
+    {
+      "id": "haus-frostauge",
+      "sourceRevision": 3,
+      "graphFingerprint": "894db76baf1fb2535be16cb0aee50e4f9badee942560379c3e41d698c4dcdb97",
+      "protectedHash": "035d9941a65d4ec1658c8e7db2d1e8fdd7774cdcc471365794c9a97824de9b89",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wellenschild",
+      "sourceRevision": 6,
+      "graphFingerprint": "6e45f660fc15089216cd834ea1869cb3fea508613021d3af81d75d2e55e1dcff",
+      "protectedHash": "9daf378fbe05c654396efa4300348e50985a0c71ddc59449c453a41e38dc8bcb",
+      "targets": [
+        {
+          "id": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gullvig",
+      "sourceRevision": 6,
+      "graphFingerprint": "5725d6f0c470f249c418fb06ecdc510b4166bd89ffd173afebf57cb9bd9b7b40",
+      "protectedHash": "d87f35a6150ce7cbb779d5ff4d5160274403f524f5f260759eda4cc3dd4b8983",
+      "targets": [
+        {
+          "id": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "birth": "1704",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "birth": "1699",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wellensaenger",
+      "sourceRevision": 6,
+      "graphFingerprint": "c996a798432ca9cf240ed1de1a632c3f731a2172e6225f52ad9d59dce1f501e8",
+      "protectedHash": "7919cb9460d8219b2baa88c037db17a3e95e83e175e6546d3579f5c8964bb8ce",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eibenschild",
+      "sourceRevision": 2,
+      "graphFingerprint": "7134a8ab224ed540c9d21e39eb15a050ecfab18503549a13c68954e2b85a21c3",
+      "protectedHash": "6e343a780316d781c35a59e55191a5fd2cea51c6d10eafc6bfce924dd9fd492d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-suedstahl",
+      "sourceRevision": 6,
+      "graphFingerprint": "abc345ddb45d4be808655bceeba9e9ece7478b375729f185ad8b85e789f2a23f",
+      "protectedHash": "854c3f8e7293b8526bb317c347c5df2ea12e02bbfbafe2abee0a53c3af4b0ce4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-albholz",
+      "sourceRevision": 6,
+      "graphFingerprint": "c0477b4608b84a1f8893b75de15688e39405f3bddcc66836637853ee1fc85397",
+      "protectedHash": "528afe6e98b611dd02ffc8203db9d3daa4d186eb6c0ca78a7e507c15b3f0d669",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "sourceRevision": 3,
+      "graphFingerprint": "5aefb6f8851821467313d46b8375cf7a12ee3b1cb47fb21bd000d43725f70f5b",
+      "protectedHash": "cca2b3bb5574c45aab325f68574982e1fd62e713921634fff52b529bc3c993c1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wellenkrone",
+      "sourceRevision": 3,
+      "graphFingerprint": "06fb991ddc9177b3f3b24232a0ad2583ef10712eafa0155ecf566641eb5dead4",
+      "protectedHash": "403c243b9e74ee500d8e7f7b0b82360055e49a1ebfc41fcba0596067dbeacdf5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-donnerblut",
+      "sourceRevision": 4,
+      "graphFingerprint": "37b856e48e460e6e32a1cbfd0e57c2dbc45d924b22645e478dfadcdb61db91de",
+      "protectedHash": "c46b5a69e4c01126ce1b51effe41a11ba17bc063fa5be048af4369d1c7e2f6ef",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-moorbrand",
+      "sourceRevision": 4,
+      "graphFingerprint": "c28aaa20e001a953220c9f33a2bff5fa55a7a1c295ea195e8e6ae3b5b7a5b674",
+      "protectedHash": "c8f8b47d6641cbb288c203dfbd0cd7fcf426ca57f464701a0b24ccdf83c038c5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-jormung",
+      "sourceRevision": 4,
+      "graphFingerprint": "6c45932464f0164e3232c3ceae94a1aea5186f02a8cde6af3c8f796e6b93f453",
+      "protectedHash": "9c6e983eddd2c005ae29c6db72789fa3ad6930d86d66bfee8d84da6d5e10e1bf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nidfengr",
+      "sourceRevision": 3,
+      "graphFingerprint": "2a82d72e1872f1924b5af380b98dd07f47d4c02024dc0a920a0df7cac1e819bc",
+      "protectedHash": "04e38c2ea92039069369786db55f29058de0a0103c8e21d0f55f6b1683fb050a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tarbhann",
+      "sourceRevision": 3,
+      "graphFingerprint": "10a034491dc8fb4718f60d4624422e86dabc2413c75306d0dc5cee1639ea7ed2",
+      "protectedHash": "08d396714a0edf313c509c784b477e2ecd3e147fd25ec5d68dba943ef966e16e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bjarnvarg",
+      "sourceRevision": 4,
+      "graphFingerprint": "db01b8f7f54d27a325689799ae32d9b752da8709992fbd6b7c53300952d2c8de",
+      "protectedHash": "85966b75000409fd8ff666d77cfa457c37ac312b124545a2ed52b0083cbad1f1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tauwind",
+      "sourceRevision": 4,
+      "graphFingerprint": "b0c5af994c33f5e4d91b08ee5f7c1a3cf77fff302b2e6bea91e2e1573364e0d9",
+      "protectedHash": "5953914fed34897e75bc3883a79f42db929a39039b82d7cd0b1e43355446438d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-spindelschlag",
+      "sourceRevision": 5,
+      "graphFingerprint": "70efebb6431b161155ca01e9a560892f465d7e27baa9133af7c7c8a7f996bdde",
+      "protectedHash": "f6952874fb7d583271722fa2ec7740eb95c4f4dc9259d6772532933282c8ffb6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morchaon",
+      "sourceRevision": 3,
+      "graphFingerprint": "fa572a238b47846e7c3d946821b70b351902626806213f5e0b6a7ec3eafafda3",
+      "protectedHash": "b6c2ccba4e587e8a7fba333ff9041f12fa19bc679dcba3cc833d529979e382cf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hvelgrson",
+      "sourceRevision": 3,
+      "graphFingerprint": "aa4bfaf17aecd8bf982679dd81b59916bf9d232262f358a3365fbdb05fb76173",
+      "protectedHash": "9f0a70fb49a88fb8956f0d9c1039d3f72a014275a4b600a3ea943111dbce43b0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-frostzorn",
+      "sourceRevision": 4,
+      "graphFingerprint": "a725407d62f2c101399c5d8bfb8878be897b400012a6ebd854c39bcc44947785",
+      "protectedHash": "d6e8e4e405f8b5d21fd9847e50a99ee67aa6f8d95585bb38df55435d125a35a2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-grimr",
+      "sourceRevision": 3,
+      "graphFingerprint": "d2e84bf44960169e0ac068cc97123009faa070bf2b18d1b6c189c8ff4fd34043",
+      "protectedHash": "b490674159f4d19bfe864562a2b06e504277c17f0be3c0f34d3a2359899c246f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skaife",
+      "sourceRevision": 3,
+      "graphFingerprint": "615dbd61070435393d6b780612dcd5e69ad237c2f35cb4d5292506d392f83d99",
+      "protectedHash": "7994a75f109fd076d9701bfca4ed96f496e0e3e8930edd4f6f2cc551594bdfd8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-holmr",
+      "sourceRevision": 3,
+      "graphFingerprint": "880450e4632c15c70c70266fa5f515a6c3bdd3ead7fab10cc9757c1a1cd89be0",
+      "protectedHash": "9ae92fc41f4d3a2362c63a1d2ff2f4c392908b5a1b5b95ab49e502cac64fbbb0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-isvanyr",
+      "sourceRevision": 3,
+      "graphFingerprint": "15a8c54cea147931119ff06081489331bade572198468f223531992a7a2f16e3",
+      "protectedHash": "b91afd4cd672542c44fc33c302799fd7655f11bfb3cb6af690c935acd08f2026",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "sourceRevision": 3,
+      "graphFingerprint": "fa099a309e04d60eedc42e97fd40eb3230e3707c17e38172d8148db53005e6be",
+      "protectedHash": "2cf8c43d3b42b0a8bb70afdda358af99859b8ff2896c85bb2c27394ac772bbec",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-feuerhaar",
+      "sourceRevision": 6,
+      "graphFingerprint": "f074dcfc60b23481b812e92db878380776afb95ef8104f4e4ebaa4f62b967e34",
+      "protectedHash": "67deec92a7656af64eabb01b7510a813184863a115525eeaa0f061a0c2bb029b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skogg",
+      "sourceRevision": 5,
+      "graphFingerprint": "69aac25c05d17ea7f4cb43aac95a972a6edcf63a4e1b984806d378603e8f58bb",
+      "protectedHash": "60461d9ee948a59dc800113ba7176c09bcbe37aabc39ed2b8dbe179ad2e70996",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-silberzunge",
+      "sourceRevision": 4,
+      "graphFingerprint": "180a5eae6c36834702b89dd5d6182e95b65a1d71eb6ef2ef59a63e07345557b4",
+      "protectedHash": "a981869e53cdcabb4056d780d8fcfae5084cc8c056292fd50da1c2ef5821f0ac",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hrafnvald",
+      "sourceRevision": 2,
+      "graphFingerprint": "0c7fc2bc677aeeb174f597c6aedace90e90b790f483e193a7ec51bbdcb71e47a",
+      "protectedHash": "30a2a771cdf2c23c20956785ac3c53907de2bcc6db1d4067fd0ee4114dd859ae",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-trachwyll",
+      "sourceRevision": 4,
+      "graphFingerprint": "93dc8c096b637515efb7f27006cbfe2889c967a43ba2ef752d61c11bb8b6ee2d",
+      "protectedHash": "b6bfab893824ef2595eb9965afa3ecaea27cb268aab444ef78d1b0e371f5cf3f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-grendel",
+      "sourceRevision": 6,
+      "graphFingerprint": "37a662ccc6d9a8c9dc6ba65f90640a4009e328245efe1988c15008c7eb9f109d",
+      "protectedHash": "f25010fd6e235888062dfb3d5605fc21cf925ef85e9e7fe50abea517fd4f146a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "sourceRevision": 5,
+      "graphFingerprint": "580ca18856d7138103eb3e93e66c467e9ada6473fb9531a7edda1dd6aae24c96",
+      "protectedHash": "17032036c12aedd849c4a7c50be256534c41cbe064c56aed4c328fbc61f347a7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blutklinge",
+      "sourceRevision": 3,
+      "graphFingerprint": "a29ecf4934afcc6a3adc50ab574723e2f4f24808d8464e1a996f2c8c5cc84040",
+      "protectedHash": "d21c97d438bbf74530ca67b5a6fe34e27cff81ad9163cac7783bb7330a037d05",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-windhueter",
+      "sourceRevision": 3,
+      "graphFingerprint": "20e8322f4dcdfc229d40878733bf5a2999b5bbbe22e35147a19c24318797becb",
+      "protectedHash": "0af65af44cd9cbc03214a3e7c4481ff46e57f488b9a63c38a6e6e61637c06ea1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morkvard",
+      "sourceRevision": 2,
+      "graphFingerprint": "7da06380aa762fc7688482b9ecc5fec6669ab9e1cad54b7368cd106ff28731e2",
+      "protectedHash": "b3c2f624d985dba6df9d4f9c9a36e0f4e1a664b0f8ad9203d383fd8949bad790",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-luin",
+      "sourceRevision": 2,
+      "graphFingerprint": "b11befa41102546ab1d3b94d1993b14c3ab4c28224cf66ff4497a9386289e355",
+      "protectedHash": "bbd837e33d0d62e84d38921284f9b16c8bac85878af05f68f6e6b246279c5c01",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-an-borach",
+      "sourceRevision": 2,
+      "graphFingerprint": "0de1314a8fe0fd1e5b2ad691e25679b572b1b58d8701227e29c87cfa407b1608",
+      "protectedHash": "c6677fb5c98fdeadb6b2e7082605bf9277eab0c2ae560936fd0d96c053e59855",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-helgr",
+      "sourceRevision": 9,
+      "graphFingerprint": "a1a111ea512d53292e9773d64e355609997d0c4b83ce6bdb28e73da340519986",
+      "protectedHash": "ba70217bd8f24603a3b829b99e6748412482c52e776e1cfe0f02d044fccfe642",
+      "targets": [
+        {
+          "id": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "birth": "1655",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kummerherz",
+      "sourceRevision": 5,
+      "graphFingerprint": "23fffa08a9998d86276c7ab2f47465b376d926725ad8b50bb8cf0149911d4356",
+      "protectedHash": "9389fde4bc2842d072969c41c8499355ebf0dca9741279ef2ddd1cfbd0eabd14",
+      "targets": [
+        {
+          "id": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        },
+        {
+          "id": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "birth": "1673",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-todbrand",
+      "sourceRevision": 5,
+      "graphFingerprint": "df8e7638e1a64dd8a32186f42cba282cd92e46c17ec7803ba30eacee2348ce99",
+      "protectedHash": "1f13ecb831976df181bf12b06e1b0566fe30c289cb589854537710c329942421",
+      "targets": [
+        {
+          "id": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "birth": "1703",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-graumahne",
+      "sourceRevision": 8,
+      "graphFingerprint": "ceb546fac7505bad6743e1f2b542e0b88ce7d037ba217a11e7badf64120e86ef",
+      "protectedHash": "8c2001cc9490ec025dfe8d3d03d524041f897d2123273059622bf9f37382047e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-schmetterschild",
+      "sourceRevision": 5,
+      "graphFingerprint": "23f2d0a097525dda6f5a69775fc23281d4e6d212375f379aabe51ef8fed624b8",
+      "protectedHash": "2082d017b26c79ac9a926788a40bf3a28e13b18d7f1320b63e254da0a5199e20",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hrafn",
+      "sourceRevision": 4,
+      "graphFingerprint": "0a4fbc25fc0c73feccf27e02188b8b4bd5f2c3543b895cc78899204b0b7ef202",
+      "protectedHash": "ec6a7489314108308be0a4e60686c2ce2f88b74e0ce45ab007b4482d195e6eda",
+      "targets": [
+        {
+          "id": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "birth": "1655",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eisbrand",
+      "sourceRevision": 3,
+      "graphFingerprint": "4fddd367bb089f1680c41b85886c41a26aa525ce56208ac5c50a94669e8ae56f",
+      "protectedHash": "feda0b85d4bbd34dfaf705707c4394b52a3e5ab7a41b887aebf5f46e4e7c13ce",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-svartholmr",
+      "sourceRevision": 2,
+      "graphFingerprint": "943bebe11bfd7807d98943e622ba7c9cfc076910531a1130eb469514a8449928",
+      "protectedHash": "bde1c434dc06f98eaab03850a8355bad2e24e723e45a92c05a996b28cbae0461",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arnvild",
+      "sourceRevision": 4,
+      "graphFingerprint": "a8a6c55aab1161a13124863eb85a328b34bbbeec4f5ae8a8859373a4f33227f4",
+      "protectedHash": "4e4f3a356e45a921bfb3773b64aa5812e6cc6e172f6088eb082b900b76c7c718",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-bronaigh",
+      "sourceRevision": 2,
+      "graphFingerprint": "49e7a7d3223b89fe45ef8fdb996da5d92f61c3f4f54277dd5f2a1518ef0f1dce",
+      "protectedHash": "cd66b68101d15faa9e94687ef915f4f29010c2091129ad1d26af35d7f25805f3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-schwarzstolz",
+      "sourceRevision": 2,
+      "graphFingerprint": "8d0f6d04f14a29d4e3e3f42c1e2b700eb31bf65d80a380da179be368c7338e50",
+      "protectedHash": "c765f92bf865b61d9bb74d8238009781c1efcf9a78147c78bc338df513b8caed",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-schattenherz",
+      "sourceRevision": 8,
+      "graphFingerprint": "ccb7fff10d5527f95c5c6668c6ee8b030d13c86caf48f3c01a568a85ea8bcfd6",
+      "protectedHash": "6d3f35c6b45146e9c08783d19a4915af9c2dbc0ff38c7685cae00328152a3e65",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blutstahl",
+      "sourceRevision": 5,
+      "graphFingerprint": "20ec9ef3068d32a2da3b99793bb820c2ca54ab6d8b012221cff2a672b58ae100",
+      "protectedHash": "1248236d76b147b72e7a838d80da8cd3143db2105dbd9798c6919a9329943738",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-silberblut",
+      "sourceRevision": 3,
+      "graphFingerprint": "439341a48e96c8d8d04ce82f0aadae08162864f0e881bd5609589c5b77bdb6d6",
+      "protectedHash": "2a501d5ed9853a20a8fbbf8770063b92846b036415942f95ba74fe0a70e54fa4",
+      "targets": [
+        {
+          "id": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "birth": "1563",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kaltherz",
+      "sourceRevision": 7,
+      "graphFingerprint": "b38542b18c3f2d7ef48666865f766174bd54e4d871bdb334956af6e15eaf4e57",
+      "protectedHash": "eaf399ebfc93c0b2aa23c3fdf6d13916aac64c1673aaa9329064e7745ec223fa",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-feuerherz",
+      "sourceRevision": 6,
+      "graphFingerprint": "85bd8b7805144ce0ed765ce6974112f392282a12762b269924dc2d36d612385d",
+      "protectedHash": "27577d4393cca573489d88830147434da86d26e376a1bbd6d0f2b5a6ec316975",
+      "targets": [
+        {
+          "id": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "birth": "1609",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-vragi",
+      "sourceRevision": 5,
+      "graphFingerprint": "1609be73c50dba83c6c22f26a3e505cddcc3d323c24d12142d93e5da45c8411d",
+      "protectedHash": "11ecfcbfa9177a9975ce880a2f76a0d96c3165ce7f35c9ec69f1a6afc42c872a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-schwarzblut",
+      "sourceRevision": 3,
+      "graphFingerprint": "1d09f8e1d43ad0c53d29425ef85545223b2f700f3a517bbcd37b14c09e9ef3f0",
+      "protectedHash": "2f5bac34a0030ec03ef2895548e15d2c8fcce16649d1c7ff22d885561dbe9145",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-goldglanz",
+      "sourceRevision": 4,
+      "graphFingerprint": "52e9f5e9652cef298690c11d487e4e04723cd815dd093be36ad3daea788cb2d7",
+      "protectedHash": "95af4070100c2f17551624e06317fed4f3616f7cab7445b25a093444574a6f7c",
+      "targets": [
+        {
+          "id": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-goldschwur",
+      "sourceRevision": 2,
+      "graphFingerprint": "4182fd3aad5574bc36e6013f3e56591364e883e8f46a6632337aff082becccc3",
+      "protectedHash": "69afe9573e755bb0e25ca76f8429f45c4491be463d742cee4630b8041d52be10",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-goldhand",
+      "sourceRevision": 2,
+      "graphFingerprint": "a15c74674830c67ca134a7ea16fd3ed04e4a511b91844f99ee7603749e1e217e",
+      "protectedHash": "66a84ea0978b7460ad601db2448c68e6b65ab0f6c25225a7410a7d4175be656a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-guldskar",
+      "sourceRevision": 2,
+      "graphFingerprint": "79f8ab6febc0c21340dca5ef6517b6bc3e2d3f491c1b6dccd5f2cd7bc5454542",
+      "protectedHash": "0d03ba890449222b8d236d0d0abb430dc98fc8eff724b68fbc90a6566d310aee",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-aurangr",
+      "sourceRevision": 2,
+      "graphFingerprint": "4d01f2e14f01fe3a63dc11b6bc9f883f0970d0da7cee483583c0e92e5cb8921c",
+      "protectedHash": "59da4ed129233c24a36bcaaab626691fe7a9288622e5876fc9589e61d03b0aa7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fenngrim",
+      "sourceRevision": 2,
+      "graphFingerprint": "dd3b2901a7ad05ec3ec135246e75cc938f79c703edec7e84f6d89f1e0c26df7e",
+      "protectedHash": "cd6b3e05cd65adf7f157c67b129e4e291cf80baf0406f2337c8dcfdf3c67bb26",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brackwasser",
+      "sourceRevision": 2,
+      "graphFingerprint": "b2085a4dc1a806a1f7dc536de347f5363451f6530f8736fb4502c309ddddcca0",
+      "protectedHash": "728a1a89de8d272947aada4a7cbefd399c6e1bfac984cf63cd297ee95f36dbf3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sumpfgeborener",
+      "sourceRevision": 2,
+      "graphFingerprint": "d61c6e4d03ca94030bd8ff19fc956ad57440d5d6ec8eb4094561334a8027102e",
+      "protectedHash": "8cb80c42b8895fcd4ea217093b860f702aa43bc5931b026885baa0362dc1d320",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-helmyr",
+      "sourceRevision": 2,
+      "graphFingerprint": "609a07dae4e3a8864a62dedab5e11c64de548eb0500b129ff982f59abd4a0b0c",
+      "protectedHash": "7906e868c465bef0deb39f219dd24b5968b450d346245d5b3de388a2f8caca1e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-taufwolf",
+      "sourceRevision": 2,
+      "graphFingerprint": "9bc1db68b9597fac5e310651223af9273c6e251de6237539e5f454ea6eaad1b0",
+      "protectedHash": "eef585b1b5ac34488ed04f241747afb0b88a5ec67d6c9d9ee51af92866ad4bbc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-myrskarn",
+      "sourceRevision": 2,
+      "graphFingerprint": "764e65b3dd6f54d1c18dd7ceae763d1a4f2385594f04ff2fd037e85d20a7d3d1",
+      "protectedHash": "8d9cda1e4e4089e6a5c396bec8b9b7b083f9317cec0406de3b4d09f22e0d02ca",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-goldzunge",
+      "sourceRevision": 2,
+      "graphFingerprint": "fdb4b6ca3dbac11842befbce50526f64786116e5152ad15bd6a1be3862f666fc",
+      "protectedHash": "02801d4e8b39e25dff1542ece16a05ba2292acb6a03efe271d6918117a293fff",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hjerte",
+      "sourceRevision": 4,
+      "graphFingerprint": "52812f14c85045bc821a2ae6d058b20d933ab8545f0975b547ca2393921aac45",
+      "protectedHash": "4998c0d2680db7a656f00590cdd9bfb7233343e8305c2bb52d69665bdae16354",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-jaernblod",
+      "sourceRevision": 4,
+      "graphFingerprint": "9a94199646f2a7a082bea242b653827e8fca0337567d135e65301387dd6cd198",
+      "protectedHash": "2dd7e0ba8fbd653df78875f2ed10234c8262c19bf0ea1e182ad73c896a3a53a5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "sourceRevision": 2,
+      "graphFingerprint": "667ba9453c7730464399e7204ae809667e22d22b10f25026cb7c5ac271ea21b6",
+      "protectedHash": "73cb88dc4e7fd509c3b65c12f4e9c3c00760c79c66e169f27cf1ec82f99b3bb6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "sourceRevision": 2,
+      "graphFingerprint": "0b9c7d300fd3ad0b173b004468d4d80c11cb1dc4e5c4d3eeee962e6a99979159",
+      "protectedHash": "fb656f768348b938222aafbdfe265e651ff52bf66f982fb5486984d82d8a304d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "sourceRevision": 2,
+      "graphFingerprint": "dc52b5a62fd848962eabeaf26d0802857549adf7de8300546d6a91e24e29c312",
+      "protectedHash": "cd00bf30cb87c66318225c4d0afc33b38d14521766a429526ef3dd5fb6ae7604",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "sourceRevision": 7,
+      "graphFingerprint": "73efc7050bb89507965f2d98ba021f5727e0b0d31bb94e2dac112adb2a7f3868",
+      "protectedHash": "4cb6c7ad60ffb65409244d161b4e61c37146ac1c9a048bb7e79badca68a2260a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kampfgeborene",
+      "sourceRevision": 7,
+      "graphFingerprint": "cdb08263a078eef05ced8f7e2f910ab861d72599d9bb68945eff989750c98223",
+      "protectedHash": "01b1003c02b5288a29e718db471b79ce9c8ba70d785156cc6941e9c810f2d5fc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brathfengr",
+      "sourceRevision": 6,
+      "graphFingerprint": "755bbcd3038ff948c65d7b9f78c0a4523cb9d69f241ed8937de4ba951f056e73",
+      "protectedHash": "952d30626a452138fc1d4926df2f566bda65f8619f19f8061bdcbef1cf1e209b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sterkr",
+      "sourceRevision": 5,
+      "graphFingerprint": "4133beca5eacf146b050bdedbabe34cbdd3d5aa02f970f9bb47973b659150dc0",
+      "protectedHash": "4e0d95cb40d467d42265e18d7e50a8fcdce62ce16be12f12fc31bf880c1341b7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-soekeren",
+      "sourceRevision": 6,
+      "graphFingerprint": "e6969075f0e41d425d444cb642da9016465f6085b820e7fbe36b9887e6511911",
+      "protectedHash": "abf419654335660c4ee51ef5f3e331c1a56348f2026fe562ea60f4416bacfc70",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skald",
+      "sourceRevision": 6,
+      "graphFingerprint": "e960cbeb96ecc48dfdd0fe701bb6be592ad4ce9c320f5b3aa71f364d314fdada",
+      "protectedHash": "f8cd8b027ef85edff1810ff5b032ac2411c6646b810094a8c828d75d63e4c069",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-vangandr",
+      "sourceRevision": 3,
+      "graphFingerprint": "3ef5ce1df79f6455fd02539c5c437b194373871973a38f3b76d43c6094bf0b9a",
+      "protectedHash": "a8d69eaa07a7d33930edfd28d194072cf073eec239d772b32297933fd72d9f1f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "sourceRevision": 4,
+      "graphFingerprint": "aa3051080a3b160dfb346d9f12b3e215a3292e1f4b0897d7d55080cc1604a93c",
+      "protectedHash": "d38ea99dc04e4067f7a9f93694837035287997dd65ed252fe34dccbb9686748c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skaal",
+      "sourceRevision": 6,
+      "graphFingerprint": "b89a71dba137a073288da05b6e55d745cee2ebcb401a623cbb5f2b81d59110f9",
+      "protectedHash": "9a4cda1416d3039b76d14c2032e21af5a890022a9fe3a58431d1b8aa8196ec95",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skjegg",
+      "sourceRevision": 6,
+      "graphFingerprint": "8bedd1ee91d3c6187e229072809159045ee98b7c80f6ac4e7dd3d53fdbeb7a2d",
+      "protectedHash": "0272bf182331e941af6c97b5e587cfe63305fc42e80712379d79b386be2ede7b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-freiwinter",
+      "sourceRevision": 6,
+      "graphFingerprint": "fae5cc8d0f360ae2424a9c061f3d75c1d3a3afc9993eaed4e006d8c7f1814298",
+      "protectedHash": "b33a03c6bffd0f2c5ad4108359c04f0d6a8e0ffe0d2ac490dc73f2402d24bb3e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gruenklang",
+      "sourceRevision": 2,
+      "graphFingerprint": "8c37210d4a179a91554cd7c4e6857d3c8e76c7395b945e457bdf6f373c82175e",
+      "protectedHash": "7a06ed53865e2f2f5ee5e42c646695b990167ce63f2d808d0cbbe8afbe7f5da9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-flammenschritt",
+      "sourceRevision": 2,
+      "graphFingerprint": "4f39a1276b2893d89ab964d349b0688db5ad40e53d240a80a620f292e0fbb246",
+      "protectedHash": "f82f89b491c023d4812925b57fcf7dedab2f9a3c5812b924ba436fea3eca3f1f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-runensaenger",
+      "sourceRevision": 2,
+      "graphFingerprint": "5eb2d21118df5cffb537693ed1c744127701af8dc06ec561c8d3411b446b7a9a",
+      "protectedHash": "8dd945e006d65124c64217c469276f3b1646f68c18ed952a5964ec2d1375de40",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sturmsaenger",
+      "sourceRevision": 2,
+      "graphFingerprint": "78424f3b4326ff55b216e801aa3e0908a587db32a94fe43732c6b71b9457691c",
+      "protectedHash": "7bf79fb4985d9ff7e70b10641a42d967663b809fe3f3acd6cc42ca173469d82c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-liedtrinker",
+      "sourceRevision": 2,
+      "graphFingerprint": "d4d856d4eb5624ff7b065736a9ec405c2d294176a9fbe69985099bd4acc4c805",
+      "protectedHash": "5b2694ca69f5780a79b9b24deaa646a4de6a05be17bca50b57551f52f720e591",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-spottzunge",
+      "sourceRevision": 2,
+      "graphFingerprint": "ef020a6729c7a8c506a17395e9c854d8954738a0aa3bf36faf612676968cce97",
+      "protectedHash": "32bf7d696907207d302b55ca9e2723567af638553cd0d939387827fa8b48c943",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eisenjungfer",
+      "sourceRevision": 4,
+      "graphFingerprint": "4684cf92ed813920c5b07bc385c2bad5c79761bdb70f186a6eb5a27879f6e764",
+      "protectedHash": "bfb6799d3872e95905e73e4f9f6f2b4e947700300b8dbcb7f22fe98fd3345b48",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blutdorn",
+      "sourceRevision": 2,
+      "graphFingerprint": "ad9d26c041c17866839960084dac1f77fe223254cd267d795c8a86e3df95f5fb",
+      "protectedHash": "f5cf2c94e34a39f8b7301238fc0fc4a5b6d4b58343880e05acd7f1e696264fdc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dornacker",
+      "sourceRevision": 2,
+      "graphFingerprint": "a02307b1d3243eef384ab9c5802a1feac29cbabf6edf732f55d10a19ddc30618",
+      "protectedHash": "b3d41a8480de9376a9b7c654a8e3099ec5279a6eb7befeb6416ce037760f07de",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-baerenherz",
+      "sourceRevision": 3,
+      "graphFingerprint": "e6b3aab22c4ae738f4bbde7de62bc3e16e608f12b0ba540527a79e004ab56b54",
+      "protectedHash": "73626b77c88215c95450b8c1b23d87b1d672204341fecc4e771d2e67f6284234",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kraehenrufer",
+      "sourceRevision": 2,
+      "graphFingerprint": "41d866347c6819b5410985c806cbf81b20cea1db30360f592a245244a162f939",
+      "protectedHash": "c75457a662cc4f3e2b379bb186ce120dbb354e25be1ab9b2276a02919f1eeedf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-unholdbann",
+      "sourceRevision": 3,
+      "graphFingerprint": "cbe6413a99887e4cbc98e1546634a767e16bdf712c58c67093c3790db4750c0f",
+      "protectedHash": "c0debe7b16237f8ef518b145d726001b7dccb81665a155220b50b0200f4d9bdb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rotstahl",
+      "sourceRevision": 3,
+      "graphFingerprint": "76d6fce4c3b75e31aa3651f1311a40a6b463bc2b13e4ec1ec934be48cc812c90",
+      "protectedHash": "7407c1f09a2f1d4c1d26393294a34864044579e3177f834fefbedb1af0cd7625",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bogenhand",
+      "sourceRevision": 2,
+      "graphFingerprint": "5e06f49af09cd842a5da7f1ea56c690904f6f63efc81f91fd36db6d46cf44aad",
+      "protectedHash": "1ce5414f577ab11ca0783f31c1d57080903561f637f6a82711a4d7f2b7d4ad19",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-frostgeborene",
+      "sourceRevision": 2,
+      "graphFingerprint": "1dc4257bea3541ed5154b3404a417242dda954f5c39cf821dd37f438c358a0a8",
+      "protectedHash": "877c617308df63a2f4cc15d55ad5bd552a9edd05aaaab98af73ab53d9fe989f0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ulvasar",
+      "sourceRevision": 2,
+      "graphFingerprint": "027cc5c834d67c44aa65a3341c720cfd3ebb4a659b9bf91609d14f900d5d2480",
+      "protectedHash": "c037b0e5e62f57cfdab4e20c59a47494a68ff7ab0dedc0ee97af47d2a09524f4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bjornskar",
+      "sourceRevision": 2,
+      "graphFingerprint": "acddb0816c3a820ef8f70f4472927708dab830c7e2f44bdebe70f73d37d3eb54",
+      "protectedHash": "d6c58030a289e3a8fb4e467dd86bb6da59c7e5c979cb6f410b0b5015fe60259e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-vanir",
+      "sourceRevision": 2,
+      "graphFingerprint": "82d933e843a948f01d3b1c5c6b524188c88e2aaf844f1ee1697fb54516fe5a6a",
+      "protectedHash": "c154742d4c8cae54b104746cf4fefe1c911854550b8cea7030511eb2427e32e7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tiogar",
+      "sourceRevision": 2,
+      "graphFingerprint": "d84eafff17e0fefdb76d1d662bb3d25b4614704a97493642d30448bb2f40623b",
+      "protectedHash": "2f823e1c5b63a87fd666a56e84ec15a6014448252b401b3f5e8ea46622ab7b88",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fiadhrach",
+      "sourceRevision": 2,
+      "graphFingerprint": "a1735a3d462e88a042a49917f332f269c4e9dde282dc459f25159df9a359e7fc",
+      "protectedHash": "77a754b9046260c21924aeae2b447b026c0c7b31e7afb2d85cae3025ad85436f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "sourceRevision": 17,
+      "graphFingerprint": "58f37da2bd0aa02d306604ef323fba289bd71c162d86e802d3c8d2c5552e1ea2",
+      "protectedHash": "70a6d586ac9274dee83238e4ed1246e496b8e9a2972c47341e9bcd6581a5ec6e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ua-eirce",
+      "sourceRevision": 4,
+      "graphFingerprint": "7886754050a6d64352f7674d44b693903f6061764e0295c817dd52f0f442d646",
+      "protectedHash": "ff58ff1ca09169a4fa2a4d3ce73c1fb3a940be98d2ea3212456df7c7cb118e4e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fiachrach",
+      "sourceRevision": 5,
+      "graphFingerprint": "d0327942363f09857fc7df17067927f23074ded77b7cfec92a626f7abc75c400",
+      "protectedHash": "4091329936ffacefe6b62d12c29f847ba5e7b5e373ad9be7e16ac3e81c583746",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "sourceRevision": 8,
+      "graphFingerprint": "f5cc43dea91bb69bb6689511ae1b5aca25248028245eb7fb0209174704a27534",
+      "protectedHash": "7db74120aed292cc5f738e47988707bf543597a0b7300e8e10a523f6e6a498fd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ua-gaelach",
+      "sourceRevision": 14,
+      "graphFingerprint": "179c22a8d1ea48636c244e32d8adff99b0534b5b65404c906b1eeee42919bbfc",
+      "protectedHash": "0a5dee397d83c1070fb84704bd67a3e4b8f32befab41e97b6aa14c47f4904b3f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gallchobhair",
+      "sourceRevision": 13,
+      "graphFingerprint": "0fe238e3c66ab66200307193477c0a956d5113fb03130a9d3e36a0d4ece208e8",
+      "protectedHash": "f4f1126ca87cfadc1ebcd5e06c4afec2e194955838c3e593898163e9e2c22e1f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cleir",
+      "sourceRevision": 4,
+      "graphFingerprint": "4424ccc39ba17130479aba6f3eb253df09c1d4e46e713506fa7a941532b52811",
+      "protectedHash": "e8afb36d447988b3f9db00eead7f349683afe923db70e37e4dcc400c9e2cc036",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "sourceRevision": 6,
+      "graphFingerprint": "7786abcbe8f8950e0142f6eb74eebefef97097b6579323091b2b31772db8b353",
+      "protectedHash": "2c936cf9fe906efc0b5a201ff4258dcb8b788faa1bfa5ea160bb8bfdcfd2d09a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "sourceRevision": 7,
+      "graphFingerprint": "4d48fa64a8d2f384bb19e9060130bba8d3de5c59b70b4621f9b7403b6304fe8a",
+      "protectedHash": "098142aaa723f4091a8866280823ccc877f6d609c4424896c75c13276c34fb1b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-na-mhuir",
+      "sourceRevision": 6,
+      "graphFingerprint": "d79dd6c8bbbb6fc9d0d2e198267f7baa43e14395491d680cbaec3465a59fb7ae",
+      "protectedHash": "96151d7db581843fe6a2a85aee06d1ceb0dfb4882f6fdc9473d4437f35b9c9de",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gruenhand",
+      "sourceRevision": 5,
+      "graphFingerprint": "5a6b8fe9a6393a35008773c86a6e2bde6be95f1a04bde09aca846b7598f81d02",
+      "protectedHash": "d8d2c75f64753239183a5884b2f7e4dc1aafd51ec9cc3f9e3e5c7a9f401f0cab",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dal-cruthin",
+      "sourceRevision": 12,
+      "graphFingerprint": "92b64679b64318c05d99e6281876f53a228083df811fa9a17c64f5cafcbc18ff",
+      "protectedHash": "8df97a0b3adaf608047e05d7624da7e36ad80e97fe13b005d94d51b52872e4a6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-suileach",
+      "sourceRevision": 2,
+      "graphFingerprint": "d6722ac14f1a3e0339dbbec1dcedca1e853aab294d504a76b4618c3e9bd2fa22",
+      "protectedHash": "dd5d415e4cd8a1bf0724224035cd8bbb7860b89a716e95a13bd951708db771f2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-frisealach",
+      "sourceRevision": 8,
+      "graphFingerprint": "ddb30bca7a90a9fbcf89d23f6d647601d4d04920c44dd19448329e21d6d2e2dc",
+      "protectedHash": "5e7bfec1a610094357eacbfd72ef5a9f7306f28da7598feb1b73051012dab90a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ard-trodach",
+      "sourceRevision": 9,
+      "graphFingerprint": "c28f9fb9f1280a42d660862898df01240d3cae30ff66ae44b1fe2fe18ac4053c",
+      "protectedHash": "504cba113cbbfb0e9c2eb1483ee3d86d957f988cc33c9f39a253cb11c7633479",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nic-caoimhe",
+      "sourceRevision": 5,
+      "graphFingerprint": "a3203491b853886ee1c02f62fa9200ddfcb578bdb9742ef9f9c411bd7bebe318",
+      "protectedHash": "42ed5aafdea9a5579040be89e39190da6d7f837c12585f800e223d401bbb909c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-iomrach",
+      "sourceRevision": 5,
+      "graphFingerprint": "41ee99e777ec8d6cc2bf817956c8a9fe30f2a7840382cf5af08b7c12427c228d",
+      "protectedHash": "b11e3d9610838983d01c3a113918a2531512ef118db70e7f119a33c90fb1ce30",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-somhairle",
+      "sourceRevision": 5,
+      "graphFingerprint": "cd5c1dd30d166c5cc3839fadc7f69fb72b313801a5d3fee1a7a5707588ab3e58",
+      "protectedHash": "b1436cc102255023d42263ec288df06007fc25d5b004b5e8879685c121eeb46c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fir-an-tarvo",
+      "sourceRevision": 6,
+      "graphFingerprint": "4e3d2d1d401f4a18ef3b41c78e5360f632a7376f4d7efc757d6cb42f8a9d5fee",
+      "protectedHash": "ca24cc92693b9e04bc91d8e6661fcee81f784f95017e8c374d2a59aee0696a80",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ruitheach",
+      "sourceRevision": 4,
+      "graphFingerprint": "8fb79223084b6dea21da9828f3a0dd4d1e481d1bc9c37f9c3da886f2df7f1dea",
+      "protectedHash": "bf88509ee101dd2c13f7992dab10c6781d231c4a85d38db2b9fc5c42c0cbe0c6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gortach",
+      "sourceRevision": 9,
+      "graphFingerprint": "dec153d7a0e874bb765ab58b8ba8aa0cf85bc93373bed447250d738ba4cd21ed",
+      "protectedHash": "a35f1d862608cee7ad5a14c9a083009b415d2bf49780ad79fa4d3cfc34720add",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mac-airt",
+      "sourceRevision": 10,
+      "graphFingerprint": "f8eb9b95468c8711152583bef596c7e8c60b7f80626a46321fa42ca8ad34141c",
+      "protectedHash": "5dccd74f113918ab4ff149104f8ea09116df29eee249615a48b796c0ddd1e24b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-choinnich",
+      "sourceRevision": 8,
+      "graphFingerprint": "8758db9e20c71931a7119d06f54b605bc474c448d731dfbe5dfe2ef31af3d4d4",
+      "protectedHash": "57c2a3ebcbfe6d036fb9d86bd1ec4f89836ba8c66fc383c7be7a664ed75e0823",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nic-blar-leitheach",
+      "sourceRevision": 5,
+      "graphFingerprint": "c73331e3d5c18d8fd903c220976cba7ff033384600c092ac1498cf0242ce927d",
+      "protectedHash": "93558d53ebaf686ab83428f0bf14cbe6e3967d38b6b19c43ac7a67ab9a3a7bcc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-laidir",
+      "sourceRevision": 4,
+      "graphFingerprint": "6af448a443819cbec47ee58084aff574096bc131c6ca31128e09ac747fbe9223",
+      "protectedHash": "c76c5d61a5dd6794cbc1a2461e7e7abb6cbe78b03cea73b1c72eac1e59a4582b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "sourceRevision": 6,
+      "graphFingerprint": "f1e93f817d7df13e7fac9d4c2d1ce734d1c5e0666271e356c6b5402ff968bea0",
+      "protectedHash": "5fd80391d3c45a8fbd787d643aa96bca43d2c638b3984ff3b882d5c42d67a71d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tir-an-cuinn",
+      "sourceRevision": 7,
+      "graphFingerprint": "96df3c5416b7c0a8b439e60a4e99566d858649465f95e6f113cea6654126588d",
+      "protectedHash": "f25f90e714d635c5c69d4c9849f5da0ccd4b8b4f90569772cfcba924fdf8080e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-airgid",
+      "sourceRevision": 5,
+      "graphFingerprint": "d2c83ebfb6def1b7ba775266487cbd2c67979f3dd035750461d371b62513868d",
+      "protectedHash": "6b2c3b896a9ae4612e61ba46a8e6b907dcb605ed54587fbd7d2200ad0ad67e89",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-amrhan",
+      "sourceRevision": 5,
+      "graphFingerprint": "9abc04a2bfef7e6aab3f43d9c87e27e19c59ba8a69fc86a5a1824d4bf3eba707",
+      "protectedHash": "6e860743fb20a5ecf1608589e660fadcf28300885986f86b52fe6950763ddd70",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyllach",
+      "sourceRevision": 4,
+      "graphFingerprint": "017b884f89a853239da1c6d4fc17843b5d74a192420b63857f1f64fd87fc611a",
+      "protectedHash": "e5cf3765364ef111951222da39cf9c98378cae82c23f2c8b0d96b8d969f01b2c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sgrechiwr",
+      "sourceRevision": 3,
+      "graphFingerprint": "d69436727f8a94d6ef700af930fa8efc17bc659858362ac84d1f67c99c96dde3",
+      "protectedHash": "7cfd6781a9c6f346bf782cb3ee5141474b8df9a0edf96e1814b47d411665e14e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tlawd",
+      "sourceRevision": 4,
+      "graphFingerprint": "6409085b0422f2d2ae8df9755f35ed8fef63fa2376689c83ea63149e7d9edad5",
+      "protectedHash": "1cc853b7e458f2b3808b8d7c7b56409bdd94460dedcfef1a4fc2b0ccb89dbf24",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhyddid",
+      "sourceRevision": 6,
+      "graphFingerprint": "9b898b61f069bb34cbf1b36c1f352428675c60bbf10664ad2cf35dc730cbba9a",
+      "protectedHash": "e846a2e54d2bbd82fe19406e45b7b94645c99d4c2ba8165a73a51b5d68d36671",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gelyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "ff08977d1ec7d81be50289d4a4506c14b071ad42722ad6cf28c470a6677e1390",
+      "protectedHash": "65e6162e0f7c0316646b259b1ccf3e4bc49f5f3af13b86d018e78d9125c6d236",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cludwyr",
+      "sourceRevision": 5,
+      "graphFingerprint": "2bda35f89283d7dea466cdcd0dbf7c299c89d19e8a027217aaf9b8495463aa1f",
+      "protectedHash": "1622e0488ef0a7146eb01fea977f174e09c087171bae4798b72429590f260758",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-chwedlonol",
+      "sourceRevision": 5,
+      "graphFingerprint": "80929ea8761b465074c5507714207855a0072a53dabf1aec17ed93d7b15b5151",
+      "protectedHash": "d31ba3b7c0ba7962cd8872be79dcabb86cbf203f59a2487346823c268e89da0d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-balchder",
+      "sourceRevision": 4,
+      "graphFingerprint": "9ca7f8682606590348c751d5c4fe37789f21585b67e0e19f4efb2f834301cb06",
+      "protectedHash": "1c5eba0dd5e570a28e7180e240ac6bdf6243effa70b6f015ea1270d8fac4971e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eneiniog",
+      "sourceRevision": 3,
+      "graphFingerprint": "35427ba5b5b73c19d0a2722a6e7e49fd6801d5a624206adfd8ab9df15a7af6a8",
+      "protectedHash": "6d67b68bb233a2a125e768f8ae0169ef052f8f27a9e3add296c19fdc212f4cbb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gostyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "b01634beb420b0f49ad433c921de8cff01c1b0bad3caf04600024d8110daf102",
+      "protectedHash": "0bfa222baa2bba608af2b384afbb428f0ba2d982576034b1fd103abed9a43242",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-awenydd",
+      "sourceRevision": 4,
+      "graphFingerprint": "6c4955cd9ba8f5fb4ea8af787ee4969c5bb65204e0a8ab68465eb64cabc51c7d",
+      "protectedHash": "64074527a3d8ea093ce2203d944162a58f5b3605909b461068332ee22eb47ced",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-awenor",
+      "sourceRevision": 3,
+      "graphFingerprint": "d07bd3fcbb9283ecc3233e9d794c6c4ff0cc2b5009f71c8528c07488e6896819",
+      "protectedHash": "f6a4e3d9935d0ad319c82a508cfbc092da89acbd2b674db568fc1c76522958a2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-loer",
+      "sourceRevision": 3,
+      "graphFingerprint": "3845e4f204d8e1d6562b74020030ad8d9d95e47d210cfe8614343afd10520e65",
+      "protectedHash": "97c795f7c68fea21ecbe483a32235e0102d91b13b3b1d3f4e15acdf1734786de",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-trevoryn",
+      "sourceRevision": 4,
+      "graphFingerprint": "a74210cfe710a3ed2b0de2be67daceb0dd87b6493f5e8030141adcf02f869586",
+      "protectedHash": "768f6162152bfc27f0428c687beab229278294f1c4b9cd80a00ab27aeaf52777",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-svathamar",
+      "sourceRevision": 3,
+      "graphFingerprint": "a690b43eea797a492706fd6abb8aa541269a4351b3bf69cce4e4a599cb9c6fc9",
+      "protectedHash": "00416f6eb22bcf59dcbbb5267dd8217832452676f600b1c2bb7fd1b3a9fd0713",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dubhdarach",
+      "sourceRevision": 3,
+      "graphFingerprint": "9d58ec47fa32bc9a4d39bf69224a8cb7e20301e0466d011e0ca7eb52d1938445",
+      "protectedHash": "a6f595bba71445189911bb307eb9d55200ca80b72d2d2d3e86cf85bf5c063232",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-raves",
+      "sourceRevision": 4,
+      "graphFingerprint": "36e4744bda91d447b1df650fe067b9ec7059aaa4ce78b7a5385e90f08c5c88d5",
+      "protectedHash": "d9a2b176ebf2d5edf0594b5b06300229095c4f2274ae45f0e4200b058ccaccd6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gofrann",
+      "sourceRevision": 2,
+      "graphFingerprint": "da9fd310891cf9f3becabd402de90f979d64aae1c53f65196a7ede0115970133",
+      "protectedHash": "9e667e10e756154cc2f15146afb820d7916441eb75a990487532e8ddbc06ee1a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-vann",
+      "sourceRevision": 2,
+      "graphFingerprint": "691129a120545a498e81a032028b0f0661c9536af28316a0637d83927b0c8be6",
+      "protectedHash": "5352f2022ffa8302b0e7a6a13cac12fca22561ff936a20f33dd603c10ceb7ca8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-draenmelyn",
+      "sourceRevision": 10,
+      "graphFingerprint": "586886b4119f8130685b74770b6c13e90ce253836fa4120e9916efdabdb8ed3e",
+      "protectedHash": "4608d9d84a4f602f2e61b4ee21c7125d3c459105defe7081b6de3711dde55546",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pendrwn",
+      "sourceRevision": 4,
+      "graphFingerprint": "1dc0ac22e076fc9edd905a0a39148b9abd134ca7d9ecc04a47671aa5c691aaad",
+      "protectedHash": "ce9202fd62bd920e49032435360b30cf90d1f31d7c002926ff2297ba7a4fbb29",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-swyll",
+      "sourceRevision": 15,
+      "graphFingerprint": "9ea93fbb5189234e9725de56ad684886003a8cf637907fc4f0c52cf41a2a97c6",
+      "protectedHash": "b4c71816d6ed3970644128e7faebf2bf4f81211a74462d971841168b44769582",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-aelmor",
+      "sourceRevision": 3,
+      "graphFingerprint": "2e952f3d3d977e0c34467231a103dfb38beb95e6a910d43569c3cb3584fc43c1",
+      "protectedHash": "e864fdc4b3eaffc680e5550a59d34ec265e165f1a4a16cff5dd32835e4fdedc4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-maerllys",
+      "sourceRevision": 9,
+      "graphFingerprint": "f106268b87587d4e5c0f840306e0e6b054e9ed07210cb6a2ee18b3f2e0683e54",
+      "protectedHash": "474d04d19f3c5966ceca1f0ab34fd719a99e9cbcce41835d35a4109acb3ce910",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-braglas",
+      "sourceRevision": 3,
+      "graphFingerprint": "eab6da276c84c81b15dca5814320b2054ff2570015eb60a19d8568a1ed60818b",
+      "protectedHash": "a652e7f498ddee414420179cefb3ef07959f0803c0cfc328e1447bad3769f66e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tonnarth",
+      "sourceRevision": 5,
+      "graphFingerprint": "28271bc13f8b5dd27921e8c592dba7448b278e8c3d0dfe71840001f3d106f8a2",
+      "protectedHash": "bf0d009176e4742dcfba2704839be2958fd8894f2e263fd4c6b23cca11df52c0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ysgrif",
+      "sourceRevision": 6,
+      "graphFingerprint": "28b59ccbc2ab0bfe3540d07dedfbdc5c02694184072fe815ec45173d889819f3",
+      "protectedHash": "6eb5492065d506af9039b5a38a91184e00d161848a284ffaae0f8486c962f9f5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-falchdyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "7877df5c32b96c1fb13d414558bd056599a82df327e9e036c3347c4042f55584",
+      "protectedHash": "7cb5b0156f55b3cb9b5f90f6dca61a48987aa70b621ee11429801d2571557ccf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-coeddu",
+      "sourceRevision": 5,
+      "graphFingerprint": "f777dd695871aeccf64b152067acf90e02b39089917958f3886a96bf181a0c0b",
+      "protectedHash": "a127c33b09698c22aeedde0621ff3e2b5e56a13613a730056f9c447f89255224",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "craigddu",
+      "sourceRevision": 4,
+      "graphFingerprint": "36aea953a707df1fb84483394b6eb99669f7279955e908b48bf98140b72013d8",
+      "protectedHash": "281a2eec89e499aa0635ae5dabfdb01bc6bf1296e50e655fd00756570c620b02",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cochdon",
+      "sourceRevision": 2,
+      "graphFingerprint": "8f62f40df03a5b8178b352f64c67f93bf49acde13c1cdc7ec35bd274d95a1bab",
+      "protectedHash": "0d08b8fb0c7ee63ac02c95ba93aa6751d184a4811828a6212e136d2fe98b625b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-twyllod",
+      "sourceRevision": 4,
+      "graphFingerprint": "fb3684bcff3a7d8fa6a9df114c31c405c4fd1150fa39811373e8c6a7ab158b58",
+      "protectedHash": "6099ca199d4c8d185233916d81ac1d6dea41f5e0025eda472855029928c137dd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-llafnfor",
+      "sourceRevision": 2,
+      "graphFingerprint": "a7d2f1340633ca6ec631eae2bfeb721c9cfd5c165b63a4ecef2e960dcb49df58",
+      "protectedHash": "3b55b997a2a7afc8ceebb299b89e618243dafa955eb90634fbaa362228b21877",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ysgellfor",
+      "sourceRevision": 1,
+      "graphFingerprint": "e0f9b6724fea49b016cd12748488d6bf8cc6f6bfafef0f3439978e57f323113f",
+      "protectedHash": "91c3149b92859231629e09cc836bb28eaea04e8559a272f37b6459b233bfa279",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-helfaen",
+      "sourceRevision": 1,
+      "graphFingerprint": "1c8b9eb015586fbfad49f0a56848f08032f26cb1fb6c036436efa6baaae733e3",
+      "protectedHash": "fb8ae671fac98c786bd34cda2c9290d94dd03349a9846415290a56e4f27601d6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-marchwern",
+      "sourceRevision": 1,
+      "graphFingerprint": "1a20221036eba49e15d21fc8d4cdb85a519e1c72a74936db9b821b2b41671b27",
+      "protectedHash": "9b77001cc10fe43bf46e1d5bd3844d67aefc21850d6412ab3b93044eb5fe6c54",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tirfelyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "5cb5f9913414b8929a5e830fb9fc590036ab77e2a623c06ea54ebf79605ec9db",
+      "protectedHash": "42dfce3c35f5898f1403f63e5b5782ebdba7ce3e4318061c3b324d47eeeb45d4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dolweth",
+      "sourceRevision": 1,
+      "graphFingerprint": "66e7c1a76625c12bc38f93bcfb36b8e4e1ec7af31b53db2b6ebee6e1822feb6a",
+      "protectedHash": "922064841cf71b557b57cfc15b2c3e3c4d2059c850c29291200e64ce17e6f328",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brynial",
+      "sourceRevision": 1,
+      "graphFingerprint": "5f5e632e083b736f30f0ce5ba07425e28b0ad3e5ed43e160b94a1208d161839c",
+      "protectedHash": "7246ccbfefd624f55795fd90d7f0aab8b477611ea8757ff45ebfcd43eda26237",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bragwen",
+      "sourceRevision": 1,
+      "graphFingerprint": "bcf9c40e708412d856d5138865ac17810a3d220421fa2e89fd675b70791b0948",
+      "protectedHash": "29ad1308c8adb1cd51a373bb1a1b370334694faa14f00229b0012853b3f374e3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eiddfer",
+      "sourceRevision": 1,
+      "graphFingerprint": "31259fa26a98c2b304310c4eb93188fa5a8aa81e4277a37d07d04abe44240699",
+      "protectedHash": "6a94e535af4bf48f69c4c9de429e668541c376d53efe74001a12c06ef39befbd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fontani",
+      "sourceRevision": 2,
+      "graphFingerprint": "fded657dba59db25de023e5c160172b5256ee4bf918fb11260347c947190ca1a",
+      "protectedHash": "fdac68e607ab378a23844990a1b020b40756af3e91f8817d2a576eb33d245b23",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhwyd",
+      "sourceRevision": 2,
+      "graphFingerprint": "72c84d50aabca4bfcd850447fad6e2744066197b9b684578cdfb8a8b4d810cb8",
+      "protectedHash": "083960d28ab172c7a60637104a28aa021ea70e105f31ff5d9128ba0700197152",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-penrudd",
+      "sourceRevision": 7,
+      "graphFingerprint": "286f1eaae695a5755789f91d4ef3f6b84d977e98ab84b38a44e49b16795800f2",
+      "protectedHash": "36c4452000cff3cb161847053a88ae4943047dc51a8769fdcfa05bace84a4a97",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-llythfor",
+      "sourceRevision": 8,
+      "graphFingerprint": "ca0f4fd364ba93a0ba49549fee746ba860655b779ca2ee47c2e3af83d1ec974e",
+      "protectedHash": "69a79b92c0bb1b3d6ccafbc6bb426a7ea4e054487b3cec7a5cee10363d8bd880",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwregysdu",
+      "sourceRevision": 2,
+      "graphFingerprint": "49b54d1b2eca5ea882a056e3e08ce4f6be2aa8b09eca0fb56621ebd2eeab7794",
+      "protectedHash": "9b239c10127e76902e3733562b847e54c694fcc31dab316288bc4f1131290847",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "sept-cneacail",
+      "sourceRevision": 3,
+      "graphFingerprint": "68a789e70c4b200c191d8a2471bc1a2d676f2b54b137694c396400466c35c0c5",
+      "protectedHash": "8399d6b25b03f25b8dfd70b2cc1856c81bbe4c7e11c081658244b017fdef4957",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-valerus",
+      "sourceRevision": 2,
+      "graphFingerprint": "0c5df140139a6415fb56dc45164f1767831463d517230e52cd82cc3ff8a0185f",
+      "protectedHash": "5cf7a80fdaffc2a8eb5df7401cbce34e296fe63c956bd2470ec982461cefbc31",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fearnan",
+      "sourceRevision": 3,
+      "graphFingerprint": "851e3bc1f2f916895ef34eac709ddd144a215810129693900af0a60d2a3761b0",
+      "protectedHash": "5f873b26f040b81842d289a434d072124c7074339a81426955cdb72418d9d588",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-torvik",
+      "sourceRevision": 3,
+      "graphFingerprint": "381d45c79e82a18b1b3e30a42b1a2bcc0cd6f0d4c0cb9af578b2fe8cabd5e022",
+      "protectedHash": "3a288af9f96cb65e4fe9b765eaee4a5e6e85ab48ccb0c209f557c102314c4068",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-celynfor",
+      "sourceRevision": 3,
+      "graphFingerprint": "860f9f9cf9fb4e59044387708c890a82dc56348f591b8e893260b2f1371e9ca0",
+      "protectedHash": "b7345e21b4672e7808572ab5e2fc62e65a746b952be18a24a9ec63db262f9371",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bradrhith",
+      "sourceRevision": 3,
+      "graphFingerprint": "1f979565160d380e4862507ce4db1945238bd62d5eb61ddf98f91e147667f14d",
+      "protectedHash": "1efabf4f5fc4379b0679924daa5f3040503ba0d56b2bcacfc33bff033ff0719c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-argall",
+      "sourceRevision": 5,
+      "graphFingerprint": "249f5bdbb50d216a5b72b00c3c7c25de777f63f3e521ccc2751a076e95263416",
+      "protectedHash": "ec8791e21d5deaf6fbc4ef49b9fcd5b340dd5446275fce75cef3f4115dc81ab9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-almarch",
+      "sourceRevision": 3,
+      "graphFingerprint": "f0e025fe42109c3a46c37f4f9aed5980b9c29d6bad612c67314184191220e916",
+      "protectedHash": "9ce68916395151b8512d389b9ee9a2b121d192aded18863b4d6c2aa8958b7f22",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-althin",
+      "sourceRevision": 3,
+      "graphFingerprint": "30d1765be7778af2577da5660b393f022193b5d7d1a8983d9b105bfd114e2efd",
+      "protectedHash": "494e0c7316e809bb201baf571a7cd481d6a7002e3fccf4d4cfaf46f8a1224076",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brinmarch",
+      "sourceRevision": 3,
+      "graphFingerprint": "213d924ca0ddd85f85447080bec930fa27ce89d28284445c11223715e5184b9d",
+      "protectedHash": "181faa359cc02a98fdd5bf8bd691f9c3b0b51e3aaead26ebf2f180d72adf5e0c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-coedvarn",
+      "sourceRevision": 3,
+      "graphFingerprint": "608a4aa2830d954de9375fb7e722a6a5c3cb21768e484203eb58e1b562bb074f",
+      "protectedHash": "85e4b69d6be0362784f5c701460114dfabde8200a86940386109f2a4f9131752",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eirfael",
+      "sourceRevision": 3,
+      "graphFingerprint": "6c4f30f5ca70cc73219f3aaf3c81c4eb4eeff49aac04e85eff8bf3baf9a96fb6",
+      "protectedHash": "fe006b3f202287e695c56d415a9b4a528b3f3e40ba1da0fcd483a989b39ec300",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ghorswyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "ecbcb5f9d878025bdc5c2fa33f547fb690ba4f7cfb2bca1ba32f03f4e08afa53",
+      "protectedHash": "fc89f518b4c6ac29596ce609be454e78b21edee28a2bfb53f2e022cf4dce30a1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwardin",
+      "sourceRevision": 3,
+      "graphFingerprint": "0c0825708fbf29fa3484a6156fb98020036c36f0a4bf2c336c151a3650d6471a",
+      "protectedHash": "c0fc28a3622f589712160eaa1dc9dc94e5a00bb074db2baec47440a90b106cb8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwynrhos",
+      "sourceRevision": 3,
+      "graphFingerprint": "3f9ea45e4ba47ef61c1b2d9c9e513508e7e916d2eed678835abe892d671f28fd",
+      "protectedHash": "604c0073cc733c347dee04c682724f618b68b43695add6b88b4d678a1190ca8b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-talmeirch",
+      "sourceRevision": 3,
+      "graphFingerprint": "942a6078009cef1043b2dd4159d7df435c05922d6f818e2a5a87b6e1f306c641",
+      "protectedHash": "68723a5affe6099bede2c7354408057d098652d3bd574f0980463aa63502beb8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tirwyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "0eec17fcbbc52e9722ab55544f8c01d91f3de92eb40804a44c8ad7b9b01538e8",
+      "protectedHash": "1c8633fbbb9acf091cf3dfbfeb88d4b7f50de228691f11f01101e64ade3d8e96",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bekab",
+      "sourceRevision": 2,
+      "graphFingerprint": "fc3697ed7c96e27e44755e1023eaaa251f6070bc495ccaacb57eb4e4b40e8a77",
+      "protectedHash": "141a37b7acaa25a89043ea4c9962939bc355dffac843ba64c8d9f7158f5ce5ee",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-iorwen",
+      "sourceRevision": 2,
+      "graphFingerprint": "77bb6759cbfcb9e0aa76f2910b9c6c931e44ba69a8b4e4f0a5b3a18e56aa799a",
+      "protectedHash": "1da5212dc65d23aeff529b08d868c87a7e55c8318ebf2f31951143aec09b776e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-maethan",
+      "sourceRevision": 2,
+      "graphFingerprint": "bcd93ff8abf1106fcca11b07cc2e88604baa66dc4524b491463581b710e4ce96",
+      "protectedHash": "b351cea1cba0234a43a7fb77a621a5fb22f9ddc27cc6852cd0a356a5731cfed8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhen",
+      "sourceRevision": 2,
+      "graphFingerprint": "6dfd5f56b12bc29e43ac23eafe7d87ef0228074f43d73a414c86c172529e3b1a",
+      "protectedHash": "5a50b553a5f8f44be0f21dc9e82e84eb0b89bf97baac048ff1416de94a26c310",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-annwyl",
+      "sourceRevision": 6,
+      "graphFingerprint": "83a164e4a4619579ff8d3f67329977d45c80aa96c81a248c4a5dfffffeb5a07b",
+      "protectedHash": "984f193d09ff34e239c6b36f2aa3a49ebfe6b01d52ce623aa232258c7fc93e66",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-barus",
+      "sourceRevision": 4,
+      "graphFingerprint": "3a5b7c7bfd012fad74ff32556289d153e582144297d276f6ec9d56276c7edb6d",
+      "protectedHash": "f3a6bdca2a7abba59a44f8a2ef7efa6432466d2e27b39bebfc35887ccde8e1b5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cenfig",
+      "sourceRevision": 4,
+      "graphFingerprint": "af65a22e04666002719205244ad06296f24bcd3f464d8fbe436bbf354acd74e0",
+      "protectedHash": "743e9f712ca225ef374fb3b9039c65df43e0ce30a04b89fd68f63827cd18d7ed",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cysgodion",
+      "sourceRevision": 4,
+      "graphFingerprint": "fa46a440767184a2f8277c0d7aff7ef43b9a4c1704a19346bf359bf3aa69085a",
+      "protectedHash": "3befbf9d1bf520100e0f4d3e0542920e4bc536e02957871649adcdaf5e29c451",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-daran",
+      "sourceRevision": 5,
+      "graphFingerprint": "414758f90e2207be3edc7e40213cdb075b31de8705c525fb9576eefc9a96e52f",
+      "protectedHash": "42ec968dfdeb001a1c67ff963e7a27310132568b430aafeafb1cb5fdc6584b1f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-edmy",
+      "sourceRevision": 4,
+      "graphFingerprint": "6bdd301a07ed457a95fa83fb022fc73d658de2636e1b8aee74bba5c7be9bb30e",
+      "protectedHash": "de3769bc9141f58839be931782b1767521e93f2887bc377cb848e421f640f86c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyntog",
+      "sourceRevision": 5,
+      "graphFingerprint": "518917cfbce5b3d914a9704d25689bc58d96437182c68099cc64aeaf2f7b65fd",
+      "protectedHash": "eebb0e17f0f02a42665a9a5ad21b817b0cb86064f03179ddefe51881e139046a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-penwyn",
+      "sourceRevision": 4,
+      "graphFingerprint": "6c0028730a0bac9726fb22341a1636023e5bee65d5df3c426c1681cae3dc43f8",
+      "protectedHash": "b1770ae1ca7cbf6ef367010334fdb531a6f859db916054055ffb876bda732006",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhuddgar",
+      "sourceRevision": 5,
+      "graphFingerprint": "28eb7e47c8532db479d2a0302671cb65106ad0dbef518b52e41259821f5a1c82",
+      "protectedHash": "0be08364ec65d7b6b7b6c058d6042ceffebcc77febc44264df77f210de6b6d75",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-seldryn",
+      "sourceRevision": 4,
+      "graphFingerprint": "ccd4303e848c9437da941e9586c5e946b5122189ae9657874983239a1feb1410",
+      "protectedHash": "4123abb66f5cf63327ca151a539516d5addbdd6cc9361edad891132ae0c52837",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-selog",
+      "sourceRevision": 4,
+      "graphFingerprint": "6fa6e310b7a5aaabcf611399f21a464a1e3a70230aa7d86f590dc7cf682fa0c2",
+      "protectedHash": "ce32ebb42c8ff92cf36ec96434e2ceb3c35545b98a709ca109996f37a839270b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-taranvyr",
+      "sourceRevision": 4,
+      "graphFingerprint": "230e94ea88d513f1adf52f7bfb28a37d5c4671b7ee75e6a52dba127cc4ca2e38",
+      "protectedHash": "4be108bce1d4cbad8088290a70d5fd336d9f2015ad1c683001a4f0716a192c01",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tawelgar",
+      "sourceRevision": 4,
+      "graphFingerprint": "cf1b54bce10c3aa64f3270e5efb3ea1920c60e39929cca7a69e0984512dc35db",
+      "protectedHash": "2e315442adb525cd0237fba6e2816fb6d2b47aae8eeaa9abcacaadc7309ab256",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-trydar",
+      "sourceRevision": 6,
+      "graphFingerprint": "400eea6fe1e35d0cce1c59c9eac897a8ce2a239b4b80d4dd519b955413f3b3c3",
+      "protectedHash": "e6dc25cfaaee94fc3372f2fd91046da6b91f84b324f208e1f621313701a615fa",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ymladd",
+      "sourceRevision": 4,
+      "graphFingerprint": "61f90b602bc35397a650707ff1a6e3e381b2223f5266d504c5107f427537028d",
+      "protectedHash": "a972be7f517fea52507fdd24d56d3b3aaeae3bee5db4706993bdc1477b8e898d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-caerlaen",
+      "sourceRevision": 4,
+      "graphFingerprint": "02214774501ed1646bb56a978146f7523238ffb3413ce10916c3b1ec038eaea3",
+      "protectedHash": "38a664f37bdcc03a14007a838093693a626892fb390aee0a15ed18a81c967473",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-caerthwyn",
+      "sourceRevision": 4,
+      "graphFingerprint": "a1d67d7bb92599e5eefc312f247146cf195391d067d3b59527bf96150647a6cb",
+      "protectedHash": "d98efcb103fc274ccc6e21f5429005155f9a983106ab39ec269d5ad49c6bdcd1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwared",
+      "sourceRevision": 6,
+      "graphFingerprint": "5b5ff23999d94d5dd3f55f5dd48991efcdd519817b8312d2980d5c8f78d0fd18",
+      "protectedHash": "6b474734166bdecc136fa580987ec97d4f80030fc2e30e8cc124a3405158dd9f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-madryn",
+      "sourceRevision": 3,
+      "graphFingerprint": "f35ffb3392196fe697d79f6848a0d77b88ba02b5e5d725867a1038f7beb80a2e",
+      "protectedHash": "490e78932b525c230dee2b1570a728292b752517c853cf3611a063d5229ae64d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-merek",
+      "sourceRevision": 4,
+      "graphFingerprint": "6cbd27fa707a52096d10ff06440d18628f2dbb96b19779b82b4513dad3ab4856",
+      "protectedHash": "3f7deb247f286f39b66ccf2100bf1db41e3bdf232bde95dc806aa590a40f8429",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhenna",
+      "sourceRevision": 3,
+      "graphFingerprint": "e6a179a3cf4441d99880d56029805ef85adce0bd76848e00bd4ffc32fa1feb54",
+      "protectedHash": "dad8632846487c0541660a35e8d6118d2af21a75baa937862fe0b72dfc361dbe",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-talinvyr",
+      "sourceRevision": 3,
+      "graphFingerprint": "d28abb075f8e57e5375f73531f0c9b65ee18c7672e7cc954cce26775c2b8ee92",
+      "protectedHash": "c0cabd3b49a33c6a0294fa5613708f5139759eac34234746431a8e538951cb76",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morveth",
+      "sourceRevision": 3,
+      "graphFingerprint": "69419c512b2ee63ce8e8beb8192a1b9837a71fa6a5f567751283bbde8f5eca0e",
+      "protectedHash": "61fc8aa10555a36c635eef627a4b87f515c46caf17b37c7670a0ff63248c7a47",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-skellor",
+      "sourceRevision": 6,
+      "graphFingerprint": "37dc6de55a30d90a27567d11aba7c61c235303baef7091982aac259b98a83bbc",
+      "protectedHash": "4edbad3094bab629506ac5e53bee7eca279b25aa155bd038f3efeeeeda114327",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wylan",
+      "sourceRevision": 12,
+      "graphFingerprint": "295be7afad0ca054f6d5781da6a66e671018f8d61d610a415f7cddc9cd60baf4",
+      "protectedHash": "83c4a740c8b79fdc12f25ef1a1f129c7d64e7d2b05689da596e8b62c0e662403",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-illewod",
+      "sourceRevision": 9,
+      "graphFingerprint": "fd402fd0ad10ad554d42d5191eaaddc0741b7c5c05e90093a2b09cfd18006e8c",
+      "protectedHash": "7fd7d5d0dff5d1a438ade16e81ad8db0f27442e41c1544d376ae8d6047413754",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pendrag",
+      "sourceRevision": 8,
+      "graphFingerprint": "16739c9d43595f490ace0a5930604a76b7f290d0805db5f77f4d6c0863597fc0",
+      "protectedHash": "df4a5f3afae3c8f605582a4bfc9e18188616b861e485bd5ff65bbc2878d6fc8d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-grawn",
+      "sourceRevision": 7,
+      "graphFingerprint": "fd4f2937211edb0974176e11c8cfa559c9baf6b85c67b8bf6680ddd457a8bd73",
+      "protectedHash": "88a69d14b8c1037653948b1b848d6a838feaf5dac1d904bc07abdf4cc15fd3a7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-neidr",
+      "sourceRevision": 11,
+      "graphFingerprint": "71dd40e11ca8cc460b710137bb63890f7d49ab055636fcf63529ee14dea4e5ed",
+      "protectedHash": "695bccdd71d5089bf2172c7a5500afbc9db8e2164f952394a96d6be178c16ea9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pysgod",
+      "sourceRevision": 10,
+      "graphFingerprint": "4b999b8391a8eb0f9a6056bc06d2e8a3f0b4db0a349aee1d7dfd57f9f93f8b01",
+      "protectedHash": "68b8ed942e77934c95d19ceeeae9047f3a0bb1bba6a3f352b6f41f8ea67589b1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arth",
+      "sourceRevision": 19,
+      "graphFingerprint": "a7efd80c8ac3171d8b57554da62931d69ea83a6d8a1b6bc79675b7494b5b17cc",
+      "protectedHash": "56ff2bd98f62b266cf46b2f8fcaa7eb0435b7f28a599d9065c546fbc5cbc1a63",
+      "targets": [
+        {
+          "id": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "birth": "1660",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "visibility": "public"
+        },
+        {
+          "id": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "birth": "1675",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-afanen-elisud",
+          "status": "active",
+          "end": ""
+        }
+      ]
+    },
+    {
+      "id": "haus-aderyn",
+      "sourceRevision": 16,
+      "graphFingerprint": "381828fd49197c09526d786d442baf476668801c04ccc1196da48ef6fa6ea838",
+      "protectedHash": "9b612e5441f4394e5a20ad1ec47a7c142b206da2699deae9b7507b61d079e6f9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-teyrngarch",
+      "sourceRevision": 3,
+      "graphFingerprint": "7a9650d9a852927c3c4559198491d49527ef04d17a1a98f1e3ceebd08d48343f",
+      "protectedHash": "2f1ec43e9418ac6477d72eca0fa8fd71e25ef4d09fc2281a82cc2e696f44c8c0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blach",
+      "sourceRevision": 3,
+      "graphFingerprint": "0d630b8999895d9dca809de0904cdedfbc79a395b9a197849d86dc584c824c98",
+      "protectedHash": "a5f0aa2a563782e8881cc421bd0cbaf897b9975890ac3b49ba08938ebc834cf9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-llwynog",
+      "sourceRevision": 4,
+      "graphFingerprint": "89c1d6fc23d53040fb89a4cde7d0528363c231f0be05cdad73af60c44b0e62ba",
+      "protectedHash": "7fc4952ba834d902c599d4831a12fd09c4389c9893765fe668d73dcee3050311",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-illwath",
+      "sourceRevision": 4,
+      "graphFingerprint": "02145c7f3154997e2d2b7a4b05f3161af99e615d4aedc1f1d8b37a53181302fb",
+      "protectedHash": "ed0d3baea3bfd4c76dfbbf8edf47915fc755c9afcd99451fd75c5cabc31c625f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morforwyn",
+      "sourceRevision": 7,
+      "graphFingerprint": "9c3e9480c7ccba25c578329e07c73c9b8da4a671997bcdbf4640bd609e5859ee",
+      "protectedHash": "0a001c0ad96346979e81f2e4db44b04eb58eed37063ebb6d237e2ba2e5434dda",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhelian",
+      "sourceRevision": 1,
+      "graphFingerprint": "6e1c0625c37ceb5274d23567adccee8ba6fc3b81f4778d407059970c3eccd46c",
+      "protectedHash": "dc157b8c585eeadd2eaa2f3de505395498d4dcda37ba164aabe4b7f022d6ee67",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-aelryn",
+      "sourceRevision": 1,
+      "graphFingerprint": "b0206ab99854461874478ca52ffcd1c4f0a51c6f94e0ecbe96d12277b83a5594",
+      "protectedHash": "2c0777f286fda55414aefed837421e5a53450edf7bd886f2d55bc7164788fb04",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-caerwen",
+      "sourceRevision": 2,
+      "graphFingerprint": "beee5042cc3efab10658735f9c08dcc73aece60ba2208a6aa88ecad143f957cc",
+      "protectedHash": "5aae830a78ebb37470eff2a28de88290b60db9bb9017af313ced537ce1fa3038",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nerwynn",
+      "sourceRevision": 2,
+      "graphFingerprint": "8f25c86a4dc180b52aa1e995b940c0691b10ad79e92bba674259d149eb5f427c",
+      "protectedHash": "5cff106726e13929fd6890d1046fcdc40fbb48e2c00f2e38bffd9715b8210abd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-grianlaoch",
+      "sourceRevision": 4,
+      "graphFingerprint": "75b28fb851faa4a76439a922a953feed2e228bce489c54886abea9b16b5710fa",
+      "protectedHash": "1ac7ff71c3d5719135dc66a5f3124071be658b02428e6d22485bb1d609b76746",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwaedryn",
+      "sourceRevision": 1,
+      "graphFingerprint": "7f8e6d6729dfb9ba467d8c702621045049f5ba13f66c3a094a24d13b5c1221ef",
+      "protectedHash": "9d852592a89f56225fc2ca39dccb5d48ccd2ddfc104bc2f283b7957540cf6e83",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhavorn",
+      "sourceRevision": 1,
+      "graphFingerprint": "5bbe86431f260d368a83d9298db87d41d0ef7c02f64c9585a79b0541e88a1a9d",
+      "protectedHash": "520a5cea5bd5914747eb2d87e1ae8b93a5a1e6832e618920a66eaab91f07b6ad",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pergarn",
+      "sourceRevision": 1,
+      "graphFingerprint": "065e50b4acf3bccc2aca11e9baaddbd28111a3e82f7f4cdd30c301a777d672de",
+      "protectedHash": "60bdd31da03a03eb95c6d7ec139e361a9e192188e860ecfb93575cd94c815929",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-donwyr",
+      "sourceRevision": 1,
+      "graphFingerprint": "91536f543f07f691b85b2d7c4a97c0d931a72b50d76c5479c43acc155492b9a5",
+      "protectedHash": "3a8a3e6aa037aacbe29263014d9181f4e2bc39b59da083891067c2c1e31c982f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-uffyrn",
+      "sourceRevision": 1,
+      "graphFingerprint": "85690b4dc9707b94591b79d4136636cd921aab707b2949dc6128f7f777123d00",
+      "protectedHash": "b8eb442a99238d1a307518215a7116f92d7ce24b3ff4537023b78abae2f4a10a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pwllor",
+      "sourceRevision": 1,
+      "graphFingerprint": "ecdf9abb7c624fa2e909e035d96f00380fb0bdc48451dcec1bb5f5cd5a69b579",
+      "protectedHash": "b1d740f34a12443370602f87a7f47ae38e9500888d2f7ca84d043c4c9912a8fc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-llurien",
+      "sourceRevision": 1,
+      "graphFingerprint": "bd68031ea1fd94d374815fc5c05a51758ab9507ba0eeb0c5c47b69aa29ea8332",
+      "protectedHash": "3f5779fc2b89c83568e1da21b69ce4a3e4ce33835b8143e7b0bd9e317de69f6e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-neddair",
+      "sourceRevision": 1,
+      "graphFingerprint": "36c8c2e3cb46837c795dbdd333bfbdd546b054528508906016a5f33186407764",
+      "protectedHash": "af06bd728cd94cd3226ca6fd3e39f703ca93f8e27d85dde8c161acce6caa37e0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cyrwain",
+      "sourceRevision": 1,
+      "graphFingerprint": "19b5e4cf93fb8aa313b46f30671d981634e01a9b4ea3b001a92a8c01c1d069a3",
+      "protectedHash": "9eb43c94582846e8beaf6f296383e047f968acc23010d3c4b8946634855da025",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-donvael",
+      "sourceRevision": 1,
+      "graphFingerprint": "4a563eda385bf6fe6977beaa950887f3153f9a68a36f97aed04a5760d088b907",
+      "protectedHash": "1e10a1a22da931413047a857a190d574bda6c52b796332d5d1d00a434e48481e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhenith",
+      "sourceRevision": 1,
+      "graphFingerprint": "2313c8361609d557ff1e06cd05cad5f2249caa1ba6fefaa2b8c697b396e8b47a",
+      "protectedHash": "73d669da9eb824992a8594e63c8f492a7d1c77f792f60f30cdeb23c5d84659ba",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bellyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "c87c39ab7d341293d7e5ddd6c1c25bc652c02ec9cf1b323a58726bb91d7487ad",
+      "protectedHash": "9a5d842d316ac8cbfa18b29484bdfb53fd760597037dec145b31ac8b067373d9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fenor",
+      "sourceRevision": 1,
+      "graphFingerprint": "ac75b4262bb371dab8f04c50aa3f1436afa5118ca135ddc6a26b614fc7b486b0",
+      "protectedHash": "114d3029c8c26f22667ea11ecd531ac15699b9d79020079733a3293896f708be",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-loryn",
+      "sourceRevision": 1,
+      "graphFingerprint": "1b73118db47a6e74b44f9e8946b088da6dcc8dba66d81d2ecd1c3ffb01819b53",
+      "protectedHash": "ea21deb2b739a623af27d9605f2f1e7bf072e09cb3cf2564e9d2d8812c3866b1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-orlen",
+      "sourceRevision": 1,
+      "graphFingerprint": "303eeaaf271b810d99159376bf105c2a13eaa5c25dfe85ef2877e2fc4416543b",
+      "protectedHash": "6bb604d88d27bff71dcef451a4785818a5d091ebd8357331c047fccdddc31d87",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-renvyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "7b5a7bc3115ced414e74ff28e6512562e10f3724469e0217a86918d60f28b471",
+      "protectedHash": "7bb25e87491d3e0fcced4fc9d7055e4069b435e798bb82b1604b8efce989c81e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-nic-riordain",
+      "sourceRevision": 1,
+      "graphFingerprint": "366d9aa0a80b1d4cfdb857fe07ca5b4ef3f1080027b57ed6b499d0e9d88bf45f",
+      "protectedHash": "831af8538ff005e2e347ce8a8cddbd5fe29b4d4ea89b1d216a15a0760e498737",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ceirwyn",
+      "sourceRevision": 4,
+      "graphFingerprint": "a613446b497cd3dc2c527d484d73f334ea7484acb6e616642c748f2d8d7442dd",
+      "protectedHash": "9a033fb3562b7a6d55f4cd575fb2e53ab926c1e5a4c246cc4fca1e5d4e84bf32",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cath",
+      "sourceRevision": 2,
+      "graphFingerprint": "b7062385e922823a324ac47a40d715e92688a709ba5826f3fb9432eae5ef743c",
+      "protectedHash": "559b5bf1c438175291104988109568020f01cf8c2e71f57da345eea4b9cb9820",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-grael",
+      "sourceRevision": 3,
+      "graphFingerprint": "c8c02ff916575d2b653c89e38dcb99463dbce9e76c7783e3c7c944209c0316f5",
+      "protectedHash": "d6505f9373f5936f0b60cbe7ebe90ba668cbf4da21f3b24e5cfae70ac39fb3fe",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-penderyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "f5cab3bcc9ba038600f0e458e0239c5e268194c500c4474d67c2e8ce23f46c2d",
+      "protectedHash": "cae38d0e5701a06544ab2e7c45824674dc1e1c8309abccbfe27ecc8ce7d49663",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dienyddiwr",
+      "sourceRevision": 6,
+      "graphFingerprint": "49c16dae67caa64eeb3227954925dd7e6f9cacf24c84424f144e02554670d006",
+      "protectedHash": "9711a1fcec91de0d233e01bf3ee39f73cbee3c9487266a3e9adda1f2adca484c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dyngwn",
+      "sourceRevision": 7,
+      "graphFingerprint": "d27849bddfe34fa56c28ae1966a7acca48ba447f055b58b3a65e4ddcec510b7c",
+      "protectedHash": "390eb669e8a89ba1af8a86aa0904b9faa198b1e0efe0e83d99a878a3f76da986",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-marwolaeth",
+      "sourceRevision": 5,
+      "graphFingerprint": "7e2baf8c8ee7fe04b939ddcb362a48af7b046816a747c076e4297d2f5a6ae2f9",
+      "protectedHash": "10dca2ce1045c2e5be3a06c642be63d24fca168c0219e8f12042b9641eed284f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pengair",
+      "sourceRevision": 2,
+      "graphFingerprint": "6807af68a30195e6b5c815b95b7d538d688ebc5a1431548be38543e8006e30bd",
+      "protectedHash": "32355658e3dc2d922f18b887e6cb0f94a4af938ba7c57086182b36f451546fd2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morwyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "0b79ed6c5ef79a23f0d2431a7f7fcecf9bac3a4e6208856fef5102abb307070f",
+      "protectedHash": "054bd4c231f73fbf6aeffb8eb806c069fc7b8b819f0019fbd442e27342130efb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-rhavaen",
+      "sourceRevision": 1,
+      "graphFingerprint": "516cfeb13db3b88e72d7f17154a87c0b3a06463ccef63d7fc6ac118ca1cbfdfd",
+      "protectedHash": "0913f5adc0ad2c677653724e0c455515ed92ff59579e56657b5bf861dcc614d8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-iwrell",
+      "sourceRevision": 1,
+      "graphFingerprint": "0408cda2ebfd9b619e414e331497c0342521470fb9a05cda8dd9e459a23b0bc3",
+      "protectedHash": "b7e6284b783c096b8559d3e7cdb8421bb29b86cbfe2c984df8aac8b1e4f294d1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-oenfyr",
+      "sourceRevision": 1,
+      "graphFingerprint": "e7592e251d52fcc22a7e039d76e868ea7dc7c63984917ab5b8246fc0843a9985",
+      "protectedHash": "7cb55521ffb44cfb7f13396d3ac980a8892b0b75f20d21bfe612a8e48c0eb9f4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-saivor",
+      "sourceRevision": 1,
+      "graphFingerprint": "efb84b19b90772b5f386eed03969b07c71d208be01f84de2d1a80251a3559f2b",
+      "protectedHash": "223b6bb9def6637e1c6d14325a7d4e0df8a141461d150d47ca693e0eb7c52f46",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ynllym",
+      "sourceRevision": 1,
+      "graphFingerprint": "eaccb6292043e68773f694cc4928764be4ac2e8bbe0aef78cb41461759065307",
+      "protectedHash": "5d8fd562ece15dc2f10b2e3c7312474cb69c0139e25b51a5687ba84579a8b0f6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cyfrif",
+      "sourceRevision": 1,
+      "graphFingerprint": "3a204b3303164b9f7da6a7bd3cd2c504bd90209397f73cf84e138b6a4877a84a",
+      "protectedHash": "9ceee99577ee012575ca3e2ec414033815d887d3ffe2b03123a75444a805562c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fiachraoin",
+      "sourceRevision": 1,
+      "graphFingerprint": "97f396449a91e6915b44a607bb054df5437986fc461fdf5ebead3201d635cbe2",
+      "protectedHash": "97fc8c268276d84b364a620631a47ee60bdfac51ff62deac4b2f1d4b404db60e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dinefwr",
+      "sourceRevision": 4,
+      "graphFingerprint": "4319058b5ee37a9d405de472a0b8f4ee14fa464892d301ec4409cc7a82eff60f",
+      "protectedHash": "5b83addb198c0ffec3b4a1876e547f0be422c83850bdbf253cbad365e7f85022",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mochdaer",
+      "sourceRevision": 4,
+      "graphFingerprint": "4c86538b54dc0710bd35749c3122b514920f5455bcd8f9c5f8569610decb5bfc",
+      "protectedHash": "4a7e5e1af9d2cb67dc49a72f88cd3851aea07dd691285fb7e3ffee141e7e52db",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tir-addawol",
+      "sourceRevision": 2,
+      "graphFingerprint": "88ec06cda8907ece30d9f16628026e6bb1c74a453a1320be5b37375969f3d4d4",
+      "protectedHash": "32cb78086e9090ddee469bce82c1b0449dc4f8bb527e3e80089cdaadda9dbe75",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hwyaden",
+      "sourceRevision": 4,
+      "graphFingerprint": "0ebc1867a108b32bdc581c97f853d65696902df6b0c720352421a895ce65d1d6",
+      "protectedHash": "e9cde21b5bd2cd1f2617e76ae6dc9f59f1d145ad0184955f8f08fb35d5bbef34",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-creyr",
+      "sourceRevision": 5,
+      "graphFingerprint": "d344158c04fa078e0f67e3ec83fe358c632dcc3efd2c68060f79bad976e0e1ad",
+      "protectedHash": "073d4a42cf41e6fb1a4c68549ad762a4f608790706e1b3b06e74e25420a3c2bc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-carwyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "a266665ddb00174114ae03076bc2f20800f14b3cc734c0e793f8f82873a07ceb",
+      "protectedHash": "9353f222b55635457755cb315ab7e0e62dfb63b80c1dabc0cc5d50bfc2a7e190",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-deyrn",
+      "sourceRevision": 1,
+      "graphFingerprint": "34e9cc83c8d2215dd37352fb345675314a9d8db55e8571572d2379b7214a7678",
+      "protectedHash": "c80d2e72af723fc21586e5e6ab1182bdfd5a26f6f1a369c002c2e08218a0b691",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-garan",
+      "sourceRevision": 1,
+      "graphFingerprint": "25b759c435e1e96b8caf1ca6e3d1e1f452a3c8cc268b0abcf19b30373f5671e5",
+      "protectedHash": "8a0585744845a0176a72cb6f8ddc9335b178b9288863571aa0bbc1ed25798395",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-kelan",
+      "sourceRevision": 1,
+      "graphFingerprint": "6dae4a25885a9d5b89848d46115af8688e7f59d014e84c9b6e5de85c10c65543",
+      "protectedHash": "832bd207c537b158a451af3b3dfe8ee18d017192269218e88aed0c8cb5dc1d9b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pellan",
+      "sourceRevision": 1,
+      "graphFingerprint": "33fb689829d30d2bcfb737fe235bcd1f48f9c95e19b84c92d0183a2afe2bfed3",
+      "protectedHash": "882eaf1b87718aa8d1074b96ad820c458d1dcbe0b4dbe19a4ef429b3cfd9e5e1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-serin",
+      "sourceRevision": 1,
+      "graphFingerprint": "8f4e69512fd8144cbfe775c75a235c6ca14dd1e2cdfaeb71f375e62f8d95ec7a",
+      "protectedHash": "375eb8d3d3f1e349bb6ef82fd2606553a508c5c54b1b23988d50ef1c70294bd9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-uldyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "29012cbe1ccf4289263b92845f89f97e0941c915825b61719d73f0843bf34dd7",
+      "protectedHash": "dafb102e8a04583c80f41c0f6d0ca2852a2f0bd86c492be02eff5645c62ee602",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-yllen",
+      "sourceRevision": 1,
+      "graphFingerprint": "e0b6da09d31cb5b09d090250311f6e35ffb4e64a464a9146c840bd30cb031672",
+      "protectedHash": "e935d7c2bdb329d99dd0d42dadd2c2be9965d0eb745514c53c82fd7fe75e03b7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-corlyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "80b3b499024ff764ce4752d57e14f742ebfa400796974a19d06ccae6285e1595",
+      "protectedHash": "457beccb965cfce813b0be1eb7b1133e82f384c4c274c05d1a167b13cac051bc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-derlan",
+      "sourceRevision": 1,
+      "graphFingerprint": "efb5d976ddc37200fd0eb7df6184dfd6c7fb8bf236197718c221e9df062a64bc",
+      "protectedHash": "a0344244ebc2200a0dc86ddd27c2cb01ace4ce6f769a82edd69e873d4627d3a3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tannau",
+      "sourceRevision": 1,
+      "graphFingerprint": "7399ec22c1174c22204184daf5dcb02678607762005a8706264e0a5cbf40c06c",
+      "protectedHash": "8afd91ef15df6f7cb5ee00bf6e83579c2c1284dc0f4e4bd398209f2d9c37492e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-asyn",
+      "sourceRevision": 2,
+      "graphFingerprint": "9e2f4367dd37f58d8285551075d6a94140f426f80e5a07ce27a046662d63ecc2",
+      "protectedHash": "714e197a3820758cdb3435d0879effc50ccb37b67a945db1d9415d647a1e2993",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-fhaire",
+      "sourceRevision": 2,
+      "graphFingerprint": "9b41d56d090cae7d21d734c74df0d14b5b48569621988666dcb11de5a147b952",
+      "protectedHash": "4d269c6909e1d00ee8141751dafaf7a432dae9c086963c0fa61b04fd44b5696a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-trisceil",
+      "sourceRevision": 2,
+      "graphFingerprint": "322b45cb836fe4c753fcd8c46761408187db9b9502951c18fc10328ff5c397df",
+      "protectedHash": "e44673a0467b4eb71de294afc1f30ad68ca5fe4711c7d91b485017667f1a4bbe",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morcanhuc",
+      "sourceRevision": 2,
+      "graphFingerprint": "748fce68ee50e556271d72ab0408ac562f8e202cf81404ec6c553a05fb5c10f8",
+      "protectedHash": "c17b1e9f879561e52b624fe1e7316abe0b7f31f51f8d41514a52932cae028bdc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ciarog",
+      "sourceRevision": 5,
+      "graphFingerprint": "ed0c58e800b60e0e7b7edfaa0798808e97193a37a206e3f66b4584724fb7c50f",
+      "protectedHash": "408f25cb191a62e14eee58c0ecd9407592f03552dae463047d5189cc0b80b2cb",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-chiffyddlon",
+      "sourceRevision": 5,
+      "graphFingerprint": "a01abee6283af4aae544ad8f5d72e2cac0dffbcd5ca3e3a794e9b9b1866f3fce",
+      "protectedHash": "ce4cfcab3164c40eaf81c3df70c4cd7f851269b19795e60d17a37461e6865984",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwarchod",
+      "sourceRevision": 3,
+      "graphFingerprint": "9a7c4d1032e0b6d1fe8789b0e6bf8451767cdd8606ceccf1dd2b8437ec77642a",
+      "protectedHash": "3b7cb2c5213ad3eced4c716cdaa194df49113630eb68db56314aea5d8a13d705",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-baedd",
+      "sourceRevision": 2,
+      "graphFingerprint": "d417b3ef8180fbc74b4f59ebd538752cdcddcb4f84b8be9e1a282782cf4c66e6",
+      "protectedHash": "038ccf70b02c196ef772409f24286b16013c5086438a15644b9bcc5ee6eb24dc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sgwarnog",
+      "sourceRevision": 5,
+      "graphFingerprint": "df8a12e2432568a907f0217c690c3857ce42ce074f3e3870fd94195d6de18452",
+      "protectedHash": "46deed639184282ca6ffad2da7155dcf4a4d2fe022a1090012ee094189dbc416",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-marchog",
+      "sourceRevision": 4,
+      "graphFingerprint": "4c7d072551e14e07fea64864a6331029e5b2cbbc744f672329ba242786ffa260",
+      "protectedHash": "4ae0240e1c9e9bdfe35b4ff2a1a96c05a5caca068f95d5c40699a580ee40fcf1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwythiad",
+      "sourceRevision": 1,
+      "graphFingerprint": "a85a18f4d0b59a33b2b888d6890cc86caa920d7d17624fd88ccdf033b8708618",
+      "protectedHash": "da44827f7ab6eaab4d7f7371ee766c04f22ae8efa60392602ccb638b51d00e20",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-aroglyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "e8cfbceb31478f84ce1b7fc7de4e2762a84eeb93c22328f69d97b02626edcaa2",
+      "protectedHash": "c65ac12eebb3e7efa8f91d6c3f76b41b927241ec6755de079efe12eab747c121",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cruithenaech",
+      "sourceRevision": 1,
+      "graphFingerprint": "32597942f85be98eb9893ea3ee64a404675485bdc6a75b8d417231f6e8e335a1",
+      "protectedHash": "8532e896c3707cd08acf57eeaa03d9258ccbbe134dd24693ab8c1bf72829cc24",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-warthog",
+      "sourceRevision": 1,
+      "graphFingerprint": "c866f2a9b83b0cc4a1e750ba5b77295e7d807c8dd0cd8316821ec1ac5f1f6f67",
+      "protectedHash": "ebbcece5be6cdf5abb3f4f91c233fc121977aeaabe9409cbffba0b4513af7d10",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-saith",
+      "sourceRevision": 4,
+      "graphFingerprint": "ccde0828697cfb3945dd1914aeffbb16861df9d67797635a36e1a391f861906b",
+      "protectedHash": "45bdfdf7b2c7e40086e9d288e1470e5fad177595a3665925cfb9ebbac6975ecd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-crefyddol",
+      "sourceRevision": 5,
+      "graphFingerprint": "2113a96db75205aea9be9f2a0838dc60b1179fda5b6e5dc68a07eb6c8991aa96",
+      "protectedHash": "bde7b0a5a49b7f43a9a316572204d8f8c65c04dd2d76bda36daadb543bab42b5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-canwyll",
+      "sourceRevision": 5,
+      "graphFingerprint": "9a995681845a591669991450fdccf924c5cff2698c5e735daf0cdc8c87fd572c",
+      "protectedHash": "b30b3f445bf47db6c584fb144d8192347abb963b5a19bb3f3508c9c42912c0d8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pyrth",
+      "sourceRevision": 3,
+      "graphFingerprint": "a991e36cde426065ad2101e098c770460065a086c678999450514ac967a6a1c3",
+      "protectedHash": "7baa32a0b4a6bf0426046b46d78937d4ecedebdb8620abda1f1be56e7853d7ec",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tiwna",
+      "sourceRevision": 6,
+      "graphFingerprint": "453003e9c5831255543ff2e815141b3152f44e36eb38052d5a82709ba8a9c888",
+      "protectedHash": "fdd91ff417ce07521675ce20959b73d218018f565aafb3426dc925e233bcc5d4",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ferlan",
+      "sourceRevision": 1,
+      "graphFingerprint": "69c176544c08ae21f5b8f60f852c050a469270531ea4c2a79925d55dd8b81da0",
+      "protectedHash": "561cd969c01f57e7279ffe6f4c41ab606876f67431ec29197d9c58bdc447e49c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-argyllan",
+      "sourceRevision": 1,
+      "graphFingerprint": "68ea1c9852825502f807e992d2ce9875a3bd2230dadd00198b2bfd6e8ec1dda0",
+      "protectedHash": "4d1e1715d7f3cfee3cb3d1547480d9f785713e5d39ab70ab60fb5649d3a26530",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-delvor",
+      "sourceRevision": 1,
+      "graphFingerprint": "caf86f613b4a894ed0af1fbb7aefa0a174753904ec29d8bd53c4a4b180dbd822",
+      "protectedHash": "69b17a980bb0e9884ddd0f237a2e2546c2492cca59530127e256865413945b88",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-corant",
+      "sourceRevision": 1,
+      "graphFingerprint": "397da74ef44b86cecc66fc864a6dc2f9a6cac87fba5f88ce1565f102fc19d860",
+      "protectedHash": "d8fd49cf0234c1ac9e1c9f2f386e02d4d621e4a23cf9823da7df02639353e7f9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-faelcaran",
+      "sourceRevision": 1,
+      "graphFingerprint": "cd556c7d74384240d70777352e18c7d7557ab669427509a059bb979799eb428e",
+      "protectedHash": "5dc3eb4c166a596762352880df895f6cfc9bed9d54cfa279f8a797d2a79b8c53",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-llyncar",
+      "sourceRevision": 1,
+      "graphFingerprint": "abbbab85981efc12193cf891d3c4ac70db30a64cdda5af38f4ac2cb365063c7b",
+      "protectedHash": "9d7fc68faa71f1b470ee8578ae43af693598ad0e9193b3edbeb013515b4c8551",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-maredwyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "6b02ea1c58d5b0a9b8b49daba3e0046fc24cb922d68f84b019805ded63c8d113",
+      "protectedHash": "804fd99ba5819cedd4381e8e28fd68110226149e24f229b93ded74874d81b3f1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morfynn",
+      "sourceRevision": 1,
+      "graphFingerprint": "577acee1a09f1446cfc3ee499374237a29eec8157a8e546fa1a991d4474855f2",
+      "protectedHash": "c0098beacb7bfe6e32ff9aee85b8b1c6915969252200b6641b2de893eef501f6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-selaeth",
+      "sourceRevision": 1,
+      "graphFingerprint": "12d581c22cc65faeb5dc1843eef55e8520776088e67428c44046b2d7a3d3554a",
+      "protectedHash": "9fe63618d7cd3f88870b200cb990cff3959f3fd961f97b66e128e7fcd9f9469d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arven",
+      "sourceRevision": 1,
+      "graphFingerprint": "4cb02a87a80eb09262ebef0bf6fefd2881f5af90c59e00ebff2d0ca35649779f",
+      "protectedHash": "b89013cf9a6df52a18316f6d6d4080f4a015615d65144b9e751b6c76b1505f15",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brithfaen",
+      "sourceRevision": 1,
+      "graphFingerprint": "4bb9b1d80658663b76ced5dc964a5347eb7864b1ffa435c4e55edb96df801b73",
+      "protectedHash": "29ac2f327041d5d58caf51da303ea68651d361b594e794c1e057ebaa587cd656",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tir-an-muirghin",
+      "sourceRevision": 1,
+      "graphFingerprint": "f4e79006601d0717ebd8a5ffea0c119ca9bd4c4a04eb932c3262a5ac8160534a",
+      "protectedHash": "d7d642f65916a18dfaf8dbc90f39e609945907c0253f021e67211cf42509e7c9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eryr",
+      "sourceRevision": 3,
+      "graphFingerprint": "5ffb0b79595d68b6900f6a58dd424a0b0e6bf1ab1e5a552de2659c1e86a477f1",
+      "protectedHash": "52666f1b0524c537bf43996325135c247d91d89f7fd2d71198a69fd1430ef9d7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tylluan",
+      "sourceRevision": 4,
+      "graphFingerprint": "7a81da33f4850dffd7115de234b0d9c523fc2d693be20017c95f190494e775aa",
+      "protectedHash": "ec1bcee11ca6d7e2abe3c876f18fed76e83c89d7c8a46f1b76a3e1a8798eda95",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mwyalchen",
+      "sourceRevision": 5,
+      "graphFingerprint": "d8a16fc2ebccac557110c30bcd9e07e6407682763d6f00a7cbccd0f28c251ffe",
+      "protectedHash": "d2dcd259ee5780c2a76b2c511efff1b2df93892976b3fc5caf3d8a4e933494d3",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ilyuncu",
+      "sourceRevision": 3,
+      "graphFingerprint": "80a4d1e22747a739c5eb78c3a6eee417e71d648cdcfcdea6ae71b41cbe2c3bd8",
+      "protectedHash": "79645b5b067f729a46baebe0e546f3149fe395015af19eda07760dce924ea818",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-sliabh",
+      "sourceRevision": 2,
+      "graphFingerprint": "2aa19eb86d22a8e3275bac417a75889e1e0e5a18af6e2ced1da14687fa7c71c1",
+      "protectedHash": "dff67294822afe5ec25e4622c625cc80cbe6219327bbdb5db4ebb4ca4b0b647e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gaeth",
+      "sourceRevision": 2,
+      "graphFingerprint": "9e83635e8ed4243e63a741e9a3ba0e31f9e18b926803185c560cf2bf264e011c",
+      "protectedHash": "551f8ab8bded55467e7bc5be36e22443f2af546faa3278157cd665134e1b2318",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hebog",
+      "sourceRevision": 3,
+      "graphFingerprint": "6ea524bb52023363c10408d3c363c24c9a53f6e577df4ef1adc601800ef32837",
+      "protectedHash": "c85043a632d51231bfecae58259d2455a1b67df2788ba4ee3b57fb2120463522",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bronnor",
+      "sourceRevision": 1,
+      "graphFingerprint": "98fe8794e613188bf0e31b45e3588374704e0dfc32c8dbd99b96b50026dae066",
+      "protectedHash": "45d37f365b2472ba105985ac24403aeb2b56359bdd32be64e2f231e1c0400d4f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-caerfran",
+      "sourceRevision": 1,
+      "graphFingerprint": "226c5fa0b9d49b9169905ffe7991692568d58852742a90e9aeb0e740a631b908",
+      "protectedHash": "a5e56eb822cbcc8cc3d487dc25b59af9d1fc82651882bda3ddc51472eadbb4da",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-coedrudd",
+      "sourceRevision": 1,
+      "graphFingerprint": "11cbd36324aa30e3adbbb5cd50e5e97e364ce690f1e2cad7f59b97e0fc163c0b",
+      "protectedHash": "415227b652cd039b5375f1dadad4a6583e7bfa29a138ae139a59cc27e70eb5d0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-barcud",
+      "sourceRevision": 1,
+      "graphFingerprint": "ad7af083f6b9039535dcf82e090bbb1325be9a23859f36daa90e227a073d1374",
+      "protectedHash": "b70308c224dace256911fd792cb44b4c704445c4fc37b61b8ffe6e600997fa6f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-durdynn",
+      "sourceRevision": 2,
+      "graphFingerprint": "d5516c8872ba7d60094106a9249bda221835c9703bc0b02a21459d12d998f05a",
+      "protectedHash": "b659ccb47026863e4a781d628af33a0a2e89cf9c9c7c53eb116e546ea181210e",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwylen",
+      "sourceRevision": 1,
+      "graphFingerprint": "ab9ae22bd3157170cdc3f03e1245a94d01d81b0a8d3ba96d8c26dd5a811ba612",
+      "protectedHash": "75991a8ec53265cec41f8ef585c974389ff09d77424b87f8adbca16bd6ecafe9",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-faelwyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "c14e1151e6bcb33be856516f150d83c9f0e7e4d737b6b034a73d0dbf511df225",
+      "protectedHash": "91b129da4c43c890f502230673f436715bb2a175e3ba5ff200809e1a08e1c1ed",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyntell",
+      "sourceRevision": 1,
+      "graphFingerprint": "84e349e455f73ed7557e5d9ab2b1b4e2b47d2a86f96e3ae40262e47bf1c7b797",
+      "protectedHash": "f20d4ad32d3fd0b2aa4cc135f8f3d9fae054dee529aed0c496d42aa99bdb5abd",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyliadwr",
+      "sourceRevision": 1,
+      "graphFingerprint": "48b30ad4178c28e5a3dc539a94849b247bca396b7d47c0c8c5fac5f4a41595a5",
+      "protectedHash": "7c45ca177dc4b15fa338c9e02666aa6d19302c1a5dcbea1e8a1aa2e0e9e6e0ad",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-helyg",
+      "sourceRevision": 1,
+      "graphFingerprint": "b566709dfab396a4406130ea75452701ce1ac85dfa02d52d65e8806d046ffc2f",
+      "protectedHash": "6687ed4bc1236b6e948cae60b0da4dbfacce62476d583829f6b30bf50a1d7d94",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ffwnarch",
+      "sourceRevision": 1,
+      "graphFingerprint": "9f37386063b8ba50f9668de9e3c360368f9ec72e51fe77a71bc0fe0ea3adbd70",
+      "protectedHash": "edcf4e79eb7f0be935bd22a92923f7fae9badae9a36c5c57bbb290a3c2782290",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gormard",
+      "sourceRevision": 1,
+      "graphFingerprint": "ac00026f1db06786a095dba5a696f22910c331a91697575ed56bf8f190f22cd7",
+      "protectedHash": "7c0d395f2d68ffff7be156ac142769af18d7f27505b2b01e826987fb86be9ba2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ua-fionnghal",
+      "sourceRevision": 1,
+      "graphFingerprint": "dd23deba8153c7aaafdb7ae5f218cf29f24962961137e6cd4dbfa7ff4cfdacef",
+      "protectedHash": "b1fe2b54705e60724a361682dc5904e6a83fb07ad020e35199ea1374f6684aa5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blaidd-tredegar",
+      "sourceRevision": 3,
+      "graphFingerprint": "39cb6435842295018a7ca5bc7054f1eef837dfd2c40da1a3e396212ab041a40a",
+      "protectedHash": "bc09b82c40f1012619820c2fd55b3cae56a44e88305d5850346e1ae512b17c43",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brithyll",
+      "sourceRevision": 4,
+      "graphFingerprint": "8ba218cda6c731ca925e53895a9267146ae3adea3303ad9ccfab043c907cee6f",
+      "protectedHash": "0b2ef8dafcd6f175d40da1ebece491ef4734084924d9737f3d8fc35443fd0807",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwialen",
+      "sourceRevision": 3,
+      "graphFingerprint": "8910bf29be433c32f36dd7c17fde4a2f45044810e5b74ab265ec9f3b756b4777",
+      "protectedHash": "11efc38fbb1a9078a048c631b2ded64f4944845f9b4b02102a5ed4eca4ed04cf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-illygoden-tredegar",
+      "sourceRevision": 4,
+      "graphFingerprint": "a35d46a11dd23593e7a3d03e4b4274e8f582faa516563223f4399b306476b641",
+      "protectedHash": "5c01f55a806dc6ccb3b135ed8f48d13ef85ccdb5134ea11c2b846550046d4094",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwaedlyd-tredegar",
+      "sourceRevision": 3,
+      "graphFingerprint": "0985a7e2e8f5df4356eb07be1934a27f6e6bcacd3649985699746a1f54d370b4",
+      "protectedHash": "e9e029949a9c39302744a504f84369ea032befc4888cf753df3e10eefa500cf8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-draenog",
+      "sourceRevision": 3,
+      "graphFingerprint": "09911e4a4b5436d7bfaa539fd068e1bb08e774cb69740ab37521bf5992e4c605",
+      "protectedHash": "ba46938d25fbdc70534994f210c6ba3977b20ee809ce455eca96e2fe934aafc6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-coedwig",
+      "sourceRevision": 6,
+      "graphFingerprint": "0cea4d2353b09fa71fb758352a7c5dd9c34845bd4c2d848b49bbbf943cc19cf7",
+      "protectedHash": "4507791781c73c54a884a0a77420b7f1823230fdfbb82d23551c0d5d34b9b4f1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-wivern",
+      "sourceRevision": 3,
+      "graphFingerprint": "57bf393449176617b09ffb6cb82149997d4ed69cf43afec92a477351a1f36302",
+      "protectedHash": "e5a88bbbf391ee92914b7df49049cbe83aa7e67864eebdd812039618c55a801d",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morfil",
+      "sourceRevision": 2,
+      "graphFingerprint": "0297764974a98fc9cb685ae2ae166d66f643adbaea861e6d9b4569ac0e6c1fc6",
+      "protectedHash": "c4deac16ce69add166156231f64b0005acc0c8b41327b1bac9fe15248ed141bf",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-lyfant-caer-asgwrn",
+      "sourceRevision": 4,
+      "graphFingerprint": "17e580dcdb19e61a3e3cf5a2d30d390e5f12d4f011751a92c99e7f7b1b7c4d6c",
+      "protectedHash": "3066be37659ca6354ebec7ed39f4b3c3f69d8d35ef33ae7949c3bdafe46a196c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dornach",
+      "sourceRevision": 1,
+      "graphFingerprint": "ea5dbc9ce0ab34730aa58fb7493c17afffb14e6e38070e4bd5ddf3ad46018b9a",
+      "protectedHash": "b19038f8c4329e904cd092c94e44a63cc481b6e358729b5e29d4049fc22ab2b7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-brathaireann",
+      "sourceRevision": 1,
+      "graphFingerprint": "7d51da28e6ce36b2cf83016ae4fdcf209460a1d0a7f45abeb91c735921145e10",
+      "protectedHash": "3764f7740e7446799acdf86682a9606d581e9f3a5788b9f1a4db5278ca2172dc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tonnmharra",
+      "sourceRevision": 1,
+      "graphFingerprint": "f5f002298ed05698b00313343b000d6bb90f8d6ce9efde6ebe8eef9196782802",
+      "protectedHash": "06a8263694314447b00458c8c5b00dd934d40ec275f35b08ed04e96fb2dca747",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-tanwyn",
+      "sourceRevision": 1,
+      "graphFingerprint": "a4a142442f09721e0367b92ccfb9a3e73f7ba758eb063a36f6d0a2a33588bbd6",
+      "protectedHash": "c758eb3dedf0cde879f463a9c8c0d16b7a16a4c2d676401fc16fcd1052040d03",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pawen",
+      "sourceRevision": 6,
+      "graphFingerprint": "5b47347e22ee20fe82e1f4183e0b2144973d18e25b20560a1daac43aff2108d6",
+      "protectedHash": "28d7f7bc61a414ae3f2a20e11b0ea6a7ae1c4668f1fc0b16522fd6c5310294dc",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-crafanc",
+      "sourceRevision": 7,
+      "graphFingerprint": "af89abc4cf493187151ad04991c5bd5277296431905aa899d2d55946d363e2bc",
+      "protectedHash": "340fe45526a8d974601fe1952a12e05e5f7cf3d7622070c69a7bc50fadd42524",
+      "targets": [
+        {
+          "id": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "birth": "1660",
+          "death": "1710",
+          "status": "dead",
+          "sex": "female",
+          "visibility": "public"
+        }
+      ],
+      "partnerships": []
+    },
+    {
+      "id": "haus-unigol",
+      "sourceRevision": 5,
+      "graphFingerprint": "6c083b10ac7a6684f50f215604d26e372b8c2d78e913df42baee8a39304da58d",
+      "protectedHash": "068f15cff774f7dba0889006068ba5761366500da48eceafc1561122ed12176b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morthwyll",
+      "sourceRevision": 5,
+      "graphFingerprint": "3a46c8b179604b03b2504ae263cd6d2586bce409867cfb80f36e4369b3390f4d",
+      "protectedHash": "c70b392a3a03c975af4f4e9fa1bda950f5cf3c236868e33c4f07a75d167f83f7",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-eirth",
+      "sourceRevision": 5,
+      "graphFingerprint": "84d1ca9c34d999c3f4a9895fce8f533938eb092decad444763baa7ead8ff256b",
+      "protectedHash": "4b80143a7bf1fff91b3de49b055cc8c818489050cbb296e5e93a835bc8f22744",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-selwyn",
+      "sourceRevision": 3,
+      "graphFingerprint": "947910e7c03a8cd929ade8e8a11ec34d7357c989d0f7d811769931387cceec53",
+      "protectedHash": "d4a7ae071674c0b37d578dbfa035c870fde4e4f74a03441cafce8124c77f3bea",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-diafol-talgarth",
+      "sourceRevision": 4,
+      "graphFingerprint": "28bb05f9d78d8083a1a56782e616098cb02878502ba6c30c0e799edca06264dd",
+      "protectedHash": "8fe5c4c0f7dbc8c65fb060894bbfd04c48c280c694c58804956365a7397a4d38",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dianc-aberdail",
+      "sourceRevision": 3,
+      "graphFingerprint": "6bb1b61512ed16e04bb30fddce47139de77f3707072a29d906b5cc28063c2b01",
+      "protectedHash": "2c2c204ce53db73c282f7ffb35b9f1734d44f570db790d17e32221f5f341350c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arfordir-aberdail",
+      "sourceRevision": 3,
+      "graphFingerprint": "8496e8cbd97e1a120776e337ab457c8085e15e8c9cde011cf0920bb480e01226",
+      "protectedHash": "bef8d47b42a02b92ff0db68a4b6865d842eb22b296d7a1a56f92d39a596fe6de",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dyfrgi-caer-cryftlawd",
+      "sourceRevision": 5,
+      "graphFingerprint": "5559409bfed2bb45fc564d7164af5fd63933d04c5e7de6380beda2d509e0ea43",
+      "protectedHash": "fbe80dd1a41b22ec7b9c44dc808e3a18822f059a95f587b4104ed1c164a89e6c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-walwrs-caer-deheuol",
+      "sourceRevision": 4,
+      "graphFingerprint": "a372f025694c6e6d26a64524be3f037820a08755a645e31b1c0a52481efb194b",
+      "protectedHash": "8364491a74c929fe1a9e1ceb00daeec6af397458261c5464afb4e5fbb2a0bc00",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cwningod",
+      "sourceRevision": 9,
+      "graphFingerprint": "a5c5ae0ef0d76732a25eb46bde46d82a6b222055729886454954235d1f36b79f",
+      "protectedHash": "8042785b9e45ab30944173094627d2212b342141917bcdfbbf35254e69037b45",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-beryn",
+      "sourceRevision": 7,
+      "graphFingerprint": "3f6185d8d240a8e898bcba8ff6a2b0b76d0120617d55b8368ffece8cd380cc9c",
+      "protectedHash": "7156b1cc462b484b39f976e3ce6f716df7faa67fc701056c08d16c81ef7d6897",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-dyger",
+      "sourceRevision": 7,
+      "graphFingerprint": "c8868590dc6b3648c2ca07fb50f9b2d0fe9403e41a2719f8dc2b3daa4be54564",
+      "protectedHash": "249bd5d0c665ead8f5f255bce23206c8fb9ab19665d85311b78d7e30247cfe71",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwyllt",
+      "sourceRevision": 2,
+      "graphFingerprint": "11b9a99130faeec752e37ec8463a30e9548ad06a11b0c70441c185878e03b6bf",
+      "protectedHash": "33de46ab8ac4d699eb08e33cc026476d4fea2ee6d87291bb459ab04ca8c7bbe2",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-mathgraig",
+      "sourceRevision": 7,
+      "graphFingerprint": "d5a88bc36cfd6a5cddc4ca511b4c472a3e3194f523ea3ff61e26f3e20d32b8ad",
+      "protectedHash": "350647437c6e36d672d8fa9dd786df3730b81ece298621d4f34d8eab4f785d19",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-prys",
+      "sourceRevision": 8,
+      "graphFingerprint": "49796065a8ea5eae0a0feaee7f68d21bb2de76458291b6ba1ce15456b493c37b",
+      "protectedHash": "76eeea4d5e0bc5ae00dd1299a516072c1a7692f5bf658dfd874cda4d409963f5",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morgwynt",
+      "sourceRevision": 7,
+      "graphFingerprint": "44a7d1272a535b14f9a2fecf2598d568156bd9ecc4eeb301c6ae256a1270bfc5",
+      "protectedHash": "9862fc31f47decbc12287fd52de974862fe1c53a88eeddc9f6964ea05302d1c1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morglan",
+      "sourceRevision": 7,
+      "graphFingerprint": "9686eaeda43ac2c871892892167e51e9a6cd1dcaa8d5a136868fa75c6694c28e",
+      "protectedHash": "56959e45b4d049ed43b52b484a9da1ad15565dfa6467dbeb6c492391a8beec8c",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bowen",
+      "sourceRevision": 3,
+      "graphFingerprint": "6fbd186e4edecf5f54d4d341cacce81b65d3edc368e501d4e9429c5773862a81",
+      "protectedHash": "872dcbac29c6a6b3b911d453348c9b66313c6436f9d5db6c68a8d73c01beb96f",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-bevan",
+      "sourceRevision": 3,
+      "graphFingerprint": "f6c0d5cbca843f313b6fcfee8e2c4f126375321fc7951412d9fdaa07d688e73d",
+      "protectedHash": "db99286e6f4a0164d38623ecc3161d0da3ff3f7a1fe68ff15bdd650532cd7283",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-arian",
+      "sourceRevision": 3,
+      "graphFingerprint": "5aeeca0ca1e90f37ffa7f862d0e3c651d58fd05e5c01d3628e95d3c2e00b375a",
+      "protectedHash": "6472e8cb2beb6633829d6029c95e3ac4eae5592f77a7f30b41ccadacfcbf8f12",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-hirschhorn",
+      "sourceRevision": 7,
+      "graphFingerprint": "f813db894c5823dabddd305902c33c841231dce6fca24fb1238763cfccb6936c",
+      "protectedHash": "facf5898cf311d0baaf43b36eb4e40f34ca7683da3f80ed622ac59fe4f6312f0",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-penry",
+      "sourceRevision": 7,
+      "graphFingerprint": "f45f5bac2975d41e5a43603334f1a217bc1c8b109a101cfc4478b3f43fe4eb9c",
+      "protectedHash": "e6a5877a09c2ea395628100bd14b7a36910967565bcf49f3b9192e9de39d6302",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-parry",
+      "sourceRevision": 3,
+      "graphFingerprint": "cc2e080200991ac4361dad80b68b2d85784ab4ea10a5a3039e0cd62f9608f2b7",
+      "protectedHash": "1492adff7a0386b2c4c936aa31fa7f339cc058c2d10f3d35a3b3986a60fba419",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-gwernhelyd",
+      "sourceRevision": 2,
+      "graphFingerprint": "02c8217852e5dc39ca3adb208c33748be70b683fb395b5fcda3b258d7e180d15",
+      "protectedHash": "1f68dc12f6238a4482cc48493f34dbaeaf303e66405f7dc42d8003a700aeb366",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-cledrann",
+      "sourceRevision": 2,
+      "graphFingerprint": "1e3cc8bb2074b94ff86e6c51f31647011276f498dcd6e1512d4946cb86356702",
+      "protectedHash": "c07891ef1ca1e5e72e2477d343cb6c637e08fc1b50fe41cc808e88edd081caa6",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-halenwych",
+      "sourceRevision": 2,
+      "graphFingerprint": "8b16197c723af27abdb737ff46a90642b241bc02f25cff254db6a12b3eebb8b1",
+      "protectedHash": "14d8a678d8ffd9381efe56b894a234384514c20a6f739340cff1941059d53fc1",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-torawg",
+      "sourceRevision": 7,
+      "graphFingerprint": "f79a4ed35593cc52c1f433f61d367a97387c15efae3b25c21bd969f5859ab55e",
+      "protectedHash": "3b09acdf0f350a395d0fa92df2194b66061b778d8bd2dc3c63f4c0d1e4ad2d36",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ddraenen",
+      "sourceRevision": 8,
+      "graphFingerprint": "915292ef18af844ba5501117d8b647c17282beab33c28673b4e576cb105b7323",
+      "protectedHash": "0cba8a2a43c7c89d17e7937b0210d271a25bf128c43335841dbf8ac79fcee24b",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-pluen",
+      "sourceRevision": 7,
+      "graphFingerprint": "8da6ce690e8a86065ccd10ccfb8c0f9138545de3e8327ea9cd0a83258fd6aa9d",
+      "protectedHash": "ba0b534e3d443a5442b8224e38284c677fe87adf3e90d6e70e25ed12654a2a15",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-morlan",
+      "sourceRevision": 7,
+      "graphFingerprint": "bd29c701c7cbdc4b80a1a7625ca3f5b37b5dbd3b9b46d2cc2a97ea1ea77690d0",
+      "protectedHash": "a53bd29d43d3f9a4c18aaafa543ecd2933816f01cd04aabbd0b1a616de61860a",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-ard-follmhar",
+      "sourceRevision": 2,
+      "graphFingerprint": "e5b350e099c69badb4b6838d325c0b396c6f7728f879bb7545f9e74018793f9a",
+      "protectedHash": "cb6f2ab80a6a145d49a061d315fb7c100e2b4a2f85435836f40dc36cbce5c059",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blodyn-talgarth",
+      "sourceRevision": 2,
+      "graphFingerprint": "48290cf5d56f4f9ef7e4d21b1f134dd3ed91e3d70780c3d45efeb5bd0190d182",
+      "protectedHash": "4a19181373964716646f1e4e9dea1ccfafc49520d33d227da20c2b7b84e669f8",
+      "targets": [],
+      "partnerships": []
+    },
+    {
+      "id": "haus-blodyn-aberdail",
+      "sourceRevision": 3,
+      "graphFingerprint": "140b67599fe9f2a180abd6a1bcc280e3eb078e0264dcd1ad2eb49907a15adf94",
+      "protectedHash": "bbf1a4eb41093fcddb286264375588952255681ebf53697ebf1e9949fb1dc940",
+      "targets": [],
+      "partnerships": []
+    }
+  ]
+}

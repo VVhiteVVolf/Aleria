@@ -1,0 +1,1571 @@
+[
+  {
+    "id": "haus-pysgod",
+    "slug": "pysgod",
+    "attachmentId": "c369a4e3-4d12-4024-b4c1-00c452e0ce41",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\c369a4e3-4d12-4024-b4c1-00c452e0ce41\\Eingefügter Text.txt",
+    "sourceSha256": "e4e4b60beaa50a7492d7d91f1c8baf14463e5ab7fe92ac67e2b3a3082c212e1f",
+    "sourceTitle": "Das Haus Pysgod O'Tredegar",
+    "canonical": {
+      "id": "haus-pysgod",
+      "title": "Haus Pysgod O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "county",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 105
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hof",
+      "Familie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 141,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "„Mawr yn y bywyd, mawreddog yn y farwolaeth.“",
+          "„Großartig im Leben, Erhaben im Angesicht des Todes.“",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "...."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "In den geheimnisvollen Zeiten der Ursprünge Cenyrs begab sich die Familie Pysgod gemeinsam mit den auserwählten Gründervätern auf eine mystische Reise. Sie waren von tiefer Weisheit durchdrungen und von einer Verbindung zur Dame des Sees Nimue geleitet. Als Avalon, ihre alte Heimat, dem Untergang geweiht war, führte der goldene Fisch, ein mystischer Diener der Dame des Sees, die Pysgod-Familie und die anderen Gründerväter nach Cenyr.",
+          "In den nördlichen Gefilden gründete die Familie Pysgod die küstennahe Ortschaft Menevia. Ihre Anwesenheit am Ufer diente nicht nur der Verteidigung des Landes, sondern wurde auch von mythischen Begebenheiten und geheimen Wissen begleitet. Gemeinsam mit der Familie Arth eroberten sie später die nördlichen Inseln Cenyrs, wo die Arth-Familie verweilte, um über diese zu herrschen.",
+          "Das Wappen der Pysgod trägt den goldenen Fisch, ein Symbol, das in den mythischen Annalen von Nimue und ihrer Verbindung zu den Gründervätern verwurzelt ist. Die Sage erzählt von einer Zeit, als die Schicksalsfäden Cenyrs auf mystische Weise gewoben wurden und die Pysgod-Familie als Hüterin der uralten Geheimnisse in die Geschichte einging."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Die Traditionen der erhabenen Familie Pysgod spiegeln ihre einzigartige Mischung aus Stolz, Weisheit und Grazie wider. Innerhalb der Familie werden Aufrichtigkeit, Selbstrespekt und Disziplin als grundlegende Tugenden hoch geschätzt. Die Pysgod zeichnen sich nicht nur durch ihre charakterlichen Eigenschaften aus, sondern sind auch als herausragende Schwertkämpfer, Staatsmänner und versierte Seeleute bekannt.",
+          "Die Familie Pysgod hat sich einen Ruf als eindrucksvolle Seemacht erworben, und obwohl sie vielleicht nicht die Furcht wie die Arth verbreiten, genießen sie den Respekt über die Grenzen Cenyrs hinaus. Die Verbindung zur See ist tief in ihren Traditionen verwurzelt und spiegelt sich in ihrer maritimen Expertise und ihrem Engagement im Glauben wider."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Cenyr, weltbekannt und in Avalon geboren. Ein cenyrischer Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr.",
+          "Die Ritter des Hauses Pysgod sind vor allem durch ihre zahlreichen Cantref- und Teulu-Ritter bekannt, wohingegen der Anteil der Helwyr, trotz der großen Wälder und Flächen, eher gering ausfällt. Dies liegt an der starken Infanterie-Tradition der Pysgod, die viel Wert auf die Ausbildung von Teulu- und Cantref-Kriegern legten. Obwohl das Haus auch Helwyr und Uchelwyr ausbildet, sind diese Klassen eher selten vertreten. In Bezug auf die Rüstung setzen die Pysgod weniger auf Plattenpanzerung. Aufgrund der Knappheit an Erzen, der kühlen und regnerischen Witterung sowie der dichten Wälder der Region bieten sich Brigantinen, Leder, Schuppenpanzer und Lamellenrüstungen eher an als vollständige Stahlrüstungen. Die Ritter aus Menevia tragen daher oft unterschiedliche Rüstungen, wobei Fell und Pelz, ähnlich wie bei den Arth, häufig anzutreffen sind. Die Miliz",
+          "des Hauses bevorzugt meist Leder-Rüstungen, gelegentlich mit Pelz und einigen Eisen- oder Stahlverstärkungen.",
+          "Die Stadtwache unterscheidet sich von der Burgwache durch einen Wappenrock; die Wachen der Stadt tragen das Emblem der Stadt, während die Burgwache das Emblem des goldenen Fisches der Pysgod O'Menevia zeigt."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Die Pysgod herrschen über die größte Stadt im Norden von Cenyr, Menevia, die bekannt ist für ihr vielfältiges Handwerk, darunter Töpferei, Glaserei und mehr. Die Stadt ist auch ein Zentrum für die Fischerei und Holzverarbeitung sowie Bauhandwerk. Als Lehnsherren regieren die Pysgod über ein ausgedehntes Gebiet, das etwa ein Drittel der Fläche des Königreichs ausmacht und Menevia zu einer der größten Baronien macht. Innerhalb ihrer Baronie haben die Pysgod interessante Lehensgebiete wie die Hafenstadt Lewdharbr, Lann Idult, eine agrarische Kleinstadt, Llanforwyn, eine heilige Pilgerstätte, die Burg Caer Asgwrn und Coedlyn, eine agrarische Ortschaft.",
+          "Was Menevia und den Pysgod fehlt, sind Bergbausiedlungen, die der Baronie Bodenschätze liefern. Obwohl die Pysgod reich an Nahrung, Holz, Wild, Handwerkswaren und maritimen Gütern sind, fehlen ihnen Mineralien. Daher sind die Pysgod trotz ihrer Größe nicht wohlhabender als die Grawn aus Glisswig."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Die Pysgod sind gottesfürchtige Menschen, die stolz auf ihre cenyrische Kultur sind. Als Cenyri aus dem Norden haben sie eine etwas raue Art zu sprechen, ähnlich denen von den Inseln. Obwohl die Pysgod Respekt und Etikette wahren, sind sie nicht hochnäsig und können sich auf ein niedrigeres Niveau einlassen. In ihrer Religion hegen die Pysgod Stolz für die heilige Stätte innerhalb ihrer Baronie, auch wenn dies bei den Göttern nicht gern gesehen wird. Dennoch sind sie beschützerisch und bekennen voller stolz, Zugang zu einem Heiligtum zu haben."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Die Pysgod sind dafür bekannt, zahlreiche Allianzen zu schließen und diese sorgfältig zu pflegen, selbst über die Grenzen des Königreichs hinaus. In der Regel schaffen sich die Pysgod keine Feinde, da sie als aufrichtige Menschen gelten und generell keine Gründe liefern, gehasst oder antagonisiert zu werden. Natürlich sind die Pysgod als Wächter des Nordens die natürlichen Gegner der Nordmänner, aber das ist verständlich."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Die Pysgod O'Menevia sind geprägt von Erhabenheit, Stolz und Weitsicht. Aufrichtigkeit, Selbstachtung und Disziplin sind für sie zentrale Werte. Ihre Moral betont die Bedeutung von Ehre, Treue und Schutz der cenyrischen Kultur. In Konflikten streben sie Allianzen an und vermeiden unnötige Feindseligkeiten. Gottesfürchtigkeit und Respekt vor ihrer Heiligen Stätte prägen ihr religiöses Verhalten."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/cKlmV9x.png",
+        "linkedUrl": null,
+        "alt": "cKlmV9x.png",
+        "style": "height:200px; width:202px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/hIbHsKk.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2063",
+        "alt": "hIbHsKk.png",
+        "style": "height:180px; width:175px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Traditionen",
+        "url": "https://i.imgur.com/SrSqI8L.png",
+        "linkedUrl": null,
+        "alt": "SrSqI8L.png",
+        "style": "float:right; height:331px; width:221px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2063",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-blaidd-tredegar",
+    "slug": "blaidd",
+    "attachmentId": "8022dfb2-2fa4-414e-962f-9750cf0327d7",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\8022dfb2-2fa4-414e-962f-9750cf0327d7\\Eingefügter Text.txt",
+    "sourceSha256": "857a180a14bc026011eefb675a03b3c5c7023777eb491f56ad1e785bbdddb620",
+    "sourceTitle": "Das Haus Blaidd O'Branon / OTredegar",
+    "canonical": {
+      "id": "haus-blaidd-tredegar",
+      "title": "Haus Blaidd O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 17
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 103,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "„Wyliadwrus a ffyddlon, gyda'r Greal yn y galon. “",
+          "„Wachsam und treu, mit dem Gral im Herzen.“",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Blaidd sind ein sehr altes Geschlecht aus Avallorn die aber erst mit der Entstehung des Königreiches Vennyr als Adelsgeschlecht in die Geschichte eingingen. Sie waren dem Volk Cennyr und Vennyrs bekannt als \" Hüter \" des Grals."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Geschichte des Hauses Blaidd reicht tief in die sagenumwobene Zeit von Avallorn zurück, als das Land noch unter dem Schutz der alten Mächte stand. Damals waren die Blaidd noch kein Adelshaus, sondern entsprangen den Taten zweier Brüder: Llewelyn und Sieffre, Priester von hohem Ansehen und tiefer Weisheit. Als die Blodyn angesichts des drohenden Untergangs entschieden, mit ihren Anhängern das Land zu verlassen, griffen die beiden Brüder ein.",
+          "In einer Zeit, in der die Handlanger des Verschlingers nach dem Gral der Dame des Sees, Nimue, trachteten, nahmen die Brüder das heilige Gefäß an sich. Mit Mut und List entflohen sie den drohenden Klauen der Dunkelheit und brachten den Gral in Sicherheit, fernab von Avallorn.",
+          "Die Brüder fanden Zuflucht im neugegründeten Reich Vennyr im Norden, wo sie sich mit zwei edlen Albenfrauen vermählten. Jede dieser Ehen brachte ein Kind, Sohn und Tochter hervor, die später mit den königlichen Blodyn von Vennyr verbunden wurden. So wurde der Sohn von Llewelyn zum Stammvater des Hauses Blaidd, doch in den Erzählungen und Legenden gelten die beiden Priesterbrüder selbst als die wahren Gründer des Hauses.",
+          "Das Wappen der Blaidd zeigt zwei stolze Wölfe, die Seite an Seite stehen, vereint durch den Gral der Dame des Sees. Die Wölfe symbolisieren die beiden Brüder – Llewelyn und Sieffre – deren Mut und Taten das Fundament des Hauses Blaidd legten. Der Gral im Zentrum des Wappens steht für die heilige Aufgabe, die sie einst erfüllten, und erinnert an das Band, das sie mit den Mächten von Avallorn und der magischen Welt der Seen verknüpft. So bleiben die Blaidd stets die Hüter dieser alten Mysterien, deren Ursprung bis in die Zeiten der Legenden zurückreicht."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Das Haus Blaidd ist stolz auf seine Abstammung aus Avallorn, der sagenumwobenen Heimat des Avallornischen Volkes, die heute als untergegangen gilt. Dieses Erbe prägt die Traditionen und Werte des Hauses, die stets darauf ausgerichtet sind, das Vermächtnis ihrer Ahnen, insbesondere der beiden Brüder Llewelyn und Sieffre, zu ehren. Diese Brüder, die den Gral der Dame des Sees, Nimue, schützten, sind die Heldenfiguren, auf denen viele der Rituale und Traditionen der Blaidd basieren.",
+          "Eine bedeutende Tradition des Hauses ist die Ausbildung von Paladinen, die der Dame des Sees nacheifern und in ihrem Dienst stehen. Diese Paladine verkörpern das höchste Ideal des Hauses Blaidd: Mut, Ehre und Loyalität gegenüber der Dame und dem Land. Neben den Paladinen bildet das Haus auch Kleriker der Derwyn aus, die als spirituelle Führer dienen. Zusätzlich gibt es Kriegerklassen wie die berserkerähnlichen Rhyfellwyr, die für ihre wilde Kampfkraft bekannt sind, und die seekämpfenden Morwyr, die auf See ihre Feinde bekämpfen.",
+          "Der Seekampf ist eine weitere wichtige Tradition des Hauses Blaidd. Da sie einst hohe Herren über Avallorn waren, mussten sie die Nordmänner, die ihre Küsten bedrohten, auf See abwehren. Daraus entwickelte sich eine starke maritime Kriegertradition, in der insbesondere ihre Derwyn, Paladine und Morwyr-Ritter brillieren. Diese Tradition wird heute noch fortgeführt, da die Blaidd stets als hervorragende Kommandanten und Krieger auf See geschätzt werden.",
+          "Im Gegensatz zu anderen Häusern sind die Blaidd keine Abenteurer. Sie sind äußerst pflichtbewusst und legen großen Wert auf ihre Loyalität gegenüber dem Land und der Dame des Sees. Abenteuerlust und eigensinniges Handeln sind bei den Blaidd selten zu finden, da sie den Fokus auf Vaterlandstreue und Hingabe an Nimue legen. Die meisten Mitglieder des Hauses finden ihre Berufung als Kapitäne, Paladine im Orden, Kleriker der Kirche oder als treue Ritter, die ihrem Grafen dienen. Eigensinn hat bei den Blaidd wenig Platz; sie sind ganz der Gemeinschaft und ihrer heiligen Aufgabe verpflichtet."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Vennyr, weltbekannt und in Avallorn geboren. Eben jener Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr und Brechinaucc.",
+          "Die Ritter des Hauses Blaidd orientieren sich stilistisch eher an den schlichteren Teulu-Rittern aus Cenyr als an den wilden Rhyfelwyr oder anderen Kriegerklassen aus Vennyr. Dieser Unterschied spiegelt den Fokus des Hauses wider, das sich auf die Ausbildung von Paladinen und Klerikern konzentriert. Während im Norden oft auf Pelze und leichtere Rüstungen gesetzt wird, um der Kälte und den rauen Bedingungen zu trotzen, legen die Blaidd mehr Wert auf Prestige, Optik und Tradition.",
+          "Die Ritter des Hauses Blaidd tragen häufig volle Plattenrüstungen, die durch aufwendige Verzierungen aus Bronze oder Gold betont werden. Bronze ist besonders beliebt und verleiht den Rüstungen der Blaidd-Ritter einen edlen, fast antiken Glanz, der an ihre altehrwürdige Abstammung aus Avallorn erinnert. Diese Rüstungen sind nicht nur funktional, sondern auch ein Symbol ihres hohen Standes und ihrer Rolle als Verteidiger der heiligen Traditionen.",
+          "Praktische Aspekte wie Schutz vor Kälte oder Beweglichkeit, die im Norden oft Priorität haben, werden bei den Blaidd-Rittern bewusst zugunsten von ritterlicher Erscheinung und Ehre vernachlässigt. Ihre prachtvollen Rüstungen und ihr strahlender Auftritt verkörpern die Werte des Hauses: Pflichtbewusstsein, Hingabe an die Dame des Sees und die Wahrung von Tradition und Ehre."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Das Haus Blaidd verwaltet in Tredegar mehrere Küstendörfer und spielt eine wichtige Rolle bei der Verstärkung der Flotte der Region. In diesem Zusammenhang besitzen sie einige Schiffswerften, die es ihnen ermöglichen, ihre maritime Stärke auszubauen und ihre wirtschaftliche Stellung in Tredegar zu festigen. Trotz dieser Errungenschaften ist ihr Besitz im Vergleich zu früher bescheiden, da sie durch den Verlust ihrer Heimat in Avallorn viel an Wohlstand und Einfluss eingebüßt haben.",
+          "In Tredegar müssen sich die Blaidd neu etablieren und ihre Machtbasis wieder aufbauen. Ihre Küstendörfer und Werften bilden den Grundstein ihrer wirtschaftlichen Erholung. Diese Infrastruktur dient nicht nur der lokalen Wirtschaft, sondern stärkt auch ihre Position als Hüter des Meeres, was ihnen zusätzliches Prestige einbringt. Obwohl sie durch den Verlust ihrer alten Heimat geschwächt sind, arbeiten die Blaidd entschlossen daran, ihren einstigen Ruhm wiederherzustellen und ihre Rolle als Beschützer der See und ihrer Traditionen zu festigen."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Das Haus Blaidd stammt ursprünglich aus dem eroberten Vennyr, einer Region, die stark von den Kämpfen und der Expansion beeinflusst wurde. Nach dem Verlust ihrer alten Heimat in Vennyr fanden die Blaidd in Tredegar eine neue Bleibe, dank der Gunst und Unterstützung des Grafen von Tredegar. Hier begannen sie, ihre Traditionen fortzuführen und eine neue Heimat aufzubauen, während sie gleichzeitig halfen, die maritime Verteidigung und Wirtschaft der Region zu stärken.",
+          "In religiöser Hinsicht bleibt das Haus Blaidd tief mit der Verehrung von Nimue, der Dame des Sees, verbunden. Nimue, die als Schutzpatronin der Seefahrer, Hüterin der Geheimnisse und Verkörperung der Magie der Seen gilt, spielt eine zentrale Rolle im spirituellen Leben des Hauses Blaidd. Ihre Vorfahren, die Priesterbrüder Llewelyn und Sieffre, hatten einst den Gral der Dame des Sees vor den Feinden Avallorns gerettet, und dieses Erbe prägt bis heute das Selbstverständnis der Familie.",
+          "Die Blaidd sehen es als ihre heilige Aufgabe, die Weisheit und den Schutz Nimués zu wahren und zu verbreiten. Ihre Paladine und Kleriker dienen oft direkt im Namen der Dame des Sees, und ihre Verbindung zu ihr ist tief in der Identität des Hauses verwurzelt. Rituale und Zeremonien, die Nimue gewidmet sind, gehören zum Alltag der Blaidd, und ihre neuen Siedlungen in Tredegar spiegeln diesen spirituellen Fokus wider, mit Kapellen und Tempeln, die der Dame des Sees gewidmet sind. Durch diese religiöse Verbundenheit haben die Blaidd nicht nur eine neue Heimat gefunden, sondern auch ihren Glauben und ihre Traditionen in Tredegar verankert."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Die Blaidd haben seit Vennyrs Untergang wichtige Allianzen geschmiedet. Ihre Loyalität gegenüber dem Grafen von Tredegar ist unerschütterlich, und diese Allianz ist der Eckpfeiler ihrer neuen Machtbasis. Darüber hinaus haben die Blaidd enge Verbindungen zu anderen Häusern geknüpft, die die Verehrung der Dame des Sees teilen, was ihnen spirituelle und kulturelle Verbündete verschafft. Diese Häuser schätzen die tiefe Hingabe der Blaidd an Nimue und sehen sie als wichtige Hüter dieser religiösen Traditionen.",
+          "Die Allianzen der Blaidd basieren häufig auf gemeinsamen religiösen und maritimen Interessen, was ihnen sowohl in politischer als auch wirtschaftlicher Hinsicht Sicherheit bietet. Trotz einiger Rivalitäten haben sie es geschafft, sich als einflussreiche Kraft in Tredegar zu etablieren, indem sie ein Netz aus Loyalitäten und Partnerschaften aufgebaut haben, das ihre Position festigt und ihre Zukunft in der Region sichert."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Blaidd ist geprägt von tiefem Pflichtbewusstsein, Ehrfurcht vor der Tradition und unerschütterlicher Loyalität. Ihre Werte wurzeln in ihrer alten Herkunft aus Avallorn und der heiligen Aufgabe, den Gral der Dame des Sees zu schützen. Diese spirituelle Verantwortung hat sich über Generationen hinweg als zentrales Element ihres Selbstverständnisses erhalten.",
+          "Die Blaidd legen großen Wert auf Ehre, Disziplin und Hingabe an ihr Land sowie an die Dame des Sees, Nimue. Sie sehen es als ihre oberste Pflicht, das Wohl ihres Hauses und der Region, die sie beschützen, zu fördern. Dabei wird Aufrichtigkeit in ihren Handlungen hoch geschätzt. Eigensinn und Abenteuerlust werden hingegen weniger gefördert; stattdessen stehen Gemeinschaftssinn, Treue zu ihren Verbündeten und die Bereitschaft, sich für das größere Wohl zu opfern, im Vordergrund.",
+          "Fleiß und die Bereitschaft, hart zu arbeiten, um den eigenen Wohlstand und den der Gemeinschaft zu sichern, sind ebenfalls zentrale Werte. Die Blaidd verkörpern den Idealismus von Treue und Opferbereitschaft, verbunden mit einer tiefen spirituellen Bindung zu ihrer göttlichen Beschützerin, Nimue."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/616Sbqs.png",
+        "linkedUrl": null,
+        "alt": "616Sbqs.png",
+        "style": "height:200px; width:201px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/iQuvpRo.png",
+        "linkedUrl": "https://www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2088",
+        "alt": "iQuvpRo.png",
+        "style": "height:123px; width:114px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/3S842ZJ.png",
+        "linkedUrl": null,
+        "alt": "Hl1POXF.png",
+        "style": "float:right; height:400px; width:267px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "https://www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2088",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-brithyll",
+    "slug": "brithyll",
+    "attachmentId": "b0a5725d-8ba8-4bc4-8246-c2148cb4dbaf",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\b0a5725d-8ba8-4bc4-8246-c2148cb4dbaf\\Eingefügter Text.txt",
+    "sourceSha256": "4ccb19421b67848c484f22afb252a452034045eaf5174f1e782a8e86c0a1dc1b",
+    "sourceTitle": "Das Haus Brithyll O'Tredegar",
+    "canonical": {
+      "id": "haus-brithyll",
+      "title": "Haus Brithyll O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 57
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hof",
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 85,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "„Maepysgodyn yn dod o hyrd i ddoethineb yn y lif “",
+          "„ Ein Fisch findet Weisheit in der Strömung.“",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Familie Brithyll ist ein Kadettenhaus der Familie Pysgod, bekannt für ihre intellektuelle und gesittete Haltung."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Familie Brithyll ist ein Kadettenhaus der Familie Pysgod. Der Patron dieser Familie ist der Mentor. Die Brithyll gelten als sehr gesittet und intellektuell, sind sie doch oft Priester des Mentors, Tutoren und Lehrer oder leiten sogar seine Universität in Tredegar. Darüber hinaus sind sie gute Händler und bilden den einen oder anderen guten Teulu aus!"
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Das Haus Brithyll, ansässig in Tredegar, hat sich im Laufe der Jahrhunderte einen Ruf als Bewahrer von Weisheit und Wissen erarbeitet. Ihr Schutzpatron, der Mentor-Gott Orinor, steht im Zentrum ihres spirituellen und intellektuellen Lebens. Eine der herausragenden Traditionen des Hauses ist es, den Patriarchen des Mentors für die Grafschaft zu stellen. In der Geschichte der Grafschaft ist es nur selten vorgekommen, dass kein Mitglied der Familie Brithyll zum Oberhaupt des Mentorenordens aufgestiegen ist, was ihre tiefe Verbindung zu Orinor und ihrer religiösen Verantwortung unterstreicht.",
+          "Bildung ist ein weiterer Pfeiler ihrer Traditionen. Die Brithyll schicken viele ihrer Nachkommen an die renommiertesten Universitäten des Mentors, darunter solche in der Hauptstadt und sogar in der berüchtigten Blutstadt. In Tredegar selbst betreiben sie die angesehenste Universität Cenyrs, die viele Professoren und Gelehrte hervorgebracht hat, welche die Institution leiten. Diese Universität ist ein Symbol des intellektuellen Erbes des Hauses Brithyll und eine Quelle für zukünftige Generationen von Gelehrten und Priestern.",
+          "Ritterlich gesehen sind die Brithyll meist als Teulu, Schwertkämpfer auf dem Schlachtfeld, bekannt. Einige Mitglieder des Hauses widmen sich jedoch als Paladine Orinor und schwören ihm heilige Eide. Andere treten als Kleriker auf und tragen die Lehren des Mentors in die Welt. Diese Vielfalt in den militärischen und religiösen Rollen zeigt das Engagement der Brithyll, sowohl das geistige als auch das kriegerische Erbe ihres Hauses zu ehren.",
+          "Eine weitere zentrale Tradition des Hauses ist der Handel. Die Brithyll kontrollieren mehrere Dörfer, Gehöfte, Zollwege und Häfen innerhalb der Baronie, die ihnen ein stetiges Einkommen sichern. Ihre engen Verbindungen zum Markt der Fortuna und ihre Allianzen mit der Handelsgilde haben ihnen zudem bedeutende wirtschaftliche Macht verschafft. Diese Balance zwischen Wissen, Religion und Handel macht das Haus Brithyll zu einem einflussreichen Akteur innerhalb Tredegars und darüber hinaus."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Cumbra und Umbrien, weltbekannt und in Avalon geboren. Eben jener Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr und Brechinaucc.",
+          "Die Ritter des Hauses Brithyll orientieren sich stark an der Erscheinung der Ritter des Grafen von Tredegar, die ein markantes Fischthema in ihrer Ausrüstung aufweisen. Dieses Thema spiegelt sich besonders in der Gestaltung ihrer Rüstungen wider. Die Brithyll-Ritter tragen prächtige Schuppenrüstungen, die das schimmernde Schuppenkleid eines Fisches nachahmen sollen. Diese Rüstungen sind nicht nur optisch beeindruckend, sondern bieten auch hervorragenden Schutz, da die Schuppenstruktur Beweglichkeit mit Stärke vereint.",
+          "Ein weiteres charakteristisches Merkmal der Brithyll-Ritter sind ihre Helme, die an den Seiten mit Flossen geschmückt sind, um die Verbindung zum Wasser und den Fischen noch deutlicher zu machen. Diese Helme verleihen den Rittern eine einzigartige und eindrucksvolle Silhouette auf dem Schlachtfeld, die sie von anderen Kriegern unterscheidet und ihre Zugehörigkeit zum Haus Brithyll sowie ihre Nähe zum maritimen Erbe symbolisiert. Die Mischung aus Ästhetik und Funktionalität macht die Brithyll-Ritter zu einer bemerkenswerten und respektierten Kriegerkaste in der Region Tredegar."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Das Haus Brithyll verfügt über beträchtlichen Besitz und hat sich in Tredegar zu einer der wohlhabendsten Familien entwickelt. Ihr Wohlstand basiert auf einer Kombination aus klugem Handel, strategischen Landbesitz und ihren engen Verbindungen zu Bildung und Religion. Das Haus kontrolliert mehrere Dörfer, Gehöfte, Zollwege und Häfen innerhalb der Baronie, die ihnen ein konstantes und sicheres Einkommen verschaffen. Diese Besitzungen sind nicht nur wirtschaftlich bedeutend, sondern auch strategisch wichtig, da sie den Handel und die Bewegung von Waren in der Region maßgeblich beeinflussen.",
+          "Ein wichtiger Faktor für den Wohlstand des Hauses Brithyll ist ihre Verbundenheit mit dem Markt der Fortuna, einer mächtigen Handelsgilde, mit der sie enge Allianzen geschlossen haben. Diese Handelsverbindungen ermöglichen es ihnen, ihre wirtschaftliche Macht weiter auszubauen und sich in Handelsangelegenheiten zu profilieren. Darüber hinaus generiert das Haus durch ihre Universitäten in Tredegar erhebliche Einnahmen, da diese Institution viele einflussreiche Gelehrte und Studenten anzieht.",
+          "Obwohl die Brithyll durch ihre Tradition als Gelehrte, Priester und Ritter bekannt sind, hat ihr Handelsgeschick sie zu einem der wirtschaftlich stabilsten Häuser in der Grafschaft gemacht. Ihr Besitz und ihre klugen Handelsbeziehungen garantieren ihnen nicht nur Wohlstand, sondern auch politische und wirtschaftliche Einflussnahme in der gesamten Region."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Das Haus Brithyll ist tief in der Verehrung des Mentors, Orinor, verwurzelt, der Gott der Weisheit, des Wissens und der Lehre. Als Schutzpatron des Hauses ist Orinor nicht nur eine zentrale spirituelle Figur, sondern auch der Leitstern ihrer intellektuellen und religiösen Bestrebungen. Die Brithyll sehen es als ihre heilige Pflicht an, das Wissen zu mehren und Weisheit zu verbreiten, was sich in ihrer Hingabe an die Ausbildung von Priestern, Klerikern und Gelehrten zeigt.",
+          "Die enge Verbindung zum Mentorenorden führt dazu, dass viele Mitglieder des Hauses als Priester oder Kleriker des Mentors dienen und auch an der Universität des Mentors in Tredegar unterrichten oder sie leiten. Sie sehen es als Ehre an, den Glauben an Orinor in Form von Bildung und Lehre weiterzugeben. Orinor steht für Aufrichtigkeit, Disziplin und die Suche nach tiefem Verständnis, und diese Werte spiegeln sich auch im Handeln der Brithyll wider.",
+          "Neben der akademischen Seite ihrer religiösen Hingabe sind die Brithyll auch dafür bekannt, Paladine des Orinor hervorzubringen, die ihre heiligen Eide im Namen des Mentors schwören. Diese Paladine und Kleriker tragen die Verantwortung, die Tugenden von Orinor zu bewahren und zu verteidigen, sei es in Schlachten oder auf den Wegen der Diplomatie. Die Brithyll sehen sich als Hüter und Vermittler von Wissen und Glauben, fest entschlossen, die Weisheit ihres Gottes zu verbreiten und in die Gesellschaft einzubringen."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Die Brthyll bevorzugen Häuser mit Frommen Bezug oder Kaufmännischem Geschick."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Brithyll verkörpert eine tiefe Hingabe an Wissen, Weisheit und Aufrichtigkeit. Ihre moralischen Grundsätze sind stark von ihrem Schutzpatron Orinor, dem Gott der Weisheit, geprägt. Der Wert des Wissens steht im Zentrum ihrer Identität, und sie betrachten Bildung und geistige Entwicklung als den Schlüssel zur Stärkung nicht nur ihres Hauses, sondern auch der Gesellschaft als Ganzes.",
+          "Integrität und Disziplin sind ebenso zentrale Werte der Brithyll. Sie streben danach, ihre Aufgaben mit äußerster Sorgfalt und Präzision zu erfüllen, sei es in akademischen, religiösen oder militärischen Bereichen. Durch ihre enge Verbindung zum Mentorenorden verpflichten sie sich, Wissen nicht nur zu bewahren, sondern auch weiterzugeben, und sie legen besonderen Wert darauf, dies mit Ehrlichkeit und moralischer Klarheit zu tun.",
+          "Auf persönlicher Ebene schätzen die Brithyll Bescheidenheit und das Streben nach Selbstverbesserung. Für sie ist Eigensinn oder Selbstsucht verpönt; vielmehr gilt es, das Wohl der Gemeinschaft und der Baronie zu fördern. Sie fühlen sich nicht nur dem Streben nach Weisheit, sondern auch dem Dienst am Land und den Menschen verpflichtet.",
+          "Insgesamt sind die Moral und die Werte des Hauses Brithyll geprägt von ihrer tiefen Überzeugung, dass Wissen Macht ist – aber nur dann, wenn es mit ethischen Prinzipien und dem Streben nach einem höheren Wohl verbunden ist."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/CuGHEbV.png",
+        "linkedUrl": null,
+        "alt": "CuGHEbV.png",
+        "style": "height:200px; width:201px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/FqDAOjy.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2084",
+        "alt": "FqDAOjy.png",
+        "style": "height:142px; width:175px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/N9mJOik.png",
+        "linkedUrl": null,
+        "alt": "5iGtyn5.png",
+        "style": "float:right; height:400px; width:267px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2084",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-gwialen",
+    "slug": "gwialen",
+    "attachmentId": "30c27015-c2ea-4c0e-b358-53a66318c43f",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\30c27015-c2ea-4c0e-b358-53a66318c43f\\Eingefügter Text.txt",
+    "sourceSha256": "4981bc8818d234d02d0eaca12c1815eefa391bd6c2b6d763efd1a402ac7374aa",
+    "sourceTitle": "Das Haus Gwialen O'Tredegar",
+    "canonical": {
+      "id": "haus-gwialen",
+      "title": "Haus Gwialen O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 40
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hierachie",
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 69,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "„ .... “",
+          "„“",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Familie der Gwialen sind eine alte Familie aus Tredegar, deren Stammbaum der Ahnenforschung nach noch in die Zeit zurückreicht, bevor die Avallornier nach Cenyr kamen."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Familie Gwialen ist eine altehrwürdige Familie aus Tredegar, deren Wurzeln tief in die Geschichte zurückreichen, noch bevor die Avallornier nach Cenyr kamen. Ursprünglich war die Familie eine einfache Fischerfamilie, die in einem Dorf lebte, das später zu Tredegar heranwachsen sollte. Aufgrund ihres umfassenden Wissens über das Meer wurden sie von der Familie Pysgod, den späteren Herrschern über die Region, als Kapitäne ihrer Schiffe angestellt. Der mutigste und tapferste unter ihnen wurde schließlich zum Ritter geschlagen, womit die Familie Gwialen offiziell gegründet wurde. Bemerkenswerterweise war der Gründer der Familie kein Cenyri, sondern ein Albe , was die besondere Verbindung der Gwialen zur frühen Geschichte von Cenyr unterstreicht.",
+          "Seit ihrer Gründung sind die Gwialen eng mit den Pysgod verbunden und haben über die Jahrhunderte hinweg eine enge Allianz gepflegt. Ihre Bedeutung in der Region Tredegar ist dabei vor allem durch ihre Leidenschaft für die Fischerei geprägt. Die Gwialen gelten als die Schutzherren der Fischerei in Tredegar und im Umland und haben diese Tradition über Generationen hinweg aufrechterhalten.",
+          "Die Familie gründete die berühmte Angelgilde „ Fischers Freud “, die zahlreiche Angelwettbewerbe in Tredegar, Cenyr und sogar in ganz Estryll und weltweit organisiert. Diese Wettbewerbe und das Engagement der Familie haben die Gwialen weit über die Grenzen ihrer Heimat hinaus bekannt gemacht und ihnen den Ruf eingebracht, nicht nur fähige Seefahrer und Fischer zu sein, sondern auch die Traditionen des Angelns mit Stolz und Ehre zu bewahren."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Die Gwialen, mit ihren tiefen albischen Wurzeln, gelten weltweit als die Schutzpatrone der Angler und der Fischerei . In der Grafschaft Tredegar gehören ihnen die meisten Fischerdörfer im Hinterland und an der Küste, und ihre Flotte umfasst zahlreiche Fischereischiffe, auch wenn man sie nicht gerade als gefürchtete Seekrieger betrachtet. Sie haben sich insbesondere der Fischerei und dem Handel verschrieben, wobei die Gründung der Angelgilde \" Fischers Freud \" eine ihrer größten Errungenschaften ist. Diese Gilde organisiert Angelwettbewerbe und fördert die Fischerei in ganz Estryll, was die Gwialen zu einer weltweit angesehenen Familie gemacht hat.",
+          "Fischerei und Anglerei sind das Herzstück ihrer Traditionen. Die Gwialen besitzen die meisten Fischereien in der Region und haben sich im Bereich der Schifffahrt einen großen Namen gemacht. Ihr Wissen über das Fischen und ihre Erfahrung auf See sind unübertroffen, auch wenn sie nicht als gefürchtete Seekämpfer bekannt sind. Stattdessen haben sie ihre Fähigkeiten auf den Handel und die Wirtschaft konzentriert. Durch ihre Fischereien und Fischmärkte haben sie ein beständiges Einkommen gesichert und spielen eine zentrale Rolle in der Versorgung der Klaueninseln mit konservierten Fischen, die in Salzlake in Fässern gelagert werden.",
+          "Eine weitere Facette der Gwialen-Traditionen ist ihre berühmte Küche , die sich auf skurrile und exotische Delikatessen aus dem Meer spezialisiert hat. Ihre Fischgerichte sind über die Jahrhunderte hinweg zu einer Tradition in Tredegar geworden und ziehen Feinschmecker aus aller Welt an. Die Küche der Gwialen hat einen solchen Ruf, dass der Gourmet und prominente Feinschmecker oft monatelang in Tredegar residiert, um die Spezialitäten zu genießen.",
+          "Eine der wichtigsten Traditionen der Gwialen ist der jährliche Fischmarkt , der direkt nach der weltberühmten Anglersweltmeisterschaft in Tredegar stattfindet. Dieser Markt und der Wettbewerb ziehen Angler und Besucher aus aller Welt an und machen Tredegar in dieser Zeit zu einem lebhaften Zentrum des Handels und der Fischereikunst. Die Gwialen sind stolz auf diese Traditionen, die sie nicht nur als Meister der Fischerei, sondern auch als Hüter von Kultur und Wirtschaft in der Region auszeichnen."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Cenyr, weltbekannt und in Avallorn geboren. Ein cenyrischer Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr.",
+          "Die Ritter des Hauses Gwialen sind bekannt für ihre imposanten, geschlossenen Plattenrüstungen, die den Wohlstand der Familie widerspiegeln. Diese Rüstungen sind oft mit goldenen Verzierungen versehen, und die vorherrschende Farbe Blau symbolisiert die enge Verbindung der Familie zum Meer und zur Fischerei. Die Ritter der Gwialen treten stets eindrucksvoll auf, ihre Rüstungen strahlen Macht und Eleganz aus.",
+          "Obwohl die Gwialen-Ritter in Bezug auf ihren kriegerischen Ruhm hinter den militärisch fokussierten Häusern wie Blaidd oder Brithyll zurückstehen, bedeutet das keineswegs, dass sie schlechte Krieger sind. Ihre Ritter sind wohl ausgebildet und hoch angesehen, jedoch liegt der Schwerpunkt des Hauses mehr auf Fischerei, Handel und Seefahrt. Dennoch tragen die Ritter des Hauses Gwialen stolz das Erbe ihrer Familie und stehen jederzeit bereit, Tredegar und die Interessen ihres Hauses zu verteidigen."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Der Wohlstand des Hauses Gwialen beruht auf ihrer engen Verbindung zur Fischerei, Schifffahrt und dem Handel, die sie seit Generationen meisterhaft betreiben. Die Gwialen kontrollieren die meisten Fischerdörfer in der Grafschaft Tredegar und haben sich als zentrale Akteure im maritimen Handel etabliert. Ihre zahlreichen Fischereischiffe und die gut entwickelten Handelsrouten sichern ihnen ein stetiges Einkommen. Besonders der Handel mit konserviertem Fisch, der in Salzlake in Fässern gelagert wird, ist eine wichtige Einnahmequelle. Dieser Fisch ist nicht nur für die lokale Bevölkerung wichtig, sondern wird auch auf die Klaueninseln und andere Gebiete exportiert, was den Gwialen eine wirtschaftlich stabile Position verschafft.",
+          "Ein weiterer Faktor ihres Wohlstands ist die Angelgilde \"Fischers Freud\", die von den Gwialen gegründet wurde. Diese Gilde organisiert nicht nur Angelwettbewerbe, sondern hat auch weitreichende Handelsbeziehungen geknüpft, die den Einfluss des Hauses über die Grenzen von Tredegar hinaus erweitern. Durch diese wirtschaftlichen Aktivitäten haben sich die Gwialen ein großes Vermögen aufgebaut, das es ihnen erlaubt, in prachtvolle Rüstungen, Schiffe und Ländereien zu investieren.",
+          "Ihre Fischmärkte und der Handel mit exotischen Meeresdelikatessen tragen ebenfalls erheblich zu ihrem Reichtum bei. Diese skurrilen Delikatessen sind nicht nur in Tredegar, sondern auch weit darüber hinaus bekannt und ziehen Gourmets und Feinschmecker aus aller Welt an, was die Gwialen zusätzlich wirtschaftlich stärkt.",
+          "Dank ihres Wohlstands genießen die Gwialen nicht nur innerhalb der Grafschaft, sondern auch im weiteren Umfeld Respekt und Anerkennung. Sie haben sich einen Namen als erfolgreiche Händler und Bewahrer der maritimen Tradition gemacht, was ihren Einfluss und ihre finanzielle Sicherheit weiter festigt."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Das Haus Gwialen hat eine tiefe Verbindung zum Gott Tharnor, auch bekannt als der Knecht, der für Handel, Arbeit und Fleiß steht. Dieser Gott ist zentral für die Werte des Hauses, da die Gwialen großen Wert auf harte Arbeit, wirtschaftlichen Erfolg und Beständigkeit legen. Tharnor verkörpert genau diese Tugenden, und die Gwialen verehren ihn als ihren göttlichen Schutzpatron, der sie in ihren Handels- und Fischereigeschäften leitet und beschützt.",
+          "Obwohl die Gwialen sich selten auf der religiösen Bühne oder in kirchlichen Machtkämpfen engagieren, gelten sie als ein recht frommes und rechtschaffenes Haus. Ihre Frömmigkeit zeigt sich vor allem in ihrem Fleiß und in ihrer täglichen Arbeit, die sie als Dienst an Tharnor betrachten. Rituale zu Ehren Tharnors werden in der Regel im privaten Kreis oder innerhalb ihrer Gilde abgehalten, besonders vor wichtigen Handelsabschlüssen oder zu Beginn der Angel- und Fischsaison.",
+          "Trotz ihrer Zurückhaltung im religiösen Leben der Grafschaft sind die Gwialen als aufrichtige und ehrbare Familie bekannt, die sich durch ihre Hingabe an Arbeit, Handel und Fleiß auszeichnet. Ihr Glaube an Tharnor spiegelt ihre starke Verbindung zu diesen Werten wider und prägt ihr Handeln sowohl in wirtschaftlichen als auch in sozialen Belangen."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Die Familie verfolgt kein bestimmtes Schema für seine Allianzen. Generell verbündet man sich aber mit gleichgesinnten oder im Zweifelsfall, mit Häusern innerhalb derselben Grafschaft."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Gwialen ist bekannt für seine Bodenständigkeit und Demut, Werte, die tief in ihrer Kultur und Geschichte verwurzelt sind. Als ehemalige Fischerfamilie, die sich über Generationen hinweg durch harte Arbeit und Entschlossenheit zu einem angesehenen Adelshaus entwickelt hat, bewahren sie sich eine bescheidene und pragmatische Haltung. Sie sehen sich selbst weniger als Teil der glamourösen Elite, sondern vielmehr als Hüter und Förderer der Gemeinschaft, die durch Handel und Fleiß das Wohlstandsniveau der Region sichern.",
+          "Fleiß und harte Arbeit sind die Kernwerte des Hauses, und sie lehren, dass Erfolg nur durch beständiges Engagement und Disziplin erreicht werden kann. Ihr Schutzpatron Tharnor, der Gott der Arbeit und des Handels, spiegelt diese Werte wider und gibt ihnen die moralische Orientierung, die sie in ihrem täglichen Handeln leitet. Die Gwialen sind stolz darauf, durch ihre Fischereitätigkeit und ihren Handel einen bedeutenden Beitrag zur Wirtschaft der Grafschaft zu leisten, ohne dabei nach Ruhm oder Macht zu streben",
+          ".",
+          "Demut ist ein weiterer zentraler Wert, der sich in ihrem Verhalten gegenüber anderen Adelshäusern, sowie gegenüber dem einfachen Volk zeigt. Sie sind nicht darauf bedacht, sich über andere zu erheben, sondern sehen ihre Rolle darin, die Gemeinschaft zu stärken und ihren Wohlstand durch Arbeit und Fleiß zu mehren. Dies spiegelt sich auch in ihrem zurückhaltenden Auftreten auf der politischen und religiösen Bühne wider. Für die Gwialen ist es wichtiger, einen praktischen und nachhaltigen Beitrag zur Gesellschaft zu leisten, als in den Vordergrund zu treten.",
+          "Zusammengefasst stehen die Gwialen für Fleiß, Demut und Bodenständigkeit. Sie glauben fest daran, dass jeder Erfolg, den sie erzielen, das Ergebnis harter Arbeit und nicht bloßer Geburt oder Titel ist. Diese Werte prägen ihr tägliches Leben und ihren Umgang mit anderen, sowohl innerhalb der eigenen Familie als auch in der breiteren Gemeinschaft."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/2hRC48P.png",
+        "linkedUrl": null,
+        "alt": "2hRC48P.png",
+        "style": "height:200px; width:200px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/IY7e5qu.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2085",
+        "alt": "IY7e5qu.png",
+        "style": "height:123px; width:129px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/D0jv9pR.png",
+        "linkedUrl": null,
+        "alt": "JpFfm78.png",
+        "style": "float:right; height:350px; width:233px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2085",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-illygoden-tredegar",
+    "slug": "illygoden",
+    "attachmentId": "1bfe2d27-d6fb-424f-8db1-4d60499d8862",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\1bfe2d27-d6fb-424f-8db1-4d60499d8862\\Eingefügter Text.txt",
+    "sourceSha256": "aff48d108b24e7c38d662dfbcc0453e0fd3acdfff40c7c2cd507d668d22f7241",
+    "sourceTitle": "Das Haus Illygoden O'Tirwedd /O'Tredegar",
+    "canonical": {
+      "id": "haus-illygoden-tredegar",
+      "title": "Haus Illygoden O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 25
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 74,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "\"Nid oes angen cofio dewrder oherwydd ni fydd byth yn cael ei anghofio.\"",
+          "An Mut muss man sich nicht erinnern, denn er wird nie vergessen. “",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Illygoden sind eine alteingesessene Familie aus Vennyr, die ursprünglich in Tirwedd, der östlichen Stadt des Landes, beheimatet war."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Illygoden sind eine Familie aus Vennyr, welche in Tirwedd, der östlichen Stadt des Landes, beheimatet waren. Von dort aus wurden die Handelsrouten nach Faelaron und Adrimar überwacht, da in der nördlicheren See die Schwarzblutmarodeure und Nordmänner ihr Unwesen trieben. Die Illygoden sind äußerst loyale Menschen, die insbesondere der Familie Blaidd die Treue schworen. Sie gelten auch als sehr treue Anhänger der Dame des Sees.",
+          "Seit dem Untergang von Vennyr haben sie sich in Tredegar niedergelasssen.",
+          "Da sie eine sehr große Familie waren und viele Kinder hervorbrachten, haben sie sogar ein größeres Kadettenhaus, die Bochdew, hervorgebracht, welche nach Caer Ynys gingen und dort bewachten. Mit diesen haben sie sehr viele Ehen geschlossen, was bis in die heutige Zeit reicht.",
+          "Bekannt sind sie für vielerlei Dinge. So sind die Illyogoden recht klein. Der größte jemals gemessene Illygoden soll gerade mal 1,72 m groß gewesen sein. Für gewöhnlich sind sie knapp über 1,60 m. Außerdem tragen sie ihre Haare immer in Knoten, haben immer mindestens einen auf den Kopf. Zumindest die Männer. Die Frauen haben oftmals zwei. Außerdem haben sie schwarze Augen und eine Vorliebe für Käse. Tatsächlich besitzen sie mehrere Kuhfarmen und Molkereien.",
+          "Tatsächlich sind ihre kriegerischen Fähigkeiten eher untypisch für Vennyr. Als Rhyfelwyrr eignen sie sich aufgrund ihrer eher schmächtigeren Statur eher weniger. Außerdem geben sie nur selten gute Seeleute ab. Für gewöhnlich sind sie Ceidwynn und Derwyn oder gehen eher den klassisch cenyrischen Weg als Teulu."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Die Illygoden, erst vor kurzem in Tredegar sesshaft geworden, haben die Verantwortung über mehrere Gehöfte und Dörfer übernommen, die sich auf die Viehzucht spezialisiert haben. Diese neue Aufgabe knüpft an ihre alte Tradition in Vennyr an, wo sie große Bestände an Hochlandrindern hielten. Als sie aus ihrer Heimat flohen, brachten sie einige dieser robusten Rinder mit nach Tredegar, um ihre Tradition der Viehzucht fortzuführen. Heute sind die Illygoden für ihre erstklassigen Rinderfarmen bekannt, die einen wichtigen Beitrag zur Nahrungsversorgung der Region leisten.",
+          "Ein weiteres Erkennungsmerkmal der Illygoden ist ihre große Familienstruktur. Die Familie gilt als äußerst fruchtbar und wächst stetig, was sie zu einer der größeren und einflussreicheren Familien macht. Diese Fruchtbarkeit wird von den Illygoden als Segen angesehen und spiegelt ihre Fähigkeit wider, auch in schwierigen Zeiten für das Wachstum und den Fortbestand ihrer Linie zu sorgen.",
+          "Obwohl die Illygoden keine herausragenden Krieger sind, haben sie sich auf bestimmte militärische Rollen spezialisiert. Aufgrund ihrer schmächtigen Statur sind sie weniger als schwere Nahkämpfer geeignet, doch als Bogenschützen und Reiter haben sie sich einen Namen gemacht. Sie stellen häufig Ceidwynn, also Bogenschützen, oder Reiter in der Klasse der Teulu. Zudem sind viele Illygoden Kleriker der Derwyn, was ihre spirituelle Verbindung zur Dame des Sees und ihr Engagement in der Verteidigung der Region unterstreicht. Diese Rollen erlauben es ihnen, ihre Talente bestmöglich einzusetzen, ohne sich in schwere, direkte Kämpfe verwickeln zu müssen.",
+          "..."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Vennyr, weltbekannt und in Avallorn geboren. Eben jener Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr und Vennyr.",
+          "Im Gegensatz zu vielen anderen Familien aus Vennyr sind die Illygoden eher untypisch in ihrer kriegerischen Ausrichtung. Aufgrund ihrer eher schmächtigen Statur eignen sie sich nur selten als Rhyfelwyrr, die typischen schweren Krieger von Vennyr. Auch als Seeleute sind sie weniger bekannt, obwohl ihre Wurzeln in einer Hafenstadt liegen. Stattdessen sind die Illygoden häufig als Ceidwynn, Bogenschützen, oder Derwyn, spirituelle Krieger, zu finden. Einige von ihnen folgen dem klassisch cenyrischen Weg als Teulu, Schwertkämpfer zu Pferd. Diese Anpassungsfähigkeit in ihrer Kriegertradition zeigt, dass die Illygoden ihre Fähigkeiten auf strategisch kluge und an ihre Stärke angepasste Weise einsetzen."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Der Wohlstand des Hauses Illygoden gründet sich hauptsächlich auf ihre landwirtschaftlichen Betriebe, insbesondere die Viehzucht, die sie aus ihrer alten Heimat Vennyr mit nach Tredegar brachten. Ihre Hochlandrinder sind besonders begehrt, da sie robust und widerstandsfähig sind und hochwertiges Fleisch und Milchprodukte liefern. Diese Viehzucht bildet das Rückgrat ihres wirtschaftlichen Erfolgs in Tredegar, und sie haben es geschafft, mehrere produktive Gehöfte und Dörfer zu übernehmen, die ihnen ein stetiges Einkommen sichern.",
+          "Neben der Viehzucht betreiben die Illygoden auch Molkereien, die ihre Käsespezialitäten produzieren und vermarkten. Ihre Leidenschaft für Käse ist nicht nur eine kulturelle Eigenheit, sondern auch eine lukrative Einkommensquelle, da ihre Produkte in der Region sehr geschätzt werden. Diese Kombination aus Viehhaltung und Molkereiproduktion hat das Haus Illygoden zu einem wirtschaftlich stabilen Akteur in Tredegar gemacht.",
+          "Obwohl sie nicht für ihre militärische Stärke bekannt sind, haben die Illygoden durch ihre landwirtschaftlichen Fähigkeiten und ihren Beitrag zur Nahrungsversorgung der Region einen respektablen Wohlstand erlangt. Ihr Erfolg auf dem landwirtschaftlichen und wirtschaftlichen Gebiet ermöglicht es ihnen, ihre Position in Tredegar zu festigen und trotz ihrer bescheidenen kriegerischen Rolle eine wichtige und respektierte Familie zu bleiben."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Die Illygoden sind tief mit dem Glauben an die Dame des Sees, Nimue, verbunden, wie es für viele Familien aus Vennyr üblich ist. Ihre Treue zu Nimue zeigt sich in ihrer spirituellen Hingabe und ihrem starken Glauben, der ein zentraler Bestandteil ihrer Identität ist. Besonders durch ihre Rolle als Kleriker der Derwyn-Klasse, den spirituellen Kriegern, pflegen viele Illygoden eine enge Beziehung zu den Lehren der Dame des Sees. Diese Kleriker übernehmen oft die Rolle von Priestern oder spirituellen Führern, die das Haus leiten und den Glauben in der Gemeinschaft verbreiten.",
+          "Neben ihrer Hingabe zur Dame des Sees haben die Illygoden jedoch auch eine starke Verbindung zur Erde und zur Natur, die sich in ihrer Viehzucht widerspiegelt. Diese Verbindung zur Natur und zum Leben, das sie durch ihre Tiere pflegen, verstärkt ihre religiöse Hingabe. Die Illygoden betrachten ihre Arbeit mit dem Vieh als eine heilige Aufgabe, die im Einklang mit den Werten der Dame des Sees steht.",
+          "Ihr religiöser Glaube wird weniger auf großer Bühne zur Schau gestellt und ist eher in den Alltag und ihre landwirtschaftliche Arbeit integriert. Rituale und Gebete zu Nimue sind vor allem vor Erntezeiten oder dem Beginn der Zuchtsaison von Bedeutung. Insgesamt sind die Illygoden ein recht frommes, aber unauffälliges Haus, das seine religiöse Hingabe in Verbindung mit dem natürlichen Kreislauf des Lebens praktiziert."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Das Haus ist in der Vergangenheit oft Ehen mit dem eigenen Kadettenhaus eingegangen aber auch sehr viele mit anderen Häusern Vennyrs."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Illygoden ist stark von den Werten Loyalität, Gemeinschaft und Beständigkeit geprägt. Ihre enge Verbindung zur Familie Blaidd und ihre unerschütterliche Treue gegenüber ihren Verbündeten stehen im Mittelpunkt ihrer moralischen Grundsätze. Die Illygoden legen großen Wert auf ihre Verpflichtungen gegenüber anderen Häusern, vor allem gegenüber ihren langjährigen Verbündeten. Sie sehen Loyalität als heiligen Grundsatz und sind stolz darauf, ein Haus zu sein, auf das man sich in allen Lebenslagen verlassen kann.",
+          "Ein weiteres zentrales Element ihrer Moral ist die Bedeutung der Familie und Gemeinschaft. Die Illygoden glauben fest daran, dass die Stärke eines Hauses durch seine Familienbande und das Wohlstandsniveau seiner Gemeinschaft bestimmt wird. Ihre große Fruchtbarkeit und ihre Vorliebe für große Familien spiegeln ihre Überzeugung wider, dass Wachstum und Beständigkeit den langfristigen Erfolg sichern. Jedes Mitglied der Familie trägt Verantwortung für das Wohl der Gemeinschaft und der nächsten Generationen, und dies ist tief in ihrer Kultur verankert.",
+          "Arbeit und Fleiß sind ebenfalls zentrale Werte des Hauses. Die Illygoden haben ihre Stärke durch landwirtschaftliche Arbeit und Viehzucht aufgebaut und glauben fest daran, dass echter Wohlstand nur durch harte Arbeit erreicht wird. Trotz ihrer schmächtigen Statur und ihrer weniger kriegerischen Fähigkeiten setzen sie auf Ausdauer und Beständigkeit, um sowohl in wirtschaftlicher als auch in spiritueller Hinsicht zu gedeihen. Sie sehen das Leben als Kreislauf, in dem jeder seine Rolle erfüllen muss, um das größere Wohl zu sichern.",
+          "Insgesamt sind die Illygoden ein bodenständiges und treues Haus, das sich durch Fleiß, starke Familienwerte und ihre Hingabe an die Gemeinschaft und die Dame des Sees auszeichnet. Sie legen weniger Wert auf Ruhm und Ehre auf dem Schlachtfeld, sondern auf Loyalität, Zusammenarbeit und das Erfüllen ihrer Verpflichtungen gegenüber ihren Verbündeten und ihrer Gemeinschaft."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/wlwUlYP.png",
+        "linkedUrl": null,
+        "alt": "wlwUlYP.png",
+        "style": "height:200px; width:199px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/eXrBGfP.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2086",
+        "alt": "eXrBGfP.png",
+        "style": "height:123px; width:102px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/7X0UKJd.png",
+        "linkedUrl": null,
+        "alt": "2cfTbMb.png",
+        "style": "float:right; height:300px; width:200px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2086",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-gwaedlyd-tredegar",
+    "slug": "gwaedlyd",
+    "attachmentId": "fce23593-f26f-401a-ac39-8962e1184cfb",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\fce23593-f26f-401a-ac39-8962e1184cfb\\Eingefügter Text.txt",
+    "sourceSha256": "40d1e1dc5f8704fecd725ab12c91c90e7a1cac03e7739bbcbef48924782ff565",
+    "sourceTitle": "Das Haus Gwaedlyd O'Tredegar",
+    "canonical": {
+      "id": "haus-gwaedlyd-tredegar",
+      "title": "Haus Gwaedlyd O'Tredegar",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Schimmerküste",
+        "Tredegar"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Tredegar",
+        "barony": "Schimmerküste",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Schimmerküste.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 16
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hof",
+      "Hierachie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 68,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "\"Gwaed ac eurogrwydd\"",
+          "\"Blut und Schuld. “",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hierarchie",
+          "10) Stammbaum",
+          "11) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Gwaedlyd sind eine kriegerische Familie aus Vennyr."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Gwaedlyd sind eine Familie aus Vennyr , welche dort für ihre kriegerische Ader bekannt waren. Ihr Gründer Agravaine der Hai war ein berühmten Ritters aus Serenlyn, welcher allerdings auch dafür bekannt war äußerst blutrünstig zu sein. Als dieser in einem Kampf gegen die Nordmänner versehentlich auch einen seiner Männer schlachtete, wurde er vom Justiziar von Brechinauc dazu verdonnert auf der vor der Küste von Brechinauc liegenden Insel Gorwel eine Festung zu errichten. Seine Nachkommen sollen dies schützen. Dies war die Strafe, die er und seine Blutlinie erhielt und sollte für 1.000 Jahre gelten.",
+          "Dennoch wurde die Familie für ihre Errungenschaften und Taten auch belohnt und so erhielten sie einige Generationen später sogar den Titel eines Ritterfürsten und Caer Gorwel wurde offiziel zu einer ritterlichen Herrschaft.",
+          "Bei der Blutschlacht von Caer Gorwel wurde die Familie nahezu ausgelöscht. Lediglich Lady Blodeuyn, ihre drei Kinder Gronw, Morcant und Uthyr sowie die junge Rhondda sollten die Schlacht überleben. Dies lag daran, dass Lady Blodeuyn für die Evakuierung der Zivilbevölkerung zuständig war und die damals noch jungen Knappen Gronw, Morcant und Uthyr die einzigen entbehrlichen für die Verteidigung von diesen waren. Rhondda war damals ein Kleinkind. Alle anderen Gwaedlyd sind in der Schlacht gestorben.",
+          "Nach dem Untergang von Caer Gorwel und der anschließenden Flucht aller Brechinauc nach Cenyr haben sich die Gwaedlyd in Menevia niedergelassen und dort die Burg erhalten, die früher von den Morfil bewohnt werden.",
+          "Bekannt sind die Gwaedlyd für ihre dunkelroten Haare und ihre stechenden eisblauen Augen. Ihnen sagt man eine gewisse nordische Kühlheit nach und man sagt, dass sie im Kampf schon mal ihrem Zorn erliegen und nicht über die klassische cenyrisch/vennyrische Gelassenheit verfügen.",
+          "Die Gwaedlyd bilden ihrerseits größtenteils Morwyr aus und sind für diese bekannt. Derwyn sucht man in der Familie für gewöhlich vergebens. Es gab nur wenige Ausnahmen, die man trotz des langen Bestehens dieser Familie tatsächlich an einer Hand ablesen kann."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Die Gwaedlyd sind bekannt für ihre nordisch anmutende Kühle, eine Wesensart, die fast an die erbarmungslose Kälte der Nordmänner erinnert, gegen die sie einst kämpften. Ein berühmtes Zitat eines Gelehrten, „Blickt man lange genug in den Abgrund, so blickt der Abgrund auch zurück“, beschreibt treffend die Natur der Gwaedlyd. Sie haben so oft in den Abgrund des Krieges geschaut, dass sie einige Eigenschaften ihrer Feinde übernommen haben. Trotz ihrer blutrünstigen Geschichte und ihrer rauen Art, sind die Gwaedlyd keine schlechten Menschen – sie sind schlicht direkter, rustikaler und oft unnachgiebig. Sie handeln mit einer Mischung aus kühler Gelassenheit und explosivem Temperament, die sie sowohl unberechenbar als auch gefährlich macht.",
+          "Dieses Gemüt, das zwischen stoischer Ruhe und blutdurstiger Wildheit schwankt, erinnert an ihren Wappentier – den Hai. Ein Hai ist kalt, kalkulierend und effizient, aber wenn er Blut wittert, kann er unkontrollierbar und gnadenlos sein. Genau so verhalten sich die Gwaedlyd im Kampf: Sie bleiben still und berechnend, bis das Blutvergießen beginnt, und dann schlagen sie schnell und erbarmungslos zu.",
+          "Obwohl die Gwaedlyd keine herausragenden Seefahrer sind, sind sie als Krieger zur See bekannt und gefürchtet. Besonders ihre Morwyr, die Seestreitkräfte, sind berühmt für ihre Fähigkeit, Schlachten auf See effizient und brutal zu führen. Die Gwaedlyd-Ritter kleiden sich oft in imposante Plattenrüstungen, die das glatte und furchteinflößende Erscheinungsbild eines Hais widerspiegeln. Im Kampf vermeiden sie es, Pelze zu tragen, um ihre Beweglichkeit und ihre kampfbereite Erscheinung zu betonen. Im Alltag greifen sie jedoch gerne auf Pelze zurück, um sich vor der Kälte zu schützen.",
+          "Ein Gwaedlyd im Kampf soll die Erscheinung eines nackten Hais verkörpern: glatt, einschüchternd und immer bereit zum Angriff. Diese Traditionen haben die Gwaedlyd über Generationen geprägt und sie zu einer Familie gemacht, die zwar nicht immer mit Anmut, aber immer mit tödlicher Effizienz handelt."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Vennyr, weltbekannt und in Avallorn geboren. Eben jener Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr und Vennyr.",
+          "Militärisch sind die Gwaedlyd vor allem für ihre Morwyr bekannt, eine Klasse von See- und Nahkämpfern, die in den Küstengefechten von Vennyr von zentraler Bedeutung war. Sie haben sich über die Jahre als hervorragende Krieger zur See bewiesen, und der Großteil der Familie folgt dieser Tradition. Derwyn, die spirituellen Krieger, sind in der Familie fast nie vertreten. Tatsächlich gab es in der langen Geschichte der Gwaedlyd nur sehr wenige Derwyn, die man an einer Hand abzählen kann."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Das Haus Gwaedlyd ist keines der wohlhabenden Häuser in Tredegar. Nach ihrer Flucht aus Vennyr und ihrer Neuansiedlung in Tredegar wurde ihnen die Verantwortung über die Küstenwache übertragen. Ihr Schwerpunkt liegt daher nicht im Handel oder in der Wirtschaft, sondern in der Kriegsführung und der Verteidigung der Küste. Die Gwaedlyd sind besonders darauf spezialisiert, Morwyr, also Krieger zur See, auszubilden, und dies ist auch ihre Hauptaufgabe in Tredegar.",
+          "Obwohl ihnen einige Küstensiedlungen zur Überwachung zugewiesen wurden, generiert das Haus nur ein bescheidenes Einkommen. Sie leben von den steuerlichen Abgaben dieser Ortschaften, doch da diese Siedlungen klein und wirtschaftlich unbedeutend sind, kommt dabei nur wenig Wohlstand für das Haus Gwaedlyd zusammen. Ihr Fokus bleibt daher klar auf militärische Aufgaben und die Sicherung der Küsten gerichtet, anstatt auf den Aufbau eines wirtschaftlichen Imperiums.",
+          "Trotz ihres bescheidenen Einkommens sind die Gwaedlyd stolz auf ihre Rolle als Verteidiger der Küsten und sehen in der militärischen Stärke ihre wahre Macht. Wohlstand in materieller Form spielt für sie eine untergeordnete Rolle, da sie ihre Ehre und ihren Wert auf dem Schlachtfeld beweisen, nicht im Handel."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Die Gwaedlyd sind nicht für ihre Frömmigkeit bekannt, was auf ihre lange Geschichte als Verteidiger der Küste Vennyrs zurückzuführen ist. An der äußersten Front waren sie kontinuierlich mit Marodeuren, Banditen und Räubern konfrontiert, was sie abgestumpft und bitter gemacht hat. Der ständige Kampf, die Grausamkeiten, denen ihre Untertanen ausgesetzt waren – Vergewaltigungen, Verwüstungen und andere Schandtaten – haben das Haus Gwaedlyd tief geprägt. Diese Erfahrungen haben dazu geführt, dass sie wenig Vertrauen in die Schutzkraft der Götter setzen, was ihre religiöse Distanz erklärt.",
+          "Während in anderen Häusern Religion einen zentralen Platz einnimmt, ist dies bei den Gwaedlyd nicht der Fall. Es gibt hin und wieder einen Derwyn in der Familie, aber insgesamt ist Religion bei ihnen von untergeordneter Bedeutung. Sie konzentrieren sich mehr auf die Kriegsführung als auf spirituelle Praktiken. Ihre pragmatische und kampforientierte Lebensweise lässt wenig Raum für religiöse Reflexion, was sie von anderen Häusern unterscheidet, die tief in religiösen Traditionen verwurzelt sind.",
+          "Kulturell bleiben die Gwaedlyd ihrer Herkunft aus Vennyr treu, auch wenn sie jetzt in Cennyr ansässig sind. Ihre raue und direkte Art führt manchmal zu Spannungen mit den anderen Häusern, die die Gwaedlyd als kalt und unnahbar wahrnehmen. Die Gwaedlyd haben Schwierigkeiten, sich an ihre neue Rolle und Heimat in Cennyr zu gewöhnen, was in der Region kein Geheimnis ist. Trotz dieser kulturellen Unterschiede und Anpassungsschwierigkeiten begegnen andere Häuser ihnen jedoch mit Verständnis, da sie die Härten erkennen, die die Gwaedlyd in ihrer Vergangenheit durchlebt haben."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Das Haus hat keine klare Präferenz für Allianzen, wobei man Häuser aus Cennyr und Vennyr bevorzugt, logischerweise."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Gwaedlyd zeichnet sich durch eine pragmatische und von den Härten des Lebens geprägte Moral aus. Ihre Werte wurden über Generationen hinweg durch ihre Erfahrungen an der Frontlinie gegen Marodeure, Räuber und Nordmänner geformt. Für die Gwaedlyd zählt vor allem Überlebenswille, Entschlossenheit und die Fähigkeit, sich in den dunkelsten Momenten des Lebens zu behaupten. Diese Härte hat sie zu einem zähen und widerstandsfähigen Haus gemacht, das wenig Zeit für idealistische Vorstellungen oder Sentimentalitäten hat.",
+          "Gerechtigkeit wird bei den Gwaedlyd nicht durch religiöse Prinzipien, sondern durch die Realität des Krieges bestimmt. Ehre und Moral sind für sie eher an praktische Taten als an hehre Ideale gebunden. Ihre Taten sind oft brutal und direkt, was sie manchmal skrupellos erscheinen lässt, doch hinter dieser Härte steckt ein tiefer Wunsch nach Schutz und Sicherheit für ihre eigenen Leute. Sie sind bereit, alles zu tun, um das Überleben ihrer Familie und ihrer Untertanen zu sichern.",
+          "Die Gwaedlyd schätzen Loyalität, vor allem gegenüber ihren Verbündeten und ihrer Blutlinie. Verrat und Untreue sind unverzeihliche Sünden in ihren Augen. Diese Loyalität ist jedoch pragmatisch und nicht romantisch verklärt; sie basiert auf der Notwendigkeit, zusammenzustehen, um zu überleben. Ihre Werte basieren auf Tatkraft, Effizienz und der ständigen Bereitschaft, zu kämpfen, wenn es nötig ist.",
+          "Insgesamt spiegeln die Werte des Hauses Gwaedlyd die Realität ihrer kriegerischen Vergangenheit wider: Sie sind hart, unnachgiebig und bereit, Opfer zu bringen, um ihre Familie zu schützen. Ihre Moral ist weniger von Tugenden wie Güte oder Vergebung geprägt, sondern vielmehr von einem tiefen Sinn für Überlebensnotwendigkeit, Pflichterfüllung und unerschütterlicher Loyalität."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/tlQE5b0.png",
+        "linkedUrl": null,
+        "alt": "tlQE5b0.png",
+        "style": "height:203px; width:200px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/wB51hlr.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2087",
+        "alt": "wB51hlr.png",
+        "style": "height:123px; width:128px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/03Z4A08.png",
+        "linkedUrl": null,
+        "alt": "oqInRGG.png",
+        "style": "float:right; height:300px; width:200px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2087",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  },
+  {
+    "id": "haus-coedwig",
+    "slug": "coedwig",
+    "attachmentId": "55934959-b162-4711-bf3d-e4e0a2727bee",
+    "attachmentFile": "C:\\Users\\fhg_r\\.codex\\attachments\\55934959-b162-4711-bf3d-e4e0a2727bee\\Eingefügter Text.txt",
+    "sourceSha256": "5b19eb29231d3d977fec62b898907821801bae2bae3e09862a18c01b728b074d",
+    "sourceTitle": "Das Haus Coedwig O'Llanfyn",
+    "canonical": {
+      "id": "haus-coedwig",
+      "title": "Haus Coedwig O'Llanfyn",
+      "folderPath": [
+        "Cenyr",
+        "Graue Weite",
+        "Achatsee",
+        "Llanfyn"
+      ],
+      "profile": {
+        "rankId": "barony",
+        "seat": "Llanfyn",
+        "barony": "Achatsee",
+        "county": "Graue Weite",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pysgod",
+        "liegeHouseName": "Haus Pysgod O'Tredegar",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Graue Weite/Achatsee.png",
+          "county": "assets/images/regions/graue-weite.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 61
+    },
+    "policy": "Current canonical rank, seat, branch ID and structure outrank copied tables. Source genealogy, hierarchy, court and cadet-house sections are excluded. Military statistics are excluded. Qualitative equipment passages require editorial review.",
+    "excludedSections": [
+      "Hof",
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "ignoredImagesInExcludedSections": 99,
+    "narrativeSections": [
+      {
+        "title": "Hauskopf",
+        "paragraphs": [
+          "„ Mae dail yn symbol o'n dyfodol. Ni yw'r goeden sy'n eu cynnal. “",
+          "„Blätter symbolisieren unsere Zukunft. Wir sind der Baum, der sie trägt. “",
+          "Motto des Hauses",
+          "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen",
+          "4) Rittertum",
+          "5) Besitztum",
+          "6) Kultur / Religion",
+          "7) Konflikte & Allianzen",
+          "8) Werte",
+          "9) Hof",
+          "10) Hierarchie",
+          "11) Stammbaum",
+          "12) Trivia"
+        ]
+      },
+      {
+        "title": "Übersicht",
+        "paragraphs": [
+          "Die Coedwig sind eine traditionsreiche Familie aus Tredegar, die einst nach Llanfyn zogen, um dort den Ort aufzubauen und die Region zu stärken. Heute sind sie die Barone der Baronie Achatsee, benannt nach dem großen See, der einst die Heimat des sagenumwobenen Achatordens war. Die Coedwig haben sich nicht nur als Bewahrer der Ländereien einen Namen gemacht, sondern auch als Hüter der Geschichte und Traditionen, die tief in den Nebeln der Grauen Weite verwurzelt sind."
+        ]
+      },
+      {
+        "title": "Geschichte",
+        "paragraphs": [
+          "Die Coedwig sind ursprünglich eine Familie aus Tredegar, welche die südliche Burg, die früher vor den Stadtmauern lag, bewohnte. Ihre Aufgabe war es die umliegenden Bauern zu schützen. Später sollten sie die Herrschaft Llan Ildut erhalten.",
+          "Die Coedwig gelten als sehr bodenständige und friedliche Menschen, deren Hauptbestreben es ist für Frieden in Ihrer Region zu sorgen. Bekannt sind sie für ihr oftmals unbändiges Haar und ihre große Loyalität. Als Schützer im Landinneren sind viele von Ihnen Uchelwyr. Allerdings haben sie auch gute Teulu.",
+          "In der Nähe von Llan Ildut und noch innerhalb ihrer ritterlichen Herrschaft wohnt ein alter Eremit, der mit zum Hofstaat zählt, auch wenn dieser es nicht will. Er wird von den Coedwig oft \"Großväterchen\" genannt. Außer Jac lässt er allerdings niemanden in seine Nähe. Seinen wirklichen Namen kennen wohl nur die Druiden.",
+          "Die Coedwig haben früher gute Beziehungen zu den Mac Duff aus Fortriu unterhalten. Aus diesem Grund ist eine der letzten überlebenden Mac Duff die Hofmagierin von Coedwig. Sie kam freiwillig zu ihnen."
+        ]
+      },
+      {
+        "title": "Traditionen",
+        "paragraphs": [
+          "Die Coedwig sind ein altes Rittergeschlecht aus Tredegar, das seit jeher für den Schutz und die Verwaltung der umliegenden Ortschaften verantwortlich war. In ihrer neuen Rolle als Barone von Llanfyn haben sie ihre landwirtschaftlichen Traditionen noch weiter vertieft. Die Bewirtschaftung von Gehöften und Viehzucht waren schon immer ein zentraler Bestandteil ihres Lebens, und auch heute noch sehen die Coedwig es als ihre Pflicht, die ländlichen Gebiete ihrer Baronie zu fördern und zu pflegen.",
+          "Eine ihrer bedeutendsten Traditionen ist die Pferdehaltung, die in Llanfyn eine wichtige Rolle spielt. Obwohl die Coedwig nicht die herausragenden Pferdezüchter wie die Gefrydd aus dem Süden sind, gilt ihre Pferdezucht als die größte innerhalb der Grafschaft Tredegar. Die Pferde der Coedwig sind geschätzt und weit verbreitet, sowohl für den landwirtschaftlichen Einsatz als auch für die Schlacht.",
+          "Neben der Vieh- und Pferdewirtschaft haben sich die Coedwig auch der Holzverarbeitung verschrieben. Sie sind einer der größten Akteure in der Holzfällerei und Holzverarbeitung der Region, was besonders für den Schiffbau Tredegars von Bedeutung ist. Die Coedwig liefern die Planken, Masten und Bretter, die für den Bau der Schiffe dringend benötigt werden. Llanfyn spielt daher eine zentrale Rolle in der maritimen Infrastruktur der Grafschaft.",
+          "Jedoch führt die intensive Holzfällerei gelegentlich zu Spannungen mit dem lokalen Eremiten, der das Abholzen des Waldes kritisch sieht. Dieser Konflikt spiegelt die Balance wider, die die Coedwig zwischen Tradition, wirtschaftlicher Notwendigkeit und dem Schutz der Natur zu wahren versuchen."
+        ]
+      },
+      {
+        "title": "Rittertum",
+        "paragraphs": [
+          "Das Rittertum von Cenyr, weltbekannt und in Avalon geboren, findet seine vollendete Form im Rittertum der Pendragons. Ein cenyrischer Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr.",
+          "Die Ritter des Hauses Coedwig sind für ihre schlichte, aber robuste Ausrüstung bekannt, die sie zu zuverlässigen Kriegern auf dem Schlachtfeld macht. Sie tragen meist Plattenpanzer, die zwar ohne großen Prunk oder Verzierungen auskommen, aber funktional und effektiv im Schutz sind. Diese schlichte Rüstung spiegelt die bodenständige Natur der Coedwig wider, die weniger Wert auf Ästhetik als auf Funktionalität und Effektivität legen.",
+          "Die Coedwig-Ritter sind häufig als Uchelwyr-Kavalleristen im Einsatz. Hoch zu Ross kämpfen sie mit Geschick und Stärke, wobei ihre Pferde eine zentrale Rolle in der Kriegsführung spielen. Die Familie hat eine lange Tradition in der Pferdezucht, was dazu führt, dass ihre Uchelwyr als einige der besten Kavalleristen der Grafschaft gelten. Ihre Pferde sind kräftig und gut ausgebildet, was den Rittern eine besondere Mobilität und Stärke im Kampf verleiht.",
+          "Neben den Uchelwyr gibt es in der Familie Coedwig auch viele Teulu, die als Schwertträger auf dem Schlachtfeld agieren. Diese Ritter sind hervorragend ausgebildete Kämpfer, die in direkter Konfrontation mit dem Feind brillieren. Sie kämpfen an vorderster Front und stehen ihren Kavalleristen-Brüdern in nichts nach, wenn es darum geht, das Land und die Herrschaft zu verteidigen.",
+          "Die Ritter des Hauses Coedwig verkörpern die Werte ihres Hauses: Einfachheit, Pragmatismus und die Hingabe an die Pflicht. Sie sind keine Krieger, die nach Ruhm oder Glanz streben, sondern solche, die sich auf den Schutz ihrer Ländereien und ihrer Leute konzentrieren."
+        ]
+      },
+      {
+        "title": "Besitztum",
+        "paragraphs": [
+          "Das Haus Coedwig ist nicht als übermäßig wohlhabend bekannt, doch ihre Stärke liegt in der Verwaltung ihrer Ländereien und ihrer Rolle als zentrale Akteure in der Region Llanfyn. Ihr Wohlstand beruht vor allem auf der erfolgreichen Bewirtschaftung von Gehöften, Viehhaltung und der Pferdezucht, die sie seit Generationen betreiben. Diese landwirtschaftliche Basis sorgt für einen beständigen, wenn auch bescheidenen Wohlstand, der ihnen Stabilität verleiht.",
+          "Die Coedwig sind besonders stolz auf ihre Pferdehaltung, die zwar nicht die Elite der Grafschaft stellt, aber dennoch die größte in der Region ist. Der Handel mit ihren Pferden bringt ihnen einen respektablen Teil ihres Einkommens ein und stärkt ihre Stellung in der Region. Darüber hinaus sind ihre Viehbestände eine wichtige Ressource, sowohl für den Eigenbedarf als auch für den Handel innerhalb der Grafschaft.",
+          "Ein weiterer wichtiger Besitz des Hauses ist ihr Einfluss auf die Holzverarbeitung in Llanfyn. Sie kontrollieren weite Waldgebiete und sind führend in der Produktion von Holz für den Schiffbau in Tredegar. Planken, Masten und Bretter, die aus ihren Wäldern stammen, sind entscheidend für die maritime Infrastruktur der Region. Dieser Handel mit Holzprodukten trägt erheblich zu ihrem Wohlstand bei, auch wenn er manchmal Konflikte mit Naturschützern, wie dem lokalen Eremiten, auslöst.",
+          "Zusammengefasst sorgt die Verbindung aus Landwirtschaft, Pferdezucht und Holzverarbeitung für einen stabilen, wenn auch nicht übermäßig großen Wohlstand. Die Coedwig sind ein bodenständiges Haus, das in erster Linie auf Nachhaltigkeit und den Erhalt ihrer Ländereien und Traditionen achtet, anstatt auf großen Reichtum zu setzen."
+        ]
+      },
+      {
+        "title": "Kultur/ Religion",
+        "paragraphs": [
+          "Das Haus Coedwig ist tief in der Naturverbundenheit verwurzelt und lebt im Einklang mit der Göttin der Natur, Sylvanaeth. Ihr Fokus auf die Natur und das Gleichgewicht spiegelt sich in ihrem Alltag und ihrer Lebensweise wider. Die Coedwig versuchen, ihre Ländereien nachhaltig zu bewirtschaften und stets im Einklang mit den Werten der Naturgöttin zu handeln. Diese Hingabe zu Sylvanaeth prägt nicht nur ihre spirituelle Ausrichtung, sondern auch ihre Entscheidung, das Land respektvoll zu behandeln und nur das zu nehmen, was notwendig ist.",
+          "Ein besonderer Einfluss auf ihre religiösen Überzeugungen rührt von ihrer Verbindung zum Eremiten, der in der Region Llanfyn lebt. Obwohl nur wenige Mitglieder des Hauses direkten Kontakt zu diesem mysteriösen Einsiedler haben, gilt es als ungeschriebenes Gesetz, den Eremiten nicht zu stören oder gar zu erzürnen. Sein Einfluss, wenn auch subtil, erinnert die Coedwig ständig daran, das natürliche Gleichgewicht zu wahren und im Einklang mit den spirituellen Kräften der Natur zu leben.",
+          "Kulturell betrachtet werden die Coedwig als treue, hingebungsvolle und bodenständige Menschen angesehen. Sie sind für ihre Schlichtheit und Demut bekannt und leben ihre Religion eher in Taten als in aufwändigen Ritualen aus. Ihr tiefes Gespür für das Gleichgewicht der Natur und die Achtung vor den natürlichen Zyklen verleihen ihnen eine innere Ruhe und Gelassenheit, die sie von vielen anderen Häusern unterscheidet. Fromm, aber nicht fanatisch, sehen die Coedwig ihren Glauben als eine Möglichkeit, sich im täglichen Leben mit der Natur zu verbinden und diese Verbindung als eine Form der Hingabe an Sylvanaeth zu betrachten."
+        ]
+      },
+      {
+        "title": "Konflikte & Allianzen",
+        "paragraphs": [
+          "Die Coedwig bevorzugen gern Allianzen mit Häusern des \"Nordens\", dies zeigt sich in vielen ihrer Ehen."
+        ]
+      },
+      {
+        "title": "Werte",
+        "paragraphs": [
+          "Das Haus Coedwig zeichnet sich durch eine starke moralische Grundlage aus, die auf Naturverbundenheit, Loyalität und Bescheidenheit basiert. Ihre Werte sind tief in ihrer Beziehung zur Natur und ihrer Göttin Sylvanaeth verwurzelt, was sie zu einem sehr umsichtigen und respektvollen Haus macht. Für die Coedwig steht das Gleichgewicht im Zentrum ihres moralischen Kompasses – sei es das Gleichgewicht zwischen Mensch und Natur oder zwischen Verantwortung und Macht.",
+          "Naturverbundenheit ist eine der wichtigsten Tugenden der Coedwig. Sie sehen es als ihre Pflicht, ihre Ländereien im Einklang mit der Natur zu bewirtschaften und ihre Entscheidungen auf Nachhaltigkeit und den Erhalt der natürlichen Ressourcen zu stützen. Diese Einstellung spiegelt sich nicht nur in ihrem religiösen Glauben, sondern auch in ihrer Art zu regieren wider. Sie achten darauf, dass ihre Handlungen keinen unnötigen Schaden anrichten, weder für die Umwelt noch für die Gemeinschaft, der sie dienen.",
+          "Loyalität gegenüber der Familie, der Gemeinschaft und ihren Bündnissen ist ein weiterer zentraler Wert der Coedwig. Sie sind zuverlässig und stehen zu ihrem Wort, was ihnen den Ruf eines vertrauenswürdigen und treuen Hauses eingebracht hat. Ihre Loyalität zeigt sich sowohl in ihrer Bereitschaft, ihre Ländereien und Leute zu verteidigen, als auch in ihrer treuen Hingabe zu den Werten ihrer Vorfahren und ihrer Verbindung zu Sylvanaeth.",
+          "Bescheidenheit und Demut sind ebenfalls tief in der Moral der Coedwig verwurzelt. Sie streben nicht nach Ruhm oder Reichtum, sondern sehen ihre Rolle als Diener des Landes und der Gemeinschaft. Ihr bodenständiger Charakter spiegelt sich in ihrer Einfachheit und ihrer Zurückhaltung wider. Sie glauben daran, dass wahre Stärke in der Bescheidenheit und in der Fähigkeit liegt, im Einklang mit der Natur und den Menschen zu leben, ohne über sie zu herrschen.",
+          "Insgesamt sind die Coedwig ein Haus, das sich durch ihre Hingabe an die Natur, ihre Loyalität und ihre schlichte, aber starke Moral auszeichnet. Sie sind tief mit ihren Ländereien und den natürlichen Zyklen verbunden und sehen es als ihre Aufgabe, diese Verbindung aufrechtzuerhalten und die Balance in allem zu wahren."
+        ]
+      },
+      {
+        "title": "Historische Figuren des Clans",
+        "paragraphs": [
+          "Beschreibung ..."
+        ]
+      },
+      {
+        "title": "Trivia",
+        "paragraphs": []
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "section": "Hauskopf",
+        "url": "https://i.imgur.com/eLBQ83e.png",
+        "linkedUrl": null,
+        "alt": "eLBQ83e.png",
+        "style": "height:198px; width:200px",
+        "placeholder": false
+      },
+      {
+        "index": 1,
+        "section": "Geschichte",
+        "url": "https://i.imgur.com/weK1F3d.png",
+        "linkedUrl": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2090",
+        "alt": "weK1F3d.png",
+        "style": "height:186px; width:175px",
+        "placeholder": false
+      },
+      {
+        "index": 2,
+        "section": "Rittertum",
+        "url": "https://i.imgur.com/MDCSKhY.png",
+        "linkedUrl": null,
+        "alt": "cQaEa7D.png",
+        "style": "float:right; height:330px; width:220px",
+        "placeholder": false
+      },
+      {
+        "index": 3,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 4,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 5,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 6,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 7,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      },
+      {
+        "index": 8,
+        "section": "Historische Figuren des Clans",
+        "url": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+        "linkedUrl": null,
+        "alt": "Portrait",
+        "style": "border-style:solid; border-width:1px; height:120px; vertical-align:top; width:120px",
+        "placeholder": true
+      }
+    ],
+    "links": [
+      {
+        "section": "Geschichte",
+        "url": "www.animexx.de/zirkel/ichbinreiter/tafel/animexx.de/zirkel/ichbinreiter/tafel/?seite=2090",
+        "text": "",
+        "containsImage": true
+      }
+    ]
+  }
+]

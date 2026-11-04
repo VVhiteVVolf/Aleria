@@ -1,0 +1,1092 @@
+{
+  "schema": "aleria.leitheach-house-territory-map",
+  "publicOnly": true,
+  "sourceFiles": [
+    "Kontinente/modules/leitheach/pages.source.json",
+    "Karten/Leitheach/territories.import.json"
+  ],
+  "count": 29,
+  "rows": [
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "title": "Clan Mac Ard Cumhaill",
+      "territoryId": "fuerstentum-leitheach",
+      "territoryName": "Fürstentum Leitheach",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+      "territoryType": "Fürstentum",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ua-eirce",
+      "title": "Clan Ua’Eirce",
+      "territoryId": "leitheach-herrschaft-eirce",
+      "territoryName": "Tir na nIúr",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sleagh",
+          "slug": "leitheach-tir-na-sleagh"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na nIúr",
+          "slug": "leitheach-herrschaft-eirce"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-fiachrach",
+      "title": "Clan Uí Fiachrach",
+      "territoryId": "leitheach-herrschaft-fiachrach",
+      "territoryName": "Tir na Seamróige",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sleagh",
+          "slug": "leitheach-tir-na-sleagh"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Seamróige",
+          "slug": "leitheach-herrschaft-fiachrach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "title": "Ruin Ua Laoch",
+      "territoryId": "leitheach-herrschaft-laoch",
+      "territoryName": "Tir na gCoiréal",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sleagh",
+          "slug": "leitheach-tir-na-sleagh"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na gCoiréal",
+          "slug": "leitheach-herrschaft-laoch"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ua-gaelach",
+      "title": "Clan Ua’Gaelach",
+      "territoryId": "leitheach-tir-na-sinsear",
+      "territoryName": "Tir na Sinsear",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-gallchobhair",
+      "title": "Fir An’Gallchobhair",
+      "territoryId": "leitheach-tir-na-coimhthioch",
+      "territoryName": "Tir na Coimhthioch",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
+      "territoryType": "Lehensherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Coimhthioch",
+          "slug": "leitheach-tir-na-coimhthioch"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-cleir",
+      "title": "Clan Ua’Cleir",
+      "territoryId": "leitheach-herrschaft-cleir",
+      "territoryName": "Tir na bhFiach",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Coimhthioch",
+          "slug": "leitheach-tir-na-coimhthioch"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na bhFiach",
+          "slug": "leitheach-herrschaft-cleir"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "title": "Clan Ua’Ghaiscíoch",
+      "territoryId": "leitheach-herrschaft-ghaiscioch",
+      "territoryName": "Tir na nArmúr",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/Herrschaft der Ua’Ghaiscíoch.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Coimhthioch",
+          "slug": "leitheach-tir-na-coimhthioch"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na nArmúr",
+          "slug": "leitheach-herrschaft-ghaiscioch"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "title": "Clan Dál’Ceardaíocht",
+      "territoryId": "leitheach-herrschaft-ceardaiocht",
+      "territoryName": "Tir na hInneonach",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Coimhthioch",
+          "slug": "leitheach-tir-na-coimhthioch"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na hInneonach",
+          "slug": "leitheach-herrschaft-ceardaiocht"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-na-mhuir",
+      "title": "Clan Na’Mhuir",
+      "territoryId": "leitheach-tir-na-fancha",
+      "territoryName": "Tir na Fancha",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Fancha",
+          "slug": "leitheach-tir-na-fancha"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-gruenhand",
+      "title": "Sept Grünhand aus Leith",
+      "territoryId": "leitheach-tir-na-fancha",
+      "territoryName": "Tir na Fancha",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sinsear",
+          "slug": "leitheach-tir-na-sinsear"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Fancha",
+          "slug": "leitheach-tir-na-fancha"
+        }
+      ],
+      "selectionBasis": "Sept im bestehenden Tir-na-Fancha-Gebiet des Lehnshauses",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-dal-cruthin",
+      "title": "Clan Dál’Cruthin",
+      "territoryId": "leitheach-tir-na-gortanna",
+      "territoryName": "Tir na Gortanna",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-suileach",
+      "title": "Mac Suileach",
+      "territoryId": "leitheach-tir-na-gortanna",
+      "territoryName": "Tir na Gortanna",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        }
+      ],
+      "selectionBasis": "Historisches Haus ohne eigene heutige Territorialseite; zugehoerige Oberherrschaft",
+      "historical": true,
+      "notes": []
+    },
+    {
+      "id": "haus-frisealach",
+      "title": "Ard Frisealach",
+      "territoryId": "leitheach-herrschaft-frisealach",
+      "territoryName": "Tir na Lúibe",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
+      "territoryType": "Lehensherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Lúibe",
+          "slug": "leitheach-herrschaft-frisealach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ard-trodach",
+      "title": "Ard Trodach",
+      "territoryId": "leitheach-herrschaft-ard-trodach",
+      "territoryName": "Tir na gComhrac",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na gComhrac",
+          "slug": "leitheach-herrschaft-ard-trodach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-nic-caoimhe",
+      "title": "Nic Caoimhe",
+      "territoryId": "leitheach-herrschaft-nic-caoimhe",
+      "territoryName": "Tir na Lasrach",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Lasrach",
+          "slug": "leitheach-herrschaft-nic-caoimhe"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-iomrach",
+      "title": "An’Iomrach",
+      "territoryId": "leitheach-herrschaft-somhairle",
+      "territoryName": "Tir na Soilse",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Soilse",
+          "slug": "leitheach-herrschaft-somhairle"
+        }
+      ],
+      "selectionBasis": "Geografischer Ruecklink nach Tir na Soilse, dessen heutige Verwaltung bei Somhairle liegt",
+      "historical": true,
+      "notes": [
+        "Kein heutiger Herrschaftsanspruch der Iomrach: historischer Untergang1733, Somhairle ist heutiger Verwalter des Gebiets."
+      ]
+    },
+    {
+      "id": "haus-somhairle",
+      "title": "Sidhe Somhairle",
+      "territoryId": "leitheach-herrschaft-somhairle",
+      "territoryName": "Tir na Soilse",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gortanna",
+          "slug": "leitheach-tir-na-gortanna"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Soilse",
+          "slug": "leitheach-herrschaft-somhairle"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-fir-an-tarvo",
+      "title": "Clan Fir An’Tarvo",
+      "territoryId": "leitheach-tir-na-tonn",
+      "territoryName": "Tir na Tonn",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Tonn",
+          "slug": "leitheach-tir-na-tonn"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-ruitheach",
+      "title": "Dál’Ruitheach",
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "territoryName": "Tir na nDambaí",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Tonn",
+          "slug": "leitheach-tir-na-tonn"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na nDambaí",
+          "slug": "leitheach-herrschaft-ruitheach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-gortach",
+      "title": "Ru’Gortach",
+      "territoryId": "leitheach-herrschaft-gortach",
+      "territoryName": "Tir na Breithe",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Tonn",
+          "slug": "leitheach-tir-na-tonn"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Breithe",
+          "slug": "leitheach-herrschaft-gortach"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-mac-airt",
+      "title": "Clan Mac Airt",
+      "territoryId": "leitheach-tir-na-comhchuibhis",
+      "territoryName": "Tir an Comhchuibhis",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-choinnich",
+      "title": "Ua’Choinnich",
+      "territoryId": "leitheach-herrschaft-choinnich",
+      "territoryName": "Tir na gCrúb",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na gCrúb",
+          "slug": "leitheach-herrschaft-choinnich"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-nic-blar-leitheach",
+      "title": "Nic’Blar · Leitheach",
+      "territoryId": "leitheach-herrschaft-nic-blar",
+      "territoryName": "Tir na Rún",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Rún",
+          "slug": "leitheach-herrschaft-nic-blar"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-laidir",
+      "title": "Ruin’Laidir",
+      "territoryId": "leitheach-herrschaft-laidir",
+      "territoryName": "Tir na Dídine",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
+      "territoryType": "Lehensherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na Dídine",
+          "slug": "leitheach-herrschaft-laidir"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "title": "Dal T’Saor",
+      "territoryId": "leitheach-herrschaft-dal-t-saor",
+      "territoryName": "Herrschaft der Dál T’Saor",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/Herrschaft der Dál T’Saor.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dál T’Saor",
+          "slug": "leitheach-herrschaft-dal-t-saor"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": true,
+      "notes": [
+        "Die eigene vorhandene Ortsseite enthaelt noch die alte Herrschender-Clan-Beschriftung. Kanonischer historischerStatus/extinctionEvent1735 hat fuer die Hausseite Vorrang."
+      ]
+    },
+    {
+      "id": "haus-tir-an-cuinn",
+      "title": "Clan Tir An’Cuinn",
+      "territoryId": "leitheach-tir-na-sruth",
+      "territoryName": "Tir na Sruth",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+      "territoryType": "Oberherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sruth",
+          "slug": "leitheach-tir-na-sruth"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-airgid",
+      "title": "Tir An’Airgid",
+      "territoryId": "leitheach-herrschaft-airgid",
+      "territoryName": "Tir na gCorr",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
+      "territoryType": "Lehensherrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sruth",
+          "slug": "leitheach-tir-na-sruth"
+        },
+        {
+          "type": "Lehensherrschaft",
+          "name": "Tir na gCorr",
+          "slug": "leitheach-herrschaft-airgid"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    },
+    {
+      "id": "haus-amrhan",
+      "title": "Ua’Amhran",
+      "territoryId": "leitheach-herrschaft-amhran",
+      "territoryName": "Tir na hÉisteachta",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
+      "territoryType": "Herrschaft",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Sruth",
+          "slug": "leitheach-tir-na-sruth"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na hÉisteachta",
+          "slug": "leitheach-herrschaft-amhran"
+        }
+      ],
+      "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+      "historical": false,
+      "notes": []
+    }
+  ]
+}

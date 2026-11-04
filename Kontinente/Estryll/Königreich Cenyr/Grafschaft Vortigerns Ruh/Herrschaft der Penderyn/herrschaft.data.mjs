@@ -142,13 +142,17 @@ export default createTerritory({
           "name": "Swynol",
           "seat": "Bragwhislyn",
           "liege": "Haus Penderyn",
-          "rank": "Bürgerliches Haus"
+          "rank": "Bürgerliches Haus",
+          "familyId": "haus-swynol",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-swynol"
         },
         {
           "name": "Creithiog",
           "seat": "Bragwhislyn",
           "liege": "Haus Penderyn",
-          "rank": "Bürgerliches Haus"
+          "rank": "Bürgerliches Haus",
+          "familyId": "haus-creithiog",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-creithiog"
         }
       ]
     }

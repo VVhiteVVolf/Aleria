@@ -1,0 +1,32 @@
+{
+  "basis": "Architecture agent measured 392x844 mobile browser viewport; Alvanista house group clipped 2.156px at top, Ort15 label clipped 22.828px at left.",
+  "changes": [
+    {
+      "id": "alvanista",
+      "field": "pin",
+      "from": [
+        26.8982,
+        3.7995
+      ],
+      "to": [
+        32.5,
+        10
+      ],
+      "reason": "Display group moved below and right of source marker; actual point preserved."
+    },
+    {
+      "id": "ort-15",
+      "field": "label",
+      "from": [
+        5.1819,
+        56.6722
+      ],
+      "to": [
+        12,
+        56.6722
+      ],
+      "reason": "Label fits narrow map width; actual point and pin preserved."
+    }
+  ],
+  "sourcePointsUnchanged": true
+}

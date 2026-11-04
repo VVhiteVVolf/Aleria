@@ -12,7 +12,7 @@ import {
   createParentages,
   createWardAwayBranch
 } from './family-record-builders.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
@@ -322,8 +322,8 @@ export const HOUSE_VAEREN_FAMILY = withFaelaornSourceCounterUpgrade(Object.freez
 
     person('thorgest-vaeren', 'Thorgest Vaeren', 'male', '1543', '1585', { title: 'König von Aldrimar' }),
     spouse('eamhair-urquhart', 'Eamhair Urquhart', 'female', '1545', '1627'),
-    awayWoman('annegrit-vaeren', 'Annegrit Vaeren', '1548', '1572', 'Haus Pendrag'),
-    spouse('rhodri-pendrag', 'Rhodri Pendrag', 'male', '1547', '1613', 'house-pendrag'),
+    awayWoman('annegrit-vaeren', 'Annegrit Vaeren', '1533', '1572', 'Haus Pendrag'),
+    spouse('rhodri-pendrag', 'Rhodri Pendrag', 'male', '1530', '1599', 'house-pendrag'),
 
     person('siegthrygre-vaeren', 'Siegthrygre Vaeren', 'male', '1561', '1616', { title: 'König von Aldrimar' }),
     spouse('gunnora-wellensaenger', 'Gunnora Wellensänger', 'female', '1562', '1605', 'house-wellensaenger'),

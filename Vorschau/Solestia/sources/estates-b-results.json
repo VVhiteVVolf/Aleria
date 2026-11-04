@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "records": [
+    {
+      "id": "estate-hidalgo",
+      "name": "Hidalgo",
+      "category": "estates",
+      "assetStem": "hidalgo",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-4fa396e8-9487-4968-9f88-0d1bf2d7fe42.png",
+      "copiedOriginal": "assets/estates/generated/hidalgo.png",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-hidalgo",
+      "sha256": "4de6c42195466d016009e98930b75d430bd2de6132773de6e807202e9b149589",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "byteIdentical": true,
+      "visualReview": "Junger Hidalgo mit großem Federhut, spanischem gepufftem Wams und Mantel. Hält einen unbeschrifteten versiegelten Landbrief, gerades Schwert an Hüfte. Runde Ohren, zwei Hände, beide Stiefel vollständig, klare flache Comicformen."
+    },
+    {
+      "id": "estate-senor",
+      "name": "Señor",
+      "category": "estates",
+      "assetStem": "senor",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-10b802dc-f696-43e3-b4df-6839bf9c5e13.png",
+      "copiedOriginal": "assets/estates/generated/senor.png",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-senor",
+      "sha256": "158504ed508ba44bff22a966388636165e74fc27899dde21fc2143d334bdab0f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "byteIdentical": true,
+      "visualReview": "Junge Ritterherrin mit spanischem Teilharnisch, Burgmodell auf der Hand und vollständigem gerade aufwärts gehaltenem Zeremonienschwert. Runde Ohren, zwei Arme und Hände, beide Stiefel vollständig, humorvolle flache Comiczeichnung."
+    },
+    {
+      "id": "estate-caballero",
+      "name": "Caballero",
+      "category": "estates",
+      "assetStem": "caballero",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-6cab1b61-6f0d-49cd-a736-6ae36c887f1f.png",
+      "copiedOriginal": "assets/estates/generated/caballero.png",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-caballero",
+      "sha256": "14ece069aab46a67098284a1336857af8a2f3214a40d6d7284c8223444eedffb",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "byteIdentical": true,
+      "visualReview": "Junger Caballero mit offenem spanischem Morion und rundem Federbusch. Vollständiger Plattenharnisch, zwei Hände übereinander auf dem Knauf eines vollständigen aufgestellten geraden Großschwerts. Beide Füße sichtbar, flache kräftig konturierte Comiczeichnung."
+    }
+  ]
+}

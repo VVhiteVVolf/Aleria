@@ -11,6 +11,9 @@ import {
   COMBAT_WEAPON_TYPE_OPTIONS,
   getArmorClass,
   getAttributeModifier,
+  getEffectiveCombatAttribute,
+  getEffectiveSkillProficiency,
+  resolveCharacterCombatProfile,
   getMaximumHitPoints,
   getPassivePerception,
   getProficiencyBonus,
@@ -21,6 +24,9 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
+import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
+import { getSpellManaCost } from '../combat/combat-resource-progression.js';
+import { renderCreatureRuleSummary } from './creature-rule-presentation.js';
 import { renderCreatureDossier } from './creature-dossier.js?v=20261013-draig-breeds-v2';
 import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261013-draig-breeds-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
@@ -354,7 +360,7 @@ function renderRadar(profile) {
   const radius = 52;
   const axes = COMBAT_ATTRIBUTE_DEFINITIONS.map((definition, index) => {
     const angle = -Math.PI / 2 + index * Math.PI / 3;
-    const value = Math.max(1, Math.min(30, Number(getAttribute(profile, definition.key).score) || 10));
+    const value = Math.max(1, Math.min(30, Number(getEffectiveCombatAttribute(profile, definition.key).score) || 10));
     const scale = value / 30;
     return {
       ...definition,
@@ -392,6 +398,7 @@ function renderSheet() {
   const creature = sanitizeCreature(state.draft);
   state.draft = clone(creature);
   const profile = creature.combatProfile;
+  const resolved = resolveCharacterCombatProfile(creature);
   const maximumHp = getMaximumHitPoints(profile);
   const armorClass = getArmorClass(profile);
   const proficiency = getProficiencyBonus(profile);
@@ -430,7 +437,7 @@ function renderSheet() {
             <label><span>Temporäre LP</span><input type="number" min="0" max="9999" data-creature-profile-path="hitPoints.temporary" value="${profile.hitPoints.temporary || 0}"><b>${profile.hitPoints.temporary || 0}</b></label>
             <label><span>Trefferwürfel</span><select data-creature-profile-path="hitPoints.hitDie">${[4, 6, 8, 10, 12, 20].map(die => `<option value="${die}"${profile.hitPoints.hitDie === die ? ' selected' : ''}>W${die}</option>`).join('')}</select></label>
             <label><span>Rüstungsklasse</span><input type="number" min="0" max="999" data-combat-field="armor-class" value="${armorClass}"><b>◈ ${armorClass}</b></label>
-            <label><span>Bewegung (m)</span><input type="number" min="0" max="999" data-combat-field="movement" value="${profile.combat.movement}"><b>${profile.combat.movement} m</b></label>
+            <label><span>Bewegung · Grundwert (m)</span><input type="number" min="0" max="999" data-combat-field="movement" value="${profile.combat.movement}"><b>Wirksam ${resolved.movement} m</b></label>
             <label><span>Kompetenzbonus</span><input type="number" min="-20" max="30" data-combat-field="proficiency" value="${proficiency}"><b>+${proficiency}</b></label>
             <label><span>Passiv-Bonus</span><input type="number" min="-99" max="99" data-combat-field="passive-perception" value="${profile.combat.passivePerceptionBonus}"><b>${passivePerception}</b></label>
             <label><span>0-TP-Sonderregel</span><input type="checkbox" data-creature-profile-path="combat.canActAtZeroHitPoints"${profile.combat.canActAtZeroHitPoints ? ' checked' : ''}><b>${profile.combat.canActAtZeroHitPoints ? 'Handlungsfähig' : 'Handlungsunfähig'}</b></label>
@@ -442,8 +449,9 @@ function renderSheet() {
             ${renderRadar(profile)}
             <div class="creature-attribute-grid">${COMBAT_ATTRIBUTE_DEFINITIONS.map(definition => {
               const attribute = getAttribute(profile, definition.key);
-              const modifier = getAttributeModifier(attribute);
-              return `<label><span>${definition.label}</span><input type="number" min="1" max="40" data-attribute-key="${definition.key}" value="${attribute.score}"><b>${modifier >= 0 ? '+' : ''}${modifier}</b></label>`;
+              const effective = getEffectiveCombatAttribute(profile, definition.key);
+              const modifier = getAttributeModifier(effective);
+              return `<label><span>${definition.label} · Grundwert</span><input type="number" min="1" max="40" data-attribute-key="${definition.key}" value="${attribute.score}"><b>${modifier >= 0 ? '+' : ''}${modifier}</b>${describeCombatAttributeValue(attribute, effective) ? `<small>${escapeHtml(describeCombatAttributeValue(attribute, effective))}</small>` : ''}</label>`;
             }).join('')}</div>
           </div>
         </section>
@@ -505,7 +513,7 @@ function renderCreatureDetailSection(profile, collection, number, title, kind, a
   return `<section class="creature-sheet-section creature-detail-section">
     <div class="creature-section-head"><div class="creature-section-title"><span>${number}</span> ${title}</div><button type="button" data-creature-action="add-detail" data-collection="${collection}" data-entry-kind="${kind}"${defaultActivation ? ` data-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
     <div class="creature-detail-list">${items.map(item => { const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon); return `<article class="creature-detail-card ${item.active === false || !compatible ? 'inactive' : ''}" data-compatible="${compatible}">
-      <div><span>${escapeHtml([item.activationType || item.type, (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · '), compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar`].filter(Boolean).join(' · '))}</span><strong>${escapeHtml(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeHtml(item.description || item.effect || 'Noch keine Beschreibung.')}</p></div>
+      <div><span>${escapeHtml([item.activationType || item.type, (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · '), compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar`].filter(Boolean).join(' · '))}</span><strong>${escapeHtml(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeHtml(item.description || item.effect || 'Noch keine Beschreibung.')}</p>${renderCreatureRuleSummary(item)}</div>
       <div><button type="button" data-creature-action="edit-detail" data-collection="${collection}" data-entry-kind="${kind}" data-item-id="${escapeHtml(item.id)}">Bearbeiten</button><button type="button" class="creature-row-remove" data-creature-action="remove-detail" data-collection="${collection}" data-item-id="${escapeHtml(item.id)}">×</button></div>
     </article>`; }).join('') || `<div class="creature-table-empty">Noch keine ${title.toLowerCase()} eingetragen.</div>`}</div>
   </section>`;
@@ -547,7 +555,7 @@ function renderCreatureMagic(profile) {
   return `<section class="creature-sheet-section creature-magic-section">
     <div class="creature-section-head"><div class="creature-section-title"><span>M</span> Magie & Zauberformeln</div><div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="magic.enabled"${profile.magic.enabled ? ' checked' : ''}> Magie aktiv</label><button type="button" data-creature-action="add-spell">+ Zauber</button></div></div>
     ${spellSlots.length ? `<div class="creature-spell-slot-grid">${spellSlots.map(resource => `<label data-creature-resource-id="${escapeHtml(resource.id)}"><span>${escapeHtml(getSpellLevelLabel(getSpellSlotLevel(resource)))}</span><div><input type="number" min="0" max="9999" data-resource-field="current" value="${resource.current}" aria-label="${escapeHtml(resource.name)} aktuell"><i>/</i><input type="number" min="0" max="9999" data-resource-field="maximum" value="${resource.maximum}" aria-label="${escapeHtml(resource.name)} maximum"></div></label>`).join('')}</div>` : ''}
-    <div class="creature-spell-list">${profile.magic.spells.map((spell, index) => `<div data-spell-index="${index}"><input data-spell-field="name" value="${escapeHtml(spell.name)}" placeholder="Zauber"><select data-spell-field="level" aria-label="Zaubergrad">${renderCreatureSpellLevelOptions(spell.level)}</select><input data-spell-field="rollFormula" value="${escapeHtml(spell.rollFormula)}" placeholder="1d8"><input type="number" min="0" max="999" data-spell-field="manaCost" value="${spell.manaCost}" aria-label="Mana"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}><select data-spell-field="presentationKind"><option value="spell"${spell.presentationKind === 'spell' ? ' selected' : ''}>Zauberformel</option><option value="prayer"${spell.presentationKind === 'prayer' ? ' selected' : ''}>Gebet</option><option value="song"${spell.presentationKind === 'song' ? ' selected' : ''}>Gesang</option></select><select data-spell-field="resolutionType"><option value="spell-attack"${spell.resolutionType === 'spell-attack' ? ' selected' : ''}>Zauberangriff</option><option value="saving-throw"${spell.resolutionType === 'saving-throw' ? ' selected' : ''}>Zauber-SG</option><option value="automatic"${spell.resolutionType === 'automatic' ? ' selected' : ''}>Automatisch</option></select><button type="button" data-creature-action="edit-detail" data-collection="magic.spells" data-entry-kind="spell" data-item-id="${escapeHtml(spell.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-spell" data-index="${index}">×</button><textarea rows="2" data-spell-field="description" placeholder="Wirkung">${escapeHtml(spell.description)}</textarea></div>`).join('') || '<div class="creature-table-empty">Noch keine Zauberformel.</div>'}</div>
+    <div class="creature-spell-list">${profile.magic.spells.map((spell, index) => `<div data-spell-index="${index}"><input data-spell-field="name" value="${escapeHtml(spell.name)}" placeholder="Zauber"><select data-spell-field="level" aria-label="Zaubergrad">${renderCreatureSpellLevelOptions(spell.level)}</select><input data-spell-field="rollFormula" value="${escapeHtml(spell.rollFormula)}" placeholder="1d8"><input type="number" min="0" max="999" data-spell-field="manaCost" value="${getSpellManaCost(spell.level)}" aria-label="Mana" readonly title="Kosten nach Wirkungsgrad; Zaubertricks kosten ebenfalls Mana"><select data-spell-field="presentationKind"><option value="spell"${spell.presentationKind === 'spell' ? ' selected' : ''}>Zauberformel</option><option value="prayer"${spell.presentationKind === 'prayer' ? ' selected' : ''}>Gebet</option><option value="song"${spell.presentationKind === 'song' ? ' selected' : ''}>Gesang</option></select><select data-spell-field="resolutionType"><option value="spell-attack"${spell.resolutionType === 'spell-attack' ? ' selected' : ''}>Zauberangriff</option><option value="saving-throw"${spell.resolutionType === 'saving-throw' ? ' selected' : ''}>Zauber-SG</option><option value="automatic"${spell.resolutionType === 'automatic' ? ' selected' : ''}>Automatisch</option></select><button type="button" data-creature-action="edit-detail" data-collection="magic.spells" data-entry-kind="spell" data-item-id="${escapeHtml(spell.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-spell" data-index="${index}">×</button><textarea rows="2" data-spell-field="description" placeholder="Wirkung">${escapeHtml(spell.description)}</textarea></div>`).join('') || '<div class="creature-table-empty">Noch keine Zauberformel.</div>'}</div>
   </section>`;
 }
 
@@ -563,7 +571,7 @@ function renderSkillsAndSaves(profile) {
       <input data-skill-field="name" value="${escapeHtml(skill.name)}" placeholder="Wahrnehmung">
       <select data-skill-field="attributeKey">${ATTRIBUTE_OPTIONS.replace(`value="${skill.attributeKey}"`, `value="${skill.attributeKey}" selected`)}</select>
       <select data-skill-field="proficiency"><option value="none"${skill.proficiency === 'none' ? ' selected' : ''}>Ungeübt</option><option value="trained"${skill.proficiency === 'trained' ? ' selected' : ''}>Trainiert</option><option value="expertise"${skill.proficiency === 'expertise' ? ' selected' : ''}>Expertise</option></select>
-      <b>${getSkillTotal(profile, skill) >= 0 ? '+' : ''}${getSkillTotal(profile, skill)}</b>
+      <b>${getSkillTotal(profile, skill) >= 0 ? '+' : ''}${getSkillTotal(profile, skill)}${getEffectiveSkillProficiency(profile, skill) !== skill.proficiency ? `<small>Wirksam ${{ none: 'Ungeübt', trained: 'Geübt', expertise: 'Expertise' }[getEffectiveSkillProficiency(profile, skill)]}</small>` : ''}</b>
       <button type="button" class="creature-row-remove" data-creature-action="remove-skill" data-index="${index}">×</button>
     </div>`).join('')}</div>
   </section>`;
@@ -578,6 +586,7 @@ function renderConditions(profile) {
       <textarea rows="2" data-condition-field="description" placeholder="Auswirkung">${escapeHtml(condition.description)}</textarea>
       <label class="creature-active-toggle"><input type="checkbox" data-condition-field="active"${condition.active ? ' checked' : ''}> aktiv</label>
       <button type="button" class="creature-row-remove" data-creature-action="remove-condition" data-index="${index}">×</button>
+      <div class="creature-condition-mechanics">${renderCreatureRuleSummary(condition)}</div>
     </div>`).join('') || '<div class="creature-table-empty">Keine Zustände eingetragen.</div>'}</div>
   </section>`;
 }
@@ -678,7 +687,7 @@ function collectDraftFromForm() {
       name: row.querySelector('[data-spell-field="name"]')?.value || '',
       level,
       rollFormula: row.querySelector('[data-spell-field="rollFormula"]')?.value || '',
-      manaCost: level === 0 ? 0 : readNumber(row.querySelector('[data-spell-field="manaCost"]'), 0),
+      manaCost: getSpellManaCost(level),
       slotResourceId: level === 0 ? '' : findSpellSlotResourceId(profile.resources, level),
       slotCost: level === 0 ? 0 : Math.max(1, Number(existing.slotCost) || 1),
       presentationKind: row.querySelector('[data-spell-field="presentationKind"]')?.value || 'spell',
@@ -926,7 +935,7 @@ function addRow(kind) {
   const profile = state.draft.combatProfile;
   if (kind === 'attack') { const id = makeId('attack'); profile.weapons.push({ id, name: '', weaponType: 'natural', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, equipped: profile.weapons.length === 0 }); }
   if (kind === 'ability') profile.abilities.push({ id: makeId('ability'), name: '', description: '', active: true });
-  if (kind === 'spell') profile.magic.spells.push({ id: makeId('spell'), name: '', level: 0, rollFormula: '', manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', resolutionType: 'spell-attack', activationType: 'action', damageType: 'Magie', prepared: true, description: '' });
+  if (kind === 'spell') profile.magic.spells.push({ id: makeId('spell'), name: '', level: 0, rollFormula: '', manaCost: getSpellManaCost(0), slotResourceId: '', slotCost: 0, presentationKind: 'spell', resolutionType: 'spell-attack', activationType: 'action', damageType: 'Magie', prepared: true, description: '' });
   if (kind === 'skill') profile.skills.push({ id: makeId('skill'), name: '', attributeKey: 'dexterity', proficiency: 'trained', bonus: 0 });
   if (kind === 'condition') profile.conditions.push({ id: makeId('condition'), name: '', duration: '', description: '', active: true });
   if (kind === 'loot') state.draft.loot.items.push({ id: makeId('loot'), name: '', quantity: 1, chance: 100, notes: '' });

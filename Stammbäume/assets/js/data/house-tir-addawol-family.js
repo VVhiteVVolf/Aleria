@@ -7,7 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_TIR_ADDAWOL_PORTRAITS } from './house-tir-addawol-portraits.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   WEIDEBUCHT_HOUSE_EMBLEMS,
   WEIDEBUCHT_HOUSE_PROFILES

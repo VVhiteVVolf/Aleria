@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "cc9bb5b5-4be9-4d3a-8b30-e61d68a8e5f5",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "0adc27e244c8a776cdfe06fe2ce9ced65d3e341b9074413d67e9a37ea20cc320"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-tonnmharra",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-tonnmharra",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Dun Liath",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/hvgTgzD.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "c8af34b7fce957a3fa235c5d8a6d257803c0291dd6c86b4edaebd9e027a100ac",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Die dünne Clanvorlage bleibt ohne erfundene Gründer oder eigene Chronik; der aktuelle knight-prince/Ritterfürstenrang wird nicht selbständig in einen anderen Clanrang geändert.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

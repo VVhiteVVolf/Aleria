@@ -103,7 +103,7 @@ function ensureSceneDiceDialog() {
                 </div>
               </div>
               <label><span>Probe</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
-              <label><span>Regelart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
+              <label><span>Regelart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select><small>Dieser freie Würfelpool verwendet die eingegebene Formel. Für automatisch berechnete Bogenwerte und Eigenschaften wähle einen Proben- oder Kampfabschnitt.</small></label>
               <div class="scene-dice-narration-config">
                 <label><span>Wurfart</span><select id="scene-dice-narration-mode">${buildSceneDiceNarrationModeOptions()}</select><small data-scene-dice-narration-mode-description></small></label>
                 <label class="scene-dice-check scene-dice-humor-check"><input id="scene-dice-humor-enabled" type="checkbox" checked><span>Lockeren Humor bei Patzern erlauben</span></label>

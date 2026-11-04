@@ -8,7 +8,7 @@ import {
   createWardAwayBranch
 } from './family-record-builders.js';
 import { HOUSE_GULLVIG_PORTRAITS } from './house-gullvig-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRAEHENMOOR_HOUSE_EMBLEMS } from './kraehenmoor-house-profiles.js';
 import {
   KRONENTAL_HOUSE_EMBLEMS,

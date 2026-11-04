@@ -4,6 +4,7 @@ import { getCombatResourceIconPresentation } from '../combat-resource-icons.js';
 import { getEvaluationScenario } from './combat-evaluation-model.js';
 import { renderEvaluationAttackRows, renderEvaluationDamageInstances } from './combat-evaluation-rolls.js';
 import { describeRecordedDamageRoll } from './combat-damage-presentation.js';
+import { describeNaturalRollReceipt } from './combat-natural-roll-presentation.js';
 
 function stat(kind, label, value, note, help) {
   return `<div class="combat-evaluation-stat combat-evaluation-stat--${kind}" ${combatTooltipAttributes(help, { focusable: true })}>${renderCombatStatIcon(kind)}<span>${escape(label)}</span><strong>${escape(value)}</strong><small>${escape(note)}</small></div>`;
@@ -15,7 +16,8 @@ export function renderEvaluationStats(resolution = {}) {
   const attack = resolution.attack || {}, snapshot = resolution.targetSnapshot || {};
   const saving = attack.resolutionMode === 'saving-throw', automatic = scenario.automatic;
   const rollLabel = saving ? 'Rettungswurf' : attack.resolutionMode === 'spell-attack' ? 'Zauber-Treffer' : 'Trefferwurf';
-  const rolls = attack.diceResults?.length ? `W20 [${attack.diceResults.join(', ')}] ${Number(attack.modifier) >= 0 ? '+' : ''}${attack.modifier ?? 0}` : attack.notation || '';
+  const dice = attack.diceResults?.length ? `W20 [${attack.diceResults.join(', ')}] ${Number(attack.modifier) >= 0 ? '+' : ''}${attack.modifier ?? 0}` : attack.notation || '';
+  const rolls = [dice, describeNaturalRollReceipt(attack)].filter(Boolean).join(' · ');
   const multiple = scenario.sequence.count > 1;
   const cells = multiple ? [stat('attack', 'Angriffsfolge', `${scenario.sequence.hits} / ${scenario.sequence.count}`, 'Treffer / getrennte Angriffe', 'Die gesamte gespeicherte Folge. Jeder Angriff hat seinen eigenen Treffer- und gegebenenfalls Schadenswurf.')] : automatic ? [] : [stat(saving ? 'save' : 'attack', rollLabel, attack.total ?? '—', rolls, `${rollLabel} aus diesem Beitrag. ${saving ? 'Das Ziel besteht bei einem Ergebnis mindestens gleich dem SG.' : 'Ein Ergebnis mindestens gleich der Verteidigung trifft; kritische Ergebnisse werden gesondert ausgewertet.'}`)];
   if (!automatic && !multiple && attack.targetDefense != null) cells.push(stat('defense', saving ? 'Zauber-SG' : 'Verteidigung', attack.targetDefense, saving ? 'Schwierigkeitsgrad' : 'Zum Zeitpunkt des Angriffs', 'Gespeicherter Vergleichswert dieser Auswertung, einschließlich damals wirksamer Modifikatoren.'));
@@ -33,7 +35,7 @@ export function renderEvaluationStats(resolution = {}) {
   if (own?.after && own.before?.temporary != null && own.after.temporary != null && own.before.temporary !== own.after.temporary && (!scenario.self || !temporaryChanged)) cells.push(stat('hp', 'Eigener temporärer Schutz', `${own.before.temporary} → ${own.after.temporary}`, 'Schutzvorrat der handelnden Figur', 'Gespeicherte Änderung des temporären Schutzes.'));
   const saves = (resolution.secondarySaves || []).map(save => {
     const attribute = { strength: 'KRF', dexterity: 'GES', constitution: 'KON', intelligence: 'INT', wisdom: 'WEI', charisma: 'CHA' }[save.attributeKey] || 'Rettung';
-    return stat('save', `${attribute}-Rettung · SG ${save.dc}`, save.total, `${save.succeeded ? 'Gelungen' : 'Misslungen'}${save.timing === 'after-sequence' ? ' · nach der Folge' : ''}`, `Gespeicherter Rettungswurf ${save.total} gegen SG ${save.dc}. ${save.succeeded ? 'Das Ziel widersteht der Zusatzwirkung.' : 'Die Zusatzwirkung greift; Dauer und genaue Wirkung stehen in den Regelbelegen.'}`);
+    return stat('save', `${save.type === 'concentration' ? 'Konzentration · ' : ''}${attribute}-Rettung · SG ${save.dc}`, save.total, [save.succeeded ? 'Gelungen' : 'Misslungen', save.timing === 'after-sequence' ? 'nach der Folge' : '', describeNaturalRollReceipt(save)].filter(Boolean).join(' · '), `Gespeicherter Rettungswurf ${save.total} gegen SG ${save.dc}. ${save.succeeded ? 'Das Ziel widersteht der Zusatzwirkung.' : 'Die Zusatzwirkung greift; Dauer und genaue Wirkung stehen in den Regelbelegen.'}`);
   });
   return `${cells.length ? `<div class="combat-evaluation-stats" aria-label="Gespeicherte Kampfwerte">${cells.join('')}</div>` : ''}${multiple ? renderEvaluationAttackRows(resolution) : ''}${scenario.damage.length > 1 && !multiple ? renderEvaluationDamageInstances(resolution) : ''}${saves.length ? `<div class="combat-evaluation-stats" aria-label="Zusätzliche Rettungswürfe">${saves.join('')}</div>` : ''}${renderEvaluationResources(resolution)}`;
 }

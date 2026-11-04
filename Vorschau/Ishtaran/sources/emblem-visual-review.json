@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "range": "pool-01 through pool-26",
+  "status": "passed",
+  "reviewedWith": "view_image",
+  "contactSheets": [
+    "diagnostics/ishtaran/emblems-final-01-07-light-dark.jpg",
+    "diagnostics/ishtaran/emblems-final-08-14-light-dark.jpg",
+    "diagnostics/ishtaran/emblems-final-15-21-light-dark.jpg",
+    "diagnostics/ishtaran/emblems-final-22-26-light-dark.jpg"
+  ],
+  "findings": [
+    "All 26 emblems are distinct, centered, circular and complete with clear transparent margins.",
+    "Light and dark composite previews show clean round edges without exterior shadows or colored fringes after the authorized shared alpha preparation.",
+    "All imagery remains unassigned to houses, cities, ranks or seats.",
+    "The two carp remain distinct, the caravan bridge has one arch, the wagon wheel has eight spokes, the fortress has two towers and the vessel has one triangular sail.",
+    "Motifs, painted fields and ornamental rings remain readable at the 600 pixel preview size."
+  ],
+  "technicalEvidence": "sources/emblem-alpha-audit.final.json",
+  "generatorEvidence": "sources/emblem-generation.json",
+  "preparation": "sources/prepare-emblems.py",
+  "latestCorrections": [
+    {
+      "id": "pool-07",
+      "revision": "wing-fix-20261103-v1",
+      "status": "passed",
+      "receipt": "sources/pool-07-wing-fix-20261103-v1.json",
+      "evidence": "diagnostics/ishtaran/pool-07-wing-fix-light-dark.jpg",
+      "finding": "Only one raised rear wing remains; extra folded foreground wing removed."
+    }
+  ]
+}

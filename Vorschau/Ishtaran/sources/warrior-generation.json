@@ -1,0 +1,305 @@
+{
+  "createdAt": "2026-11-03",
+  "tool": "built-in image_gen",
+  "preset": "fantasy-rpg-character",
+  "styleReference": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+  "profileReferences": [
+    "Bestiarium/tiere/pferde/sarkal/profil.json",
+    "Bestiarium/tiere/pferde/shahzad/profil.json"
+  ],
+  "baseClassReferences": [
+    "Klassenordner/Basisklassen/kampfer/klasse.json",
+    "Klassenordner/Basisklassen/reiter/klasse.json",
+    "Klassenordner/Basisklassen/barde/klasse.json",
+    "Klassenordner/Basisklassen/seefahrer/klasse.json"
+  ],
+  "alphaPolicy": "User authorization: Ja, Transparenz technisch bereinigen. Shared alpha-only transfer; preserve all RGB bytes, dimensions, original files and original fully transparent gaps.",
+  "jobs": [
+    {
+      "id": "nefer",
+      "name": "Nefer",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran NEFER, disciplined ordinary formation infantryman, full figure calmly standing upright in three-quarter view. Seljuk and early Ottoman military clothing: knee-length muted brick-red quilted kaftan, modest mail shoulders and neck, simple short conical iron helmet with a narrow cloth turban wrapping, plain trousers and leather boots. Right hand holds ONE straight wooden spear vertically beside him, complete iron leaf-shaped point visible. Left forearm carries one medium round muted ochre wooden shield, simple dark metal boss. One curved sabre is sheathed at the belt, visible as a distinct secondary weapon. Practical restrained equipment, no grand noble heraldry. Compact steady formation-ready stance, both boots visible and separate.\nPalette: Gedämpftes Ziegelrot, Ocker, mattes Eisen und dunkelbraunes Leder.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/nefer.png",
+      "production": "assets/warriors/production/nefer.png",
+      "preview": "assets/warriors/previews/nefer.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-6bc5e080-2581-4e3a-b624-0c10f79b9e9c.png",
+      "sourceSha256": "9f43a45d972a04766ad9e8a55782ab6a8eda5a85c5df79e97e94f200d39ad21b",
+      "productionSha256": "d84932a6352eb94d0fef017906163a8beb16ae927cebfec4765b7b0642e8a7c0",
+      "previewSha256": "f353d7d540427b76704242b879a4c73daf469c0806be52a3f7a3ef353cd869a6",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 22,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "derwisch",
+      "name": "Derwisch",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran DERWISCH swordmaster, full figure calmly standing upright in three-quarter view. Strong Janissary and dervish-inspired military design: tall cream felt bork headdress with a long folded rear cloth, dark petrol band and restrained brass brow piece; visible calm moustached human face, no religious insignia. Long muted wine-red split kaftan with a dark padded inner coat and a few restrained metal arm guards, wide cloth sash, trousers and boots. He holds TWO clearly separate curved sabres, one in each relaxed hand, both blade tips directed safely down and out beside the legs, large clean readable curved blade shapes. Still composed pose, no dance, no whirl, no combat action. Both boots and both complete sword tips visible.\nPalette: Gedämpftes Weinrot, dunkles Petrol, cremefarbener Filz, mattes Messing.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/derwisch.png",
+      "production": "assets/warriors/production/derwisch.png",
+      "preview": "assets/warriors/previews/derwisch.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-21672c8f-25a6-48a4-b74b-732a57add7d6.png",
+      "sourceSha256": "555a959d56e296a7b4bff02bb9dad04ff2fe6242bef420c9cd1c4b12e81f1bfb",
+      "productionSha256": "e0011785639337d623b266c92c5c9384d3dd21c6487ad4ee69679f1bb75392b6",
+      "previewSha256": "2b6bef57a450d5401d1aa89785e5cb6cd569850b90ae832ecd01214102b0ffda",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 8,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "sipahi",
+      "name": "Sipahi",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "Bestiarium/assets/horse-profiles/sarkal.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. Input image 2 is breed/subject reference ONLY for the Sarkal horse; ignore its scenery, battle action, other figures and different drawing style.\n\nSubject: One Ishtaran SIPAHI mounted lancer seated calmly on ONE complete Sarkal warhorse, both horse and rider shown in full three-quarter view. Seljuk-Ottoman and Cuman inspired cavalry armor: dark petrol kaftan beneath restrained grey lamellar torso and mail sleeves, muted rust-red sash and saddlecloth, pointed helmet with mail neck guard and small subdued cloth wrap. Rider holds ONE long oriental cavalry lance upright with a very slight diagonal beside the horse; continuous straight wooden shaft, complete small steel spearhead visible. One curved sabre sheathed at belt. Sarkal horse follows the SECOND reference as breed/appearance only: tall lean sinewy grey-white horse with dark dapples, long dry legs, deep chest and dark mane, fitted with plain functional leather bridle and saddle. Horse standing quietly with all FOUR legs and hooves visible, no galloping. Entire spear point, helmet, horse ears, mane, tail and hooves contained within generous transparent margins. Rider and horse painted in the FIRST reference style, no background from either reference.\nPalette: Gedämpftes Dunkelpetrol, Rostrot, graues Eisen, braunes Leder.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure mounted on exactly one horse, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/sipahi.png",
+      "production": "assets/warriors/production/sipahi.png",
+      "preview": "assets/warriors/previews/sipahi.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-c94da977-76fb-4420-9693-7d073a0fe5f5.png",
+      "sourceSha256": "93099dcaaba1cee94bba37c33da52be98d4ea5f5d707b2a45fc2cc155e6ffb98",
+      "productionSha256": "e92d7bba431646e876f98c909de54e0391e8d2aa614ca5070c6557250464edbc",
+      "previewSha256": "5712cf88f8dae5e612469ecf5b5e9f2cf3852a2a4dd265c36c55e0a30895415d",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 7,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "ghulam",
+      "name": "Ghulam",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran GHULAM heavy warrior, full figure calmly standing upright in three-quarter view. Strong Cuman heavy military design: closed conical helmet with an articulated muted iron face mask shaped like a stern human face, almond eye openings and simple stylized moustache; mail around neck and shoulders. Heavy mail beneath large clearly painted lamellar bands on torso and thighs, dull ochre-brown coat, restrained rust-red sash, stout trousers and boots. He holds ONE substantial flanged steel mace upright at his side, straight wooden handle, clearly readable large solid head, other hand relaxed near belt. No chain flail in this version, no additional held weapons. Solid calm imposing stance, both boots visible. Armor reads distinctly heavier than the other class figures.\nPalette: Gedämpftes Ockerbraun, anthrazitfarbene Kette, rostrote Bänder, mattes Metall.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/ghulam.png",
+      "production": "assets/warriors/production/ghulam.png",
+      "preview": "assets/warriors/previews/ghulam.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-6206e8e0-cdd2-4a78-a98a-d107e166276d.png",
+      "sourceSha256": "43c6d0cb10c8a573494498ec9fd3b95a9fa056a5e48e3fc6a5aa3aacd8f0fff9",
+      "productionSha256": "b678c5b53b975d98f495bcecf5d79bffba5e0930fcd11f06d005ab0f1c118c7a",
+      "previewSha256": "6926d6a4e4bb983ae416fddbbe400db57ee0550c73dd9dcc64a2b7099147d7bc",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 26,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "aschik",
+      "name": "Aschik",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran ASCHIK, poetic fencer and musician, full figure calmly standing upright in three-quarter view. Human secular traveling artist and swordsman, not a priest. Seljuk-Ottoman civilian-martial clothes: muted saffron-ochre long light coat over pale turquoise shirt, simple cream turban, dark brown waist sash, loose trousers and soft leather boots. A SMALL LONG-NECKED LUTE with rounded wooden soundbox hangs by a narrow shoulder strap at the torso; one hand gently supports its neck. A curved sabre is clearly sheathed at one hip and a small dagger in a separate sheath at the opposite side; the free hand rests naturally by the sword hilt. Quiet confident expression, restrained trim, no magical aura or religious symbols. Full lute neck and both boots visible, no extra instruments.\nPalette: Gedämpftes Safranocker, blasses Türkis, warmes Braun, cremefarbene Stoffe.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/aschik.png",
+      "production": "assets/warriors/production/aschik.png",
+      "preview": "assets/warriors/previews/aschik.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-89af8f4d-8ecd-4bf0-9f47-4eab5267bf2f.png",
+      "sourceSha256": "1d0fc38a7b222e1e7d21a2a2bf012c72c804b7a98f31824cfbaa4729c1761228",
+      "productionSha256": "f8875e687f3727fe4af35879eb881a8c7670d52b7e77198f65916b2bcedbac7f",
+      "previewSha256": "3596959e2fa39bd867dc61a7822bb5f5121485a7a7e4ad5dcd17419d0eb4cc38",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 12,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "nizet",
+      "name": "Nizet",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran NIZET disciplined polearm infantryman, full figure calmly standing upright in three-quarter view. Distinctive tall folded cream Janissary bork cap with a small dark brown front band and long straight rear flap; face uncovered, calm stern expression. Long muted sage-green military kaftan, simple grey lamellar breast section over quilted fabric, broad brown sash, trousers and boots. Both hands rest naturally on ONE tall oriental glaive: a single continuous straight wooden staff with one broad slightly curved steel blade at the top, complete blade and lower staff end both visible, held nearly vertical alongside the body. Clear simple weapon axis, no axe-head clutter, no musket shape. Calm formation stance, both boots fully visible.\nPalette: Gedämpftes Salbeigrün, cremefarbener Filz, dunkelbraunes Leder, graues Eisen.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/nizet.png",
+      "production": "assets/warriors/production/nizet.png",
+      "preview": "assets/warriors/previews/nizet.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-79b7e34b-a631-4b93-819f-5a42851b7fe0.png",
+      "sourceSha256": "e8525d6bdaf9a78452114dcf51b72db4d8ad0794a378ab02f81c32cd04f96c94",
+      "productionSha256": "f344c6bbd49fe4a0efced7ee1d11373614162713a8e3fd3e686b2577f321c754",
+      "previewSha256": "7398c58593990d8524403e349517b1c45bb84e7136e569cb1933e65d75173e09",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 10,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "keman",
+      "name": "Keman",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "Bestiarium/assets/horse-profiles/sarkal.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. Input image 2 is breed/subject reference ONLY for the Sarkal horse; ignore its scenery, battle action, other figures and different drawing style.\n\nSubject: One Ishtaran KEMAN mounted horse archer seated calmly on ONE complete Sarkal warhorse, full rider and horse in quiet three-quarter view. Cuman-Seljuk light cavalry design: low pointed cap with narrow brown fur brim, face uncovered, muted rust-red quilted riding coat with sand-colored cuffs, leather belt and light mail neck collar, loose trousers, riding boots. Rider holds ONE clearly readable short recurved composite BOW relaxed vertically at his side without drawing it; a tidy arrow quiver is attached to the saddle and one curved sabre is sheathed at the rider hip. Sarkal horse follows the SECOND reference as breed and appearance only: tall sinewy grey-white dappled warhorse with long lean legs, deep chest and dark mane, functional brown leather bridle and simple sand-colored saddle blanket. Horse stands quietly, no galloping, all FOUR legs and hooves visible. Entire bow, rider head, horse ears, mane, tail and hooves within generous transparent margins. Use the FIRST reference for the painting technique of BOTH rider and horse; no scenery from either reference.\nPalette: Gedämpftes Rostrot, sandfarbener Stoff, dunkelbraunes Leder, graue Pferdefarbe.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure mounted on exactly one horse, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/keman.png",
+      "production": "assets/warriors/production/keman.png",
+      "preview": "assets/warriors/previews/keman.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-7d0a7782-f7e7-408f-b69a-e908b0ad7e00.png",
+      "sourceSha256": "791aae71ce240aedebd3daf827cda61ea470ad39af14a05c4c89779334819f54",
+      "productionSha256": "74ca245b597ce4f1d8fcccb053bfe236480eee40d722d235f1196657de861fc7",
+      "previewSha256": "d41e20c51b22135ca81b0728c8a05dfd791e0d9804c6ba0c8a011d78df1d4d65",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 5,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    },
+    {
+      "id": "lewent",
+      "name": "Lewent",
+      "status": "ready",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one Ishtaran class illustration for a fantasy country workshop.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nInput image 1 is the PRIMARY PAINTING STYLE reference: match its quiet simplified matte shapes, soft thin painted edges and fine even pigment grain. Armor, clothing, helmets and weapons follow the new cultural subject below. Do not reproduce the western plate armor or the winged-lion emblem from image 1. Omit the glow and haze visible around that reference. \n\nSubject: One Ishtaran LEWENT marine warrior, full figure calmly standing upright in three-quarter view. Seljuk-Ottoman naval infantry inspiration in LIGHT practical sea-going clothes: low wrapped muted blue sailor cap, short open sea-blue wool coat over cream linen shirt, brick-red waist sash, loose cropped trousers, supple dark leather boots, very light leather protection rather than heavy plate. He holds ONE simple short recurved BOW relaxed vertically beside him, carries a neat quiver and ONE sheathed curved sabre at the hip. Weathered human face, quiet attentive demeanor, modest practical kit. Both boots fully visible. No ship, no deck, no water, no coastal scene, no firearms, no pirate tricorne.\nPalette: Gedämpftes Meeresblau, ziegelroter Gürtel, cremefarbenes Leinen, braunes Leder.\n\nComposition: portrait 2:3, ideally 1024 by 1536 pixels; exactly one class figure, complete full silhouette, generous clear margin around the top, sides and all feet or hooves and weapon tips. Calm upright catalog pose. No text, captions, labels, house emblems or specific named person. No musket, firearm, gun barrel, cannon, ammunition pouch, smoke, blood, modern weapon, religious office, western plate-armor copy, dramatic action, scenery, ground patch, cast shadow, halo or glow.\n\nOutput: PNG RGBA with REAL TRANSPARENT background. All actual subject surfaces must be fully opaque alpha=255; all empty exterior and open gaps must be alpha=0, except a narrow antialiased contour. No washed-out translucent figure, no checkerboard painted into the image, no opaque colored backdrop. Preserve a clean continuous silhouette with no outer shadow.",
+      "generated": "assets/warriors/generated/lewent.png",
+      "production": "assets/warriors/production/lewent.png",
+      "preview": "assets/warriors/previews/lewent.webp",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0ca-6914-7191-9aed-4016bbc9e754\\exec-e5554def-ef13-48be-9077-4e824fc11ab2.png",
+      "sourceSha256": "ed8784705af17ce826de1273093842bc5b2c97441d743e27d227eb236831e83e",
+      "productionSha256": "a6d5e116bd536b03c743f00fc66e74e48c8bca8124710d1680e11e87ff394f7c",
+      "previewSha256": "8d58f4d4694a374c544b261f13421cd153514cf899347496158d168b1da2d610",
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      },
+      "minimumTransparentMarginPixels": 33,
+      "visualReview": {
+        "lightBackground": "diagnostics/ishtaran/warriors/contact-light.png",
+        "darkBackground": "diagnostics/ishtaran/warriors/contact-dark.png",
+        "reviewed": true,
+        "findings": "Complete silhouette, correct class equipment, no firearm, no exterior glow after alpha cleanup. Original RGB and fully transparent source gaps preserved."
+      }
+    }
+  ],
+  "alphaAuthorization": {
+    "source": "sources/user-decisions-2026-11-03.json",
+    "quote": "Ja, Transparenz technisch bereinigen",
+    "date": "2026-11-03"
+  },
+  "classDefinitionsSource": "sources/user-decisions-2026-11-03.json",
+  "preparation": {
+    "wrapper": "scripts/prepare_warriors.py",
+    "sharedPipeline": "../shared/warrior-artifacts/pipeline.py",
+    "artifactManifest": "assets/warriors/manifest.json",
+    "productionDimensions": [
+      1024,
+      1536
+    ],
+    "previewDimensions": [
+      768,
+      1152
+    ],
+    "processing": {
+      "version": 1,
+      "outsideThreshold": 160,
+      "coreThreshold": 240,
+      "edgeRadius": 2
+    }
+  },
+  "audit": {
+    "checkedWarriors": 8,
+    "failures": [],
+    "warnings": [
+      "aschik: tight but transparent margin (12 px)",
+      "derwisch: tight but transparent margin (8 px)",
+      "keman: tight but transparent margin (5 px)",
+      "nizet: tight but transparent margin (10 px)",
+      "sipahi: tight but transparent margin (7 px)"
+    ]
+  }
+}

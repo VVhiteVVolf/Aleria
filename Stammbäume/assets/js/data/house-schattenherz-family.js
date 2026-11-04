@@ -7,7 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_SCHATTENHERZ_PORTRAITS } from './house-schattenherz-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
@@ -330,7 +330,7 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
       title: 'Affäre Dagnis',
       tags: ['Affäre']
     }),
-    spouse('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1720', 'house-varangr'),
+    spouse('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1724', 'house-varangr'),
 
     person('thjald-schattenherz', 'Thjald Schattenherz', 'male', '1720', '', {
       title: 'Zweiter Erbe des Clans Schattenherz'
@@ -387,7 +387,7 @@ export const HOUSE_SCHATTENHERZ_FAMILY = Object.freeze({
       visibility: 'private',
       notes: 'Nordall ist Dagnis Affärenpartner und laut Eisenbieger-Herkunftsakte Hildas biologischer Vater.'
     }),
-    partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1720' })
+    partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1724' })
   ],
   parentages: [
     ...childrenOf(

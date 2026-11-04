@@ -1,0 +1,509 @@
+{
+  "schema": "aleria.kronental-original-image-verification",
+  "reviewedAt": "2026-11-03",
+  "canonicalCounty": "Kronental",
+  "publicOnly": true,
+  "count": 19,
+  "houseCount": 18,
+  "newOriginalCount": 17,
+  "reusedOriginalCount": 2,
+  "missingOriginalCount": 11,
+  "missingIds": [
+    "haus-eibenschild",
+    "haus-donnerblut",
+    "haus-moorbrand",
+    "haus-jormung",
+    "haus-nidfengr",
+    "haus-tarbhann",
+    "haus-bjarnvarg",
+    "haus-tauwind",
+    "haus-morchaon",
+    "haus-hvelgrson",
+    "haus-frostzorn"
+  ],
+  "visualReviewComplete": true,
+  "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+  "productionPixelsModified": false,
+  "entries": [
+    {
+      "id": "haus-vaeren",
+      "assetPath": "Stammbäume/assets/images/references/haus-vaeren/krieger.png",
+      "url": "https://i.imgur.com/Rt3lPnh.png",
+      "sha256": "da3c3c6bd14dfdcaaf2724751b581b915d6d0ba2e555c6b8f579d78f4ec21a0c",
+      "hashMatches": true,
+      "bytes": 364899,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-riesentod",
+      "assetPath": "Stammbäume/assets/images/references/haus-riesentod/krieger.png",
+      "url": "https://i.imgur.com/wox658M.png",
+      "sha256": "cc757c7c6564e81f783f3e8d64e1b2a60ebecf41861effea1e6cd5c72920e38a",
+      "hashMatches": true,
+      "bytes": 264793,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-eisenbieger",
+      "assetPath": "Stammbäume/assets/images/references/haus-eisenbieger/krieger.png",
+      "url": "https://i.imgur.com/QuHUNNe.png",
+      "sha256": "ec0273dba856093cf853b680414ceba1f9af9db92f1a8b685ba91d76d3e66c79",
+      "hashMatches": true,
+      "bytes": 362291,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "assetPath": "Stammbäume/assets/images/references/haus-sturmgeborene/krieger.png",
+      "url": "https://i.imgur.com/tRG3Uz9.png",
+      "sha256": "479ad7a1effcefd45e5d00f86d475f2fb984be3dca4fde3b7b9f358aaac806f7",
+      "hashMatches": true,
+      "bytes": 338960,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-frostauge",
+      "assetPath": "Stammbäume/assets/images/references/haus-frostauge/krieger.png",
+      "url": "https://i.imgur.com/idjxZBt.png",
+      "sha256": "2a74963e0379c999a716ce75b4738496e3b463c511b9cbea552b774085147390",
+      "hashMatches": true,
+      "bytes": 334675,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-wellenschild",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellenschild/krieger.png",
+      "url": "https://i.imgur.com/vFt0y9u.png",
+      "sha256": "a309332dad5d50d1737573ed45f7fa2db60e7790597114f6f2885b262cbb014c",
+      "hashMatches": true,
+      "bytes": 229917,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-gullvig",
+      "assetPath": "Stammbäume/assets/images/references/haus-gullvig/krieger.png",
+      "url": "https://i.imgur.com/EZTchz2.png",
+      "sha256": "95b1b6c8ec8919c1348d43c5f3d0d7a6e3e4fd8140bc212a66d6b54101d51d32",
+      "hashMatches": true,
+      "bytes": 304941,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger.png",
+      "url": "https://i.imgur.com/ouMNV7a.png",
+      "sha256": "703dda83bfecc81ff7f0e1c81e81cc3a243cf87edc25291ef1809ca79955110d",
+      "hashMatches": true,
+      "bytes": 1966492,
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger-2.png",
+      "url": "https://i.imgur.com/JUpeF3R.png",
+      "sha256": "b04399e6df3ee21fb631d9b916946356753921030c1948d81ad53e65020e1876",
+      "hashMatches": true,
+      "bytes": 301108,
+      "format": "PNG",
+      "width": 409,
+      "height": 610,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-spindelschlag",
+      "assetPath": "Stammbäume/assets/images/references/haus-spindelschlag/krieger.png",
+      "url": "https://i.imgur.com/hvDOgqU.png",
+      "sha256": "a6d388ed37189af534f29a4a49e80a1a375797ee3cc83ca69ca3df20ddbb39e9",
+      "hashMatches": true,
+      "bytes": 257686,
+      "format": "PNG",
+      "width": 409,
+      "height": 610,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-suedstahl",
+      "assetPath": "Stammbäume/assets/images/references/haus-suedstahl/krieger.png",
+      "url": "https://i.imgur.com/MkzyrRp.png",
+      "sha256": "288fb9db6ffcedc0ab912b47224a3f69ebb2fd8c72b29c9f39c303e2cf6f1037",
+      "hashMatches": true,
+      "bytes": 186335,
+      "format": "PNG",
+      "width": 409,
+      "height": 610,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-albholz",
+      "assetPath": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+      "url": "https://i.imgur.com/GUdQCnk.png",
+      "sha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "hashMatches": true,
+      "bytes": 207731,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-wellenkrone",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+      "url": "https://i.imgur.com/fVc4D5w.png",
+      "sha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "hashMatches": true,
+      "bytes": 275624,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "assetPath": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+      "url": "https://i.imgur.com/kbX9DpR.png",
+      "sha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "hashMatches": true,
+      "bytes": 278656,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-grimr",
+      "assetPath": "Stammbäume/assets/images/references/haus-grimr/krieger.png",
+      "url": "https://i.imgur.com/sNHRSOX.png",
+      "sha256": "32f0a47e05d6f334ec3d3a8fd5fc2de2dcb4f4f088e5d70ef9eac9d7dc1b9418",
+      "hashMatches": true,
+      "bytes": 243720,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-skaife",
+      "assetPath": "Stammbäume/assets/images/references/haus-skaife/krieger.png",
+      "url": "https://i.imgur.com/mGjdqQn.png",
+      "sha256": "5675eb81ea3db01c51b9b50c1a689b8e07e6d8c3de17447bc76469418c51162f",
+      "hashMatches": true,
+      "bytes": 237806,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-holmr",
+      "assetPath": "Stammbäume/assets/images/references/haus-holmr/krieger.png",
+      "url": "https://i.imgur.com/hG5YonB.png",
+      "sha256": "ab275e392907901982e07e7a87aa084da152cb477c23b5f89d368b80151bc369",
+      "hashMatches": true,
+      "bytes": 268899,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-isvanyr",
+      "assetPath": "Stammbäume/assets/images/references/haus-isvanyr/krieger.png",
+      "url": "https://i.imgur.com/n5qsu70.png",
+      "sha256": "c53619166ec19d4fb2b968a02e908a42c3d2e69f6d8a183fc1fb815d77c7f3f1",
+      "hashMatches": true,
+      "bytes": 353434,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "assetPath": "Stammbäume/assets/images/references/haus-mac-mamhar/krieger.png",
+      "url": "https://i.imgur.com/uHoBBXh.png",
+      "sha256": "9afa629e1c716aec40735f21fba6fe896d613aabe85f811bac8b265156561c65",
+      "hashMatches": true,
+      "bytes": 243999,
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sourceBytesPreserved": true,
+      "visuallyInspected": true
+    }
+  ],
+  "warnings": [
+    {
+      "id": "haus-wellensaenger",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger.png",
+      "note": "Originalabmessungen 1024×1536 unverändert erhalten; kein Zuschnitt oder Skalieren der Produktionsdatei."
+    },
+    {
+      "id": "haus-wellensaenger",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger-2.png",
+      "note": "Originalabmessungen 409×610 unverändert erhalten; kein Zuschnitt oder Skalieren der Produktionsdatei."
+    },
+    {
+      "id": "haus-spindelschlag",
+      "assetPath": "Stammbäume/assets/images/references/haus-spindelschlag/krieger.png",
+      "note": "Originalabmessungen 409×610 unverändert erhalten; kein Zuschnitt oder Skalieren der Produktionsdatei."
+    },
+    {
+      "id": "haus-suedstahl",
+      "assetPath": "Stammbäume/assets/images/references/haus-suedstahl/krieger.png",
+      "note": "Originalabmessungen 409×610 unverändert erhalten; kein Zuschnitt oder Skalieren der Produktionsdatei."
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

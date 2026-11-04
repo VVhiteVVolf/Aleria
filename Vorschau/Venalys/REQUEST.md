@@ -1,5 +1,16 @@
 # Venalys – bestätigter Auftrag vom 2. November 2026
 
+Aktualisierung vom 4. November 2026: Die überarbeiteten Karten aus
+`C:/Users/fhg_r/Downloads/Venalys/Alternative Maps` sind die aktive
+Kartengrundlage. Sie zeigen weiterhin 13 Bezirke, nun 98 kartierte Außenorte
+und vier nicht mehr verortete alte Türme. Die 78 bisherigen POI-IDs bleiben
+erhalten; 24 neue Punkte erhalten zusätzliche IDs. Neue Ortsnamen und
+begründete Namensverschiebungen wurden ausdrücklich zur Ausarbeitung
+freigegeben. Einzelheiten und Grenzen der Zuordnung stehen in
+`sources/map-revision-20261104/DECISIONS.md`. Die älteren Zahlen und Maße unten
+dokumentieren den ursprünglichen Auftrag; vorhandene Bezirksnamen und lokale
+Mehrfachzuordnungen werden beim Laden eines vollständigen alten Entwurfs erhalten.
+
 Die Nutzerfestlegungen dieses Auftrags gehen der älteren Bestandssuche unter
 `sources/RECHERCHE.md` vor. Vorbereitungsseite im bestehenden Aleria-Projekt,
 vorerst lokal; keine automatische Übernahme der Entwürfe in kanonische

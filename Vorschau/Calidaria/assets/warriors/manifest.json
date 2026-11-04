@@ -1,0 +1,3646 @@
+{
+  "schema": "aleria.calidaria.warriors",
+  "version": 1,
+  "entries": [
+    {
+      "id": "house-colony-01",
+      "source": "assets/warriors/generated/house-colony-01.png",
+      "sourceSha256": "776e5b9232ac74b163920e1b510af9c0110da5960ee616b0361807321a3f3ac8",
+      "production": "assets/warriors/production/house-colony-01.png",
+      "productionSha256": "c7509489a7f983cd41d1d2cca3bc899e8a18ae35fe93d5bd9d9cf06f37747ef9",
+      "preview": "assets/warriors/previews/house-colony-01.webp",
+      "previewSha256": "f42316b02d2cff30435f8176d727c19a9b3a66938f6575c5d7dd3cdea7dcf83a",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          24,
+          23,
+          993,
+          1472
+        ],
+        "margins": {
+          "left": 24,
+          "top": 23,
+          "right": 31,
+          "bottom": 64
+        },
+        "minimumMarginPixels": 23,
+        "touchesCanvas": false,
+        "transparentPixels": 917743,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 655121,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          28,
+          138,
+          984,
+          1462
+        ],
+        "margins": {
+          "left": 28,
+          "top": 138,
+          "right": 40,
+          "bottom": 74
+        },
+        "minimumMarginPixels": 28,
+        "touchesCanvas": false,
+        "transparentPixels": 952327,
+        "opaquePixels": 613485,
+        "partialAlphaPixels": 7052,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          19,
+          101,
+          740,
+          1099
+        ],
+        "margins": {
+          "left": 19,
+          "top": 101,
+          "right": 28,
+          "bottom": 53
+        },
+        "minimumMarginPixels": 19,
+        "touchesCanvas": false,
+        "transparentPixels": 526268,
+        "opaquePixels": 336112,
+        "partialAlphaPixels": 22356,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-02",
+      "source": "assets/warriors/generated/house-colony-02.png",
+      "sourceSha256": "b11feeaa84fd4c63e7b8f709525c840886f5c63631cd6371eee53bc82ed39f4b",
+      "production": "assets/warriors/production/house-colony-02.png",
+      "productionSha256": "e9582fcae3eaddae866452d45d718dceca6108d78ccddd81b0644334a388b21f",
+      "preview": "assets/warriors/previews/house-colony-02.webp",
+      "previewSha256": "74840f0fa1f94f9390d0264bd1d63ed357fbf4b63871810cfbd4e0ae7d1b2495",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 961524,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 611340,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          186,
+          77,
+          877,
+          1447
+        ],
+        "margins": {
+          "left": 186,
+          "top": 77,
+          "right": 147,
+          "bottom": 89
+        },
+        "minimumMarginPixels": 77,
+        "touchesCanvas": false,
+        "transparentPixels": 989673,
+        "opaquePixels": 578039,
+        "partialAlphaPixels": 5152,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          138,
+          55,
+          660,
+          1088
+        ],
+        "margins": {
+          "left": 138,
+          "top": 55,
+          "right": 108,
+          "bottom": 64
+        },
+        "minimumMarginPixels": 55,
+        "touchesCanvas": false,
+        "transparentPixels": 549029,
+        "opaquePixels": 317998,
+        "partialAlphaPixels": 17709,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-03",
+      "source": "assets/warriors/generated/house-colony-03.png",
+      "sourceSha256": "5ff5b4378fe07b3bf23b105879c1b30ae721d792541f6b0d9fc862ee881f65c1",
+      "production": "assets/warriors/production/house-colony-03.png",
+      "productionSha256": "7a2cfd8d1b51c261293037d324bac260453ce6918443867a2e47b1cc33f08b34",
+      "preview": "assets/warriors/previews/house-colony-03.webp",
+      "previewSha256": "e630cf7eb3228e0dbb7a7ea35b4ff12c788c27f5be13472de25131db19f62d3c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          27,
+          1024,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 27,
+          "right": 0,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1052912,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 519952,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          248,
+          55,
+          826,
+          1479
+        ],
+        "margins": {
+          "left": 248,
+          "top": 55,
+          "right": 198,
+          "bottom": 57
+        },
+        "minimumMarginPixels": 55,
+        "touchesCanvas": false,
+        "transparentPixels": 1075773,
+        "opaquePixels": 493012,
+        "partialAlphaPixels": 4079,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          184,
+          39,
+          622,
+          1112
+        ],
+        "margins": {
+          "left": 184,
+          "top": 39,
+          "right": 146,
+          "bottom": 40
+        },
+        "minimumMarginPixels": 39,
+        "touchesCanvas": false,
+        "transparentPixels": 598877,
+        "opaquePixels": 271255,
+        "partialAlphaPixels": 14604,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-04",
+      "source": "assets/warriors/generated/house-colony-04.png",
+      "sourceSha256": "1b81bd70dc1a8543a3f1c3de820ec7c0ead73ff6765c0745e06b397ecab0a85c",
+      "production": "assets/warriors/production/house-colony-04.png",
+      "productionSha256": "be20e10b5613dfbf38be6dff52b2ec7cf5405cfff7109ac20c7da8116bdc1a85",
+      "preview": "assets/warriors/previews/house-colony-04.webp",
+      "previewSha256": "acc4ed712bee07d6e383296ca16c105b9697ca6162a4fcf711cbd4378baba6c2",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          6,
+          1010,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 6,
+          "right": 14,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1142078,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 430786,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          237,
+          9,
+          730,
+          1499
+        ],
+        "margins": {
+          "left": 237,
+          "top": 9,
+          "right": 294,
+          "bottom": 37
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 1180804,
+        "opaquePixels": 386548,
+        "partialAlphaPixels": 5512,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          175,
+          4,
+          550,
+          1127
+        ],
+        "margins": {
+          "left": 175,
+          "top": 4,
+          "right": 218,
+          "bottom": 25
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 655581,
+        "opaquePixels": 209331,
+        "partialAlphaPixels": 19824,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-05",
+      "source": "assets/warriors/generated/house-colony-05.png",
+      "sourceSha256": "985ae29d72d7de07a71cd63a660ce0b63a98a8268984d31bfa75ad0b76ef9dfc",
+      "production": "assets/warriors/production/house-colony-05.png",
+      "productionSha256": "98366bff8ef3b550dfb72608d1c2e375f0c10ec392dc99fd4eaccf491a77fb9c",
+      "preview": "assets/warriors/previews/house-colony-05.webp",
+      "previewSha256": "b3d801f23da7549c1fb5ef648d7b00d236626cbb96c44b41443ff363ddd0fa18",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          29,
+          1015,
+          1470
+        ],
+        "margins": {
+          "left": 0,
+          "top": 29,
+          "right": 9,
+          "bottom": 66
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 909129,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 663735,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          15,
+          99,
+          1012,
+          1446
+        ],
+        "margins": {
+          "left": 15,
+          "top": 99,
+          "right": 12,
+          "bottom": 90
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 955813,
+        "opaquePixels": 607813,
+        "partialAlphaPixels": 9238,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          9,
+          72,
+          761,
+          1087
+        ],
+        "margins": {
+          "left": 9,
+          "top": 72,
+          "right": 7,
+          "bottom": 65
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 527493,
+        "opaquePixels": 332567,
+        "partialAlphaPixels": 24676,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-06",
+      "source": "assets/warriors/generated/house-colony-06.png",
+      "sourceSha256": "f0414ee0c028106029725d25fbb8321884f8305d2083e46d5d9e276c1e9a617e",
+      "production": "assets/warriors/production/house-colony-06.png",
+      "productionSha256": "767008b8bcc6d205facdd3d9935ee61983a0263a1eb6a75bcc1240c566ced64e",
+      "preview": "assets/warriors/previews/house-colony-06.webp",
+      "previewSha256": "305d8bae18997ee32963d82a10288b5d0bae7415516a5b5e3c56e6f65c8f6fe8",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          73,
+          40,
+          970,
+          1506
+        ],
+        "margins": {
+          "left": 73,
+          "top": 40,
+          "right": 54,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 30,
+        "touchesCanvas": false,
+        "transparentPixels": 1122439,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 450425,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          161,
+          43,
+          787,
+          1502
+        ],
+        "margins": {
+          "left": 161,
+          "top": 43,
+          "right": 237,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 1139801,
+        "opaquePixels": 429362,
+        "partialAlphaPixels": 3701,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          118,
+          30,
+          593,
+          1129
+        ],
+        "margins": {
+          "left": 118,
+          "top": 30,
+          "right": 175,
+          "bottom": 23
+        },
+        "minimumMarginPixels": 23,
+        "touchesCanvas": false,
+        "transparentPixels": 634987,
+        "opaquePixels": 235625,
+        "partialAlphaPixels": 14124,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-07",
+      "source": "assets/warriors/generated/house-colony-07.png",
+      "sourceSha256": "ac294d01f8091c5e0d7b4f4249b8da578bb15976f4df9295a9293e4e93963d20",
+      "production": "assets/warriors/production/house-colony-07.png",
+      "productionSha256": "738dc5f7d838a0ba0af73c3413f541846482ea278dc19eff74478abefec21811",
+      "preview": "assets/warriors/previews/house-colony-07.webp",
+      "previewSha256": "31aa20e7b390448711c6f4e3f4996745582a93e9ed4b94428a184da7b9a51dea",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          21,
+          1010,
+          1511
+        ],
+        "margins": {
+          "left": 0,
+          "top": 21,
+          "right": 14,
+          "bottom": 25
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1121817,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 451047,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          209,
+          57,
+          738,
+          1483
+        ],
+        "margins": {
+          "left": 209,
+          "top": 57,
+          "right": 286,
+          "bottom": 53
+        },
+        "minimumMarginPixels": 53,
+        "touchesCanvas": false,
+        "transparentPixels": 1151332,
+        "opaquePixels": 416965,
+        "partialAlphaPixels": 4567,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          154,
+          40,
+          556,
+          1115
+        ],
+        "margins": {
+          "left": 154,
+          "top": 40,
+          "right": 212,
+          "bottom": 37
+        },
+        "minimumMarginPixels": 37,
+        "touchesCanvas": false,
+        "transparentPixels": 640789,
+        "opaquePixels": 228091,
+        "partialAlphaPixels": 15856,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-08",
+      "source": "assets/warriors/generated/house-colony-08.png",
+      "sourceSha256": "6a1634342783835a8f25df0b2a30873f0d04f5cb65e20ba51d6cc38c39df4776",
+      "production": "assets/warriors/production/house-colony-08.png",
+      "productionSha256": "f1476f9d6f8e0109397624c07d9e2a47d0d47a6501242ee01cdd25cfebf0d4e6",
+      "preview": "assets/warriors/previews/house-colony-08.webp",
+      "previewSha256": "b596273d3c32dda01c67d370df8e521d2c6ea55c7ebf04f916a302b2ec7843ff",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1000,
+          1518
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 24,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 972524,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 600340,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          101,
+          35,
+          838,
+          1508
+        ],
+        "margins": {
+          "left": 101,
+          "top": 35,
+          "right": 186,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 28,
+        "touchesCanvas": false,
+        "transparentPixels": 996342,
+        "opaquePixels": 572160,
+        "partialAlphaPixels": 4362,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          73,
+          24,
+          631,
+          1133
+        ],
+        "margins": {
+          "left": 73,
+          "top": 24,
+          "right": 137,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 19,
+        "touchesCanvas": false,
+        "transparentPixels": 553659,
+        "opaquePixels": 315622,
+        "partialAlphaPixels": 15455,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-09",
+      "source": "assets/warriors/generated/house-colony-09.png",
+      "sourceSha256": "23215b18a41099b2759904dc1daf9fe636c6910902702b79c36a8309bd4917d8",
+      "production": "assets/warriors/production/house-colony-09.png",
+      "productionSha256": "b0d5581a609bec6315d898c363c907367a92f346d0ecdde29d30013be6b987db",
+      "preview": "assets/warriors/previews/house-colony-09.webp",
+      "previewSha256": "4900cc6d1d10ca8c2dd94503508f03d01229c4b4bed4cb21ac9f0bf5cb245f68",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          19,
+          1010,
+          1519
+        ],
+        "margins": {
+          "left": 0,
+          "top": 19,
+          "right": 14,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1258705,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 314159,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          280,
+          167,
+          742,
+          1390
+        ],
+        "margins": {
+          "left": 280,
+          "top": 167,
+          "right": 282,
+          "bottom": 146
+        },
+        "minimumMarginPixels": 146,
+        "touchesCanvas": false,
+        "transparentPixels": 1288234,
+        "opaquePixels": 279400,
+        "partialAlphaPixels": 5230,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          208,
+          123,
+          559,
+          1045
+        ],
+        "margins": {
+          "left": 208,
+          "top": 123,
+          "right": 209,
+          "bottom": 107
+        },
+        "minimumMarginPixels": 107,
+        "touchesCanvas": false,
+        "transparentPixels": 717695,
+        "opaquePixels": 150750,
+        "partialAlphaPixels": 16291,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-10",
+      "source": "assets/warriors/generated/house-colony-10.png",
+      "sourceSha256": "1426ee35b8d688e2737b95407d4cb0cf89d6147f53b61c63a6d8227c4c2ef2de",
+      "production": "assets/warriors/production/house-colony-10.png",
+      "productionSha256": "d3855959335afe7eb9cf1cc9ba225c550580f6c189834880ba79e4bddb6faa32",
+      "preview": "assets/warriors/previews/house-colony-10.webp",
+      "previewSha256": "1c609813e8a86b49db077feaf3cab762309b23e6be8cac44ebab52b37b93c3fd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          65,
+          22,
+          908,
+          1536
+        ],
+        "margins": {
+          "left": 65,
+          "top": 22,
+          "right": 116,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1226795,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 346069,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          212,
+          208,
+          769,
+          1375
+        ],
+        "margins": {
+          "left": 212,
+          "top": 208,
+          "right": 255,
+          "bottom": 161
+        },
+        "minimumMarginPixels": 161,
+        "touchesCanvas": false,
+        "transparentPixels": 1248383,
+        "opaquePixels": 320679,
+        "partialAlphaPixels": 3802,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          157,
+          154,
+          579,
+          1034
+        ],
+        "margins": {
+          "left": 157,
+          "top": 154,
+          "right": 189,
+          "bottom": 118
+        },
+        "minimumMarginPixels": 118,
+        "touchesCanvas": false,
+        "transparentPixels": 696311,
+        "opaquePixels": 174927,
+        "partialAlphaPixels": 13498,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-colony-11",
+      "source": "assets/warriors/generated/house-colony-11.png",
+      "sourceSha256": "e23c51ab08bec49c0e1aa623a5310dd44bc07bd60ed2842b9ff67f5d70626c07",
+      "production": "assets/warriors/production/house-colony-11.png",
+      "productionSha256": "6dbaec9ac2965ebf92b46bce50515baa34d9314b9e584ac079ed70f401590b4f",
+      "preview": "assets/warriors/previews/house-colony-11.webp",
+      "previewSha256": "c3c4e1466f0d5e64adb284b0b5afe789356846ca6850de4a69a4f87d0cbe4c34",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1016,
+          1526
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 8,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1185990,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 386874,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          221,
+          191,
+          807,
+          1408
+        ],
+        "margins": {
+          "left": 221,
+          "top": 191,
+          "right": 217,
+          "bottom": 128
+        },
+        "minimumMarginPixels": 128,
+        "touchesCanvas": false,
+        "transparentPixels": 1209735,
+        "opaquePixels": 359238,
+        "partialAlphaPixels": 3891,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          163,
+          141,
+          608,
+          1058
+        ],
+        "margins": {
+          "left": 163,
+          "top": 141,
+          "right": 160,
+          "bottom": 94
+        },
+        "minimumMarginPixels": 94,
+        "touchesCanvas": false,
+        "transparentPixels": 674774,
+        "opaquePixels": 196801,
+        "partialAlphaPixels": 13161,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-01",
+      "source": "assets/warriors/generated/house-tlapanui-01.png",
+      "sourceSha256": "21df2c8c0f36a9f77501edc7c55e421e88711540f46cc7c295b319ad71af8387",
+      "production": "assets/warriors/production/house-tlapanui-01.png",
+      "productionSha256": "af1148b13b24753d292bf5f277b1adc64280140c85adc4f973e81350e08d69e0",
+      "preview": "assets/warriors/previews/house-tlapanui-01.webp",
+      "previewSha256": "219580422382eedd60375b03c766a2a3eca27ce285d3cfd7770f4b985a98560d",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          998,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 26,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1092575,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 480289,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          134,
+          54,
+          773,
+          1467
+        ],
+        "margins": {
+          "left": 134,
+          "top": 54,
+          "right": 251,
+          "bottom": 69
+        },
+        "minimumMarginPixels": 54,
+        "touchesCanvas": false,
+        "transparentPixels": 1130705,
+        "opaquePixels": 436850,
+        "partialAlphaPixels": 5309,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          98,
+          38,
+          582,
+          1102
+        ],
+        "margins": {
+          "left": 98,
+          "top": 38,
+          "right": 186,
+          "bottom": 50
+        },
+        "minimumMarginPixels": 38,
+        "touchesCanvas": false,
+        "transparentPixels": 628174,
+        "opaquePixels": 238442,
+        "partialAlphaPixels": 18120,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-02",
+      "source": "assets/warriors/generated/house-tlapanui-02.png",
+      "sourceSha256": "1b4bf6215e91cf816a418b669bea54b9c109730698bdae63abca8b23467dbd7d",
+      "production": "assets/warriors/production/house-tlapanui-02.png",
+      "productionSha256": "04b6a17b4cdf1c19b14ba4ec35168d10f1eafd2e5a4fe77d88ff5e91ef8481ef",
+      "preview": "assets/warriors/previews/house-tlapanui-02.webp",
+      "previewSha256": "1b99f5039b47c57a58000a37514e61392882a052e992f989686c29f0411ce01c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          20,
+          992,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 20,
+          "right": 32,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1104059,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 468805,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          201,
+          68,
+          811,
+          1459
+        ],
+        "margins": {
+          "left": 201,
+          "top": 68,
+          "right": 213,
+          "bottom": 77
+        },
+        "minimumMarginPixels": 68,
+        "touchesCanvas": false,
+        "transparentPixels": 1141490,
+        "opaquePixels": 425259,
+        "partialAlphaPixels": 6115,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          148,
+          49,
+          610,
+          1097
+        ],
+        "margins": {
+          "left": 148,
+          "top": 49,
+          "right": 158,
+          "bottom": 55
+        },
+        "minimumMarginPixels": 49,
+        "touchesCanvas": false,
+        "transparentPixels": 633649,
+        "opaquePixels": 231278,
+        "partialAlphaPixels": 19809,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-03",
+      "source": "assets/warriors/generated/house-tlapanui-03.png",
+      "sourceSha256": "795ccd9bd57695b8014d2472ba3a46be9e368851febbf99518aaf1e1587136dd",
+      "production": "assets/warriors/production/house-tlapanui-03.png",
+      "productionSha256": "6e44e888a603923f6fddd2e7ba3d272dc34aa88fa5974034a862f5f6fa487528",
+      "preview": "assets/warriors/previews/house-tlapanui-03.webp",
+      "previewSha256": "eb131daed764874e967c951f529ce4dbf2f419ac6797c25fa4ca8a08963dd025",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1012,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 12,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1156555,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 416309,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          159,
+          56,
+          725,
+          1487
+        ],
+        "margins": {
+          "left": 159,
+          "top": 56,
+          "right": 299,
+          "bottom": 49
+        },
+        "minimumMarginPixels": 49,
+        "touchesCanvas": false,
+        "transparentPixels": 1197986,
+        "opaquePixels": 369146,
+        "partialAlphaPixels": 5732,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          117,
+          40,
+          546,
+          1118
+        ],
+        "margins": {
+          "left": 117,
+          "top": 40,
+          "right": 222,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 665363,
+        "opaquePixels": 200256,
+        "partialAlphaPixels": 19117,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-04",
+      "source": "assets/warriors/generated/house-tlapanui-04.png",
+      "sourceSha256": "ab5bc141eb382f6ae45cbeb57729b5b234890925e41d4b0d59d4689268887b78",
+      "production": "assets/warriors/production/house-tlapanui-04.png",
+      "productionSha256": "0312bb750a4aadf3e535935c7435c94ed5e4faf72c9602a8fdbfe16adc8b58e5",
+      "preview": "assets/warriors/previews/house-tlapanui-04.webp",
+      "previewSha256": "ee818b493569d8ea2ff12f51da3fc49abb179e4c30481be8f3dd0615f76c9076",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          73,
+          51,
+          978,
+          1496
+        ],
+        "margins": {
+          "left": 73,
+          "top": 51,
+          "right": 46,
+          "bottom": 40
+        },
+        "minimumMarginPixels": 40,
+        "touchesCanvas": false,
+        "transparentPixels": 1109549,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 463315,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          216,
+          56,
+          888,
+          1491
+        ],
+        "margins": {
+          "left": 216,
+          "top": 56,
+          "right": 136,
+          "bottom": 45
+        },
+        "minimumMarginPixels": 45,
+        "touchesCanvas": false,
+        "transparentPixels": 1140351,
+        "opaquePixels": 425982,
+        "partialAlphaPixels": 6531,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          160,
+          40,
+          668,
+          1121
+        ],
+        "margins": {
+          "left": 160,
+          "top": 40,
+          "right": 100,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 31,
+        "touchesCanvas": false,
+        "transparentPixels": 632842,
+        "opaquePixels": 231604,
+        "partialAlphaPixels": 20290,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-05",
+      "source": "assets/warriors/generated/house-tlapanui-05.png",
+      "sourceSha256": "0116866931cd666a6a26e156ef71f1168979092280f0f3130224203136325e3e",
+      "production": "assets/warriors/production/house-tlapanui-05.png",
+      "productionSha256": "c99db7079acd7945858deabadb305732f96ec96ca37345888227b04941314561",
+      "preview": "assets/warriors/previews/house-tlapanui-05.webp",
+      "previewSha256": "da8d6eb2f51864ff4029bc8cdf5de8f6dc6c2b25d84a85deac3d20d0ccef2ab4",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          20,
+          1008,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 20,
+          "right": 16,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1098501,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 474363,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          110,
+          24,
+          765,
+          1514
+        ],
+        "margins": {
+          "left": 110,
+          "top": 24,
+          "right": 259,
+          "bottom": 22
+        },
+        "minimumMarginPixels": 22,
+        "touchesCanvas": false,
+        "transparentPixels": 1129018,
+        "opaquePixels": 438128,
+        "partialAlphaPixels": 5718,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          80,
+          16,
+          576,
+          1138
+        ],
+        "margins": {
+          "left": 80,
+          "top": 16,
+          "right": 192,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 626967,
+        "opaquePixels": 238936,
+        "partialAlphaPixels": 18833,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-06",
+      "source": "assets/warriors/generated/house-tlapanui-06.png",
+      "sourceSha256": "d631ae1f95e1fdae379be497a36ebc30238f4b30f3c3b41bbc4ffaaea1f808a3",
+      "production": "assets/warriors/production/house-tlapanui-06.png",
+      "productionSha256": "c16c4b4a9d2656d7519b00461288798426a8218f7995ee1fd3c81c54bb901cc1",
+      "preview": "assets/warriors/previews/house-tlapanui-06.webp",
+      "previewSha256": "e7814f82b570d5713a92f14c6a9d9473fd0479816e9c5ac643dbecd15f06789c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          19,
+          1023,
+          1518
+        ],
+        "margins": {
+          "left": 0,
+          "top": 19,
+          "right": 1,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1132516,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 440348,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          256,
+          44,
+          826,
+          1490
+        ],
+        "margins": {
+          "left": 256,
+          "top": 44,
+          "right": 198,
+          "bottom": 46
+        },
+        "minimumMarginPixels": 44,
+        "touchesCanvas": false,
+        "transparentPixels": 1172632,
+        "opaquePixels": 393480,
+        "partialAlphaPixels": 6752,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          190,
+          31,
+          622,
+          1120
+        ],
+        "margins": {
+          "left": 190,
+          "top": 31,
+          "right": 146,
+          "bottom": 32
+        },
+        "minimumMarginPixels": 31,
+        "touchesCanvas": false,
+        "transparentPixels": 649599,
+        "opaquePixels": 212844,
+        "partialAlphaPixels": 22293,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-07",
+      "source": "assets/warriors/generated/house-tlapanui-07.png",
+      "sourceSha256": "ca24a9673d4878e0223a3ac4d2cdb473363d7b3a343f08c5db18665d391ac68b",
+      "production": "assets/warriors/production/house-tlapanui-07.png",
+      "productionSha256": "38f599150029c534f2042c8b4d5c99843112a1aa8c1473332a08565a0e3c9217",
+      "preview": "assets/warriors/previews/house-tlapanui-07.webp",
+      "previewSha256": "85f5c1a50c5f37b76bb2157487901c0258e1720f4cb5a6d5af3d00cc6d1872de",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1039374,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 533490,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          150,
+          23,
+          961,
+          1497
+        ],
+        "margins": {
+          "left": 150,
+          "top": 23,
+          "right": 63,
+          "bottom": 39
+        },
+        "minimumMarginPixels": 23,
+        "touchesCanvas": false,
+        "transparentPixels": 1085078,
+        "opaquePixels": 481381,
+        "partialAlphaPixels": 6405,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          110,
+          15,
+          723,
+          1125
+        ],
+        "margins": {
+          "left": 110,
+          "top": 15,
+          "right": 45,
+          "bottom": 27
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 601891,
+        "opaquePixels": 262868,
+        "partialAlphaPixels": 19977,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-08",
+      "source": "assets/warriors/generated/house-tlapanui-08.png",
+      "sourceSha256": "dcf254485ac031771c02d0ab063ee04c0337183adf3d796bcd02d9da33be6242",
+      "production": "assets/warriors/production/house-tlapanui-08.png",
+      "productionSha256": "72bfb7944d4750da5a2e56a8dce640b189cb79aa371369a8b8340785efe15885",
+      "preview": "assets/warriors/previews/house-tlapanui-08.webp",
+      "previewSha256": "5193a1f27a0239b66814b46e75a70a7f19779574a0da69e63b106ce4fbffebd7",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1014,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 10,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1079041,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 493823,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          160,
+          76,
+          902,
+          1487
+        ],
+        "margins": {
+          "left": 160,
+          "top": 76,
+          "right": 122,
+          "bottom": 49
+        },
+        "minimumMarginPixels": 49,
+        "touchesCanvas": false,
+        "transparentPixels": 1109567,
+        "opaquePixels": 458148,
+        "partialAlphaPixels": 5149,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          118,
+          55,
+          679,
+          1118
+        ],
+        "margins": {
+          "left": 118,
+          "top": 55,
+          "right": 89,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 616724,
+        "opaquePixels": 250781,
+        "partialAlphaPixels": 17231,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-09",
+      "source": "assets/warriors/generated/house-tlapanui-09.png",
+      "sourceSha256": "e0a55f067f592f58ac36b4ca6cd4398af7c538ba40c8e714d262dda09783003b",
+      "production": "assets/warriors/production/house-tlapanui-09.png",
+      "productionSha256": "1d556864f7abd644a17ecc16780720b8cf8e2a921fa539c9942adce882007713",
+      "preview": "assets/warriors/previews/house-tlapanui-09.webp",
+      "previewSha256": "478921be8f3c4996c828a6f6fd6fae7b409cb29e234db8cd10d42d90e2c8fea0",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          51,
+          35,
+          1004,
+          1504
+        ],
+        "margins": {
+          "left": 51,
+          "top": 35,
+          "right": 20,
+          "bottom": 32
+        },
+        "minimumMarginPixels": 20,
+        "touchesCanvas": false,
+        "transparentPixels": 1139498,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 433366,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          229,
+          49,
+          758,
+          1486
+        ],
+        "margins": {
+          "left": 229,
+          "top": 49,
+          "right": 266,
+          "bottom": 50
+        },
+        "minimumMarginPixels": 49,
+        "touchesCanvas": false,
+        "transparentPixels": 1173983,
+        "opaquePixels": 394444,
+        "partialAlphaPixels": 4437,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          170,
+          34,
+          571,
+          1117
+        ],
+        "margins": {
+          "left": 170,
+          "top": 34,
+          "right": 197,
+          "bottom": 35
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 651916,
+        "opaquePixels": 213868,
+        "partialAlphaPixels": 18952,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-10",
+      "source": "assets/warriors/generated/house-tlapanui-10.png",
+      "sourceSha256": "646128c62610877c0026f1ff597f7f79edcac6297ceed4c27cdeeec0d2b0d0ce",
+      "production": "assets/warriors/production/house-tlapanui-10.png",
+      "productionSha256": "b36eaf9cb9976d810ba7b345043ac853050c07d7826a8a0196229f12a61ee073",
+      "preview": "assets/warriors/previews/house-tlapanui-10.webp",
+      "previewSha256": "7e29f4534e8b269f9cb96e6d9793fa3c1ab5c153f247591220ac91070e1b55c4",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1012,
+          1521
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 12,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1035564,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 537300,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          124,
+          22,
+          889,
+          1518
+        ],
+        "margins": {
+          "left": 124,
+          "top": 22,
+          "right": 135,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 18,
+        "touchesCanvas": false,
+        "transparentPixels": 1066561,
+        "opaquePixels": 501032,
+        "partialAlphaPixels": 5271,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          91,
+          14,
+          669,
+          1141
+        ],
+        "margins": {
+          "left": 91,
+          "top": 14,
+          "right": 99,
+          "bottom": 11
+        },
+        "minimumMarginPixels": 11,
+        "touchesCanvas": false,
+        "transparentPixels": 591687,
+        "opaquePixels": 274063,
+        "partialAlphaPixels": 18986,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-11",
+      "source": "assets/warriors/generated/house-tlapanui-11.png",
+      "sourceSha256": "559a2b93edfafc73254a0e6292a40db58f7cb2f1a7b13eb713ba9223894b5394",
+      "production": "assets/warriors/production/house-tlapanui-11.png",
+      "productionSha256": "66fca2f0b63ce33d46617931c19cfa9b838f84613824fdfb3168249fa5ea24f8",
+      "preview": "assets/warriors/previews/house-tlapanui-11.webp",
+      "previewSha256": "54ff489f2938d5bb42ed7655311088af216d0c89856830fdf72b7750c42d0fd4",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          13,
+          1012,
+          1510
+        ],
+        "margins": {
+          "left": 0,
+          "top": 13,
+          "right": 12,
+          "bottom": 26
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1072060,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 500804,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          230,
+          16,
+          802,
+          1506
+        ],
+        "margins": {
+          "left": 230,
+          "top": 16,
+          "right": 222,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 1106169,
+        "opaquePixels": 460553,
+        "partialAlphaPixels": 6142,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          170,
+          10,
+          604,
+          1132
+        ],
+        "margins": {
+          "left": 170,
+          "top": 10,
+          "right": 164,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 613578,
+        "opaquePixels": 251007,
+        "partialAlphaPixels": 20151,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-11-v2",
+      "source": "assets/warriors/generated/house-tlapanui-11-v2.png",
+      "sourceSha256": "4efe406ae5bec47c5118a0829cac513cc5651646d8944d76983d79fe1f1a5a73",
+      "production": "assets/warriors/production/house-tlapanui-11-v2.png",
+      "productionSha256": "2db78ed2be8a93f7810603db5e51e73e808d8daa70ffb17d0c5b96e3b0e335d5",
+      "preview": "assets/warriors/previews/house-tlapanui-11-v2.webp",
+      "previewSha256": "ee0cb305ee7b0346616f15350a8fde013bd299f210422c8719474bb69a347883",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          23,
+          9,
+          1010,
+          1472
+        ],
+        "margins": {
+          "left": 23,
+          "top": 9,
+          "right": 14,
+          "bottom": 64
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 1145373,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 427491,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          244,
+          143,
+          772,
+          1467
+        ],
+        "margins": {
+          "left": 244,
+          "top": 143,
+          "right": 252,
+          "bottom": 69
+        },
+        "minimumMarginPixels": 69,
+        "touchesCanvas": false,
+        "transparentPixels": 1172439,
+        "opaquePixels": 395515,
+        "partialAlphaPixels": 4910,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          181,
+          105,
+          581,
+          1103
+        ],
+        "margins": {
+          "left": 181,
+          "top": 105,
+          "right": 187,
+          "bottom": 49
+        },
+        "minimumMarginPixels": 49,
+        "touchesCanvas": false,
+        "transparentPixels": 651898,
+        "opaquePixels": 215316,
+        "partialAlphaPixels": 17522,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-12",
+      "source": "assets/warriors/generated/house-tlapanui-12.png",
+      "sourceSha256": "62f51e1abe2459ba9e7919bd8eaf43de74aade9247f4bce520ec3abbc5fd08d6",
+      "production": "assets/warriors/production/house-tlapanui-12.png",
+      "productionSha256": "74ab0dc9461a7e3ee936523ba47393425baf3ce1f773357141f917778d26e6aa",
+      "preview": "assets/warriors/previews/house-tlapanui-12.webp",
+      "previewSha256": "0fa7b0c99021c0bd10571f85afc2825d418499bcf9581161c79c7e82afc51e3a",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          24,
+          1006,
+          1516
+        ],
+        "margins": {
+          "left": 0,
+          "top": 24,
+          "right": 18,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1097060,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 475804,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          146,
+          27,
+          754,
+          1508
+        ],
+        "margins": {
+          "left": 146,
+          "top": 27,
+          "right": 270,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 27,
+        "touchesCanvas": false,
+        "transparentPixels": 1121314,
+        "opaquePixels": 446928,
+        "partialAlphaPixels": 4622,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          107,
+          18,
+          568,
+          1133
+        ],
+        "margins": {
+          "left": 107,
+          "top": 18,
+          "right": 200,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 18,
+        "touchesCanvas": false,
+        "transparentPixels": 623288,
+        "opaquePixels": 244415,
+        "partialAlphaPixels": 17033,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-13",
+      "source": "assets/warriors/generated/house-tlapanui-13.png",
+      "sourceSha256": "6d9ddf5b7bfd38309079606f6b3f4c28641a116f5497a43e267d0cb2fbf58f2c",
+      "production": "assets/warriors/production/house-tlapanui-13.png",
+      "productionSha256": "7176628d81151e0a77cf1bb4a80a36a6c26471efb548be11f994931bb32b1da5",
+      "preview": "assets/warriors/previews/house-tlapanui-13.webp",
+      "previewSha256": "95124578397afe2f4cad8dd9cca74b12b9f32f889a76f6b1f9dbe99c876aa3a7",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          21,
+          1010,
+          1524
+        ],
+        "margins": {
+          "left": 0,
+          "top": 21,
+          "right": 14,
+          "bottom": 12
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 982911,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 589953,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          191,
+          33,
+          975,
+          1521
+        ],
+        "margins": {
+          "left": 191,
+          "top": 33,
+          "right": 49,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 1023619,
+        "opaquePixels": 542248,
+        "partialAlphaPixels": 6997,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          141,
+          22,
+          734,
+          1143
+        ],
+        "margins": {
+          "left": 141,
+          "top": 22,
+          "right": 34,
+          "bottom": 9
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 565587,
+        "opaquePixels": 295568,
+        "partialAlphaPixels": 23581,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-14",
+      "source": "assets/warriors/generated/house-tlapanui-14.png",
+      "sourceSha256": "13e9a3e3d7e98b8d6beb91ba3186f6be20d7bf3dfe7e504e45f2b7ab9fd5d0bd",
+      "production": "assets/warriors/production/house-tlapanui-14.png",
+      "productionSha256": "5384e21e275f527a091bde7f3900a1921d6e82ade3e86fe5b48c3274b86d14e1",
+      "preview": "assets/warriors/previews/house-tlapanui-14.webp",
+      "previewSha256": "64485cb0595fdde9c84ed2147fe56d6fdfdb7dd33d9b29220605d560f8a2da49",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          26,
+          1004,
+          1522
+        ],
+        "margins": {
+          "left": 0,
+          "top": 26,
+          "right": 20,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1085551,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 487313,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          101,
+          30,
+          820,
+          1519
+        ],
+        "margins": {
+          "left": 101,
+          "top": 30,
+          "right": 204,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 17,
+        "touchesCanvas": false,
+        "transparentPixels": 1115054,
+        "opaquePixels": 452223,
+        "partialAlphaPixels": 5587,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          73,
+          20,
+          617,
+          1142
+        ],
+        "margins": {
+          "left": 73,
+          "top": 20,
+          "right": 151,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 619171,
+        "opaquePixels": 246953,
+        "partialAlphaPixels": 18612,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-15",
+      "source": "assets/warriors/generated/house-tlapanui-15.png",
+      "sourceSha256": "9ee61cb342aeed37d03d2f03d80a2bbb9a423f8fc2cc18960300fddad0799822",
+      "production": "assets/warriors/production/house-tlapanui-15.png",
+      "productionSha256": "cb755240f0aec87a5c9404a34929317f8e1bf9e3ff43e8a9e11452ca2570bc89",
+      "preview": "assets/warriors/previews/house-tlapanui-15.webp",
+      "previewSha256": "4f7dcabe181802bf04423cbd6c79560851f6df9538e7d2ea7729e81b70373ff1",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          988,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 36,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1055629,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 517235,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          34,
+          10,
+          837,
+          1521
+        ],
+        "margins": {
+          "left": 34,
+          "top": 10,
+          "right": 187,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 1088686,
+        "opaquePixels": 478551,
+        "partialAlphaPixels": 5627,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          23,
+          6,
+          630,
+          1143
+        ],
+        "margins": {
+          "left": 23,
+          "top": 6,
+          "right": 138,
+          "bottom": 9
+        },
+        "minimumMarginPixels": 6,
+        "touchesCanvas": false,
+        "transparentPixels": 603455,
+        "opaquePixels": 260865,
+        "partialAlphaPixels": 20416,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-16",
+      "source": "assets/warriors/generated/house-tlapanui-16.png",
+      "sourceSha256": "c69f89dd38f58bb860c7685456160be16c520b6a061596089c07f47806dae6d5",
+      "production": "assets/warriors/production/house-tlapanui-16.png",
+      "productionSha256": "f1362c22098588e5f9b6af1c460dd6bc5ee461914237fdc4d2f1ae2e1d5abca2",
+      "preview": "assets/warriors/previews/house-tlapanui-16.webp",
+      "previewSha256": "4bc2b9c93a1a25d9ebf00c29d949cb2caa848fd11b14334eb86e57b2c26868fd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1014,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 10,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 964404,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 608460,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          100,
+          9,
+          796,
+          1531
+        ],
+        "margins": {
+          "left": 100,
+          "top": 9,
+          "right": 228,
+          "bottom": 5
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 997212,
+        "opaquePixels": 570017,
+        "partialAlphaPixels": 5635,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          73,
+          4,
+          599,
+          1151
+        ],
+        "margins": {
+          "left": 73,
+          "top": 4,
+          "right": 169,
+          "bottom": 1
+        },
+        "minimumMarginPixels": 1,
+        "touchesCanvas": false,
+        "transparentPixels": 553265,
+        "opaquePixels": 313468,
+        "partialAlphaPixels": 18003,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-tlapanui-17",
+      "source": "assets/warriors/generated/house-tlapanui-17.png",
+      "sourceSha256": "7faf07ac99ffcaa46013fdabd49e7521795d2eb80efbaabd0655a85fa087de4d",
+      "production": "assets/warriors/production/house-tlapanui-17.png",
+      "productionSha256": "b9b3d2285350a62d4738d46d6a737d6500d8f6cd85a69787364c8c63d4152b91",
+      "preview": "assets/warriors/previews/house-tlapanui-17.webp",
+      "previewSha256": "880253e6a0e83b4b2ca5f6d8def0a7418064784d4470de5a4fdf24bd2b14750f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1008,
+          1494
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 16,
+          "bottom": 42
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1118951,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 453913,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          224,
+          129,
+          777,
+          1484
+        ],
+        "margins": {
+          "left": 224,
+          "top": 129,
+          "right": 247,
+          "bottom": 52
+        },
+        "minimumMarginPixels": 52,
+        "touchesCanvas": false,
+        "transparentPixels": 1148939,
+        "opaquePixels": 418165,
+        "partialAlphaPixels": 5760,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          166,
+          94,
+          585,
+          1115
+        ],
+        "margins": {
+          "left": 166,
+          "top": 94,
+          "right": 183,
+          "bottom": 37
+        },
+        "minimumMarginPixels": 37,
+        "touchesCanvas": false,
+        "transparentPixels": 638429,
+        "opaquePixels": 227652,
+        "partialAlphaPixels": 18655,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-01",
+      "source": "assets/warriors/generated/prototype-01.png",
+      "sourceSha256": "d1728a0ba3bbd4e71e0cd20b590dfb83ab6462b6702b1a8642ce0aaf79389ea9",
+      "production": "assets/warriors/production/prototype-01.png",
+      "productionSha256": "ff18084419046f562c7d80020aab8072065ddc4ce4f5f5d1505ad757d1995a03",
+      "preview": "assets/warriors/previews/prototype-01.webp",
+      "previewSha256": "f3317223bd02996a46f5e11b89f2b746da20e483f21df2a9a89c90e1b50134c5",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          16,
+          1021,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 16,
+          "right": 3,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1001515,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 571349,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          87,
+          19,
+          824,
+          1492
+        ],
+        "margins": {
+          "left": 87,
+          "top": 19,
+          "right": 200,
+          "bottom": 44
+        },
+        "minimumMarginPixels": 19,
+        "touchesCanvas": false,
+        "transparentPixels": 1041600,
+        "opaquePixels": 524802,
+        "partialAlphaPixels": 6462,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          63,
+          12,
+          620,
+          1121
+        ],
+        "margins": {
+          "left": 63,
+          "top": 12,
+          "right": 148,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 577389,
+        "opaquePixels": 287421,
+        "partialAlphaPixels": 19926,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-02",
+      "source": "assets/warriors/generated/prototype-02.png",
+      "sourceSha256": "38ae0de902e3c791b3469d8e08708acd60140d470cf09b647623647d37ba0642",
+      "production": "assets/warriors/production/prototype-02.png",
+      "productionSha256": "c1738bd6cf99a5f9594ae634a3d0adaffd9d4f69c08d1b58f2f178a661976309",
+      "preview": "assets/warriors/previews/prototype-02.webp",
+      "previewSha256": "bf51244027e7bb53f80aa4aed6a27dc977c86f8de858cc76a84dab9d62483349",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          53,
+          0,
+          988,
+          1501
+        ],
+        "margins": {
+          "left": 53,
+          "top": 0,
+          "right": 36,
+          "bottom": 35
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1110427,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 462437,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          248,
+          10,
+          771,
+          1494
+        ],
+        "margins": {
+          "left": 248,
+          "top": 10,
+          "right": 253,
+          "bottom": 42
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 1143286,
+        "opaquePixels": 424339,
+        "partialAlphaPixels": 5239,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          184,
+          5,
+          580,
+          1123
+        ],
+        "margins": {
+          "left": 184,
+          "top": 5,
+          "right": 188,
+          "bottom": 29
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 634411,
+        "opaquePixels": 230486,
+        "partialAlphaPixels": 19839,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-03",
+      "source": "assets/warriors/generated/prototype-03.png",
+      "sourceSha256": "10834c28e3a7527b8754dc95709c6a0dd983e1becba9c185e3c865da7fe568eb",
+      "production": "assets/warriors/production/prototype-03.png",
+      "productionSha256": "f58256bcff94d4ad932fe5fb93f6b4c0d1a8ebf6ddc7997dbc0358eb1f704323",
+      "preview": "assets/warriors/previews/prototype-03.webp",
+      "previewSha256": "11714236e74760d8afa2463373fceaf151ee68a6da6f2c2deaf17f89baa57f77",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          11,
+          1012,
+          1522
+        ],
+        "margins": {
+          "left": 0,
+          "top": 11,
+          "right": 12,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1048426,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 524438,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          78,
+          14,
+          835,
+          1519
+        ],
+        "margins": {
+          "left": 78,
+          "top": 14,
+          "right": 189,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 1082749,
+        "opaquePixels": 483775,
+        "partialAlphaPixels": 6340,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          57,
+          8,
+          628,
+          1142
+        ],
+        "margins": {
+          "left": 57,
+          "top": 8,
+          "right": 140,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 600102,
+        "opaquePixels": 263696,
+        "partialAlphaPixels": 20938,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-03-v2",
+      "source": "assets/warriors/generated/prototype-03-v2.png",
+      "sourceSha256": "3d510485e0636b3718e152eaabaf8ca75fe96417db6f7c208666231de869a914",
+      "production": "assets/warriors/production/prototype-03-v2.png",
+      "productionSha256": "4914aead5f4c2f5548f61295749b3a166c6d90c4c237339a03953400809f9a59",
+      "preview": "assets/warriors/previews/prototype-03-v2.webp",
+      "previewSha256": "17190f9ebba3571ae28f50a20b79259945f2ad1a8b022950fbfb146e836b4912",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1012,
+          1523
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 12,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1034522,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 538342,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          73,
+          13,
+          839,
+          1520
+        ],
+        "margins": {
+          "left": 73,
+          "top": 13,
+          "right": 185,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 1069148,
+        "opaquePixels": 497345,
+        "partialAlphaPixels": 6371,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          52,
+          7,
+          632,
+          1142
+        ],
+        "margins": {
+          "left": 52,
+          "top": 7,
+          "right": 136,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 592136,
+        "opaquePixels": 271215,
+        "partialAlphaPixels": 21385,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-04",
+      "source": "assets/warriors/generated/prototype-04.png",
+      "sourceSha256": "6d9e44345d56fe424d97aece7832bf9b37052a8b74aa3c8b814bceb984202560",
+      "production": "assets/warriors/production/prototype-04.png",
+      "productionSha256": "96c0a5eb9e50d45a20df6eab612ef2bdf0904b6eb1201a1545f2f4baeef82679",
+      "preview": "assets/warriors/previews/prototype-04.webp",
+      "previewSha256": "15c166bb168adbd47b1b94369df9988ed7bb0e34d1dd7db0ece8a807190818c3",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1021,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 3,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1082673,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 490191,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          213,
+          13,
+          844,
+          1509
+        ],
+        "margins": {
+          "left": 213,
+          "top": 13,
+          "right": 180,
+          "bottom": 27
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 1133232,
+        "opaquePixels": 431074,
+        "partialAlphaPixels": 8558,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          157,
+          7,
+          635,
+          1134
+        ],
+        "margins": {
+          "left": 157,
+          "top": 7,
+          "right": 133,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 626371,
+        "opaquePixels": 233443,
+        "partialAlphaPixels": 24922,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "prototype-05",
+      "source": "assets/warriors/generated/prototype-05.png",
+      "sourceSha256": "c5975f62a85638f1da503cafb218778457af5ecd2f6aef795419b52818ba5c1b",
+      "production": "assets/warriors/production/prototype-05.png",
+      "productionSha256": "184fb5b60227c94279a5acea784b8628507b7a45b01340045332b609f4f85149",
+      "preview": "assets/warriors/previews/prototype-05.webp",
+      "previewSha256": "7c67e5c8c97dc62b3552992938d9c5024683355dc1c11cb3138dd539befb0d59",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1004,
+          1524
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 20,
+          "bottom": 12
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1032290,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 540574,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          137,
+          41,
+          896,
+          1507
+        ],
+        "margins": {
+          "left": 137,
+          "top": 41,
+          "right": 128,
+          "bottom": 29
+        },
+        "minimumMarginPixels": 29,
+        "touchesCanvas": false,
+        "transparentPixels": 1065026,
+        "opaquePixels": 501931,
+        "partialAlphaPixels": 5907,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          100,
+          28,
+          674,
+          1132
+        ],
+        "margins": {
+          "left": 100,
+          "top": 28,
+          "right": 94,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 20,
+        "touchesCanvas": false,
+        "transparentPixels": 591081,
+        "opaquePixels": 274847,
+        "partialAlphaPixels": 18808,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

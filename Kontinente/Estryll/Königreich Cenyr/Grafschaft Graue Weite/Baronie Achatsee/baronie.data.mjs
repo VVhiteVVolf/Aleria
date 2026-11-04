@@ -192,7 +192,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-coedwig"
         }
       ]
     },
@@ -208,7 +209,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tanwyn"
         }
       ]
     }

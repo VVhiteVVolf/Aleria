@@ -10,7 +10,7 @@ import { HOUSE_MORFORWYN_PORTRAITS } from './house-morforwyn-portraits.js';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS,
   SONNENKUESTE_HOUSE_PROFILES
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 
 const MORFORWYN_HOUSE_ID = 'house-morforwyn';
@@ -319,7 +319,7 @@ const MORFORWYN_COMPLETE_SOURCE = Object.freeze({
       lineageRole: 'head'
     }),
     person('idmue-morforwyn', 'Idmue', 'female', '1599', ''),
-    person('ofranton-1599-morforwyn', 'Ofranton', 'male', '1599', '1630'),
+    person('ofranton-1599-morforwyn', 'Ofranton', 'male', '1599', '1633'),
     person('ywamue-morforwyn', 'Ywamue', 'female', '1600', '1704', {
       title: 'Historische Ritterherrin der Marmue-Linie',
       lineageRole: 'head'
@@ -444,7 +444,7 @@ const MORFORWYN_COMPLETE_SOURCE = Object.freeze({
     createMarriage('marriage-serenmue-teirwton-morforwyn', ...COUPLES.serenmue, { status: 'ended' }),
     createMarriage('marriage-bethmue-talorton-morforwyn', ...COUPLES.bethmue, { status: 'ended' }),
     createMarriage('marriage-megmue-wynton-morforwyn', ...COUPLES.megmue, { status: 'ended' }),
-    createMarriage('marriage-talfamue-ofranton-1599-morforwyn', ...COUPLES.talfamue, { status: 'ended', end: '1630' }),
+    createMarriage('marriage-talfamue-ofranton-1599-morforwyn', ...COUPLES.talfamue, { status: 'ended', end: '1633' }),
     createMarriage('marriage-ywamue-dewiton-morforwyn', ...COUPLES.ywamue, { status: 'ended', end: '1641' }),
     createMarriage('marriage-owamue-helygton-morforwyn', ...COUPLES.owamue, { status: 'ended', end: '1648' }),
     createMarriage('marriage-gwlyddyn-eurolwyn-grael', ...COUPLES.eurolwyn, { status: 'ended', end: '1684' }),

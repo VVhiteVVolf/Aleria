@@ -1,0 +1,159 @@
+{
+  "id": "haus-ruin-ua-laoch",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "0814ba1a-e76c-4cf1-95eb-e372685a651f",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\0814ba1a-e76c-4cf1-95eb-e372685a651f\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ruin-ua-laoch/animexx-original.html",
+    "bytes": 119209,
+    "sha256": "849734baaf01a1b31b706bd00d3973bc2d6abf7cf6bff51083cf62881b7fa3d7",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ruin-ua-laoch",
+    "baselineSourceRevision": 7,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Abhainn",
+      "barony": "Tir na gCoiréal",
+      "county": "Tir na Sleagh",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na gCoiréal",
+        "Broch an Abhainn"
+      ]
+    },
+    "graphFingerprint": "f5cc43dea91bb69bb6689511ae1b5aca25248028245eb7fb0209174704a27534",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-ruin-ua-laoch",
+    "title": "Ruin Ua Laoch",
+    "territoryId": "leitheach-herrschaft-laoch",
+    "territoryName": "Tir na gCoiréal",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na gCoiréal",
+        "slug": "leitheach-herrschaft-laoch"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ruin-ua-laoch",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-ruin-ua-laoch",
+    "slug": "ruin-ua-laoch",
+    "canonicalSlug": "ruin-ua-laoch",
+    "attachmentId": "0814ba1a-e76c-4cf1-95eb-e372685a651f",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/aFy1QsQ.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 294950,
+    "sha256": "68498666f3c05f06732faf8b68bdd5330dba5b960cc85d967277a7dfddd95b6c",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-ruin-ua-laoch",
+    "title": "Ruin Ua Laoch",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sleagh",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/aFy1QsQ.png",
+    "path": "Stammbäume/assets/images/references/haus-ruin-ua-laoch/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ruin-ua-laoch/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "68498666f3c05f06732faf8b68bdd5330dba5b960cc85d967277a7dfddd95b6c",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Roter Speerträger mit Flügelhelm und figurengeschmücktem Langschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "849734baaf01a1b31b706bd00d3973bc2d6abf7cf6bff51083cf62881b7fa3d7",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-ruin-ua-laoch, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die allgemeine Tiarna-Passage wird als kulturelles Ideal erhalten. Daraus folgen keine automatisch vergebenen Klassen, Fianna-Ränge oder neuen Fähigkeiten einzelner Personen.",
+    "Bestehender Gründer Senán Cumhail (senan-ancient-cumhail) bleibt identisch; Laoch ist der gelieferte Heldenbeiname, keine zusätzliche Personenakte.",
+    "Die Bestienjagd bleibt Gründungsüberlieferung; keine neue Kreaturen-, Trophäen- oder Inventarakte. Zum Broch werden keine widersprüchlichen neuen Bauphasen festgelegt.",
+    "Heutiger Lairdrang und Sitz Broch an Abhainn bleiben erhalten, auch wenn die Quelle von älteren Gütern bei der Fürstenstadt erzählt.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

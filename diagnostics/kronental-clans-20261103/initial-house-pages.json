@@ -1,0 +1,125 @@
+[
+  {
+    "id": "haus-suedstahl",
+    "source": "Familien Häuser und Clans/data/haus-suedstahl.data.js",
+    "archive": "diagnostics/kronental-clans-20261103/initial-house-pages/haus-suedstahl.data.js",
+    "sha256": "7f2d97947b5b32d02d92a6dfb502e04d089c61f7f6261d6ca2bcbfa842af2154",
+    "bytes": 16408,
+    "registryEntry": {
+      "id": "haus-suedstahl",
+      "slug": "haus-suedstahl",
+      "aliases": [
+        "suedstahl",
+        "südstahl",
+        "clan-suedstahl",
+        "clan-südstahl"
+      ],
+      "name": "Clan Südstahl",
+      "status": "active",
+      "type": "clan",
+      "data": "data/haus-suedstahl.data.js",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Familien Häuser und Clans",
+          "slug": "familien-haeuser-und-clans"
+        },
+        {
+          "type": "Königreich",
+          "name": "Aldrimar",
+          "slug": "aldrimar"
+        },
+        {
+          "type": "Jarltum",
+          "name": "Kronental",
+          "slug": "kronental"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tal der Helden",
+          "slug": "tal-der-helden"
+        },
+        {
+          "type": "Sitz",
+          "name": "Heldenwacht",
+          "slug": "heldenwacht"
+        },
+        {
+          "type": "Clan",
+          "name": "Clan Südstahl",
+          "slug": "haus-suedstahl"
+        }
+      ],
+      "tags": [
+        "suedstahl",
+        "clan",
+        "huskarl",
+        "aldrimar",
+        "kronental",
+        "heldenwacht",
+        "vaeren"
+      ]
+    }
+  },
+  {
+    "id": "haus-albholz",
+    "source": "Familien Häuser und Clans/data/haus-albholz.data.js",
+    "archive": "diagnostics/kronental-clans-20261103/initial-house-pages/haus-albholz.data.js",
+    "sha256": "a125c5f0ae743ce98625ad778453d6ea17dc0c11bbf22858001f5013b7648e4b",
+    "bytes": 16049,
+    "registryEntry": {
+      "id": "haus-albholz",
+      "slug": "haus-albholz",
+      "aliases": [
+        "albholz",
+        "clan-albholz"
+      ],
+      "name": "Clan Albholz",
+      "status": "active",
+      "type": "clan",
+      "data": "data/haus-albholz.data.js",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Familien Häuser und Clans",
+          "slug": "familien-haeuser-und-clans"
+        },
+        {
+          "type": "Königreich",
+          "name": "Aldrimar",
+          "slug": "aldrimar"
+        },
+        {
+          "type": "Jarltum",
+          "name": "Kronental",
+          "slug": "kronental"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tal der Helden",
+          "slug": "tal-der-helden"
+        },
+        {
+          "type": "Sitz",
+          "name": "Heldenwacht",
+          "slug": "heldenwacht"
+        },
+        {
+          "type": "Clan",
+          "name": "Clan Albholz",
+          "slug": "haus-albholz"
+        }
+      ],
+      "tags": [
+        "albholz",
+        "clan",
+        "huskarl",
+        "aldrimar",
+        "kronental",
+        "heldenwacht",
+        "vaeren",
+        "druidenhain"
+      ]
+    }
+  }
+]

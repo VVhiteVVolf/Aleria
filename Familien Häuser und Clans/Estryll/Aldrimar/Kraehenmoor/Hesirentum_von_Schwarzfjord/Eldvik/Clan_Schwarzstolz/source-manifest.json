@@ -1,0 +1,61 @@
+{
+  "id": "haus-schwarzstolz",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": null,
+  "authority": {
+    "familyId": "haus-schwarzstolz",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Eldvik",
+      "barony": "Hesirentum von Schwarzfjord",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "8d0f6d04f14a29d4e3e3f42c1e2b700eb31bf65d80a380da179be368c7338e50"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-schwarzstolz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-schwarzstolz",
+    "slug": "schwarzstolz",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2d335301-4023-4d47-b5c1-6e794630e59f.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-schwarzstolz/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kraehenmoor-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "f88b9412f016566ba04733164dd4ab3ec74e24a3c84864f1366a6ed18e3ad459",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1923852,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

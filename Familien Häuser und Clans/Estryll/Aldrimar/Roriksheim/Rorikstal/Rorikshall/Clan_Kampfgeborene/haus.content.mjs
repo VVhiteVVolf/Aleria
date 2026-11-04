@@ -1,0 +1,228 @@
+// Geprüfte redaktionelle Quelle; kanonische Familienakten bleiben maßgeblich.
+export const HOUSE_CONTENT = {
+  "id": "haus-kampfgeborene",
+  "name": "Clan Kampfgeborene",
+  "type": "Clan",
+  "page": "haus.html",
+  "county": "Roriksheim",
+  "liege": "Clan Varulv",
+  "territoryId": "jarltum-roriksheim",
+  "territoryName": "Jarltum Roriksheim",
+  "territoryHref": "../Kontinente/Estryll/Königreich Aldrimar/Jarltum Roriksheim/Jarltum Roriksheim.html",
+  "parentHouseId": "house-varulv",
+  "extinct": false,
+  "showMotto": false,
+  "registerPage": true,
+  "prepared": false,
+  "contentVersion": "20261103-roriksheim-v1",
+  "biographyManagedExternally": false,
+  "biographySourceRevision": 7,
+  "biographyPreviousDefaultFingerprints": [],
+  "biographyIntroTitle": "Über den Clan",
+  "biographyHistoryTitle": "Geschichte",
+  "biographySummary": {
+    "overview": "Die Kampfgeborenen sind ein Hesirenclan von Rorikshall und Vasallen der Varulv. Der alte Name Krigsfodt erinnert an ihre norrnaighischen Wurzeln. Wirtschaftliche Not und die Fehde mit den Schwarzdorn bedrohen ihre einst bedeutendere Stellung.",
+    "history": "Fridthjof Kampfgeborener gilt als Gründer. Später arbeiteten die Kampfgeborenen eng mit den Schwarzdorn zusammen: Sie bestellten Felder, betrieben Imkerei und sicherten Handelswege, während ihre Partner brauten und Tavernen versorgten. Mit der zunehmenden Macht der Schwarzdorn wurden sie aus dem gemeinsamen Geschäft gedrängt. Unter Rag Blauzahn vertiefte sich der Bruch.",
+    "character": "Stolz, Verbitterung und der Wunsch nach neuer Geltung bestimmen den Clan. Seine Angehörigen halten an Jagdfertigkeit und Zusammenhalt fest, sind aus wirtschaftlicher Bedrängnis aber auch bereit, Gegner mit Raubzügen und anderen skrupellosen Mitteln zu schwächen.",
+    "customs": "Bogenschießen, Hundezucht und Jagd gehören früh zur Ausbildung. Bei der Huskarlprobe zieht ein Anwärter mit Hund oder Wolf allein in den Wald. Erst eine anspruchsvolle Jagdbeute beweist das erwartete Geschick; die bestandene Prüfung wird vor der Gemeinschaft gefeiert.",
+    "holdings": "Wenige Höfe, Zwinger und landwirtschaftliche Besitzungen bilden die verbliebene Grundlage ihres Lebens. Ihre begrenzten Mittel erschweren Bündnisse und nähren den Versuch, sich an den Ressourcen der Schwarzdorn zu bereichern.",
+    "culture": "Die Kampfgeborenen verbinden svaerische Kultur mit albischen Einflüssen. Ihr heutiger Name steht neben dem älteren Krigsfodt. Ein besonderer Schutzgott prägt den Clan nicht; praktische Fähigkeiten, Naturverbundenheit und Wehrhaftigkeit haben größere Bedeutung.",
+    "relations": "Aus den früheren Geschäftspartnern Schwarzdorn wurden erbitterte Rivalen. Die Isolation des Clans verstärkte sich nach dem Prätendentenkrieg. Das bürgerliche Haus Frostgeborene bleibt eine eigene Familie; seine Nähe zu den Kampfgeborenen begründet keinen gemeinsamen Adelsrang.",
+    "influence": [],
+    "achievements": [],
+    "trivia": [
+      "Purpurne Augen gelten als auffälliges Merkmal der Kampfgeborenen."
+    ]
+  },
+  "placeholders": {
+    "male": "../Stammbäume/assets/images/placeholders/male.png",
+    "female": "../Stammbäume/assets/images/placeholders/female.png"
+  },
+  "allies": [],
+  "hierarchy": [
+    {
+      "type": "Sammlung",
+      "name": "Familien Häuser und Clans",
+      "slug": "familien-hauser-und-clans"
+    },
+    {
+      "type": "Kontinent",
+      "name": "Estryll",
+      "slug": "estryll"
+    },
+    {
+      "type": "Königreich",
+      "name": "Aldrimar",
+      "slug": "aldrimar"
+    },
+    {
+      "type": "Jarltum",
+      "name": "Roriksheim",
+      "slug": "roriksheim"
+    },
+    {
+      "type": "Region",
+      "name": "Rorikstal",
+      "slug": "rorikstal"
+    },
+    {
+      "type": "Sitz",
+      "name": "Rorikshall",
+      "slug": "rorikshall"
+    },
+    {
+      "type": "Clan",
+      "name": "Clan Kampfgeborene",
+      "slug": "haus-kampfgeborene"
+    }
+  ],
+  "profile": {
+    "highestTitle": "Hesire",
+    "rank": "Hesire",
+    "houseType": "Clan",
+    "motto": "",
+    "quoteAuthor": "",
+    "seat": "Rorikshall",
+    "affiliation": "Roriksheim",
+    "liege": "Clan Varulv",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
+    "founding": "",
+    "milestoneOne": "",
+    "milestoneTwo": "",
+    "patron": "",
+    "knightingPatron": "",
+    "people": "",
+    "wealth": "",
+    "religion": "",
+    "patronDeities": "",
+    "origin": "",
+    "cadetBranches": "",
+    "allies": "",
+    "enemies": ""
+  },
+  "omitMilitaryProfile": true,
+  "sections": {
+    "overview": "Die Kampfgeborenen, sind ein Hesirenclan aus Rorikshall und Vasallen der Varulv. Aufgrund ihrer Vergangenheit nagen sie derzeitig am Hungertuch und kämpfen um ihre Existenz als Adelshaus.",
+    "history": "Die Kampfgeborenen sind ein stolzer Clan, der in den Weiten von Rorikshall beheimatet ist. Ursprünglich bekannt als mutige Krieger und tapfere Leibeigene, entwickelte sich der Clan im Laufe der Generationen zu einer einflussreichen Familie mit starken Überzeugungen und festen Prinzipien.\n\nDie Geschichte der Kampfgeborenen begann mit ihrem Gründer, einem kühnen Krieger namens Fridthjof Kampfgeborener. In den turbulenten Zeiten von Rorikshall, als die Clans um Land und Ressourcen kämpften, zeichneten sich die Kampfgeborenen durch ihre herausragende Kampfkunst aus. Er gründete den Clan, um eine starke und vereinte Gemeinschaft zu schaffen, die den Herausforderungen ihrer Zeit gewachsen war.\n\nDie Geschichte der Kampfgeborenen ist eng mit ihrer Rivalität zu den Schwarzdorn verknüpft. Ursprünglich waren die beiden Clans Verbündete im florierenden Brauereigeschäft. Doch im Laufe der Zeit wurden die Schwarzdorn gierig und drängten die Kampfgeborenen aus dem Geschäft. Diese Entfremdung führte zu einer tiefen Feindschaft zwischen den beiden Clans, die bis heute anhält.",
+    "traditions": "Die Kunst des Bogenschießens und die Jagd sind zentrale Bestandteile der Kampfgeborenen-Tradition. Schon in jungen Jahren werden die Mitglieder in die Geheimnisse des Bogens eingeweiht, um sich als geschickte Jäger und Verteidiger auszubilden. Diese Fähigkeiten sind nicht nur Mittel zur Nahrungsbeschaffung, sondern auch ein Ausdruck von Stolz und Kampfgeist.\n\nDie Liebe zu Hunden ist tief im Clan verankert. Hundezwinger sind auf dem Gelände der Kampfgeborenen allgegenwärtig, und jedes Mitglied pflegt eine enge Beziehung zu seinem eigenen Wolf. Die Tradition der Hundezucht wird von Generation zu Generation weitergegeben, und die Tiere sind nicht nur treue Begleiter, sondern auch hilfreiche Jäger und Wächter.\n\nUm ein vollwertiges Mitglied des Clans zu werden, muss ein Kampfgeborener früh die Kunst der Jagd erlernen. Die jungen Mitglieder werden in die Wälder geführt, um die Fähigkeiten des Überlebens und der Beutejagd zu entwickeln. Diese frühe Ausbildung dient nicht nur der Versorgung des Clans, sondern stärkt auch die Bindung der Mitglieder zur Natur.",
+    "knighthood": "Das Huskarltum, ein ehrwürdiger Ritus in Aldrimar, durchzieht auch die Kultur der Kampfgeborenen und verleiht ihren Mitgliedern den Status von vollwertigen Kriegern. Diese Tradition, in jeder Familie und jedem Clan einzigartig, wird bei den Kampfgeborenen durch eine besondere Mutprobe, die sogenannte Huskarlprobe, zelebriert.\n\nAnders als der Ritterschlag, der in vielen Kulturen die Einführung in das Rittertum markiert, wird der Übergang zum Huskarl bei den Kampfgeborenen durch eine herausfordernde Jagd mit dem Wolf oder einem treuen Hund zelebriert. Diese Jagd stellt sicher, dass der junge Krieger nicht nur imstande ist, selbst für seine Versorgung zu sorgen, sondern auch, dass er die Geschicklichkeit und den Mut eines wahren Kämpfers besitzt.\n\nDie Huskarlprobe verlangt von dem jungen Krieger, allein in den Wald zu ziehen und mit einer anspruchsvollen Jagdbeute zurückzukehren. Ein einfacher Fang, wie ein Hase oder ein Fuchs, genügt nicht. Stattdessen muss der Bursche seine Fähigkeiten unter Beweis stellen, indem er ein beeindruckendes Wild erlegt, das nicht nur seine Geschicklichkeit, sondern auch seine Entschlossenheit repräsentiert.\n\nDie erfolgreiche Absolvierung der Huskarlprobe wird mit einem festlichen Ritual belohnt, bei dem der junge Krieger vor der Gemeinschaft präsentiert wird. Seine Leistungen werden anerkannt, und er wird zum Huskarl erklärt – ein Symbol seiner Volljährigkeit und seines status als vollwertiges Mitglied des Clans.\n\nDas Huskarltum bei den Kampfgeborenen stärkt nicht nur die individuellen Fähigkeiten jedes Kriegers, sondern fördert auch den Zusammenhalt und die Gemeinschaft im Clan. Es schafft eine einzigartige Verbindung zwischen den Mitgliedern und verleiht dem Clan eine starke, kriegerische Identität.",
+    "holdings": "Der Besitz der Kampfgeborenen erstreckt sich über einige wenige Höfe, Zwinger und einen begrenzten Besitz an Leibeigenen, die gemeinsam zum Wohlstand des Clans beitragen. Diese Besitztümer, obwohl begrenzt, spielen eine entscheidende Rolle im täglichen Leben der Kampfgeborenen und dienen als Basis für ihre Lebensgrundlagen.\n\nDie Kampfgeborenen haben ihre Aufmerksamkeit auch auf Raubzüge gegen die Schwarzdorn gerichtet, um sich an deren Ressourcen zu bereichern. Diese heimlichen Angriffe auf die feindlichen Clans sind bisher jedoch nur mit begrenztem Erfolg gekrönt gewesen. Die Motivation hinter diesen Aktionen liegt nicht nur in der Erweiterung des eigenen Wohlstands, sondern auch in der Schwächung der Schwarzdorn, um so die Rivalität zwischen den Clans zu ihren Gunsten zu beeinflussen.\n\nDie Besitzverhältnisse und Raubzüge spiegeln den Kampf der Kampfgeborenen um Einfluss und Wohlstand in ihrer Region wider. Durch geschickte Manöver und kriegerische Taktiken versuchen sie, ihre Position zu stärken und sich inmitten der konkurrierenden Clans zu behaupten.",
+    "cultureReligion": "Die Kampfgeborenen, die der Svaerischen Kulturgruppe in Aldrimar angehören, haben eine tief verwurzelte Verbindung zu ihrer kulturellen Identität. Mit albischem Einfluss und einer Tradition, die von Generation zu Generation weitergegeben wird, tragen sie stolz ihren neuen Namen, \"Kampfgeborener\", und haben ihren alten Namen, Krigsfodt, abgelegt. Diese Namensänderungen sind Teil eines breiteren Trends in der jüngsten Generation von Aldrimar.\n\nIn religiöser Hinsicht zeigen die Kampfgeborenen wenig Interesse an den Göttern und haben keinen besonderen Schutzpatron. Ihre Kultur und Lebensweise sind eher von pragmatischen und weltlichen Überlegungen geprägt, wobei sie sich auf ihre Jagdfertigkeiten, ihre Verbundenheit zur Natur und die Kunst des Krieges konzentrieren. Dies spiegelt sich in ihrem täglichen Leben und ihren Handlungen wider, während sie sich auf ihre eigenen Fähigkeiten und Traditionen stützen, um ihre Gemeinschaft zu stärken und zu schützen.",
+    "conflictsAlliances": "Die Rivalität zwischen den Kampfgeborenen und den Schwarzdorn hat ihre Wurzeln im Brauereigeschäft, das einst gemeinsam betrieben wurde. Früher teilten sich die beiden Clans die Verantwortung, wobei die Kampfgeborenen für das Bestellen der Felder, die Imkerei und die Sicherstellung der Handelswege zuständig waren, während die Schwarzdorn sich auf das Brauen und den Tavernenvertrieb konzentrierten. Allerdings wurden die Schwarzdorn im Laufe der Zeit gieriger und drängten die Kampfgeborenen aus dem Geschäft, was zu einer tiefen Feindschaft zwischen den Clans führte.\n\nDie Rivalität verschärfte sich weiter, als die Schwarzdorn ihre Macht in der Region ausweiteten und die Kampfgeborenen an den Rand des Wohlstands drängten. Um gegen die Schwarzdorn vorzugehen, schlossen sich die Kampfgeborenen Raubzügen an, um ihren eigenen Wohlstand zu steigern und die Macht der Schwarzdorn zu brechen. Diese Auseinandersetzung prägt nicht nur das Verhältnis zwischen den beiden Clans, sondern hat auch politische Auswirkungen auf die Region, da die Kampfgeborenen bestrebt sind, ihren Einfluss zurückzugewinnen, während die Schwarzdorn ihre Position verteidigen und gegen die Raubzüge der Kampfgeborenen vorgehen.\n\nDie Kampfgeborenen sind derzeit von wenigen, wenn überhaupt vorhandenen Bündnissen betroffen. Dies resultiert aus ihrer finanziellen Schwäche und ihrem geringen Einfluss. Der Clan, der über begrenzte Ressourcen verfügt, hat wenig zu bieten und ist für andere in dieser kriegerischen Zeit wenig attraktiv. Wohlstand, Einfluss und Standhaftigkeit sind gefragte Ressourcen, die die Kampfgeborenen nur begrenzt beitragen können. Aufgrund dieser Einschränkungen finden die Kampfgeborenen nur selten Gelegenheiten für Bündnisse mit anderen Clans.\n\nKrieg der Prätendenten\n\nWährend der Zeit des Krieges waren die Kampfgeborenen und die Schwarzdorn wie Brüder, ihre enge Zusammenarbeit spiegelte sich in ihrer gegenseitigen Unterstützung wider. Die Kampfgeborenen kümmerten sich um die Felder, den Honig und andere Ressourcen, während die Schwarzdorn sich auf die Brauerei konzentrierten. Diese starke Bindung ermöglichte es beiden Clans, gemeinsam gegen die Varulv zu intrigieren und ihre eigenen Interessen zu verfolgen.\n\nMit dem Aufstieg von Rag Blauzahn änderte sich die Beziehung jedoch drastisch. Die Kampfgeborenen wurden allmählich aus dem Geschäft gedrängt und verloren an Bedeutung. Die Schwarzdorn, nun unangefochten im Geschäft, benötigten die Ressourcen der Kampfgeborenen nicht länger und entzogen ihnen ihre Unterstützung. Dies führte zu einem dramatischen Wandel in den Beziehungen zwischen den beiden Clans.\n\nZur Zeit von Rag Blauzahn gab es keine Ehen mehr zwischen den Häusern, und die Kampfgeborenen standen zunehmend isoliert da. Ihr Einfluss war geschwunden, und sie wurden von anderen Clans gemieden oder verachtet. Die Kampfgeborenen, die einst einflussreich waren, hatten sich zu einem Clan entwickelt, der wenig zu bieten hatte, was zu ihrer zunehmenden Isolation und dem Verlust ihrer einst starken Verbindungen führte.",
+    "values": "Die Kampfgeborenen sind im Kern ein stolzer Clan mit festen Überzeugungen und starken Prinzipien. Die Moral des Hauses spiegelt sich in ihrer Geschichte, Tradition und ihrem Streben nach Wohlstand und Einfluss wider. Ihre Rivalität zu den Schwarzdorn hat eine gewisse Verbitterung und Neid hervorgebracht, insbesondere wegen der verlorenen Position im Brauereigeschäft und dem Wunsch, den eigenen Clan wieder zu alter Größe zu führen.\n\nObwohl die Kampfgeborenen im Kern keine schlechten Menschen sind, sind sie bereit, skrupellose Wege einzuschlagen, um ihre Ziele zu erreichen. Ihr Verhalten zeigt eine gewisse Härte und Entschlossenheit, insbesondere in ihren Raubzügen gegen die Schwarzdorn, um deren Ressourcen zu schwächen und den eigenen Wohlstand zu steigern.\n\nDie Liebe zu Hunden, die Tradition des Bogenschießens und die Jagd sind integraler Bestandteil ihrer Moral und Kultur. Diese Elemente unterstreichen ihre Fähigkeiten als Krieger und Jäger sowie ihre Verbundenheit zur Natur.\n\nInsgesamt kann man sagen, dass die Kampfgeborenen im Kern weder eindeutig gut noch böse sind, sondern eher von einem starken Überlebens- und Machtstreben geprägt sind. Ihre Handlungen und moralischen Entscheidungen sind stark von ihrem Streben nach Wohlstand und Einfluss beeinflusst, und sie sind bereit, dafür auch unkonventionelle und moralisch ambivalente Wege zu beschreiten.",
+    "succession": "Die überlieferte Erbfolge nennt Jorund Kampfgeborener.",
+    "court": "Lars Kampfgeborener führt Clan Kampfgeborene.",
+    "familyTree": "Der Stammbaum zeigt die überlieferten Angehörigen und Verbindungen der Familie.",
+    "historicalFigures": "Einzelne historische Persönlichkeiten sind bislang nicht näher überliefert."
+  },
+  "images": {
+    "crest": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-kampfgeborene.png",
+    "scene": "../Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+    "sceneAlt": "Clandarstellung · Clan Kampfgeborene",
+    "banner": "../Stammbäume/assets/images/regions/aldrimar-roriksheim.png"
+  },
+  "illustrationCategory": "Hausdarstellung",
+  "cadets": [],
+  "founder": {
+    "id": "fridthjof-kampfgeborene",
+    "familyId": "haus-kampfgeborene",
+    "name": "Fridthjof Kampfgeborener",
+    "role": "Begründung des Clans",
+    "detail": "Gründer des Clans Kampfgeborene",
+    "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/fridthjof-kampfgeborene.png",
+    "silhouette": "male"
+  },
+  "heads": [
+    {
+      "id": "fridthjof-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Fridthjof Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Gründer des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/fridthjof-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "bujold-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Bujold Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/bujold-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "aegir-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Aegir Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/aegir-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "alrek-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Alrek Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/alrek-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "halstein-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Halstein Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/halstein-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "valeric-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Valeric Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/valeric-kampfgeborene.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "lars-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Lars Kampfgeborener",
+      "role": "Überliefertes Oberhaupt",
+      "detail": "Hesir des Clans Kampfgeborene seit 1714 · öffentlicher Vater Jorunds und Jordis",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/lars-kampfgeborene.png",
+      "silhouette": "male"
+    }
+  ],
+  "heirs": [
+    {
+      "id": "jorund-kampfgeborene",
+      "familyId": "haus-kampfgeborene",
+      "name": "Jorund Kampfgeborener",
+      "role": "Erbfolge",
+      "detail": "Erster Erbe · öffentlich Sohn Lars’ und Morgas",
+      "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/jorund-kampfgeborene.png",
+      "silhouette": "male"
+    }
+  ],
+  "offices": [],
+  "figuresTitle": "Historische Persönlichkeiten",
+  "figures": [],
+  "trivia": [
+    "Fast jeder Kampfgeborener ist ein Skytte und fast jeder Kampfgeborener hat zumindest einen Hund oder gleich einen Wolf als Begleiter.",
+    "Die Kampfgeborenen sind bekannt für ihre purpurnen Augen.",
+    "Wiglaff und Lars haben sich nie miteinander verstanden, der Grund dafür ist ein Kindheitsstreit in der Lars Wiglaff aus Versehen mit der Schleuder am Auge erwischte. Beim Holmgang revanchierte sich Wiglaff dafür bei Lars und erwischte diesen im Gesicht, seitdem ist Lars blind auf beiden Augen."
+  ],
+  "currentHead": "Lars Kampfgeborener",
+  "firstHeir": "Jorund Kampfgeborener",
+  "countyLabel": "Jarltum",
+  "sectionTitles": {
+    "knighthood": "4. Huskarltum"
+  }
+};

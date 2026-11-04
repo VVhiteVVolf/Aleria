@@ -1,0 +1,100 @@
+{
+  "schema": "aleria.house-lore-corrections-delivery",
+  "date": "2026-11-04",
+  "status": "complete-local",
+  "sourceFacts": {
+    "canonicalFields": 71,
+    "managedFamilies": 28,
+    "houseSourcesAndBios": 30,
+    "protectedYoungestChildAnchors": 15,
+    "retainedCounterpartConflicts": 20
+  },
+  "decisions": [
+    {
+      "case": "Ceardaíocht",
+      "solution": "Aonghus 1610–1672; Ètáin 1612–1695. Wíomar 1630, Wúnaire 1632, Séamus 1634 bleiben."
+    },
+    {
+      "case": "Dál T’Saor",
+      "solution": "Territoriale Hausverwaltung seit 1735 erloschen; belegte Überlebende bleiben lebendig."
+    },
+    {
+      "case": "Ratsmitglieder",
+      "solution": "Wunbhna und Maolmhuire leben; vorhandene Identitäten und Ratsverknüpfungen bleiben."
+    },
+    {
+      "case": "Draig",
+      "solution": "Sylvia stirbt 1725, Siana bleibt Jahrgang 1725. Gruffyds Amtsende wird 1171; Neithons Beginn bleibt 1172."
+    },
+    {
+      "case": "Neidr",
+      "solution": "Daffyd stirbt 1608; Prynhawn bleibt Jahrgang 1608. Sein bisheriges Amtsende 1593 ist kein Todesdatum."
+    },
+    {
+      "case": "Morforwyn",
+      "solution": "Ofranton stirbt 1633; Eheende ebenfalls 1633. Ffeston bleibt Jahrgang 1633. Die öffentliche Marmue-Gegenakte wird gezielt mitgeführt."
+    },
+    {
+      "case": "Tiwna–Canwyll",
+      "solution": "Morwen geboren 1632, Dylis 1650, Cynwrig 1652. Glesni 1669 und Gavin 1651 bleiben; Morwens Tod 1659 bleibt."
+    },
+    {
+      "case": "Pendrag",
+      "solution": "Annegrit geboren 1533; Rhodri 1530–1599. Gawain 1551, Arianwen 1562 und Tarwen 1572 bleiben. Rhodri stirbt weiterhin vor Agravaine 1600."
+    },
+    {
+      "case": "Dyngwn",
+      "solution": "Morgan lebt und ist das amtierende Oberhaupt. Erste Ehe endet mit dem belegten Tod Aoirghes 1630; zweite Ehe ist aktiv."
+    },
+    {
+      "case": "Wolfshorn",
+      "solution": "Hornhall unmittelbar in Dämmergrund unter Vangandr; getrennte Bleiddorn-Akte erhalten."
+    },
+    {
+      "case": "Varangr, Sturmgeborene, Grendel",
+      "solution": "Rörik stirbt 1724, Kormak 1666, Gunnar Grendel 1631. Kinderjahre und belegte Amtszeiten bleiben."
+    },
+    {
+      "case": "Nachtjäger und Vangandr",
+      "solution": "Ingunn stirbt 1651, Sturlaugr 1652; Annegret geboren 1680. Kjartan 1648, Svandís 1651 und Torger 1700 bleiben."
+    },
+    {
+      "case": "Blutklinge und Windhüter",
+      "solution": "Beide bleiben ausgestorben. Der Kategorienname wird im Fließtext durch den belegten letzten Sitz Ivarsfels ersetzt."
+    },
+    {
+      "case": "Zwanzig weitere Gegenakten",
+      "solution": "Nur konkret aufgelistet, nicht angeglichen; remaining-twenty-counterparts.json."
+    }
+  ],
+  "evidence": [
+    "leitheach-changes.json",
+    "cenyr-changes.json",
+    "aldrimar-changes.json",
+    "auxiliary-scope-supplement.json",
+    "test-results.json",
+    "final-preservation.json",
+    "independent-review.json",
+    "browser-verification.json"
+  ],
+  "validation": {
+    "testsPassed": 250,
+    "publicRecordsPreserved": 424,
+    "publicPersonEntriesReviewed": 10312,
+    "untargetedFamilyCollectionHashesIdentical": 397,
+    "targetedBiologicalParentChecks": 98,
+    "generationGapExceptions": 1,
+    "browser": "limited"
+  },
+  "preservation": [
+    "Keine IDs oder Verwandtschaftszuordnungen geändert",
+    "Vorhandene Illustrationen erhalten",
+    "Persönliche Cachetexte, eigene/null-Hausbios, lokale Metadatenentwürfe und Tombstones geschützt",
+    "Ursprüngliche Importfixtures und Auditbelege unverändert"
+  ],
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

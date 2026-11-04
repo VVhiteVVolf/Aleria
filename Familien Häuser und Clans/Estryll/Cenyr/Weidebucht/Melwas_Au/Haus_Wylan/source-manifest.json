@@ -1,0 +1,43 @@
+{
+  "source": {
+    "attachmentId": "da30d4ac-18ac-470e-855f-26816205a90c",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "2c982e38e2b24c39db932011f9c839b9579958ba99c12529935efb667f460a2f"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-wylan",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-wylan",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 10,
+    "currentSeat": "Cerrigarth",
+    "currentRankId": "county"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/chtOz7H.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "4c8b6af57cf4958bfb94ea199a413a6c8c3d1866b0665e21e234f60c1a659fe8",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Die alten Bezeichnungen O’Dewet/O’Penrith und Baron werden nicht übernommen. Cerrigarth, Melwas Au und der Grafenrang folgen der aktuellen Akte. Die Intrigenerzählung nennt kein neu abgeleitetes Alter oder Amtsjahr.",
+    "Die pauschale Behauptung, die Grafschaft besitze keine Bodenschätze, widerspricht der aktuellen Mochdaer-/Mynfonn-Quelle und wird verworfen."
+  ]
+}

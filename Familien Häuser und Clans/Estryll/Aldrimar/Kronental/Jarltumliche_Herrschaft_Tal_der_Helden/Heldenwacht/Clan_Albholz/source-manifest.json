@@ -1,0 +1,212 @@
+{
+  "id": "haus-albholz",
+  "contentVersion": "20261103-kronental-v1",
+  "source": {
+    "attachmentId": "fd7aa732-d512-4497-a061-ebf19715b1e3",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\fd7aa732-d512-4497-a061-ebf19715b1e3\\Eingefügter Text.txt",
+    "archive": "diagnostics/kronental-clans-20261103/sources/albholz/animexx-original.html",
+    "bytes": 78971,
+    "sha256": "724da6eb070d280712d78fb1742840a5a19242830e156b8359e8c3c4f62550ea",
+    "byteIdentical": true
+  },
+  "initialPage": {
+    "id": "haus-albholz",
+    "source": "Familien Häuser und Clans/data/haus-albholz.data.js",
+    "archive": "diagnostics/kronental-clans-20261103/initial-house-pages/haus-albholz.data.js",
+    "sha256": "a125c5f0ae743ce98625ad778453d6ea17dc0c11bbf22858001f5013b7648e4b",
+    "bytes": 16049,
+    "registryEntry": {
+      "id": "haus-albholz",
+      "slug": "haus-albholz",
+      "aliases": [
+        "albholz",
+        "clan-albholz"
+      ],
+      "name": "Clan Albholz",
+      "status": "active",
+      "type": "clan",
+      "data": "data/haus-albholz.data.js",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Familien Häuser und Clans",
+          "slug": "familien-haeuser-und-clans"
+        },
+        {
+          "type": "Königreich",
+          "name": "Aldrimar",
+          "slug": "aldrimar"
+        },
+        {
+          "type": "Jarltum",
+          "name": "Kronental",
+          "slug": "kronental"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tal der Helden",
+          "slug": "tal-der-helden"
+        },
+        {
+          "type": "Sitz",
+          "name": "Heldenwacht",
+          "slug": "heldenwacht"
+        },
+        {
+          "type": "Clan",
+          "name": "Clan Albholz",
+          "slug": "haus-albholz"
+        }
+      ],
+      "tags": [
+        "albholz",
+        "clan",
+        "huskarl",
+        "aldrimar",
+        "kronental",
+        "heldenwacht",
+        "vaeren",
+        "druidenhain"
+      ]
+    }
+  },
+  "authority": {
+    "familyId": "haus-albholz",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Heldenwacht",
+      "barony": "Jarltümliche Herrschaft – Tal der Helden",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "c0477b4608b84a1f8893b75de15688e39405f3bddcc66836637853ee1fc85397"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-albholz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-albholz",
+    "slug": "albholz",
+    "canonicalSlug": "albholz",
+    "attachmentId": "fd7aa732-d512-4497-a061-ebf19715b1e3",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/GUdQCnk.png",
+    "sourceImageIndex": 2,
+    "sourceStyle": "height:450px; width:300px",
+    "context": "Einführungsbild",
+    "bytes": 207731,
+    "sha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-albholz",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Kronental",
+    "sourceUrl": "https://i.imgur.com/GUdQCnk.png",
+    "path": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": true,
+    "status": "reused",
+    "sha": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Grün-goldener Krieger mit geschlossenem Helm und gebogenem Schwert.",
+    "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "724da6eb070d280712d78fb1742840a5a19242830e156b8359e8c3c4f62550ea",
+    "reusedSourcePath": "Familien Häuser und Clans/assets/images/scenes/haus-albholz.png",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "illustrations": [
+    {
+      "id": "haus-albholz",
+      "slug": "albholz",
+      "canonicalSlug": "albholz",
+      "attachmentId": "fd7aa732-d512-4497-a061-ebf19715b1e3",
+      "imageIndex": 1,
+      "url": "https://i.imgur.com/GUdQCnk.png",
+      "sourceImageIndex": 2,
+      "sourceStyle": "height:450px; width:300px",
+      "context": "Einführungsbild",
+      "bytes": 207731,
+      "sha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "familyId": "haus-albholz",
+      "canonicalKingdom": "Aldrimar",
+      "canonicalCounty": "Kronental",
+      "sourceUrl": "https://i.imgur.com/GUdQCnk.png",
+      "path": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+      "role": "warrior",
+      "primary": true,
+      "existing": true,
+      "status": "reused",
+      "sha": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "w": 408,
+      "h": 612,
+      "unchangedOriginal": true,
+      "downloadTool": "curl.exe --noproxy *",
+      "visuallyInspected": true,
+      "visualDescription": "Grün-goldener Krieger mit geschlossenem Helm und gebogenem Schwert.",
+      "contactSheet": "diagnostics/kronental-clans-20261103/original-clan-figures.jpg",
+      "sourceAttachmentSha256": "724da6eb070d280712d78fb1742840a5a19242830e156b8359e8c3c4f62550ea",
+      "reusedSourcePath": "Familien Häuser und Clans/assets/images/scenes/haus-albholz.png",
+      "format": "PNG",
+      "original": true,
+      "representative": true,
+      "namedPersonId": ""
+    }
+  ],
+  "decisions": [
+    "Sitz Heldenwacht und Huskarlrang bleiben erhalten; der Druidenhain ist Herkunftskontext, kein neuer heutiger Registerort.",
+    "Albhric/Alberick bezeichnet dieselbe bestehende Identität. Historische Verbindung zu Liorain Grünhand nur als Text; keine neue Genealogie oder aktuelle Amtsbesetzung.",
+    "Tavernen und Geschäfte bleiben unbenannte betriebliche Besitzungen; keine neuen Orts- oder Gildenakten erfinden.",
+    "Bestehende ausgeführte Hausseite als vorrangigen öffentlichen Kontext gelesen. Acht Kapitel und heutige Führung ergänzt; zusätzliche bestehende succession/court/figures und verknüpfte Porträts sind beim Builder zu erhalten, nicht aus Anhängen zu ersetzen.",
+    "Bestehende Kapitel, Hofrollen, Figurenbeschreibungen und lokale Portraits gezielt erhalten. Das alte Genealogiekapitel wird durch den kanonischen Iframe ersetzt.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

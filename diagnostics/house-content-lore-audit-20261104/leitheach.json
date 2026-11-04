@@ -1,0 +1,868 @@
+{
+  "schema": "aleria.house-content-lore-audit",
+  "date": "2026-11-04",
+  "region": "Leitheach",
+  "status": "read-only-complete",
+  "scope": {
+    "houseContents": 29,
+    "houseBiographies": 29,
+    "territoryPages": 27,
+    "topics": [
+      "origins",
+      "seats",
+      "ranks",
+      "liege-relations",
+      "events",
+      "culture",
+      "religion",
+      "narrative-relations"
+    ],
+    "excluded": [
+      "genealogical-graphs",
+      "life-dates",
+      "life-status-arithmetic",
+      "military-statistics",
+      "already-fixed-dal-t-saor"
+    ]
+  },
+  "summary": {
+    "confirmedMaterialLoreConflicts": 0,
+    "confirmedEditorialContradictions": 2,
+    "suspicions": 0
+  },
+  "findings": [
+    {
+      "id": "leitheach-cumhaill-conflicts-placeholder",
+      "category": "editorial-contradiction",
+      "severity": "low",
+      "title": "Cumhaill chapter says no recorded conflicts although other current histories record them",
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.content.mjs",
+          "line": 102,
+          "field": "sections.conflictsAlliances",
+          "text": "Einzelne Bündnisse und Fehden sind bislang nicht näher überliefert."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.content.mjs",
+          "line": 107,
+          "field": "sections.history",
+          "text": "Die Dál'Ruitheach beanspruchen stolz ihre Abstammung vom legendären Erzdruiden Mogh Ruith – eine Behauptung, die weder durch überlieferte Worte des Druiden selbst noch durch die Anerkennung anderer Druiden oder der Fianna, der ehrwürdigen Ehrenkrieger und Chronisten aller Albenclans, je belegt wurde. Dennoch hielten die Dál'Ruitheach unbeirrt an diesem Erbe fest, und ihre unbeugsame Überzeugung führte im Laufe der Geschichte immer wieder zu Spannungen.\n\nInsbesondere mit den Mac Ard Cumhaill aus Dun Athar, den Herren Leitheachs, kam es zu wiederholten Auseinandersetzungen. Der Stolz der Dál'Ruitheach ließ sich nicht beugen, selbst als sie zeitweise ohne festes Heim umherzogen – mal unter diesem, mal unter jenem Fürsten lebend, stets auf der Suche nach einem Ort, der sie nicht nur duldete, sondern anerkannte.\n\nErst mit der Ansiedlung in Tir na Tonn, der „Landzunge der Wogen“, fanden die Dál'Ruitheach endlich ein Stück Land, das sie ihr eigen nennen durften. Ein Ort, fernab alter Zwistigkeiten, der ihnen Ruhe und das erste Mal seit Jahrhunderten eine Heimat versprach."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.content.mjs",
+          "line": 102,
+          "field": "sections.history",
+          "text": "Die Mac Suileach gehörten zu den alten Adelsgeschlechtern der frühen Kronalben. Zeitweise beanspruchten sie eine Stellung, die derjenigen Mac Ard Cumhaills gleichkommen oder sie übertreffen sollte. Während des Konflikts um den Druiden- und Magierorden versuchten sie, die Schwäche ihrer Rivalen auszunutzen.\n\nDál’Cruthin trug maßgeblich zu ihrer Niederlage bei und erhielt als Belohnung Lochansail. Die Suileach wurden verbannt und verloren ihre frühere Verwaltung. Der spätere Fáill-Name erinnert an diesen Fall, ohne den überlieferten Mor-Tiarna-Rang auszulöschen."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs",
+          "line": 102,
+          "field": "sections.history",
+          "text": "Dál’Cruthin trug zur Niederlage der rivalisierenden Mac Suileach bei und festigte damit die Stellung Mac Ard Cumhaills. Als Belohnung erhielt das Haus die Herrschaft über Lochansail. Die frühere Mor-Tiarna-Stellung der Suileach ging verloren; ihr historischer Rang wird dadurch nicht aus der Überlieferung gelöscht."
+        }
+      ],
+      "explanation": "The generic negative placeholder is incompatible with concrete current narrative about repeated disputes with Ruitheach and the Suileach conflict. This is an editorial omission on the Cumhaill page, not evidence of conflicting versions of the event."
+    },
+    {
+      "id": "leitheach-laoch-customs-placeholder",
+      "category": "editorial-contradiction",
+      "severity": "low",
+      "title": "Laoch customs chapter denies traditions described in its own religion chapter",
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+          "line": 108,
+          "field": "sections.traditions",
+          "text": "Besondere Hausbräuche sind bisher nicht überliefert."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+          "line": 111,
+          "field": "sections.cultureReligion",
+          "text": "Die Laoch sind durch und durch kampfgerichtet, doch in ihren Riten auch ehrfürchtig. Sie verehren den Streiter als Schutzgott, sehen in ihm das Spiegelbild Senans – unbeugsam, gerecht, furchtlos. Rituale zu Ehren des Helden finden regelmäßig statt, besonders vor großen Entscheidungen oder Kämpfen. Viele tragen ein kleines Abbild Senans bei sich – als Talisman und Mahnung zugleich."
+        }
+      ],
+      "explanation": "The same current page states that no house customs are recorded and then describes regular rituals for Senan and his talismans. The substantive tradition itself has no competing version."
+    }
+  ],
+  "renderingEvidence": [
+    {
+      "path": "Familien Häuser und Clans/haus.html",
+      "line": 50,
+      "description": "traditions paragraph is present"
+    },
+    {
+      "path": "Familien Häuser und Clans/haus.html",
+      "line": 123,
+      "description": "conflictsAlliances paragraph is present"
+    },
+    {
+      "path": "Familien Häuser und Clans/assets/js/haeuser-page.js",
+      "line": 78,
+      "description": "renderSections writes every section to its data-section target"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "haus-dal-t-saor",
+      "name": "Dal T’Saor",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-dal-t-saor",
+      "seat": "Sruthlann",
+      "rank": "Laird",
+      "liege": "Clan Mac Airt",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-comhchuibhis",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-dal-t-saor",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird (Ritterfürst)"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": "Previously corrected case excluded from findings."
+    },
+    {
+      "id": "haus-mac-airt",
+      "name": "Clan Mac Airt",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Sruthlann/Clan_Mac_Airt/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Sruthlann/Clan_Mac_Airt/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-comhchuibhis",
+      "seat": "Sruthlann",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-comhchuibhis",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-laidir",
+      "name": "Ruin’Laidir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Didine/Claisean/Ruin_Laidir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Didine/Claisean/Ruin_Laidir/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-laidir",
+      "seat": "Claisean",
+      "rank": "Dún Tiarna",
+      "liege": "Clan Mac Airt",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-comhchuibhis",
+          "seat": "Claisean",
+          "liege": "Clan Mac Airt",
+          "rank": "Dún-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-laidir",
+          "seat": "Claisean",
+          "liege": "Clan Mac Airt",
+          "rank": "Dún-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-nic-blar-leitheach",
+      "name": "Nic’Blar · Leitheach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-nic-blar",
+      "seat": "Sruthlann",
+      "rank": "Laird",
+      "liege": "Clan Mac Airt",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-comhchuibhis",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-nic-blar",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-choinnich",
+      "name": "Ua’Choinnich",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-choinnich",
+      "seat": "Sruthlann",
+      "rank": "Laird",
+      "liege": "Clan Mac Airt",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-comhchuibhis",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-choinnich",
+          "seat": "Sruthlann",
+          "liege": "Clan Mac Airt",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-dal-cruthin",
+      "name": "Clan Dál’Cruthin",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-gortanna",
+      "seat": "Lochansail",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Lochansail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Lochansail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-suileach",
+      "name": "Mac Suileach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-gortanna",
+      "seat": "Lochansail",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Lochansail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-nic-caoimhe",
+      "name": "Nic Caoimhe",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Lasrach/Lochansail/Nic_Caoimhe/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Lasrach/Lochansail/Nic_Caoimhe/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-nic-caoimhe",
+      "seat": "Lochansail",
+      "rank": "Laird",
+      "liege": "Clan Dál’Cruthin",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Lochansail",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-nic-caoimhe",
+          "seat": "Lochansail",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-frisealach",
+      "name": "Ard Frisealach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Luibe/Lasbun/Ard_Frisealach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Luibe/Lasbun/Ard_Frisealach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-frisealach",
+      "seat": "Lasbun",
+      "rank": "Dún Tiarna",
+      "liege": "Clan Dál’Cruthin",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Lasbun",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Dún-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-frisealach",
+          "seat": "Lasbun",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Dún-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-iomrach",
+      "name": "An’Iomrach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-somhairle",
+      "seat": "Broch an Clais",
+      "rank": "Laird",
+      "liege": "Clan Dál’Cruthin",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Broch an Clais",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": "Historical predecessor in Broch an Clais; Somhairle now administers it. This is a coherent succession, not a duplicate-current-ruler conflict."
+    },
+    {
+      "id": "haus-somhairle",
+      "name": "Sidhe Somhairle",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-somhairle",
+      "seat": "Broch an Clais",
+      "rank": "Laird",
+      "liege": "Clan Dál’Cruthin",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Broch an Clais",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-somhairle",
+          "seat": "Broch an Clais",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ard-trodach",
+      "name": "Ard Trodach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_gComhrac/Lochansail/Ard_Trodach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_gComhrac/Lochansail/Ard_Trodach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-ard-trodach",
+      "seat": "Lochansail",
+      "rank": "Laird",
+      "liege": "Clan Dál’Cruthin",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-gortanna",
+          "seat": "Lochansail",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-ard-trodach",
+          "seat": "Lochansail",
+          "liege": "Clan Dál’Cruthin",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ua-gaelach",
+      "name": "Clan Ua’Gaelach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Nossail/Clan_Ua_Gaelach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Nossail/Clan_Ua_Gaelach/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-sinsear",
+      "seat": "Nossail",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Nossail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-sinsear",
+          "seat": "Nossail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-gallchobhair",
+      "name": "Fir An’Gallchobhair",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-coimhthioch",
+      "seat": "Dun Laog",
+      "rank": "Dún Tiarna",
+      "liege": "Clan Ua’Gaelach",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sinsear",
+          "seat": "Dun Laog",
+          "liege": "Clan Ua’Gaelach",
+          "rank": "Dún-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-coimhthioch",
+          "seat": "Dun Laog",
+          "liege": "Clan Ua’Gaelach",
+          "rank": "Dún-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-cleir",
+      "name": "Clan Ua’Cleir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_bhFiach/Cairn_Faire/Clan_Ua_Cleir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_bhFiach/Cairn_Faire/Clan_Ua_Cleir/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-cleir",
+      "seat": "Cairn Fàire",
+      "rank": "Laird",
+      "liege": "Fir An’Gallchobhair",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-coimhthioch",
+          "seat": "Cairn Fàire",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-cleir",
+          "seat": "Cairn Fàire",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "name": "Clan Dál’Ceardaíocht",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-ceardaiocht",
+      "seat": "Dun Laog",
+      "rank": "Laird",
+      "liege": "Fir An’Gallchobhair",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-coimhthioch",
+          "seat": "Dun Laog",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-ceardaiocht",
+          "seat": "Dun Laog",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "name": "Clan Ua’Ghaiscíoch",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_nArmur/Dun_Laog/Clan_Ua_Ghaiscioch/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_nArmur/Dun_Laog/Clan_Ua_Ghaiscioch/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-ghaiscioch",
+      "seat": "Dun Laog",
+      "rank": "Laird",
+      "liege": "Fir An’Gallchobhair",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-coimhthioch",
+          "seat": "Dun Laog",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-ghaiscioch",
+          "seat": "Dun Laog",
+          "liege": "Fir An’Gallchobhair",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-na-mhuir",
+      "name": "Clan Na’Mhuir",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Clan_Na_Mhuir/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Clan_Na_Mhuir/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-fancha",
+      "seat": "Broch an Coill",
+      "rank": "Laird",
+      "liege": "Clan Ua’Gaelach",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sinsear",
+          "seat": "Broch an Coill",
+          "liege": "Clan Ua’Gaelach",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-fancha",
+          "seat": "Broch an Coill",
+          "liege": "Clan Ua’Gaelach",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-gruenhand",
+      "name": "Sept Grünhand aus Leith",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-fancha",
+      "seat": "Broch an Coill",
+      "rank": "Septoberhaupt (bürgerlicher Rang)",
+      "liege": "Clan Na’Mhuir",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-fancha",
+          "seat": "Broch an Coill",
+          "liege": "Clan Na’Mhuir",
+          "rank": "Bauernsept"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "name": "Clan Mac Ard Cumhaill",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.biography.mjs",
+      "territoryId": "fuerstentum-leitheach",
+      "seat": "Dun Athar",
+      "rank": "Ard Tiarna",
+      "liege": "",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Dun Athar",
+          "liege": "",
+          "rank": "Fürstenclan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-sleagh",
+          "seat": "Dun Athar",
+          "liege": "",
+          "rank": "Fürstenclan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-fiachrach",
+      "name": "Clan Uí Fiachrach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_Seamroige/Marbail/Clan_Ui_Fiachrach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_Seamroige/Marbail/Clan_Ui_Fiachrach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-fiachrach",
+      "seat": "Mârbail",
+      "rank": "Laird",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sleagh",
+          "seat": "Mârbail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-fiachrach",
+          "seat": "Mârbail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "name": "Ruin Ua Laoch",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-laoch",
+      "seat": "Broch an Abhainn",
+      "rank": "Laird",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sleagh",
+          "seat": "Broch an Abhainn",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-laoch",
+          "seat": "Broch an Abhainn",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ua-eirce",
+      "name": "Clan Ua’Eirce",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_nIur/Senanbail/Clan_Ua_Eirce/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_nIur/Senanbail/Clan_Ua_Eirce/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-eirce",
+      "seat": "Senanbail",
+      "rank": "Laird",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sleagh",
+          "seat": "Senanbail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-eirce",
+          "seat": "Senanbail",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-tir-an-cuinn",
+      "name": "Clan Tir An’Cuinn",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Ceanntire/Clan_Tir_An_Cuinn/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Ceanntire/Clan_Tir_An_Cuinn/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-sruth",
+      "seat": "Ceanntire",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Ceanntire",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-sruth",
+          "seat": "Ceanntire",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-airgid",
+      "name": "Tir An’Airgid",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_gCorr/Cel_Leagan/Tir_An_Airgid/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_gCorr/Cel_Leagan/Tir_An_Airgid/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-airgid",
+      "seat": "Cel Leagan",
+      "rank": "Dún Tiarna",
+      "liege": "Clan Tir An’Cuinn",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sruth",
+          "seat": "Cel Leagan",
+          "liege": "Clan Tir An’Cuinn",
+          "rank": "Dún-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-airgid",
+          "seat": "Cel Leagan",
+          "liege": "Clan Tir An’Cuinn",
+          "rank": "Dún-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-amrhan",
+      "name": "Ua’Amhran",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-amhran",
+      "seat": "Ceanntire",
+      "rank": "Laird",
+      "liege": "Clan Tir An’Cuinn",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-sruth",
+          "seat": "Ceanntire",
+          "liege": "Clan Tir An’Cuinn",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-amhran",
+          "seat": "Ceanntire",
+          "liege": "Clan Tir An’Cuinn",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-fir-an-tarvo",
+      "name": "Clan Fir An’Tarvo",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Dun_Rothar/Clan_Fir_An_Tarvo/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Dun_Rothar/Clan_Fir_An_Tarvo/haus.biography.mjs",
+      "territoryId": "leitheach-tir-na-tonn",
+      "seat": "Dun Rothar",
+      "rank": "Mor Tiarna",
+      "liege": "Clan Mac Ard Cumhaill",
+      "territorialOccurrences": [
+        {
+          "territoryId": "fuerstentum-leitheach",
+          "seat": "Dun Rothar",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        },
+        {
+          "territoryId": "leitheach-tir-na-tonn",
+          "seat": "Dun Rothar",
+          "liege": "Clan Mac Ard Cumhaill",
+          "rank": "Mor-Tiarna-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-gortach",
+      "name": "Ru’Gortach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_Breithe/Broch_an_Ear/Ru_Gortach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_Breithe/Broch_an_Ear/Ru_Gortach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-gortach",
+      "seat": "Broch an Ear",
+      "rank": "Laird",
+      "liege": "Clan Fir An’Tarvo",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-tonn",
+          "seat": "Broch an Ear",
+          "liege": "Clan Fir An’Tarvo",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-gortach",
+          "seat": "Broch an Ear",
+          "liege": "Clan Fir An’Tarvo",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    },
+    {
+      "id": "haus-ruitheach",
+      "name": "Dál’Ruitheach",
+      "content": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.content.mjs",
+      "biography": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.biography.mjs",
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "seat": "Broch an Iar",
+      "rank": "Laird",
+      "liege": "Clan Fir An’Tarvo",
+      "territorialOccurrences": [
+        {
+          "territoryId": "leitheach-tir-na-tonn",
+          "seat": "Broch an Iar",
+          "liege": "Clan Fir An’Tarvo",
+          "rank": "Laird-Clan"
+        },
+        {
+          "territoryId": "leitheach-herrschaft-ruitheach",
+          "seat": "Broch an Iar",
+          "liege": "Clan Fir An’Tarvo",
+          "rank": "Laird-Clan"
+        }
+      ],
+      "review": "Current narrative and biography reviewed; no material contradiction confirmed",
+      "note": ""
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "topic": "Ruitheach disputes with Cumhaill but currently serves Tarvo",
+      "reason": "Past disputes and current subordination can coexist; current histories explicitly distinguish the periods."
+    },
+    {
+      "topic": "Laoch previous goods near the princely city versus current Broch an Abhainn",
+      "reason": "Both the house history and territorial geography explicitly narrate the relocation; no conflict."
+    },
+    {
+      "topic": "Different religious emphases among Sinsear, Comhchuibhis and the ruling house",
+      "reason": "Regional traditions and particular house patrons do not negate the principality religion."
+    },
+    {
+      "topic": "Iomrach versus Somhairle in Broch an Clais",
+      "reason": "Historical predecessor versus current administration; explicitly narrated."
+    }
+  ],
+  "limitations": [
+    "The report concerns current file-based public default content. User-edited live biographies were not accessed.",
+    "Generic or incomplete outlines are not treated as material lore contradictions.",
+    "Ignored supplied genealogy tables were not used as competing lore evidence."
+  ],
+  "productFilesChanged": false
+}

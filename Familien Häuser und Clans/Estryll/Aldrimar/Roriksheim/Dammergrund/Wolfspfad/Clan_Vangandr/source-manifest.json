@@ -1,0 +1,81 @@
+{
+  "id": "haus-vangandr",
+  "source": {
+    "attachmentId": "fb656f5b-fe28-4491-b1cc-e73110cd021f",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\fb656f5b-fe28-4491-b1cc-e73110cd021f\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/vangandr/animexx-original.html",
+    "bytes": 131168,
+    "sha256": "35ac4b5f499c13ebd88805445a5c49b5efb2dd7816c2637a3bcd40b0e2524dc0",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-vangandr",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Wolfspfad",
+      "barony": "Dämmergrund",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-vangandr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "vangandr",
+    "familyId": "haus-vangandr",
+    "attachmentId": "fb656f5b-fe28-4491-b1cc-e73110cd021f",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/8Pp8GsW.png",
+    "path": "Stammbäume/assets/images/references/haus-vangandr/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 301273,
+    "sha256": "9103c730f6c5eab486249548f250496cbacdddd885a3c19b3df8567a07281808",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-vangandr",
+    "url": "https://i.imgur.com/8Pp8GsW.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-vangandr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Axtkämpfer mit Fellkleidung, roter Haartracht und begleitendem Wolf.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-1.png"
+  },
+  "decisions": [
+    "Dämmergund und Dämmergunds werden zur kanonischen Schreibweise Dämmergrund und Dämmergrunds berichtigt.",
+    "Die lange Fluchgeschichte und der Warnreim sind eigenständige Überlieferung und bleiben als solche erhalten. Die Quelle erläutert selbst, dass Angehörige normal sterben und verborgene Überlebende oder Linien ein vermeintliches Wiederaufstehen erklären; keine automatische Untoten- oder Unsterblichkeitsmechanik vergeben.",
+    "Gerüchte über Menschenopfer ausdrücklich als Außenwahrnehmung erhalten, nicht als durch Tatsachen bewiesene heutige Praxis ausgeben.",
+    "Ceitheach ist im Kontinente-Register eine eigene Region auf Estryll und nicht Deitheach auf Aldervan; die Quelle nicht durch bloße Namensähnlichkeit umdeuten.",
+    "Die Eroberung Wolfspfads wird mit 1637 genannt. Die zusätzliche relative Behauptung zehn Jahre nach dem Krieg wird ausgelassen: Sie legt ohne hinreichenden Abgleich ein Kriegsende 1627 fest.",
+    "Der Bericht über den Untergang der Fiadhrach wird mit Fiadhrach und Vanir abgeglichen: Täuschung und Gewalt der Vanir sind mehrmals belegt; eine tatsächliche Verderbnis oder ein tatsächlicher Verrat der Fiadhrach wird nicht behauptet.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

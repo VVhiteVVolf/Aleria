@@ -1,0 +1,105 @@
+{
+  "scope": "Attachment source analysis 7-12 only; no genealogy imported",
+  "noProductionChanges": true,
+  "ignored": [
+    "all military statistics",
+    "genealogical portrait grids",
+    "placeholder court roles",
+    "old infobox rank/seat/hierarchy where current data exists"
+  ],
+  "newFiguresNeeded": [
+    "Aroglyn civilian/guild representative",
+    "Chiffyddlon house warrior",
+    "Gwarchod house warrior"
+  ],
+  "existingOriginalFiguresToPreserve": [
+    "Gwythiad",
+    "Cruithenaech",
+    "Warthog"
+  ],
+  "contactViewed": "assets-second/contact-inspection.png",
+  "houses": [
+    {
+      "house": "Gwythiad",
+      "attachment": "1c2654c1-4d30-4426-b499-5d8a2d0b2bc6",
+      "authoredNonGenealogicalFacts": [
+        "Ritterfamilie aus Glyndraith; stellt seit Generationen die Leibwache der Grawn und den Kommandanten der Stadtwache.",
+        "Kinder dienen gewoehnlich als Pagen und Knappen der Grawn."
+      ],
+      "existingEmblem": "assets-second/gwythiad-emblem.png",
+      "existingFigure": "assets-second/gwythiad-source-illustration.png",
+      "figureRole": "Fertiger Hauskrieger, im Einleitungsbild statt eigener Rittertumsektion.",
+      "visualInspection": "Gruen-goldener Wappenrock mit Eichenblatt; offener konischer Metallhelm mit kleinem gruenem Busch; Schwert und runder Eichenblattschild.",
+      "generateNew": false,
+      "notes": "Ausser Einleitung ueberwiegend allgemeine Leerfelder und Platzhalter. Keine leeren Hof-/Stammbaumrollen zaehlen."
+    },
+    {
+      "house": "Aroglyn",
+      "attachment": "9ff345e9-b731-4660-856f-438d47497731",
+      "authoredNonGenealogicalFacts": [
+        "Der Einleitung zufolge gehoert dem Haus die Gilde Goldener Atem; keine weiteren Gildendaten ableiten oder anlegen."
+      ],
+      "existingEmblem": "assets-second/aroglyn-emblem.png",
+      "existingFigure": null,
+      "figureRole": "Leeres Einleitungsfeld Bild/Illustration (Platzhalter); keine belegte Militaerfigur.",
+      "visualInspection": "Tuerkisfarbenes Duftgefaess mit violetter Bluete und hellem Dampf auf Holz, goldbrauner Flechtrahmen.",
+      "generateNew": true,
+      "newFigureGuidance": "Buerger-/Gildenvertreterdarstellung. Duft-/Handwerksbezug ist bildlich durch das Wappen motiviert; Rang, Wohlstand und Gildenberuf bleiben ohne aktuellen Beleg offen.",
+      "notes": "Keine Ritterdarstellung oder benannte Person aus Hof-/Hierarchieplatzhaltern erfinden."
+    },
+    {
+      "house": "Chiffyddlon",
+      "attachment": "51f39ce8-c331-4cb0-9c7c-9c5bfa360dfc",
+      "authoredNonGenealogicalFacts": [
+        "Hausgeschichte erzaehlt vom Erloeschen des Hauses nach Kriegsverlusten; Maelgwn und sein Sohn fallen, Gwilym hinterlaesst nur bereits verlobte/verheiratete Toechter. Diese Aussage gegen aktuellen Kanon pruefen."
+      ],
+      "existingEmblem": "assets-second/chiffyddlon-emblem.png",
+      "existingFigure": null,
+      "figureRole": "Kein Kriegerbild im Abschnitt Rittertum vorhanden.",
+      "visualInspection": "Goldene Schnecke mit Spiralhaus auf dunkelblauem Grund und cremefarbenen Wellen, Goldrahmen.",
+      "generateNew": true,
+      "newFigureGuidance": "Hauskrieger mit dunkelblau-goldener Farbgebung und zur Schneckenheraldik passender ruhiger, gerundeter Helm-/Beschlagform; keine gleiche Helmvorlage wie Gwythiad.",
+      "notes": "Alte Infotabelle nennt Teulu/Milwr und Wohlstand, darf aber nur vorlaeufiger qualitativer Designhinweis sein. Keine Titel, Klassenhierarchien oder Mengen daraus importieren."
+    },
+    {
+      "house": "Gwarchod",
+      "attachment": "66fc9d35-553f-41af-b2fa-c5cd780bb4cb",
+      "authoredNonGenealogicalFacts": [
+        "Waleran kehrt laut Hausgeschichte zehn Jahre nach Ende des Hauses aus nordmaennischer Gefangenschaft/Sklaverei zurueck, tritt dem Blutbund bei und stirbt bei einem Auftrag. Gegen aktuellen Kanon pruefen."
+      ],
+      "existingEmblem": "assets-second/gwarchod-emblem.png",
+      "existingFigure": null,
+      "figureRole": "Kein Kriegerbild im Abschnitt Rittertum vorhanden.",
+      "visualInspection": "Grau-weisser Waschbaer mit schwarzer Augenmaske und Ringelschwanz auf Blau, heller Rahmen.",
+      "generateNew": true,
+      "newFigureGuidance": "Historisch passender Hauskrieger; Blau/Grau/Weiss, zur Maskenheraldik passendes zurueckhaltendes Helmprofil. Stangenwaffenbezug nur nach Abgleich mit aktueller Klassen-/Hausstruktur.",
+      "notes": "Alte Infotabelle nennt Cantref/Milwr, Wohlstand und Titel; nicht als kanonische Daten importieren. Keine Figur Walerans mit erfundenem verbindlichem Aussehen aus dem leeren Hofbereich erzeugen."
+    },
+    {
+      "house": "Cruithenaech",
+      "attachment": "77dc41f0-cb68-451f-b32e-f51cfbc6bea7",
+      "authoredNonGenealogicalFacts": [
+        "Vorlage besitzt einen allgemeinen, mit Warthog identischen Abschnitt zur historischen Crannath-Tiarna-Organisation und zur spaeteren Umstellung auf Rittertum. Kein eigenstaendiger ausgearbeiteter Hausgeschichtentext."
+      ],
+      "existingEmblem": "assets-second/cruithenaech-emblem.png",
+      "existingFigure": "assets-second/cruithenaech-source-illustration.png",
+      "figureRole": "Vorhandene Tiarna-Darstellung im Abschnitt 4.) Tiarnatum.",
+      "visualInspection": "Goldene Aehre und blaues Flechtornament im Wappen. Vorhandener Krieger: offener konischer Helm, blau-goldener Umhang, Schuppen-/Kettenpanzer, Speer und runder Aehren-Schild.",
+      "generateNew": false,
+      "notes": "Fast alle individuellen Tabellenwerte, Geschichte und Hofdaten sind Platzhalter; aktuelle Struktur/Orte/Raenge behalten."
+    },
+    {
+      "house": "Warthog",
+      "attachment": "093cca1d-69d4-4f52-b48a-05256a2ce8cb",
+      "authoredNonGenealogicalFacts": [
+        "Vorlage besitzt denselben allgemeinen Crannath-Tiarnatumstext wie Cruithenaech; individuelle Geschichte sonst Platzhalter."
+      ],
+      "existingEmblem": "assets-second/warthog-emblem.png",
+      "existingFigure": "assets-second/warthog-source-illustration.png",
+      "figureRole": "Vorhandene Tiarna-Darstellung im Abschnitt 4.) Tiarnatum.",
+      "visualInspection": "Dunkler borstiger Eber auf cremefarbenem Grund, rotbrauner Flechtrahmen. Vorhandener Krieger: geschlossener kantiger Helm mit Sehschlitzen, braune Leder-/Pelzkleidung, Speer, runder Eberschild.",
+      "generateNew": false,
+      "notes": "Keine leeren Hof-, Hierarchie- oder Stammbaumportraets als fehlende Personen behandeln. Aktueller Kanon hat Vorrang."
+    }
+  ]
+}

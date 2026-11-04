@@ -1,0 +1,21 @@
+@import url('../shared/country-workbench/workbench.css');
+@import url('../shared/country-workbench/heraldry-gallery.css');
+@import url('./solestia-context.css');
+@import url('./solestia-map.css');
+@import url('./solestia-art.css');
+@import url('./solestia-estates.css');
+
+.solestia-workbench{--paper:#f4ecd9;--ink:#383028;--muted:#74664f;--accent:#853e31;--line:#d4c4a1;background:#dfd1b6}
+.solestia-workbench .hero{grid-template-columns:1fr;background:linear-gradient(135deg,#f5edd9,#e4d2a8)}
+.solestia-workbench .hero-with-art{grid-template-columns:1.3fr .8fr;gap:40px}
+.solestia-workbench .hero-line{max-width:620px;color:#9a583b}
+.solestia-workbench .lead{max-width:850px}
+.solestia-workbench .toolbar nav{gap:16px}
+.solestia-workbench .house-art-card,.solestia-workbench .prototype-grid article{background:#ece1c9}
+.skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.skip-link:focus{top:12px}
+@media(max-width:1100px){.solestia-workbench .toolbar{flex-wrap:wrap}}
+@media(max-width:850px){.solestia-workbench .toolbar nav{width:100%;justify-content:space-between;margin:0}}
+@media(max-width:650px){.solestia-workbench .hero-with-art{grid-template-columns:1fr}}
+@media(max-width:420px){.solestia-workbench .toolbar nav{gap:7px;font-size:10px}}
+@media print{.skip-link{display:none}}

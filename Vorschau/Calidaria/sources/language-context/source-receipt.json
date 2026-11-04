@@ -1,0 +1,40 @@
+{
+  "sourceArchive": "C:\\Users\\fhg_r\\Downloads\\Sprache der Tlapanui\\Tlapanui-Gesamtpaket-2.100.zip",
+  "archiveSha256": "e9a0e5c140c7bcc67755c06338772d6792ebdde03b4ab3cb4bc9082519b8e629",
+  "archiveFilenameVersion": "2.100",
+  "internalPackageVersion": "2.000",
+  "languageDataVersion": "1.000",
+  "scope": "Read-only user source for house naming; original files untouched. No fonts or full package integrated into runtime.",
+  "files": [
+    {
+      "archiveEntry": "Tlapanui-Gesamtpaket-2.000/Daten/Nuatlapa_Sprachdaten_1.000.json",
+      "localFile": "Nuatlapa_Sprachdaten_1.000.json",
+      "sha256": "1e5b02d0360b2b49c98ecdb05ba376b36637e5d7292740faa386ddc51c12e71c",
+      "bytes": 464165
+    },
+    {
+      "archiveEntry": "Tlapanui-Gesamtpaket-2.000/Quellen/Tlapanui_Kulturkontext.txt",
+      "localFile": "Tlapanui_Kulturkontext.txt",
+      "sha256": "019b54e35a72247da1f1dbda768b481337c9413fbb2c4a0c1fc00358a14248ba",
+      "bytes": 1189
+    },
+    {
+      "archiveEntry": "Tlapanui-Gesamtpaket-2.000/README.txt",
+      "localFile": "README.txt",
+      "sha256": "36dd34eb5be6ce042996f667f9c128bc7644279133317b346cc9cc353a85b5f0",
+      "bytes": 442
+    },
+    {
+      "archiveEntry": "Tlapanui-Gesamtpaket-2.000/manifest.json",
+      "localFile": "manifest.json",
+      "sha256": "3cd1c732d1e7dee5a116d9901f3f49b76b2fd4c526c3517ef8670b7a48c29502",
+      "bytes": 278
+    },
+    {
+      "archiveEntry": "Tlapanui-Gesamtpaket-2.000/Dokumentation/Nuatlapa_Sprach_und_Namensbibel_1.000.docx",
+      "sourceSha256": "8182f6dd35ad4a8db1f92969e74f4e707d56aad7439d5d8b279ef27c39b12918",
+      "textExtract": "Nuatlapa_Sprach_und_Namensbibel_1.000.txt",
+      "extraction": "word/document.xml paragraphs; source content retained"
+    }
+  ]
+}

@@ -1,0 +1,2556 @@
+{
+  "date": "2026-11-04",
+  "scope": "Read-only HTTP HEAD audit of the final local Solestia preparation and its active runtime assets",
+  "preview": "http://127.0.0.1:8897/Vorschau/Solestia/",
+  "checked": 122,
+  "localDependencyModulesAndStyles": 38,
+  "collections": {
+    "HOUSES": 12,
+    "ARTWORKS": 2,
+    "WARRIORS": 12,
+    "CLASS_PROTOTYPES": 5,
+    "ESTATES": 9
+  },
+  "mapVariants": 2,
+  "allHttp200": true,
+  "allExpectedContentTypes": false,
+  "requiredChecks": [
+    {
+      "pathname": "/Vorschau/Solestia/estate-data.mjs",
+      "found": true
+    },
+    {
+      "pathname": "/Vorschau/Solestia/estate-view.mjs",
+      "found": true
+    },
+    {
+      "pathname": "/Vorschau/Solestia/solestia-estates.css",
+      "found": true
+    },
+    {
+      "pathname": "/Bestiarium/tiere/pferde/equo/index.html",
+      "found": true
+    }
+  ],
+  "failures": [
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/ancient-grianeach.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/ancient-grianeach.webp",
+      "reasons": [
+        "ARTWORKS:ancient-grianeach:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "113424",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-01.webp",
+      "reasons": [
+        "HOUSES:pool-01:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "135340",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-02.webp",
+      "reasons": [
+        "HOUSES:pool-02:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "124714",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-03.webp",
+      "reasons": [
+        "HOUSES:pool-03:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127830",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-04-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-04-v2.webp",
+      "reasons": [
+        "HOUSES:pool-04:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "91464",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-05.webp",
+      "reasons": [
+        "HOUSES:pool-05:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "114556",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-06.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-06.webp",
+      "reasons": [
+        "HOUSES:pool-06:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "122716",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-07.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-07.webp",
+      "reasons": [
+        "HOUSES:pool-07:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "122648",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-08.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-08.webp",
+      "reasons": [
+        "HOUSES:pool-08:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127542",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-09.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-09.webp",
+      "reasons": [
+        "HOUSES:pool-09:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "121472",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-10.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-10.webp",
+      "reasons": [
+        "HOUSES:pool-10:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "119400",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-11.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-11.webp",
+      "reasons": [
+        "HOUSES:pool-11:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "133510",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/caballero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/caballero.webp",
+      "reasons": [
+        "ESTATES:caballero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "190932",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/conde.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/conde.webp",
+      "reasons": [
+        "ESTATES:conde:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "231760",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/escudero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/escudero.webp",
+      "reasons": [
+        "ESTATES:escudero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "201596",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/hidalgo.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/hidalgo.webp",
+      "reasons": [
+        "ESTATES:hidalgo:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "251954",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/paje.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/paje.webp",
+      "reasons": [
+        "ESTATES:paje:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "157954",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/pechero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/pechero.webp",
+      "reasons": [
+        "ESTATES:pechero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "204080",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/regulo.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/regulo.webp",
+      "reasons": [
+        "ESTATES:regulo:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "191254",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/senor.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/senor.webp",
+      "reasons": [
+        "ESTATES:senor:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "182852",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/sobira.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/sobira.webp",
+      "reasons": [
+        "ESTATES:sobira:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "190102",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/maps/solestia-normal.webp",
+      "pathname": "/Vorschau/Solestia/assets/maps/solestia-normal.webp",
+      "reasons": [
+        "MAP_VARIANTS:normal:map"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "6105286",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/maps/solestia-regions.webp",
+      "pathname": "/Vorschau/Solestia/assets/maps/solestia-regions.webp",
+      "reasons": [
+        "MAP_VARIANTS:regions:map"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "4857464",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/originals/previews/solestia.webp",
+      "pathname": "/Vorschau/Solestia/assets/originals/previews/solestia.webp",
+      "reasons": [
+        "HOUSES:house-ducal:crest",
+        "ARTWORKS:realm-solestia:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "100900",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-ducal.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-ducal.webp",
+      "reasons": [
+        "WARRIORS:house-ducal:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "183118",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-01.webp",
+      "reasons": [
+        "WARRIORS:pool-01:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "166882",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-02.webp",
+      "reasons": [
+        "WARRIORS:pool-02:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "148260",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-03.webp",
+      "reasons": [
+        "WARRIORS:pool-03:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "150666",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-04-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-04-v2.webp",
+      "reasons": [
+        "WARRIORS:pool-04:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "165762",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-05.webp",
+      "reasons": [
+        "WARRIORS:pool-05:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "175534",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-06.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-06.webp",
+      "reasons": [
+        "WARRIORS:pool-06:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "149700",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-07-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-07-v2.webp",
+      "reasons": [
+        "WARRIORS:pool-07:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "146228",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-08.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-08.webp",
+      "reasons": [
+        "WARRIORS:pool-08:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "137756",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-09.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-09.webp",
+      "reasons": [
+        "WARRIORS:pool-09:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "197710",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-10.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-10.webp",
+      "reasons": [
+        "WARRIORS:pool-10:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "150656",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-11.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-11.webp",
+      "reasons": [
+        "WARRIORS:pool-11:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "147436",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-01.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-01:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "126260",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-02.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-02:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "155758",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-03.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-03:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "131518",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-04.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-04.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-04:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127664",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-05.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-05:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "195620",
+      "ok": false
+    }
+  ],
+  "entries": [
+    {
+      "url": "http://127.0.0.1:8897/Bestiarium/tiere/pferde/equo/index.html",
+      "pathname": "/Bestiarium/tiere/pferde/equo/index.html",
+      "reasons": [
+        "WARRIORS:pool-09:mount",
+        "CLASS_PROTOTYPES:prototype-05:mount",
+        "explicit-Equo-reference"
+      ],
+      "status": 200,
+      "contentType": "text/html",
+      "expectedContentTypes": [
+        "text/html"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "14066",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Leukonia/art-view.mjs",
+      "pathname": "/Vorschau/Leukonia/art-view.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/art-dialogs.mjs",
+        "dependency-of:/Vorschau/Solestia/art-view.mjs",
+        "dependency-of:/Vorschau/Solestia/estate-view.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4687",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Leukonia/house-placement-render.mjs",
+      "pathname": "/Vorschau/Leukonia/house-placement-render.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs",
+        "dependency-of:/Vorschau/Solestia/map-view.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2569",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Leukonia/house-placement-render.mjs?v=20261103-leukonia-4",
+      "pathname": "/Vorschau/Leukonia/house-placement-render.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Leukonia/map-view.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2569",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Leukonia/map-view.mjs",
+      "pathname": "/Vorschau/Leukonia/map-view.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4496",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/clan-map.css?v=20261103-placement-2",
+      "pathname": "/Vorschau/shared/clan-map.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2807",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/clan-map.mjs?v=20261103-placement-2",
+      "pathname": "/Vorschau/shared/clan-map.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "5712",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-placement.mjs",
+      "pathname": "/Vorschau/shared/country-placement.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "5749",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/art-dialog-session.mjs",
+      "pathname": "/Vorschau/shared/country-workbench/art-dialog-session.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/art-dialogs.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1353",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/art-dialogs.css",
+      "pathname": "/Vorschau/shared/country-workbench/art-dialogs.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1805",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/base.css",
+      "pathname": "/Vorschau/shared/country-workbench/base.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "7002",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/heraldry-gallery.css",
+      "pathname": "/Vorschau/shared/country-workbench/heraldry-gallery.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2912",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/occupation.css",
+      "pathname": "/Vorschau/shared/country-workbench/occupation.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "663",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/placement.css",
+      "pathname": "/Vorschau/shared/country-workbench/placement.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "3093",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/render.mjs",
+      "pathname": "/Vorschau/shared/country-workbench/render.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-render.mjs",
+        "dependency-of:/Vorschau/Solestia/art-dialogs.mjs",
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs",
+        "dependency-of:/Vorschau/Solestia/art-view.mjs",
+        "dependency-of:/Vorschau/Solestia/map-view.mjs",
+        "dependency-of:/Vorschau/Solestia/estate-view.mjs",
+        "dependency-of:/Vorschau/Leukonia/art-view.mjs",
+        "dependency-of:/Vorschau/Leukonia/house-placement-render.mjs",
+        "dependency-of:/Vorschau/Leukonia/map-view.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "9265",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/country-workbench/workbench.css",
+      "pathname": "/Vorschau/shared/country-workbench/workbench.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2105",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/house-detail-render.mjs",
+      "pathname": "/Vorschau/shared/house-detail-render.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/art-dialogs.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2651",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/house-details.css",
+      "pathname": "/Vorschau/shared/house-details.css",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-workbench/workbench.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2194",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/placement-controls.mjs?v=20261103-placement-2",
+      "pathname": "/Vorschau/shared/placement-controls.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/shared/country-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4220",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/shared/placement-state.mjs",
+      "pathname": "/Vorschau/shared/placement-state.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/placement-state.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2376",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/",
+      "pathname": "/Vorschau/Solestia/",
+      "reasons": [
+        "entry-page"
+      ],
+      "status": 200,
+      "contentType": "text/html",
+      "expectedContentTypes": [
+        "text/html"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "817",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/art-data.mjs",
+      "pathname": "/Vorschau/Solestia/art-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1870",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/art-dialogs.mjs",
+      "pathname": "/Vorschau/Solestia/art-dialogs.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4189",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/art-view.mjs",
+      "pathname": "/Vorschau/Solestia/art-view.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-render.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2025",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/ancient-grianeach.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/ancient-grianeach.webp",
+      "reasons": [
+        "ARTWORKS:ancient-grianeach:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "113424",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-01.webp",
+      "reasons": [
+        "HOUSES:pool-01:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "135340",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-02.webp",
+      "reasons": [
+        "HOUSES:pool-02:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "124714",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-03.webp",
+      "reasons": [
+        "HOUSES:pool-03:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127830",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-04-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-04-v2.webp",
+      "reasons": [
+        "HOUSES:pool-04:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "91464",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-05.webp",
+      "reasons": [
+        "HOUSES:pool-05:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "114556",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-06.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-06.webp",
+      "reasons": [
+        "HOUSES:pool-06:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "122716",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-07.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-07.webp",
+      "reasons": [
+        "HOUSES:pool-07:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "122648",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-08.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-08.webp",
+      "reasons": [
+        "HOUSES:pool-08:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127542",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-09.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-09.webp",
+      "reasons": [
+        "HOUSES:pool-09:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "121472",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-10.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-10.webp",
+      "reasons": [
+        "HOUSES:pool-10:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "119400",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/previews/pool-11.webp",
+      "pathname": "/Vorschau/Solestia/assets/emblems/previews/pool-11.webp",
+      "reasons": [
+        "HOUSES:pool-11:crest"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "133510",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/ancient-grianeach.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/ancient-grianeach.png",
+      "reasons": [
+        "ARTWORKS:ancient-grianeach:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2604141",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-01.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-01.png",
+      "reasons": [
+        "HOUSES:pool-01:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "3000521",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-02.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-02.png",
+      "reasons": [
+        "HOUSES:pool-02:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2904407",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-03.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-03.png",
+      "reasons": [
+        "HOUSES:pool-03:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2862260",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-04-v2.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-04-v2.png",
+      "reasons": [
+        "HOUSES:pool-04:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2251607",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-05.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-05.png",
+      "reasons": [
+        "HOUSES:pool-05:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2807834",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-06.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-06.png",
+      "reasons": [
+        "HOUSES:pool-06:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2823101",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-07.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-07.png",
+      "reasons": [
+        "HOUSES:pool-07:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2713628",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-08.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-08.png",
+      "reasons": [
+        "HOUSES:pool-08:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2932418",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-09.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-09.png",
+      "reasons": [
+        "HOUSES:pool-09:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2698663",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-10.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-10.png",
+      "reasons": [
+        "HOUSES:pool-10:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2840509",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/emblems/production/pool-11.png",
+      "pathname": "/Vorschau/Solestia/assets/emblems/production/pool-11.png",
+      "reasons": [
+        "HOUSES:pool-11:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2887942",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/caballero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/caballero.webp",
+      "reasons": [
+        "ESTATES:caballero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "190932",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/conde.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/conde.webp",
+      "reasons": [
+        "ESTATES:conde:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "231760",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/escudero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/escudero.webp",
+      "reasons": [
+        "ESTATES:escudero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "201596",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/hidalgo.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/hidalgo.webp",
+      "reasons": [
+        "ESTATES:hidalgo:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "251954",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/paje.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/paje.webp",
+      "reasons": [
+        "ESTATES:paje:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "157954",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/pechero.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/pechero.webp",
+      "reasons": [
+        "ESTATES:pechero:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "204080",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/regulo.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/regulo.webp",
+      "reasons": [
+        "ESTATES:regulo:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "191254",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/senor.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/senor.webp",
+      "reasons": [
+        "ESTATES:senor:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "182852",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/previews/sobira.webp",
+      "pathname": "/Vorschau/Solestia/assets/estates/previews/sobira.webp",
+      "reasons": [
+        "ESTATES:sobira:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "190102",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/caballero.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/caballero.png",
+      "reasons": [
+        "ESTATES:caballero:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2054632",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/conde.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/conde.png",
+      "reasons": [
+        "ESTATES:conde:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2399087",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/escudero.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/escudero.png",
+      "reasons": [
+        "ESTATES:escudero:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2155419",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/hidalgo.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/hidalgo.png",
+      "reasons": [
+        "ESTATES:hidalgo:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2528767",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/paje.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/paje.png",
+      "reasons": [
+        "ESTATES:paje:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1936128",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/pechero.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/pechero.png",
+      "reasons": [
+        "ESTATES:pechero:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2239126",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/regulo.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/regulo.png",
+      "reasons": [
+        "ESTATES:regulo:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2219207",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/senor.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/senor.png",
+      "reasons": [
+        "ESTATES:senor:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2064306",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/estates/production/sobira.png",
+      "pathname": "/Vorschau/Solestia/assets/estates/production/sobira.png",
+      "reasons": [
+        "ESTATES:sobira:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2266954",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/maps/solestia-normal.webp",
+      "pathname": "/Vorschau/Solestia/assets/maps/solestia-normal.webp",
+      "reasons": [
+        "MAP_VARIANTS:normal:map"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "6105286",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/maps/solestia-regions.webp",
+      "pathname": "/Vorschau/Solestia/assets/maps/solestia-regions.webp",
+      "reasons": [
+        "MAP_VARIANTS:regions:map"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "4857464",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/originals/previews/solestia.webp",
+      "pathname": "/Vorschau/Solestia/assets/originals/previews/solestia.webp",
+      "reasons": [
+        "HOUSES:house-ducal:crest",
+        "ARTWORKS:realm-solestia:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "100900",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/originals/solestia.png",
+      "pathname": "/Vorschau/Solestia/assets/originals/solestia.png",
+      "reasons": [
+        "HOUSES:house-ducal:fullsize",
+        "HOUSES:house-ducal:original",
+        "ARTWORKS:realm-solestia:fullsize",
+        "ARTWORKS:realm-solestia:original"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "466462",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-ducal.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-ducal.webp",
+      "reasons": [
+        "WARRIORS:house-ducal:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "183118",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-01.webp",
+      "reasons": [
+        "WARRIORS:pool-01:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "166882",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-02.webp",
+      "reasons": [
+        "WARRIORS:pool-02:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "148260",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-03.webp",
+      "reasons": [
+        "WARRIORS:pool-03:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "150666",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-04-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-04-v2.webp",
+      "reasons": [
+        "WARRIORS:pool-04:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "165762",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-05.webp",
+      "reasons": [
+        "WARRIORS:pool-05:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "175534",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-06.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-06.webp",
+      "reasons": [
+        "WARRIORS:pool-06:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "149700",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-07-v2.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-07-v2.webp",
+      "reasons": [
+        "WARRIORS:pool-07:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "146228",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-08.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-08.webp",
+      "reasons": [
+        "WARRIORS:pool-08:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "137756",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-09.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-09.webp",
+      "reasons": [
+        "WARRIORS:pool-09:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "197710",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-10.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-10.webp",
+      "reasons": [
+        "WARRIORS:pool-10:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "150656",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/house-pool-11.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/house-pool-11.webp",
+      "reasons": [
+        "WARRIORS:pool-11:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "147436",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-01.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-01.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-01:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "126260",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-02.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-02.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-02:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "155758",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-03.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-03.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-03:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "131518",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-04.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-04.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-04:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "127664",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/previews/prototype-05.webp",
+      "pathname": "/Vorschau/Solestia/assets/warriors/previews/prototype-05.webp",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-05:image"
+      ],
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "expectedContentTypes": [
+        "image/webp"
+      ],
+      "contentTypeMatches": false,
+      "contentLength": "195620",
+      "ok": false
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-ducal.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-ducal.png",
+      "reasons": [
+        "WARRIORS:house-ducal:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2031586",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-01.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-01.png",
+      "reasons": [
+        "WARRIORS:pool-01:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1907547",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-02.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-02.png",
+      "reasons": [
+        "WARRIORS:pool-02:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1702291",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-03.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-03.png",
+      "reasons": [
+        "WARRIORS:pool-03:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1762188",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-04-v2.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-04-v2.png",
+      "reasons": [
+        "WARRIORS:pool-04:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1960481",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-05.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-05.png",
+      "reasons": [
+        "WARRIORS:pool-05:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1907215",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-06.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-06.png",
+      "reasons": [
+        "WARRIORS:pool-06:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1775504",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-07-v2.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-07-v2.png",
+      "reasons": [
+        "WARRIORS:pool-07:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1813718",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-08.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-08.png",
+      "reasons": [
+        "WARRIORS:pool-08:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1637685",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-09.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-09.png",
+      "reasons": [
+        "WARRIORS:pool-09:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2008176",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-10.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-10.png",
+      "reasons": [
+        "WARRIORS:pool-10:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1745907",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/house-pool-11.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/house-pool-11.png",
+      "reasons": [
+        "WARRIORS:pool-11:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1755192",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/prototype-01.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/prototype-01.png",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-01:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1562548",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/prototype-02.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/prototype-02.png",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-02:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1851832",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/prototype-03.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/prototype-03.png",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-03:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1643206",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/prototype-04.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/prototype-04.png",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-04:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1583512",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/assets/warriors/production/prototype-05.png",
+      "pathname": "/Vorschau/Solestia/assets/warriors/production/prototype-05.png",
+      "reasons": [
+        "CLASS_PROTOTYPES:prototype-05:fullsize"
+      ],
+      "status": 200,
+      "contentType": "image/png",
+      "expectedContentTypes": [
+        "image/png"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2021667",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/estate-data.mjs",
+      "pathname": "/Vorschau/Solestia/estate-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4370",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/estate-view.mjs",
+      "pathname": "/Vorschau/Solestia/estate-view.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-render.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1060",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/house-data.mjs",
+      "pathname": "/Vorschau/Solestia/house-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "7684",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/house-placement.mjs",
+      "pathname": "/Vorschau/Solestia/house-placement.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2180",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/index.html",
+      "pathname": "/Vorschau/Solestia/index.html",
+      "reasons": [
+        "entry-html"
+      ],
+      "status": 200,
+      "contentType": "text/html",
+      "expectedContentTypes": [
+        "text/html"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "817",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/map-data.mjs",
+      "pathname": "/Vorschau/Solestia/map-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs",
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "563",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/map-view.mjs",
+      "pathname": "/Vorschau/Solestia/map-view.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-render.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "3602",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/placement-state.mjs",
+      "pathname": "/Vorschau/Solestia/placement-state.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/house-placement.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "417",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/proposal-app.mjs?v=20261104-solestia-1",
+      "pathname": "/Vorschau/Solestia/proposal-app.mjs",
+      "reasons": [
+        "html-entry-resource"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1875",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/proposal-render.mjs",
+      "pathname": "/Vorschau/Solestia/proposal-render.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "4104",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/proposal.css?v=20261104-solestia-1",
+      "pathname": "/Vorschau/Solestia/proposal.css",
+      "reasons": [
+        "html-entry-resource"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1336",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/realm-context.mjs",
+      "pathname": "/Vorschau/Solestia/realm-context.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "2829",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/solestia-art.css",
+      "pathname": "/Vorschau/Solestia/solestia-art.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "546",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/solestia-context.css",
+      "pathname": "/Vorschau/Solestia/solestia-context.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "860",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/solestia-estates.css",
+      "pathname": "/Vorschau/Solestia/solestia-estates.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1270",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/solestia-map.css",
+      "pathname": "/Vorschau/Solestia/solestia-map.css",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal.css"
+      ],
+      "status": 200,
+      "contentType": "text/css",
+      "expectedContentTypes": [
+        "text/css"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "1018",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/territory-data.mjs",
+      "pathname": "/Vorschau/Solestia/territory-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/map-data.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "11701",
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:8897/Vorschau/Solestia/warrior-data.mjs",
+      "pathname": "/Vorschau/Solestia/warrior-data.mjs",
+      "reasons": [
+        "dependency-of:/Vorschau/Solestia/proposal-app.mjs"
+      ],
+      "status": 200,
+      "contentType": "text/javascript",
+      "expectedContentTypes": [
+        "text/javascript",
+        "application/javascript",
+        "application/ecmascript"
+      ],
+      "contentTypeMatches": true,
+      "contentLength": "14803",
+      "ok": true
+    }
+  ],
+  "browserStatus": "not-run: this is an HTTP/file audit, not a CUA browser pass; known timeoutMs limitation remains"
+}

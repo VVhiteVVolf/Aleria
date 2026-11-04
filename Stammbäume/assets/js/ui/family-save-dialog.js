@@ -1,5 +1,5 @@
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
-import { normalizeFamilyId } from '../services/family-library.js';
+import { normalizeFamilyId } from '../services/family-library.js?v=20261104-content-lore-v1';
 import { fillHouseRankSelect, renderHouseProfilePreview } from './house-profile-fields.js';
 import { createHousePlacementFields } from './house-placement-fields.js';
 

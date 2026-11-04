@@ -251,7 +251,7 @@ export const HOUSE_DAL_T_SAOR_FAMILY = withAislearneachSourceCounterUpgrade(Obje
     person('bhaltair-tsaoir', 'Bhaltair T’Saoir', 'male', '1634', '????'),
     spouse('ciorstaidh-blar', 'Ciorstaidh Blár', 'female', '1630', '1711', 'house-nic-blar'),
     spouse('turlough-airt', 'Turlough Airt', 'male', '1630', '1691', 'house-mac-airt'),
-    spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '????'),
+    spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '', '', { status: 'alive' }),
 
     person('luan-tsaoir', 'Luan T’Saoir', 'male', '1649', '1719'),
     person('hurracan-tsaoir', 'Hurracan T’Saoir', 'male', '1651', '1720'),

@@ -2,11 +2,11 @@ import {
   createExtinctPlaceholderHouseFamily,
   createFounderPlaceholderHouseFamily
 } from './blank-house-family-factory.js';
-import { HOUSE_DAL_T_SAOR_FAMILY } from './house-dal-t-saor-family.js';
+import { HOUSE_DAL_T_SAOR_FAMILY } from './house-dal-t-saor-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_MAC_AIRT_FAMILY } from './house-mac-airt-family.js';
 import { HOUSE_NIC_BLAR_LEITHEACH_FAMILY } from './house-nic-blar-family.js';
 import { HOUSE_RUIN_LAIDIR_FAMILY } from './house-ruin-laidir-family.js';
-import { HOUSE_UA_CHOINNICH_FAMILY } from './house-ua-choinnich-family.js';
+import { HOUSE_UA_CHOINNICH_FAMILY } from './house-ua-choinnich-family.js?v=20261104-lore-fixes-v1';
 import {
   TIR_AN_COMHCHUIBHIS_HOUSE_DEFINITIONS,
   TIR_AN_COMHCHUIBHIS_HOUSE_EMBLEMS,

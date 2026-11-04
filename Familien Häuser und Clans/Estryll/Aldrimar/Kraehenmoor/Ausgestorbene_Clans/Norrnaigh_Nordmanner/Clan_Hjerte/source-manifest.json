@@ -1,0 +1,94 @@
+{
+  "id": "haus-hjerte",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "75681841-67b2-40ec-94b3-adc68657079e",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\75681841-67b2-40ec-94b3-adc68657079e\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/hjerte/animexx-original.html",
+    "bytes": 86661,
+    "sha256": "e1cdd385999d4f7a5f7a41e8c988cc59a6a78fc110e7bb79e749fb0cdd1deca3",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-hjerte",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "52812f14c85045bc821a2ae6d058b20d933ab8545f0975b547ca2393921aac45"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-hjerte",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-hjerte",
+    "familyId": "haus-hjerte",
+    "slug": "hjerte",
+    "canonicalSlug": "hjerte",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "75681841-67b2-40ec-94b3-adc68657079e",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/BhVDxjD.png",
+    "sourceUrl": "https://i.imgur.com/BhVDxjD.png",
+    "path": "Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:330px; width:220px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 261936,
+    "sha256": "915d9531c33419244ff1f685499f02214dac0eff9228393ae7bca52f8c497d2a",
+    "sha": "915d9531c33419244ff1f685499f02214dac0eff9228393ae7bca52f8c497d2a",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Speerkämpfer mit Hörnerhelm, Herzzeichen, Rundschild und Wolf als Teil des Originalmotivs.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Historischer Thanenclan, nicht unbekannter Rang. Erlöschen des Stammnamens von fortlebenden Kadettenlinien unterscheiden; keinen pauschalen Tod aller Nachkommen behaupten.",
+    "Norrnaigh (Nordmänner) und Ausgestorbene Clans sind kulturelle/archivarische Kategorien, keine Stammsitze. Historischer Wirkungsraum Krähenmoor; Gramfenn/Kummerherz begründet keine zweite Hjerte-Akte in Schwarzfenn.",
+    "Vier bereits belegte Nachfolgelinien Kummerherz, Schattenherz, Feuerherz und Kaltherz im Text nennen. Keine neuen Ehe- oder Elternkanten, Gründerdaten oder Hofämter übernehmen.",
+    "Die Erzählung vom Zug über das heutige Vennyr ist historische Überlieferung, keine neue gegenwärtige Landeszuordnung. Politische Ehen und territoriale Rückzüge werden ohne neue Datierung erhalten.",
+    "Glaennath-Niederlage nicht zu einer vollständigen Vernichtung des gesamten Albenvolks ausweiten. Tyrdras-Verehrung und Nacht des Eisernen Willens als historische Hauskultur erhalten.",
+    "Quellwiderspruch zwischen angeblich konsequenter Ablehnung von Täuschung und opportunistischen Allianzen bleibt als Spannung zwischen Kriegerideal und Machtpolitik sichtbar; kein neues moralisches Gesamturteil. Militärstatistiken ausgenommen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

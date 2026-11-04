@@ -1,0 +1,1100 @@
+{
+  "schema": "aleria.kraehenmoor-public-initial-review",
+  "schemaVersion": 1,
+  "publicOnly": true,
+  "scope": {
+    "kingdom": "Aldrimar",
+    "county": "Krähenmoor"
+  },
+  "baselineCapturedAt": "2026-11-03T19:08:22.749Z",
+  "extinctIds": [
+    "haus-hjerte",
+    "haus-jaernblod",
+    "haus-kaldhrafn",
+    "haus-mac-corcaigh",
+    "haus-mac-morfhia"
+  ],
+  "generatedImageIds": [
+    "haus-aurangr",
+    "haus-brackwasser",
+    "haus-fenngrim",
+    "haus-goldhand",
+    "haus-goldschwur",
+    "haus-goldzunge",
+    "haus-guldskar",
+    "haus-helmyr",
+    "haus-jaernblod",
+    "haus-myrskarn",
+    "haus-schwarzstolz",
+    "haus-sumpfgeborener",
+    "haus-taufwolf"
+  ],
+  "records": [
+    {
+      "id": "haus-varangr",
+      "title": "Clan Varangr",
+      "documentTitle": "Clan Varangr",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kraehenmoor.png",
+          "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 9,
+      "motto": "",
+      "graphFingerprint": "8c9e210484c163f8e193c7132ba73e0a7e46d5eba896da004685a47927d669b2",
+      "profileFingerprint": "205318ecfcbb064ba2de6838832a6873472eec006d601e8dbb970b844a5d1ae5",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Varangr/haus.content.mjs",
+      "inputSlug": "varangr",
+      "sourceArchiveSha256": "b2f84eabee7b7687b98a890030eb6ab15577b6bbdca862d1c8bd44cea44c73f0"
+    },
+    {
+      "id": "haus-schwarzstolz",
+      "title": "Clan Schwarzstolz",
+      "documentTitle": "Clan Schwarzstolz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Hesirentum von Schwarzfjord",
+        "Eldvik"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Eldvik",
+        "barony": "Hesirentum von Schwarzfjord",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "8d0f6d04f14a29d4e3e3f42c1e2b700eb31bf65d80a380da179be368c7338e50",
+      "profileFingerprint": "a725da077c14810bcb159a09d61ef989f619ca681b2bf96b0c46a3b808de979d",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Hesirentum_von_Schwarzfjord/Eldvik/Clan_Schwarzstolz/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-schattenherz",
+      "title": "Clan Schattenherz",
+      "documentTitle": "Clan Schattenherz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Rabenweide",
+        "Rabenfurt"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Rabenfurt",
+        "barony": "Thanentum Rabenweide",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "motto": "",
+      "graphFingerprint": "3ca2c11512b9ca1117a2039ce6bdd5f8d4db734cef3294fd4f70f26b98047999",
+      "profileFingerprint": "ef0dc37723447eeba6fb19cf7ad5f834d217e4abda2d837c875496fb0a89b06d",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Rabenweide/Rabenfurt/Clan_Schattenherz/haus.content.mjs",
+      "inputSlug": "schattenherz",
+      "sourceArchiveSha256": "053542e2bdf6ec9fa4c5a172d1ec5966f86b577bf08e19e8d9d116a65fe5b1ff"
+    },
+    {
+      "id": "haus-blutstahl",
+      "title": "Clan Blutstahl",
+      "documentTitle": "Clan Blutstahl",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "20ec9ef3068d32a2da3b99793bb820c2ca54ab6d8b012221cff2a672b58ae100",
+      "profileFingerprint": "4ebb30fe9c5fa8f19e007361dc99e9ccf4397168c77db4c12c987e9a2c6195e9",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Blutstahl/haus.content.mjs",
+      "inputSlug": "blutstahl",
+      "sourceArchiveSha256": "3e5169326dd3e413494ccb40d617681a4c2e36afdf252f1e74f252359a64f656"
+    },
+    {
+      "id": "haus-silberblut",
+      "title": "Clan Silberblut",
+      "documentTitle": "Clan Silberblut",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "439341a48e96c8d8d04ce82f0aadae08162864f0e881bd5609589c5b77bdb6d6",
+      "profileFingerprint": "4ebb30fe9c5fa8f19e007361dc99e9ccf4397168c77db4c12c987e9a2c6195e9",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Silberblut/haus.content.mjs",
+      "inputSlug": "silberblut",
+      "sourceArchiveSha256": "e07a3c837bf3ef239956324234edb6ce44d94b7e1ca72e91f16b91047093a43a"
+    },
+    {
+      "id": "haus-kaltherz",
+      "title": "Clan Kaltherz",
+      "documentTitle": "Clan Kaltherz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "motto": "Geduld und Kalkül führen zum Sieg",
+      "graphFingerprint": "b38542b18c3f2d7ef48666865f766174bd54e4d871bdb334956af6e15eaf4e57",
+      "profileFingerprint": "723d50b28aab292a1afb1dc040ae0e47ae07ac637ed44f41e015907495020801",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Kaltherz/haus.content.mjs",
+      "inputSlug": "kaltherz",
+      "sourceArchiveSha256": "8056e8e6ff33433ececbc55eab97f6dfd930eb87f6148844eb5fbade32d74d6f"
+    },
+    {
+      "id": "haus-feuerherz",
+      "title": "Clan Feuerherz",
+      "documentTitle": "Clan Feuerherz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "32082824c3b689cb8b5b589813e21ed816fa5cdac32c38778d060b581527f4aa",
+      "profileFingerprint": "723d50b28aab292a1afb1dc040ae0e47ae07ac637ed44f41e015907495020801",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "inputSlug": "feuerherz",
+      "sourceArchiveSha256": "fa656f00e283bc712a6cfc34ed2ca91ded8fe760b987dc7b4e5738f8a4238be0"
+    },
+    {
+      "id": "haus-vragi",
+      "title": "Clan Vragi",
+      "documentTitle": "Clan Vragi",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Rabenweide",
+        "Rabenforst",
+        "Rabenhain"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rabenhain",
+        "barony": "Thanentum Rabenweide",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-schattenherz",
+        "liegeHouseName": "Clan Schattenherz",
+        "folderPath": [
+          "Aldrimar",
+          "Krähenmoor",
+          "Thanentum Rabenweide",
+          "Rabenforst",
+          "Rabenhain"
+        ],
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kraehenmoor.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenforst.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "1609be73c50dba83c6c22f26a3e505cddcc3d323c24d12142d93e5da45c8411d",
+      "profileFingerprint": "0abb29f719ececd37649f18164dd0aeaf3f41fc76bde562e052fd68679768f88",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Rabenweide/Rabenforst/Rabenhain/Clan_Vragi/haus.content.mjs",
+      "inputSlug": "vragi",
+      "sourceArchiveSha256": "b29132ca404e1b6b09b70c2ea729946857f9ea8544bb40364336c8675a127ff2"
+    },
+    {
+      "id": "haus-schwarzblut",
+      "title": "Clan Schwarzblut",
+      "documentTitle": "Clan Schwarzblut",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Hesirentum von Schwarzfjord",
+        "Nebelwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Nebelwacht",
+        "barony": "Hesirentum von Schwarzfjord",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "1d09f8e1d43ad0c53d29425ef85545223b2f700f3a517bbcd37b14c09e9ef3f0",
+      "profileFingerprint": "ca9b031f7e904492a669896c022ca19dfeae0cffd3052e04d750351153bbd0c7",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Hesirentum_von_Schwarzfjord/Nebelwacht/Clan_Schwarzblut/haus.content.mjs",
+      "inputSlug": "schwarzblut",
+      "sourceArchiveSha256": "293fcf2debe99a647fa9aea0178e3b40dfc24cca69cff18a7d1c0bbbe3075160"
+    },
+    {
+      "id": "haus-goldglanz",
+      "title": "Clan Goldglanz",
+      "documentTitle": "Clan Goldglanz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-blutstahl",
+        "liegeHouseName": "Clan Blutstahl",
+        "liegeHouses": [
+          {
+            "id": "house-blutstahl",
+            "name": "Clan Blutstahl"
+          },
+          {
+            "id": "house-silberblut",
+            "name": "Clan Silberblut"
+          }
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "52e9f5e9652cef298690c11d487e4e04723cd815dd093be36ad3daea788cb2d7",
+      "profileFingerprint": "a59c4ea7c8f041aacc3619908b84556a7b27dd6cba3cf3754e0aab583dc599d2",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Goldglanz/haus.content.mjs",
+      "inputSlug": "goldglanz",
+      "sourceArchiveSha256": "15ce3e3368cb6027d460681079bb1cc85f02b8d0eff7ab02944feda3a108f899"
+    },
+    {
+      "id": "haus-goldschwur",
+      "title": "Clan Goldschwur",
+      "documentTitle": "Clan Goldschwur",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "4182fd3aad5574bc36e6013f3e56591364e883e8f46a6632337aff082becccc3",
+      "profileFingerprint": "35b15e690e45742b6c86c65997b52048b3c20a2876bc033a0010e72d0cdddf7a",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldschwur/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-goldhand",
+      "title": "Clan Goldhand",
+      "documentTitle": "Clan Goldhand",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "a15c74674830c67ca134a7ea16fd3ed04e4a511b91844f99ee7603749e1e217e",
+      "profileFingerprint": "35b15e690e45742b6c86c65997b52048b3c20a2876bc033a0010e72d0cdddf7a",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldhand/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-guldskar",
+      "title": "Clan Guldskar",
+      "documentTitle": "Clan Guldskar",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "79f8ab6febc0c21340dca5ef6517b6bc3e2d3f491c1b6dccd5f2cd7bc5454542",
+      "profileFingerprint": "35b15e690e45742b6c86c65997b52048b3c20a2876bc033a0010e72d0cdddf7a",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Guldskar/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-aurangr",
+      "title": "Clan Aurangr",
+      "documentTitle": "Clan Aurangr",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "4d01f2e14f01fe3a63dc11b6bc9f883f0970d0da7cee483583c0e92e5cb8921c",
+      "profileFingerprint": "35b15e690e45742b6c86c65997b52048b3c20a2876bc033a0010e72d0cdddf7a",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Aurangr/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-fenngrim",
+      "title": "Clan Fenngrim",
+      "documentTitle": "Clan Fenngrim",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "dd3b2901a7ad05ec3ec135246e75cc938f79c703edec7e84f6d89f1e0c26df7e",
+      "profileFingerprint": "c932e37d13083913829fe46164bfd7f47faa333e2c14f31e10c7e6242196d733",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Fenngrim/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-brackwasser",
+      "title": "Clan Brackwasser",
+      "documentTitle": "Clan Brackwasser",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "b2085a4dc1a806a1f7dc536de347f5363451f6530f8736fb4502c309ddddcca0",
+      "profileFingerprint": "c932e37d13083913829fe46164bfd7f47faa333e2c14f31e10c7e6242196d733",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Brackwasser/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-sumpfgeborener",
+      "title": "Clan Sumpfgeborener",
+      "documentTitle": "Clan Sumpfgeborener",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "d61c6e4d03ca94030bd8ff19fc956ad57440d5d6ec8eb4094561334a8027102e",
+      "profileFingerprint": "c932e37d13083913829fe46164bfd7f47faa333e2c14f31e10c7e6242196d733",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Sumpfgeborener/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-helmyr",
+      "title": "Clan Helmyr",
+      "documentTitle": "Clan Helmyr",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "609a07dae4e3a8864a62dedab5e11c64de548eb0500b129ff982f59abd4a0b0c",
+      "profileFingerprint": "7f3cdd3bdf41934a83a27993fe9dfbd81d9295e7fc2f28752e51725895d169f1",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Helmyr/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-taufwolf",
+      "title": "Clan Taufwolf",
+      "documentTitle": "Clan Taufwolf",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "9bc1db68b9597fac5e310651223af9273c6e251de6237539e5f454ea6eaad1b0",
+      "profileFingerprint": "7f3cdd3bdf41934a83a27993fe9dfbd81d9295e7fc2f28752e51725895d169f1",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Taufwolf/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-myrskarn",
+      "title": "Clan Myrskarn",
+      "documentTitle": "Clan Myrskarn",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "764e65b3dd6f54d1c18dd7ceae763d1a4f2385594f04ff2fd037e85d20a7d3d1",
+      "profileFingerprint": "7f3cdd3bdf41934a83a27993fe9dfbd81d9295e7fc2f28752e51725895d169f1",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Myrskarn/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-goldzunge",
+      "title": "Clan Goldzunge",
+      "documentTitle": "Clan Goldzunge",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "fdb4b6ca3dbac11842befbce50526f64786116e5152ad15bd6a1be3862f666fc",
+      "profileFingerprint": "73871ebf33ccbfe557166bf86c819a21ceaaa3a82aefcd3a7eec47887cb1aee7",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldzunge/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null
+    },
+    {
+      "id": "haus-hjerte",
+      "title": "Clan Hjerte",
+      "documentTitle": "Clan Hjerte",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "Behaupte dich, bis es wahr wird",
+      "graphFingerprint": "52812f14c85045bc821a2ae6d058b20d933ab8545f0975b547ca2393921aac45",
+      "profileFingerprint": "2d62c288465e304943c4406c4a818575dea1d71ce3856e1f7dd3ce83d87bd4d7",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Hjerte/haus.content.mjs",
+      "inputSlug": "hjerte",
+      "sourceArchiveSha256": "e1cdd385999d4f7a5f7a41e8c988cc59a6a78fc110e7bb79e749fb0cdd1deca3"
+    },
+    {
+      "id": "haus-jaernblod",
+      "title": "Clan Järnblod",
+      "documentTitle": "Clan Järnblod",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Silberquell"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "9a94199646f2a7a082bea242b653827e8fca0337567d135e65301387dd6cd198",
+      "profileFingerprint": "21417f54e2cf7fb53c57ae9ad792f78744537818f97e85e4b1396c82eaf82691",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Jarnblod/haus.content.mjs",
+      "inputSlug": "jarnblod",
+      "sourceArchiveSha256": "338a1c441a4786f45e5cbedcfcfcb8e16b1ba8426589373e158f969647d9cdc6"
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "title": "Clan Kaldhrafn",
+      "documentTitle": "Clan Kaldhrafn",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "667ba9453c7730464399e7204ae809667e22d22b10f25026cb7c5ac271ea21b6",
+      "profileFingerprint": "7d87d5053619988f6a657054fa5979893fc2e3549bbeaa38fb92da6b05a1e72d",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Kaldhrafn/haus.content.mjs",
+      "inputSlug": "kaldhrafn",
+      "sourceArchiveSha256": "12f03a0af61b31bda2858a66723d15f9d242d93f890af2042f68999c0a718699"
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "title": "Clan Mac Môrfhia",
+      "documentTitle": "Clan Mac Môrfhia",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Silberquell"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "0b9c7d300fd3ad0b173b004468d4d80c11cb1dc4e5c4d3eeee962e6a99979159",
+      "profileFingerprint": "31dce7293c0a57923c65ae8d9516083b4c351358e887a41b8f642248c5ccfdc2",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Morfhia/haus.content.mjs",
+      "inputSlug": "morfhia",
+      "sourceArchiveSha256": "3587e273eb4a6a0faca2fa8b66fad7cb8cd66fe543ddd2c0ec73e1b0943105bf"
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "title": "Clan Mac Corcaigh",
+      "documentTitle": "Clan Mac Corcaigh",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Moortal"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "dc52b5a62fd848962eabeaf26d0802857549adf7de8300546d6a91e24e29c312",
+      "profileFingerprint": "cd07170fe8b598095881a9a2e13a2a64a710cb575375824f936e24ef855085f5",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Corcaigh/haus.content.mjs",
+      "inputSlug": "corcaigh",
+      "sourceArchiveSha256": "7d3b2dec19faee18146d922ac7ed162ef95822b878db2e8345093fd1d7c726ce"
+    }
+  ],
+  "originalAssets": [
+    {
+      "id": "haus-schattenherz",
+      "path": "Stammbäume/assets/images/references/haus-schattenherz/krieger.png",
+      "url": "https://i.imgur.com/mG4OdPP.png",
+      "sha256": "d76e676f8550619da7dd6eb12d0e567848ae3a841d718e8a2ec187ed6e8d73d1",
+      "bytes": 296480
+    },
+    {
+      "id": "haus-blutstahl",
+      "path": "Stammbäume/assets/images/references/haus-blutstahl/krieger.png",
+      "url": "https://i.imgur.com/mkMUZoc.png",
+      "sha256": "976ae1a3d20c7408b8d58836eb4529ced5751271351536d16992e0094f285bd0",
+      "bytes": 228669
+    },
+    {
+      "id": "haus-silberblut",
+      "path": "Stammbäume/assets/images/references/haus-silberblut/krieger.png",
+      "url": "https://i.imgur.com/SSFSP56.png",
+      "sha256": "c6a9fda164e6d401e899caa3ab201cccf72e9b6b21006143e8d1ab73f76d4be0",
+      "bytes": 313729
+    },
+    {
+      "id": "haus-varangr",
+      "path": "Stammbäume/assets/images/references/haus-varangr/krieger.png",
+      "url": "https://i.imgur.com/MY4f0QD.png",
+      "sha256": "01687f30ec6b3175d9cfbd544fe4fb467be701d2a234d563677b73dcc6b85460",
+      "bytes": 194283
+    },
+    {
+      "id": "haus-kaltherz",
+      "path": "Stammbäume/assets/images/references/haus-kaltherz/krieger.png",
+      "url": "https://i.imgur.com/me1uC4q.png",
+      "sha256": "9ed88bbf8986757fb6a49fedf160dec3fddd3fc17778b725a69be55c7351a0f1",
+      "bytes": 285226
+    },
+    {
+      "id": "haus-feuerherz",
+      "path": "Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+      "url": "https://i.imgur.com/lbVUg03.png",
+      "sha256": "2112b40bcaaebf8cbc20aa06c24d1bd49daa9cc750ccca56f50609783dbab80a",
+      "bytes": 234409
+    },
+    {
+      "id": "haus-vragi",
+      "path": "Stammbäume/assets/images/references/haus-vragi/krieger.png",
+      "url": "https://i.imgur.com/SZQifHJ.png",
+      "sha256": "90c1f8969e768bd52353048fc9ac95f421386d1345d17b9fb39821d793cf52da",
+      "bytes": 304958
+    },
+    {
+      "id": "haus-schwarzblut",
+      "path": "Stammbäume/assets/images/references/haus-schwarzblut/krieger.png",
+      "url": "https://i.imgur.com/Tir7bJU.png",
+      "sha256": "1839877dcd392fe422843f937852e1c912fc2067a4d95d5d18a726397fe6d35c",
+      "bytes": 290272
+    },
+    {
+      "id": "haus-goldglanz",
+      "path": "Stammbäume/assets/images/references/haus-goldglanz/krieger.png",
+      "url": "https://i.imgur.com/DqYI5oN.png",
+      "sha256": "582184ee77cf8c54660a6ec4db261bf6f6ff9dcab2a0774322a2c76141d66e78",
+      "bytes": 330163
+    },
+    {
+      "id": "haus-hjerte",
+      "path": "Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+      "url": "https://i.imgur.com/BhVDxjD.png",
+      "sha256": "915d9531c33419244ff1f685499f02214dac0eff9228393ae7bca52f8c497d2a",
+      "bytes": 261936
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "path": "Stammbäume/assets/images/references/haus-kaldhrafn/krieger.png",
+      "url": "https://i.imgur.com/wAZpWE4.png",
+      "sha256": "b9e0ddf55698099f59bad3d1f4cf4f24998131fe5fc3938e0ae78e227f108300",
+      "bytes": 225346
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "path": "Stammbäume/assets/images/references/haus-mac-morfhia/krieger.png",
+      "url": "https://i.imgur.com/VHv4grp.png",
+      "sha256": "5da2ddaf091ee82b86204daad2533fcbaaab6e135d5279762bef41938440a474",
+      "bytes": 283029
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "path": "Stammbäume/assets/images/references/haus-mac-corcaigh/krieger.png",
+      "url": "https://i.imgur.com/djsYPLC.png",
+      "sha256": "94e678dd70804dd84b2ccca47866fda7a66b28fe6c35d975fd3be82047c410f6",
+      "bytes": 263135
+    }
+  ]
+}

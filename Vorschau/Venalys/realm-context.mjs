@@ -1,6 +1,6 @@
 export const context = {
   realm: 'venalys', short: 'Venalys', title: 'Die Stadtrepublik Venalys', continent: 'Tirnara',
-  emblem: 'assets/crests/venalys.webp', emblemFull: 'assets/originals/venalys.png', imageSize: [8192, 4698],
+  emblem: 'assets/crests/venalys.webp', emblemFull: 'assets/originals/venalys.png', imageSize: [6144, 3524],
   introduction: 'Aus einer Handelskolonie des Marktes der Fortuna erwuchs eine unabhängige Metropole. Fünf Gründerfamilien verbanden Kaufmannschaft, Kapital, Waffendienst, Mission und Baukunst. Ihre Häuser prägen die Republik bis heute.',
   note: 'Bezirksnamen und Wappenzuordnungen sind dein lokaler Entwurf. Ein Haus kann mehrere Stadtbezirke und äußere Orte erhalten; mehrere Häuser können denselben Bereich teilen. Es entstehen vorerst ausschließlich Magnarierhäuser unter den fünf Patrizierfamilien.',
   historyHeading: 'Fünf Gründerväter. Eine Republik.',

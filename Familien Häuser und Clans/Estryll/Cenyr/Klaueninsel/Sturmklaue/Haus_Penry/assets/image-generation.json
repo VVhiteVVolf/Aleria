@@ -1,0 +1,55 @@
+{
+  "schema": "aleria.house-figure-generation",
+  "schemaVersion": 1,
+  "houseId": "haus-penry",
+  "generatedAt": "2026-11-03",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "defaultSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12f-fb44-7d93-b36e-5e3217ddae0a\\exec-18c5fd84-d406-40d4-b191-fa5d4c988ee3.png",
+  "prompt": "Use case: stylized-concept. Asset: ONE representative Aleria house figure, portrait 2:3, completely visible full body. Reference 1 provides ONLY the approved painting style, never the default armor design; reference 2 gives the actual family crest.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\nHouse and regional design: Elder male commoner of the Penry family in Talgarth, with an established household administration connection. Muted navy long wool coat, tan underlayer, plain brown belt, small gold-colored key badge and soft cap. Carry one closed household ledger, other hand relaxed. Not a portrait of a specific named person. No armor, weapons, shield or aristocratic jewelry.\nNeutral upright three-quarter stance, complete feet, simple clear large shapes. Salty windy island climate is expressed only in practical clothing, no environment. Genuine transparent PNG through all open gaps, no ground, cast shadow, glow, text or watermark. This is a representative family illustration and does not create a named identity, mechanical equipment, family rank or unproven profession.",
+  "references": [
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png"
+  ],
+  "referenceInspection": {
+    "styleActuallyViewed": true,
+    "emblemActuallyViewed": true
+  },
+  "transparentBackground": true,
+  "aspectRatio": "2:3",
+  "image": "Familien Häuser und Clans/Estryll/Cenyr/Klaueninsel/Sturmklaue/Haus_Penry/assets/hausdarstellung-2026-11-03.png",
+  "sha256": "cc94f63a77bd765adf1540ca2780a29b28775512aedf54df3a89174c608ee8c3",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA"
+  },
+  "qa": {
+    "status": "passed",
+    "contactSheet": "diagnostics/klaueninsel-house-pages-20261103/bevan-arian-hirschhorn-penry-contact-sheet.png",
+    "alphaPreserved": true,
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "fullyTransparentPixels": 975981,
+    "nonTransparentBoundingBox": [
+      0,
+      11,
+      1006,
+      1536
+    ],
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "contactSheetActuallyViewed": true,
+    "reviewedOnLightAndDark": true,
+    "completeFigureAndFeetVisible": true,
+    "handsAndFaceReviewed": true,
+    "heraldicMotifReviewed": true,
+    "noVisibleHaloOrCastShadow": true,
+    "unnamedRepresentative": true,
+    "description": "Aelterer Buerger in blauem Wollmantel mit Schluesselabzeichen und geschlossenem Haushaltsbuch; keine Waffen oder Ruestung."
+  }
+}

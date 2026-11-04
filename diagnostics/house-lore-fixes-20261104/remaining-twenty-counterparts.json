@@ -1,0 +1,498 @@
+{
+  "status": "listed-only-no-alignment",
+  "count": 20,
+  "findings": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "fields": [
+        "birth",
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "????",
+            "death": "????"
+          }
+        },
+        {
+          "familyId": "haus-wyrm",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "1100",
+            "death": "1177"
+          }
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "values": {
+            "birth": "1099",
+            "death": "1166"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "fields": [
+        "birth"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1698"
+          }
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1701"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-silberblut",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-hrafn",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "female"
+          }
+        },
+        {
+          "familyId": "haus-sterkr",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "male"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "fields": [
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1182"
+          }
+        },
+        {
+          "familyId": "haus-illewod",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1172"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "male"
+          }
+        },
+        {
+          "familyId": "haus-pendrag",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "female"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-crafanc",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    }
+  ]
+}

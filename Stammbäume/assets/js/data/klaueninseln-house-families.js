@@ -11,7 +11,7 @@ import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
 import { PARZIFAL_CREW_HOUSE_FAMILIES } from './parzifal-crew-house-families.js';
 import { withParzifalCrewPortraitUpgrade } from './parzifal-crew-families/portrait-upgrade.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
-import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js';
+import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js?v=20261104-life-status-v1';
 import {
   HOUSE_DIAFOL_TALGARTH_FAMILY,
   HOUSE_DIAFOL_TREFGOCH_FAMILY
@@ -26,7 +26,7 @@ import {
 } from './house-dyfrgi-family.js';
 import { HOUSE_EIRTH_FAMILY } from './house-eirth-family.js';
 import { HOUSE_MORTHWYLL_FAMILY } from './house-morthwyll-family.js';
-import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
+import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_SELWYN_FAMILY } from './house-selwyn-family.js';
 import { HOUSE_UNIGOL_FAMILY } from './house-unigol-family.js';
 import {

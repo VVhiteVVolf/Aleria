@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "scope": "Explicit user-retained illustrations. These exceptions override the general v3 art brief without creating person records.",
+  "records": [
+    {
+      "id": "source-03",
+      "usage": "emblem-pair",
+      "classId": "derwisch",
+      "revision": 2,
+      "directionSource": "sources/emblem-warriors-source-art-direction-v2.json",
+      "sha256": "12e0381e96ee468425188d3122b78cc572a02fd34ec947eb0b1af0075e332485",
+      "productionSha256": "e8ebea2aa62a897ff23b4a710279eccdae9081ea212ccad016a975dcc7e39885",
+      "previewSha256": "cab55df6241f71e439159174bee3fb48809f34e0d5da864d2a7b32e065479a7f"
+    },
+    {
+      "id": "pool-18",
+      "usage": "emblem-pair",
+      "classId": "derwisch",
+      "revision": 2,
+      "directionSource": "sources/emblem-warriors-pool-14-26-art-direction-v2.json",
+      "sha256": "4d0ca7bae64e34f175e6eb07da8a7ab6f8f0008b72b1979aa289b191704376c3",
+      "display": {
+        "helmet": "Geschlossener goldgerippter Tulpenhelm mit drei senkrechten Sehschlitzen",
+        "armor": "Dunkle Brustlamellen mit Goldborten, blauer Schal und blaue Ärmel; langer roter Überwurf mit Goldornamenten.",
+        "equipment": ["Ein großer zweihändig geführter Krummsäbel"],
+        "pose": "Ruhiger aufrechter Stand; beide Hände ruhen auf dem langen Säbelgriff, die Klinge zeigt nach unten."
+      }
+    },
+    {
+      "id": "pool-20",
+      "usage": "emblem-pair",
+      "classId": "ghulam",
+      "revision": 1,
+      "sha256": "b4a2bfd930b937e09fa681bee973958485ed9e07d27ae58585f949d99824f9ae",
+      "display": {
+        "helmet": "Kumanischer Kegelhelm mit menschlicher Gesichtsmaske, Kettenvorhang und rotem Tuchschmuck",
+        "armor": "Schweres Kettenhemd und graue rechteckige Lamellen über schwarzem Waffenrock; roter Brusttabard mit weißem Widderkopf.",
+        "equipment": ["Geflanschter Streitkolben"],
+        "pose": "Aufrechter Stand; Streitkolben seitlich vor dem Körper, die andere Hand hängt entspannt."
+      }
+    },
+    {
+      "id": "ghulam",
+      "usage": "class-overview",
+      "classId": "ghulam",
+      "revision": 1,
+      "sha256": "43c6d0cb10c8a573494498ec9fd3b95a9fa056a5e48e3fc6a5aa3aacd8f0fff9",
+      "productionSha256": "b678c5b53b975d98f495bcecf5d79bffba5e0930fcd11f06d005ab0f1c118c7a",
+      "previewSha256": "6926d6a4e4bb983ae416fddbbe400db57ee0550c73dd9dcc64a2b7099147d7bc"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "reviewed-public-family-registry",
+    "familyId": "haus-pellan",
+    "sourceRevision": 0
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-pellan",
+    "existingGraphUnchanged": true,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ]
+  },
+  "preparation": {
+    "inventedPeople": false,
+    "inventedRelationships": false,
+    "inventedProfession": false,
+    "militaryStatisticsImported": false
+  },
+  "images": [
+    {
+      "role": "Repräsentative Hausfigur",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "sha256": "4ad10bff6376e7d5378062a0b5aa7d908e4d61535eb659e62e2f5f3b5f938237",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json",
+      "namedPerson": false
+    }
+  ],
+  "decisions": [
+    "Nur belegte öffentliche Registerfakten und bestehende Angehörige verwendet. Keine alten Genealogien, Amtsfolgen oder Militärstatistiken importiert.",
+    "Bestehende Hausquellen bleiben erhalten; dieses neue Modul füllt eine geprüfte aktive Seitenlücke."
+  ]
+}

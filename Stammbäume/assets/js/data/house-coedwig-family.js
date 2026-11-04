@@ -11,7 +11,7 @@ import {
 } from './graue-weite-house-profiles.js';
 import { HOUSE_COEDWIG_PORTRAITS } from './house-coedwig-portraits.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { SCHWARZFENN_HOUSE_EMBLEMS } from './schwarzfenn-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 

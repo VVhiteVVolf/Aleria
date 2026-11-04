@@ -2,7 +2,9 @@ import {uid} from '../ui/html.mjs';
 import {renderEditor} from './editor-view.mjs';
 import {importLocalImage} from './image-import.mjs';
 import {createMindmapController} from '../mindmap/mindmap-controller.mjs';
-export function createEditor(root,{getModule,updateModule,onDuplicate,onDelete,ask,toast}) {
+import {isRequestModule,REQUEST_PRIORITIES,REQUEST_STAGES} from '../requests/request-model.mjs';
+import {renderRequestFeedback} from '../requests/request-editor.mjs';
+export function createEditor(root,{getModule,updateModule,captureContext=()=>null,onDuplicate,onDelete,onShare,ask,toast}) {
   let moduleId=null,pageId=null;
   const current=()=>getModule(moduleId);
   const update=(mutator,options={})=>updateModule(moduleId,mutator,{reason:'editor-input',...options});
@@ -31,6 +33,7 @@ export function createEditor(root,{getModule,updateModule,onDuplicate,onDelete,a
       if(action==='remove-block'){update(module=>{page(module).blocks=page(module).blocks.filter(block=>block.id!==blockId);});render();}
       if(action==='remove-image'){update(module=>{page(module).blocks.find(block=>block.id===blockId).value='';});render();}
       if(action==='duplicate-module'){onDuplicate(moduleId);toast('Eine Kopie liegt auf deiner Pinnwand.');}
+      if(action==='share-request'){const id=moduleId;root.close();onShare?.(id);}
       if(action==='delete-module'){if(await ask({title:'Modul entfernen?',description:'Das Modul mit allen Seiten entfernen. Du kannst es über Rückgängig wiederherstellen.',input:false,confirm:'Modul entfernen',danger:true})){const id=moduleId;root.close();onDelete(id);}}
     }catch(error){toast(error.message);}
   });
@@ -38,11 +41,14 @@ export function createEditor(root,{getModule,updateModule,onDuplicate,onDelete,a
     const moduleField=event.target.dataset.moduleField,blockField=event.target.dataset.blockField;
     if(moduleField){update(module=>{module[moduleField]=event.target.value;},{groupKey:`${moduleId}-${moduleField}`});if(moduleField==='title')root.querySelector('.editor-module-name').textContent=event.target.value;}
     if(blockField){const blockId=event.target.closest('[data-block]').dataset.block;update(module=>{page(module).blocks.find(block=>block.id===blockId)[blockField]=event.target.value;},{groupKey:`${blockId}-${blockField}`});}
+    if((moduleField||blockField)&&isRequestModule(current()))root.querySelector('[data-request-feedback]').innerHTML=renderRequestFeedback(current());
   });
   root.addEventListener('change',async event=>{
+    const field=event.target.dataset.requestField;
+    if(field){const choices=field==='stage'?REQUEST_STAGES:field==='priority'?REQUEST_PRIORITIES:null;if(choices&&Object.hasOwn(choices,event.target.value))update(module=>{module.requestMeta[field]=event.target.value;});return;}
     if(!event.target.matches('[data-image-upload]')||!event.target.files[0])return;
-    const id=moduleId,selectedPage=pageId,blockId=event.target.closest('[data-block]').dataset.block,file=event.target.files[0];
-    try{const value=await importLocalImage(file);updateModule(id,module=>{const block=module.pages.find(item=>item.id===selectedPage)?.blocks.find(item=>item.id===blockId);if(block)block.value=value;},{reason:'editor-input'});if(moduleId===id)render();toast('Bild lokal eingefügt. Es wird beim Export mitgesichert.');}catch(error){toast(error.message);}
+    const id=moduleId,selectedPage=pageId,boardId=captureContext(),blockId=event.target.closest('[data-block]').dataset.block,file=event.target.files[0];
+    try{const value=await importLocalImage(file);let inserted=false;updateModule(id,module=>{const block=module.pages.find(item=>item.id===selectedPage)?.blocks.find(item=>item.id===blockId);if(block){block.value=value;inserted=true;}},{reason:'editor-input',...(boardId?{boardId}:{})});if(!inserted){toast('Die ursprüngliche Bildkarte wurde inzwischen entfernt. Bitte wähle das Bild erneut aus.');return;}if(moduleId===id&&captureContext()===boardId)render();toast('Bild lokal eingefügt. Es wird beim Export und bei der Wunschübergabe mitgesichert.');}catch(error){toast(error.message);}
   });
   root.addEventListener('close',()=>{moduleId=null;map.reset();});
   return {open(id){moduleId=id;pageId=current().pages[0].id;map.reset();render();root.showModal();},refresh(){if(root.open)render();}};

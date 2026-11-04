@@ -2,8 +2,8 @@ import { createFounderPlaceholderHouseFamily } from './blank-house-family-factor
 import { HOUSE_CATH_FAMILY } from './house-cath-family.js';
 import { HOUSE_CEIRWYN_FAMILY } from './house-ceirwyn-family.js';
 import { HOUSE_DIENYDDIWR_FAMILY } from './house-dienyddiwr-family.js';
-import { HOUSE_DYNGWN_FAMILY } from './house-dyngwn-family.js';
-import { HOUSE_GRAEL_FAMILY } from './house-grael-family.js';
+import { HOUSE_DYNGWN_FAMILY } from './house-dyngwn-family.js?v=20261104-lore-fixes-v1';
+import { HOUSE_GRAEL_FAMILY } from './house-grael-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_MARWOLAETH_FAMILY } from './house-marwolaeth-family.js';
 import { HOUSE_PENGAIR_FAMILY } from './house-pengair-family.js';
 import { HOUSE_PENDERYN_FAMILY } from './house-penderyn-family.js';

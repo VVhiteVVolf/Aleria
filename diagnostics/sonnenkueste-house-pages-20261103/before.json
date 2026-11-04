@@ -1,0 +1,4650 @@
+[
+  {
+    "id": "haus-illewod",
+    "title": "Haus Illewod",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "county",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/haus-illewod.png",
+    "motto": "„Gemeinsam stehen wir, vereint bleiben wir.“",
+    "sourceRevision": 8,
+    "graphFingerprint": "fd402fd0ad10ad554d42d5191eaaddc0741b7c5c05e90093a2b09cfd18006e8c",
+    "people": [
+      {
+        "id": "bedwyr-illewod",
+        "name": "Bedwyr",
+        "title": "Gründer des Hauses Illewod",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/bedwyr-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "athracht-riordain",
+        "name": "Athracht Ríordáin",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/athracht-riordain.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kyvwlch-illewod",
+        "name": "Kyvwlch Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/kyvwlch-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "sabria-illewod",
+        "name": "Sabria Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendolyn-ancient-draig",
+        "name": "Gwendolyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/gwendolyn-ancient-draig.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwyron-neidr",
+        "name": "Gwyron Neidr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gwyron-neidr.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mathonwy-illewod",
+        "name": "Mathonwy Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/mathonwy-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "tuilelaith-riordain",
+        "name": "Tuilelaith Ríordáin",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/tuilelaith-riordain.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "maldwyn-illewod",
+        "name": "Maldwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/maldwyn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "marwynne-illewod",
+        "name": "Marwynne Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ceridwen-blach",
+        "name": "Ceridwen Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "pebin-fuchs",
+        "name": "Pebin der Fuchs",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/pebin-fuchs.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "berwyn-illewod",
+        "name": "Berwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/berwyn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ysolde-illewod",
+        "name": "Ysolde Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "liadan-gallchobhair",
+        "name": "Liadan Gallchobhair",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/liadan-gallchobhair.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhun-wylan",
+        "name": "Rhun Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/rhun-wylan.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "penryn-illewod",
+        "name": "Penryn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/penryn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ffion-illewod",
+        "name": "Ffion Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "trevelyan-aderyn",
+        "name": "Trevelyan Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/trevelyan-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "keudawg-illewod",
+        "name": "Keudawg Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pendrag/keudawg-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "tallwch-illewod",
+        "name": "Tallwch Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/tallwch-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhianu-illewod",
+        "name": "Rhianu Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "morgaine-illewod",
+        "name": "Morgaine Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "blodeuyn-pendrag",
+        "name": "Blodeuyn Pendrag",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pendrag/blodeuyn-pendrag.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "teleri-llwynog",
+        "name": "Teleri Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "muiredach-eoghhainn",
+        "name": "Muiredach Eóghhainn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ercwiff-teyrngarch",
+        "name": "Ercwiff Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ercwiff-teyrngarch.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iorwerth-illewod",
+        "name": "Iorwerth Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/iorwerth-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "karys-illewod",
+        "name": "Karys Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gareth-illewod",
+        "name": "Gareth Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gareth-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwales-illewod",
+        "name": "Gwales Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gwales-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lowri-illewod",
+        "name": "Lowri Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lynfa-pysgod",
+        "name": "Lynfa Pysgod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "griff-neidr",
+        "name": "Griff Neidr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/griff-neidr.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "telyn-wylan",
+        "name": "Telyn Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "isobel-penderyn",
+        "name": "Isobel Penderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gawain-blach",
+        "name": "Gawain Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gawain-blach.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "selwyn-illewod",
+        "name": "Selwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/selwyn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "evaine-illewod",
+        "name": "Evaine Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/evaine-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "olwyna-illewod",
+        "name": "Olwyna Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/olwyna-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "madoc-illewod",
+        "name": "Madoc Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/madoc-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ehangwen-illewod",
+        "name": "Ehangwen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ehangwen-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brannoc-illewod",
+        "name": "Brannoc Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/brannoc-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "maygan-draig",
+        "name": "Maygan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/maygan-draig.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "shan-tylluan",
+        "name": "Shan Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/shan-tylluan.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glaw-grawn",
+        "name": "Glaw Grawn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhondda-llwynog",
+        "name": "Rhondda Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhondda-dieniddiwr",
+        "name": "Rhondda Dienyddiwr",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arthgal-illewod",
+        "name": "Arthgal Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/arthgal-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "carwyn-illewod",
+        "name": "Carwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/carwyn-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mifawi-illewod",
+        "name": "Mifawi Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/mifawi-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meical-illewod",
+        "name": "Meical Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/meical-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caled-illewod",
+        "name": "Caled Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/caled-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "land-ceirwyn",
+        "name": "Land Ceirwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/land-ceirwyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dafydd-blach",
+        "name": "Dafydd Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/dafydd-blach.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "catel-aderyn",
+        "name": "Catel Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/catel-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "menna-brithyll",
+        "name": "Menna Brithyll",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siriol-draenog",
+        "name": "Siriol Draenog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/siriol-draenog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "merwin-illewod",
+        "name": "Merwin Illewod",
+        "title": "Regierender Graf",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/merwin-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "mairwen-illewod",
+        "name": "Mairwen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/mairwen-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marared-illewod",
+        "name": "Marared Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/marared-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "hedd-illewod",
+        "name": "Hedd Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/hedd-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kerris-illewod",
+        "name": "Kerris Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/kerris-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "anali-illewod",
+        "name": "Anali Illewod",
+        "title": "Wegverheiratet an Haus Grianlaoch",
+        "notes": "Anali heiratete Tynan Gallchobhair und begründete mit ihm das junge Ritterhaus Grianlaoch in Gallchofaen.",
+        "portrait": "assets/images/portraits/haus-illewod/anali-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sayres-illewod",
+        "name": "Sayres Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/sayres-illewod.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elen-illewod",
+        "name": "Elen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/elen-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "alana-gallchobhair",
+        "name": "Alana Gallchobhair",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/alana-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cynfor-pysgod",
+        "name": "Cynfor Pysgod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/cynfor-pysgod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "selsye-wylan",
+        "name": "Selsye Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/selsye-wylan.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "torri-coedwig",
+        "name": "Torri Coedwig",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/torri-coedwig.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ieuan-llwynog",
+        "name": "Ieuan Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ieuan-llwynog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tynan-gallchobhair",
+        "name": "Tynan Gallchobhair",
+        "title": "Gründer und Ritterherr des Hauses Grianlaoch",
+        "notes": "Tynan kam mit Gallchobhair-Kriegern und Siedlern aus Dun Laog nach Aberon und begründete in Gallchofaen Haus Grianlaoch.",
+        "portrait": "assets/images/portraits/haus-illewod/tynan-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwawr-saethwyr",
+        "name": "Gwawr Saethwyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/gwawr-saethwyr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gaenor-teyrngarch",
+        "name": "Gaenor Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gaenor-teyrngarch.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lynette-illewod",
+        "name": "Lynette Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/lynette-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "bors-illewod",
+        "name": "Bors Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/bors-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "morwyn-illewod",
+        "name": "Morwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/morwyn-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "marwyn-illewod",
+        "name": "Marwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/marwyn-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "lewelin-illewod",
+        "name": "Lewelin Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/lewelin-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "zirilla-illewod",
+        "name": "Zirilla Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/zirilla-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nowy-illewod",
+        "name": "Nowy Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/nowy-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dymphna-gallchobhair",
+        "name": "Dymphna Grianlaoch",
+        "title": "Aufgenommenes Mündel Graf Merwins",
+        "notes": "Leibliche Tochter Tynans und Analis sowie dynastischer Spross des Hauses Grianlaoch; zur Festigung der Verbindung als Mündel an Graf Merwin Illewod gegeben.",
+        "portrait": "assets/images/portraits/haus-illewod/dymphna-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "deaglan-gallchobhair",
+        "name": "Deaglan Grianlaoch",
+        "title": "Erbe des Hauses Grianlaoch · Aufgenommenes Mündel Graf Merwins",
+        "notes": "Leiblicher Sohn Tynans und Analis sowie Erbe des Hauses Grianlaoch; gemeinsam mit Dymphna als Mündel an Graf Merwin Illewod gegeben.",
+        "portrait": "assets/images/portraits/haus-illewod/deaglan-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "collen-illewod",
+        "name": "Collen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/collen-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "celyn-illewod",
+        "name": "Célyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/celyn-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-teyrngarch",
+    "title": "Haus Teyrngarch O'Aberon",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+    "motto": "",
+    "sourceRevision": 2,
+    "sourceNote": "Personen, Lebensdaten, Ehen, Elternschaften, Amtsfolge und Porträts folgen der bereitgestellten Teyrngarch-Tabelle. Der dort mit Punkten markierte Überlieferungssprung wird als einziger serieller Zeitsprung unmittelbar nach Taredd, Sulwen und dem Hauswappen geführt. Lanette, Saselia, Yvaine, Mairwen, Marwine, Siona und Shylene besitzen direkte Wegverheiratet-Knoten; Elinor entsprechend einen Wegverlobt-Knoten zu Haus Penderyn. Geteilte Weltpersonen und Partnerschaften mit Illewod, Penderyn und Wylan verwenden dieselben technischen IDs. Nachkommen werden nur in der jeweils fortgesetzten Herkunftsakte geführt: Lugh/Cariad und Gwastad/Eilonwyn ausschließlich hier, Mairwen/Gareth ausschließlich bei Penderyn. Die technische Lugh-ID lugh-teyrngrach bleibt wegen der vorhandenen Wylan-Gegenakte stabil, während der sichtbare Name korrigiert ist. Wiederholte generische Silhouetten wurden nicht als individuelle Porträts importiert.",
+    "graphFingerprint": "7a9650d9a852927c3c4559198491d49527ef04d17a1a98f1e3ceebd08d48343f",
+    "people": [
+      {
+        "id": "taredd-teyrngarch",
+        "name": "Taredd der Braumeister",
+        "title": "Braumeister · Gründer des Hauses Teyrngarch",
+        "notes": "Begründete mit seinem weithin bekannten Bier, seinen Brauereien und Handelsbeziehungen den Aufstieg des Hauses.",
+        "portrait": "assets/images/portraits/haus-teyrngarch/taredd-teyrngarch.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "sulwen-teyrngarch",
+        "name": "Sulwen",
+        "title": "Mitgründerin des Hauses Teyrngarch",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ercwiff-teyrngarch",
+        "name": "Ercwiff Teyrngarch",
+        "title": "Ritterfürst des Hauses Teyrngarch bis 1641",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ercwiff-teyrngarch.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "lanette-teyrngarch",
+        "name": "Lanette Teyrngarch",
+        "title": "Wegverheiratet an Haus Luga",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "morgaine-illewod",
+        "name": "Morgaine Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "quinlan-luga",
+        "name": "Quinlan Luga",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/quinlan-luga.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "saselia-teyrngarch",
+        "name": "Saselia Teyrngarch",
+        "title": "Wegverheiratet an Haus Canwyll",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "seithved-teyrngarch",
+        "name": "Seithved Teyrngarch",
+        "title": "Ritterfürst des Hauses Teyrngarch von 1641 bis 1691",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/seithved-teyrngarch.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "yvaine-teyrngarch",
+        "name": "Yvaine Teyrngarch",
+        "title": "Wegverheiratet an Haus Gwarchod",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glendower-canwyll",
+        "name": "Glendower Canwyll",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/glendower-canwyll.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siriol-llwynog",
+        "name": "Siriol Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "garselid-gwarchod",
+        "name": "Garselid Gwarchod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/garselid-gwarchod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwastad-teyrngarch",
+        "name": "Gwastad Teyrngarch",
+        "title": "Ritterfürst des Hauses Teyrngarch von 1691 bis 1725",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-penderyn/gwastad-teyrngarch.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "mairwen-teyrngarch",
+        "name": "Mairwen Teyrngarch",
+        "title": "Wegverheiratet an Haus Penderyn",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eilonwy-penderyn",
+        "name": "Eilonwyn Penderyn",
+        "title": "",
+        "notes": "Die Teyrngarch-Quelle schreibt Eilonwyn und lässt ihre Daten offen; die Penderyn-Gegenakte belegt 1652–1700 und verwendet die Variante Eilonwy.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gareth-penderyn",
+        "name": "Gareth Penderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-penderyn/gareth-penderyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lugh-teyrngrach",
+        "name": "Lugh Teyrngarch",
+        "title": "Ritterfürst · Oberhaupt des Hauses Teyrngarch seit 1725",
+        "notes": "Die historische technische ID aus der Wylan-Gegenakte bleibt erhalten; die sichtbare Schreibweise folgt der Hausquelle Teyrngarch.",
+        "portrait": "assets/images/portraits/haus-wylan/lugh-teyrngrach.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "edlym-teyrngarch",
+        "name": "Edlym Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/edlym-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marwine-teyrngarch",
+        "name": "Marwine Teyrngarch",
+        "title": "Wegverheiratet an Haus Heaghra",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/marwine-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "heledd-teyrngarch",
+        "name": "Heledd Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/heledd-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cariad-wylan",
+        "name": "Cariad Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/cariad-wylan.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tegin-blach",
+        "name": "Tegin Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/tegin-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "donnagh-heaghra",
+        "name": "Donnagh Haeghra",
+        "title": "",
+        "notes": "Gegenaktenabgleich 08.10.2026: name nach Blaithneach-Quelle haeghra:140:0: Donnagh Heaghra → Donnagh Haeghra.\nGegenaktenabgleich 08.10.2026: houseId nach Blaithneach-Quelle haeghra:140:0: house-heaghra → house-haeghra.",
+        "portrait": "assets/images/portraits/haus-teyrngarch/donnagh-heaghra.jpeg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gaenor-teyrngarch",
+        "name": "Gaenor Teyrngarch",
+        "title": "Erster Erbe des Hauses Teyrngarch",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gaenor-teyrngarch.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "siona-teyrngarch",
+        "name": "Siona Teyrngarch",
+        "title": "Wegverheiratet an Haus Tir Addawol",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/siona-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arfon-teyrngarch",
+        "name": "Arfon Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/arfon-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brannoc-teyrngarch",
+        "name": "Brannoc Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/brannoc-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "shylene-teyrngarch",
+        "name": "Shylene Teyrngarch",
+        "title": "Wegverheiratet an Haus Illwath",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/shylene-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elen-illewod",
+        "name": "Elen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/elen-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fotor-tir-addawol",
+        "name": "Fotor Tir Addawol",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/fotor-tir-addawol.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "annegret-schwarzdorn",
+        "name": "Annegret Schwarzdorn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/annegret-schwarzdorn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eimear-marcaigh",
+        "name": "Eimear Marcaigh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/eimear-marcaigh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwifredd-illwath",
+        "name": "Gwifredd Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/gwifredd-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elinor-teyrngarch",
+        "name": "Elinor Teyrngarch",
+        "title": "Wegverlobt an Haus Penderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-penderyn/elinor-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gandwy-teyrngarch",
+        "name": "Gandwy Teyrngarch",
+        "title": "Zweiter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/gandwy-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "olwen-teyrngarch",
+        "name": "Olwen Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/olwen-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iona-teyrngarch",
+        "name": "Iona Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/iona-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "evrel-teyrngarch",
+        "name": "Evrel Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/evrel-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dafi-teyrngarch",
+        "name": "Dafi Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/dafi-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wendy-teyrngarch",
+        "name": "Wendy Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/wendy-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cadfan-teyrngarch",
+        "name": "Cadfan Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/cadfan-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elen-1721-teyrngarch",
+        "name": "Elen Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/elen-1721-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "grippuid-teyrngarch",
+        "name": "Grippuid Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/grippuid-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dwnn-penderyn",
+        "name": "Dwnn Penderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-penderyn/dwnn-penderyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-blach",
+    "title": "Haus Blach O'Aberon",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+    "motto": "",
+    "sourceRevision": 2,
+    "sourceNote": "Personen, Lebensdaten, Ehen, Amtsfolge und Porträts folgen der bereitgestellten Blach-Tabelle. Die Vereinigung von Tir an Muirghin und Nic Ríordáin bildet das Gründerpaar vor dem Blach-Wappen. Vier Punktreihen werden als vier strikt serielle, niemals parallele Generationentrenner geführt. Bei den zwei alten Doppelzweigen speist jeweils ein einziger globaler Trenner beide Paarungen, während die fachlichen Abstammungen getrennt bleiben. Ceridwen, Rheuwen, Angharad, Gwyneth, Gwenlian, Millena, Artura, Tegin, Alicyn, Betws, Gwerful und Tanwen besitzen direkte Wegverheiratet-Knoten zu ihren Zielhäusern. Betws wird nach ihrem eindeutigen Quellporträt als Blach-Tochter geführt; ihre Ehe mit Morien beendet ihren Herkunftszweig am Zielknoten Haus Tiwna. Ailis Ghaiscioch ist als aufgenommenes Mündel Emyrs’ mit Mündelrahmen und ausschließlich einer Pflegebeziehung erfasst. Geteilte Weltpersonen, Partnerschaften und Porträts mit Illewod, Wyrm, Illysywen, Wylan, Dienyddiwr, Teyrngarch, Dyngwn und Marwolaeth verwenden dieselben technischen IDs. Caitrionas Herkunftshaus verwendet nun durchgängig die kanonische Kennung des Clans Dál’Ceardaíocht. Nachkommen werden nur auf der fortgeführten Seite dargestellt: Gwyneth/Gogyvwlch, Tegin/Edlym und Tanwen/Penryn ausschließlich in den Zielhäusern; Ifan/Malvina, Dafydd/Carwyn, Dylan/Quendolin, Idwallon/Marve und Meurig/Dolena ausschließlich hier. Die Varianten Jeanae/Jeannae, Penrys/Penryn und Emyrs/Emrys wurden zugunsten bestehender Gegenakten beziehungsweise der ausführlichen Hierarchie normalisiert. Idwallons bereits kanonisches Geburtsjahr 1704 aus der Wyrm-Akte bleibt trotz der Blach-Angabe 1703 stabil. Wiederholte schwarze Standardsilhouetten wurden nicht als individuelle Porträts importiert.",
+    "graphFingerprint": "0d630b8999895d9dca809de0904cdedfbc79a395b9a197849d86dc584c824c98",
+    "people": [
+      {
+        "id": "lachlan-tir-an-muirghin",
+        "name": "Lachlan Tir an Muirghin",
+        "title": "Gründer und erster Ritterfürst des Hauses Blach",
+        "notes": "Vereinte Tir an Muirghin und Nic Ríordáin zum späteren Haus Blach.",
+        "portrait": "assets/images/portraits/haus-blach/lachlan-tir-an-muirghin.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "uileann-riordain",
+        "name": "Uileann Ríordáin",
+        "title": "Mitgründerin des Hauses Blach",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/uileann-riordain.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dirmyg-blach",
+        "name": "Dirmyg Blach",
+        "title": "Ritterfürst des Hauses Blach",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/dirmyg-blach.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "siobhan-muirghin",
+        "name": "Siobhan Muirghin",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhynnon-blach",
+        "name": "Rhynnon Blach",
+        "title": "Ritterfürst des Hauses Blach",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/rhynnon-blach.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ceridwen-blach",
+        "name": "Ceridwen Blach",
+        "title": "Wegverheiratet an Haus Illewod",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marwe-ghaiscioch",
+        "name": "Marwe Ghaiscíoch",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "maldwyn-illewod",
+        "name": "Maldwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/maldwyn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aeron-blach",
+        "name": "Aeron Blach",
+        "title": "Ritterfürst des Hauses Blach bis 1288",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wyrm/aeron-blach.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "rheuwen-blach",
+        "name": "Rheuwen Blach",
+        "title": "Wegverheiratet an Haus Llwynog",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "jeannae-wyrm",
+        "name": "Jeannae Wyrm",
+        "title": "",
+        "notes": "Die auffällige Lebensspanne ist in der Blach- und Wyrm-Quelle gleich überliefert und wird unverändert bewahrt.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "penkawr-llwynog",
+        "name": "Penkawr Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/penkawr-llwynog.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ehangwen-blach",
+        "name": "Ehangwen Blach",
+        "title": "Ritterfürst des Hauses Blach bis 1638",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/ehangwen-blach.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "angharad-blach",
+        "name": "Angharad Blach",
+        "title": "Wegverheiratet an Haus Créyr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fidelma-fiachrach",
+        "name": "Fidelma Fiachrach",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cadwaladr-creyr",
+        "name": "Cadwaladr Créyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/cadwaladr-creyr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gawain-blach",
+        "name": "Gawain Blach",
+        "title": "Ritterfürst des Hauses Blach von 1638 bis 1640",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/gawain-blach.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "cadogan-blach",
+        "name": "Cadogan Blach",
+        "title": "Ritterfürst des Hauses Blach von 1640 bis 1691",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/cadogan-blach.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwyneth-blach",
+        "name": "Gwyneth Blach",
+        "title": "Wegverheiratet an Haus Illysywen",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meredydd-blach",
+        "name": "Meredydd Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/meredydd-blach.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lowri-illewod",
+        "name": "Lowri Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wynndie-gwyvern",
+        "name": "Wynndie Gwyvern",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gogyvwlch-illysywen",
+        "name": "Gogyvwlch Illysywen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illysywen/gogyvwlch-illysywen.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meiriona-morforwyn",
+        "name": "Meiriona Morforwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ifan-blach",
+        "name": "Ifan Blach",
+        "title": "Ritterfürst des Hauses Blach von 1691 bis 1696",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/ifan-blach.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwenlian-blach",
+        "name": "Gwenlian Blach",
+        "title": "Wegverheiratet an Haus Canwyll",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "berwyn-blach",
+        "name": "Berwyn Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/berwyn-blach.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "millena-blach",
+        "name": "Millena Blach",
+        "title": "Wegverheiratet an Haus Tir Addawol",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "malvina-wylan",
+        "name": "Malvina Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eiddyl-canwyll",
+        "name": "Eiddyl Canwyll",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/eiddyl-canwyll.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eilun-chiffyddlon",
+        "name": "Eilun Chiffyddlon",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "roderick-tir-addawol",
+        "name": "Roderick Tir Addawol",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/roderick-tir-addawol.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dafydd-blach",
+        "name": "Dafydd Blach",
+        "title": "Ritterfürst · Oberhaupt des Hauses Blach seit 1696",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/dafydd-blach.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "artura-blach",
+        "name": "Artura Blach",
+        "title": "Wegverheiratet an Haus Llwynog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/artura-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dylan-blach",
+        "name": "Dylan Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dienyddiwr/dylan-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ossian-blach",
+        "name": "Ossian Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/ossian-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tegin-blach",
+        "name": "Tegin Blach",
+        "title": "Wegverheiratet an Haus Teyrngarch",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/tegin-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "alicyn-blach",
+        "name": "Alicyn Blach",
+        "title": "Wegverheiratet an Haus Illwath",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/alicyn-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carwyn-illewod",
+        "name": "Carwyn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/carwyn-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurig-llwynog",
+        "name": "Eurig Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/eurig-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "quendolin-dienyddiwr",
+        "name": "Quendolin Dienyddiwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dienyddiwr/quendolin-dienyddiwr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "heatherlinn-hwyaden",
+        "name": "Heatherlinn Hwyaden",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/heatherlinn-hwyaden.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "edlym-teyrngarch",
+        "name": "Edlym Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/edlym-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "vorath-illwath",
+        "name": "Vorath Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/vorath-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "emyrs-blach",
+        "name": "Emyrs Blach",
+        "title": "Erster Erbe des Hauses Blach",
+        "notes": "Die Hofliste schreibt den Namen einmal Emrys; die ausführliche Hierarchie verwendet Emyrs.",
+        "portrait": "assets/images/portraits/haus-blach/emyrs-blach.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "betws-blach",
+        "name": "Betws Blach",
+        "title": "Wegverheiratet an Haus Tiwna",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/betws-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "idwallon-blach",
+        "name": "Idwallon Blach",
+        "title": "",
+        "notes": "Die Blach-Tabelle nennt 1703; die bereits kanonische Wyrm-Gegenakte führt dieselbe Weltperson mit 1704.",
+        "portrait": "assets/images/portraits/haus-wyrm/idwallon-blach.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwerful-blach",
+        "name": "Gwerful Blach",
+        "title": "Wegverheiratet an Haus Baedd",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/gwerful-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meurig-blach",
+        "name": "Meurig Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dyngwn/meurig-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tanwen-blach",
+        "name": "Tanwen Blach",
+        "title": "Wegverheiratet an Haus Marwolaeth",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-marwolaeth/tanwen-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caitriona-ceardaiocht",
+        "name": "Caitriona Ceardaíocht",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/caitriona-ceardaiocht.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "morien-tiwna",
+        "name": "Morien Tiwna",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/morien-tiwna.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marve-wyrm",
+        "name": "Marve Wyrm",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wyrm/marve-wyrm.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arthwr-baedd",
+        "name": "Arthwr Baedd",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/arthwr-baedd.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dolena-dyngwn",
+        "name": "Dolena Dyngwn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dyngwn/dolena-dyngwn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "penryn-marwolaeth",
+        "name": "Penryn Marwolaeth",
+        "title": "",
+        "notes": "Die Blach-Tabelle schreibt den Namen einmal Penrys; die Marwolaeth-Gegenakte belegt Penryn.",
+        "portrait": "assets/images/portraits/haus-marwolaeth/penryn-marwolaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "prys-blach",
+        "name": "Prys Blach",
+        "title": "Zweiter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/prys-blach.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "gwyna-blach",
+        "name": "Gwyna Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/gwyna-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gawl-blach",
+        "name": "Gawl Blach",
+        "title": "Dritter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/gawl-blach.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "ailis-ghaiscioch",
+        "name": "Ailis Ghaiscioch",
+        "title": "Aufgenommenes Mündel Emyrs Blachs",
+        "notes": "Ailis ist Emyrs’ Mündel und kein leibliches Kind der Blach.",
+        "portrait": "assets/images/portraits/haus-blach/ailis-ghaiscioch.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caw-blach",
+        "name": "Caw Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/caw-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "jenita-blach",
+        "name": "Jenita Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/jenita-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "afal-blach",
+        "name": "Afal Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/afal-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhian-blach",
+        "name": "Rhian Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/rhian-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-llwynog",
+    "title": "Haus Llwynog O'Aberon",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+    "motto": "Die Jagd lehrt Geduld, der Wald lehrt Weisheit.",
+    "sourceRevision": 3,
+    "sourceNote": "Personen, Lebensdaten, Ehen, Amtsfolge und Porträts folgen der bereitgestellten Llwynog-Tabelle. Pebin der Fuchs und Marwynne Illewod bilden das Gründerpaar vor dem Hauswappen. Beide Punktreihen werden als strikt serielle Generationentrenner geführt; der zweite steht ausschließlich unter Penkawr/Rheuwen und führt deren Llwynog-Linie fort. Nerys endet in dieser Akte mit ihrer Wegverheiratung an Penryn Illewod und führt weder sichtbar noch genealogisch zum zweiten Zeitsprung. Die Quelltabelle vertauscht in einer Partnerzeile Tarian Tiwna und Artura Blach; die nachfolgende Kinderüberschrift und die bestehende Blach-Gegenakte belegen eindeutig Eurig/Artura, sodass Edwynna/Tarian zugeordnet wird. Penrys wird zur bestehenden Illewod-Schreibweise Penryn, Mallt zur bestehenden Wylan-Schreibweise Malt normalisiert. Kerrilynns Daten folgen ihrer Ceirwyn-Gegenakte. Tudwallons ältere technische ID bleibt kompatibel, während Hausname und Weltidentität auf Llwynog vereinheitlicht sind. Nerys, Teleri, Maddison, Siriol, Aeronwen, Arvonia, Enid, Edwynna, Myfanwy und Rhosyn besitzen direkte Wegverheiratet-Knoten; Brina einen Wegverlobt-Knoten zu Haus Hebog. Geteilte Weltpersonen, Partnerschaften und Porträts mit Illewod, Blach, Wylan, Teyrngarch, Dyngwn, Grawn und Gafyr verwenden dieselben technischen Identitäten. Nachkommen stehen nur am fortgeführten Hauszweig: Seithved/Siriol bei Teyrngarch, Cloi/Enid bei Grawn und Penryn/Nerys bei Illewod; die Llwynog-Nachkommen ausschließlich hier. Wiederholte schwarze Standardsilhouetten wurden nicht als individuelle Porträts importiert.",
+    "graphFingerprint": "89c1d6fc23d53040fb89a4cde7d0528363c231f0be05cdad73af60c44b0e62ba",
+    "people": [
+      {
+        "id": "pebin-fuchs",
+        "name": "Pebin der Fuchs",
+        "title": "Gründer und erster Ritterfürst des Hauses Llwynog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/pebin-fuchs.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "marwynne-illewod",
+        "name": "Marwynne Illewod",
+        "title": "Mitgründerin des Hauses Llwynog",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "penkawr-llwynog",
+        "name": "Penkawr Llwynog",
+        "title": "Ritterfürst des Hauses Llwynog bis 1288",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/penkawr-llwynog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "title": "Wegverheiratet an Haus Illewod",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rheuwen-blach",
+        "name": "Rheuwen Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "penryn-illewod",
+        "name": "Penryn Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/penryn-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "heveydd-llwynog",
+        "name": "Heveydd Llwynog",
+        "title": "Ritterfürst des Hauses Llwynog bis 1635",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/heveydd-llwynog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ginevra-llwynog",
+        "name": "Ginevra Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/ginevra-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "teleri-llwynog",
+        "name": "Teleri Llwynog",
+        "title": "Wegverheiratet an Haus Illewod",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kerrilynn-ceirwyn",
+        "name": "Kerrilynn Ceirwyn",
+        "title": "",
+        "notes": "Die Ceirwyn-Gegenakte belegt 1592–1677; die Llwynog-Tabelle nennt abweichend 1590 und kein Todesjahr.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tallwch-illewod",
+        "name": "Tallwch Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/tallwch-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhydderch-llwynog",
+        "name": "Rhydderch Llwynog",
+        "title": "Ritterfürst des Hauses Llwynog von 1653 bis 1696",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/rhydderch-llwynog.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "maddison-llwynog",
+        "name": "Maddison Llwynog",
+        "title": "Wegverheiratet an Haus Dinefwr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siriol-llwynog",
+        "name": "Siriol Llwynog",
+        "title": "Wegverheiratet an Haus Teyrngarch",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siani-wylan",
+        "name": "Siani Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "govynyon-dinefwr",
+        "name": "Govynyon Dinefwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/govynyon-dinefwr.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "seithved-teyrngarch",
+        "name": "Seithved Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/seithved-teyrngarch.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhynnon-llwynog",
+        "name": "Rhynnon Llwynog",
+        "title": "Ritterfürst des Hauses Llwynog von 1696 bis 1717",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dyngwn/rhynnon-llwynog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "aeronwen-llwynog",
+        "name": "Aeronwen Llwynog",
+        "title": "Wegverheiratet an Haus Baedd",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhondda-llwynog",
+        "name": "Rhondda Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eira-dyngwn",
+        "name": "Eira Dyngwn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhun-baedd",
+        "name": "Rhun Baedd",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/rhun-baedd.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ehangwen-illewod",
+        "name": "Ehangwen Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ehangwen-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "anarawd-llwynog",
+        "name": "Anarawd Llwynog",
+        "title": "Ritterfürst · Oberhaupt des Hauses Llwynog seit 1717",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/anarawd-llwynog.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "arvonia-llwynog",
+        "name": "Arvonia Llwynog",
+        "title": "Wegverheiratet an Haus Pyrth",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/arvonia-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "enid-llwynog",
+        "name": "Enid Llwynog",
+        "title": "Wegverheiratet an Haus Grawn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-grawn/enid-llwynog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "edwynna-llwynog",
+        "name": "Edwynna Llwynog",
+        "title": "Wegverheiratet an Haus Tiwna",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/edwynna-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurig-llwynog",
+        "name": "Eurig Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/eurig-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "malt-wylan",
+        "name": "Malt Wylan",
+        "title": "",
+        "notes": "Die Llwynog-Tabelle schreibt den Namen Mallt; die bestehende Wylan-Gegenakte führt dieselbe Weltperson als Malt.",
+        "portrait": "assets/images/portraits/haus-wylan/malt-wylan.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "yspaddaden-pyrth",
+        "name": "Yspaddaden Pyrth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/yspaddaden-pyrth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cloi-grawn",
+        "name": "Cloi Grawn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-grawn/cloi-grawn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tarian-tiwna",
+        "name": "Tarian Tiwna",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/tarian-tiwna.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "artura-blach",
+        "name": "Artura Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/artura-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ieuan-llwynog",
+        "name": "Ieuan Llwynog",
+        "title": "Erster Erbe des Hauses Llwynog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/ieuan-llwynog.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "myfanwy-llwynog",
+        "name": "Myfanwy Llwynog",
+        "title": "Wegverheiratet an Haus Ghaiscíoch",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/myfanwy-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bevan-llwynog",
+        "name": "Bevan Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/bevan-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudwallon-lwynog",
+        "name": "Tudwallon Llwynog",
+        "title": "",
+        "notes": "Die technische Personen-ID bleibt wegen der älteren Gafyr-Gegenakte mit einem l in „lwynog“ erhalten; der sichtbare Hausname ist korrigiert.",
+        "portrait": "assets/images/portraits/haus-gafyr/tudwallon-lwynog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhosyn-llwynog",
+        "name": "Rhosyn Llwynog",
+        "title": "Wegverheiratet an Haus Créyr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/rhosyn-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "colwin-llwynog",
+        "name": "Colwin Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/colwin-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kerris-illewod",
+        "name": "Kerris Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/kerris-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "darragh-ua-ghaiscioch",
+        "name": "Darragh Ua'Ghaiscíoch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/darragh-ua-ghaiscioch.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mairead-cleir",
+        "name": "Mairead Cléir",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/mairead-cleir.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aerwyn-gafyr",
+        "name": "Aerwyn Gafyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/aerwyn-gafyr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cadoc-creyr",
+        "name": "Cadoc Créyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/cadoc-creyr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glynis-morforwyn",
+        "name": "Glynis Morforwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/glynis-morforwyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "haul-llwynog",
+        "name": "Haul Llwynog",
+        "title": "Zweiter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/haul-llwynog.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "brina-llwynog",
+        "name": "Brina Llwynog",
+        "title": "Verlobt mit Eurig Hebog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/brina-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sath-llwynog",
+        "name": "Sath Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/sath-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "celyn-llwynog",
+        "name": "Célyn Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/celyn-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "corryn-llwynog",
+        "name": "Corryn Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/corryn-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "adda-llwynog",
+        "name": "Adda Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/adda-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cari-llwynog",
+        "name": "Cari Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/cari-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "davie-llwynog",
+        "name": "Davie Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/davie-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurig-hebog",
+        "name": "Eurig Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/eurig-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-illwath",
+    "title": "Haus Illwath O'Caer Llew",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Löwenberg",
+      "Caer Llew"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Caer Llew",
+      "barony": "Löwenberg",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+    "motto": "",
+    "sourceRevision": 3,
+    "sourceNote": "Personen, Lebensdaten, Partnerschaften, Elternschaften und Erbfolge folgen der bereitgestellten Illwath-Tabelle. Ehangwens männliches Geschlecht ist durch Quelltext und Porträt belegt; Rhondda ist seine Ehefrau. Das Hauswappen steht direkt unter ihrem Gründerpaar, bevor Tarawg, Sianwen und Vorath folgen. Der offenkundige Zahlendreher 1996 bei Kynwas wird generationengerecht zu 1696 korrigiert. Gwiffred wird anhand der Teyrngarch-Gegenakte als Gwifredd normalisiert; Caerdaíocht zur bestehenden Projektschreibweise Ceardaíocht. Die Zielhäuser Sianwens und Branwens verwenden nun durchgängig die kanonischen Kennungen der Clans Dál’Ceardaíocht und Na’Mhuir. Die Partnerschaften Ehangwen/Rhondda, Vorath/Alicyn, Gwifredd/Shylene und Branwen/Khellen verwenden dieselben IDs und Weltidentitäten wie ihre Gegenakten; Kinder werden ausschließlich im fortgeführten Zielzweig geführt. Sianwen, Rhianu und Branwen besitzen direkte Wegverheiratet-Knoten. Die jüngste Generation bleibt auf ausdrückliche Vorgabe vollständig unverlobt. Die ausdrücklich ausgeschlossenen älteren Porträts von Rheanne Morforwyn und Fintan Airt werden nicht übernommen. Wiederholte generische Silhouetten werden ebenfalls nicht als individuelle Bilddateien importiert.",
+    "graphFingerprint": "02145c7f3154997e2d2b7a4b05f3161af99e615d4aedc1f1d8b37a53181302fb",
+    "people": [
+      {
+        "id": "ehangwen-illewod",
+        "name": "Ehangwen Illewod",
+        "title": "Gründer und erster Ritterfürst des Hauses Illwath bis 1720",
+        "notes": "Jüngster Spross seiner Illewod-Generation. Ehangwen zog mit graflicher Erlaubnis nach Caer Llew und begründete dort das Kadettenhaus Illwath.",
+        "portrait": "assets/images/portraits/haus-illewod/ehangwen-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "rhondda-llwynog",
+        "name": "Rhondda Llwynog",
+        "title": "Mitgründerin des Hauses Illwath",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tarawg-illwath",
+        "name": "Tarawg Illwath",
+        "title": "Ritterfürst · Oberhaupt des Hauses Illwath seit 1720",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/tarawg-illwath.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "sianwen-illwath",
+        "name": "Sianwen Illwath",
+        "title": "Wegverheiratet an Haus Ceardaíocht",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/sianwen-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "vorath-illwath",
+        "name": "Vorath Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/vorath-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rheanne-morforwyn",
+        "name": "Rheanne Morforwyn",
+        "title": "",
+        "notes": "Das ausdrücklich ausgeschlossene ältere Quellenporträt wird nicht übernommen.",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caibrel-ceardaiocht",
+        "name": "Caibrel Ceardaíocht",
+        "title": "",
+        "notes": "Die Quelltabelle schreibt den Hausnamen einmal Caerdaíocht; die kanonische Schreibweise im Projekt lautet Ceardaíocht.",
+        "portrait": "assets/images/portraits/haus-illwath/caibrel-ceardaiocht.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "alicyn-blach",
+        "name": "Alicyn Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/alicyn-blach.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kynwas-illwath",
+        "name": "Kynwas Illwath",
+        "title": "Erster Erbe des Hauses Illwath",
+        "notes": "Das Quellenjahr 1996 ist innerhalb der belegten Generationenfolge offenkundig ein Zahlendreher und wird als 1696 geführt.",
+        "portrait": "assets/images/portraits/haus-illwath/kynwas-illwath.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "rhianu-illwath",
+        "name": "Rhianu Illwath",
+        "title": "Wegverheiratet an Haus Airt",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/rhianu-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwifredd-illwath",
+        "name": "Gwifredd Illwath",
+        "title": "",
+        "notes": "Die Quelle schreibt den Namen Gwiffred; die bestehende Teyrngarch-Gegenakte führt dieselbe Weltperson als Gwifredd.",
+        "portrait": "assets/images/portraits/haus-teyrngarch/gwifredd-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "branwen-illwath",
+        "name": "Branwen Illwath",
+        "title": "Wegverheiratet an Haus Mhuir",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/branwen-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nessa-cleir",
+        "name": "Nessa Cléir",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/nessa-cleir.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fintan-airt",
+        "name": "Fintan Airt",
+        "title": "",
+        "notes": "Das ausdrücklich ausgeschlossene ältere Quellenporträt wird nicht übernommen.",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "shylene-teyrngarch",
+        "name": "Shylene Teyrngarch",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-teyrngarch/shylene-teyrngarch.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "khellen-mhuir",
+        "name": "Khellen Mhuir",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/khellen-mhuir.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arthgal-illwath",
+        "name": "Arthgal Illwath",
+        "title": "Zweiter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/arthgal-illwath.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "sian-illwath",
+        "name": "Sian Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/sian-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gawl-illwath",
+        "name": "Gawl Illwath",
+        "title": "Dritter in der Erbfolge",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/gawl-illwath.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "urien-illwath",
+        "name": "Urien Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/urien-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mared-illwath",
+        "name": "Mared Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/mared-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-morforwyn",
+    "title": "Haus Morforwyn O'Carngol",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Jungferntal",
+      "Carngol"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Carngol",
+      "barony": "Jungferntal",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+    "motto": "",
+    "sourceRevision": 5,
+    "sourceNote": "Die drei bereitgestellten Tabellen werden als ein zusammenhängendes matriarchales Haus modelliert: Hafmues Hauptlinie sowie die von Marmue und Elimue ausgehenden Nebenlinien. Zwei je gemeinsam gespeiste globale Zeitsprünge ersetzen alle parallelen Punktreihen. Claimed-Elternschaften bewahren dabei, aus welcher Linie die später wieder belegten Personen stammen. Bei innerfamiliären Ehen führt stets die weibliche Morforwyn-Paarstelle die Kinder fort; der Mann wird an ihr als Partnerdarstellung wiederholt, während an seiner Herkunftsstelle nur eine kinderlose Spiegelkarte der Frau erscheint. Dadurch dürfen Karten mehrfach sichtbar sein, Weltperson, Ehe und Kinderlinie existieren aber nur einmal. Eurolwyn, Meiriona, Endellion, Sioned, Rheanne, Afanen und Glynis sind die belegten Ausnahmen von der matriarchalen Fortsetzung: Ihre Kinder stehen im jeweiligen Zielhaus, weshalb ihre Morforwyn-Zweige an direkten Wegverheiratet-Knoten enden. Die Partnerschaften und Weltpersonen mit Grael, Blach, Marwolaeth, Illwath, Neidr und Llwynog verwenden die bestehenden Gegenakten-IDs. Rheannes zuvor ausdrücklich ausgeschlossene Altporträts bleiben ungenutzt. Für Gwenmue wird bei zwei widersprüchlichen Quellbildern das Bild der Hauptakte verwendet; für Glynis und Afanen bleiben die bereits kanonischen Gegenaktenbilder maßgeblich. Die wiederholten schwarzen Standardsilhouetten werden nicht als individuelle Porträts importiert. Die drei genealogischen Linien sind als getrennte Familienakten modelliert. Diese Akte bildet ausschließlich die schwarz bewappnete Stammlinie ab.",
+    "graphFingerprint": "9e33dffca4bf954fc158ad983ca28cee7084cff2bf920441b8d2295680a71b50",
+    "people": [
+      {
+        "id": "triston-morforwyn",
+        "name": "Triston",
+        "title": "Sagenhafter Ritter aus Avallorn",
+        "notes": "Triston gehört zur Herkunftslegende vor der eigentlichen Gründung des Hauses Morforwyn.",
+        "portrait": "assets/images/portraits/haus-morforwyn/triston-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mapnimue",
+        "name": "Mapnimue",
+        "title": "Sagengestalt · Tochter der Dame des Sees",
+        "notes": "Sagenhafte Ahnfrau der Morforwyn.",
+        "portrait": "assets/images/portraits/haus-morforwyn/mapnimue.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "hafmue-morforwyn",
+        "name": "Hafmue",
+        "title": "Gründerin und erste Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/hafmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "talorton-legendary-morforwyn",
+        "name": "Talorton",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marmue-morforwyn",
+        "name": "Marmue",
+        "title": "Begründerin der Marmue-Nebenlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/marmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "padmue-morforwyn",
+        "name": "Padmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/padmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "xylton-morforwyn",
+        "name": "Xylton",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elimue-morforwyn",
+        "name": "Elimue",
+        "title": "Begründerin der Elimue-Nebenlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/elimue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwalchgwyn-morforwyn",
+        "name": "Gwalchgwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aelwyn-morforwyn",
+        "name": "Aelwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "serenmue-morforwyn",
+        "name": "Serenmue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/serenmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwennalarch-morforwyn",
+        "name": "Gwennalarch",
+        "title": "",
+        "notes": "In der Quelle auch Gwenmue genannt.",
+        "portrait": "assets/images/portraits/haus-morforwyn/gwennalarch-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "teirwton-morforwyn",
+        "name": "Teirwton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "talfamue-morforwyn",
+        "name": "Talfamue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/talfamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "idmue-morforwyn",
+        "name": "Idmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/idmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ofranton-1599-morforwyn",
+        "name": "Ofranton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ysoltmue-morforwyn",
+        "name": "Ysoltmue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/ysoltmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ffeston-morforwyn",
+        "name": "Ffeston",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenmue-morforwyn",
+        "name": "Gwenmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/gwenmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhydton-morforwyn",
+        "name": "Rhydton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "urumue-morforwyn",
+        "name": "Urumue",
+        "title": "Baronesse und Oberhaupt des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/urumue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "xynemue-morforwyn",
+        "name": "Xynemue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/xynemue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ffinton-morforwyn",
+        "name": "Ffinton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "derwton-morforwyn",
+        "name": "Derwton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "idriston-morforwyn",
+        "name": "Idriston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/idriston-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glanmue-morforwyn",
+        "name": "Glanmue",
+        "title": "Erste Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/glanmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "madogton-morforwyn",
+        "name": "Madogton",
+        "title": "Wegverheiratet innerhalb der Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eirymue-morforwyn",
+        "name": "Eirymue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/eirymue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchton-morforwyn",
+        "name": "Gwalchton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "varedmue-morforwyn",
+        "name": "Varedmue",
+        "title": "Zweite Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/varedmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "jonamue-morforwyn",
+        "name": "Jonamue",
+        "title": "Dritte Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/jonamue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "merediton-morforwyn",
+        "name": "Merediton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/merediton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "karismue-morforwyn",
+        "name": "Karismue",
+        "title": "Zweite Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/karismue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "jeston-morforwyn",
+        "name": "Jeston",
+        "title": "Wegverheiratet innerhalb der Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/jeston-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ffynmue-morforwyn",
+        "name": "Ffynmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/ffynmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "alunton-morforwyn",
+        "name": "Alunton",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/alunton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glynis-morforwyn",
+        "name": "Glynis Morforwyn",
+        "title": "Wegverheiratet an Haus Llwynog",
+        "notes": "In der Quelle auch Glynmue genannt; Cari und Davie werden ausschließlich im Llwynog-Zweig geführt.",
+        "portrait": "assets/images/portraits/haus-llwynog/glynis-morforwyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "colwin-llwynog",
+        "name": "Colwin Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/colwin-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wledmue-morforwyn",
+        "name": "Wledmue",
+        "title": "Dritte Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/wledmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "cerysmue-morforwyn",
+        "name": "Cerysmue",
+        "title": "Vierte Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/cerysmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "nefmue-morforwyn",
+        "name": "Nefmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/nefmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "llyrton-morforwyn",
+        "name": "Llyrton",
+        "title": "Wegverheiratet innerhalb der Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/llyrton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "neirton-morforwyn",
+        "name": "Neirton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/neirton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-nefmue-husband",
+        "name": "Unbekannter Ehemann",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-rhelian",
+    "title": "Haus Rhelian",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Jungferntal",
+      "Carngol"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Carngol",
+      "barony": "Jungferntal",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Jungferntal/haus-rhelian.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "6e1c0625c37ceb5274d23567adccee8ba6fc3b81f4778d407059970c3eccd46c",
+    "people": [
+      {
+        "id": "haus-rhelian-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-rhelian-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-aelryn",
+    "title": "Haus Aelryn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Jungferntal",
+      "Carngol"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Carngol",
+      "barony": "Jungferntal",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Jungferntal/haus-aelryn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "b0206ab99854461874478ca52ffcd1c4f0a51c6f94e0ecbe96d12277b83a5594",
+    "people": [
+      {
+        "id": "haus-aelryn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-aelryn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-grianlaoch",
+    "title": "Haus Grianlaoch",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Gallchofaen"
+      ],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png",
+    "motto": "",
+    "sourceRevision": 1,
+    "sourceNote": "Die Akte verwendet die vier bereits in Haus Illewod angelegten Weltpersonen, die dort vorhandene Ehe sowie dieselben biologischen Elternschafts-IDs. Tynan Gallchobhair und Anali Illewod bilden das Gründerpaar; das Grianlaoch-Wappen steht seriell zwischen ihnen und ihren beiden Kindern. Dymphna und Deaglan tragen im Herkunftsbaum den dunkelblauen ward-away-Rahmen und besitzen jeweils einen direkten Vermittlungsknoten zu Haus Illewod. In der Illewod-Gegenakte bleiben sie aufgenommene ward-Mündel Graf Merwins. Der im Infokasten ausdrücklich als Sitz genannte Name Gallchofaen wird gegenüber der Fließtextvariante Gallochfaen normalisiert.",
+    "graphFingerprint": "75b28fb851faa4a76439a922a953feed2e228bce489c54886abea9b16b5710fa",
+    "people": [
+      {
+        "id": "tynan-gallchobhair",
+        "name": "Tynan Gallchobhair",
+        "title": "Gründer und Ritterherr des Hauses Grianlaoch",
+        "notes": "Tynan kam nach den Bränden von Dun Laog mit Gallchobhair-Kriegern und albischen Siedlern nach Aberon. In Gallchofaen begründete er das junge Ritterhaus Grianlaoch unter der Lehnshoheit Graf Merwin Illewods.",
+        "portrait": "assets/images/portraits/haus-illewod/tynan-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "anali-illewod",
+        "name": "Anali Illewod",
+        "title": "Ehefrau Tynans und Mitgründerin des Hauses Grianlaoch",
+        "notes": "Anali gehört dem Haus Illewod an. Ihre Ehe mit Tynan verbindet das junge Grianlaoch-Geschlecht unmittelbar mit den Grafen von Aberon.",
+        "portrait": "assets/images/portraits/haus-illewod/anali-illewod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dymphna-gallchobhair",
+        "name": "Dymphna Grianlaoch",
+        "title": "Weggegebenes Mündel bei Haus Illewod",
+        "notes": "Dymphna ist das leibliche Kind Tynans und Analis. Sie wurde zur Festigung der Verbindung als Mündel an Graf Merwin Illewod gegeben und bleibt dynastisch ein Spross des Hauses Grianlaoch.",
+        "portrait": "assets/images/portraits/haus-illewod/dymphna-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "deaglan-gallchobhair",
+        "name": "Deaglan Grianlaoch",
+        "title": "Erbe des Hauses Grianlaoch · Weggegebenes Mündel bei Haus Illewod",
+        "notes": "Deaglan ist das leibliche Kind Tynans und Analis sowie der in der Quelle genannte Erbe des Hauses. Er wurde gemeinsam mit Dymphna als Mündel an Graf Merwin Illewod gegeben.",
+        "portrait": "assets/images/portraits/haus-illewod/deaglan-gallchobhair.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      }
+    ]
+  },
+  {
+    "id": "haus-gwaedryn",
+    "title": "Haus Gwaedryn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-gwaedryn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "7f8e6d6729dfb9ba467d8c702621045049f5ba13f66c3a094a24d13b5c1221ef",
+    "people": [
+      {
+        "id": "haus-gwaedryn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-gwaedryn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-rhavorn",
+    "title": "Haus Rhavorn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-rhavorn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "5bbe86431f260d368a83d9298db87d41d0ef7c02f64c9585a79b0541e88a1a9d",
+    "people": [
+      {
+        "id": "haus-rhavorn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-rhavorn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-pergarn",
+    "title": "Haus Pergarn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-pergarn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "065e50b4acf3bccc2aca11e9baaddbd28111a3e82f7f4cdd30c301a777d672de",
+    "people": [
+      {
+        "id": "haus-pergarn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-pergarn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-donwyr",
+    "title": "Haus Donwyr",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-donwyr.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "91536f543f07f691b85b2d7c4a97c0d931a72b50d76c5479c43acc155492b9a5",
+    "people": [
+      {
+        "id": "haus-donwyr-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-donwyr-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-uffyrn",
+    "title": "Haus Uffyrn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-uffyrn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "85690b4dc9707b94591b79d4136636cd921aab707b2949dc6128f7f777123d00",
+    "people": [
+      {
+        "id": "haus-uffyrn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-uffyrn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-pwllor",
+    "title": "Haus Pwllor",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-pwllor.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "ecdf9abb7c624fa2e909e035d96f00380fb0bdc48451dcec1bb5f5cd5a69b579",
+    "people": [
+      {
+        "id": "haus-pwllor-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-pwllor-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-llurien",
+    "title": "Haus Llurien",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-llurien.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "bd68031ea1fd94d374815fc5c05a51758ab9507ba0eeb0c5c47b69aa29ea8332",
+    "people": [
+      {
+        "id": "haus-llurien-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-llurien-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-neddair",
+    "title": "Haus Neddair",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-neddair.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "36c8c2e3cb46837c795dbdd333bfbdd546b054528508906016a5f33186407764",
+    "people": [
+      {
+        "id": "haus-neddair-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-neddair-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-cyrwain",
+    "title": "Haus Cyrwain",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-cyrwain.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "19b5e4cf93fb8aa313b46f30671d981634e01a9b4ea3b001a92a8c01c1d069a3",
+    "people": [
+      {
+        "id": "haus-cyrwain-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-cyrwain-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-donvael",
+    "title": "Haus Donvael",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-donvael.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "4a563eda385bf6fe6977beaa950887f3153f9a68a36f97aed04a5760d088b907",
+    "people": [
+      {
+        "id": "haus-donvael-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-donvael-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-rhenith",
+    "title": "Haus Rhenith",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-rhenith.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "2313c8361609d557ff1e06cd05cad5f2249caa1ba6fefaa2b8c697b396e8b47a",
+    "people": [
+      {
+        "id": "haus-rhenith-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-rhenith-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-bellyn",
+    "title": "Haus Bellyn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-bellyn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "c87c39ab7d341293d7e5ddd6c1c25bc652c02ec9cf1b323a58726bb91d7487ad",
+    "people": [
+      {
+        "id": "haus-bellyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-bellyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-fenor",
+    "title": "Haus Fenor",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-fenor.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "ac75b4262bb371dab8f04c50aa3f1436afa5118ca135ddc6a26b614fc7b486b0",
+    "people": [
+      {
+        "id": "haus-fenor-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-fenor-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-loryn",
+    "title": "Haus Loryn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-loryn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "1b73118db47a6e74b44f9e8946b088da6dcc8dba66d81d2ecd1c3ffb01819b53",
+    "people": [
+      {
+        "id": "haus-loryn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-loryn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-orlen",
+    "title": "Haus Orlen",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-orlen.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "303eeaaf271b810d99159376bf105c2a13eaa5c25dfe85ef2877e2fc4416543b",
+    "people": [
+      {
+        "id": "haus-orlen-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-orlen-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-renvyn",
+    "title": "Haus Renvyn",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Gersteküste",
+      "Aberon"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Aberon",
+      "barony": "Gersteküste",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Gersteküste/haus-renvyn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "7b5a7bc3115ced414e74ff28e6512562e10f3724469e0217a86918d60f28b471",
+    "people": [
+      {
+        "id": "haus-renvyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-renvyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-nic-riordain",
+    "title": "Haus Nic Ríordáin",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Antike Häuser",
+      "Dun Afalla"
+    ],
+    "profile": {
+      "rankId": "dun-tiarna",
+      "seat": "Dun Afalla",
+      "barony": "Antike Häuser",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/AntikeIcon.png",
+        "barony": "assets/images/regions/AntikeIcon.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Antike Häuser/haus-nic-riordain.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "366d9aa0a80b1d4cfdb857fe07ca5b4ef3f1080027b57ed6b499d0e9d88bf45f",
+    "people": [
+      {
+        "id": "haus-nic-riordain-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-nic-riordain-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-morforwyn-linie-elimue",
+    "title": "Morforwyn – Elimue-Linie",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Jungferntal",
+      "Carngol"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Carngol",
+      "barony": "Jungferntal",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Jungferntal/morforwyn-linie-elimue.png",
+    "motto": "",
+    "sourceRevision": 5,
+    "sourceNote": "Die drei bereitgestellten Tabellen werden als ein zusammenhängendes matriarchales Haus modelliert: Hafmues Hauptlinie sowie die von Marmue und Elimue ausgehenden Nebenlinien. Zwei je gemeinsam gespeiste globale Zeitsprünge ersetzen alle parallelen Punktreihen. Claimed-Elternschaften bewahren dabei, aus welcher Linie die später wieder belegten Personen stammen. Bei innerfamiliären Ehen führt stets die weibliche Morforwyn-Paarstelle die Kinder fort; der Mann wird an ihr als Partnerdarstellung wiederholt, während an seiner Herkunftsstelle nur eine kinderlose Spiegelkarte der Frau erscheint. Dadurch dürfen Karten mehrfach sichtbar sein, Weltperson, Ehe und Kinderlinie existieren aber nur einmal. Eurolwyn, Meiriona, Endellion, Sioned, Rheanne, Afanen und Glynis sind die belegten Ausnahmen von der matriarchalen Fortsetzung: Ihre Kinder stehen im jeweiligen Zielhaus, weshalb ihre Morforwyn-Zweige an direkten Wegverheiratet-Knoten enden. Die Partnerschaften und Weltpersonen mit Grael, Blach, Marwolaeth, Illwath, Neidr und Llwynog verwenden die bestehenden Gegenakten-IDs. Rheannes zuvor ausdrücklich ausgeschlossene Altporträts bleiben ungenutzt. Für Gwenmue wird bei zwei widersprüchlichen Quellbildern das Bild der Hauptakte verwendet; für Glynis und Afanen bleiben die bereits kanonischen Gegenaktenbilder maßgeblich. Die wiederholten schwarzen Standardsilhouetten werden nicht als individuelle Porträts importiert. Die drei genealogischen Linien sind als getrennte Familienakten modelliert. Diese Akte bildet ausschließlich die Elimue-Nebenlinie ab.",
+    "graphFingerprint": "b1f2d5df7f4d975d5139bcb94995a90121aa4600ea00a63c8a84d8205e88d122",
+    "people": [
+      {
+        "id": "elimue-morforwyn",
+        "name": "Elimue",
+        "title": "Begründerin der Elimue-Nebenlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/elimue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "aelwyn-morforwyn",
+        "name": "Aelwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "serenmue-morforwyn",
+        "name": "Serenmue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/serenmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "teirwton-morforwyn",
+        "name": "Teirwton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bethmue-morforwyn",
+        "name": "Bethmue",
+        "title": "Historische Ritterherrin der Elimue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/bethmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "talorton-bethmue-morforwyn",
+        "name": "Talorton",
+        "title": "",
+        "notes": "Nicht mit dem sagenhaften Talorton der Gründerzeit identisch; die Quelle trennt beide durch nicht überlieferte Generationen.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ywamue-morforwyn",
+        "name": "Ywamue",
+        "title": "Historische Ritterherrin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/ywamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "dewiton-morforwyn",
+        "name": "Dewiton",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "owamue-morforwyn",
+        "name": "Owamue",
+        "title": "Historische Ritterherrin der Elimue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/owamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "helygton-morforwyn",
+        "name": "Helygton",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurolwyn-morforwyn",
+        "name": "Eurolwyn Morforwyn",
+        "title": "Wegverheiratet an Haus Grael",
+        "notes": "In der Morforwyn-Quelle auch Eurolmue genannt; ihre Kinder werden ausschließlich im fortgeführten Grael-Zweig geführt.",
+        "portrait": "assets/images/portraits/haus-grael/eurolwyn-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwlyddyn-grael",
+        "name": "Gwlyddyn Grael",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-grael/gwlyddyn-grael.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ysoltmue-morforwyn",
+        "name": "Ysoltmue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/ysoltmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ffeston-morforwyn",
+        "name": "Ffeston",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenmue-morforwyn",
+        "name": "Gwenmue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/gwenmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhydton-morforwyn",
+        "name": "Rhydton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "branmue-morforwyn",
+        "name": "Branmue",
+        "title": "Ritterherrin und Oberhaupt der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/branmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "vynnston-morforwyn",
+        "name": "Vynnston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "xynemue-morforwyn",
+        "name": "Xynemue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/xynemue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "derwton-morforwyn",
+        "name": "Derwton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "olmue-morforwyn",
+        "name": "Olmue",
+        "title": "Ritterherrin und Oberhaupt der Elimue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/olmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "branston-morforwyn",
+        "name": "Branston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ofranton-1661-morforwyn",
+        "name": "Ofranton",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "zedmue-morforwyn",
+        "name": "Zedmue",
+        "title": "Erste Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/zedmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "eirymue-morforwyn",
+        "name": "Eirymue",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/eirymue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchton-morforwyn",
+        "name": "Gwalchton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "endellion-morforwyn",
+        "name": "Endellion Morforwyn",
+        "title": "Wegverheiratet an Haus Marwolaeth",
+        "notes": "Ihre vier Kinder werden ausschließlich in der Marwolaeth-Akte fortgeführt.",
+        "portrait": "assets/images/portraits/haus-marwolaeth/endellion-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "deiniol-marwolaeth",
+        "name": "Deiniol Marwolaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-marwolaeth/deiniol-marwolaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-morforwyn-linie-marmue",
+    "title": "Morforwyn – Marmue-Linie",
+    "folderPath": [
+      "Cenyr",
+      "Sonnenküste",
+      "Jungferntal",
+      "Carngol"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Carngol",
+      "barony": "Jungferntal",
+      "county": "Sonnenküste",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-illewod",
+      "liegeHouseName": "Haus Illewod O'Aberon",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "county": "assets/images/regions/sonnenkueste.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Sonnenküste/Jungferntal/morforwyn-linie-marmue.png",
+    "motto": "",
+    "sourceRevision": 5,
+    "sourceNote": "Die drei bereitgestellten Tabellen werden als ein zusammenhängendes matriarchales Haus modelliert: Hafmues Hauptlinie sowie die von Marmue und Elimue ausgehenden Nebenlinien. Zwei je gemeinsam gespeiste globale Zeitsprünge ersetzen alle parallelen Punktreihen. Claimed-Elternschaften bewahren dabei, aus welcher Linie die später wieder belegten Personen stammen. Bei innerfamiliären Ehen führt stets die weibliche Morforwyn-Paarstelle die Kinder fort; der Mann wird an ihr als Partnerdarstellung wiederholt, während an seiner Herkunftsstelle nur eine kinderlose Spiegelkarte der Frau erscheint. Dadurch dürfen Karten mehrfach sichtbar sein, Weltperson, Ehe und Kinderlinie existieren aber nur einmal. Eurolwyn, Meiriona, Endellion, Sioned, Rheanne, Afanen und Glynis sind die belegten Ausnahmen von der matriarchalen Fortsetzung: Ihre Kinder stehen im jeweiligen Zielhaus, weshalb ihre Morforwyn-Zweige an direkten Wegverheiratet-Knoten enden. Die Partnerschaften und Weltpersonen mit Grael, Blach, Marwolaeth, Illwath, Neidr und Llwynog verwenden die bestehenden Gegenakten-IDs. Rheannes zuvor ausdrücklich ausgeschlossene Altporträts bleiben ungenutzt. Für Gwenmue wird bei zwei widersprüchlichen Quellbildern das Bild der Hauptakte verwendet; für Glynis und Afanen bleiben die bereits kanonischen Gegenaktenbilder maßgeblich. Die wiederholten schwarzen Standardsilhouetten werden nicht als individuelle Porträts importiert. Die drei genealogischen Linien sind als getrennte Familienakten modelliert. Diese Akte bildet ausschließlich die Marmue-Nebenlinie ab.",
+    "graphFingerprint": "fdb3460cfccc6b0f0a99abde924fcc1ef07963e11835c982bb4a592976e50044",
+    "people": [
+      {
+        "id": "marmue-morforwyn",
+        "name": "Marmue",
+        "title": "Begründerin der Marmue-Nebenlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/marmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwalchgwyn-morforwyn",
+        "name": "Gwalchgwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "megmue-morforwyn",
+        "name": "Megmue",
+        "title": "Historische Ritterherrin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/megmue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "wynton-morforwyn",
+        "name": "Wynton",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "talfamue-morforwyn",
+        "name": "Talfamue",
+        "title": "Historische Baronesse des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/talfamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ofranton-1599-morforwyn",
+        "name": "Ofranton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ywamue-morforwyn",
+        "name": "Ywamue",
+        "title": "Historische Ritterherrin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/ywamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "dewiton-morforwyn",
+        "name": "Dewiton",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "owamue-morforwyn",
+        "name": "Owamue",
+        "title": "Historische Ritterherrin der Elimue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/owamue-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "helygton-morforwyn",
+        "name": "Helygton",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenlyn-morforwyn",
+        "name": "Gwenlyn",
+        "title": "",
+        "notes": "In der Quelle auch Gwenmue genannt; nicht mit Gwenmue, geboren 1631, identisch.",
+        "portrait": "assets/images/portraits/haus-morforwyn/gwenlyn-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "branmue-morforwyn",
+        "name": "Branmue",
+        "title": "Ritterherrin und Oberhaupt der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/branmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "meiriona-morforwyn",
+        "name": "Meiriona Morforwyn",
+        "title": "Wegverheiratet an Haus Blach",
+        "notes": "In der Quelle auch Meimue genannt; Berwyn und Millena werden ausschließlich im Blach-Zweig geführt.",
+        "portrait": "assets/images/portraits/haus-morforwyn/meiriona-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "vynnston-morforwyn",
+        "name": "Vynnston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meredydd-blach",
+        "name": "Meredydd Blach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-blach/meredydd-blach.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "urumue-morforwyn",
+        "name": "Urumue",
+        "title": "Baronesse und Oberhaupt des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/urumue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ffinton-morforwyn",
+        "name": "Ffinton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "olmue-morforwyn",
+        "name": "Olmue",
+        "title": "Ritterherrin und Oberhaupt der Elimue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/olmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "branston-morforwyn",
+        "name": "Branston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ofranton-1661-morforwyn",
+        "name": "Ofranton",
+        "title": "Wegverheiratet in die Elimue-Linie",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "zedmue-morforwyn",
+        "name": "Zedmue",
+        "title": "Erste Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/zedmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "idriston-morforwyn",
+        "name": "Idriston",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/idriston-morforwyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sioned-morforwyn",
+        "name": "Sioned Morforwyn",
+        "title": "Wegverheiratet an Haus Tiwna",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/sioned-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "efrawg-tiwna",
+        "name": "Efrawg Tiwna",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/efrawg-tiwna.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "varedmue-morforwyn",
+        "name": "Varedmue",
+        "title": "Zweite Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/varedmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "rheanne-morforwyn",
+        "name": "Rheanne Morforwyn",
+        "title": "Wegverheiratet an Haus Illwath",
+        "notes": "Die früher ausdrücklich ausgeschlossenen Altporträts werden auch in der Morforwyn-Akte nicht übernommen; ihre Kinder stehen ausschließlich bei Illwath.",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tarawg-illwath",
+        "name": "Tarawg Illwath",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illwath/tarawg-illwath.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "afanen-morforwyn",
+        "name": "Afanen Morforwyn",
+        "title": "Wegverheiratet an Haus Neidr",
+        "notes": "In der Quelle auch Afamue genannt; ihre Kinder werden ausschließlich in der Neidr-Akte geführt.",
+        "portrait": "assets/images/portraits/haus-neidr/afanen-morforwyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhon-neidr",
+        "name": "Rhon Neidr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-neidr/rhon-neidr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "jonamue-morforwyn",
+        "name": "Jonamue",
+        "title": "Dritte Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/jonamue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "merediton-morforwyn",
+        "name": "Merediton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/merediton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "karismue-morforwyn",
+        "name": "Karismue",
+        "title": "Zweite Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/karismue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "alunton-morforwyn",
+        "name": "Alunton",
+        "title": "Wegverheiratet in die Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/alunton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wledmue-morforwyn",
+        "name": "Wledmue",
+        "title": "Dritte Erbin des Hauses Morforwyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/wledmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "sianmue-morforwyn",
+        "name": "Sianmue",
+        "title": "Vierte Nachfolgerin der Marmue-Linie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/sianmue-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "neirton-morforwyn",
+        "name": "Neirton",
+        "title": "Wegverheiratet in die Stammlinie",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-morforwyn/neirton-morforwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-sianmue-husband",
+        "name": "Unbekannter Ehemann",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  }
+]

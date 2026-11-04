@@ -20,6 +20,7 @@ import { getStoredCriticalConsequences, getAttackSequenceOutcome } from '../comb
 import { summarizeRuleEffects } from './combat-rule-presentation.js';
 import { renderEvaluationStats } from './combat-evaluation-stats.js?v=20261015-scenarios-v2';
 import { getEvaluationScenario, getEvaluationSelfLabel, getEvaluationFactSummary } from './combat-evaluation-model.js';
+import { getCombatActionAvailability } from './combat-action-availability.js';
 import { renderEvaluationEffectCards } from './combat-evaluation-effects.js';
 import { renderEvaluationLedger } from './combat-evaluation-ledger.js?v=20261015-ledger-layout-v3';
 function escapeHtml(value) {
@@ -77,6 +78,8 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
   const actionGroups = getActionGroups(actor);
   const actionOptions = renderActionOptions(actor, selectedActionId, actionGroups);
   const equipmentSwitch = actor.selectedAction?.kind === 'equipment-switch';
+  const wait = (actor.actions || []).find(action => action.id === 'combat:wait');
+  const waitAvailable = !actorReady && wait && selectedActionId !== wait.id && getCombatActionAvailability(actor, wait).available;
   const composerHint = equipmentSwitch
     ? 'Wechsel beim Eintragen'
     : 'Auswertung beim Eintragen';
@@ -143,7 +146,8 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
       ${!magic && !equipmentSwitch ? renderCombatWeaponGrip(actor) : ''}
       </div>
     </div>
-    ${actorReady ? '' : `<p class="combat-composer-warning" role="status">${escapeHtml(actorProblem || actor.selectedAction?.disabledReason || 'Ergänze auf dem Charakter- oder Kreaturenbogen einen passenden Angriff mit Schadenswurf.')}</p>`}
+    ${actor.selectedAction?.kind === 'wait' ? '<p class="combat-action-notice" data-combat-wait-guidance>Abwarten lässt den Beitrag verstreichen. Eine kurze Beschreibung des Zustands genügt; du musst keine bewusste Handlung erfinden.</p>' : ''}
+    ${actorReady ? '' : `<div class="combat-composer-warning" role="status"><p>${escapeHtml(actorProblem || actor.selectedAction?.disabledReason || 'Ergänze auf dem Charakter- oder Kreaturenbogen einen passenden Angriff mit Schadenswurf.')}</p>${waitAvailable ? '<p>Du kannst den Zug ohne Angriff abschließen. <button type="button" data-combat-select-action="combat:wait">Abwarten wählen</button></p>' : ''}<small>Die Sperre betrifft diese Handlung. Du kannst eine andere zulässige Handlung oder einen Abschnitt ohne Kampfmechanik wählen.</small></div>`}
     ${paymentPanel}
     ${renderActionDetails(actor)}
     ${ruleOptions.length ? `<div class="combat-rule-selection">

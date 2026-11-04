@@ -7,7 +7,7 @@ import {
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_STURMGEBORENE_PORTRAITS } from './house-sturmgeborene-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRAEHENMOOR_HOUSE_EMBLEMS } from './kraehenmoor-house-profiles.js';
 import {
   KRONENTAL_HOUSE_EMBLEMS,
@@ -305,7 +305,7 @@ export const HOUSE_STURMGEBORENE_FAMILY = Object.freeze({
     spouse('snorri-frostauge', 'Snorri Frostauge', 'male', '1637', '1715', 'house-frostauge'),
     spouse('yggrid-helgr', 'Yggrid Helgr', 'female', '1633', '1712', 'house-helgr'),
 
-    person('kormak-sturmgeborener', 'Kormak Sturmgeborener', 'male', '1625', '1658'),
+    person('kormak-sturmgeborener', 'Kormak Sturmgeborener', 'male', '1625', '1666'),
     person('torger-sturmgeborene', 'Torger Sturmgeborener', 'male', '1647', '1693', { title: 'Oberhaupt des Clans Sturmgeborene' }),
     awayWoman('lydia-sturmgeborene', 'Lydia Sturmgeborene', '1658', '1733', 'Clan Vaeren'),
     person('thorbrand-sturmgeborener', 'Thorbrand Sturmgeborener', 'male', '1650', '1720', { title: 'Oberhaupt des Clans Sturmgeborene' }),
@@ -340,7 +340,7 @@ export const HOUSE_STURMGEBORENE_FAMILY = Object.freeze({
     person('arnkatla-sturmgeborene', 'Arnkatla Sturmgeborene', 'female', '1676', ''),
     person('idmar-sturmgeborener', 'Idmar Sturmgeborener', 'male', '1673', ''),
     person('bergthor-sturmgeborener', 'Bergthor Sturmgeborener', 'male', '1676', ''),
-    spouse('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '', 'house-varangr'),
+    spouse('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '1713', 'house-varangr'),
     spouse('drifa-vragi', 'Drifa Vragi', 'female', '1677', '', 'house-vragi'),
     spouse('bjork-sturmgeborene-spouse', 'Björk', 'female', '1679', ''),
 
@@ -402,7 +402,7 @@ export const HOUSE_STURMGEBORENE_FAMILY = Object.freeze({
     directlyAbovePrimaryChildWithPackedSiblingBranches(
       'marriage-kormak-magdis-sturmgeborene',
       'elinborg-sturmgeborene',
-      { status: 'ended', end: '1658' }
+      { status: 'ended', end: '1666' }
     ),
     directlyAbovePrimaryChildWithPackedSiblingBranches(
       'marriage-rannveig-torger-varulv',
@@ -413,7 +413,7 @@ export const HOUSE_STURMGEBORENE_FAMILY = Object.freeze({
     directlyAboveOnlyChild('marriage-thorbrand-astrid-grendel', 'idmar-sturmgeborener', { status: 'ended', end: '1704' }),
     partnership('marriage-hallveig-raloff-sturmgeborene', { status: 'ended', end: '1680' }),
     directlyAboveOnlyChild('marriage-erlend-svana-sturmgeborene', 'bergthor-sturmgeborener', { status: 'ended', end: '1725' }),
-    partnership('marriage-ingeborg-hadvar-sturmgeborene'),
+    partnership('marriage-ingeborg-hadvar-sturmgeborene', { status: 'ended', end: '1713' }),
     directlyAbovePrimaryChildWithPackedSiblingBranches(
       'marriage-arnthor-elinborg-sturmgeborene',
       'runar-1694-sturmgeborener',

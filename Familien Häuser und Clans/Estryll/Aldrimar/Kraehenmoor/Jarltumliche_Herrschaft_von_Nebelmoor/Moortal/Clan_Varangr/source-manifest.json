@@ -1,0 +1,99 @@
+{
+  "id": "haus-varangr",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "c6792eb6-93ba-4a1e-87ca-3e7a5f26636c",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\c6792eb6-93ba-4a1e-87ca-3e7a5f26636c\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/varangr/animexx-original.html",
+    "bytes": 155424,
+    "sha256": "b2f84eabee7b7687b98a890030eb6ab15577b6bbdca862d1c8bd44cea44c73f0",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-varangr",
+    "baselineSourceRevision": 9,
+    "profile": {
+      "rankId": "jarl",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kraehenmoor.png",
+        "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "8c9e210484c163f8e193c7132ba73e0a7e46d5eba896da004685a47927d669b2"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-varangr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-varangr",
+    "familyId": "haus-varangr",
+    "slug": "varangr",
+    "canonicalSlug": "varangr",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "c6792eb6-93ba-4a1e-87ca-3e7a5f26636c",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/MY4f0QD.png",
+    "sourceUrl": "https://i.imgur.com/MY4f0QD.png",
+    "path": "Stammbäume/assets/images/references/haus-varangr/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-varangr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:330px; width:220px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 194283,
+    "sha256": "01687f30ec6b3175d9cfbd544fe4fb467be701d2a234d563677b73dcc6b85460",
+    "sha": "01687f30ec6b3175d9cfbd544fe4fb467be701d2a234d563677b73dcc6b85460",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hausfigur als Bogenschütze mit geschlossenem Helm, roter Helmzier und grüner Hauskleidung.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Krähenmoor ist das Jarltum; Moortal sein Hauptsitz in der jarltümlichen Herrschaft Nebelmoor. Die alte Bezeichnung Jarltum von Moortal wird berichtigt.",
+    "Aktueller Rang Jarl unter Vaeren. Erzählungen über Torvald, Elisef und Sinding bleiben historische politische Ereignisse, keine neue heutige Ratsbesetzung oder genealogischen Änderungen.",
+    "Glaennath-Niederlage wird als Eroberung der örtlichen Herrschaften beschrieben, nicht als Ausrottung eines gesamten Volkes.",
+    "Die Quelle erwähnt die Ermordung eines späteren Königs, nennt aber weder Täter noch eine überprüfbare Chronologie. Sichtbar neutral Tod des Königs, ohne neuen Mordvorwurf oder Täterentscheid.",
+    "Goldhortung, Misstrauen und höfischer Prunk sind der überlieferte Ruf des Hauses, keine medizinische Diagnose aller Angehörigen. Militärstatistiken und alte Infotabellen bleiben vollständig ausgenommen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

@@ -1,0 +1,778 @@
+{
+  "schema": "aleria.cenyr-authorized-lore-fixes",
+  "date": "2026-11-04",
+  "status": "canonical-and-content-ready-for-root-revision-and-build",
+  "sourceRevisionOwnership": "Root; no revision/version change by source agent",
+  "sourceFiles": [
+    {
+      "path": "Stammbäume/assets/js/data/house-draig-family.js",
+      "beforeSha256": "12cfcce98157ee7b50dcac7eeca2a41a2b5ad8f68ca20206a46ea77d8472d1e5",
+      "afterSha256": "7f3a94025ebbf18c933a8255d61b52253b34e0f12fbd21c6cd40889902fbd7f4"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-arth-family.js",
+      "beforeSha256": "8f5b70f8e1fb32429622180540fa97aa34d52f28f8437d34dbf2cdc282fbcee7",
+      "afterSha256": "6e3c4daa295f37de228e5f5640929b2c12964d171e2363f47bcecc7df5af63d2"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-neidr-family.js",
+      "beforeSha256": "c3897bb7fb03e396ddee9ffe7281f22d07911da998f704863d8b2a4c0885e898",
+      "afterSha256": "0828477cb04ef612462445086e75f11b8273c65fdc7bbc2125bee44a2fe5d032"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-wylan-family.js",
+      "beforeSha256": "812ef266abc83eb1c3f0f32853af725df753ff396ac79661b66580e3b42901b0",
+      "afterSha256": "d8fd313f76e8250bd2eeb9d4930c3701f3c9b503743e5410a30de4dbb3e03a62"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-morforwyn-family.js",
+      "beforeSha256": "671d5d96ebee3617ba60ea898d2f8ab15dce9a6409eec6251115f5113d54fbe3",
+      "afterSha256": "f422273c792460807e3970d3221eee0268fe130c05fd4c8542d5b25df6cd1a50"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-tiwna-family.js",
+      "beforeSha256": "57e65304ad0920e09f0f9ca7d8e3ee2542e0aa4410ca19c1a623e0ab0edc8a34",
+      "afterSha256": "56c423bf9c9e463bf69719ae562edce5cb86dcc321d8aa0f773c518fd104fb6e"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-canwyll-family.js",
+      "beforeSha256": "4812c8dcd02a26e4e6cb9fec49f705f2ed255c7c679c7e7de4088f95bf4f4035",
+      "afterSha256": "c3f9d15074f023a5b0a5cee593960fa40ce87722c8654ed5973703efe74eca03"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-pawen-family.js",
+      "beforeSha256": "02cade306772cfdc660e514328d086f3fb9f0fbed5b93cc6c05818814ebcfab1",
+      "afterSha256": "5978cfbe1e4e8e7c5b36928df7d225005ff0a6f1a48fbd45cf9ad848f9a79ea8"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-dyngwn-family.js",
+      "beforeSha256": "d0d2d0a6c24829c6a3b64dc9edf06eaa57493a8e5f4f822bcc203255f30df1f3",
+      "afterSha256": "51874c51a01c0b3c9700986fa60fe5be9197794869e834a58f7f155eca17c5e5"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-grael-family.js",
+      "beforeSha256": "9ab86f9d71b5e7a5da3c006a7770e6371074ed5e86426c734f905c189f7d241d",
+      "afterSha256": "f34c3219dd02d082bd9946a1b0d639290d961003ca8039138d6dc8a914d21814"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+      "beforeSha256": "405fd83eba60a8bee049d7c1ee1c8e971c8f607a2bc2fac9c5ec391c200bf008",
+      "afterSha256": "5f084fc37fd2c1493151183f5d7c15a2dd03a7649ca19842b35a4890ebc033e9"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-vaeren-family.js",
+      "beforeSha256": "aaf03616a4f274dbc40d03a5a02499312d1c839e82409097298618cd900add4e",
+      "afterSha256": "1a3595c314004c1bdfb1c86915f884b7bda2a6ea8afde118c47464324bf6c01a"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.content.mjs",
+      "beforeSha256": "e10428dfa3ff089800ff1ef96c91396b6cabf1799342d1fc9cb464e3042b9de5",
+      "afterSha256": "ac9e993c9c8c818ac605063a2fd7b15c7d08c12d0781618ef27bd12bc6dbf093"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Dyngwn/haus.content.mjs",
+      "beforeSha256": "2d965c22f06d60cbd17bce858ba14e901a9e492f56854320be8d6869826fd268",
+      "afterSha256": "c67b9c9de53ceed0f178e3a2f12eb1bb81d4014e7abc0753e2b02e70e1d11100"
+    }
+  ],
+  "before": [
+    {
+      "id": "haus-draig",
+      "persons": [
+        {
+          "id": "sylvia-cenyr",
+          "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+          "name": "Sylvia O'Cenyr",
+          "birth": "1695",
+          "death": "1719",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "0c02f0470520a654191e6bf1af00844927d0b5a5a127df4e1ceaf2caf574994d",
+      "profileHash": "51a1a03a7aa657c59fec3048cbdb4d1ad9a9b3ff600b9c319737a9e09be7fec1"
+    },
+    {
+      "id": "haus-vaeren",
+      "persons": [
+        {
+          "id": "annegrit-vaeren",
+          "worldPersonId": "person--haus-vaeren--annegrit-vaeren",
+          "name": "Annegrit Vaeren",
+          "birth": "1548",
+          "death": "1572",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "rhodri-pendrag",
+          "worldPersonId": "person--haus-pendrag--rhodri-pendrag",
+          "name": "Rhodri Pendrag",
+          "birth": "1547",
+          "death": "1613",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "ccfac8b333b7223eed71a49a618321ac5d323019e5361500757881688c37b5f7",
+      "profileHash": "0873c848d8a22bf6ea38d122ab05bf9de38b52bc1bd21d768af26ba29614fc23"
+    },
+    {
+      "id": "haus-wylan",
+      "persons": [
+        {
+          "id": "daffyd-neidr",
+          "worldPersonId": "person--haus-neidr--daffyd-neidr",
+          "name": "Daffyd Neidr",
+          "birth": "1555",
+          "death": "????",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "fe21cb9654aee0b7021e1df1aa65cfc5b4c607908c8940d97fb005af20dfc923",
+      "profileHash": "63dabb09b951d1b759735790f3281efd09c5b80ba2385b801e852d6be57408c5"
+    },
+    {
+      "id": "haus-pendrag",
+      "persons": [
+        {
+          "id": "annegrit-vaeren",
+          "worldPersonId": "person--haus-vaeren--annegrit-vaeren",
+          "name": "Annegrit Vaeren",
+          "birth": "1548",
+          "death": "1572",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "rhodri-pendrag",
+          "worldPersonId": "person--haus-pendrag--rhodri-pendrag",
+          "name": "Rhodri Pendrag",
+          "birth": "????",
+          "death": "????",
+          "status": "dead",
+          "notes": "Vorverstorben vor seinem Bruder König Agravaine; sein Sohn Gawain erbte die Krone."
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "9c8b38f57381c546fc2f4d56318745f57edcc847fee45db74906d866c9c52e0f",
+      "profileHash": "92ded7a8d896aaa6dac6f430fd80b6e9095a37f175b011c325d092233296822e"
+    },
+    {
+      "id": "haus-neidr",
+      "persons": [
+        {
+          "id": "daffyd-neidr",
+          "worldPersonId": "person--haus-neidr--daffyd-neidr",
+          "name": "Daffyd Neidr",
+          "birth": "1555",
+          "death": "1593",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "morgan-dyngwn",
+          "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+          "name": "Morgan Dyngwn",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "notes": "Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben."
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-aoirghe-morgan",
+          "status": "active",
+          "start": "",
+          "end": ""
+        }
+      ],
+      "graphStructureHash": "bb84c26d136b375d47a5ff615c6e2ca5d077d30e5d5d9a22b449e2014e128fc7",
+      "profileHash": "4d50f623d139ef32a983f05a8fe00caf835f1a336870a3a4bf1b9f10f6ccd6ab"
+    },
+    {
+      "id": "haus-arth",
+      "persons": [
+        {
+          "id": "sylvia-cenyr",
+          "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+          "name": "Sylvia O'Cenyr",
+          "birth": "1695",
+          "death": "1719",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "f53656bf860d2254d84539a0d3b5c80225cbb6fbfe0969d340bd874d97e9963c",
+      "profileHash": "84633a0793746580cf2e7a5a0b41e3d0f529c8481bde73d2e4ee00fa88aa23ab"
+    },
+    {
+      "id": "haus-morforwyn",
+      "persons": [
+        {
+          "id": "ofranton-1599-morforwyn",
+          "worldPersonId": "person--haus-morforwyn--ofranton-1599-morforwyn",
+          "name": "Ofranton",
+          "birth": "1599",
+          "death": "1630",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-talfamue-ofranton-1599-morforwyn",
+          "status": "ended",
+          "start": "",
+          "end": "1630"
+        }
+      ],
+      "graphStructureHash": "517643f7ca1679b0666e4e1f099b3429f04002bf602b6663e0d43fb9a563036e",
+      "profileHash": "9890d6e1c6fc67d938d948393e9fcd93a8e99d8a9e14f679bea9c00d09e90f39"
+    },
+    {
+      "id": "haus-grael",
+      "persons": [
+        {
+          "id": "morgan-dyngwn",
+          "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+          "name": "Morgan Dyngwn",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-rhonwen-morgan-grael",
+          "status": "widowed",
+          "start": "",
+          "end": ""
+        }
+      ],
+      "graphStructureHash": "e6b70a3714c2efd9dc3182c49fb960218864d3c2eca093f6ab9ac9ddcef71b90",
+      "profileHash": "b09f92e5e3961fa95b58d0f7221135f937253d7c103f78f4f391f93ff378fe07"
+    },
+    {
+      "id": "haus-dyngwn",
+      "persons": [
+        {
+          "id": "morgan-dyngwn",
+          "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+          "name": "Morgan Dyngwn",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "notes": "Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben."
+        }
+      ],
+      "partnerships": [
+        {
+          "id": "marriage-aoirghe-morgan",
+          "status": "active",
+          "start": "",
+          "end": ""
+        },
+        {
+          "id": "marriage-rhonwen-morgan-grael",
+          "status": "widowed",
+          "start": "",
+          "end": ""
+        }
+      ],
+      "graphStructureHash": "fcb7f582629509f8f88c4bbba12c835e0560bf94620e6a5a00164c5a911f4783",
+      "profileHash": "b09f92e5e3961fa95b58d0f7221135f937253d7c103f78f4f391f93ff378fe07"
+    },
+    {
+      "id": "haus-canwyll",
+      "persons": [
+        {
+          "id": "cynwrig-canwyll",
+          "worldPersonId": "person--haus-canwyll--cynwrig-canwyll",
+          "name": "Cynwrig Canwyll",
+          "birth": "1662",
+          "death": "1720",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "dylis-tiwna",
+          "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+          "name": "Dylis Tiwna",
+          "birth": "1662",
+          "death": "1720",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "cd06d52db64bdc147ca8d82a40c81be5abe589f384707eb3d7c0a622bd9d6720",
+      "profileHash": "1229f1d94b0b011676df14c1e4ec6aff9d36d19285dcbb053d3ca139c84f571e"
+    },
+    {
+      "id": "haus-tiwna",
+      "persons": [
+        {
+          "id": "morwen-pawen",
+          "worldPersonId": "person--haus-pawen--morwen-pawen",
+          "name": "Morwen Pawen",
+          "birth": "1642",
+          "death": "1659",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "dylis-tiwna",
+          "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+          "name": "Dylis Tiwna",
+          "birth": "1662",
+          "death": "1720",
+          "status": "dead",
+          "notes": ""
+        },
+        {
+          "id": "cynwrig-canwyll",
+          "worldPersonId": "person--haus-canwyll--cynwrig-canwyll",
+          "name": "Cynwrig Canwyll",
+          "birth": "1662",
+          "death": "1720",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "70c027d15666efc71c6557b21f8e65b71259cf8f3e99723aaf834df47607cef4",
+      "profileHash": "1d41637b12d105118e3872845be79756efb8fbfce9a5b9c0b1692c3bd6e3c18f"
+    },
+    {
+      "id": "haus-pawen",
+      "persons": [
+        {
+          "id": "morwen-pawen",
+          "worldPersonId": "person--haus-pawen--morwen-pawen",
+          "name": "Morwen Pawen",
+          "birth": "1642",
+          "death": "1659",
+          "status": "dead",
+          "notes": ""
+        }
+      ],
+      "partnerships": [],
+      "graphStructureHash": "87e7af62c1b4329cd1a41e4eaed5be4dffa81a4eca55a0e60cef26ff45618a15",
+      "profileHash": "c854c498b20ba8776727094a6f5e2c5595201d6970cd7b1fd584f32061c6a393"
+    }
+  ],
+  "recordChanges": [
+    {
+      "familyId": "haus-draig",
+      "personId": "sylvia-cenyr",
+      "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+      "changes": {
+        "death": {
+          "before": "1719",
+          "after": "1725"
+        }
+      }
+    },
+    {
+      "familyId": "haus-vaeren",
+      "personId": "annegrit-vaeren",
+      "worldPersonId": "person--haus-vaeren--annegrit-vaeren",
+      "changes": {
+        "birth": {
+          "before": "1548",
+          "after": "1533"
+        }
+      }
+    },
+    {
+      "familyId": "haus-vaeren",
+      "personId": "rhodri-pendrag",
+      "worldPersonId": "person--haus-pendrag--rhodri-pendrag",
+      "changes": {
+        "birth": {
+          "before": "1547",
+          "after": "1530"
+        },
+        "death": {
+          "before": "1613",
+          "after": "1599"
+        }
+      }
+    },
+    {
+      "familyId": "haus-wylan",
+      "personId": "daffyd-neidr",
+      "worldPersonId": "person--haus-neidr--daffyd-neidr",
+      "changes": {
+        "death": {
+          "before": "????",
+          "after": "1608"
+        }
+      }
+    },
+    {
+      "familyId": "haus-pendrag",
+      "personId": "annegrit-vaeren",
+      "worldPersonId": "person--haus-vaeren--annegrit-vaeren",
+      "changes": {
+        "birth": {
+          "before": "1548",
+          "after": "1533"
+        }
+      }
+    },
+    {
+      "familyId": "haus-pendrag",
+      "personId": "rhodri-pendrag",
+      "worldPersonId": "person--haus-pendrag--rhodri-pendrag",
+      "changes": {
+        "birth": {
+          "before": "????",
+          "after": "1530"
+        },
+        "death": {
+          "before": "????",
+          "after": "1599"
+        }
+      }
+    },
+    {
+      "familyId": "haus-neidr",
+      "personId": "daffyd-neidr",
+      "worldPersonId": "person--haus-neidr--daffyd-neidr",
+      "changes": {
+        "death": {
+          "before": "1593",
+          "after": "1608"
+        }
+      }
+    },
+    {
+      "familyId": "haus-neidr",
+      "personId": "morgan-dyngwn",
+      "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+      "changes": {
+        "death": {
+          "before": "????",
+          "after": ""
+        },
+        "status": {
+          "before": "dead",
+          "after": "alive"
+        },
+        "notes": {
+          "before": "Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+          "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+        }
+      }
+    },
+    {
+      "familyId": "haus-arth",
+      "personId": "sylvia-cenyr",
+      "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+      "changes": {
+        "death": {
+          "before": "1719",
+          "after": "1725"
+        }
+      }
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "personId": "ofranton-1599-morforwyn",
+      "worldPersonId": "person--haus-morforwyn--ofranton-1599-morforwyn",
+      "changes": {
+        "death": {
+          "before": "1630",
+          "after": "1633"
+        }
+      }
+    },
+    {
+      "familyId": "haus-grael",
+      "personId": "morgan-dyngwn",
+      "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+      "changes": {
+        "death": {
+          "before": "????",
+          "after": ""
+        },
+        "status": {
+          "before": "dead",
+          "after": "alive"
+        }
+      }
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "personId": "morgan-dyngwn",
+      "worldPersonId": "person--haus-dyngwn--morgan-dyngwn",
+      "changes": {
+        "death": {
+          "before": "????",
+          "after": ""
+        },
+        "status": {
+          "before": "dead",
+          "after": "alive"
+        },
+        "notes": {
+          "before": "Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+          "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+        }
+      }
+    },
+    {
+      "familyId": "haus-canwyll",
+      "personId": "cynwrig-canwyll",
+      "worldPersonId": "person--haus-canwyll--cynwrig-canwyll",
+      "changes": {
+        "birth": {
+          "before": "1662",
+          "after": "1652"
+        }
+      }
+    },
+    {
+      "familyId": "haus-canwyll",
+      "personId": "dylis-tiwna",
+      "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+      "changes": {
+        "birth": {
+          "before": "1662",
+          "after": "1650"
+        }
+      }
+    },
+    {
+      "familyId": "haus-tiwna",
+      "personId": "morwen-pawen",
+      "worldPersonId": "person--haus-pawen--morwen-pawen",
+      "changes": {
+        "birth": {
+          "before": "1642",
+          "after": "1632"
+        }
+      }
+    },
+    {
+      "familyId": "haus-tiwna",
+      "personId": "dylis-tiwna",
+      "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+      "changes": {
+        "birth": {
+          "before": "1662",
+          "after": "1650"
+        }
+      }
+    },
+    {
+      "familyId": "haus-tiwna",
+      "personId": "cynwrig-canwyll",
+      "worldPersonId": "person--haus-canwyll--cynwrig-canwyll",
+      "changes": {
+        "birth": {
+          "before": "1662",
+          "after": "1652"
+        }
+      }
+    },
+    {
+      "familyId": "haus-pawen",
+      "personId": "morwen-pawen",
+      "worldPersonId": "person--haus-pawen--morwen-pawen",
+      "changes": {
+        "birth": {
+          "before": "1642",
+          "after": "1632"
+        }
+      }
+    }
+  ],
+  "partnershipChanges": [
+    {
+      "familyId": "haus-neidr",
+      "partnershipId": "marriage-aoirghe-morgan",
+      "changes": {
+        "status": {
+          "before": "active",
+          "after": "ended"
+        },
+        "end": {
+          "before": "",
+          "after": "1630"
+        }
+      }
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "partnershipId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "changes": {
+        "end": {
+          "before": "1630",
+          "after": "1633"
+        }
+      }
+    },
+    {
+      "familyId": "haus-grael",
+      "partnershipId": "marriage-rhonwen-morgan-grael",
+      "changes": {
+        "status": {
+          "before": "widowed",
+          "after": "active"
+        }
+      }
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "partnershipId": "marriage-aoirghe-morgan",
+      "changes": {
+        "status": {
+          "before": "active",
+          "after": "ended"
+        },
+        "end": {
+          "before": "",
+          "after": "1630"
+        }
+      }
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "partnershipId": "marriage-rhonwen-morgan-grael",
+      "changes": {
+        "status": {
+          "before": "widowed",
+          "after": "active"
+        }
+      }
+    }
+  ],
+  "previousDefaultNotes": [
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "value": "Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben."
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "value": "Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben."
+    }
+  ],
+  "affectedHouseIds": [
+    "haus-draig",
+    "haus-vaeren",
+    "haus-wylan",
+    "haus-pendrag",
+    "haus-neidr",
+    "haus-arth",
+    "haus-morforwyn",
+    "haus-grael",
+    "haus-dyngwn",
+    "haus-canwyll",
+    "haus-tiwna",
+    "haus-pawen"
+  ],
+  "validation": {
+    "graphStructuresUnchanged": 12,
+    "houseProfilesUnchanged": 12,
+    "publicCounterpartsConsistent": 18,
+    "protectedDescendantBirths": {
+      "haus-draig": {
+        "siana-draig": "1725"
+      },
+      "haus-neidr": {
+        "prynhawn-neidr": "1608"
+      },
+      "haus-morforwyn": {
+        "ffeston-morforwyn": "1633"
+      },
+      "haus-tiwna": {
+        "gavin-tiwna": "1651"
+      },
+      "haus-canwyll": {
+        "glesni-canwyll": "1669",
+        "aeronwen-canwyll": "1678",
+        "uvel-canwyll": "1674",
+        "jowan-canwyll": "1676"
+      },
+      "haus-pendrag": {
+        "gawain-pendragon": "1551",
+        "arianwen-pendragon": "1562",
+        "tarwen-pendrag": "1572"
+      },
+      "haus-grawn": {
+        "ywen-grawn": "1700",
+        "elin-grawn": "1700"
+      }
+    },
+    "relevantPublicBiologicalConnectionsChecked": 30,
+    "explicitOmittedGenerationConnectionsExcluded": 1,
+    "correctedParentsAtLeast16AtKnownChildren": true,
+    "idsAndWorldPersonIdsUnchanged": true,
+    "sourceRevisionsChangedByThisAgent": false,
+    "sharedRegistryOrGeneratedFilesChangedByThisAgent": false
+  },
+  "decisions": [
+    {
+      "case": "Sylvia/Siana",
+      "before": "Sylvia death1719; Siana birth1725",
+      "after": "Sylvia death1725; Siana birth1725",
+      "reason": "Authorized child-priority correction. Minimal latest-child year; no death cause or additional event invented."
+    },
+    {
+      "case": "Gruffyd Draig",
+      "before": "House term1169-1172, canonical death1171",
+      "after": "Term1169-1171; next head begins1172 unchanged",
+      "reason": "Current canonical death prevails. No invented regent fills the intervening year."
+    },
+    {
+      "case": "Daffyd/Prynhawn",
+      "before": "Daffyd death1593/unknown in Wylan; child1608",
+      "after": "Daffyd death1608 in both records; child unchanged",
+      "reason": "Authorized child-priority correction; office end1593 remains separate. Marriage had no1593 end to replace; no illegitimacy or separation story introduced."
+    },
+    {
+      "case": "Ofranton/Ffeston",
+      "before": "Ofranton death and marriage end1630; child1633",
+      "after": "Death and marriage end1633; child unchanged",
+      "reason": "Minimal latest-child-year correction; no death cause invented."
+    },
+    {
+      "case": "Tiwna-Canwyll connected line",
+      "before": "Morwen1642; Dylis1662; Cynwrig1662; Gavin1651; Glesni1669",
+      "after": "Morwen1632; Dylis1650; Cynwrig1652; descendants unchanged; Morwen death1659 retained",
+      "reason": "Approved full-line correction anchored at newest descendants. Morwen parents1614 are18 at her birth; Madoc1630 is20 at Dylis; Morwen18/19 at Dylis/Gavin; Dylis19 and Cynwrig17 at Glesni; Cynwrig parents1629/1634 are23/18."
+    },
+    {
+      "case": "Morgan Dyngwn lives",
+      "before": "Three counterparts dead; second marriage widowed; house current head unknown",
+      "after": "Three alive, death empty; Rhonwen marriage active; Aoirghe marriage ended1630; current head Morgan",
+      "reason": "Explicit user canon. First-wife death1630 was already in Dyngwn; no new death date introduced. Name and birth1588 preserved. Territorial reference already correct. Existing partnership metadata only; participants and parentages preserved."
+    },
+    {
+      "case": "Annegrit/Rhodri/Gawain",
+      "before": "Mother1548; father1547-1613 in Vaeren and undated in Pendrag; children1551/1562/1572",
+      "after": "Annegrit1533-1572; Rhodri1530-1599 in both records; children unchanged",
+      "reason": "Approved connected-parent correction: mother18/29/39, father21/32/42 at children. Existing Pendrag note requires Rhodri before brother Agravaine1600, so1613 rejected. Ancient parent connection explicitly crosses a generation gap, not direct chronology."
+    }
+  ],
+  "pendingRootWork": [
+    "Targeted source-field migration/revisions and preservation of edited notes owned by root.",
+    "ContentVersion/biographySourceRevision/default fingerprints owned by root.",
+    "Rebuild affected house bios/pages with existing builders; no generator run by source agent."
+  ],
+  "nonScopeProtection": "Other20 identity differences and Dienyddiwr/Unigol/Morthwyll anomalies untouched. IDs, edges, profiles, portraits, crests and private content unchanged."
+}

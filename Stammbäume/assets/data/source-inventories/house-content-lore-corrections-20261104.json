@@ -1,0 +1,85 @@
+{
+  "schema": "aleria.reviewed-house-content-lore-corrections",
+  "date": "2026-11-04",
+  "authority": "User approved Varulv faction correction, Feuerherz diversified economy, Gwaedlyd shark symbolism and Fiadhrach albische Herkunft. Leitheach editorial notes are unimportant and unchanged.",
+  "sourceFields": [
+    {
+      "familyId": "haus-varulv",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+      "field": "biographySummary.history",
+      "before": "Im Krieg der Prätendenten zerbrach die geplante Verbindung zum Königshaus durch den Giftmord an Astrid Varulv und König Roger Vaeren. Eldar Varulv schloss sich daraufhin Arn Vaeren an. Während Eldar zeitweise verwundet war, belasteten die unterschiedlichen Fraktionen seiner Vasallen die Herrschaft zusätzlich.",
+      "after": "Im Krieg der Prätendenten zerbrach die geplante Verbindung zum Königshaus durch den Giftmord an Astrid Varulv und König Roger Vaeren. Eldar Varulv schloss sich daraufhin dem grünen Lager unter Arn Vaeren an. Während Eldar zeitweise verwundet war, belasteten die unterschiedlichen Fraktionen seiner Vasallen die Herrschaft zusätzlich."
+    },
+    {
+      "familyId": "haus-varulv",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+      "field": "sections.conflictsAlliances",
+      "before": "Krieg der Prätendenten\n\nVor dem Krieg standen die Varulv kurz davor, eine bedeutende Allianz mit dem Königshaus einzugehen. Die geplante Hochzeit der Schwester des Jarls mit dem König Roger Vaeren sollte die Verbindung zwischen den Varulv und dem Königshaus festigen. Doch als diese Verbindung durch den Mord an Astrid Varulv und Roger Vaeren durch einen vergifteten Weinkelch vereitelt wurde, wendeten sich die Varulv von den Grünen ab und schlossen sich Arn Vaeren an. Dieser erkannte schnell das Potenzial von Eldar Varulv, der als Reaktion auf den Mord an seiner Schwester und Schwager in den Krieg zog und sich durch seine brutale Effizienz hervorhob.\n\nWährend des Krieges sahen sich die Varulv erheblichen Herausforderungen gegenüber. Die internen Konflikte innerhalb ihres Jarltums verschärften die Situation erheblich. Die Kampfgeborenen und Schwarzdorn neigten zur Roten Fraktion, während die Skaal und Skjegg die Blaue Fraktion unterstützten. Darüber hinaus verließen die eigenen Kadetten der Nachtjäger aus Horunn und die Skalden ihren Ruf, was das Jarltum zusätzlich schwächte. Diese ständigen Streitigkeiten und Machtwechsel belasteten die Varulv enorm.\n\nEldar Varulv, obwohl ein fähiger Anführer, war zeitweise schwer verwundet und konnte daher nicht immer die Kontrolle behalten. In diesen Zeiten übernahmen die Schwarzdorn und Kampfgeborenen das Zepter, was die interne Stabilität der Varulv weiter beeinträchtigte. Trotz dieser Schwierigkeiten konnte Eldar Varulv durch seine Brillanz und Entschlossenheit einige Fortschritte erzielen und das Jarltum zumindest teilweise stabilisieren.\n\nNach dem Krieg standen die Varulv vor der Aufgabe, die Wogen zu glätten. Die Skaal und Skald, die ursprünglich Schwierigkeiten bereitet hatten, wurden durch geschickte Ehen wieder in das Bündnis integriert. Dennoch bleiben einige Clans des Jarltums vorsichtig und misstrauisch gegenüber den Varulv. Die Freiwinter, die Kadetten des Hauses Varulv, hielten jedoch stets loyal zu ihrem Clan und trugen zur Stabilität der Familie bei.",
+      "after": "Krieg der Prätendenten\n\nVor dem Krieg standen die Varulv kurz davor, eine bedeutende Allianz mit dem Königshaus einzugehen. Die geplante Hochzeit der Schwester des Jarls mit dem König Roger Vaeren sollte die Verbindung zwischen den Varulv und dem Königshaus festigen. Doch als diese Verbindung durch den Mord an Astrid Varulv und Roger Vaeren durch einen vergifteten Weinkelch vereitelt wurde, schlossen sich die Varulv dem grünen Lager unter Arn Vaeren an. Dieser erkannte schnell das Potenzial von Eldar Varulv, der als Reaktion auf den Mord an seiner Schwester und Schwager in den Krieg zog und sich durch seine brutale Effizienz hervorhob.\n\nWährend des Krieges sahen sich die Varulv erheblichen Herausforderungen gegenüber. Die internen Konflikte innerhalb ihres Jarltums verschärften die Situation erheblich. Die Kampfgeborenen und Schwarzdorn neigten zur Roten Fraktion, während die Skaal und Skjegg die Blaue Fraktion unterstützten. Darüber hinaus verließen die eigenen Kadetten der Nachtjäger aus Horunn und die Skalden ihren Ruf, was das Jarltum zusätzlich schwächte. Diese ständigen Streitigkeiten und Machtwechsel belasteten die Varulv enorm.\n\nEldar Varulv, obwohl ein fähiger Anführer, war zeitweise schwer verwundet und konnte daher nicht immer die Kontrolle behalten. In diesen Zeiten übernahmen die Schwarzdorn und Kampfgeborenen das Zepter, was die interne Stabilität der Varulv weiter beeinträchtigte. Trotz dieser Schwierigkeiten konnte Eldar Varulv durch seine Brillanz und Entschlossenheit einige Fortschritte erzielen und das Jarltum zumindest teilweise stabilisieren.\n\nNach dem Krieg standen die Varulv vor der Aufgabe, die Wogen zu glätten. Die Skaal und Skald, die ursprünglich Schwierigkeiten bereitet hatten, wurden durch geschickte Ehen wieder in das Bündnis integriert. Dennoch bleiben einige Clans des Jarltums vorsichtig und misstrauisch gegenüber den Varulv. Die Freiwinter, die Kadetten des Hauses Varulv, hielten jedoch stets loyal zu ihrem Clan und trugen zur Stabilität der Familie bei."
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "field": "biographySummary.holdings",
+      "before": "Die Besitzungen liegen in den kalten Sümpfen südlich von Moortal, nahe Schimmerküste und Rabenweide. Kleine Holz- und Schilfsiedlungen, schwieriger Boden und morsches Holz begrenzen den Wohlstand. Die Kontrolle von Wald- und Sumpfpfaden sowie Zölle auf den passierbaren Wegen sichern einen bescheidenen Ertrag.",
+      "after": "Die Besitzungen liegen in den kalten Sümpfen südlich von Moortal, nahe Schimmerküste und Rabenweide. Schwieriger Boden und morsches Holz erschweren die Landwirtschaft und prägen die kleinen Holz- und Schilfsiedlungen. Zölle auf den passierbaren Wegen bilden einen wichtigen Pfeiler der Wirtschaft. Jagd, Lederverarbeitung und Handwerk ergänzen die Einnahmen; Rostklamm und Totengrundstollen liefern Erz und Steinmaterial."
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "field": "sections.knighthood",
+      "before": "Die Feuerherzen kontrollieren die kalten und nassen Sümpfe südlich von Moortal, nahe der Grenze zur Schimmerküste und Rabenweide. Ihr Gebiet ist rau und unwirtlich, das Holz morsch und der Boden tückisch, was ihnen nur wenig Wohlstand bringt. Doch genau dieses harte Leben hat ihre Krieger zäh und widerstandsfähig gemacht. Sie sind an Entbehrungen gewöhnt und gelten als unerbittliche Verteidiger ihrer Heimat, die ihre Sümpfe gegen gefährliche Kreaturen und Banditen schützen.\n\nIm Gegensatz zu den Kaltherzen, die auf List und Fernkampf setzen, bevorzugen die Feuerherzen direkte Konfrontation und setzen auf starke Infanteristen und Waldläufer. Ihre Krieger kämpfen tapfer und impulsiv, ohne Furcht vor Gefahren oder Tod, was ihnen Respekt und Bewunderung einbringt. Sie kämpfen offen und ehrenhaft, mit Speeren, Äxten und Schwertern, und verachten die Hinterhältigkeit ihrer kaltherzigen Verwandten. Ihre Infanterie ist hart und robust, an Sümpfe und Schlamm gewöhnt und bereit, bis zum letzten Atemzug zu kämpfen. Ehre und Mut sind ihre größten Tugenden, und sie glauben, dass nur der offene Kampf wahre Stärke beweist.",
+      "after": "Die Feuerherzen kontrollieren die kalten und nassen Sümpfe südlich von Moortal, nahe der Grenze zur Schimmerküste und Rabenweide. Ihr Gebiet ist rau und unwirtlich, das Holz morsch und der Boden tückisch, was die Landwirtschaft erschwert. Doch genau dieses harte Leben hat ihre Krieger zäh und widerstandsfähig gemacht. Sie sind an Entbehrungen gewöhnt und gelten als unerbittliche Verteidiger ihrer Heimat, die ihre Sümpfe gegen gefährliche Kreaturen und Banditen schützen.\n\nIm Gegensatz zu den Kaltherzen, die auf List und Fernkampf setzen, bevorzugen die Feuerherzen direkte Konfrontation und setzen auf starke Infanteristen und Waldläufer. Ihre Krieger kämpfen tapfer und impulsiv, ohne Furcht vor Gefahren oder Tod, was ihnen Respekt und Bewunderung einbringt. Sie kämpfen offen und ehrenhaft, mit Speeren, Äxten und Schwertern, und verachten die Hinterhältigkeit ihrer kaltherzigen Verwandten. Ihre Infanterie ist hart und robust, an Sümpfe und Schlamm gewöhnt und bereit, bis zum letzten Atemzug zu kämpfen. Ehre und Mut sind ihre größten Tugenden, und sie glauben, dass nur der offene Kampf wahre Stärke beweist."
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "field": "sections.holdings",
+      "before": "Die Feuerherzen besitzen wenig Reichtum und Land, da ihr Gebiet aus kalten, nassen Sümpfen südlich von Moortal besteht, nahe der Grenze zur Schimmerküste und Rabenweide. Das Holz ist morsch, der Boden tückisch, und fruchtbares Land gibt es kaum, was ihnen wirtschaftliche Armut und Entbehrungen beschert. Dennoch sind sie stolz auf ihre Heimat und betrachten die unwirtlichen Sümpfe als Teil ihrer Identität und ihres trotzigen Geistes.\n\nIhre einzige Einnahmequelle stammt aus dem Zoll und der Kontrolle der Wald- und Sumpfpfade, die als Schleichwege und geheime Routen dienen und Händler und Reisende durch die tückischen Sümpfe führen. Doch selbst hier herrscht Armut, und ihre Siedlungen sind klein und einfach, oft nur aus Holz und Schilf gebaut. Wohlstand und Luxus bedeuten ihnen wenig, stattdessen setzen sie auf Gemeinschaft und Zusammenhalt, um in ihrer harten Umgebung zu überleben. Für die Feuerherzen zählt nicht Reichtum, sondern Ehre, Mut und Tapferkeit, und ihre Sümpfe sind für sie ein Symbol der Härte und Standhaftigkeit.",
+      "after": "Die Feuerherzen verwalten die kalten, nassen Sümpfe südlich von Moortal, nahe der Grenze zur Schimmerküste und Rabenweide. Das Holz ist vielerorts morsch, der Boden tückisch, und fruchtbares Land gibt es kaum. Dennoch nutzen sie die unterschiedlichen Ressourcen ihrer Heimat und haben eine vielfältige wirtschaftliche Grundlage bewahrt. Die unwirtlichen Sümpfe bleiben Teil ihrer Identität und ihres trotzigen Geistes.\n\nEin wichtiger Pfeiler ihrer Einnahmen sind Zölle und Abgaben an den passierbaren Wald- und Sumpfwegen. Suthborg sichert die südliche Hauptstraße und kontrolliert die Warenströme nach Moortal. Daneben tragen Jagd, Lederverarbeitung, Handwerk und Tauschhandel in den Dörfern zur Versorgung und zum Einkommen bei. Die Bergbauorte Rostklamm und Totengrundstollen liefern Erz und Steinmaterial und unterstützen damit Bauwerke, Werkzeuge und Waffen für den regionalen Bedarf.\n\nIhre Siedlungen bleiben einfach und müssen den Gefahren der Sümpfe trotzen. Gemeinschaft und Zusammenhalt bedeuten den Feuerherzen mehr als Luxus; Ehre, Mut und Tapferkeit prägen ihr Selbstverständnis auch dort, wo Handel und Handwerk eine beständige Lebensgrundlage schaffen."
+    },
+    {
+      "familyId": "haus-fiadhrach",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+      "field": "sections.overview",
+      "before": "Der Clan der Fiadhrach war ein elbisches Adelshaus des alten Fürstentums Glaennath. Sie herrschten über die waldreiche Region, die heute als Dämmergrund bekannt ist, und hatten ihren Sitz in der uralten Stadt Connair, die tief im Herzen des großen Waldes lag – abgeschieden, geschützt und spirituell bedeutsam.\n\nDie Fiadhrach galten als treue Vasallen des Hauses Tíogar und übernahmen in der Ordnung der Glaennath die Rolle geistiger Hüter und Bewahrer. Sie waren weniger Krieger als Druidenfürsten, deren Macht auf Tradition, Naturbindung und der Verehrung uralter Stätten basierte.",
+      "after": "Der Clan der Fiadhrach war ein albisches Adelshaus des alten Fürstentums Glaennath. Sie herrschten über die waldreiche Region, die heute als Dämmergrund bekannt ist, und hatten ihren Sitz in der uralten Stadt Connair, die tief im Herzen des großen Waldes lag – abgeschieden, geschützt und spirituell bedeutsam.\n\nDie Fiadhrach galten als treue Vasallen des Hauses Tíogar und übernahmen in der Ordnung der Glaennath die Rolle geistiger Hüter und Bewahrer. Sie waren weniger Krieger als Druidenfürsten, deren Macht auf Tradition, Naturbindung und der Verehrung uralter Stätten basierte."
+    }
+  ],
+  "territorialEvidence": "diagnostics/house-content-lore-fixes-20261104/gwaedlyd-changes.json",
+  "territorialSource": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs",
+  "contentVersion": "20261104-content-lore-v1",
+  "houseSources": [
+    {
+      "id": "haus-varulv",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+      "biographyChanged": true,
+      "previousRevision": 6,
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-content-lore-v1"
+    },
+    {
+      "id": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "biographyChanged": true,
+      "previousRevision": 7,
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-content-lore-v1"
+    },
+    {
+      "id": "haus-fiadhrach",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+      "biographyChanged": false,
+      "previousRevision": 2,
+      "biographySourceRevision": 2,
+      "contentVersion": "20261104-content-lore-v1"
+    }
+  ],
+  "preserved": [
+    "All family identities, relations, dates and profiles",
+    "Existing illustrations",
+    "Personal biographies and explicit removals",
+    "Previous audit and original source archives",
+    "Both Leitheach editorial notes"
+  ]
+}

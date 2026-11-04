@@ -1,0 +1,750 @@
+{
+  "schemaVersion": 1,
+  "sourceDirectory": "C:/Users/fhg_r/Downloads/Länder/Das Kaiserreich Argentum/Sylvarant",
+  "suppliedEmblems": [
+    {
+      "id": "house-afronia",
+      "kind": "house",
+      "name": "Afronia",
+      "sourceFile": "Afronia.png",
+      "sourceSha256": "639eb9bb49c87e4962cd422693bcb759704cd79e8c9d7e8dd1e05d521a71a337",
+      "original": "assets/originals/afronia.png",
+      "originalSha256": "639eb9bb49c87e4962cd422693bcb759704cd79e8c9d7e8dd1e05d521a71a337",
+      "dimensions": [
+        401,
+        398
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/afronia.webp",
+      "previewSha256": "1f1cbe4f67f3a8c0aef2f304a9bf9d1285c9ed40e690994340de75b866ff3b6a",
+      "previewDimensions": [
+        401,
+        398
+      ]
+    },
+    {
+      "id": "house-avidius",
+      "kind": "house",
+      "name": "Avidius",
+      "sourceFile": "Avidius.png",
+      "sourceSha256": "f6ee3780c5855b014324bd6b11a1c704507564a9b786882be7d3abedd3b3eb31",
+      "original": "assets/originals/avidius.png",
+      "originalSha256": "f6ee3780c5855b014324bd6b11a1c704507564a9b786882be7d3abedd3b3eb31",
+      "dimensions": [
+        424,
+        427
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/avidius.webp",
+      "previewSha256": "0be9e2b22002dc9adb84ead45e7b6886c62dcb1c525b9bde3c62e240148aeca3",
+      "previewDimensions": [
+        424,
+        427
+      ]
+    },
+    {
+      "id": "house-bruttia",
+      "kind": "house",
+      "name": "Bruttia",
+      "sourceFile": "Bruttia.png",
+      "sourceSha256": "46b5532019c92fbaceb0d69b6aca103f1051d2ae7513e1a31306a79a4436725d",
+      "original": "assets/originals/bruttia.png",
+      "originalSha256": "46b5532019c92fbaceb0d69b6aca103f1051d2ae7513e1a31306a79a4436725d",
+      "dimensions": [
+        449,
+        447
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/bruttia.webp",
+      "previewSha256": "6bf6161673ac9d02690bff64e73eb245beb04609325fe0975538d365b3265e24",
+      "previewDimensions": [
+        449,
+        447
+      ]
+    },
+    {
+      "id": "house-caepo",
+      "kind": "house",
+      "name": "Caepo",
+      "sourceFile": "Caepo.png",
+      "sourceSha256": "b1c3e56fee30cee0327dc1758632f67092525368ae62352adc8d21d677c90f02",
+      "original": "assets/originals/caepo.png",
+      "originalSha256": "b1c3e56fee30cee0327dc1758632f67092525368ae62352adc8d21d677c90f02",
+      "dimensions": [
+        420,
+        417
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/caepo.webp",
+      "previewSha256": "c5d85b778a6ce5e819d04e1cd4d1e10928ac3012a5ce437911b5f6911162cb97",
+      "previewDimensions": [
+        420,
+        417
+      ]
+    },
+    {
+      "id": "house-cerunia",
+      "kind": "house",
+      "name": "Cerunia",
+      "sourceFile": "Cerunia.png",
+      "sourceSha256": "c1335b67d4e7c4e6a1be5363764ebac4adb7e08eb290b6450fbf27c3ce5411b5",
+      "original": "assets/originals/cerunia.png",
+      "originalSha256": "c1335b67d4e7c4e6a1be5363764ebac4adb7e08eb290b6450fbf27c3ce5411b5",
+      "dimensions": [
+        435,
+        440
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/cerunia.webp",
+      "previewSha256": "46b6b8b1365135eb427967a2338e43b8322629cc06c45e487f424484da5c0334",
+      "previewDimensions": [
+        435,
+        440
+      ]
+    },
+    {
+      "id": "house-faleria",
+      "kind": "house",
+      "name": "Faleria",
+      "sourceFile": "Faleria.png",
+      "sourceSha256": "44d897a52574c94f762bfa42b713f50432baeef8b114d75ea5d4424ada48ecc4",
+      "original": "assets/originals/faleria.png",
+      "originalSha256": "44d897a52574c94f762bfa42b713f50432baeef8b114d75ea5d4424ada48ecc4",
+      "dimensions": [
+        434,
+        428
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/faleria.webp",
+      "previewSha256": "8ba1bbe50c4bb0c4b76c1113ad7e4ec3ca32eabc139b11e3485ef6e1a6abb5d4",
+      "previewDimensions": [
+        434,
+        428
+      ]
+    },
+    {
+      "id": "house-flamen",
+      "kind": "house",
+      "name": "Flamen",
+      "sourceFile": "Flamen.png",
+      "sourceSha256": "4dd9baf98bfac345c43cac254f9449c5166275b2bcf2351723facfe4a58db5f1",
+      "original": "assets/originals/flamen.png",
+      "originalSha256": "4dd9baf98bfac345c43cac254f9449c5166275b2bcf2351723facfe4a58db5f1",
+      "dimensions": [
+        453,
+        451
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/flamen.webp",
+      "previewSha256": "16430aa786186b36625218f57c0d784e4ec0890e154de04030761eb6372e1bfa",
+      "previewDimensions": [
+        453,
+        451
+      ]
+    },
+    {
+      "id": "realm-argentum",
+      "kind": "realm",
+      "name": "Kaiserreich Argentum",
+      "sourceFile": "Kaiserreich Argentum.png",
+      "sourceSha256": "e52e021882e1fa9a1551668d047235947b7b53b537b5c581ce61642c01e48c30",
+      "original": "assets/originals/argentum.png",
+      "originalSha256": "e52e021882e1fa9a1551668d047235947b7b53b537b5c581ce61642c01e48c30",
+      "dimensions": [
+        412,
+        413
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/argentum.webp",
+      "previewSha256": "8ab49dfcd658d6247e8997fad7e79ee7ef208a50f9709cbe2957174095513b32",
+      "previewDimensions": [
+        412,
+        413
+      ]
+    },
+    {
+      "id": "house-maborel",
+      "kind": "house",
+      "name": "Maborel",
+      "sourceFile": "Maborel.png",
+      "sourceSha256": "545e8b980c82b34c44a8de7500e73b3c65f97f559a58a85dae840d4ca91dd934",
+      "original": "assets/originals/maborel.png",
+      "originalSha256": "545e8b980c82b34c44a8de7500e73b3c65f97f559a58a85dae840d4ca91dd934",
+      "dimensions": [
+        437,
+        441
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/maborel.webp",
+      "previewSha256": "bf1d42ff84d48b90e625d2d7b00d984dc2da4c80cd22da177488d470ae47381c",
+      "previewDimensions": [
+        437,
+        441
+      ]
+    },
+    {
+      "id": "house-mede",
+      "kind": "house",
+      "name": "Mede",
+      "sourceFile": "Mede Wappen.png",
+      "sourceSha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b",
+      "original": "assets/originals/mede.png",
+      "originalSha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b",
+      "dimensions": [
+        390,
+        387
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/mede.webp",
+      "previewSha256": "9cf01015ce9936e025dc928237620e0b129f0f9e7be79ff98f00334703d308e0",
+      "previewDimensions": [
+        390,
+        387
+      ]
+    },
+    {
+      "id": "house-pullo",
+      "kind": "house",
+      "name": "Pullo",
+      "sourceFile": "Pullo.png",
+      "sourceSha256": "7ddb07d8ad79edf12e46718e19b92e75be8734cf951a9b57facd6899cf49444a",
+      "original": "assets/originals/pullo.png",
+      "originalSha256": "7ddb07d8ad79edf12e46718e19b92e75be8734cf951a9b57facd6899cf49444a",
+      "dimensions": [
+        436,
+        435
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/pullo.webp",
+      "previewSha256": "974ba2274cfc74736a82a12422f3b241d0c14e7fe2d61835bc2aadef1c559739",
+      "previewDimensions": [
+        436,
+        435
+      ]
+    },
+    {
+      "id": "house-rinia",
+      "kind": "house",
+      "name": "Rinia",
+      "sourceFile": "Rinia.png",
+      "sourceSha256": "c20eb1c2471c63342affea9f3bfc7aeae02f4bba1081483905ababa717720e81",
+      "original": "assets/originals/rinia.png",
+      "originalSha256": "c20eb1c2471c63342affea9f3bfc7aeae02f4bba1081483905ababa717720e81",
+      "dimensions": [
+        831,
+        829
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/rinia.webp",
+      "previewSha256": "6181b6a967271eda77dd4d7b356c48874fb44b2ca02a94c92a4737ed9f98e1c1",
+      "previewDimensions": [
+        600,
+        599
+      ]
+    },
+    {
+      "id": "house-stalitia",
+      "kind": "house",
+      "name": "Stalitia",
+      "sourceFile": "Stalitia.png",
+      "sourceSha256": "4221e715641e166d7570ff25ded1febfd35e9fec6d283ec44da9b813537d86bf",
+      "original": "assets/originals/stalitia.png",
+      "originalSha256": "4221e715641e166d7570ff25ded1febfd35e9fec6d283ec44da9b813537d86bf",
+      "dimensions": [
+        441,
+        440
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/stalitia.webp",
+      "previewSha256": "a00b891b9bec482d54a847490e178ed8df9a74412561c38b7cac7402e5cc1f03",
+      "previewDimensions": [
+        441,
+        440
+      ]
+    },
+    {
+      "id": "house-sylvian",
+      "kind": "house",
+      "name": "Sylvian",
+      "sourceFile": "Sylvian.png",
+      "sourceSha256": "d95c4a756ab686818859c490d0f29ac0d0967a76379c0e9194ca525eaca6ecd5",
+      "original": "assets/originals/sylvian.png",
+      "originalSha256": "d95c4a756ab686818859c490d0f29ac0d0967a76379c0e9194ca525eaca6ecd5",
+      "dimensions": [
+        455,
+        454
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/sylvian.webp",
+      "previewSha256": "807b7aa20a16e3c9e02ce0d4da01e2d28fbd679122b7fbdddfac9d99c2e64958",
+      "previewDimensions": [
+        455,
+        454
+      ]
+    },
+    {
+      "id": "house-syx",
+      "kind": "house",
+      "name": "Syx",
+      "sourceFile": "Syx.png",
+      "sourceSha256": "2c878d128b0387f8561889b211c30b47ef81900c4419286bfc3c5fb552c97ad7",
+      "original": "assets/originals/syx.png",
+      "originalSha256": "2c878d128b0387f8561889b211c30b47ef81900c4419286bfc3c5fb552c97ad7",
+      "dimensions": [
+        375,
+        375
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/syx.webp",
+      "previewSha256": "5ba6c46099b6e248a304e213fce07562ffe776ae7c897c5d16d4ee0dc9d2e4f0",
+      "previewDimensions": [
+        375,
+        375
+      ]
+    },
+    {
+      "id": "house-umbranox",
+      "kind": "house",
+      "name": "Umbranox",
+      "sourceFile": "Umbranox.png",
+      "sourceSha256": "70a70cbbf024f0fbe0d414a117d0cc287fa2b831c6a55ac9f88c245bb2df2785",
+      "original": "assets/originals/umbranox.png",
+      "originalSha256": "70a70cbbf024f0fbe0d414a117d0cc287fa2b831c6a55ac9f88c245bb2df2785",
+      "dimensions": [
+        438,
+        442
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/umbranox.webp",
+      "previewSha256": "9034869a3edf6fe9deb6588ecae9ce69ecd6f1f68033f5c69a5fde9968623b21",
+      "previewDimensions": [
+        438,
+        442
+      ]
+    },
+    {
+      "id": "house-vineben",
+      "kind": "house",
+      "name": "Vineben",
+      "sourceFile": "Vineben.png",
+      "sourceSha256": "c41db74cde245d0627d9b9d44576f9d456b53bb76bf20c3ab66d1340ebca57b3",
+      "original": "assets/originals/vineben.png",
+      "originalSha256": "c41db74cde245d0627d9b9d44576f9d456b53bb76bf20c3ab66d1340ebca57b3",
+      "dimensions": [
+        447,
+        446
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/vineben.webp",
+      "previewSha256": "544ac34585f2b654d91d2128b107ade2c4896b8c44a9fec3619b207b62cdbd9e",
+      "previewDimensions": [
+        447,
+        446
+      ]
+    },
+    {
+      "id": "house-vulpin",
+      "kind": "house",
+      "name": "Vulpin",
+      "sourceFile": "Vulpin.png",
+      "sourceSha256": "6a22d6261232e64b80a6d4dd310745f68975a92ccf024e4b985aa55a666cf76e",
+      "original": "assets/originals/vulpin.png",
+      "originalSha256": "6a22d6261232e64b80a6d4dd310745f68975a92ccf024e4b985aa55a666cf76e",
+      "dimensions": [
+        351,
+        348
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/vulpin.webp",
+      "previewSha256": "2c679d3498ba4249810e82cd6d2d84e6b7056c531b15dc9e4190d9bc7c466722",
+      "previewDimensions": [
+        351,
+        348
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": "regions",
+      "number": 1,
+      "short": "Gelieferte Karte",
+      "file": "Kaiserreich (Sylvarant).png",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Sylvarant\\Kaiserreich (Sylvarant).png",
+      "sourceSha256": "25926dcf8657110a9d7559166f195f68e3bfa0c3ae7e46f7edef6e7f0e8d5878",
+      "sourceImageSize": [
+        8126,
+        8192
+      ],
+      "originalRetained": true,
+      "map": "assets/maps/sylvarant.webp",
+      "sha256": "818cb42c49a71a34d6286d58c671fe05aef219de72946e347f196669453def85",
+      "imageSize": [
+        4063,
+        4096
+      ],
+      "noGeometryEdits": true,
+      "sourceMarkers": [
+        {
+          "area": 10867,
+          "bbox": [
+            5649,
+            219,
+            5799,
+            369
+          ],
+          "centre": [
+            5724.0,
+            294.0
+          ]
+        },
+        {
+          "area": 15508,
+          "bbox": [
+            4720,
+            1161,
+            4914,
+            1342
+          ],
+          "centre": [
+            4817.0,
+            1251.5
+          ]
+        },
+        {
+          "area": 10874,
+          "bbox": [
+            5457,
+            1454,
+            5608,
+            1604
+          ],
+          "centre": [
+            5532.5,
+            1529.0
+          ]
+        },
+        {
+          "area": 15046,
+          "bbox": [
+            2058,
+            1727,
+            2252,
+            1907
+          ],
+          "centre": [
+            2155.0,
+            1817.0
+          ]
+        },
+        {
+          "area": 25886,
+          "bbox": [
+            3292,
+            1928,
+            3486,
+            2126
+          ],
+          "centre": [
+            3389.0,
+            2027.0
+          ]
+        },
+        {
+          "area": 25885,
+          "bbox": [
+            6905,
+            2289,
+            7099,
+            2487
+          ],
+          "centre": [
+            7002.0,
+            2388.0
+          ]
+        },
+        {
+          "area": 10867,
+          "bbox": [
+            2751,
+            2645,
+            2901,
+            2795
+          ],
+          "centre": [
+            2826.0,
+            2720.0
+          ]
+        },
+        {
+          "area": 10877,
+          "bbox": [
+            5652,
+            2709,
+            5803,
+            2859
+          ],
+          "centre": [
+            5727.5,
+            2784.0
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            5220,
+            2739,
+            5371,
+            2889
+          ],
+          "centre": [
+            5295.5,
+            2814.0
+          ]
+        },
+        {
+          "area": 10876,
+          "bbox": [
+            4543,
+            2969,
+            4694,
+            3119
+          ],
+          "centre": [
+            4618.5,
+            3044.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            2977,
+            3100,
+            3128,
+            3250
+          ],
+          "centre": [
+            3052.5,
+            3175.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            1382,
+            3440,
+            1533,
+            3590
+          ],
+          "centre": [
+            1457.5,
+            3515.0
+          ]
+        },
+        {
+          "area": 10870,
+          "bbox": [
+            2718,
+            4038,
+            2868,
+            4188
+          ],
+          "centre": [
+            2793.0,
+            4113.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            7466,
+            4188,
+            7616,
+            4338
+          ],
+          "centre": [
+            7541.0,
+            4263.0
+          ]
+        },
+        {
+          "area": 35414,
+          "bbox": [
+            4653,
+            4238,
+            4957,
+            4542
+          ],
+          "centre": [
+            4805.0,
+            4390.0
+          ]
+        },
+        {
+          "area": 10879,
+          "bbox": [
+            5359,
+            5007,
+            5510,
+            5157
+          ],
+          "centre": [
+            5434.5,
+            5082.0
+          ]
+        },
+        {
+          "area": 10879,
+          "bbox": [
+            702,
+            5178,
+            853,
+            5328
+          ],
+          "centre": [
+            777.5,
+            5253.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            4046,
+            5295,
+            4197,
+            5445
+          ],
+          "centre": [
+            4121.5,
+            5370.0
+          ]
+        },
+        {
+          "area": 10874,
+          "bbox": [
+            2880,
+            5394,
+            3030,
+            5545
+          ],
+          "centre": [
+            2955.0,
+            5469.5
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            6770,
+            5459,
+            6921,
+            5609
+          ],
+          "centre": [
+            6845.5,
+            5534.0
+          ]
+        },
+        {
+          "area": 10871,
+          "bbox": [
+            2114,
+            5726,
+            2265,
+            5876
+          ],
+          "centre": [
+            2189.5,
+            5801.0
+          ]
+        },
+        {
+          "area": 10877,
+          "bbox": [
+            5996,
+            6286,
+            6147,
+            6436
+          ],
+          "centre": [
+            6071.5,
+            6361.0
+          ]
+        },
+        {
+          "area": 26036,
+          "bbox": [
+            671,
+            6562,
+            866,
+            6760
+          ],
+          "centre": [
+            768.5,
+            6661.0
+          ]
+        },
+        {
+          "area": 25663,
+          "bbox": [
+            3130,
+            6654,
+            3324,
+            6852
+          ],
+          "centre": [
+            3227.0,
+            6753.0
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            7187,
+            7313,
+            7337,
+            7463
+          ],
+          "centre": [
+            7262.0,
+            7388.0
+          ]
+        },
+        {
+          "area": 25885,
+          "bbox": [
+            5571,
+            7515,
+            5765,
+            7713
+          ],
+          "centre": [
+            5668.0,
+            7614.0
+          ]
+        }
+      ],
+      "bakedNames": true,
+      "bakedCityLabels": [
+        "Hauptstadt"
+      ]
+    }
+  ]
+}

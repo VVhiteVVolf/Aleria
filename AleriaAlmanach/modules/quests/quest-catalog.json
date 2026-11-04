@@ -2347,6 +2347,14 @@
       "title": "Laerelis"
     },
     {
+      "id": "tlapanui",
+      "title": "Nuatlapa · Tlapanui"
+    },
+    {
+      "id": "ishtaran",
+      "title": "Tirghan · Ishtaran"
+    },
+    {
       "id": "infernal-nharazim",
       "title": "Infernal"
     },
@@ -2477,6 +2485,10 @@
     {
       "id": "draig-leibgarde",
       "title": "Draig Leibgarde"
+    },
+    {
+      "id": "oweta-quartett",
+      "title": "Owetas Quartett"
     },
     {
       "id": "drachentanz-volkstanz",
@@ -2743,6 +2755,16 @@
       "moduleId": "laerelis-lichtfluss"
     },
     {
+      "id": "tlapanui",
+      "title": "Nuatlapa · Tlapanui · I. — Die Rede der Inselgemeinschaft",
+      "moduleId": "tlapanui"
+    },
+    {
+      "id": "ishtaran",
+      "title": "Tirghan · Ishtaran · I. — Die Rede des gemeinsamen Landes",
+      "moduleId": "ishtaran"
+    },
+    {
       "id": "infernal-nharazim",
       "title": "Infernal · I. — Die Sprache unter dem gebrochenen Himmel",
       "moduleId": "infernal-nharazim"
@@ -2971,6 +2993,31 @@
       "id": "draig-leibgarde::page:3",
       "title": "Draig Leibgarde · IV. — Dienstordnung & Namen",
       "moduleId": "draig-leibgarde"
+    },
+    {
+      "id": "oweta-quartett",
+      "title": "Owetas Quartett",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:quartett",
+      "title": "Owetas Quartett · Owetas Quartett",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:rangfolge",
+      "title": "Owetas Quartett · Die Gemeinschaft",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::page:gruppenuebersicht",
+      "title": "Owetas Quartett · Gruppenübersicht",
+      "moduleId": "oweta-quartett"
+    },
+    {
+      "id": "oweta-quartett::session:mittagsrast",
+      "title": "Owetas Quartett · Mittagsrast am Lagerfeuer",
+      "moduleId": "oweta-quartett"
     },
     {
       "id": "drachentanz-volkstanz",
@@ -6066,6 +6113,8 @@
     "AleriaAlmanach/modules/klingende-muenze-gwynthor/post-data.js",
     "AleriaAlmanach/modules/lachende-nixe/nixe-data.js",
     "AleriaAlmanach/modules/language/arcane-alphabet-entry.js",
+    "AleriaAlmanach/modules/language/ishtaran/ishtaran-data.js",
+    "AleriaAlmanach/modules/language/ishtaran/ishtaran-entry.js",
     "AleriaAlmanach/modules/language/laerelis/laerelis-data.js",
     "AleriaAlmanach/modules/language/laerelis/laerelis-entry.js",
     "AleriaAlmanach/modules/language/laerelis/laerelis-tables.js",
@@ -6074,6 +6123,9 @@
     "AleriaAlmanach/modules/language/morgar/morgar-data.js",
     "AleriaAlmanach/modules/language/morgar/morgar-entry.js",
     "AleriaAlmanach/modules/language/morgar/morgar-tables.js",
+    "AleriaAlmanach/modules/language/package-language-tables.js",
+    "AleriaAlmanach/modules/language/tlapanui/tlapanui-data.js",
+    "AleriaAlmanach/modules/language/tlapanui/tlapanui-entry.js",
     "AleriaAlmanach/modules/letzte-rast/rast-data.js",
     "AleriaAlmanach/modules/letzter-heller/heller-data.js",
     "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js",
@@ -6081,6 +6133,7 @@
     "AleriaAlmanach/modules/name-list/name-list-data.js",
     "AleriaAlmanach/modules/natural-resources/natural-resources-data.js",
     "AleriaAlmanach/modules/organization-network/organization-network-data.js",
+    "AleriaAlmanach/modules/oweta-quartett/oweta-quartett-data.js",
     "AleriaAlmanach/modules/pendrwn-general-store/store-data.js",
     "AleriaAlmanach/modules/piracy/piracy-entries.js",
     "AleriaAlmanach/modules/religion/gruener-bund/gruener-bund-entry.js",

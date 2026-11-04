@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-03",
+  "applied": true,
+  "retiredDocuments": 4,
+  "canonicalPeople": 3,
+  "membershipUpdates": 0,
+  "canonicalProfileWrites": 0,
+  "liveResourceWrites": 0,
+  "verifiedPreservation": true,
+  "plans": [
+    "retirement-plan.json",
+    "retirement-plan-gwendolyn-alias.json"
+  ],
+  "atomicRetirementCommits": 2,
+  "relatedBiographyDocumentsVerified": 7,
+  "relatedBiographyCharacters": 3,
+  "relatedBiographyCreatures": 4,
+  "localDatabaseProjection": {
+    "selectedCharacters": 3,
+    "newCharacters": 1,
+    "unrelatedCharactersPreserved": 263,
+    "canonicalCombatWrites": 0,
+    "fullInventoryImports": 0,
+    "checkChangedFiles": 0
+  },
+  "biographyVerification": "../patrick-bios-20261103/publication-verification.json",
+  "method": "Guarded Firestore commit after encrypted original backup; complete before/after preservation verified by the publisher.",
+  "metadataFollowup": {
+    "verified": true,
+    "planId": "267d5332b331a0b468b2c5d84b808c769fa0c5da960ff83ebe524f8009c73f4a",
+    "updatedCharacterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+    "profileFields": [
+      "role",
+      "bio"
+    ],
+    "inventoryWrites": 0,
+    "combatWrites": 0,
+    "verification": "../patrick-bios-20261103/metadata-followup-verification.json",
+    "localDatabaseChangedFiles": 9,
+    "localDatabaseNewCharacters": 0,
+    "localDatabaseCheckChangedFiles": 0
+  }
+}

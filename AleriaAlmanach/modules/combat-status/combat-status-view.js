@@ -1,7 +1,9 @@
-import { getStatusIcon, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
-import { getRollModeLabel } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
+import { getStatusIcon } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 import { formatStatusDuration } from './combat-status-model.js?v=20260906-effect-rolls-v1';
-import { summarizeRuleEffects } from '../combat/ui/combat-rule-presentation.js';
+import { describeCombatTriggerRule } from '../combat/ui/combat-rule-presentation.js';
+import { summarizeCombatMechanics } from '../combat/ui/combat-mechanics-presentation.js';
+import { getActionBlockingCondition } from '../combat/combat-wait-action.js';
+import { describeCombatWardDeflection } from '../combat/ui/combat-ward-presentation.js';
 
 export function escapeCombatMarkup(value) {
   return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -17,28 +19,26 @@ export const renderCombatIcon = (source, fallback = '✦') => safeCombatImage(so
 
 export function renderCombatCondition(condition, { removable = false, temporary = false } = {}) {
   const rules = (condition.triggerRules || []).filter(rule => rule.enabled !== false)
-    .map(rule => summarizeRuleEffects(rule.effects)).filter(label => label !== 'Auslöser angewandt');
+    .map(describeCombatTriggerRule);
   const preparation = [condition.blockedResource ? `${({ action: 'Aktion', reaction: 'Reaktion', 'bonus-action': 'Bonusaktion' })[condition.blockedResource] || condition.blockedResource} gesperrt` : '',
+    getActionBlockingCondition({ conditions: [condition] }) ? 'Freiwillige Handlungen und Reaktionen gesperrt; Abwarten und Rettungen bleiben möglich' : '',
     condition.damageGuard?.charges > 0 ? `Nächster Treffer: −${condition.damageGuard.reduction} Schaden · ${condition.damageGuard.charges} Ladung` : '',
-    condition.counterAttack?.enabled ? 'Einmaliger Konter nach gegnerischem Fehlschlag' : '', ...rules].filter(Boolean).join(' · ');
-  const modifiers = [...STATUS_MODIFIERS, ['strength', 'Kraft'], ['movement', 'Bewegung'], ['initiative', 'Initiative']].filter(([key]) => Number(condition.mechanics?.[key]))
-    .map(([key, label]) => `${label} ${formatCombatModifier(condition.mechanics[key])}`).join(' · ');
-  const rollModes = STATUS_ROLL_MODES.filter(([key]) => ['advantage', 'disadvantage'].includes(condition.mechanics?.[key]))
-    .map(([key, label]) => `${getRollModeLabel(condition.mechanics[key])}: ${label}`).join(' · ');
-  const saveNames = { strength: 'STÄ', dexterity: 'GES', constitution: 'KON', intelligence: 'INT', wisdom: 'WEI', charisma: 'CHA' };
-  const conditional = [...(condition.mechanics?.skillModifiers || []).map(modifier => `${modifier.name} ${formatCombatModifier(modifier.bonus)}`),
-    ...(condition.mechanics?.saveAttributeModifiers || []).map(modifier => `${saveNames[modifier.attributeKey] || modifier.attributeKey}-Rettung ${formatCombatModifier(modifier.bonus)}`),
-    ...(condition.mechanics?.saveModifiers || []).map(modifier => `${({ fear: 'Rettung gegen Furcht', poison: 'Rettung gegen Gift', bleeding: 'Rettung gegen Blutungsfolgen' })[modifier.kind] || modifier.kind} ${formatCombatModifier(modifier.bonus)}`)].join(' · ');
+    condition.ward?.enabled ? describeCombatWardDeflection(condition.ward) : '',
+    condition.ward?.enabled && condition.ward.breaksOnCriticalHit ? 'Magische Abwehr zerbricht bei einem kritischen Treffer' : '',
+    condition.counterAttack?.enabled ? 'Einmaliger Konter nach gegnerischem Fehlschlag' : '',
+    condition.blockPreparedCounter ? 'Vorbereitete Konter gesperrt' : '',
+    condition.criticalPeriodicLoss > 0 ? `Nachschaden: −${condition.criticalPeriodicLoss} TP zu Beginn jedes eigenen Beitrags` : '',
+    condition.usage?.remaining > 0 ? `${condition.usage.remaining} verbleibende Anwendung${condition.usage.remaining === 1 ? '' : 'en'}` : '', ...rules].filter(Boolean).join(' · ');
+  const modifiers = summarizeCombatMechanics({ ...condition.mechanics, blocksActions: false });
+  const conditional = summarizeCombatMechanics(condition.conditionalMechanics);
   const duration = (temporary ? formatStatusDuration(condition) : condition.duration || 'Aus dem Charakterbogen')
     + (condition.concentrationOwnerId && condition.durationModel?.kind !== 'concentration' ? ' · Konzentration' : '');
   return `<li class="comment-combat-condition" data-condition-id="${e(condition.id)}" data-status-kind="${e(condition.statusKind || 'condition')}">
     <span class="comment-combat-condition-icon">${renderCombatIcon(getStatusIcon(condition) || condition.icon)}</span>
     <div><strong>${e(condition.name)}</strong><small>${e(duration)}${condition.ward?.enabled ? ` · ${e(condition.ward.charges)} Abwehrladungen` : ''}</small>
       ${modifiers ? `<small class="comment-combat-condition-modifiers">${e(modifiers)}</small>` : ''}
-      ${conditional ? `<small class="comment-combat-condition-modifiers">${e(conditional)}</small>` : ''}
+      ${conditional ? `<small class="comment-combat-condition-modifiers">Nur beim passenden Auslöser: ${e(conditional)}</small>` : ''}
       ${preparation ? `<small class="comment-combat-condition-modifiers">${e(preparation)}</small>` : ''}
-      ${condition.mechanics?.weaponBonusDamageFormula ? `<small class="comment-combat-condition-modifiers">Waffenschaden +${e(condition.mechanics.weaponBonusDamageFormula.replace(/d/gi, 'W'))}</small>` : ''}
-      ${rollModes ? `<small class="comment-combat-condition-modifiers">${e(rollModes)}</small>` : ''}
       ${condition.description || condition.source ? `<details data-profile-details-key="condition:${e(condition.id)}"><summary>Wirkung & Quelle</summary><p>${e(condition.description || '')}</p>${condition.source ? `<p>${e(condition.source)}</p>` : ''}</details>` : ''}
     </div>${removable ? `<button type="button" data-action="remove-comment-combat-condition" data-condition-id="${e(condition.id)}" aria-label="${e(condition.name)} entfernen" title="Effekt entfernen">×</button>` : ''}</li>`;
 }

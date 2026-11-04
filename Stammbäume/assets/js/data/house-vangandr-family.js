@@ -332,7 +332,7 @@ export const HOUSE_VANGANDR_FAMILY = Object.freeze({
     spouse('gudrid', 'Gudrid', 'female', '1674', ''),
     spouse('emma', 'Emma', 'female', '1675', ''),
     relationPartner('deirdre', 'Deirdre', '1702', '', 'forced', 'Opfer Eadrics · Mutter Finnbolds'),
-    spouse('annegret', 'Annegret', 'female', '1700', ''),
+    spouse('annegret', 'Annegret', 'female', '1680', ''),
 
     person('vidar-vangandr', 'Vidar Vangandr', 'male', '1692', '', {
       title: 'Erster Erbe des Clans Vangandr',

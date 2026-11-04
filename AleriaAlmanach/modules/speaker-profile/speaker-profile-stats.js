@@ -186,6 +186,7 @@ function makeSpeakerProfileSegmentContext(comment, segment, options = {}) {
 }
 
 function buildSpeakerProfileStats(character, fallbackName, comments, currentThreadIds = []) {
+  comments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
   const threadSet = new Set((currentThreadIds || []).map(id => String(id || '').trim()).filter(Boolean));
   const wordCounts = new Map();
   const kindCounts = new Map();

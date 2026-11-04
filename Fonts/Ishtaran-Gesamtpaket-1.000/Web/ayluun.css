@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Ayluun Mondbogen';
+  src: url('../Fonts/AyluunMondbogen-Regular.woff2') format('woff2'),
+       url('../Fonts/AyluunMondbogen-Regular.woff') format('woff'),
+       url('../Fonts/AyluunMondbogen-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.ayluun { font-family: 'Ayluun Mondbogen', fantasy; font-size: 2.1rem; letter-spacing: .08em; }

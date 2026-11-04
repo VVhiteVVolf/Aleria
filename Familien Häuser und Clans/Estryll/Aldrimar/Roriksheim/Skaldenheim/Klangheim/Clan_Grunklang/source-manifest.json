@@ -1,0 +1,47 @@
+{
+  "id": "haus-gruenklang",
+  "source": null,
+  "authority": {
+    "familyId": "haus-gruenklang",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-brathfengr",
+      "liegeHouseName": "Clan Brathfengr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-gruenklang",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "gruenklang",
+    "id": "haus-gruenklang",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-53cf88bf-b432-4ada-bd03-7464b9686886.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-gruenklang/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "preset": "fantasy-rpg-character",
+    "promptManifest": "diagnostics/roriksheim-clans-20261103/image-prompts.json",
+    "sha256": "7bd8b94d7bf8f56b517111b19fca9ec51840ed1fd4a577bd7e1a0b2053a100a1"
+  },
+  "decisions": [
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

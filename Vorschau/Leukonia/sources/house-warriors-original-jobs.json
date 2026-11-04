@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "tool": "built-in image_gen.imagegen",
+  "status": "Independent house figure proposals; no named persons or canonical biographies.",
+  "stylePreset": "AleriaAlmanach/docs/art/image-style-presets.json#fantasy-rpg-character",
+  "newUserDirection": "Greek/Roman/Byzantine diversity; closed helmets for some heavy figures. Existing completed prompts are retained exactly; last3 briefs and the focused Lex helmet edit follow the latest direction.",
+  "jobs": [
+    {
+      "id": "warrior-house-apinia",
+      "helmet": "Offener attischer Bronzehelm mit dunklem Längskamm",
+      "assetStem": "house-apinia",
+      "category": "warriors",
+      "houseId": "house-apinia",
+      "prototypeId": "prototype-07",
+      "role": "Römischer Kampfbarde",
+      "description": "Eine junge Kampfbardin mit bronzenem Harnisch, heller Tunika und dunklem Schulterstoff; das Federmotiv erscheint als dezenter Beschlag.",
+      "equipment": [
+        "Säbel",
+        "tragbare Kithara"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Kohlschwarz",
+        "gedecktes Rostorange",
+        "altes Bronze-/Silbergold"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Römische, lateinische, kampanische und spätantike Ausrüstung. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEine junge erwachsene Frau von23Jahren, schlank athletisch, schmales Gesicht mit dunklen Augen und langen schwarzen Haaren in einer einzelnen sichtbaren Seitenflechte. Haus Apinia, römische Kampfbardin. Leichter taillierter kampanischer Bronzeharnisch mit großem elfenbeinfarbenem Bruststoff, schwarze lederne Pteryges, kurze helle Tunika mit schmalem rostorangem Saum, asymmetrisch gefaltete schwarze Schulterdecke. Niedriger traditioneller offener attischer Bronzehelm mit kleinen hochgeklappten Wangenklappen und kleinem dunklem Längskamm, keine Krone. Kleine silberne Feder aus dem Hauswappen als Brustbeschlag und schmale Federstickerei am Mantelsaum. Aufrechter ruhiger Stand leicht nach links gedreht, ein Fuß locker vorgestellt. Die linke Hand stützt eine kleine tragbare dunkle römische Kithara am Hüftgurt, mit rechteckigem offenem Rahmen und wenigen klaren Saiten; die rechte Hand hält einen gebogenen Säbel locker mit Spitze schräg nach unten. Beide Gegenstände sauber getrennt. Kein Schreibpult, keine Feder als Waffe, keine zusätzliche Person, keine Bühne. Eigenständige elegante weibliche Silhouette; kein männlicher Prototyp7 in anderen Farben.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\apinia.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "d14b070d58a9ad10cc286a8d1388147378db604d4cb49c1066bdedbfeddf56c4"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-bolar",
+      "helmet": "Korintherhelm mit Nasal und langen Wangenplatten; weit geschlossener Gesichtsschutz",
+      "assetStem": "house-bolar",
+      "category": "warriors",
+      "houseId": "house-bolar",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist",
+      "description": "Ein schwerer Infanterist mit Korintherhelm, Ketten- und Schuppenrüstung sowie Axt und dunkelgrünem Turmschild.",
+      "equipment": [
+        "Axt",
+        "Turmschild"
+      ],
+      "palette": [
+        "tiefes Waldgrün",
+        "Elfenbein",
+        "gedecktes Gold",
+        "dunkles Eisen"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Römische, lateinische, kampanische und spätantike Ausrüstung. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEin junger erwachsener Mann von26Jahren mit athletisch kräftigen Schultern und schlanker Taille, keinesfalls alt oder übergewichtig; jugendliche dunkle Augen und kurzer schwarzer Haarschnitt. Schwere Infanterie des Hauses Bolar. Traditioneller korinthischer Helm aus dunkler matter Bronze mit normalen langen Wangenplatten, Nasal und offenem Mundbereich; niedriger cremefarbener Längsbusch. Kettenhemd mit dunkelgrün gefasstem breitem Schuppenpanzer darüber, schwere lederne Schulterlaschen, dunkelgrüne Tunika, kurze elfenbeinfarbene Feldschärpe und matte Eisenbeinschienen. Keine Segmentpanzerkopie des Prototyps. In der rechten Hand eine einzige funktionale einblättrige Kampfaxt, Blatt und kompletter Schaft sichtbar ruhig seitlich gehalten. Die andere Hand hält einen hohen leicht gekrümmten Turmschild mit gerundeter Oberkante, tiefgrün, mit einem klaren kleinen cremefarbenen Krakenmotiv des Hauswappens in der oberen Mitte. Natürlicher aufrechter frontaler Wachstand mit Blick seitlich über den Schild, kein Angriff. Kein Krakenkopf als Helm, keine Tentakelrüstung und kein weiteres Schwert.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\bolar.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "7e690fdf9cd91688e470784fdcb306746a3dc907a85b280dbc69c2258e6b0cf2"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-lex",
+      "helmet": "Geschlossener griechisch-byzantinischer Gesichtshelm mit weißem Kamm; gezielter Helm-Edit",
+      "assetStem": "house-lex",
+      "category": "warriors",
+      "houseId": "house-lex",
+      "prototypeId": "prototype-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "description": "Eine Lanzenträgerin mit dunklem Segmentharnisch, silbernem spätrömischem Helm und zurückhaltendem Helm-Motiv am Stoff.",
+      "equipment": [
+        "lange Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Anthrazit",
+        "Silber",
+        "gebrochenes Weiß"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Römische, lateinische, kampanische und spätantike Ausrüstung. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEine junge erwachsene Frau von25Jahren, schlank athletisch, kantiges jugendliches Gesicht, sehr kurzes glattes schwarzes Haar und dunkle Augen. Schwer gepanzerte Lanzenträgerin des Hauses Lex. Breiter traditioneller gewölbter spätrömischer Intercisa-Helm aus mattem Silbermetall mit normalem Scheitelband und breiten klappbaren Wangenstücken; kleiner fächerförmiger weißer Kamm als Anklang an den normalen Helm im Wappen, keine wörtliche riesige Wappengrafik als Kopfschmuck. Dunkler eisenfarbener Segmentharnisch mit großem leicht gerundetem Bruststück und wenigen breiten horizontalen Bauchbändern, helle Kettenunterärmel, schwarze Pteryges, weiße knielange Tunika und schmales anthrazitfarbenes Schultertuch. Komplette gerade Lanze wird seitlich links gehalten, eine Hand oben locker am Schaft, die andere unten nahe der Hüfte, Spitze und Fuß der Lanze beide sichtbar. Füße ruhig leicht versetzt, Dreiviertelansicht nach rechts, freie Sicht auf beide Beine. Kein Schild und keine zusätzliche gezogene Klinge. Kleines silbernes Helmmotiv mit Lorbeer auf schwarzer seitlicher Stofflasche. Keine Wiederholung von Prototyp2s grünem Lamellenmantel.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\lex.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "28701760f7d8b33edf3f2da7147ddf15a9c19573b98fe9214d7bab1eab58ee87"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-orania",
+      "helmet": "Offener phrygischer Reiterhelm mit vorgebogener Kappe",
+      "assetStem": "house-orania",
+      "category": "warriors",
+      "houseId": "house-orania",
+      "prototypeId": "prototype-03",
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "description": "Ein Kataphrakt mit spätrömischem Reiterhelm und kupferfarbenem Lamellenpanzer auf einem dunkelgrauen Equo.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Reiterrüstung"
+      ],
+      "palette": [
+        "dunkles Marineblau",
+        "Kupferbraun",
+        "Elfenbein",
+        "gedämpftes Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Römische, lateinische, kampanische und spätantike Ausrüstung. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEin junger erwachsener Mann von27Jahren, schlank und athletisch, leicht gebräuntes längliches Gesicht, glattes dunkles Haar am Nacken, römischer Kataphrakt des Hauses Orania. Traditioneller spätrömischer hoher aber schlichter Phrygischer Reiterhelm mit leicht vorgebogener normaler Spitze und kurzen Wangenklappen, ohne Federn, Hörner oder Tierkopf. Kupferbrauner taillierter Lamellenpanzer mit breiten Metallstreifen, dunkle marineblaue Ärmel, kurzer elfenbeinfarbener Schulterumhang und geschlossene Schienen. Referenz3 liefert das tatsächliche Equo-Militärpferd: kräftige kompakte Brust, solide Beine, dunkel anthrazitgraues Fell, schwarze Mähne und Schweif. Das ruhig stehende ganze Pferd zeigt nach LINKS in einer seitlichen Dreiviertelansicht, vier vollständige unterscheidbare Hufe und das komplette Haupt im Bild. Einfache graue Hals-Schuppendecke und kupferfarbene Flankenlamellen, nicht dieselbe Schuppenrüstung des Klassenprototyps. Marineblaue Satteldecke mit kleinem elfenbeinfarbenem springendem Pferd aus dem Hauswappen. Reiter hält ein einziges gerades Reiterschwert seitlich mit vollständiger Klinge ruhig schräg nach oben; andere Hand hält anatomisch sinnvolle getrennte Zügel. Beide Steigbügel und natürlicher Sattel. Keine Lanze. Der Schweif wächst an Hinterhand. Keine Kopie der nach rechts gewendeten Klassenfigur.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\orania.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "c5e75f74a1784ab2e1096d9337e48bf45cb3c378ee4d9968e5a5928f88cee0d0"
+        },
+        {
+          "path": "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\equo.webp",
+          "role": "actual Equo breed reference",
+          "sha256": "9b94e1269a7f1c52113a80a521c067bdf59d03ac1857b62fa34cb05c51fb7a26"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-pelagia",
+      "helmet": "Prunkvoller attischer Helm mit offenem Gesicht und blauem Längskamm",
+      "assetStem": "house-pelagia",
+      "category": "warriors",
+      "houseId": "house-pelagia",
+      "prototypeId": "prototype-05",
+      "role": "Mariner und Kleriker des Zephyr",
+      "description": "Eine edel ausgestattete Marinerin und Zephyr-Klerikerin mit Säbel, Rückenköcher und goldenen Seepferdchen-Stickereien.",
+      "equipment": [
+        "Säbel",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "tiefes Marineblau",
+        "gedecktes Gold",
+        "staubiges Türkis",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Griechische, römische und BYZANTINISCHE Ausrüstung mit vielfältigen traditionellen Helmen. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEine junge erwachsene Frau von24Jahren, schlank und athletisch, gebräuntes ovales Gesicht mit kurzem dunklem Haar und einer sichtbaren engen Flechte. Besonders edle, pompöse und seltene Marinerin und Klerikerin des Zephyr als Hausfigur für Pelagia. Traditioneller kampanisch-attischer mattgoldener Helm mit offenem Gesicht, schmalem navyblauem Längskamm und normalen langen Wangenklappen. Elegante griechisch-byzantinische dunkelblaue Rüstung aus breiten überlappenden Metallbändern am Torso, einzelne mattgoldene Schulterlaschen, ivoryfarbene kurze gepanzerte Ärmel, dunkelmarineblaue geschlitzte Prunktunika mit klaren goldenen Säumen und ein ruhig herabfallender staubig türkisfarbener langer Mantel. Luxuriös, aber keine riesigen Fantasy-Schulterplatten. Kleines goldenes einzelnes Seepferdchen über wellenförmiger Stickerei auf dem unteren Überwurf, getreu dem Hauswappen. Rechte Hand hält einen klar gebogenen Säbel ruhig schräg nach unten; linke Hand ruht locker am Gürtel, vollständige Klinge und beide Füße sichtbar. Sichtbarer Rückenköcher mit wenigen befiederten Pfeilen über der anderen Schulter. Keine neuen Göttersymbole, kein Stab, keine Magieeffekte und kein Bogen in der Hand. Ruhige vornehme Frontpose, Gewicht auf einem Bein; eigenes weibliches Gesicht und eigenständige bandartige Rüstungsbauweise.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\pelagia.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "e8757031be3ea3b067df14c14cfbd5f50d8b48be6d3699b333339d7aa08561cb"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-tremelia",
+      "helmet": "Offener griechisch-byzantinischer Phrygischer Bronzehelm",
+      "assetStem": "house-tremelia",
+      "category": "warriors",
+      "houseId": "house-tremelia",
+      "prototypeId": "prototype-04",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "description": "Ein leichter gerüsteter Fernkämpfer mit meergrünen Stoffen, Speer und sichtbarem Rückenköcher; zwei kleine Seepferdchen schmücken den Bruststoff.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "tiefes Seegrün",
+        "Elfenbein",
+        "blasses Gold",
+        "dunkles Leder"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Griechische, römische und BYZANTINISCHE Ausrüstung mit vielfältigen traditionellen Helmen. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEin junger erwachsener Mann von23Jahren, schlank athletisch mit schmalen Schultern und langen Beinen, jugendliches leicht sommersprossiges Gesicht und kurzes welliges braunes Haar. Römisch-kampanischer Fernkämpfer des Hauses Tremelia. Traditioneller griechisch-byzantinischer Phrygischer Bronzehelm mit sanft vorgebogener normaler Kappe und kleinen Wangenklappen, offenes jugendliches Gesicht, kein Busch, kein Tierkopf und kein Horn. Leichte byzantinische bronzefarbene Lamellenweste über meergrüner langer Tunika, kurze weiche weiße Schulterdecke, goldene Stoffeinfassungen und einfache lederne Armschienen; keine breite Segmentarüstung und keine schweren Beinschienen. Knapp unter dem Gürtel ein kleines klar lesbares Paar gegenüberstehender goldener Seepferdchen als normale Stickerei des Hauswappens. Sichtbarer Rückenköcher mit Pfeilbefiederung über einer Schulter, von vorn gut lesbar. Linke Hand hält den schlanken langen Speer seitlich aufrecht, komplette Spitze und unteres Ende im Bild; rechte Hand liegt locker am Köcherriemen. Ruhiger Stand mit leicht angewinkeltem Knie und nach links geneigtem Kopf, kein Angriff. Schlichte funktionale Militärstiefel mit niedrigen Wadenwickeln, keine Musketen, kein Schild und keine weitere gezogene Waffe.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\tremelia.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "0bf67444df015150e4c38e0b78f2313e4b79697cdda087ca8e811d24537ab11b"
+        }
+      ],
+      "transparent_background": true
+    },
+    {
+      "id": "warrior-house-mede",
+      "helmet": "Vollständig geschlossener griechisch-byzantinischer Gardistenhelm mit Augenschlitzen und Atemlöchern",
+      "assetStem": "house-mede",
+      "category": "warriors",
+      "houseId": "house-mede",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist · kaiserlicher Gardecharakter",
+      "description": "Ein schwerer Gardekämpfer mit grünem Mantel, heller Rüstung und goldenem Zweigmotiv des Hauses Mede; keine bestimmte kaiserliche Person.",
+      "equipment": [
+        "Schwert",
+        "Turmschild"
+      ],
+      "palette": [
+        "dunkles gedecktes Grün",
+        "Elfenbein",
+        "altes Gold",
+        "mattes Silber"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Eine neue eigenständige Hauskriegerfigur für Leukonia im Fantasy-Kaiserreich Argentum. Keine benannte Person, keine Genealogie und kein Amtsinhaberporträt. Bildreferenz1 liefert ausschließlich die freigegebene matte Malweise; westliche Plattenrüstung und blaue Farben sowie der äußere Farbdunst dieser Referenz sind KEINE Designvorgaben. Bildreferenz2 ist das tatsächlich gelieferte Hauswappen und bestimmt Hausfarben und kleines funktional getragenes Motiv. Keine andere Figur als Basis kopieren oder bloß umfärben. Griechische, römische und BYZANTINISCHE Ausrüstung mit vielfältigen traditionellen Helmen. Ein junger erwachsener Mensch20–30Jahre, schlank athletisch und fit, menschliche Ohren. Ruhige aufrechte vollständige Ganzkörperpose im2:3-Hochformat1024x1536. Höchste Helmzier bis beide Füße und jede Waffenspitze vollständig sichtbar, mindestens8Prozent transparenter Rand; beim Reiter gesamte Pferdefigur mit vier getrennt lesbaren Hufen. Keine Umgebung, Bodenfläche, äußeren Schatten, Glows, Papierfläche, schwarzen Hintergrund oder Farbschleier; alle äußeren Flächen und offenen Zwischenräume sind echt transparent. Keine Musketen, Feuerwaffen, modernen Objekte, Schrift oder Wasserzeichen. Keine kräftigen Comic-Outlines, kein CGI, keine realistische Öldetailfülle. Keine Tierkostüme oder Tierköpfe als Helm; das Wappenmotiv wird als kleine gemalte Heraldik, Stickerei oder Beschlag genutzt.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEin junger erwachsener Mann von27Jahren, schlank und athletisch, ruhiges feines jugendliches Gesicht mit kurzem hellbraunem Haar. Haus Mede, schwerer Infanterist mit kaiserlichem Gardecharakter; KEIN Porträt der regierenden Kaiserin und kein konkreter Amtsinhaber. Ein vollständig GESCHLOSSENER griechisch-byzantinischer Gardistenhelm aus mattem hellem Stahl mit gewöhnlicher Scheitelverstärkung und kleinem weißem Längsbusch. Geschlossene glatte Metall-Gesichtsplatte schützt Stirn, Nase, Mund und Kinn; nur schmale normale Augenschlitze und kleine Atemlöcher, keine geöffnete Visierstellung, kein sichtbares ungeschütztes Gesicht und keine Monster- oder Tiermaske. Der junge schlanke Körper und die jungen menschlichen Hände bleiben erkennbar. Heller matt silberner griechisch-byzantinischer Muskelharnisch mit einfach stilisierten Brustformen, Kettenärmel, schmale goldene Einfassungen, tiefgrüne lederne Pteryges, elfenbeinfarbene Tunika und schwerer dunkelgrüner Gardemantel. Kleine goldene Zweig-Stickerei des Mede-Wappens auf der Brustmitte, kein imperialer Adler als Ersatz für das Hausmotiv. In einer Hand ein gerades langes Schwert ruhig fast senkrecht mit voller Spitze nach unten, andere Hand hält einen hohen schmalen elfenbeinfarbenen Turmschild mit dunkelgrünem Rand und kleinem goldenem Zweig. Aufrecht würdig, Füße schulterbreit, leicht nach rechts gedreht, ohne hochrangige Kronen oder Zepter. Eigenständiger heller Muskelharnisch und lange Gardestoffe, keine Wiederholung des dunkelblauen Segmentpanzer-Prototyps.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\mede.png",
+          "role": "exact supplied house emblem and palette",
+          "sha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b"
+        }
+      ],
+      "transparent_background": true
+    }
+  ],
+  "edits": [
+    {
+      "id": "warrior-house-lex-helmet-v2",
+      "houseId": "house-lex",
+      "assetStem": "house-lex",
+      "category": "warriors",
+      "prototypeId": "prototype-02",
+      "purpose": "Latest user request: Greek/Roman/Byzantine diversity with closed helmets for heavy classes.",
+      "prompt": "Edit target is reference1, the complete current houseLex lancer image. Keep the complete figure EXACTLY the same: same young adult athletic female body, pose, hands, spear, all armor below neck, black/white/silver palette, house emblems, cloak, boots, matte pigment style, original canvas framing and transparency. Change ONLY the helmet's face protection. Replace the open face and open cheek gap with a fully CLOSED ordinary Greek-Byzantine metal face-guard helmet: a smooth matte silver iron visor protects nose, mouth, chin and cheeks, narrow horizontal eye openings and small breathing perforations, with conventional human-shaped construction, no animal, monster, horns or fantasy face. Keep the existing white crest, central crown and neck guard. The visor is DOWN and completely closed, no exposed human face. Match reference2 approved matte painted style. Reference3 is the exact Lex house emblem; keep that symbolism and silver/charcoal palette unchanged. Do not redesign the body or spear. Full silhouette, highest crest, both feet and full spearhead remain inside the existing1024x1536 transparent canvas. No environment, no background, no outer glow or shadows. Preserve the image except this face-guard change.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.",
+      "refs": [
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\warriors\\generated\\house-lex.png",
+          "role": "edit target; change helmet face protection only",
+          "pathAtGeneration": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\warriors\\generated\\house-lex.png",
+          "retainedPath": "E:\\Aleria\\Vorschau\\Leukonia\\sources\\house-warriors-original-archive\\house-lex-open-helmet-v1.png",
+          "sha256AtGeneration": "b2677a62146dc2fff747c5052fe457669e45a500645d9a0785eafb101888e9e5"
+        },
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "role": "approved matte painting style only",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Leukonia\\assets\\originals\\lex.png",
+          "role": "exact house emblem and palette",
+          "sha256": "28701760f7d8b33edf3f2da7147ddf15a9c19573b98fe9214d7bab1eab58ee87"
+        }
+      ],
+      "transparent_background": true
+    }
+  ],
+  "presetSha256": "ddfc9157fb7d9264d39234f246fe00f5d1f8151bcb90c8f66beb01e660488fb6",
+  "mountEvidence": {
+    "profile": "Bestiarium/tiere/pferde/equo/profil.json",
+    "sha256": "819405feb2cff162a609f20a804e3d312b32bbb5bc8bbfc3da9697141f7c8412"
+  }
+}

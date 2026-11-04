@@ -3,6 +3,8 @@ import { renderCombatSheetHeader, renderCombatSheetPages } from '../combat-sheet
 import { createCombatSheetWorkspace } from '../combat-sheet/combat-sheet-workspace.js';
 const sheetWorkspace = createCombatSheetWorkspace();
 import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
+import { summarizeCombatMechanics } from '../combat/ui/combat-mechanics-presentation.js';
+import { describeCombatTriggerRule } from '../combat/ui/combat-rule-presentation.js';
 const SKILL_PROFICIENCY_LABELS={none:'Ungeübt',trained:'Geübt',expertise:'Expertise'};
 import { renderDevelopmentShop, refreshDevelopmentShop } from '../character-development/development-ui.js';
 import { findDevelopmentArchiveDuplicate } from '../character-development/development-entry-reference.js';
@@ -634,21 +636,8 @@ function renderMechanicsFields(collection, item) {
   </div>`;
 }
 
-const CARD_MECHANIC_LABELS = Object.freeze({
-  attack: 'Angriff', damage: 'Schaden', armorClass: 'RK', initiative: 'Initiative',
-  skill: 'Fertigkeiten', savingThrow: 'Rettungswürfe', spellAttack: 'Zauberangriff',
-  spellSaveDc: 'Zauber-SG', movement: 'Bewegung', maximumHitPoints: 'Max. TP',
-  passivePerception: 'Wahrnehmung'
-});
-
 function renderMechanicsSummary(mechanics = {}) {
-  const values = Object.entries(CARD_MECHANIC_LABELS)
-    .map(([key, label]) => [label, Number(mechanics[key]) || 0])
-    .filter(([, value]) => value !== 0)
-    .map(([label, value]) => `${label} ${displayModifier(value)}`);
-  if (mechanics.attackRollMode === 'advantage') values.push('Angriff mit Vorteil');
-  if (mechanics.attackRollMode === 'disadvantage') values.push('Angriff mit Nachteil');
-  return values.join(' · ');
+  return summarizeCombatMechanics(mechanics);
 }
 
 function getActivationLabel(value) {
@@ -707,6 +696,7 @@ function renderPresentationDetailCards(collection, title, kicker, kind, addLabel
           ${damage ? `<p class="cp-entry-mechanics-note"><strong>Schaden${damageRoll ? `: ${escapeMarkup(damageRoll)}` : ''}</strong> · ${escapeMarkup(damage)}</p>` : ''}
           ${propertyRows ? `<section><h5>Eigenschaften</h5><div class="cp-card-property-grid">${propertyRows}</div></section>` : ''}
           ${mechanics ? `<p class="cp-entry-mechanics-note"><strong>Strukturierte Wirkung:</strong> ${escapeMarkup(mechanics)}</p>` : ''}
+          ${item.triggerRules?.some(rule => rule.enabled !== false) ? `<section><h5>Bedingte Regeln</h5><ul>${item.triggerRules.filter(rule => rule.enabled !== false).map(rule => `<li>${escapeMarkup(describeCombatTriggerRule(rule))}</li>`).join('')}</ul></section>` : ''}
           ${item.requirements || item.limitations ? `<p class="cp-entry-limitations"><strong>Grenzen:</strong> ${escapeMarkup(item.requirements || item.limitations)}</p>` : ''}
           <div class="cp-sheet-detail-actions"><button type="button" data-combat-action="edit-detail-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-entry-kind="${kind}">Bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" aria-label="${escapeMarkup(item.name || 'Eintrag')} entfernen">×</button></div>
         </div>
@@ -729,6 +719,7 @@ function renderConditionCollection(profile, title, kicker, addLabel) {
       return `<details class="cp-condition-card ${item.active ? 'active' : 'inactive'}">
         <summary>${renderEntryIcon('condition', item, 'cp-condition-card-icon')}<span class="cp-entry-card-heading"><small>${escapeMarkup(meta)}</small><strong>${escapeMarkup(item.name || 'Unbenannter Zustand')}</strong><span>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</span></span><i class="cp-card-disclosure" aria-hidden="true"></i></summary>
         <div class="cp-condition-card-body">
+          ${renderMechanicsSummary(item.mechanics) ? `<p class="cp-entry-mechanics-summary">${escapeMarkup(renderMechanicsSummary(item.mechanics))}</p>` : ''}
           <div class="cp-sheet-narrative-title"><label><input type="checkbox" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="active"${checked(item.active)}> aktiv</label><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="name" value="${escapeMarkup(item.name)}" maxlength="100" placeholder="Name"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" aria-label="${escapeMarkup(item.name || 'Zustand')} entfernen">×</button></div>
           <div class="cp-sheet-fields compact"><label><span>Dauer</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="duration" value="${escapeMarkup(item.duration)}" maxlength="100"></label><label><span>Quelle</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" maxlength="160"></label></div>
           <textarea data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="description" maxlength="1200" placeholder="Beschreibung und erzählerische Bedeutung">${escapeMarkup(item.description)}</textarea>

@@ -1,0 +1,146 @@
+{
+  "id": "haus-mac-ard-cumhaill",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "a1094e91-6bdf-46de-8efd-088401229cd0",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\a1094e91-6bdf-46de-8efd-088401229cd0\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/mac-ard-cumhaill/animexx-original.html",
+    "bytes": 166371,
+    "sha256": "d7771c68c6b61be7e94ff4acbb6f6b806b9c0dcc819b8681734f3f1228980fb3",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-mac-ard-cumhaill",
+    "baselineSourceRevision": 16,
+    "profile": {
+      "rankId": "ard-tiarna",
+      "seat": "Dun Athar",
+      "barony": "",
+      "county": "Tir na Sleagh",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "barony": "",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Dun Athar"
+      ]
+    },
+    "graphFingerprint": "58f37da2bd0aa02d306604ef323fba289bd71c162d86e802d3c8d2c5552e1ea2",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-mac-ard-cumhaill",
+    "title": "Clan Mac Ard Cumhaill",
+    "territoryId": "fuerstentum-leitheach",
+    "territoryName": "Fürstentum Leitheach",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+    "territoryType": "Fürstentum",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-mac-ard-cumhaill",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-mac-ard-cumhaill",
+    "slug": "mac-ard-cumhaill",
+    "canonicalSlug": "mac-ard-cumhaill",
+    "attachmentId": "a1094e91-6bdf-46de-8efd-088401229cd0",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Z0TGI4J.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 232592,
+    "sha256": "bb8af064025c9fb071352b0391d7867c2d15f1749dbed286fde8c37703408078",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-mac-ard-cumhaill",
+    "title": "Clan Mac Ard Cumhaill",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sleagh",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/Z0TGI4J.png",
+    "path": "Stammbäume/assets/images/references/haus-mac-ard-cumhaill/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-mac-ard-cumhaill/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "bb8af064025c9fb071352b0391d7867c2d15f1749dbed286fde8c37703408078",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Gerüsteter Speerträger mit Harfenzeichen, rotem Waffenrock und Schottenmuster.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "d7771c68c6b61be7e94ff4acbb6f6b806b9c0dcc819b8681734f3f1228980fb3",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-mac-ard-cumhaill, Rang Ard Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Mac Cumhaill bezeichnet im gelieferten Text den Fürstenclan Mac Ard Cumhaill. Kurzform wird eindeutig zugeordnet; keine zusätzliche Akte und kein neuer Rang.",
+    "Fürstenwürde und Landesherrschaft begründen kein persönliches Eigentum an allen Vasallenorten. Besitztext unterscheidet eigene Wirtschaftsgrundlage und abhängige Verwaltungen.",
+    "Vater und Streiter bleiben die überlieferten religiösen Anrufungen. Keine neuen Götteridentitäten oder Namensgleichsetzungen aus unterschiedlichen regionalen Formen.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

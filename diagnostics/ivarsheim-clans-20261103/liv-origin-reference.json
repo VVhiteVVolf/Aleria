@@ -1,0 +1,575 @@
+{
+  "schema": "aleria.liv-origin-reference",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T17:57:37.288Z",
+  "publicOnly": true,
+  "existingPerson": {
+    "id": "liv",
+    "worldPersonId": "person--family-tree--liv",
+    "name": "Liv",
+    "title": "",
+    "sex": "female",
+    "status": "alive",
+    "birth": "1688",
+    "death": "",
+    "portrait": "",
+    "portraitPlaceholder": "auto",
+    "houseId": "",
+    "familyRole": "married",
+    "lineageRole": "branch",
+    "tags": [],
+    "notes": "Hrolfs Frau; verliess ihn und kehrte mit einem Teil ihrer Kinder zu ihrem eigenen Clan im Norden Aldrimars zurueck. Lebt noch.",
+    "extensions": {}
+  },
+  "canonicalSourceFamilyId": "haus-wolfshorn",
+  "existingOccurrences": [
+    {
+      "familyId": "haus-wolfshorn",
+      "personId": "liv"
+    },
+    {
+      "familyId": "haus-bleiddorn",
+      "personId": "liv"
+    }
+  ],
+  "marriage": {
+    "id": "marriage-hrolf-liv",
+    "participantIds": [
+      "hrolf-wolfshorn",
+      "liv"
+    ],
+    "type": "marriage",
+    "status": "ended",
+    "start": "1709",
+    "end": "1731",
+    "certainty": "confirmed",
+    "visibility": "public",
+    "notes": "Liv verliess Hrolf 1731, kurz nach der Geburt der juengsten Tochter Helka, mit einem Teil ihrer Kinder und kehrte zu ihrem eigenen Clan im Norden Aldrimars zurueck. Beide leben noch.",
+    "extensions": {}
+  },
+  "children": [
+    {
+      "parentage": {
+        "id": "parentage-ylva-wolfshorn",
+        "childId": "ylva-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "ylva-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--ylva-wolfshorn",
+        "name": "Ylva Wolfshorn",
+        "title": "Erstgeborene Tochter",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wolfshorn/ylva-wolfshorn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Wurde als eines von Hrolfs beiden aeltesten Kindern gemeinsam mit ihm, Asgeir und Halvar ins Exil geschickt und begleitet sie nach Cenyr.",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-asgeir-wolfshorn",
+        "childId": "asgeir-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "asgeir-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+        "name": "Asgeir Wolfshorn",
+        "title": "Aeltester Sohn",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wolfshorn/asgeir-wolfshorn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Wurde als eines von Hrolfs beiden aeltesten Kindern gemeinsam mit ihm, Ylva und Halvar ins Exil geschickt und begleitet sie nach Cenyr.",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-bodil-wolfshorn",
+        "childId": "bodil-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "bodil-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--bodil-wolfshorn",
+        "name": "Bodil Wolfshorn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.",
+        "extensions": {
+          "registryManagedFields": [
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-kettil-wolfshorn",
+        "childId": "kettil-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "kettil-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--kettil-wolfshorn",
+        "name": "Kettil Wolfshorn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.",
+        "extensions": {
+          "registryManagedFields": [
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-eirik-wolfshorn",
+        "childId": "eirik-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "eirik-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--eirik-wolfshorn",
+        "name": "Eirik Wolfshorn",
+        "title": "",
+        "sex": "male",
+        "status": "missing",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Zog mit Liv fort; sein heutiges Schicksal ist Hrolf unbekannt.",
+        "extensions": {}
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-sigrun-wolfshorn",
+        "childId": "sigrun-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "sigrun-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--sigrun-wolfshorn",
+        "name": "Sigrun Wolfshorn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.",
+        "extensions": {
+          "registryManagedFields": [
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-dagny-wolfshorn",
+        "childId": "dagny-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "dagny-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--dagny-wolfshorn",
+        "name": "Dagny Wolfshorn",
+        "title": "",
+        "sex": "female",
+        "status": "missing",
+        "birth": "1722",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Zog mit Liv fort; ihr heutiges Schicksal ist Hrolf unbekannt.",
+        "extensions": {}
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-torstein-wolfshorn",
+        "childId": "torstein-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "torstein-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--torstein-wolfshorn",
+        "name": "Torstein Wolfshorn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.",
+        "extensions": {
+          "registryManagedFields": [
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "notes": 5
+          }
+        }
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-vibeke-wolfshorn",
+        "childId": "vibeke-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "vibeke-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--vibeke-wolfshorn",
+        "name": "Vibeke Wolfshorn",
+        "title": "",
+        "sex": "female",
+        "status": "missing",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Zog mit Liv fort; ihr heutiges Schicksal ist Hrolf unbekannt.",
+        "extensions": {}
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-ansgar-wolfshorn",
+        "childId": "ansgar-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "ansgar-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--ansgar-wolfshorn",
+        "name": "Ansgar Wolfshorn",
+        "title": "",
+        "sex": "male",
+        "status": "missing",
+        "birth": "1728",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Zog mit Liv fort; sein heutiges Schicksal ist Hrolf unbekannt.",
+        "extensions": {}
+      }
+    },
+    {
+      "parentage": {
+        "id": "parentage-helka-wolfshorn",
+        "childId": "helka-wolfshorn",
+        "parentIds": [
+          "hrolf-wolfshorn",
+          "liv"
+        ],
+        "partnershipId": "marriage-hrolf-liv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      "person": {
+        "id": "helka-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--helka-wolfshorn",
+        "name": "Helka Wolfshorn",
+        "title": "",
+        "sex": "female",
+        "status": "missing",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wolfshorn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Zog mit Liv fort; ihr heutiges Schicksal ist Hrolf unbekannt.",
+        "extensions": {}
+      }
+    }
+  ],
+  "childrenKnownToHaveLeftWithLiv": [
+    "eirik-wolfshorn",
+    "dagny-wolfshorn",
+    "vibeke-wolfshorn",
+    "ansgar-wolfshorn",
+    "helka-wolfshorn"
+  ],
+  "childrenWithUnresolvedResidence": [
+    "bodil-wolfshorn",
+    "kettil-wolfshorn",
+    "sigrun-wolfshorn",
+    "torstein-wolfshorn"
+  ],
+  "childrenInCenyrExile": [
+    "ylva-wolfshorn",
+    "asgeir-wolfshorn"
+  ],
+  "oldBiographyEvidence": {
+    "source": "CharakterDatenbank/records/familien/haus-wolfshorn/hrolf-wolfshorn--0caPdKpJoVazPUuu2KMu/character.json",
+    "field": "character.bio",
+    "latestIndividualExport": "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/0caPdKpJoVazPUuu2KMu.json",
+    "sourceUpdatedAt": "2026-11-02T21:05:42.453432Z",
+    "excerpt": "Mit dem Niedergang seines Hofes zerbrach auch seine Familie. Als Nahrung und Hoffnung knapp wurden, verließ ihn seine Ehefrau Liv. Sie nahm etwa die Hälfte ihrer gemeinsamen Kinder mit sich und kehrte in den Norden Aldrimars zu ihrem eigenen Clan zurück. Hrolf kennt ihr heutiges Schicksal nicht. Bei ihm blieben lediglich Halvar, Ylva und Asgeir, die ihm trotz aller Entbehrungen die Treue hielten.",
+    "containsIvarsheim": false,
+    "containsIvarsfels": false,
+    "namesWife": "Liv",
+    "warning": "Der alte Kurztext vertauscht in einem anderen Absatz Asgeir und Halvar und beschreibt eine alte Fassung des Exils. Diese Stellen besitzen keinen Vorrang vor spaeterer Nutzerkorrektur und kanonischer Familienakte."
+  },
+  "newAuthorialInstruction": {
+    "familyId": "haus-hrafnvald",
+    "title": "Clan Hrafnvald",
+    "rankId": "huskarl",
+    "kingdom": "Aldrimar",
+    "county": "Ivarsheim",
+    "barony": "Ivarsklamm",
+    "seat": "Ivarsfels",
+    "liegeFamilyId": "haus-wargh",
+    "liegeHouseName": "Clan Wargh",
+    "originOfAssignment": "Neue Nutzerfestlegung fuer Livs bisher namenlosen Herkunftsclan, durch Root am 03.11.2026 konkretisiert.",
+    "notAnOldSourceClaim": true
+  },
+  "protectedRelatedRecords": [
+    {
+      "id": "haus-wolfshorn",
+      "title": "Clan Wolfshorn",
+      "profile": {
+        "rankId": "knight",
+        "seat": "Hornhall",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "Clan Vangandr",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "5142a6bca7078a6c3d920f99c8fc8772ccc959383298f0129b052236c260a018"
+    },
+    {
+      "id": "haus-bleiddorn",
+      "title": "Haus Bleiddorn",
+      "profile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "graphFingerprint": "1d54f26eb0d15d88d7fdcc283e5a75ba6650f47f852fefb962e62b33f3b8f433"
+    }
+  ],
+  "recommendations": [
+    "Bestehende ID liv und Welt-ID person--family-tree--liv exakt beibehalten; Name Liv, Geburt 1688, weiblich und lebend nicht durch eine neue Person oder Ragnhild ersetzen.",
+    "Die neue Hrafnvald-Akte darf Liv als dieselbe vorhandene Identitaet fuehren. Alte Wolfshorn- und Bleiddorn-Graphen bleiben bytegleich; keine vorhandenen Elternkanten oder Ehen umhaengen.",
+    "Hrolf bleibt Wolfshorn; sein Cenyr-Zweig bleibt Bleiddorn. Hrafnvald ist Livs Herkunftsclan, kein neuer Name fuer Hrolfs Clan.",
+    "Die bestaetigte Ehe 1709 bis 1731 ist beendet. Daraus keine neue Eheschliessung oder neue Lebensdaten ableiten.",
+    "Nur Eirik, Dagny, Vibeke, Ansgar und Helka sind ausdruecklich mit Liv fortgezogen. Missing beschreibt den bislang ueberlieferten Wissensstand; keinen Tod und keinen heutigen Aufenthalt dieser Kinder still behaupten.",
+    "Bodil, Kettil, Sigrun und Torstein haben ungekl?rten Aufenthalt. Ylva und Asgeir sind Teil der Cenyr-Exilgruppe. Halvar ist Hrolfs Bruder, kein gemeinsamer Sohn.",
+    "Liv besitzt bislang kein individuelles Portrait und keine belegten Eltern. Neue Ausarbeitung muss als neue authoriale Ergaenzung behandelt werden; keine alte Quellengenealogie importieren."
+  ]
+}

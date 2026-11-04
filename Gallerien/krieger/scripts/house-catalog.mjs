@@ -6,8 +6,10 @@ import { getHouseRank } from '../../../Stammbäume/assets/js/domain/house-profil
 const normalizeName = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('de').replace(/^(haus|clan|familie)\s+/, '').replace(/[^a-z0-9]/g, '');
 
 /** Keep register identities and separately document named houses found inside trees. */
-export function collectHouses(root) {
-  const records = FAMILY_REGISTRY;
+export function collectHouses(root, { houseIds = null } = {}) {
+  const scope = houseIds ? new Set(houseIds) : null;
+  const records = scope ? FAMILY_REGISTRY.filter(record => scope.has(record.id)) : FAMILY_REGISTRY;
+  if (scope) for (const id of scope) if (!records.some(record => record.id === id)) throw new Error(`Unbekannte Registerquelle: ${id}`);
   const houses = records.map(record => ({
     id: record.id,
     name: record.title,
@@ -34,6 +36,7 @@ export function collectHouses(root) {
   const graphs = records.map(record => ({ id: record.id, family: record.family }));
   const published = new URL('Stammbäume/assets/data/published-families/', root);
   for (const file of readdirSync(published).filter(name => name.endsWith('.json') && name !== 'registry.json')) {
+    if (scope && !scope.has(file.slice(0, -'.json'.length))) continue;
     const source = JSON.parse(readFileSync(new URL(file, published), 'utf8'));
     const family = source.family || source;
     if (family.document?.id && family.houses) graphs.push({ id: family.document.id, family });
@@ -42,6 +45,7 @@ export function collectHouses(root) {
     for (const house of family.houses || []) {
       if (!house.name || /unbekannt|unknown/i.test(house.name) || /^house-(unbekannt|unknown)/.test(house.id)) continue;
       let id = resolveHouse(house.id, house.name);
+      if (scope && !scope.has(id)) continue;
       if (!id) {
         id = house.id;
         const entry = {

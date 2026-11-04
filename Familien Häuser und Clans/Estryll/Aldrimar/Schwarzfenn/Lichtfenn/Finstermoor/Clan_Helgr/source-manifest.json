@@ -1,0 +1,87 @@
+{
+  "id": "haus-helgr",
+  "source": {
+    "attachmentId": "786dbe31-1674-48ff-8faa-522801208e2c",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\786dbe31-1674-48ff-8faa-522801208e2c\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/helgr/animexx-original.html",
+    "bytes": 137316,
+    "sha256": "427de59f07f3c26c30f4185c7b44ad7a649317239b337e64bc0c26fe1be6dd5e",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-helgr",
+    "baselineSourceRevision": 8,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Finstermoor",
+      "barony": "Lichtfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-lichtfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-helgr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-helgr",
+    "familyId": "haus-helgr",
+    "slug": "helgr",
+    "canonicalSlug": "helgr",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "786dbe31-1674-48ff-8faa-522801208e2c",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Z07jgGv.png",
+    "sourceUrl": "https://i.imgur.com/Z07jgGv.png",
+    "path": "Stammbäume/assets/images/references/haus-helgr/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-helgr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 306754,
+    "sha256": "138762f7b7220f09ce4787667076435fb1e867337400c94c52b0f9b5d1ad6ced",
+    "sha": "138762f7b7220f09ce4787667076435fb1e867337400c94c52b0f9b5d1ad6ced",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hell gerüsteter Krieger mit gelbem Wappenrock, Schwert und Schild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Finstermoor/Lichtfenn/Schwarzfenn und Rang Thane bleiben maßgeblich. Die alte Größenbewertung des Gebiets als eher Hesirentum ändert keinen Rang.",
+    "Heimskr Helgrs religiöse Bedeutung wird historisch beschrieben. Aus dem Fließtext keine neue heutige Ratsbesetzung oder automatische aktuelle Hausführung ableiten.",
+    "Lokan und Løkan erscheinen als Varianten des Hüter-Namens. Sichtbar einheitlich Lokan; keine zweite Gottheit oder neue Religionsakte anlegen.",
+    "Ordninatoren wird zur üblichen Schreibweise Ordinatoren berichtigt; die Quelle beschreibt damit eine kirchliche Inquisition. Keine zusätzlichen Ordensmitglieder oder neuen persönlichen Klassen vergeben.",
+    "Drei Lebenswege der Angehörigen sind ein kulturelles Erwartungsmuster, keine zwingende automatische Ausbildung jedes Clanmitglieds. Militärzahlen und Alttabellen bleiben ausgenommen.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert.",
+    "Magnus Helgr, der ausdrücklich als erster Erbe bezeichnet wird, besitzt einen Todeseintrag. Die lebenden nachrangigen Erben werden nicht als neu bestätigter erster Erbe ausgegeben."
+  ]
+}

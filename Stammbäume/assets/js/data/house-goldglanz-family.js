@@ -258,7 +258,7 @@ export const HOUSE_GOLDGLANZ_FAMILY = Object.freeze({
     }),
 
     person('wulfgar-goldglanz', 'Wulfgar Goldglanz', 'male', '1587', '1666'),
-    awayWoman('gulda-goldglanz', 'Gulda Goldglanz', '1588', '????', 'Clan Varangr'),
+    awayWoman('gulda-goldglanz', 'Gulda Goldglanz', '1588', '', 'Clan Varangr'),
     spouse('sigrid-silberblut', 'Sigrid Silberblut', 'female', '1580', '1640', 'house-silberblut', {
       notes: 'Die Goldglanz-Quelle nennt unmöglich 1540 als Todesjahr. Die Silberblut-Gegenakte führt konsistent 1640.'
     }),

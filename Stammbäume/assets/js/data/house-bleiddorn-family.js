@@ -1,6 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
-import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
+import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js?v=20261104-lore-fixes-v1';
 import { createMigrationHouseSource } from './migration-house-source.js';
 
 const BLEIDDORN_HOUSE_ID = 'house-bleiddorn';

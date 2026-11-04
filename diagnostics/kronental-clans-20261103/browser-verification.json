@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-03",
+  "status": "pass",
+  "browser": "Chrome via cua_repl",
+  "origin": "http://127.0.0.1:8897",
+  "checks": [
+    "Vaeren displays its unchanged original warrior, royal rank, Heldenwacht territorial link and distinct Sigurd/Skjor roles.",
+    "Vaeren iframe actually loads the existing interactive Clan Vaeren family chart.",
+    "The clan-description button inside the iframe opens the new house biography with Sigurd Vaeren as head and a link to the full house page.",
+    "Both original Wellensänger figures are visibly present on the house page, including krieger-2.png; final gallery captions verified after reload.",
+    "Existing alias ?haus=suedstahl resolves to the expanded Clan Südstahl page and original house figure.",
+    "Frostzorn displays its new representative figure, living outlaw status, Vintrefjord seat and Vorn Frostzorn as head without a fabricated office date.",
+    "Morchaon displays a civilian figure, Bürgerliches Haus and its unchanged neutral crest.",
+    "Mac Mamhar displays its unchanged original figure and ancient extinct Glaennath context with rank and exact seat left open."
+  ],
+  "genealogyEdited": false,
+  "productionDataSavedFromBrowser": false,
+  "published": false
+}

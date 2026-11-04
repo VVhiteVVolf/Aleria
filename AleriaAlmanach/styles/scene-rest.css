@@ -42,6 +42,14 @@
   margin-top: 0.55rem;
 }
 
+.scene-rest-type[data-rest-type="regenerate"] {
+  grid-column: 1 / -1;
+}
+
+.scene-rest-card [data-scene-rest-time-panel][hidden] {
+  display: none;
+}
+
 .scene-rest-type {
   display: grid;
   grid-template-columns: 3.5rem minmax(0, 1fr);

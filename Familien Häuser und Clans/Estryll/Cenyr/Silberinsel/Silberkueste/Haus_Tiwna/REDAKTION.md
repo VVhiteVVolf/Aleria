@@ -1,0 +1,17 @@
+# Tiwna: Quellenabgleich vom 3. November 2026
+
+Die gemeinsame redaktionelle Quelle ist `haus.content.mjs`. `animexx-original.html` enthält den Anhang unverändert; `quellen.json` dokumentiert Prüfsummen, Bildherkunft und die vorhandenen Gegenakten.
+
+- Maßgeblich sind `haus-tiwna`, der Baronenrang, Eiddon in der Baronie Silberküste und Haus Neidr als Lehnsherr. Der genealogische Ursprung bleibt das Kadettenhaus der Pysgod. Alte Ortsbezeichnungen Liwtune und Cerneu werden nicht als zusätzliche heutige Orte oder Registerebenen übernommen.
+- Sämtliche genealogischen Tabellen unter „Hierarchie“ und das Stammbaumbild werden vollständig ignoriert. Der Hausseitenadapter bettet den bereits ausgearbeiteten Stammbaum ein. Personen, Beziehungen, Lebensdaten und Generationssprünge bleiben unverändert.
+- Die Gründungserzählung bleibt ausdrücklich umstrittene Überlieferung. Ihr Inhalt zu Morholt Pysgod und Caitrin Neidr, der Hochzeit und den wettstreitenden Geschenken bleibt erhalten. Die vermeintliche Beinahe-Verarmung der Pysgod erscheint als Steigerung der Erzählung und nicht als neue gesicherte Wirtschaftsakte.
+- Der ursprüngliche Kulturbegriff „Kymru-Festung“ widerspricht der vorhandenen Silberküsten-Seite mit „Crannath-Festung“. Der neue Haustext bleibt bei „alte Festung“ und legt keine zusätzliche Kulturzuordnung fest.
+- Sieben Oberhäupter und zwei Erben sind mit den tatsächlich vorhandenen Personenakten verknüpft. Der Gründer Morholt Pysgod ist vom heutigen Morholt Tiwna getrennt. Unbekannte frühe Amtsanfänge bleiben offen. Alle zwanzig Hofämter sind unbenannt und verwenden örtliche Silhouetten.
+- Die historischen vier Figuren der Vorlage — Morholt Pysgod, Caradoc, Brannock und Efrawg — bleiben enthalten. Caitrin wird zusätzlich als bereits belegte Mitgründerin gewürdigt. Die leeren Beschreibungsplätze werden ausschließlich mit vorhandenen Rollen und Amtsangaben gefüllt, nicht mit neuen Taten.
+- Aus dem ausgeführten Traditionstext kommen die persönliche Teulu-Ausbildung, die Bewährung vor dem Ritterschlag, Seefahrt und der besondere Drachentunfischfang. Der ausgeführte Rittertumtext hat Vorrang vor der pauschalen Klassenzeile der Infotabelle.
+- Militärstatistiken werden vollständig ignoriert. Keine Truppen-, Knechts-, Stadtwachen- oder Flottenzahlen übernommen; militärische Profilwerte leer und Profilgruppe ausgeblendet. Rüstungsformen, Flossenzier und die unterschiedlichen Haus-/Stadtzeichen bleiben als qualitative Kulturangaben erhalten.
+- Fischerei, die überlieferte Mine, Holzverarbeitung, begrenzte Landwirtschaft und die genannten Importgüter bleiben erhalten. Keine weiteren Minen, Rohstoffmengen oder Ortsnamen ergänzt.
+- Dame des Sees wird zum etablierten Projektbegriff „Dame der See“ vereinheitlicht. Die Kapelle und die Naturverbundenheit zur Mutter sind erhalten. Der allgemeine Absatz über Intrigen wird nicht zu einem neuen konkreten aktuellen Streitfall ausgebaut.
+- „Drachentuna“ und „Tunfisch“ werden in der Hausdarstellung als Drachentunfisch bezeichnet. Es wird keine neue Kreatur, Bestiarium-Akte oder Jagdbeute angelegt.
+- Das Original-Kriegerbild ist unverändert lokal eingebunden und wurde tatsächlich angesehen. Alle Personenbilder stammen aus den bestehenden kanonischen Portraitzuordnungen.
+- `biographySourceRevision: 5` folgt auf die bestehende Familienquellrevision 4. Die Hausbio liegt im Umfang von 250–600 Wörtern; die Arbeitsquelle ändert keinen Graphen und keine individuell gespeicherte Ausgabe.

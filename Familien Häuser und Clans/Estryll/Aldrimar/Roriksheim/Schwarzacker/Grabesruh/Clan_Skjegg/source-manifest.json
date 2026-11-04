@@ -1,0 +1,82 @@
+{
+  "id": "haus-skjegg",
+  "source": {
+    "attachmentId": "d94c18c3-8318-43dd-9bda-aa5a0ab288ea",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\d94c18c3-8318-43dd-9bda-aa5a0ab288ea\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/skjegg/animexx-original.html",
+    "bytes": 112757,
+    "sha256": "e0fdbcd37daf43a730610163bc80418813c0b38b2b3a3e5d9019fbf559b9b128",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-skjegg",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Grabesruh",
+      "barony": "Schwarzacker",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Klangheim"
+      ],
+      "liegeHouseId": "house-skaal",
+      "liegeHouseName": "Clan Skaal",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzacker.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-skjegg",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "skjegg",
+    "familyId": "haus-skjegg",
+    "attachmentId": "d94c18c3-8318-43dd-9bda-aa5a0ab288ea",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/j73Fljm.png",
+    "path": "Stammbäume/assets/images/references/haus-skjegg/krieger.png",
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 281210,
+    "sha256": "1ddce1067ff3d2eb5cf7cd65daffacda6155d948254e8a1c33f926c0f5fa5555",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-skjegg",
+    "url": "https://i.imgur.com/j73Fljm.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-skjegg/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Verhüllter Hauskrieger mit Speer, Raven und runenverziertem Schild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-3.png"
+  },
+  "decisions": [
+    "Grabesruh/Schwarzacker und Skaal als Lehnsherr sind kanonisch. Klangheim bleibt vorhandener Nebensitz. Das territoriale Quellen-README bewahrt Alfarsborg als Skjegg-Besitz im geografischen Schwerthohn.",
+    "Die kirchliche Erneuerung und der Bedeutungsverlust Grabesruhs sind historisch zu erzählen; Grabesruh ist weiterhin der aktuelle Sitz und wird nicht als verschwundener Ort behandelt.",
+    "Bestattungsriten, Seelenwachen, Steinmetzkunst und zurückhaltende Frömmigkeit sind ausführlich übernehmbar. Frühere nekromantische Züge werden nicht zur heutigen Praxis erklärt.",
+    "Hjorleif ist kanonisch als 1629 hingerichteter Hesir geführt. Keine neue Kriegsjahreszahl oder Amtsfolge aus dem Kapitelkontext ableiten.",
+    "Die Quelle beschreibt den Kleriker- und Kriegerdienst allgemein; daraus keine pauschalen Klassen, Zauber oder neuen Hofbesetzungen für alle Angehörigen vergeben.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

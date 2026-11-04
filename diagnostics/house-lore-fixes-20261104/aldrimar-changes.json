@@ -1,0 +1,514 @@
+{
+  "schema": "aleria.house-lore-fixes.aldrimar",
+  "reviewedAt": "2026-11-04",
+  "status": "authoring-and-canonical-source-fixes-complete-root-integration-pending",
+  "authorization": "Root relays explicit user authorization for these named Aldrimar chronology/geography corrections; child years take priority. No push or deployment.",
+  "decisions": [
+    {
+      "case": "Rörik Varangr",
+      "personId": "rorik-varangr",
+      "before": {
+        "birth": "1696",
+        "death": "1720"
+      },
+      "after": {
+        "birth": "1696",
+        "death": "1724"
+      },
+      "familyIds": [
+        "haus-varangr",
+        "haus-schattenherz"
+      ],
+      "reason": "Fjalar 1721 und Olesja 1723 haben Vorrang. Das Todesjahr liegt ein Jahr nach dem jüngsten öffentlich belegten Kind; Gisrun 1703 und Röriks Eltern 1669/1671 bleiben zeitlich stimmig.",
+      "basis": "Authorized editorial redating constrained by existing child/parent/partner data; exact new death year is not claimed as recovered historical evidence."
+    },
+    {
+      "case": "Kormak Sturmgeborener",
+      "personId": "kormak-sturmgeborener",
+      "before": {
+        "birth": "1625",
+        "death": "1658"
+      },
+      "after": {
+        "birth": "1625",
+        "death": "1666"
+      },
+      "familyIds": [
+        "haus-sturmgeborene",
+        "haus-wellenschild"
+      ],
+      "reason": "Kinder 1649, 1657 und 1665 bleiben erhalten. Kormak und Magdis sind beim jüngsten Kind je 40 Jahre alt; der Vater Kormaks war bei dessen Geburt 20.",
+      "basis": "Authorized editorial redating; one year after youngest child."
+    },
+    {
+      "case": "Gunnar Grendel",
+      "personId": "gunnar-grendel",
+      "before": {
+        "birth": "1585",
+        "death": "1625"
+      },
+      "after": {
+        "birth": "1585",
+        "death": "1631"
+      },
+      "familyIds": [
+        "haus-grendel",
+        "haus-wargh"
+      ],
+      "reason": "Vidar 1618 und Thordis 1630 bleiben erhalten. Hljótrún 1589–1641 ist beim letzten Kind 41, Gunnar 45. Seine ausdrücklich belegte Hesiren-Amtszeit 1623–1625 bleibt unverändert und wird nicht mit dem Lebensende gleichgesetzt.",
+      "basis": "Authorized editorial redating; office term and lifespan kept distinct."
+    },
+    {
+      "case": "Ingunn Feuerherz / Sturlaugr Nachtjäger",
+      "before": {
+        "ingunnDeath": "1645",
+        "sturlaugrDeath": "1650"
+      },
+      "after": {
+        "ingunnDeath": "1651",
+        "sturlaugrDeath": "1652"
+      },
+      "familyIds": [
+        "haus-feuerherz",
+        "haus-nachtjaeger",
+        "haus-riesentod"
+      ],
+      "reason": "Kjartan 1648 und Svandís 1651 bleiben erhalten. Ingunn lebt bis zum Jahr der jüngsten Tochter. Sturlaugr lebt bis 1652, damit die ausdrücklich benannte zweite Ehe mit Orka 1630 nach der ersten möglich bleibt, ohne eine unbelegte Scheidung oder Ehe-Startdaten zu erfinden. Die öffentlichen Eheenden sind 1651 bzw. 1652.",
+      "basis": "Authorized connected correction of both parents and their explicit first/second marriage context."
+    },
+    {
+      "case": "Annegret / Torger Vangandr",
+      "personId": "annegret",
+      "before": {
+        "birth": "1700",
+        "death": ""
+      },
+      "after": {
+        "birth": "1680",
+        "death": ""
+      },
+      "familyIds": [
+        "haus-vangandr"
+      ],
+      "reason": "Torger bleibt 1700 geboren; Mutter und Vater Brodd 1675 sind dann 20 bzw. 25 Jahre alt. Es bestehen keine datierten Vorfahren der Mutter, die dieser begrenzten Korrektur widersprechen.",
+      "basis": "Authorized editorial redating of the mother; identity and son birth unchanged."
+    }
+  ],
+  "protectedChildrenBirthYears": {
+    "fjalar-varangr": "1721",
+    "olesja-varangr": "1723",
+    "ingeborg-sturmgeborene": "1649",
+    "jornborg-sturmgeborene": "1657",
+    "elinborg-sturmgeborene": "1665",
+    "vidar-grendel": "1618",
+    "thordis-grendel": "1630",
+    "kjartan-nachtjaeger": "1648",
+    "svandis-nachtjaeger": "1651",
+    "torger-vangandr": "1700"
+  },
+  "canonicalFieldChanges": [
+    {
+      "familyId": "haus-wolfshorn",
+      "collection": "document",
+      "entityId": "",
+      "field": "description",
+      "before": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.",
+      "after": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Thanentum Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging."
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "partnerships",
+      "entityId": "marriage-kormak-magdis-sturmgeborene",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "partnerships",
+      "entityId": "marriage-magdis-kormak-wellenschild",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-vangandr",
+      "collection": "persons",
+      "entityId": "annegret",
+      "field": "birth",
+      "before": "1700",
+      "after": "1680"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1652"
+    }
+  ],
+  "authoringTextChanges": [
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+      "before": "Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund",
+      "after": "Wehrhalle Hornhall im Thanentum Dämmergrund",
+      "occurrences": 2
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+      "before": "Hornhall ist die überlieferte Wehrhalle des Clans in Dämmergrund. Sie liegt im Dämmertal und dient der Grenzwacht.",
+      "after": "Hornhall ist die überlieferte Wehrhalle des Clans in Dämmergrund. Der Grenzsitz untersteht den Vangandr unmittelbar und dient der Grenzwacht.",
+      "occurrences": 2
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+      "before": "Haus Blutklinge war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.",
+      "after": "Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus mit letztem belegten Sitz in Ivarsfels.",
+      "occurrences": 1
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+      "before": "Haus Windhüter war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.",
+      "after": "Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus mit letztem belegten Sitz in Ivarsfels.",
+      "occurrences": 1
+    }
+  ],
+  "geographicCorrection": {
+    "familyId": "haus-wolfshorn",
+    "before": "Hornhall im Dämmertal des Thanentums Dämmergrund; holdings behaupten ebenfalls Dämmertal.",
+    "after": "Hornhall liegt unmittelbar im Thanentum Dämmergrund und untersteht den Vangandr direkt.",
+    "strongerExistingEvidence": [
+      {
+        "path": "Kontinente/modules/roriksheim/pages.source.json",
+        "line": 2849
+      },
+      {
+        "path": "Kontinente/modules/roriksheim/pages.source.json",
+        "line": 4402
+      }
+    ],
+    "bleiddornChecked": true,
+    "bleiddornChanged": false,
+    "bleiddornReason": "Die aktive Exilakte und ihre Hausquelle enthalten keine falsche Dämmertal-Zuordnung. Die eigenständigen Identitäten und Cenyr-Ansiedlung bleiben erhalten."
+  },
+  "extinctHouses": [
+    {
+      "familyId": "haus-blutklinge",
+      "status": "extinct preserved",
+      "lastAttestedSeat": "Ivarsfels",
+      "change": "Kulturkategorie aus sections.overview entfernt; kein neues Hauskonzept."
+    },
+    {
+      "familyId": "haus-windhueter",
+      "status": "extinct preserved",
+      "lastAttestedSeat": "Ivarsfels",
+      "change": "Kulturkategorie aus sections.overview entfernt; kein neues Hauskonzept."
+    }
+  ],
+  "affectedHouseIds": [
+    "haus-blutklinge",
+    "haus-feuerherz",
+    "haus-grendel",
+    "haus-nachtjaeger",
+    "haus-riesentod",
+    "haus-schattenherz",
+    "haus-sturmgeborene",
+    "haus-vangandr",
+    "haus-varangr",
+    "haus-wargh",
+    "haus-wellenschild",
+    "haus-windhueter",
+    "haus-wolfshorn"
+  ],
+  "canonicalSourceModules": [
+    "Stammbäume/assets/js/data/house-varangr-family.js",
+    "Stammbäume/assets/js/data/house-schattenherz-family.js",
+    "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+    "Stammbäume/assets/js/data/house-wellenschild-family.js",
+    "Stammbäume/assets/js/data/house-grendel-family.js",
+    "Stammbäume/assets/js/data/house-wargh-family.js",
+    "Stammbäume/assets/js/data/house-feuerherz-family.js",
+    "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+    "Stammbäume/assets/js/data/house-riesentod-family.js",
+    "Stammbäume/assets/js/data/house-vangandr-family.js",
+    "Stammbäume/assets/js/data/house-wolfshorn-family.js"
+  ],
+  "authoringSourceModules": [
+    "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+    "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+    "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs"
+  ],
+  "changedSourceFiles": [
+    {
+      "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+      "beforeSha256": "f1facd4a4c04d6a4c8a607027ceee2e3096c721ec4c9845c3a1ff8c3271b7e98",
+      "afterSha256": "c2862afa04062155d5c162497e0d497193409dbb9c57ac6d7d095dfe3e3fc80d"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-schattenherz-family.js",
+      "beforeSha256": "db35de2705c6544e81d19151bdc4ac98ade86b5a48d07d7fec6acbf0e50f611b",
+      "afterSha256": "48fda6e26f151237163ce107f6db4b0b8514a24c3748059df79a646c4b3d9486"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+      "beforeSha256": "6eb3eb552d003cdccbf3ce216499372f315dedd7c222addbb13b682cfd7d5de5",
+      "afterSha256": "7e724def237c012afd5dd779697a9eafbdd17fc0eaf506ceebcd2c824015a1f5"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-wellenschild-family.js",
+      "beforeSha256": "77f81cba37a302db93fc034eb8e8ed3af2d0e32a412a94ecc597c5947216bffa",
+      "afterSha256": "026ed5d48b8d17682da2ce17678cb0740d8702badae9850b4b911c392221f8f9"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+      "beforeSha256": "bfff77c5d69861af8b66a1c72f87052dea0637ad4223bb24b45374ab78468939",
+      "afterSha256": "19500920b134d86c5716d92cafde34b791d7f10d0965070846751197866f48cf"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+      "beforeSha256": "746b2478a8fff0f749c4ead714eeed4ade181dcd1ca316cad6b6322bafdacf24",
+      "afterSha256": "08453b95068cc8ea6926162b5c7686bca5b755cc89fbb4c5c6d3000bddfde71e"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-feuerherz-family.js",
+      "beforeSha256": "726d45bd50279bcfcbfd8ffdf9c917040cadde6f926dd64b48c831203b255feb",
+      "afterSha256": "2b0417d55ac083f3b8bdd1106563a76f6863c5fb64aa86bc2b211e64c601690d"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+      "beforeSha256": "eefc60397b82a10524c1a09f1d90082a76ff1ab46bca06599bb79c256bb11174",
+      "afterSha256": "d8ca50444d523d05043419cfe4ee3bcafbc34a2c1594c0eadf4a47d49396be3e"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+      "beforeSha256": "a3c131710764c394ebacf1be489c41a336cbe5d8edfc5232f5310b86b820de78",
+      "afterSha256": "4f1e5755b64802e52034ea27570b2bf484557f56bb3c4b5ce2b745af55dd5435"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+      "beforeSha256": "012bef58ca2fb35b3a7c80c3753fc5e82f69ace15c649283a6c16cf0508d1f0f",
+      "afterSha256": "2a968d882730736da81121cfdfd3fc06c27aee885c6e8d6c72328faed74af05c"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-wolfshorn-family.js",
+      "beforeSha256": "20be29f1ab42e2970bcae99901d63c27e3a4445491e2695d37a917a763b1d8d2",
+      "afterSha256": "c2fb16fbb85e58b8ef7770a32e19c55f1e1883c362da0e4c1f6ecf8c970de706"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+      "beforeSha256": "e0985880cbc2e948e9eb1274f4146227434183f10e5dbcc3faa266c74f804668",
+      "afterSha256": "9b6b3d40420c62764ad3eb82d084e1415608f95d00c6574f03220336aa366468"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+      "beforeSha256": "1733fe0b5129fd941ef2725d8f63d0adf86f1bbb5cd8bb01fd76f2278f38817d",
+      "afterSha256": "a7b345c8cbea0087dcbcf58ba248d98facf8ef25f7f635813c2dc44028c029bd"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+      "beforeSha256": "9acae83e71c1f64025bd862bb18b1e315fc38641f637771526dccc6289ddadf2",
+      "afterSha256": "7e3d4ee304deb268cdb4ecfd2eb25e10b39144125ed59aa282950d6a5a56ee24"
+    }
+  ],
+  "previousDefaultNotes": [],
+  "invariants": {
+    "personAndRelationshipNotesChanged": false,
+    "newPeopleOrRelationships": false,
+    "worldPersonIdsPreserved": true,
+    "childrenYearsPreserved": true,
+    "personSexAndStatusUntouched": true,
+    "unrelatedParentagesAndRelationshipsUntouched": true,
+    "privateOrRestrictedRelationshipsChanged": false,
+    "profilesRanksSeatsEmblemsAndAssetsUnchanged": true,
+    "other20CounterRecordDiscrepanciesApplied": false,
+    "improbableBrynhildRiesentodCaseChanged": false,
+    "historicalAuditFilesUnchanged": true,
+    "baseSourceRevisionsChangedByThisAgent": false,
+    "contentVersionsChangedByThisAgent": false,
+    "generatedOutputsEditedOrBuilderExecuted": false,
+    "pushOrDeploy": false
+  },
+  "validation": {
+    "syntax": {
+      "count": 14,
+      "errors": []
+    },
+    "canonicalRuntimeChecks": {
+      "parentCopies": 12,
+      "publicPairCopies": 10,
+      "childrenYearsPreserved": true,
+      "errors": []
+    },
+    "authoringSourcesChecked": 3,
+    "parentRecordCopiesCorrected": 12,
+    "publicMarriageCopiesAligned": 10,
+    "errors": []
+  },
+  "pendingRootIntegration": [
+    "Gezielte source-family-field-upgrade-Patches und Feldrevisionen für alte unveränderte Standarddaten; persönliche Bearbeitungen erhalten.",
+    "ContentVersion/biographySourceRevision und begrenzte Hausausgaben durch Root aktualisieren.",
+    "Root führt gemeinsame Fach- und Integrationstests aus."
+  ],
+  "oldAuditReference": "diagnostics/house-lore-audit-20261103/aldrimar-findings.json"
+}

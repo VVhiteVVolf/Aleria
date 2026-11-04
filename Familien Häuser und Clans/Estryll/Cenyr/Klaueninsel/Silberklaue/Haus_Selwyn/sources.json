@@ -1,0 +1,54 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-selwyn",
+  "source": {
+    "attachmentId": "6431a918-1602-4a99-8979-dc4f61eafccb",
+    "file": "animexx-original.html",
+    "sha256": "b032e74fd98610f6548b41e8bf78cafc5f4afeda025d0271a1935600c58123d5",
+    "bytes": 86706,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "supplied genealogy ignored; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-selwyn"
+  },
+  "militaryStatistics": "ignored entirely",
+  "previousFamilySourceRevision": 2,
+  "biographySourceRevision": 3,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/YRuvtaj.png",
+      "role": "house-illustration",
+      "sha256": "e08ac277ace61f57a3bb53c753dee6a87cb9ac7abc45d2d70b900291dc57606d",
+      "bytes": 228417,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/qzIFqba.png",
+      "role": "territory-banner",
+      "sha256": "79f8cbf3aaf26a7f26d2334337b34142b54c58ad2b93522564b6dfe34b3ecb6a",
+      "bytes": 365256,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 512,
+      "height": 488,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-selwyn-family.js"
+  ]
+}

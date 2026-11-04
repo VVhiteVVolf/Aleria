@@ -1,0 +1,52 @@
+{
+  "id": "sept-cneacail",
+  "refs": [
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png"
+  ],
+  "prompt": "ONE anonymous everyday representative of the exiled Sept Cneacail currently residing in Gwynthor, Cenyr, with Ceitheach cultural roots. This is a generic house illustration, not any named family member. Reference 1 is ONLY the approved quiet matte hand-painted house-figure STYLE: slightly stylised full-body proportions, large simple garment shapes, soft thin painted contours, restrained shadows and fine uniform dry pigment grain. Do not reproduce the reference knight's armour or any surrounding RGB haze. Reference 2 supplies the sept's emblem and muted palette: wooden barrel and bare twisted tree, natural tan and brown wood. Depict an ordinary adult civilian in an earthy brown wool overcoat over a muted cream long tunic, simple wool cap, leather belt and practical boots. Calm upright three-quarter pose. Hold a small closed account ledger in one hand and an ordinary leather coin purse in the other, reflecting current trade/money dealings. A small understated barrel-and-bare-tree badge may decorate the coat. Do not depict a current brewery, brewing gear, tavern, noble rank or warrior equipment; brewing/distilling is historical heritage only. Natural ordinary face with small visible eyes, nose and mouth, no blank face or mask. ONE complete full-body figure, all boots and props visible with generous margin, 2:3 portrait, at least 1024x1536. True transparent PNG alpha immediately outside the figure and in open gaps. No background, ground, cast shadow, halo, fog, text, frame, photorealism, thick black outlines, shiny materials or CGI.",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "providerOriginalPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-8c867115-c0a9-4234-ab05-7bdd672f78a7.png",
+  "stagedPath": "diagnostics/cenyr-house-completeness-20261103/new-figures/sept-cneacail.png",
+  "selected": true,
+  "qaPending": false,
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-8c867115-c0a9-4234-ab05-7bdd672f78a7.png",
+  "sha256": "dc82c57db2db0fe9acbc485499d09fe6d71eed80ea8fcdddfa2b896064b5c61d",
+  "bytes": 2102866,
+  "size": [
+    1024,
+    1536
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaZeroPixels": 965505,
+  "alphaOneToThreePixels": 17903,
+  "alphaCorners": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visibleAlphaAbove8BBox": [
+    191,
+    14,
+    806,
+    1526
+  ],
+  "pixelEdits": false,
+  "sourceJobManifest": "diagnostics/cenyr-house-completeness-20261103/art-audit/remaining-six-generation-jobs.json",
+  "visualReview": "Actual white-background composite inspected; role, full body, house palette and transparency accepted. Anonymous representative only.",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Sept_Cneacail/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/sept-cneacail.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "namedPerson": false,
+  "createsPersonRecord": false
+}

@@ -1,0 +1,226 @@
+{
+  "publicOnly": true,
+  "records": [
+    {
+      "id": "haus-nic-blar",
+      "title": "Clan Nic Blar",
+      "folderPath": [
+        "Ceitheach",
+        "Tir na Scian",
+        "Lochcoille"
+      ],
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Lochcoille",
+        "barony": "",
+        "county": "Tir na Scian",
+        "kingdom": "Ceitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-ui-rochraide",
+        "liegeHouseName": "Clan Ui’Rochraide",
+        "folderIcons": [
+          "assets/images/regions/Ceitheach/ceitheach.png",
+          "assets/images/regions/Ceitheach/tir-na-scian.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Ceitheach/ceitheach.png",
+          "county": "assets/images/regions/Ceitheach/tir-na-scian.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Ceitheach",
+          "Tir na Scian",
+          "Lochcoille"
+        ]
+      },
+      "graphFingerprint": "361bf927e438891e1a5d5b1972c2d22e555b04396ef150e1ee927ae2274800a7",
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    },
+    {
+      "id": "haus-cleirigh",
+      "title": "Clan Faill’ Cléirigh",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Eorach"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Eorach",
+        "barony": "",
+        "county": "Tir na Dílse",
+        "kingdom": "Blaithneach",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/Blaithneach/blaithneach.png",
+          "assets/images/regions/Blaithneach/tir-na-dilse.png",
+          ""
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/Blaithneach/tir-na-dilse.png",
+          "kingdom": "assets/images/regions/Blaithneach/blaithneach.png"
+        }
+      },
+      "graphFingerprint": "a7bb6045405e43eb5abb617f3a2cc290782acaeb181aec94192859a68d624c04",
+      "biographyFingerprint": "76a42cf01bc55dbe68be298caba7c3ef8996a8f0f28405d3f1592c1e6d2b34a2"
+    },
+    {
+      "id": "haus-draig",
+      "title": "Haus Draig",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "profile": {
+        "rankId": "county",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "graphFingerprint": "3f44f53eb62562f4432cf13c681ece12f35036b87abf7425cf95aae64b7ead81",
+      "biographyFingerprint": "422418d316886f0d926d698f7ed8b15a5ef01009792a0de2541f780cb99f45a0"
+    },
+    {
+      "id": "haus-aderyn",
+      "title": "Haus Aderyn O'Penbryn",
+      "folderPath": [
+        "Cenyr",
+        "Tal der Milane",
+        "Yvains Klamm",
+        "Penbryn"
+      ],
+      "profile": {
+        "rankId": "county",
+        "seat": "Penbryn",
+        "barony": "Yvains Klamm",
+        "county": "Tal der Milane",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+          "county": "assets/images/regions/tal-der-milane.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "graphFingerprint": "381828fd49197c09526d786d442baf476668801c04ccc1196da48ef6fa6ea838",
+      "biographyFingerprint": "7819c124bc15740490829bb2a7e4f9ae8d4c681433cc09e723a22a411d9da05f"
+    },
+    {
+      "id": "haus-marwolaeth",
+      "title": "Haus Marwolaeth O'Mathragon",
+      "folderPath": [
+        "Cenyr",
+        "Vortigerns Ruh",
+        "Tanwens Flamme",
+        "Mathragon"
+      ],
+      "profile": {
+        "rankId": "knight-prince",
+        "seat": "Mathragon",
+        "barony": "Tanwens Flamme",
+        "county": "Vortigerns Ruh",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-pendrag",
+        "liegeHouseName": "Haus Pendrag",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Vortigerns Ruh/Mathragon.png",
+          "barony": "assets/images/regions/Cenyr/Vortigerns Ruh/Tanwens Flamme.png",
+          "county": "assets/images/regions/vortigerns-ruh.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "graphFingerprint": "7e2baf8c8ee7fe04b939ddcb362a48af7b046816a747c076e4297d2f5a6ae2f9",
+      "biographyFingerprint": "736f15213417b2b2957d2167801a23894d1279178506805f2c0e9d0f05c69fb8"
+    },
+    {
+      "id": "haus-suedstahl",
+      "title": "Clan Südstahl",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "abc345ddb45d4be808655bceeba9e9ece7478b375729f185ad8b85e789f2a23f",
+      "biographyFingerprint": "6b02377e2dbb7c690398da34cf45ee5cb6c856bfb66ab99c00615ed5ab63ddc0"
+    },
+    {
+      "id": "haus-albholz",
+      "title": "Clan Albholz",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "c0477b4608b84a1f8893b75de15688e39405f3bddcc66836637853ee1fc85397",
+      "biographyFingerprint": "9fce2dca138938bcde9aeff413cd2ff6819c3bdd0778c17869980c0b80d8bc04"
+    }
+  ]
+}

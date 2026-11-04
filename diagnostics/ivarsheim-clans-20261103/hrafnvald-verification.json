@@ -1,0 +1,28 @@
+{
+  "schema": "aleria.hrafnvald-source-verification",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "status": "passed",
+  "familyId": "haus-hrafnvald",
+  "sourceRevision": 1,
+  "registeredCount": 1,
+  "personIds": [
+    "torleif-hrafnvald",
+    "liv"
+  ],
+  "existingLivIdentityByteEquivalent": true,
+  "relationshipsAdded": 0,
+  "protectedGraphsAndProfilesChecked": 14,
+  "protectedSourceFilesByteIdentical": [
+    "Stammbäume/assets/js/data/house-wolfshorn-family.js",
+    "Stammbäume/assets/js/data/house-bleiddorn-family.js"
+  ],
+  "schemaDiagnostics": [],
+  "housePageWords": 597,
+  "biographyWords": 236,
+  "assetStatus": {
+    "crest": true,
+    "representativeFigure": false
+  },
+  "onlyNewClanGraphAdded": true
+}

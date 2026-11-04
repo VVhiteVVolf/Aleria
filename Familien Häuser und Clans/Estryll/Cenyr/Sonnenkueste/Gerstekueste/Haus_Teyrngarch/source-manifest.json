@@ -1,0 +1,39 @@
+{
+  "houseId": "haus-teyrngarch",
+  "source": {
+    "attachmentId": "64a4cbd6-5676-4616-854f-7ae7d26737fc",
+    "file": "animexx-original.html",
+    "sha256": "5521323e250f8658471a8a978a500573cf110f2eada41e571b7fb47c636b3e13",
+    "byteIdenticalToAttachment": true
+  },
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "graphChanged": false,
+    "familyId": "haus-teyrngarch"
+  },
+  "militaryStatisticsIgnored": true,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/vsz6S9r.png",
+      "role": "Hausdarstellung",
+      "sha256": "4f44680963e9a954830e710f21191ed4748a3ae77d5e4a240335d74ad1a40fd2",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-teyrngarch-family.js",
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/herrschaft.data.mjs"
+  ],
+  "decisions": [
+    "Gelieferte Abschnitte Hierarchie und Stammbaum vollständig ignoriert; nur vorhandene Familien- und Personen-IDs. Amtszeiten bleiben von Lebensdaten getrennt.",
+    "Sämtliche Militärstatistiken aus Tabellen und Fließtext ausgelassen. Qualitative Kultur-/Ausrüstungsangaben bleiben getrennt davon erhalten.",
+    "Original-Kriegerbilder unverändert lokal übernommen und tatsächlich angesehen; keine Neugenerierung.",
+    "Stabile Personen-ID lugh-teyrngrach bleibt erhalten; sichtbarer kanonischer Name ist Lugh Teyrngarch. Gaenor und Gandwy sind die bestehenden Erben.",
+    "Brauerzunft und Melynwyrdd Bande sind bereits in der aktuellen Herrschaftsquelle beschrieben. Keine neue Organisation angelegt. Einmalige Kapitel zu Braufesten, Familienzusammenhalt und Kodex bleiben redigiert erhalten.",
+    "Penderyn-Rivalität wird entsprechend ausgeführtem Text als arrangierter Marktgegensatz beschrieben. Clan Schwarzdorn sitzt laut aktuellem Register in Rorikshall/Roriksheim; keine ungeprüfte östliche Richtungszuordnung übernommen. Klingende Münze bleibt wirtschaftliche Rivalin; kein neuer Gildenstatus oder Amtsinhaber erfunden."
+  ]
+}

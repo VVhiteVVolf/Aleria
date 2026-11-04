@@ -5,8 +5,9 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
-import { findLaterMechanicalDependency } from './mechanical-comment-dependencies.js';
+import { findLaterMechanicalDependency, findLaterSceneRegenerationBoundary } from './mechanical-comment-dependencies.js';
 import { getCombatRulesRelease } from '../generated/combat/combat-rules-release.js';
+import { isSilentSceneRegeneration } from '../generated/scene-regeneration/scene-regeneration-model.js';
 import { getUndoInventoryFingerprint, undoInventoryFingerprint } from './mechanical-undo-inventory.js';
 
 function fail(code, message) {
@@ -123,6 +124,9 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
     if (!snapshot.exists) fail('not-found', 'Dieser Beitrag existiert nicht mehr.');
     const comment = snapshot.data() || {};
     if (clean(comment.entryId, 240) !== entryId) fail('failed-precondition', 'Der Beitrag gehört nicht zu dieser Szene.');
+    if (isSilentSceneRegeneration(comment)) {
+      fail('failed-precondition', 'Dieser technische Szenenstand kann nicht zurückgenommen werden.');
+    }
     if (comment.inventoryTransaction?.group === true) {
       fail('failed-precondition', 'Dieser Beitrag belegt eine Buchung des Gruppenbestands. Korrigiere sie durch eine Gegenbuchung in der Gruppenkasse; der Beleg bleibt erhalten.');
     }
@@ -142,6 +146,9 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
     const commentIndex = history.findIndex(entry => entry.id === commentId);
     if (getCombatRulesRelease(comment) || (commentIndex >= 0 && history.slice(commentIndex + 1).some(getCombatRulesRelease))) {
       fail('failed-precondition', 'Dieser Beitrag liegt vor einer veröffentlichten Regelumstellung. Eine automatische Rücknahme würde alte Ausrüstungsdaten wiederherstellen; der bisherige Kampfverlauf bleibt erhalten.');
+    }
+    if (findLaterSceneRegenerationBoundary(history, commentId)) {
+      fail('failed-precondition', 'Dieser ältere Beitrag kann nicht mehr zurückgenommen werden, weil der aktuelle Szenenstand verbindlich fortgeschrieben wurde.');
     }
     const dependent = findLaterMechanicalDependency(history, commentId);
     if (!force && dependent) fail('failed-precondition', `Eine neuere Handlung hängt von diesem Kampfstand ab: ${describeComment(dependent)}. Nimm zuerst den neueren Beitrag zurück.`);

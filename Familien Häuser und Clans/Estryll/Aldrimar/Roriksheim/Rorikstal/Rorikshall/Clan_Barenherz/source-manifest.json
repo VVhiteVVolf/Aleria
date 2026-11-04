@@ -1,0 +1,47 @@
+{
+  "id": "haus-baerenherz",
+  "source": null,
+  "authority": {
+    "familyId": "haus-baerenherz",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Rorikshall",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varulv",
+      "liegeHouseName": "Clan Varulv",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-baerenherz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "baerenherz",
+    "id": "haus-baerenherz",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-f3e5e632-b04c-4522-a604-f5cd2d128853.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-baerenherz/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "preset": "fantasy-rpg-character",
+    "promptManifest": "diagnostics/roriksheim-clans-20261103/image-prompts.json",
+    "sha256": "f939b72406099ccb7bb4929601f4bb80d97c5ec9d02cbaeaace0632de4395a49"
+  },
+  "decisions": [
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

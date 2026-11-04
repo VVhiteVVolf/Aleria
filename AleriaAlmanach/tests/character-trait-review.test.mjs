@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { isDeepStrictEqual } from 'node:util';
 import { access, readFile } from 'node:fs/promises';
 import { buildCharacterDatabase, markCharacterDatabaseOverlay } from '../../CharakterDatenbank/lib/character-database-model.mjs';
 import { REVIEWED_CHARACTER_TRAITS } from '../modules/character-trait-review/reviewed-character-traits.js';
@@ -9,6 +10,8 @@ import { mergeCharacterRecordProjections } from '../../CharakterDatenbank/lib/ch
 import { sanitizeCharacterCombatProfile, getMaximumHitPoints } from '../modules/combat/combat-profile-model.js';
 import { reconcileClassDamageRevisions } from '../modules/classes/class-damage-revisions.js';
 import { correctExistingSignetAbility } from '../modules/character-trait-review/character-trait-publication-plan.mjs';
+import { PREVIOUS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-source.js';
+import { reviseDevelopmentTraitBiography, reviseDevelopmentTraitBiographyCards } from '../modules/character-development/development-trait-biography-revisions.js';
 
 const root = new URL('../../', import.meta.url);
 const json = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
@@ -19,6 +22,24 @@ const confirmed = await json('diagnostics/combat-sheets-20261102/traits-online-a
 const assignment = name => REVIEWED_CHARACTER_TRAITS.find(row => row.name === name);
 const before = id => baseline.profiles.find(row => row.id === id).character;
 const after = id => snapshot.characters.find(row => row.id === id);
+const previousTraits = new Map(PREVIOUS_DEVELOPMENT_TRAITS.map(trait => [trait.id, trait]));
+
+function projectExactReviewedTraitCopies(copies, expected, name) {
+  assert.equal(copies.length, expected.length, `${name}: trait count`);
+  return copies.map((copy, index) => {
+    const current = expected[index], previous = previousTraits.get(current.id);
+    assert.equal(copy.id, current.id, `${name}: trait identity/order`);
+    assert.ok(isDeepStrictEqual(copy, current) || (previous && isDeepStrictEqual(copy, previous)),
+      `${name}: ${copy.id} must exactly match the current or fully preserved historical catalog definition`);
+    return isDeepStrictEqual(copy, current) ? copy : structuredClone(current);
+  });
+}
+
+function projectExactBiographyTraitLeaves(value) {
+  if (!value.biography?.biography) return value;
+  const biography = reviseDevelopmentTraitBiography(value.biography.biography);
+  return biography === value.biography.biography ? value : { ...value, biography: { ...value.biography, biography } };
+}
 
 test('explicit review stays sparse, uses existing catalog icons and never infers clinical labels', async () => {
   assert.equal(REVIEWED_CHARACTER_TRAITS.length, 14);
@@ -33,10 +54,11 @@ test('explicit review stays sparse, uses existing catalog icons and never infers
   }
 });
 
-test('all 14 reviewed records change only traits, named obsolete ability and existing biography cards', async () => {
+test('all 14 frozen review sources retain exact historical or current catalog copies while runtime exposes current rules and preserves all other fields', async () => {
   for (const row of REVIEWED_CHARACTER_TRAITS) {
     const original = structuredClone(before(row.id)), current = structuredClone(after(row.id));
-    assert.deepEqual(current.combatProfile.quirks, reviewedCharacterTraits(row), row.name);
+    const currentTraits = reviewedCharacterTraits(row);
+    const currentQuirks = projectExactReviewedTraitCopies(current.combatProfile.quirks, currentTraits, row.name);
     let expected = projectReviewedCharacterTraits(original, row);
     if (confirmed) {
       const remote = confirmed.characters.find(character => character.id === row.onlineId); assert(remote);
@@ -46,12 +68,25 @@ test('all 14 reviewed records change only traits, named obsolete ability and exi
     }
     // Projection metadata is not gameplay; every other field must remain exact.
     for (const value of [expected, current]) { delete value.updatedAt; delete value.localRecord; delete value.inventory; }
-    assert.deepEqual(current, expected, row.name);
+    const projectedCurrent = projectExactBiographyTraitLeaves({ ...current, combatProfile: { ...current.combatProfile, quirks: currentQuirks } });
+    assert.deepEqual(projectedCurrent, expected, row.name);
     const record = await json(`CharakterDatenbank/${baseline.profiles.find(source => source.id === row.id).path}`);
     assert.deepEqual(record.character.combatProfile, after(row.id).combatProfile, row.name);
     const normalized = sanitizeCharacterCombatProfile(current.combatProfile);
     assert.deepEqual(normalized.quirks.map(trait => trait.id), current.combatProfile.quirks.map(trait => trait.id), row.name);
+    assert.deepEqual(normalized.quirks, sanitizeCharacterCombatProfile({ quirks: currentTraits }).quirks, `${row.name}: effective current catalog rules`);
     for (let iteration = 0; iteration < 3; iteration++) assert.deepEqual(sanitizeCharacterCombatProfile(normalized).quirks, normalized.quirks);
+  }
+});
+
+test('historical review source allowances reject partial text, icon, price or mechanic edits', () => {
+  const row = assignment('Freya Skald'), expected = reviewedCharacterTraits(row);
+  const originals = expected.map(trait => structuredClone(previousTraits.get(trait.id) || trait));
+  assert.deepEqual(projectExactReviewedTraitCopies(originals, expected, row.name), expected);
+  for (const mutate of [trait => { trait.description += ' Individuelle Änderung.'; }, trait => { trait.icon = '/anderes-bild.png'; },
+    trait => { trait.cost += 1; }, trait => { trait.mechanics.skill = 99; }]) {
+    const changed = structuredClone(originals); mutate(changed[0]);
+    assert.throws(() => projectExactReviewedTraitCopies(changed, expected, row.name), /must exactly match/);
   }
 });
 
@@ -119,7 +154,7 @@ test('only the obsolete Gawain personality ability is removed; personal training
   assert.equal(getMaximumHitPoints(sanitizeCharacterCombatProfile(after(asgeir.id).combatProfile)), getMaximumHitPoints(sanitizeCharacterCombatProfile(before(asgeir.id).combatProfile)) + 2);
 });
 
-test('public biography prose, relations, mentors, history and statistics survive the five card replacements', async () => {
+test('frozen biography sources preserve prose, relations, mentors, history and statistics while exact catalog cards project current rules', async () => {
   const original = await json('diagnostics/character-trait-review-20261102/public-biographies-before.json');
   const current = await json('js/biography/sources/public-biographies.json');
   let replaced = 0;
@@ -135,14 +170,14 @@ test('public biography prose, relations, mentors, history and statistics survive
     const row = REVIEWED_CHARACTER_TRAITS.find(row => entry.characterIds.includes(row.id) || entry.characterIds.includes(row.onlineId));
     const expected = structuredClone(oldEntry);
     if (row) { replaced++; expected.biography.biography.abilities = reviewedBiographyTraitCards(row.id); expected.biography.biography.abilitiesTitle = 'Eigenschaften'; }
-    assert.deepEqual(entry, expected, oldEntry.name);
+    assert.deepEqual(projectExactBiographyTraitLeaves(entry), expected, oldEntry.name);
   }
   assert.equal(replaced, 5);
   assert.equal(current.entries.length, original.entries.length);
   const { GAIS_WYRM_BIOGRAPHY } = await import('../../Stammbäume/assets/js/data/person-biographies/gais-wyrm.js');
   const { GAWAIN_PUBLIC_BIOGRAPHY } = await import('../modules/gawain-duncan/gawain-public-biography.mjs');
-  assert.deepEqual(GAIS_WYRM_BIOGRAPHY.biography.abilities, reviewedBiographyTraitCards(assignment('Gais Wyrm').id));
-  assert.deepEqual(GAWAIN_PUBLIC_BIOGRAPHY.biography.abilities, reviewedBiographyTraitCards(assignment('Gawain Draig').id));
+  assert.deepEqual(reviseDevelopmentTraitBiographyCards(GAIS_WYRM_BIOGRAPHY.biography.abilities), reviewedBiographyTraitCards(assignment('Gais Wyrm').id));
+  assert.deepEqual(reviseDevelopmentTraitBiographyCards(GAWAIN_PUBLIC_BIOGRAPHY.biography.abilities), reviewedBiographyTraitCards(assignment('Gawain Draig').id));
 });
 
 const merge = characters => buildCharacterDatabase({ characters }, []).records[0].record.character;

@@ -9,8 +9,8 @@ export function assertHouseBiographyRegistryRevision(family, historicalMinimum) 
   assert.ok(expected >= historicalMinimum);
 }
 
-// A registry entry may add a biography and source revision. The imported source
-// document, graph collections, and all other metadata must retain their identity.
+// A registry entry may add a biography, its source revision and explicit metadata
+// boundaries. The imported source document and graph collections retain identity.
 export function assertHouseBiographyRegistrySource(actual, source) {
   const { extensions: actualExtensions, ...actualGraph } = actual;
   const { extensions: sourceExtensions, ...sourceGraph } = source;
@@ -20,7 +20,16 @@ export function assertHouseBiographyRegistrySource(actual, source) {
   }
   const { houseBiographyModule, sourceRevision, registryManagedEntitySourceRevision, ...actualMetadata } = actualExtensions || {};
   const { houseBiographyModule: oldBiography, sourceRevision: oldRevision, registryManagedEntitySourceRevision: oldEntityRevision, ...sourceMetadata } = sourceExtensions || {};
-  assert.deepEqual(actualMetadata, sourceMetadata);
+  const expectedMetadata = { ...sourceMetadata };
+  for (const area of ['Document', 'HouseProfile', 'Extension', 'View', 'Lineage']) {
+    const fields = sourceExtensions?.[`registryManaged${area}Fields`] || [];
+    const key = `registryManaged${area}FieldRevisions`;
+    expectedMetadata[key] = {
+      ...Object.fromEntries(fields.map(field => [field, Number(oldRevision) || 0])),
+      ...sourceExtensions?.[key]
+    };
+  }
+  assert.deepEqual(actualMetadata, expectedMetadata);
   if (registryManagedEntitySourceRevision !== undefined) {
     assert.equal(registryManagedEntitySourceRevision, oldEntityRevision ?? oldRevision ?? 0);
   }

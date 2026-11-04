@@ -1,13 +1,13 @@
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
-import { HOUSE_PENDRAG_FAMILY } from './house-pendrag-family.js';
+import { HOUSE_PENDRAG_FAMILY } from './house-pendrag-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_ILLEWOD_FAMILY } from './house-illewod-family.js';
-import { HOUSE_NEIDR_FAMILY } from './house-neidr-family.js';
+import { HOUSE_NEIDR_FAMILY } from './house-neidr-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_GRAWN_FAMILY } from './house-grawn-family.js';
 import { HOUSE_ADERYN_FAMILY } from './house-aderyn-family.js';
 import { HOUSE_PYSGOD_FAMILY } from './house-pysgod-family.js';
-import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
-import { HOUSE_WYLAN_FAMILY } from './house-wylan-family.js';
+import { HOUSE_ARTH_FAMILY } from './house-arth-family.js?v=20261104-life-status-v1';
+import { HOUSE_WYLAN_FAMILY } from './house-wylan-family.js?v=20261104-lore-fixes-v1';
 
 // Zentrales Register für die 8 weiteren großen Häuser Cenyrs
 // (Celtigerns Wacht/Haus Draig ist separat ausgearbeitet). Noch nicht ausgearbeitete

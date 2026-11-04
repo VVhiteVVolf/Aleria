@@ -40,7 +40,7 @@ export function renderSceneRestParticipantOption(candidate = {}) {
       </span>
       <span class="scene-rest-participant-copy">
         <strong>${escapeMarkup(candidate.name || 'Unbekannte Figur')}</strong>
-        <small>${candidate.sceneParticipant ? 'Hat in dieser Szene kommentiert' : 'Weitere verfügbare Figur'}</small>
+        <small>${candidate.sceneParticipant ? 'Figur dieser Szene' : 'Weitere verfügbare Figur'}</small>
       </span>
       <span class="scene-rest-participant-hp"><b>${escapeMarkup(hp.currentHitPoints ?? 0)}</b> / ${escapeMarkup(hp.maximumHitPoints ?? 0)} TP</span>
     </label>`;
@@ -68,7 +68,7 @@ export function ensureSceneRestDialog() {
       </div>
       <div class="scene-time-event-card-body scene-rest-card-body">
         <section class="scene-time-dialog-panel">
-          <label>Art der Rast</label>
+          <label>Art der Erholung</label>
           <div class="scene-rest-type-grid">
             <button type="button" class="scene-rest-type active" data-scene-rest-action="select-type" data-rest-type="short" aria-pressed="true">
               <img src="${SCENE_REST_ICON_URL}" alt=""><span><strong>Kurze Rast</strong><small>Standard: 1 Stunde · TP und Kurzrast-Ressourcen</small></span>
@@ -76,13 +76,16 @@ export function ensureSceneRestDialog() {
             <button type="button" class="scene-rest-type" data-scene-rest-action="select-type" data-rest-type="long" aria-pressed="false">
               <img src="${SCENE_REST_ICON_URL}" alt=""><span><strong>Lange Rast</strong><small>Standard: 8 Stunden · TP, Langrast- und Tagesressourcen</small></span>
             </button>
+            <button type="button" class="scene-rest-type" data-scene-rest-action="select-type" data-rest-type="regenerate" aria-pressed="false">
+              <img src="${SCENE_REST_ICON_URL}" alt=""><span><strong>Voll regenerieren</strong><small>Sofort · ohne Zeitsprung, Szeneneintrag oder Benachrichtigung</small></span>
+            </button>
           </div>
           <input type="hidden" id="scene-rest-type" value="short">
         </section>
 
         <section class="scene-time-dialog-panel">
           <div class="scene-rest-panel-head"><label>Betroffene Figuren</label><span data-scene-rest-selected-count>0 ausgewählt</span></div>
-          <p class="scene-time-dialog-hint scene-rest-visible-hint">Standardmäßig sind alle Figuren markiert, die in der aktuellen Szene bereits kommentiert haben. Weitere Figuren können gezielt ergänzt werden.</p>
+          <p class="scene-time-dialog-hint scene-rest-visible-hint">Die bisherigen Szenenfiguren sind vorausgewählt. Weitere Figuren können gezielt ergänzt werden.</p>
           <div class="scene-rest-participant-tools">
             <input id="scene-rest-participant-search" type="search" placeholder="Figur suchen …" data-scene-rest-field="search">
             <button type="button" data-scene-rest-action="select-scene">Szenenfiguren wählen</button>
@@ -92,7 +95,7 @@ export function ensureSceneRestDialog() {
           <div class="scene-rest-participant-empty" data-scene-rest-participant-empty hidden>Keine passende Figur gefunden.</div>
         </section>
 
-        <section class="scene-time-dialog-panel">
+        <section class="scene-time-dialog-panel" data-scene-rest-time-panel>
           <label>Zeitlicher Ablauf</label>
           <div class="scene-time-dialog-grid scene-rest-time-grid">
             <label><span>Beginn · Tag</span><input id="scene-rest-start-day" type="number" min="1" step="1" value="1" data-scene-rest-field="time"></label>
@@ -128,21 +131,27 @@ export function renderSceneRestCandidates(candidates = []) {
 }
 
 export function setSceneRestType(type = 'short') {
+  const regenerate = type === 'regenerate';
   const definition = getSceneRestType(type);
   const input = document.getElementById('scene-rest-type');
   const duration = document.getElementById('scene-rest-duration-hours');
   const body = document.getElementById('scene-rest-body');
-  if (input) input.value = definition.id;
+  if (input) input.value = regenerate ? 'regenerate' : definition.id;
+  const title = document.getElementById('scene-rest-dialog-title');
+  if (title) title.textContent = regenerate ? 'Figuren vollständig regenerieren' : 'Rast einlegen';
+  const timePanel = document.querySelector('[data-scene-rest-time-panel]');
+  if (timePanel) timePanel.hidden = regenerate;
   if (duration) {
     duration.min = String(definition.durationSeconds / 3600);
     duration.value = String(definition.durationSeconds / 3600);
   }
   if (body) body.value = definition.description;
   document.querySelectorAll('[data-scene-rest-action="select-type"]').forEach(button => {
-    const active = button.dataset.restType === definition.id;
+    const active = button.dataset.restType === (regenerate ? 'regenerate' : definition.id);
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
   });
+  setSceneRestSubmitting(false);
 }
 
 export function updateSceneRestSelectionCount() {
@@ -175,7 +184,17 @@ export function setSceneRestSubmitting(submitting) {
   const button = document.querySelector('[data-scene-rest-action="submit"]');
   if (!button) return;
   button.disabled = !!submitting;
-  button.textContent = submitting ? 'Rast wird gespeichert …' : 'Rast eintragen';
+  const regenerate = document.getElementById('scene-rest-type')?.value === 'regenerate';
+  button.textContent = submitting ? 'Wird gespeichert …' : regenerate ? 'Ausgewählte regenerieren' : 'Rast eintragen';
+  document.querySelectorAll('#scene-rest-overlay button, #scene-rest-overlay input').forEach(control => {
+    control.disabled = !!submitting;
+  });
+}
+
+export function renderSceneRegenerationPreview(selectedCount) {
+  const preview = document.querySelector('[data-scene-rest-preview]');
+  if (!preview) return;
+  preview.innerHTML = `<p><strong>${selectedCount} Figur${selectedCount === 1 ? '' : 'en'}</strong> vollständig regenerieren: Lebenspunkte, Kampfressourcen und begrenzte Fähigkeiten auffüllen; temporäre Lebenspunkte, Zustände, Konzentration und Kanalisierung entfernen.</p><p>Die Szenenzeit bleibt stehen. Es erscheint kein Beitrag und keine Benachrichtigung. Dauerhafte Leiden, feste Merkmale und Besitz bleiben erhalten.</p>`;
 }
 
 export function renderSceneRestPreview(sceneRest, sceneTimeEvent) {

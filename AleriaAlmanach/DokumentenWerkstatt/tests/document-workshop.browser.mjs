@@ -34,7 +34,7 @@ assert.equal(data.width, 2460); assert.ok(data.height >= 2340); assert.equal(dat
 await writeFile(artifact('workshop-export.png'), Buffer.from(data.png.split(',')[1], 'base64'));
 console.log('PNG', { width: data.width, height: data.height, cornerAlpha: data.corner });
 const fontChecks = await evaluate(`(async()=>{const {PROJECT_FONTS}=await import('/AleriaAlmanach/DokumentenWerkstatt/js/fonts/font-catalog.js');const {ensureDocumentFont}=await import('/AleriaAlmanach/DokumentenWerkstatt/js/fonts/document-fonts.js');const results=[];for(const font of PROJECT_FONTS){await ensureDocumentFont({font:"'"+font.family+"'",fontSize:20});results.push(document.fonts.check('20px "'+font.family+'"'));}return results;})()`);
-assert.equal(fontChecks.length, 8); assert.ok(fontChecks.every(Boolean));
+assert.equal(fontChecks.length, 10); assert.ok(fontChecks.every(Boolean));
 const documentTree = await command('DOM.getDocument');
 const fontInput = await command('DOM.querySelector', { nodeId: documentTree.root.nodeId, selector: '#custom-font-file' });
 await command('DOM.setFileInputFiles', { nodeId: fontInput.nodeId, files: [join(workspace, 'Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff2')] });

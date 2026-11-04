@@ -1,0 +1,98 @@
+{
+  "schema": "aleria.kronental-final-integration-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T20:35:47.029Z",
+  "status": "pass",
+  "publicOnly": true,
+  "productDataModified": false,
+  "contentVersion": "20261103-kronental-v1",
+  "baseline": {
+    "path": "diagnostics/kronental-clans-20261103/baseline.json",
+    "sha256": "d7c91e4c27b2fd1c970741991b22275d87df052648f34908074dd663d00eaa34",
+    "families": 29,
+    "aggregateGraphAndProfileFingerprint": "fe3e48b3defc8cce2647477b4298b8af4a0fb0008d60f314de6c0b3b653a3009",
+    "graphsUnchanged": 29,
+    "profilesUnchanged": 29,
+    "titlesAndFoldersUnchanged": 29
+  },
+  "integration": {
+    "registeredFullHousePages": 29,
+    "linkedHouseBiographies": 29,
+    "canonicalIframes": 29,
+    "correctlyWiredGalleryHouses": 29,
+    "unchangedOriginalFigures": 19,
+    "originalHouses": 18,
+    "generatedRepresentativeFigures": 11,
+    "generatedBytesMatchToolOutputs": true,
+    "byteIdenticalSourceArchives": 19,
+    "unchangedLegacyPageSources": 2,
+    "wellensaengerSecondaryOriginalRetained": true,
+    "legacyAliasesPreserved": true
+  },
+  "specificCases": {
+    "registryCounty": "Kronental",
+    "territoryId": "jarltum-heldenwacht",
+    "currentHeads": {
+      "haus-vaeren": "Sigurd Vaeren",
+      "haus-riesentod": "Thrainn Riesentod",
+      "haus-sturmgeborene": "Arnthor Sturmgeborener",
+      "haus-frostauge": "Aegir Frostauge",
+      "haus-gullvig": "Náttfar Gullvig",
+      "haus-wellensaenger": "Fjorlag Wellensänger",
+      "haus-eibenschild": "Alrik Eibenschild",
+      "haus-suedstahl": "Malak Südstahl",
+      "haus-albholz": "Branoc Albholz",
+      "haus-frostzorn": "Vorn Frostzorn"
+    },
+    "historicalIds": [
+      "haus-grimr",
+      "haus-skaife",
+      "haus-holmr",
+      "haus-isvanyr",
+      "haus-mac-mamhar"
+    ],
+    "torrenheimRetainedFor": [
+      "haus-holmr",
+      "haus-skaife",
+      "haus-grimr"
+    ],
+    "spindelschlag": {
+      "rank": "Bürgerlich",
+      "seat": "Spindelheim",
+      "liege": "Clan Vaeren"
+    },
+    "albhricPortraitVariant": {
+      "id": "albhric-albholz",
+      "familyId": "haus-albholz",
+      "sourceBackup": "diagnostics/kronental-clans-20261103/initial-house-pages/haus-albholz.data.js",
+      "sourceSha256": "a125c5f0ae743ce98625ad778453d6ea17dc0c11bbf22858001f5013b7648e4b",
+      "allowedVariant": "Stammbäume/assets/images/portraits/haus-albholz/albhric-albholz-young.png",
+      "otherPersonsRemainStrict": true
+    },
+    "noNewRanksOrProfessions": true
+  },
+  "tests": {
+    "command": "node \"Familien Häuser und Clans/tests/kronental-house-pages.test.mjs\"",
+    "passed": 10,
+    "failed": 0
+  },
+  "imageReview": {
+    "contactSheet": "diagnostics/kronental-clans-20261103/all-clan-figures.jpg",
+    "visuallyInspected": true,
+    "totalUniqueImages": 30,
+    "newFiguresPngRgba2to3": 11,
+    "newFiguresAlphaRange": [
+      0,
+      254
+    ],
+    "anonymousRepresentatives": true,
+    "minorUnchangedSourceArtifacts": [
+      "Eibenschild: einzelner Alpha1-Eckpixel; echte Transparenz vorhanden und Toolbytes unveraendert.",
+      "Randnahe Details und geringe Alpha-Randpixel der Originale bleiben erhalten."
+    ]
+  },
+  "findings": [],
+  "limits": [
+    "Read-only Daten-, Dateihash- und Integrationspruefung; keine eigene Browserpruefung."
+  ]
+}

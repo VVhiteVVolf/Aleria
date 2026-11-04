@@ -36,3 +36,20 @@ test('an uninitialized index and oversized recent requests retain the full-histo
   assert.equal(await repository.recent(31), null);
   assert.equal(reads, 0);
 });
+
+test('silent regeneration never appears in activity counts, previews or live overlays', async () => {
+  const visible = { id: 'speech', entryId: 'scene', text: 'Weiter geht es.', orderKey: 1 };
+  const regeneration = { id: 'reset', entryId: 'scene', orderKey: 2,
+    commentKind: 'scene-regeneration-event', serverValidatedMechanics: true,
+    sceneRegeneration: { participants: [{ actorId: 'gawain' }] } };
+  const summary = buildCommentThreadActivity('scene', [visible, regeneration]);
+  assert.equal(summary.commentCount, 1);
+  assert.deepEqual(summary.recentComments.map(comment => comment.id), ['speech']);
+  const repository = createCommentActivityRepository({ readState: async () => ({ ready: true }), readThreads: async () => [summary] });
+  repository.update('scene', [visible, regeneration]);
+  assert.deepEqual((await repository.recent(12)).map(comment => comment.id), ['speech']);
+
+  const untrusted = { ...regeneration, id: 'untrusted', serverValidatedMechanics: false };
+  const imported = { ...regeneration, id: 'imported', importedHistoricalMechanics: true };
+  assert.equal(buildCommentThreadActivity('scene', [untrusted, imported]).commentCount, 2);
+});

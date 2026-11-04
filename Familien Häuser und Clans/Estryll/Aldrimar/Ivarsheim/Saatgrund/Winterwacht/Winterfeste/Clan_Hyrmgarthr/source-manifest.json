@@ -1,0 +1,90 @@
+{
+  "id": "haus-hyrmgardr",
+  "source": {
+    "attachmentId": "d0e5fd78-1569-4a24-a143-fae2193fcf78",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\d0e5fd78-1569-4a24-a143-fae2193fcf78\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/hyrmgarthr/animexx-original.html",
+    "bytes": 146167,
+    "sha256": "28176de37fb3b51b0c1703185e850e3568b69e1ee785fd73ab631901efbf9626",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-hyrmgardr",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Winterfeste",
+      "barony": "Saatgrund",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-skogg",
+      "liegeHouseName": "Clan Skogg",
+      "folderPath": [
+        "Aldrimar",
+        "Ivarsheim",
+        "Saatgrund",
+        "Winterwacht",
+        "Winterfeste"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-winterwacht.png",
+        "barony": "assets/images/regions/aldrimar-saatgrund.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-hyrmgardr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-hyrmgardr",
+    "familyId": "haus-hyrmgardr",
+    "slug": "hyrmgarthr",
+    "canonicalSlug": "hyrmgardr",
+    "attachmentId": "d0e5fd78-1569-4a24-a143-fae2193fcf78",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/QisLQiU.png",
+    "sourceUrl": "https://i.imgur.com/QisLQiU.png",
+    "path": "Stammbäume/assets/images/references/haus-hyrmgardr/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-hyrmgardr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 242054,
+    "sha256": "499f6b755a53651525d786961c45e9ee017920de7f6e16c1b3ae610334e90b28",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Runenkrieger mit verhülltem Gesicht, Hörnerhelm, leuchtenden Runen und Schwert.",
+    "sha": "499f6b755a53651525d786961c45e9ee017920de7f6e16c1b3ae610334e90b28",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Sichtbarer Name Clan Hyrmgarthr, stabile Familien-ID haus-hyrmgardr und Hausknoten house-hyrmgardr. Hrymgardr, Hyrmgarðr und Hyrmgardr sind Quellvarianten, keine neu anzulegenden Familien. Ein haus-hyrmgarthr-Datensatz existiert nicht.",
+    "Heutiger Sitz Winterfeste, Unterherrschaft Winterwacht, übergeordnet Saatgrund, Lehnsherr Skogg. Magische Macht begründet keine höhere Rangstufe und keinen Registerwechsel.",
+    "Gunnhildrs unterschiedliche mythische Deutungen bleiben als Gerüchte kenntlich. Blutträger sind nach der aktuellen Autorenfestlegung Menschen mit infernalem oder celestialem Erbe; keine pauschale Rassenänderung, Vampirinfektion oder zusätzliche Klasse schreiben.",
+    "Die Auslese des Winterwacht-Ordens wird ohne den Anteil jeder Dritte beschrieben. Magisches Erbe, Interesse, Ausbildung und tatsächliche Meisterschaft bleiben getrennt.",
+    "Baltborg liegt laut aktuellem Kartenabgleich in Rothain und ist eine Ordensburg. Die alte Liste macht sie nicht zu einer Hyrmgarthr-Clanburg in Winterwacht; der Eintrag wird nicht so übernommen.",
+    "Winterfeste, Ard Eabhraig, Hyrmhaug und Winterhalt gehören zum aktuellen Gebietszusammenhang Winterwachts. Antike Ruinen und einzelne Stützpunkte begründen keine neuen Orts- oder Personenakten.",
+    "Die beiden großen Magier sind Aldis Hyrmgarthr und Freydis Hyrmgarthr, beide verschollen. Nicht mit Freydis Silberzunge oder anderen Namensgleichen vermischen; keine neuen Lebens- oder Todesdaten setzen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

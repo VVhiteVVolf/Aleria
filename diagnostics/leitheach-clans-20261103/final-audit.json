@@ -1,0 +1,185 @@
+{
+  "schema": "aleria.leitheach-final-integration-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T21:54:17.270Z",
+  "status": "pass",
+  "publicOnly": true,
+  "productDataModified": false,
+  "contentVersion": "20261103-leitheach-v1",
+  "baseline": {
+    "path": "diagnostics/leitheach-clans-20261103/baseline.json",
+    "fileSha256": "7b3a97caabf560ec863d516d79f3c4a1ce25f5dc59e9ca41f12e74e04af03e9a",
+    "aggregateProtectedFingerprint": "846b969e338d546789a077f183641fbbd703eeeaf1098ab34b5c63330037739a",
+    "families": 29,
+    "graphsUnchanged": 29,
+    "profilesUnchanged": 29,
+    "historicalMetadataUnchanged": 29,
+    "titlesAndFoldersUnchanged": 29,
+    "relatedPublicRecordsUnchanged": [
+      "haus-nic-blar",
+      "haus-cleirigh",
+      "haus-draig",
+      "haus-aderyn",
+      "haus-marwolaeth",
+      "haus-suedstahl",
+      "haus-albholz"
+    ]
+  },
+  "integration": {
+    "registeredFullHousePages": 29,
+    "linkedHouseBiographies": 29,
+    "canonicalIframes": 29,
+    "territorialLinks": 29,
+    "correctlyWiredGalleryHouses": 29,
+    "originalFiguresByteIdentical": 26,
+    "generatedRepresentativeFigures": 3,
+    "generatedBytesMatchToolOutputs": true,
+    "sourceArchivesByteIdentical": 28,
+    "canonicalFounderCards": 26,
+    "confirmedCurrentHeads": 26,
+    "confirmedHeirSequences": 18
+  },
+  "historicalHouseAdministrations": [
+    {
+      "id": "haus-suileach",
+      "rank": "Mor Tiarna",
+      "lastSeat": "Lochansail",
+      "currentHead": ""
+    },
+    {
+      "id": "haus-iomrach",
+      "rank": "Laird",
+      "lastSeat": "Broch an Clais",
+      "currentHead": ""
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "rank": "Laird",
+      "lastSeat": "Sruthlann",
+      "currentHead": ""
+    }
+  ],
+  "survivingPersonsVisible": [
+    {
+      "familyId": "haus-iomrach",
+      "personId": "ybhna-iomrach",
+      "name": "Ybhna Iomrach",
+      "status": "alive"
+    },
+    {
+      "familyId": "haus-iomrach",
+      "personId": "conan-iomrach",
+      "name": "Cónán Iomrach",
+      "status": "alive"
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "personId": "quona-tsaoir",
+      "name": "Quona T’Saoir",
+      "status": "alive"
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "personId": "junaid-tsaoir",
+      "name": "Junaid T’Saoir",
+      "status": "alive"
+    }
+  ],
+  "specificCases": {
+    "distinctPrincipality": "Leitheach",
+    "countrySource": "Kontinente/modules/leitheach/pages.source.json",
+    "nicBlarDistinctFromCeitheach": true,
+    "cleirDistinctFromBlaithneachCleirigh": true,
+    "canonicalAliasIdsPreserved": [
+      "haus-amrhan",
+      "haus-dal-t-saor",
+      "haus-nic-blar-leitheach"
+    ],
+    "gruenhand": {
+      "rankId": "sept-head",
+      "displayRank": "Septoberhaupt (bürgerlicher Rang)",
+      "houseType": "Bürgerliches Sept",
+      "seat": "Broch an Coill",
+      "liege": "Clan Na’Mhuir"
+    },
+    "fiachrachFirstHeir": "Séamus Fiachrach",
+    "historicalAdministrationDoesNotImplyAllRelativesDead": true
+  },
+  "tests": {
+    "command": "node \"Familien Häuser und Clans/tests/leitheach-house-pages.test.mjs\"",
+    "passed": 10,
+    "failed": 0,
+    "executionBeforeImageRevision2": true
+  },
+  "imageReview": {
+    "contactSheet": "diagnostics/leitheach-clans-20261103/all-clan-figures.jpg",
+    "visuallyInspected": true,
+    "allGeneratedPngRgba2to3": true,
+    "generatedAlphaRange": [
+      0,
+      254
+    ],
+    "sourceBytesUnmodified": true,
+    "blockingFindings": [],
+    "minorSourceArtifacts": [
+      "Geringe Alpha-Randpixel des unveraenderten Tooloutputs; auf heller Kontaktansicht keine blockierenden sichtbaren Fehler.",
+      "Vorhandene Bodendetails, Schatten und randnahe Elemente der26Originale bleiben erhalten."
+    ],
+    "activeGeneratedRevision": 2,
+    "individualV2ImagesVisuallyInspected": true,
+    "normalRoundedHumanEarsConfirmed": true,
+    "generatedCornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "findings": [],
+  "limits": [
+    "Read-only Daten-, Dateihash- und Integrationspruefung; breite Regressionen und Browserpruefung werden separat durch Root belegt.",
+    "Keine Bereinigung durch diesen Audit; Workspacekopien v1 wurden durch Root entfernt, Tooloriginale sind erhalten."
+  ],
+  "imageRevisionUpdate": {
+    "reviewedAt": "2026-11-03T21:54:17.270Z",
+    "revision": 2,
+    "reason": "Nutzerkorrektur: normale menschliche runde Ohren",
+    "validationScope": "Gezielte Bildpfad-/Hashpruefung; kein erneuter breiter Testlauf durch diesen Audit",
+    "checks": [
+      {
+        "id": "haus-suileach",
+        "assetPath": "Stammbäume/assets/images/references/haus-suileach/krieger-human-ears-v2.png",
+        "sha256": "1a303e2511d4d016d96e6e6bba5b363741f2a7aa8198c2730f2570e0f9ba8c02",
+        "toolSourceByteIdentical": true,
+        "normalRoundedHumanEarsVisuallyConfirmed": true,
+        "pageBiographyAndGalleryUseV2": true,
+        "originalGenerationSourcePreserved": true,
+        "supersededWorkspaceCopyAbsent": true
+      },
+      {
+        "id": "haus-dal-t-saor",
+        "assetPath": "Stammbäume/assets/images/references/haus-dal-t-saor/krieger-human-ears-v2.png",
+        "sha256": "250ceccf5174688a0e3cc6103482c6ab4905dd1df721e8a21f8521570c6a1d53",
+        "toolSourceByteIdentical": true,
+        "normalRoundedHumanEarsVisuallyConfirmed": true,
+        "pageBiographyAndGalleryUseV2": true,
+        "originalGenerationSourcePreserved": true,
+        "supersededWorkspaceCopyAbsent": true
+      },
+      {
+        "id": "haus-gruenhand",
+        "assetPath": "Stammbäume/assets/images/references/haus-gruenhand/krieger-human-ears-v2.png",
+        "sha256": "ee85e8c659b811c2f3b37cc60174eb4c42643a5e28fd94753c957e1ce0db6639",
+        "toolSourceByteIdentical": true,
+        "normalRoundedHumanEarsVisuallyConfirmed": true,
+        "pageBiographyAndGalleryUseV2": true,
+        "originalGenerationSourcePreserved": true,
+        "supersededWorkspaceCopyAbsent": true
+      }
+    ],
+    "original26StillByteIdentical": true,
+    "baseline29AndRelated7StillUnchanged": true,
+    "testFixtureHardcodesOldVersion": false,
+    "noSupersededV1GalleryRecords": true
+  }
+}

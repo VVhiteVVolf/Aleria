@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "reviewed-public-family-registry",
+    "familyId": "haus-gormard",
+    "sourceRevision": 0
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-gormard",
+    "existingGraphUnchanged": true,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ]
+  },
+  "preparation": {
+    "inventedPeople": false,
+    "inventedRelationships": false,
+    "inventedProfession": false,
+    "militaryStatisticsImported": false
+  },
+  "images": [
+    {
+      "role": "Repräsentative Hausfigur",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "sha256": "75606f9c109fdd380c78fc9de9c5916e5340175a04b7b058875ad3766c01dc7d",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json",
+      "namedPerson": false
+    }
+  ],
+  "decisions": [
+    "Nur belegte öffentliche Registerfakten und bestehende Angehörige verwendet. Keine alten Genealogien, Amtsfolgen oder Militärstatistiken importiert.",
+    "Bestehende Hausquellen bleiben erhalten; dieses neue Modul füllt eine geprüfte aktive Seitenlücke."
+  ]
+}

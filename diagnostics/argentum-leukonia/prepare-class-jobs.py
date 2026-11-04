@@ -1,0 +1,52 @@
+"""Retain complete class prompts; built-in image_gen calls are issued separately."""
+from pathlib import Path
+import hashlib
+import json
+
+ROOT = Path(__file__).resolve().parents[2]
+REALM = ROOT / 'Vorschau/Leukonia'
+PRESET_FILE = ROOT / 'AleriaAlmanach/docs/art/image-style-presets.json'
+PRESET = json.loads(PRESET_FILE.read_text(encoding='utf-8'))['presets']['fantasy-rpg-character']
+STYLE_REF = ROOT / PRESET['approvedReferenceImage']
+EMBLEM_REF = REALM / 'assets/originals/argentum.png'
+HORSE_REF = ROOT / 'Bestiarium/assets/horse-profiles/equo.webp'
+BRIEFS = [
+  ('prototype-01', 'Schwerer Infanterist',
+   'Ein junger erwachsener Mann von etwa26Jahren, schlank und athletisch, eckiges jugendliches Gesicht. Römisch-kampanischer schwerer Infanterist, ruhige aufrechte Dreiviertelpose. Eisenfarbener Imperial-Gallic-Helm mit breitem Nackenschutz und offenen gegliederten Wangenklappen, niedriger dunkelroter Querbusch. Deutlich gebaute matte Segmentpanzerung am Torso, kurze Kettenärmel, lederne Pteryges über staubig ziegelroter Tunika, schwere Beinschienen. In einer Hand ein gerades Spatha-Schwert ruhig mit Spitze schräg nach unten, andere Hand am großen gekrümmten rechteckigen Turmschild. Schild ist dunkelmarineblau mit kleinem gemaltem gedecktgoldenem Kaiseradler aus Referenz2; kein weiterer Schild und keine Axt. Schild verdeckt nicht beide Beine. Solide geschlossene Haltung, Waffen und Füße komplett.'),
+  ('prototype-02', 'Schwer gepanzerter Lanzenträger',
+   'Eine junge erwachsene Frau von etwa25Jahren, athletisch mit schlanker Taille und ruhigem schmalem Gesicht. Schwer gepanzerte römische Lanzenträgerin. Spätrömischer Berkasovo-Kammhelm aus mattem verzinntem Eisen, klare zentrale Längsverstärkung und lange gewöhnliche Wangenklappen, Gesicht erkennbar, kein Federbusch. Dunkle schwere Lamellenrüstung mit großen einfachen Flächen, Kettenärmel, lange cremefarbene Tunika, gedeckt graugrüner kurzer Mantel, Bronzeledergürtel, Beinschienen. Eine sehr lange gerade Lanze wird mit beiden Händen locker an einer vertikalen klaren Schaftachse vor der Seite gehalten, kleine normale Lanzenspitze; voller Schaft und vollständige Spitze im Bild. Kein Schild und keine zusätzliche gezogene Klinge. Kleiner gedecktgoldener Kaiseradler als Stoffstickerei am Mantelrand. Deutlich andere Silhouette und Rüstungsbauweise als ein Segmentpanzer.'),
+  ('prototype-03', 'Berittener mit Schwert · Kataphrakt',
+   'Ein junger erwachsener Mann von etwa27Jahren, schlanker athletischer Reiter, ruhiges offenes jugendliches Gesicht. Spätrömischer Kataphrakt auf einem vollständigen Equo-Militärpferd: Referenz3 zeigt seine Rasse, dunkel anthrazitgraues Fell, schwarze Mähne und schwarzer Schweif, kräftige Brust, kompakter belastbarer Körper und solide Beine. Equo ist robust, kein riesiges Kaltblut und kein schlankes Wüstenpferd. Ruhig stehendes Pferd in seitlicher Dreiviertelansicht mit vier gut unterscheidbaren vollständigen Beinen und vier sichtbaren Hufen, Kopf und Schweif vollständig; Schweif wächst nur an Hinterhand. Reiter mit vernünftigem Sattel, Steigbügeln und getrennten Zügeln. Traditioneller spätrömischer Spangenhelm mit Nasal und Kettennackenschutz, ohne hohen Busch. Matte geschlossene silbergraue Schuppenrüstung mit Armschienen und kleinen Schulterlamellen, tailliert, schlichter dunkelroter Überwurf. Ein gerades langes Reiterschwert in der rechten Hand ruhig schräg nach oben, vollständige Klinge; linke Hand hält Zügel. Pferd mit kurzer funktionaler Schuppendecke über Hals und Flanken, Beine und Anatomie bleiben sichtbar, Kopf offen mit einfachem Zaum. Kleine navy-goldene Kaiseradler-Stickerei an der Satteldecke. Keine Lanze, kein weiterer Mensch, keine Szene.'),
+  ('prototype-04', 'Fernkämpfer mit Speer und Rückenköcher',
+   'Eine junge erwachsene Frau von etwa23Jahren, schlank und beweglich, ovales jugendliches Gesicht mit kurzem schwarzem Haar. Leichter gerüstete römische Fernkämpferin, entspannt ruhig in leicht versetzter aufrechter Pose. Schlichter spätantiker Eisenhelm mit niedrigem gerundetem Kamm und kurzen Wangenklappen, kein Busch, keine Maske. Leichter ledergefasster Schuppenpanzer über staubig olivfarbener Tunika, einzelne Unterarmschienen, kurze naturfarbene Schulterdecke und geschlossene römische Militärschuhe. Eine Hand hält einen schlanken langen Speer seitlich aufrecht; komplette klare Speerachse und Lanzenspitze im Bild. Ein sichtbarer Rückenköcher über der anderen Schulter mit deutlich erkennbaren befiederten Pfeilen, trotz Frontalansicht gut lesbar. Die zweite Hand liegt locker am Gurt. Keine weitere gezogene Waffe und kein Schild. Kleine gedecktgoldene imperiale Adlerfibel auf Stoff, keine Schrift. Köcher nicht versehentlich durch Speer ersetzen.'),
+  ('prototype-05', 'Mariner und Kleriker des Zephyr',
+   'Ein junger erwachsener Mann von etwa24Jahren, schlank und athletisch, feines jugendliches Gesicht mit kurzem lockigem dunklem Haar. Seltener edler pompöser römischer Marinekrieger und Kleriker des Zephyr. Traditioneller italisch-attischer Prunkhelm mit kurzem hellem Kamm, offenen Wangen und blassen Meeresgrün-Einlagen; keine Tierform am Helm. Eleganter matt silberner Schuppenpanzer, ruhige große Formen, lange elfenbeinfarbene geschlitzte Tunika, gedeckt meergrüner Mantel, dezente alte goldene Säume, einfache breite Armschienen und helle Beinschienen. Keine riesigen Schulterplatten. Ruhige höfische Haltung. Eine Hand hält einen einzelnen gebogenen Säbel mit vollständiger Klinge locker nach unten neben dem Körper; andere Hand fasst den Mantelgurt. Sichtbarer Rückenköcher mit befiederten Pfeilen über einer Schulter. Pompöse Stoffe und maritimer Farbklang, keine zusätzlichen erfundenen religiösen Symbole, keine Magieeffekte und kein Stab. Kleiner Kaiseradler als metallener Gürtelbeschlag aus Referenz2.'),
+  ('prototype-06', 'Miliz · einfacher Legionär',
+   'Eine junge erwachsene Frau von etwa22Jahren, schlank und kräftig, rundes jugendliches Gesicht und dunkler geflochtener Nacken. Einfacher römischer Miliz-Legionär ohne höfische Pracht. Schlichter bronzefarbener Montefortino-Helm mit kleinem normalem Knopf, kein Federbusch und keine Maske. Kurzes einfaches Kettenhemd über einer groben naturfarbenen Tunika, brauner Ledergürtel, einfache umwickelte Unterschenkel und praktische geschlossene Militärschuhe. Kleiner matter dunkelroter Oval-Holzschild in einer Hand, anderes Handgelenk ruht ruhig an einem kurzen geraden Schwert, das in der Hand mit Spitze nach unten gehalten wird, komplette Klinge sichtbar. Kein Turmschild, keine großen Beinschienen, keine Vergoldung. Ein kleiner schlichter ockerfarbener gemalter Kaiseradler am Schild reicht als imperiale Zugehörigkeit. Schlichte aufrechte Haltung, freundliche entschlossene Mimik, kein Gruß und keine Kampfaktion.'),
+  ('prototype-07', 'Römischer Kampfbarde',
+   'Ein junger erwachsener Mann von etwa25Jahren, schlank athletisch, längliches jugendliches Gesicht und kurze lockige kastanienbraune Haare. Römischer Kampfbarde in ruhiger aufrechter Haltung. Leichter niedriger italischer Bronzehelm mit schmaler Stirnbinde und kleinen geöffneten Wangenklappen, kein hoher Busch und keine Krone. Taillierter schlichter lederner Brustschutz über staubig pflaumenfarbener Tunika, kurze Lederpteryges, gedeckt safranfarbenes Schultertuch und praktische römische Stiefel. Die linke Hand hält eine kleine tragbare römische Leier am Hüftgurt, die rechte Hand hält einen einzelnen gebogenen Säbel locker gesenkt; beide Gegenstände vollständig und klar getrennt. Kein zusätzliches Schwert, kein Zauberstab, keine große Laute, keine Sprechblasen oder Notenzeichen. Kleine Kaiseradlerfibel verbindet das Tuch. Mimik ruhig und aufmerksam, kein Auftritt und keine Bühne.'),
+]
+COMMON = ('Einzelnes eigenständiges Klassenprototypenbild des Fantasy-Kaiserreiches Argentum; dies ist keine benannte Person und noch kein festgelegter Klassenname. '
+          'Die erste Bildreferenz ist ausschließlich verbindliche MALSTILREFERENZ, nicht die westliche Plattenrüstung oder ihre Farben. '
+          'Die zweite Bildreferenz liefert nur das imperiale Adler-Motiv und dessen gedeckte navy-goldene Farbanklänge. '
+          'Römisch-kampanische und spätrömische Ausrüstung, keine osmanische oder seldschukische Kleidung. '
+          'Junger erwachsener Mensch20bis30Jahre, fit und schlank, menschliche Ohren, keine alte oder gedrungene Gestalt. '
+          'Ruhige vollständige Ganzkörperfigur, 2:3 Hochformat1024x1536, höchste Zier bis beide Füße sowie sämtliche Waffenspitzen vollständig sichtbar und mindestens6Prozent freier Rand. '
+          'Beim Reiter ganze Pferdesilhouette mit vier Hufen und zusätzlichem Rand. '
+          'Echter transparenter PNG-Hintergrund, alle äußeren Flächen und offene Figurenlücken transparent; Figurenmaterialien deckend. '
+          'Kein Boden, Schatten, Hintergrund, Papierfläche, Glows oder Farbdunst der Stilreferenz. '
+          'Keine Musketen, Feuerwaffen, modernen Gegenstände, Schrift, Zahlen oder Wasserzeichen. Keine dicken Comic-Outlines, keine realistische Ölmalerei, kein CGI. '
+          'Jede Figur als wirklich eigener Charakter mit eigener Rüstung und eigenem Helm, keine Umfärbung einer gemeinsamen Basissilhouette.')
+jobs = []
+for ident, role, design in BRIEFS:
+    refs = [str(STYLE_REF), str(EMBLEM_REF)] + ([str(HORSE_REF)] if ident == 'prototype-03' else [])
+    jobs.append({'id':ident, 'category':'warriors', 'assetStem':ident, 'name':None, 'role':role,
+                 'prompt':'\n\n'.join(['Use case: stylized-concept', COMMON, PRESET['prompt'], 'Motiv: '+design]),
+                 'transparent_background':True, 'referenced_image_paths':refs,
+                 'mount': {'name':'Equo','profile':'Bestiarium/tiere/pferde/equo/profil.json','href':'../../Bestiarium/tiere/pferde/equo/index.html','status':'existing-imperial-breed'} if ident == 'prototype-03' else None})
+manifest = {'schemaVersion':1, 'date':'2026-11-03', 'tool':'built-in image_gen.imagegen',
+            'stylePreset':str(PRESET_FILE.relative_to(ROOT)), 'presetSha256':hashlib.sha256(PRESET_FILE.read_bytes()).hexdigest(),
+            'referenceRoles':{'first':'approved matte figure style only','second':'imperial emblem motif only','thirdIfPresent':'actual Equo breed reference only'},
+            'jobs':jobs}
+(REALM/'sources/class-prototype-generation-jobs.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'jobs':len(jobs),'ids':[job['id'] for job in jobs]}))

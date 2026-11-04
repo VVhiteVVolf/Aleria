@@ -1,0 +1,87 @@
+{
+  "id": "haus-hrafn",
+  "source": {
+    "attachmentId": "920791e2-8294-4fc2-9597-a9d17999cb1c",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\920791e2-8294-4fc2-9597-a9d17999cb1c\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/hrafn/animexx-original.html",
+    "bytes": 85166,
+    "sha256": "4f7138e7b25653a0e6eec692ab98126a7bfaa4ced411620c8d80b85aa7b18827",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-hrafn",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Flusswall",
+      "barony": "Flussblick",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-flussblick.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-hrafn",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-hrafn",
+    "familyId": "haus-hrafn",
+    "slug": "hrafn",
+    "canonicalSlug": "hrafn",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "920791e2-8294-4fc2-9597-a9d17999cb1c",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/EuqiZJ1.png",
+    "sourceUrl": "https://i.imgur.com/EuqiZJ1.png",
+    "path": "Stammbäume/assets/images/references/haus-hrafn/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-hrafn/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 321962,
+    "sha256": "fc5bc1eb516cb79936736f790f297874b80f08aa733fe688175a69f80eaba6f1",
+    "sha": "fc5bc1eb516cb79936736f790f297874b80f08aa733fe688175a69f80eaba6f1",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkelgrün gerüsteter Krieger mit Hörnerhelm, Schwert und Werkzeugschild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Aktueller Ort Flusswall, Gebiet Flussblick, Lehnsherr Ragnulf. Flussblick ist nicht der heutige Stadtname.",
+    "Gründung nach dem Prätendentenkrieg und Wiederaufbauauftrag bleiben erhalten. Keine eigene Kriegsbeteiligung des damals noch nicht bestehenden Clans erfinden.",
+    "Hrafns Herkunftsabschnitt nennt Grüne als Vernichter der Arnvild; Arnvild nennt Widerstand gegen Grüne, anschließend aber Arn als Befehlgeber der Vernichtung. Wegen dieses Quellenwiderspruchs werden Angreiferfraktion und Befehlgeber im redigierten Produkttext nicht festgelegt.",
+    "Geistige Nachfolge der Arnvild bedeutet handwerkliches und religiöses Erbe, keine neue Abstammung oder Zusammenlegung der Akten.",
+    "Die im Traditionskapitel stehenden drei Absätze zum Huskarltum werden sachlich in das Kriegerkapitel eingeordnet; keine Inhalte gehen dadurch verloren.",
+    "Die Hrafn erwerben Stein und Erz von außen. Keine eigenen Minen aus dem allgemeinen Schmiedethema oder dem Wappen ableiten.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

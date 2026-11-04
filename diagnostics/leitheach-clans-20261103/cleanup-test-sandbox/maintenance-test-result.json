@@ -1,0 +1,39 @@
+{
+  "schema": "aleria.bounded-maintenance-test-run",
+  "suite": "netlify/tests/temporary-cleanup.test.py",
+  "sandbox": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "testsRun": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "productionCodeChanged": false,
+  "aclChanged": false,
+  "standardMode0700CreationPreserved": true,
+  "recursiveRemovalUsed": false,
+  "cleanupEvents": [
+    {
+      "directory": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-maintenance-test-4euu_p54",
+      "removedOwnFiles": 3,
+      "emptyDirectoriesRemoved": 4
+    },
+    {
+      "directory": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-maintenance-test-2xguzmt2",
+      "removedOwnFiles": 4,
+      "emptyDirectoriesRemoved": 4
+    },
+    {
+      "directory": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-maintenance-test-dvdetm7d",
+      "removedOwnFiles": 2,
+      "emptyDirectoriesRemoved": 4
+    },
+    {
+      "directory": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-maintenance-test-8q06giem",
+      "removedOwnFiles": 5,
+      "emptyDirectoriesRemoved": 4
+    }
+  ],
+  "remainingOwnDirectories": [],
+  "output": "test_changed_or_unbacked_content_is_retained (bounded_cleanup_tests.CleanupTests.test_changed_or_unbacked_content_is_retained) ... ok\ntest_methods_and_outside_paths_cannot_be_targeted (bounded_cleanup_tests.CleanupTests.test_methods_and_outside_paths_cannot_be_targeted) ... ok\ntest_only_proven_git_copies_are_removed (bounded_cleanup_tests.CleanupTests.test_only_proven_git_copies_are_removed) ... ok\ntest_symlinks_cannot_escape_the_build (bounded_cleanup_tests.CleanupTests.test_symlinks_cannot_escape_the_build) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.073s\n\nOK\n"
+}

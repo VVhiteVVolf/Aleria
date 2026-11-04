@@ -12,7 +12,7 @@ import {
   createWardAwayBranch
 } from './family-record-builders.js';
 import { HOUSE_RAGNULF_PORTRAITS } from './house-ragnulf-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import { SCHWARZFENN_HOUSE_EMBLEMS } from './schwarzfenn-house-profiles.js';
 

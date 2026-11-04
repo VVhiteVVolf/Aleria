@@ -1,0 +1,39 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-dianc-aberdail",
+  "attachmentId": "e589c58b-1e24-4636-9b9c-abb354861c28",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "ed1a6e14f478a30f6504d594002c3e6174507b65097cf3e8fd7f4daf97b26257",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/fFxT5Wx.png",
+      "sha256": "8407ea8dd0263023a8be801eac33a011349f7e3af5eb3e89f029ae0cf7ef45c5",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-dianc-aberdail",
+    "originFamilyId": "haus-dianc",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-dianc-family.js",
+    "Stammbäume/assets/js/data/house-dianc-portraits.js",
+    "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "biographyWords": 326
+}

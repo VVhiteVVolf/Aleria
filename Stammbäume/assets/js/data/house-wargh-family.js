@@ -10,7 +10,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_WARGH_PORTRAITS } from './house-wargh-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
@@ -358,7 +358,7 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
     person('harald-wargh', 'Harald Wargh', 'male', '1586', '1627', { title: 'Jarl des Clans Wargh' }),
     spouse('eyrun-skogg', 'Eyrún Skogg', 'female', '1587', '1605', 'house-skogg'),
     awayWoman('hljotrun-wargh', 'Hljótrún Wargh', '1589', '1641', 'Clan Grendel'),
-    spouse('gunnar-grendel', 'Gunnar Grendel', 'male', '1585', '1625', 'house-grendel'),
+    spouse('gunnar-grendel', 'Gunnar Grendel', 'male', '1585', '1631', 'house-grendel'),
     person('herleif-wargh', 'Herleif Wargh', 'male', '1591', '1629'),
     spouse('fjorgyn-helgr', 'Fjörgyn Helgr', 'female', '1593', '1629', 'house-helgr', {
       notes: 'Der beschädigte Quellenname „FjÇ«rgyn“ wurde als Fjörgyn normalisiert.'
@@ -385,8 +385,8 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
 
     person('borg-wargh', 'Borg Wargh', 'male', '1667', '1734', { title: 'Jarl des Clans Wargh' }),
     spouse('angebroda-skald', 'Angebroda Skald', 'female', '1670', '', 'house-skald'),
-    awayWoman('bylga-wargh', 'Bylga Wargh', '1673', '????', 'Clan Kummerherz'),
-    spouse('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '????', 'house-kummerherz'),
+    awayWoman('bylga-wargh', 'Bylga Wargh', '1673', '', 'Clan Kummerherz'),
+    spouse('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '', 'house-kummerherz'),
     person('sverkel-wargh', 'Sverkel Wargh', 'male', '1664', '????', {
       extensions: { chartPartnerMirrorForPartnershipIds: ['marriage-sverkel-torgunna-wargh'] }
     }),
@@ -395,8 +395,8 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
     }),
     awayWoman('edeltraud-wargh', 'Edeltraud Wargh', '1660', '1723', 'Haus Morthwyll'),
     spouse('cadwallen-morthwyll', 'Cadwallen Morthwyll', 'male', '1659', '1725', 'house-morthwyll'),
-    person('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '????'),
-    spouse('laufey-wellenschild', 'Laufey Wellenschild', 'female', '1674', '????', 'house-wellenschild'),
+    person('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', ''),
+    spouse('laufey-wellenschild', 'Laufey Wellenschild', 'female', '1674', '', 'house-wellenschild'),
 
     person('ketill-wargh', 'Ketill Wargh', 'male', '1693', '', { title: 'Jarl von Ivarsheim seit 1734' }),
     spouse('freyrs-varulv', 'Freyrs Varulv', 'female', '1698', '', 'house-varulv'),
@@ -406,10 +406,10 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
     spouse('gwenlyn-trachwyll', 'Gwenlyn Trachwyll', 'female', '1702', '', 'house-trachwyll'),
     person('thorgil-wargh', 'Thorgil Wargh', 'male', '1695', ''),
     spouse('freygunn-skogg', 'Freygunn Skogg', 'female', '1699', '', 'house-skogg'),
-    person('olmar-wargh', 'Olmar Wargh', 'male', '1699', '????'),
-    spouse('asahel-gullvig', 'Ásahel Gullvig', 'female', '1704', '????', 'house-gullvig'),
-    person('agnar-wargh', 'Agnar Wargh', 'male', '1698', '????'),
-    spouse('ormrun-todbrand', 'Ormrún Todbrand', 'female', '1703', '????', 'house-todbrand'),
+    person('olmar-wargh', 'Olmar Wargh', 'male', '1699', ''),
+    spouse('asahel-gullvig', 'Ásahel Gullvig', 'female', '1704', '', 'house-gullvig'),
+    person('agnar-wargh', 'Agnar Wargh', 'male', '1698', ''),
+    spouse('ormrun-todbrand', 'Ormrún Todbrand', 'female', '1703', '', 'house-todbrand'),
     awayWoman('skegghild-wargh', 'Skegghild Wargh', '1702', '', 'Clan Silberzunge'),
     spouse('hjalprek-silberzunge', 'Hjalprek Silberzunge', 'male', '1697', '', 'house-silberzunge'),
 
@@ -452,7 +452,7 @@ export const HOUSE_WARGH_FAMILY = Object.freeze({
     marriage('marriage-thorgal-skjoldrun-wargh', { status: 'ended', end: '1627' }),
     marriage('marriage-haldor-fridlaug-wargh', { status: 'ended', end: '1627' }),
     marriage('marriage-harald-eyrun-wargh', { status: 'ended', end: '1605' }),
-    marriage('marriage-hljotrun-gunnar-wargh', { status: 'ended', end: '1625' }),
+    marriage('marriage-hljotrun-gunnar-wargh', { status: 'ended', end: '1631' }),
     marriage('marriage-herleif-fjorgyn-wargh', { status: 'ended', end: '1629' }),
     marriage('marriage-asger-isrun-wargh', { status: 'ended', end: '1685' }),
     marriage('marriage-hogne-yngvild-wargh', { status: 'ended', end: '1650' }),

@@ -1,0 +1,158 @@
+{
+  "id": "haus-ruitheach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "40d12756-3c78-41bf-8280-531ebb0ceb4b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\40d12756-3c78-41bf-8280-531ebb0ceb4b\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/dal-ruitheach/animexx-original.html",
+    "bytes": 88284,
+    "sha256": "46b9bd04d3c985a93f9c24564cd729b62f4847e24b35147f3368c4d3315e73c4",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ruitheach",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Iar",
+      "barony": "Tir na nDambaí",
+      "county": "Tir na Tonn",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-fir-an-tarvo",
+      "liegeHouseName": "Clan Fir An’Tarvo",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-tonn.png",
+        "assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Tir na nDambaí",
+        "Broch an Iar"
+      ]
+    },
+    "graphFingerprint": "8fb79223084b6dea21da9828f3a0dd4d1e481d1bc9c37f9c3da886f2df7f1dea",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-ruitheach",
+    "title": "Dál’Ruitheach",
+    "territoryId": "leitheach-herrschaft-ruitheach",
+    "territoryName": "Tir na nDambaí",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na nDambaí",
+        "slug": "leitheach-herrschaft-ruitheach"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ruitheach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-ruitheach",
+    "slug": "dal-ruitheach",
+    "canonicalSlug": "ruitheach",
+    "attachmentId": "40d12756-3c78-41bf-8280-531ebb0ceb4b",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/0H43J2L.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 259615,
+    "sha256": "d187064b36b87302b55f0a740fb1c177aff096a66c1fa289bf9f33f8f6217266",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-ruitheach",
+    "title": "Dál’Ruitheach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Tonn",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/0H43J2L.png",
+    "path": "Stammbäume/assets/images/references/haus-ruitheach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ruitheach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "d187064b36b87302b55f0a740fb1c177aff096a66c1fa289bf9f33f8f6217266",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Grüner Hauskrieger mit Schwert über der Schulter und Schottenmuster.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "46b9bd04d3c985a93f9c24564cd729b62f4847e24b35147f3368c4d3315e73c4",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-ruitheach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug dal-ruitheach wird der bestehenden ID haus-ruitheach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Abstammung von Mogh Ruith ist laut Quelle ausdrücklich unbestätigter Anspruch. Keine genealogische Verbindung, göttliche Abstammung oder neuen Elternkanten daraus ableiten.",
+    "Heutiger Lairdrang, Sitz Broch an Iar und Dienst an Fir An’Tarvo haben Vorrang vor früherer Wanderschaft. Keine neue Herkunftsregion aus der Heldensage festlegen.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

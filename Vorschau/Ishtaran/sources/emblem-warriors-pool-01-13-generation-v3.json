@@ -1,0 +1,820 @@
+{
+  "schemaVersion": 3,
+  "createdAt": "2026-11-03",
+  "status": "generated-reviewed-awaiting-shared-alpha",
+  "generationRevision": "young-traditional-helm-v3",
+  "generator": "built-in image_gen.imagegen",
+  "records": [
+    {
+      "id": "pool-01",
+      "classId": "keman",
+      "motif": "Silberner Steppenwolf",
+      "palette": "Dunkelblau, Silberweiß, graues Eisen, wenig mattes Gold",
+      "helmet": "Niedriger traditioneller kumanischer Mighfer aus genieteten Segmenten, einfache Spitze und schmaler Nasenbügel, kurzer Kettennackenschutz",
+      "armor": "Leichter dunkelblauer Schuppenrock über kurzer Kette, silberne schmale Schultersegmente und schmaler heller Pelzkragen",
+      "pose": "Ruhig beritten, Pferd leicht nach links gewandt; Bogen locker schräg über den Oberschenkeln",
+      "brief": "A slim athletic handsome 24-year-old male Keman on one complete Sarkal, calm left-facing three-quarter stance. Traditional low Cuman segmented mighfer helmet, plain small point and narrow nasal, short mail neck curtain; natural uncovered young face with a short neat black beard. NO wolf-shaped visor, animal ears, feathers or fur headdress. Dark-blue light scale vest over short mail and ivory sleeves; the tapered silver shoulder lames and angular edging quietly echo the wolf's lean form but remain ordinary functional armor. Split riding skirt, grey trousers and tall boots. One compact composite bow rests diagonally over the saddle in one hand, the other holds the reins. Saddle quiver, one sheathed sabre. Natural lean grey-white dappled Sarkal, complete body and all four separate hooves.",
+      "mounted": true,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 24,
+      "face": "Schlanker athletischer junger Mann, kurzer schwarzer Bart, ruhiger Blick",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. Image3 is ONLY the Sarkal HORSE BREED reference: tall lean sinewy grey-white dark-dappled horse, dry long legs, deep chest and dark mane. Ignore the battle scene, other figures, motion and drawing style.\n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 24-year-old ADULT MAN, slim and athletic, attractive youthful face. Schlanker athletischer junger Mann, kurzer schwarzer Bart, ruhiger Blick. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic handsome 24-year-old male Keman on one complete Sarkal, calm left-facing three-quarter stance. Traditional low Cuman segmented mighfer helmet, plain small point and narrow nasal, short mail neck curtain; natural uncovered young face with a short neat black beard. NO wolf-shaped visor, animal ears, feathers or fur headdress. Dark-blue light scale vest over short mail and ivory sleeves; the tapered silver shoulder lames and angular edging quietly echo the wolf's lean form but remain ordinary functional armor. Split riding skirt, grey trousers and tall boots. One compact composite bow rests diagonally over the saddle in one hand, the other holds the reins. Saddle quiver, one sheathed sabre. Natural lean grey-white dappled Sarkal, complete body and all four separate hooves.\n\nClass role: KEMAN.\nPalette: Dunkelblau, Silberweiß, graues Eisen, wenig mattes Gold, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Niedriger traditioneller kumanischer Mighfer aus genieteten Segmenten, einfache Spitze und schmaler Nasenbügel, kurzer Kettennackenschutz. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Leichter dunkelblauer Schuppenrock über kurzer Kette, silberne schmale Schultersegmente und schmaler heller Pelzkragen. The emblem Silberner Steppenwolf may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete mounted adult on exactly one complete calm Sarkal, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, horse ears, complete tail, ALL FOUR separated legs and hooves, functional reins, bridle, saddle and stirrups, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. Horse stands calmly, no gallop. Tail emerges correctly from hindquarters. Natural grey-white dark-dappled coat, never heraldic blue or gold.\n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp"
+      ],
+      "source": "assets/warriors/generated/pool-01.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-b60fa93a-9a8c-46a9-854f-f6d56fef07b6.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "provenanceRecovery": "Original path and exact source file verified after execution-cell state reset; prompt reconstructed from the identical approved V3 builder and retained direction file.",
+      "sha256": "c9bde9f3e5a7b16e2f67744f4c14647acb1f0959e66ba18100737760ae17880c",
+      "generatorSha256": "c9bde9f3e5a7b16e2f67744f4c14647acb1f0959e66ba18100737760ae17880c",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+          "sha256": "5e9c2898eb20e67df0a0b1008aedea79ad486d1a88ad372f385363276fd1ecbd"
+        },
+        {
+          "path": "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp",
+          "sha256": "b3041d5033b3fa43dfa21f96ac868c2d5783031312bb4204b9c5ed79c2b4d9af"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-02",
+      "classId": "ghulam",
+      "motif": "Schwarzer Schneeleopard",
+      "palette": "Ockergold, Schwarz, dunkle Bronze",
+      "helmet": "Traditioneller osmanischer gerippter Turbanhelm mit schmalem glattem Stirnring, Nasenbügel und Kettenvorhang",
+      "armor": "Taillierter schwerer schwarzer Schuppen- und Lamellenpanzer, ockerfarbene Ärmel und schmale Seitenbahnen, flache Bronze-Rosetten",
+      "pose": "Schmaler ruhiger Dreiviertelstand; Streitkolben gesenkt schräg neben dem rechten Bein",
+      "brief": "A slim athletic 27-year-old female Ghulam, youthful attractive narrow face and one long dark braid, strong posture without a broad bulky body. Traditional Ottoman fluted turban helmet with a smooth bronze brow ring, narrow nasal and mail curtain, open human face; NO feline visor or animal construction. Heavy black scale-and-lamellar armor follows a long fitted functional silhouette, ochre quilted sleeves and side panels, a few bronze rosette plates and dark spotted decorative panels inspired by the leopard. Armor is heavy because of material, never because of a thick or old body. One substantial flanged mace held low diagonally beside the right leg, left hand relaxed on the belt. Full boots and complete mace visible. Modest natural armor fit, no sculpted breast armor.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 27,
+      "face": "Schlanke athletische junge Frau, dunkler Zopf, klare schmale Gesichtszüge",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 27-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Schlanke athletische junge Frau, dunkler Zopf, klare schmale Gesichtszüge. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic 27-year-old female Ghulam, youthful attractive narrow face and one long dark braid, strong posture without a broad bulky body. Traditional Ottoman fluted turban helmet with a smooth bronze brow ring, narrow nasal and mail curtain, open human face; NO feline visor or animal construction. Heavy black scale-and-lamellar armor follows a long fitted functional silhouette, ochre quilted sleeves and side panels, a few bronze rosette plates and dark spotted decorative panels inspired by the leopard. Armor is heavy because of material, never because of a thick or old body. One substantial flanged mace held low diagonally beside the right leg, left hand relaxed on the belt. Full boots and complete mace visible. Modest natural armor fit, no sculpted breast armor.\n\nClass role: GHULAM.\nPalette: Ockergold, Schwarz, dunkle Bronze, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller osmanischer gerippter Turbanhelm mit schmalem glattem Stirnring, Nasenbügel und Kettenvorhang. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Taillierter schwerer schwarzer Schuppen- und Lamellenpanzer, ockerfarbene Ärmel und schmale Seitenbahnen, flache Bronze-Rosetten. The emblem Schwarzer Schneeleopard may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-02.png"
+      ],
+      "source": "assets/warriors/generated/pool-02.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-95ec80a8-d147-458c-b77f-ea72b828d33a.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "provenanceRecovery": "Original path and exact source file verified after execution-cell state reset; prompt reconstructed from the identical approved V3 builder and retained direction file.",
+      "sha256": "b42028ed00af013a963ce2688e6154b2e3b6e67f1deaf7645df8725a8a261b68",
+      "generatorSha256": "b42028ed00af013a963ce2688e6154b2e3b6e67f1deaf7645df8725a8a261b68",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-02.png",
+          "sha256": "ead8b06bb48d2fcba0aefb6e5140efbc669ce721df9e6cb58e75deb195e011ff"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-03",
+      "classId": "nizet",
+      "motif": "Weißer Steinbock",
+      "palette": "Weinrot, Elfenbeinweiß, mattes Silber",
+      "helmet": "Traditioneller persischer gerippter Kulah-Khud mit einer schlichten Mittelspitze und langem Nasenbügel",
+      "armor": "Silberne winklige Brustlamellen, kleine geschwungene Schulterkanten, langer weinroter geteilter Kaftan",
+      "pose": "Schmale seitliche Stellung mit vorgestelltem Fuß; lange Klingenstange ruhig diagonal vor dem Körper",
+      "brief": "A tall slender 21-year-old male Nizet, youthful clean-shaven angular face and short brown hair. Traditional Persian ribbed kulah-khud, ONE plain central spike, narrow nasal and mail curtain. NO horns, antlers, animal face or bird ornament. Matte silver chevron torso lames and smooth curved shoulder borders over a wine-red long split kaftan with ivory edges; subtle curved engraving on bracers echoes the ibex motif, never horns projecting from armor. Side-on stance with left foot forward. Hold ONE long oriental glaive gently diagonal across the body, two natural hands spaced apart on a single continuous straight shaft. Complete curved blade and lower butt fit well within the frame. No shield. Slim youthful body, decorative yet functional Persian equipment.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 21,
+      "face": "Hochgewachsener schlanker junger Mann, bartlos, braunes Haar",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 21-year-old ADULT MAN, slim and athletic, attractive youthful face. Hochgewachsener schlanker junger Mann, bartlos, braunes Haar. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A tall slender 21-year-old male Nizet, youthful clean-shaven angular face and short brown hair. Traditional Persian ribbed kulah-khud, ONE plain central spike, narrow nasal and mail curtain. NO horns, antlers, animal face or bird ornament. Matte silver chevron torso lames and smooth curved shoulder borders over a wine-red long split kaftan with ivory edges; subtle curved engraving on bracers echoes the ibex motif, never horns projecting from armor. Side-on stance with left foot forward. Hold ONE long oriental glaive gently diagonal across the body, two natural hands spaced apart on a single continuous straight shaft. Complete curved blade and lower butt fit well within the frame. No shield. Slim youthful body, decorative yet functional Persian equipment.\n\nClass role: NIZET.\nPalette: Weinrot, Elfenbeinweiß, mattes Silber, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller persischer gerippter Kulah-Khud mit einer schlichten Mittelspitze und langem Nasenbügel. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Silberne winklige Brustlamellen, kleine geschwungene Schulterkanten, langer weinroter geteilter Kaftan. The emblem Weißer Steinbock may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-03.png"
+      ],
+      "source": "assets/warriors/generated/pool-03.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-2b33454d-a437-4e5d-8287-dbfbbb207344.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "provenanceRecovery": "Original path and exact source file verified after execution-cell state reset; prompt reconstructed from the identical approved V3 builder and retained direction file.",
+      "sha256": "2a5010242213b5cdeac2c99b3a045f2942f31cec132d2ebf5f7252b0f6b56ec9",
+      "generatorSha256": "2a5010242213b5cdeac2c99b3a045f2942f31cec132d2ebf5f7252b0f6b56ec9",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-03.png",
+          "sha256": "3ff4254d208f507d1ddc373985064b771db56b591175bc97626a94b49846b6ef"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-04",
+      "classId": "nefer",
+      "motif": "Dunkle Zypresse",
+      "palette": "Elfenbein, Dunkelgrün, oxidierte Bronze",
+      "helmet": "Traditionelle niedrige Stahlhaube mit grüner Turbanwicklung, rundlicher Scheitel und kleiner einfacher Spitze",
+      "armor": "Elfenbeinfarbener Stepprock mit grünen länglichen Lamellensätzen wie geschichteten Zypressenzweigen",
+      "pose": "Ruhige leichte Drehung nach rechts; Speer hinter der äußeren Schulter, Schild tief vor dem Knie",
+      "brief": "A lean athletic 25-year-old female Nefer with a young determined face and dark braided hair visible at the nape. Traditional low rounded steel cap with plain small central point and a dark-green cloth turban winding, normal mail neck protection. NO leaf-shaped blade or tree crest on the helmet. Ivory quilted knee-length coat with dark-green long overlapping tapered lamellar strips; the strips evoke cypress foliage through their orderly construction. Short green shoulder mantle, plain bronze fasteners, dark sash, loose trousers and sturdy boots. One spear held upright just behind the outer shoulder, one practical round ivory shield angled low with a painted dark-green cypress. Quiet natural weight shift, light-to-medium formation infantry equipment, no mature or bulky body.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 25,
+      "face": "Schlanke junge Frau, lange dunkle Flechtfrisur, entschlossener Ausdruck",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 25-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Schlanke junge Frau, lange dunkle Flechtfrisur, entschlossener Ausdruck. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A lean athletic 25-year-old female Nefer with a young determined face and dark braided hair visible at the nape. Traditional low rounded steel cap with plain small central point and a dark-green cloth turban winding, normal mail neck protection. NO leaf-shaped blade or tree crest on the helmet. Ivory quilted knee-length coat with dark-green long overlapping tapered lamellar strips; the strips evoke cypress foliage through their orderly construction. Short green shoulder mantle, plain bronze fasteners, dark sash, loose trousers and sturdy boots. One spear held upright just behind the outer shoulder, one practical round ivory shield angled low with a painted dark-green cypress. Quiet natural weight shift, light-to-medium formation infantry equipment, no mature or bulky body.\n\nClass role: NEFER.\nPalette: Elfenbein, Dunkelgrün, oxidierte Bronze, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditionelle niedrige Stahlhaube mit grüner Turbanwicklung, rundlicher Scheitel und kleiner einfacher Spitze. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Elfenbeinfarbener Stepprock mit grünen länglichen Lamellensätzen wie geschichteten Zypressenzweigen. The emblem Dunkle Zypresse may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-04.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-0662a2c1-96b6-4c5c-b7a7-b5aa7a2fe6a9.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-0662a2c1-96b6-4c5c-b7a7-b5aa7a2fe6a9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-04.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "e7e9c8788ea1b2ab99d3a7a25be5f661436aaece887fec2ae67c347bd272f108",
+      "generatorSha256": "e7e9c8788ea1b2ab99d3a7a25be5f661436aaece887fec2ae67c347bd272f108",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-04.png",
+          "sha256": "64dad4859567c1265cbfd63ad42131444c5543aa0c182008d40ec3ced28e6bab"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-05",
+      "classId": "derwisch",
+      "motif": "Rote Tulpe",
+      "palette": "Dunkelgrün, Rot, Elfenbein, mattes Messing",
+      "helmet": "Traditioneller hoher cremefarbener Janitscharen-Börk mit geradem grünem Stirnband und gefaltetem Rückentuch",
+      "armor": "Langer ärmelloser grüner Kaftan, roter dreigeteilter Überrock, flach blütenblattförmige Armschienen",
+      "pose": "Entspannte Fechterhaltung mit leicht gedrehtem Oberkörper; ein Säbel nahe der Schulter, einer gesenkt",
+      "brief": "A slim athletic 23-year-old male Derwisch swordmaster with youthful handsome face, fine dark moustache and short dark curls. Traditional tall CREAM felt Janissary bork with a straight dark-green brow band, small plain brass clasp and long folded rear cloth; entirely normal historical-style headgear, NO tulip-petal crown or abstract crest. Dark-green sleeveless long kaftan over ivory fitted sleeves, red three-part split overskirt with broad smooth petal-shaped hems and a wide ivory sash. Shallow overlapping brass forearm guards reflect tulip forms in the BODY equipment only. Quiet asymmetrical fencing catalog pose: one curved sabre upright safely outside the shoulder, the other lowered beside the opposite leg. Two separate believable hand grips, both whole blades and boots visible, no dance.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 23,
+      "face": "Schlanker athletischer junger Mann, feiner Schnurrbart, lockiges dunkles Haar",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 23-year-old ADULT MAN, slim and athletic, attractive youthful face. Schlanker athletischer junger Mann, feiner Schnurrbart, lockiges dunkles Haar. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic 23-year-old male Derwisch swordmaster with youthful handsome face, fine dark moustache and short dark curls. Traditional tall CREAM felt Janissary bork with a straight dark-green brow band, small plain brass clasp and long folded rear cloth; entirely normal historical-style headgear, NO tulip-petal crown or abstract crest. Dark-green sleeveless long kaftan over ivory fitted sleeves, red three-part split overskirt with broad smooth petal-shaped hems and a wide ivory sash. Shallow overlapping brass forearm guards reflect tulip forms in the BODY equipment only. Quiet asymmetrical fencing catalog pose: one curved sabre upright safely outside the shoulder, the other lowered beside the opposite leg. Two separate believable hand grips, both whole blades and boots visible, no dance.\n\nClass role: DERWISCH.\nPalette: Dunkelgrün, Rot, Elfenbein, mattes Messing, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller hoher cremefarbener Janitscharen-Börk mit geradem grünem Stirnband und gefaltetem Rückentuch. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Langer ärmelloser grüner Kaftan, roter dreigeteilter Überrock, flach blütenblattförmige Armschienen. The emblem Rote Tulpe may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5ac0758c-85c3-41f4-ae42-039ea0c5ae87.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5ac0758c-85c3-41f4-ae42-039ea0c5ae87.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-05.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "ac563ac263d72070d5dc7d82958bad619c6edb6393fc78b9701b8daf96adf189",
+      "generatorSha256": "ac563ac263d72070d5dc7d82958bad619c6edb6393fc78b9701b8daf96adf189",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png",
+          "sha256": "3dd2f92d21cf8546762261bba35214b125d50c24a7942bddfa1ef99b683bcb8b"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-06",
+      "classId": "keman",
+      "motif": "Weißer Jagdfalke",
+      "palette": "Rostrot, Weiß, Blaugrau, mattes Silber",
+      "helmet": "Traditionelle osmanische Zischägge mit rundlicher Glocke, kurzem geradem Nasenbügel, Wangenklappen und Nackenschirm",
+      "armor": "Rostroter Reitrock, schmale silberne Schuppenweste mit gefächerten Schulterlagen, blaue Schärpe",
+      "pose": "Berittene ruhige Rechtsdreiviertelansicht; Bogen niedrig waagrecht vor dem Sattel, Blick leicht zurück",
+      "brief": "A slim athletic 22-year-old female Keman on one complete Sarkal, youthful attractive open face and long dark braid, calm right-facing three-quarter stance with gaze slightly over the shoulder. Traditional Ottoman zischagge: shallow round iron skull, short STRAIGHT nasal, ordinary cheek pieces and articulated neckguard, plain top finial. NO beak, feather tuft or bird-shaped helmet pieces. Rust-red riding coat, blue-grey sash, a light silver scale vest with layered functional shoulder lames arranged like folded wings. Ivory cuffs and riding boots. One short composite bow carried low and nearly horizontal across the saddle, other hand on reins; tidy quiver, sheathed sabre. Rust-blue saddlecloth with a small white falcon. Natural lean grey-white dark-dappled Sarkal, complete tail and all four hooves visible.",
+      "mounted": true,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 22,
+      "face": "Junge schlanke Reiterin, bartlos, langer schwarzer Zopf, klarer wacher Blick",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. Image3 is ONLY the Sarkal HORSE BREED reference: tall lean sinewy grey-white dark-dappled horse, dry long legs, deep chest and dark mane. Ignore the battle scene, other figures, motion and drawing style.\n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 22-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Junge schlanke Reiterin, bartlos, langer schwarzer Zopf, klarer wacher Blick. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic 22-year-old female Keman on one complete Sarkal, youthful attractive open face and long dark braid, calm right-facing three-quarter stance with gaze slightly over the shoulder. Traditional Ottoman zischagge: shallow round iron skull, short STRAIGHT nasal, ordinary cheek pieces and articulated neckguard, plain top finial. NO beak, feather tuft or bird-shaped helmet pieces. Rust-red riding coat, blue-grey sash, a light silver scale vest with layered functional shoulder lames arranged like folded wings. Ivory cuffs and riding boots. One short composite bow carried low and nearly horizontal across the saddle, other hand on reins; tidy quiver, sheathed sabre. Rust-blue saddlecloth with a small white falcon. Natural lean grey-white dark-dappled Sarkal, complete tail and all four hooves visible.\n\nClass role: KEMAN.\nPalette: Rostrot, Weiß, Blaugrau, mattes Silber, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditionelle osmanische Zischägge mit rundlicher Glocke, kurzem geradem Nasenbügel, Wangenklappen und Nackenschirm. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Rostroter Reitrock, schmale silberne Schuppenweste mit gefächerten Schulterlagen, blaue Schärpe. The emblem Weißer Jagdfalke may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete mounted adult on exactly one complete calm Sarkal, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, horse ears, complete tail, ALL FOUR separated legs and hooves, functional reins, bridle, saddle and stirrups, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. Horse stands calmly, no gallop. Tail emerges correctly from hindquarters. Natural grey-white dark-dappled coat, never heraldic blue or gold.\n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-06.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-2484439e-6cde-4d4e-8a00-5222b79b8288.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-2484439e-6cde-4d4e-8a00-5222b79b8288.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-06.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "146c1944205087305517a5c45f0441e149aa0157c73497b94a8801b91dd30666",
+      "generatorSha256": "146c1944205087305517a5c45f0441e149aa0157c73497b94a8801b91dd30666",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-06.png",
+          "sha256": "6b341558f199e2894c51f5c6581dc506057106eb7e157694f1008e3e8540c542"
+        },
+        {
+          "path": "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp",
+          "sha256": "b3041d5033b3fa43dfa21f96ac868c2d5783031312bb4204b9c5ed79c2b4d9af"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "pool-07",
+      "classId": "sipahi",
+      "motif": "Goldener Adler",
+      "palette": "Nachtgrün, Gold, dunkles Eisen",
+      "helmet": "Traditioneller hoher türkischer gerippter Turbanhelm mit kleiner Mittelspitze, Nasenbügel und Kettenvorhang",
+      "armor": "Persisch-türkischer Brustspiegel, goldgerandete gefächerte Schulterlamellen und dunkelgrüne Reiterbahnen",
+      "pose": "Würdige berittene Frontdreiviertelansicht; Lanze leicht rückwärts geneigt, linker Arm locker an den Zügeln",
+      "brief": "A lean athletic 26-year-old male Sipahi on one complete Sarkal, young handsome face with a short neat dark beard. Traditional tall fluted Turkish turban helmet with a small central point, ordinary narrow nasal, night-green cloth winding and mail neck curtain. NO eagle brow sculpture, wings, metal feather fan or animal helmet. Dark iron Persian breast mirror over mail, broad but fitted golden-edged shoulder lames arranged in layered wing-like rows; night-green divided riding skirt and green-gold saddlecloth. The body remains slim, with armor visibly worn over it. Quiet front-left three-quarter horse stance, one full coherent cavalry lance gently inclined backward in right hand, left hand controlling reins. One sheathed sabre. Entire natural grey-white dappled Sarkal, ears, tail, all four separate hooves, tack, stirrups and complete lance in frame.",
+      "mounted": true,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 26,
+      "face": "Junger schlanker athletischer Mann, kurzer gepflegter dunkler Bart",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. Image3 is ONLY the Sarkal HORSE BREED reference: tall lean sinewy grey-white dark-dappled horse, dry long legs, deep chest and dark mane. Ignore the battle scene, other figures, motion and drawing style.\n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 26-year-old ADULT MAN, slim and athletic, attractive youthful face. Junger schlanker athletischer Mann, kurzer gepflegter dunkler Bart. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A lean athletic 26-year-old male Sipahi on one complete Sarkal, young handsome face with a short neat dark beard. Traditional tall fluted Turkish turban helmet with a small central point, ordinary narrow nasal, night-green cloth winding and mail neck curtain. NO eagle brow sculpture, wings, metal feather fan or animal helmet. Dark iron Persian breast mirror over mail, broad but fitted golden-edged shoulder lames arranged in layered wing-like rows; night-green divided riding skirt and green-gold saddlecloth. The body remains slim, with armor visibly worn over it. Quiet front-left three-quarter horse stance, one full coherent cavalry lance gently inclined backward in right hand, left hand controlling reins. One sheathed sabre. Entire natural grey-white dappled Sarkal, ears, tail, all four separate hooves, tack, stirrups and complete lance in frame.\n\nClass role: SIPAHI.\nPalette: Nachtgrün, Gold, dunkles Eisen, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller hoher türkischer gerippter Turbanhelm mit kleiner Mittelspitze, Nasenbügel und Kettenvorhang. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Persisch-türkischer Brustspiegel, goldgerandete gefächerte Schulterlamellen und dunkelgrüne Reiterbahnen. The emblem Goldener Adler may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete mounted adult on exactly one complete calm Sarkal, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, horse ears, complete tail, ALL FOUR separated legs and hooves, functional reins, bridle, saddle and stirrups, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. Horse stands calmly, no gallop. Tail emerges correctly from hindquarters. Natural grey-white dark-dappled coat, never heraldic blue or gold.\n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-07.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5bcc4b24-ecc9-45ff-a4c4-aa30be48102e.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5bcc4b24-ecc9-45ff-a4c4-aa30be48102e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-07.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "1cb4232faa367266a6b94b5398b1eff69ee14709a2e6aadfd1d39adc2fbd1139",
+      "generatorSha256": "1cb4232faa367266a6b94b5398b1eff69ee14709a2e6aadfd1d39adc2fbd1139",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-07.png",
+          "sha256": "137ba3dee7de6a47a37af400ab3a6fbd6afdb858b544b280749243b42fdc73d7"
+        },
+        {
+          "path": "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp",
+          "sha256": "b3041d5033b3fa43dfa21f96ac868c2d5783031312bb4204b9c5ed79c2b4d9af"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-08",
+      "classId": "aschik",
+      "motif": "Silberne Mondsichel und drei Sterne",
+      "palette": "Dunkelviolett, Silbergrau, Elfenbein, warmes Braun",
+      "helmet": "Traditioneller flacher persischer Wickelturban über kleiner runder Stahlkappe, glatte silberne Stirnschließe",
+      "armor": "Leichte kleine Schulterschalen mit Sichelkanten über weitem höfischem Mantel, schmales silbernes Brustband",
+      "pose": "Lässige höfische Stellung mit freiem Standbein; Säbel gesenkt, Laute am Rücken mit sichtbarem Hals",
+      "brief": "A slender attractive 24-year-old female Aschik, secular courtly fencer and poet, youthful oval face and dark hair. Traditional low Persian ivory wrapped turban over a small round steel skullcap, smooth small silver clasp; no crescent-shaped helmet structure, giant moon crest or fantasy spikes. Long dark-violet open coat with broad silver-grey cuffs, light asymmetrical rounded shoulder shells over a short fitted mail vest, narrow silver curved chest bands and restrained star embroidery. Soft ivory trousers, tall dark boots and relaxed natural stance with one foot eased forward. One elegant gently curved sabre held point-down in the right hand, left hand on hip. Small long-necked lute hangs on the back by a visible strap, pegbox and some body visible. Practical modest cut, no sculpted breast armor or exposed midriff.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 24,
+      "face": "Schlanke junge Frau, feines ovales Gesicht, dunkles Haar, höfische Gelassenheit",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 24-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Schlanke junge Frau, feines ovales Gesicht, dunkles Haar, höfische Gelassenheit. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slender attractive 24-year-old female Aschik, secular courtly fencer and poet, youthful oval face and dark hair. Traditional low Persian ivory wrapped turban over a small round steel skullcap, smooth small silver clasp; no crescent-shaped helmet structure, giant moon crest or fantasy spikes. Long dark-violet open coat with broad silver-grey cuffs, light asymmetrical rounded shoulder shells over a short fitted mail vest, narrow silver curved chest bands and restrained star embroidery. Soft ivory trousers, tall dark boots and relaxed natural stance with one foot eased forward. One elegant gently curved sabre held point-down in the right hand, left hand on hip. Small long-necked lute hangs on the back by a visible strap, pegbox and some body visible. Practical modest cut, no sculpted breast armor or exposed midriff.\n\nClass role: ASCHIK.\nPalette: Dunkelviolett, Silbergrau, Elfenbein, warmes Braun, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller flacher persischer Wickelturban über kleiner runder Stahlkappe, glatte silberne Stirnschließe. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Leichte kleine Schulterschalen mit Sichelkanten über weitem höfischem Mantel, schmales silbernes Brustband. The emblem Silberne Mondsichel und drei Sterne may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-08.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-3a8db510-e20b-4884-924a-20974c4b5f6a.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-3a8db510-e20b-4884-924a-20974c4b5f6a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-08.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "7b4e1b26c5e38b78e7c7594df728cea5df2dcfb3a396657f0ad6e06b7dbf54b9",
+      "generatorSha256": "7b4e1b26c5e38b78e7c7594df728cea5df2dcfb3a396657f0ad6e06b7dbf54b9",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-08.png",
+          "sha256": "50030e695c43c576f275f4fc3c936cb1269f1b6cdc428e0b04f4b7224f046a67"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-09",
+      "classId": "nefer",
+      "motif": "Weißes Steppenzelt",
+      "palette": "Blaugrün, Weiß, Dunkelholz, Silber",
+      "helmet": "Traditioneller niedriger osmanischer Mighfer mit runder Kuppel, genieteten Eisenbändern und weißem Tuchrand",
+      "armor": "Körpernaher blaugrüner Brigantinenrock mit vier weißen dreieckigen Beinschößen und kurzem Schulterüberwurf",
+      "pose": "Schmaler athletischer asymmetrischer Stand; Speer locker querdiagonal, Rundschild am äußeren Unterarm",
+      "brief": "A slim athletic 23-year-old male Nefer with youthful narrow face, a small neat brown beard and warm brown eyes. Traditional low Ottoman mighfer with round dome, plain riveted reinforcing bands and ivory cloth rim, ordinary short cheek pieces; NO flattened tent-roof caricature or oversized headgear. Blue-green fitted brigandine coat with small silver rivets and four broad white-edged triangular skirt panels suggesting tent canvas, a short ivory shoulder cape and plain dark belt. Modest mail elbows, lean legs, sturdy boots. One spear carried at a shallow diagonal across the front with entire point and butt, one natural hand controls it; small blue-green round shield on opposite forearm rests near hip, small white tent painting. Quiet asymmetric standing pose, youthful proportional body rather than a stocky soldier.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 23,
+      "face": "Schlanker athletischer junger Mann, feiner kurzer Bart, braunes Haar",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 23-year-old ADULT MAN, slim and athletic, attractive youthful face. Schlanker athletischer junger Mann, feiner kurzer Bart, braunes Haar. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic 23-year-old male Nefer with youthful narrow face, a small neat brown beard and warm brown eyes. Traditional low Ottoman mighfer with round dome, plain riveted reinforcing bands and ivory cloth rim, ordinary short cheek pieces; NO flattened tent-roof caricature or oversized headgear. Blue-green fitted brigandine coat with small silver rivets and four broad white-edged triangular skirt panels suggesting tent canvas, a short ivory shoulder cape and plain dark belt. Modest mail elbows, lean legs, sturdy boots. One spear carried at a shallow diagonal across the front with entire point and butt, one natural hand controls it; small blue-green round shield on opposite forearm rests near hip, small white tent painting. Quiet asymmetric standing pose, youthful proportional body rather than a stocky soldier.\n\nClass role: NEFER.\nPalette: Blaugrün, Weiß, Dunkelholz, Silber, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller niedriger osmanischer Mighfer mit runder Kuppel, genieteten Eisenbändern und weißem Tuchrand. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Körpernaher blaugrüner Brigantinenrock mit vier weißen dreieckigen Beinschößen und kurzem Schulterüberwurf. The emblem Weißes Steppenzelt may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-09.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8a20433b-2267-460b-8827-7a33f5ef8a82.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8a20433b-2267-460b-8827-7a33f5ef8a82.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-09.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "a30f7780cff55a8c3b125e26f34a3c23b87bf533fc851a37b12b7994b8f3870c",
+      "generatorSha256": "a30f7780cff55a8c3b125e26f34a3c23b87bf533fc851a37b12b7994b8f3870c",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-09.png",
+          "sha256": "00a27b69fddd580549356bb55eb7a6f56c09f06c549dbf715debbfe009926565"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-10",
+      "classId": "ghulam",
+      "motif": "Goldener ruhender Löwe",
+      "palette": "Dunkelrot, Gold, Bronze, dunkles Kettenmetall",
+      "helmet": "Traditioneller persischer Kulah-Khud mit glatter gewölbter Glocke, schlichter Spitze und Nasenbügel über roter Tuchwicklung",
+      "armor": "Taillierter Vier-Spiegel-Panzer über schwerer Kette, flache goldgerandete Schulterschalen, kurzer roter Mantel",
+      "pose": "Ruhiger junger Frontdreiviertelstand; schwerer Kolben locker gesenkt an der Seite",
+      "brief": "A slim strong athletic 28-year-old female Ghulam, youthful serious face and dark braid, no old or bulky features. Traditional Persian kulah-khud: smooth rounded iron dome, plain central spike, normal straight nasal, dark-red cloth winding and mail curtain. NO lion-muzzle visor, animal mask, mane-shaped helmet ridges or plume. Heavy dark mail under a fitted FOUR-MIRROR cuirass with broad flat iron plates and matte gold borders; rounded shoulder guards have shallow gold radiating decorative ribs, short dark-red cloak and long divided red skirt panels. Clothing and armor cover a lean practical figure, no breast-shaped armor. Quiet nearly frontal stance, one foot slightly forward. One short heavy flanged mace held low beside the shin, free hand touching the belt. Full weapon and both boots visible.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 28,
+      "face": "Schlanke kräftig-athletische junge Frau, dunkler Zopf, junge ernste Gesichtszüge",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 28-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Schlanke kräftig-athletische junge Frau, dunkler Zopf, junge ernste Gesichtszüge. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim strong athletic 28-year-old female Ghulam, youthful serious face and dark braid, no old or bulky features. Traditional Persian kulah-khud: smooth rounded iron dome, plain central spike, normal straight nasal, dark-red cloth winding and mail curtain. NO lion-muzzle visor, animal mask, mane-shaped helmet ridges or plume. Heavy dark mail under a fitted FOUR-MIRROR cuirass with broad flat iron plates and matte gold borders; rounded shoulder guards have shallow gold radiating decorative ribs, short dark-red cloak and long divided red skirt panels. Clothing and armor cover a lean practical figure, no breast-shaped armor. Quiet nearly frontal stance, one foot slightly forward. One short heavy flanged mace held low beside the shin, free hand touching the belt. Full weapon and both boots visible.\n\nClass role: GHULAM.\nPalette: Dunkelrot, Gold, Bronze, dunkles Kettenmetall, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller persischer Kulah-Khud mit glatter gewölbter Glocke, schlichter Spitze und Nasenbügel über roter Tuchwicklung. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Taillierter Vier-Spiegel-Panzer über schwerer Kette, flache goldgerandete Schulterschalen, kurzer roter Mantel. The emblem Goldener ruhender Löwe may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-10.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-bb33b4dd-4a2f-40de-925d-9d8e72613005.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-bb33b4dd-4a2f-40de-925d-9d8e72613005.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-10.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "0abca64608140a5aa0e590a2bd5a60e1a7f38e30a7be8af97b118ed769aaf791",
+      "generatorSha256": "0abca64608140a5aa0e590a2bd5a60e1a7f38e30a7be8af97b118ed769aaf791",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-10.png",
+          "sha256": "b561ba197449fb23fc3458419da2afa7f3be4854f42ebd1d9182f99775cd494f"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-11",
+      "classId": "ghulam",
+      "motif": "Schwarzer Stier",
+      "palette": "Elfenbein, Schwarz, mattes Eisen",
+      "helmet": "Traditioneller schwarzer kumanischer Spangenhelm mit glatter Spitze, normalen Wangenklappen und kurzem Nackenschutz",
+      "armor": "Körpernaher schwerer schwarzer Rechteck-Lamellenpanzer, elfenbeinfarbene geteilte Überwurfstücke und funktionale Schulterkappen",
+      "pose": "Aufrechte lockere Standposition; Morgenstern nah am Boden, freie Hand am Gürtel",
+      "brief": "A lean muscular 25-year-old male Ghulam, youthful handsome clean-shaven square-jawed face and short dark hair. Traditional black Cuman segmented mighfer helmet, plain small point, normal hinged cheek pieces, narrow nasal and short articulated neckguard. NO bull horns, antlers, animal visor, face sculpture or huge crest. Heavy black rectangular lamellar armor follows a fitted long athletic torso, broad functional shoulder caps, ivory split overcoat with black borders and a dark sash. Small black bull embroidery on the skirt is allowed; the BODY armor's square calm construction subtly reflects the bull. Quiet planted stance with shoulders naturally angled and head turned slightly. One compact spiked morningstar on a rigid handle lowered beside the outer boot, no chain flail. Free hand on belt, full silhouette and weapon visible.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "male",
+      "age": 25,
+      "face": "Schlanker muskulöser junger Mann, glattrasiertes Gesicht, dunkle kurze Haare",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 25-year-old ADULT MAN, slim and athletic, attractive youthful face. Schlanker muskulöser junger Mann, glattrasiertes Gesicht, dunkle kurze Haare. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A lean muscular 25-year-old male Ghulam, youthful handsome clean-shaven square-jawed face and short dark hair. Traditional black Cuman segmented mighfer helmet, plain small point, normal hinged cheek pieces, narrow nasal and short articulated neckguard. NO bull horns, antlers, animal visor, face sculpture or huge crest. Heavy black rectangular lamellar armor follows a fitted long athletic torso, broad functional shoulder caps, ivory split overcoat with black borders and a dark sash. Small black bull embroidery on the skirt is allowed; the BODY armor's square calm construction subtly reflects the bull. Quiet planted stance with shoulders naturally angled and head turned slightly. One compact spiked morningstar on a rigid handle lowered beside the outer boot, no chain flail. Free hand on belt, full silhouette and weapon visible.\n\nClass role: GHULAM.\nPalette: Elfenbein, Schwarz, mattes Eisen, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller schwarzer kumanischer Spangenhelm mit glatter Spitze, normalen Wangenklappen und kurzem Nackenschutz. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Körpernaher schwerer schwarzer Rechteck-Lamellenpanzer, elfenbeinfarbene geteilte Überwurfstücke und funktionale Schulterkappen. The emblem Schwarzer Stier may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-11.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-13bde044-6ecf-410a-bfe4-c1ac51758e16.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-13bde044-6ecf-410a-bfe4-c1ac51758e16.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-11.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "d1de71935a02b515d6fb35a33899da1dc4b9a7236f6e88d1b3a12952356aed54",
+      "generatorSha256": "d1de71935a02b515d6fb35a33899da1dc4b9a7236f6e88d1b3a12952356aed54",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-11.png",
+          "sha256": "97fbd36876bff95130562fe790fcc97a9b1c801efbfd4a8ffbf9f6e859205b03"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "pool-12",
+      "classId": "nizet",
+      "motif": "Weißer Kranich",
+      "palette": "Olivgrün, Elfenbeinweiß, Silber, winziges Rot",
+      "helmet": "Traditioneller hoher weißer Janitscharen-Börk mit olivgrünem geradem Stirnband und langem gefaltetem Nackentuch",
+      "armor": "Schmale silberne horizontale Schutzstreifen, weiß gefächerte Armschalen und langer olivgrüner Kaftan",
+      "pose": "Hochgewachsene leicht seitliche Haltung, Gewicht auf einem Bein; lange schmale Klingenstange leicht geneigt",
+      "brief": "A tall slender athletic 23-year-old female Nizet with youthful attractive long face and dark-brown hair. Traditional tall WHITE felt Janissary bork with a straight olive brow band, a small plain brass front clasp and long folded rear cloth. NO feathers, bird beak, red crane crest, horns or abstract helmet construction. Long olive military kaftan with ivory inner panels, narrow horizontal silver torso strips and pale overlapping functional upper-arm lames arranged like folded crane feathers on the BODY only. Narrow brown sash, fitted practical boots. Lightly side-on quiet pose with weight on one leg, both feet grounded. Hold one long narrow oriental glaive gently inclined beside the body with natural two-hand spacing, complete coherent staff and curved blade. Slim modestly fitted functional protection, no sculpted breast armor.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 23,
+      "face": "Hohe schlanke athletische junge Frau, schmales Gesicht, dunkelbraune Haare",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 23-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Hohe schlanke athletische junge Frau, schmales Gesicht, dunkelbraune Haare. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A tall slender athletic 23-year-old female Nizet with youthful attractive long face and dark-brown hair. Traditional tall WHITE felt Janissary bork with a straight olive brow band, a small plain brass front clasp and long folded rear cloth. NO feathers, bird beak, red crane crest, horns or abstract helmet construction. Long olive military kaftan with ivory inner panels, narrow horizontal silver torso strips and pale overlapping functional upper-arm lames arranged like folded crane feathers on the BODY only. Narrow brown sash, fitted practical boots. Lightly side-on quiet pose with weight on one leg, both feet grounded. Hold one long narrow oriental glaive gently inclined beside the body with natural two-hand spacing, complete coherent staff and curved blade. Slim modestly fitted functional protection, no sculpted breast armor.\n\nClass role: NIZET.\nPalette: Olivgrün, Elfenbeinweiß, Silber, winziges Rot, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditioneller hoher weißer Janitscharen-Börk mit olivgrünem geradem Stirnband und langem gefaltetem Nackentuch. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Schmale silberne horizontale Schutzstreifen, weiß gefächerte Armschalen und langer olivgrüner Kaftan. The emblem Weißer Kranich may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-12.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-6fccb1a6-85f6-43a3-bad1-9825ed022fc6.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-6fccb1a6-85f6-43a3-bad1-9825ed022fc6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-12.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "4287b5419d6c368d86096e964e8308250ad900a7f86bb07b99e51dcc8936766e",
+      "generatorSha256": "4287b5419d6c368d86096e964e8308250ad900a7f86bb07b99e51dcc8936766e",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-12.png",
+          "sha256": "81f28f8294fdf8ad7589f157852a00beb3200bfbeaae7108fb1a9539658f8019"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pool-13",
+      "classId": "lewent",
+      "motif": "Zwei goldene Karpfen",
+      "palette": "Dunkelblau, Gold, Elfenbein, Bronze",
+      "helmet": "Traditionelle niedrige osmanische Marine-Tuchkappe über flacher runder Stahlkappe, schmaler glatter Messingrand",
+      "armor": "Leichte dunkelblaue Jacke mit wenigen goldbronzenen Fischschuppen an einer Schulter, offene cremefarbene Ärmel",
+      "pose": "Lockere leicht gedrehte Stellung; Säbel gesenkt vor dem Körper, Bogen und Pfeilköcher auf dem Rücken",
+      "brief": "A slim athletic 26-year-old female Lewent marine warrior, youthful attractive sun-touched face, black braid and alert eyes. Traditional low Ottoman naval cloth cap over a shallow smooth steel skullcap, narrow plain brass rim. NO fin ridge, fish-shaped helmet pieces, animal crest or abstract construction. Short split navy coat over covered ivory linen, a few large gold-bronze fish-scale BODY plates protect one shoulder and upper chest, supple leather forearm guards and practical soft boots. A small paired-carp embroidery may appear on the coat; the overlapping body scales echo the heraldry. Relaxed turned catalog stance, one gently curved sabre held low across the front with complete tip, free hand at belt. One short composite bow securely slung on back beside a tidy arrow quiver, coherent bow limbs and string. Modest functional marine outfit, no ship, water, gun or pirate costume.",
+      "mounted": false,
+      "revision": "young-traditional-helm-v3",
+      "gender": "female",
+      "age": 26,
+      "face": "Schlanke athletische junge Frau, wetterfester junger Ausdruck, schwarze Flechtfrisur",
+      "prompt": "Use case: stylized-concept. Asset type: ONE NEW individually designed Ishtaran heraldic warrior, revision3.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nIMAGE REFERENCE ROLES: Image1 defines ONLY the approved quiet matte painted rendering, simplified forms, soft thin painted contours and fine even pigment grain. It does NOT define the body age, helmet shape, western plate, heraldic lion, exact stance or exterior haze. Image2 defines the EXACT palette and heraldic motif for clothing and body armor decoration. Do not turn its animal or geometric symbol into the helmet's shape. \n\nHIGHEST-PRIORITY CHARACTER RULE: a YOUNG 26-year-old ADULT WOMAN, slim and athletic, attractive youthful face. Schlanke athletische junge Frau, wetterfester junger Ausdruck, schwarze Flechtfrisur. Absolutely no older face, grey beard, stocky or fat body, thick waist or bulky anatomy. Heavy armor must be fitted around an athletic body. Young ADULT, never a child. Use functional modest historical fantasy clothing, never sexualized armor.\n\nINDIVIDUAL COMPLETE DESIGN: A slim athletic 26-year-old female Lewent marine warrior, youthful attractive sun-touched face, black braid and alert eyes. Traditional low Ottoman naval cloth cap over a shallow smooth steel skullcap, narrow plain brass rim. NO fin ridge, fish-shaped helmet pieces, animal crest or abstract construction. Short split navy coat over covered ivory linen, a few large gold-bronze fish-scale BODY plates protect one shoulder and upper chest, supple leather forearm guards and practical soft boots. A small paired-carp embroidery may appear on the coat; the overlapping body scales echo the heraldry. Relaxed turned catalog stance, one gently curved sabre held low across the front with complete tip, free hand at belt. One short composite bow securely slung on back beside a tidy arrow quiver, coherent bow limbs and string. Modest functional marine outfit, no ship, water, gun or pirate costume.\n\nClass role: LEWENT.\nPalette: Dunkelblau, Gold, Elfenbein, Bronze, muted matte pigments.\nExact NORMAL TRADITIONAL HELMET: Traditionelle niedrige osmanische Marine-Tuchkappe über flacher runder Stahlkappe, schmaler glatter Messingrand. Helmet construction must follow ordinary Cuman, Ottoman, Janissary or Persian forms only, as described. Plain geometric engraving is fine. NO animal-face visor, wolf/leopard/lion/bull muzzle, horns, antlers, animal ears, feathers, giant fan, wing construction, sculptural heraldic crest, fish fin helmet ridge, flower crown or abstract symbol-shaped helmet. Ordinary short central spike, nasal, mail and plain metal headgear are permitted. For a Janissary use the traditional folded white felt bork, not a novel flower-shaped cap.\n\nBODY ARMOR AND TEXTILES remain individually designed: Leichte dunkelblaue Jacke mit wenigen goldbronzenen Fischschuppen an einer Schulter, offene cremefarbene Ärmel. The emblem Zwei goldene Karpfen may inspire body scale patterns, overlapping lames, cut, embroidery, shield painting and palette. This is thoughtful different gear for each warrior, not the same stock figure recolored. Retain the new youthful lean proportions throughout.\n\nCOMPOSITION: portrait2:3, ideally1024x1536. One complete standing adult figure, quiet upright believable asymmetric catalog posture. Include full highest headgear point, all weapon tips and lower ends, both complete separate boots, with generous transparent margins around the entire silhouette, especially above spear/glaive/headgear. \n\nNO firearms, muskets, guns, gunbarrels, pistols, cannon or ammunition. No extra people, extra animals, detached emblem discs, text, labels, captions, scene, floor, landscape, ground patch, shadows, halo, glow, colored haze, paper backdrop, opaque rectangle or painted checkerboard. No western full plate, no theatrical animal-head costume and no combat action. No use of any previous class figure or rejected version as a visual model.\n\nOUTPUT true transparent PNG RGBA. Actual subject surfaces opaque Alpha255; real open gaps and exterior Alpha0 except narrow antialiasing. No translucent faded figure or painted exterior color clouds.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-13.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-2dfe52c2-3a32-4260-baf0-3430f4b19c2a.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-2dfe52c2-3a32-4260-baf0-3430f4b19c2a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "source": "assets/warriors/generated/pool-13.png",
+      "generationRevision": "young-traditional-helm-v3",
+      "sha256": "1cc324fced56ae9e7299bd5ccc0a94f69e5b9e2c909cce6e393eec771fa0e0c5",
+      "generatorSha256": "1cc324fced56ae9e7299bd5ccc0a94f69e5b9e2c909cce6e393eec771fa0e0c5",
+      "sourceEqualsToolOriginal": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "references": [
+        {
+          "path": "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+          "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+        },
+        {
+          "path": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-13.png",
+          "sha256": "e24c8254058111c28bc92ef3f1c629b0cffb4c77deabb882fd57f0d1ded409f0"
+        }
+      ],
+      "visualReview": {
+        "status": "passed",
+        "youngAdult": true,
+        "slimAthletic": true,
+        "traditionalHelmet": true,
+        "fullSilhouette": true,
+        "correctClassEquipment": true,
+        "heraldryIntegrated": true,
+        "reviewMethod": "view_image individual source",
+        "alphaStatus": "Awaiting central shared pipeline"
+      },
+      "sourceCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "rawImagesPreserved": true,
+  "reviewedCount": 13,
+  "contactSheet": "diagnostics/ishtaran/pool-01-13-v3-contact.jpg"
+}

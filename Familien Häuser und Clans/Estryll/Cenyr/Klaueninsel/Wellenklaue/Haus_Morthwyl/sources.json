@@ -1,0 +1,54 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-morthwyll",
+  "source": {
+    "attachmentId": "9f76674d-de64-4d23-a5e9-d44239b69c8a",
+    "file": "animexx-original.html",
+    "sha256": "265fddd51f4af5eaebfd73e8062ac520c43a6c81f2c38b4945da57c0b42dee42",
+    "bytes": 93194,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "supplied genealogy ignored; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-morthwyll"
+  },
+  "militaryStatistics": "ignored entirely",
+  "previousFamilySourceRevision": 4,
+  "biographySourceRevision": 5,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/yl25XGB.png",
+      "role": "house-illustration",
+      "sha256": "a44efb640d0fd0f3e7475fa6b077a26ae6109815095f0456e924142c8521a3d1",
+      "bytes": 297054,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/yLOY5Ag.png",
+      "role": "territory-banner",
+      "sha256": "074f4003f010a2a057db13d81666a864654591da713cfbdd1d2e18086d967837",
+      "bytes": 312640,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 458,
+      "height": 545,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-morthwyll-family.js"
+  ]
+}

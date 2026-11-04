@@ -1,0 +1,17 @@
+{
+  "version": "1.000",
+  "counts": {
+    "silben": 200,
+    "woerter": 1000,
+    "namen_maennlich": 500,
+    "namen_weiblich": 500,
+    "font_codepoints": 200
+  },
+  "font_formats": [
+    ".woff",
+    ".ttf",
+    ".otf",
+    ".woff2"
+  ],
+  "validation": "bestanden"
+}

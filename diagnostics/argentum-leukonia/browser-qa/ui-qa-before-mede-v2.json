@@ -1,0 +1,2731 @@
+{
+  "date": "2026-11-03",
+  "tabId": "1982820749",
+  "modelChecks": {
+    "passed": 14,
+    "command": "node --test --experimental-test-isolation=none Vorschau/tests/leukonia-data-placement.test.mjs Vorschau/tests/placement-state.test.mjs Vorschau/tests/placement-controls.test.mjs"
+  },
+  "functions": {
+    "mobilePlacement": {
+      "caption": "7 von 39 Häusern zugeordnet · 26 Orte · Archonate.",
+      "free": "32 ohne Sitz",
+      "house": "house-bolar"
+    },
+    "dynamicDossier": {
+      "facts": "Sitz im EntwurfAllantaicRangArchonRahmenGold",
+      "overflow": false,
+      "scrollTop": 0,
+      "title": "Haus Bolar"
+    },
+    "persistence": {
+      "caption": "7 von 39 Häusern zugeordnet · 26 Orte · Normal.",
+      "house": "house-bolar"
+    },
+    "reset": {
+      "bolarFree": true,
+      "caption": "6 von 39 Häusern zugeordnet · 26 Orte · Normal.",
+      "free": "33 ohne Sitz"
+    },
+    "keyboardTarget": {
+      "caption": "7 von 39 Häusern zugeordnet · 26 Orte · Normal.",
+      "house": "pool-32"
+    },
+    "undo": {
+      "caption": "6 von 39 Häusern zugeordnet · 26 Orte · Normal.",
+      "pool32Free": true
+    },
+    "liveMouseDrag": "Unavailable: native CUA pipe absent. Pointer threshold/cancellation/touch behavior and map target activation validated by 5 shared model tests; keyboard and mobile selection path passed in real browser.",
+    "fileImport": "File chooser automation timed out in prior pass; no settings changed. Full valid/invalid/foreign/excluded-seat import atomicity and undo history verified by model tests.",
+    "export": {
+      "actualProductDownload": true,
+      "filename": "leukonia-sitzentwurf (1).json",
+      "bytes": 947,
+      "houses": 39,
+      "assigned": 6,
+      "exactBaseline": true,
+      "validModelRestoreAndUndo": true,
+      "detail": "browser-qa/final-export-model-check.json"
+    }
+  },
+  "desktop": {
+    "map": {
+      "map": [
+        1324.796875,
+        759.75
+      ],
+      "pins": [
+        {
+          "city": "alvanista",
+          "clipped": false
+        },
+        {
+          "city": "ort-03",
+          "clipped": false
+        },
+        {
+          "city": "aspio",
+          "clipped": false
+        },
+        {
+          "city": "zaphias",
+          "clipped": false
+        },
+        {
+          "city": "ort-18",
+          "clipped": false
+        },
+        {
+          "city": "ort-20",
+          "clipped": false
+        }
+      ],
+      "scrollWidth": 1380,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1380
+    }
+  },
+  "mobile": {
+    "map": {
+      "map": [
+        360.625,
+        206.8125
+      ],
+      "pins": [
+        {
+          "city": "alvanista",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            115.390625,
+            389.265625,
+            20,
+            20
+          ]
+        },
+        {
+          "city": "ort-03",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            197.046875,
+            388.8125,
+            20,
+            20
+          ]
+        },
+        {
+          "city": "aspio",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            29.546875,
+            406.78125,
+            20,
+            20
+          ]
+        },
+        {
+          "city": "zaphias",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            200.875,
+            455.765625,
+            20,
+            20
+          ]
+        },
+        {
+          "city": "ort-18",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            62.421875,
+            508.25,
+            20,
+            20
+          ]
+        },
+        {
+          "city": "ort-20",
+          "clipped": false,
+          "mapTop": 378.59375,
+          "rect": [
+            129.4375,
+            513.65625,
+            20,
+            20
+          ]
+        }
+      ],
+      "scrollWidth": 374,
+      "viewport": [
+        392,
+        844
+      ],
+      "width": 374
+    },
+    "mapControls": {
+      "canvasWidth": 487,
+      "clientWidth": 374,
+      "scrollWidth": 374,
+      "source": "assets/maps/leukonia-regions.webp",
+      "zoom": "135 %"
+    },
+    "page": {
+      "banners": 5,
+      "castes": 6,
+      "clientWidth": 377,
+      "height": 844,
+      "houseCards": 39,
+      "houseFigures": 11,
+      "prototypes": 7,
+      "scrollWidth": 377,
+      "width": 392
+    },
+    "finalPage": {
+      "clientWidth": 377,
+      "height": 844,
+      "scrollWidth": 377,
+      "width": 392
+    }
+  },
+  "dossiers": [
+    {
+      "id": "province-leukonia-v2",
+      "kind": "artwork",
+      "label": "Leukonia als Provinz ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenSilberweiß · Dunkelrot · GoldRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/leukonia-v2.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Leukonia als Provinz"
+    },
+    {
+      "id": "illustris",
+      "kind": "caste",
+      "label": "Illustris ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/illustris.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Illustris"
+    },
+    {
+      "id": "patrizier",
+      "kind": "caste",
+      "label": "Patrizier ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/patrizier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Patrizier"
+    },
+    {
+      "id": "magnarier",
+      "kind": "caste",
+      "label": "Magnarier ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/magnarier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Magnarier"
+    },
+    {
+      "id": "mercantrier",
+      "kind": "caste",
+      "label": "Mercantrier ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/mercantrier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mercantrier"
+    },
+    {
+      "id": "plebejer",
+      "kind": "caste",
+      "label": "Plebejer ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/plebejer.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Plebejer"
+    },
+    {
+      "id": "servi",
+      "kind": "caste",
+      "label": "Servi ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/servi.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Servi"
+    },
+    {
+      "id": "realm-argentum",
+      "kind": "artwork",
+      "label": "Das Kaiserreich Argentum ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenNachtblau · Gold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/argentum.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Das Kaiserreich Argentum"
+    },
+    {
+      "id": "banner-apinia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Apinia ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenSchwarz · Silberweiß · Kupferorange",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/apinia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Apinia"
+    },
+    {
+      "id": "banner-lex",
+      "kind": "artwork",
+      "label": "Archonatsbanner Lex ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenSchwarz · Silber · dunkles Eisen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/lex.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Lex"
+    },
+    {
+      "id": "banner-orania",
+      "kind": "artwork",
+      "label": "Archonatsbanner Orania ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenDunkelviolett · Silberweiß · Bronze",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/orania.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Orania"
+    },
+    {
+      "id": "banner-pelagia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Pelagia ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenNachtblau · Gold · Azurblau",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/pelagia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Pelagia"
+    },
+    {
+      "id": "banner-tremelia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Tremelia ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenPetrolgrün · Elfenbein · Gold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/tremelia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Tremelia"
+    },
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "label": "Schwerer Infanterist ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungSchwert oder Axt · gegebenenfalls Turmschild",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwerer Infanterist"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "label": "Schwer gepanzerter Lanzenträger ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungLanze · schwere Rüstung",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwer gepanzerter Lanzenträger"
+    },
+    {
+      "id": "prototype-03",
+      "kind": "prototype",
+      "label": "Berittener mit Schwert · Kataphrakt ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungReiterschwert · schwere Rüstung",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Berittener mit Schwert · Kataphrakt"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "label": "Fernkämpfer mit Speer und Rückenköcher ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungSpeer · Rückenköcher",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Fernkämpfer mit Speer und Rückenköcher"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "label": "Mariner und Kleriker des Zephyr ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungSäbel · Rückenköcher",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mariner und Kleriker des Zephyr"
+    },
+    {
+      "id": "prototype-06",
+      "kind": "prototype",
+      "label": "Miliz · einfacher Legionär ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungSchwert und Schild im Bildentwurf",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Miliz · einfacher Legionär"
+    },
+    {
+      "id": "prototype-07",
+      "kind": "prototype",
+      "label": "Römischer Kampfbarde ansehen",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungSäbel · Instrument",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Römischer Kampfbarde"
+    },
+    {
+      "id": "province-leukonia-v2",
+      "kind": "artwork",
+      "label": "Leukonia als Provinz ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenSilberweiß · Dunkelrot · GoldRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/leukonia-v2.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Leukonia als Provinz"
+    },
+    {
+      "id": "illustris",
+      "kind": "caste",
+      "label": "Illustris ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/illustris.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Illustris"
+    },
+    {
+      "id": "patrizier",
+      "kind": "caste",
+      "label": "Patrizier ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/patrizier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Patrizier"
+    },
+    {
+      "id": "magnarier",
+      "kind": "caste",
+      "label": "Magnarier ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/magnarier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Magnarier"
+    },
+    {
+      "id": "mercantrier",
+      "kind": "caste",
+      "label": "Mercantrier ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/mercantrier.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mercantrier"
+    },
+    {
+      "id": "plebejer",
+      "kind": "caste",
+      "label": "Plebejer ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/plebejer.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Plebejer"
+    },
+    {
+      "id": "servi",
+      "kind": "caste",
+      "label": "Servi ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/castes/previews/servi.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Servi"
+    },
+    {
+      "id": "realm-argentum",
+      "kind": "artwork",
+      "label": "Das Kaiserreich Argentum ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenNachtblau · Gold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/argentum.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Das Kaiserreich Argentum"
+    },
+    {
+      "id": "banner-apinia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Apinia ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenSchwarz · Silberweiß · Kupferorange",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/apinia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Apinia"
+    },
+    {
+      "id": "banner-lex",
+      "kind": "artwork",
+      "label": "Archonatsbanner Lex ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenSchwarz · Silber · dunkles Eisen",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/lex.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Lex"
+    },
+    {
+      "id": "banner-orania",
+      "kind": "artwork",
+      "label": "Archonatsbanner Orania ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenDunkelviolett · Silberweiß · Bronze",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/orania.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Orania"
+    },
+    {
+      "id": "banner-pelagia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Pelagia ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenNachtblau · Gold · Azurblau",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/pelagia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Pelagia"
+    },
+    {
+      "id": "banner-tremelia",
+      "kind": "artwork",
+      "label": "Archonatsbanner Tremelia ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenPetrolgrün · Elfenbein · Gold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/banners/previews/tremelia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Archonatsbanner Tremelia"
+    },
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "label": "Schwerer Infanterist ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungSchwert oder Axt · gegebenenfalls Turmschild",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwerer Infanterist"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "label": "Schwer gepanzerter Lanzenträger ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungLanze · schwere Rüstung",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Schwer gepanzerter Lanzenträger"
+    },
+    {
+      "id": "prototype-03",
+      "kind": "prototype",
+      "label": "Berittener mit Schwert · Kataphrakt ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungReiterschwert · schwere Rüstung",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Berittener mit Schwert · Kataphrakt"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "label": "Fernkämpfer mit Speer und Rückenköcher ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungSpeer · Rückenköcher",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Fernkämpfer mit Speer und Rückenköcher"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "label": "Mariner und Kleriker des Zephyr ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungSäbel · Rückenköcher",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Mariner und Kleriker des Zephyr"
+    },
+    {
+      "id": "prototype-06",
+      "kind": "prototype",
+      "label": "Miliz · einfacher Legionär ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungSchwert und Schild im Bildentwurf",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Miliz · einfacher Legionär"
+    },
+    {
+      "id": "prototype-07",
+      "kind": "prototype",
+      "label": "Römischer Kampfbarde ansehen",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungSäbel · Instrument",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Römischer Kampfbarde"
+    }
+  ],
+  "status": "39-house-pairs-passed-both-viewports-mede-v2-pending",
+  "console": {
+    "applicationErrors": [],
+    "ignoredExtensionErrors": 2
+  },
+  "finalCounts": {
+    "caption": "6 von 39 Häusern zugeordnet · 26 Orte · Normal.",
+    "figures": 39,
+    "free": "33 ohne Sitz",
+    "hero": [
+      "5",
+      "26",
+      "39"
+    ],
+    "houses": 39
+  },
+  "houseDossiers": [
+    {
+      "id": "house-apinia",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfOrt 20 (Name offen)RangArchonRahmenSilber",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-apinia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/apinia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Apinia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-bolar",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-bolar.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/bolar.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Bolar",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-lex",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfAlvanistaRangArchonRahmenSilber",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-lex.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/lex.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Lex",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-orania",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfOrt 18 (Name offen)RangArchonRahmenBronze",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-orania.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/orania.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Orania",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-pelagia",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfOrt 03 (Name offen)RangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-pelagia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/pelagia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Pelagia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-tremelia",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfAspioRangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-tremelia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/tremelia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Tremelia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-mede",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfZaphiasRangKaiserliche LinieRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-mede.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/mede.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Mede",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-01",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-01.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 01 Wolf",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-02",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-02.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 02 Widder",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-03",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-03.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 03 Keiler",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-04",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-04.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 04 Hirsch",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-05",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-05.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 05 Falke",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-06",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-06.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 06 Greif",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-07",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-07.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 07 Reiher",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-08",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-08.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-08.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 08 Löwe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-09",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-09.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-09.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 09 Eiche",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-10",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-10.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-10.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 10 Krabbe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-11",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-11.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-11.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 11 Skorpion",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-12",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-12.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-12.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 12 Steinbock",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-13",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-13.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-13.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 13 Fackel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-14",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-14.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-14.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 14 Amphore",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-15",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-15.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-15.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 15 Lyra",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-16",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-16.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-16.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 16 Olivenzweig",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-17",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-17.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-17.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 17 Granatapfel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-18",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-18.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-18.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 18 Fisch",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-19",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-19.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-19.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 19 Eule",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-20",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-20.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-20.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 20 Rabe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-21",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-21.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-21.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 21 Bär",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-22",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-22.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-22.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 22 Windhund",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-23",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-23.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-23.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 23 Hirschkäfer",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-24",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-24.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-24.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 24 Palme",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-25",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-25.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-25.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 25 Ähren",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-26",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-26.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-26.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 26 Brücke",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-27",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-27.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-27.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 27 Leuchtturm",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-28",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-28.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-28.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 28 Sonne",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-29",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-29.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-29.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 29 Mondsichel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-30",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-30.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-30.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 30 Äxte",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-31",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-31.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-31.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 31 Sphinx",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-32",
+      "viewport": "desktop-1440x1000",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-32.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-32.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 32 Leiter",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-apinia",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfOrt 20 (Name offen)RangArchonRahmenSilber",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-apinia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/apinia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Apinia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-bolar",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-bolar.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/bolar.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Bolar",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-lex",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfAlvanistaRangArchonRahmenSilber",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-lex.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/lex.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Lex",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-orania",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfOrt 18 (Name offen)RangArchonRahmenBronze",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-orania.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/orania.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Orania",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-pelagia",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfOrt 03 (Name offen)RangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-pelagia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/pelagia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Pelagia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-tremelia",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfAspioRangArchonRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-tremelia.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/tremelia.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Tremelia",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "house-mede",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfZaphiasRangKaiserliche LinieRahmenGold",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/house-mede.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/originals/previews/mede.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Mede",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-01",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-01.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 01 Wolf",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-02",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-02.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 02 Widder",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-03",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-03.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 03 Keiler",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-04",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-04.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 04 Hirsch",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-05",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-05.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 05 Falke",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-06",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-06.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 06 Greif",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-07",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-07.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 07 Reiher",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-08",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-08.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-08.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 08 Löwe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-09",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-09.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-09.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 09 Eiche",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-10",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-10.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-10.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 10 Krabbe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-11",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-11.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-11.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 11 Skorpion",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-12",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-12.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-12.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 12 Steinbock",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-13",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-13.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-13.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 13 Fackel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-14",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-14.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-14.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 14 Amphore",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-15",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-15.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-15.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 15 Lyra",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-16",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-16.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-16.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 16 Olivenzweig",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-17",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-17.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-17.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 17 Granatapfel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-18",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-18.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-18.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 18 Fisch",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-19",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-19.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-19.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 19 Eule",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-20",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-20.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-20.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 20 Rabe",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-21",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-21.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-21.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 21 Bär",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-22",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-22.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-22.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 22 Windhund",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-23",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-23.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-23.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 23 Hirschkäfer",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-24",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenGOLD",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-24.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-24.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 24 Palme",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-25",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-25.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-25.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 25 Ähren",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-26",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-26.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-26.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 26 Brücke",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-27",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-27.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-27.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 27 Leuchtturm",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-28",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-28.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-28.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 28 Sonne",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-29",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-29.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-29.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 29 Mondsichel",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-30",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenEISEN",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-30.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-30.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 30 Äxte",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-31",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenSILBER",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-31.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-31.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 31 Sphinx",
+      "titleMatches": true,
+      "imagePairMatches": true
+    },
+    {
+      "id": "pool-32",
+      "viewport": "mobile-392x844",
+      "facts": "Sitz im EntwurfNoch offenRangNicht festgelegtRahmenHOLZ",
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/pool-32.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/pool-32.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Freies Hauswappen 32 Leiter",
+      "titleMatches": true,
+      "imagePairMatches": true
+    }
+  ],
+  "viewportReset": true
+}

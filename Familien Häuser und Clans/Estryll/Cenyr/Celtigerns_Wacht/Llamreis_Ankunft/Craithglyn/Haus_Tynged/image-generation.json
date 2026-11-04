@@ -1,0 +1,24 @@
+{
+  "id": "haus-tynged",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19e7a-219c-7240-9adb-89ae6e7a2b5f\\exec-99683f0b-7dd7-4cf8-aadc-b4fa0fe8d81b.png",
+  "stagedOutput": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-tynged.png",
+  "sha256": "aea6843304cb19410ddbd8dcccd14d3c2f0e50fde53815418eb3636f9b63ba6d",
+  "provider": "built-in-imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one representative civilian family illustration for the Aleria house register. The supplied approved house-knight reference defines PAINTING STYLE ONLY. Do not copy its armour, blue clothing, gold griffin, sword, helmet or noble equipment. Create an unnamed ordinary adult citizen, never a named registered person, ancestor or new historical figure. This family's profession and heraldry are not documented: do not invent a crest, badge, trade, uniform or title. Match the approved restrained matte hand-painted style, simplified readable shapes, soft thin painted contours, sparse soft shading, muted earthy colours and fine uniform gouache pigment grain. Quiet upright three-quarter full-body figure, all hands and feet complete, 2:3 portrait with free margin. TRUE transparent RGBA PNG, outside the silhouette and all open gaps alpha=0. No background, scenery, floor, outer shadow, halo, mist, paper, frame, lettering or watermark. No photorealism, CGI, glossy surfaces, thick black comic outlines or paint splashes.\nFamily: Tynged. Current location: Cenyr / Celtigerns Wacht / Llamreis Ankunft / Craithglyn. This is an illustrative representative only; no family facts are added by the clothes.\nSubject: One anonymous mature adult woman with dark hair braided beneath a simple ivory linen cap. Muted ochre wool overgown with a plain blue underdress, soft light-grey shoulder shawl, modest side bag on a leather strap, simple brown shoes. Both hands calmly resting at waist, quiet approachable expression. Practical everyday civilian clothing for a cool damp cenyrish rural town. No official robes, office badge, crown, weapon or profession tools.",
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "heraldry": "unknown-not-invented",
+  "profession": "unknown-not-invented",
+  "namedPerson": false,
+  "status": "generated-awaiting-visual-QA",
+  "productionImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Craithglyn/Haus_Tynged/assets/hausdarstellung-2026-11-03.png",
+  "originalReceipt": "diagnostics/cenyr-house-completeness-20261103/generation-receipts/haus-tynged.json",
+  "integrationReview": {
+    "status": "visually-accepted",
+    "reviewer": "root",
+    "date": "2026-11-03",
+    "scope": "all-28-final-staged-figures"
+  },
+  "createsPersonRecord": false
+}

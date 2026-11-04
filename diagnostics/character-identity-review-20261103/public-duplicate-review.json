@@ -1,0 +1,96 @@
+{
+  "schema": "aleria.public-character-duplicate-review",
+  "capturedAt": "2026-11-03T17:02:47.212Z",
+  "counts": {
+    "livePublic": 394,
+    "localPublic": 264
+  },
+  "liveDuplicateWorldIdentities": [],
+  "liveActiveExactNames": [
+    {
+      "conflictingWorldIds": false,
+      "conflictingBirths": false,
+      "conflictingAges": false,
+      "records": [
+        {
+          "id": "E8HXkgi2kdkXaqkxrnRo",
+          "name": "Meurig Draig",
+          "archived": false,
+          "worldPersonId": "",
+          "birth": "",
+          "age": null,
+          "title": "Ritter & Justiziar von Gwynthor",
+          "portrait": "https://i.imgur.com/yf6v066.jpeg",
+          "registeredCanonicalId": "E8HXkgi2kdkXaqkxrnRo"
+        },
+        {
+          "id": "N11mTG3vo2rLq2eQxOXE",
+          "name": "Meurig Draig",
+          "archived": false,
+          "worldPersonId": "",
+          "birth": "",
+          "age": null,
+          "title": "Kämmerer des Grafen",
+          "portrait": "https://i.imgur.com/HrJ5ZLM.jpeg",
+          "registeredCanonicalId": "E8HXkgi2kdkXaqkxrnRo"
+        },
+        {
+          "id": "oVvNboWTUionb0PCZDf7",
+          "name": "Meurig Draig",
+          "archived": false,
+          "worldPersonId": "",
+          "birth": "",
+          "age": null,
+          "title": "Justiziar des Grafen/ Gwynthor",
+          "portrait": "https://64.media.tumblr.com/f2e763e4d73a5e0d145ca5eaddc9eeee/18fb17b5724618d9-15/s250x400/369a883e07c647469ae13f5c4536e069a2156eb2.pnj",
+          "registeredCanonicalId": "E8HXkgi2kdkXaqkxrnRo"
+        }
+      ]
+    }
+  ],
+  "localDuplicateWorldIdentities": [],
+  "localActiveExactNames": [],
+  "liveRegisteredAliasGroups": [
+    {
+      "registeredCanonicalId": "E8HXkgi2kdkXaqkxrnRo",
+      "records": [
+        {
+          "id": "E8HXkgi2kdkXaqkxrnRo",
+          "name": "Meurig Draig",
+          "worldPersonId": "",
+          "title": "Ritter & Justiziar von Gwynthor"
+        },
+        {
+          "id": "N11mTG3vo2rLq2eQxOXE",
+          "name": "Meurig Draig",
+          "worldPersonId": "",
+          "title": "Kämmerer des Grafen"
+        },
+        {
+          "id": "oVvNboWTUionb0PCZDf7",
+          "name": "Meurig Draig",
+          "worldPersonId": "",
+          "title": "Justiziar des Grafen/ Gwynthor"
+        }
+      ]
+    }
+  ],
+  "conclusions": {
+    "confirmedRetirements": [
+      "6atOllMA637Z2VNAZAxf",
+      "XWJ6XXwvpESHR3zAXkJx",
+      "uiKiMFXC6OEWOdDenbiM",
+      "mRCEkgEQByaxQWC0PJN5"
+    ],
+    "unresolved": [
+      {
+        "ids": [
+          "N11mTG3vo2rLq2eQxOXE",
+          "oVvNboWTUionb0PCZDf7"
+        ],
+        "reason": "Display name Meurig, but biography describes Odyar. Already inconsistent in original August and September archive sources. No identity correction or retirement inferred."
+      }
+    ],
+    "namesakePreserved": "Gethin Draenmelyn is a separate registered person born 1725, distinct from Gethin Draig born 1722."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-morforwyn",
+  "source": {
+    "attachmentId": "a6fd8a60-6bc2-4122-a29c-6f32ee43c00c",
+    "file": "animexx-original.html",
+    "sha256": "b81e8c6f2bc316a24d521ef8d380961ffb895ed4c8fcb6b713b69a189ff8bc4c",
+    "bytes": 107064,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "ignore supplied genealogy; existing main-line iframe and linked side-line records only",
+    "graphChanged": false,
+    "familyId": "haus-morforwyn",
+    "linkedFamilies": [
+      "haus-morforwyn-linie-elimue",
+      "haus-morforwyn-linie-marmue"
+    ]
+  },
+  "militaryStatistics": "ignored entirely",
+  "biographySourceRevision": 6,
+  "previousFamilySourceRevision": 5,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/GfwcCBC.png",
+      "role": "house-illustration",
+      "sha256": "5ea1507285e78442443ece603c9387517cbdfca3d04c7c66b62a833c0240514e",
+      "bytes": 255362,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA",
+      "visuallyInspected": true
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/yFXHuqn.png",
+      "role": "territory-banner",
+      "sha256": "043606404ef456fe4a49ded4719c510fc762d3bbdc7c654625820bb1add5124b",
+      "bytes": 311798,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 509,
+      "height": 491,
+      "mode": "RGBA",
+      "visuallyInspected": true
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/house-morforwyn-family.js",
+    "Stammbäume/assets/js/data/house-morforwyn-portraits.js",
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js"
+  ],
+  "territorySource": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/baronie.data.mjs"
+}

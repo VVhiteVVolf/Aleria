@@ -1,0 +1,44 @@
+{
+  "schema": "aleria.house-content-lore-audit",
+  "date": "2026-11-04",
+  "region": "Cross-region and explicit world canon",
+  "productFilesChanged": false,
+  "findings": [
+    {
+      "id": "fiadhrach-elven-description",
+      "classification": "confirmed-content-error",
+      "category": "world-premise",
+      "title": "Fiadhrach is called elven despite the explicit absence of elves",
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+          "line": 106,
+          "field": "sections.overview",
+          "quote": "Der Clan der Fiadhrach war ein elbisches Adelshaus des alten Fürstentums Glaennath."
+        },
+        {
+          "type": "explicit-user-canon",
+          "quote": "Keine elfenohren elfen gibts bei uns nicht!"
+        }
+      ],
+      "explanation": "The active house page introduces an elven identity that the user explicitly excluded. Glaennath/Alben as cultural names do not require an elven species. This is active page prose, not an ignored genealogy table.",
+      "suggestedDirection": "Describe the house as a Glaennath clan or an albisches Adelshaus; preserve its actual history and culture. No change made."
+    }
+  ],
+  "consistentCrossChecks": [
+    {
+      "topic": "Cneacail businesses and exile",
+      "sources": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Sept_Cneacail/haus.content.mjs",
+        "AleriaAlmanach/modules/letzter-heller/heller-module.mjs",
+        "AleriaAlmanach/modules/klingende-krone/krone-biography.mjs"
+      ],
+      "result": "Current exile event, split businesses and Finlay's relationship with Klingende Münze are consistent."
+    }
+  ],
+  "limitations": [
+    "Only current public file-based content was used; private dossiers and live authored biographies were excluded.",
+    "Narrative alternatives, historical relocations, and missing details are not automatically contradictions.",
+    "No genealogical chronology audit or military-statistics comparison was performed."
+  ]
+}

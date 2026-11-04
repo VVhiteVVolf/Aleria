@@ -1,0 +1,1471 @@
+{
+  "schema": "aleria.kronental-public-initial-review",
+  "schemaVersion": 1,
+  "publicOnly": true,
+  "scope": {
+    "kingdom": "Aldrimar",
+    "county": "Kronental",
+    "territoryId": "jarltum-heldenwacht"
+  },
+  "baselineCapturedAt": "2026-11-03T20:14:23.930Z",
+  "extinctIds": [
+    "haus-grimr",
+    "haus-holmr",
+    "haus-isvanyr",
+    "haus-mac-mamhar",
+    "haus-skaife"
+  ],
+  "generatedImageIds": [
+    "haus-bjarnvarg",
+    "haus-donnerblut",
+    "haus-eibenschild",
+    "haus-frostzorn",
+    "haus-hvelgrson",
+    "haus-jormung",
+    "haus-moorbrand",
+    "haus-morchaon",
+    "haus-nidfengr",
+    "haus-tarbhann",
+    "haus-tauwind"
+  ],
+  "neutralCrestIds": [
+    "haus-hvelgrson",
+    "haus-morchaon",
+    "haus-nidfengr",
+    "haus-tarbhann"
+  ],
+  "records": [
+    {
+      "id": "haus-vaeren",
+      "title": "Clan Vaeren",
+      "documentTitle": "Clan Vaeren",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "royal",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 10,
+      "motto": "",
+      "graphFingerprint": "524ed2d04e3bd8ad6f2986173a0fdaac59e5142e2fd3ff30ea0dab5d9aa14789",
+      "profileFingerprint": "0873c848d8a22bf6ea38d122ab05bf9de38b52bc1bd21d768af26ba29614fc23",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Vaeren/haus.content.mjs",
+      "inputSlug": "vaeren",
+      "sourceArchiveSha256": "c48aea08b1050fbcdc61702409f9719ab381f02c8daf9fc64a7fa7d2eaa29768",
+      "extinct": false
+    },
+    {
+      "id": "haus-riesentod",
+      "title": "Clan Riesentod",
+      "documentTitle": "Clan Riesentod",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "motto": "",
+      "graphFingerprint": "c4f615538a2eed7169ac1fc9dd43f246c4532370960807ba50d427045b373e7c",
+      "profileFingerprint": "a3a02afc6416d3b4a856015bc49f89806148a0f1ed2ce5f8e602924255e78c50",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Riesentod/haus.content.mjs",
+      "inputSlug": "riesentod",
+      "sourceArchiveSha256": "872d6a0e8580736e8557679023b5c1cf73f836cf139a9642e07b9e77bb0b48b2",
+      "extinct": false
+    },
+    {
+      "id": "haus-eisenbieger",
+      "title": "Clan Eisenbieger",
+      "documentTitle": "Clan Eisenbieger",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "d29493704336b00c0e4279520c24132bf117a0c3448e3b17f2ac03b753a61840",
+      "profileFingerprint": "a3a02afc6416d3b4a856015bc49f89806148a0f1ed2ce5f8e602924255e78c50",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Eisenbieger/haus.content.mjs",
+      "inputSlug": "eisenbieger",
+      "sourceArchiveSha256": "947df95d804a6b0a4eb4c1b83a3a4b001669065a692a643bec91cc26f71d0141",
+      "extinct": false
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "title": "Clan Sturmgeborene",
+      "documentTitle": "Clan Sturmgeborene",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "e8583e494baa68e3cd54666da09a8afe39414db96ea842698abb85caae549929",
+      "profileFingerprint": "a3a02afc6416d3b4a856015bc49f89806148a0f1ed2ce5f8e602924255e78c50",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Sturmgeborene/haus.content.mjs",
+      "inputSlug": "sturmgeborener",
+      "sourceArchiveSha256": "0ce6f2cfe13617a7d1cb08781d735b08f88a0e9a3e327c67d5b47eece9011bb1",
+      "extinct": false
+    },
+    {
+      "id": "haus-frostauge",
+      "title": "Clan Frostauge",
+      "documentTitle": "Clan Frostauge",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "894db76baf1fb2535be16cb0aee50e4f9badee942560379c3e41d698c4dcdb97",
+      "profileFingerprint": "a3a02afc6416d3b4a856015bc49f89806148a0f1ed2ce5f8e602924255e78c50",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Frostauge/haus.content.mjs",
+      "inputSlug": "frostauge",
+      "sourceArchiveSha256": "fc4d0b89abf4943ff0e4b477c9bfd562b6c76568058a41136fa130c06f626186",
+      "extinct": false
+    },
+    {
+      "id": "haus-wellenschild",
+      "title": "Clan Wellenschild",
+      "documentTitle": "Clan Wellenschild",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Klageschild-Inseln",
+        "Wellenruh"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wellenruh",
+        "barony": "Klageschild-Inseln",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "ca8d0a35e7e2f04a2f40e6175c85baa01fdc71016ee8600ca6aa21823e745f47",
+      "profileFingerprint": "c38264b031a204d7f4359dd0e3b20efe7fbb9a3714402c002028447ee8ebaa96",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Klageschild_Inseln/Wellenruh/Clan_Wellenschild/haus.content.mjs",
+      "inputSlug": "wellenschild",
+      "sourceArchiveSha256": "9b1b221bfae8b64755a859bc2aed562f1811cb308d0c8e964b7d4f6c2ad7ccbd",
+      "extinct": false
+    },
+    {
+      "id": "haus-gullvig",
+      "title": "Clan Gullvig",
+      "documentTitle": "Clan Gullvig",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Hesirentum von Möwenfels",
+        "Kastav"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Kastav",
+        "barony": "Hesirentum von Möwenfels",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-moewenfels.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-moewenfels.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "Wie die Möwe – stets wachsam, stets frei.",
+      "graphFingerprint": "5725d6f0c470f249c418fb06ecdc510b4166bd89ffd173afebf57cb9bd9b7b40",
+      "profileFingerprint": "beee75d2cf066b8600faa72d56a8bcd26653227fe24da53ab3ab215fa0c7806d",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Hesirentum_von_Mowenfels/Kastav/Clan_Gullvig/haus.content.mjs",
+      "inputSlug": "gullvig",
+      "sourceArchiveSha256": "25a809307a6ec1004b8464624db4769a82310e5150c9ef777e95b5eee663d9b5",
+      "extinct": false
+    },
+    {
+      "id": "haus-wellensaenger",
+      "title": "Clan Wellensänger",
+      "documentTitle": "Clan Wellensänger",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Hesirentum von Wellenklang",
+        "Amol"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Amol",
+        "barony": "Hesirentum von Wellenklang",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-wellenklang.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-wellenklang.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "c996a798432ca9cf240ed1de1a632c3f731a2172e6225f52ad9d59dce1f501e8",
+      "profileFingerprint": "39e2ec169ce3ec1ded6019b0860b469fa696b3f7a4c690e11eec8ba39f731234",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Hesirentum_von_Wellenklang/Amol/Clan_Wellensanger/haus.content.mjs",
+      "inputSlug": "wellensaenger",
+      "sourceArchiveSha256": "691afaab2594f07829e09b06a261709e2688992a15bb4d50c174af14416896da",
+      "extinct": false
+    },
+    {
+      "id": "haus-eibenschild",
+      "title": "Clan Eibenschild",
+      "documentTitle": "Clan Eibenschild",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Klageschild-Inseln",
+        "Vagaborg"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Vagaborg",
+        "barony": "Klageschild-Inseln",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wellenschild",
+        "liegeHouseName": "Clan Wellenschild",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "7134a8ab224ed540c9d21e39eb15a050ecfab18503549a13c68954e2b85a21c3",
+      "profileFingerprint": "a0a9fd003c30f2c279badee455ded105517df007c03bad998e788f20f1f1d74b",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Klageschild_Inseln/Vagaborg/Clan_Eibenschild/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-suedstahl",
+      "title": "Clan Südstahl",
+      "documentTitle": "Clan Südstahl",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "Loyalität vor Blut",
+      "graphFingerprint": "abc345ddb45d4be808655bceeba9e9ece7478b375729f185ad8b85e789f2a23f",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Sudstahl/haus.content.mjs",
+      "inputSlug": "suedstahl",
+      "sourceArchiveSha256": "a98045254d74a97e354c1cf8870f914ce289fbb0b47af523d16f41b056eec118",
+      "extinct": false
+    },
+    {
+      "id": "haus-albholz",
+      "title": "Clan Albholz",
+      "documentTitle": "Clan Albholz",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "c0477b4608b84a1f8893b75de15688e39405f3bddcc66836637853ee1fc85397",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Albholz/haus.content.mjs",
+      "inputSlug": "albholz",
+      "sourceArchiveSha256": "724da6eb070d280712d78fb1742840a5a19242830e156b8359e8c3c4f62550ea",
+      "extinct": false
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "title": "Clan Dämmerrufer",
+      "documentTitle": "Clan Dämmerrufer",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "5aefb6f8851821467313d46b8375cf7a12ee3b1cb47fb21bd000d43725f70f5b",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Dammerrufer/haus.content.mjs",
+      "inputSlug": "daemmerrufer",
+      "sourceArchiveSha256": "3cf6bec40046e282b34c1b7c9fb0acd18114954997bcb16389f7d6b26089354d",
+      "extinct": false
+    },
+    {
+      "id": "haus-wellenkrone",
+      "title": "Clan Wellenkrone",
+      "documentTitle": "Clan Wellenkrone",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "06fb991ddc9177b3f3b24232a0ad2583ef10712eafa0155ecf566641eb5dead4",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Wellenkrone/haus.content.mjs",
+      "inputSlug": "wellenkrone",
+      "sourceArchiveSha256": "6af11e44fed4ac2d7b89b0bc53b00d6ee6a094edffc02e3bf810369abb2a5f6c",
+      "extinct": false
+    },
+    {
+      "id": "haus-donnerblut",
+      "title": "Clan Donnerblut",
+      "documentTitle": "Clan Donnerblut",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "37b856e48e460e6e32a1cbfd0e57c2dbc45d924b22645e478dfadcdb61db91de",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Donnerblut/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-moorbrand",
+      "title": "Clan Moorbrand",
+      "documentTitle": "Clan Moorbrand",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "c28aaa20e001a953220c9f33a2bff5fa55a7a1c295ea195e8e6ae3b5b7a5b674",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Moorbrand/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-jormung",
+      "title": "Clan Jormung",
+      "documentTitle": "Clan Jormung",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "6c45932464f0164e3232c3ceae94a1aea5186f02a8cde6af3c8f796e6b93f453",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Jormung/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-nidfengr",
+      "title": "Clan Nidfengr",
+      "documentTitle": "Clan Nidfengr",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "2a82d72e1872f1924b5af380b98dd07f47d4c02024dc0a920a0df7cac1e819bc",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Nidfengr/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-tarbhann",
+      "title": "Clan Tarbhann",
+      "documentTitle": "Clan Tarbhann",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "10a034491dc8fb4718f60d4624422e86dabc2413c75306d0dc5cee1639ea7ed2",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Tarbhann/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-bjarnvarg",
+      "title": "Clan Bjarnvarg",
+      "documentTitle": "Clan Bjarnvarg",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "db01b8f7f54d27a325689799ae32d9b752da8709992fbd6b7c53300952d2c8de",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Bjarnvarg/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-tauwind",
+      "title": "Clan Tauwind",
+      "documentTitle": "Clan Tauwind",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "b0c5af994c33f5e4d91b08ee5f7c1a3cf77fff302b2e6bea91e2e1573364e0d9",
+      "profileFingerprint": "fcf4c247a2748c2997150d22fbe3487a10caeb51b398b4b76a625541c392dfdb",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Tauwind/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-spindelschlag",
+      "title": "Clan Spindelschlag",
+      "documentTitle": "Clan Spindelschlag",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Spindelheim"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Spindelheim",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "70efebb6431b161155ca01e9a560892f465d7e27baa9133af7c7c8a7f996bdde",
+      "profileFingerprint": "8a4cef277bc5361d45b31f481a5b64145086ccd1659047ce6db60bbbe63a35b6",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Spindelheim/Clan_Spindelschlag/haus.content.mjs",
+      "inputSlug": "spindelschlag",
+      "sourceArchiveSha256": "8186104bb95f2d67217cc70a514a2ecddb1c215e85e95cf65ed509f312412055",
+      "extinct": false
+    },
+    {
+      "id": "haus-morchaon",
+      "title": "Clan Morchaon",
+      "documentTitle": "Clan Morchaon",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "fa572a238b47846e7c3d946821b70b351902626806213f5e0b6a7ec3eafafda3",
+      "profileFingerprint": "2d519c1c167d4934991628e794ab7fda167ec9b06e2f31159a9ddd6460f63147",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Morchaon/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-hvelgrson",
+      "title": "Clan Hvelgrson",
+      "documentTitle": "Clan Hvelgrson",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Heldenwacht",
+        "barony": "Jarltümliche Herrschaft – Tal der Helden",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "aa4bfaf17aecd8bf982679dd81b59916bf9d232262f358a3365fbdb05fb76173",
+      "profileFingerprint": "2d519c1c167d4934991628e794ab7fda167ec9b06e2f31159a9ddd6460f63147",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Hvelgrson/haus.content.mjs",
+      "inputSlug": null,
+      "sourceArchiveSha256": null,
+      "extinct": false
+    },
+    {
+      "id": "haus-frostzorn",
+      "title": "Clan Frostzorn",
+      "documentTitle": "Clan Frostzorn",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Abtrünnige Clans",
+        "Sirenen-Zahn-Riff-Inselgruppe",
+        "Vintrefjord"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Vintrefjord",
+        "barony": "Abtrünnige Clans",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Aldrimar",
+          "Kronental",
+          "Abtrünnige Clans",
+          "Sirenen-Zahn-Riff-Inselgruppe",
+          "Vintrefjord"
+        ],
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "",
+          "assets/images/regions/aldrimar-kronental-sirenen-zahn-riff.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-sirenen-zahn-riff.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "a725407d62f2c101399c5d8bfb8878be897b400012a6ebd854c39bcc44947785",
+      "profileFingerprint": "2e46414439a42eb6a37c5565cb64224226a56b4e3dab7db94143bd4ea9296239",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Abtrunnige_Clans/Sirenen_Zahn_Riff_Inselgruppe/Vintrefjord/Clan_Frostzorn/haus.content.mjs",
+      "inputSlug": "frostzorn",
+      "sourceArchiveSha256": "eea9ea91fb11f45d70e93c5102bd53459a912f7a3045b7a755c10f8686958e72",
+      "extinct": false
+    },
+    {
+      "id": "haus-grimr",
+      "title": "Clan Grimr",
+      "documentTitle": "Clan Grimr",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "Torrenheim"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Torrenheim",
+        "barony": "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "d2e84bf44960169e0ac068cc97123009faa070bf2b18d1b6c189c8ff4fd34043",
+      "profileFingerprint": "2990770f6567fcd1b27f82058e464f70822b3bdbc1f161881c86d4e3bde8ef90",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Hesirentum_von_Torrenwacht_ausgestorben_inaktiv/Torrenheim/Clan_Grimr/haus.content.mjs",
+      "inputSlug": "grimr",
+      "sourceArchiveSha256": "6d210c5d61faf43194cb70a391b886a947c37b0b2c544cbd2086495bc7937b43",
+      "extinct": true
+    },
+    {
+      "id": "haus-skaife",
+      "title": "Clan Skaife",
+      "documentTitle": "Clan Skaife",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "Torrenheim"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Torrenheim",
+        "barony": "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "615dbd61070435393d6b780612dcd5e69ad237c2f35cb4d5292506d392f83d99",
+      "profileFingerprint": "2990770f6567fcd1b27f82058e464f70822b3bdbc1f161881c86d4e3bde8ef90",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Hesirentum_von_Torrenwacht_ausgestorben_inaktiv/Torrenheim/Clan_Skaife/haus.content.mjs",
+      "inputSlug": "skaife",
+      "sourceArchiveSha256": "2eeb724cb338e9b0376df5e8b8a7dd8b6d24c57b3112c952c89908e15f23dc33",
+      "extinct": true
+    },
+    {
+      "id": "haus-holmr",
+      "title": "Clan Holmr",
+      "documentTitle": "Clan Holmr",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "Torrenheim"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Torrenheim",
+        "barony": "Hesirentum von Torrenwacht (ausgestorben / inaktiv)",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kronental-torrenwacht.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "880450e4632c15c70c70266fa5f515a6c3bdd3ead7fab10cc9757c1a1cd89be0",
+      "profileFingerprint": "2990770f6567fcd1b27f82058e464f70822b3bdbc1f161881c86d4e3bde8ef90",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Hesirentum_von_Torrenwacht_ausgestorben_inaktiv/Torrenheim/Clan_Holmr/haus.content.mjs",
+      "inputSlug": "holmr",
+      "sourceArchiveSha256": "256e5dfb2cba7dfc142d64c8665dc8afd1f8719a4374cded5fa51ebe748d8e90",
+      "extinct": true
+    },
+    {
+      "id": "haus-isvanyr",
+      "title": "Clan Isvanyr",
+      "documentTitle": "Clan Isvanyr",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "assets/images/regions/Cenyr/Ährental/Ausgestorben.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "15a8c54cea147931119ff06081489331bade572198468f223531992a7a2f16e3",
+      "profileFingerprint": "8c7db24af641bc52b42c38698a0cd5bb9f6463d6ab190961e8e6bb32b5e77197",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Isvanyr/haus.content.mjs",
+      "inputSlug": "isvanyr",
+      "sourceArchiveSha256": "1996b26e110d2f1b66c1c53a97434a89e98e8780b0738f9f22e37c7a7482f30a",
+      "extinct": true
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "title": "Clan Mac Mamhar",
+      "documentTitle": "Clan Mac Mamhar",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Kronental",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kronental.png",
+          "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "assets/images/regions/Cenyr/Ährental/Ausgestorben.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kronental.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "fa099a309e04d60eedc42e97fd40eb3230e3707c17e38172d8148db53005e6be",
+      "profileFingerprint": "485ee3bae02a8176b8dd60352067a8fbfb2cb0c2932fe2e7684ef1203cdb52ae",
+      "hadBiography": false,
+      "biographyFingerprint": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Mamhar/haus.content.mjs",
+      "inputSlug": "mamhar",
+      "sourceArchiveSha256": "b7e64f2272512cd3dac24513424fafdea492417dc74262fe78698930b0a0b106",
+      "extinct": true
+    }
+  ],
+  "originalAssets": [
+    {
+      "id": "haus-vaeren",
+      "path": "Stammbäume/assets/images/references/haus-vaeren/krieger.png",
+      "url": "https://i.imgur.com/Rt3lPnh.png",
+      "sha256": "da3c3c6bd14dfdcaaf2724751b581b915d6d0ba2e555c6b8f579d78f4ec21a0c",
+      "bytes": 364899,
+      "primary": true
+    },
+    {
+      "id": "haus-riesentod",
+      "path": "Stammbäume/assets/images/references/haus-riesentod/krieger.png",
+      "url": "https://i.imgur.com/wox658M.png",
+      "sha256": "cc757c7c6564e81f783f3e8d64e1b2a60ebecf41861effea1e6cd5c72920e38a",
+      "bytes": 264793,
+      "primary": true
+    },
+    {
+      "id": "haus-eisenbieger",
+      "path": "Stammbäume/assets/images/references/haus-eisenbieger/krieger.png",
+      "url": "https://i.imgur.com/QuHUNNe.png",
+      "sha256": "ec0273dba856093cf853b680414ceba1f9af9db92f1a8b685ba91d76d3e66c79",
+      "bytes": 362291,
+      "primary": true
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "path": "Stammbäume/assets/images/references/haus-sturmgeborene/krieger.png",
+      "url": "https://i.imgur.com/tRG3Uz9.png",
+      "sha256": "479ad7a1effcefd45e5d00f86d475f2fb984be3dca4fde3b7b9f358aaac806f7",
+      "bytes": 338960,
+      "primary": true
+    },
+    {
+      "id": "haus-frostauge",
+      "path": "Stammbäume/assets/images/references/haus-frostauge/krieger.png",
+      "url": "https://i.imgur.com/idjxZBt.png",
+      "sha256": "2a74963e0379c999a716ce75b4738496e3b463c511b9cbea552b774085147390",
+      "bytes": 334675,
+      "primary": true
+    },
+    {
+      "id": "haus-wellenschild",
+      "path": "Stammbäume/assets/images/references/haus-wellenschild/krieger.png",
+      "url": "https://i.imgur.com/vFt0y9u.png",
+      "sha256": "a309332dad5d50d1737573ed45f7fa2db60e7790597114f6f2885b262cbb014c",
+      "bytes": 229917,
+      "primary": true
+    },
+    {
+      "id": "haus-gullvig",
+      "path": "Stammbäume/assets/images/references/haus-gullvig/krieger.png",
+      "url": "https://i.imgur.com/EZTchz2.png",
+      "sha256": "95b1b6c8ec8919c1348d43c5f3d0d7a6e3e4fd8140bc212a66d6b54101d51d32",
+      "bytes": 304941,
+      "primary": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "path": "Stammbäume/assets/images/references/haus-wellensaenger/krieger.png",
+      "url": "https://i.imgur.com/ouMNV7a.png",
+      "sha256": "703dda83bfecc81ff7f0e1c81e81cc3a243cf87edc25291ef1809ca79955110d",
+      "bytes": 1966492,
+      "primary": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "path": "Stammbäume/assets/images/references/haus-wellensaenger/krieger-2.png",
+      "url": "https://i.imgur.com/JUpeF3R.png",
+      "sha256": "b04399e6df3ee21fb631d9b916946356753921030c1948d81ad53e65020e1876",
+      "bytes": 301108,
+      "primary": false
+    },
+    {
+      "id": "haus-spindelschlag",
+      "path": "Stammbäume/assets/images/references/haus-spindelschlag/krieger.png",
+      "url": "https://i.imgur.com/hvDOgqU.png",
+      "sha256": "a6d388ed37189af534f29a4a49e80a1a375797ee3cc83ca69ca3df20ddbb39e9",
+      "bytes": 257686,
+      "primary": true
+    },
+    {
+      "id": "haus-suedstahl",
+      "path": "Stammbäume/assets/images/references/haus-suedstahl/krieger.png",
+      "url": "https://i.imgur.com/MkzyrRp.png",
+      "sha256": "288fb9db6ffcedc0ab912b47224a3f69ebb2fd8c72b29c9f39c303e2cf6f1037",
+      "bytes": 186335,
+      "primary": true
+    },
+    {
+      "id": "haus-albholz",
+      "path": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+      "url": "https://i.imgur.com/GUdQCnk.png",
+      "sha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "bytes": 207731,
+      "primary": true
+    },
+    {
+      "id": "haus-wellenkrone",
+      "path": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+      "url": "https://i.imgur.com/fVc4D5w.png",
+      "sha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "bytes": 275624,
+      "primary": true
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "path": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+      "url": "https://i.imgur.com/kbX9DpR.png",
+      "sha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "bytes": 278656,
+      "primary": true
+    },
+    {
+      "id": "haus-grimr",
+      "path": "Stammbäume/assets/images/references/haus-grimr/krieger.png",
+      "url": "https://i.imgur.com/sNHRSOX.png",
+      "sha256": "32f0a47e05d6f334ec3d3a8fd5fc2de2dcb4f4f088e5d70ef9eac9d7dc1b9418",
+      "bytes": 243720,
+      "primary": true
+    },
+    {
+      "id": "haus-skaife",
+      "path": "Stammbäume/assets/images/references/haus-skaife/krieger.png",
+      "url": "https://i.imgur.com/mGjdqQn.png",
+      "sha256": "5675eb81ea3db01c51b9b50c1a689b8e07e6d8c3de17447bc76469418c51162f",
+      "bytes": 237806,
+      "primary": true
+    },
+    {
+      "id": "haus-holmr",
+      "path": "Stammbäume/assets/images/references/haus-holmr/krieger.png",
+      "url": "https://i.imgur.com/hG5YonB.png",
+      "sha256": "ab275e392907901982e07e7a87aa084da152cb477c23b5f89d368b80151bc369",
+      "bytes": 268899,
+      "primary": true
+    },
+    {
+      "id": "haus-isvanyr",
+      "path": "Stammbäume/assets/images/references/haus-isvanyr/krieger.png",
+      "url": "https://i.imgur.com/n5qsu70.png",
+      "sha256": "c53619166ec19d4fb2b968a02e908a42c3d2e69f6d8a183fc1fb815d77c7f3f1",
+      "bytes": 353434,
+      "primary": true
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "path": "Stammbäume/assets/images/references/haus-mac-mamhar/krieger.png",
+      "url": "https://i.imgur.com/uHoBBXh.png",
+      "sha256": "9afa629e1c716aec40735f21fba6fe896d613aabe85f811bac8b265156561c65",
+      "bytes": 243999,
+      "primary": true
+    }
+  ],
+  "initialHousePages": [
+    {
+      "id": "haus-suedstahl",
+      "source": "Familien Häuser und Clans/data/haus-suedstahl.data.js",
+      "sha256": "7f2d97947b5b32d02d92a6dfb502e04d089c61f7f6261d6ca2bcbfa842af2154",
+      "aliases": [
+        "suedstahl",
+        "südstahl",
+        "clan-suedstahl",
+        "clan-südstahl"
+      ]
+    },
+    {
+      "id": "haus-albholz",
+      "source": "Familien Häuser und Clans/data/haus-albholz.data.js",
+      "sha256": "a125c5f0ae743ce98625ad778453d6ea17dc0c11bbf22858001f5013b7648e4b",
+      "aliases": [
+        "albholz",
+        "clan-albholz"
+      ]
+    }
+  ]
+}

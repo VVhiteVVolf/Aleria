@@ -1,0 +1,438 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "Haus Draig",
+    "tab": "Gruppen",
+    "desc": "Gemeinschaften des Hauses Draig und seiner Gefährten.",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Haus Draig"
+    ]
+  },
+  "entry": {
+    "id": "oweta-quartett",
+    "title": "Owetas Quartett",
+    "subtitle": "Oweta · Rianna · Lefraye · Caralyn",
+    "type": "Reisegruppe",
+    "category": "Gefolge",
+    "schemaVersion": 1,
+    "multipage": true,
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "/AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+    "previewImage": "/AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+    "stamp": "OWETAS QUARTETT · GEMEINSAM UNTERWEGS",
+    "icon": "",
+    "symbol": "",
+    "locked": false,
+    "appendCommentsPage": true,
+    "enablePageComments": true,
+    "sessionCast": [
+      "vk0xAa3ZcEhVvGC1CzNq",
+      "person--haus-wyrm--rianna-wyrm",
+      "person--haus-gafyr--lefraye-gafyr",
+      "Eka4z7TWpzEgx8KjhIzy"
+    ],
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "quartett",
+        "pageTitle": "Owetas Quartett",
+        "image": "/AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+        "imageWidth": 42,
+        "imageTall": true,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "description": "<p>Auf dem Land ist Mittagsruhe eingekehrt. Ein kleines Lagerfeuer brennt zwischen Gras und gepacktem Reisezeug. Oweta Draig, Rianna Wyrm, Lefraye Gafyr und Caralyn Chwedonol haben sich darum niedergelassen. Für einen Augenblick genügen Schatten, etwas zu essen und Zeit füreinander.</p><p>Oweta führt dieses Quartett. Rianna, Lefraye und Caralyn stehen gemeinsam auf der Ebene darunter; untereinander gibt es keinen Rangunterschied. Beim Rasten bleibt Raum für ein Gespräch, eine beiläufige Neckerei und die gewöhnlichen Handgriffe eines gemeinsamen Lagers.</p><p>Auch ihre Tiere sind dabei: Owetas Heulwen, Riannas Goldlöckchen und Sir Fressbert, Lefrayes Thalena und Agravaine – kurz Vain – sowie Caralyns Eure Hufigkeit. Während die Pferde in der Nähe grasen, gehören Kater und Drossel ebenso zum Bild dieser kleinen Gemeinschaft.</p>",
+        "stats": [
+          [
+            "Gruppe",
+            "Owetas Quartett"
+          ],
+          [
+            "Anführerin",
+            "Oweta Draig"
+          ],
+          [
+            "Gefährtinnen",
+            "Rianna Wyrm · Lefraye Gafyr · Caralyn Chwedonol"
+          ],
+          [
+            "Rangfolge",
+            "Oweta; darunter drei gleichrangige Gefährtinnen"
+          ],
+          [
+            "Tierbegleiter",
+            "Vier Pferde, ein Kater und eine Drossel"
+          ],
+          [
+            "Lager",
+            "Mittagsrast auf dem Land"
+          ]
+        ],
+        "commentDivider": false,
+        "commentSequence": []
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "rangfolge",
+        "pageTitle": "Die Gemeinschaft",
+        "hierarchyPage": true,
+        "hierarchy": {
+          "layoutMode": "vertical",
+          "treeDisplayMode": "tabs",
+          "cardFontScale": 92,
+          "portraitScale": 100,
+          "chartScale": 100,
+          "eyebrow": "Ein Quartett auf gemeinsamen Wegen",
+          "subtitle": "Oweta führt; Rianna, Lefraye und Caralyn stehen gleichrangig unter ihr.",
+          "centerLabel": "Owetas Quartett",
+          "organizationTitle": "Owetas Quartett",
+          "motto": "Gemeinsam unterwegs.",
+          "detailsTitle": "Das Quartett",
+          "details": [
+            {
+              "label": "Führung",
+              "value": "Oweta Draig"
+            },
+            {
+              "label": "Gefährtinnen",
+              "value": "Rianna, Lefraye und Caralyn · gleichrangig"
+            }
+          ],
+          "description": "Eine Anführerin und drei Gefährtinnen. Weitere Rangstufen gibt es in dieser Gruppe nicht.",
+          "chartTitle": "Die Gemeinschaft",
+          "chartIntro": "Oweta Draig führt die Gruppe. Die drei Gefährtinnen bilden gemeinsam die zweite Ebene.",
+          "trees": [
+            {
+              "id": "quartett",
+              "parentTreeId": "",
+              "label": "Das Quartett",
+              "levels": [
+                {
+                  "label": "Anführerin",
+                  "nodes": [
+                    {
+                      "title": "Anführerin",
+                      "subtitle": "Oweta Draig",
+                      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+                      "text": "Führt das Quartett."
+                    }
+                  ]
+                },
+                {
+                  "label": "Gefährtinnen · gleichrangig",
+                  "nodes": [
+                    {
+                      "title": "Gefährtin",
+                      "subtitle": "Rianna Wyrm",
+                      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/rianna-wyrm.jpg",
+                      "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                    },
+                    {
+                      "title": "Gefährtin",
+                      "subtitle": "Lefraye Gafyr",
+                      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/lefraye-gafyr.jpg",
+                      "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                    },
+                    {
+                      "title": "Gefährtin",
+                      "subtitle": "Caralyn Chwedonol",
+                      "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg",
+                      "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "levels": [
+            {
+              "label": "Anführerin",
+              "nodes": [
+                {
+                  "title": "Anführerin",
+                  "subtitle": "Oweta Draig",
+                  "portrait": "/Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+                  "text": "Führt das Quartett."
+                }
+              ]
+            },
+            {
+              "label": "Gefährtinnen · gleichrangig",
+              "nodes": [
+                {
+                  "title": "Gefährtin",
+                  "subtitle": "Rianna Wyrm",
+                  "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/rianna-wyrm.jpg",
+                  "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                },
+                {
+                  "title": "Gefährtin",
+                  "subtitle": "Lefraye Gafyr",
+                  "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/lefraye-gafyr.jpg",
+                  "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                },
+                {
+                  "title": "Gefährtin",
+                  "subtitle": "Caralyn Chwedonol",
+                  "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg",
+                  "text": "Steht mit den beiden anderen Gefährtinnen auf derselben Ebene unter Oweta."
+                }
+              ]
+            }
+          ],
+          "footerNote": "Die Tiere begleiten ihre jeweiligen Besitzerinnen und stehen außerhalb der Rangfolge."
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "gruppenuebersicht",
+        "pageTitle": "Gruppenübersicht",
+        "landingPage": true,
+        "landing": {
+          "presentation": "folio",
+          "coverImage": "/AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+          "bannerImage": "",
+          "title": "Owetas Quartett",
+          "subtitle": "Oweta, Rianna, Lefraye und Caralyn · eine Rast auf dem Land",
+          "memberTitle": "Das Quartett & seine Tiere",
+          "questTitle": "Gemeinsame Vorhaben",
+          "notesTitle": "Aus dem Reisebuch",
+          "eventsTitle": "Was bisher geschah",
+          "mapTitle": "Unsere Wege",
+          "mapKartenId": "",
+          "mapImage": "",
+          "mapDisplay": "embed",
+          "mapLink": "",
+          "mapButtonLabel": "Karte öffnen",
+          "infoTitle": "Am Lagerfeuer",
+          "members": [],
+          "quests": [],
+          "questJournal": {
+            "enabled": true,
+            "questIds": [],
+            "runIds": [],
+            "includeMembers": true
+          },
+          "notes": [],
+          "events": [],
+          "info": [
+            {
+              "icon": "*",
+              "title": "Die Gemeinschaft",
+              "text": "Vier Gefährtinnen; Oweta führt die Gruppe."
+            },
+            {
+              "icon": "*",
+              "title": "Die Rast",
+              "text": "Mittags, am Lagerfeuer im Grünen."
+            },
+            {
+              "icon": "*",
+              "title": "Die Tiere",
+              "text": "Heulwen, Goldlöckchen, Sir Fressbert, Thalena, Agravaine und Eure Hufigkeit."
+            }
+          ],
+          "group": {
+            "version": 2,
+            "location": "Auf dem Land bei Gwynthor",
+            "activity": "Mittagsrast am Lagerfeuer",
+            "status": "Gemeinsam unterwegs",
+            "supplies": "",
+            "threadId": "oweta-quartett::session:mittagsrast",
+            "includeCompanions": false,
+            "sceneThreads": [
+              "oweta-quartett::session:mittagsrast"
+            ],
+            "members": [
+              {
+                "id": "hierarchy:oweta draig",
+                "characterId": "vk0xAa3ZcEhVvGC1CzNq",
+                "kind": "character",
+                "creatureId": "",
+                "linkMode": "manual",
+                "assignment": "active",
+                "status": "auto",
+                "note": "",
+                "badgeIcon": null
+              },
+              {
+                "id": "hierarchy:rianna wyrm",
+                "characterId": "person--haus-wyrm--rianna-wyrm",
+                "kind": "character",
+                "creatureId": "",
+                "linkMode": "manual",
+                "assignment": "active",
+                "status": "auto",
+                "note": "",
+                "badgeIcon": null
+              },
+              {
+                "id": "hierarchy:lefraye gafyr",
+                "characterId": "person--haus-gafyr--lefraye-gafyr",
+                "kind": "character",
+                "creatureId": "",
+                "linkMode": "manual",
+                "assignment": "active",
+                "status": "auto",
+                "note": "",
+                "badgeIcon": null
+              },
+              {
+                "id": "hierarchy:caralyn chwedonol",
+                "characterId": "Eka4z7TWpzEgx8KjhIzy",
+                "kind": "character",
+                "creatureId": "",
+                "linkMode": "manual",
+                "assignment": "active",
+                "status": "auto",
+                "note": "",
+                "badgeIcon": null
+              }
+            ],
+            "guests": [
+              {
+                "id": "oweta-quartett:companion-oweta-heulwen",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-oweta-heulwen",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Oweta Draig.",
+                "badgeIcon": null,
+                "name": "Heulwen",
+                "role": "Rhyfel · bei Oweta Draig",
+                "portrait": "https://i.imgur.com/IQPGIq7.jpeg",
+                "until": "",
+                "temporary": false
+              },
+              {
+                "id": "oweta-quartett:companion-rianna-goldloeckchen",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-rianna-goldloeckchen",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Rianna Wyrm.",
+                "badgeIcon": null,
+                "name": "Goldlöckchen",
+                "role": "Goldmähnen-Stute · bei Rianna Wyrm",
+                "portrait": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/goldloeckchen.png",
+                "until": "",
+                "temporary": false
+              },
+              {
+                "id": "oweta-quartett:companion-rianna-sir-fressbert",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-rianna-sir-fressbert",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Rianna Wyrm.",
+                "badgeIcon": null,
+                "name": "Sir Fressbert",
+                "role": "Cenyric-Kater · bei Rianna Wyrm",
+                "portrait": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/sir-fressbert.png",
+                "until": "",
+                "temporary": false
+              },
+              {
+                "id": "oweta-quartett:companion-lefraye-thalena",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-lefraye-thalena",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Lefraye Gafyr.",
+                "badgeIcon": null,
+                "name": "Thalena",
+                "role": "Farnschritt-Stute · bei Lefraye Gafyr",
+                "portrait": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/thalena.png",
+                "until": "",
+                "temporary": false
+              },
+              {
+                "id": "oweta-quartett:companion-lefraye-agravaine",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-lefraye-agravaine",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Lefraye Gafyr.",
+                "badgeIcon": null,
+                "name": "Agravaine",
+                "role": "Mwyalchen-Drossel · bei Lefraye Gafyr",
+                "portrait": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+                "until": "",
+                "temporary": false
+              },
+              {
+                "id": "oweta-quartett:companion-caralyn-eure-hufigkeit",
+                "characterId": "",
+                "kind": "creature",
+                "creatureId": "companion-caralyn-eure-hufigkeit",
+                "linkMode": "auto",
+                "assignment": "active",
+                "status": "auto",
+                "note": "Persönlicher Tierbegleiter von Caralyn Chwedonol.",
+                "badgeIcon": null,
+                "name": "Eure Hufigkeit",
+                "role": "Rhyfel (vermutlich) · bei Caralyn Chwedonol",
+                "portrait": "https://i.imgur.com/c69AFl9.png",
+                "until": "",
+                "temporary": false
+              }
+            ],
+            "presets": [],
+            "treasury": {
+              "openingCopper": null,
+              "entries": []
+            },
+            "inventory": [],
+            "icons": {
+              "roster": "",
+              "scene": "",
+              "quests": "",
+              "inventory": "",
+              "notes": "",
+              "map": "",
+              "location": "",
+              "status": "",
+              "activity": "",
+              "supplies": "",
+              "treasury": ""
+            }
+          }
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "mittagsrast",
+        "pageTitle": "Mittagsrast am Lagerfeuer",
+        "image": "/AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+        "imageWidth": 40,
+        "imageTall": true,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "sessionPage": true,
+        "sessionIntro": "<p>Die Sonne steht hoch über dem Land. Im Gras liegen Bettrollen und Reisebeutel, über dem kleinen Feuer wärmt sich das Essen. Die Pferde grasen in Sichtweite. Oweta, Rianna, Lefraye und Caralyn haben es sich am Lagerfeuer bequem gemacht.</p>",
+        "sessionHint": "Ein Gespräch am Feuer, eine kleine Pause oder der nächste gemeinsame Aufbruch.",
+        "sessionEmptyTitle": "Zeit für eine Rast",
+        "sessionEmptyText": "Das Feuer knistert leise. Die Mittagsruhe gehört den vier Gefährtinnen und ihren Tieren.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      }
+    ]
+  }
+}

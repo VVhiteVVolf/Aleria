@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-04",
+  "scope": "Lokale Sylvarant-Vorbereitung; keine Veröffentlichung",
+  "suppliedHouseCrestsUnchanged": 17,
+  "suppliedImperialCrestsUnchanged": 1,
+  "newHouseCrests": 13,
+  "houseWarriorPairs": 30,
+  "classPrototypes": 7,
+  "newActiveFigureFiles": 35,
+  "newActiveHeraldryFiles": 14,
+  "retainedEarlierGeneratorVersions": 2,
+  "selectedProvinceAsset": "province-sylvarant-v2",
+  "mede": "Geliefertes Sylvarant-Wappen und unveränderte freigegebene Leukonia-Figur; Hauptstadt-Raute ort-15",
+  "pullo": "Die eigene Hausfigur ist zugleich der ausschließlich Pullo vorbehaltene siebte Klassenprototyp.",
+  "deferred": ["Neue Hausnamen", "Ortsnamen", "Weitere Sitze und Hausränge", "Regionalbanner"],
+  "verification": {
+    "targetedNodeTestsPassed": 46,
+    "warriorAlphaAudit": "35 geprüft; keine Fehler oder Warnungen",
+    "emblemCircleAlphaAudit": "14 geprüft; innen vollständig deckend, außen transparent",
+    "generatorOriginalAudit": "49 aktive und zwei frühere Versionen byteidentisch zum Tooloriginal",
+    "visualReview": "Alle 30 Wappen-Figuren-Paare, sieben Klassen und das überarbeitete Provinzwappen angesehen",
+    "runtimeDependencyGraph": "26 Module und Styles ohne fehlende Abhängigkeit",
+    "browser": {
+      "status": "limited",
+      "reason": "CUA createBrowserTab scheitert erneut mit Cannot read properties of undefined (reading 'timeoutMs'). Kein erfolgreicher Browser-Pass behauptet.",
+      "httpPreview": "http://127.0.0.1:8897/Vorschau/Sylvarant/"
+    },
+    "focusRegression": "Auswahl aus dem Hausdossier im offenen Kartenmodal fokussiert nach Neurendern dessen Viewport; vier Regressionfälle bestanden."
+  },
+  "evidence": [
+    "diagnostics/argentum-sylvarant/source-original-audit.json",
+    "diagnostics/argentum-sylvarant/warriors/audit.json",
+    "diagnostics/argentum-sylvarant/emblem-alpha-audit.json",
+    "diagnostics/argentum-sylvarant/http-assets-audit.json",
+    "diagnostics/argentum-sylvarant/house-pairs-1.jpg",
+    "diagnostics/argentum-sylvarant/house-pairs-2.jpg",
+    "diagnostics/argentum-sylvarant/class-prototypes.jpg"
+  ]
+}

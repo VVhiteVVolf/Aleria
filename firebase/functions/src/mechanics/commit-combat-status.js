@@ -10,19 +10,10 @@ import { createManualCombatCondition, buildCombatStatusChange, formatStatusDurat
 import { isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { assertMechanicalActorProfileSource } from './mechanical-profile-source.js';
 
 const clean = (value, maximum = 180) => String(value || '').trim().slice(0, maximum);
 const fail = (code, message) => { throw new HttpsError(code, message); };
-
-function assertActorSource(history, actorId, recordId, kind) {
-  if (actorId === recordId) return;
-  if (kind !== 'creature') fail('invalid-argument', 'Figurenkennung und Profilquelle stimmen nicht überein.');
-  const known = history.some(comment => (comment.combatEncounter?.participants || []).some(participant =>
-    participant.actorId === actorId && participant.persistence?.kind === 'scene-creature' && participant.persistence.sourceCreatureId === recordId)
-    || [comment, ...(comment.commentSegments || [])].some(segment =>
-      segment.sceneActorId === actorId && (segment.sceneActorSourceId || segment.creatureId) === recordId));
-  if (!known) fail('failed-precondition', 'Diese Kreatureninstanz ist in der Szene noch nicht bekannt.');
-}
 
 export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances: 10, concurrency: 20, enforceAppCheck: false, timeoutSeconds: 30 }, async request => {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
@@ -46,7 +37,7 @@ export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances:
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     if ((allHistory.at(-1)?.id || '') !== data.expectedLastCommentId) fail('failed-precondition', 'Die Szene hat sich verändert. Aktualisiere den Stand und prüfe die Änderung erneut.');
     const history = allHistory.filter(isTrustedSceneContributionComment);
-    assertActorSource(history, actorId, recordId, kind);
+    assertMechanicalActorProfileSource(history, { actorId, recordId, kind });
     const encounter = getActiveCombatEncounter(history);
     const snapshot = await transaction.get(recordRef);
     if (!snapshot.exists) fail('not-found', 'Das Figurenprofil wurde nicht gefunden.');

@@ -1,0 +1,135 @@
+{
+  "status": "pass",
+  "tests": 93,
+  "failures": 0,
+  "runs": [
+    {
+      "path": "Familien Häuser und Clans/tests/kraehenmoor-house-pages.test.mjs",
+      "chunk_id": "4aec20",
+      "wall_time_seconds": 3.6645212000000003,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 609.6\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/schwarzfenn-house-pages.test.mjs",
+      "chunk_id": "b4672f",
+      "wall_time_seconds": 3.5481827,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 385.4496\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/ivarsheim-house-pages.test.mjs",
+      "chunk_id": "225183",
+      "wall_time_seconds": 3.4194066,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 267.7696\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/roriksheim-house-pages.test.mjs",
+      "chunk_id": "7a50ba",
+      "wall_time_seconds": 3.9822569,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 524.9277\r\n"
+    },
+    {
+      "path": "Stammbäume/tests/vennyr-warrior-images.test.js",
+      "chunk_id": "932661",
+      "wall_time_seconds": 3.7219539,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..9\r\n# tests 9\r\n# suites 0\r\n# pass 9\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 390.2939\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/prepared-house-content.test.mjs",
+      "chunk_id": "0e6460",
+      "wall_time_seconds": 0.6512673,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..7\r\n# tests 7\r\n# suites 0\r\n# pass 7\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 51.1317\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/house-content-scope.test.mjs",
+      "chunk_id": "8590ed",
+      "wall_time_seconds": 0.6824225,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..8\r\n# tests 8\r\n# suites 0\r\n# pass 8\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 29.8051\r\n"
+    },
+    {
+      "path": "Gallerien/krieger/tests/gallery-catalog.test.mjs",
+      "chunk_id": "775420",
+      "wall_time_seconds": 3.9920399,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..9\r\n# tests 9\r\n# suites 0\r\n# pass 9\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 560.5625\r\n"
+    },
+    {
+      "path": "Gallerien/krieger/tests/scoped-catalog.test.mjs",
+      "chunk_id": "8c7d60",
+      "wall_time_seconds": 0.9189021,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..12\r\n# tests 12\r\n# suites 0\r\n# pass 12\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 35.0893\r\n"
+    },
+    {
+      "path": "netlify/tests/house-source-publication.test.mjs",
+      "chunk_id": "7208fe",
+      "wall_time_seconds": 1.0066905,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..4\r\n# tests 4\r\n# suites 0\r\n# pass 4\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 24.2183\r\n"
+    },
+    {
+      "path": "netlify/tests/frontend-source-publication.test.mjs",
+      "chunk_id": "7ee4bd",
+      "wall_time_seconds": 1.0948756,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..3\r\n# tests 3\r\n# suites 0\r\n# pass 3\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 24.3392\r\n"
+    },
+    {
+      "path": "netlify/tests/reference-art-publication.test.mjs",
+      "chunk_id": "f44000",
+      "wall_time_seconds": 0.8161273,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..1\r\n# tests 1\r\n# suites 0\r\n# pass 1\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 16.4043\r\n"
+    }
+  ],
+  "consistency": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "f3d6a1",
+        "wall_time_seconds": 1.7998300999999999,
+        "exit_code": 0,
+        "original_token_count": 306,
+        "output": "haus-mac-corcaigh: Hausseite und Hausbio aktuell.\nhaus-mac-morfhia: Hausseite und Hausbio aktuell.\nhaus-hjerte: Hausseite und Hausbio aktuell.\nhaus-jaernblod: Hausseite und Hausbio aktuell.\nhaus-kaldhrafn: Hausseite und Hausbio aktuell.\nhaus-schwarzstolz: Hausseite und Hausbio aktuell.\nhaus-schwarzblut: Hausseite und Hausbio aktuell.\nhaus-aurangr: Hausseite und Hausbio aktuell.\nhaus-brackwasser: Hausseite und Hausbio aktuell.\nhaus-fenngrim: Hausseite und Hausbio aktuell.\nhaus-feuerherz: Hausseite und Hausbio aktuell.\nhaus-goldhand: Hausseite und Hausbio aktuell.\nhaus-goldschwur: Hausseite und Hausbio aktuell.\nhaus-goldzunge: Hausseite und Hausbio aktuell.\nhaus-guldskar: Hausseite und Hausbio aktuell.\nhaus-helmyr: Hausseite und Hausbio aktuell.\nhaus-kaltherz: Hausseite und Hausbio aktuell.\nhaus-myrskarn: Hausseite und Hausbio aktuell.\nhaus-sumpfgeborener: Hausseite und Hausbio aktuell.\nhaus-taufwolf: Hausseite und Hausbio aktuell.\nhaus-varangr: Hausseite und Hausbio aktuell.\nhaus-vragi: Hausseite und Hausbio aktuell.\nhaus-schattenherz: Hausseite und Hausbio aktuell.\nhaus-blutstahl: Hausseite und Hausbio aktuell.\nhaus-goldglanz: Hausseite und Hausbio aktuell.\nhaus-silberblut: Hausseite und Hausbio aktuell.\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "b8f0c2",
+        "wall_time_seconds": 2.9586553,
+        "exit_code": 0,
+        "original_token_count": 189,
+        "output": "{\n  \"updatedHouses\": [\n    \"haus-varangr\",\n    \"haus-schwarzstolz\",\n    \"haus-schattenherz\",\n    \"haus-blutstahl\",\n    \"haus-silberblut\",\n    \"haus-kaltherz\",\n    \"haus-feuerherz\",\n    \"haus-vragi\",\n    \"haus-schwarzblut\",\n    \"haus-goldglanz\",\n    \"haus-goldschwur\",\n    \"haus-goldhand\",\n    \"haus-guldskar\",\n    \"haus-aurangr\",\n    \"haus-fenngrim\",\n    \"haus-brackwasser\",\n    \"haus-sumpfgeborener\",\n    \"haus-helmyr\",\n    \"haus-taufwolf\",\n    \"haus-myrskarn\",\n    \"haus-goldzunge\",\n    \"haus-hjerte\",\n    \"haus-jaernblod\",\n    \"haus-kaldhrafn\",\n    \"haus-mac-morfhia\",\n    \"haus-mac-corcaigh\"\n  ],\n  \"houses\": 896,\n  \"registered\": 781,\n  \"mentioned\": 115,\n  \"illustrated\": 681,\n  \"missing\": 215,\n  \"illustrations\": 1210,\n  \"otherAffiliations\": 306\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "797b12",
+        "wall_time_seconds": 2.4106771,
+        "exit_code": 0,
+        "original_token_count": 4962,
+        "output": "Warning: truncated output (original token count: 4962)\nTotal output lines: 135\n\nwarning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/data/spell-attack-library.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/docs/economy/price-review-2026-10-19.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/docs/economy/price-review-2026-10-19.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/characters/character-data.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/economy-calculator/economy-build.generated.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/economy-calculator/economy-runtime.global.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/economy-pricing/price-reference.generated.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/gawain-duncan/source/reviewed-module.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/group-adventures/group-adventures.global.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/quests/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/quests/quest-authored-dossiers.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/quests/quest-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/modules/regional-equipment/regional-equipment-catalog.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/scripts/build-quest-preparations.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AleriaAlmanach/tests/gethin-character-links.test.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'Anzeigetafeln/assets/data/notice-reward-catalog.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CharakterDatenbank/assets/js/character-database-client.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CharakterDatenbank/generated/characters.snapshot.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CharakterDatenbank/generated/sync-report.json', LF will be re…3462 tokens truncated…the next time Git touches it\nwarning: in the working copy of 'diagnostics/biography-redesign-20261102/online-biographies.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/character-development-audit-20261102/unrelated-before.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/character-trait-review-20261102/public-biographies-before.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/character-trait-review-20261102/registry-before.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/character-trait-review-20261102/snapshot-before.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/combat-sheets-20261102/final-live-user-verification.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/combat-sheets-20261102/public-privacy-audit.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/combat-sheets-20261102/public-worktree-plan.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/house-knight-rings-20261102/online-before.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'diagnostics/knight-equipment-20261102/online-inspection.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'firebase/functions/src/generated/economy-pricing/price-reference.generated.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'firebase/functions/src/generated/weapon-standards/weapon-standard-catalog.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'js/biography/build-public-biographies.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'js/biography/public-biographies.generated.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'js/biography/sources/knight-training.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'js/biography/sources/public-biographies.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'netlify/build/character-reference-tasks.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'netlify/build/publication-policy.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'netlify/build/site-build-tasks.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'netlify/tests/site-build.test.mjs', LF will be replaced by CRLF the next time Git touches it\n"
+      }
+    }
+  ]
+}

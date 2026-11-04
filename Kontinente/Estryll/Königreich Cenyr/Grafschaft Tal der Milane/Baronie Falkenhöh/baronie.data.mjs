@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/tal-der-milane/territory-page.mjs?v=tal-der-milane-20261019';
+import { createTerritory } from '../../../../modules/tal-der-milane/territory-page.mjs?v=20261103-tal-der-milane-v1';
 
 export default createTerritory({
   "id": "baronie-falkenhoeh",
@@ -140,7 +140,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-hebog"
         }
       ]
     },
@@ -155,7 +156,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mór Tiarna",
           "featured": false,
-          "featuredLabel": "Mór Tiarna"
+          "featuredLabel": "Mór Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gormard"
         }
       ]
     }

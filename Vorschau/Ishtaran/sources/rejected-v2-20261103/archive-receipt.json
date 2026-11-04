@@ -1,0 +1,305 @@
+{
+    "createdAtUtc":  "2026-11-03T11:37:58.3119953Z",
+    "status":  "archived-and-verified",
+    "reason":  "User rejected v2 emblem-warriors except the explicitly approved Dahakid source-03. All writers confirmed stopped before archiving.",
+    "retainedApprovedDahakid":  {
+                                    "id":  "source-03",
+                                    "source":  "assets/warriors/generated/source-03.png",
+                                    "sha256":  "12e0381e96ee468425188d3122b78cc572a02fd34ec947eb0b1af0075e332485",
+                                    "status":  "user-approved-unchanged",
+                                    "archived":  false
+                                },
+    "genericIllustrationsRetained":  [
+                                         "aschik",
+                                         "derwisch",
+                                         "ghulam",
+                                         "keman",
+                                         "lewent",
+                                         "nefer",
+                                         "nizet",
+                                         "sipahi"
+                                     ],
+    "snapshotScopeNote":  "Mixed source v2 manifests include the approved Dahakid record as historical context. Only files listed in files[] are rejected; Dahakid is retained as approved.",
+    "files":  [
+                  {
+                      "id":  "maghneach",
+                      "previous":  "assets/warriors/generated/maghneach.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/maghneach.png",
+                      "bytes":  2506266,
+                      "sha256":  "7cb8a770fef8ec5a2d391c5db56b6858bc462acc42343ea1dfcb29b21047b7f3"
+                  },
+                  {
+                      "id":  "pool-01",
+                      "previous":  "assets/warriors/generated/pool-01.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-01.png",
+                      "bytes":  2417219,
+                      "sha256":  "3c525edb66e257e32bf82f9d2d077e5e4359dcf9d5261f57bbb2816299f5e550"
+                  },
+                  {
+                      "id":  "pool-02",
+                      "previous":  "assets/warriors/generated/pool-02.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-02.png",
+                      "bytes":  2358120,
+                      "sha256":  "a1edfa8e58700625a378886a98019b3053e3c0cb5c7358758aadab4a4fc7bcf3"
+                  },
+                  {
+                      "id":  "pool-03",
+                      "previous":  "assets/warriors/generated/pool-03.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-03.png",
+                      "bytes":  2181170,
+                      "sha256":  "cb7d7c0632549a653d5c999f2f459d75611a84575606b0177f4a9fb195be5f2f"
+                  },
+                  {
+                      "id":  "pool-04",
+                      "previous":  "assets/warriors/generated/pool-04.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-04.png",
+                      "bytes":  2301513,
+                      "sha256":  "7d8678194fb05fc7de165f32322714fa58bf77030b69ffd09959065c8f3e112c"
+                  },
+                  {
+                      "id":  "pool-05",
+                      "previous":  "assets/warriors/generated/pool-05.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-05.png",
+                      "bytes":  2079529,
+                      "sha256":  "c1614641cc688d294e259ddebbdcae7ae143af56b3b19b81ff4ef2e568e68897"
+                  },
+                  {
+                      "id":  "pool-06",
+                      "previous":  "assets/warriors/generated/pool-06.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-06.png",
+                      "bytes":  2501020,
+                      "sha256":  "80ed391c0804400df08c1da5c1c840d479d46549edd859150daea0fe1ee3b73c"
+                  },
+                  {
+                      "id":  "pool-07",
+                      "previous":  "assets/warriors/generated/pool-07.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-07.png",
+                      "bytes":  2444835,
+                      "sha256":  "7400c64cf7c7028768748418fdf54f73af4f034d24c925f0c556d0fdc0d6057a"
+                  },
+                  {
+                      "id":  "pool-08",
+                      "previous":  "assets/warriors/generated/pool-08.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-08.png",
+                      "bytes":  2131583,
+                      "sha256":  "1e5f79d5c25f09ebaa6021ff244da748f2099562cf567e1f9b5c7b1e58735e8d"
+                  },
+                  {
+                      "id":  "pool-09",
+                      "previous":  "assets/warriors/generated/pool-09.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-09.png",
+                      "bytes":  2430578,
+                      "sha256":  "0ad2e460190168afd442e43d42951b0f42776e57e24e301a32a63edd82eae2eb"
+                  },
+                  {
+                      "id":  "pool-10",
+                      "previous":  "assets/warriors/generated/pool-10.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-10.png",
+                      "bytes":  2290918,
+                      "sha256":  "7228c51d958c7ded26905f6b42c2c67ec1a26aedfd7eb0e6d4c126a7d6a817d7"
+                  },
+                  {
+                      "id":  "pool-11",
+                      "previous":  "assets/warriors/generated/pool-11.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-11.png",
+                      "bytes":  2384267,
+                      "sha256":  "a65022c9b49f3d06bf06fdf356e3f29cd9c7fea18b2516feca2204d2c45e68fa"
+                  },
+                  {
+                      "id":  "pool-12",
+                      "previous":  "assets/warriors/generated/pool-12.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-12.png",
+                      "bytes":  1965107,
+                      "sha256":  "3cc1ef00b00f1eefdcd6909db5bde82acc7f9d7a131a61478b62ae81f340104a"
+                  },
+                  {
+                      "id":  "pool-13",
+                      "previous":  "assets/warriors/generated/pool-13.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-13.png",
+                      "bytes":  2067981,
+                      "sha256":  "5cac23a9d4c6d9151ba75a14a0dec6cfeb97389419a4991db9fc9a3c7e4545f9"
+                  },
+                  {
+                      "id":  "pool-14",
+                      "previous":  "assets/warriors/generated/pool-14.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-14.png",
+                      "bytes":  2419291,
+                      "sha256":  "82eecb0f4bc48a6dd3b4b4e900c35479fd876526591cb5e6021fa06666ba79bc"
+                  },
+                  {
+                      "id":  "pool-15",
+                      "previous":  "assets/warriors/generated/pool-15.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-15.png",
+                      "bytes":  2372833,
+                      "sha256":  "a130acfe6549ffedf4b4c7edca99dc8920b9b483f1fd60ea586b3a4c4318ea48"
+                  },
+                  {
+                      "id":  "pool-16",
+                      "previous":  "assets/warriors/generated/pool-16.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-16.png",
+                      "bytes":  2302184,
+                      "sha256":  "6e81fb50f6486a0c605217f5deab8e8e4ef4aae179088fc000f371f33033fe84"
+                  },
+                  {
+                      "id":  "pool-17",
+                      "previous":  "assets/warriors/generated/pool-17.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-17.png",
+                      "bytes":  2098866,
+                      "sha256":  "a89479cb389ffec9d0a314abed9742b3861ec6857e835eee3a5d089ad701b90a"
+                  },
+                  {
+                      "id":  "pool-18",
+                      "previous":  "assets/warriors/generated/pool-18.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-18.png",
+                      "bytes":  1850745,
+                      "sha256":  "4d0ca7bae64e34f175e6eb07da8a7ab6f8f0008b72b1979aa289b191704376c3"
+                  },
+                  {
+                      "id":  "pool-19",
+                      "previous":  "assets/warriors/generated/pool-19.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-19.png",
+                      "bytes":  2393077,
+                      "sha256":  "886d383b6af2b8b2b08627a06212bbc9970d12ebb2f9f0d9e1c5144aab977b46"
+                  },
+                  {
+                      "id":  "pool-20",
+                      "previous":  "assets/warriors/generated/pool-20.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-20.png",
+                      "bytes":  2538692,
+                      "sha256":  "2c0cd74aebc84fc0561f2d10ea186d674e655c865c1cbe1f1d5524e7f1f21f40"
+                  },
+                  {
+                      "id":  "pool-21",
+                      "previous":  "assets/warriors/generated/pool-21.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-21.png",
+                      "bytes":  2502051,
+                      "sha256":  "91ac2a9cc9e273ef431a4d3e972f2d7286003a384cc5174e6d10b4ff473ae14d"
+                  },
+                  {
+                      "id":  "pool-24",
+                      "previous":  "assets/warriors/generated/pool-24.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/pool-24.png",
+                      "bytes":  2198612,
+                      "sha256":  "a21b0784706d17601e2bbab4a65279149544a6c5155d78a3fbd72a78a9e25ccd"
+                  },
+                  {
+                      "id":  "source-01",
+                      "previous":  "assets/warriors/generated/source-01.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-01.png",
+                      "bytes":  2459146,
+                      "sha256":  "0e468692eddbd3703ac0e8490126b0ff6ad1319172fc67a0f66c5457a1cd9c3d"
+                  },
+                  {
+                      "id":  "source-02",
+                      "previous":  "assets/warriors/generated/source-02.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-02.png",
+                      "bytes":  2159478,
+                      "sha256":  "f36e0f894d483d962acc21ba5a3c43dc66ddae9aa634e4b8ce8e7a2b06c67011"
+                  },
+                  {
+                      "id":  "source-04",
+                      "previous":  "assets/warriors/generated/source-04.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-04.png",
+                      "bytes":  2585823,
+                      "sha256":  "a70911f473c46336c35100de567489c0d2ac7d3c85d00bf09600993c1ac30c1b"
+                  },
+                  {
+                      "id":  "source-05",
+                      "previous":  "assets/warriors/generated/source-05.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-05.png",
+                      "bytes":  2178531,
+                      "sha256":  "dbefc6877cae5f99b0a2cdebcf9e6e5dad5e3045e386d288051821b46cd38687"
+                  },
+                  {
+                      "id":  "source-06",
+                      "previous":  "assets/warriors/generated/source-06.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-06.png",
+                      "bytes":  2587535,
+                      "sha256":  "6b2d303ddbefcba79079031858763c1a2f54c243e347039830ea307eb52fa3e7"
+                  },
+                  {
+                      "id":  "source-07",
+                      "previous":  "assets/warriors/generated/source-07.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-07.png",
+                      "bytes":  2287755,
+                      "sha256":  "9b5a8fe329fc196d0b3fffea2c716a739fa05314eb94ba2918b23033ba7ae1d2"
+                  },
+                  {
+                      "id":  "source-08",
+                      "previous":  "assets/warriors/generated/source-08.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-08.png",
+                      "bytes":  2081188,
+                      "sha256":  "cf87771fa3168247fa588e0071b69affd05e7f181b4156906c1f5a1744b3b6d3"
+                  },
+                  {
+                      "id":  "source-09",
+                      "previous":  "assets/warriors/generated/source-09.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-09.png",
+                      "bytes":  2527124,
+                      "sha256":  "4c0c91cfef3aa94d4a5cb853ba864264c96186938fba44ae3116a5e30830f581"
+                  },
+                  {
+                      "id":  "source-10",
+                      "previous":  "assets/warriors/generated/source-10.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-10.png",
+                      "bytes":  2044192,
+                      "sha256":  "d96ee915f3fc4bc8e564c61b6a709c854c7dc33270848b63c41a71f1639e05ad"
+                  },
+                  {
+                      "id":  "source-11",
+                      "previous":  "assets/warriors/generated/source-11.png",
+                      "archived":  "assets/warriors/generated-archive/rejected-v2-20261103/source-11.png",
+                      "bytes":  2552874,
+                      "sha256":  "218468c5470635b01e2afc8e02bd6bc3f2376337f803fa30a1bc25510542a536"
+                  }
+              ],
+    "sourceSnapshots":  [
+                            {
+                                "source":  "sources/create-emblem-warrior-prompts-pool-14-26-v2.mjs",
+                                "snapshot":  "sources/rejected-v2-20261103/create-emblem-warrior-prompts-pool-14-26-v2.mjs",
+                                "sha256":  "71672fb4a779f8d397f1e18e1a87ae6c0a042051225ea0721767a53c97b2b36d"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-pool-01-13-art-direction-v2.mjs",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-pool-01-13-art-direction-v2.mjs",
+                                "sha256":  "1ffe68f70f30354ae974e3a206f598ec958ac93da2934796702c0c686471828e"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-pool-01-13-generation.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-pool-01-13-generation.json",
+                                "sha256":  "b08c810c7d4764a1ae3bbda428870a3ad59251ebadb59f698a756bb6295caabf"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-pool-01-13-receipts-v2.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-pool-01-13-receipts-v2.json",
+                                "sha256":  "a65baf18074083efe423426da92917737ea73f0ee4224787d943f808d7a19557"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-pool-14-26-art-direction-v2.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-pool-14-26-art-direction-v2.json",
+                                "sha256":  "6ca86df45b952114257d933d94e2e500939423298ee651f8dde8386bd5294ae3"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-pool-14-26-generation-v2.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-pool-14-26-generation-v2.json",
+                                "sha256":  "16b6dda2348aef3e906a172c34082b815bcfcb04c5b6cd80f181c115a1b46fbb"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-source-art-direction-v2.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-source-art-direction-v2.json",
+                                "sha256":  "ff9671e485a1669d851cf1b8b23761413f481c4a1f26b3f93b0f7a8466f0e4bd"
+                            },
+                            {
+                                "source":  "sources/emblem-warriors-source-generation-v2.json",
+                                "snapshot":  "sources/rejected-v2-20261103/emblem-warriors-source-generation-v2.json",
+                                "sha256":  "62615606387cae5dc2e4430c7df3ebbfc56afcc3fd6cdec7d88d2724c06df9f0"
+                            }
+                        ],
+    "verification":  {
+                         "archivedFiles":  33,
+                         "remainingActiveGeneratedFiles":  9,
+                         "dahakidOriginalPreserved":  true,
+                         "genericOriginalProductionPreviewHashesPreserved":  true,
+                         "completedAtUtc":  "2026-11-03T11:37:58.8089508Z"
+                     }
+}

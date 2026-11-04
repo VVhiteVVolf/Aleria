@@ -3,6 +3,7 @@ import { collectClaimedLootActorIds } from '../loot/loot-model.js?v=20260807-loo
 import { ENCOUNTER_STATUS_LABELS, ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from '../combat/combat-encounter-outcome.js';
 import { renderEncounterSummary, escapeEncounterMarkup as escapeMarkup } from './combat-encounter-summary-ui.js';
 import { renderEncounterActions } from './combat-encounter-panel.js?v=20260928-equipment-art-v4';
+import { renderCombatEncounterStartApplications } from './combat-encounter-start-ui.js';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 
@@ -220,6 +221,7 @@ export function renderCombatEncounterComment(comment = {}, index = 0) {
     ${event.body ? `<p>${escapeMarkup(event.body)}</p>` : ''}
     ${event.operation === 'end' ? renderEncounterSummary(event, { comments: globalThis.getCachedCommentsForThread?.(comment.entryId) || [] }) : ''}
     ${renderRoster(event.participants)}
+    ${renderCombatEncounterStartApplications(event)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}
     ${event.operation === 'end' && !awards ? '<small>Es wurden keine EP vergeben.</small>' : ''}
     ${renderLootRow(event, comment)}

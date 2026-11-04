@@ -82,7 +82,9 @@ test('Namenskorrektur überträgt sich ohne Identitätswechsel auf ältere Gegen
   for(const record of FAMILY_REGISTRY.filter(r=>r.family.houses.some(h=>h.id==='house-cwningod'))){
     const current=record.family;
     const stale=structuredClone(current);
-    stale.extensions.sourceRevision=(current.extensions.cwingodHouseNameRevision ?? current.extensions.sourceRevision)-1;
+    // Later biography-only revisions do not move this naming correction's source boundary.
+    stale.extensions.sourceRevision=(current.extensions.cwingodHouseNameRevision
+      ?? current.extensions.registryManagedEntitySourceRevision ?? current.extensions.sourceRevision)-1;
     stale.persons.forEach(p=>{p.name=p.name.replace('Cwingod','Cwningod');});
     stale.houses.forEach(h=>{h.name=h.name.replace('Cwingod','Cwningod');});
     stale.cadetBranches.forEach(h=>{h.name=h.name.replace('Cwingod','Cwningod');});
@@ -116,9 +118,43 @@ test('die Porträtkorrektur aktualisiert vorhandene Gegenakten feldgenau und wie
   const withoutExtensions = ({ extensions, ...record }) => record;
   for (const [familyId, revision] of Object.entries(CWINGOD_PORTRAIT_REVISIONS)) {
     // Exercise this portrait release before the later Mathgham field correction.
-    const current = familyId === 'haus-arth'
-      ? withCwingodSourcePortraitUpgrade(HOUSE_ARTH_FAMILY)
-      : getRegisteredFamily(familyId)?.family;
+    const source = familyId === 'haus-arth' ? HOUSE_ARTH_FAMILY : getRegisteredFamily(familyId)?.family;
+    // Reconstruct this portrait release's boundary. Later source and biography
+    // revisions must not turn this historical fixture into a different upgrade.
+    const earlier = source ? structuredClone(source) : null;
+    if (earlier) {
+      earlier.extensions.sourceRevision = revision - 1;
+      earlier.extensions.cwingodHouseNameRevision = Math.min(
+        earlier.extensions.cwingodHouseNameRevision ?? revision - 1, revision - 1
+      );
+      if (Number.isInteger(earlier.extensions.registryManagedEntitySourceRevision)) {
+        earlier.extensions.registryManagedEntitySourceRevision = Math.min(
+          earlier.extensions.registryManagedEntitySourceRevision, revision - 1
+        );
+      }
+      for (const key of ['persons', 'partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps']) {
+        for (const entity of earlier[key]) {
+          const extensions = entity.extensions;
+          if (!extensions) continue;
+          if (Number.isInteger(extensions.registryManagedSourceRevision)) {
+            extensions.registryManagedSourceRevision = Math.min(extensions.registryManagedSourceRevision, revision - 1);
+          }
+          for (const revisionKey of ['registryManagedFieldRevisions', 'registryManagedFieldFillOnlyRevisions']) {
+            if (!extensions[revisionKey]) continue;
+            extensions[revisionKey] = Object.fromEntries(
+              Object.entries(extensions[revisionKey]).map(([field, value]) =>
+                [field, Number.isInteger(value) ? Math.min(value, revision - 1) : value])
+            );
+          }
+        }
+      }
+      delete earlier.extensions.cwingodSourcePortraitInventory;
+      for (const person of earlier.persons) {
+        const asset = portraitInventory.portraits.find(entry => entry.personId === person.id);
+        if (asset) person.portrait = asset.previousPath;
+      }
+    }
+    const current = earlier ? withCwingodSourcePortraitUpgrade(earlier) : null;
     // The Rioga source may be published separately; it receives the same portrait
     // correction as soon as its full family record is available.
     if (!current?.persons.some(person => Object.hasOwn(CWINGOD_SOURCE_PORTRAITS, person.id))) continue;

@@ -6,6 +6,7 @@
   const TRANSACTION_LABELS = Object.freeze({
     combat: 'Kampfauswertung',
     status: 'Zustandsänderung',
+    regeneration: 'Szenenregeneration',
     inventory: 'Inventarvorgang',
     rest: 'Rast',
     skill: 'Fertigkeitsauswertung',
@@ -30,6 +31,7 @@
     const kinds = new Set();
     const segments = getSegments(comment);
     if (isObject(comment.combatStatus)) kinds.add('status');
+    if (isObject(comment.sceneRegeneration)) kinds.add('regeneration');
     if (
       isObject(comment.combatTransaction)
       || (Array.isArray(comment.criticalLifecycle) && comment.criticalLifecycle.length > 0)

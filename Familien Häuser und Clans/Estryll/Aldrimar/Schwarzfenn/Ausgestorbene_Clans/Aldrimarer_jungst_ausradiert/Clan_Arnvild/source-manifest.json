@@ -1,0 +1,88 @@
+{
+  "id": "haus-arnvild",
+  "source": {
+    "attachmentId": "d50ddaba-82c9-40cf-af1c-35b10762c1a6",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\d50ddaba-82c9-40cf-af1c-35b10762c1a6\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/arnvild/animexx-original.html",
+    "bytes": 84758,
+    "sha256": "5a0b55c00f959e95593240f3245f1b27ef95613dc9b27d5f8540ba44fc1e73ee",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-arnvild",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Aldrimarer (jüngst ausradiert)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Flusswall"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-arnvild",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-arnvild",
+    "familyId": "haus-arnvild",
+    "slug": "arnvild",
+    "canonicalSlug": "arnvild",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "d50ddaba-82c9-40cf-af1c-35b10762c1a6",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Cp3rZe5.png",
+    "sourceUrl": "https://i.imgur.com/Cp3rZe5.png",
+    "path": "Stammbäume/assets/images/references/haus-arnvild/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-arnvild/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 285180,
+    "sha256": "60ea0a0e9d5c70b74f77453848e41391f470bf86d070f17fc4bdac7d4af0c6db",
+    "sha": "60ea0a0e9d5c70b74f77453848e41391f470bf86d070f17fc4bdac7d4af0c6db",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Krieger mit geflügeltem Helm und goldener Heraldik.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Kanonischer Rang bleibt hesire. Die historische Registergruppe Aldrimarer (jüngst ausradiert) ist kein Sitz und macht den Rang nicht unknown. Historischer Ort ist Flusswall.",
+    "Arnvild gehört zur jüngsten Bürgerkriegsvergangenheit, nicht zu den antiken Norrnaigh- oder Crannath-Gruppen.",
+    "Orka ist bereits als letzte Überlebende von Flusswall kanonisch belegt. Keine zusätzliche Überlebendenfigur erzeugen und nicht pauschal alle biologischen Linien als erloschen behaupten.",
+    "Die Angreiferzuordnung im eigenen Konfliktkapitel und in Hrafns Geschichte widerspricht sich. Übernommen werden die Verteidigung, die Schändung und der Untergang, ohne eine neue Fraktionschronologie zu entscheiden.",
+    "Aldrun, Orvindir und Thorim sind in dieser Vorlage genannte Gottheiten. Keine neuen Kleriker, Ordensmitglieder oder Klassen aus allgemeinen Glaubensaussagen anlegen.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

@@ -4,6 +4,7 @@ import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-
 import { applyDefinedItemEffects } from './item-use-effects.js';
 import { getConsumedSubstanceExposure } from '../character-health/substance-item-effects.js';
 import { applySubstanceExposure } from '../character-health/substance-state.js';
+import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 const INVENTORY_USE_MODES = new Set(['auto', 'consume', 'use']);
 const CONSUMABLE_CATEGORIES = new Set(['potions', 'consumable', 'consumables', 'food', 'ammunition']);
 const REUSABLE_CATEGORIES = new Set(['weapon', 'armor']);
@@ -155,9 +156,6 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
     if (exposure) conditionEffects = applySubstanceExposure({ ...combatProfile, temporaryConditions: conditionEffects.conditions }, exposure,
       { actorId: inventoryUse.actorId, sceneId, seconds: sceneClockSeconds });
   }
-  if (conditionEffects.changed) inventoryUse.conditionSnapshot = {
-    before: clone(combatProfile.temporaryConditions || []), after: conditionEffects.conditions
-  };
   const resources = clone(Array.isArray(combatProfile?.resources) ? combatProfile.resources : []);
   const abilities = clone(Array.isArray(combatProfile?.abilities) ? combatProfile.abilities : []);
   const dayKey = cleanText(recoveryDayKey, 160);
@@ -167,6 +165,16 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
   delete inventoryUse.itemEffects;
   if (defined.hitPointSnapshot) inventoryUse.hitPointSnapshot = defined.hitPointSnapshot;
   if (defined.effects.length) inventoryUse.itemEffects = defined.effects;
+  if (defined.hitPointSnapshot) {
+    const conditions = releaseCriticalTemporaryOwnership(conditionEffects.conditions,
+      defined.hitPointSnapshot.before, defined.hitPointSnapshot.after);
+    if (conditions.some((entry, index) => entry !== conditionEffects.conditions[index])) {
+      conditionEffects = { ...conditionEffects, conditions, changed: true };
+    }
+  }
+  if (conditionEffects.changed) inventoryUse.conditionSnapshot = {
+    before: clone(combatProfile.temporaryConditions || []), after: conditionEffects.conditions
+  };
 
   abilities.forEach(ability => {
     const trigger = ability?.inventoryUseTrigger;

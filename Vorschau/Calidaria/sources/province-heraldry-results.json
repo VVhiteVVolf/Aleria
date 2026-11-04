@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "provider": "image_gen.imagegen",
+  "records": [
+    {
+      "id": "province-calidaria",
+      "category": "emblems",
+      "assetStem": "province-calidaria",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-aef7-7bc2-8289-4b6bcb826776\\exec-3514027a-b449-41e8-a972-955af2ba99b1.png",
+      "jobManifest": "sources/province-heraldry-jobs.json",
+      "jobId": "province-calidaria",
+      "previousGeneration": {
+        "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-aef7-7bc2-8289-4b6bcb826776\\exec-87a5d78e-99ac-46de-839b-828974504775.png",
+        "reason": "Outer feet overlapped inner rim; corrected to four fully visible feet inside inner field."
+      },
+      "sha256": "48528bb2142bba7f7cb908449d73ab0ea3c84c031e83c03e0d4c3633578eecc1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "originalBytePreserved": true,
+      "visualReview": "Exactly one central Cyclops eye; Roman Herakles with muscle cuirass and lion pelt; both complete figures, four feet and clubs visible inside circular field."
+    },
+    {
+      "id": "ancient-tlapatlan",
+      "category": "emblems",
+      "assetStem": "ancient-tlapatlan",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-aef7-7bc2-8289-4b6bcb826776\\exec-20aea475-4417-4966-b91f-84e682b4e52b.png",
+      "jobManifest": "sources/province-heraldry-jobs.json",
+      "jobId": "ancient-tlapatlan",
+      "sha256": "2f07d4bce6cefeaa5e0568012f68d9ace93d44b94e88caac9294ca04eb0aa6be",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "originalBytePreserved": true,
+      "visualReview": "One hammerhead shark with broad transverse head, clearly curved body and shark fins; single narrow complete wooden ring; no human face or text."
+    }
+  ]
+}

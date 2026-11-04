@@ -1,10 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, access } from 'node:fs/promises';
+import { readFile, access, stat } from 'node:fs/promises';
 import vm from 'node:vm';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 
 const root = new URL('../../', import.meta.url);
+const houseRegistryContext = { window: {} };
+vm.runInNewContext(await readFile(new URL('Familien Häuser und Clans/haeuser.registry.js', root), 'utf8'), houseRegistryContext);
+const houseRegistry = houseRegistryContext.window.HaeuserRegistry;
 const county = new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/', root);
 const regions = {
   gwendolyn: 'Baronie Gwendolyns Ufer/baronie.data.js',
@@ -76,33 +79,61 @@ test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrsc
   for (const [key, expected] of [
     ['gafyr', ['gafyr','gostyn','tlawd']],
     ['saethwyr', ['chwedlonol','eneiniog','saethwyr']],
-    ['wyrm', ['argall','cludwyr','loer','rhyddid','wyrm']],
+    ['wyrm', ['argall','blevis','brogar','cludwyr','crewe','glyn','jernigan','loer','rhyddid','talfryn','tarw','tynged','wyrm']],
   ]) {
     const cards = territories[key].flatMap(section => section.cards);
     assert.deepEqual(ids(cards).filter(id => id.startsWith('haus-')), expected.map(id => 'haus-' + id), key);
   }
 });
 
-test('Alle registrierten Grafschaftsfamilien bleiben über örtliche Wappenkarten erreichbar, auch ohne Hausseitenregister', async () => {
+test('Wyrms bürgerliche Familien behalten ihren Wohnort unabhängig von ihrer Dienstbindung', () => {
+  const wyrmCards = territories.wyrm.flatMap(section => section.cards);
+  for (const [seat, names] of [
+    ['Llysfaen', ['blevis','brogar','crewe','glyn','jernigan','talfryn']],
+    ['Craithglyn', ['tarw','tynged']],
+  ]) {
+    for (const name of names) {
+      const id = 'haus-' + name;
+      const record = FAMILY_REGISTRY.find(record => record.id === id);
+      assert.deepEqual(record.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', seat], id);
+      assert.equal(record.family.document.houseProfile.seat, seat, id);
+      assert.equal(record.family.document.houseProfile.liegeHouseId, 'haus-wyrm', id);
+      for (const cards of [local, wyrmCards]) {
+        const matches = cards.filter(card => card.id === id);
+        assert.equal(matches.length, 1, id);
+        assert.equal(matches[0].seat, seat, id);
+        assert.equal(matches[0].liege, 'Wyrm', id);
+      }
+    }
+  }
+});
+
+test('Alle registrierten Grafschaftsfamilien bleiben über direkte Hausseiten oder vorhandene Familienakten erreichbar', async () => {
   const cards = [...local, ...Object.values(territories).flatMap(sections => sections.flatMap(section => section.cards))];
   for (const record of FAMILY_REGISTRY.filter(record => record.folderPath.includes('Celtigerns Wacht'))) {
     const found = cards.filter(card => card.id === record.id);
     assert.ok(found.length, record.id);
     for (const card of found) {
       const target = new URL(card.href, 'http://aleria.local');
-      if (['haus-cochdon', 'haus-twyllod', 'haus-llythfor'].includes(record.id)) {
+      const houseEntry = houseRegistry.byId(record.id);
+      if (houseEntry) {
+        assert.equal(card.href, '/Familien%20H%C3%A4user%20und%20Clans/' + houseRegistry.linkFor(record.id), record.id);
+        assert.equal(target.searchParams.get('haus'), record.id);
+        assert.equal(decodeURIComponent(target.pathname), '/Familien Häuser und Clans/' + (houseEntry.page || 'haus.html'));
+      } else {
         assert.equal(target.searchParams.get('family'), record.id);
         assert.equal(target.searchParams.get('mode'), 'view');
         assert.equal(decodeURIComponent(target.pathname), '/Stammbäume/Stammbaum.html');
+      }
+      if (['haus-cochdon', 'haus-twyllod', 'haus-llythfor'].includes(record.id)) {
         assert.equal(card.rank, 'Bürgerliche Familie');
-      } else {
-        assert.equal(target.searchParams.get('haus'), record.id);
-        assert.match(target.pathname, /\/(haus|kleinehaeuser)\.html$/);
       }
       target.search = '';
       // Leading slash denotes the site's root, not the filesystem root.
       await access(new URL(target.pathname.replace(/^\//, ''), root));
-      await access(new URL(card.imageSrc.replace(/^\//, ''), root));
+      assert.equal(typeof card.imageSrc, 'string', record.id);
+      assert.ok(card.imageSrc.trim(), 'Fehlendes Wappenbild: ' + record.id);
+      assert.ok((await stat(new URL(card.imageSrc.replace(/^\//, ''), root))).isFile(), 'Wappenbild ist keine Datei: ' + record.id);
     }
   }
 });

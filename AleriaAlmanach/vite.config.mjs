@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { buildQuestCatalog } from './scripts/build-quest-catalog.mjs';
 import { buildMorgarReference, copyMorgarAssets } from './modules/language/morgar/morgar-build.mjs';
 import { buildLaerelisReference } from './modules/language/laerelis/laerelis-build.mjs';
+import { buildPackageLanguageReferences } from './modules/language/package-language-build.mjs';
 import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-assets.mjs';
@@ -73,6 +74,7 @@ function preserveClassicAlmanachScripts() {
       await buildNoticeRewardCatalog({ check: true });
       await buildMorgarReference({ check: true });
       await buildLaerelisReference({ check: true });
+      await buildPackageLanguageReferences({ check: true });
       await buildReligionModules({ check: true });
     },
     configResolved(config) {

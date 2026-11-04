@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-03",
+  "cityProposalCount": 40,
+  "houseProposalCount": 100,
+  "providedHouseProposalCount": 44,
+  "normalization": "NFC, deutschsprachige Kleinschreibung, Haus-/Clan-/Familienpräfix entfernt; exakte vollständige Namen",
+  "scope": {
+    "publishedRegistry": "Stammbäume/assets/data/published-families/registry.json",
+    "publishedFamilyCount": 78,
+    "houseSourceFiles": 909,
+    "placeSourceFiles": 70
+  },
+  "privacy": "Explizit geheime Quellengruppe ausgeschlossen; Bericht enthält ausschließlich Namen aus den neuen Vorschlägen und keine fremden Personen- oder Geheimdaten.",
+  "collisions": [],
+  "canonicalRegistersUnchanged": true,
+  "workshopAssignments": "Separate local house-data.mjs and territory-data.mjs proposals; no canonical assignment."
+}

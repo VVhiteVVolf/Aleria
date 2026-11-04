@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-03",
+  "scope": "Leukonia contracts, source-publication boundary, original-house/prototype visual review; no canonical registers, Firebase, push or deployment",
+  "latestSourcePrecedence": [
+    "sources/user-request-2026-11-03.txt",
+    "sources/user-decisions-2026-11-03.json",
+    "sources/island-exclusion-2026-11-03.json",
+    "sources/province-emblem-correction-2026-11-03.json"
+  ],
+  "lore": {
+    "castes": [
+      "Illustris",
+      "Patrizier",
+      "Magnarier",
+      "Mercantrier",
+      "Plebejer",
+      "Servi"
+    ],
+    "posts": "13 Reichsämter plus Archon als einziger bestätigter Adelsrang",
+    "institutions": "genau 10; Orbus qui Mariella ersetzt den veralteten zweiten Lytheris-Eintrag",
+    "proconsulSeats": 3,
+    "aedilsPerQuaestor": 5,
+    "tribuneVeto": "einmal jährlich; Reichweite und Wirkungsdauer bleiben offen",
+    "guard": "Liktorengarde untersteht ausschließlich dem Kaiseramt; gegenwärtig Kaiserin",
+    "consul": "abgeschafft; kein aktiver Konsul angelegt",
+    "localAdministration": "Präfekt und Magistrat bleiben nicht erbliche staatliche Verwaltungsposten",
+    "confirmedVersusDraft": "Sechs Archonhäuser und Mede bestätigt; konkrete bearbeitbare Sitzentwürfe, neue Wappen und Figuren sind Vorschläge; Klassennamen bleiben offen",
+    "materialDefects": []
+  },
+  "mainland": {
+    "archonates": 5,
+    "settlements": 26,
+    "newHouseEmblems": 32,
+    "houses": 39,
+    "bolar": "Haus und Archonrang erhalten; Region und Sitz null",
+    "mede": "Zaphias als kaiserliche Domäne",
+    "excluded": [
+      "archonat-insel",
+      "ort-23",
+      "ort-24"
+    ],
+    "provinceEmblem": "province-leukonia-v2: korinthischer Hoplit mit Gorgonenkopf",
+    "activeBanners": 5
+  },
+  "publication": {
+    "defectFound": "Leukonia sources, scripts, assets.source.json, technische Manifeste sowie banners/castes generated waren vor dem gezielten Fix statisch auslieferbar",
+    "fix": "Schmale Ergänzung der bestehenden publication-policy; vorhandene fremde Änderungen erhalten",
+    "excluded": [
+      "Vorschau/Leukonia/sources/",
+      "Vorschau/Leukonia/scripts/",
+      "Vorschau/Leukonia/assets.source.json",
+      "technische Kategorie-Manifeste",
+      "generated/generated-archive/alternates unter warriors, emblems, banners und castes",
+      "ausdrücklich inaktive vorbereitete Vorschläge: alter Stier leukonia, pool-33, pool-34, Banner bolar"
+    ],
+    "retained": [
+      "Browsermodule",
+      "Karten",
+      "aktive production/previews",
+      "gelieferte öffentliche Originaldownloads"
+    ],
+    "runtimeDependsOnExcludedAuthoringSources": false
+  },
+  "visualReview": {
+    "prototypeContact": "class-prototypes-contact.jpg",
+    "originalHousesIndividuallyViewed": [
+      "house-apinia",
+      "house-bolar",
+      "house-lex",
+      "house-orania",
+      "house-pelagia",
+      "house-tremelia",
+      "house-mede"
+    ],
+    "originalHouseCompositesViewed": [
+      "contract-audit-original-houses-light.jpg",
+      "contract-audit-original-houses-dark.jpg"
+    ],
+    "findings": [
+      "Alle sieben Prototypen erfüllen die jeweils bestätigten Rollen; vollständiger Reiter samt Equo und vier Hufen sichtbar",
+      "Alle sieben ursprünglichen Hausfiguren zeigen vollständige Figuren und Waffen ohne erkannten Anschnitt; Heraldik und Farben bleiben differenziert",
+      "Haus Lex und Mede tragen geschlossene Helme; weitere antike Helme und Rüstungsaufbauten variieren",
+      "Helle und dunkle Diagnosekompositionen zeigen freigestellte Hausfiguren ohne auffällige äußere Halos"
+    ],
+    "materialDefects": []
+  },
+  "verification": {
+    "runner": "node --test --experimental-test-isolation=none",
+    "runnerReason": "Standard-Isolation startet Childprozesse; das Sandbox-System verweigert sie mit spawn EPERM. Ohne Prozessisolation laufen dieselben node:test-Fälle erfolgreich.",
+    "policyTestsPassed": 12,
+    "leukoniaContractTestsPassed": 13,
+    "sharedPlacementTestsPassed": 5,
+    "totalTargetedTestsPassed": 30,
+    "all39Pairing": {
+      "completed": true,
+      "activeHouses": 39,
+      "readyHouseWarriors": 39,
+      "uniqueHouseIds": 39,
+      "uniqueSourceHashes": 39,
+      "uniqueProductionHashes": 39,
+      "sharedSourceOrProductionWithPrototype": false,
+      "checksumsVerified": "alle 39 generierten Originale, 39 Produktions-PNGs und 39 WebP-Vorschauen gegen Artefaktmanifest",
+      "originalSuppliedCrestsBytePreserved": 8,
+      "transparencyProofs": "alle 39: RGB unverändert, kein transparenter Quellpixel sichtbar gemacht, Kern deckend, ursprüngliche transparente Lücken nicht gefüllt, fertige Silhouette berührt keine Leinwandkante",
+      "mounts": "ausschließlich prototype-03 und zugehörige Hausvarianten besitzen Equo-Verweis; vorhandenes Bestiariumziel geprüft",
+      "evidence": [
+        "Vorschau/Leukonia/assets/warriors/manifest.json",
+        "Vorschau/tests/leukonia-art-contracts.test.mjs"
+      ]
+    },
+    "commands": [
+      "node --test --experimental-test-isolation=none Vorschau/tests/leukonia-*.test.mjs Vorschau/tests/placement-state.test.mjs",
+      "node --test --experimental-test-isolation=none netlify/tests/leukonia-source-publication.test.mjs netlify/tests/reference-art-publication.test.mjs netlify/tests/frontend-source-publication.test.mjs netlify/tests/house-source-publication.test.mjs"
+    ]
+  },
+  "imageRevision": "initial-house-set-before-mede-v2",
+  "medeFollowup": "Mede V2 has a separate completed audit: contract-audit-mede-v2-2026-11-03.json. This historical audit continues to describe the preceding 39-figure set including Mede V1."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-grianlaoch",
+  "attachmentId": "ac026692-ce80-4b12-8dcf-c0a04c384a4d",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "37a9ee989e85696745588d8346738abb0b1cf38325a85f265e743b6249347289",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausfigur",
+      "file": "assets/hausdarstellung-original.png",
+      "url": "https://i.imgur.com/39p68Fe.png",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "active": true,
+      "sha256": "96f3c78702a67ed36d1a351bb5144b80f57595775df713f1153e6d836de1002b",
+      "width": 408,
+      "height": 612
+    },
+    {
+      "role": "Hausfigur",
+      "file": "assets/hausdarstellung-2026-11-03.png",
+      "generationPlan": "diagnostics/sonnenkueste-house-pages-20261103/image-prompts.json#haus-grianlaoch",
+      "preservedOriginal": false,
+      "visuallyInspected": true,
+      "sha256": "a8a80118d948e1189cb1ade6369099e41949dc6546ed5f535fa0a74ad104949e",
+      "active": false,
+      "note": "Frühere Ergänzung erhalten; nach Wiederfund wird das passende Vorlagenoriginal als Hauptfigur verwendet."
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-grianlaoch",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Stammbäume/assets/js/data/house-grianlaoch-family.js",
+    "Stammbäume/assets/js/data/house-grianlaoch-portraits.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true,
+  "originalFigureCorrection": "Nutzerhinweis vom3.November2026: vorhandener passender Ritter im Einführungsbild war falsch als Szene klassifiziert. Original wiedergefunden und unverändert eingebunden. Bestehende Texte und kanonische Metadaten erhalten."
+}

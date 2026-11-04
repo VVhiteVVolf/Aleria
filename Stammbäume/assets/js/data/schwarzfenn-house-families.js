@@ -7,7 +7,7 @@ import {
   SCHWARZFENN_HOUSE_EMBLEMS,
   SCHWARZFENN_HOUSE_PROFILES
 } from './schwarzfenn-house-profiles.js';
-import { HOUSE_HELGR_FAMILY } from './house-helgr-family.js';
+import { HOUSE_HELGR_FAMILY } from './house-helgr-family.js?v=20261104-life-status-v1';
 import { HOUSE_EISBRAND_FAMILY } from './house-eisbrand-family.js';
 import { HOUSE_TODBRAND_FAMILY } from './house-todbrand-family.js';
 import { HOUSE_GRAUMAHNE_FAMILY } from './house-graumahne-family.js';

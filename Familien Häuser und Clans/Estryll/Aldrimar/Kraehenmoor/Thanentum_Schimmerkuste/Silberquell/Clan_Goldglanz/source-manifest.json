@@ -1,0 +1,103 @@
+{
+  "id": "haus-goldglanz",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "4a8f5fb8-cf04-4d29-a06f-23af5a900bc5",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\4a8f5fb8-cf04-4d29-a06f-23af5a900bc5\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/goldglanz/animexx-original.html",
+    "bytes": 118717,
+    "sha256": "15ce3e3368cb6027d460681079bb1cc85f02b8d0eff7ab02944feda3a108f899",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-goldglanz",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Silberquell",
+      "barony": "Thanentum Schimmerküste",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-blutstahl",
+      "liegeHouseName": "Clan Blutstahl",
+      "liegeHouses": [
+        {
+          "id": "house-blutstahl",
+          "name": "Clan Blutstahl"
+        },
+        {
+          "id": "house-silberblut",
+          "name": "Clan Silberblut"
+        }
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "52e9f5e9652cef298690c11d487e4e04723cd815dd093be36ad3daea788cb2d7"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-goldglanz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-goldglanz",
+    "familyId": "haus-goldglanz",
+    "slug": "goldglanz",
+    "canonicalSlug": "goldglanz",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "4a8f5fb8-cf04-4d29-a06f-23af5a900bc5",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/DqYI5oN.png",
+    "sourceUrl": "https://i.imgur.com/DqYI5oN.png",
+    "path": "Stammbäume/assets/images/references/haus-goldglanz/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-goldglanz/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 330163,
+    "sha256": "582184ee77cf8c54660a6ec4db261bf6f6ff9dcab2a0774322a2c76141d66e78",
+    "sha": "582184ee77cf8c54660a6ec4db261bf6f6ff9dcab2a0774322a2c76141d66e78",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Goldfarben gerüsteter Hauskrieger mit Streitkolben und reich verziertem goldenen Schild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Beide kanonischen Lehnsherren Blutstahl UND Silberblut sichtbar benennen. Der erste liegeHouseId ist kein Beleg einer ausschließlichen Dienstbindung.",
+    "Honigbreu, Brauerei, Marktteilung und offener Quellenbericht über Syndikat/Nachtfalter gehören zum ausdrücklich gelieferten öffentlichen Haustext; keinerlei geheime oder private Dossiers konsultiert.",
+    "Rorikshall bei der Herkunft der Kampfgeborenen meint den Ortskontext innerhalb des Jarltums Roriksheim; keine neue Jarltumsbezeichnung.",
+    "Kronental/Heldenwacht als neutrale Handelszone: Niederlassung und Marktzugang unterscheiden sich von territorialem Lehen oder zusätzlichem Familiensitz.",
+    "Die absolute Behauptung keine militärische Macht wird als geringe damalige militärische Bedeutung formuliert, da derselbe Text angeworbene Wachen und Waffenämter belegt. Keine Truppenzahlen und keine Personenlisten.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

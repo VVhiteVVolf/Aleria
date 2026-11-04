@@ -7,9 +7,9 @@ import {
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { HOUSE_HEBOG_PORTRAITS } from './house-hebog-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,
   TAL_DER_MILANE_HOUSE_PROFILES

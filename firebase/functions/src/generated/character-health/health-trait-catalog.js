@@ -46,8 +46,8 @@ const fever = (id, name, rank, description, mechanics, cost, variant = 'human') 
   referenceUrl: '/AleriaAlmanach/AleriaAlmanach.html?entry=arkanistenfieber'
 });
 export const ARCANE_FEVER_TRAITS = Object.freeze([
-  fever('arkanistenfieber-anzeichen', 'Anzeichen vom Arkanistenfieber', 1, 'Beginnende arkane Überreizung: +1 Zauberangriff, −1 Initiative. Eine Beobachtung, noch kein sicher festgestelltes Hauptstadium.', { spellAttack: 1, initiative: -1 }, 0),
-  fever('arkanistenfieber-symptome', 'Erste Symptome des Arkanistenfiebers', 2, 'Der kurzzeitige Magieschub bleibt: +1 Zauberangriff; −1 Initiative und −1 auf KON-Rettungswürfe. Weitere Magie gefährdet die Figur.', { spellAttack: 1, initiative: -1, saveAttributeModifiers: [save('constitution', -1)] }, -1),
+  fever('arkanistenfieber-anzeichen', 'Anzeichen vom Arkanistenfieber', 1, 'Beginnende arkane Überreizung: +1 Zauberangriff, −1 Initiative. Eine Beobachtung, noch kein sicher festgestelltes Hauptstadium.', { spellAttack: 1, initiative: -1 }, 1),
+  fever('arkanistenfieber-symptome', 'Erste Symptome des Arkanistenfiebers', 2, 'Der kurzzeitige Magieschub bleibt: +1 Zauberangriff; −1 Initiative und −1 auf KON-Rettungswürfe. Weitere Magie gefährdet die Figur.', { spellAttack: 1, initiative: -1, saveAttributeModifiers: [save('constitution', -1)] }, 0),
   ...['human', 'druid'].flatMap(variant => [1, 2, 3, 4].map(stage => {
     const roman = ['I', 'II', 'III', 'IV'][stage - 1];
     const mechanics = { skill: -stage, initiative: -stage, savingThrow: -stage, movement: -stage,

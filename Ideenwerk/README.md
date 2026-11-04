@@ -1,135 +1,217 @@
 # Ideenwerk · Patricks Studio
 
-Eigenständige Ideenwerkstatt für Charaktere, Geschichten, Orte und lose Gedanken.
-Alle Inhalte liegen lokal im Browser. Es gibt keine Firebase-Anbindung, keine
-Serverdatenbank und keine extern geladenen Schriftarten, Bilder oder Bibliotheken.
+Eine eigene Werkstatt für Figuren, Geschichten, Orte und Ideen. Patrick kann hier
+auch Modul- und Avatarwünsche beschreiben, Referenzbilder hinzufügen und die
+ausgewählten Wünsche auf GitHub zur Umsetzung bereitstellen.
 
-## Direkt starten
+## Starten
 
-**`Ideenwerk.html` doppelklicken und im Browser öffnen.** Dafür wird keine
-Installation und kein laufender Server benötigt. Die Datei enthält die gesamte
-Oberfläche und alle Programmteile. Einen aktuellen Chrome, Edge oder Firefox verwenden.
+**`Ideenwerk.html` doppelklicken und im Browser öffnen.** Die Datei enthält die
+gesamte Anwendung; eine Installation oder ein laufender Server ist nicht nötig.
+Einen aktuellen Chrome, Edge oder Firefox verwenden.
 
-Beim ersten Start ist eine ausdrücklich markierte Beispielpinnwand vorhanden.
-Über **Neue Pinnwand** einen leeren Arbeitsbereich anlegen. Die Beispieldaten können
-über das Papierkorbsymbol neben dem Pinnwandtitel entfernt werden.
+Neue Projekte starten mit einer leeren Pinnwand. Unveränderte Beispiele aus der
+früheren Version werden beim Laden entfernt. Bearbeitete Beispiele, hinzugefügte
+Bilder, verschobene Karten und eigene Inhalte bleiben erhalten.
 
 Alternativ mit installiertem Node.js 22 oder neuer `Start-Ideenwerk.cmd`
-doppelklicken oder in diesem Ordner `npm start` ausführen. Das öffnet die modulare
-Fassung unter `http://127.0.0.1:4177`. Der lokale Server liefert ausschließlich die
-Anwendungsdateien aus; er speichert und verarbeitet keine Projektinhalte.
-Für diesen Start ist kein `npm install` erforderlich. Mit Strg+C beenden.
+doppelklicken oder in diesem Ordner `npm start` ausführen. Die modulare Fassung
+öffnet sich unter `http://127.0.0.1:4177`. Dafür ist kein `npm install` nötig.
+Der lokale Server liefert die Anwendung aus; Projektinhalte speichert er nicht.
+Mit Strg+C beenden.
 
-## Arbeiten
+## Die drei Arten zu speichern
 
-- **Pinnwand, Raster, Liste:** Drei Ansichten desselben Projekts. Die freie Position
-  bleibt beim Wechsel der Ansicht erhalten.
-- **Module:** Charakterdesign, Storydesign, Mindmap, Welten & Orte, Moodboard und
-  freie Idee. Das Modul anklicken, um es zu bearbeiten. Am Punktgriff verschieben;
-  die Pfeiltasten bewegen einen fokussierten Griff ebenfalls.
-- **Miniaturen:** Der kleine Pfeil rechts oben klappt das Modul zu einer Kachel
-  mit Vorschau zusammen. Ein weiterer Klick klappt die Vorschau wieder aus.
-- **Seiten:** Jede Vorlage bringt passende Seiten mit. Eigene Seiten und Text-,
-  Listen- oder Bildblöcke lassen sich ergänzen, umbenennen und entfernen.
-- **Charakterdesign:** Portrait, Eigenschaften als Liste, freier Text, innerer
-  Antrieb und Entwicklung. Keine Spielwerte oder Aleria-Klassensysteme.
-- **Mindmap:** Gedanken hinzufügen, ziehen und beschriften. Einen Knoten auswählen,
-  **Verbinden** anklicken und den zweiten Knoten wählen. Eine Linie bzw. deren
-  Beschriftung anklicken, um den Verbindungstext zu ändern. Tab und Enter können
-  Knoten und Linien auswählen; Pfeiltasten verschieben fokussierte Knoten.
-- **Bilder:** PNG, JPEG oder WebP bis 12 MB einfügen. Das Bild wird lokal auf
-  maximal 1.200 Pixel Kantenlänge verkleinert und als WebP eingebettet. Das Original
-  bleibt auf dem Rechner unverändert.
-- **Suche:** Durchsucht Titel, Texte, Seiten und Mindmap-Knoten. Der Vorlagenfilter
-  grenzt die Ergebnisse zusätzlich ein.
-- **Rückgängig/Wiederholen:** Über die Pfeile in der Werkzeugleiste. Strg+Z und
-  Strg+Umschalt+Z gelten außerhalb von Textfeldern für das Projekt; innerhalb eines
-  Textfeldes gelten die normalen Textabkürzungen. Verlauf: die letzten 30 Schritte
-  seit dem Öffnen. Strg+S exportiert das ganze Projekt.
+| Anzeige oder Knopf | Was passiert? |
+| --- | --- |
+| **Lokal gespeichert** | Änderungen werden automatisch im aktuellen Browser gespeichert. |
+| **Datei sichern** | Lädt das ganze Projekt mit allen Pinnwänden und Bildern als JSON-Datei herunter. |
+| **Wünsche auf GitHub speichern** | Überträgt ausdrücklich ausgewählte Wünsche mit ihren Beschreibungen und Bildern in das gemeinsame private Repository. |
 
-## Lokal sichern und übertragen
+Es gibt keinen automatischen GitHub-Push im Hintergrund. Beim Schreiben bleibt
+die Arbeit zunächst lokal. Erst die GitHub-Erfolgsmeldung bestätigt die Übergabe.
 
-**Automatisch:** Änderungen werden in IndexedDB in diesem Browser gespeichert.
-„Lokal gespeichert“ bedeutet Browserspeicher, keine Datei im Projektordner.
-Ein zweiter Tab desselben Ursprungs wird bei verfügbarer Web-Locks-API gegen
-gleichzeitiges Überschreiben gesperrt. Speicherfehler werden sichtbar gemeldet.
+**Datei öffnen** fügt Pinnwände aus einer Sicherung hinzu. Vorhandene Pinnwände
+bleiben erhalten; auch ein Import lässt sich rückgängig machen. Für einen
+Rechner- oder Browserwechsel zuerst eine Datei sichern und am Ziel öffnen.
+Das gilt auch beim Wechsel zwischen HTML-Datei und lokalem Server.
 
-**Export:** Lädt eine JSON-Datei mit allen Pinnwänden, Modulpositionen, Seiten,
-Bildern, Knoten und Verbindungen herunter. Diese Datei ist die portable Sicherung.
-**Import:** Fügt Pinnwände einer Sicherung nach einer Zusammenfassung hinzu;
-vorhandene Pinnwände bleiben erhalten. Auch ein Import ist rückgängig zu machen.
+Browserdaten gehören zu Browserprofil und Ursprung; bei `file:` kann auch der
+Dateipfad eine Rolle spielen. Die HTML-Datei selbst enthält keine nachträglich
+eingegebenen Ideen. Eine gespeicherte Projektdatei ist deshalb die mitnehmbare
+Sicherung. Das Löschen der Browserdaten entfernt auch die automatische lokale
+Speicherung. Speicherfehler werden in der Oberfläche angezeigt.
 
-Für einen Rechner-/Browserwechsel zuerst exportieren und am Ziel importieren.
-Auch beim Wechsel zwischen HTML-Datei und lokalem Server exportieren/importieren.
-Browserdaten sind an Browserprofil und Ursprung gebunden; bei `file:` kann auch
-der Dateipfad eine Rolle spielen. Datei möglichst am gleichen Ort behalten.
-Browserdaten löschen oder Privatmodus beenden kann die automatische Sicherung
-entfernen. Deshalb regelmäßig exportieren. Die HTML-Datei selbst enthält keine
-nachträglich eingegebenen Ideen.
+## Ideen bearbeiten
 
-Grenzen pro Projekt: 30 Pinnwände, je 500 Module, je 50 Seiten und 100 Blöcke pro
-Seite; je Mindmap 200 Knoten und 500 Verbindungen. Portable Projektdateien maximal
-32 MB; GitHub-Sicherungen maximal 25 MB. Importdateien werden vor Übernahme geprüft;
-externe Bild-URLs, HTML-Ausführung und ungültige Verbindungen sind ausgeschlossen.
+1. Links eine Vorlage auswählen und einen Titel vergeben.
+2. Texte, Listen und Bilder ergänzen. Jede Vorlage bringt passende Seiten mit;
+   eigene Seiten und Inhaltsblöcke lassen sich hinzufügen.
+3. Die Karte zum Bearbeiten anklicken. Am Punktgriff verschieben; am fokussierten
+   Griff funktionieren auch die Pfeiltasten. Der kleine Pfeil klappt die Karte
+   zu einer Miniatur zusammen.
 
-## GitHub-Sicherung ohne Deployment
+Pinnwand, Raster und Liste zeigen dieselben Inhalte. Suche und Vorlagenfilter
+helfen beim Wiederfinden. Neue Pinnwände schaffen weitere Arbeitsbereiche.
 
-1. Ein eigenes GitHub-Repository ohne Hosting-Anbindung anlegen und mit einer
-   README initialisieren. Für private Ideen ein privates Repository verwenden.
-2. Einen Fine-grained Personal Access Token ausschließlich für dieses Repository
-   mit **Contents: Read and write** bereitstellen.
-3. Im Editor **GitHub** öffnen, `Benutzer/Repository` und Token eintragen.
-4. **Ziel prüfen** zeigt Sichtbarkeit, Datenumfang und Branch. Erst **Jetzt sichern**
-   überträgt die Projektdaten.
+Die normalen Vorlagen sind Charakterdesign, Storydesign, Mindmap, Welten & Orte,
+Moodboard und freie Idee. Charakterdesign sammelt Aussehen, Eigenschaften und
+Entwicklung; Spielwerte und Aleria-Klassen werden hier nicht verwaltet.
 
-Die Sicherung liegt auf **`ideenwerk-backup`** unter
-`projects/<projektkennung>.json`. Der Branch beginnt unabhängig vom Standardbranch,
-übernimmt keinen Anwendungscode und enthält nur JSON-Projektdateien sowie eine
-Erkennungsdatei. Ein bereits vorhandener fremder Branch wird abgewiesen. Vor dem
-Schreiben wird erneut auf zwischenzeitliche Änderungen geprüft; es gibt keinen
-Force-Push. Der Standardbranch kann nicht als Sicherungsbranch verwendet werden.
+In einer Mindmap Gedanken hinzufügen, ziehen und beschriften. Einen Knoten
+auswählen, **Verbinden** anklicken und den zweiten Knoten wählen. Die Linie oder
+ihre Beschriftung anklicken, um den Verbindungstext zu ändern. Tab und Enter
+wählen Knoten und Linien; Pfeiltasten bewegen fokussierte Knoten.
 
-Es gibt keine Deployment-, Workflow-, Netlify- oder Firebase-Aufrufe. Committexte
-enthalten `[skip ci] [skip netlify]`. Externe Automationen eines Repositorys kann
-der Editor nicht kontrollieren; deshalb ein Backup-Repository ohne Hosting wählen.
+Bilder als PNG, JPEG oder WebP bis 12 MB einfügen. Ideenwerk verkleinert sie lokal
+auf maximal 1.200 Pixel Kantenlänge und bettet sie als WebP ein. Das Original auf
+dem Rechner bleibt erhalten. Listen verwenden einen Punkt pro Zeile.
 
-Der Token wird nur während des geöffneten GitHub-Dialogs im Arbeitsspeicher
-gehalten und beim Schließen verworfen. Er wird nicht in IndexedDB, LocalStorage,
-Projektdateien oder Sicherungen abgelegt. Es gibt keine automatische Synchronisation.
-Zur Wiederherstellung die JSON-Datei im Backup-Branch herunterladen und importieren.
+**Rückgängig/Wiederholen:** Werkzeugleiste, Strg+Z und Strg+Umschalt+Z. Innerhalb
+eines Textfeldes gelten dessen normale Textabkürzungen. Der Projektverlauf umfasst
+die letzten 30 Schritte seit dem Öffnen. Strg+S sichert das Projekt als Datei.
 
-Technische Grundlage:
-[GitHub Git Trees API](https://docs.github.com/en/rest/git/trees),
-[Git Commits API](https://docs.github.com/en/rest/git/commits),
-[Git References API](https://docs.github.com/en/rest/git/refs).
+## Einen Wunsch zur Umsetzung vorbereiten
 
-## Weiterentwickeln
+Über **Wunsch erstellen** zwischen zwei Vorlagen wählen:
 
-Das Laufzeitsystem braucht keine Pakete und keinen Build. `index.html` lädt native
-JavaScript-Module. Verantwortlichkeiten sind nach Features getrennt:
+- **Modulwunsch:** Ein neues Aleria-Modul, eine Szene, ein Ort oder eine Erweiterung.
+  Beschreiben, was entstehen soll, wo es hingehört und welche Inhalte wichtig sind.
+- **Avatarwunsch:** Ein neues Charakterbild. Ein Referenzbild der Figur einfügen
+  und Aussehen, Kleidung, Pose sowie gewünschte Änderungen beschreiben.
+
+Einen aussagekräftigen Titel und die Beschreibung ergänzen. Für Avatarwünsche
+ist mindestens ein Referenzbild erforderlich. Fehlende Angaben werden im Wunsch
+angezeigt. Mit **Bereit zur Übergabe** wird ein fertiger Wunsch in der
+GitHub-Auswahl vorausgewählt. Vollständig beschriebene Entwürfe können ebenfalls
+bewusst ausgewählt werden.
+
+**Deine Wünsche** sammelt Modul- und Avatarwünsche aus allen Pinnwänden. Dort
+steht, ob ein Wunsch nur lokal gespeichert ist, ob sein aktueller Inhalt bereits
+auf GitHub liegt oder ob er seit der letzten Übergabe geändert wurde. Nach einer
+inhaltlichen Änderung erneut auf GitHub speichern; der frühere Speicherbeleg
+bestätigt nur den damaligen Stand.
+
+## GitHub einmal gemeinsam einrichten
+
+1. Ein eigenes **privates** Repository für die Wünsche anlegen und mit einer
+   README initialisieren, zum Beispiel `patrick/aleria-wuensche`.
+2. Der Repository-Besitzer lädt die andere Person über die GitHub-Einstellungen
+   als Mitwirkenden ein. Die Einladung annehmen, damit beide das Repository
+   öffnen können.
+3. Patrick erstellt in seinem GitHub-Konto selbst einen **Fine-grained Personal
+   Access Token**. Nur dieses Repository auswählen und unter den
+   Repository-Berechtigungen **Contents: Read and write** freigeben.
+4. In Ideenwerk **Wünsche auf GitHub speichern** öffnen und `Benutzer/Repository`
+   sowie den Token eintragen.
+
+Der Token bleibt nur während dieses geöffneten Dialogs im Arbeitsspeicher und
+wird beim Schließen verworfen. Er wird nicht im Projekt, im Browserspeicher oder
+in den GitHub-Dateien gespeichert. Beim nächsten Öffnen muss er neu eingegeben
+werden. Für VS Code verwendet die lesende Person ihre eigene GitHub-Anmeldung.
+
+## Wünsche auf GitHub speichern
+
+1. Die Wünsche ankreuzen, die weitergegeben werden sollen. Unvollständige Wünsche
+   sind nicht auswählbar. Andere Ideen und private Notizen werden nicht übertragen.
+2. **Auswahl und Ziel prüfen** anklicken. Repository, Wünsche, Bildanzahl und
+   Datenumfang kontrollieren.
+3. **Ausgewählte Wünsche auf GitHub speichern** anklicken. Die Erfolgsmeldung
+   enthält den bestätigten Commit und einen Link zum gespeicherten Stand.
+
+Die Übergabe liegt im eigenen Branch **`ideenwerk-wuensche`**:
+
+```text
+wuensche/<projektkennung>/
+  README.md
+  <wunschkennung>/
+    README.md
+    wunsch.json
+    bilder/
+```
+
+Jeder Wunsch erhält eine lesbare Markdown-Beschreibung, strukturierte Angaben
+als JSON und separate Bilddateien. Die Bilder werden in der Markdown-Vorschau
+angezeigt. Frühere Wünsche und zusätzliche Bearbeitungsnotizen bleiben erhalten;
+die Übersicht listet die zuletzt übergebene Auswahl. Für eigene Umsetzungsnotizen
+kann im Wunschordner eine `bearbeitung.md` ergänzt werden.
+
+Der Branch entsteht beim ersten erfolgreichen Speichern. Er ist unabhängig vom
+Standardbranch und enthält nur Wunschdateien. Gleichzeitige Änderungen werden
+erkannt; dann das Ziel erneut prüfen. Ideenwerk verwendet keinen Force-Push und
+ruft kein Deployment auf. Committexte enthalten `[skip ci] [skip netlify]`.
+
+## Wünsche in VS Code ansehen
+
+Nach der ersten erfolgreichen Übergabe:
+
+1. In VS Code mit Strg+Umschalt+P **Git: Clone** wählen und die Repository-URL
+   `https://github.com/BENUTZER/REPOSITORY.git` eintragen. Mit dem berechtigten
+   GitHub-Konto anmelden und den geklonten Ordner öffnen.
+2. Links unten auf den Branchnamen klicken und den entfernten Branch
+   **`origin/ideenwerk-wuensche`** auswählen. VS Code legt dafür einen lokalen
+   Branch mit Nachverfolgung an.
+3. Im Explorer `wuensche/<projektkennung>/README.md` öffnen. Mit
+   **Markdown: Vorschau öffnen** oder Strg+Umschalt+V die Beschreibungen und Bilder
+   ansehen. Von der Übersicht führen Links zu den einzelnen Wünschen.
+4. Für Patricks nächste Übergabe in der Quellcodeverwaltung **… → Pull** wählen.
+   Der neueste gespeicherte Stand steht dann im lokalen Ordner bereit und kann
+   hier zur Umsetzung gelesen werden.
+
+Wer das Repository bereits lokal geöffnet hat, kann den Branch auch im
+VS-Code-Terminal holen und auswählen:
+
+```sh
+git fetch origin
+git switch --track origin/ideenwerk-wuensche
+```
+
+Existiert der lokale Branch bereits, stattdessen `git switch ideenwerk-wuensche`
+und anschließend `git pull --ff-only` verwenden. Wünsche werden von dort bewusst
+in Aleria umgesetzt; die Übergabe selbst verändert keine Aleria-Inhalte.
+
+## Das ganze Projekt zusätzlich auf GitHub sichern
+
+**Projektbackup auf GitHub** unten auf der Seite sichert weiterhin das gesamte
+Projekt mit allen Pinnwänden und Bildern. Das ist unabhängig von der
+Wunschübergabe: Es verwendet den Branch **`ideenwerk-backup`** und die Datei
+`projects/<projektkennung>.json`.
+
+Ein mit README initialisiertes Backup-Repository ohne Hosting-Anbindung sowie
+einen nur dafür berechtigten Token verwenden. **Ziel prüfen** zeigt den Umfang;
+erst **Jetzt sichern** überträgt das Projekt. Zur Wiederherstellung die
+JSON-Datei aus dem Backup-Branch herunterladen und über **Datei öffnen** einlesen.
+Auch dieses Backup wird nicht automatisch synchronisiert.
+
+## Grenzen und Weiterentwicklung
+
+Ein Projekt umfasst höchstens 30 Pinnwände mit je 500 Modulen, je 50 Seiten und
+100 Blöcken pro Seite. Eine Mindmap kann 200 Knoten und 500 Verbindungen enthalten.
+Projektdateien sind auf 32 MB begrenzt, GitHub-Backups und Wunschpakete auf 25 MB.
+Importdateien werden vor der Übernahme geprüft.
+
+`index.html` lädt native JavaScript-Module. Die Laufzeit benötigt keine Pakete.
+Die Verantwortlichkeiten liegen in eigenen Featureordnern:
 
 | Ordner | Verantwortung |
 | --- | --- |
-| `modules/workspace` | Dokumentformat, Zustand, Verlauf, IndexedDB, Import/Export und Pinnwandnavigation |
-| `modules/templates` | Vorlagenkatalog und Vorlagenauswahl |
-| `modules/board` | Karten, Darstellung und freie Positionierung |
-| `modules/editor` | Modulseiten, Blöcke und lokaler Bildimport |
-| `modules/mindmap` | Knoten, Verbindungen, Geometrie und deren Interaktion |
-| `modules/github` | Explizite Projektsicherung und GitHub-Dialog |
-| `modules/ui` | Kleine Darstellungsbausteine, Symbole und Dialoge |
+| `modules/workspace` | Projektformat, lokaler Zustand, Verlauf, Speicherung, Migration und Import/Export |
+| `modules/templates` | Vorlagenkatalog und Auswahl |
+| `modules/board` | Karten, Darstellung und Positionierung |
+| `modules/editor` | Modulseiten, Inhaltsblöcke und Bildimport |
+| `modules/mindmap` | Gedanken, Verbindungen und Interaktion |
+| `modules/requests` | Wunschangaben, Übergabestatus und lesbare Dateipakete |
+| `modules/github` | Explizite Wunschübergabe und getrenntes Projektbackup |
+| `modules/ui` | Symbole und Dialogbausteine |
 
-`app.mjs` startet nur Speicher und Oberfläche. Änderungen erfolgen über den lokalen
-Workspace-Store. Der Vorlagenkatalog ist die gemeinsame Quelle für Erstellung,
-Vorlagenauswahl und Filter. Kein Zugriff auf kanonische Aleria-Daten.
+Prüfungen im Ordner `Ideenwerk`: **`npm test`** und **`npm run check`**.
+Die GitHub-Tests verwenden einen simulierten Transport; dabei werden keine
+echten Tokens verwendet und keine externen Dateien geschrieben.
 
-Prüfungen: `npm test` und `npm run check` (ohne Installation).
-Die Tests verwenden für GitHub einen simulierten API-Transport und übertragen
-keine Daten. Ein echter Push benötigt Patricks Repository und Token.
+Zum Neuerstellen von `Ideenwerk.html` einmal `npm install` und anschließend
+`npm run build` ausführen. Nur dafür wird esbuild benötigt. Änderungen gehören
+in die modularen Quellen; die einzelne HTML-Datei ist ein generiertes Ausgabeformat.
 
-Zum Neuerstellen der einzelnen HTML-Datei einmal `npm install` und dann
-`npm run build` ausführen. Nur hierfür wird die Entwicklungsabhängigkeit esbuild
-benötigt. `Ideenwerk.html` ist ein generiertes Ausgabeformat; Änderungen gehören
-in die modularen Quelldateien und werden danach neu gebaut.
-
-Die Arbeit wurde lokal erstellt. Das Aleria-Repository wurde weder gepusht noch
-deployt. Bestehende andere Projektänderungen wurden nicht übernommen.
+Die Anwendung ist lokal vorbereitet. Ein echtes Zielrepository ist noch nicht
+verbunden und es wurde kein externer GitHub-Push ausgeführt. Die Verbindung wird
+im fertigen Editor mit dem gemeinsamen Repository und Patricks Token eingerichtet.

@@ -8,7 +8,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_SCHWARZDORN_PORTRAITS } from './house-schwarzdorn-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   RORIKSHEIM_HOUSE_EMBLEMS,
   RORIKSHEIM_HOUSE_PROFILES

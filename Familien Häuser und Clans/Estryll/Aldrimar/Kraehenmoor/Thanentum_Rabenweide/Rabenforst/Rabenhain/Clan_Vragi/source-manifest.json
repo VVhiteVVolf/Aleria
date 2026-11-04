@@ -1,0 +1,108 @@
+{
+  "id": "haus-vragi",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "09cdb2f7-75b4-49bb-bba4-36f30a249f5f",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\09cdb2f7-75b4-49bb-bba4-36f30a249f5f\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/vragi/animexx-original.html",
+    "bytes": 106107,
+    "sha256": "b29132ca404e1b6b09b70c2ea729946857f9ea8544bb40364336c8675a127ff2",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-vragi",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Rabenhain",
+      "barony": "Thanentum Rabenweide",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-schattenherz",
+      "liegeHouseName": "Clan Schattenherz",
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Rabenweide",
+        "Rabenforst",
+        "Rabenhain"
+      ],
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kraehenmoor.png",
+        "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+        "assets/images/regions/aldrimar-kraehenmoor-rabenforst.png",
+        "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "1609be73c50dba83c6c22f26a3e505cddcc3d323c24d12142d93e5da45c8411d"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-vragi",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-vragi",
+    "familyId": "haus-vragi",
+    "slug": "vragi",
+    "canonicalSlug": "vragi",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "09cdb2f7-75b4-49bb-bba4-36f30a249f5f",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/SZQifHJ.png",
+    "sourceUrl": "https://i.imgur.com/SZQifHJ.png",
+    "path": "Stammbäume/assets/images/references/haus-vragi/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-vragi/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:250px; width:167px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 304958,
+    "sha256": "90c1f8969e768bd52353048fc9ac95f421386d1345d17b9fb39821d793cf52da",
+    "sha": "90c1f8969e768bd52353048fc9ac95f421386d1345d17b9fb39821d793cf52da",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hauskrieger mit Geweihhelm, Axt und gelb-schwarzem Hirschschild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Rabenhain/Rabenforst unter Schattenherz; die kulturelle Nähe zu Varangrs Eroberungsgeschichte begründet keine heutige direkte Lehnsherrschaft Varangrs.",
+    "Vragi bleibt ein bestehender Hesirenclan, auch wenn die Geschichte den Ursprung als Priesterkaste betont. Keine Änderung von Rang, ID oder Familie.",
+    "Orakelkind und Wodin-Verehrung sind im aktuellen Rabenforst-Gebietstext ausdrücklich belegt. Keine neue benannte Orakelperson, Gabe oder Klasse anlegen.",
+    "Religiöse Deutungen als Glaube der Gemeinschaft formulieren, nicht als automatische übernatürliche Fähigkeiten jedes Angehörigen.",
+    "Politische Zurückhaltung hebt die bestehende Lehnsbindung nicht auf; Askese ist kein Beleg völliger wirtschaftlicher oder rechtlicher Unabhängigkeit.",
+    "Militärstatistiken, alte Hoflisten und Stammbäume vollständig ausgeschlossen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

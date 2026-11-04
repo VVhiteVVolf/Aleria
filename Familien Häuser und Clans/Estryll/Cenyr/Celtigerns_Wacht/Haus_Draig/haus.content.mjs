@@ -293,7 +293,7 @@ export const HOUSE_CONTENT = {
     {
       "id": "gruffyd-draig",
       "name": "Gruffyd Draig",
-      "detail": "1169–1172",
+      "detail": "1169–1171",
       "familyId": "haus-draig",
       "image": "../Stammbäume/assets/images/portraits/haus-draig/gruffyd-draig.jpg"
     },
@@ -563,11 +563,9 @@ export const HOUSE_CONTENT = {
     "Das hochklappbare Visier der Drachenhelme bildet den Oberkiefer eines Drachen nach.",
     "Hausgefolge und Stadtwache unterscheiden sich durch die Wappen auf ihren Wappenröcken."
   ],
-  "contentVersion": "20261102-court-offices-v1",
+  "contentVersion": "20261104-lore-fixes-v1",
   "omitMilitaryProfile": true,
   "illustrationCategory": "Hausdarstellung",
-  "biographySourceRevision": 15,
-  "biographyPreviousDefaultFingerprints": [
-    "3373:8cca99be:2c8dbd70"
-  ]
+  "biographySourceRevision": 16,
+  "biographyPreviousDefaultFingerprints": ["3373:8cca99be:2c8dbd70","5691:77b9f198:1080c28e"]
 };

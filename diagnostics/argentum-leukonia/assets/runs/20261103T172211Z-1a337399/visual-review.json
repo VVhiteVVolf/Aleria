@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-03",
+  "reviewedContactSheets": ["contact-light.jpg", "contact-dark.jpg"],
+  "reviewedIndividualGeneratorOutputs": ["house-apinia", "house-bolar", "house-lex", "house-orania", "house-pelagia", "house-tremelia", "house-mede"],
+  "scope": "Seven original-house figures; no runtime house or warrior records changed.",
+  "findings": [
+    "Apinia: eigenständige junge Kampfbardin mit Kithara, Säbel, Federbeschlag und schwarzem Schulterstoff.",
+    "Bolar: Axtkämpfer mit großem grünem Schild, Krakenmotiv und korinthischem Gesichtsschutz.",
+    "Lex: vollständige Lanze und schwerer Harnisch; gezielt geschlossener griechisch-byzantinischer Gesichtshelm nach jüngster Nutzerkorrektur.",
+    "Orania: Kataphrakt mit Schwert und vollständigem Equo; vier Hufe, funktionaler Zaum und Steigbügel sind sichtbar.",
+    "Pelagia: edle maritime Figur mit Säbel, Rückenköcher und einzelnem goldenem Seepferdchen; offener attischer Helm.",
+    "Tremelia: Speer, sichtbarer Rückenköcher und zwei Seepferdchen; leichter Lamellenbau und phrygischer Helm.",
+    "Mede: geschlossener Gardistenhelm, heller Muskelharnisch, Schwert und Schild mit Hauszweig; kein Porträt der amtierenden Kaiserin.",
+    "Alle sieben Motive sind vollständig sichtbar, mit erhaltenen offenen Zwischenräumen und ohne auffälligen äußeren Farbdunst. Unterschiedliche Rüstungsbauweisen, Gesichter beziehungsweise Gesichtsschutz und Stoffe sind erkennbar.",
+    "Technischer Audit ohne Fehler. Knappe, transparente Ränder bei Apinia, Lex, Mede, Pelagia und Tremelia sind dokumentiert; kein Motiv berührt den Bildrand."
+  ],
+  "requiredCorrections": [],
+  "originalsAndRgbPreserved": true,
+  "lexEarlierVersion": "Vorschau/Leukonia/sources/house-warriors-original-archive/house-lex-open-helmet-v1.png",
+  "evidence": ["audit.json", "warriors/audit.json", "Vorschau/Leukonia/sources/results-house-warriors-original.json", "Vorschau/Leukonia/sources/house-warriors-original-jobs.json"]
+}

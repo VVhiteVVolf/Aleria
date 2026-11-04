@@ -1,0 +1,35 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-illwath",
+  "attachmentId": "efae3b1d-b137-482b-8fa3-f06597489dbb",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "7e33ed4a620015b514e25b898741eb942447c90e1d9d94761fa9bb5d84652578",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hausfigur",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/kgSxcAK.png",
+      "preservedOriginal": true,
+      "visuallyInspected": true,
+      "sha256": "236cef4642d7ddabb51b02f69a225713e74a03cf30e2655eddca1dcab5531a79"
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-illwath",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/sonnenkueste-house-profiles.js",
+    "Stammbäume/assets/js/data/house-illwath-family.js",
+    "Stammbäume/assets/js/data/house-illwath-portraits.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryStatisticsIgnored": true
+}

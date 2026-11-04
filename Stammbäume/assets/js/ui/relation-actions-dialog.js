@@ -7,7 +7,7 @@ import {
 } from '../modules/relationships/relationship-action-policy.js';
 import { isPersonRecordedDead } from '../domain/person-life-state.js';
 import { normalizePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
-import { listFamilyRecords } from '../services/family-library.js';
+import { listFamilyRecords } from '../services/family-library.js?v=20261104-content-lore-v1';
 import { escapeHtml } from './dom.js';
 
 const PARTNER_ACTIONS = new Set(['marry', 'betroth', 'affair', 'import-ward']);

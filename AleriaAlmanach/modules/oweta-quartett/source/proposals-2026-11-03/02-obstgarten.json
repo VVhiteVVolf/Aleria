@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "title": "Mittagsrast am Obstgarten",
+  "createdAt": "2026-11-03",
+  "mode": "proposal",
+  "generator": "image_gen.imagegen (built-in)",
+  "preset": "anime-scene-portrait",
+  "aspectRatio": "2:3",
+  "width": 1024,
+  "height": 1536,
+  "sha256": "5ade55d83355331640bce64a663793d5c0585cdaca2f2f58094e0cac7855495b",
+  "image": "02-obstgarten.png",
+  "prompt": "02-obstgarten.txt",
+  "sourcePath": "C:/Users/fhg_r/.codex/generated_images/01a1a11d-fdf8-70f3-866b-74881609f594/exec-dd20a745-d8ca-4f5f-8f5d-77170051023e.png",
+  "references": [
+    "Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+    "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/rianna-wyrm-ruestung-begleiter.png",
+    "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/lefraye-gafyr-ruestung-begleiter.png",
+    "Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg",
+    "AleriaAlmanach/modules/oweta-quartett/source/references/heulwen.jpeg"
+  ],
+  "additionalViewedReference": "AleriaAlmanach/modules/oweta-quartett/source/references/eure-hufigkeit.png",
+  "visualReview": {
+    "people": 4,
+    "horses": 4,
+    "cats": 1,
+    "thrushes": 1,
+    "goldfish": 0,
+    "identityHairstylesAndArmorDistinct": true,
+    "middayLighting": true,
+    "fireSeparatedFromPeopleAndPets": true,
+    "obviousExtraOrMergedHumanLimbsDetected": false,
+    "note": "Full scene inspected. Four faces are unobstructed; simple hand poses. Lefraye crosses her own two legs. No claim of automated pixel-perfect defect detection."
+  },
+  "published": false,
+  "asset": "AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/02-obstgarten.png",
+  "rootVisualReview": {
+    "women": 4,
+    "horses": 4,
+    "cats": 1,
+    "thrushes": 1,
+    "goldfish": 0,
+    "identitiesAndHairChecked": true,
+    "humanLimbsChecked": true,
+    "middayAndCampfire": true,
+    "noApparentMaterialDefects": true
+  }
+}

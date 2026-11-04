@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "status": "complete-local",
+  "houses": 12,
+  "cities": 10,
+  "baronies": 9,
+  "capital": "Valdoria",
+  "capitalHouses": [
+    "Alveira",
+    "Meroval",
+    "Zerain"
+  ],
+  "classPrototypes": 5,
+  "houseFigures": 12,
+  "estateComics": 9,
+  "activeGeneratedImages": 38,
+  "preservedPreviousImages": 13,
+  "tool": "built-in image_gen.imagegen",
+  "lastUserHeraldryCorrection": "pool-04-v2, rampant domestic pig, matching pikewoman house-pool-04-v2",
+  "sourceAudits": [
+    "diagnostics/solestia/source-original-audit.json",
+    "diagnostics/solestia/estate-source-audit.json"
+  ],
+  "alphaAudit": {
+    "circleEmblems": 12,
+    "warriorManifestRevisions": 19,
+    "estateFigures": 9,
+    "failures": 0,
+    "activeTightMarginsPixels": [
+      6,
+      9,
+      10,
+      12
+    ],
+    "visualFullSilhouettesVerified": true
+  },
+  "httpAudit": {
+    "requests": 122,
+    "all200": true,
+    "localWebpMimeLimitation": "41 previews served as application/octet-stream by local preview server"
+  },
+  "browser": {
+    "status": "limited",
+    "reason": "CUA timeoutMs connection failure; no browser pass claimed"
+  },
+  "release": "Authorized later as part of public release after Venalys update; not yet published"
+}

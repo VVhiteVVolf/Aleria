@@ -1,0 +1,1672 @@
+{
+  "baseline": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+  "total": 185,
+  "revised": 65,
+  "rows": [
+    {
+      "id": "development-trait-feuer-phobie",
+      "name": "Feuer Phobie",
+      "revised": true,
+      "previousCost": -3,
+      "cost": -2,
+      "description": "Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe. Die Angst erhöht nicht den erlittenen Feuerschaden.",
+      "reason": "Angst erschwert Rettungen, verursacht aber keine physische Feueranfälligkeit."
+    },
+    {
+      "id": "development-trait-naturkind",
+      "name": "In der Natur aufgewachsen",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Vertrautheit mit der Wildnis: +1 auf Naturkunde und Mit Tieren umgehen. Keine automatische Expertise.",
+      "reason": "Umgebungserfahrung gibt kleine Boni, keine automatische Expertise."
+    },
+    {
+      "id": "development-trait-flink",
+      "name": "Flinke Füße",
+      "revised": false,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "+2 m Bewegung, −1 RK.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-standfest",
+      "name": "Standfest",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+1 RK, −1 m Bewegung.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-wachsam",
+      "name": "Wachsamer Blick",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+2 passive Wahrnehmung und +1 Initiative.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-vertraeumt",
+      "name": "Verträumt",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Abschweifende Aufmerksamkeit: −1 Initiative und −1 passive Wahrnehmung. Tagträume verleihen kein arkanes Fachwissen.",
+      "reason": "Aufmerksamkeitsnachteil erhalten; unbegründete arkane Fachkenntnis entfernt."
+    },
+    {
+      "id": "development-trait-zaeh",
+      "name": "Zäh wie Leder",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-zerbrechlich",
+      "name": "Zerbrechlich",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−3 maximale TP. Ein empfindlicher Körper verleiht keine automatische akrobatische Begabung.",
+      "reason": "Empfindlichkeit erhalten; unbegründete Akrobatik entfernt."
+    },
+    {
+      "id": "development-trait-mutig",
+      "name": "Mutiges Herz",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "+2 auf Rettungswürfe gegen Furcht.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-aengstlich",
+      "name": "Leicht zu erschrecken",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−2 auf Rettungswürfe gegen Furcht. Schreckhaftigkeit verleiht keine zusätzliche Schleichfertigkeit.",
+      "reason": "Furchtmalus erhalten; unbegründete Schleichfertigkeit entfernt."
+    },
+    {
+      "id": "development-trait-giftfest",
+      "name": "Giftfeste Konstitution",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+      "reason": "Tatsächliche körperliche Giftfestigkeit darf Schaden und Giftrettungen betreffen; Preis 4 erhalten."
+    },
+    {
+      "id": "development-trait-frostempfindlich",
+      "name": "Frostempfindlich",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Doppelter Kälteschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-glutgewoehnt",
+      "name": "An Glut gewöhnt",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 0,
+      "description": "Ruhe beim Umgang mit Feuer: +1 auf Rettungswürfe gegen feuerbasierte Angriffe; −1 Initiative. Gewöhnung halbiert keinen Feuerschaden.",
+      "reason": "Ruhigerer Umgang mit Feuer hilft der Rettung; Gewöhnung halbiert keinen Brandschaden."
+    },
+    {
+      "id": "development-trait-gelehrt",
+      "name": "Bücherwurm",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Expertise in Geschichte; −1 auf Athletik.",
+      "reason": "Wissensorientierter Ausbildungs-Trait mit Expertise und körperlichem Tradeoff bleibt erhalten."
+    },
+    {
+      "id": "development-trait-empathisch",
+      "name": "Menschenkenner",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "+1 auf Motiv erkennen und Überzeugen. Einfühlung unterstützt den Umgang mit Menschen, ersetzt aber keine Ausbildung.",
+      "reason": "Einfühlung unterstützt zwei soziale Fertigkeiten um einen kleinen Betrag."
+    },
+    {
+      "id": "development-trait-schroff",
+      "name": "Schroffe Ehrlichkeit",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "+1 auf Einschüchtern, −1 auf Täuschen.",
+      "reason": "Kleine gegenläufige soziale Einflüsse statt pauschalem Expertenvorsprung."
+    },
+    {
+      "id": "development-trait-silberzunge",
+      "name": "Silberzunge",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+      "reason": "Ausgesprochener rhetorischer Ausbildungs-Trait mit Expertise und Tradeoff bleibt erhalten."
+    },
+    {
+      "id": "development-trait-ungeschickt",
+      "name": "Zwei linke Hände",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−2 auf Fingerfertigkeit. Ungeschicklichkeit verändert die körperliche Widerstandskraft nicht.",
+      "reason": "Feinmotorischer Nachteil ohne sachfremde zusätzliche TP."
+    },
+    {
+      "id": "development-trait-scharfschuetze",
+      "name": "Ruhige Sehne",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-klingenmut",
+      "name": "Klingenmut",
+      "revised": false,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-arkaner-fokus",
+      "name": "Arkaner Fokus",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 2,
+      "description": "+1 Zauberangriff, −1 Waffenangriff.",
+      "reason": "Ein Zauberer nutzt den Waffenmalus häufig kaum; Preis des wirksamen Zauberbonus erhöht."
+    },
+    {
+      "id": "development-trait-zaehe-magie",
+      "name": "Zähe Magie",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+1 Zauber-SG; −1 m Bewegung.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-magiescheu",
+      "name": "Magiescheu",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−1 Zauberangriff und −1 Zauber-SG.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-glueckspilz",
+      "name": "Glückspilz",
+      "revised": true,
+      "previousCost": 3,
+      "cost": 5,
+      "description": "Bei Angriffen, Proben und Attributsrettungswürfen wird jede natürliche 1 einmal automatisch neu gewürfelt; das zweite Ergebnis gilt. Auch bei Vorteil oder Nachteil wird jeder betroffene W20 genau einmal neu gewürfelt. Zusätzlich +1 auf alle Attributsrettungswürfe.",
+      "reason": "Explizite einmalige Würfelwiederholung macht Glück spürbar; Preis berücksichtigt sie."
+    },
+    {
+      "id": "development-trait-pechvogel",
+      "name": "Pechvogel",
+      "revised": true,
+      "previousCost": -3,
+      "cost": -5,
+      "description": "Bei Angriffen, Proben und Attributsrettungswürfen gelten natürliche 1, 2 und 3 als kritischer Fehlschlag. Zusätzlich −1 auf alle Attributsrettungswürfe.",
+      "reason": "Explizite Fehlschlagszone 1–3 macht Pech spürbar; Gutschrift berücksichtigt sie."
+    },
+    {
+      "id": "development-trait-kampfbereit",
+      "name": "Immer kampfbereit",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+      "reason": "Kleiner begrenzter Kampfeinstiegs-Vorrat; fehlende Engine-Anwendung separat behoben."
+    },
+    {
+      "id": "development-trait-konzentriert",
+      "name": "Eiserne Konzentration",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Vorteil auf KON-Rettungswürfe zum Aufrechterhalten einer Konzentration; −1 Initiative. Andere KON-Rettungswürfe bleiben unverändert.",
+      "reason": "Vorteil nur zum Erhalten einer Konzentration; kein unverdienter Gift-/Krankheitsschutz."
+    },
+    {
+      "id": "development-trait-lebhafter-geist",
+      "name": "Lebhafter Geist",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+      "reason": "Breiter kleiner Fertigkeitsbonus kostet Punkte und dauerhaften Rüstungsschutz."
+    },
+    {
+      "id": "development-trait-kraftpaket",
+      "name": "Kraftpaket",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-duennhaeutig",
+      "name": "Dünnhäutig",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−1 auf CHA-Rettungswürfe. Empfindlichkeit verleiht keine zusätzliche Bühnenfertigkeit.",
+      "reason": "Kleiner passender CHA-Malus; keine aus Empfindlichkeit abgeleitete Bühnenausbildung."
+    },
+    {
+      "id": "development-trait-vollbusig",
+      "name": "Vollbusig",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 0,
+      "description": "Ausgeprägte Brustform als rein beschreibendes Körpermerkmal; keine pauschale Änderung sozialer Fertigkeiten.",
+      "reason": "Körperform bleibt Beschreibung und vergibt keine pauschale Fertigkeit."
+    },
+    {
+      "id": "development-trait-haesslich",
+      "name": "Hässlich",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Als unvorteilhaft wahrgenommene Gesichtszüge; −1 auf Flirten. Die Erscheinung erzeugt keine zusätzliche Einschüchterungsfertigkeit.",
+      "reason": "Kleiner enger Eindrucksmalus; keine automatische Einschüchterung."
+    },
+    {
+      "id": "development-trait-gutaussehend",
+      "name": "Gutaussehend",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Als ansprechend wahrgenommene Gesichtszüge; +1 auf Flirten. Der kleine Eindrucksbonus ersetzt keine Überzeugungs- oder Bühnenausbildung.",
+      "reason": "Kleiner enger Eindrucksbonus; Aussehen ersetzt keine Rhetorik/Bühnenausbildung."
+    },
+    {
+      "id": "development-trait-fit",
+      "name": "Fit",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-fragil",
+      "name": "Fragil",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-schmaechtig",
+      "name": "Schmächtig",
+      "revised": false,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-klein",
+      "name": "Klein",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 0,
+      "description": "Unterdurchschnittliche Körpergröße; +1 auf Heimlichkeit und −1 auf Athletik.",
+      "reason": "Größenwirkung auf ±1 mit ausgeglichenem Richtpreis verkleinert."
+    },
+    {
+      "id": "development-trait-gross",
+      "name": "Groß",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 0,
+      "description": "Überdurchschnittliche Körpergröße; +1 auf Athletik und −1 auf Heimlichkeit.",
+      "reason": "Größenwirkung auf ±1 mit ausgeglichenem Richtpreis verkleinert."
+    },
+    {
+      "id": "development-trait-huenenhaft",
+      "name": "Hünenhaft",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-riesenblut",
+      "name": "Riesenblut",
+      "revised": true,
+      "previousCost": 3,
+      "cost": 2,
+      "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 auf Athletik, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+      "reason": "Masse hilft Athletik und TP; kein pauschaler Bonus auf Bogen-/Feuerwaffenschaden."
+    },
+    {
+      "id": "development-trait-breitschultrig",
+      "name": "Breitschultrig",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Breite Schultern und kräftiger Oberkörper; +1 auf Athletik. Schulterbreite beeinträchtigt nicht automatisch die Feinmotorik.",
+      "reason": "Kleiner Kraftbonus; Schulterbreite beeinträchtigt keine Fingerfertigkeit."
+    },
+    {
+      "id": "development-trait-sehnig",
+      "name": "Sehnig",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-gelenkig",
+      "name": "Gelenkig",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-steife-gelenke",
+      "name": "Steife Gelenke",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-scharfe-augen",
+      "name": "Scharfe Augen",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "+2 auf Wahrnehmung und zusätzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.",
+      "reason": "Ausgeprägter körperlicher Sinn darf stärker sein; +3 passive Wahrnehmung ist ausdrücklich erklärt."
+    },
+    {
+      "id": "development-trait-schwerhoerig",
+      "name": "Schwerhörig",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+      "reason": "Bestehender allgemeiner Wahrnehmungsabzug bleibt als ausdrücklich erklärte Regelabstraktion."
+    },
+    {
+      "id": "development-trait-eiserne-lunge",
+      "name": "Eiserne Lunge",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-schneller-stoffwechsel",
+      "name": "Schneller Stoffwechsel",
+      "revised": false,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-schwere-knochen",
+      "name": "Schwere Knochen",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+      "reason": "Kleine feste Widerstandskraft mit nachvollziehbarer Trägheit."
+    },
+    {
+      "id": "development-trait-robuste-haut",
+      "name": "Robuste Haut",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+      "reason": "Begrenzter körperlicher Vor-/Nachteil; feste TP füllen aktuelle TP nicht auf und Größenkonflikte werden sichtbar."
+    },
+    {
+      "id": "development-trait-frost-phobie",
+      "name": "Frostphobie",
+      "revised": true,
+      "previousCost": -3,
+      "cost": -2,
+      "description": "Nachteil bei Rettungswürfen gegen kältebasierte Angriffe. Die Angst erhöht nicht den erlittenen Kälteschaden.",
+      "reason": "Angst erschwert Rettungen, verursacht aber keine physische Kälteanfälligkeit."
+    },
+    {
+      "id": "development-trait-blitz-phobie",
+      "name": "Blitzphobie",
+      "revised": true,
+      "previousCost": -3,
+      "cost": -2,
+      "description": "Nachteil bei Rettungswürfen gegen Blitzangriffe. Die Angst erhöht nicht den erlittenen Blitzschaden.",
+      "reason": "Angst erschwert Rettungen, verursacht aber keine physische Blitzanfälligkeit."
+    },
+    {
+      "id": "development-trait-gift-phobie",
+      "name": "Giftphobie",
+      "revised": true,
+      "previousCost": -3,
+      "cost": -2,
+      "description": "Nachteil bei Rettungswürfen gegen giftbasierte Angriffe. Die Angst erhöht nicht den erlittenen Giftschaden.",
+      "reason": "Angst erschwert Rettungen, verändert aber keinen Giftstoffwechsel."
+    },
+    {
+      "id": "development-trait-magie-phobie",
+      "name": "Magiephobie",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+      "reason": "Begrenzte klar ausgewiesene Wirkung mit bestehendem Preis/Tradeoff; keine neue Kompetenz- oder Ressourcenvergabe."
+    },
+    {
+      "id": "development-trait-heilerhaende",
+      "name": "Heilerhände",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Sicheres Gespür bei der Versorgung: +2 auf Heilkunde und +1 auf Naturkunde.",
+      "reason": "Begabung gibt begrenzte Versorgungshilfe statt stufenabhängiger automatischer Expertise."
+    },
+    {
+      "id": "development-trait-spuernase",
+      "name": "Spürnase",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Ausgeprägte Beobachtungsgabe: +2 auf Nachforschungen und +1 auf Wahrnehmung.",
+      "reason": "Ausgeprägte Beobachtung ist stärker als bloße Neugier, aber keine automatische Expertise."
+    },
+    {
+      "id": "development-trait-buehnenbegabt",
+      "name": "Bühnenbegabt",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Gespür für Ausdruck und Bewegung: +2 auf Auftreten und +1 auf Akrobatik.",
+      "reason": "Begrenzte Ausdrucksbegabung statt automatischer Expertise."
+    },
+    {
+      "id": "development-trait-flinke-finger",
+      "name": "Flinke Finger",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Geschickte, ruhige Hände: +2 auf Fingerfertigkeit und +1 auf Heimlichkeit.",
+      "reason": "Begrenzte manuelle Begabung statt automatischer Expertise."
+    },
+    {
+      "id": "development-trait-faehrtenleser",
+      "name": "Geborener Fährtenleser",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Gespür für Spuren und Wildnis: +2 auf Überleben und +1 auf Naturkunde.",
+      "reason": "Begrenztes Spurengespür statt automatischer Expertise."
+    },
+    {
+      "id": "development-trait-luegenriecher",
+      "name": "Lügenriecher",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 2,
+      "description": "Aufmerksam für Widersprüche: +1 auf Motiv erkennen und WEI-Rettungswürfe.",
+      "reason": "Kleines Gespür; weder unfehlbares Erkennen von Lügen noch automatische Expertise."
+    },
+    {
+      "id": "development-trait-feueraffinitaet",
+      "name": "Feueraffinität",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Resistenz gegen Feuerschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-eisaffinitaet",
+      "name": "Eisaffinität",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Resistenz gegen Kälteschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-blitzaffinitaet",
+      "name": "Blitzaffinität",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Resistenz gegen Blitzschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-saeureaffinitaet",
+      "name": "Säureaffinität",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Resistenz gegen Säureschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-schallaffinitaet",
+      "name": "Schallaffinität",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Resistenz gegen Donnerschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-giftanfaellig",
+      "name": "Giftanfällig",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-saeureempfindlich",
+      "name": "Säureempfindlich",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Doppelter Säureschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-blitzempfindlich",
+      "name": "Blitzempfindlich",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Doppelter Blitzschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-schallempfindlich",
+      "name": "Schallempfindlich",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Doppelter Donnerschaden.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-magische-resonanz",
+      "name": "Magische Resonanz",
+      "revised": false,
+      "previousCost": -4,
+      "cost": -4,
+      "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+      "reason": "Tatsächliche körperliche/magische Affinität bleibt getrennt von Angst; Halbierung/Verdopplung zählt pro Schadensart nur einmal."
+    },
+    {
+      "id": "development-trait-buehnensicher",
+      "name": "Bühnensicher",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Vorteil bei Auftreten-Proben. Mehrere Quellen von Vorteil geben keine zusätzlichen Würfel.",
+      "reason": "Enger Fertigkeitsvorteil; keine zusätzlichen Würfel bei mehreren Quellen."
+    },
+    {
+      "id": "development-trait-arkan-geschult",
+      "name": "Arkan geschult",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+      "reason": "Explizite Schulung betrifft nur Arkane Kunde, keine zusätzliche Zaubermacht."
+    },
+    {
+      "id": "development-trait-frohnatur",
+      "name": "Frohnatur",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Offenes, ansteckend fröhliches Auftreten: je +1 auf Überzeugen, Auftreten und Flirten.",
+      "reason": "Freundlicher Eindruck unterstützt Kontakt; Fröhlichkeit erkennt keine versteckten Motive."
+    },
+    {
+      "id": "development-trait-buehnenmensch",
+      "name": "Bühnenmensch",
+      "revised": true,
+      "previousCost": -1,
+      "cost": 0,
+      "description": "Auf der Bühne zuhause, in der Wildnis ungeübt: +1 auf Auftreten; −1 auf Überleben.",
+      "reason": "Kleiner Ausdrucks-/Wildnisgegensatz; sachfremder Einschüchterungsmalus entfernt."
+    },
+    {
+      "id": "development-trait-ordnungszwang",
+      "name": "Ordnungszwang",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Dein Blick für Abweichungen hilft ein wenig, Einzelheiten kosten Zeit: +1 auf Nachforschungen, −1 Initiative.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-namenhueter",
+      "name": "Namenhüter",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Namen und gehörte Lebensgeschichten bleiben dir im Gedächtnis: +1 auf Geschichte und Überzeugen, −1 auf Wahrnehmung.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-unverbesserlicher-optimist",
+      "name": "Unverbesserlicher Optimist",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Du erwartest stets das Beste: +1 auf Rettungswürfe gegen Furcht und Überzeugen, −1 auf Motiv erkennen.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-schwarzseher",
+      "name": "Schwarzseher",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 1,
+      "description": "Du rechnest mit Schwierigkeiten und wirkst entsprechend düster: +1 Initiative und +1 auf Motiv erkennen, −1 auf Überzeugen.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-schweigegeluebde",
+      "name": "Schweigegelübde",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Du hörst eher zu und verzichtest auf deine Stimme: +1 auf Motiv erkennen, −1 auf Überzeugen und Auftreten. Die kleinen Abzüge bilden die eingeschränkte Ausdrucksweise allgemein ab; Schrift und Gebärden bleiben möglich.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-eigensinn",
+      "name": "Eigensinn",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 0,
+      "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +1 auf CHA-Rettungswürfe, −1 auf Überzeugen.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-ritualgebunden",
+      "name": "Ritualgebunden",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Du kennst deine wiederkehrenden Riten, reagierst aber zögerlich auf Neues: +1 auf Religion, −1 Initiative.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-neugier-vor-vorsicht",
+      "name": "Neugier vor Vorsicht",
+      "revised": true,
+      "previousCost": -1,
+      "cost": 0,
+      "description": "Du schaust genauer hin, gehst dabei aber eher ein Risiko ein: +1 auf Nachforschungen, −1 auf GES-Rettungswürfe. Neugier ersetzt keine Ermittlerausbildung.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-uebervorsichtig",
+      "name": "Übervorsichtig",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Du suchst zuerst einen sicheren Ausweg und zögerst dadurch: +1 auf GES-Rettungswürfe, −1 Initiative.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-wanderlust",
+      "name": "Wanderlust",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 1,
+      "description": "Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf Überleben, −1 auf Nachforschungen.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-totengraeberhumor",
+      "name": "Totengräberhumor",
+      "revised": true,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Mit Bestattungsbräuchen vertraut begegnest du dem Unheimlichen mit unpassenden Scherzen: +1 auf Religion und Rettungswürfe gegen Furcht, −1 auf Auftreten.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-stille-zeugin",
+      "name": "Stille Zeugin",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Du beobachtest lieber vom Rand aus: +1 passive Wahrnehmung, −1 auf Auftreten. Der Bonus verändert keine aktiven Wahrnehmungsproben.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-fremde-erinnerungen",
+      "name": "Fremde Erinnerungen",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 1,
+      "description": "Bruchstücke fremder Geschichten und Runen drängen sich in deinen Geist: +1 auf Geschichte und Arkane Kunde, −1 auf WEI-Rettungswürfe.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-schatten-von-morgen",
+      "name": "Schatten von Morgen",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Unbestimmte Vorahnungen treiben dich an, erschweren aber klare Gedanken: +1 Initiative, −1 auf INT-Rettungswürfe.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-schuldengewissen",
+      "name": "Schuldengewissen",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Du gehst sorgsam mit Zusagen um und scheust Ausreden: +1 auf Überzeugen, −1 auf Täuschen. Ein schlechtes Gewissen verleiht keine Fähigkeit, andere zu durchschauen.",
+      "reason": "Verlässlichkeit hilft Überzeugen; Gewissen vermittelt kein Gedankenlesen."
+    },
+    {
+      "id": "development-trait-pazifistische-ader",
+      "name": "Pazifistische Ader",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Du suchst eher Versöhnung als Verletzung: +1 auf Überzeugen, −1 Waffenschaden. Pazifismus verleiht keine medizinische Ausbildung. Zauberschaden bleibt unverändert.",
+      "reason": "Versöhnliche Haltung bleibt; medizinische Fachfertigkeit aus Überzeugung entfernt."
+    },
+    {
+      "id": "development-trait-ehrenhafter-zweikampf",
+      "name": "Ehrenhafter Zweikampf",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Du bevorzugst die direkte Begegnung: +1 auf Nahkampf-Waffenangriffe, −1 auf Fernkampf-Waffenangriffe. Das gilt auch für entsprechende Techniken, nicht für Zauber.",
+      "reason": "Eng gefilterte kleine Waffen-/Magiewirkung ist bereits stimmig; keine weitere Ausweitung."
+    },
+    {
+      "id": "development-trait-deckungssucher",
+      "name": "Deckungssucher",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Du bewegst dich bedächtig und schützt dich vor Beschuss: −1 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.",
+      "reason": "Eng gefilterte kleine Waffen-/Magiewirkung ist bereits stimmig; keine weitere Ausweitung."
+    },
+    {
+      "id": "development-trait-magische-wetterfuehligkeit",
+      "name": "Magische Wetterfühligkeit",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Magische Spannungen machen dich unruhig: +1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder, −1 Initiative.",
+      "reason": "Eng gefilterte kleine Waffen-/Magiewirkung ist bereits stimmig; keine weitere Ausweitung."
+    },
+    {
+      "id": "development-trait-aberglaeubisch",
+      "name": "Abergläubisch",
+      "revised": true,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Du kennst viele Omen und deutest Magie schnell als schlechtes Zeichen: +1 auf Religion, −1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder.",
+      "reason": "Charakterliche Neigung auf kleines ±1-Paket begrenzt; Preis folgt verbleibender Wirkung."
+    },
+    {
+      "id": "development-trait-zahlenintuition",
+      "name": "Zahlenintuition",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du erkennst Mengenverhältnisse und Muster schnell: +1 auf Nachforschungen. Zahlengefühl vermittelt kein historisches Wissen.",
+      "reason": "Kleines Mustererkennen ohne historisches Fachwissen."
+    },
+    {
+      "id": "development-trait-sprachgefuehl",
+      "name": "Sprachgefühl",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du findest leicht den passenden Ausdruck: +1 auf Überzeugen und Täuschen.",
+      "reason": "Kleine nachvollziehbare Begabung mit passendem niedrigeren Preis statt breiter +2-Pakete."
+    },
+    {
+      "id": "development-trait-mechanisches-verstaendnis",
+      "name": "Mechanisches Verständnis",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du begreifst kleine Bauteile und gehst sicher damit um: +1 auf Fingerfertigkeit und Nachforschungen.",
+      "reason": "Kleine nachvollziehbare Begabung mit passendem niedrigeren Preis statt breiter +2-Pakete."
+    },
+    {
+      "id": "development-trait-feines-musikgehoer",
+      "name": "Feines Musikgehör",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du hörst Rhythmus und Tonhöhe sicher: +1 auf Auftreten. Musikalisches Gehör verrät keine fremden Absichten.",
+      "reason": "Musikalisches Gehör hilft Ausdruck, nicht dem Erkennen fremder Absichten."
+    },
+    {
+      "id": "development-trait-raumgefuehl",
+      "name": "Raumgefühl",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du schätzt Abstände und die eigene Lage im Raum gut ein: +1 auf Akrobatik und Körperbeherrschung.",
+      "reason": "Räumliches Körpergefühl hilft Bewegung, nicht allgemeinen Ermittlungen."
+    },
+    {
+      "id": "development-trait-taktisches-gespuer",
+      "name": "Taktisches Gespür",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+      "reason": "Kleine Initiative-/Willenskombination ist begrenzt und passend bepreist."
+    },
+    {
+      "id": "development-trait-alchemistisches-gespuer",
+      "name": "Alchemistisches Gespür",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du bemerkst Auffälligkeiten von Stoffen und Magie leichter: +1 auf Naturkunde und Arkane Kunde. Rezepte müssen weiterhin erlernt werden.",
+      "reason": "Kleine nachvollziehbare Begabung mit passendem niedrigeren Preis statt breiter +2-Pakete."
+    },
+    {
+      "id": "development-trait-symboldenker",
+      "name": "Symboldenker",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du erkennst Beziehungen zwischen Zeichen, Riten und Runen: +1 auf Religion und Arkane Kunde.",
+      "reason": "Kleine nachvollziehbare Begabung mit passendem niedrigeren Preis statt breiter +2-Pakete."
+    },
+    {
+      "id": "development-trait-stimmkuenstler",
+      "name": "Stimmkünstler",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du variierst Stimme und Ausdruck mühelos: +1 auf Täuschen und Auftreten.",
+      "reason": "Kleine nachvollziehbare Begabung mit passendem niedrigeren Preis statt breiter +2-Pakete."
+    },
+    {
+      "id": "development-trait-tierisches-taktgefuehl",
+      "name": "Tierisches Taktgefühl",
+      "revised": true,
+      "previousCost": 2,
+      "cost": 1,
+      "description": "Du passt deine Bewegungen und Ruhe gut an Tiere an: +1 auf Mit Tieren umgehen. Daraus folgt keine allgemeine Körperausbildung.",
+      "reason": "Umgang mit Tieren verbessert keine allgemeine Körperausbildung."
+    },
+    {
+      "id": "development-trait-bluttraeger-vampirspross",
+      "name": "Blutträger (Vampirspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines vampirischen Vorfahren: +1 Zauberangriff, +1 auf Arkane Kunde und KON-Rettungswürfe.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-formlingsspross",
+      "name": "Blutträger (Formlingsspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines Formlings oder Formwandlers: +1 Zauber-SG und +2 auf Täuschen. Die Anlage begünstigt Illusion und Verstellung.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-succubusspross",
+      "name": "Blutträger (Succubusspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines Sukkubus oder Inkubus: +1 Zauber-SG, +2 auf Flirten und +1 auf Motiv erkennen. Die Anlage begünstigt Traum- und Gefühlsmagie.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-satyrspross",
+      "name": "Blutträger (Satyrspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines Satyrs: +1 Zauberangriff, +2 auf Auftreten und +1 auf Akrobatik. Magische Begabung zeigt sich besonders in Klang und Rhythmus.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-aelvarspross",
+      "name": "Blutträger (Aelvarspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe einer Aelvar: +1 Zauber-SG, +2 auf Heimlichkeit und +1 auf Religion. Die infernale Anlage ist von subtiler Magie und verborgenen Riten geprägt.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-nymphenspross",
+      "name": "Blutträger (Nymphenspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe einer celestialen Nymphe: +1 Zauber-SG und jeweils +1 auf Naturkunde, Heilkunde und Mit Tieren umgehen. Die Anlage ist lebens- und naturverbunden.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-flammenspross",
+      "name": "Blutträger (Flammenspross)",
+      "revised": false,
+      "previousCost": 5,
+      "cost": 5,
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Flamme: +1 Zauberangriff und Resistenz gegen Feuerschaden.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-windspross",
+      "name": "Blutträger (Windspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 m Bewegung und +1 auf Akrobatik.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-donnerspross",
+      "name": "Blutträger (Donnerspross)",
+      "revised": false,
+      "previousCost": 5,
+      "cost": 5,
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen des Donners: +1 Zauberangriff und Resistenz gegen Blitzschaden.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-bluttraeger-bergspross",
+      "name": "Blutträger (Bergspross)",
+      "revised": false,
+      "previousCost": 4,
+      "cost": 4,
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Berge: +1 Zauber-SG, +2 maximale TP und +1 auf STÄ-Rettungswürfe. Aktuelle TP werden nicht aufgefüllt.",
+      "reason": "Belegte übernatürliche Anlage mit begrenzten Boni und höherem Preis; keine Rassen-, Zauber- oder Verwandlungsvergabe."
+    },
+    {
+      "id": "development-trait-theriantrophie-werwolf-fluch",
+      "name": "Zatracher Theriantrophie (Werwolf) · Fluchform",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Zatrachs Fluch des Wolfes: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Wahrnehmung, +1 Initiative und −2 auf WEI-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-werwolf-segen",
+      "name": "Zatracher Theriantrophie (Werwolf) · Jüngersegen",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +1 auf Wahrnehmung, Überleben und STÄ-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-werbaer-fluch",
+      "name": "Zatracher Theriantrophie (Werbär) · Fluchform",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Zatrachs Fluch des Bären: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +3 maximale TP, +1 auf Athletik und −2 auf WEI-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-werbaer-segen",
+      "name": "Zatracher Theriantrophie (Werbär) · Jüngersegen",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +3 maximale TP und +1 auf KON-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-wereber-fluch",
+      "name": "Zatracher Theriantrophie (Wereber) · Fluchform",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Zatrachs Fluch des Ebers: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Athletik, +1 auf Körperbeherrschung, −2 auf Motiv erkennen und −1 auf WEI-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-wereber-segen",
+      "name": "Zatracher Theriantrophie (Wereber) · Jüngersegen",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +1 auf STÄ- und KON-Rettungswürfe, −1 Initiative.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-werluchs-fluch",
+      "name": "Zatracher Theriantrophie (Werluchs) · Fluchform",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Zatrachs Fluch des Luchses: ungewollte, gewöhnlich mondgebundene Hybridwandlung mit Kontrollverlust. Passive Grundprägung: +2 auf Heimlichkeit, +1 auf Akrobatik und −2 auf WEI-Rettungswürfe.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-theriantrophie-werluchs-segen",
+      "name": "Zatracher Theriantrophie (Werluchs) · Jüngersegen",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Zatrachs Jüngersegen mit grundsätzlich willentlich gelenkter Wandlung und erhaltenem Verstand. Passive Grundprägung: +2 auf Heimlichkeit und +1 Initiative.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-symbiose-varulv-wolf",
+      "name": "Silvanische Symbiose der Varulv (Wolf)",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-symbiose-diuid-baer",
+      "name": "Silvanische Symbiose der Mac Ard Diuid (Bär)",
+      "revised": false,
+      "previousCost": 3,
+      "cost": 3,
+      "description": "Überliefertes Bärenerbe der Mhathain in der Diuid-Linie. Grundprägung: +2 maximale TP, +1 auf Athletik und STÄ-Rettungswürfe. Stärkere Manifestationen sind selten.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-symbiose-lockart-baer",
+      "name": "Silvanische Symbiose der Ó Lockart (Bär)",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Abgeschwächtes Bärenerbe aus der Diuid-Linie. Grundprägung: +1 auf KON-Rettungswürfe, Körperbeherrschung und passive Wahrnehmung. Die Überlieferung beschreibt seltene Träger.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-symbiose-haig-baer",
+      "name": "Silvanische Symbiose der Dál Haig (Bär)",
+      "revised": false,
+      "previousCost": 2,
+      "cost": 2,
+      "description": "Seltenes, schwach ausgeprägtes Bärenerbe der Haig; in der Clanüberlieferung nicht für jeden Angehörigen belegt. Grundprägung: +2 auf Athletik und +1 auf Körperbeherrschung.",
+      "reason": "Begrenzte übernatürliche Grundprägung; Fluch, Segen und seltene Clananlage bleiben getrennt, ohne automatische Verwandlung."
+    },
+    {
+      "id": "development-trait-psychopath",
+      "name": "Psychopath",
+      "revised": true,
+      "previousCost": 4,
+      "cost": 0,
+      "description": "Aleria-Spielprägung der emotionalen Distanz: +1 auf Rettungswürfe gegen Furcht; −1 auf Motiv erkennen und Flirten. Die Prägung vermittelt keine Ermittlerausbildung.",
+      "reason": "Autorische Spielprägung mit kleinem Paket; keine automatische Detektivkompetenz."
+    },
+    {
+      "id": "development-trait-soziopath",
+      "name": "Soziopath",
+      "revised": true,
+      "previousCost": -3,
+      "cost": 0,
+      "description": "Aleria-Spielprägung der sozialen Distanz: +1 auf CHA-Rettungswürfe; −1 auf Überzeugen und Motiv erkennen. Keine zusätzlichen Nachforschungs- oder Wahrnehmungskenntnisse.",
+      "reason": "Autorische Spielprägung mit kleinem Paket; keine automatische Detektivkompetenz."
+    },
+    {
+      "id": "development-trait-narzisstisch",
+      "name": "Narzisstisch",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 1,
+      "description": "Ausgeprägte Selbstdarstellung: +1 auf Auftreten und CHA-Rettungswürfe; −1 auf Überzeugen und Motiv erkennen.",
+      "reason": "Kleine Selbstdarstellungs-/Selbstbehauptungswirkung mit kleinen sozialen Nachteilen."
+    },
+    {
+      "id": "development-trait-eidetisches-gedaechtnis",
+      "name": "Eidetisches Gedächtnis",
+      "revised": true,
+      "previousCost": 6,
+      "cost": 4,
+      "description": "Sicheres Erinnern bereits wahrgenommener Informationen: +2 auf Geschichte und +1 auf Arkane Kunde, Naturkunde und Religion. Keine allgemeine INT-Erhöhung oder medizinische Ausbildung; unbekannte Informationen müssen weiterhin beschafft werden.",
+      "reason": "Erinnern unterstützt bekanntes Wissen, erhöht aber nicht INT oder Heilkunde."
+    },
+    {
+      "id": "development-trait-geistig-beschraenkt",
+      "name": "Geistig beschränkt",
+      "revised": false,
+      "previousCost": -8,
+      "cost": -8,
+      "description": "−4 auf sämtliche Fertigkeitsproben. Die wirksamen Attributswerte INT und WEI sind auf höchstens 3 begrenzt, auch mit Boni oder freien Modifikatoren. Andere Handlungen werden nicht pauschal gesperrt.",
+      "reason": "Ausdrückliche feste Autorenregel erhalten; INT/WEI-Wertobergrenze 3 bleibt wirksam."
+    },
+    {
+      "id": "development-trait-vollidiot",
+      "name": "Vollidiot",
+      "revised": false,
+      "previousCost": -10,
+      "cost": -10,
+      "description": "Stärkere alternative Einschränkung: −6 auf sämtliche Fertigkeitsproben. INT und WEI höchstens 2, auch mit Boni oder freien Modifikatoren. Ersetzt die Ausprägung „Geistig beschränkt“; keine zusätzliche Punktgutschrift für beide.",
+      "reason": "Ausdrückliche alternative Autorenregel erhalten; stärkere Grenze ersetzt statt stapelt."
+    },
+    {
+      "id": "development-trait-genie",
+      "name": "Genie",
+      "revised": true,
+      "previousCost": 10,
+      "cost": 5,
+      "description": "+2 auf den INT-Attributswert und +1 auf Nachforschungen. Der daraus entstehende INT-Modifikator gilt ebenfalls. Geistige Begabung erhöht keine körperlichen Attribute und vergibt keine automatische Ausbildung.",
+      "reason": "Geistige Begabung wirkt auf INT und Nachforschung; körperliche und pauschale Fertigkeitsbuffs entfallen."
+    },
+    {
+      "id": "development-trait-blind",
+      "name": "Blind",
+      "revised": false,
+      "previousCost": -5,
+      "cost": -5,
+      "description": "Dauerhafter Verlust des Sehvermögens. Nachteil auf Angriffswürfe; −2 Initiative. Rein visuelle Aufgaben sind ohne geeigneten Ersatzsinn unmöglich.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-einaeugig",
+      "name": "Einäugig",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Eingeschränktes räumliches Sehen: −1 auf Fernkampf-Waffenangriffe und −1 passive Wahrnehmung.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-chronische-sehschwaeche",
+      "name": "Dauerhafte Sehschwäche",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−1 auf Wahrnehmung und Nachforschungen. Individuell angepasste Sehhilfen werden gesondert vereinbart.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-taub",
+      "name": "Taub",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Dauerhafter Verlust des Hörvermögens. −1 Initiative. Rein akustische Aufgaben sind ohne Ersatzwahrnehmung unmöglich; visuelle Wahrnehmung bleibt unverändert.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-einseitig-taub",
+      "name": "Einseitig taub",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Schallquellen lassen sich schwer orten: −1 Initiative und −1 passive Wahrnehmung.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-stumm",
+      "name": "Stumm",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Die Figur kann keine Stimme erzeugen. Schrift und Gebärden funktionieren; ausdrücklich stimmgebundene Handlungen benötigen eine Alternative.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-geruchssinnverlust",
+      "name": "Geruchssinnverlust",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Gerüche werden nicht wahrgenommen. Rein geruchsbasierte Aufgaben sind ohne Ersatz unmöglich.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-geschmackssinnverlust",
+      "name": "Geschmackssinnverlust",
+      "revised": false,
+      "previousCost": 0,
+      "cost": 0,
+      "description": "Geschmack wird nicht wahrgenommen. Verdorbene oder veränderte Speisen können nicht allein durch Kosten erkannt werden.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-einarmig",
+      "name": "Einarmig",
+      "revised": false,
+      "previousCost": -4,
+      "cost": -4,
+      "description": "Ein Arm fehlt oder ist dauerhaft unbrauchbar: −2 auf Athletik. Tätigkeiten mit zwei benötigten Händen sind ohne geeigneten Ersatz nicht möglich.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-fehlende-hand",
+      "name": "Fehlende Hand",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Eine Hand fehlt oder ist dauerhaft unbrauchbar: −1 auf Fingerfertigkeit. Handabhängige Ausrüstung benötigt eine passende Alternative.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-fehlende-finger",
+      "name": "Fehlende Finger",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Mehrere Finger fehlen oder sind dauerhaft unbeweglich: −2 auf Fingerfertigkeit.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-handtremor",
+      "name": "Angeborener Handtremor",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Anhaltendes Zittern: −2 auf Fingerfertigkeit und −1 auf Angriffe mit Bögen, Armbrüsten und Feuerwaffen.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-chronisches-hinken",
+      "name": "Chronisches Hinken",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Dauerhaft beeinträchtigter Gang: −1 m Bewegung und −1 auf Akrobatik.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-versteiftes-knie",
+      "name": "Versteiftes Knie",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 m Bewegung und −2 auf Akrobatik. Die Einschränkung bleibt nach Rasten bestehen.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-fehlender-fuss",
+      "name": "Fehlender Fuß",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Ein Fuß fehlt oder ist dauerhaft unbrauchbar: −3 m Bewegung und −2 auf Körperbeherrschung. Hilfsmittel werden individuell abgebildet.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-gelaehmte-beine",
+      "name": "Gelähmte Beine",
+      "revised": false,
+      "previousCost": -5,
+      "cost": -5,
+      "description": "Eigenständige Fortbewegung mit den Beinen ist nicht möglich. −3 auf Akrobatik; Rollstuhl, Reittier, Tragen oder Magie benötigen eine eigene Bewegungsregel.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-wirbelsaeulenverkruemmung",
+      "name": "Angeborene Wirbelsäulenverkrümmung",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−1 auf Athletik und Körperbeherrschung sowie −1 m Bewegung.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-knochenbruechigkeit",
+      "name": "Angeborene Knochenbrüchigkeit",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "−4 maximale TP und −1 auf STÄ-Rettungswürfe. Keine pauschale Verdoppelung sämtlichen Schadens.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-bluterleiden",
+      "name": "Angeborenes Bluterleiden",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 maximale TP und −2 auf Rettungswürfe gegen Blutungsfolgen. Bestehende feste Kritfolgen werden nicht verstärkt oder verlängert.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-lungenschwaeche",
+      "name": "Chronische Lungenschwäche",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 auf KON-Rettungswürfe und −1 auf Athletik.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-angeborener-herzfehler",
+      "name": "Angeborener Herzfehler",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−3 maximale TP und −1 auf KON-Rettungswürfe.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-nierenschwaeche",
+      "name": "Chronische Nierenschwäche",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 auf Rettungswürfe gegen Gift und −1 auf Körperbeherrschung.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-leberschwaeche",
+      "name": "Chronische Leberschwäche",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 auf Rettungswürfe gegen Gift. Alkoholbelastung zählt zusätzlich um 25 % stärker; Toleranz verändert nicht diesen Nachteil.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-verdauungsleiden",
+      "name": "Chronisches Verdauungsleiden",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−2 maximale TP und −1 auf KON-Rettungswürfe. Passende Nahrung ist eine individuelle Erleichterung, keine automatische Heilung.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-nervenverletzung",
+      "name": "Dauerhafte Nervenverletzung",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−1 auf Fingerfertigkeit und Körperbeherrschung; −1 Initiative.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-chronische-migraene",
+      "name": "Chronische Migräne",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Anhaltende Beschwerden: −1 Initiative und −1 auf Nachforschungen. Einzelne schwere Schübe werden gesondert geführt.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-schlaf-wach-stoerung",
+      "name": "Chronische Schlaf-Wach-Störung",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−2 Initiative. Schlafanfälle werden ausdrücklich als eigener Zustand vergeben, niemals zufällig beim Laden.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-lichtempfindliche-augen",
+      "name": "Dauerhaft lichtempfindliche Augen",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−1 auf Wahrnehmung und Fernkampf-Waffenangriffe. Schutz vor grellem Licht wird individuell berücksichtigt.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-vernarbtes-gewebe",
+      "name": "Chronisch vernarbtes Gewebe",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "−2 maximale TP und −1 auf Akrobatik durch dauerhaft eingeschränkte Gewebeelastizität.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-arkane-vernarbung",
+      "name": "Dauerhafte arkane Vernarbung",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "−1 Zauberangriff und −1 auf Rettungswürfe gegen Magie. Keine automatische Infektion mit Arkanistenfieber.",
+      "reason": "Konkrete dauerhafte Beeinträchtigung mit begrenzten Werten; alternative Ausprägungen werden nicht mehrfach gerechnet."
+    },
+    {
+      "id": "development-trait-arkanistenfieber-anzeichen",
+      "name": "Anzeichen vom Arkanistenfieber",
+      "revised": true,
+      "previousCost": 0,
+      "cost": 1,
+      "description": "Beginnende arkane Überreizung: +1 Zauberangriff, −1 Initiative. Eine Beobachtung, noch kein sicher festgestelltes Hauptstadium.",
+      "reason": "Spürbarer Zauberangriffsbonus ist ein positiver Richtpreis; keine kostenlose Buff-Optimierung."
+    },
+    {
+      "id": "development-trait-arkanistenfieber-symptome",
+      "name": "Erste Symptome des Arkanistenfiebers",
+      "revised": true,
+      "previousCost": -1,
+      "cost": 0,
+      "description": "Der kurzzeitige Magieschub bleibt: +1 Zauberangriff; −1 Initiative und −1 auf KON-Rettungswürfe. Weitere Magie gefährdet die Figur.",
+      "reason": "Zusätzlicher KON-Malus neutralisiert den Richtpreis des frühen Magieschubs."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-1",
+      "name": "Arkanes Fieber I. Stadium",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Müdigkeit, Blässe und entzündete Augen. −1 auf Fertigkeiten, Rettungswürfe und Initiative; −1 m Bewegung. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-2",
+      "name": "Arkanes Fieber II. Stadium",
+      "revised": false,
+      "previousCost": -4,
+      "cost": -4,
+      "description": "Krämpfe, Fieber und Organstörungen. −2 auf Fertigkeiten, Rettungswürfe und Initiative; −2 m Bewegung; −2 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-3",
+      "name": "Arkanes Fieber III. Stadium",
+      "revised": false,
+      "previousCost": -6,
+      "cost": -6,
+      "description": "Fortschreitende Nekrose und geistiger Verfall. −3 auf Fertigkeiten, Rettungswürfe und Initiative; −3 m Bewegung; −6 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-4",
+      "name": "Arkanes Fieber IV. Stadium",
+      "revised": false,
+      "previousCost": -8,
+      "cost": -8,
+      "description": "Vollständiger Ich-Verlust. −4 auf Fertigkeiten, Rettungswürfe und Initiative; −4 m Bewegung; −8 maximale TP. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt möglich. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-1",
+      "name": "Arkanes Fieber I. Stadium (Druidenvariante)",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Erschöpfung und gestörte Aura. −1 auf Fertigkeiten, Rettungswürfe und Initiative; −1 m Bewegung; zusätzlich −1 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-2",
+      "name": "Arkanes Fieber II. Stadium (Druidenvariante)",
+      "revised": false,
+      "previousCost": -4,
+      "cost": -4,
+      "description": "Halluzinationen und instabile Instinkte. −2 auf Fertigkeiten, Rettungswürfe und Initiative; −2 m Bewegung; zusätzlich −2 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-3",
+      "name": "Arkanes Fieber III. Stadium (Druidenvariante)",
+      "revised": false,
+      "previousCost": -6,
+      "cost": -6,
+      "description": "Schwerer geistiger Verfall ohne Nekrose. −3 auf Fertigkeiten, Rettungswürfe und Initiative; −3 m Bewegung; zusätzlich −3 auf WEI-Rettungswürfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-4",
+      "name": "Arkanes Fieber IV. Stadium (Druidenvariante)",
+      "revised": false,
+      "previousCost": -8,
+      "cost": -8,
+      "description": "Vollständiger Ich-Verlust ohne Nekrose. −4 auf Fertigkeiten, Rettungswürfe und Initiative; −4 m Bewegung; zusätzlich −4 auf WEI-Rettungswürfe. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt möglich. Keine Heilung durch TP-Heilung oder Rast.",
+      "reason": "Abgestuftes dauerhaftes Krankheitsstadium; nur die höchste Ausprägung wirkt, keine freie Mehrfachgutschrift."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-1",
+      "name": "Alkoholiker (I. Stadium)",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-2",
+      "name": "Alkoholiker (II. Stadium)",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-alcohol-3",
+      "name": "Alkoholiker (III. Stadium)",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Betrunken“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-1",
+      "name": "Kriss-süchtig (I. Stadium)",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-2",
+      "name": "Kriss-süchtig (II. Stadium)",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-kriss-3",
+      "name": "Kriss-süchtig (III. Stadium)",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Kriss-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-1",
+      "name": "Smaragdflux-süchtig (I. Stadium)",
+      "revised": false,
+      "previousCost": -1,
+      "cost": -1,
+      "description": "Entzug: −1 auf Fertigkeiten. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-2",
+      "name": "Smaragdflux-süchtig (II. Stadium)",
+      "revised": false,
+      "previousCost": -2,
+      "cost": -2,
+      "description": "Entzug: −2 auf Fertigkeiten und −1 Initiative. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-abhaengigkeit-smaragdflux-3",
+      "name": "Smaragdflux-süchtig (III. Stadium)",
+      "revised": false,
+      "previousCost": -3,
+      "cost": -3,
+      "description": "Entzug: −3 auf Fertigkeiten und −2 Initiative; −1 auf KON-Rettungswürfe. Diese Entzugsabzüge entfallen ausschließlich während „Smaragdflux-Rausch“. Die Abhängigkeit bleibt bestehen.",
+      "reason": "Stoffbezogener abgestufter Entzug; nur passender aktiver Rausch unterdrückt die Abzüge."
+    },
+    {
+      "id": "development-trait-substanztoleranz-alcohol",
+      "name": "Substanztoleranz (Alkohol)",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "reason": "Enger stoffgebundener Schwelleneffekt, ohne Schutz vor Schaden oder Risiken."
+    },
+    {
+      "id": "development-trait-substanztoleranz-kriss",
+      "name": "Substanztoleranz (Kriss)",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "reason": "Enger stoffgebundener Schwelleneffekt, ohne Schutz vor Schaden oder Risiken."
+    },
+    {
+      "id": "development-trait-substanztoleranz-smaragdflux",
+      "name": "Substanztoleranz (Smaragdflux)",
+      "revised": false,
+      "previousCost": 1,
+      "cost": 1,
+      "description": "Die nötige Rauschmenge verdoppelt sich. Nachwirkungen, Organschäden und Krankheitsrisiken werden dadurch nicht halbiert.",
+      "reason": "Enger stoffgebundener Schwelleneffekt, ohne Schutz vor Schaden oder Risiken."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "records": [
+    {
+      "id": "prototype-01",
+      "assetStem": "prototype-01",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-484ea726-65ca-4f8d-9d5e-192bb19df481.png",
+      "workspaceOriginal": "assets/warriors/generated/prototype-01.png",
+      "sha256": "d1728a0ba3bbd4e71e0cd20b590dfb83ab6462b6702b1a8642ce0aaf79389ea9",
+      "originalUnchanged": true
+    },
+    {
+      "id": "prototype-02",
+      "assetStem": "prototype-02",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-dcb5ba57-1090-459c-b240-10088e6a35b0.png",
+      "workspaceOriginal": "assets/warriors/generated/prototype-02.png",
+      "sha256": "38ae0de902e3c791b3469d8e08708acd60140d470cf09b647623647d37ba0642",
+      "originalUnchanged": true
+    }
+  ],
+  "history": [
+    {
+      "id": "prototype-02-head-v1",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-a258d9bf-766a-41fe-a9cd-99c4bca849e2.png",
+      "reason": "Head shape revised before integration; selected final is prototype-02."
+    }
+  ],
+  "visualReview": {
+    "prototype-01": {
+      "completeFigure": true,
+      "weapon": "Steel-edged Macuahuitl",
+      "openSteelJaguarHelmet": true,
+      "youngAdult": true,
+      "styleMatched": true
+    },
+    "prototype-02": {
+      "completeFigure": true,
+      "weapon": "Wooden Tepoztopilli head with visible steel cutting segments",
+      "youngAdult": true,
+      "styleMatched": true,
+      "topMargin": "Complete spear point with narrow top margin; central framing pipeline may add padding."
+    }
+  },
+  "alphaProcessing": "Not modified; root will use the authorized shared alpha pipeline."
+}

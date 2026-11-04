@@ -1,0 +1,82 @@
+{
+  "id": "haus-silberzunge",
+  "source": {
+    "attachmentId": "e157f696-1233-415b-a294-3ec695b9022b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\e157f696-1233-415b-a294-3ec695b9022b\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/silberzunge/animexx-original.html",
+    "bytes": 116531,
+    "sha256": "49a3ef796af7e44d71149338987f55457e4437c4b80dbc46eaaf82af068e8960",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-silberzunge",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Ivarsfels",
+      "barony": "Ivarsklamm",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-silberzunge",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-silberzunge",
+    "familyId": "haus-silberzunge",
+    "slug": "silberzunge",
+    "canonicalSlug": "silberzunge",
+    "attachmentId": "e157f696-1233-415b-a294-3ec695b9022b",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/fJlzp6J.png",
+    "sourceUrl": "https://i.imgur.com/fJlzp6J.png",
+    "path": "Stammbäume/assets/images/references/haus-silberzunge/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-silberzunge/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:500px; width:333px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 214603,
+    "sha256": "b0306dcb6e2866a01f92d580aa78dfa73054af115224f832e8944ff93e1d16f9",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hellhaariger gerüsteter Vertreter mit Geldbeutel und unter dem Arm gehaltenem Helm.",
+    "sha": "b0306dcb6e2866a01f92d580aa78dfa73054af115224f832e8944ff93e1d16f9",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Stabile Identität haus-silberzunge, sichtbarer Titel Clan Silberzunge; Silberzungen ist eine gebräuchliche Mehrzahl, keine zweite Familie.",
+    "Der heutige Familiensitz ist Ivarsfels. Die Altquelle nennt Sølvborg Hauptsitz; die übernommene Fassung beschreibt sie als eigene nördliche Festung. Aktueller Kartenname ist Sølborg.",
+    "Die nördlichen Siedlungen Tiefensilber, Erzklamm, Hyrnstein, Helgashof, Hirschsweiler, Sølvstatt und Sølvfurt sind im heutigen Gebietstext der Silberzungen bestätigt.",
+    "Jötunborg ist ausdrücklich ein Stützpunkt der Titanenbrecher und keine Silberzunge-Clanburg. Es wird nicht aus Nachbarschaft oder Kartenposition als Eigentum zugeschlagen.",
+    "Die Behauptung am Schluss des Kriegskapitels, allein Silberblut und Wargh seien übrig geblieben, ist innerhalb des Silberzunge-Berichts widersprüchlich. Silberblut wird weder stillschweigend zu Silberzunge umbenannt noch als neuer lokaler Clan behauptet; erhalten bleiben die Verluste und die anschließende Isolation.",
+    "Snorris Altersangabe nicht zur Festlegung neuer Kriegsjahre benutzen. Die Anteilsaussage Großteil der Elitekrieger wird ohne Stärkeverhältnis redigiert.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

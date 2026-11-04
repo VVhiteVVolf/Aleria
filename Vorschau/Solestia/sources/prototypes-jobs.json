@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "prototype-01",
+      "name": "Schwertmeister",
+      "role": "Schwertmeister",
+      "description": "Leicht gerüsteter Fechtmeister mit Degen, Federhut und einer auf dem Rücken getragenen Laute, deren Hals über die Schulter ragt.",
+      "equipment": [
+        "Degen mit Korbgefäß",
+        "Federhut",
+        "Laute mit Rückentragegurt",
+        "Leichter Brustpanzer und Armschutz"
+      ],
+      "palette": [
+        "Dunkles Petrol",
+        "Elfenbein",
+        "Warmes Leder",
+        "Mattes Eisen"
+      ],
+      "category": "warriors",
+      "assetStem": "prototype-01",
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: one new full-body class prototype for the fictional duchy of Solestia, Aleria. The referenced knight supplies ONLY approved matte simplified painting style, thin painted contours and fine even pigment grain. It does NOT supply western-blue armor, griffin, helmet, pose or exterior color haze. Cultural equipment: emphatically rich IBERIAN/SPANISH late-medieval/early-renaissance fantasy with morions, cabassets, elegant breastplates, restrained etched ornament, puffed cloth and feather hats as specified below. No Greek/Roman military tunic or helmet, no firearms, no muskets. Young athletic HUMAN adult20–28; normal anatomically rounded human ears, never elves. No named person, house, rank or invented history.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA youthful clean-shaven Iberian fencing master,22, lean athletic, dark wavy shoulder-length hair and naturally rounded ears. A soft broad black felt feather hat with an asymmetrically upturned brim and two modest ivory feathers. Rich dark-petrol puffed doublet sleeves, subtle ivory slashes, fitted plain lightly etched steel breastplate, narrow bronze cuffs and soft leather gloves, high-waisted slim dark trousers and tall practical dark brown boots. Lighter than a full knight, graceful but credible protection and comfortable cloth. He holds a slender STRAIGHT RAPIER/DEGEN in his right hand angled calmly down to the right, swept basket-hilt/cup guard and long slender double-edged pointed blade, not a wide broadsword, curved saber or katana. Left hand rests lightly at his hip. A real pear-bodied wooden LUTE is securely strapped on his BACK by a diagonal shoulder strap, the long fretboard and BENT PEGBOX protruding clearly above the opposite shoulder at a slanted angle. Show the lute's small pear body edge behind the far hip to connect the neck naturally. The instrument is behind the body, not held, no harp or lyre. No quiver. Calm upright three-quarter stance, one foot slightly forward.\n\nOutput EXACT1024x1536 portrait2:3 RGBA-PNG. One calm upright full-body figure, complete head/hat/feathers, both whole boots/soles and every weapon tip fully visible inside canvas. Use only80percent of image height, wide transparent margin at least90pixels sides/top/bottom. Correct two arms, two hands and natural grips. True transparent background outside silhouette and inside gaps. NO environment, floor, cast shadow, glow, outer color fog, paper or black painted background. Matte muted pigments and simplified broad forms, not glossy 3D/photorealism. No text, names, numbers, watermark, floating separate crest, shield or animal companion. No musket/firearm.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-02",
+      "name": "Ritter",
+      "role": "Ritter",
+      "description": "Schwerer Ritter in spanischem Plattenharnisch und geschlossenem Morionhelm mit Federschmuck; beide Hände ruhen auf dem Knauf des aufgestellten Großschwerts.",
+      "equipment": [
+        "Großschwert",
+        "Geschlossener spanischer Morionhelm mit Federschmuck",
+        "Schwerer Plattenharnisch"
+      ],
+      "palette": [
+        "Silberstahl",
+        "Dunkles Weinrot",
+        "Alte Bronze",
+        "Schwarz"
+      ],
+      "category": "warriors",
+      "assetStem": "prototype-02",
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: one new full-body class prototype for the fictional duchy of Solestia, Aleria. The referenced knight supplies ONLY approved matte simplified painting style, thin painted contours and fine even pigment grain. It does NOT supply western-blue armor, griffin, helmet, pose or exterior color haze. Cultural equipment: emphatically rich IBERIAN/SPANISH late-medieval/early-renaissance fantasy with morions, cabassets, elegant breastplates, restrained etched ornament, puffed cloth and feather hats as specified below. No Greek/Roman military tunic or helmet, no firearms, no muskets. Young athletic HUMAN adult20–28; normal anatomically rounded human ears, never elves. No named person, house, rank or invented history.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nAn athletic young adult male heavy SPANISH KNIGHT in a magnificent full plate harness: fluted silver-steel breastplate, pronounced articulated pauldrons, layered hip tassets, mail at joints, armored thighs/knees/greaves and complete pointed plate sabatons, dark wine-red and black short cloth inserts, restrained bronze vine engraving. A clearly SPANISH MORION with high lengthwise comb and sharply curved brim, combined with a CLOSEABLE full steel visor with narrow eye slit and neat small ventilation holes, topped with a modest burgundy and cream feather plume. Do not copy a Roman face-mask or Greek Corinthian nose helmet, and do not copy the source knight's western helm. His pose is essential: one extremely LARGE STRAIGHT TWO-HANDED GREATSWORD stands vertically centered in front of his body, blade point down at his feet, broad double-edged blade, functional long crossguard. BOTH hands rest naturally STACKED ONE UPON THE OTHER over the pommel/end of the long grip at lower-chest/upper-waist height, relaxed wrists and slightly bent elbows, visibly leaning his weight on the sword as the user references. Sword is NOT raised, not carried sideways, not gripped by only one hand, and no shield. Calm proud fully upright symmetrical stance with both feet apart for balance.\n\nOutput EXACT1024x1536 portrait2:3 RGBA-PNG. One calm upright full-body figure, complete head/hat/feathers, both whole boots/soles and every weapon tip fully visible inside canvas. Use only80percent of image height, wide transparent margin at least90pixels sides/top/bottom. Correct two arms, two hands and natural grips. True transparent background outside silhouette and inside gaps. NO environment, floor, cast shadow, glow, outer color fog, paper or black painted background. Matte muted pigments and simplified broad forms, not glossy 3D/photorealism. No text, names, numbers, watermark, floating separate crest, shield or animal companion. No musket/firearm.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-03",
+      "name": "Pikenier",
+      "role": "Pikenier",
+      "description": "Pikenier mit Federhut, teilweisem Plattenharnisch und Hellebarde; gepolsterte Stoffpartien lassen die Figur beweglich.",
+      "equipment": [
+        "Hellebarde",
+        "Federhut",
+        "Brust- und Schulterplatten",
+        "Gepolsterter Waffenrock"
+      ],
+      "palette": [
+        "Ocker",
+        "Burgunderrot",
+        "Stahl",
+        "Dunkelbraun"
+      ],
+      "category": "warriors",
+      "assetStem": "prototype-03",
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: one new full-body class prototype for the fictional duchy of Solestia, Aleria. The referenced knight supplies ONLY approved matte simplified painting style, thin painted contours and fine even pigment grain. It does NOT supply western-blue armor, griffin, helmet, pose or exterior color haze. Cultural equipment: emphatically rich IBERIAN/SPANISH late-medieval/early-renaissance fantasy with morions, cabassets, elegant breastplates, restrained etched ornament, puffed cloth and feather hats as specified below. No Greek/Roman military tunic or helmet, no firearms, no muskets. Young athletic HUMAN adult20–28; normal anatomically rounded human ears, never elves. No named person, house, rank or invented history.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA young athletic male Iberian pikeman,25, short dark hair, young clean-shaven angular face and rounded human ears. An ochre broad-brimmed soft feather hat, tilted brim and two burgundy feathers. Practical half armor in matte steel: a shaped Spanish breastplate and backplate, one compact articulated shoulder defense, simple forearm plates, padded burgundy-and-ochre doublet, restrained puffed/slashed upper sleeves, dark knee-length padded breeches with knee defenses, tall fitted brown boots. Protection is partly PLATE and partly lighter padded cloth; not a ragged peasant and not the full knight. Holds a functional long straight wooden HALBERD pole vertically beside the body with one hand at waist and one lower or relaxed at hip: compact broad steel axe head, rear hook and one upper spear point, all above his head, bottom of shaft visible beside his boot. The whole halberd is visible, vertical head and shaft aligned, no giant impossible axe, no firearm. Calm upright full-body three-quarter stance, no shield, no lute or quiver.\n\nOutput EXACT1024x1536 portrait2:3 RGBA-PNG. One calm upright full-body figure, complete head/hat/feathers, both whole boots/soles and every weapon tip fully visible inside canvas. Use only80percent of image height, wide transparent margin at least90pixels sides/top/bottom. Correct two arms, two hands and natural grips. True transparent background outside silhouette and inside gaps. NO environment, floor, cast shadow, glow, outer color fog, paper or black painted background. Matte muted pigments and simplified broad forms, not glossy 3D/photorealism. No text, names, numbers, watermark, floating separate crest, shield or animal companion. No musket/firearm.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-04",
+      "name": "Mariner",
+      "role": "Mariner",
+      "description": "Leicht gerüsteter Mariner mit offenem spanischem Cabasset, geradem Degen und Rückenköcher.",
+      "equipment": [
+        "Degen",
+        "Rückenköcher",
+        "Offener spanischer Cabasset",
+        "Leichter Brust- und Kettenpanzer"
+      ],
+      "palette": [
+        "Meeresgrün",
+        "Stahl",
+        "Elfenbein",
+        "Braunes Leder"
+      ],
+      "category": "warriors",
+      "assetStem": "prototype-04",
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: one new full-body class prototype for the fictional duchy of Solestia, Aleria. The referenced knight supplies ONLY approved matte simplified painting style, thin painted contours and fine even pigment grain. It does NOT supply western-blue armor, griffin, helmet, pose or exterior color haze. Cultural equipment: emphatically rich IBERIAN/SPANISH late-medieval/early-renaissance fantasy with morions, cabassets, elegant breastplates, restrained etched ornament, puffed cloth and feather hats as specified below. No Greek/Roman military tunic or helmet, no firearms, no muskets. Young athletic HUMAN adult20–28; normal anatomically rounded human ears, never elves. No named person, house, rank or invented history.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA young athletic adult woman Iberian MARINER,23, olive complexion, brown eyes, dark hair braided low at the nape, anatomically rounded human ears. An OPEN Spanish steel CABASSET helmet with almond-shaped high crown and a narrow slightly rolled brim, open youthful face; no Greek or Roman cheek helmet, no huge plume. Light flexible fitted steel breastplate over short mail sleeves and a sea-green fitted doublet, ivory shoulder scarf clasped to the side, leather belt and short split armored overskirt over dark fitted full-length trousers, modest bracers and tall boots. A slender straight RAPIER/DEGEN in one hand angled diagonally downward away from the legs, swept basket guard, narrow double-edged tapered blade, never a curved saber or wide knight sword. A leather QUIVER of arrows is strapped on her BACK, arrow fletchings clearly rising over one shoulder and diagonal carrying strap across the chest; no bow in hands unless explicitly requested, no lute or harp. Free hand rests on her waist/belt. Quiet balanced full-body stance, no shield, no firearm.\n\nOutput EXACT1024x1536 portrait2:3 RGBA-PNG. One calm upright full-body figure, complete head/hat/feathers, both whole boots/soles and every weapon tip fully visible inside canvas. Use only80percent of image height, wide transparent margin at least90pixels sides/top/bottom. Correct two arms, two hands and natural grips. True transparent background outside silhouette and inside gaps. NO environment, floor, cast shadow, glow, outer color fog, paper or black painted background. Matte muted pigments and simplified broad forms, not glossy 3D/photorealism. No text, names, numbers, watermark, floating separate crest, shield or animal companion. No musket/firearm.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-05",
+      "category": "warriors",
+      "assetStem": "prototype-05",
+      "name": "Kavallerist",
+      "role": "Kavallerist",
+      "description": "Schwer gerüsteter spanisch geprägter Kavallerist mit Lanze auf einem Equo. Der Entwurf zeigt geschlossenen Morionhelm und einen funktionalen Reitsattel mit Zügeln und Steigbügeln.",
+      "equipment": [
+        "Lanze",
+        "Geschlossener spanischer Morionhelm",
+        "Schwerer Plattenharnisch",
+        "Reitsattel mit Steigbügeln",
+        "Zaum und Zügel"
+      ],
+      "palette": [
+        "Silberstahl",
+        "Dunkelgrün",
+        "Elfenbein",
+        "Alte Bronze"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Bestiarium/assets/horse-profiles/equo.webp"
+      ],
+      "prompt": "Use case: stylized-concept. New full-body MOUNTED CAVALRY prototype of fictional Solestia, Aleria. Reference1 supplies ONLY the approved matte simplified painting style, soft thin painted contours and fine pigment grain, not its western helmet/blue palette/griffin or invisible exterior halo. Reference2 is the real Equo breed visual reference: a compact robust functional black military horse with solid muscular chest, sturdy legs and dark mane; use its horse anatomy and coat, not the scene or people. This is a visual class proposal using an Equo, NOT a claim that every Solestian rides this breed. One young human knight, twenty-five years old, athletic adult, anatomical rounded human ears under armor, no elves.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nCultural equipment HEAVY SPANISH/IBERIAN KNIGHT in refined silver-steel full plate, shaped Spanish breastplate, layered tassets, articulated pauldrons/elbows/knees and greaves, dark-green cloth inserts, ivory short shoulder cloak and restrained aged-bronze leaf etching. A CLOSED Spanish MORION with curved sweeping brim and tall lengthwise comb, hinged full visor and neat breathing perforations; small green and ivory feather plume. No Roman/Greek/Corinthian helmet. Both arms and both legs functional. The rider sits upright and composed on a complete muscular dark/black Equo horse in three-quarter side view, STANDING calmly with all FOUR clearly separated full legs and FOUR complete hooves visible. No gallop, jumping or rearing. Horse has fitted leather bridle/bit, reins run visibly and continuously to the rider's LEFT hand; working war saddle with a high front/back, dark-green simple saddlecloth with an ivory border; both stirrup leathers and sensible rider boot placement, the near foot visibly in its stirrup. A small steel chamfron protects the horse's forehead without hiding muzzle/nostrils, no giant costume armor. Horse tail must grow from its HINDQUARTERS and hang behind the rump, never from neck/chest/flank. Mane only along upper neck.\n\nWeapon: one long straight wooden LANCE held upright by the rider's RIGHT hand beside him, with a simple sharp leaf-shaped steel spear point and a small narrow plain green pennon below it. The hand grips shaft mechanically, shaft straight and continuous, upper lance tip fully visible above helmet; lower butt is also entirely visible beside horse. NO sword in either hand, no shield, no musket/firearm. Calm capable cavalry portrayal, not a tiny figure on a gigantic horse.\n\nOutput EXACT1024x1536 PNG2:3. Entire HORSE and RIDER including lance tip, highest feather, horse nose/tail and ALL FOUR hooves within frame, at least64px clear margin on every side. Scale the whole mounted subject smaller if needed rather than cropping. True transparent background outside silhouette and open spaces between legs/tack/lance. No ground, landscape, outer shadow/glow/haze, paper, text/numbers/watermark or extra figures. Matte muted painted shapes, fine even pigment texture, no photorealism/3D."
+    }
+  ]
+}

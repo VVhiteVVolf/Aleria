@@ -1,0 +1,477 @@
+{
+  "reviewedAt": "2026-11-03",
+  "reviewerScope": "Read-only runtime/source review; only this report is written.",
+  "runtimeFilesChanged": false,
+  "snapshots": [
+    {
+      "file": "Vorschau/Ishtaran/house-data.mjs",
+      "sha256": "845decded33ad801170a0d23b21bacde9648516f08a3ecbbdd5c0d4320337b8e"
+    },
+    {
+      "file": "Vorschau/Ishtaran/territory-data.mjs",
+      "sha256": "8644bea686473a3ef8d682795810edb870bab5e84706e24dc22dadf747977d71"
+    },
+    {
+      "file": "Vorschau/Ishtaran/sources/initial-seat-proposal.mjs",
+      "sha256": "d09a5255d6f59ef060bd685b3923a8965f2b415c6198893e2a4cee7eef317945"
+    }
+  ],
+  "structuralErrors": [],
+  "counts": {
+    "houses": 37,
+    "placed": 32,
+    "free": 5,
+    "cities": 21,
+    "capital": 1,
+    "paschaCities": 8,
+    "smallCities": 12
+  },
+  "all37NamesMatchNamingProposal": true,
+  "dahakidPreserved": true,
+  "maghneachExcludedFromLivingHouses": true,
+  "extraTarkanDistributionInLargeCityOrder": [
+    2,
+    2,
+    1,
+    0,
+    1,
+    2,
+    0,
+    1
+  ],
+  "freeHouses": [
+    {
+      "id": "pool-10",
+      "name": "Tenguran"
+    },
+    {
+      "id": "pool-13",
+      "name": "Salur"
+    },
+    {
+      "id": "pool-14",
+      "name": "Ordugan"
+    },
+    {
+      "id": "pool-22",
+      "name": "Torgun"
+    },
+    {
+      "id": "pool-26",
+      "name": "Albaran"
+    }
+  ],
+  "seatChecks": [
+    {
+      "id": "capital",
+      "name": "Altasar",
+      "tier": "capital",
+      "houses": [
+        {
+          "name": "Aschina",
+          "rank": "Sultan"
+        },
+        {
+          "name": "Aybars",
+          "rank": "Tarkan"
+        },
+        {
+          "name": "Köktemir",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-01",
+      "name": "Ildaran",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Bayindir",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Kinik",
+          "rank": "Tarkan"
+        },
+        {
+          "name": "Yarkulan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-02",
+      "name": "Kargulan",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Dahakid",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Iltan",
+          "rank": "Tarkan"
+        },
+        {
+          "name": "Kurtan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-03",
+      "name": "Ayseran",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Alptegin",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Tebaran",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-04",
+      "name": "Orsakent",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Altugan",
+          "rank": "Pascha"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-05",
+      "name": "Belduran",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Bayturan",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Erkut",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-06",
+      "name": "Kalduran",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Tardu",
+          "rank": "Tarkan"
+        },
+        {
+          "name": "Barsbek",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Ardulan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-07",
+      "name": "Kembaran",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Börtugan",
+          "rank": "Pascha"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "large-08",
+      "name": "Torgasar",
+      "tier": "pascha",
+      "houses": [
+        {
+          "name": "Kargan",
+          "rank": "Pascha"
+        },
+        {
+          "name": "Karluk",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-01",
+      "name": "Kersalan",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Merugan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-02",
+      "name": "Altschar",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Tarkut",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-03",
+      "name": "Bayrath",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Ilterisch",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-04",
+      "name": "Koyrath",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Afschar",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-05",
+      "name": "Arkulan",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Balkar",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-06",
+      "name": "Oryntar",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Turgan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-07",
+      "name": "Börkent",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Börtan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-08",
+      "name": "Ilbarsen",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Erlugan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-09",
+      "name": "Teldarak",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Turgut",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-10",
+      "name": "Kutlakar",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Kutlug",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-11",
+      "name": "Taschuran",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Arkut",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "small-12",
+      "name": "Temrakan",
+      "tier": "tarkan",
+      "houses": [
+        {
+          "name": "Kuturan",
+          "rank": "Tarkan"
+        }
+      ],
+      "anchorOffsetPixels": [
+        0,
+        0
+      ]
+    }
+  ],
+  "geographyFindings": [
+    {
+      "id": "large-06",
+      "name": "Kalduran",
+      "severity": "location-wording",
+      "issue": "Der Ortskreis liegt am Südostufer des großen inneren Sees und nördlich des sichtbaren Gebirges. Die aktuelle Beschreibung verschiebt den maßgeblichen Bezug zum östlichen Gebirgsrand.",
+      "currentRegion": "Östliches Bergland",
+      "currentDescription": "Große Stadt am östlichen Rand des südöstlichen Berglandes.",
+      "suggestedRegion": "Östliche Seenlandschaft",
+      "suggestedDescription": "Große Stadt am Südostufer des großen inneren Sees, nördlich des östlichen Gebirges.",
+      "evidence": "diagnostics/ishtaran/placement-map-review/large-06-normal-regions.png"
+    },
+    {
+      "id": "small-05",
+      "name": "Arkulan",
+      "severity": "location-wording",
+      "issue": "Das Gebirge liegt im Ausschnitt links beziehungsweise nordwestlich des Ortskreises. Der Kreis liegt am südöstlichen Auslauf dieses nördlichen Ostgebirges, nicht an dessen Nordrand.",
+      "currentRegion": "Östliche Landesmitte",
+      "currentDescription": "Kleine Herrschaft am nördlichen Rand des östlichen Berglands.",
+      "suggestedRegion": "Nordöstlicher Gebirgsfuß",
+      "suggestedDescription": "Kleine Herrschaft am südöstlichen Auslauf des nördlichen Ostgebirges.",
+      "evidence": "diagnostics/ishtaran/placement-map-review/small-05-normal-regions.png"
+    },
+    {
+      "id": "small-10",
+      "name": "Kutlakar",
+      "severity": "location-wording",
+      "issue": "Am Ortskreis ist ein offener südlicher Landstreifen westlich eines Flussarms sichtbar. Im Ausschnitt liegt kein erkennbares Gebirge; die Wolkenkante allein belegt keinen Gebirgsrand.",
+      "currentRegion": "Südlicher Gebirgsrand",
+      "currentDescription": "Kleine Herrschaft am südlichen Gebirgsrand; der rote Quellkreis begründet keinen anderen Rang.",
+      "suggestedRegion": "Südliches Flussland",
+      "suggestedDescription": "Kleine Herrschaft auf dem südlichen Landstreifen westlich des nord-südlichen Flussarms; der rote Quellkreis begründet keinen anderen Rang.",
+      "evidence": "diagnostics/ishtaran/placement-map-review/small-10-normal-regions.png"
+    },
+    {
+      "id": "small-12",
+      "name": "Temrakan",
+      "severity": "location-wording",
+      "issue": "Am südöstlichen Ortskreis sind Baumgruppen, offenes Land und die südliche Wolkenkante sichtbar. Ein unmittelbarer Gebirgsrand ist hier nicht belegt; die markante östliche Berggruppe liegt deutlich weiter westlich.",
+      "currentRegion": "Südöstlicher Gebirgsrand",
+      "currentDescription": "Kleine Herrschaft im südöstlichen Wald- und Gebirgsland.",
+      "suggestedRegion": "Südöstliches Waldland",
+      "suggestedDescription": "Kleine Herrschaft am südöstlichen Rand des Waldlands oberhalb der Wolkenkante.",
+      "evidence": "diagnostics/ishtaran/placement-map-review/small-12-normal-regions.png"
+    }
+  ],
+  "visuallyReviewedContacts": [
+    "diagnostics/ishtaran/placement-map-review/contact-01-07.jpg",
+    "diagnostics/ishtaran/placement-map-review/contact-08-14.jpg",
+    "diagnostics/ishtaran/placement-map-review/contact-15-21.jpg"
+  ],
+  "geographyReviewNote": "Alle 21 Normal-/Regionen-Ausschnitte tatsächlich angesehen. Nur vier klare Ortsbezüge beziehungsweise unbelegte unmittelbare Gebirgsbehauptungen aufgeführt; keine kosmetischen Namenspräferenzen."
+}

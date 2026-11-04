@@ -11,6 +11,7 @@ import {
 import { HOUSE_SWYLL_PORTRAITS } from './house-swyll-portraits.js';
 import { MAERLLYS_SWYLL_MARRIAGE } from './maerllys-cross-family-marriages.js';
 import { PENDRWN_SWYLL_MARRIAGE } from './pendrwn-cross-family-marriages.js';
+import { withPatrickBiographyFamily } from './patrick-biography-family-overlay.js';
 import {
   COURT_EMBLEMS, GWRGAN_COCHDON, LLEUCU_SWYLL, EIFION_TWYLLOD,
   LLEUCU_FIRST_MARRIAGE, LLEUCU_SECOND_MARRIAGE
@@ -244,7 +245,7 @@ const EMYR_CHILD_IDS = Object.freeze([
   'nerys-swyll'
 ]);
 
-export const HOUSE_SWYLL_FAMILY = Object.freeze({
+export const HOUSE_SWYLL_FAMILY = Object.freeze(withPatrickBiographyFamily({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -419,4 +420,4 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
     }),
     sourceNote: 'Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt sechs wegverheiratete Schwestern: Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys werden in den jeweiligen Gegenakten gespiegelt; Lleucu, Rhodris 1702 geborene Zwillingsschwester, ist mit ihren beiden Ehen ergänzt. Der Swyll-Zweig endet an den zwei Wappenverknüpfungen; die drei Kinder Eifions werden ausschließlich bei Twyllod geführt. Nur Carys, Llio und Nerys führen noch zu unbekannten Häusern. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert.'
   })
-});
+}));

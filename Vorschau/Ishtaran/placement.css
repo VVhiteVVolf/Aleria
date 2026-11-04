@@ -1,0 +1,13 @@
+.ishtaran-placement .seat-card>header{justify-content:space-between}
+.ishtaran-placement .seat-occupancy{flex-shrink:0;font:11px/1.6 var(--sans);color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:3px}
+.ishtaran-placement .seat-rules{font:12px/1.7 var(--sans);color:var(--accent);margin-bottom:18px}
+.ishtaran-placement .house-choice strong{overflow-wrap:anywhere}
+.ishtaran-placement .placement-draft-tools p{font-size:15px;color:var(--muted)}
+.ishtaran-placement .crest-group{width:max-content;max-width:220px;flex-wrap:wrap;white-space:normal}
+.ishtaran-placement .crest-group[data-city="capital"]{transform:translate(-50%,0);margin-top:8px}
+.ishtaran-placement .clan-pin[data-marker-tone="muted"] img{filter:grayscale(1);opacity:.7}
+.ishtaran-placement .placement-target.is-disabled-target{display:block;background:#dddcd6;border-color:#777d7f;color:#62686a;opacity:.9;cursor:not-allowed}
+.ishtaran-placement .seat-card.is-destroyed{background:#e9e7df;border-color:#a6a8a1}
+.ishtaran-workbench .house-gallery-note{font:12px/1.7 var(--sans);color:var(--muted)}
+@media(max-width:650px){.ishtaran-placement .crest-group{max-width:150px}.ishtaran-placement .seat-card h3{font-size:26px}}
+@media print{.ishtaran-placement .placement-draft-tools,.ishtaran-placement .placement-targets,.ishtaran-placement .drag-crest{display:none}}

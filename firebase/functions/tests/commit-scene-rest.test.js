@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { sceneRestCommitInternals } from '../src/mechanics/commit-scene-rest.js';
+import { getTrustedSceneCursorSeconds } from '../src/mechanics/trusted-scene-history.js';
 
 test('rest detects daily recovery only after a trusted day key changed', () => {
   assert.equal(sceneRestCommitInternals.hasPendingDailyRecovery({
@@ -40,4 +41,16 @@ test('rest timeline accepts forward progress and rejects backwards or invalid an
     () => sceneRestCommitInternals.getRequestedRestTimeline({ anchorDay: 2, anchorSeconds: 21 * 3600 }, previousCursor, 8 * 3600),
     /kürzer als die angegebene Rastdauer/
   );
+});
+
+test('rest rejects missing times and must add its duration after elapsed contribution time', () => {
+  for (const value of [null, undefined, '', ' ', false]) assert.throws(
+    () => sceneRestCommitInternals.getRequestedRestTimeline({ anchorDay: 1, anchorSeconds: value }, 0), /Endzeit/);
+  const cursor = getTrustedSceneCursorSeconds([
+    { serverValidatedMechanics: true, sceneTimeEvent: { anchorDay: 1, anchorSeconds: 100 } },
+    { serverCommitted: true, commentMode: 'character', commentSegments: [{ text: 'Zeit verstreicht.', durationSeconds: 3600 }] }
+  ]);
+  assert.throws(() => sceneRestCommitInternals.getRequestedRestTimeline({ anchorDay: 1, anchorSeconds: 3700 }, cursor, 3600), /kürzer/);
+  assert.deepEqual(sceneRestCommitInternals.getRequestedRestTimeline({ anchorDay: 1, anchorSeconds: 7300 }, cursor, 3600),
+    { anchorDay: 1, anchorSeconds: 7300, endCursor: 7300 });
 });

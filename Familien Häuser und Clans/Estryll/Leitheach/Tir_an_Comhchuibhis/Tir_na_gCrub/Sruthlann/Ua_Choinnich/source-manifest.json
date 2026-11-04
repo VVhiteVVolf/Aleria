@@ -1,0 +1,157 @@
+{
+  "id": "haus-choinnich",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "5224d1a5-150a-4143-a2be-915441dfcc47",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\5224d1a5-150a-4143-a2be-915441dfcc47\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ua-choinnich/animexx-original.html",
+    "bytes": 111319,
+    "sha256": "6526acfe67631b7d69226e62e09cb7ed985dccba55515a09744df90ca82c62ab",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-choinnich",
+    "baselineSourceRevision": 6,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Sruthlann",
+      "barony": "Tir na gCrúb",
+      "county": "Tir an Comhchuibhis",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-airt",
+      "liegeHouseName": "Clan Mac Airt",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na gCrúb",
+        "Sruthlann"
+      ]
+    },
+    "graphFingerprint": "fdbabb7855beb03b11855b1d5249802b66c80acbd3f8c7f967d6f1a46c330ffc",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-choinnich",
+    "title": "Ua’Choinnich",
+    "territoryId": "leitheach-herrschaft-choinnich",
+    "territoryName": "Tir na gCrúb",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na gCrúb",
+        "slug": "leitheach-herrschaft-choinnich"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-choinnich",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-choinnich",
+    "slug": "ua-choinnich",
+    "canonicalSlug": "choinnich",
+    "attachmentId": "5224d1a5-150a-4143-a2be-915441dfcc47",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/d1NS2HC.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 287157,
+    "sha256": "fe5b2d5271d45c31e6aabd8f4bff381f77eb3e5c434ea2c9188d0893fcf00df2",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-choinnich",
+    "title": "Ua’Choinnich",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir an Comhchuibhis",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/d1NS2HC.png",
+    "path": "Stammbäume/assets/images/references/haus-choinnich/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-choinnich/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "fe5b2d5271d45c31e6aabd8f4bff381f77eb3e5c434ea2c9188d0893fcf00df2",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Berittener grüner Speerträger mit Herzzeichen und Rundschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "6526acfe67631b7d69226e62e09cb7ed985dccba55515a09744df90ca82c62ab",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-choinnich, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug ua-choinnich wird der bestehenden ID haus-choinnich zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

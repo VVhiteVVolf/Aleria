@@ -1,0 +1,159 @@
+{
+  "id": "haus-na-mhuir",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "27bf4582-bf61-4c5a-871f-e7e52b62af9e",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\27bf4582-bf61-4c5a-871f-e7e52b62af9e\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/na-mhuir/animexx-original.html",
+    "bytes": 86578,
+    "sha256": "0065938b917372a49b851cb0e462352480d2823a15c6a0fd78f2d64ab6bef9d5",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-na-mhuir",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Coill",
+      "barony": "Tir na Fancha",
+      "county": "Tir na Sinsear",
+      "kingdom": "Leitheach",
+      "secondarySeats": [
+        "Broch an Abhainn"
+      ],
+      "liegeHouseId": "haus-ua-gaelach",
+      "liegeHouseName": "Clan Ua’Gaelach",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "assets/images/regions/Leitheach/tir-na-fancha.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "barony": "assets/images/regions/Leitheach/tir-na-fancha.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Fancha",
+        "Broch an Coill"
+      ]
+    },
+    "graphFingerprint": "d79dd6c8bbbb6fc9d0d2e198267f7baa43e14395491d680cbaec3465a59fb7ae",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-na-mhuir",
+    "title": "Clan Na’Mhuir",
+    "territoryId": "leitheach-tir-na-fancha",
+    "territoryName": "Tir na Fancha",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Fancha",
+        "slug": "leitheach-tir-na-fancha"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-na-mhuir",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-na-mhuir",
+    "slug": "na-mhuir",
+    "canonicalSlug": "na-mhuir",
+    "attachmentId": "27bf4582-bf61-4c5a-871f-e7e52b62af9e",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/2jtAcd2.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 318911,
+    "sha256": "3ba4e3418cf484dcaff7f35f240d2bc3094fc19065d63cc4ae2833bf0f5ada81",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-na-mhuir",
+    "title": "Clan Na’Mhuir",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sinsear",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/2jtAcd2.png",
+    "path": "Stammbäume/assets/images/references/haus-na-mhuir/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-na-mhuir/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "3ba4e3418cf484dcaff7f35f240d2bc3094fc19065d63cc4ae2833bf0f5ada81",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Grün gekleidete kniende Figur mit Speer, Rundschild und Kapuze.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "0065938b917372a49b851cb0e462352480d2823a15c6a0fd78f2d64ab6bef9d5",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-na-mhuir, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Tir na Fancha gehört nach aktueller Nutzerbestätigung zu Na’Mhuir. Kein kopierter Buarstrath-Kontext und keine andere Ortszuweisung.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

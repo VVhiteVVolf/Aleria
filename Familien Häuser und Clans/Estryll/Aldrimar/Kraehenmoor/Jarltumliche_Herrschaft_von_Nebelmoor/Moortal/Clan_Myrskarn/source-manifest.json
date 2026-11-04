@@ -1,0 +1,61 @@
+{
+  "id": "haus-myrskarn",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": null,
+  "authority": {
+    "familyId": "haus-myrskarn",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "barony": "Jarltümliche Herrschaft von Nebelmoor",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-kaltherz",
+      "liegeHouseName": "Clan Kaltherz",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "764e65b3dd6f54d1c18dd7ceae763d1a4f2385594f04ff2fd037e85d20a7d3d1"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-myrskarn",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-myrskarn",
+    "slug": "myrskarn",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2ef55050-3a5c-407d-ace0-b9b74f468bcb.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-myrskarn/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kraehenmoor-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-myrskarn.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "60a3e82a66280b7f77efb797b6d275653c1e8f989470ecc0d5552597964ba827",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2288508,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

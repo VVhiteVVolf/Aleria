@@ -1,11 +1,15 @@
 import { readFileSync } from 'node:fs';
 
 /** Add reviewed local illustrations while preserving existing project provenance. */
-export function appendLocalIllustrations(root, entries, add, selection = {}) {
+export function appendLocalIllustrations(root, entries, add, selection = {}, { houseIds = null } = {}) {
+  const scope = houseIds ? new Set(houseIds) : null;
   const sourcePath = 'Gallerien/krieger/data/local-source-review.json';
   const imported = JSON.parse(readFileSync(new URL('Gallerien/krieger/data/local-images.json', root), 'utf8'));
   const reviewedPrimaries = new Map((selection.localGroupPrimaries || []).map(primary => [primary.group, primary]));
   for (const group of imported.groups) {
+    // A matching hash alone does not authorize importing a foreign local group's
+    // current variants or metadata during an allowlisted house-page update.
+    if (scope && !group.houseIds.some(id => scope.has(id))) continue;
     const reviewed = reviewedPrimaries.get(group.key);
     let entry = reviewed ? [...entries.values()].find(image => image.copies.includes(reviewed.file))
       : group.existingId ? [...entries.values()].find(image => image.id === group.existingId) : null;
@@ -17,7 +21,7 @@ export function appendLocalIllustrations(root, entries, add, selection = {}) {
     if (group.existingId && !entry) throw new Error(`Belegtes Motiv fehlt: ${group.existingId}`);
     if (!entry) {
       const primary = group.variants[0];
-      entry = add({ file: primary.image, name: group.name, category: group.category, affiliation: group.affiliation, note: group.note });
+      entry = add({ file: primary.image, houseId: scope ? group.houseIds.find(id => scope.has(id)) : '', name: group.name, category: group.category, affiliation: group.affiliation, note: group.note });
       for (const houseId of group.houseIds) add({ file: primary.image, houseId });
       entry.thumbnail = primary.thumbnail;
     }

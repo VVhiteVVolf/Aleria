@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "jobs": [
+    {
+      "id": "tlapanui-10",
+      "houseId": "tlapanui-10",
+      "assetStem": "house-tlapanui-10",
+      "category": "warriors",
+      "prototypeId": "prototype-05",
+      "role": "Tlapanui-Marinekrieger",
+      "description": "Junger Marinekrieger mit indigo-weißer Inselkleidung, leichtem Stahlpanzer und einem kleinen fliegenden Fisch als getragener Heraldik. Ein Stahlsäbel und Rundschild ergänzen den offenen, lokal gebundenen Helm.",
+      "equipment": [
+        "Stahlsäbel",
+        "Kleiner Rundschild",
+        "Leichter Stahlpanzer",
+        "Offener Helm"
+      ],
+      "palette": [
+        "Silberweiß",
+        "Nachtblau",
+        "Rostrot"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Ikaru. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: Ein junger Mann von20Jahren, schlank-sehnig, warmbrauneHaut, jugendliches ovalesGesicht,dunkleAugen,schulterlanges schwarzesHaar als kurzergebundenerZopf. Offener niedriger römischbeeinflussterStahlhelmmitnur einerquerliegendenKnochenplatteundseitlichdunklenFaserbindungen,keinKamm. Brustschutz aus wenigen breiten mattsilbernenVertikalplattenüber einem kurzen indigofarbenen Wickelrock mit breiten cremeweißenRändern, rechterArm frei mit dunklenMeeres-Tattoos, linkerUnterarmmitSchiene. DezenteflossenförmigeStahlbeschlägeanSchultern,keineFischrüstung. RechteHandhält einen kurzen einschneidigengebogenenStahlsäbel ruhig seitlichabwärts,linkeHandeinen kleinenrundenindigoblauenHolzschildmitgenaueinemkleinensilberweißenfliegendenFisch. BeideSandalenbeinesichtbar. FrontaleaufrechtePosemitBlickleichtnachlinks,keinePosekopieMarineprototyp.\n\nHauspalette: Silberweiß, Nachtblau, Rostrot. Wappenmotiv: Ein einzelner silberweißer fliegender Fisch im klaren Seitenprofil nach rechts, mit genau zwei deutlich erkennbaren seitlichen Flossen wie schmalen Flügeln, ein Fischschwanz. Keine Vogelfüße. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-10.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-05.png"
+      ]
+    },
+    {
+      "id": "tlapanui-11",
+      "houseId": "tlapanui-11",
+      "assetStem": "house-tlapanui-11-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-02",
+      "role": "Tepoztopilli-Lanzenträger",
+      "description": "Ein Tlapanui-Lanzenträger in petrol-cremefarbenem Schuppen- und Gewebepanzer. Ein kleiner Nautilusbeschlag greift das Hauszeichen auf; die Tepoztopilli besitzt einen breiten Holzkopf mit Stahlschneiden.",
+      "equipment": [
+        "Tepoztopilli mit Stahlschneiden",
+        "Schuppen- und Gewebepanzer",
+        "Offener Stahlhelm mit Knochenkamm"
+      ],
+      "palette": [
+        "Creme",
+        "Petrol",
+        "Ocker"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Bild1istdiezubearbeitendeHausfigurNakatsama;Bild2liefertnurdiegenehmigteMalweise. BehaltekompletteFigur,Identität,Gesicht,Helm,Knochenkamm,Tattoos,petrol/cremeRüstung,Nautiluszeichen,Körperhaltung,HändeundSandalenunverändert. Korrigiere NUR das Framing der TEPOZTOPILLI: Der breite hölzerne Paddelkopf mit seitlichen Stahlsegmenten ist oben angeschnitten. Mach die Waffe etwas kürzer beziehungsweise senke ihren oberen Kopf, sodass der gesamte abgerundete HOLZSCHEITEL und alle Stahlsegmente sichtbar sind. ObersterWaffenpunktmindestens80PixelunterdemoberenBildrand. Kein normalerSpeerkopf,keinObsidian,breiterPaddelkopfbleibt. DieWaffemussdurchbeideHändesinnvollgeführtbleibenundderganzeSchaftfußüberdemunterenRandbleiben. DieganzeFigurdarfgerneinebequemeZweidrittelbildhöheeinnehmen, ausreichendtransparenteLuftauchoben/unten; 1024x1536 bleibt. KeinezusätzlichenGegenständeoderNamensschrift.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nEchtertransparenterHintergrund,keinäußererFarb-/Lichtdunst,BodenoderSchatten. MattevereinfachtegemalteFormen,keine3D-Materialeffekte. GibdietatsächlichvollständigeWaffeohneAnschnittaus.",
+      "references": [
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/generated/house-tlapanui-11.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "revisions": [
+        {
+          "assetStem": "house-tlapanui-11",
+          "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Nakatsama. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: Ein jungerMannvon27Jahren, athletischbreitschultrigabernichtmassig,kurzesschwarzesHaar,brauneAugen,markantesjungesGesicht. OffenerlokalergewölbterStahlhelmmitkurzemzurückgebogenemKnochenkamm,nichtFederbusch,nichtgriechisch. Panzer ausgroßenabgerundetenmattenSchuppenin diagonalenReihenüberhellercremefarbenerTunika;petrolfarbenerlangerrechteckigerHüftwickelmitwenigenockerfarbenenStufenbändern. Ein kleinescremefarbenesNautilusspiralzeichen alsflacherBrustbeschlag, nichtSchneckengehäusealsRüstung. DunkleTattoosaufbeidenfreienOberarmen,unterschiedlichgemusterteBeinschienen. Erhält eineeinzigeTEPOZTOPILLIseitlichaufrechtmitbeidenHändenlockeramSchaft:breiterlangerhölzernerPaddelkopfmitklarengetrenntenSTAHLSchneidsegmentenandenseitlichenRändern,keinenormaleSpeerspitzeundkeinObsidian. GanzerWaffenkopf+samtSchaftendeimBild,keinSchild.\n\nHauspalette: Creme, Petrol, Ocker. Wappenmotiv: Eine einzige cremefarbene stilisierte Nautilusschale als klar lesbare große Spirale, keine weiteren Tiere. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+            "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-11-v2.png",
+            "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-02.png"
+          ],
+          "status": "superseded-framing"
+        }
+      ]
+    },
+    {
+      "id": "tlapanui-12",
+      "houseId": "tlapanui-12",
+      "assetStem": "house-tlapanui-12",
+      "category": "warriors",
+      "prototypeId": "prototype-05",
+      "role": "Tlapanui-Marinekriegerin",
+      "description": "Junge Marinekriegerin mit korallroten und cremeweißen Geweben, leichtem Metallpanzer und einem kleinen Muschelhorn am Gürtel. Sie trägt einen Stahlsäbel und einen schlichten Kopfschutz über geflochtenem Haar.",
+      "equipment": [
+        "Stahlsäbel",
+        "Leichter Metall- und Gewebepanzer",
+        "Stirn- und Wangenschutz",
+        "Kleines Muschelhorn"
+      ],
+      "palette": [
+        "Korallrot",
+        "Cremeweiß",
+        "Dunkelbraun"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Tsamakea. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinejungeFrau24Jahre, schlankathletisch,warmebrauneHaut,dunkleAugen,wacherruhigerBlick,lange schwarzeHaare in dreischmalenZöpfenüberderlinkenSchulter. LeichterKopfschutzauseinemgebogenenStahlstirnbandmitkurzenbeweglichenWangenstücken,keinHelmdach/Federfächer. LeichtesärmellosesFaserhemdmitkleinenmattenStahlplattennuraufBrustundlinkerSchulter,korallroterkurzerWickelmantelübercremefarbenerknielangerTunika,breiterdunkelbraunerGürtel. RechterUnterarmfreimitgroßemgeometrischemTattoo,linksSpiral-Tattoo. Ein kleineskorallrotesMuschelhornhängtamGürtel,einMuschelhornmotivistflachaufcremefarbenerHüftlaschegemalt. SiehälteineneinzigenStahlsäbelmitKlingenachuntenrechts,linkeHandlockerinderGürtelnähe,KEINSchild,keinezusätzlicheWaffe,keineentblößtenBrüste. RuhigeDreiviertelposenachlinksmitbeidenvollständigenLedersandalen.\n\nHauspalette: Korallrot, Cremeweiß, Dunkelbraun. Wappenmotiv: Eine einzelne große korallrote gedrehte Muschelhornschnecke im Profil auf cremeweißem Feld, klare große Windungen und eine Öffnung. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-12.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-05.png"
+      ]
+    },
+    {
+      "id": "tlapanui-13",
+      "houseId": "tlapanui-13",
+      "assetStem": "house-tlapanui-13",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Moai-/Meeresberserker",
+      "description": "Tätowierter Berserker mit weitgehend freiem Oberkörper und einer furchterregenden Wellenfratze aus Holz, Eisen und Knochen. Eine große Stahlhakenwaffe und türkisfarbene Stoffbänder greifen das Meeresmotiv auf.",
+      "equipment": [
+        "Große Hakenwaffe aus Stahl",
+        "Grimassenmaske aus Holz, Eisen und Knochen",
+        "Gewebter Wickelschurz"
+      ],
+      "palette": [
+        "Türkis",
+        "Dunkelbraun",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Navaloku. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinjungerMann26Jahre,kräftigathletischaberrealistischproportioniert,warmebrauneHaut,freiermuskulöserOberkörpermitbreitendunklenWellen-/StufentattoosbiszuOberarmenundWaden. DichtesschwarzesHaarseitlichabstehendundhintenineinemtiefenKnoten. MächtigegetrageneGrimassenmaskemitGEWUNDENENWELLENFORMENausdunklemHolz,EisenundKnochen:breiteStirnmitzweisichrollendenKnochenwellen,aggressivschrägeAugenschlitze,kurzenkantigenNasenrücken,weitaufgerissenesZAHNMAULmitgroßenhellenFangzähnen. Sieistbeeindruckendfastdämonisch,aberkeinwirklicherDämonundkeineleuchtendenAugen. TürkisfarbeneStoffbindungenandunklemknielangemWickelschurz,elfenbeinfarbenergezackterSaum,eineflachekleineDoppelwelleaufHüftlasche. Erhält eineeinzigegroßegeschmiedeteFishhook-Hakenwaffelinkslockeraufrecht; dievolleKurveistimBild,rechteHandoffenentspannt. KeineRüstungaufBrust,keinSchild,nichtdieselbeglatteMoai-MaskeausalterV1. FüßeinrobustenFasersandalenvollständig.\n\nHauspalette: Türkis, Dunkelbraun, Elfenbein. Wappenmotiv: Zwei große einander folgende türkisfarbene stilisierte Meereswellen mit eingerollten Kämmen auf dunkelbraunem Feld, kein Boot und keine Tiere. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-13.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-03-v2.png"
+      ]
+    },
+    {
+      "id": "tlapanui-14",
+      "houseId": "tlapanui-14",
+      "assetStem": "house-tlapanui-14",
+      "category": "warriors",
+      "prototypeId": "prototype-05",
+      "role": "Tlapanui-Marinekrieger",
+      "description": "Marinekrieger mit ockerfarbenen und cremeweißen Stoffen, roter Segelstickerei und asymmetrischer Stahlbewehrung. Er führt einen Stahlsäbel; ein kleines Kanuzeichen sitzt auf der Schulterlasche.",
+      "equipment": [
+        "Stahlsäbel",
+        "Asymmetrische Arm- und Brustbewehrung",
+        "Offener Spangenhelm"
+      ],
+      "palette": [
+        "Creme",
+        "Ocker",
+        "Dunkelrot"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Kaetavaru. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinjungerMann23Jahre,schlankathletisch,länglichjugendlichesGesicht,schmalerSchnurrbartohneBartschatten,kurzschwarzgelocktesHaar,brauneAugen. OffenerSpangenhelmmitniedrigemseilgebundenemNackenschutzausGewebe,keineWangenplattenundkeinHelmkamm. KurzercremefarbenerWaffenrockmitockerfarbenenbreitenSchulterlaschen,aufrechterStahlbruststreifennurüberderlinkenBrust,andereBrustmitgewebtemPanzer. DunkelrotesdreieckigesSegelmotivaufrechterHüftschärpeundkleinecremefarbeneKanuplaketteauf linkerSchulter. RechterUnterarmträgtbreiteStahlschienen,linkerArmistfreimitgeometrischenTattoos;keinSchild. SeineRighthandhältStahlsäbelmitSpitzeschrägvomKörperwegnachunten,linkeHandliegtlockeraufdemGürtel. GegenüberMarine10anderesGesicht,Helm,RüstungundStofflänge;ruhigerfrontalerStandmitvollständigenSandalen.\n\nHauspalette: Creme, Ocker, Dunkelrot. Wappenmotiv: Ein einziges cremefarbenes polynesisch inspiriertes Auslegerkanu im klaren Seitenprofil mit einem kleinen dreieckigen dunkelroten Segel und einem sichtbaren seitlichen Schwimmer auf sonnig-ockerfarbenem Feld, keine Personen und kein Schriftzug. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-14.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-05.png"
+      ]
+    },
+    {
+      "id": "tlapanui-15",
+      "houseId": "tlapanui-15",
+      "assetStem": "house-tlapanui-15",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Moai-/Meeresberserkerin",
+      "description": "Athletische Berserkerin mit Tätowierungen, praktischem Brustwickel und einer höhnischen Holz-Eisen-Knochen-Maske. Die große Stahlhakenwaffe und weinrote Stoffe nehmen Farben und Motiv des Hauses auf.",
+      "equipment": [
+        "Große Hakenwaffe aus Stahl",
+        "Höhnische Grimassenmaske",
+        "Praktischer Brustwickel",
+        "Gewebter Hüftschurz"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelweinrot",
+        "Knochenweiß"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Tekaru. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinejungeFrau25Jahre,sehnigathletisch,warmebrauneHaut,dunkleAugen,schwarzesHaarineinemhohengeflochtenenKnotenzusammengebunden. PraktischerbreiterknochenweißerdichterBrustwickelbedecktdieBrustvollständig;Schultern,ArmeundBauchbleibenfreimitbreitendunkelweinroten/schwarzengeometrischenTätowierungen. KnielangerweinroterWickelschurzmitknochenweißenStufensäumen,leichteKnochenEisen-Unterarmschienen. BeeindruckendehöhnischefurchterregendeMaskeausweißlichgealtertemHolz,schwarzemEisenundKnochen:hochgezogeneasymmetrischeBrauen,tiefeengeAugenschlitze,breitesseitlichhochgezogenesgrinsendesMaulmitlangenFangzähnen,gezackteWangen. KeinTierkopfzwang,weilHauswappenFischhakenist;keineMagie. Ein kleinerflacherStahlhakenbeschlagauf demGürtel. Sieführt einegroßeschmiedeeiserneFishhook-HakenwaffemitrechterHandruhigseitlich,zweiteHandoffenamKörper. DieWaffeandersalsmännlicherProto:breitereflacheSichelkurvemitkurzemgebundenemGriff. KeineSexualisierung,keineActionpose,ganzeWaffeundbeideSandalen.\n\nHauspalette: Silber, Dunkelweinrot, Knochenweiß. Wappenmotiv: Ein einzelner großer silberner gebogener polynesisch inspirierter Fischhaken mit kurzer dunkelroter Griffwicklung auf dunkelweinrotem Feld; eindeutig Haken, kein Anker, keine Kreuzform. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-15.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-03-v2.png"
+      ]
+    },
+    {
+      "id": "tlapanui-16",
+      "houseId": "tlapanui-16",
+      "assetStem": "house-tlapanui-16",
+      "category": "warriors",
+      "prototypeId": "prototype-01",
+      "role": "Jaguar-Krieger",
+      "description": "Jaguar-Krieger mit offenem Stahlhelm, Jaguarpelz und einem Macuahuitl mit Stahlschneiden. Ocker, Creme und Blattgrün sowie eine kleine Kakaoplakette verbinden die Rüstung mit dem Hauszeichen.",
+      "equipment": [
+        "Macuahuitl mit Stahlschneiden",
+        "Offener Jaguarhelm",
+        "Jaguarpelz",
+        "Stahl- und Faserpanzer"
+      ],
+      "palette": [
+        "Ocker",
+        "Cremeweiß",
+        "Dunkelgrün"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Panikela. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinjungerMann25Jahre,athletisch,warmebrauneHaut,kurzesschwarzesHaar,breitesjungesGesichtmitdunklenAugen. OffenerstählernerJaguar-OBERSCHÄDELHelmmitjaguarähnlichenOhrenundkurzenoberseitigenFangzähnen,UnterkieferfehltundMenschengesichtbleibtoffen. JaguarpelzliegtalskurzerrechterSchulterwurf,nichtbeidseitigerPelzmanteldesPrototyps. AsymmetrischerFaserpanzerinCreme/BraunmitdunkelgrünenlangenStofflaschen,wenigegroßeStahlplattenamlinkenBrustteilundGürtel,einArmfreiundtätowiert. KleineockerfarbeneKakao-DoppelfruchtplaketteamGürtel,einBlattmotivaufHüftsaum;keineFruchtverkleidung. ErhälteineneinzelnenhölzernenMacuahuitlmitbreitemPaddelkörperundgetrenntenSTAHLSchneidsegmentenstattObsidian,waagerechtleichtschrägvorihmnachunteninderrechtenHand,linkeHandruhtamGürtel. RuhigeaufrechteDreiviertelposenachlinks,volleWaffeundbeideSandalenimBild,keinekopiertePrototypensilhouette.\n\nHauspalette: Ocker, Cremeweiß, Dunkelgrün. Wappenmotiv: Zwei große ockerfarbene gerippte Kakaofrüchte mit einem einzigen dunkelgrünen Blatt, diagonale heraldische Anordnung auf cremeweißem Feld. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-16.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-01.png"
+      ]
+    },
+    {
+      "id": "tlapanui-17",
+      "houseId": "tlapanui-17",
+      "assetStem": "house-tlapanui-17",
+      "category": "warriors",
+      "prototypeId": "prototype-02",
+      "role": "Tepoztopilli-Lanzenkriegerin",
+      "description": "Lanzenkriegerin mit langem Stahl- und Textilpanzer in Grün, Rostrot und Creme. Ein kleiner Fächerkamm und flache Palmenstickerei ergänzen die Tepoztopilli mit stählernen Schneidsegmenten.",
+      "equipment": [
+        "Tepoztopilli mit Stahlschneiden",
+        "Langer Stahl- und Textilpanzer",
+        "Offener Helm mit kleinem Fächerkamm"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Sand",
+        "Rostrot"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: eigenständige Calidaria-Hauskriegerdarstellung für Haus Maravatu. Keine benannte Person und keine neue Hausgeschichte. Bild1 liefert ausschließlich die freigegebene MATTE MALWEISE, NICHT seine westliche Ritterrüstung, Helmform oder Hausfarben. Bild2 ist das konkrete Hauswappen und liefert nur Farben und kleine sinnvoll getragene Heraldik. Bild3 zeigt die zugrundegelegte Tlapanui-Rolle/Kultur, ist KEINE Umfärbevorlage. Neue eigenständige Figur mit anderer Identität, Rüstung, Kopfgestaltung, Stoffaufbau und Handhaltung.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nKulturelle Bindung: Fiktionale Tlapanui aus Calidaria, vor allem Rapa-Nui-nahes polynesisches Erscheinungsbild und lokale Gewebe-/Holz-/Knochenformen, ergänzende mesoamerikanische Gestaltung, weiterentwickelte ARGENTISCHE Stahltechnik. Junge erwachsene menschliche Figur mit natürlichen menschlichen Ohren, dunklen Augen und Haaren, schlank bis athletisch. Keine griechischen Helme oder Feuerwaffen, keine europäische Standard-Ritterausrüstung. Polynesisch inspirierte Tätowierungen als fiktionale geometrische Gestaltung, keine Schrift und keine Behauptung historischer Authentizität.\n\nIndividuelles Motiv: EinejungeFrau27Jahre,hochgewachsenathletisch,warmebrauneHaut,markantesruhigesjungesGesicht,dunkleAugen,schwarzesHaarinzweistraffnachhintengeflochtenenZöpfen. OffenerlokalerStahlhelmmitkurzemnachhintenliegendenFÄCHERKAMMausfünfgrünenFaser-/Blattplatten,keinTierkopf. HandwerklichreiferlangerFaserpanzerinCreme,überBrustundOberschenkelnwenigebreitehorizontaleStahlbänder;tieferdunkelgrünerWaffenrockmitrostrotenSeitenlaschenundflacherPalmenstickereiunten. SichtbaregeometrischeTattoo-BänderaufdenUnterarmenundWaden. Siehält eineeinzigeTEPOZTOPILLImitbreitemHOLZPADDELKOPFundgetrenntenSTAHLSchneidsegmentenaufbeidenSeiten,beideHändeamSchaft;WaffeklarrechtsnebendemKörper,ganzeSpitzeundFußsichtbar. KeinegewöhnlicheSpeerspitze,keinObsidian,keinSchild. LangerPanzeraufbauandersalskurzerweiblicherPrototyp,ruhigerleichtversetzterStand.\n\nHauspalette: Dunkelgrün, Sand, Rostrot. Wappenmotiv: Eine einzelne dunkelgrüne Palme mit genau einem Stamm und fünf breiten klar voneinander getrennten Palmwedeln auf hellem sandfarbenem Feld, kein Strandboden oder Landschaft. Es erscheint ausschließlich als kleine getragene Bemalung, Stickerei oder Beschlag und bestimmt einige Formen, kein separates schwebendes Wappen. Keine schriftlichen Hausnamen im Bild.\n\nFraming und Transparenz zwingend: genau eine vollständige aufrechte Figur, ruhige Haltung, rechteckiges2:3PNG exakt1024x1536. Kopf/Helm/Fächer und gesamteWaffe einschließlichallerSpitzen biszu beidenvollständigenSandalen sichtbar. Bequeme8–10Prozent transparente Luft ringsum, auch überStangenwaffenspitzen. KeinSzenenhintergrund,keinBoden,keineäußerenSchatten,Glows,Farbfahnen,TextoderWasserzeichen. EchteAlpha-TransparenzaußenundinoffenenZwischenräumen. PlausibleHändeundWaffengriffe,keinezusätzlichenGliedmaßen. EinfachemattegemalteFormen,keinfotorealistisches3D-Rendering.\n\nZusätzlicheFramingpräzisierung: Der gesamte breite hölzerne Paddelkopf darfNICHTobenangeschnittensein. DieganzeTepoztopilliistnurwenighöheralsdieFigur,ihreobersteabgerundeteHolzkantebleibtmindestens90PixelunterdemoberenBildrand. OberkanteundalleSchneidsegmentevollständig. FigurmitWaffezusammennur80ProzentBildhöhe,komfortabletransparentefreieRänder.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/emblems/production/tlapanui-17.png",
+        "E:/Aleria/Vorschau/Calidaria/assets/warriors/production/prototype-02.png"
+      ]
+    }
+  ]
+}

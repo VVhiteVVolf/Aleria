@@ -171,7 +171,11 @@
 .combat-action-details dl > div { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 0.5rem; }
 .combat-action-details dt { color: var(--composer-accent); font: 600 0.8rem/1.45 "EB Garamond", Georgia, serif; }
 .combat-action-details dd { margin: 0; white-space: pre-line; overflow-wrap: anywhere; font: 400 0.87rem/1.45 "EB Garamond", Georgia, serif; }
-.combat-composer-warning { margin-top: 0.7rem; }
+.combat-composer-warning { margin-top: 0.7rem; font: 500 0.9rem/1.5 "EB Garamond", Georgia, serif; }
+.combat-composer-warning p { margin: 0 0 0.5rem; }
+.combat-composer-warning small { display: block; font-size: 0.85rem; }
+.combat-composer-warning [data-combat-select-action] { display: block; min-height: 2.5rem; margin-top: 0.45rem; padding: 0.5rem 0.85rem; border: 1px solid var(--composer-accent); border-radius: 4px; background: var(--composer-accent); color: #fff7e5; font: 700 0.9rem/1.3 "EB Garamond", Georgia, serif; cursor: pointer; }
+.combat-composer-warning [data-combat-select-action]:focus-visible { outline: 2px solid var(--composer-ink); outline-offset: 3px; }
 .combat-action-picker { position: relative; color: var(--composer-ink); font: 500 0.9rem/1.3 "EB Garamond", Georgia, serif; }
 .combat-action-picker > summary { display: flex; align-items: center; gap: 0.5rem; min-height: 2.6rem; padding: 0.5rem 0.6rem; box-sizing: border-box; border: 1px solid var(--composer-line); border-radius: 3px; background: #fffbf0; cursor: pointer; list-style: none; }
 .combat-action-picker > summary::-webkit-details-marker { display: none; }

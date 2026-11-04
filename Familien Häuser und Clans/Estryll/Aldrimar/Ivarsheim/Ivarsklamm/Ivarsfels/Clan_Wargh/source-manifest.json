@@ -1,0 +1,88 @@
+{
+  "id": "haus-wargh",
+  "source": {
+    "attachmentId": "62e2037a-12bc-40d9-939a-a19090116dca",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\62e2037a-12bc-40d9-939a-a19090116dca\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/wargh/animexx-original.html",
+    "bytes": 143189,
+    "sha256": "c2fb4320b9de7b1e33488430ef1f7b582ee47b3b3436430d9b6c70fce485c086",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-wargh",
+    "baselineSourceRevision": 6,
+    "profile": {
+      "rankId": "jarl",
+      "seat": "Ivarsfels",
+      "barony": "Ivarsklamm",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-ivarsheim.png",
+        "assets/images/regions/aldrimar-ivarsklamm.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-wargh",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-wargh",
+    "familyId": "haus-wargh",
+    "slug": "wargh",
+    "canonicalSlug": "wargh",
+    "attachmentId": "62e2037a-12bc-40d9-939a-a19090116dca",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/WTWILYV.png",
+    "sourceUrl": "https://i.imgur.com/WTWILYV.png",
+    "path": "Stammbäume/assets/images/references/haus-wargh/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-wargh/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 260628,
+    "sha256": "eef68e479edbbb13fa1bc379e9865081c36af00635164722f4b2c80edbefd2dc",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hauskrieger mit hellem Wolfspelz, dunkler Rüstung, Schwert und gelbem Wolfsschild.",
+    "sha": "eef68e479edbbb13fa1bc379e9865081c36af00635164722f4b2c80edbefd2dc",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Aktuelle Hierarchie: Jarl, Ivarsfels/Ivarsklamm/Ivarsheim/Aldrimar unter Clan Vaeren. Keine heutige Herrschaft Asgers aus dem historischen Kriegskapitel ableiten.",
+    "Die unklare Wendung Ehe des letzten Mac Lúin wird mit dem bestehenden kanonischen Gründerpaar Ivar Wargh und Méabh Mac Lúin aufgelöst. Keine neue Ehe oder Abstammung importieren.",
+    "Wargh, Varulv und Ragnulf haben laut Quelle einen gemeinsamen alten Herkunftszusammenhang. Daraus keine neue benannte Stammfamilie oder zusätzliche genealogische Kanten erzeugen.",
+    "Altersangaben im Kriegskapitel nicht zu neuen Kriegsdaten verrechnen. Insbesondere die Jugend Asgers bleibt ohne neu abgeleitetes Anfangsjahr erhalten.",
+    "Vergleichende Infanteriestärke und die pauschale Hälfte des Clans werden ausgelassen beziehungsweise ohne Zahl beschrieben. Eigenständige Ereignisse wie die Vernichtung zweier Vasallenhäuser bleiben historische Vorgänge, keine Truppenstatistik.",
+    "Stammbäume, Kadetten- und Hofnamenslisten sind von der Übernahme ausgeschlossen; die kanonischen Familienakten bleiben unverändert.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

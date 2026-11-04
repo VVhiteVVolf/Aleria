@@ -20,6 +20,15 @@ Die Hausseite bleibt `haus.html?haus=haus-draig`. Es entsteht keine weitere Kopi
 
 ## Ablauf für jedes weitere Haus
 
+Quellenpriorität (Nutzerklarstellung vom 3. November 2026): Aktuelle belegte
+Ortsdaten, Ränge, Strukturen, Hierarchien und Personenidentitäten haben Vorrang
+vor alten Hausvorlagen und kopierten Infotabellen. Eindeutig veraltete Namen und
+Titel korrigieren; einmalige Hausgeschichte ohne Gegenbeleg erhalten und offene
+Zeit- oder Statusfragen ausdrücklich dokumentieren. Die gelieferten
+Stammbaumabschnitte vollständig aus der Übernahme ausschließen und ausschließlich
+die bestehende Familienakte per Iframe einbetten. Militärstatistiken weder aus
+Infotabellen noch aus Fließtext übernehmen.
+
 1. **Quelle sichern und lesen.** Alten Code im fachlichen Hausordner als `animexx-original.html` ablegen. Texte, Bildquellen, Personen, Amtszeiten, Erben, Hofämter und Kadetten erfassen. Platzhalter sind fehlende Angaben, keine Aufforderung zum Erfinden.
 2. **Abgleichen.** Vorhandene Haus-ID, Weltpersonen-IDs, Portraits, Wappen und territoriale Einordnung prüfen. Gleichnamige Personen anhand ihrer Generation unterscheiden. Amtszeiten und Lebensdaten getrennt behandeln.
 3. **Redigieren.** Rechtschreibung und Satzbau verbessern, Dopplungen zusammenführen, sachliche Einzelheiten erhalten. Widersprüche mit ihrer getroffenen Behandlung im Abschnitt zum jeweiligen Haus dokumentieren. Keine neuen Beziehungen, Lebensdaten oder Ämter erfinden.

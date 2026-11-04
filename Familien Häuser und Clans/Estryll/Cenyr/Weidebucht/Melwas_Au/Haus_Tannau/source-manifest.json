@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "6b7ea609-57fb-4ce3-9188-94c895ff4068",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "9f5160de1d356eb9f57d317366d335a5855efe4bd970cb3f3d7ab68bc00acb4b"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-tannau",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-tannau",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 0,
+    "currentSeat": "Cerrigarth",
+    "currentRankId": "commoner"
+  },
+  "images": [
+    {
+      "role": "Bürgerliche Gerberdarstellung",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "sha256": "ae5d8e11cc1896efa01898789bfff48a73e80a0b8877b46c0139241f6e9a7dec",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json",
+      "note": "Einzige fehlende Hauptdarstellung; vom Hauptagenten erzeugt und geprüft."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Nur die ausdrücklich benannte Gerberei Die gebundene Schicht und die Hausdevise werden als schmaler Handwerkskern ergänzt. Die Vorlage enthält keine ausgearbeitete Familienchronik. Keine Person, Ämter oder Jahreszahlen ergänzt.",
+    "Neue Figur ausschließlich wegen fehlender Originaldarstellung; unbenannte Gerberdarstellung ohne neue Personenakte."
+  ]
+}

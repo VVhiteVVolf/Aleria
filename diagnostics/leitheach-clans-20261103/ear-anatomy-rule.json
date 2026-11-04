@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-03",
+  "rule": "Elfen existieren in Aleria nicht. Menschen und Alben erhalten menschliche, abgerundete Ohren; keine Elfenanatomie aus Kultur oder Referenzen ableiten.",
+  "files": [
+    "AGENTS.md",
+    "AleriaAlmanach/docs/art/image-style-presets.json"
+  ],
+  "presets": [
+    "fantasy-rpg-character",
+    "anime-scene-portrait"
+  ],
+  "validation": {
+    "jsonParse": "pass",
+    "onlyRequestedPresetFieldsAndUpdateDateChanged": true,
+    "otherPresetsUnchanged": true,
+    "imagesOrPopulationDatasetsModified": false,
+    "explicitNoElvesPhraseInAgentsAndFourPresetFields": true
+  },
+  "presetFileSha256Before": "ddfc9157fb7d9264d39234f246fe00f5d1f8151bcb90c8f66beb01e660488fb6",
+  "presetFileSha256After": "d0815cdde6069518dc832beb372a10ec59b2f38abc8555035d0a7663b301773d",
+  "explicitNoElvesClarification": {
+    "date": "2026-11-03",
+    "phrase": "Elfen existieren in Aleria nicht.",
+    "fields": [
+      "fantasy-rpg-character.prompt",
+      "fantasy-rpg-character.anatomyRule",
+      "anime-scene-portrait.prompt",
+      "anime-scene-portrait.anatomyRule"
+    ],
+    "presetFileSha256Before": "621ee70b1ce11c25bce258605efc486f0d4ab5e631f5de3c96072e72355b4ff1",
+    "presetFileSha256After": "d0815cdde6069518dc832beb372a10ec59b2f38abc8555035d0a7663b301773d",
+    "onlyFourRequestedPresetStringsChanged": true,
+    "agentsEdit": "Only existing ear-anatomy paragraph; concurrent documentation retained."
+  }
+}

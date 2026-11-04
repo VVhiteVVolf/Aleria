@@ -1,11 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { houses } from '../Venalys/house-data.mjs';
 import { warriors } from '../Venalys/warrior-data.mjs';
-import { districts, pointsOfInterest, mapGeometry } from '../Venalys/territory-data.mjs';
+import { districts, pointsOfInterest, mapGeometry,legacyPointIds } from '../Venalys/territory-data.mjs';
+import { districts as previousDistricts,pointsOfInterest as previousPoints } from '../Venalys/sources/map-revision-20261104/previous-territory-data.mjs';
 import { context } from '../Venalys/realm-context.mjs';
 import { createAssignmentState } from '../Venalys/assignment-state.mjs';
 import { FAMILY_REGISTRY, getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.registry.js';
@@ -54,15 +56,30 @@ test('new house names avoid screenshot bans and every already registered house, 
   for (const id of ['bellaratus', 'legarinus', 'discipian']) assert.ok(fresh.some(h => h.id === id));
 });
 
-test('13 neutral district polygons and 78 outside points use the same unchanged source map geometry', () => {
-  assert.equal(districts.length, 13); assert.equal(pointsOfInterest.length, 78);
-  assert.equal(new Set([...districts, ...pointsOfInterest].map(t => t.id)).size, 91);
-  const sources = read('Vorschau/Venalys/assets.source.json');
-  for (const filename of ['Venalys Normal.png', 'Venalys (Bezirke).png']) {
-    const map = sources.find(s => s.sourceFile === filename);
-    assert.ok(map);
-    assert.deepEqual(map.dimensions, [mapGeometry.width, mapGeometry.height]);
-    assert.equal(map.publishedOriginal, false);
+test('the revised maps retain thirteen district identities, 98 mapped places and four explicitly unmapped old towers', () => {
+  const mapped = pointsOfInterest.filter(point => point.point),unmapped = pointsOfInterest.filter(point => point.status === 'unmapped');
+  assert.equal(districts.length, 13); assert.equal(mapped.length,98); assert.equal(pointsOfInterest.length,102);
+  assert.equal(new Set([...districts, ...pointsOfInterest].map(t => t.id)).size,115);
+  assert.deepEqual(districts.map(d => [d.id,d.name]),previousDistricts.map(d => [d.id,d.name]));
+  assert.deepEqual(legacyPointIds,previousPoints.map(point => point.id));
+  assert.deepEqual(unmapped.map(point => point.id),['poi-r01','poi-r02','poi-r03','poi-r04']);
+  assert(unmapped.every(point => point.point === null));
+  for (const previous of previousPoints) assert.equal(pointsOfInterest.find(point => point.id === previous.id)?.name,previous.name);
+  const sources = read('Vorschau/Venalys/sources/active-map-sources.json');
+  assert.deepEqual(sources.geometry,mapGeometry);
+  assert.deepEqual(mapGeometry,{width:6144,height:3524});
+  assert.equal(sources.maps.length,2);
+  for (const map of sources.maps) {
+    assert.deepEqual(map.dimensions,[mapGeometry.width,mapGeometry.height]);
+    assert.equal(map.publishedOriginal,false);
+    assert.equal(map.noGeometryEdits,true);
+    assert.equal(createHash('sha256').update(fs.readFileSync(new URL(map.original,root))).digest('hex'),map.sha256);
+    assert.equal(createHash('sha256').update(fs.readFileSync(map.sourcePath)).digest('hex'),map.sha256);
+  }
+  assert.equal(sources.webImages.length,4);
+  for (const image of sources.webImages) {
+    assert.equal(createHash('sha256').update(fs.readFileSync(new URL(image.path,root))).digest('hex'),image.sha256);
+    assert(shouldPublish(image.path));
   }
   const validPoint = point => Array.isArray(point) && point.length === 2 && point.every(v => Number.isFinite(v) && v >= 0 && v <= 100);
   for (const [index, district] of districts.entries()) {
@@ -70,7 +87,7 @@ test('13 neutral district polygons and 78 outside points use the same unchanged 
     assert.ok(validPoint(district.point)); assert.ok(district.polygon.length >= 3);
     assert.ok(district.polygon.every(validPoint)); assert.ok(inside(district.point, district.polygon), district.id);
   }
-  for (const point of pointsOfInterest) {
+  for (const point of mapped) {
     assert.ok(validPoint(point.point), point.id);
     assert.ok(districts.every(d => !inside(point.point, d.polygon)), `${point.id} is outside the city districts`);
     assert.ok(point.sourceKind && point.description, point.id);
@@ -78,10 +95,12 @@ test('13 neutral district polygons and 78 outside points use the same unchanged 
   }
   const taverns = pointsOfInterest.filter(p => /Taverne/.test(p.kind));
   const estates = pointsOfInterest.filter(p => p.kind === 'Anwesen');
-  assert.equal(taverns.length, 6); assert.ok(taverns.every(p => p.name === 'Taverne, Herberge oder Bordell'));
-  assert.equal(estates.length, 14); assert.ok(estates.every(p => /^Anwesen \d\d$/.test(p.name)));
+  assert.equal(taverns.length,8); assert.ok(taverns.every(p => p.name === 'Taverne, Herberge oder Bordell'));
+  assert.equal(estates.length,22); assert.ok(estates.every(p => /^Anwesen \d\d$/.test(p.name)));
   const named = pointsOfInterest.filter(p => !taverns.includes(p) && !estates.includes(p));
-  assert.equal(new Set(named.map(p => normalizeName(p.name))).size, 58);
+  assert.equal(new Set(named.map(p => normalizeName(p.name))).size,72);
+  assert.equal(mapped.filter(point => point.kind === 'Dorf').length,25);
+  assert.equal(mapped.filter(point => point.kind === 'Küstensiedlung').length,4);
 });
 
 test('every Magnarier has a noble military representation and the two requested patrician figures are additional', () => {

@@ -1,4 +1,4 @@
-import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261024-vortigerns-v1';
+import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261104-content-lore-v1';
 
 /**
  * Loads the public repository release without delaying the local application

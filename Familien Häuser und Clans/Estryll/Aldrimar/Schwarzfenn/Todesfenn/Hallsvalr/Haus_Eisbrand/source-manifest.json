@@ -1,0 +1,87 @@
+{
+  "id": "haus-eisbrand",
+  "source": {
+    "attachmentId": "a9380c3b-7656-4a5e-bcd5-690c51e67a1b",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\a9380c3b-7656-4a5e-bcd5-690c51e67a1b\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/eisbrand/animexx-original.html",
+    "bytes": 74302,
+    "sha256": "c557fe7b2af8b8ad1067458f77cb4e7047b7cec7712cb22ff903703775807c47",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-eisbrand",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Hallsvalr",
+      "barony": "Todesfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-eisbrand",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-eisbrand",
+    "familyId": "haus-eisbrand",
+    "slug": "eisbrand",
+    "canonicalSlug": "eisbrand",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "a9380c3b-7656-4a5e-bcd5-690c51e67a1b",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/aucPiOG.png",
+    "sourceUrl": "https://i.imgur.com/aucPiOG.png",
+    "path": "Stammbäume/assets/images/references/haus-eisbrand/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-eisbrand/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Räubertum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 306088,
+    "sha256": "44e030a09a7d60eb0d17b0cadd3c02daa08b1fdf8736505786242a7f6e283405",
+    "sha": "44e030a09a7d60eb0d17b0cadd3c02daa08b1fdf8736505786242a7f6e283405",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Unveränderte Gruppenabbildung mit drei unterschiedlich ausgerüsteten Figuren; kein Aufteilen oder Neuerfinden von Personen.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Kanonischer Rang commoner; keine anerkannte Clan- oder Adelsrangstufe und keine Lehnsherrschaft. Die Bezeichnung Clan in der Vorlage ist kein Adelungsbeleg.",
+    "Audun Todbrand ist der bereits vorhandene Gründer. Seine Herkunftserzählung wird textlich erhalten, ohne neue Eltern-, Erb- oder Bastardknoten anzulegen.",
+    "Hallsvalr liegt im nicht verlässlich von Todbrand verwalteten östlichen Banditenraum. Militärische Kontrolle wird nicht als rechtmäßiges Lehen oder zusätzliche neue Verwaltungsebene beschrieben.",
+    "Grabmal, Hallsvalr, Draugrstad und südlicher Bruchturm sind laut aktuellem Ortsregister getrennte Orte. Die alte Aussage über eine umgebaute Grabstätte wird nicht zu einer ungeprüften Gleichsetzung dieser Orte.",
+    "Erpressung, Raubzüge, Zwangsarbeit und Rekrutierung von Deserteuren bleiben Inhalte der Quelle. Keine neuen Opfer-, Kreaturen-, Inventar- oder Gildendatensätze daraus erzeugen.",
+    "Die militärische Kriegerüberschrift wird inhaltlich als Räubertum verstanden. Adelige Huskarlrituale oder kirchliche Bräuche werden dem Haus nicht hinzuerfunden.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

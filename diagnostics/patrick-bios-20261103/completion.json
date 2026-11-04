@@ -1,0 +1,61 @@
+{
+  "schema": "aleria.patrick-biographies-completion",
+  "date": "2026-11-03",
+  "release": {
+    "deployId": "6aea3a7208d879f2f4ecb435",
+    "commit": "8927ed6daec7b59dc6212ac6405e18816acd3f4c",
+    "verifiedFiles": 34607,
+    "functions": [
+      "document-publisher",
+      "family-publisher",
+      "imgur-album",
+      "karten-publisher",
+      "wedding-publisher",
+      "world-content-publisher"
+    ],
+    "url": "https://dieweltvonaleria.netlify.app",
+    "verifiedAt": "2026-11-03T19:49:22.445Z"
+  },
+  "pushedBranch": "master",
+  "publicCheckoutClean": true,
+  "publicCharacters": 262,
+  "unrelatedPublicCharactersPreserved": 259,
+  "biographyCharacters": 3,
+  "newCharacterGwen": 1,
+  "newOwnedCompanions": 4,
+  "personalityCards": 34,
+  "newComicIcons": 23,
+  "selfHostedOriginalImagesAndIcons": 36,
+  "imageMigration": {
+    "planId": "785361b0d00128240a5f869739fbfd06010eae20db6e02e4d9f65f0ab9e2df3c",
+    "committedAt": "2026-11-03T19:31:38.284290Z",
+    "verifiedDocuments": 7,
+    "changedDocuments": 7,
+    "imageReplacements": 66,
+    "unrelatedRawFieldsUnchanged": true,
+    "staticOriginalsVerified": true
+  },
+  "retiredLegacyDocuments": 4,
+  "canonicalPeoplePreserved": 3,
+  "checks": {
+    "releaseGates": 49,
+    "lastReleaseReran": 11,
+    "lastReleaseReusedByInputHash": 38,
+    "territoryTests": 223,
+    "housePageTests": 162,
+    "itemMechanicsTests": 340,
+    "biographyFeatureTests": 98,
+    "biographyGateTests": 2
+  },
+  "cleanup": {
+    "ownedPublicationStageRemoved": true,
+    "ownedFunctionSupportRemoved": true,
+    "ownPreviewPortsStopped": [
+      5578
+    ],
+    "olderBuildFilesRemoved": 0,
+    "sourcesOriginalsAndEncryptedBackupsPreserved": true
+  },
+  "privateContentExcluded": true,
+  "unresolvedIdentity": "Meurig/Odyar: contradictory old records, no automatic merge"
+}

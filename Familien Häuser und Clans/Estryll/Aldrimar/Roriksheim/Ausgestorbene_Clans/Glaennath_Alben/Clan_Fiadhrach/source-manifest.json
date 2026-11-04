@@ -1,0 +1,83 @@
+{
+  "id": "haus-fiadhrach",
+  "source": {
+    "attachmentId": "1fc1a71d-f4de-43f5-9e8d-9f2ab06a1c74",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\1fc1a71d-f4de-43f5-9e8d-9f2ab06a1c74\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/fiadhrach/animexx-original.html",
+    "bytes": 49478,
+    "sha256": "9db6414bcf7705d6373763b84ce9e6a9c4ec695362bf71d692eb66f4e67d1d9c",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-fiadhrach",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Connair bei Wolfspfad"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-fiadhrach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "fiadhrach",
+    "familyId": "haus-fiadhrach",
+    "attachmentId": "1fc1a71d-f4de-43f5-9e8d-9f2ab06a1c74",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/ao9YSC4.png",
+    "path": "Stammbäume/assets/images/references/haus-fiadhrach/krieger.png",
+    "sourceStyle": "float:right; height:350px; vertical-align:top; width:233px",
+    "context": "Tiarnatum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 254279,
+    "sha256": "1c9b3b7d8718078ec19c5286bac27a0de775030cf48af7ae44322ee46c4aa542",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-fiadhrach",
+    "url": "https://i.imgur.com/ao9YSC4.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-fiadhrach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Albenkrieger mit Geweihhelm, Schwert und violettem Hirschschild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-4.png"
+  },
+  "decisions": [
+    "Der aktuelle Registerrang bleibt unknown; die alten Bezeichnungen Adelshaus und Druidenfürsten sind historische Beschreibungen und rechtfertigen keine neue Rangstufe.",
+    "Connair bei Wolfspfad ist ein überlieferter historischer Bezug, nicht der heutige technische Sitzwert Glaennath (Alben). Keine neue Ortsposition oder Gleichsetzung mit Wolfspfad festlegen.",
+    "Die Fiadhrach-Quelle und Vangandr stimmen in Aufnahme, Täuschung und Massaker überein; auch Vanirs Konfliktkapitel stützt diese Folge. Der einzelne gegenteilige Satz im Vanir-Besitztumkapitel wird nicht als bewiesener Verrat der Fiadhrach übernommen.",
+    "Flüsterer im Holz und Schwarzer Gast bleiben Überlieferungsnamen einer dunklen Macht, keine neu angelegte konkrete Kreatur mit Personendossier oder Fähigkeiten.",
+    "Ahnenbaum, Ritualgärten, Kanäle, Druidenhöfe und die beschriebenen Ruinen bleiben als Kultur- und Besitzüberlieferung erhalten. Geisterberichte ausdrücklich als Berichte, nicht als bestätigte Begegnungen formulieren.",
+    "Allgemeines Tiarnatum bleibt historischer Kulturrahmen. Vorbereitete unbekannte Gründer und sämtliche bestehenden Familiengraphen bleiben unverändert.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

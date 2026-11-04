@@ -43,6 +43,16 @@ const entries = Object.freeze({
     cssFamily: 'Stoicheia',
     transliterator: identityCommentLanguageText
   },
+  tlapanui: {
+    label: 'Nuatlapa · Tlapanui',
+    cssFamily: 'Tavarua Bildschnitt',
+    transliterator: identityCommentLanguageText
+  },
+  ishtaran: {
+    label: 'Tirghan · Ishtaran',
+    cssFamily: 'Ayluun Mondbogen',
+    transliterator: identityCommentLanguageText
+  },
   runic: {
     label: 'Futhark · Runisch',
     cssFamily: 'Noto Sans Runic',

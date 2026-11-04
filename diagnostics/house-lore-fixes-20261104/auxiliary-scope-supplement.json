@@ -1,0 +1,73 @@
+{
+  "schema": "aleria.public-linked-line-scope-supplement",
+  "reason": "The same source person and marriage are selected unchanged into the existing public linked-only Marmue line. Include their authorized chronology correction in saved-line upgrades.",
+  "sourceEvidence": [
+    "diagnostics/house-lore-fixes-20261104/before-public-data.json: haus-morforwyn",
+    "diagnostics/sonnenkueste-house-pages-20261103/before.json: public Marmue identity and graph fingerprint",
+    "Stammbäume/assets/js/data/house-morforwyn-family.js: createMorforwynLineFamily selects the common source persons and partnerships"
+  ],
+  "reconstructedFormerValues": true,
+  "records": [
+    {
+      "id": "haus-morforwyn-linie-marmue",
+      "sourceRevision": 6,
+      "persons": [
+        {
+          "id": "ofranton-1599-morforwyn",
+          "worldPersonId": "person--haus-morforwyn--ofranton-1599-morforwyn",
+          "name": "Ofranton",
+          "birth": "1599",
+          "death": "1630",
+          "status": "dead",
+          "sex": "male",
+          "title": "Wegverheiratet in die Stammlinie",
+          "notesHash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+          "otherFieldsHash": "0a74b3693d70b847c6547a422cb5db7a963e8c7d5567cc89ee3f5c803cad7456",
+          "managedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "nonManagedExtensionsHash": "b8160e2e9937f4bb26a2de52843cdc340729fbedf295bdb0b1673a915cee48a5"
+        }
+      ]
+    }
+  ],
+  "biographies": [
+    {
+      "id": "haus-morforwyn-linie-marmue",
+      "biographyFingerprint": "2657:2515eb4a:6485a690",
+      "pageData": "Estryll/Cenyr/Sonnenkuste/Jungferntal/Haus_Morforwyn_Marmue/haus.data.js?v=20261103-cenyr-completeness-v1",
+      "pageStatus": "active"
+    }
+  ],
+  "changes": [
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "persons",
+      "entityId": "ofranton-1599-morforwyn",
+      "field": "death",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "partnerships",
+      "entityId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "field": "end",
+      "before": "1630",
+      "after": "1633"
+    }
+  ]
+}

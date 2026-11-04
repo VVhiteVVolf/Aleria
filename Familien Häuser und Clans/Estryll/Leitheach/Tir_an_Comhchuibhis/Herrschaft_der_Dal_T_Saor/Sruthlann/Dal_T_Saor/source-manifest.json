@@ -1,0 +1,166 @@
+{
+  "id": "haus-dal-t-saor",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "8d7ee86f-d6b0-4aad-bbe7-5c26737034f2",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\8d7ee86f-d6b0-4aad-bbe7-5c26737034f2\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/dal-t-saoir/animexx-original.html",
+    "bytes": 94134,
+    "sha256": "8a3258d8621c1a728c639032b25bfac763dbf678c60573238ef5c90d49da0130",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-dal-t-saor",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Sruthlann",
+      "barony": "Herrschaft der Dál T’Saor",
+      "county": "Tir an Comhchuibhis",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-airt",
+      "liegeHouseName": "Clan Mac Airt",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "assets/images/houses/Leitheach/clan-dal-t-saor.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "barony": "assets/images/houses/Leitheach/clan-dal-t-saor.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Herrschaft der Dál T’Saor",
+        "Sruthlann"
+      ]
+    },
+    "graphFingerprint": "f3fabf4c7c09693b21f5a0b9121ae0dc375d15101414b5f320c63d80cc0e230e",
+    "historicalMetadata": {
+      "historicalStatus": "extinct",
+      "extinctHouse": false,
+      "ownHouseStatus": "extinct",
+      "extinctionEvent": {
+        "year": "1735",
+        "cause": "Finsteres Unheil aus dem Dunkelhain in der T’Saoir-Burg",
+        "administrativeExtinction": true,
+        "survivorIds": [
+          "quona-tsaoir",
+          "junaid-tsaoir"
+        ]
+      }
+    }
+  },
+  "territory": {
+    "id": "haus-dal-t-saor",
+    "title": "Dal T’Saor",
+    "territoryId": "leitheach-herrschaft-dal-t-saor",
+    "territoryName": "Herrschaft der Dál T’Saor",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/Herrschaft der Dál T’Saor.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dál T’Saor",
+        "slug": "leitheach-herrschaft-dal-t-saor"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": true,
+    "notes": [
+      "Die eigene vorhandene Ortsseite enthaelt noch die alte Herrschender-Clan-Beschriftung. Kanonischer historischerStatus/extinctionEvent1735 hat fuer die Hausseite Vorrang."
+    ]
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-dal-t-saor",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-dal-t-saor",
+    "slug": "dal-t-saor",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-c7976f0b-c3f4-4c27-b5d3-c5de1f54e904.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-dal-t-saor/krieger-human-ears-v2.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/ear-correction-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "editTarget": "E:/Aleria/Stammbäume/assets/images/references/haus-dal-t-saor/krieger-generated-v1.png",
+    "originalGenerationSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2f6e9f8e-f475-478b-896f-debda58d6b86.png",
+    "supersedesAssetPath": "Stammbäume/assets/images/references/haus-dal-t-saor/krieger-generated-v1.png",
+    "representative": true,
+    "namedPersonId": "",
+    "anatomy": "normal rounded human ears",
+    "sha256": "250ceccf5174688a0e3cc6103482c6ab4905dd1df721e8a21f8521570c6a1d53",
+    "original": false,
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2175601,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-dal-t-saor, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug dal-t-saoir wird der bestehenden ID haus-dal-t-saor zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Kanonische ID haus-dal-t-saor und Name Dál T’Saor trotz Quellform Saoir erhalten. 1735 ist das belegte Ende der Burg-/Hauptlinie, nicht Todesdatum aller Angehörigen.",
+    "Quona und Junaid leben auswärts weiter. Keine neue aktuelle Herrschaft oder Amtsbesetzung aus ihrem Überleben ableiten; keine genealogische Mutation.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen.",
+    "Nutzerkorrektur: normale menschliche Ohren; korrigierte Fassung ersetzt die verworfene Zwischenfassung. Gelieferte Originale bleiben unverändert."
+  ],
+  "supersededIllustration": {
+    "id": "haus-dal-t-saor",
+    "slug": "dal-t-saor",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2f6e9f8e-f475-478b-896f-debda58d6b86.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-dal-t-saor/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "b04b0608fbe0509b039a22ac8e9004cac6de21721e7a041ee77cd455d562a590",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2183073,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  }
+}

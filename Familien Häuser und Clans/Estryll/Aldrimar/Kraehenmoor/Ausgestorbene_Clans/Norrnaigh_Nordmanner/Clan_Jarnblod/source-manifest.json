@@ -1,0 +1,75 @@
+{
+  "id": "haus-jaernblod",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "b60fe4f3-07a8-4916-a10c-adb4b2bb2db4",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\b60fe4f3-07a8-4916-a10c-adb4b2bb2db4\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/jarnblod/animexx-original.html",
+    "bytes": 74261,
+    "sha256": "338a1c441a4786f45e5cbedcfcfcb8e16b1ba8426589373e158f969647d9cdc6",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-jaernblod",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Silberquell"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "9a94199646f2a7a082bea242b653827e8fca0337567d135e65301387dd6cd198"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-jaernblod",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-jaernblod",
+    "slug": "jaernblod",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-0b97cb27-94c0-45a1-b344-4e7e464600fc.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-jaernblod/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kraehenmoor-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-jaernblod.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "bb4261034b8b037684095310bd07c890221bfe75174fe1f38867e010c6876e68",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2252110,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "decisions": [
+    "Stabile ID haus-jaernblod und sichtbarer Name Järnblod. Eisenblut ist hier ein Beiname, keine zusätzliche neue Haus-ID.",
+    "Historischer Rang Thane bleibt erhalten. Kulturordner Norrnaigh ist kein Sitz; Silberquell ist als historischer Nebenbezug belegt.",
+    "Schwarzblut entstand vor der letzten Teilung in Blutstahl und Silberblut. Alle drei vorhandenen Nachfolgelinien ausdrücklich erhalten; Stammclan nicht als heute aktiv beschreiben.",
+    "Die frühe Kriegerschar ist eine Herkunftsform, kein Grund zur Aberkennung des späteren Thanenrangs. Unterwerfung anderer Gebiete Aldervans bleibt historische Erzählung, ohne aktuelle Kontinent- oder Familienzuordnung zu ändern.",
+    "Alte Präsenspassagen heute sind die Järnblod in zwei Linien gespalten werden in erloschenes Stammhaus und fortlebendes Erbe getrennt. Keine Genealogie, Lebensdaten oder Hoflisten übernehmen.",
+    "Keine passende Hausfigur im Huskarltum vorhanden; einzelne Hofportraits nicht zur Hausdarstellung umdeuten. Militärstatistiken ausgeschlossen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

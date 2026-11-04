@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Drei anonyme Venalys-Ständecomicfiguren im Leukonia-Kastencomicstil mit eigenständiger spätrömisch-frühitalienischer Gestaltung.",
+  "stylePreset": "fantasy-class-icon",
+  "jobs": [
+    {
+      "id": "estate-patrizier",
+      "assetStem": "patrizier",
+      "name": "Patrizier",
+      "description": "Würdevoller junger Patrizier im italienischen Mantel mit Siegelbrief und Siegelring als Vertreter der alten Gründertradition.",
+      "palette": [
+        "Weinrot",
+        "Elfenbein",
+        "Altes Gold",
+        "Dunkelbraun"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Eine einzelne humorvolle Comicfigur für die Stände Venalys'. Alle vier Referenzen liefern nur den gemeinsamen Zeichnungsstil: große ausdrucksvolle Köpfe, kurze Comicproportionen, kräftige unregelmäßige dunkelbraune Konturen, flache warme gedeckte Farbflächen mit feiner Druckkörnung. Es sind Stilreferenzen, keine Kopiervorlagen für deren Kleidung oder Gegenstände. Eine vollständig neue eigenständige Figur. Die Kultur Venalys' verbindet spätrömische Tradition mit frühitalienischer und italienischer Renaissancekleidung sowie Condottieri-Harnischen. Keine spanischen Morions/Federhüte/Puffhosen, kein griechischer Look. Keine Toga-Farbvariante einer Referenz.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv: Ein junger würdevoller männlicher PATRIZIER, Angehöriger einer alten Gründerväterfamilie und des hohen Adels Venalys'. Die alte Tradition wird durch Gewand und einen Gründungsbrief gezeigt, nicht durch hohes Alter. Großes charmantes Gesicht mit dunkelbraunem gewelltem schulterlangem Haar, hochgezogener Augenbraue und übertrieben feierlicher Haltung. Er trägt eine edle weinrote frühitalienische Cioppa, einen langen reich gefalteten Mantel mit breitem cremefarbenem Kragen und einfachen goldenen Rankenborten über einer elfenbeinfarbenen eng gegürteten Tunika, dunkle Strümpfe und braune geschlossene Schuhe. Auf dem Kopf eine weiche flache weinrote italienische Gelehrten-/Patrizierkappe OHNE Feder und ohne Krone. Goldene Kette mit kleinem schlichten runden Siegelmedaillon. Sein linker Arm trägt einen einzelnen breiten aufgerollten unbeschrifteten GRÜNDUNGS-/LANDBRIEF mit großem rotem Siegel. Mit der rechten Hand zeigt er humorvoll würdevoll seinen goldenen SIEGELRING vor der Brust, als betone er die lange Tradition seiner Familie. Keine Insignie eines bestimmten Regierungsamtes, kein Zepter. Eigene vertikale Mantelsilhouette.\n\nAnonyme junge erwachsene menschliche Standesfigur, etwa 20–28 Jahre alt, keine bestimmte Person, kein erfundener Amtsträger und kein konkretes Hauszeichen. Runde anatomisch menschliche Ohren. Genau zwei Arme und zwei Hände. Charmant und würdevoll humorvoll, nicht fett oder alt. Kopf groß, etwa ein Viertel der Gesamthöhe. Exakt 1024×1536, Hochformat 2:3, Figur bewusst etwas kleiner zentriert mit mindestens 7 Prozent leerem Rand an ALLEN Seiten. Maximal 84 Prozent der Bildhöhe von höchstem Hut/Helm bis Sohlen. Beide Füße sowie alle Objekte/Waffenspitzen vollständig sichtbar. Echter transparenter PNG-Hintergrund und transparente offene Zwischenräume, KEIN Farbdunst/Farbhof, keine Umgebung, Bodenfläche, Schatten, Papierfläche, Rahmen, Bildbeschriftung, Wappenrahmen oder Wasserzeichen. Keine Schrift auf Briefen/Büchern. Keine Krone, keine Lorbeerkränze, keine griechischen Tempel/Symbole/Helme. Keine photorealistische Hauskriegerdarstellung, keine feine realistische Gouache, kein Anime, keine dreidimensionale Plastikmodellierung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png"
+      ]
+    },
+    {
+      "id": "estate-magnarier",
+      "assetStem": "magnarier",
+      "name": "Magnarier",
+      "description": "Stolze junge Magnarierin im spätrömisch-italienischen Condottieri-Harnisch mit Mantel und geradem Schwert.",
+      "palette": [
+        "Stahlgrau",
+        "Dunkelblau",
+        "Creme",
+        "Gedämpftes Gold"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Eine einzelne humorvolle Comicfigur für die Stände Venalys'. Alle vier Referenzen liefern nur den gemeinsamen Zeichnungsstil: große ausdrucksvolle Köpfe, kurze Comicproportionen, kräftige unregelmäßige dunkelbraune Konturen, flache warme gedeckte Farbflächen mit feiner Druckkörnung. Es sind Stilreferenzen, keine Kopiervorlagen für deren Kleidung oder Gegenstände. Eine vollständig neue eigenständige Figur. Die Kultur Venalys' verbindet spätrömische Tradition mit frühitalienischer und italienischer Renaissancekleidung sowie Condottieri-Harnischen. Keine spanischen Morions/Federhüte/Puffhosen, kein griechischer Look. Keine Toga-Farbvariante einer Referenz.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv: Eine junge weibliche MAGNARIERIN, Angehörige eines adligen Ritterfürstenhauses Venalys'. Sie steht mit charmanter stolzer Miene, leicht breitbeinig und keck hochgezogenem Kinn. Dunkle geflochtene Haare, sichtbar fröhliches Gesicht und menschliche Ohren. Edler spätrömisch-frühitalienischer CONDOTTIERI-HARNISCH: silbergrauer schlichter kräftiger Brustpanzer aus großen Platten, dreilagige runde Schulterplatten, lange gegliederte Hüftplatten über cremefarbenem Waffenrock, Kettenstoff an Ellbogen, volle Beinschienen und feste geschlossene gepanzerte Schuhe. Ein dunkelblauer kurzer Mantel fällt von einer runden goldenen Fibel. Italienischer kleiner ARMET mit nach OBEN geöffnetem Visier, so dass ihr Gesicht völlig frei ist, kein griechischer T-Nasenhelm und kein spanischer Morion. Ihre rechte Hand hält ein vollständiges GERADEs Schwert mit Kreuzparierstange locker schräg nach unten, die Spitze bleibt neben einem Stiefel frei innerhalb des Rahmens. Ihre linke Hand ruht stolz an der Hüfte. Kein Schild, kein Hausschlüssel, keine Urkunde und kein Geldbeutel. Die Komik entsteht durch den übertrieben stolzen kleinen Ritterfürstenauftritt und den großen Comic-Kopf.\n\nAnonyme junge erwachsene menschliche Standesfigur, etwa 20–28 Jahre alt, keine bestimmte Person, kein erfundener Amtsträger und kein konkretes Hauszeichen. Runde anatomisch menschliche Ohren. Genau zwei Arme und zwei Hände. Charmant und würdevoll humorvoll, nicht fett oder alt. Kopf groß, etwa ein Viertel der Gesamthöhe. Exakt 1024×1536, Hochformat 2:3, Figur bewusst etwas kleiner zentriert mit mindestens 7 Prozent leerem Rand an ALLEN Seiten. Maximal 84 Prozent der Bildhöhe von höchstem Hut/Helm bis Sohlen. Beide Füße sowie alle Objekte/Waffenspitzen vollständig sichtbar. Echter transparenter PNG-Hintergrund und transparente offene Zwischenräume, KEIN Farbdunst/Farbhof, keine Umgebung, Bodenfläche, Schatten, Papierfläche, Rahmen, Bildbeschriftung, Wappenrahmen oder Wasserzeichen. Keine Schrift auf Briefen/Büchern. Keine Krone, keine Lorbeerkränze, keine griechischen Tempel/Symbole/Helme. Keine photorealistische Hauskriegerdarstellung, keine feine realistische Gouache, kein Anime, keine dreidimensionale Plastikmodellierung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png"
+      ]
+    },
+    {
+      "id": "estate-mercantier",
+      "assetStem": "mercantier",
+      "name": "Mercantier",
+      "description": "Verschmitzter wohlhabender Mercantier in frühitalienischem Bürgergewand mit Hut, Handelsbuch und Geldbeutel.",
+      "palette": [
+        "Salbeigrün",
+        "Ocker",
+        "Creme",
+        "Lederbraun"
+      ],
+      "category": "estates",
+      "prompt": "Use case: illustration-story. Asset type: Eine einzelne humorvolle Comicfigur für die Stände Venalys'. Alle vier Referenzen liefern nur den gemeinsamen Zeichnungsstil: große ausdrucksvolle Köpfe, kurze Comicproportionen, kräftige unregelmäßige dunkelbraune Konturen, flache warme gedeckte Farbflächen mit feiner Druckkörnung. Es sind Stilreferenzen, keine Kopiervorlagen für deren Kleidung oder Gegenstände. Eine vollständig neue eigenständige Figur. Die Kultur Venalys' verbindet spätrömische Tradition mit frühitalienischer und italienischer Renaissancekleidung sowie Condottieri-Harnischen. Keine spanischen Morions/Federhüte/Puffhosen, kein griechischer Look. Keine Toga-Farbvariante einer Referenz.\n\nEine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.\n\nMotiv: Ein junger männlicher MERCANTIER, technisch nichtadliger aber sehr wohlhabender und einflussreicher Angehöriger eines guten Bürger-/Ritterherrenhauses Venalys'. Kein Adelszeichen, keine Krone, kein Lorbeer, kein Ritterschwert. Ein verschmitzter Blick, eine Augenbraue höher, gepflegtes kurzes kastanienbraunes Haar und dünnes kurzes Kinnbärtchen. Er trägt ein ausgezeichnetes salbeigrünes italienisches Renaissance-Bürgergewand: knielange offene Giornea mit schmalem ockerfarbenem Besatz über cremefarbenem Wams, schlichte dunkle enge Strümpfe, braune geschlossene Lederhalbschuhe und einen weichen ockerfarbenen runden italienischen Hut ohne Feder. Keine Römertunika und keine Sandalen. Sein linker Arm hält ein dickes geschlossenes ledernes HANDELSBUCH vor der Brust; der Buchdeckel ist schmuckvoll gerahmt aber ohne Schrift. Die rechte Hand hebt einen gut gefüllten goldbraunen GELDBEUTEL mit Zugkordel etwas selbstzufrieden hoch. Er wirkt flink und klug statt arrogant. Keine Münzzeichen, keine Beschriftungen, keine zusätzlichen Gegenstände. Eigene klare asymmetrische Buch-und-Beutel-Silhouette.\n\nAnonyme junge erwachsene menschliche Standesfigur, etwa 20–28 Jahre alt, keine bestimmte Person, kein erfundener Amtsträger und kein konkretes Hauszeichen. Runde anatomisch menschliche Ohren. Genau zwei Arme und zwei Hände. Charmant und würdevoll humorvoll, nicht fett oder alt. Kopf groß, etwa ein Viertel der Gesamthöhe. Exakt 1024×1536, Hochformat 2:3, Figur bewusst etwas kleiner zentriert mit mindestens 7 Prozent leerem Rand an ALLEN Seiten. Maximal 84 Prozent der Bildhöhe von höchstem Hut/Helm bis Sohlen. Beide Füße sowie alle Objekte/Waffenspitzen vollständig sichtbar. Echter transparenter PNG-Hintergrund und transparente offene Zwischenräume, KEIN Farbdunst/Farbhof, keine Umgebung, Bodenfläche, Schatten, Papierfläche, Rahmen, Bildbeschriftung, Wappenrahmen oder Wasserzeichen. Keine Schrift auf Briefen/Büchern. Keine Krone, keine Lorbeerkränze, keine griechischen Tempel/Symbole/Helme. Keine photorealistische Hauskriegerdarstellung, keine feine realistische Gouache, kein Anime, keine dreidimensionale Plastikmodellierung.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png"
+      ]
+    }
+  ]
+}

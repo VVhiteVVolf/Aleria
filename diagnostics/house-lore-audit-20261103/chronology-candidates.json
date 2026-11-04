@@ -1,0 +1,2534 @@
+{
+  "schema": "aleria.public-house-chronology-candidates",
+  "reviewedAt": "2026-11-03T22:35:06.963Z",
+  "currentYear": 1740,
+  "status": "unreviewed-candidates",
+  "note": "Automated candidates are not accepted lore contradictions. Public graph only; exact numeric years; shared IDs need identity verification.",
+  "count": {
+    "records": 424,
+    "persons": 10312,
+    "excludedPeopleOnlyInNonPublicConnections": 73,
+    "publicParentages": 5699,
+    "publicPartnerships": 4186,
+    "excludedNonPublicParentages": 39,
+    "excludedNonPublicPartnerships": 67
+  },
+  "sharedIdentityGroups": 2517,
+  "identityCandidates": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "fields": {
+        "birth": [
+          "1100",
+          "1099"
+        ],
+        "death": [
+          "1177",
+          "1166"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "familyTitle": "Haus Draig",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "????",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-wyrm",
+          "familyTitle": "Haus Wyrm",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "1100",
+          "death": "1177",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "familyTitle": "Haus Saethwyr",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "birth": "1099",
+          "death": "1166",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "familyTitle": "Haus Gwyvern",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "fields": {
+        "birth": [
+          "1698",
+          "1701"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "familyTitle": "Clan Vaeren",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "familyTitle": "Clan Ragnulf",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1701",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Zweiter Erbe · ambitionierter Herausforderer Gunnars"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Kummerherz"
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Thane des Clans Kummerherz seit 1733"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Silberblut"
+        },
+        {
+          "familyId": "haus-silberblut",
+          "familyTitle": "Clan Silberblut",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "familyTitle": "Clan Goldglanz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Varangr"
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Feuerherz"
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "familyTitle": "Clan Feuerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "1713",
+          "status": "dead",
+          "sex": "male",
+          "title": "Jarl von 1704 bis 1713"
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+      "fields": {
+        "birth": [
+          "1565",
+          "1578"
+        ],
+        "death": [
+          "1734",
+          "1634"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1565",
+          "death": "1734",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-frostauge",
+          "familyTitle": "Clan Frostauge",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1578",
+          "death": "1634",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "familyTitle": "Clan Helgr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Hrafn"
+        },
+        {
+          "familyId": "haus-hrafn",
+          "familyTitle": "Clan Hrafn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "fields": {
+        "sex": [
+          "female",
+          "male"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "familyTitle": "Clan Graumähne",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-sterkr",
+          "familyTitle": "Clan Sterkr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--family-tree--gunnhildr",
+      "fields": {
+        "birth": [
+          "1700",
+          "1652"
+        ],
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-schmetterschild",
+          "familyTitle": "Clan Schmetterschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1700",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-nachtjaeger",
+          "familyTitle": "Clan Nachtjäger",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1652",
+          "death": "1729",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--family-tree--gwelda",
+      "fields": {
+        "birth": [
+          "1674",
+          "1697"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-schwarzdorn",
+          "familyTitle": "Clan Schwarzdorn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-frostgeborene",
+          "familyTitle": "Haus Frostgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1697",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "fields": {
+        "death": [
+          "1182",
+          "1172"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1182",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-illewod",
+          "familyTitle": "Haus Illewod",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1172",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "fields": {
+        "sex": [
+          "male",
+          "female"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "male",
+          "title": ""
+        },
+        {
+          "familyId": "haus-pendrag",
+          "familyTitle": "Haus Pendrag",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": ""
+        },
+        {
+          "familyId": "haus-crafanc",
+          "familyTitle": "Haus Crafanc O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "1710",
+          "status": "dead",
+          "sex": "female",
+          "title": ""
+        }
+      ],
+      "requiresIdentityAndNarrativeReview": true
+    }
+  ],
+  "localCandidates": [
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-draig",
+      "familyTitle": "Haus Draig",
+      "parentageId": "parentage-siana-draig",
+      "parent": {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "sylvia-cenyr",
+        "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+        "name": "Sylvia O'Cenyr",
+        "birth": "1695",
+        "death": "1719",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "name": "Siana",
+        "birth": "1725",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 30,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-varangr",
+      "familyTitle": "Clan Varangr",
+      "parentageId": "varangr-parentage-olesja-varangr",
+      "parent": {
+        "familyId": "haus-varangr",
+        "familyTitle": "Clan Varangr",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "rorik-varangr",
+        "worldPersonId": "person--haus-varangr--rorik-varangr",
+        "name": "Rörik Varangr",
+        "birth": "1696",
+        "death": "1720",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-varangr",
+        "familyTitle": "Clan Varangr",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "olesja-varangr",
+        "worldPersonId": "person--haus-varangr--olesja-varangr",
+        "name": "Olesja Varangr",
+        "birth": "1723",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 27,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-riesentod",
+      "familyTitle": "Clan Riesentod",
+      "parentageId": "riesentod-parentage-ketill-riesentod",
+      "parent": {
+        "familyId": "haus-riesentod",
+        "familyTitle": "Clan Riesentod",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "brynhild-freiwinter",
+        "worldPersonId": "person--haus-freiwinter--brynhild-freiwinter",
+        "name": "Brynhild Freiwinter",
+        "birth": "1600",
+        "death": "1679",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-riesentod",
+        "familyTitle": "Clan Riesentod",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "ketill-riesentod",
+        "worldPersonId": "person--haus-riesentod--ketill-riesentod",
+        "name": "Ketill Riesentod",
+        "birth": "1610",
+        "death": "1627",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 10,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-sturmgeborene",
+      "familyTitle": "Clan Sturmgeborene",
+      "parentageId": "sturmgeborene-parentage-elinborg-sturmgeborene",
+      "parent": {
+        "familyId": "haus-sturmgeborene",
+        "familyTitle": "Clan Sturmgeborene",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "kormak-sturmgeborener",
+        "worldPersonId": "person--haus-sturmgeborene--kormak-sturmgeborener",
+        "name": "Kormak Sturmgeborener",
+        "birth": "1625",
+        "death": "1658",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-sturmgeborene",
+        "familyTitle": "Clan Sturmgeborene",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "elinborg-sturmgeborene",
+        "worldPersonId": "person--haus-sturmgeborene--elinborg-sturmgeborene",
+        "name": "Elinborg Sturmgeborene",
+        "birth": "1665",
+        "death": "1704",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet innerhalb des Clans Sturmgeborene"
+      },
+      "yearGap": 40,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-grendel",
+      "familyTitle": "Clan Grendel",
+      "parentageId": "grendel-parentage-thordis-grendel",
+      "parent": {
+        "familyId": "haus-grendel",
+        "familyTitle": "Clan Grendel",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "gunnar-grendel",
+        "worldPersonId": "person--haus-grendel--gunnar-grendel",
+        "name": "Gunnar Grendel",
+        "birth": "1585",
+        "death": "1625",
+        "status": "dead",
+        "sex": "male",
+        "title": "Hesir des Clans Grendel von 1623 bis 1625"
+      },
+      "child": {
+        "familyId": "haus-grendel",
+        "familyTitle": "Clan Grendel",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "thordis-grendel",
+        "worldPersonId": "person--haus-grendel--thordis-grendel",
+        "name": "Thordis Grendel",
+        "birth": "1630",
+        "death": "1700",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Clan Silberzunge"
+      },
+      "yearGap": 45,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-born-after-child",
+      "familyId": "haus-vangandr",
+      "familyTitle": "Clan Vangandr",
+      "parentageId": "vangandr-parentage-torger-vangandr",
+      "parent": {
+        "familyId": "haus-vangandr",
+        "familyTitle": "Clan Vangandr",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "annegret",
+        "worldPersonId": "person--family-tree--annegret",
+        "name": "Annegret",
+        "birth": "1700",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-vangandr",
+        "familyTitle": "Clan Vangandr",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "torger-vangandr",
+        "worldPersonId": "person--haus-vangandr--torger-vangandr",
+        "name": "Torger Vangandr",
+        "birth": "1700",
+        "death": "",
+        "status": "alive",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 0,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-nachtjaeger",
+      "familyTitle": "Clan Nachtjäger",
+      "parentageId": "nachtjaeger-parentage-kjartan-nachtjaeger",
+      "parent": {
+        "familyId": "haus-nachtjaeger",
+        "familyTitle": "Clan Nachtjäger",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "ingunn-1614-feuerherz",
+        "worldPersonId": "person--haus-feuerherz--ingunn-1614-feuerherz",
+        "name": "Ingunn Feuerherz",
+        "birth": "1614",
+        "death": "1645",
+        "status": "dead",
+        "sex": "female",
+        "title": "Erste Ehefrau Sturlaugrs"
+      },
+      "child": {
+        "familyId": "haus-nachtjaeger",
+        "familyTitle": "Clan Nachtjäger",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "kjartan-nachtjaeger",
+        "worldPersonId": "person--haus-nachtjaeger--kjartan-nachtjaeger",
+        "name": "Kjartan Nachtjäger",
+        "birth": "1648",
+        "death": "1720",
+        "status": "dead",
+        "sex": "male",
+        "title": "Hesir des Clans Nachtjäger"
+      },
+      "yearGap": 34,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-nachtjaeger",
+      "familyTitle": "Clan Nachtjäger",
+      "parentageId": "nachtjaeger-parentage-svandis-nachtjaeger",
+      "parent": {
+        "familyId": "haus-nachtjaeger",
+        "familyTitle": "Clan Nachtjäger",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "ingunn-1614-feuerherz",
+        "worldPersonId": "person--haus-feuerherz--ingunn-1614-feuerherz",
+        "name": "Ingunn Feuerherz",
+        "birth": "1614",
+        "death": "1645",
+        "status": "dead",
+        "sex": "female",
+        "title": "Erste Ehefrau Sturlaugrs"
+      },
+      "child": {
+        "familyId": "haus-nachtjaeger",
+        "familyTitle": "Clan Nachtjäger",
+        "realms": [
+          "Aldrimar"
+        ],
+        "personId": "svandis-nachtjaeger",
+        "worldPersonId": "person--haus-nachtjaeger--svandis-nachtjaeger",
+        "name": "Svandís Nachtjäger",
+        "birth": "1651",
+        "death": "1711",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an unbekanntes Haus"
+      },
+      "yearGap": 37,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-born-after-child",
+      "familyId": "haus-dal-ceardaiocht",
+      "familyTitle": "Clan Dál’Ceardaíocht",
+      "parentageId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+      "parent": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "aonghus-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+        "name": "Aonghus Gallchobhair",
+        "birth": "1635",
+        "death": "1672",
+        "status": "dead",
+        "sex": "male",
+        "title": "Gründer und erster Laird des Clans Dál’Ceardaíocht · bis 1672"
+      },
+      "child": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "wiomar-ceardaiocht",
+        "worldPersonId": "person--haus-dal-ceardaiocht--wiomar-ceardaiocht",
+        "name": "Wíomar Ceardaíocht",
+        "birth": "1630",
+        "death": "1681",
+        "status": "dead",
+        "sex": "male",
+        "title": "Laird des Clans Dál’Ceardaíocht · 1672–1681"
+      },
+      "yearGap": -5,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-dal-ceardaiocht",
+      "familyTitle": "Clan Dál’Ceardaíocht",
+      "parentageId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+      "parent": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "etain-ancient",
+        "worldPersonId": "person--family-tree--etain-ancient",
+        "name": "Ètáin",
+        "birth": "1622",
+        "death": "1695",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "wiomar-ceardaiocht",
+        "worldPersonId": "person--haus-dal-ceardaiocht--wiomar-ceardaiocht",
+        "name": "Wíomar Ceardaíocht",
+        "birth": "1630",
+        "death": "1681",
+        "status": "dead",
+        "sex": "male",
+        "title": "Laird des Clans Dál’Ceardaíocht · 1672–1681"
+      },
+      "yearGap": 8,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-born-after-child",
+      "familyId": "haus-dal-ceardaiocht",
+      "familyTitle": "Clan Dál’Ceardaíocht",
+      "parentageId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+      "parent": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "aonghus-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+        "name": "Aonghus Gallchobhair",
+        "birth": "1635",
+        "death": "1672",
+        "status": "dead",
+        "sex": "male",
+        "title": "Gründer und erster Laird des Clans Dál’Ceardaíocht · bis 1672"
+      },
+      "child": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "wunaire-ceardaiocht",
+        "worldPersonId": "person--haus-dal-ceardaiocht--wunaire-ceardaiocht",
+        "name": "Wúnaire Ceardaíocht",
+        "birth": "1632",
+        "death": "1704",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Ruitheach"
+      },
+      "yearGap": -3,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-dal-ceardaiocht",
+      "familyTitle": "Clan Dál’Ceardaíocht",
+      "parentageId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+      "parent": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "etain-ancient",
+        "worldPersonId": "person--family-tree--etain-ancient",
+        "name": "Ètáin",
+        "birth": "1622",
+        "death": "1695",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "wunaire-ceardaiocht",
+        "worldPersonId": "person--haus-dal-ceardaiocht--wunaire-ceardaiocht",
+        "name": "Wúnaire Ceardaíocht",
+        "birth": "1632",
+        "death": "1704",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Ruitheach"
+      },
+      "yearGap": 10,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-born-after-child",
+      "familyId": "haus-dal-ceardaiocht",
+      "familyTitle": "Clan Dál’Ceardaíocht",
+      "parentageId": "ceardaiocht-parentage-seamus-ceardaiocht",
+      "parent": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "aonghus-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+        "name": "Aonghus Gallchobhair",
+        "birth": "1635",
+        "death": "1672",
+        "status": "dead",
+        "sex": "male",
+        "title": "Gründer und erster Laird des Clans Dál’Ceardaíocht · bis 1672"
+      },
+      "child": {
+        "familyId": "haus-dal-ceardaiocht",
+        "familyTitle": "Clan Dál’Ceardaíocht",
+        "realms": [
+          "Leitheach"
+        ],
+        "personId": "seamus-ceardaiocht",
+        "worldPersonId": "person--haus-dal-ceardaiocht--seamus-ceardaiocht",
+        "name": "Séamus Ceardaíocht",
+        "birth": "1634",
+        "death": "1659",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": -1,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-penryn-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "berwyn-illewod",
+        "worldPersonId": "person--haus-illewod--berwyn-illewod",
+        "name": "Berwyn Illewod",
+        "birth": "1117",
+        "death": "1181",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 131,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-penryn-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "liadan-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--liadan-gallchobhair",
+        "name": "Liadan Gallchobhair",
+        "birth": "1120",
+        "death": "1206",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 128,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-ffion-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "berwyn-illewod",
+        "worldPersonId": "person--haus-illewod--berwyn-illewod",
+        "name": "Berwyn Illewod",
+        "birth": "1117",
+        "death": "1181",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "ffion-illewod",
+        "worldPersonId": "person--haus-illewod--ffion-illewod",
+        "name": "Ffion Illewod",
+        "birth": "1250",
+        "death": "1320",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 133,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-ffion-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "liadan-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--liadan-gallchobhair",
+        "name": "Liadan Gallchobhair",
+        "birth": "1120",
+        "death": "1206",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "ffion-illewod",
+        "worldPersonId": "person--haus-illewod--ffion-illewod",
+        "name": "Ffion Illewod",
+        "birth": "1250",
+        "death": "1320",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 130,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-keudawg-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "keudawg-illewod",
+        "worldPersonId": "person--haus-illewod--keudawg-illewod",
+        "name": "Keudawg Illewod",
+        "birth": "1580",
+        "death": "1647",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 332,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-keudawg-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "nerys-llwynog",
+        "worldPersonId": "person--haus-llwynog--nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "birth": "1250",
+        "death": "1315",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "keudawg-illewod",
+        "worldPersonId": "person--haus-illewod--keudawg-illewod",
+        "name": "Keudawg Illewod",
+        "birth": "1580",
+        "death": "1647",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 330,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-tallwch-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "tallwch-illewod",
+        "worldPersonId": "person--haus-illewod--tallwch-illewod",
+        "name": "Tallwch Illewod",
+        "birth": "1586",
+        "death": "1669",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 338,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-tallwch-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "nerys-llwynog",
+        "worldPersonId": "person--haus-llwynog--nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "birth": "1250",
+        "death": "1315",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "tallwch-illewod",
+        "worldPersonId": "person--haus-illewod--tallwch-illewod",
+        "name": "Tallwch Illewod",
+        "birth": "1586",
+        "death": "1669",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 336,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-rhianu-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "rhianu-illewod",
+        "worldPersonId": "person--haus-illewod--rhianu-illewod",
+        "name": "Rhianu Illewod",
+        "birth": "1590",
+        "death": "1659",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 342,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-rhianu-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "nerys-llwynog",
+        "worldPersonId": "person--haus-llwynog--nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "birth": "1250",
+        "death": "1315",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "rhianu-illewod",
+        "worldPersonId": "person--haus-illewod--rhianu-illewod",
+        "name": "Rhianu Illewod",
+        "birth": "1590",
+        "death": "1659",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 340,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-morgaine-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "penryn-illewod",
+        "worldPersonId": "person--haus-illewod--penryn-illewod",
+        "name": "Penryn Illewod",
+        "birth": "1248",
+        "death": "1281",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "morgaine-illewod",
+        "worldPersonId": "person--haus-illewod--morgaine-illewod",
+        "name": "Morgaine Illewod",
+        "birth": "1594",
+        "death": "1649",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 346,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-illewod",
+      "familyTitle": "Haus Illewod",
+      "parentageId": "parentage-morgaine-illewod",
+      "parent": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "nerys-llwynog",
+        "worldPersonId": "person--haus-llwynog--nerys-llwynog",
+        "name": "Nerys Llwynog",
+        "birth": "1250",
+        "death": "1315",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "morgaine-illewod",
+        "worldPersonId": "person--haus-illewod--morgaine-illewod",
+        "name": "Morgaine Illewod",
+        "birth": "1594",
+        "death": "1649",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 344,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-pendrag",
+      "familyTitle": "Haus Pendrag",
+      "parentageId": "parentage-gawain-pendragon",
+      "parent": {
+        "familyId": "haus-pendrag",
+        "familyTitle": "Haus Pendrag",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "annegrit-vaeren",
+        "worldPersonId": "person--haus-vaeren--annegrit-vaeren",
+        "name": "Annegrit Vaeren",
+        "birth": "1548",
+        "death": "1572",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-pendrag",
+        "familyTitle": "Haus Pendrag",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "gawain-pendragon",
+        "worldPersonId": "person--haus-pendrag--gawain-pendragon",
+        "name": "Gawain Pendrag",
+        "birth": "1551",
+        "death": "1623",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "yearGap": 3,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-neidr",
+      "familyTitle": "Haus Neidr",
+      "parentageId": "parentage-prynhawn-neidr",
+      "parent": {
+        "familyId": "haus-neidr",
+        "familyTitle": "Haus Neidr",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "daffyd-neidr",
+        "worldPersonId": "person--haus-neidr--daffyd-neidr",
+        "name": "Daffyd Neidr",
+        "birth": "1555",
+        "death": "1593",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-neidr",
+        "familyTitle": "Haus Neidr",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "prynhawn-neidr",
+        "worldPersonId": "person--haus-neidr--prynhawn-neidr",
+        "name": "Prynhawn Neidr",
+        "birth": "1608",
+        "death": "1655",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 53,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-arth",
+      "familyTitle": "Haus Arth O'Talgarth",
+      "parentageId": "parentage-siana-draig",
+      "parent": {
+        "familyId": "haus-arth",
+        "familyTitle": "Haus Arth O'Talgarth",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "sylvia-cenyr",
+        "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+        "name": "Sylvia O'Cenyr",
+        "birth": "1695",
+        "death": "1719",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-arth",
+        "familyTitle": "Haus Arth O'Talgarth",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "name": "Siana Draig",
+        "birth": "1725",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": ""
+      },
+      "yearGap": 30,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-morforwyn",
+      "familyTitle": "Haus Morforwyn O'Carngol",
+      "parentageId": "morforwyn-parentage-ffeston-morforwyn",
+      "parent": {
+        "familyId": "haus-morforwyn",
+        "familyTitle": "Haus Morforwyn O'Carngol",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "ofranton-1599-morforwyn",
+        "worldPersonId": "person--haus-morforwyn--ofranton-1599-morforwyn",
+        "name": "Ofranton",
+        "birth": "1599",
+        "death": "1630",
+        "status": "dead",
+        "sex": "male",
+        "title": "Wegverheiratet in die Stammlinie"
+      },
+      "child": {
+        "familyId": "haus-morforwyn",
+        "familyTitle": "Haus Morforwyn O'Carngol",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "ffeston-morforwyn",
+        "worldPersonId": "person--haus-morforwyn--ffeston-morforwyn",
+        "name": "Ffeston",
+        "birth": "1633",
+        "death": "1659",
+        "status": "dead",
+        "sex": "male",
+        "title": "Wegverheiratet in die Elimue-Linie"
+      },
+      "yearGap": 34,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-dienyddiwr",
+      "familyTitle": "Haus Dienyddiwr O'Mathragon",
+      "parentageId": "dienyddiwr-parentage-robyert-dienyddiwr",
+      "parent": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "evaine-wylan",
+        "worldPersonId": "person--haus-wylan--evaine-wylan",
+        "name": "Evaine Wylan",
+        "birth": "1662",
+        "death": "1707",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "robyert-dienyddiwr",
+        "worldPersonId": "person--haus-dienyddiwr--robyert-dienyddiwr",
+        "name": "Robyert Dienyddiwr",
+        "birth": "1670",
+        "death": "",
+        "status": "alive",
+        "sex": "male",
+        "title": "Ritterfürst · Oberhaupt des Hauses Dienyddiwr seit 1713"
+      },
+      "yearGap": 8,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-dienyddiwr",
+      "familyTitle": "Haus Dienyddiwr O'Mathragon",
+      "parentageId": "dienyddiwr-parentage-robyert-dienyddiwr",
+      "parent": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "mervyn-dienyddiwr",
+        "worldPersonId": "person--haus-dienyddiwr--mervyn-dienyddiwr",
+        "name": "Mervyn Dienyddiwr",
+        "birth": "1659",
+        "death": "1713",
+        "status": "dead",
+        "sex": "male",
+        "title": "Ritterfürst des Hauses Dienyddiwr von 1693 bis 1713"
+      },
+      "child": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "robyert-dienyddiwr",
+        "worldPersonId": "person--haus-dienyddiwr--robyert-dienyddiwr",
+        "name": "Robyert Dienyddiwr",
+        "birth": "1670",
+        "death": "",
+        "status": "alive",
+        "sex": "male",
+        "title": "Ritterfürst · Oberhaupt des Hauses Dienyddiwr seit 1713"
+      },
+      "yearGap": 11,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-dienyddiwr",
+      "familyTitle": "Haus Dienyddiwr O'Mathragon",
+      "parentageId": "dienyddiwr-parentage-revelyn-dienyddiwr",
+      "parent": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "evaine-wylan",
+        "worldPersonId": "person--haus-wylan--evaine-wylan",
+        "name": "Evaine Wylan",
+        "birth": "1662",
+        "death": "1707",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-dienyddiwr",
+        "familyTitle": "Haus Dienyddiwr O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "revelyn-dienyddiwr",
+        "worldPersonId": "person--haus-dienyddiwr--revelyn-dienyddiwr",
+        "name": "Revelyn Dienyddiwr",
+        "birth": "1673",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Dyngwn"
+      },
+      "yearGap": 11,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-marwolaeth",
+      "familyTitle": "Haus Marwolaeth O'Mathragon",
+      "parentageId": "marwolaeth-parentage-cerys-marwolaeth",
+      "parent": {
+        "familyId": "haus-marwolaeth",
+        "familyTitle": "Haus Marwolaeth O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "delwen-dyngwn",
+        "worldPersonId": "person--haus-dyngwn--delwen-dyngwn",
+        "name": "Delwen Dyngwn",
+        "birth": "1636",
+        "death": "1687",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-marwolaeth",
+        "familyTitle": "Haus Marwolaeth O'Mathragon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "cerys-marwolaeth",
+        "worldPersonId": "person--haus-marwolaeth--cerys-marwolaeth",
+        "name": "Cerys Marwolaeth",
+        "birth": "1646",
+        "death": "1733",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Draig"
+      },
+      "yearGap": 10,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-canwyll",
+      "familyTitle": "Haus Canwyll O'Llanvane",
+      "parentageId": "canwyll-parentage-glesni-canwyll",
+      "parent": {
+        "familyId": "haus-canwyll",
+        "familyTitle": "Haus Canwyll O'Llanvane",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "cynwrig-canwyll",
+        "worldPersonId": "person--haus-canwyll--cynwrig-canwyll",
+        "name": "Cynwrig Canwyll",
+        "birth": "1662",
+        "death": "1720",
+        "status": "dead",
+        "sex": "male",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-canwyll",
+        "familyTitle": "Haus Canwyll O'Llanvane",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "glesni-canwyll",
+        "worldPersonId": "person--haus-canwyll--glesni-canwyll",
+        "name": "Glesni Canwyll",
+        "birth": "1669",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Grawn"
+      },
+      "yearGap": 7,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-canwyll",
+      "familyTitle": "Haus Canwyll O'Llanvane",
+      "parentageId": "canwyll-parentage-glesni-canwyll",
+      "parent": {
+        "familyId": "haus-canwyll",
+        "familyTitle": "Haus Canwyll O'Llanvane",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "dylis-tiwna",
+        "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+        "name": "Dylis Tiwna",
+        "birth": "1662",
+        "death": "1720",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-canwyll",
+        "familyTitle": "Haus Canwyll O'Llanvane",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "glesni-canwyll",
+        "worldPersonId": "person--haus-canwyll--glesni-canwyll",
+        "name": "Glesni Canwyll",
+        "birth": "1669",
+        "death": "",
+        "status": "alive",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Grawn"
+      },
+      "yearGap": 7,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-tiwna",
+      "familyTitle": "Haus Tiwna O'Eiddon",
+      "parentageId": "tiwna-parentage-gavin-tiwna",
+      "parent": {
+        "familyId": "haus-tiwna",
+        "familyTitle": "Haus Tiwna O'Eiddon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "morwen-pawen",
+        "worldPersonId": "person--haus-pawen--morwen-pawen",
+        "name": "Morwen Pawen",
+        "birth": "1642",
+        "death": "1659",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-tiwna",
+        "familyTitle": "Haus Tiwna O'Eiddon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "gavin-tiwna",
+        "worldPersonId": "person--haus-tiwna--gavin-tiwna",
+        "name": "Gavin Tiwna",
+        "birth": "1651",
+        "death": "1714",
+        "status": "dead",
+        "sex": "male",
+        "title": "Baron des Hauses Tiwna 1705–1714"
+      },
+      "yearGap": 9,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "child-born-after-parent-death",
+      "familyId": "haus-tiwna",
+      "familyTitle": "Haus Tiwna O'Eiddon",
+      "parentageId": "tiwna-parentage-dylis-tiwna",
+      "parent": {
+        "familyId": "haus-tiwna",
+        "familyTitle": "Haus Tiwna O'Eiddon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "morwen-pawen",
+        "worldPersonId": "person--haus-pawen--morwen-pawen",
+        "name": "Morwen Pawen",
+        "birth": "1642",
+        "death": "1659",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-tiwna",
+        "familyTitle": "Haus Tiwna O'Eiddon",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "dylis-tiwna",
+        "worldPersonId": "person--haus-tiwna--dylis-tiwna",
+        "name": "Dylis Tiwna",
+        "birth": "1662",
+        "death": "1720",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Canwyll"
+      },
+      "yearGap": 20,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-unigol",
+      "familyTitle": "Haus Unigol O'Caer Marwor",
+      "parentageId": "unigol-parentage-gwenfrewi-unigol",
+      "parent": {
+        "familyId": "haus-unigol",
+        "familyTitle": "Haus Unigol O'Caer Marwor",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "tarawg-unigol",
+        "worldPersonId": "person--haus-unigol--tarawg-unigol",
+        "name": "Tarawg Unigol",
+        "birth": "1644",
+        "death": "1706",
+        "status": "dead",
+        "sex": "male",
+        "title": "Ritterfürst und Oberhaupt des Hauses Unigol 1684–1706"
+      },
+      "child": {
+        "familyId": "haus-unigol",
+        "familyTitle": "Haus Unigol O'Caer Marwor",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "gwenfrewi-unigol",
+        "worldPersonId": "person--haus-unigol--gwenfrewi-unigol",
+        "name": "Gwenfrewi Unigol",
+        "birth": "1652",
+        "death": "1705",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Chiffyddlon"
+      },
+      "yearGap": 8,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-morthwyll",
+      "familyTitle": "Haus Morthwyl O'Caer Morben",
+      "parentageId": "morthwyll-parentage-braih-morthwyll",
+      "parent": {
+        "familyId": "haus-morthwyll",
+        "familyTitle": "Haus Morthwyl O'Caer Morben",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "rhondia-dyngwn",
+        "worldPersonId": "person--haus-dyngwn--rhondia-dyngwn",
+        "name": "Rhondia Dyngwn",
+        "birth": "1622",
+        "death": "1699",
+        "status": "dead",
+        "sex": "female",
+        "title": ""
+      },
+      "child": {
+        "familyId": "haus-morthwyll",
+        "familyTitle": "Haus Morthwyl O'Caer Morben",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "braih-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--braih-morthwyll",
+        "name": "Braih Morthwyll",
+        "birth": "1632",
+        "death": "1675",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Cwingod"
+      },
+      "yearGap": 10,
+      "requiresNarrativeReview": true
+    },
+    {
+      "kind": "parent-age-under-12",
+      "familyId": "haus-morthwyll",
+      "familyTitle": "Haus Morthwyl O'Caer Morben",
+      "parentageId": "morthwyll-parentage-braih-morthwyll",
+      "parent": {
+        "familyId": "haus-morthwyll",
+        "familyTitle": "Haus Morthwyl O'Caer Morben",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "merlion-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--merlion-morthwyll",
+        "name": "Merlion Morthwyll",
+        "birth": "1621",
+        "death": "1688",
+        "status": "dead",
+        "sex": "male",
+        "title": "Ritterfürst und Oberhaupt des Hauses Morthwyll 1644–1688"
+      },
+      "child": {
+        "familyId": "haus-morthwyll",
+        "familyTitle": "Haus Morthwyl O'Caer Morben",
+        "realms": [
+          "Cenyr"
+        ],
+        "personId": "braih-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--braih-morthwyll",
+        "name": "Braih Morthwyll",
+        "birth": "1632",
+        "death": "1675",
+        "status": "dead",
+        "sex": "female",
+        "title": "Wegverheiratet an Haus Cwingod"
+      },
+      "yearGap": 11,
+      "requiresNarrativeReview": true
+    }
+  ]
+}

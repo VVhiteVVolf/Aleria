@@ -15,7 +15,7 @@ import { HOUSE_SCHMETTERSCHILD_PORTRAITS } from './house-schmetterschild-portrai
 import { HOUSE_SCHWARZBLUT_PORTRAITS } from './house-schwarzblut-portraits.js';
 import { HOUSE_SILBERBLUT_PORTRAITS } from './house-silberblut-portraits.js';
 import { HOUSE_VARANGR_PORTRAITS } from './house-varangr-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
@@ -222,7 +222,7 @@ export const HOUSE_SILBERBLUT_FAMILY = Object.freeze({
 
     person('einar-silberblut', 'Einar Silberblut', 'male', '1560', '1601'),
     person('vikar-silberblut', 'Vikar Silberblut', 'male', '1564', '1611'),
-    spouse('kjellfrid-varangr', 'Kjellfrid Varangr', 'female', '1563', '????', 'house-varangr'),
+    spouse('kjellfrid-varangr', 'Kjellfrid Varangr', 'female', '1563', '', 'house-varangr'),
     spouse('lyngvild-feuerhaar', 'Lyngvild Feuerhaar', 'female', '1569', '1615', 'house-feuerhaar'),
 
     awayWoman('sigrid-silberblut', 'Sigrid Silberblut', '1580', '1640', 'Clan Goldglanz', {

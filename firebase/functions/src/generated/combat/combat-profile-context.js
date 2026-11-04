@@ -2,6 +2,7 @@ import {
   getAttributeModifier,
   createCombatProfileReadModel,
   getEffectiveCombatAttribute,
+  getNaturalRollPolicy,
   getSavingThrowTotal,
   getSkillTotal,
   getEffectiveSkillProficiency,
@@ -70,6 +71,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
     hitPointRules: profile.hitPoints,
     armorClassRules: { ...profile.armorClass, armorRoutine: resolved.armorRoutine },
     combatModifiers: profile.combat,
+    naturalRollPolicy: getNaturalRollPolicy(calculation),
     savingThrows: profile.savingThrows.map(save => ({
       ...save,
       total: getSavingThrowTotal(calculation, save.attributeKey)

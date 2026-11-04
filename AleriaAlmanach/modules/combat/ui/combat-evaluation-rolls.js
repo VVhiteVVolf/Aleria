@@ -1,11 +1,13 @@
 import { escapeCombatHtml as escape, combatTooltipAttributes } from './combat-presentation-markup.js';
 import { getEvaluationAttackRows, getRecordedDamageInstances } from './combat-evaluation-model.js';
 import { describeRecordedDamageRoll } from './combat-damage-presentation.js';
+import { describeNaturalRollReceipt } from './combat-natural-roll-presentation.js';
 
 export function evaluationRollText(roll = {}, label = 'Angriff') {
   const dice = roll.diceResults?.length ? `W20 [${roll.diceResults.join(', ')}] ${Number(roll.modifier) >= 0 ? '+' : ''}${roll.modifier ?? 0}` : roll.notation || 'Wurf nicht einzeln gespeichert';
   const outcome = roll.resolutionMode === 'saving-throw' ? roll.saveSucceeded ? 'gelungen' : 'misslungen' : roll.criticalFailure ? 'Kritischer Fehlschlag' : roll.criticalSuccess ? 'Kritischer Treffer' : roll.hit ? 'Treffer' : 'verfehlt';
-  return `${label}: ${dice} · ${outcome}${roll.rollMode === 'advantage' ? ' · Vorteil' : roll.rollMode === 'disadvantage' ? ' · Nachteil' : ''}`;
+  const natural = describeNaturalRollReceipt(roll);
+  return `${label}: ${dice} · ${outcome}${roll.rollMode === 'advantage' ? ' · Vorteil' : roll.rollMode === 'disadvantage' ? ' · Nachteil' : ''}${natural ? ` · ${natural}` : ''}`;
 }
 
 const total = (values, key) => values.length && values.every(v => Number.isFinite(Number(v[key])) && v[key] != null) ? values.reduce((sum,v) => sum+Number(v[key]),0) : null;
@@ -39,5 +41,5 @@ export function renderEvaluationSaveRecords(resolution = {}) {
   const saves = resolution.secondarySaves || [];
   if (!saves.length) return '';
   const attributes = {strength:'KRF',dexterity:'GES',constitution:'KON',intelligence:'INT',wisdom:'WEI',charisma:'CHA'};
-  return `<ul class="combat-evaluation-record-list">${saves.map(save => `<li><b>${escape(attributes[save.attributeKey] || 'Rettung')}-Rettung ${escape(save.total)} gegen SG ${escape(save.dc)}</b><span>${save.succeeded ? 'gelungen' : 'misslungen'} · ${save.timing === 'before-maneuver' ? 'vor dem Gegenangriff' : save.timing === 'after-sequence' ? 'nach der gesamten Angriffsfolge' : 'nach dem auslösenden Treffer'}</span>${save.diceResults?.length ? `<small>W20 [${escape(save.diceResults.join(', '))}] ${Number(save.modifier) >= 0 ? '+' : ''}${escape(save.modifier ?? 0)}</small>` : ''}</li>`).join('')}</ul>`;
+  return `<ul class="combat-evaluation-record-list">${saves.map(save => `<li><b>${save.type === 'concentration' ? 'Konzentration · ' : ''}${escape(attributes[save.attributeKey] || 'Rettung')}-Rettung ${escape(save.total)} gegen SG ${escape(save.dc)}</b><span>${save.succeeded ? 'gelungen' : 'misslungen'} · ${save.timing === 'before-maneuver' ? 'vor dem Gegenangriff' : save.timing === 'after-sequence' ? 'nach der gesamten Angriffsfolge' : 'nach dem auslösenden Treffer'}</span>${save.diceResults?.length ? `<small>W20 [${escape(save.diceResults.join(', '))}] ${Number(save.modifier) >= 0 ? '+' : ''}${escape(save.modifier ?? 0)}</small>` : ''}${describeNaturalRollReceipt(save) ? `<small>${escape(describeNaturalRollReceipt(save))}</small>` : ''}</li>`).join('')}</ul>`;
 }

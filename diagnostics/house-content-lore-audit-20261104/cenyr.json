@@ -1,0 +1,132 @@
+{
+  "schema": "aleria.house-content-lore-audit",
+  "date": "2026-11-04",
+  "region": "Cenyr",
+  "mode": "read-only public narrative audit",
+  "scope": {
+    "houseAuthoringModulesInventoried": 277,
+    "method": "All haus.content.mjs modules below Estryll/Cenyr were loaded, short histories screened, and current rank/seat/liege prose compared with active territorial data. Detailed cross-reading focused on shared founding stories, displacement, maritime wars, guild origins and Vennyr exile branches.",
+    "limitations": "This is a broad source screen plus targeted detailed comparison, not a claim that every sentence of every long narrative has been exhaustively reconciled. Prepared houses without an established history cannot support a plot comparison.",
+    "excluded": [
+      "Genealogical tables, person life-date arithmetic and living/dead counterpart comparisons",
+      "Military statistics",
+      "Private and secret sources",
+      "Previously repaired Morgan, Sylvia, Gruffyd and Wolfshorn cases",
+      "Imported old family trees as evidence"
+    ]
+  },
+  "findings": [
+    {
+      "id": "cenyr-gwaedlyd-symbolism",
+      "status": "confirmed textual contradiction",
+      "kind": "house culture and heraldic interpretation",
+      "title": "Die Gwaedlyd-Kulturgeschichte erklärt einen Wolf statt des Haimotivs",
+      "statementA": {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Graue_Weite/Schimmerkueste/Haus_Gwaedlyd/haus.content.mjs",
+        "line": 96,
+        "text": "Der Hai verkörpert stille Aufmerksamkeit und den plötzlichen Angriff. Die Hausgeschichte nennt Agravaine den Hai; auch Überblick und Rüstungsbeschreibung verwenden das Haimotiv."
+      },
+      "statementB": {
+        "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs",
+        "line": 104,
+        "text": "Ihr Wappen, das einen blutroten Wolf zeigt, steht symbolisch für ihre wilde und unbezwingbare Natur im Kampf."
+      },
+      "assessment": "Die aktive Territorialgeschichte deutet ein anderes Wappentier und leitet daraus das Selbstbild des Hauses ab. Dies betrifft die kulturelle Erzählung, nicht nur eine abweichende Bildunterschrift.",
+      "visualVerification": {
+        "path": "Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-gwaedlyd.png",
+        "inspected": true,
+        "result": "Black shark rising above blue waves, blood at the mouth; no wolf."
+      }
+    }
+  ],
+  "suspicions": [
+    {
+      "id": "cenyr-gwefrydd-foundation-grantor",
+      "status": "unconfirmed attribution; not a proved contradiction",
+      "kind": "founding event and authority",
+      "title": "Gwefrydds Erhebung wird einmal dem König und einmal dem Grafen zugeschrieben",
+      "statementA": {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/haus.content.mjs",
+        "line": 101,
+        "text": "Der König erhob ihn zum Baron. Auf königliche Weisung wiesen die Draigs ihm eine fruchtbare Region zu."
+      },
+      "statementB": {
+        "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/baronie.data.js",
+        "line": 203,
+        "text": "In Anerkennung ihrer Bedeutung erhob der Graf die Gwefrydd in den Adelsstand und verlieh ihnen den Titel der Barone von Arthus Streben."
+      },
+      "assessment": "Die Hauschronik unterscheidet ausdrücklich königliche Erhebung und gräfliche Landzuweisung. Die Territorialchronik verlegt den Erhebungsakt selbst zum Grafen. Eine Ausführung im Auftrag des Königs könnte beide Fassungen verbinden, wird in der Territorialchronik aber nicht beschrieben; diese Verbindung darf nicht stillschweigend erfunden werden. Die Ausführung durch einen königlichen Beauftragten ist möglich. Ohne ausdrücklichen Ausschluss dieser Lesart ist dies kein harter Plotwiderspruch."
+    },
+    {
+      "id": "cenyr-lyfant-exile-or-return",
+      "status": "unconfirmed narrative tension; no explicit exclusion of earlier Cenyr ancestors",
+      "kind": "exile and settlement history",
+      "title": "Lyfants neuer Exilsitz wird territorial als Rückkehr zum Erbe der Vorfahren erzählt",
+      "statementA": {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Graue_Weite/Silberwald/Skelettkueste/Haus_Lyfant/haus.content.mjs",
+        "line": 100,
+        "text": "Die ältere Heimat liegt in Derwyddion in Vennyr. Nach Seeschlacht und Flucht gelangen die Überlebenden über Tredegar nach Caer Asgwrn; Cledwyn führt die neue Linie seit 1720."
+      },
+      "statementB": {
+        "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft Skelettküste/herrschaft.data.mjs",
+        "line": 118,
+        "text": "Nach der Seeschlacht um Vennyr kehrten die Überlebenden an die Knochenküste zurück, um das Erbe ihrer Vorfahren zu bewahren."
+      },
+      "assessment": "Die aktuelle Hauschronik beschreibt einen neuen südlichen Exilzweig, während der Territorialtext Caer Asgwrn als angestammte Heimat vor dem Krieg erscheinen lässt. Derselbe Territorialtext nennt zuvor Tylwyth als frühere Herren der verfallenen Festung. Eine frühere Lyfant-Herrschaft dort ist in den geprüften Hausquellen nicht belegt. Herkunft Vennyr und heutiger Cenyr-Zweig müssen getrennt bleiben. Die Hauschronik schließt eine noch ältere Verbindung einzelner Vorfahren zu Cenyr nicht ausdrücklich aus. Deshalb nur Verdacht auf vermischte Exil- und Rückkehrgeschichte, kein bewiesener Plotwiderspruch."
+    },
+    {
+      "id": "cenyr-hebog-displacement-motive",
+      "status": "unconfirmed narrative tension",
+      "title": "Hebogs Weg nach Falkenhöh: Vertreibung oder beauftragte Sicherung gegen Trolle?",
+      "statementA": {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Tal_der_Milane/Falkenhoeh/Haus_Hebog/haus.content.mjs",
+        "line": 107,
+        "text": "Die Hebog wurden nach Süden geschickt, um gegen die Trolle vorzugehen, welche die Verbindung zwischen Mathrafal und dem Aderyn-Gebiet gefährdeten."
+      },
+      "statementB": {
+        "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/baronie.data.mjs",
+        "line": 99,
+        "text": "Die Hebog zogen sich nach ihrer Vertreibung in diese Region zurück und erschlossen Trawsfynydd."
+      },
+      "assessment": "Die Motive sind unterschiedlich erzählt, aber nicht zwingend unvereinbar: Vertreibung und ein anschließender Auftrag könnten zusammengehören. Eine solche Verknüpfung ist bisher nicht belegt; daher kein bestätigter Plotwiderspruch."
+    }
+  ],
+  "additionalStructuralDiscrepancies": [
+    {
+      "id": "cenyr-faelwyn-current-liege",
+      "status": "confirmed current source mismatch; secondary to narrative findings",
+      "title": "Faelwyns aktuelle Dienstbindung ist unterschiedlich geführt",
+      "statementA": {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Tal_der_Milane/Yvains_Klamm/Haus_Faelwyn/haus.content.mjs",
+        "line": 94,
+        "text": "Die Lehenszuordnung nennt Haus Tylluan O'Penbryn."
+      },
+      "statementB": {
+        "path": "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js",
+        "line": 108,
+        "text": "faelwyn: aderynVassalProfile('knight')"
+      },
+      "corroboration": {
+        "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/herrschaft.data.mjs",
+        "line": 156,
+        "text": "Faelwyn ist im Abschnitt Ritterhäuser · Tylluan mit liege Haus Tylluan geführt."
+      },
+      "assessment": "Hausprosa und Territorialübersicht nennen Tylluan als heutige unmittelbare Bindung; das Registerprofil nennt Aderyn. Dies ist kein neuer Gründungs- oder Kriegsplotbefund."
+    }
+  ],
+  "notReportedAsContradictions": [
+    "Skellor-Verlust von Creigfryn und neue Belehnung Merek sind in den aktuellen Haus- und Territorialquellen konsistent erzählt.",
+    "Arwydds Aufstieg nach Castellbryn und Idris als eigentlicher Gründer sind in den verglichenen aktuellen Fassungen konsistent.",
+    "Dinefwr und Tir Addawol erzählen die gemeinsame Erim-Vorgeschichte und die zwei Gründerbrüder konsistent.",
+    "Pawen, Crafanc und Cwingod stimmen in der Reihenfolge der Kadettenhäuser und der Unterstützung beim Aufbau Moreas überein.",
+    "Nicht identische Ortspräzision, eine ausdrücklich als Sage bezeichnete Herkunft sowie historische gegenüber heutigen Vennyr-Rängen wurden nicht als Widerspruch gezählt.",
+    "Aelmors Draig/Saethwyr-Abweichung ist überwiegend ein Metadatenproblem; sie wurde nicht als bestätigter narrativer Plotwiderspruch aufgenommen."
+  ],
+  "productFilesChanged": false,
+  "summary": {
+    "confirmedNarrativeContradictions": 1,
+    "unconfirmedNarrativeQuestions": 3,
+    "additionalCurrentStructuralMismatch": 1,
+    "noFurtherHardPlotContradictionEstablished": true
+  }
+}

@@ -40,7 +40,8 @@ function getSidebarCommentActivityMs(comment, fallbackIndex = 0) {
 }
 
 function sortSidebarFeedComments(comments) {
-  return (Array.isArray(comments) ? comments : [])
+  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  return (Array.isArray(visibleComments) ? visibleComments : [])
     .map((comment, index) => ({ comment, index }))
     .sort((a, b) => {
       const av = getSidebarCommentActivityMs(a.comment, a.index);

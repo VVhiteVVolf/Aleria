@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../modules/silberinsel/territory-page.mjs?v=silberinsel-20261019';
+import { createTerritory } from '../../../modules/silberinsel/territory-page.mjs?v=20261103-silberinsel-v1';
 
 export default createTerritory({
   "id": "grafschaft-silberinsel",
@@ -207,7 +207,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-neidr"
         },
         {
           "name": "Saith",
@@ -217,7 +218,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-saith"
         },
         {
           "name": "Crefyddol",
@@ -227,7 +229,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-crefyddol"
         },
         {
           "name": "Canwyll",
@@ -237,7 +240,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-canwyll"
         },
         {
           "name": "Tiwna",
@@ -247,7 +251,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tiwna"
         },
         {
           "name": "Pyrth",
@@ -257,7 +262,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-pyrth"
         }
       ]
     },
@@ -272,7 +278,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ferlan"
         },
         {
           "name": "Argyllan",
@@ -282,7 +289,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-argyllan"
         },
         {
           "name": "Delvor",
@@ -292,7 +300,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-delvor"
         },
         {
           "name": "Corant",
@@ -302,7 +311,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-corant"
         },
         {
           "name": "Faelcaran",
@@ -312,7 +322,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-faelcaran"
         },
         {
           "name": "Llyncar",
@@ -322,7 +333,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-llyncar"
         },
         {
           "name": "Maredwyn",
@@ -332,7 +344,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maredwyn"
         },
         {
           "name": "Morfynn",
@@ -342,7 +355,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-morfynn"
         },
         {
           "name": "Selaeth",
@@ -352,7 +366,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-selaeth"
         },
         {
           "name": "Arven",
@@ -362,7 +377,8 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-arven"
         }
       ]
     },
@@ -377,7 +393,24 @@ export default createTerritory({
           "liege": "Haus Neidr O'Llanvane",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brithfaen"
+        }
+      ]
+    },
+    {
+      "title": "Bürgerliche Häuser · Silberinsel",
+      "houses": [
+        {
+          "name": "Hamnett",
+          "familyId": "haus-hamnett",
+          "imageSrc": "/Stammbäume/assets/images/houses/Silberinsel/haus-hamnett.png",
+          "seat": "",
+          "liege": "",
+          "rank": "Bürgerliches Künstlerhaus",
+          "featured": false,
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hamnett"
         }
       ]
     },
@@ -392,7 +425,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mor Tiarna",
           "featured": false,
-          "featuredLabel": "Mor Tiarna"
+          "featuredLabel": "Mor Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tir-an-muirghin"
         }
       ]
     }

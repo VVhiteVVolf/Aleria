@@ -1,0 +1,93 @@
+{
+  "id": "haus-moorbrand",
+  "contentVersion": "20261103-kronental-v1",
+  "source": null,
+  "initialPage": null,
+  "authority": {
+    "familyId": "haus-moorbrand",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Heldenwacht",
+      "barony": "Jarltümliche Herrschaft – Tal der Helden",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "c28aaa20e001a953220c9f33a2bff5fa55a7a1c295ea195e8e6ae3b5b7a5b674"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-moorbrand",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-moorbrand",
+    "slug": "moorbrand",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-cf1143a2-4d93-43a4-874b-2281793fce35.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-moorbrand/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kronental/clan-moorbrand.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "5d3f38703282c9e4a4948059e1d818e0bc4395e96ac030d9d4c18b01f77ba567",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1980272,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "illustrations": [
+    {
+      "id": "haus-moorbrand",
+      "slug": "moorbrand",
+      "role": "warrior",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-cf1143a2-4d93-43a4-874b-2281793fce35.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-moorbrand/krieger-generated-v1.png",
+      "tool": "built-in image_gen",
+      "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+      "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kronental/clan-moorbrand.png",
+      "representative": true,
+      "namedPersonId": "",
+      "sha256": "5d3f38703282c9e4a4948059e1d818e0bc4395e96ac030d9d4c18b01f77ba567",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1980272,
+      "format": "PNG",
+      "mode": "RGBA",
+      "original": false
+    }
+  ],
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

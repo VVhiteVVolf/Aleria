@@ -4,10 +4,10 @@ import { HOUSE_RUIN_UA_LAOCH_FAMILY } from './house-ruin-ua-laoch-family.js';
 import { HOUSE_UA_GAELACH_FAMILY } from './house-ua-gaelach-family.js';
 import { HOUSE_UA_EIRCE_FAMILY } from './house-ua-eirce-family.js';
 import { HOUSE_UI_FIACHRACH_FAMILY } from './house-ui-fiachrach-family.js';
-import { TIR_NA_SINSEAR_HOUSE_FAMILIES } from './tir-na-sinsear-house-families.js';
+import { TIR_NA_SINSEAR_HOUSE_FAMILIES } from './tir-na-sinsear-house-families.js?v=20261104-lore-fixes-v1';
 import { TIR_NA_GORTANNA_HOUSE_FAMILIES } from './tir-na-gortanna-house-families.js';
 import { TIR_NA_TONN_HOUSE_FAMILIES } from './tir-na-tonn-house-families.js';
-import { TIR_AN_COMHCHUIBHIS_HOUSE_FAMILIES } from './tir-an-comhchuibhis-house-families.js';
+import { TIR_AN_COMHCHUIBHIS_HOUSE_FAMILIES } from './tir-an-comhchuibhis-house-families.js?v=20261104-lore-fixes-v1';
 import { TIR_NA_SRUTH_HOUSE_FAMILIES } from './tir-na-sruth-house-families.js';
 import {
   LEITHEACH_CLAN_DEFINITIONS,

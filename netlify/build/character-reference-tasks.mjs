@@ -62,10 +62,12 @@ export const CHARACTER_REFERENCE_TASKS = [{
     'firebase/functions/src/generated/character-origins/',
     'firebase/functions/src/generated/combat/combat-weapon-profile-family.js',
     'firebase/functions/tests/reference-catalog-parity.test.js',
+    'firebase/functions/package.json', 'firebase/functions/package-lock.json',
     'Klassenordner/modules/culture/culture-class-training-template.js',
     ...tests
   ],
   commands: [
+    ['netlify/build/prepare-runtime-checks.mjs', '--scope=firebase'],
     ['AleriaAlmanach/scripts/build-weapon-standards.mjs', '--check'],
     ['AleriaAlmanach/scripts/check-weapon-standard-art.mjs'],
     ['AleriaAlmanach/scripts/check-ability-icons.mjs'],

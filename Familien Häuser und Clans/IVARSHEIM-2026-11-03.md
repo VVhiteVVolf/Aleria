@@ -1,0 +1,15 @@
+# Ivarsheim: zwölf vorhandene Häuser und Clan Hrafnvald
+
+Die Übernahme umfasst Wargh, Feuerhaar, Skogg, Silberzunge, Trachwyll, Grendel, Hyrmgarthr, Blutklinge, Windhüter, Morkvard, Mac Luin und An Borach sowie den neu beauftragten Clan Hrafnvald. Alle dreizehn besitzen Hausseite, Hausbio, passende Darstellung und eine Einbettung ihrer Familienakte. Die zwölf älteren Familiengraphen, ihre Profile, Titel, Wappen, IDs und Ortszuordnungen bleiben unverändert.
+
+Elf mitgelieferte Originalbilder wurden unverändert übernommen. Trachwyll verwendet sein bereits aus dem Vennyr-Auftrag vorhandenes Original. Hyrmgarthr behält die stabile ID `haus-hyrmgardr`; Schreibvarianten der Vorlage erzeugen keine zusätzliche Familie. Trachwylls heutige Ivarsfels-Linie bleibt vom Talfronwyn-Ursprung getrennt. Die alte Kriegserzählung aus Vennyr wurde nicht zur Geschichte der neuen Ivarsfels-Linie umgedeutet.
+
+Blutklinge und Windhüter sind jüngst erloschene aldrimarische Häuser; Morkvard ist ein antiker Norrnaigh-Clan, Mac Luin und An Borach gehören zur alten Glaennath-Kultur. Ihre Rangfelder bleiben offen. Kulturordner werden als Kategorien geführt. Historische Sitze stammen ausschließlich aus vorhandenen Ortsbezügen; „Ort unbekannt“ wird nicht zum Ortsnamen.
+
+Clan Hrafnvald konkretisiert auf Nutzerauftrag Livs namenlosen Herkunftsclan im Norden Aldrimars. Ivarsfels in Ivarsklamm, Huskarlrang unter Wargh, ein kleiner umfriedeter Hof, Gastrecht und das Motto „Unser Tor bleibt offen.“ sind neue Ausarbeitung. Der neue Clanherr Torleif Hrafnvald (1681, lebend) erhält keine erfundenen Eltern oder Verwandtschaft zu Liv. Liv behält ihre Identität `liv` / `person--family-tree--liv`, Name und Geburt 1688. Nur die neue Clanakte ordnet sie Hrafnvald zu; Wolfshorn, Bleiddorn und deren Verbindungen bleiben unangetastet.
+
+Das kreisrunde Raben-und-Schlüssel-Wappen und die anonyme Hrafnvald-Hausfigur wurden mit dem eingebauten Imagegen-Werkzeug erzeugt. Tatsächlich angesehene aldrimarische Registerwappen und die freigegebene Hausritter-Stilreferenz bestimmten Formensprache beziehungsweise Malstil. Die Hausfigur ist kein Liv-Porträt. Prompts und Herkunftsbelege liegen unter `diagnostics/ivarsheim-clans-20261103/`.
+
+Die Quellen pro Familie liegen unter `Estryll/Aldrimar/Ivarsheim/`. `modules/house-content/reviewed-aldrimar-house-content.mjs` verbindet redigierte Kapitel mit kanonischen Metadaten und vorhandenen Personenlinks, ohne Familienakten zu verändern. Vollständig redigierte Seiten verwenden die große Vorlage, damit auch ihre Kriegerkapitel sichtbar bleiben. Die Kurzbiografien verweisen auf die ausführlichen Seiten.
+
+Die zehn gezielten Ivarsheim-Tests schützen Bestandsakten, Originalhashes, Iframes, Personenverknüpfungen und eigene Bio-Bearbeitungen. Zusammen mit Roriksheim, Vennyr, Hausvorbereitung, begrenztem Build und Galerie bestehen 64 gezielte Prüfungen. Build und Galerie werden für die ausgewählten Haus-IDs mit `--houses=...` und `--check` geprüft. Keine unbeschränkte Neugenerierung, kein Firebase-Abgleich und keine Veröffentlichung für diese Übernahme.

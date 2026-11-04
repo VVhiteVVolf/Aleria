@@ -1,0 +1,213 @@
+// Geprüfte redaktionelle Quelle; kanonische Familienakten bleiben maßgeblich.
+export const HOUSE_CONTENT = {
+  "id": "haus-gullvig",
+  "name": "Clan Gullvig",
+  "type": "Clan",
+  "page": "haus.html",
+  "county": "Kronental",
+  "liege": "Clan Vaeren",
+  "territoryId": "jarltum-heldenwacht",
+  "territoryName": "Jarltum Heldenwacht",
+  "territoryHref": "../Kontinente/Estryll/Königreich Aldrimar/Jarltum Heldenwacht/Jarltum Heldenwacht.html",
+  "parentHouseId": "house-vaeren",
+  "extinct": false,
+  "showMotto": true,
+  "registerPage": true,
+  "prepared": false,
+  "contentVersion": "20261103-kronental-v1",
+  "biographyManagedExternally": false,
+  "biographySourceRevision": 6,
+  "biographyPreviousDefaultFingerprints": [],
+  "biographyIntroTitle": "Über den Clan",
+  "biographyHistoryTitle": "Geschichte",
+  "biographySummary": {
+    "overview": "Clan Gullvig ist ein Hesirenclan von Kastav in Möwenfels und dient den Vaeren. Sein Wahlspruch „Wie die Möwe – stets wachsam, stets frei“ verbindet Heimatbindung mit anpassungsfähiger Seefahrt und geschickter Diplomatie.",
+    "history": "Als Kastavs Bau die Ansprüche von Krone, Varangr und Küstenkriegern gegeneinander aufbrachte, entsandte der König Sten „die Möwe“. Statt den Streit militärisch zu entscheiden, verhandelte Sten mit den Rivalen. Zollvergünstigungen, Hafenrechte und ein persönlicher Bund mit den Küstenkriegern ermöglichten den Ausgleich. Kastav blieb der Krone erhalten und wurde zur Heimat der Gullvig. Im Prätendentenkrieg zerbrachen enge Bindungen zu Schwarzblut, Blutstahl und Silberblut. Spätere Annäherungen milderten diese Gegnerschaft nur langsam.",
+    "character": "Gerissenheit, Weitsicht und die Fähigkeit zum Rückzug gelten als Stärken. Ein nützlicher Ausgleich ist den Gullvig mehr wert als unbeugsame Feindschaft. Sie suchen Gelegenheiten und wählen möglichst selbst die Bedingungen eines Kampfes.",
+    "customs": "Reisen, Handel und das Knüpfen von Beziehungen bestimmen das Hausleben. Auch wer als Händler, Söldner oder Kundschafter weit fortzieht, betrachtet Kastav als sicheren Heimathafen.",
+    "holdings": "Fischfang, Schiffbau und Küstenholz tragen die Wirtschaft Möwenfels’. Möwenhof ist für Glaswaren bekannt, das Inland liefert Nahrung und Vieherzeugnisse. Kupfer, Salz und Bausteine ergänzen die Handelsgüter.",
+    "culture": "Die Seemaid Aegyra und Nimue werden verehrt. Bewegliche Skeidr und kundige Skytten passen zur Küstenlandschaft; schwere Reiterei ist selten.",
+    "relations": "Die ältere Rivalität mit Varangr und die Kriegserinnerung gegenüber Schwarzblut bleiben spürbar. Gemeinsame Dienste in Orden und Gilden schaffen zugleich neue Möglichkeiten zur Zusammenarbeit.",
+    "trivia": [],
+    "influence": [],
+    "achievements": []
+  },
+  "placeholders": {
+    "male": "../Stammbäume/assets/images/placeholders/male.png",
+    "female": "../Stammbäume/assets/images/placeholders/female.png"
+  },
+  "allies": [],
+  "hierarchy": [
+    {
+      "type": "Sammlung",
+      "name": "Familien Häuser und Clans",
+      "slug": "familien-hauser-und-clans"
+    },
+    {
+      "type": "Kontinent",
+      "name": "Estryll",
+      "slug": "estryll"
+    },
+    {
+      "type": "Königreich",
+      "name": "Aldrimar",
+      "slug": "aldrimar"
+    },
+    {
+      "type": "Jarltum",
+      "name": "Kronental",
+      "slug": "kronental"
+    },
+    {
+      "type": "Region",
+      "name": "Hesirentum von Möwenfels",
+      "slug": "hesirentum-von-mowenfels"
+    },
+    {
+      "type": "Sitz",
+      "name": "Kastav",
+      "slug": "kastav"
+    },
+    {
+      "type": "Clan",
+      "name": "Clan Gullvig",
+      "slug": "haus-gullvig"
+    }
+  ],
+  "profile": {
+    "highestTitle": "Hesire",
+    "rank": "Hesire",
+    "houseType": "Clan",
+    "motto": "Wie die Möwe – stets wachsam, stets frei.",
+    "quoteAuthor": "",
+    "seat": "Kastav",
+    "affiliation": "Kronental",
+    "liege": "Clan Vaeren",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
+    "founding": "",
+    "milestoneOne": "",
+    "milestoneTwo": "",
+    "patron": "",
+    "knightingPatron": "",
+    "people": "",
+    "wealth": "",
+    "religion": "",
+    "patronDeities": "",
+    "origin": "",
+    "cadetBranches": "",
+    "allies": "",
+    "enemies": ""
+  },
+  "omitMilitaryProfile": true,
+  "sections": {
+    "overview": "Clan Gullvig ist ein Hesirenclan von Kastav im Hesirentum Möwenfels unter den Vaeren. Handel, Diplomatie und anpassungsfähige Seefahrt bestimmen seine Stellung. Sten „die Möwe“ sicherte Kastav durch Verhandlungen und einen Bund mit den Küstenkriegern.\n\nDie Gullvig sind ein gerissener Seefahrerclan, der seinen Einfluss durch Handel, Diplomatie und taktische Finesse sichert, anstatt durch rohe Gewalt. Wie die Möwe, die ihr Wappen ziert, sind sie anpassungsfähig, wachsam und stets darauf bedacht, ihren Platz in der Nahrungskette zu behaupten.",
+    "history": "In den frühen Tagen des Königreichs Aldrimar, als die Grenzen noch fließend waren und jeder Jarl seinen Einfluss zu festigen suchte, war das Land ein Schachbrett aus Intrigen, alten Fehden und unbeugsamem Ehrgeiz. Die Krone der Vaeren, Herrscher über Heldenwacht, versuchte ihre Küstenbesitztümer zu sichern, während die Jarle von Krähenmoor und ihre Küstenvasallen ihren Einfluss entlang des Schwarzfjords und in Möwenfels geltend machten.\n\nDer Streit um Möwenfels wurde erbittert geführt. Während Krähenmoor die Region als ihr altes Land beanspruchte, forderten die Küstenkrieger die Kontrolle, da sie seit Generationen die Seewege beherrschten. Die Vaeren ließen daraufhin die Burg Kastav errichten – eine Bastion, die ihre Ansprüche untermauern und die Handelsroute in den Süden sichern sollte. Doch noch bevor die Mauern standen, begann der Widerstand. Sabotage, Diebstahl und eingeschüchterte Arbeiter ließen den Bau stocken. Kein offener Krieg wurde geführt, doch Kastav war zum Schlachtfeld eines stillen Krieges geworden.\n\nDie Krone konnte dies nicht ignorieren. Doch ein offener Konflikt hätte das Reich gespalten. Also entsandte der König einen Mann, der nicht mit dem Schwert, sondern mit Worten kämpfte: Sten „die Möwe“ Gullvig, sein Herold und Gesandter.\n\nSten reiste zuerst nach Krähenmoor, um mit den Varangr zu verhandeln. Sie empfingen ihn mit offenen Armen, doch hinter ihrer Gastfreundschaft verbargen sich bestechende Angebote. Gold, Ländereien, eine Zukunft an ihrer Seite – wenn er nur den König zur Aufgabe Kastavs bewegen würde. Sten hörte sich alles an, nahm ihren Met, ließ sich ihre Versprechen schmecken – und verließ ihr Land noch in derselben Nacht.\n\nEr ritt nach Nebelwacht, zum Sitz der Küstenkrieger, die sich bisher gegen Kastav gestellt hatten. Doch dort erwartete ihn nur kaltes Schweigen. Sie fürchteten den Zorn ihrer Herren und lehnten ein Treffen ab. Doch Sten wusste, wo ihre Schwäche lag. Sie waren keine Landherren, sondern Seefahrer und Händler. Ihre wahre Macht lag in der Kontrolle der Handelsroute von Möwenfels nach Süden – genau dort, wo die Krone nun Kastav errichten wollte.\n\nAlso bot er ihnen, was sie nicht ablehnen konnten. Ermäßigte Zölle, Handelsfreiheit in Heldenwacht und ein sicheres Hafenrecht in Möwenfels. Doch Worte allein reichten nicht. Um den Pakt zu besiegeln, wurde eine Ehe geschlossen. Sten nahm eine Tochter der Küstenkrieger zur Frau – eine Verbindung, die nicht nur zwei Häuser, sondern zwei Mächte vereinte.\n\nAls die Nachricht Krähenmoor erreichte, tobten die Jarle vor Wut. Doch sie konnten nichts tun. Die Handelsrouten waren zu wertvoll, das Bündnis zu stark. Über Jahre erwogen sie, die Küstenkrieger zu entmachten, doch ihr Einfluss war zu groß, ihre Verbündeten zu vorsichtig.\n\nSo wurde Kastav nicht durch Blutvergießen, sondern durch List und Diplomatie gewonnen. Die Krone hielt ihre Festung, die Küstenkrieger ihre Handelsmacht, und Sten Gullvig sicherte seinem Namen eine Zukunft, die kein Schwert so leicht brechen konnte.",
+    "traditions": "Die Gullvig sind ein Seefahrerclan, der sich nicht durch rohe Stärke, sondern durch Gerissenheit, Weitsicht und Anpassungsfähigkeit behauptet. Sie mögen nicht die härtesten Krieger oder die diszipliniertesten Soldaten sein, doch was ihnen an unerschütterlicher Kampfkraft fehlt, gleichen sie mit Kalkül, Intrige und taktischer Raffinesse aus. Wie die Möwe, die ihr Banner ziert, wissen sie, wann sie zuschlagen müssen, wann sie abwarten sollten und wann es klüger ist, sich zurückzuziehen, um an einem besseren Tag erneut zuzubeißen.\n\nDie Gullvig leben nach dem Prinzip des freien Geistes. Sie ziehen dorthin, wo der Wind günstig steht, wo die Strömung sie trägt, und lassen sich nicht von starren Traditionen oder unerschütterlichen Bündnissen aufhalten. Doch so frei sie auch sein mögen, sie vergessen niemals ihre Wurzeln. Kastav ist ihr Heimathafen, die einzige Konstante in einer Welt, die sich ständig verändert. Ein Gullvig kann lange fort sein, kann die entlegensten Küsten bereisen oder als Söldner, Händler oder Kundschafter dienen – doch wenn der Sturm kommt, weiß er, wo er Zuflucht findet.\n\nIhre Frömmigkeit richtet sich in erster Linie an Aegyra, die Seemaid, Göttin der Seefahrer, Kundschafter und Entdecker. Sie verehren sie als jene, die den richtigen Kurs weist, die See für jene öffnet, die sie zu ehren wissen, und die denjenigen gnädig ist, die sie nicht erzürnen. Doch auch Nimue, die Göttin des Meeres, die sie in nordischer Anrufung als Njama ehren, wird von den Gullvig respektiert. Sie ist es, die dem Klugen zur rechten Zeit die richtigen Worte in den Mund legt, die dafür sorgt, dass Verhandlungen mit einem Vorteil enden und dass Pläne sich so entfalten, wie es am besten für den eigenen Erfolg ist.\n\nFür die Gullvig ist das Leben wie die See – unberechenbar, voller Möglichkeiten, doch auch gnadenlos für jene, die nicht wissen, wann sie sich anpassen müssen. Sie respektieren den Handel, das Wortspiel und das Netz der politischen Beziehungen ebenso wie den Kampf mit der Klinge. Sie glauben, dass wahre Stärke nicht in bloßer Gewalt liegt, sondern in der Fähigkeit, sich in der Nahrungskette immer den Platz zu sichern, der ihnen gebührt – und ihn zu verteidigen, wenn es nötig ist.",
+    "knighthood": "Die Krieger der Gullvig sind vor allem Seekrieger, bekannt als Skeidr, die auf schnelle, wendige Angriffe vom Wasser aus setzen. Sie tragen leichte bis mittlere Rüstung und bevorzugen Schwerter, Beile und Speere, um sich schnell zu bewegen und blitzartig zuzuschlagen.\n\nIhre Skytten, geübte Bogenschützen und Waldläufer, nutzen Langbögen und Reflexbögen, um Feinde aus dem Hinterhalt zu dezimieren. Sie agieren als Kundschafter und Späher, perfekt für Überraschungsangriffe und Guerillataktiken.\n\nReiter, die Thegns, sind selten, da das Küstenland ungeeignet ist. Statt schwerer Kavallerie verlassen sich die Gullvig auf Beweglichkeit, Täuschung und präzise Schläge, um ihre Feinde zu überlisten – sie kämpfen nicht, wenn der Kampf nicht zu ihren Bedingungen ist.",
+    "holdings": "Die Wirtschaft Möwenfels’ wird von ihrer maritimen Lage und reichen Naturressourcen geprägt. Fischfang und Schiffsbau sind das Rückgrat der Küstensiedlungen, während die Wälder der Region Holz für den Schiffsbau und die Verarbeitung liefern. Orte wie Möwenhof sind bekannt für ihre Glasmanufaktur, die aus dem feinen Quarzsand der Küste hochwertige Glaswaren fertigt.\n\nIm Landesinneren dominieren Landwirtschaft und Viehzucht. In Möwenfeld werden Kartoffeln, Wurzelgemüse und Schweinefleisch produziert, die sowohl die Region versorgen als auch exportiert werden. Der Bergbau liefert Kupfer, Salz und Bausteine, insbesondere aus Kobberslag, Tungbrudd und Jarnfjell. Diese Wirtschaftszweige sichern die wirtschaftliche Stärke Möwenfels’ und seine bedeutende Rolle innerhalb des Jarltums.",
+    "cultureReligion": "Die Gullvig sind ein freigeistiger Seefahrerclan, der das Meer als seine wahre Heimat betrachtet. Wie die Möwen, die ihr Banner zieren, sind sie rastlose Wanderer, die dorthin gehen, wo es ihnen nützt, doch stets wissen, wo sie hingehören – Kastav bleibt ihr Heimathafen.\n\nIhre Glaubenskultur ist eng mit der See verbunden. Sie verehren in erster Linie Aegyra, die Seemaid, Göttin der Seefahrer, Kundschafter und Entdecker, die ihnen den Weg über die Wellen weist. Gleichzeitig achten sie Nimue, in ihrer nordischen Form als Njama, als Göttin des Meeres.\n\nIhr Alltag ist geprägt von Traditionen des Handels, der Seefahrt und der Diplomatie, doch auch von einem tiefen Respekt für das Meer und seine Launen. Sie glauben, dass Glück und Erfolg von Geschick, Kalkül und dem Wohlwollen der Seemaid abhängen – und dass jene, die töricht gegen die Wellen kämpfen, unweigerlich untergehen.",
+    "conflictsAlliances": "Die Gullvig sind ein Clan, der Beziehungen pflegt und erhält, denn sie wissen, dass Freunde oft wertvoller sind als Waffen. Sie sehen Konflikte als Teil des Spiels um Macht und Einfluss, doch sie halten nicht an alter Feindschaft fest, wenn sie keinen Nutzen bringt.\n\nIhre Vergangenheit mit den Varangr ist geprägt von Intrigen und Machtkämpfen, besonders während der Fehde um Möwenfels und die Kontrolle der Küste. Die Varangr sehen die Gullvig bis heute als schlaue Überlebenskünstler, die sich immer auf die richtige Seite schlagen – während die Gullvig ihrerseits die Varangr als zu stur und unnachgiebig betrachten.\n\nAuch mit den Schwarzblut gab es Spannungen, besonders im Bürgerkrieg, als man sich für kurze Zeit auf gegnerischen Seiten wiederfand. Doch der Konflikt war pragmatisch, kein tief verwurzelter Hass. Die Gullvig halten keine blinden Fehden, sondern suchen nach Wegen, frühere Gegner wieder als Verbündete zu gewinnen – nicht aus Großzügigkeit, sondern weil sie wissen, dass ein alter Feind oft ein neuer Freund sein kann, wenn die Umstände es erfordern.\n\nKrieg der Prätendenten\n\nVor dem Bürgerkrieg waren die Gullvig ein eng verbündetes Haus, das starke Beziehungen zu seinen Nachbarn pflegte. Mündelschaften zwischen den Häusern Wellensänger, Gullvig, Schwarzblut, Blutstahl und Silberblut und Wellenschild waren üblich, wie es bei Sven Gullvig und Detlaff Schwarzblut der Fall war. Diese Verbindungen wurden durch gemeinsame Herausforderungen wie den Kampf gegen Piraten und Marodeure geschmiedet, was eine tiefe Bindung zwischen den Häusern schuf.\n\nDer Krieg veränderte jedoch die Beziehungen drastisch. Plötzlich standen die Gullvig in Feindschaft zu den Schwarzblut-, Silberblut- und Blutstahl-Clans. Die einst engen Allianzen zerbrachen, und die Gullvig fanden sich in einem Konflikt wieder, der alte Freundschaften auf die Probe stellte. Besonders nach dem Tod von Skeld Gullvig und den emotionalen Wunden, die durch den Krieg geschlagen wurden, blieb die Beziehung zu den Schwarzblut-Familie angespannt und von gegenseitigem Misstrauen geprägt.\n\nIm Laufe der Zeit begann sich die Gesinnung der Gullvig zunehmend den Roten zuzuwenden. Trotz dieses Wechsels blieb der Schaden, den die Konflikte angerichtet hatten, bestehen, und die Beziehungen zwischen Gullvig und Schwarzblut waren weiterhin von Spannungen belastet. Es war erst durch die spätere Zusammenarbeit in Orden und Gilden, bei der sich Mitglieder beider Häuser wiedervereinigten und gemeinsam fochten, dass sich die Wogen allmählich glätteten.\n\nDennoch bleibt es gelegentlich schwierig, wenn beide Clans zu denselben Ereignissen geladen werden, da die alte Rivalität zwischen ihnen immer noch spürbar ist und in bestimmten Situationen zu hitzigen Auseinandersetzungen führen kann.",
+    "values": "Die Gullvig glauben, dass Überleben und Erfolg nicht durch rohe Gewalt, sondern durch Anpassungsfähigkeit, kluge Bündnisse und taktisches Geschick gesichert werden. Sie halten wenig von sinnlosen Fehden oder unbeugsamer Ehre – stattdessen schätzen sie Verstand, Weitsicht und die Fähigkeit, Gelegenheiten zu nutzen. Wie die Möwe, die ihr Wappen ziert, wissen sie, wann sie sich nehmen müssen, was ihnen zusteht, und wann es klüger ist, abzuwarten oder sich zurückzuziehen. Ein Gullvig kämpft nicht um des Kampfes willen – sondern nur, wenn der Sieg schon fast gewiss ist.",
+    "succession": "Die bestätigte Erbfolge nennt Askold Gullvig, Barni Gullvig in dieser Reihenfolge.",
+    "court": "Náttfar Gullvig führt Clan Gullvig.",
+    "familyTree": "Der Stammbaum zeigt die überlieferten Angehörigen und Verbindungen der Familie.",
+    "historicalFigures": "Einzelne historische Persönlichkeiten sind bislang nicht näher überliefert."
+  },
+  "images": {
+    "crest": "../Stammbäume/assets/images/houses/Aldrimar/Kronental/clan-gullvig.png",
+    "scene": "../Stammbäume/assets/images/references/haus-gullvig/krieger.png",
+    "sceneAlt": "Repräsentative Hausdarstellung · Clan Gullvig",
+    "banner": "../Stammbäume/assets/images/regions/aldrimar-kronental.png"
+  },
+  "illustrationCategory": "Hausdarstellung",
+  "cadets": [],
+  "founder": {
+    "id": "sten-gullvig",
+    "familyId": "haus-gullvig",
+    "name": "Sten „die Möwe“ Gullvig",
+    "role": "Überlieferter Ursprung",
+    "detail": "Gründer des Clans Gullvig · Herold und Gesandter der Krone",
+    "image": "../Stammbäume/assets/images/portraits/haus-gullvig/sten-gullvig.png",
+    "silhouette": "male"
+  },
+  "heads": [
+    {
+      "id": "skeld-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Skeld Gullvig",
+      "role": "Historischer Amtsträger",
+      "detail": "Hesir des Clans Gullvig · Gefallen in der zweiten Seeschlacht bei Wellenruh",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/skeld-gullvig.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "sven-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Sven Gullvig",
+      "role": "Historischer Amtsträger",
+      "detail": "Hesir des Clans Gullvig ab 1630",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/sven-gullvig.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "tjodrik-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Tjodrik Gullvig",
+      "role": "Historischer Amtsträger",
+      "detail": "Hesir des Clans Gullvig ab 1671",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/tjodrik-gullvig.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "vetrar-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Vetrar Gullvig",
+      "role": "Historischer Amtsträger",
+      "detail": "Hesir des Clans Gullvig ab 1692",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/vetrar-gullvig.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "nattfar-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Náttfar Gullvig",
+      "role": "Belegter Amtsträger",
+      "detail": "Hesir des Clans Gullvig seit 1711",
+      "image": "../Stammbäume/assets/images/portraits/haus-kummerherz/nattfar-gullvig.png",
+      "silhouette": "male"
+    }
+  ],
+  "heirs": [
+    {
+      "id": "askold-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Askold Gullvig",
+      "role": "Erbfolge",
+      "detail": "Erster Erbe des Clans Gullvig",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/askold-gullvig.png",
+      "silhouette": "male"
+    },
+    {
+      "id": "barni-gullvig",
+      "familyId": "haus-gullvig",
+      "name": "Barni Gullvig",
+      "role": "Erbfolge",
+      "detail": "Zweiter Erbe des Clans Gullvig",
+      "image": "../Stammbäume/assets/images/portraits/haus-gullvig/barni-gullvig.png",
+      "silhouette": "male"
+    }
+  ],
+  "offices": [],
+  "figuresTitle": "Historische Persönlichkeiten",
+  "figures": [],
+  "trivia": [],
+  "currentHead": "Náttfar Gullvig",
+  "firstHeir": "Askold Gullvig",
+  "countyLabel": "Jarltum",
+  "sectionTitles": {
+    "knighthood": "4. Huskarltum"
+  }
+};

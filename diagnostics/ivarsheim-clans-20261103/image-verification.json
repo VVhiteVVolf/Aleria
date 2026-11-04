@@ -1,0 +1,409 @@
+{
+  "schema": "aleria.ivarsheim-image-verification",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseFigures": 13,
+  "crests": 1,
+  "totalPNGs": 14,
+  "contactSheet": "diagnostics/ivarsheim-clans-20261103/all-clan-figures.jpg",
+  "layout": {
+    "columns": 7,
+    "rows": 2,
+    "cellWidth": 200,
+    "cellHeight": 325,
+    "width": 1400,
+    "height": 650
+  },
+  "entries": [
+    {
+      "id": "haus-wargh",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-wargh/krieger.png",
+      "bytes": 260628,
+      "sha256": "eef68e479edbbb13fa1bc379e9865081c36af00635164722f4b2c80edbefd2dc",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-feuerhaar",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-feuerhaar/krieger.png",
+      "bytes": 204477,
+      "sha256": "92dd4a0b68592e3c2019f2d1cc4c00feddd469935af9dc02108beca59fc4fe50",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-skogg",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-skogg/krieger.png",
+      "bytes": 219846,
+      "sha256": "0e856d44a9179c80487b4515932088a4469e216542769bf3bb3a1e19102062ec",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-silberzunge",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-silberzunge/krieger.png",
+      "bytes": 214603,
+      "sha256": "b0306dcb6e2866a01f92d580aa78dfa73054af115224f832e8944ff93e1d16f9",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-hrafnvald",
+      "role": "warrior",
+      "kind": "Neu",
+      "assetPath": "Stammbäume/assets/images/references/haus-hrafnvald/krieger-generated-v1.png",
+      "bytes": 2234697,
+      "sha256": "349b9ff73dfa02bf1e7847f5bc3e9922a696f146db5c1a450ae533dee04b0b34",
+      "originalManifestHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-trachwyll",
+      "role": "warrior",
+      "kind": "Vorhanden",
+      "assetPath": "Stammbäume/assets/images/references/haus-trachwyll/krieger.png",
+      "bytes": 218637,
+      "sha256": "65f36d698041aa6a830b6a3f3a92311370a1f3c97b1b5b187ea330c9e2042b0c",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-grendel",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-grendel/krieger.png",
+      "bytes": 296618,
+      "sha256": "409aa7cb1fb647b025b35e880515405c63512f9b8840e62c405be6ac551ba28e",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-hyrmgardr/krieger.png",
+      "bytes": 242054,
+      "sha256": "499f6b755a53651525d786961c45e9ee017920de7f6e16c1b3ae610334e90b28",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-blutklinge",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-blutklinge/krieger.png",
+      "bytes": 288464,
+      "sha256": "29a8a2b62a04eff285b40edb9032c59e923394b73af05b64af8e83cfbb82c8c9",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-windhueter",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-windhueter/krieger.png",
+      "bytes": 266927,
+      "sha256": "41ce6ef25a2d9ad48f492b6738916ac827eb05a0bc2eba1d9900045d066ea379",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-morkvard",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-morkvard/krieger.png",
+      "bytes": 259649,
+      "sha256": "30714075274e9750c929f403b3ba19892d4b24d595fbef4dc31b2e8b6ce422f2",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-mac-luin",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-mac-luin/krieger.png",
+      "bytes": 242672,
+      "sha256": "2db024714d2f12903ed6d2d7760079d0578af783d3df8d4dceef7cc4460df2a3",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-an-borach",
+      "role": "warrior",
+      "kind": "Original",
+      "assetPath": "Stammbäume/assets/images/references/haus-an-borach/krieger.png",
+      "bytes": 239422,
+      "sha256": "eac653938799f9222f5b8044ca332681d1f0eaaed404dddf682fa5e29936fab8",
+      "originalManifestHashMatches": true,
+      "generatedSourceByteIdentical": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "expectedRatio": "2:3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-hrafnvald",
+      "role": "crest",
+      "kind": "Neues Wappen",
+      "assetPath": "Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-hrafnvald.png",
+      "bytes": 2833821,
+      "sha256": "fd19f13176136b292d70a4ad6bb3b7101a4be69eb743c74380e2e0c3cf58f4af",
+      "originalManifestHashMatches": null,
+      "generatedSourceByteIdentical": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "expectedRatio": "1:1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "productionImageUnmodified": true,
+      "visuallyInspected": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "visualReviewPending": false,
+  "visualReviewComplete": true,
+  "status": "passed",
+  "visualFindings": [
+    "Alle 13 Hausfiguren und das neue Hrafnvald-Wappen tatsächlich im Kontaktblatt angesehen.",
+    "Originale und vorhandenes Trachwyll-Bild unverändert; keine Produktionstransparenz oder Bildinhalte bearbeitet.",
+    "Hrafnvalds neue Hausfigur zeigt schlichte Rüstung, Fellmantel, Schlüssel und zurückhaltende Heraldik; kein zusätzliches benanntes Personenportrait.",
+    "Hrafnvalds Wappen ist kreisrund mit hellem Raben, silbernem Schlüssel, dunklem petrolfarbenem Feld und schlichter Metallfassung.",
+    "Keine sichtbaren Beschnitte, Hintergründe, falsch zugeordneten Hauslabels oder störenden Alpha-Säume festgestellt."
+  ]
+}

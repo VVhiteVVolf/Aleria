@@ -1,0 +1,114 @@
+{
+  "schema": "aleria.kronental-local-original-search",
+  "reviewedAt": "2026-11-03",
+  "publicOnly": true,
+  "searchRoots": [
+    "Stammbäume/assets/images",
+    "Familien Häuser und Clans",
+    "Gallerien",
+    "BilderRüstungen",
+    "Kontinente/assets",
+    "AleriaAlmanach/docs/art"
+  ],
+  "excluded": [
+    "private dossiers",
+    "hidden content",
+    "genealogy/individual portraits as house figure replacements"
+  ],
+  "method": [
+    "Canonical allowlist and source URL/filename search",
+    "Existing reference-sources.json URL lookup",
+    "Warrior gallery houseIds and illustration sources",
+    "Canonical slug filename search; crests/portraits do not count as house figures"
+  ],
+  "additionalHouses": [
+    {
+      "id": "haus-eibenschild",
+      "title": "Clan Eibenschild",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-eibenschild.png",
+        "Stammbäume/assets/images\\portraits\\haus-wellenschild\\thorin-eibenschild.png",
+        "Stammbäume/assets/images\\portraits\\haus-wellenschild\\marit-eibenschild.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-donnerblut",
+      "title": "Clan Donnerblut",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-donnerblut.png",
+        "Stammbäume/assets/images\\portraits\\haus-suedstahl\\astrid-donnerblut.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-moorbrand",
+      "title": "Clan Moorbrand",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-moorbrand.png",
+        "Stammbäume/assets/images\\portraits\\haus-albholz\\mornhild-moorbrand.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-jormung",
+      "title": "Clan Jormung",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-jormung.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-nidfengr",
+      "title": "Clan Nidfengr",
+      "matches": [],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-tarbhann",
+      "title": "Clan Tarbhann",
+      "matches": [],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-bjarnvarg",
+      "title": "Clan Bjarnvarg",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-bjarnvarg.png",
+        "Stammbäume/assets/images\\portraits\\haus-albholz\\sven-bjarnvarg.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-tauwind",
+      "title": "Clan Tauwind",
+      "matches": [
+        "Stammbäume/assets/images\\houses\\Aldrimar\\Kronental\\clan-tauwind.png",
+        "Stammbäume/assets/images\\portraits\\haus-suedstahl\\freydis-tauwind.png"
+      ],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-morchaon",
+      "title": "Clan Morchaon",
+      "matches": [],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    },
+    {
+      "id": "haus-hvelgrson",
+      "title": "Clan Hvelgrson",
+      "matches": [],
+      "potentialHouseFigurePaths": [],
+      "status": "missing"
+    }
+  ]
+}

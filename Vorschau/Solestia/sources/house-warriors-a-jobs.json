@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "pool-01",
+      "prototypeId": "prototype-02",
+      "role": "Ritterin",
+      "description": "Schwere Ritterin in kobaltblauem, burgunderrotem und silbernem spanischem Harnisch mit Fächerzeichen; beide Hände ruhen auf dem aufgestellten Großschwert.",
+      "equipment": [
+        "Großschwert",
+        "Geschlossener spanischer Morionhelm",
+        "Schwerer Plattenharnisch"
+      ],
+      "houseId": "pool-01",
+      "assetStem": "house-pool-01",
+      "category": "warriors",
+      "palette": [
+        "Elfenbein",
+        "Burgunderrot",
+        "Kobaltblau",
+        "Gold"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. One DISTINCT new unnamed young adult human house warrior for fictional Solestia. Spanish/Iberian late-medieval/early-renaissance fantasy equipment, rich and stylish but functional. Reference1 ONLY supplies approved matte simplified painting style, thin painted contours and fine even pigment grain: do NOT copy blue palette, griffin, western helmet, pose or invisible exterior halo. Reference2 is THIS house's actual NEW crest: use its palette and small worn heraldic detail. Reference3 supplies ONLY role/equipment, NOT the person's identity, silhouette or armor blueprint. Invent a fresh person and clearly DIFFERENT armor construction, cloth cut, helmet/hat style and arrangement; never just recolor the role prototype. Humans/Felsalben have rounded human ears; NO elves. No invented name, genealogy, office, occupation or house history based on the emblem. No Greek/Roman helmets or tunics, no firearms. Heraldry stays a small badge, painted border or restrained armor detail; never build unusable literal object-armor or attach actual fans/castanets/cups to the helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nAn athletic young woman knight of24, face concealed in a closed SPANISH MORION with a low long comb, sharply swept brim and hinged visor/breathing perforations; a short ivory feather fan pinned on one SIDE, a different profile from the role reference's towering front crest. All steel is matte silver edged in aged gold. A broad breastplate with restrained radiating FAN-LIKE FLUTING, small opened ivory-and-burgundy FAN emblem on a cobalt chest panel, compact angular pauldrons and articulated elbow wings, long overlapping hip plate lames with simple radial incisions and a split burgundy calf-length cloth skirt, reinforced plated legs and full sabatons. Her asymmetric cobalt shoulder cape is fastened on the right with a small gold clasp. No cleavage or exaggerated armor anatomy; no actual giant fan or dancer accessory. Essential knight pose: a huge straight double-edged TWO-HANDED GREATSWORD stands exactly VERTICAL in front of her, tip just beside/between feet, crossguard under waist. BOTH gauntleted hands rest STACKED naturally over its large pommel at upper waist/lower chest, she gently rests weight on it; shoulders relaxed, no sword raising or one-handed carrying. No shield. A calm slightly turned torso and balanced feet.\n\nActual house emblem: Ein einzelner geöffneter spanisch-iberischer Tanzfächer aus elfenbeinfarbenen Stäben und burgunderroten Stofffeldern auf kobaltblauem Grund. Der Fächer steht symmetrisch halbkreisförmig geöffnet mit deutlich sichtbarem gemeinsamen Gelenk unten; keine Hand und kein Tänzer.\nHouse palette: Elfenbein, Burgunderrot, Kobaltblau, Gold\n\nExactly1024x1536 portrait2:3 RGBA-PNG. Calm upright COMPLETE FULL-BODY figure filling at most80percent image height, all hat/feather points, both boots/soles and all weapon/instrument tips fully in frame with90px clear margin. Anatomical two arms/two hands, functional natural grips. True transparent background outside silhouette and within gaps. NO environment/floor/outer shadow/glow/color fog/paper/black painted background. Matte simplified broad forms, softly painted edges and fine even grain, no 3D/CGI/photorealism. No text/names/watermarks/floating crest/no animal companion/no firearm/no shield.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-01.png",
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/prototype-02.png"
+      ]
+    },
+    {
+      "id": "pool-02",
+      "prototypeId": "prototype-01",
+      "role": "Schwertmeister",
+      "description": "Fechtmeister in cremefarbenem, ockerfarbenem und dunkelrotem Wams mit Kastagnettenzeichen, Degen, Federhut und rückwärts getragener Laute.",
+      "equipment": [
+        "Degen mit Korbgefäß",
+        "Breiter Federhut",
+        "Laute mit Rückentragegurt",
+        "Leichter Brust- und Armschutz"
+      ],
+      "houseId": "pool-02",
+      "assetStem": "house-pool-02",
+      "category": "warriors",
+      "palette": [
+        "Schwarzholz",
+        "Ocker",
+        "Dunkelrot",
+        "Creme"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. One DISTINCT new unnamed young adult human house warrior for fictional Solestia. Spanish/Iberian late-medieval/early-renaissance fantasy equipment, rich and stylish but functional. Reference1 ONLY supplies approved matte simplified painting style, thin painted contours and fine even pigment grain: do NOT copy blue palette, griffin, western helmet, pose or invisible exterior halo. Reference2 is THIS house's actual NEW crest: use its palette and small worn heraldic detail. Reference3 supplies ONLY role/equipment, NOT the person's identity, silhouette or armor blueprint. Invent a fresh person and clearly DIFFERENT armor construction, cloth cut, helmet/hat style and arrangement; never just recolor the role prototype. Humans/Felsalben have rounded human ears; NO elves. No invented name, genealogy, office, occupation or house history based on the emblem. No Greek/Roman helmets or tunics, no firearms. Heraldry stays a small badge, painted border or restrained armor detail; never build unusable literal object-armor or attach actual fans/castanets/cups to the helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA lean athletic young Iberian man of23 with short tousled black hair, youthful clean-shaven face, amber-brown eyes and rounded ears. A low wide BLACK felt hat with its front brim asymmetrically folded up and one tawny ochre feather pointing back, not the prototype's black hat/ivory feathers. A fitted CREAM vertically slashed doublet with narrow dark-red shoulder panels and ochre leather inserts, a small warm-steel fitted breastplate, asymmetric leather forearm protection and fine bronze cuffs, long tailored near-black trousers and slim leather boots. A small paired black-and-ochre CASTANET emblem hangs as an embroidered cream chest tab with one small red cord; no actual instrument in hands except the rapier and no castanet costume. A slender straight DEGEN/RAPIER in his LEFT hand, cup/swept basket hilt and long narrow blade angled down to the left, point fully visible. RIGHT hand rests on decorated belt near waist. A real wooden pear-bodied LUTE on a back-carrying strap: neck and bent pegbox protrude above his RIGHT shoulder; part of its pear body visible behind opposite hip, connected naturally. No quiver, no harp or lyre. Quiet proud fencing-master posture with one foot slightly forward, not a combat lunge.\n\nActual house emblem: Ein einzelnes Paar Kastagnetten: genau zwei große stilisierte rundlich-birnenförmige geschlossene Holz-Klangkörper nebeneinander, einer aus schwarzem Holz, einer ockerfarben, beide an einer einzigen klar geschwungenen roten Kordel mit kleinem Knoten; auf cremefarbenem Feld. Jede Kastagnette hat eine klare kleine Öse am schmalen oberen Ende und eine feine Fuge am unteren Rand. Keine Hände oder weiteren Instrumente.\nHouse palette: Schwarzholz, Ocker, Dunkelrot, Creme\n\nExactly1024x1536 portrait2:3 RGBA-PNG. Calm upright COMPLETE FULL-BODY figure filling at most80percent image height, all hat/feather points, both boots/soles and all weapon/instrument tips fully in frame with90px clear margin. Anatomical two arms/two hands, functional natural grips. True transparent background outside silhouette and within gaps. NO environment/floor/outer shadow/glow/color fog/paper/black painted background. Matte simplified broad forms, softly painted edges and fine even grain, no 3D/CGI/photorealism. No text/names/watermarks/floating crest/no animal companion/no firearm/no shield.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-02.png",
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/prototype-01.png"
+      ]
+    },
+    {
+      "id": "pool-03",
+      "prototypeId": "prototype-04",
+      "role": "Marinerin",
+      "description": "Marinerin in elfenbeinfarbenem und petrolfarbenem Waffenrock mit violettem Krokuszeichen, leichtem Harnisch, Degen und Rückenköcher.",
+      "equipment": [
+        "Degen mit Korbgefäß",
+        "Rückenköcher",
+        "Offener spanischer Cabasset",
+        "Leichter Stahl- und Kettenpanzer"
+      ],
+      "houseId": "pool-03",
+      "assetStem": "house-pool-03",
+      "category": "warriors",
+      "palette": [
+        "Violett",
+        "Gold",
+        "Rot",
+        "Elfenbein",
+        "Petrol"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. One DISTINCT new unnamed young adult human house warrior for fictional Solestia. Spanish/Iberian late-medieval/early-renaissance fantasy equipment, rich and stylish but functional. Reference1 ONLY supplies approved matte simplified painting style, thin painted contours and fine even pigment grain: do NOT copy blue palette, griffin, western helmet, pose or invisible exterior halo. Reference2 is THIS house's actual NEW crest: use its palette and small worn heraldic detail. Reference3 supplies ONLY role/equipment, NOT the person's identity, silhouette or armor blueprint. Invent a fresh person and clearly DIFFERENT armor construction, cloth cut, helmet/hat style and arrangement; never just recolor the role prototype. Humans/Felsalben have rounded human ears; NO elves. No invented name, genealogy, office, occupation or house history based on the emblem. No Greek/Roman helmets or tunics, no firearms. Heraldry stays a small badge, painted border or restrained armor detail; never build unusable literal object-armor or attach actual fans/castanets/cups to the helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA young athletic woman mariner of24, warm olive skin, curly dark hair gathered into a low bun and round human ears. A plain OPEN Spanish CABASSET with tall almond crown and narrow rolled brim, matte steel with a small gold rim, no plume. A flexible light STEEL breastplate with two broad diagonal reinforcement strips, short dark-mail sleeves, ivory long split coat with PETROL sleeves and VIOLET inset panels, sturdy leather bracers, fully covered legs in charcoal trousers and knee-high soft boots. A small VIOLET CROCUS blossom with gold center and three tiny red stigmas is embroidered on an ivory belt tab, not an actual flower bouquet. She holds a slim straight DEGEN/RAPIER in her right hand, swept basket guard with long slender blade pointing quietly down away from her body; left hand rests on quiver strap at her upper chest, not hip. A tall leather QUIVER on her BACK with ivory arrow fletchings above shoulder and a functional diagonal strap. No bow in hands, lute, shield or curved saber. Distinct long coat silhouette, elegantly restrained saffron-gold edging and modest maritime tailoring, no invented trade role or clerical garb.\n\nActual house emblem: Eine einzelne große frontal stilisierte Safrankrokusblüte mit klaren violetten Blütenblättern, goldener Blütenmitte und GENAU DREI langen kräftig ROTEN Narbenschenkeln, die getrennt aus der Mitte hervorstehen. Ein kurzer schlichter dunkler Stiel auf elfenbeinfarbenem Feld, keine zweite Blüte und keine weiteren roten Fortsätze.\nHouse palette: Violett, Gold, Rot, Elfenbein, Petrol\n\nExactly1024x1536 portrait2:3 RGBA-PNG. Calm upright COMPLETE FULL-BODY figure filling at most80percent image height, all hat/feather points, both boots/soles and all weapon/instrument tips fully in frame with90px clear margin. Anatomical two arms/two hands, functional natural grips. True transparent background outside silhouette and within gaps. NO environment/floor/outer shadow/glow/color fog/paper/black painted background. Matte simplified broad forms, softly painted edges and fine even grain, no 3D/CGI/photorealism. No text/names/watermarks/floating crest/no animal companion/no firearm/no shield.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-03.png",
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/prototype-04.png"
+      ]
+    },
+    {
+      "id": "pool-04",
+      "prototypeId": "prototype-03",
+      "role": "Pikenierin",
+      "description": "Pikenierin mit schwarzem Federhut, weinrotem Waffenrock und silberner Teilrüstung mit Steigbügelzeichen; eine Hellebarde hält sie ruhig neben dem Körper.",
+      "equipment": [
+        "Hellebarde",
+        "Breiter Federhut",
+        "Silberne Brust- und Schulterplatten",
+        "Gepolsterter weinroter Waffenrock"
+      ],
+      "houseId": "pool-04",
+      "assetStem": "house-pool-04",
+      "category": "warriors",
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Weinrot"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. One DISTINCT new unnamed young adult human house warrior for fictional Solestia. Spanish/Iberian late-medieval/early-renaissance fantasy equipment, rich and stylish but functional. Reference1 ONLY supplies approved matte simplified painting style, thin painted contours and fine even pigment grain: do NOT copy blue palette, griffin, western helmet, pose or invisible exterior halo. Reference2 is THIS house's actual NEW crest: use its palette and small worn heraldic detail. Reference3 supplies ONLY role/equipment, NOT the person's identity, silhouette or armor blueprint. Invent a fresh person and clearly DIFFERENT armor construction, cloth cut, helmet/hat style and arrangement; never just recolor the role prototype. Humans/Felsalben have rounded human ears; NO elves. No invented name, genealogy, office, occupation or house history based on the emblem. No Greek/Roman helmets or tunics, no firearms. Heraldry stays a small badge, painted border or restrained armor detail; never build unusable literal object-armor or attach actual fans/castanets/cups to the helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nAn athletic young woman Iberian halberdier of22, ash-brown hair in one braid, youthful round face and rounded human ears. A broad BLACK feather hat with a very broad low angled brim, two long CRIMSON feathers and a silver hatband, distinct from the prototype's ochre hat and burgundy fan plume. A silver cuirass made from three vertical articulated plates and two modest rounded shoulder pieces, black padded sleeves with small neat red slashes, segmented waist belt and long split burgundy padded coat, dark slim trousers, steel knee cops and black leather boots. A small silver STIRRUP on a short red strap is painted as a badge on a black chest tab; a few closed loop silver incisions on cuffs, no actual horse, saddle, rider or heavy tack prop. Straight black-wood HALBERD pole held vertically to her left side, steel axe blade, back beak and single upper spike entirely visible above hat, bottom of shaft beside foot. Left hand holds shaft firmly at waist and right hand hangs relaxed beside body; no extra weapon/quiver/lute. Calm upright three-quarter stance, no shield.\n\nActual house emblem: Ein einzelner klar erkennbarer silberner Steigbügel frontal auf mattschwarzem Feld, mit breitem gerade verlaufendem waagerechtem Fußtritt unten, zwei symmetrischen gebogenen Seiten und oberer Aufhängungsöse. Ein kurzer dunkelroter Lederriemen führt durch die obere Öse und hängt dahinter; kein Pferd, Bein, Fuß, Schloss oder weiterer Steigbügel.\nHouse palette: Silber, Schwarz, Weinrot\n\nExactly1024x1536 portrait2:3 RGBA-PNG. Calm upright COMPLETE FULL-BODY figure filling at most80percent image height, all hat/feather points, both boots/soles and all weapon/instrument tips fully in frame with90px clear margin. Anatomical two arms/two hands, functional natural grips. True transparent background outside silhouette and within gaps. NO environment/floor/outer shadow/glow/color fog/paper/black painted background. Matte simplified broad forms, softly painted edges and fine even grain, no 3D/CGI/photorealism. No text/names/watermarks/floating crest/no animal companion/no firearm/no shield.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-04.png",
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/prototype-03.png"
+      ]
+    },
+    {
+      "id": "pool-05",
+      "prototypeId": "prototype-01",
+      "role": "Schwertmeisterin",
+      "description": "Schwertmeisterin in terrakottafarbenem und elfenbeinfarbenem Fechtgewand mit Kobaltblau und Olivgrün, Krugzeichen, Degen, Federhut und rückwärts getragener Laute.",
+      "equipment": [
+        "Degen mit Korbgefäß",
+        "Olivgrüner Federhut",
+        "Laute mit Rückentragegurt",
+        "Leichter Brustpanzer und Armschutz"
+      ],
+      "houseId": "pool-05",
+      "assetStem": "house-pool-05",
+      "category": "warriors",
+      "palette": [
+        "Kobaltblau",
+        "Elfenbein",
+        "Terrakotta",
+        "Olivgrün"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. One DISTINCT new unnamed young adult human house warrior for fictional Solestia. Spanish/Iberian late-medieval/early-renaissance fantasy equipment, rich and stylish but functional. Reference1 ONLY supplies approved matte simplified painting style, thin painted contours and fine even pigment grain: do NOT copy blue palette, griffin, western helmet, pose or invisible exterior halo. Reference2 is THIS house's actual NEW crest: use its palette and small worn heraldic detail. Reference3 supplies ONLY role/equipment, NOT the person's identity, silhouette or armor blueprint. Invent a fresh person and clearly DIFFERENT armor construction, cloth cut, helmet/hat style and arrangement; never just recolor the role prototype. Humans/Felsalben have rounded human ears; NO elves. No invented name, genealogy, office, occupation or house history based on the emblem. No Greek/Roman helmets or tunics, no firearms. Heraldry stays a small badge, painted border or restrained armor detail; never build unusable literal object-armor or attach actual fans/castanets/cups to the helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nA young athletic woman fencing master of25 with warm tan skin, dark auburn side braid, youthful oval face and rounded human ears. An OLIVE-GREEN low rounded velvet hat with gently rolled wide brim and three short IVORY feathers, cobalt hatband and small bronze pin. A fitted TERRACOTTA doublet with ivory-and-cobalt slashed sleeves, a light warm-steel small breastplate and forearm bracers, long ivory split coat panels bordered with BLUE TALAVERA-INSPIRED stylized floral and band embroidery, olive narrow full-length trousers and dark brown boots. A SMALL ivory ceramic JUG with cobalt painted pattern is embroidered as the house badge on a terracotta chest panel, not an actual jug held or giant ceramic armor. A slim straight double-edged DEGEN/RAPIER with elegant basket guard in RIGHT hand, angled quietly down to the right, point fully visible; left hand lightly rests on diagonal lute-carrying strap at upper chest. A real pear-shaped wooden LUTE secured on her BACK; fretboard and characteristic bent pegbox project above LEFT shoulder, pear body edge visible behind opposite hip. No quiver/harp/lyre/shield/curved sword. Her long embroidered coat tails, lighter sleeve construction and braid clearly differ from the prototype and castanet house male fencer.\n\nActual house emblem: Ein einzelner bauchiger Talavera-inspirierter Keramikkrug frontal leicht seitlich mit genau einem Henkel, kurzem Hals und kleinem Ausguss. Elfenbeinfarbener Krug mit klaren kobaltblauen gemalten Blüten- und Bandmustern auf terrakottafarbenem Feld; heraldisch flach gemalt, kein Stillleben, keine Bodenfläche und kein weiterer Krug.\nHouse palette: Kobaltblau, Elfenbein, Terrakotta, Olivgrün\n\nExactly1024x1536 portrait2:3 RGBA-PNG. Calm upright COMPLETE FULL-BODY figure filling at most80percent image height, all hat/feather points, both boots/soles and all weapon/instrument tips fully in frame with90px clear margin. Anatomical two arms/two hands, functional natural grips. True transparent background outside silhouette and within gaps. NO environment/floor/outer shadow/glow/color fog/paper/black painted background. Matte simplified broad forms, softly painted edges and fine even grain, no 3D/CGI/photorealism. No text/names/watermarks/floating crest/no animal companion/no firearm/no shield.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-05.png",
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/prototype-01.png"
+      ]
+    }
+  ]
+}

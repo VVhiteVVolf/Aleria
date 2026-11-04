@@ -5,6 +5,6 @@ const skill = (name,bonus) => ({name,bonus});
 export const INSPIRED_TRAIT_DEFINITIONS = [
  ['buehnensicher','Bühnensicher','Vorteil bei Auftreten-Proben. Mehrere Quellen von Vorteil geben keine zusätzlichen Würfel.',{},3,{triggerRules:advantage('buehnensicherheit','performance')}],
  ['arkan-geschult','Arkan geschult','Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.',{},3,{triggerRules:advantage('arkane-schulung','arcane-kunde')}],
- ['frohnatur','Frohnatur','Je +1 auf Überzeugen, Auftreten und Motiv erkennen.',{skillModifiers:[skill('Überzeugen',1),skill('Auftreten',1),skill('Motiv erkennen',1)]},2],
- ['buehnenmensch','Bühnenmensch','+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.',{skillModifiers:[skill('Auftreten',2),skill('Überleben',-2),skill('Einschüchtern',-1)]},-1]
+ ['frohnatur','Frohnatur','Offenes, ansteckend fröhliches Auftreten: je +1 auf Überzeugen, Auftreten und Flirten.',{skillModifiers:[skill('Überzeugen',1),skill('Auftreten',1),skill('Flirten',1)]},2],
+ ['buehnenmensch','Bühnenmensch','Auf der Bühne zuhause, in der Wildnis ungeübt: +1 auf Auftreten; −1 auf Überleben.',{skillModifiers:[skill('Auftreten',1),skill('Überleben',-1)]},0]
 ];

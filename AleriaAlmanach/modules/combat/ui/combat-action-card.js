@@ -113,6 +113,7 @@ export function renderActionDetails(actor = {}, { open = false } = {}) {
   const fields = [
     ['Beschreibung', entry.description], ['Wirkung', entry.description?.includes(entry.effect) ? '' : entry.effect], ['Voraussetzungen', entry.requirements],
     ['Reichweite', action.range || entry.range], ['Ziel', entry.target], ['Dauer', action.duration || entry.duration],
+    ['Stimme', action.requiresVoice || entry.requiresVoice ? 'Eigene Stimme erforderlich' : ''],
     ['Waffenhinweise', weaponNotes], ['Besonderheiten', (action.mechanicNotes || []).join('\n')],
     ['Nicht verfügbar', action.compatible === false ? action.disabledReason : '']
   ].filter(([, value]) => value && typeof value !== 'object');

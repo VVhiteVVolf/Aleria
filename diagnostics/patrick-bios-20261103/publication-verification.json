@@ -1,0 +1,109 @@
+{
+  "planId": "7b02856c20c23d9606f0bf8a4b257bfd74769dcbfef6e36788da5ba93f446162",
+  "plannedAt": "2026-11-03T17:25:17.128Z",
+  "characters": [
+    {
+      "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "create": false,
+      "fields": [
+        "biography",
+        "inventory",
+        "title",
+        "currentLocation",
+        "genealogy",
+        "updatedAt"
+      ],
+      "fieldMask": [
+        "biography.biography.abilities",
+        "biography.biography.connections",
+        "biography.revision",
+        "biography.stats",
+        "currentLocation",
+        "genealogy.relationships.partners",
+        "inventory.companions",
+        "inventory.items",
+        "inventory.revision",
+        "title",
+        "updatedAt"
+      ]
+    },
+    {
+      "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "create": false,
+      "fields": [
+        "biography",
+        "inventory",
+        "title",
+        "currentLocation",
+        "updatedAt"
+      ],
+      "fieldMask": [
+        "biography.biography.abilities",
+        "biography.biography.connections",
+        "biography.revision",
+        "biography.stats",
+        "currentLocation",
+        "inventory",
+        "title",
+        "updatedAt"
+      ]
+    },
+    {
+      "id": "person--family-tree--unknown-cadogan-spouse",
+      "create": true,
+      "fields": [
+        "biography",
+        "inventory",
+        "name",
+        "title",
+        "currentLocation",
+        "identity",
+        "genealogy",
+        "aliases",
+        "portrait",
+        "updatedAt",
+        "taxonomyPath",
+        "createdAt",
+        "ownerUid",
+        "createdBy",
+        "archived",
+        "status",
+        "role",
+        "origin",
+        "fraktion",
+        "relevance",
+        "plotNode",
+        "profileLink",
+        "playerOwner",
+        "bio"
+      ],
+      "fieldMask": []
+    }
+  ],
+  "creatures": [
+    {
+      "id": "companion-cadogan-sgrechiwr-silberstolz"
+    },
+    {
+      "id": "companion-rhiannon-draenmelyn-perle"
+    },
+    {
+      "id": "companion-gwen-hamnett-sir-balthasar"
+    },
+    {
+      "id": "companion-gwen-hamnett-sonnenaufgang"
+    }
+  ],
+  "assets": 57,
+  "verified": true,
+  "committedAt": "2026-11-03T17:26:06.547268Z",
+  "unrelatedRestFieldsUnchanged": true,
+  "createdCharacters": 1,
+  "createdCreatures": 4,
+  "verifiedDocuments": 7,
+  "locksRead": 3,
+  "restEmptyContainerCanonicalization": true,
+  "unrelatedMainFieldsExact": true,
+  "externalWrites": 0,
+  "readOnlyRecovery": true
+}

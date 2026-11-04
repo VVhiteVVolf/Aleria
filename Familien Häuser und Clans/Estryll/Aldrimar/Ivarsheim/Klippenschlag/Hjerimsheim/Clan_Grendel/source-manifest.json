@@ -1,0 +1,82 @@
+{
+  "id": "haus-grendel",
+  "source": {
+    "attachmentId": "9b6b9df8-877f-4bb8-b7e5-ece306a95888",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\9b6b9df8-877f-4bb8-b7e5-ece306a95888\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/grendel/animexx-original.html",
+    "bytes": 116359,
+    "sha256": "52d37f98dd15c29111f0907d974ebe95894acc03d37f15b90b8077404f2f73ec",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-grendel",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Hjerimsheim",
+      "barony": "Klippenschlag",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-klippenschlag.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-grendel",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-grendel",
+    "familyId": "haus-grendel",
+    "slug": "grendel",
+    "canonicalSlug": "grendel",
+    "attachmentId": "9b6b9df8-877f-4bb8-b7e5-ece306a95888",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/tIgKo7K.png",
+    "sourceUrl": "https://i.imgur.com/tIgKo7K.png",
+    "path": "Stammbäume/assets/images/references/haus-grendel/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-grendel/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:350px; width:233px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 296618,
+    "sha256": "409aa7cb1fb647b025b35e880515405c63512f9b8840e62c405be6ac551ba28e",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Axtkämpfer mit Hörnerhelm, Fell und rotem Drachenschiffswappen.",
+    "sha": "409aa7cb1fb647b025b35e880515405c63512f9b8840e62c405be6ac551ba28e",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Der aktuelle Rang Thane und das Thanentum Klippenschlag haben Vorrang vor dem alten Hesirentum im ersten Absatz. Historische Hesirentitel einzelner Personen bleiben unverändert.",
+    "Westliche Küstenlage, Hjerimsheim und Wargh als Lehnsherr sind durch die aktuellen Orts- und Gebietsdaten bestätigt.",
+    "Fjellhain liegt nach dem heutigen Gebietstext in Rothain. Die Behauptung des alten Grendel-Besitztumabschnitts wird nicht als zusätzlicher Grendel-Besitz übernommen.",
+    "Hårfjel bleibt Grendel-Ahnengrab, liegt aber geografisch in Ivarsklamm. Keine zweite örtliche Einordnung des gesamten Clans aus einem historischen Besitzbezug erzeugen.",
+    "Ritual der Wogen, Küstenwacht und Neutralität im Prätendentenkrieg sind konkrete übernehmbare Angaben. Aus Gruppenbeschreibungen keine neuen Seefahrerpersonen oder Begleittiere anlegen.",
+    "Vergleichende Aussagen zur Größe der Streitmacht werden ausgelassen; das Ausrüstungs- und Küstenkampfprofil bleibt erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

@@ -3,11 +3,11 @@ import {
   SILBERINSEL_HOUSE_EMBLEMS,
   SILBERINSEL_HOUSE_PROFILES
 } from './silberinsel-house-profiles.js';
-import { HOUSE_CANWYLL_FAMILY } from './house-canwyll-family.js';
+import { HOUSE_CANWYLL_FAMILY } from './house-canwyll-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_CREFYDDOL_FAMILY } from './house-crefyddol-family.js';
 import { HOUSE_PYRTH_FAMILY } from './house-pyrth-family.js';
 import { HOUSE_SAITH_FAMILY } from './house-saith-family.js';
-import { HOUSE_TIWNA_FAMILY } from './house-tiwna-family.js';
+import { HOUSE_TIWNA_FAMILY } from './house-tiwna-family.js?v=20261104-lore-fixes-v1';
 
 export const SILBERINSEL_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'saith', title: 'Haus Saith' }),

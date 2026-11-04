@@ -1,0 +1,602 @@
+{
+  "schema": "aleria.house-lore-audit.aldrimar",
+  "reviewedAt": "2026-11-03",
+  "status": "read-only-review-complete",
+  "currentWorldYear": 1740,
+  "scope": {
+    "publicFamilyCount": 112,
+    "counties": {
+      "Roriksheim": 33,
+      "Kronental": 29,
+      "Ivarsheim": 13,
+      "Schwarzfenn": 11,
+      "Krähenmoor": 26
+    },
+    "historicalHouseCount": 23,
+    "activeHouseAuthoringSources": 112,
+    "activeBiographyModules": 112,
+    "territorialPageSources": 59,
+    "scopeFile": "diagnostics/house-lore-audit-20261103/aldrimar-public-ids.json"
+  },
+  "method": [
+    "Öffentliche FAMILY_REGISTRY-Einträge mit folderPath[0]=Aldrimar gegen aktive haus.content.mjs und zugehörige Bios abgeglichen.",
+    "Aktuelle Kapitel nach heutigen Rang-/Sitz-/Herrschaftsaussagen, Gründung, Zeitangaben, Angehörigen sowie Migrations- und Kulturgeschichte geprüft; gezielte Gegenprüfung mit Länder-/Territorialquellen und gegenseitigen Hausgeschichten.",
+    "Sieben lokale Aldrimar-Chronologiekandidaten an aktiven Personen-, Eltern- und Partnerschaftsdaten einzeln verifiziert.",
+    "Bei allen übernommenen Chronologiebefunden sind Elternkante und zugehörige Partnerschaft ausdrücklich public, biological und confirmed."
+  ],
+  "excluded": [
+    "private, hidden und restricted Beziehungen und ausschließlich daran verknüpfte Personen",
+    "gelieferte Altstammbäume und verworfene Archivfehler",
+    "Militärstatistiken",
+    "alte Texte in Previous-Default-Fingerprint-Metadaten"
+  ],
+  "summary": {
+    "acceptedNarrativeFindings": 3,
+    "acceptedChronologyGroups": 5,
+    "acceptedChronologyEdges": 6,
+    "improbableButUnconfirmedQuestions": 1,
+    "correctionsApplied": 0
+  },
+  "acceptedNarrativeFindings": [
+    {
+      "id": "aldrimar-narrative-haus_blutklinge",
+      "familyId": "haus-blutklinge",
+      "title": "Blutklinge: Kulturkategorie wird im aktiven Fließtext zum Sitz",
+      "confidence": "high",
+      "statementA": "Die große Hausseite nennt Aldrimarer (jüngst ausgestorben) als überlieferten Sitz.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 106,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.data.js",
+          "line": 96,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-generated-house-page"
+        }
+      ],
+      "statementB": "Profil, kurze Bio und kanonische Definition führen Ivarsfels als letzten Ort.",
+      "evidenceB": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Ivarsfels\"",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 24,
+          "quote": "Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus von Ivarsfels.",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.biography.mjs",
+          "line": 11,
+          "quote": "Ivarsfels",
+          "kind": "active-generated-biography"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 41,
+          "quote": "place: 'Ivarsfels'",
+          "kind": "active-source"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 43,
+          "quote": "culture: 'Aldrimarer'",
+          "kind": "active-source"
+        }
+      ],
+      "reason": "Die Bezeichnung Aldrimarer (jüngst ausgestorben) ist eine historische Kultur-/Registerkategorie, kein geografischer Ort. Die Aussagen stehen gleichzeitig in den aktiven Ausgaben.",
+      "strongerCurrentEvidence": "Kanonische place-Definition und damit übereinstimmende aktuelle Bio/Profil nennen Ivarsfels ausdrücklich.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-narrative-haus_windhuter",
+      "familyId": "haus-windhueter",
+      "title": "Windhüter: Kulturkategorie wird im aktiven Fließtext zum Sitz",
+      "confidence": "high",
+      "statementA": "Die große Hausseite nennt Aldrimarer (jüngst ausgestorben) als überlieferten Sitz.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 106,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.data.js",
+          "line": 96,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-generated-house-page"
+        }
+      ],
+      "statementB": "Profil, kurze Bio und kanonische Definition führen Ivarsfels als letzten Ort.",
+      "evidenceB": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Ivarsfels\"",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 24,
+          "quote": "Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus aus Ivarsfels.",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.biography.mjs",
+          "line": 11,
+          "quote": "Ivarsfels",
+          "kind": "active-generated-biography"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 49,
+          "quote": "place: 'Ivarsfels'",
+          "kind": "active-source"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 51,
+          "quote": "culture: 'Aldrimarer'",
+          "kind": "active-source"
+        }
+      ],
+      "reason": "Die Bezeichnung Aldrimarer (jüngst ausgestorben) ist eine historische Kultur-/Registerkategorie, kein geografischer Ort. Die Aussagen stehen gleichzeitig in den aktiven Ausgaben.",
+      "strongerCurrentEvidence": "Kanonische place-Definition und damit übereinstimmende aktuelle Bio/Profil nennen Ivarsfels ausdrücklich.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-narrative-hornhall",
+      "familyId": "haus-wolfshorn",
+      "title": "Hornhall: Dämmertal gegen unmittelbare Lage in Dämmergrund",
+      "confidence": "high",
+      "statementA": "Hausseite und kurze Bio verorten die Wehrhalle Hornhall im Dämmertal.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+          "line": 24,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+          "line": 106,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-source"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.data.js",
+          "line": 96,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-generated-house-page"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.biography.mjs",
+          "line": 11,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-generated-biography"
+        }
+      ],
+      "statementB": "Die aktuelle Territorialgeografie trennt Hornhall ausdrücklich von Dämmertal und ordnet es unmittelbar Dämmergrund/Vangandr zu.",
+      "evidenceB": [
+        {
+          "path": "Kontinente/modules/roriksheim/pages.source.json",
+          "line": 2849,
+          "quote": "Der Wolfshorn-Grenzsitz Hornhall liegt dagegen in Dämmergrund und untersteht unmittelbar den Vangandr.",
+          "kind": "active-territorial-source"
+        },
+        {
+          "path": "Kontinente/modules/roriksheim/pages.source.json",
+          "line": 4402,
+          "quote": "Hornhall ist der Grenzsitz des Clans Wolfshorn in Dämmergrund.",
+          "kind": "active-territorial-source"
+        }
+      ],
+      "reason": "Beide Aussagen beschreiben den heutigen verbleibenden Wolfshorn-Sitz unter Bjoern. Die aktuelle Territorialquelle unterscheidet Dämmertal ausdrücklich; eine bloße historische Umbenennung erklärt den Gegensatz nicht.",
+      "strongerCurrentEvidence": "Die konkrete aktuelle Grenzsitz-Seite und die ausdrückliche geografische Abgrenzung in der Dämmertal-Seite.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    }
+  ],
+  "acceptedChronologyFindings": [
+    {
+      "id": "aldrimar-chronology-varangr",
+      "familyId": "haus-varangr",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Rörik Varangr",
+        "birth": "1696",
+        "death": "1720"
+      },
+      "children": [
+        {
+          "name": "Olesja Varangr",
+          "birth": "1723",
+          "yearsAfterParentDeath": 3,
+          "parentageId": "varangr-parentage-olesja-varangr"
+        }
+      ],
+      "statementA": "Rörik Varangr starb laut aktiver Familienakte 1720.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 534,
+          "quote": "Rörik Varangr: Geburt 1696, Tod 1720",
+          "kind": "active-canonical-person-record"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 575,
+          "quote": "Olesja Varangr: Geburt 1723",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 193,
+          "quote": "rorik: ['rorik-varangr', 'gisrun-schattenherz']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 718,
+          "quote": "childrenOf(['fjalar-varangr', 'olesja-varangr'], 'marriage-rorik-gisrun-varangr')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-chronology-sturmgeborene",
+      "familyId": "haus-sturmgeborene",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Kormak Sturmgeborener",
+        "birth": "1625",
+        "death": "1658"
+      },
+      "children": [
+        {
+          "name": "Elinborg Sturmgeborene",
+          "birth": "1665",
+          "yearsAfterParentDeath": 7,
+          "parentageId": "sturmgeborene-parentage-elinborg-sturmgeborene"
+        }
+      ],
+      "statementA": "Kormak Sturmgeborener starb laut aktiver Familienakte 1658.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 308,
+          "quote": "Kormak Sturmgeborener: Geburt 1625, Tod 1658",
+          "kind": "active-canonical-person-record"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 325,
+          "quote": "Elinborg Sturmgeborene: Geburt 1665",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 142,
+          "quote": "'marriage-kormak-magdis-sturmgeborene': ['kormak-sturmgeborener', 'magdis-wellenschild']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 448,
+          "quote": "childrenOf(['ingeborg-sturmgeborene', 'jornborg-sturmgeborene', 'elinborg-sturmgeborene'], 'marriage-kormak-magdis-sturmgeborene')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-chronology-grendel",
+      "familyId": "haus-grendel",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Gunnar Grendel",
+        "birth": "1585",
+        "death": "1625"
+      },
+      "children": [
+        {
+          "name": "Thordis Grendel",
+          "birth": "1630",
+          "yearsAfterParentDeath": 5,
+          "parentageId": "grendel-parentage-thordis-grendel"
+        }
+      ],
+      "statementA": "Gunnar Grendel starb laut aktiver Familienakte 1625.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 318,
+          "quote": "Gunnar Grendel: Geburt 1585, Tod 1625",
+          "kind": "active-canonical-person-record"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 335,
+          "quote": "Thordis Grendel: Geburt 1630",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 161,
+          "quote": "gunnar: ['hljotrun-wargh', 'gunnar-grendel']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 448,
+          "quote": "childrenOf(['vidar-grendel', 'thordis-grendel'], 'marriage-hljotrun-gunnar-wargh')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-chronology-nachtjaeger",
+      "familyId": "haus-nachtjaeger",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Ingunn Feuerherz",
+        "birth": "1614",
+        "death": "1645"
+      },
+      "children": [
+        {
+          "name": "Kjartan Nachtjäger",
+          "birth": "1648",
+          "yearsAfterParentDeath": 3,
+          "parentageId": "nachtjaeger-parentage-kjartan-nachtjaeger"
+        },
+        {
+          "name": "Svandís Nachtjäger",
+          "birth": "1651",
+          "yearsAfterParentDeath": 6,
+          "parentageId": "nachtjaeger-parentage-svandis-nachtjaeger"
+        }
+      ],
+      "statementA": "Ingunn Feuerherz starb laut aktiver Familienakte 1645.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 272,
+          "quote": "Ingunn Feuerherz: Geburt 1614, Tod 1645",
+          "kind": "active-canonical-person-record"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 279,
+          "quote": "Kjartan Nachtjäger: Geburt 1648",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 281,
+          "quote": "Svandís Nachtjäger: Geburt 1651",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 134,
+          "quote": "sturlaugrIngunn: ['sturlaugr-nachtjaeger', 'ingunn-1614-feuerherz']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 363,
+          "quote": "childrenOf(['kjartan-nachtjaeger', 'svandis-nachtjaeger'], 'marriage-sturlaugr-ingunn-nachtjaeger')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "id": "aldrimar-chronology-vangandr",
+      "familyId": "haus-vangandr",
+      "title": "Annegret und ihr biologischer Sohn Torger mit demselben Geburtsjahr",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "statementA": "Annegret ist 1700 geboren.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 335,
+          "quote": "spouse('annegret', 'Annegret', 'female', '1700', '')",
+          "kind": "active-canonical-person-record"
+        }
+      ],
+      "statementB": "Ihr bestätigter biologischer Sohn Torger ist ebenfalls 1700 geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 350,
+          "quote": "person('torger-vangandr', 'Torger Vangandr', 'male', '1700', '')",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 144,
+          "quote": "brodd: ['brodd-vangandr', 'annegret']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 461,
+          "quote": "childrenOf(['torger-vangandr'], 'marriage-brodd-annegret-vangandr')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "parentageId": "vangandr-parentage-torger-vangandr",
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die Mutter wäre im Geburtsjahr ihres biologischen Sohnes selbst neugeboren. Es gibt keinen Generationensprung an dieser Kante. Die veröffentlichte Fluchgeschichte beschreibt keine zeitversetzte Geburt, die diese Datierung erklärt.",
+      "strongerCurrentEvidence": "Beide Jahreszahlen stehen ausdrücklich in der aktiven Akte; keine automatische Übernahme eines Wertes oder einer anderen gleichnamigen Identität ist begründet.",
+      "correctionApplied": false
+    }
+  ],
+  "reviewQuestions": [
+    {
+      "id": "aldrimar-question-riesentod",
+      "familyId": "haus-riesentod",
+      "classification": "improbable chronology, not a confirmed logical contradiction",
+      "title": "Brynhild Freiwinter zehn Jahre alt bei Ketills Geburt",
+      "confidence": "high for computed age, medium/undetermined as lore issue",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 342,
+          "quote": "spouse('brynhild-freiwinter', 'Brynhild Freiwinter', 'female', '1600', '1679'",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 360,
+          "quote": "person('ketill-riesentod', 'Ketill Riesentod', 'male', '1610', '1627')",
+          "kind": "active-canonical-person-record"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 162,
+          "quote": "'marriage-brynhild-ragnar-freiwinter': ['ragnar-riesentot', 'brynhild-freiwinter']",
+          "kind": "public-canonical-parent-pair"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 481,
+          "quote": "childrenOf(['ketill-riesentod'], 'marriage-brynhild-ragnar-freiwinter')",
+          "kind": "public-canonical-parentage"
+        }
+      ],
+      "computedAge": 10,
+      "reason": "Sehr auffälliges Alter, aber allein daraus folgt kein sicherer logischer Datenwiderspruch. Als Rückfrage, nicht als bestätigter Fehler führen.",
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "correctionApplied": false
+    }
+  ],
+  "discardedNameCollisions": [
+    {
+      "case": "Torvald Varangr",
+      "reason": "Älterer Torvald1585–1646 gehört in die Bürgerkriegserzählung; der gleichnamige1721geborene Nachkomme ist eine andere Person."
+    },
+    {
+      "case": "Elisef Varangr",
+      "reason": "Die1592geborene Königin ist von Elisef1728 zu unterscheiden."
+    },
+    {
+      "case": "Elsa Riesentod",
+      "reason": "Elsa1605–1675 ist mit Ulfrik/Zurik verbunden; Elsa1696 ist in ClanGullvig verheiratet. Keine Zeitreisebehauptung aus dem gleichen Vornamen ableiten."
+    },
+    {
+      "case": "Freydis",
+      "reason": "Freydis Hyrmgarthr1400 ist die verschollene Magierin; Freydis Silberzunge1653 ist eine andere Person. Die Gleichnamigkeit erzeugt keinen Bürgerkriegswiderspruch."
+    }
+  ],
+  "furtherNonContradictions": [
+    {
+      "case": "Kronental / Heldenwacht",
+      "reason": "Historischer Registername und heutiger Territorialname; ausdrücklich belegte Umbenennung."
+    },
+    {
+      "case": "Schwarzfenn / Wolfsklamm",
+      "reason": "Jarltum und Sitz, keine konkurrierenden Landesnamen."
+    },
+    {
+      "case": "König Sigurd / Jarl Skjor",
+      "reason": "Getrennte königliche und delegierte territoriale Ämter innerhalb ClanVaeren."
+    },
+    {
+      "case": "Wolfshorn / Bleiddorn",
+      "reason": "Verbleibender Herkunftsclan unter Bjoern und eigenständiger Cenyr-Exilzweig; korrekt getrennt. Der bestätigte Hornhall-Ortsfehler ist davon unabhängig."
+    },
+    {
+      "case": "Blutstahl / Silberblut",
+      "reason": "Stabile Thanenränge beider Häuser und Wettstreit um den gemeinsamen einzelnen Amtstitel sind keine doppelte gleichzeitige Amtsbesetzung."
+    },
+    {
+      "case": "Geschichte und heutige Bindung der Nachtjäger",
+      "reason": "Einsetzung durch Varulv in der territorialen Geschichte widerspricht nicht zwingend heutiger Unterstellung unter Vangandr im ThanentumDämmergrund."
+    }
+  ],
+  "statusParsingCaveat": {
+    "evidence": {
+      "path": "Stammbäume/assets/js/data/family-record-builders.js",
+      "line": 33,
+      "quote": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown')",
+      "kind": "active-source"
+    },
+    "reason": "Ein unbekannter Todseintrag ???? kann technisch dead erzeugen. Daraus allein wird kein tatsächlich belegter Tod oder Vorrang einer Lorefassung abgeleitet. Die bestätigten lokalen Todesdatumsfälle verwenden konkrete numerische Todesjahre."
+  },
+  "sharedIdentityConflicts": "Länderübergreifende Gegenakten-/Identitätskonflikte werden von Root gesondert in shared-identity-review.json dokumentiert und hier nicht doppelt gezählt.",
+  "limitations": "Öffentliche lokale Arbeitsdaten geprüft. Unbelegte Frühgeschichte und offene Angaben werden nicht allein aufgrund fehlender Informationen zu Widersprüchen erklärt.",
+  "productionFilesChanged": false
+}

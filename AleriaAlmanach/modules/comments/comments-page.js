@@ -23,7 +23,7 @@ function buildCommentActionBar(hintText, options = {}) {
     ? `<button class="comments-add-btn comments-action-icon-btn comments-time-event-btn" type="button" data-scene-time-action="open-event-dialog" title="Zeitsprung anlegen" aria-label="Zeitsprung anlegen">${buildCommentActionIcon('time')}</button>`
     : '';
   const sceneRestButton = options.allowSceneTime
-    ? `<button class="comments-add-btn comments-action-icon-btn comments-rest-event-btn" type="button" data-scene-rest-action="open" title="Rast einlegen" aria-label="Rast einlegen">${buildCommentActionIcon('rest')}</button>`
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-rest-event-btn" type="button" data-scene-rest-action="open" title="Rast oder stille Regeneration" aria-label="Rast oder stille Regeneration">${buildCommentActionIcon('rest')}</button>`
     : '';
   const combatEncounterButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-combat-encounter-btn" type="button" data-combat-encounter-action="open" title="Kampfliste verwalten" aria-label="Kampfliste verwalten">${buildCommentActionIcon('encounter')}</button>`

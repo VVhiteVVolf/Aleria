@@ -25,7 +25,7 @@ import { getTechniqueDamageScaling, resolveTechniqueDamageFormula, getLightAttac
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout, hasEquippedCombatShield } from './combat-weapon-loadout.js';
-import { COMBAT_WAIT_ACTION, hasActionBlockingCondition, getActionBlockingCondition } from './combat-wait-action.js';
+import { COMBAT_WAIT_ACTION } from './combat-wait-action.js';
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
@@ -34,6 +34,7 @@ import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-pai
 import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 import { getHealthTaskError } from '../character-health/health-trait-policy.js';
+import { getVoluntaryCombatActionBlock } from './combat-action-permission.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -141,6 +142,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         kind: 'technique',
         nonDamaging: technique.damageModel?.mode === 'none',
         requiresTwoHands: !!(technique.requiresTwoHands || technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
+        requiresVoice: technique.requiresVoice === true,
         kindLabel: technique.activationType === 'reaction' ? 'Reaktion' : (technique.activationType === 'bonus-action' ? 'Bonusaktion' : 'Technik'),
         name: technique.name,
         formula,
@@ -218,6 +220,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         attackModifier: isSpell ? profile.spellAttackModifier : getWeaponAttackModifier(calculation, activeWeapon || {}),
         damageModifier: isSpell ? getUniversalDamageBonus(calculation) : getWeaponDamageModifier(calculation, activeWeapon || {}),
         activationType: ability.activationType,
+        requiresVoice: ability.requiresVoice === true,
         costs: normalizeCombatResourceCosts(ability.costs),
         auraBypass: ability.auraBypass,
         resolutionMode: ability.resolutionType
@@ -272,6 +275,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
       attackModifier: profile.spellAttackModifier,
       damageModifier: getUniversalDamageBonus(calculation),
       activationType: spell.activationType,
+      requiresVoice: spell.requiresVoice === true,
       costs: normalizeCombatResourceCosts([...additionalCosts, manaCost].filter(Boolean)),
       auraBypass: spell.auraBypass,
       resolutionMode: spell.resolutionType || 'spell-attack',
@@ -489,10 +493,11 @@ export function getCombatActorProblems(profile = {}) {
   const problems = [];
   if (profile.equipmentPreparation?.error) problems.push('equipmentPreparation');
   if (!profile.characterId) problems.push('characterId');
-  if (Number(profile.currentHitPoints) <= 0 && profile.combat?.canActAtZeroHitPoints !== true) problems.push('incapacitated');
-  if (profile.profileActionId !== COMBAT_WAIT_ACTION.id && hasActionBlockingCondition(profile)) problems.push('conditionBlocksActions');
+  const waiting = profile.profileActionId === COMBAT_WAIT_ACTION.id;
+  const permission = waiting ? null : getVoluntaryCombatActionBlock(profile);
+  if (permission) problems.push(permission.code);
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
-  if (profile.selectedAction?.kind === 'equipment-switch') return problems;
+  if (waiting || profile.selectedAction?.kind === 'equipment-switch') return problems;
   if (!String(profile.weapon?.name || '').trim()) problems.push('weaponName');
   const hasStructuredEffects = Array.isArray(profile.selectedAction?.effects) && profile.selectedAction.effects.length > 0;
   if (!hasStructuredEffects && !profile.selectedAction?.nonDamaging) {
@@ -514,14 +519,15 @@ export function getCombatTargetProblems(profile = {}) {
 
 export function validateCombatActorProfile(profile = {}, { startedAction = null } = {}) {
   // Only an already resolved first target can continue the same area action.
+  // Injury or a newly applied action lock does not retract its launched effect.
   // The caller supplies its own resolution, never a client-provided permission.
   const continuingAction = !!startedAction?.resolutionId
     && startedAction.actionType !== 'channeling'
     && startedAction.actorId === profile.characterId
     && startedAction.profileActionId === profile.profileActionId;
   const missingFields = getCombatActorProblems(profile)
-    .filter(problem => problem !== 'incapacitated' || !continuingAction);
-  if (profile.weaponUnavailable) missingFields.push('disarmed');
+    .filter(problem => !['incapacitated', 'conditionBlocksActions'].includes(problem) || !continuingAction);
+  if (profile.profileActionId !== COMBAT_WAIT_ACTION.id && profile.weaponUnavailable) missingFields.push('disarmed');
   return { ready: missingFields.length === 0, missingFields };
 }
 
@@ -530,9 +536,7 @@ export function getCombatActorValidationMessage(profile = {}, validation = valid
   if (validation.missingFields.includes('disarmed')) return `${profile.weapon?.name || 'Waffe'}: Entwaffnet. Erst über „Interagieren“ aufheben oder eine andere Waffe führen.`;
   if (validation.missingFields.includes('equipmentPreparation')) return profile.equipmentPreparation.error;
   if (validation.missingFields.includes('conditionBlocksActions')) {
-    const blocker = getActionBlockingCondition(profile);
-    if (blocker?.presetId === 'stunned' || /betäubt/i.test(blocker?.name || '')) return `${profile.name || 'Die Figur'} ist betäubt und muss diesen Zug aussetzen.`;
-    return `${profile.name || 'Die Figur'} kann wegen „${blocker?.name || 'Aktiver Zustand'}“ keine selbstbestimmte Kampfhandlung ausführen und muss diesen Zug aussetzen.`;
+    return getVoluntaryCombatActionBlock(profile)?.message || 'Die gewählte Handlung ist durch einen aktiven Zustand gesperrt.';
   }
   if (validation.missingFields.includes('incapacitated')) {
     return `${profile.name || 'Die handelnde Figur'} ist bei 0 Trefferpunkten handlungsunfähig.`;

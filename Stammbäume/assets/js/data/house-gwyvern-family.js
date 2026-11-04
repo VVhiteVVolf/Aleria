@@ -163,7 +163,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     }),
     person('olwen-wyrm', 'Olwen Wyrm', 'female', '1675', '', 'house-wyrm'),
     person('meurig-draig', 'Meurig Draig', 'male', '1668', '', 'house-draig'),
-    person('afal-arth', 'Afal Arth', 'male', '1675', '????', 'house-arth'),
+    person('afal-arth', 'Afal Arth', 'male', '1675', '', 'house-arth'),
 
     // Kinder von Kimball und Dajenne
     person('aethlem-gwyvern', 'Aethlem', 'male', '1670', ''),

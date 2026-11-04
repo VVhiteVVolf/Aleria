@@ -42,7 +42,7 @@ export function createHousePageData(content) {
     profileLabels: { tiarna: 'Ritter', kerns: 'Knechte' },
     showMotto: content.showMotto,
     sections: Object.fromEntries(Object.entries(content.sections).map(([key, value]) => [key, paragraphs(value)])),
-    sectionTitles: { knighthood: content.type === 'Clan' ? '4. Tiarnatum' : content.type === 'Bürgerliches Haus' ? '4. Beruf und Hausleben' : '4. Rittertum' },
+    sectionTitles: { knighthood: content.type === 'Clan' ? '4. Tiarnatum' : content.type === 'Bürgerliches Haus' ? '4. Beruf und Hausleben' : '4. Rittertum', ...(content.sectionTitles || {}) },
     ...(content.scenes?.length ? { scenes: content.scenes } : {}),
     ...(content.warriorGallery?.entries?.length ? { warriorGallery: content.warriorGallery } : {}),
     images, court: { groups, cadets },

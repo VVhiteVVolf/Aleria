@@ -1,0 +1,325 @@
+{
+  "graphKeys": [
+    "persons",
+    "partnerships",
+    "parentages",
+    "houses",
+    "timeJumps",
+    "cadetBranches"
+  ],
+  "records": [
+    {
+      "id": "haus-wolfshorn",
+      "profile": {
+        "rankId": "knight",
+        "seat": "Hornhall",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "Clan Vangandr",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "5142a6bca7078a6c3d920f99c8fc8772ccc959383298f0129b052236c260a018"
+    },
+    {
+      "id": "haus-bleiddorn",
+      "profile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "graphFingerprint": "1d54f26eb0d15d88d7fdcc283e5a75ba6650f47f852fefb962e62b33f3b8f433"
+    },
+    {
+      "id": "haus-wargh",
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-ivarsheim.png",
+          "assets/images/regions/aldrimar-ivarsklamm.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "6bed9311621b6aeca98150b71c127919e0376cfda8ac006140072e92cbdfa586"
+    },
+    {
+      "id": "haus-feuerhaar",
+      "profile": {
+        "rankId": "thane",
+        "seat": "Jägersruh",
+        "barony": "Rothain",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rothain.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "f074dcfc60b23481b812e92db878380776afb95ef8104f4e4ebaa4f62b967e34"
+    },
+    {
+      "id": "haus-skogg",
+      "profile": {
+        "rankId": "thane",
+        "seat": "Kornweiler",
+        "barony": "Saatgrund",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-saatgrund.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "69aac25c05d17ea7f4cb43aac95a972a6edcf63a4e1b984806d378603e8f58bb"
+    },
+    {
+      "id": "haus-silberzunge",
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "180a5eae6c36834702b89dd5d6182e95b65a1d71eb6ef2ef59a63e07345557b4"
+    },
+    {
+      "id": "haus-trachwyll",
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Ivarsfels",
+        "barony": "Ivarsklamm",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "93dc8c096b637515efb7f27006cbfe2889c967a43ba2ef752d61c11bb8b6ee2d"
+    },
+    {
+      "id": "haus-grendel",
+      "profile": {
+        "rankId": "thane",
+        "seat": "Hjerimsheim",
+        "barony": "Klippenschlag",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-wargh",
+        "liegeHouseName": "Clan Wargh",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-klippenschlag.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "2e22ca17d3548ae49fe8517356c9f2541ff6bc4fcbd105b68abda6a77c278d0b"
+    },
+    {
+      "id": "haus-hyrmgardr",
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Winterfeste",
+        "barony": "Saatgrund",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-skogg",
+        "liegeHouseName": "Clan Skogg",
+        "folderPath": [
+          "Aldrimar",
+          "Ivarsheim",
+          "Saatgrund",
+          "Winterwacht",
+          "Winterfeste"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-winterwacht.png",
+          "barony": "assets/images/regions/aldrimar-saatgrund.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "580ca18856d7138103eb3e93e66c467e9ada6473fb9531a7edda1dd6aae24c96"
+    },
+    {
+      "id": "haus-blutklinge",
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Aldrimarer (jüngst ausgestorben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ivarsfels"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "a29ecf4934afcc6a3adc50ab574723e2f4f24808d8464e1a996f2c8c5cc84040"
+    },
+    {
+      "id": "haus-windhueter",
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Aldrimarer (jüngst ausgestorben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ivarsfels"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "20e8322f4dcdfc229d40878733bf5a2999b5bbbe22e35147a19c24318797becb"
+    },
+    {
+      "id": "haus-morkvard",
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ort unbekannt"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "7da06380aa762fc7688482b9ecc5fec6669ab9e1cad54b7368cd106ff28731e2"
+    },
+    {
+      "id": "haus-mac-luin",
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Ard Eabhraig"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "b11befa41102546ab1d3b94d1993b14c3ab4c28224cf66ff4497a9386289e355"
+    },
+    {
+      "id": "haus-an-borach",
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Häuser",
+        "county": "Ivarsheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Kornweiler"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-ivarsheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "graphFingerprint": "0de1314a8fe0fd1e5b2ad691e25679b572b1b58d8701227e29c87cfa407b1608"
+    }
+  ],
+  "files": [
+    {
+      "path": "Stammbäume/assets/js/data/house-wolfshorn-family.js",
+      "sha256": "20be29f1ab42e2970bcae99901d63c27e3a4445491e2695d37a917a763b1d8d2"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-bleiddorn-family.js",
+      "sha256": "b510ee28eacd22406de618b31d683eed07446fc2505f112f42495608394cd3ae"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "haus-trachwyll",
+  "source": {
+    "attachmentId": "5f13f61f-3159-42d9-8dff-5485570cba9a",
+    "originalAttachment": "C:/Users/fhg_r/.codex/attachments/5f13f61f-3159-42d9-8dff-5485570cba9a/Eingefügter Text.txt",
+    "previousArchive": "diagnostics/vennyr-warrior-import-20261103/sources/trachwyll.html",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/trachwyll/animexx-original.html",
+    "sha256": "7c5d2e050e920cbc98b397541554578c96ddf8e75d77b87ec4fe1759db718675",
+    "bytes": 134773,
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-trachwyll",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Ivarsfels",
+      "barony": "Ivarsklamm",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-trachwyll",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-trachwyll",
+    "familyId": "haus-trachwyll",
+    "slug": "trachwyll",
+    "canonicalSlug": "trachwyll",
+    "url": "https://i.imgur.com/WG2uS0O.png",
+    "sourceUrl": "https://i.imgur.com/WG2uS0O.png",
+    "path": "Stammbäume/assets/images/references/haus-trachwyll/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-trachwyll/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "imageIndex": 1,
+    "existing": true,
+    "status": "reused",
+    "bytes": 218637,
+    "sha256": "65f36d698041aa6a830b6a3f3a92311370a1f3c97b1b5b187ea330c9e2042b0c",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "sourceReceipt": "Stammbäume/assets/images/references/haus-trachwyll/reference-sources.json",
+    "separateOriginFamilyId": "haus-trachwyll-talfronwyn",
+    "originArtworkAssigned": false,
+    "visuallyInspected": true,
+    "visualDescription": "Bereits gesichertes Ivarsfels-Original mit heller Rüstung, Sonnenwappen und Schwert.",
+    "sha": "65f36d698041aa6a830b6a3f3a92311370a1f3c97b1b5b187ea330c9e2042b0c",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Ziel ist ausschließlich haus-trachwyll, die Ivarsfels-Linie ab Kenyon und Leikn. Die bestehende Herkunftsakte haus-trachwyll-talfronwyn bleibt eigenständig und unverändert.",
+    "Heutiger Rang Hesire, Familiensitz Ivarsfels, Lehnsherr Wargh. Der frühere vennyrianische Penron-/Grafenrang und die ältere Talfronwyn-Hierarchie werden nicht übertragen.",
+    "Der einzige ausgefüllte erzählende Abschnitt des Anhangs behandelt die politische Geschichte des früheren Vennyr-Hauses im Prätendentenkrieg und dessen Ehen ab 1647. Diese Vorgänge liegen vor der Ivarsfels-Linie und werden nicht als ihre eigene Kriegsgeschichte übernommen.",
+    "Gelieferte Stammbäume, Hof- und Hierarchietabellen sowie Militärstatistiken bleiben vollständig ausgeschlossen. Die genannten heutigen Verbindungen stammen ausschließlich aus der vorhandenen kanonischen Ivarsfels-Familie.",
+    "Die Territoriumsangaben zu Caer Trachwyll, Svartgil, Järnsgjot, Hochfeld, Birkfeld, Trachweiler, Llangarwyn und Trevalgan stammen aus dem aktuellen Ivarsheim-Gebietstext. Der Familiensitz bleibt Ivarsfels; die eigene Burg erzeugt keinen neuen Registerpfad.",
+    "Hårfjel westlich von Caer Trachwyll bleibt das überlieferte Grendel-Ahnengrab im übergeordneten Ivarsklamm und wird nicht als Trachwyll-Eigentum ausgegeben.",
+    "Besondere Traditionen, Ritterrituale, Religion, Werte und neue Kriegstaten sind für die Ivarsfels-Linie nicht belegt und bleiben leer. Die knappe Bio wird deshalb nicht auf 200 Wörter aufgefüllt.",
+    "Die vorhandene Originaldarstellung WG2uS0O wird unverändert referenziert. Kein Download, keine Neugenerierung und keine Übertragung des Bildes auf den Talfronwyn-Ursprung.",
+    "Produkttexte enthalten keine technischen Grenzen der Familienakte oder Arbeitsanweisungen. Die Dokumentbeschreibung dient nur als kanonische Grundlage; ihr Satz über die zulässigen Personen der neuen Akte wird nicht veröffentlicht.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

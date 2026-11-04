@@ -71,7 +71,8 @@ function cleanAlmanachDashboardCommentExcerpt(value) {
 
 function buildAlmanachDashboardSceneActivity(sections = [], comments = [], threadCounts = null) {
   const commentsByThread = new Map();
-  (Array.isArray(comments) ? comments : []).forEach((comment, index) => {
+  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  (Array.isArray(visibleComments) ? visibleComments : []).forEach((comment, index) => {
     const threadId = String(comment?.entryId || '').trim();
     if (!threadId) return;
     const list = commentsByThread.get(threadId) || [];
@@ -204,8 +205,9 @@ async function refreshAlmanachDashboardSceneActivity(sections = [], options = {}
 
 function updateAlmanachDashboardSceneThread(event) {
   const threadId = String(event?.detail?.threadId || '').trim();
-  const comments = Array.isArray(event?.detail?.comments) ? event.detail.comments : null;
-  if (!threadId || !comments) return;
+  const history = Array.isArray(event?.detail?.comments) ? event.detail.comments : null;
+  if (!threadId || !history) return;
+  const comments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(history) || history;
   _almanachDashboardSceneThreadCounts?.set(threadId, comments.length);
   _almanachDashboardSceneComments = [
     ..._almanachDashboardSceneComments.filter(comment => String(comment?.entryId || '') !== threadId),

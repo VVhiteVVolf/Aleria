@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "provider": "built-in image_gen",
+  "records": [
+    {
+      "id": "prototype-03-v2",
+      "replaces": "prototype-03",
+      "supersedesAssetStem": "prototype-03",
+      "assetStem": "prototype-03-v2",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a3f4-b8c1-7883-a229-68bfc35030de\\exec-0f41385c-8ec6-4771-9717-9f98a9c033ea.png",
+      "jobManifest": "sources/prototype-03-v2-job.json",
+      "jobId": "prototype-03-v2",
+      "copiedOriginal": "assets/warriors/generated/prototype-03-v2.png",
+      "visualReview": "Tatsächlich angesehen: deutlich gerader symmetrischer zweischneidiger Gladius mit mittiger Spitze, ruhig nach unten in der bestehenden rechten Hand gehalten. Gleicher junger Mann, offener römischer Helm, dunkelblauer Umhang, Segment- und Kettenpanzer mit Bronzekanten, petrolfarbene Tunika, Rückenköcher, Pose und beide vollständigen Füße erhalten. Kein Säbel und keine neue Heraldik.",
+      "sha256": "1aebad15236b9e2778f31bb94c7f07b56d23eebf70179ccd030f767cee43192a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "originalBytePreserved": true,
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ]
+}

@@ -25,6 +25,7 @@ service cloud.firestore {
         || (data.keys().hasAny(['inventoryTransaction']) && data.inventoryTransaction != null)
         || (data.keys().hasAny(['sceneInventoryTransfer']) && data.sceneInventoryTransfer != null)
         || (data.keys().hasAny(['sceneRest']) && data.sceneRest != null)
+        || (data.keys().hasAny(['sceneRegeneration']) && data.sceneRegeneration != null)
         || (data.keys().hasAny(['sceneDiceRoll']) && data.sceneDiceRoll != null)
         || (data.keys().hasAny(['sceneTimeEvent']) && data.sceneTimeEvent != null)
         || (data.keys().hasAny(['skillResolution']) && data.skillResolution != null)
@@ -49,6 +50,7 @@ service cloud.firestore {
     function pureTimeMarker(data) {
       return data.get('sceneTimeEvent', null) is map
         && data.get('sceneRest', null) == null
+        && data.get('sceneRegeneration', null) == null
         && data.get('restTransaction', null) == null
         && data.get('combatTransaction', null) == null
         && data.get('combatResolution', null) == null

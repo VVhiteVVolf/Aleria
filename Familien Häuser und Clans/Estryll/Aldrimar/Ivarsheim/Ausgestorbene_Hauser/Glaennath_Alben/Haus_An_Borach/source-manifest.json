@@ -1,0 +1,83 @@
+{
+  "id": "haus-an-borach",
+  "source": {
+    "attachmentId": "8ea9c37f-00db-4e8b-b02f-12f3ab543e45",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\8ea9c37f-00db-4e8b-b02f-12f3ab543e45\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/an-borach/animexx-original.html",
+    "bytes": 45031,
+    "sha256": "762bef49b556c0118a16048c67acc4c1dfb39c5221331aa50b0d441c3129b42a",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-an-borach",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "barony": "Ausgestorbene Häuser",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Kornweiler"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-an-borach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-an-borach",
+    "familyId": "haus-an-borach",
+    "slug": "an-borach",
+    "canonicalSlug": "an-borach",
+    "attachmentId": "8ea9c37f-00db-4e8b-b02f-12f3ab543e45",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/Eecy7iY.png",
+    "sourceUrl": "https://i.imgur.com/Eecy7iY.png",
+    "path": "Stammbäume/assets/images/references/haus-an-borach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-an-borach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:350px; vertical-align:top; width:233px",
+    "context": "Tiarnatum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 239422,
+    "sha256": "eac653938799f9222f5b8044ca332681d1f0eaaed404dddf682fa5e29936fab8",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Albenkrieger mit Speer, Fellbesatz, Schottenstoff und Rinderschild.",
+    "sha": "eac653938799f9222f5b8044ca332681d1f0eaaed404dddf682fa5e29936fab8",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Stabile ID haus-an-borach und Registertitel Haus An Borach verwenden. Clan Borach in der Caption ist eine Quellenkurzform, keine neue Akte.",
+    "Antiker Glaennath-Zusammenhang; Kornweiler ist der historische Ortsbezug. Die Kulturgruppe ist kein Sitz und kein Fürstentum des Hauses.",
+    "Der einzige hausbezogene Satz lautet, dass die Borach Herren des heutigen Kornweiler waren. Keine Gründungschronik, konkreten Gründer, Todesursache oder Herrscherfolge ergänzen.",
+    "Der ausführliche Tiarnatumabschnitt ist allgemeine Kulturgeschichte der Glaennath. Er darf als Kontext erhalten bleiben, nicht als Beleg spezifischer Kriegstaten oder persönlicher Ausrüstung der Borach.",
+    "Die Skogg-Erzählung und Uathachs bereits bestehende Identität bieten einen benachbarten historischen Zusammenhang. Daraus keine über die bestehenden Akten hinausgehende An-Borach-Genealogie ableiten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

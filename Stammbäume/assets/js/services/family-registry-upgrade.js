@@ -1,6 +1,6 @@
 import { normalizeFamily } from '../domain/family-schema.js';
 import { withCwingodHouseNameUpgrade } from '../data/cwingod-house-name-upgrade.js';
-import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261027-uathneach-warriors-v1';
+import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261104-content-lore-v1';
 
 const ENTITY_COLLECTIONS = Object.freeze([
   'persons',
@@ -96,6 +96,12 @@ function mergeEntities(registeredEntities = [], localEntities = [], tombstones =
     };
     registryManagedFields.forEach(fieldName => {
       if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {
+        // Editorial defaults may be replaced only while the saved value still
+        // matches a known former default. Personal research remains local.
+        const previousValues = entity.extensions?.registryManagedFieldPreviousValues?.[fieldName];
+        if (Array.isArray(previousValues)
+          && !previousValues.some(value => JSON.stringify(value) === JSON.stringify(localEntity[fieldName]))
+          && JSON.stringify(localEntity[fieldName]) !== JSON.stringify(entity[fieldName])) return;
         // A source revision that only fills missing data preserves locally
         // supplied values. Later explicit corrections keep their usual rules.
         const fillOnlyRevision = entity.extensions?.registryManagedFieldFillOnlyRevisions?.[fieldName];
@@ -171,13 +177,16 @@ export function needsRegisteredFamilyUpgrade(registeredFamily, localFamily) {
 }
 
 export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
-  const registered = withCwingodHouseNameUpgrade(normalizeFamily(registeredInput));
   const local = normalizeFamily(localInput);
+  const sourceFamily = normalizeFamily(registeredInput);
+  const applyManagedEntityFields = shouldApplyManagedEntityFields(sourceFamily, local);
+  // Biography-only revisions must not add fresh naming-upgrade metadata to
+  // otherwise unchanged house nodes. Explicit source field patches remain on
+  // the registered entities and are handled by their existing field revisions.
+  const registered = applyManagedEntityFields ? withCwingodHouseNameUpgrade(sourceFamily) : sourceFamily;
   const registeredRevision = sourceRevision(registered);
   const localRevision = sourceRevision(local);
   if (!needsRegisteredFamilyUpgrade(registered, local)) return local;
-
-  const applyManagedEntityFields = shouldApplyManagedEntityFields(registered, local);
 
   const mergedTombstones = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
@@ -214,13 +223,14 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   const mergedExtensions = mergeRegisteredManagedFields(
     registered.extensions,
     local.extensions,
-    registryManagedFieldNames(registered, 'registryManagedExtensionFields')
+    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedExtensionFields')
   );
   const registryManagedUpgradeMetadata = Object.fromEntries([
     'registryManagedDocumentFields',
     'registryManagedDocumentFieldRevisions',
     'registryManagedEntitySourceRevision',
     'registryManagedExtensionFields',
+    'registryManagedExtensionFieldRevisions',
     'registryManagedHouseProfileFields',
     'registryManagedHouseProfileFieldRevisions',
     'registryManagedLineageFields',

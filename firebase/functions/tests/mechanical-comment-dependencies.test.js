@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { findLaterMechanicalDependency } from '../src/mechanics/mechanical-comment-dependencies.js';
+import { findLaterMechanicalDependency, findLaterSceneRegenerationBoundary } from '../src/mechanics/mechanical-comment-dependencies.js';
 import { nextMechanicalCommentOrderKey } from '../src/mechanics/mechanical-comment-order.js';
 
 test('ein Abschluss liest den Kampfstand auch ohne erneute Profiländerung', () => {
@@ -36,4 +36,15 @@ test('die Reihenfolge folgt dem bei Wiederholung aktualisierten Transaktionsstan
   const first = nextMechanicalCommentOrderKey([{ orderKey: 100 }], 99, 110);
   const retried = nextMechanicalCommentOrderKey([{ orderKey: 100 }, { orderKey: first }], 99, 110);
   assert.ok(retried > first);
+});
+
+test('regeneration is a dependency and durable boundary only for its affected figures', () => {
+  const hit = { id: 'hit', combatResolution: { actorId: 'attacker', targetId: 'wolf:1' } };
+  const unrelated = { id: 'other', characterId: 'observer' };
+  const reset = { id: 'reset', commentKind: 'scene-regeneration-event', serverValidatedMechanics: true,
+    sceneRegeneration: { participants: [{ actorId: 'wolf:1', after: { current: 20 } }] } };
+  assert.equal(findLaterMechanicalDependency([hit, unrelated, reset], 'hit')?.id, 'reset');
+  assert.equal(findLaterSceneRegenerationBoundary([hit, unrelated, reset], 'hit')?.id, 'reset');
+  assert.equal(findLaterSceneRegenerationBoundary([hit, unrelated, reset], 'other'), null);
+  assert.equal(findLaterSceneRegenerationBoundary([hit, { ...reset, serverValidatedMechanics: false }], 'hit'), null);
 });

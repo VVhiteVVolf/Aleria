@@ -308,7 +308,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
     }),
     person('tarian-arth', 'Tarian Arth', 'female', '1660', '1710'),
     person('brac-pawen', 'Brac Pawen', 'male', '1660', '', 'house-pawen'),
-    person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', ''),
+    person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', '1710'),
     person('elisud-crafanc', 'Elisud Crafanc', 'male', '1661', '', 'house-crafanc'),
     person('ffodor-arth', 'Ffodor Arth', 'male', '1662', '1723'),
     person('ffionwen-penderyn', 'Ffionwen Penderyn', 'female', '1662', '1733', 'house-penderyn', {
@@ -392,7 +392,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
     person('galeshin-cwningod', 'Galeshin Cwingod', 'male', '1694', '', 'house-cwningod'),
     person('aled-arth', 'Aled Arth', 'male', '1695', ''),
     person('hiolair-morgacht', 'Hiolair Mórgacht', 'female', '1701', '', 'house-morgacht'),
-    person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'bastard' }),
+    person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1725', 'house-cenyr', { familyRole: 'bastard' }),
     person('sieffre-arth', 'Sieffre Arth', 'male', '1700', ''),
     person('cerridwyn-grael', 'Cerridwyn Grael', 'female', '1706', '', 'house-grael'),
 
@@ -445,7 +445,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
     createMarriage('marriage-rian-sath', ...RIAN_IDS),
     createMarriage('marriage-rhynnon-kyndra', ...RHYNNON_IDS),
     createMarriage('marriage-tarian-brac', ...TARIAN_IDS),
-    createMarriage('marriage-afanen-elisud', ...AFANEN_1660_IDS),
+    createMarriage('marriage-afanen-elisud', ...AFANEN_1660_IDS, { status: 'ended', end: '1710' }),
     createMarriage('marriage-ffodor-ffionwen', ...FFODOR_IDS),
     createMarriage('marriage-run-morfadd', ...RUN_IDS),
     createMarriage('marriage-domnall-gwenfrewi', ...DOMNALL_IDS),

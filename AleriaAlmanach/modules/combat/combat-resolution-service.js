@@ -8,6 +8,7 @@ import { getActionPaymentCosts } from './combat-action-economy.js';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
+import { rollProfileD20, naturalRollReceipt } from './combat-natural-roll-policy.js';
 import {
   getAuraTargetMechanics,
   getBonusDamageFormulas,
@@ -56,8 +57,9 @@ import {
 import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
+import { withCurrentCombatPermissionState } from './combat-action-permission.js';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-12';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-13';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -414,13 +416,14 @@ export class CombatResolutionService {
       total: targetDefense,
       visualMode: 'automatic',
       id: ''
-    } : await this.dice.rollAttack({
+    } : await rollProfileD20(this.dice, 'rollAttack', {
+      checkType: savingThrowMode ? 'saving-throw' : 'attack',
       modifier: attackModifier,
       rollMode: safeRollMode,
       actorName: savingThrowMode ? target.name : actor.name,
       targetName: savingThrowMode ? actor.name : target.name,
       container: options.container
-    });
+    }, savingThrowMode ? target : actor);
     const evaluated = evaluateCombatAttackRoll(actor, target, attackRoll, rollContext, { attackModifier, targetDefense });
     let { attack } = evaluated;
     const { cheatEnabled, baseAttackState, postRollAttackState, postHitAttackState, preDamageAttackState,
@@ -727,6 +730,10 @@ export class CombatResolutionService {
       ? { before: actor.channeling || null, after: null, reason: requiredChannelComments > 0 ? 'completed' : 'interrupted' } : null;
     let targetChannelingSnapshot = null;
     const lateResultEffects = [];
+    const currentPermissionProfiles = () => [
+      withCurrentCombatPermissionState(actor, actorHitPoints, actorConditions),
+      withCurrentCombatPermissionState(target, targetHitPoints, targetConditions)
+    ];
     const checkConcentrationEffects = async (results, allowResultEffects) => {
       const selfTarget = String(actor.characterId) === String(target.characterId);
       for (const recipient of selfTarget ? ['target'] : ['target', 'actor']) {
@@ -748,7 +755,8 @@ export class CombatResolutionService {
           conditions: recipient === 'actor' ? actorConditions : targetConditions,
           damage: affected.filter(entry => entry.effect?.type === 'damage').reduce((sum, entry) => sum + Number(entry.applied?.incoming || 0), 0),
           interrupted, dice: this.dice, container: options.container, allowResultEffects,
-          context: { actorId: actor.characterId, actionKind, profileActionId, ruleSources, rulePeriods, usedRuleFrequencyKeys, attack }
+          context: { actorId: actor.characterId, actionKind, profileActionId, ruleSources, rulePeriods, usedRuleFrequencyKeys, attack,
+            reactionProfiles: currentPermissionProfiles() }
         });
         if (result.snapshot) {
           const snapshot = { ...result.snapshot, before: previousSnapshot ? previousSnapshot.before : result.snapshot.before };
@@ -779,7 +787,8 @@ export class CombatResolutionService {
       const applications = collectApplicableCombatRules({
         phase, actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
         usedFrequencyKeys: usedRuleFrequencyKeys,
-        state: { ...ruleProfileState, ...attack, damage: totalDamageApplied, healed, conditionsApplied, conditionsRemoved, defeated }
+        state: { ...ruleProfileState, ...attack, damage: totalDamageApplied, healed, conditionsApplied, conditionsRemoved, defeated,
+          reactionProfiles: currentPermissionProfiles() }
       });
       markCombatRuleApplications(applications, usedRuleFrequencyKeys);
       allRuleApplications = allRuleApplications.concat(applications);
@@ -928,6 +937,7 @@ export class CombatResolutionService {
       },
       originalDescription: String(description || '').slice(0, 5000),
       attack: {
+        ...naturalRollReceipt(attackRoll),
         notation: attackNotation,
         naturalRoll: Number(attackRoll.natural),
         diceResults: Array.isArray(attackRoll.dice) ? attackRoll.dice.slice() : [],

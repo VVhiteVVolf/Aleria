@@ -2,7 +2,7 @@ function buildNameListStyleOptions(selected) {
   return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'],
     ['laerelis', 'Laerelis · Lichtfluss'], ['infernal', 'Infernal · Nharazim'],
     ['futhark', 'Futhark'], ['kanaanith', 'Kana’anith'], ['argenti', 'Lingua Argenti'],
-    ['stoicheia', 'Stoicheia'], ['plain', 'Normal']]
+    ['stoicheia', 'Stoicheia'], ['tlapanui', 'Nuatlapa · Tavarua'], ['ishtaran', 'Tirghan · Ayluun'], ['plain', 'Normal']]
     .map(([value, label]) => `<option value="${value}"${selected === value ? ' selected' : ''}>${label}</option>`).join('');
 }
 

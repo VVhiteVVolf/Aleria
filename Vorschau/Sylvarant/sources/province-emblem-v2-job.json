@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "id": "province-sylvarant-v2",
+      "replaces": "province-sylvarant",
+      "kind": "province",
+      "category": "emblems",
+      "assetStem": "province-sylvarant-v2",
+      "name": "Sylvarant · Provinzwappen",
+      "motif": "Ein silberner römischer Legionär steht angespannt auf einem Berg und streckt sich sehnsüchtig nach dem Finger eines geflügelten Halbgottes. Seine freie Hand liegt an der Brust; zwischen den Fingerspitzen bleibt eine kleine Lücke.",
+      "description": "Ein silberner Legionär auf dem Berg verzehrt sich nach der Berührung des geflügelten Halbgottes. Die Gestik ist an Michelangelos Schöpfung Adams angelehnt.",
+      "palette": [
+        "Nachtblau",
+        "Silberweiß",
+        "Ockergold"
+      ],
+      "frame": "Flach gemalter silber-ockergoldener Lorbeerrahmen",
+      "shape": "circle",
+      "prompt": "Use case: precise-object-edit. Bearbeite das beigefügte Sylvarant-Provinzwappen gezielt. ÄNDERE NUR Haltung, Gestik und Gesichtsausdruck des silbernen römischen Legionärs LINKS UNTEN. Rahmen, dunkles Holzfeld, Berg, Palette, flach gemalte heraldische Malweise und der geflügelte Halbgott rechts oben bleiben erhalten. Keine neuen Figuren oder Symbole.\n\nAUSDRÜCKLICHE NUTZERKORREKTUR: Der Legionär muss sich sichtbar nach dieser Berührung VERZEHREN. Er ist der demütig sehnende Mensch unter dem Halbgott. Seine frühere lockere Herrscherpose mit Hand an der Hüfte ist FALSCH.\n\nNEUE HALTUNG: Der Legionär streckt seinen ganzen Körper diagonal nach oben rechts. Die Hüfte und der Oberkörper lehnen sich weit vor; seine rechte Schulter ist maximal angehoben und der rechte Arm fast schmerzhaft vollständig ausgestreckt, die Finger sehnsüchtig gespreizt und der Zeigefinger sucht die letzte kleine Lücke zum Finger des Halbgottes. Seine hintere linke Ferse hebt sich, er richtet sich auf die ZEHENSPITZEN, während der vordere Fuß höher am Berg Halt findet und das vordere Knie leicht gebeugt ist. Die silberne Rüstung folgt dieser angestrengten Körperstreckung. Es ist ein auf dem Fels stehender Mensch, kein schwebender Gott. Seine linke freie Hand liegt angespannt an seiner eigenen BRUST ÜBER DEM HERZEN oder umfasst die Brustschärpe, keinesfalls lässig an der Hüfte. Der Kopf ist weit angehoben, sein jugendliches menschliches Gesicht zeigt sehnsüchtiges, ehrfürchtiges Verlangen und Anstrengung: hochgezogene innere Brauen, weit auf den Halbgott gerichtete Augen, leicht geöffneter Mund. Keine gelassene Selbstsicherheit, kein arrogantes Lächeln, kein triumphierenderBefehlsgestus. Beide Arme und Hände anatomisch klar und nur zwei Hände am Legionär. Zwischen den Fingerspitzen bleibt weiterhin eine kleine sichtbare Lücke.\n\nVOLLSTÄNDIGE WAPPENBINDUNG: Hochwertige flach auf Holz GEMALTE römisch-lateinische Fantasy-Heraldik, mattes Nachtblau, Silberweiß und Ockergold. Dünne gemalte Konturen, große ruhige Farbflächen mit höchstens einer flachen Schattenfarbe, feine gleichmäßige Pigmentkörnung, nur sehr dezente Holzmaserung. Der geschlossene runde römische Lorbeerrahmen bleibt unverändert. Keine Reliefplastik, kein Spiegelglanz, keine 3D-Metallkanten. Frontaler exakter Kreis bei85–90%Bildbreite, alle Körper/Füße/Federn vollständig innerhalb des Kreises. 1:1 PNG, Innenkreis vollständigdeckend, außerhalbAlpha0. Keine äußerenSchatten/Glows/Schrift/Wasserzeichen. Keine griechische/k orinthischeHelmform. Runde menschliche Ohren. Dies ist eine neueV2; das vorigeOriginal bleibt erhalten.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/emblems/generated/province-sylvarant.png"
+      ]
+    }
+  ]
+}

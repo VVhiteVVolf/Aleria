@@ -1,0 +1,428 @@
+{
+  "count": 70,
+  "maxConcurrency": 3,
+  "failures": [],
+  "notes": "Windows local preview serves WebP as application/octet-stream; images decode correctly in Chrome. Initial unbounded batch exhausted local server backlog; bounded check used for final result.",
+  "checks": [
+    {
+      "path": "../Leukonia/assets/originals/previews/mede.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 68672
+    },
+    {
+      "path": "../Leukonia/assets/originals/mede.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 297271
+    },
+    {
+      "path": "assets/emblems/previews/colony-01.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 144952
+    },
+    {
+      "path": "assets/emblems/previews/colony-02.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 129794
+    },
+    {
+      "path": "assets/emblems/production/colony-01.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2630334
+    },
+    {
+      "path": "assets/emblems/production/colony-02.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2698325
+    },
+    {
+      "path": "assets/emblems/previews/colony-03.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 143338
+    },
+    {
+      "path": "assets/emblems/production/colony-03.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 3039070
+    },
+    {
+      "path": "assets/emblems/previews/colony-04.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 143148
+    },
+    {
+      "path": "assets/emblems/production/colony-04.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2755799
+    },
+    {
+      "path": "assets/emblems/previews/colony-05.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 125194
+    },
+    {
+      "path": "assets/emblems/production/colony-05.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2388666
+    },
+    {
+      "path": "assets/emblems/previews/colony-06.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 130762
+    },
+    {
+      "path": "assets/emblems/production/colony-06.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2422435
+    },
+    {
+      "path": "assets/emblems/previews/colony-07.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 137702
+    },
+    {
+      "path": "assets/emblems/production/colony-07.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2910094
+    },
+    {
+      "path": "assets/emblems/previews/colony-08.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 130972
+    },
+    {
+      "path": "assets/emblems/production/colony-08.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2758999
+    },
+    {
+      "path": "assets/emblems/previews/colony-09.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 139244
+    },
+    {
+      "path": "assets/emblems/production/colony-09.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2746668
+    },
+    {
+      "path": "assets/emblems/previews/colony-10.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 138034
+    },
+    {
+      "path": "assets/emblems/production/colony-10.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2924298
+    },
+    {
+      "path": "assets/emblems/previews/colony-11.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 131424
+    },
+    {
+      "path": "assets/emblems/production/colony-11.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 3052462
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-01.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 121766
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-01.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2340778
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-02.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 134782
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-02.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2534163
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-03.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 132526
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-03.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2841191
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-04.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 131672
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-04.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2436904
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-05.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 111010
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-05.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2174488
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-06.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 119686
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-06.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2316091
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-07.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 96988
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-07.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2347999
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-09.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 107108
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-08.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2658452
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-08.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 111196
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-09.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2494281
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-10.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 125100
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-10.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2368885
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-11-v2.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 109294
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-11-v2.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2028016
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-12.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 121434
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-12.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2444926
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-13.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 118082
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-13.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2288117
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-14.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 127508
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-14.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2443899
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-15.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 107126
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-15.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2257933
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-16.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 126730
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-16.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2513913
+    },
+    {
+      "path": "assets/emblems/previews/tlapanui-17.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 115182
+    },
+    {
+      "path": "assets/emblems/production/tlapanui-17.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2304497
+    },
+    {
+      "path": "assets/warriors/previews/prototype-01.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 180854
+    },
+    {
+      "path": "assets/warriors/production/prototype-01.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1972644
+    },
+    {
+      "path": "assets/warriors/previews/prototype-02.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 155738
+    },
+    {
+      "path": "assets/warriors/production/prototype-02.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1811029
+    },
+    {
+      "path": "assets/warriors/previews/prototype-03-v2.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 167756
+    },
+    {
+      "path": "assets/warriors/production/prototype-03-v2.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1891065
+    },
+    {
+      "path": "assets/warriors/previews/prototype-04.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 165406
+    },
+    {
+      "path": "assets/warriors/production/prototype-04.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1785421
+    },
+    {
+      "path": "assets/warriors/previews/prototype-05.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 167766
+    },
+    {
+      "path": "assets/warriors/production/prototype-05.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1934760
+    },
+    {
+      "path": "../Leukonia/assets/warriors/previews/house-mede-v2.webp",
+      "status": 200,
+      "type": "application/octet-stream",
+      "bytes": 297514
+    },
+    {
+      "path": "../Leukonia/assets/warriors/production/house-mede-v2.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2720425
+    }
+  ]
+}

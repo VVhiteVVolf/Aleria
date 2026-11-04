@@ -263,11 +263,11 @@ export const HOUSE_PENDRAG_FAMILY = withFaelaornSourceCounterUpgrade(Object.free
 
     // 8. Generation (nach der großen Lücke) – Kinder Galahads & Gailis'
     person('agravaine-pendrag', 'Agravaine Pendrag', 'male', '????', '1600'),
-    person('rhodri-pendrag', 'Rhodri Pendrag', 'male', '????', '????', PENDRAG_HOUSE_ID, {
+    person('rhodri-pendrag', 'Rhodri Pendrag', 'male', '1530', '1599', PENDRAG_HOUSE_ID, {
       notes: 'Vorverstorben vor seinem Bruder König Agravaine; sein Sohn Gawain erbte die Krone.'
     }),
     person('floraid-diulb', 'Floraid Diulb', 'female', '????', '????', 'house-diulb'),
-    person('annegrit-vaeren', 'Annegrit Vaeren', 'female', '1548', '1572', 'house-vaeren'),
+    person('annegrit-vaeren', 'Annegrit Vaeren', 'female', '1533', '1572', 'house-vaeren'),
 
     // 9. Generation – Kinder Rhodris & Annegrits
     person('gawain-pendragon', 'Gawain Pendrag', 'male', '1551', '1623'),

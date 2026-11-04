@@ -79,12 +79,22 @@ export function shouldRecoverSceneRestResource(resource = {}, restType = 'short'
     : SHORT_REST_RECOVERY.has(recovery);
 }
 
+function shouldRecoverDailyEntry(entry, dayKey, options) {
+  if (entry.recovery !== 'day' || !dayKey) return false;
+  // A legacy or stale entry can recover once without refilling another pool
+  // which has already received this day's recovery.
+  return options.dayChanged === true || (
+    options.recoverPendingDaily === true
+    && cleanText(entry.recoveryDayKey, 160) !== dayKey
+  );
+}
+
 export function recoverSceneRestResources(resources = [], restType = 'short', recoveryDayKey = '', options = {}) {
   const normalizedType = getSceneRestType(restType).id;
   const dayKey = cleanText(recoveryDayKey, 160);
   return (Array.isArray(resources) ? resources : []).map((resource, index) => {
     const next = cloneResource(resource, index);
-    if (next.recovery === 'day' && options.dayChanged === true && dayKey) {
+    if (shouldRecoverDailyEntry(next, dayKey, options)) {
       next.current = next.maximum;
       next.recoveryDayKey = dayKey;
       return next;
@@ -101,7 +111,7 @@ export function recoverSceneRestAbilities(abilities = [], restType = 'short', re
   const dayKey = cleanText(recoveryDayKey, 160);
   return (Array.isArray(abilities) ? abilities : []).map((ability, index) => {
     const next = cloneAbility(ability, index);
-    if (next.recovery === 'day' && options.dayChanged === true && dayKey) {
+    if (shouldRecoverDailyEntry(next, dayKey, options)) {
       next.usesCurrent = next.usesMaximum;
       next.recoveryDayKey = dayKey;
       return next;
@@ -138,7 +148,10 @@ export function buildSceneRestParticipant(profile = {}, restType = 'short', opti
     temporary: profile.temporaryHitPoints ?? profile.hitPoints?.temporary
   }, profile.maximumHitPoints, { clearTemporary: restType === 'long' });
   const beforeResources = (Array.isArray(profile.resources) ? profile.resources : []).map(cloneResource);
-  const recoveryOptions = { dayChanged: options.dayChanged === true };
+  const recoveryOptions = {
+    dayChanged: options.dayChanged === true,
+    recoverPendingDaily: options.recoverPendingDaily === true
+  };
   const afterResources = recoverSceneRestResources(beforeResources, restType, options.recoveryDayKey, recoveryOptions);
   const beforeAbilities = (Array.isArray(profile.abilities) ? profile.abilities : []).map(cloneAbility);
   const afterAbilities = recoverSceneRestAbilities(beforeAbilities, restType, options.recoveryDayKey, recoveryOptions);

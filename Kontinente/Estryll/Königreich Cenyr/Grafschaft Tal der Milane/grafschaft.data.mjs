@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../modules/tal-der-milane/territory-page.mjs?v=tal-der-milane-20261019';
+import { createTerritory } from '../../../modules/tal-der-milane/territory-page.mjs?v=20261103-tal-der-milane-v1';
 
 export default createTerritory({
   "id": "grafschaft-tal-der-milane",
@@ -202,7 +202,8 @@ export default createTerritory({
           "liege": "Haus Pendrag",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-aderyn"
         },
         {
           "name": "Gaeth O'Penllyn",
@@ -212,7 +213,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gaeth"
         },
         {
           "name": "Hebog O'Talwyn",
@@ -222,7 +224,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-hebog"
         },
         {
           "name": "Ilyuncu O'Caer Gwennol",
@@ -232,7 +235,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-ilyuncu"
         },
         {
           "name": "Tylluan O'Penbryn",
@@ -242,7 +246,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-tylluan"
         },
         {
           "name": "Mwyalchen O'Penbryn",
@@ -252,7 +257,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-mwyalchen"
         },
         {
           "name": "Eryr O'Penbryn",
@@ -262,7 +268,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-eryr"
         }
       ]
     },
@@ -277,7 +284,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bronnor"
         },
         {
           "name": "Caerfrán",
@@ -287,7 +295,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caerfran"
         },
         {
           "name": "Coedrudd",
@@ -297,7 +306,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-coedrudd"
         },
         {
           "name": "Barcud",
@@ -307,7 +317,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-barcud"
         },
         {
           "name": "Durdynn",
@@ -317,7 +328,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-durdynn"
         },
         {
           "name": "Gwylen",
@@ -327,7 +339,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwylen"
         },
         {
           "name": "Gwyntell",
@@ -337,7 +350,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwyntell"
         },
         {
           "name": "Gwyliadwr",
@@ -347,7 +361,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwyliadwr"
         },
         {
           "name": "Helyg",
@@ -357,7 +372,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-helyg"
         }
       ]
     },
@@ -372,7 +388,8 @@ export default createTerritory({
           "liege": "Haus Aderyn O'Penbryn",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ffwnarch"
         }
       ]
     },
@@ -387,7 +404,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mór Tiarna",
           "featured": false,
-          "featuredLabel": "Mór Tiarna"
+          "featuredLabel": "Mór Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gormard"
         },
         {
           "name": "Clan Ua Fíonnghal",
@@ -397,7 +415,8 @@ export default createTerritory({
           "liege": "Clan Ui Gormárd",
           "rank": "Dún Tiarna",
           "featured": false,
-          "featuredLabel": "Dún Tiarna"
+          "featuredLabel": "Dún Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-fionnghal"
         }
       ]
     }

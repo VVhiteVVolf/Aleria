@@ -1,0 +1,2507 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-03T14:33:01.823Z",
+  "purpose": "Read-only-Abzug des Laufzeitkorpus für einen Dokumentanhang und den Sprachmodul-Kontext.",
+  "scope": "Aktuelle Repository-Ausgangsverteilung. Keine Browserentwürfe gelesen und keine Laufzeitdateien verändert.",
+  "editorialStatus": "Namen, Hausränge und Sitze bleiben Besprechungsentwurf; Dahakid ist als Hausname ausdrücklich vorgegeben. Die zehn Rangübersetzungen, acht Staatsämter und acht Klassen sind bestätigt. Kandidatenlisten sind getrennte Klangvorschläge ohne daraus abgeleitete zusätzliche Häuser oder Orte.",
+  "counts": {
+    "houses": 37,
+    "seatedHouses": 37,
+    "unassignedHouses": 0,
+    "settlements": 21,
+    "inhabitedSettlements": 20,
+    "destroyedSettlements": 1,
+    "capitalCities": 1,
+    "paschaCities": 8,
+    "smallTarkanPlaces": 12,
+    "houseNameCandidates": 100,
+    "cityNameCandidates": 40,
+    "offices": 8,
+    "ranks": 10,
+    "classes": 8
+  },
+  "context": {
+    "title": "Ishtaran",
+    "subtitle": "Tirnara · Das Erbe der Maghath",
+    "summary": "Aus dem antiken Fürstentum Maghneach ging nach Zarakhuls Tyrannei und Orins Sprachverwirrung Ishtaran hervor. Seine neue Sprache und seldschukisch geprägte Kultur stehen auf einem maghathisch-albischen Fundament.",
+    "history": [
+      {
+        "id": "maghath",
+        "title": "Die Maghath",
+        "text": "Die Maghath waren eine urtümliche albische Volksgruppe Tirnaras. Als kulturelles Vorbild dienen die anatolischen Galater: ein keltisch geprägtes Volk in einem südlichen Kulturraum. Historische galatische Personen, Städte und Ratsordnungen gehören dadurch nicht automatisch zu ihrer Geschichte."
+      },
+      {
+        "id": "maghneach",
+        "title": "Das antike Fürstentum Maghneach",
+        "text": "Maghneach ist die antike fürstliche Heimat der Maghath. Das neue blau-weiße Steppenadlerwappen erinnert an dieses frühe Zeitalter. Einzelne Fürsten, Gründungsdaten und eine genaue Verfassung sind noch nicht benannt."
+      },
+      {
+        "id": "zarakhul",
+        "title": "Unter der infernalen Sprache",
+        "text": "Zarakhul unterwarf die Völker Tirnaras und die Alben nacheinander. Seine infernale Sprache verband die unterjochten Völker unter einer gemeinsamen Tyrannei."
+      },
+      {
+        "id": "orin",
+        "title": "Orins Sprachverwirrung",
+        "text": "Der celestiale Gott Orin störte diese sprachliche Vereinigung. Die Menschen unter Zarakhul sprachen plötzlich fremde Sprachen und konnten sich nicht mehr gemeinsam organisieren. Die Tyrannei verlor damit eine ihrer verbindenden Grundlagen."
+      },
+      {
+        "id": "ishtaran",
+        "title": "Eine neue Sprache, ein neues Volk",
+        "text": "Nach dem Zerfall des albischen Königreichs und der Zerschlagung Zarakhuls waren Tirnaras Völker zerstreut: nicht länger albisch, aber auch nicht länger infernalisch. Aus den Maghath ging unter einer deutlich anderen Sprache Ishtaran hervor; seine spätere Kultur ist türkisch und seldschukisch inspiriert."
+      }
+    ],
+    "culture": [
+      {
+        "title": "Tirnara",
+        "text": "Ishtaran gehört zu Tirnara, dem Kontinent südlich von Lothir, Estryll und Aldervan. Die gelieferten Normal- und Regionenkarten zeigen das Land. Namen und Adelssitze sind als bearbeitbarer Besprechungsentwurf auf die vorhandenen Ortskreise verteilt."
+      },
+      {
+        "title": "Dualität und Religionsfreiheit",
+        "text": "Der eigene Glaube betrachtet zwei unbenannte, gegensätzlich wirkende Entitäten: Gut und Böse, Tag und Nacht, Licht und Dunkelheit. Er beruht nicht auf Götterverehrung. Religionsfreiheit und Weltoffenheit sind festgelegt; Religion besitzt keine politische Macht und keinen Platz im Staatssystem."
+      },
+      {
+        "title": "Gelehrsamkeit und Madrasa",
+        "text": "Gelehrsamkeit trägt die Staatsordnung. An der Madrasa werden Wissenschaft, Esoterik und weitere Studien betrieben. Dualität, Balance und Frieden bilden den gemeinsamen Nenner. Der oberste Gelehrte ist ein Bildungsamt, kein geistlicher Staatsrang."
+      },
+      {
+        "title": "Krieger und Reitkultur",
+        "text": "Seldschukische, osmanische und kumanische Formen prägen die Ausrüstung. Traditionelle kumanische, osmanische, janitscharische und persische Helme wechseln sichtbar; Wappen und Hausfarben prägen Rüstung und Stoffe. Dahakid erhält als besonderes Haus einen Derwisch mit ritterlichen Elementen. Musketen bleiben ausgeschlossen; die Malweise folgt dem freigestellten matten Aleria-Kriegerstil."
+      },
+      {
+        "title": "Namensklang",
+        "text": "Neue Namen dürfen alttürkisch und tengrisch anklingen, mit leicht germanisierter, gut lesbarer Schreibweise. Kräftige Konsonanten, zwei bis drei Silben und Endungen wie -an, -ar, -gan, -gut, -bek, -tegin oder -lug dienen als Orientierung. Ein Name bestimmt weder Rang noch Beruf eines Hauses."
+      }
+    ]
+  },
+  "houses": [
+    {
+      "id": "source-01",
+      "emblemId": "source-01",
+      "name": "Bayindir",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-01",
+        "name": "Ildaran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-bayindir",
+      "liege": null
+    },
+    {
+      "id": "source-02",
+      "emblemId": "source-02",
+      "name": "Ilterisch",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-03",
+        "name": "Bayrath",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-ilterisch",
+      "liege": null
+    },
+    {
+      "id": "source-03",
+      "emblemId": "source-03",
+      "name": "Dahakid",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-02",
+        "name": "Kargulan",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "user-confirmed-house-name",
+      "assignmentStatus": "proposal",
+      "nameProposalId": null,
+      "liege": null
+    },
+    {
+      "id": "source-04",
+      "emblemId": "source-04",
+      "name": "Altugan",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-04",
+        "name": "Orsakent",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-altugan",
+      "liege": null
+    },
+    {
+      "id": "source-05",
+      "emblemId": "source-05",
+      "name": "Kutlug",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-05",
+        "name": "Belduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-kutlug",
+      "liege": null,
+      "displaced": true,
+      "originSeat": {
+        "id": "small-10",
+        "name": "Kutlakar",
+        "tier": "tarkan",
+        "destroyed": true
+      },
+      "refugeSeat": {
+        "id": "large-05",
+        "name": "Belduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "displacementNote": "Aus dem zerstörten Kutlakar nach Belduran evakuiert."
+    },
+    {
+      "id": "source-06",
+      "emblemId": "source-06",
+      "name": "Merugan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-01",
+        "name": "Kersalan",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-merugan",
+      "liege": null
+    },
+    {
+      "id": "source-07",
+      "emblemId": "source-07",
+      "name": "Aschina",
+      "rank": "Sultan",
+      "seat": {
+        "id": "capital",
+        "name": "Altasar",
+        "tier": "capital",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-aschina",
+      "liege": null
+    },
+    {
+      "id": "source-08",
+      "emblemId": "source-08",
+      "name": "Alptegin",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-03",
+        "name": "Ayseran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-alptegin",
+      "liege": null
+    },
+    {
+      "id": "source-09",
+      "emblemId": "source-09",
+      "name": "Kargan",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-08",
+        "name": "Torgasar",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-kargan",
+      "liege": null
+    },
+    {
+      "id": "source-10",
+      "emblemId": "source-10",
+      "name": "Tarkut",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-02",
+        "name": "Altschar",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-tarkut",
+      "liege": null
+    },
+    {
+      "id": "source-11",
+      "emblemId": "source-11",
+      "name": "Bayturan",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-05",
+        "name": "Belduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-bayturan",
+      "liege": null
+    },
+    {
+      "id": "pool-01",
+      "emblemId": "pool-01",
+      "name": "Börtan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-07",
+        "name": "Börkent",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-boertan",
+      "liege": null
+    },
+    {
+      "id": "pool-02",
+      "emblemId": "pool-02",
+      "name": "Turgut",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-09",
+        "name": "Teldarak",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-turgut",
+      "liege": null
+    },
+    {
+      "id": "pool-03",
+      "emblemId": "pool-03",
+      "name": "Arkut",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-11",
+        "name": "Taschuran",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-arkut",
+      "liege": null
+    },
+    {
+      "id": "pool-04",
+      "emblemId": "pool-04",
+      "name": "Erlugan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-08",
+        "name": "Ilbarsen",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-erlugan",
+      "liege": null
+    },
+    {
+      "id": "pool-05",
+      "emblemId": "pool-05",
+      "name": "Afschar",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-04",
+        "name": "Koyrath",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-afschar",
+      "liege": null
+    },
+    {
+      "id": "pool-06",
+      "emblemId": "pool-06",
+      "name": "Tardu",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-06",
+        "name": "Kalduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-tardu",
+      "liege": null
+    },
+    {
+      "id": "pool-07",
+      "emblemId": "pool-07",
+      "name": "Barsbek",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-06",
+        "name": "Kalduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-barsbek",
+      "liege": null
+    },
+    {
+      "id": "pool-08",
+      "emblemId": "pool-08",
+      "name": "Aybars",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "capital",
+        "name": "Altasar",
+        "tier": "capital",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-aybars",
+      "liege": null
+    },
+    {
+      "id": "pool-09",
+      "emblemId": "pool-09",
+      "name": "Turgan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-06",
+        "name": "Oryntar",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-turgan",
+      "liege": null
+    },
+    {
+      "id": "pool-10",
+      "emblemId": "pool-10",
+      "name": "Tenguran",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "capital",
+        "name": "Altasar",
+        "tier": "capital",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-tenguran",
+      "liege": null
+    },
+    {
+      "id": "pool-11",
+      "emblemId": "pool-11",
+      "name": "Karluk",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-08",
+        "name": "Torgasar",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-karluk",
+      "liege": null
+    },
+    {
+      "id": "pool-12",
+      "emblemId": "pool-12",
+      "name": "Iltan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-02",
+        "name": "Kargulan",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-iltan",
+      "liege": null
+    },
+    {
+      "id": "pool-13",
+      "emblemId": "pool-13",
+      "name": "Salur",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-03",
+        "name": "Ayseran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-salur",
+      "liege": null
+    },
+    {
+      "id": "pool-14",
+      "emblemId": "pool-14",
+      "name": "Ordugan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-04",
+        "name": "Orsakent",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-ordugan",
+      "liege": null
+    },
+    {
+      "id": "pool-15",
+      "emblemId": "pool-15",
+      "name": "Balkar",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-05",
+        "name": "Arkulan",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-balkar",
+      "liege": null
+    },
+    {
+      "id": "pool-16",
+      "emblemId": "pool-16",
+      "name": "Erkut",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-05",
+        "name": "Belduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-erkut",
+      "liege": null
+    },
+    {
+      "id": "pool-17",
+      "emblemId": "pool-17",
+      "name": "Kinik",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-01",
+        "name": "Ildaran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-kinik",
+      "liege": null
+    },
+    {
+      "id": "pool-18",
+      "emblemId": "pool-18",
+      "name": "Göktemir",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "capital",
+        "name": "Altasar",
+        "tier": "capital",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-koektemir",
+      "liege": null
+    },
+    {
+      "id": "pool-19",
+      "emblemId": "pool-19",
+      "name": "Ardulan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-06",
+        "name": "Kalduran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-ardulan",
+      "liege": null
+    },
+    {
+      "id": "pool-20",
+      "emblemId": "pool-20",
+      "name": "Kurtan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-02",
+        "name": "Kargulan",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-kurtan",
+      "liege": null
+    },
+    {
+      "id": "pool-21",
+      "emblemId": "pool-21",
+      "name": "Börtugan",
+      "rank": "Pascha",
+      "seat": {
+        "id": "large-07",
+        "name": "Kembaran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-boertugan",
+      "liege": null
+    },
+    {
+      "id": "pool-22",
+      "emblemId": "pool-22",
+      "name": "Torgun",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-08",
+        "name": "Torgasar",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-torgun",
+      "liege": null
+    },
+    {
+      "id": "pool-23",
+      "emblemId": "pool-23",
+      "name": "Kuturan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "small-12",
+        "name": "Temrakan",
+        "tier": "tarkan",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-kuturan",
+      "liege": null
+    },
+    {
+      "id": "pool-24",
+      "emblemId": "pool-24",
+      "name": "Yarkulan",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-01",
+        "name": "Ildaran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-yarkulan",
+      "liege": null
+    },
+    {
+      "id": "pool-25",
+      "emblemId": "pool-25",
+      "name": "Tebaran",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-03",
+        "name": "Ayseran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-tebaran",
+      "liege": null
+    },
+    {
+      "id": "pool-26",
+      "emblemId": "pool-26",
+      "name": "Albaran",
+      "rank": "Tarkan",
+      "seat": {
+        "id": "large-07",
+        "name": "Kembaran",
+        "tier": "pascha",
+        "destroyed": false
+      },
+      "nameStatus": "proposal",
+      "assignmentStatus": "proposal",
+      "nameProposalId": "house-albaran",
+      "liege": null
+    }
+  ],
+  "settlements": [
+    {
+      "id": "capital",
+      "name": "Altasar",
+      "tier": "capital",
+      "destroyed": false,
+      "designation": "Sultanshauptstadt",
+      "description": "Sultanshauptstadt am größten Ortskreis der nördlichen Küste.",
+      "capacity": null,
+      "status": "proposal",
+      "nameProposalId": "city-altasar",
+      "houses": [
+        {
+          "id": "source-07",
+          "name": "Aschina",
+          "rank": "Sultan"
+        },
+        {
+          "id": "pool-08",
+          "name": "Aybars",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-10",
+          "name": "Tenguran",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-18",
+          "name": "Göktemir",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-01",
+      "name": "Ildaran",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Nördliche Küstenstadt der weiten nordöstlichen Halbinsel.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-ildaran",
+      "houses": [
+        {
+          "id": "source-01",
+          "name": "Bayindir",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-17",
+          "name": "Kinik",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-24",
+          "name": "Yarkulan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-02",
+      "name": "Kargulan",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Nordwestliche Küstenstadt am gebirgigen westlichen Landesteil.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-kargulan",
+      "houses": [
+        {
+          "id": "source-03",
+          "name": "Dahakid",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-12",
+          "name": "Iltan",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-20",
+          "name": "Kurtan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-03",
+      "name": "Ayseran",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Große Stadt am östlichen Meeresarm.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-ayseran",
+      "houses": [
+        {
+          "id": "source-08",
+          "name": "Alptegin",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-13",
+          "name": "Salur",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-25",
+          "name": "Tebaran",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-04",
+      "name": "Orsakent",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Westliche Küstenstadt unterhalb des nordwestlichen Hochlands.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-orsakent",
+      "houses": [
+        {
+          "id": "source-04",
+          "name": "Altugan",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-14",
+          "name": "Ordugan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-05",
+      "name": "Belduran",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Stadt im offenen westlichen Mittelland.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-belduran",
+      "houses": [
+        {
+          "id": "source-05",
+          "name": "Kutlug",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "source-11",
+          "name": "Bayturan",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-16",
+          "name": "Erkut",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-06",
+      "name": "Kalduran",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Große Stadt am südöstlichen Ufer des großen Sees, nördlich des Gebirges.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-kalduran",
+      "houses": [
+        {
+          "id": "pool-06",
+          "name": "Tardu",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-07",
+          "name": "Barsbek",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-19",
+          "name": "Ardulan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-07",
+      "name": "Kembaran",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Große Stadt im bewaldeten östlichen Landesteil.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-kembaran",
+      "houses": [
+        {
+          "id": "pool-21",
+          "name": "Börtugan",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-26",
+          "name": "Albaran",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "large-08",
+      "name": "Torgasar",
+      "tier": "pascha",
+      "destroyed": false,
+      "designation": "Paschastadt",
+      "description": "Große Stadt südlich der mittleren Höhenzüge.",
+      "capacity": 3,
+      "status": "proposal",
+      "nameProposalId": "city-torgasar",
+      "houses": [
+        {
+          "id": "source-09",
+          "name": "Kargan",
+          "rank": "Pascha"
+        },
+        {
+          "id": "pool-11",
+          "name": "Karluk",
+          "rank": "Tarkan"
+        },
+        {
+          "id": "pool-22",
+          "name": "Torgun",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-01",
+      "name": "Kersalan",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft am äußersten nordöstlichen Küstenvorsprung.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-kersalan",
+      "houses": [
+        {
+          "id": "source-06",
+          "name": "Merugan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-02",
+      "name": "Altschar",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft an der Bucht östlich des nordwestlichen Hochlands.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-altschar",
+      "houses": [
+        {
+          "id": "source-10",
+          "name": "Tarkut",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-03",
+      "name": "Bayrath",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft am östlichen Ufer der mittleren Meeresenge.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-bayrath",
+      "houses": [
+        {
+          "id": "source-02",
+          "name": "Ilterisch",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-04",
+      "name": "Koyrath",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft am westlichen Ufer der mittleren Meeresenge.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-koyrath",
+      "houses": [
+        {
+          "id": "pool-05",
+          "name": "Afschar",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-05",
+      "name": "Arkulan",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft am südöstlichen Auslauf des nördlichen Ostgebirges.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-arkulan",
+      "houses": [
+        {
+          "id": "pool-15",
+          "name": "Balkar",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-06",
+      "name": "Oryntar",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft im Übergang zwischen mittleren Hügeln und Bergland.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-oryntar",
+      "houses": [
+        {
+          "id": "pool-09",
+          "name": "Turgan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-07",
+      "name": "Börkent",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft im westlichen Tal südlich des Hochlands.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-boerkent",
+      "houses": [
+        {
+          "id": "pool-01",
+          "name": "Börtan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-08",
+      "name": "Ilbarsen",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft im bewaldeten südwestlichen Mittelland.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-ilbarsen",
+      "houses": [
+        {
+          "id": "pool-04",
+          "name": "Erlugan",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-09",
+      "name": "Teldarak",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft am westlichen Gebirgsrand.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-teldarak",
+      "houses": [
+        {
+          "id": "pool-02",
+          "name": "Turgut",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-10",
+      "name": "Kutlakar",
+      "tier": "tarkan",
+      "destroyed": true,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Zerstörte Stadt im südlichen Flussland. Haus Kutlug wurde nach Belduran evakuiert.",
+      "capacity": 0,
+      "status": "proposal",
+      "nameProposalId": "city-kutlakar",
+      "houses": []
+    },
+    {
+      "id": "small-11",
+      "name": "Taschuran",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft im südwestlichen Becken.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-taschuran",
+      "houses": [
+        {
+          "id": "pool-03",
+          "name": "Arkut",
+          "rank": "Tarkan"
+        }
+      ]
+    },
+    {
+      "id": "small-12",
+      "name": "Temrakan",
+      "tier": "tarkan",
+      "destroyed": false,
+      "designation": "Tarkan-Herrschaft",
+      "description": "Kleine Herrschaft im südöstlichen Waldland.",
+      "capacity": 1,
+      "status": "proposal",
+      "nameProposalId": "city-temrakan",
+      "houses": [
+        {
+          "id": "pool-23",
+          "name": "Kuturan",
+          "rank": "Tarkan"
+        }
+      ]
+    }
+  ],
+  "offices": [
+    {
+      "role": "Marschall",
+      "title": "Amir",
+      "note": "Vom Fürsten-/Herzogstitel Emir getrennt."
+    },
+    {
+      "role": "Kämmerer",
+      "title": "Müder",
+      "note": ""
+    },
+    {
+      "role": "Justiziar",
+      "title": "Hakim",
+      "note": ""
+    },
+    {
+      "role": "Oberster Gelehrter",
+      "title": "Sahir",
+      "note": "Bildung und Gelehrsamkeit; kein geistliches Oberamt."
+    },
+    {
+      "role": "Ratsmagier",
+      "title": "Va’iz",
+      "note": ""
+    },
+    {
+      "role": "Kunst und Unterhaltung",
+      "title": "Nedim",
+      "note": ""
+    },
+    {
+      "role": "Spionage und Geheimdienst",
+      "title": "Sirban",
+      "note": ""
+    },
+    {
+      "role": "Herold und Diplomatie",
+      "title": "Sefir",
+      "note": ""
+    }
+  ],
+  "ranks": [
+    {
+      "rank": "König",
+      "title": "Sultan",
+      "status": "Bestätigt",
+      "note": "Haus Aschina ist im Sitzentwurf als Sultanhaus vorgeschlagen; eine Herrscherperson ist nicht festgelegt."
+    },
+    {
+      "rank": "Fürst / Herzog",
+      "title": "Emir",
+      "status": "Bestätigt",
+      "note": "Nicht mit Amir, dem Marschall, verwechseln."
+    },
+    {
+      "rank": "Graf",
+      "title": "Pascha",
+      "status": "Bestätigt",
+      "note": ""
+    },
+    {
+      "rank": "Baron",
+      "title": "Bey",
+      "status": "Bestätigt",
+      "note": ""
+    },
+    {
+      "rank": "Ritterfürst",
+      "title": "Tarkan",
+      "status": "Bestätigt",
+      "note": "Nur etwas kleiner als ein Baron."
+    },
+    {
+      "rank": "Ritterlicher Herr",
+      "title": "Timar",
+      "status": "Bestätigt",
+      "note": "Niedrigste landbesitzberechtigte Adelsform."
+    },
+    {
+      "rank": "Ritter",
+      "title": "Sayyid / Sayyida",
+      "status": "Bestätigt",
+      "note": "Edelmann beziehungsweise Edelfrau ohne Landbesitz."
+    },
+    {
+      "rank": "Knappe",
+      "title": "Alp",
+      "status": "Bestätigt",
+      "note": ""
+    },
+    {
+      "rank": "Page",
+      "title": "Sabi",
+      "status": "Bestätigt",
+      "note": ""
+    },
+    {
+      "rank": "Freier Bürger",
+      "title": "Reaya",
+      "status": "Bestätigt",
+      "note": ""
+    }
+  ],
+  "classes": [
+    {
+      "id": "nefer",
+      "name": "Nefer",
+      "role": "Waffenknecht",
+      "description": "Der gewöhnliche Fußsoldat bildet das Rückgrat der Armee und kämpft in geschlossenen Formationen.",
+      "equipment": [
+        "Speer",
+        "Rundschild",
+        "Gegürteter Krummsäbel"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/kampfer/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "derwisch",
+      "name": "Derwisch",
+      "role": "Schwertmeister",
+      "description": "Schwertmeister, der fließende Bewegungen mit meisterhafter Schwertführung verbindet. Er führt einen zweihändigen Krummsäbel oder zwei Krummsäbel.",
+      "equipment": [
+        "Zwei Krummsäbel",
+        "Janitscharen-Börk"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/kampfer/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "sipahi",
+      "name": "Sipahi",
+      "role": "Berittener Lanzierer",
+      "description": "Berittener Lanzierer auf einem Sarkal. Die Lanze führt den Angriff, der Krummsäbel dient dem Nahkampf.",
+      "equipment": [
+        "Orientalische Lanze",
+        "Krummsäbel",
+        "Sarkal"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/reiter/index.html",
+      "mount": {
+        "name": "Sarkal",
+        "href": "../../Bestiarium/tiere/pferde/sarkal/index.html"
+      },
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "ghulam",
+      "name": "Ghulam",
+      "role": "Schwerer Krieger",
+      "description": "Schwerer Krieger, dessen schwere Rüstung und rohe Schlagkraft darauf ausgerichtet sind, Rüstungen und Schildformationen zu durchbrechen.",
+      "equipment": [
+        "Flegel, Morgenstern oder Streitkolben",
+        "Schwere Ketten- und Lamellenrüstung",
+        "Gesichtsmaske"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/kampfer/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "aschik",
+      "name": "Aschik",
+      "role": "Poetischer Fechter und Musiker",
+      "description": "Fechter, Dichter und Musiker, der alte Überlieferungen bewahrt.",
+      "equipment": [
+        "Krummsäbel",
+        "Dolch",
+        "Kleine Langhalslaute"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/barde/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "nizet",
+      "name": "Nizet",
+      "role": "Stangenwaffenkämpfer",
+      "description": "Disziplinierter Stangenwaffenkämpfer der Infanterie. Seine lange Waffe hält Gegner auf Abstand, besonders Reiterei und schwere Feinde.",
+      "equipment": [
+        "Langstielige Klingenwaffe",
+        "Hohe Janitscharenhaube"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/kampfer/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "keman",
+      "name": "Keman",
+      "role": "Berittener Bogenschütze",
+      "description": "Berittener Bogenschütze auf einem Sarkal, der auf Distanz und schnelle Positionswechsel setzt.",
+      "equipment": [
+        "Kompositbogen",
+        "Krummsäbel",
+        "Köcher",
+        "Sarkal"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/reiter/index.html",
+      "mount": {
+        "name": "Sarkal",
+        "href": "../../Bestiarium/tiere/pferde/sarkal/index.html"
+      },
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    },
+    {
+      "id": "lewent",
+      "name": "Lewent",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger, der Schiffe verteidigt, Decksbeschuss mit dem Bogen führt und im Enterkampf den Krummsäbel zieht.",
+      "equipment": [
+        "Bogen",
+        "Krummsäbel",
+        "Köcher"
+      ],
+      "baseClassHref": "../../Klassenordner/Basisklassen/seefahrer/index.html",
+      "mount": null,
+      "terminologyStatus": "confirmed-class",
+      "illustrationStatus": "proposal"
+    }
+  ],
+  "horses": [
+    {
+      "id": "sarkal",
+      "usageName": "Sarkal",
+      "bestiaryName": "Sarkal",
+      "href": "../../Bestiarium/tiere/pferde/sarkal/index.html",
+      "text": "Das vorwiegende Reitpferd Ishtarans. Das vorhandene Bestiarium führt den Sarkal als hochgewachsenes, sehniges Kriegspferd aus Ishtaran; schnell, ausdauernd und für erfahrene Reiter gezüchtet."
+    },
+    {
+      "id": "shahzad",
+      "usageName": "Shahzade",
+      "bestiaryName": "Shahzad",
+      "href": "../../Bestiarium/tiere/pferde/shahzad/index.html",
+      "text": "Gelegentlich geritten. Das zugehörige vorhandene Rasseprofil ist im Bestiarium unter „Shahzad“ geführt: ein bewegliches, ausdauerndes Pferd der Shirazad mit Ursprung in den Wüsten Sundaras."
+    }
+  ],
+  "candidateLists": {
+    "status": "candidate-catalog; separate from named draft houses and settlements",
+    "note": "Die 100 Haus- und 40 Ortskandidaten enthalten auch inzwischen für den Sitzentwurf ausgewählte Namen. Ein Kandidat ist kein zusätzliches Haus oder zusätzlicher Ort; seine Klangnotiz ist keine verifizierte historische Etymologie.",
+    "houseNames": [
+      {
+        "id": "house-aschina",
+        "name": "Aschina",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "An Ashina angelehnte Schreibform",
+        "status": "proposal"
+      },
+      {
+        "id": "house-bayindir",
+        "name": "Bayindir",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Oghusischer Stammesname aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kinik",
+        "name": "Kinik",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Oghusischer Anklang aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-salur",
+        "name": "Salur",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Alter Stammesname aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-afschar",
+        "name": "Afschar",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Germanisierte Schreibform deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-basmil",
+        "name": "Basmil",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Stammesverbandsname aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-karluk",
+        "name": "Karluk",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Stammesverbandsname aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kutlug",
+        "name": "Kutlug",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Herrschaftsgunst als Motiv deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ilterisch",
+        "name": "Ilterisch",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Germanisierter Herrschername deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tardu",
+        "name": "Tardu",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Herrschername aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-barsbek",
+        "name": "Barsbek",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Herrscheranklang aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-alptegin",
+        "name": "Alptegin",
+        "group": "Deine Vorlagen · historische Anklänge",
+        "note": "Personennamenanklang aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-koekboer",
+        "name": "Kökbör",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Himmels- und Wolfsanklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boerugan",
+        "name": "Börugan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Wolfsmotiv, weich auslaufend",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kutbarsch",
+        "name": "Kutbarsch",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Herrschaftsgunst und Raubkatzenmotiv",
+        "status": "proposal"
+      },
+      {
+        "id": "house-altugan",
+        "name": "Altugan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Archaischer Herrscherklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tenguran",
+        "name": "Tenguran",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "An Tengri angelehnter Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boertugan",
+        "name": "Börtugan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Wolfsmotiv und voller Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-koektemir",
+        "name": "Göktemir",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Himmels- und Eisenmotiv",
+        "status": "proposal"
+      },
+      {
+        "id": "house-aybars",
+        "name": "Aybars",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Mond- und Raubkatzenmotiv",
+        "status": "proposal"
+      },
+      {
+        "id": "house-turgan",
+        "name": "Turgan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Knapp und altertümlich",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurtagan",
+        "name": "Kurtagan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Wolfs- und Kriegeranklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-bayturan",
+        "name": "Bayturan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "An oghusische Namen angelehnter Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-arslugan",
+        "name": "Arslugan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Löwenanklang aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kuertegin",
+        "name": "Kürtegin",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "An Prinzentitel angelehnter Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-balkut",
+        "name": "Balkut",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Wohlstands- und Herrschaftsanklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ordugan",
+        "name": "Ordugan",
+        "group": "Deine Vorlagen · tengrisch inspirierter Klang",
+        "note": "Heerlageranklang aus deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boertan",
+        "name": "Börtan",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Knapp und rau",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kargan",
+        "name": "Kargan",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Harter, dunkler Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-turgut",
+        "name": "Turgut",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Kräftiger, kurzer Abschluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-balkar",
+        "name": "Balkar",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Breit und markant",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurtan",
+        "name": "Kurtan",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Kompakter Steppenklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-barschan",
+        "name": "Barschan",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Scharfer Anlaut, voller Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tengur",
+        "name": "Tengur",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Archaisch und bündig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-koekhan",
+        "name": "Kökhan",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Kurzer, sonorer Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boertegin",
+        "name": "Börtegin",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Getragener dreisilbiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-arkut",
+        "name": "Arkut",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Kernig und klar",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tarkut",
+        "name": "Tarkut",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Markante, feste Silben",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kutbarg",
+        "name": "Kutbarg",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Dicht und rau",
+        "status": "proposal"
+      },
+      {
+        "id": "house-torgun",
+        "name": "Torgun",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Dunkler, runder Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-altkir",
+        "name": "Altkir",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Knapp und herb",
+        "status": "proposal"
+      },
+      {
+        "id": "house-baytarg",
+        "name": "Baytarg",
+        "group": "Deine Vorlagen · alte und raue Namen",
+        "note": "Heller Beginn, harter Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tarkan",
+        "name": "Tarkan",
+        "group": "Deine Vorlagen · weitere Schreibformen",
+        "note": "Markanter Name; zugleich ein Rangtitel",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tschepni",
+        "name": "Tschepni",
+        "group": "Deine Vorlagen · weitere Schreibformen",
+        "note": "Lesbare deutsche Schreibform deiner Vorlage",
+        "status": "proposal"
+      },
+      {
+        "id": "house-erkut",
+        "name": "Erkut",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Hell und kernig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-talgut",
+        "name": "Talgut",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Breiter Anfang, fester Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurbek",
+        "name": "Kurbek",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Rund und markant",
+        "status": "proposal"
+      },
+      {
+        "id": "house-bargan",
+        "name": "Bargan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Dunkler, kräftiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-argut",
+        "name": "Argut",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Offen und knapp",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tolgan",
+        "name": "Tolgan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Runder, ruhiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-iltan",
+        "name": "Iltan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Schlank und klar",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boerkan",
+        "name": "Börkan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Voll und bündig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-karsan",
+        "name": "Karsan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Herber, klarer Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tebek",
+        "name": "Tebek",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Kurzer, heller Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-durgan",
+        "name": "Durgan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Dunkler Steppenklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-aytar",
+        "name": "Aytar",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Hell und offen",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ertugan",
+        "name": "Ertugan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Kräftiger dreisilbiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-toschgan",
+        "name": "Toschgan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Rauer, dichter Anlaut",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurdan",
+        "name": "Kurdan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Knapp und getragen",
+        "status": "proposal"
+      },
+      {
+        "id": "house-yargut",
+        "name": "Yargut",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Heller Anlauf, kerniger Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-oltan",
+        "name": "Oltan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Rund und ruhig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-barsut",
+        "name": "Barsut",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Dicht und markant",
+        "status": "proposal"
+      },
+      {
+        "id": "house-taygan",
+        "name": "Taygan",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Offener, heller Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-torbek",
+        "name": "Torbek",
+        "group": "Weitere Vorschläge · knapper Klang",
+        "note": "Dunkler Anfang, fester Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-keldaran",
+        "name": "Keldaran",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Breiter dreisilbiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ardulan",
+        "name": "Ardulan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Offener Anfang, voller Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ilkuran",
+        "name": "Ilkuran",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Klar und gleichmäßig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurtalan",
+        "name": "Kurtalan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Kräftiger Anlaut, ruhiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-taschar",
+        "name": "Taschar",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Kurze, raue Silben",
+        "status": "proposal"
+      },
+      {
+        "id": "house-boerdelan",
+        "name": "Bördelan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Voll und melodisch",
+        "status": "proposal"
+      },
+      {
+        "id": "house-altubek",
+        "name": "Altubek",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Kerniger dreisilbiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-karugan",
+        "name": "Karugan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Dunkel und getragen",
+        "status": "proposal"
+      },
+      {
+        "id": "house-turgalar",
+        "name": "Turgalar",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Breiter Steppenklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-arsugan",
+        "name": "Arsugan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Offen und sonor",
+        "status": "proposal"
+      },
+      {
+        "id": "house-balguran",
+        "name": "Balguran",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Voller, runder Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-terugan",
+        "name": "Terugan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Hell und gleichmäßig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tengalar",
+        "name": "Tengalar",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Weiter, offener Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-orkugan",
+        "name": "Orkugan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Dunkler, kompakter Anfang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-yarkulan",
+        "name": "Yarkulan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Kräftig und weit klingend",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kurbagan",
+        "name": "Kurbagan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Dichter, voller Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kuturan",
+        "name": "Kuturan",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Fester Anfang, ruhiger Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-albaran",
+        "name": "Albaran",
+        "group": "Weitere Vorschläge · voller Klang",
+        "note": "Breit und leicht aussprechbar",
+        "status": "proposal"
+      },
+      {
+        "id": "house-aldugan",
+        "name": "Aldugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Runder, ruhiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-erlugan",
+        "name": "Erlugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Heller Anlauf, weicher Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tildaran",
+        "name": "Tildaran",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Fließender dreisilbiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-sorgulan",
+        "name": "Sorgulan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Dunkel und geschmeidig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-baydaran",
+        "name": "Baydaran",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Weit und melodisch",
+        "status": "proposal"
+      },
+      {
+        "id": "house-argulan",
+        "name": "Argulan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Offener, gleichmäßiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tebaran",
+        "name": "Tebaran",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Hell und ruhig",
+        "status": "proposal"
+      },
+      {
+        "id": "house-korugan",
+        "name": "Korugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Voller, weicher Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-merugan",
+        "name": "Merugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Sanfter, sonorer Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-tolsaran",
+        "name": "Tolsaran",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Breit und fließend",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ardugan",
+        "name": "Ardugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Kerniger Anfang, runder Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "house-kostugan",
+        "name": "Kostugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Fester Anlaut, getragener Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-ilbargan",
+        "name": "Ilbargan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Klar und markant",
+        "status": "proposal"
+      },
+      {
+        "id": "house-taruban",
+        "name": "Taruban",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Weicher dreisilbiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "house-gundaran",
+        "name": "Gundaran",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Dunkler Beginn, offene Silben",
+        "status": "proposal"
+      },
+      {
+        "id": "house-aydugan",
+        "name": "Aydugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Heller, voller Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "house-burtalar",
+        "name": "Burtalar",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Breit und rhythmisch",
+        "status": "proposal"
+      },
+      {
+        "id": "house-keltugan",
+        "name": "Keltugan",
+        "group": "Weitere Vorschläge · weicher Ausklang",
+        "note": "Klarer Anlaut, weicher Schluss",
+        "status": "proposal"
+      }
+    ],
+    "cityNames": [
+      {
+        "id": "city-altasar",
+        "name": "Altasar",
+        "group": "Kurze Ortsnamen",
+        "note": "Klarer, offener Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-boerkent",
+        "name": "Börkent",
+        "group": "Kurze Ortsnamen",
+        "note": "Knapp und markant",
+        "status": "proposal"
+      },
+      {
+        "id": "city-tschamrak",
+        "name": "Tschamrak",
+        "group": "Kurze Ortsnamen",
+        "note": "Rauer, dichter Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-altschar",
+        "name": "Altschar",
+        "group": "Kurze Ortsnamen",
+        "note": "Kurze, scharfe Silhouette",
+        "status": "proposal"
+      },
+      {
+        "id": "city-koyrath",
+        "name": "Koyrath",
+        "group": "Kurze Ortsnamen",
+        "note": "Weicher Anfang, fester Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "city-tengrath",
+        "name": "Tengrath",
+        "group": "Kurze Ortsnamen",
+        "note": "Archaisch und kernig",
+        "status": "proposal"
+      },
+      {
+        "id": "city-bayrath",
+        "name": "Bayrath",
+        "group": "Kurze Ortsnamen",
+        "note": "Hell und bündig",
+        "status": "proposal"
+      },
+      {
+        "id": "city-oryntar",
+        "name": "Oryntar",
+        "group": "Kurze Ortsnamen",
+        "note": "Runder, ruhiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "city-saryntal",
+        "name": "Saryntal",
+        "group": "Kurze Ortsnamen",
+        "note": "Weit und leicht aussprechbar",
+        "status": "proposal"
+      },
+      {
+        "id": "city-ilbarsen",
+        "name": "Ilbarsen",
+        "group": "Kurze Ortsnamen",
+        "note": "Klarer Anfang, weicher Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "city-ildaran",
+        "name": "Ildaran",
+        "group": "Fließende Ortsnamen",
+        "note": "Fließender dreisilbiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-belduran",
+        "name": "Belduran",
+        "group": "Fließende Ortsnamen",
+        "note": "Rund und getragen",
+        "status": "proposal"
+      },
+      {
+        "id": "city-ayseran",
+        "name": "Ayseran",
+        "group": "Fließende Ortsnamen",
+        "note": "Hell und melodisch",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kembaran",
+        "name": "Kembaran",
+        "group": "Fließende Ortsnamen",
+        "note": "Weicher, voller Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kersalan",
+        "name": "Kersalan",
+        "group": "Fließende Ortsnamen",
+        "note": "Gleichmäßig und ruhig",
+        "status": "proposal"
+      },
+      {
+        "id": "city-elturan",
+        "name": "Elturan",
+        "group": "Fließende Ortsnamen",
+        "note": "Klar und geschmeidig",
+        "status": "proposal"
+      },
+      {
+        "id": "city-ersalan",
+        "name": "Ersalan",
+        "group": "Fließende Ortsnamen",
+        "note": "Offene, helle Silben",
+        "status": "proposal"
+      },
+      {
+        "id": "city-uldasar",
+        "name": "Uldasar",
+        "group": "Fließende Ortsnamen",
+        "note": "Dunkler Beginn, weiter Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kalduran",
+        "name": "Kalduran",
+        "group": "Fließende Ortsnamen",
+        "note": "Kräftig, aber fließend",
+        "status": "proposal"
+      },
+      {
+        "id": "city-boersalan",
+        "name": "Börsalan",
+        "group": "Fließende Ortsnamen",
+        "note": "Warmer, voller Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kargulan",
+        "name": "Kargulan",
+        "group": "Kräftige Ortsnamen",
+        "note": "Raue Anfangssilbe",
+        "status": "proposal"
+      },
+      {
+        "id": "city-torgasar",
+        "name": "Torgasar",
+        "group": "Kräftige Ortsnamen",
+        "note": "Dunkler, tragender Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kutlakar",
+        "name": "Kutlakar",
+        "group": "Kräftige Ortsnamen",
+        "note": "Markante Konsonantenfolge",
+        "status": "proposal"
+      },
+      {
+        "id": "city-teldarak",
+        "name": "Teldarak",
+        "group": "Kräftige Ortsnamen",
+        "note": "Klarer, fester Abschluss",
+        "status": "proposal"
+      },
+      {
+        "id": "city-intharak",
+        "name": "Intharak",
+        "group": "Kräftige Ortsnamen",
+        "note": "Dichter, altertümlicher Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-temrakan",
+        "name": "Temrakan",
+        "group": "Kräftige Ortsnamen",
+        "note": "Kernig und gut lesbar",
+        "status": "proposal"
+      },
+      {
+        "id": "city-kyrdaran",
+        "name": "Kyrdaran",
+        "group": "Kräftige Ortsnamen",
+        "note": "Herber, dreisilbiger Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-taschuran",
+        "name": "Taschuran",
+        "group": "Kräftige Ortsnamen",
+        "note": "Rauer Anfang, runder Ausklang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-angutar",
+        "name": "Angutar",
+        "group": "Kräftige Ortsnamen",
+        "note": "Kompakt und kraftvoll",
+        "status": "proposal"
+      },
+      {
+        "id": "city-tarkasan",
+        "name": "Tarkasan",
+        "group": "Kräftige Ortsnamen",
+        "note": "Fester, gleichmäßiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "city-arkulan",
+        "name": "Arkulan",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Offener Steppenklang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-orsakent",
+        "name": "Orsakent",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Runder Anfang, knapper Schluss",
+        "status": "proposal"
+      },
+      {
+        "id": "city-turgasar",
+        "name": "Turgasar",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Weit und getragen",
+        "status": "proposal"
+      },
+      {
+        "id": "city-barkulan",
+        "name": "Barkulan",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Voller, dunkler Klang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-sarugan",
+        "name": "Sarugan",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Weiche, offene Silben",
+        "status": "proposal"
+      },
+      {
+        "id": "city-balgoran",
+        "name": "Balgoran",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Breiter, ruhiger Rhythmus",
+        "status": "proposal"
+      },
+      {
+        "id": "city-yolkaran",
+        "name": "Yolkaran",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Hell und weit klingend",
+        "status": "proposal"
+      },
+      {
+        "id": "city-ordukar",
+        "name": "Ordukar",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Markant und sonor",
+        "status": "proposal"
+      },
+      {
+        "id": "city-goktaran",
+        "name": "Goktaran",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Kräftiger Steppenklang",
+        "status": "proposal"
+      },
+      {
+        "id": "city-targulan",
+        "name": "Targulan",
+        "group": "Weit klingende Ortsnamen",
+        "note": "Rauer Anlaut, voller Ausklang",
+        "status": "proposal"
+      }
+    ]
+  },
+  "spellingChecks": [
+    {
+      "term": "Amir",
+      "category": "Staatsamt",
+      "meaning": "Marschall",
+      "distinctFrom": "Emir",
+      "verified": true
+    },
+    {
+      "term": "Emir",
+      "category": "Rang",
+      "meaning": "Fürst / Herzog",
+      "distinctFrom": "Amir",
+      "verified": true
+    },
+    {
+      "term": "Müder",
+      "category": "Staatsamt",
+      "meaning": "Kämmerer",
+      "unicodeNote": "ü ist U+00FC; keine Umschreibung Muder oder Mueder.",
+      "verified": true
+    },
+    {
+      "term": "Va’iz",
+      "category": "Staatsamt",
+      "meaning": "Ratsmagier",
+      "unicodeNote": "Rechtes typografisches Apostroph ’ ist U+2019.",
+      "verified": true
+    },
+    {
+      "term": "Sayyid / Sayyida",
+      "category": "Rang",
+      "meaning": "Ritter; Edelmann beziehungsweise Edelfrau ohne Landbesitz.",
+      "forms": [
+        "Sayyid",
+        "Sayyida"
+      ],
+      "verified": true
+    },
+    {
+      "term": "Göktemir",
+      "category": "Hausname im Entwurf",
+      "houseId": "pool-18",
+      "stableProposalId": "house-koektemir",
+      "supersededSpelling": "Köktemir",
+      "verified": true
+    }
+  ],
+  "collisionAndUsageNotes": [
+    {
+      "term": "Tarkan",
+      "issue": "Gleichlautender bestätigter Rangtitel und Familiennamenskandidat.",
+      "titleMeaning": "Ritterfürst",
+      "candidateId": "house-tarkan",
+      "assignedAsHouseName": false,
+      "guidance": "Im Sprachkontext Rangtitel und bloßen Familiennamensvorschlag ausdrücklich trennen."
+    },
+    {
+      "term": "Shahzade / Shahzad",
+      "issue": "Nutzer-/Landesseitenbezeichnung und tatsächlicher Bestiariums-Profilname unterscheiden sich.",
+      "usageName": "Shahzade",
+      "bestiaryName": "Shahzad",
+      "profileId": "shahzad",
+      "guidance": "Kein weiteres Pferdeprofil oder weitere Rasse daraus ableiten; dieselbe vorhandene Rasse ist verlinkt."
+    },
+    {
+      "term": "Sarkal",
+      "issue": "Pferderasse, kein Titel oder Hausname.",
+      "usage": "Überwiegendes Reitpferd Ishtarans.",
+      "profileId": "sarkal"
+    },
+    {
+      "term": "Madrasa / Derwisch / Sahir / Va’iz",
+      "issue": "Kultureller oder klanglicher Religionsbezug begründet keine religiöse Staatsmacht.",
+      "guidance": "Madrasa ist Bildungsstätte, Sahir oberster Gelehrter, Va’iz Ratsmagier, Derwisch bestätigte Kriegerklasse. Religion ist vom Staat getrennt."
+    },
+    {
+      "term": "Maghath / Maghneach / Ishtaran",
+      "issue": "Volk, antikes Fürstentum und späteres Land sind verschiedene Begriffe.",
+      "guidance": "Maghath ist die urtümliche Volksgruppe; Maghneach ihre antike fürstliche Heimat. Historisches Maghneach ist kein weiteres modernes Haus und kein zusätzlicher Ort der 21er-Karte."
+    },
+    {
+      "term": "Göktemir",
+      "issue": "Aktuelle sichtbare Schreibweise weicht absichtlich von der stabilen Vorschlags-ID ab.",
+      "guidance": "Göktemir schreiben; house-koektemir ist technische Identität und keine alternative aktuelle Schreibweise."
+    },
+    {
+      "term": "Namensorthografie",
+      "issue": "Leicht germanisierter Klang ist Orientierung, keine rückwirkende ASCII-Normalisierung.",
+      "guidance": "Die vorhandenen Umlaute in Müder, Göktemir, Börtugan, Kürtegin usw. exakt erhalten; keine hypothetischen historischen Formen als gesicherte Etymologien ausgeben."
+    },
+    {
+      "term": "Wohnsitz / Lehnsherrschaft",
+      "issue": "Gemeinsamer Ort begründet keine Dienst- oder Lehensbindung.",
+      "guidance": "Alle Runtime-liege-Felder sind null; aus den Sitzgruppen keine Unterordnung ableiten."
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "Vorschau/Ishtaran/realm-context.mjs",
+      "sha256": "500abbccd64f21dfaff6b3a0eb899108be36ef9ced8363ae06fe13e1d28878fd"
+    },
+    {
+      "file": "Vorschau/Ishtaran/house-data.mjs",
+      "sha256": "118e8d00a1838f3ddfcaf395f3a656d683fd7b2f8fc7dcfa5579617edc3369da"
+    },
+    {
+      "file": "Vorschau/Ishtaran/territory-data.mjs",
+      "sha256": "c9d56685433af39e6d24bc48e2d4718f96e875ed0eaf654877d0212fd615c83f"
+    },
+    {
+      "file": "Vorschau/Ishtaran/name-proposals.mjs",
+      "sha256": "ab678b82e59c38928070d0f96f11bc8f8e28e7d9abb1c59f865859384e7a4a73"
+    },
+    {
+      "file": "Vorschau/Ishtaran/warrior-data.mjs",
+      "sha256": "ae21cd6ba9be03306fa62daeb5c312b39caa54da8740a62ffee67900f7aadac9"
+    }
+  ],
+  "validation": {
+    "runtimeSourcesUnchanged": true,
+    "countsAndSpellingsPassed": true,
+    "titleCandidateCollisions": [
+      "Tarkan"
+    ],
+    "all37HousesSeated": true,
+    "destroyedKutlakarEmpty": true
+  }
+}

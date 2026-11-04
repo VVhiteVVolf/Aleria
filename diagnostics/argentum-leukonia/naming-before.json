@@ -1,0 +1,1819 @@
+{
+  "houses": [
+    {
+      "id": "house-apinia",
+      "name": "Haus Apinia",
+      "crest": "assets/originals/previews/apinia.webp",
+      "fullsize": "assets/originals/apinia.png",
+      "original": "assets/originals/apinia.png",
+      "motif": "Eine große silberweiße Feder mit goldenen und kupferorangenen Akzenten auf dunklem Feld.",
+      "palette": [
+        "Schwarz",
+        "Silberweiß",
+        "Kupferorange"
+      ],
+      "frame": "Silber",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": "ort-20",
+      "archonateId": "archonat-suedost",
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-bolar",
+      "name": "Haus Bolar",
+      "crest": "assets/originals/previews/bolar.webp",
+      "fullsize": "assets/originals/bolar.png",
+      "original": "assets/originals/bolar.png",
+      "motif": "Ein elfenbeinweißer Oktopus auf dunkelgrünem Feld.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Gold"
+      ],
+      "frame": "Gold",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": null,
+      "archonateId": null,
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-lex",
+      "name": "Haus Lex",
+      "crest": "assets/originals/previews/lex.webp",
+      "fullsize": "assets/originals/lex.png",
+      "original": "assets/originals/lex.png",
+      "motif": "Ein silberner antiker Helm mit weißem Kamm zwischen Lorbeerzweigen.",
+      "palette": [
+        "Schwarz",
+        "Silber"
+      ],
+      "frame": "Silber",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": "alvanista",
+      "archonateId": "archonat-nord",
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-orania",
+      "name": "Haus Orania",
+      "crest": "assets/originals/previews/orania.webp",
+      "fullsize": "assets/originals/orania.png",
+      "original": "assets/originals/orania.png",
+      "motif": "Ein steigendes silberweißes Pferd auf dunklem violettem Feld.",
+      "palette": [
+        "Dunkelviolett",
+        "Silberweiß",
+        "Bronze"
+      ],
+      "frame": "Bronze",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": "ort-18",
+      "archonateId": "archonat-suedwest",
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-pelagia",
+      "name": "Haus Pelagia",
+      "crest": "assets/originals/previews/pelagia.webp",
+      "fullsize": "assets/originals/pelagia.png",
+      "original": "assets/originals/pelagia.png",
+      "motif": "Ein goldenes heraldisches Seepferd zwischen azurblauen Wellenranken.",
+      "palette": [
+        "Nachtblau",
+        "Gold",
+        "Azur"
+      ],
+      "frame": "Gold",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": "ort-03",
+      "archonateId": "archonat-nordost",
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-tremelia",
+      "name": "Haus Tremelia",
+      "crest": "assets/originals/previews/tremelia.webp",
+      "fullsize": "assets/originals/tremelia.png",
+      "original": "assets/originals/tremelia.png",
+      "motif": "Zwei einander zugewandte goldene Seepferdchen auf petrolgrünem Feld.",
+      "palette": [
+        "Petrolgrün",
+        "Elfenbein",
+        "Gold"
+      ],
+      "frame": "Gold",
+      "rank": "Archon",
+      "caste": "Patrizier",
+      "sourceSeat": "aspio",
+      "archonateId": "archonat-west",
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": false
+    },
+    {
+      "id": "house-mede",
+      "name": "Haus Mede",
+      "crest": "assets/originals/previews/mede.webp",
+      "fullsize": "assets/originals/mede.png",
+      "original": "assets/originals/mede.png",
+      "motif": "Ein goldener aufrechter Olivenzweig mit seitlichen Zweigen auf petrolfarbenem Feld.",
+      "palette": [
+        "Petrol",
+        "Gold",
+        "Elfenbein"
+      ],
+      "frame": "Gold",
+      "rank": "Kaiserliche Linie",
+      "caste": "Illustris",
+      "sourceSeat": "zaphias",
+      "archonateId": null,
+      "status": "supplied",
+      "ready": true,
+      "imperialDomain": true
+    },
+    {
+      "id": "pool-01",
+      "name": "Freies Hauswappen 01 Wolf",
+      "crest": "assets/emblems/previews/pool-01.webp",
+      "fullsize": "assets/emblems/production/pool-01.png",
+      "original": null,
+      "motif": "Ein großer silberner Wolfskopf im klaren Seitenprofil nach links, kurzes geschlossenes Maul und scharfe aufrechte Ohren auf dunkelblauem Feld.",
+      "palette": [
+        "Silber",
+        "Dunkelblau",
+        "Altgold"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-02",
+      "name": "Freies Hauswappen 02 Widder",
+      "crest": "assets/emblems/previews/pool-02.webp",
+      "fullsize": "assets/emblems/production/pool-02.png",
+      "original": null,
+      "motif": "Ein goldener Widder in ruhigem Seitenprofil mit deutlich eingerollten Hörnern auf dunkelrotem Feld.",
+      "palette": [
+        "Gold",
+        "Dunkelrot",
+        "Bronze"
+      ],
+      "frame": "GOLD",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-03",
+      "name": "Freies Hauswappen 03 Keiler",
+      "crest": "assets/emblems/previews/pool-03.webp",
+      "fullsize": "assets/emblems/production/pool-03.png",
+      "original": null,
+      "motif": "Ein kräftiger schwarzer Keiler im Profil nach rechts, heller kleiner Hauer und geschlossene klare Silhouette auf ockergelbem Feld.",
+      "palette": [
+        "Schwarz",
+        "Ocker",
+        "Eisen"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-04",
+      "name": "Freies Hauswappen 04 Hirsch",
+      "crest": "assets/emblems/previews/pool-04.webp",
+      "fullsize": "assets/emblems/production/pool-04.png",
+      "original": null,
+      "motif": "Ein elfenbeinweißer stehender Hirsch mit gut lesbarem sechsendigem Geweih auf olivgrünem Feld.",
+      "palette": [
+        "Elfenbein",
+        "Olivgrün",
+        "Bronze"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-05",
+      "name": "Freies Hauswappen 05 Falke",
+      "crest": "assets/emblems/previews/pool-05.webp",
+      "fullsize": "assets/emblems/production/pool-05.png",
+      "original": null,
+      "motif": "Ein silberner Falke mit genau zwei ausgebreiteten Flügeln frontal, gerader schmaler Stoß, auf tiefem weinrotem Feld.",
+      "palette": [
+        "Silber",
+        "Weinrot",
+        "Schwarz"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-06",
+      "name": "Freies Hauswappen 06 Greif",
+      "crest": "assets/emblems/previews/pool-06.webp",
+      "fullsize": "assets/emblems/production/pool-06.png",
+      "original": null,
+      "motif": "Ein goldener aufgerichteter Greif im Profil nach links mit genau einem sichtbar gefalteten Flügel und einem Löwenschwanz auf dunkelgrünem Feld.",
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-07",
+      "name": "Freies Hauswappen 07 Reiher",
+      "crest": "assets/emblems/previews/pool-07.webp",
+      "fullsize": "assets/emblems/production/pool-07.png",
+      "original": null,
+      "motif": "Ein bronzefarbener Reiher mit langem Hals und genau zwei schlanken Beinen, ruhig stehend zwischen zwei kleinen elfenbeinfarbenen Schilfhalmen auf petrolfarbenem Feld.",
+      "palette": [
+        "Bronze",
+        "Petrol",
+        "Elfenbein"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-08",
+      "name": "Freies Hauswappen 08 Löwe",
+      "crest": "assets/emblems/previews/pool-08.webp",
+      "fullsize": "assets/emblems/production/pool-08.png",
+      "original": null,
+      "motif": "Ein einzelner silberner Löwenkopf frontal mit stilisierter breiter Mähne auf fast schwarzem Feld.",
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Dunkelrot"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-09",
+      "name": "Freies Hauswappen 09 Eiche",
+      "crest": "assets/emblems/previews/pool-09.webp",
+      "fullsize": "assets/emblems/production/pool-09.png",
+      "original": null,
+      "motif": "Ein einzelner dunkelgrüner Eichenbaum mit kurzer kräftiger Wurzel und großer klarer runder Krone auf elfenbeinfarbenem Feld.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-10",
+      "name": "Freies Hauswappen 10 Krabbe",
+      "crest": "assets/emblems/previews/pool-10.webp",
+      "fullsize": "assets/emblems/production/pool-10.png",
+      "original": null,
+      "motif": "Eine dunkelrote Krabbe von oben mit genau zwei großen Scheren und symmetrisch angeordneten acht dünnen Laufbeinen auf cremeweißem Feld.",
+      "palette": [
+        "Dunkelrot",
+        "Cremeweiß",
+        "Schwarz"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-11",
+      "name": "Freies Hauswappen 11 Skorpion",
+      "crest": "assets/emblems/previews/pool-11.webp",
+      "fullsize": "assets/emblems/production/pool-11.png",
+      "original": null,
+      "motif": "Ein goldener Skorpion von oben, zwei deutliche Scheren, gegliederter eingerollter Schwanz, acht Beine, klar stilisiert auf mattschwarzem Feld.",
+      "palette": [
+        "Gold",
+        "Schwarz",
+        "Kupfer"
+      ],
+      "frame": "GOLD",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-12",
+      "name": "Freies Hauswappen 12 Steinbock",
+      "crest": "assets/emblems/previews/pool-12.webp",
+      "fullsize": "assets/emblems/production/pool-12.png",
+      "original": null,
+      "motif": "Ein silberner aufsteigender Steinbock im Profil nach rechts mit zwei nach hinten gebogenen Hörnern auf rostbraunem Feld.",
+      "palette": [
+        "Silber",
+        "Rostbraun",
+        "Dunkelbraun"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-13",
+      "name": "Freies Hauswappen 13 Fackel",
+      "crest": "assets/emblems/previews/pool-13.webp",
+      "fullsize": "assets/emblems/production/pool-13.png",
+      "original": null,
+      "motif": "Eine einzelne goldene antike Fackel mit großer klarer elfenbeinfarbener Flamme auf dunkelblauem Feld; die Flamme bleibt heraldisch flach.",
+      "palette": [
+        "Gold",
+        "Dunkelblau",
+        "Elfenbein"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-14",
+      "name": "Freies Hauswappen 14 Amphore",
+      "crest": "assets/emblems/previews/pool-14.webp",
+      "fullsize": "assets/emblems/production/pool-14.png",
+      "original": null,
+      "motif": "Eine große cremeweiße antike Amphore mit genau zwei Henkelgriffen, dunkelgrüner Zierlinie und rundem Fuß auf terrakottafarbenem Feld.",
+      "palette": [
+        "Cremeweiß",
+        "Terrakotta",
+        "Dunkelgrün"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-15",
+      "name": "Freies Hauswappen 15 Lyra",
+      "crest": "assets/emblems/previews/pool-15.webp",
+      "fullsize": "assets/emblems/production/pool-15.png",
+      "original": null,
+      "motif": "Eine goldene antike Lyra mit sieben geraden sichtbaren Saiten auf dunklem purpurrotem Feld.",
+      "palette": [
+        "Gold",
+        "Purpurrot",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-16",
+      "name": "Freies Hauswappen 16 Olivenzweig",
+      "crest": "assets/emblems/previews/pool-16.webp",
+      "fullsize": "assets/emblems/production/pool-16.png",
+      "original": null,
+      "motif": "Ein dunkelgrüner einzelner diagonaler Olivenzweig mit wenigen großen Blättern und fünf schwarzen Oliven auf elfenbeinfarbenem Feld.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-17",
+      "name": "Freies Hauswappen 17 Granatapfel",
+      "crest": "assets/emblems/previews/pool-17.webp",
+      "fullsize": "assets/emblems/production/pool-17.png",
+      "original": null,
+      "motif": "Ein einzelner dunkelroter leicht geöffneter Granatapfel mit kleiner goldener Krone und zwei grünen Blättern auf blaugrauem Feld.",
+      "palette": [
+        "Dunkelrot",
+        "Blaugrau",
+        "Gold"
+      ],
+      "frame": "GOLD",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-18",
+      "name": "Freies Hauswappen 18 Fisch",
+      "crest": "assets/emblems/previews/pool-18.webp",
+      "fullsize": "assets/emblems/production/pool-18.png",
+      "original": null,
+      "motif": "Ein großer silberner Fisch nach rechts in einem einfachen goldenen Wellenbogen auf tiefblauem Feld, nur ein Fisch.",
+      "palette": [
+        "Silber",
+        "Tiefblau",
+        "Gold"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-19",
+      "name": "Freies Hauswappen 19 Eule",
+      "crest": "assets/emblems/previews/pool-19.webp",
+      "fullsize": "assets/emblems/production/pool-19.png",
+      "original": null,
+      "motif": "Eine goldene Eule frontal sitzend, große klare Augen und gefaltete Flügel auf schieferblauem Feld.",
+      "palette": [
+        "Gold",
+        "Schieferblau",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-20",
+      "name": "Freies Hauswappen 20 Rabe",
+      "crest": "assets/emblems/previews/pool-20.webp",
+      "fullsize": "assets/emblems/production/pool-20.png",
+      "original": null,
+      "motif": "Ein schwarzer Rabe im Profil mit genau einem sichtbar gefalteten Flügel und leicht geöffnetem Schnabel auf elfenbeinfarbenem Feld.",
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-21",
+      "name": "Freies Hauswappen 21 Bär",
+      "crest": "assets/emblems/previews/pool-21.webp",
+      "fullsize": "assets/emblems/production/pool-21.png",
+      "original": null,
+      "motif": "Ein cremeweißer stehender Bär im Profil nach links mit vier erkennbaren Tatzen auf tiefrotem Feld.",
+      "palette": [
+        "Cremeweiß",
+        "Tiefrot",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-22",
+      "name": "Freies Hauswappen 22 Windhund",
+      "crest": "assets/emblems/previews/pool-22.webp",
+      "fullsize": "assets/emblems/production/pool-22.png",
+      "original": null,
+      "motif": "Ein schlanker bronzefarbener Windhund im gestreckten Lauf mit vier deutlich getrennten Beinen auf olivgrünem Feld.",
+      "palette": [
+        "Bronze",
+        "Olivgrün",
+        "Cremeweiß"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-23",
+      "name": "Freies Hauswappen 23 Hirschkäfer",
+      "crest": "assets/emblems/previews/pool-23.webp",
+      "fullsize": "assets/emblems/production/pool-23.png",
+      "original": null,
+      "motif": "Ein silberner Hirschkäfer symmetrisch von oben, große geweihartige Kiefer und sechs Beine auf einem gedämpften weinroten Feld.",
+      "palette": [
+        "Silber",
+        "Weinrot",
+        "Schwarz"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-24",
+      "name": "Freies Hauswappen 24 Palme",
+      "crest": "assets/emblems/previews/pool-24.webp",
+      "fullsize": "assets/emblems/production/pool-24.png",
+      "original": null,
+      "motif": "Eine goldene Palme mit einem Stamm und sieben großen gebogenen Wedeln auf dunkelpetrolfarbenem Feld.",
+      "palette": [
+        "Gold",
+        "Dunkelpetrol",
+        "Bronze"
+      ],
+      "frame": "GOLD",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-25",
+      "name": "Freies Hauswappen 25 Ähren",
+      "crest": "assets/emblems/previews/pool-25.webp",
+      "fullsize": "assets/emblems/production/pool-25.png",
+      "original": null,
+      "motif": "Drei goldene Getreideähren mit großen klaren Körnern, am Fuß durch eine rote Schnur gebunden, auf cremeweißem Feld.",
+      "palette": [
+        "Gold",
+        "Cremeweiß",
+        "Rot"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-26",
+      "name": "Freies Hauswappen 26 Brücke",
+      "crest": "assets/emblems/previews/pool-26.webp",
+      "fullsize": "assets/emblems/production/pool-26.png",
+      "original": null,
+      "motif": "Eine einzelne dunkelrote steinerne Brücke mit genau drei Bögen über zwei schiefergrauen Wellen auf elfenbeinfarbenem Feld; die Bögen sind mit Feldfarbe deckend gefüllt.",
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schiefergrau"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-27",
+      "name": "Freies Hauswappen 27 Leuchtturm",
+      "crest": "assets/emblems/previews/pool-27.webp",
+      "fullsize": "assets/emblems/production/pool-27.png",
+      "original": null,
+      "motif": "Ein einzelner silberner antiker Leuchtturm mit breiter Basis und goldener Flammenschale an der Spitze auf nachtblauem Feld.",
+      "palette": [
+        "Silber",
+        "Nachtblau",
+        "Bronze"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-28",
+      "name": "Freies Hauswappen 28 Sonne",
+      "crest": "assets/emblems/previews/pool-28.webp",
+      "fullsize": "assets/emblems/production/pool-28.png",
+      "original": null,
+      "motif": "Eine klare goldene Sonne mit menschlosem rundem Zentrum und acht breiten Strahlen auf dunkelgrünem Feld.",
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Schwarz"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-29",
+      "name": "Freies Hauswappen 29 Mondsichel",
+      "crest": "assets/emblems/previews/pool-29.webp",
+      "fullsize": "assets/emblems/production/pool-29.png",
+      "original": null,
+      "motif": "Eine breite silberne nach links geöffnete Mondsichel unter drei kleinen goldenen Sternen auf gedämpftem purpurfarbenem Feld.",
+      "palette": [
+        "Silber",
+        "Purpur",
+        "Gold"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-30",
+      "name": "Freies Hauswappen 30 Äxte",
+      "crest": "assets/emblems/previews/pool-30.webp",
+      "fullsize": "assets/emblems/production/pool-30.png",
+      "original": null,
+      "motif": "Zwei einfache silberne einschneidige antike Kampfäxte mit dunklen Holzstielen diagonal gekreuzt auf rostrot bemaltem Feld.",
+      "palette": [
+        "Silber",
+        "Rostrot",
+        "Dunkelbraun"
+      ],
+      "frame": "EISEN",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-31",
+      "name": "Freies Hauswappen 31 Sphinx",
+      "crest": "assets/emblems/previews/pool-31.webp",
+      "fullsize": "assets/emblems/production/pool-31.png",
+      "original": null,
+      "motif": "Eine goldene sitzende antike Sphinx im ruhigen Seitenprofil nach links mit menschlichem Gesicht, Löwenkörper und einem sichtbar gefalteten Flügel auf dunkelrotem Feld.",
+      "palette": [
+        "Gold",
+        "Dunkelrot",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-32",
+      "name": "Freies Hauswappen 32 Leiter",
+      "crest": "assets/emblems/previews/pool-32.webp",
+      "fullsize": "assets/emblems/production/pool-32.png",
+      "original": null,
+      "motif": "Eine einzelne silberne Leiter mit genau fünf gleichmäßigen Sprossen auf dunkelrotem Feld.",
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "frame": "HOLZ",
+      "rank": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    }
+  ],
+  "warriors": [
+    {
+      "id": "house-apinia",
+      "houseId": "house-apinia",
+      "prototypeId": "prototype-07",
+      "image": "assets/warriors/previews/house-apinia.webp",
+      "fullsize": "assets/warriors/production/house-apinia.png",
+      "ready": true,
+      "description": "Kampfbardin mit bronzenem Harnisch und dunklem Schulterstoff. Das silberne Federmotiv erscheint als dezenter Beschlag.",
+      "reason": "Kampfbardin mit bronzenem Harnisch und dunklem Schulterstoff. Das silberne Federmotiv erscheint als dezenter Beschlag.",
+      "equipment": [
+        "Säbel",
+        "tragbare Kithara"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Kohlschwarz",
+        "gedecktes Rostorange",
+        "altes Bronze-/Silbergold"
+      ],
+      "mount": null,
+      "role": "Römischer Kampfbarde",
+      "status": "proposal"
+    },
+    {
+      "id": "house-bolar",
+      "houseId": "house-bolar",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/house-bolar.webp",
+      "fullsize": "assets/warriors/production/house-bolar.png",
+      "ready": true,
+      "description": "Schwerer Infanterist in dunkelgrünen und elfenbeinfarbenen Hausfarben. Oktopusverzierungen prägen Schild und Beschläge.",
+      "reason": "Schwerer Infanterist in dunkelgrünen und elfenbeinfarbenen Hausfarben. Oktopusverzierungen prägen Schild und Beschläge.",
+      "equipment": [
+        "Axt",
+        "Turmschild"
+      ],
+      "palette": [
+        "tiefes Waldgrün",
+        "Elfenbein",
+        "gedecktes Gold",
+        "dunkles Eisen"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "house-lex",
+      "houseId": "house-lex",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/house-lex.webp",
+      "fullsize": "assets/warriors/production/house-lex.png",
+      "ready": true,
+      "description": "Schwer gepanzerter Lanzenträger mit geschlossenem Gesichtshelm. Silberne Lorbeerdetails greifen das dunkle Hauswappen auf.",
+      "reason": "Schwer gepanzerter Lanzenträger mit geschlossenem Gesichtshelm. Silberne Lorbeerdetails greifen das dunkle Hauswappen auf.",
+      "equipment": [
+        "lange Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Anthrazit",
+        "Silber",
+        "gebrochenes Weiß"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "house-orania",
+      "houseId": "house-orania",
+      "prototypeId": "prototype-03",
+      "image": "assets/warriors/previews/house-orania.webp",
+      "fullsize": "assets/warriors/production/house-orania.png",
+      "ready": true,
+      "description": "Kataphrakt auf einem Equo mit Reiterschwert. Dunkelviolette Stoffe und Pferdeverzierungen folgen dem Hauswappen.",
+      "reason": "Kataphrakt auf einem Equo mit Reiterschwert. Dunkelviolette Stoffe und Pferdeverzierungen folgen dem Hauswappen.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Reiterrüstung"
+      ],
+      "palette": [
+        "dunkles Marineblau",
+        "Kupferbraun",
+        "Elfenbein",
+        "gedämpftes Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "status": "proposal"
+    },
+    {
+      "id": "house-pelagia",
+      "houseId": "house-pelagia",
+      "prototypeId": "prototype-05",
+      "image": "assets/warriors/previews/house-pelagia.webp",
+      "fullsize": "assets/warriors/production/house-pelagia.png",
+      "ready": true,
+      "description": "Prunkvoller Mariner und Kleriker des Zephyr mit Säbel und Rückenköcher. Goldene Seepferd- und Wellenmotive prägen die nachtblauen Stoffe.",
+      "reason": "Prunkvoller Mariner und Kleriker des Zephyr mit Säbel und Rückenköcher. Goldene Seepferd- und Wellenmotive prägen die nachtblauen Stoffe.",
+      "equipment": [
+        "Säbel",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "tiefes Marineblau",
+        "gedecktes Gold",
+        "staubiges Türkis",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "role": "Mariner und Kleriker des Zephyr",
+      "status": "proposal"
+    },
+    {
+      "id": "house-tremelia",
+      "houseId": "house-tremelia",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/house-tremelia.webp",
+      "fullsize": "assets/warriors/production/house-tremelia.png",
+      "ready": true,
+      "description": "Fernkämpfer mit Speer und Rückenköcher. Petrolfarbene und goldene Details nehmen die beiden Seepferdchen des Hauswappens auf.",
+      "reason": "Fernkämpfer mit Speer und Rückenköcher. Petrolfarbene und goldene Details nehmen die beiden Seepferdchen des Hauswappens auf.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "tiefes Seegrün",
+        "Elfenbein",
+        "blasses Gold",
+        "dunkles Leder"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "house-mede",
+      "houseId": "house-mede",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/house-mede-v2.webp",
+      "fullsize": "assets/warriors/production/house-mede-v2.png",
+      "ready": true,
+      "description": "Kaiserlicher Prätorianerritter mit reich gearbeitetem Plattenharnisch und geschlossenem Lorbeerhelm. Goldene Olivenranken schmücken den petrolfarbenen Prunkmantel und Schild.",
+      "reason": "Kaiserlicher Prätorianerritter mit reich gearbeitetem Plattenharnisch und geschlossenem Lorbeerhelm. Goldene Olivenranken schmücken den petrolfarbenen Prunkmantel und Schild.",
+      "equipment": [
+        "Verziertes Spatha-Ritterschwert",
+        "ovaler Prunkschild",
+        "vollständiger Plattenharnisch",
+        "geschlossener Lorbeerhelm"
+      ],
+      "palette": [
+        "Petrol",
+        "Elfenbein",
+        "Gold",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-01",
+      "houseId": "pool-01",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-01.webp",
+      "fullsize": "assets/warriors/production/pool-01.png",
+      "ready": true,
+      "description": "Schwerer Infanterist in Dunkelblau und Silber. Das Wolfsmotiv erscheint als getragenes Wappen und als zurückhaltendes Rüstungsdetail.",
+      "reason": "Schwerer Infanterist in Dunkelblau und Silber. Das Wolfsmotiv erscheint als getragenes Wappen und als zurückhaltendes Rüstungsdetail.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelblau",
+        "Altgold"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-02",
+      "houseId": "pool-02",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-02.webp",
+      "fullsize": "assets/warriors/production/pool-02.png",
+      "ready": true,
+      "description": "Schwerer Lanzenträger in dunklem Rot und Gold. Widderverzierungen ergänzen den geschlossenen Helm und die gepanzerten Stoffbahnen.",
+      "reason": "Schwerer Lanzenträger in dunklem Rot und Gold. Widderverzierungen ergänzen den geschlossenen Helm und die gepanzerten Stoffbahnen.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelrot",
+        "Bronze"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-03",
+      "houseId": "pool-03",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-03.webp",
+      "fullsize": "assets/warriors/production/pool-03.png",
+      "ready": true,
+      "description": "Schwerer Infanterist mit dunkler Rüstung und ockergelben Stoffen. Der Keiler des Wappens erscheint als Rüstungsbeschlag.",
+      "reason": "Schwerer Infanterist mit dunkler Rüstung und ockergelben Stoffen. Der Keiler des Wappens erscheint als Rüstungsbeschlag.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Schwarz",
+        "Ocker",
+        "Eisen"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-04",
+      "houseId": "pool-04",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/pool-04.webp",
+      "fullsize": "assets/warriors/production/pool-04.png",
+      "ready": true,
+      "description": "Fernkämpfer mit Speer und Rückenköcher in Olivgrün und Elfenbein. Kleine Hirschverzierungen ergänzen die leichte Ausrüstung.",
+      "reason": "Fernkämpfer mit Speer und Rückenköcher in Olivgrün und Elfenbein. Kleine Hirschverzierungen ergänzen die leichte Ausrüstung.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Olivgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-05",
+      "houseId": "pool-05",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/pool-05.webp",
+      "fullsize": "assets/warriors/production/pool-05.png",
+      "ready": true,
+      "description": "Fernkämpfer mit Speer und sichtbarem Rückenköcher. Silberne Falkenmotive setzen Akzente auf weinrotem Stoff.",
+      "reason": "Fernkämpfer mit Speer und sichtbarem Rückenköcher. Silberne Falkenmotive setzen Akzente auf weinrotem Stoff.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Silber",
+        "Weinrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-06",
+      "houseId": "pool-06",
+      "prototypeId": "prototype-03",
+      "image": "assets/warriors/previews/pool-06.webp",
+      "fullsize": "assets/warriors/production/pool-06.png",
+      "ready": true,
+      "description": "Kataphrakt auf einem Equo in Dunkelgrün und Gold. Der Greif schmückt die Satteldecke und einzelne Beschläge.",
+      "reason": "Kataphrakt auf einem Equo in Dunkelgrün und Gold. Der Greif schmückt die Satteldecke und einzelne Beschläge.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-07",
+      "houseId": "pool-07",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-07.webp",
+      "fullsize": "assets/warriors/production/pool-07.png",
+      "ready": true,
+      "description": "Lanzenträger mit bronzenen und petrolfarbenen Rüstungsteilen. Das Reihermotiv erscheint als feine Verzierung.",
+      "reason": "Lanzenträger mit bronzenen und petrolfarbenen Rüstungsteilen. Das Reihermotiv erscheint als feine Verzierung.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Bronze",
+        "Petrol",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-08",
+      "houseId": "pool-08",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-08.webp",
+      "fullsize": "assets/warriors/production/pool-08.png",
+      "ready": true,
+      "description": "Schwerer Infanterist mit silberner Rüstung und dunklem Hausstoff. Löwenmotive prägen Schild und Brustverzierung.",
+      "reason": "Schwerer Infanterist mit silberner Rüstung und dunklem Hausstoff. Löwenmotive prägen Schild und Brustverzierung.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Dunkelrot"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-09",
+      "houseId": "pool-09",
+      "prototypeId": "prototype-06",
+      "image": "assets/warriors/previews/pool-09.webp",
+      "fullsize": "assets/warriors/production/pool-09.png",
+      "ready": true,
+      "description": "Schlichter Legionär in Elfenbein und Dunkelgrün. Ein Eichenmotiv kennzeichnet die zurückhaltende Hausausrüstung.",
+      "reason": "Schlichter Legionär in Elfenbein und Dunkelgrün. Ein Eichenmotiv kennzeichnet die zurückhaltende Hausausrüstung.",
+      "equipment": [
+        "Schwert und Schild im Bildentwurf"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Miliz · einfacher Legionär",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-10",
+      "houseId": "pool-10",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/pool-10.webp",
+      "fullsize": "assets/warriors/production/pool-10.png",
+      "ready": true,
+      "description": "Fernkämpfer mit Speer und Rückenköcher. Dunkelrote Krabbenmotive heben sich von cremefarbenem Stoff ab.",
+      "reason": "Fernkämpfer mit Speer und Rückenköcher. Dunkelrote Krabbenmotive heben sich von cremefarbenem Stoff ab.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Cremeweiß",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-11",
+      "houseId": "pool-11",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-11.webp",
+      "fullsize": "assets/warriors/production/pool-11.png",
+      "ready": true,
+      "description": "Schwer gepanzerter Infanterist in Schwarz und Gold. Das Skorpionmotiv erscheint auf getragenen Hauszeichen.",
+      "reason": "Schwer gepanzerter Infanterist in Schwarz und Gold. Das Skorpionmotiv erscheint auf getragenen Hauszeichen.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Gold",
+        "Schwarz",
+        "Kupfer"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-12",
+      "houseId": "pool-12",
+      "prototypeId": "prototype-03",
+      "image": "assets/warriors/previews/pool-12.webp",
+      "fullsize": "assets/warriors/production/pool-12.png",
+      "ready": true,
+      "description": "Kataphrakt auf einem Equo mit silbernen und rostbraunen Hausfarben. Steinbockverzierungen ergänzen die Reiterausrüstung.",
+      "reason": "Kataphrakt auf einem Equo mit silbernen und rostbraunen Hausfarben. Steinbockverzierungen ergänzen die Reiterausrüstung.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Silber",
+        "Rostbraun",
+        "Dunkelbraun"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-13",
+      "houseId": "pool-13",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-13.webp",
+      "fullsize": "assets/warriors/production/pool-13.png",
+      "ready": true,
+      "description": "Schwerer Lanzenträger mit dunkelblauen Stoffen und goldenen Details. Kleine Fackelmotive greifen das Hauswappen auf.",
+      "reason": "Schwerer Lanzenträger mit dunkelblauen Stoffen und goldenen Details. Kleine Fackelmotive greifen das Hauswappen auf.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelblau",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-14",
+      "houseId": "pool-14",
+      "prototypeId": "prototype-06",
+      "image": "assets/warriors/previews/pool-14.webp",
+      "fullsize": "assets/warriors/production/pool-14.png",
+      "ready": true,
+      "description": "Einfacher Legionär in Terrakotta und Cremeweiß. Das Amphorenmotiv bleibt als schlichte Hausbemalung erkennbar.",
+      "reason": "Einfacher Legionär in Terrakotta und Cremeweiß. Das Amphorenmotiv bleibt als schlichte Hausbemalung erkennbar.",
+      "equipment": [
+        "Schwert und Schild im Bildentwurf"
+      ],
+      "palette": [
+        "Cremeweiß",
+        "Terrakotta",
+        "Dunkelgrün"
+      ],
+      "mount": null,
+      "role": "Miliz · einfacher Legionär",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-15",
+      "houseId": "pool-15",
+      "prototypeId": "prototype-07",
+      "image": "assets/warriors/previews/pool-15.webp",
+      "fullsize": "assets/warriors/production/pool-15.png",
+      "ready": true,
+      "description": "Kampfbarde mit Säbel und Instrument. Goldene Leierverzierungen ergänzen die purpurroten Hausfarben.",
+      "reason": "Kampfbarde mit Säbel und Instrument. Goldene Leierverzierungen ergänzen die purpurroten Hausfarben.",
+      "equipment": [
+        "Säbel",
+        "Instrument"
+      ],
+      "palette": [
+        "Gold",
+        "Purpurrot",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Römischer Kampfbarde",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-16",
+      "houseId": "pool-16",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-16.webp",
+      "fullsize": "assets/warriors/production/pool-16.png",
+      "ready": true,
+      "description": "Lanzenträger in Elfenbein und Dunkelgrün. Olivenzweige erscheinen als feine Bemalung und Beschläge.",
+      "reason": "Lanzenträger in Elfenbein und Dunkelgrün. Olivenzweige erscheinen als feine Bemalung und Beschläge.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-17",
+      "houseId": "pool-17",
+      "prototypeId": "prototype-07",
+      "image": "assets/warriors/previews/pool-17.webp",
+      "fullsize": "assets/warriors/production/pool-17.png",
+      "ready": true,
+      "description": "Kampfbarde mit Säbel und Instrument in Blaugrau und Dunkelrot. Kleine Granatapfelverzierungen kennzeichnen die Hausausrüstung.",
+      "reason": "Kampfbarde mit Säbel und Instrument in Blaugrau und Dunkelrot. Kleine Granatapfelverzierungen kennzeichnen die Hausausrüstung.",
+      "equipment": [
+        "Säbel",
+        "Instrument"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Blaugrau",
+        "Gold"
+      ],
+      "mount": null,
+      "role": "Römischer Kampfbarde",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-18",
+      "houseId": "pool-18",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/pool-18.webp",
+      "fullsize": "assets/warriors/production/pool-18.png",
+      "ready": true,
+      "description": "Fernkämpferin im hellen Linothorax mit böotischem Helm, Speer und Rückenköcher. Silberne Fische und Wellen schmücken den dunkelblauen Stoff.",
+      "reason": "Fernkämpferin im hellen Linothorax mit böotischem Helm, Speer und Rückenköcher. Silberne Fische und Wellen schmücken den dunkelblauen Stoff.",
+      "equipment": [
+        "Linothorax",
+        "Speer",
+        "Rückenköcher",
+        "böotischer Helm"
+      ],
+      "palette": [
+        "Silber",
+        "Tiefblau",
+        "Gold"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-19",
+      "houseId": "pool-19",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-19.webp",
+      "fullsize": "assets/warriors/production/pool-19.png",
+      "ready": true,
+      "description": "Schwerer Infanterist im silbernen Klivanion mit geschlossenem Gesichtshelm. Eine goldene Eule kennzeichnet den dunkelblauen Turmschild.",
+      "reason": "Schwerer Infanterist im silbernen Klivanion mit geschlossenem Gesichtshelm. Eine goldene Eule kennzeichnet den dunkelblauen Turmschild.",
+      "equipment": [
+        "Schwert",
+        "Turmschild",
+        "Klivanion",
+        "geschlossener Gesichtshelm"
+      ],
+      "palette": [
+        "Gold",
+        "Schieferblau",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-20",
+      "houseId": "pool-20",
+      "prototypeId": "prototype-07",
+      "image": "assets/warriors/previews/pool-20.webp",
+      "fullsize": "assets/warriors/production/pool-20.png",
+      "ready": true,
+      "description": "Kampfbarde mit Säbel und tragbarer Leier. Kettenweste, heller Stoff und schwarze Rabenmotive bilden eine leichte Silhouette.",
+      "reason": "Kampfbarde mit Säbel und tragbarer Leier. Kettenweste, heller Stoff und schwarze Rabenmotive bilden eine leichte Silhouette.",
+      "equipment": [
+        "Säbel",
+        "tragbare Leier",
+        "Kettenweste",
+        "attischer Helm"
+      ],
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "mount": null,
+      "role": "Römischer Kampfbarde",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-21",
+      "houseId": "pool-21",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-21.webp",
+      "fullsize": "assets/warriors/production/pool-21.png",
+      "ready": true,
+      "description": "Schwere Infanteristin mit Streitaxt, Schuppenpanzer und geschlossenem Korintherhelm. Silberne Bärenmotive ergänzen den roten Hausstoff.",
+      "reason": "Schwere Infanteristin mit Streitaxt, Schuppenpanzer und geschlossenem Korintherhelm. Silberne Bärenmotive ergänzen den roten Hausstoff.",
+      "equipment": [
+        "Streitaxt",
+        "schwerer Schuppenpanzer",
+        "geschlossener Korintherhelm"
+      ],
+      "palette": [
+        "Cremeweiß",
+        "Tiefrot",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-22",
+      "houseId": "pool-22",
+      "prototypeId": "prototype-03",
+      "image": "assets/warriors/previews/pool-22.webp",
+      "fullsize": "assets/warriors/production/pool-22.png",
+      "ready": true,
+      "description": "Kataphrakt auf einem Equo mit bronzenem Schuppenpanzer. Die olivgrüne Satteldecke trägt das Windhundmotiv.",
+      "reason": "Kataphrakt auf einem Equo mit bronzenem Schuppenpanzer. Die olivgrüne Satteldecke trägt das Windhundmotiv.",
+      "equipment": [
+        "Reiterschwert",
+        "Schuppenpanzer",
+        "Vollmaskenhelm",
+        "Equo"
+      ],
+      "palette": [
+        "Bronze",
+        "Olivgrün",
+        "Cremeweiß"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-23",
+      "houseId": "pool-23",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-23.webp",
+      "fullsize": "assets/warriors/production/pool-23.png",
+      "ready": true,
+      "description": "Schwere Lanzenträgerin mit silbernen Lamellen und byzantinischem Maskenhelm. Das Hirschkäfermotiv erscheint als kleines Hauszeichen.",
+      "reason": "Schwere Lanzenträgerin mit silbernen Lamellen und byzantinischem Maskenhelm. Das Hirschkäfermotiv erscheint als kleines Hauszeichen.",
+      "equipment": [
+        "Lange Lanze",
+        "Lamellenrüstung",
+        "geschlossener byzantinischer Maskenhelm"
+      ],
+      "palette": [
+        "Silber",
+        "Weinrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-24",
+      "houseId": "pool-24",
+      "prototypeId": "prototype-06",
+      "image": "assets/warriors/previews/pool-24.webp",
+      "fullsize": "assets/warriors/production/pool-24.png",
+      "ready": true,
+      "description": "Einfacher Legionär mit Gladius und ovalem Holzschild. Ein mattgoldenes Palmenmotiv kennzeichnet die petrolfarbene Ausrüstung.",
+      "reason": "Einfacher Legionär mit Gladius und ovalem Holzschild. Ein mattgoldenes Palmenmotiv kennzeichnet die petrolfarbene Ausrüstung.",
+      "equipment": [
+        "Gladius",
+        "ovaler Holzschild",
+        "schlichte Schuppenweste",
+        "Montefortinohelm"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelpetrol",
+        "Bronze"
+      ],
+      "mount": null,
+      "role": "Miliz · einfacher Legionär",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-25",
+      "houseId": "pool-25",
+      "prototypeId": "prototype-04",
+      "image": "assets/warriors/previews/pool-25.webp",
+      "fullsize": "assets/warriors/production/pool-25.png",
+      "ready": true,
+      "description": "Fernkämpfer mit Speer, Rückenköcher und thrakischem Helm. Goldene Ähren und rote Borten ergänzen den hellen Stoff.",
+      "reason": "Fernkämpfer mit Speer, Rückenköcher und thrakischem Helm. Goldene Ähren und rote Borten ergänzen den hellen Stoff.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher",
+        "bronzener Brustpanzer",
+        "thrakischer Helm"
+      ],
+      "palette": [
+        "Gold",
+        "Cremeweiß",
+        "Rot"
+      ],
+      "mount": null,
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-26",
+      "houseId": "pool-26",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-26.webp",
+      "fullsize": "assets/warriors/production/pool-26.png",
+      "ready": true,
+      "description": "Lanzenträger mit silbernem Segmentpanzer und geschlossenem Gesichtshelm. Ein Brückenmotiv schmückt den dunkelroten Hausstoff.",
+      "reason": "Lanzenträger mit silbernem Segmentpanzer und geschlossenem Gesichtshelm. Ein Brückenmotiv schmückt den dunkelroten Hausstoff.",
+      "equipment": [
+        "Schwere Hasta",
+        "Rundschild",
+        "Segmentpanzer",
+        "geschlossener Gesichtshelm"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schiefergrau"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-27",
+      "houseId": "pool-27",
+      "prototypeId": "prototype-05",
+      "image": "assets/warriors/previews/pool-27.webp",
+      "fullsize": "assets/warriors/production/pool-27.png",
+      "ready": true,
+      "description": "Edle Marinerin und Klerikerin des Zephyr mit Säbel und Rückenköcher. Silberne Leuchtturm- und bronzene Wellenmotive ergänzen den Schuppenpanzer.",
+      "reason": "Edle Marinerin und Klerikerin des Zephyr mit Säbel und Rückenköcher. Silberne Leuchtturm- und bronzene Wellenmotive ergänzen den Schuppenpanzer.",
+      "equipment": [
+        "Säbel",
+        "Rückenköcher",
+        "edler Schuppenpanzer",
+        "byzantinischer Helm"
+      ],
+      "palette": [
+        "Silber",
+        "Nachtblau",
+        "Bronze"
+      ],
+      "mount": null,
+      "role": "Mariner und Kleriker des Zephyr",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-28",
+      "houseId": "pool-28",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-28.webp",
+      "fullsize": "assets/warriors/production/pool-28.png",
+      "ready": true,
+      "description": "Schwerer Hoplit mit Muskelpanzer und geschlossenem Korintherhelm. Ein goldener Sonnenstern kennzeichnet den dunkelgrünen Hoplon.",
+      "reason": "Schwerer Hoplit mit Muskelpanzer und geschlossenem Korintherhelm. Ein goldener Sonnenstern kennzeichnet den dunkelgrünen Hoplon.",
+      "equipment": [
+        "Schwert",
+        "großer Hoplon",
+        "Muskelpanzer",
+        "geschlossener Korintherhelm"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-29",
+      "houseId": "pool-29",
+      "prototypeId": "prototype-07",
+      "image": "assets/warriors/previews/pool-29.webp",
+      "fullsize": "assets/warriors/production/pool-29.png",
+      "ready": true,
+      "description": "Kampfbardin mit Säbel und Rahmentrommel. Silberne Mondsicheln und kleine Sterne ergänzen die purpurfarbenen Stoffe.",
+      "reason": "Kampfbardin mit Säbel und Rahmentrommel. Silberne Mondsicheln und kleine Sterne ergänzen die purpurfarbenen Stoffe.",
+      "equipment": [
+        "Säbel",
+        "Rahmentrommel",
+        "leichte Schuppenweste",
+        "spätrömischer Helm"
+      ],
+      "palette": [
+        "Silber",
+        "Purpur",
+        "Gold"
+      ],
+      "mount": null,
+      "role": "Römischer Kampfbarde",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-30",
+      "houseId": "pool-30",
+      "prototypeId": "prototype-01",
+      "image": "assets/warriors/previews/pool-30.webp",
+      "fullsize": "assets/warriors/production/pool-30.png",
+      "ready": true,
+      "description": "Schwerer Infanterist mit Streitaxt, Klivanion und geschlossenem Visierhelm. Das gekreuzte Axtmotiv erscheint auf der rostroten Schärpe.",
+      "reason": "Schwerer Infanterist mit Streitaxt, Klivanion und geschlossenem Visierhelm. Das gekreuzte Axtmotiv erscheint auf der rostroten Schärpe.",
+      "equipment": [
+        "Schwere Streitaxt",
+        "Klivanion",
+        "geschlossener byzantinischer Visierhelm"
+      ],
+      "palette": [
+        "Silber",
+        "Rostrot",
+        "Dunkelbraun"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-31",
+      "houseId": "pool-31",
+      "prototypeId": "prototype-03",
+      "image": "assets/warriors/previews/pool-31.webp",
+      "fullsize": "assets/warriors/production/pool-31.png",
+      "ready": true,
+      "description": "Kataphraktin auf einem Equo mit goldenem Schuppenpanzer und geschlossenem Reiterhelm. Sphinxverzierungen schmücken die dunkelrote Satteldecke.",
+      "reason": "Kataphraktin auf einem Equo mit goldenem Schuppenpanzer und geschlossenem Reiterhelm. Sphinxverzierungen schmücken die dunkelrote Satteldecke.",
+      "equipment": [
+        "Reiterschwert",
+        "Schuppenpanzer",
+        "geschlossener Reiterhelm",
+        "Equo"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelrot",
+        "Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "status": "proposal"
+    },
+    {
+      "id": "pool-32",
+      "houseId": "pool-32",
+      "prototypeId": "prototype-02",
+      "image": "assets/warriors/previews/pool-32.webp",
+      "fullsize": "assets/warriors/production/pool-32.png",
+      "ready": true,
+      "description": "Schwerer Lanzenträger mit dunklen Lamellen und geschlossenem Kammhelm. Das silberne Leitermotiv kennzeichnet den roten Schild.",
+      "reason": "Schwerer Lanzenträger mit dunklen Lamellen und geschlossenem Kammhelm. Das silberne Leitermotiv kennzeichnet den roten Schild.",
+      "equipment": [
+        "Lange Lanze",
+        "Rundschild",
+        "dunkle Lamellenrüstung",
+        "geschlossener Kammhelm"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "role": "Schwer gepanzerter Lanzenträger",
+      "status": "proposal"
+    }
+  ],
+  "artworks": [
+    {
+      "id": "realm-argentum",
+      "name": "Das Kaiserreich Argentum",
+      "kind": "realm",
+      "image": "assets/originals/previews/argentum.webp",
+      "fullsize": "assets/originals/argentum.png",
+      "original": "assets/originals/argentum.png",
+      "description": "Das gelieferte Zeichen des Silbernen Kaiserreichs. Leukonia ist eine seiner drei großen Provinzen.",
+      "palette": [
+        "Nachtblau",
+        "Gold"
+      ],
+      "ready": true,
+      "status": "supplied"
+    },
+    {
+      "id": "province-leukonia-v2",
+      "name": "Leukonia als Provinz",
+      "kind": "province",
+      "image": "assets/emblems/previews/leukonia-v2.webp",
+      "fullsize": "assets/emblems/production/leukonia-v2.png",
+      "ready": true,
+      "description": "Ein silberweißer korinthischer Hoplit hält einen Gorgonenkopf hoch. Dunkelrotes Feld mit silbernem Mäanderrahmen und goldenen Akzenten.",
+      "motif": "Ein silberweißer korinthischer Hoplit hält einen Gorgonenkopf hoch. Dunkelrotes Feld mit silbernem Mäanderrahmen und goldenen Akzenten.",
+      "palette": [
+        "Silberweiß",
+        "Dunkelrot",
+        "Gold"
+      ],
+      "frame": "SILBER",
+      "houseId": null,
+      "archonateId": null,
+      "status": "proposal"
+    },
+    {
+      "id": "banner-apinia",
+      "name": "Archonatsbanner Apinia",
+      "kind": "archonate",
+      "image": "assets/banners/previews/apinia.webp",
+      "fullsize": "assets/banners/production/apinia.png",
+      "ready": true,
+      "description": "Eine große silberweiße Feder mit goldenen und kupferorangenen Akzenten auf dunklem Feld.",
+      "motif": "Eine große silberweiße Feder mit goldenen und kupferorangenen Akzenten auf dunklem Feld.",
+      "palette": [
+        "Schwarz",
+        "Silberweiß",
+        "Kupferorange"
+      ],
+      "frame": null,
+      "houseId": "house-apinia",
+      "archonateId": "archonat-suedost",
+      "status": "proposal"
+    },
+    {
+      "id": "banner-lex",
+      "name": "Archonatsbanner Lex",
+      "kind": "archonate",
+      "image": "assets/banners/previews/lex.webp",
+      "fullsize": "assets/banners/production/lex.png",
+      "ready": true,
+      "description": "Ein silberner antiker Helm mit weißem Kamm zwischen Lorbeerzweigen.",
+      "motif": "Ein silberner antiker Helm mit weißem Kamm zwischen Lorbeerzweigen.",
+      "palette": [
+        "Schwarz",
+        "Silber",
+        "dunkles Eisen"
+      ],
+      "frame": null,
+      "houseId": "house-lex",
+      "archonateId": "archonat-nord",
+      "status": "proposal"
+    },
+    {
+      "id": "banner-orania",
+      "name": "Archonatsbanner Orania",
+      "kind": "archonate",
+      "image": "assets/banners/previews/orania.webp",
+      "fullsize": "assets/banners/production/orania.png",
+      "ready": true,
+      "description": "Ein steigendes silberweißes Pferd auf dunklem violettem Feld.",
+      "motif": "Ein steigendes silberweißes Pferd auf dunklem violettem Feld.",
+      "palette": [
+        "Dunkelviolett",
+        "Silberweiß",
+        "Bronze"
+      ],
+      "frame": null,
+      "houseId": "house-orania",
+      "archonateId": "archonat-suedwest",
+      "status": "proposal"
+    },
+    {
+      "id": "banner-pelagia",
+      "name": "Archonatsbanner Pelagia",
+      "kind": "archonate",
+      "image": "assets/banners/previews/pelagia.webp",
+      "fullsize": "assets/banners/production/pelagia.png",
+      "ready": true,
+      "description": "Ein goldenes heraldisches Seepferd zwischen azurblauen Wellenranken.",
+      "motif": "Ein goldenes heraldisches Seepferd zwischen azurblauen Wellenranken.",
+      "palette": [
+        "Nachtblau",
+        "Gold",
+        "Azurblau"
+      ],
+      "frame": null,
+      "houseId": "house-pelagia",
+      "archonateId": "archonat-nordost",
+      "status": "proposal"
+    },
+    {
+      "id": "banner-tremelia",
+      "name": "Archonatsbanner Tremelia",
+      "kind": "archonate",
+      "image": "assets/banners/previews/tremelia.webp",
+      "fullsize": "assets/banners/production/tremelia.png",
+      "ready": true,
+      "description": "Zwei einander zugewandte goldene Seepferdchen auf petrolgrünem Feld.",
+      "motif": "Zwei einander zugewandte goldene Seepferdchen auf petrolgrünem Feld.",
+      "palette": [
+        "Petrolgrün",
+        "Elfenbein",
+        "Gold"
+      ],
+      "frame": null,
+      "houseId": "house-tremelia",
+      "archonateId": "archonat-west",
+      "status": "proposal"
+    },
+    {
+      "id": "illustris",
+      "name": "Illustris",
+      "kind": "caste",
+      "image": "assets/castes/previews/illustris.webp",
+      "fullsize": "assets/castes/production/illustris.png",
+      "ready": true,
+      "status": "illustration"
+    },
+    {
+      "id": "patrizier",
+      "name": "Patrizier",
+      "kind": "caste",
+      "image": "assets/castes/previews/patrizier.webp",
+      "fullsize": "assets/castes/production/patrizier.png",
+      "ready": true,
+      "status": "illustration"
+    },
+    {
+      "id": "magnarier",
+      "name": "Magnarier",
+      "kind": "caste",
+      "image": "assets/castes/previews/magnarier.webp",
+      "fullsize": "assets/castes/production/magnarier.png",
+      "ready": true,
+      "status": "illustration"
+    },
+    {
+      "id": "mercantrier",
+      "name": "Mercantrier",
+      "kind": "caste",
+      "image": "assets/castes/previews/mercantrier.webp",
+      "fullsize": "assets/castes/production/mercantrier.png",
+      "ready": true,
+      "status": "illustration"
+    },
+    {
+      "id": "plebejer",
+      "name": "Plebejer",
+      "kind": "caste",
+      "image": "assets/castes/previews/plebejer.webp",
+      "fullsize": "assets/castes/production/plebejer.png",
+      "ready": true,
+      "status": "illustration"
+    },
+    {
+      "id": "servi",
+      "name": "Servi",
+      "kind": "caste",
+      "image": "assets/castes/previews/servi.webp",
+      "fullsize": "assets/castes/production/servi.png",
+      "ready": true,
+      "status": "illustration"
+    }
+  ]
+}

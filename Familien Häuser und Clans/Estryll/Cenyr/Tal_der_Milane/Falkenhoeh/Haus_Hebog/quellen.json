@@ -1,0 +1,43 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-hebog",
+  "attachmentId": "b6e1e04b-0a1a-44d8-8800-ad253270ff04",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "ec9b350390ca141a90fa79bcfe9e78ade7862fb261a8136a0a899e23c15dc8c6",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hauskrieger",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/9WZuyx2.png",
+      "sha256": "f4c639453856741b954b54e64a8721b4f95ae75146043e456d695d43d88e530e",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "role": "Hofmagierin Lasairfhiona Ó Flaithbertaigh",
+      "file": "assets/lasairfhiona-flaithbertaigh.png",
+      "source": "https://64.media.tumblr.com/25c9b0623c4b6b3ca5337709ef44d396/38d8817929c4b287-5c/s250x400/85b0cda2c42586242ad40693ae9d212ed0f1d88f.pnj",
+      "sha256": "ebf033347d076cd58a8fa2bb548cf931090c5051ba1dca7872e6ed6b1a426e9d",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-hebog",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-hebog-family.js",
+    "Stammbäume/assets/js/data/house-hebog-portraits.js",
+    "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryNumbersOmitted": true
+}

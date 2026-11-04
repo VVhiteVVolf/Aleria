@@ -1,5 +1,6 @@
 @import url('./skill-icons.css?v=20261016-guided-checks-v1');
 @import url('./skill-attempt.css?v=20261016-check-policy-v1');
+@import url('./skill-save-context.css');
 
 .comment-body.comment-kind-performance,
 .comment-live-preview-body.comment-kind-performance {
@@ -164,6 +165,10 @@
 }
 
 .skill-check-warning { margin: 0 0 0.5rem; color: #8b2d25; }
+.skill-check-warning[data-skill-action-block] { padding: 0.75rem; border: 1px solid #ab4d40; border-radius: 6px; background: #fae9df; font: 500 0.9rem/1.5 "EB Garamond", Georgia, serif; }
+.skill-check-warning[data-skill-action-block] p { margin: 0 0 0.5rem; }
+.skill-check-warning[data-skill-action-block] button { min-height: 2.5rem; padding: 0.5rem 0.85rem; border: 1px solid #7b2924; border-radius: 4px; background: #7b2924; color: #fff7e5; font: inherit; font-weight: 700; cursor: pointer; }
+.skill-check-warning[data-skill-action-block] button:focus-visible { outline: 2px solid #7b2924; outline-offset: 3px; }
 
 .skill-check-automatic-value { display: grid; align-content: start; gap: 6px; padding: 10px 12px; border: 1px solid #ab4d40; border-radius: 6px; background: #fae9df; color: #7b2924; }
 .skill-check-automatic-value > span { font: 600 .65rem/1.4 'Cinzel', Georgia, serif; }

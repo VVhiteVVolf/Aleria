@@ -13,7 +13,7 @@ import {
   SILBERINSEL_HOUSE_EMBLEMS,
   SILBERINSEL_HOUSE_PROFILES
 } from './silberinsel-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 
@@ -293,8 +293,8 @@ export const HOUSE_CANWYLL_FAMILY = Object.freeze({
     person('meriel-canwyll', 'Meriel Canwyll', 'female', '1660', ''),
     awayWoman('enfys-canwyll', 'Enfys Canwyll', '1662', '1717', 'Haus Selwyn'),
     spouse('cadfan-selwyn', 'Cadfan Selwyn', 'male', '1661', '1720', 'house-selwyn'),
-    person('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1662', '1720'),
-    spouse('dylis-tiwna', 'Dylis Tiwna', 'female', '1662', '1720', 'house-tiwna'),
+    person('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1652', '1720'),
+    spouse('dylis-tiwna', 'Dylis Tiwna', 'female', '1650', '1720', 'house-tiwna'),
 
     person('cadoc-canwyll', 'Cadoc Canwyll', 'male', '1671', ''),
     spouse('rhiannon-neidr', 'Rhiannon Neidr', 'female', '1676', '', 'house-neidr'),

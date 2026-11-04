@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import {createProjectTransfer} from '../modules/workspace/project-transfer.mjs';
 import {createWorkspaceStore} from '../modules/workspace/store.mjs';
 import {createWorkspace} from '../modules/workspace/seed.mjs';
+import {createModule} from '../modules/templates/catalog.mjs';
 function inputFor(project){
   const text=JSON.stringify(project);
   return {files:[{size:Buffer.byteLength(text),text:async()=>text}],value:'project.json',addEventListener(event,listener){this[event]=listener;}};
 }
 test('Import fügt Pinnwände mit neuen Kennungen hinzu, erhält vorhandene Inhalte und ist rückgängig zu machen',async()=>{
   const original=createWorkspace(),store=createWorkspaceStore(original),imported=createWorkspace();
+  imported.boards[0].modules.push(createModule('character'));
   imported.boards[0].modules[0].pages[0].blocks[0].value='data:image/png;base64,aGVsbG8=';
   const input=inputFor(imported);let activeId;
   createProjectTransfer({input,store,ask:async()=>true,toast:()=>{},onImported:id=>{activeId=id;}});
@@ -24,4 +26,16 @@ test('Abgebrochener oder ungültiger Import ändert den lokalen Stand nicht',asy
   createProjectTransfer({input,store,ask:async()=>false,toast:message=>warnings.push(message),onImported:()=>assert.fail('Kein Import erwartet')});
   await input.change();assert.deepEqual(store.get(),original);
   input.files=[{size:10,text:async()=>'{broken'}];await input.change();assert.deepEqual(store.get(),original);assert.equal(warnings.length,1);assert.match(warnings[0],/JSON/);
+});
+
+test('erneuter Import kopiert gleich gekennzeichnete Wünsche ohne die ursprüngliche Übergabe zu überschreiben',async()=>{
+  const project=createWorkspace(),request=createModule('module-request');
+  request.title='Ein Hafenmodul';request.pages[0].blocks[0].value='Ein kleiner Hafen.';
+  project.boards[0].modules.push(request);
+  const store=createWorkspaceStore(project),input=inputFor(project);
+  createProjectTransfer({input,store,ask:async()=>true,toast:()=>{},onImported:()=>{}});
+  await input.change();
+  assert.notEqual(store.get().boards[1].modules[0].id,request.id);
+  assert.deepEqual(store.get().boards[1].modules[0].pages,request.pages);
+  assert.deepEqual(store.get().boards[0].modules[0],request);
 });

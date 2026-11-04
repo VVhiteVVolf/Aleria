@@ -1,0 +1,9 @@
+.ishtaran-map .map-variant-row,.ishtaran-map-dialog .map-variant-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px;font:12px/1.6 var(--sans)}
+.ishtaran-map .map-variant-row>a{margin-left:auto}
+.ishtaran-map .map-shell{border:1px solid var(--line);background:#d7d8bf}
+.ishtaran-map .map-canvas{min-width:900px}
+.ishtaran-map .map-caption{margin:15px 0 0;font:11px/1.7 var(--sans);color:var(--muted)}
+.ishtaran-map-dialog .map-variant-row{padding:12px 16px;margin:0;border-bottom:1px solid var(--line);background:var(--paper)}
+#map-dialog.ishtaran-map-dialog .map-viewport{max-height:calc(96vh - 180px)}
+@media(max-width:700px){.ishtaran-map .map-variant-row>a{width:100%;margin-left:0}.ishtaran-map .section-heading h2{font-size:29px}.ishtaran-map-dialog .map-variant-row{padding:9px 12px;gap:8px}.ishtaran-map-dialog .map-variant-row button{font-size:11px;padding:8px 12px}}
+@media print{.ishtaran-map .map-variant-row,.ishtaran-map [data-action="open-map"]{display:none}.ishtaran-map .map-canvas{min-width:0}}

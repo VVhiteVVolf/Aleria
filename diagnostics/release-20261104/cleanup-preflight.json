@@ -1,0 +1,996 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "mode": "preflight-only-no-deletion",
+  "root": "E:/Aleria",
+  "scope": [
+    "Twelve explicitly approved .tmp Vite build directories from clean-build-copies.py",
+    "Fixed release lifecycle stages .site-publish and .release-state/function-source",
+    "Metadata only for prepared.json, last-release.json, release.lock",
+    "Drive metadata C/D/E/F; no drive content scans"
+  ],
+  "guidanceRead": [
+    "netlify/docs/TEMPORARY_STORAGE.md",
+    "netlify/docs/LOCAL_RELEASES.md"
+  ],
+  "command": {
+    "argv": [
+      "python",
+      "netlify/maintenance/clean-build-copies.py",
+      "--plan",
+      ".tmp/cleanup-20261104.json"
+    ],
+    "exitCode": 0,
+    "apply": false
+  },
+  "plan": {
+    "path": ".tmp/cleanup-20261104.json",
+    "sha256": "d508e5fd591d45553f8bf00e47f4b0d8d731053c9cfb8c90983e679a0939c7cd",
+    "bytes": 1552,
+    "remoteCommit": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+    "createdAt": 1793763515.1290488,
+    "selectedFileCount": 0,
+    "selectedLogicalBytes": 0,
+    "builds": [
+      {
+        "build": "wellenruh-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1166
+      },
+      {
+        "build": "praetendenten-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1197
+      },
+      {
+        "build": "praetendenten-step2-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1199
+      },
+      {
+        "build": "praetendenten-step3-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1201
+      },
+      {
+        "build": "praetendenten-step4-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1204
+      },
+      {
+        "build": "praetendenten-step5-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1207
+      },
+      {
+        "build": "praetendenten-step6-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1210
+      },
+      {
+        "build": "praetendenten-step7-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1212
+      },
+      {
+        "build": "praetendenten-canon-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1216
+      },
+      {
+        "build": "praetendenten-layout-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1212
+      },
+      {
+        "build": "leitheach-timeline-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1301
+      },
+      {
+        "build": "coastal-history-build",
+        "selectedBytes": 0,
+        "retainedFiles": 1298
+      }
+    ],
+    "files": []
+  },
+  "approvedBuildInventory": [
+    {
+      "build": "wellenruh-build",
+      "path": "E:\\Aleria\\.tmp\\wellenruh-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1166,
+      "logicalBytes": 45277294,
+      "uniqueFileIdentityBytes": 45277294,
+      "protectedMethodFiles": 340,
+      "protectedMethodBytes": 2555308,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\wellenruh-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1197,
+      "logicalBytes": 45828875,
+      "uniqueFileIdentityBytes": 45828875,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step2-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step2-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1199,
+      "logicalBytes": 45879785,
+      "uniqueFileIdentityBytes": 45879785,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step2-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step3-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step3-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1201,
+      "logicalBytes": 45925920,
+      "uniqueFileIdentityBytes": 45925920,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step3-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step4-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step4-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1204,
+      "logicalBytes": 46009960,
+      "uniqueFileIdentityBytes": 46009960,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step4-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step5-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step5-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1207,
+      "logicalBytes": 46047628,
+      "uniqueFileIdentityBytes": 46047628,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step5-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step6-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step6-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1210,
+      "logicalBytes": 46085598,
+      "uniqueFileIdentityBytes": 46085598,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step6-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-step7-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-step7-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1212,
+      "logicalBytes": 46113147,
+      "uniqueFileIdentityBytes": 46113147,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-step7-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-canon-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-canon-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1216,
+      "logicalBytes": 46402227,
+      "uniqueFileIdentityBytes": 46402227,
+      "protectedMethodFiles": 366,
+      "protectedMethodBytes": 2893517,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-canon-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "praetendenten-layout-build",
+      "path": "E:\\Aleria\\.tmp\\praetendenten-layout-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1212,
+      "logicalBytes": 46149386,
+      "uniqueFileIdentityBytes": 46149386,
+      "protectedMethodFiles": 364,
+      "protectedMethodBytes": 2834272,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\praetendenten-layout-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "leitheach-timeline-build",
+      "path": "E:\\Aleria\\.tmp\\leitheach-timeline-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1301,
+      "logicalBytes": 47547842,
+      "uniqueFileIdentityBytes": 47547842,
+      "protectedMethodFiles": 388,
+      "protectedMethodBytes": 2965647,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\leitheach-timeline-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    },
+    {
+      "build": "coastal-history-build",
+      "path": "E:\\Aleria\\.tmp\\coastal-history-build",
+      "exists": true,
+      "validBuild": true,
+      "fileCount": 1298,
+      "logicalBytes": 47491268,
+      "uniqueFileIdentityBytes": 47491268,
+      "protectedMethodFiles": 386,
+      "protectedMethodBytes": 2957699,
+      "reparsePathsSkipped": 0,
+      "resolvedPath": "E:\\Aleria\\.tmp\\coastal-history-build",
+      "withinIntendedWorkspace": true,
+      "sameResolvedAbsolutePath": true,
+      "selectedFiles": 0,
+      "selectedBytes": 0
+    }
+  ],
+  "approvedBuildTotals": {
+    "count": 12,
+    "fileCount": 14623,
+    "logicalBytes": 554758930,
+    "uniqueFileIdentityBytes": 554758930,
+    "protectedMethodFiles": 4392,
+    "protectedMethodBytes": 34046347
+  },
+  "diskUsage": [
+    {
+      "drive": "C:/",
+      "present": true,
+      "totalBytes": 499513245696,
+      "usedBytes": 463592321024,
+      "freeBytes": 35920924672
+    },
+    {
+      "drive": "D:/",
+      "present": true,
+      "totalBytes": 2000381014016,
+      "usedBytes": 1701101555712,
+      "freeBytes": 299279458304
+    },
+    {
+      "drive": "E:/",
+      "present": true,
+      "totalBytes": 1000186310656,
+      "usedBytes": 913244557312,
+      "freeBytes": 86941753344
+    },
+    {
+      "drive": "F:/",
+      "present": true,
+      "totalBytes": 15710814208,
+      "usedBytes": 82493440,
+      "freeBytes": 15628320768
+    }
+  ],
+  "releaseStages": [
+    {
+      "path": ".site-publish",
+      "exists": false,
+      "fixedPathRecognized": true,
+      "markerFile": ".aleria-publish-stage"
+    },
+    {
+      "path": ".release-state/function-source",
+      "exists": false,
+      "fixedPathRecognized": true,
+      "markerFile": ".aleria-publish-stage"
+    }
+  ],
+  "releaseMetadata": [
+    {
+      "path": ".release-state/prepared.json",
+      "exists": true,
+      "retain": true,
+      "bytes": 5548461,
+      "sha256": "e2f449480cc26604679a6a714bd4c24e2aada284024f6b89c93a98207baeeebe",
+      "commit": "2de17a7f0701af8d7dd995d53058dd54108e6aa5",
+      "preparedAt": "2026-11-01T06:50:48.426Z",
+      "directory": "E:\\Aleria\\.site-publish",
+      "support": "E:\\Aleria\\.release-state\\function-source"
+    },
+    {
+      "path": ".release-state/last-release.json",
+      "exists": true,
+      "retain": true,
+      "bytes": 390,
+      "sha256": "583fabbdd53fabccedcac8291c26e54009af351bc07020a7511b95a07b5301b3",
+      "commit": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+      "deployId": "6ae9d1dadba556edf5f5a301"
+    },
+    {
+      "path": ".release-state/release.lock",
+      "exists": false,
+      "retain": true
+    }
+  ],
+  "safeTargets": [],
+  "processAudit": {
+    "method": "Toolhelp32 process metadata and read-only NtQueryInformationProcess(ProcessCommandLineInformation), no command-line contents retained",
+    "enumeratedProcessCount": 446,
+    "eligibleProcesses": [
+      {
+        "pid": 780,
+        "parentPid": 29680,
+        "name": "cncmd.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 8652,
+        "parentPid": 44280,
+        "name": "cmd.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 20144,
+        "parentPid": 13428,
+        "name": "python.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [
+          "8897"
+        ],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 12556,
+        "parentPid": 35420,
+        "name": "cmd.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 31184,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 17572,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 13136,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 35212,
+        "parentPid": 31184,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 28612,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 44516,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 29300,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 39432,
+        "parentPid": 44516,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 26432,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 14188,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 18256,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 39984,
+        "parentPid": 26432,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 7548,
+        "parentPid": 15880,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 35028,
+        "parentPid": 19164,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 47476,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 26332,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 4796,
+        "parentPid": 26332,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 34552,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 20992,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 30604,
+        "parentPid": 20992,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 26628,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 36976,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 20316,
+        "parentPid": 36976,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 18748,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 32572,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 13140,
+        "parentPid": 32572,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 8492,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 43208,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 13380,
+        "parentPid": 43208,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 12384,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 25944,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 33692,
+        "parentPid": 25944,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 23284,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 17856,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 32600,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 45592,
+        "parentPid": 17856,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 24772,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 27084,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 45152,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 20628,
+        "parentPid": 45152,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 17272,
+        "parentPid": 47968,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 34564,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 41948,
+        "parentPid": 34564,
+        "name": "node_repl.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 9928,
+        "parentPid": 47968,
+        "name": "node.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": true,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 14548,
+        "parentPid": 47968,
+        "name": "powershell.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": true,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 16032,
+        "parentPid": 14548,
+        "name": "python.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": true,
+        "ports": [],
+        "isAuditCommand": false
+      },
+      {
+        "pid": 32132,
+        "parentPid": 47968,
+        "name": "powershell.exe",
+        "commandLineReadable": true,
+        "references": [
+          "wellenruh-build",
+          "praetendenten-build",
+          "praetendenten-canon-build",
+          "praetendenten-layout-build",
+          "leitheach-timeline-build",
+          "coastal-history-build",
+          ".site-publish",
+          ".release-state/function-source"
+        ],
+        "previewLike": true,
+        "releaseLike": true,
+        "ports": [
+          "8888",
+          "8897"
+        ],
+        "isAuditCommand": true
+      },
+      {
+        "pid": 22236,
+        "parentPid": 32132,
+        "name": "python.exe",
+        "commandLineReadable": true,
+        "references": [],
+        "previewLike": false,
+        "releaseLike": false,
+        "ports": [],
+        "isAuditCommand": false
+      }
+    ],
+    "readableEligibleProcesses": 52,
+    "targetReferencesExcludingAudit": [],
+    "excludedAuditPids": [
+      32132
+    ],
+    "limitations": [
+      "CIM process enumeration was denied; native read-only process metadata used instead.",
+      "Command-line references were checked; process working directories and open handles were not exhaustively inspected.",
+      "No deletion target exists, so no process-safety claim is needed for applying this zero-file plan."
+    ]
+  },
+  "decision": {
+    "deletionPerformed": false,
+    "sourceChangesPerformed": false,
+    "gitIndexChanged": false,
+    "selectedFiles": 0,
+    "reclaimableBytes": 0,
+    "releaseLifecycleCleanupAvailable": false,
+    "retainApprovedBuildContents": true,
+    "reason": "The existing protected cleanup tool selected no file. All 14623 remaining files stay. The two fixed owned-stage directories are absent; release receipts and all other .release-state material remain."
+  }
+}

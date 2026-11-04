@@ -10,6 +10,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_DRAENMELYN_PORTRAITS } from './house-draenmelyn-portraits.js';
 import { PENDRWN_DRAENMELYN_MARRIAGE } from './pendrwn-cross-family-marriages.js';
+import { withPatrickBiographyFamily } from './patrick-biography-family-overlay.js';
 
 const DRAENMELYN_HOUSE_ID = 'house-draenmelyn';
 const DRAENMELYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png';
@@ -129,7 +130,7 @@ const DESCENDANT_PERSONS = Object.freeze([
 const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 
-export const HOUSE_DRAENMELYN_FAMILY = Object.freeze({
+export const HOUSE_DRAENMELYN_FAMILY = Object.freeze(withPatrickBiographyFamily({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -233,4 +234,4 @@ export const HOUSE_DRAENMELYN_FAMILY = Object.freeze({
     }),
     sourceNote: 'Taliesin (18) und Myfanwy (17) wurden nach der ergänzenden Vorgabe als Vetter und Cousine in zwei Geschwisterzweigen derselben Großeltern angelegt. Beide besitzen jeweils genau zwei Geschwister. Die einzige zusätzliche Onkellinie ist Caradog, der als Söldner lebt und mit Gwenith Pendrwn verheiratet ist; dieselbe Ehe wird in der Pendrwn-Gegenakte geführt. Rhiannon ist direkt an Iestyn Swyll wegverheiratet. Sioned bleibt unverheiratet und ohne Verlobung. Damit endet die konkret ausgearbeitete Abstammung oberhalb der Eltern bei genau einer Großelterngeneration. Das gesamte Bürgerhaus steht traditionell als Diener- und Bedienstetengeschlecht im Haushalt Haus Draigs. Die drei vorgegebenen Portraitquellen wurden lokal gesichert.'
   })
-});
+}));

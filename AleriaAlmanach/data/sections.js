@@ -1629,6 +1629,8 @@ const SECTIONS = [
       },
       createMorgarLanguageEntry(),
       createLaerelisLanguageEntry(),
+      createTlapanuiLanguageEntry(),
+      createIshtaranLanguageEntry(),
       {
         id: "infernal-nharazim",
         title: "Infernal",

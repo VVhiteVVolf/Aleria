@@ -11,7 +11,7 @@ import { HOUSE_SKOGG_PORTRAITS } from './house-skogg-portraits.js';
 import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 

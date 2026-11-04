@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/sonnenkueste/territory-page.mjs?v=sonnenkueste-20261019';
+import { createTerritory } from '../../../../modules/sonnenkueste/territory-page.mjs?v=20261103-sonnenkueste-v1';
 
 export default createTerritory({
   "id": "herrschaft-teyrngarch",
@@ -127,7 +127,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-teyrngarch"
         }
       ]
     }

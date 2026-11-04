@@ -1,0 +1,84 @@
+{
+  "id": "haus-mac-luin",
+  "source": {
+    "attachmentId": "e2609f4d-693f-4204-814b-da7170b20a05",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\e2609f4d-693f-4204-814b-da7170b20a05\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/mac-luin/animexx-original.html",
+    "bytes": 47275,
+    "sha256": "c86384cbcd191fb2f8320ba81483b627f785360c1b9ddf94859c96f65a04a240",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-mac-luin",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "barony": "Ausgestorbene Häuser",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Ard Eabhraig"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-mac-luin",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-mac-luin",
+    "familyId": "haus-mac-luin",
+    "slug": "mac-luin",
+    "canonicalSlug": "mac-luin",
+    "attachmentId": "e2609f4d-693f-4204-814b-da7170b20a05",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/vsmuPQe.png",
+    "sourceUrl": "https://i.imgur.com/vsmuPQe.png",
+    "path": "Stammbäume/assets/images/references/haus-mac-luin/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-mac-luin/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:350px; vertical-align:top; width:233px",
+    "context": "Tiarnatum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 242672,
+    "sha256": "2db024714d2f12903ed6d2d7760079d0578af783d3df8d4dceef7cc4460df2a3",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Albenkrieger in gelbem Mantel mit geschlossenem Helm und Wolfsschild.",
+    "sha": "2db024714d2f12903ed6d2d7760079d0578af783d3df8d4dceef7cc4460df2a3",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Sichtbarer Registertitel Haus Mac Luin, stabile ID haus-mac-luin; die Caption Clan Luin ist eine verkürzte Quellform. Persönlicher Name Méabh Mac Lúin behält seine bestehenden Akzente.",
+    "Historischer Glaennath-Zusammenhang mit Ortsbezug Ard Eabhraig. Der technische Gruppensitz Glaennath (Alben) ist keine Hauptstadt.",
+    "Das allgemeine Tiarnatum ist Kultur- und Epochenkontext, keine persönliche Ausbildung jedes Mac-Luin-Angehörigen. Keine wiedererfundene spätere Hausstreitmacht oder Truppenstatistik.",
+    "Die Altquelle nennt Fürstenhaus und Prinzessin Méabh. Der aktuelle Registerrang unknown bleibt dennoch unverändert; historische Bezeichnungen werden nicht zur neuen heutigen Rangstufe.",
+    "Untergang der eigenständigen Herrschaft und Weiterleben in Wargh werden getrennt formuliert. Kein pauschales biologisches Erlöschen aller Nachfahren behaupten.",
+    "Der moderne Ortsbestand bestätigt Ard Eabhraig als antike Ruinenstadt in Winterwacht; keine aus der Altgeschichte abgeleitete Kartenverschiebung vornehmen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

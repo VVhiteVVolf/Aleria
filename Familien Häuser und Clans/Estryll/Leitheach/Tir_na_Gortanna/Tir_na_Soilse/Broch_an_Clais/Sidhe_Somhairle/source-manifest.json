@@ -1,0 +1,158 @@
+{
+  "id": "haus-somhairle",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "f278954f-0c2d-4850-9117-7d82f8a6fd77",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f278954f-0c2d-4850-9117-7d82f8a6fd77\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/sidhe-somhairle/animexx-original.html",
+    "bytes": 86912,
+    "sha256": "f2d9717420a42332e09d428c882cc0e6512df4dfbf821d9fc13db28e57721209",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-somhairle",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Clais",
+      "barony": "Tir na Soilse",
+      "county": "Tir na Gortanna",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dal-cruthin",
+      "liegeHouseName": "Clan Dál’Cruthin",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Soilse",
+        "Broch an Clais"
+      ]
+    },
+    "graphFingerprint": "cd5c1dd30d166c5cc3839fadc7f69fb72b313801a5d3fee1a7a5707588ab3e58",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-somhairle",
+    "title": "Sidhe Somhairle",
+    "territoryId": "leitheach-herrschaft-somhairle",
+    "territoryName": "Tir na Soilse",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Soilse",
+        "slug": "leitheach-herrschaft-somhairle"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-somhairle",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-somhairle",
+    "slug": "sidhe-somhairle",
+    "canonicalSlug": "somhairle",
+    "attachmentId": "f278954f-0c2d-4850-9117-7d82f8a6fd77",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/nkWkUsh.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 232409,
+    "sha256": "1e5fce828714d0eeef883e9b6e1fd63018b83cad3bf01b136ef6a6b5b78083d3",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-somhairle",
+    "title": "Sidhe Somhairle",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Gortanna",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/nkWkUsh.png",
+    "path": "Stammbäume/assets/images/references/haus-somhairle/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-somhairle/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "1e5fce828714d0eeef883e9b6e1fd63018b83cad3bf01b136ef6a6b5b78083d3",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Speerträgerin mit violettem Waffenrock und Langschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "f2d9717420a42332e09d428c882cc0e6512df4dfbf821d9fc13db28e57721209",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-somhairle, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug sidhe-somhairle wird der bestehenden ID haus-somhairle zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Heutiger Rang Laird und Verwaltung Broch an Clais nach dem Untergang Iomrachs. Der alte Baronie-Vordruck begründet keine Aufwertung zum Dún Tiarna.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

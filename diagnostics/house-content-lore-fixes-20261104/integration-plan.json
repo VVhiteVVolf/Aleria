@@ -1,0 +1,31 @@
+{
+  "version": "20261104-content-lore-v1",
+  "changes": 6,
+  "houseSources": [
+    {
+      "id": "haus-varulv",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+      "biographyChanged": true,
+      "previousRevision": 6,
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-content-lore-v1"
+    },
+    {
+      "id": "haus-feuerherz",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+      "biographyChanged": true,
+      "previousRevision": 7,
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-content-lore-v1"
+    },
+    {
+      "id": "haus-fiadhrach",
+      "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+      "biographyChanged": false,
+      "previousRevision": 2,
+      "biographySourceRevision": 2,
+      "contentVersion": "20261104-content-lore-v1"
+    }
+  ],
+  "gwaedlydReceipt": true
+}

@@ -17,8 +17,10 @@ import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js
 import { getCheckProfileRollModes } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { getHealthTaskError } from '../character-health/health-trait-policy.js';
+import { getVoluntaryCombatActionBlock } from '../combat/combat-action-permission.js';
+import { rollProfileD20, naturalRollReceipt } from '../combat/combat-natural-roll-policy.js';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-6';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-7';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -71,17 +73,21 @@ function buildSkillAuraApplications(sources = [], checkType = 'skill', actorProf
 
 export function getSkillRollContext({ actor, settings: sourceSettings } = {}, options = {}) {
   const settings = normalizeSkillCheckSettings(sourceSettings);
-  const skill = resolveSkillModifier(options.actorProfile || actor, settings.skillId);
+  const skill = resolveSkillModifier(options.actorProfile || actor, settings.skillId, settings.saveContext);
   const checkType = skill.definition.checkType || 'skill';
   const actionKind = checkType === 'attribute' ? 'attribute-check' : checkType;
   const modifierKey = checkType === 'saving-throw' ? 'savingThrowModifier' : 'skillModifier';
-  const sources = Array.isArray(options.ruleSources) && options.ruleSources.length
+  const rawSources = Array.isArray(options.ruleSources) && options.ruleSources.length
     ? options.ruleSources
     : [{
         actorId: String(actor.id || ''), actorName: String(actor.name || ''), profile: skill.profile,
         sourceRole: 'actor', relationToActor: 'self', relationToTarget: 'enemy',
         distanceToActor: 0, distanceToTarget: null, selectedRuleIds: []
       }];
+  // A standalone save's actor is also its recipient. Its danger is selected
+  // explicitly; the roller's held weapon must never become the danger source.
+  const sources = checkType === 'saving-throw' ? rawSources.map(source => ({ ...source,
+    relationToTarget: source.relationToActor, distanceToTarget: source.distanceToActor })) : rawSources;
   const periods = options.rulePeriods || {};
   const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
     ? new Set(options.usedRuleFrequencyKeys)
@@ -90,8 +96,9 @@ export function getSkillRollContext({ actor, settings: sourceSettings } = {}, op
     skillId: settings.skillId,
     skillName: skill.definition.label,
     saveAttribute: checkType === 'saving-throw' ? skill.definition.attributeKey : '',
+    ...(checkType === 'saving-throw' ? { saveContext: settings.saveContext } : {}),
     actorProfile: skill.profile,
-    targetProfile: options.targetProfile || null
+    targetProfile: checkType === 'saving-throw' ? skill.profile : (options.targetProfile || null)
   };
   const preApplications = collectApplicableCombatRules({
     phase: 'pre-roll', actionKind, sources, periods,
@@ -114,6 +121,8 @@ export class SkillResolutionService {
       = getSkillRollContext({ actor, settings: sourceSettings }, options);
     const healthError = getHealthTaskError(skill.profile, { sense: settings.requiredSense });
     if (healthError) throw Error(healthError);
+    const permission = checkType === 'saving-throw' ? null : getVoluntaryCombatActionBlock(skill.profile);
+    if (permission) throw Error(permission.message);
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
     const checkRule = getChallengeCheckRule(challenge, settings.skillId);
     if (!checkRule.allowed) throw new Error('Diese Probe ist für den gewählten Lösungsweg gesperrt.');
@@ -124,16 +133,18 @@ export class SkillResolutionService {
       : (challenge?.difficulty ?? settings.difficulty);
     const notation = buildSkillRollNotation(preModifier, rollMode);
     options.onPhase?.({ phase: 'skill', notation, skill, difficulty });
-    const roll = await this.dice.rollSkill({
+    const roll = await rollProfileD20(this.dice, 'rollSkill', {
+      checkType,
       modifier: preModifier,
       rollMode,
       notation,
       actorName: actor.name,
       skillName: skill.definition.label,
       container: options.container
-    });
+    }, skill.profile);
     const natural = Number(roll.natural || 0);
-    const firstOutcome = forceSkillOutcome(classifySkillCheck({ natural, total: roll.total, difficulty }), preEffects.outcome, checkType);
+    const criticalFailureMaximum = roll.naturalRollPolicy.criticalFailureMaximum;
+    const firstOutcome = forceSkillOutcome(classifySkillCheck({ natural, total: roll.total, difficulty, criticalFailureMaximum }), preEffects.outcome, checkType);
     const postApplications = collectApplicableCombatRules({
       phase: 'post-roll', actionKind, sources, periods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: {
@@ -146,7 +157,7 @@ export class SkillResolutionService {
     markCombatRuleApplications(postApplications, usedRuleFrequencyKeys);
     const postEffects = mergeCombatRuleEffects(postApplications);
     const total = Number(roll.total) + postEffects[modifierKey];
-    const calculatedOutcome = classifySkillCheck({ natural, total, difficulty });
+    const calculatedOutcome = classifySkillCheck({ natural, total, difficulty, criticalFailureMaximum });
     const combinedEffects = mergeCombatRuleEffects([...preApplications, ...postApplications]);
     const outcome = forceSkillOutcome(calculatedOutcome, combinedEffects.outcome, checkType);
     const ruleApplications = [
@@ -158,6 +169,7 @@ export class SkillResolutionService {
     });
     return {
       schemaVersion: 2,
+      ...naturalRollReceipt(roll),
       rulesVersion: SKILL_EVALUATION_RULES_VERSION,
       resolutionId: createResolutionId(),
       actorId: String(actor.id || ''),
@@ -165,6 +177,7 @@ export class SkillResolutionService {
       actorPersistence,
       skillId: settings.skillId,
       checkType,
+      ...(checkType === 'saving-throw' ? { saveContext: settings.saveContext } : {}),
       skillName: skill.definition.label,
       skillSource: skill.source,
       profileSkillName: skill.profileSkill?.name || '',

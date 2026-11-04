@@ -1,0 +1,83 @@
+{
+  "id": "haus-morkvard",
+  "source": {
+    "attachmentId": "f31f2f1d-e6e3-4356-8cc3-52db7dddb617",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f31f2f1d-e6e3-4356-8cc3-52db7dddb617\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/morkvard/animexx-original.html",
+    "bytes": 72681,
+    "sha256": "0b2e562eedbafe06fe450366772a1cd26e2c97dfb74b7cb8714343090be1ac85",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-morkvard",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Häuser",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Ort unbekannt"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-morkvard",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-morkvard",
+    "familyId": "haus-morkvard",
+    "slug": "morkvard",
+    "canonicalSlug": "morkvard",
+    "attachmentId": "f31f2f1d-e6e3-4356-8cc3-52db7dddb617",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/zHDrhSf.png",
+    "sourceUrl": "https://i.imgur.com/zHDrhSf.png",
+    "path": "Stammbäume/assets/images/references/haus-morkvard/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-morkvard/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:400px; width:267px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 259649,
+    "sha256": "30714075274e9750c929f403b3ba19892d4b24d595fbef4dc31b2e8b6ce422f2",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Bärtiger Kämpfer in Fellkleidung mit Hörnerhelm, Axt und Schild.",
+    "sha": "30714075274e9750c929f403b3ba19892d4b24d595fbef4dc31b2e8b6ce422f2",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Antiker Norrnaigh-Zusammenhang; vom jüngsten Erlöschen Blutklinges und der Windhüter trennen. Kulturordner und Ort unbekannt sind keine realen Stammsitze.",
+    "Muineach und Muirneach erscheinen im selben historischen Kontext. Im redigierten Text einheitlich Muirneach; keine neue Staats- oder Gebietszuordnung daraus schaffen.",
+    "Das Bündnis Ivar Warghs mit Méabh Mac Lúin ist durch beide Herkunftserzählungen und den aktuellen Wargh-Kontext bestätigt. Keine neue Ehe oder Abstammung importieren.",
+    "Krähenzeichen, Totemriten, tödliche Führungszweikämpfe und die überlieferten Verwüstungen bleiben historische Kultur. Keine tatsächliche Fluchmechanik, Untoten oder benannten Kreaturen aus Hügelgerüchten erzeugen.",
+    "Der heutige Registerrang bleibt unknown. Weder der Auftrag eines alten Reiksgeschlechts noch die Führung anderer Krieger begründet einen neuen festen Rang.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

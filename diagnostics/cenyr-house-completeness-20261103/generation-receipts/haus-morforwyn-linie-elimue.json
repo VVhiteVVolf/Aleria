@@ -1,0 +1,57 @@
+{
+  "id": "haus-morforwyn-linie-elimue",
+  "refs": [
+    "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Jungferntal/Haus_Morforwyn/assets/hausdarstellung-original.png",
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/morforwyn-linie-elimue.png"
+  ],
+  "prompt": "EDIT reference image 1 non-destructively to create the distinct Elimue branch variant of House Morforwyn. Image 1 is the actual edit target: preserve this anonymous knight's upright full-body pose, closed helmet, plume, plate armour silhouette, long banner-spear, shield position, proportions and simple composition. Image 2 supplies ONLY the soft matte painted rendering finish: restrained shading, thin painted contours, simplified forms, very fine even dry pigment grain. Image 3 is the EXACT Elimue branch heraldry: petrol teal mermaid and armoured knight with sword on a cream field, petrol circle border. Change the banner and shield to cream fields carrying the teal branch emblem; apply modest cream/petrol accents to cloth and plume. Do not keep the parent branch's dark field with white emblem. Keep the armour subdued grey/dark iron, quiet and non-glossy. Do not invent a named person, new weapons, additional figures, alternate pose, scenery, pedestal or action scene. The result must remain the same house-knight composition with a recognisably different branch palette and matching branch symbols. Portrait 2:3, at least 1024x1536. TRUE transparent PNG outside the actual knight, spear, pennant, shield and all open gaps. No ground, outer shadow, halo, haze, text, frame, photorealism, CGI, heavy black comic outlines or shiny rendering.",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "providerOriginalPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-099f45f5-4abe-4b38-af72-a1b126c1356d.png",
+  "stagedPath": "diagnostics/cenyr-house-completeness-20261103/new-figures/haus-morforwyn-linie-elimue.png",
+  "selected": true,
+  "qaPending": false,
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a178-132a-79c0-8080-caaca81ce961\\exec-099f45f5-4abe-4b38-af72-a1b126c1356d.png",
+  "sha256": "75c978be60e39b846232a57197ee54f94b750209dc73a3c57c274c1f6fa02306",
+  "bytes": 2247697,
+  "size": [
+    1024,
+    1536
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaZeroPixels": 941885,
+  "alphaOneToThreePixels": 24692,
+  "alphaCorners": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visibleAlphaAbove8BBox": [
+    124,
+    4,
+    867,
+    1471
+  ],
+  "pixelEdits": false,
+  "sourceJobManifest": "diagnostics/cenyr-house-completeness-20261103/art-audit/remaining-six-generation-jobs.json",
+  "visualReview": "Actual white-background composite inspected; role, full body, house palette and transparency accepted. Anonymous representative only.",
+  "referenceFiles": [
+    {
+      "path": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Jungferntal/Haus_Morforwyn/assets/hausdarstellung-original.png",
+      "sha256": "5ea1507285e78442443ece603c9387517cbdfca3d04c7c66b62a833c0240514e"
+    },
+    {
+      "path": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+    },
+    {
+      "path": "E:/Aleria/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/morforwyn-linie-elimue.png",
+      "sha256": "ba799e4da92803d0841493630c7b16e8b7a4d41ad79570cad94e1822c12b7447"
+    }
+  ]
+}

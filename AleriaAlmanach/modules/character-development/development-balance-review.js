@@ -18,7 +18,14 @@ function nonStackingParts(entry) {
   });
   for(const skill of mechanics.skillProficiencies || []) if(skill.proficiency==='expertise') parts.push(component(`expertise:${getSkillIdentity(skill.name)}`,3));
   for(const attribute of mechanics.savingThrowAdvantageAttributes || []) parts.push(component(`save-advantage:${attribute}`,3));
+  if (mechanics.naturalOneReroll) parts.push(component('natural-one-reroll', 2));
+  if (mechanics.criticalFailureMaximum > 1) parts.push(component(`critical-failure:${mechanics.criticalFailureMaximum}`, -(mechanics.criticalFailureMaximum - 1)));
   for(const rule of entry.triggerRules || []) {
+    if (rule.phase === 'on-concentration-check' && rule.enabled !== false && rule.effects?.rollMode === 'advantage'
+      && rule.condition === 'always' && rule.recipient === 'target' && rule.sourceRelation === 'self'
+      && !rule.requiredTargetTags?.length && !rule.actionKinds?.length) {
+      parts.push(component('concentration-advantage', 3));
+    }
     if(rule.phase!=='pre-roll'||rule.enabled===false||rule.effects?.rollMode!=='advantage'
       ||rule.condition!=='always'||rule.recipient!=='actor'||rule.sourceRelation!=='self'
       ||rule.actionKinds?.length!==1||rule.actionKinds[0]!=='skill'||rule.skillIds?.length!==1
@@ -73,10 +80,36 @@ export function reviewDevelopmentTraitBalance(profile,traits) {
   if(has('haesslich')&&has('gutaussehend'))warnings.push('Hässlich und Gutaussehend widersprechen sich als dauerhafte Erscheinungsmerkmale. Kläre, ob eine besondere Erklärung gewollt ist.');
   if(has('klein')&&(has('gross')||has('huenenhaft')))warnings.push('Klein und Groß/Hünenhaft beschreiben widersprüchliche Körpergrößen. Die Kombination bleibt frei wählbar.');
   if(has('gross')&&has('huenenhaft'))warnings.push('Groß und Hünenhaft beschreiben dieselbe Größenrichtung; ihre Zahlenboni addieren sich. Prüfe, ob beide gewollt sind.');
+  if(has('glueckspilz')&&has('pechvogel'))warnings.push('Glückspilz und Pechvogel wirken beide: Eine natürliche 1 wird einmal neu gewürfelt; natürliche 2 und 3 bleiben kritische Fehlschläge. Die Rettungswurfboni +1 und −1 heben sich auf.');
+  reviewNumericalStacks([...external, ...traits], warnings);
   if(has('magiescheu')&&!profile.magic?.enabled)warnings.push('Magiescheu schränkt diese Figur derzeit kaum ein, solange sie keine Magie verwendet. Die Gutschrift ist nur ein Richtwert.');
   if(has('magie-phobie')&&has('magische-resonanz'))warnings.push('Magiephobie und Magische Resonanz sind zusammen besonders gefährlich: schlechtere Rettungswürfe und doppelter magischer Schaden.');
   if(has('magische-resonanz')&&traits.some(trait=>trait.id!=='development-trait-magische-resonanz'&&(trait.mechanics.damageAffinities||[]).some(affinity=>affinity.response==='vulnerable')))warnings.push('Magische Resonanz und eine weitere Anfälligkeit überlappen bei magischem Elementarschaden. Der Schaden wird dadurch nicht vierfach; zusätzliche nichtmagische Anfälligkeit bleibt bestehen.');
   return {nominalCost,traitCost,adjustment:traitCost-nominalCost,warnings:[...new Set(warnings)]};
+}
+
+function reviewNumericalStacks(entries, warnings) {
+  const skills = new Map(), saves = new Map();
+  let allSkills = 0, allSaves = 0;
+  for (const entry of entries) {
+    const mechanics = entry.mechanics || {};
+    allSkills += Number(mechanics.skill) || 0;
+    allSaves += Number(mechanics.savingThrow) || 0;
+    for (const modifier of mechanics.skillModifiers || []) {
+      const id = getSkillIdentity(modifier.name);
+      if (!id) continue;
+      const current = skills.get(id) || { name: modifier.name, bonus: 0 };
+      current.bonus += Number(modifier.bonus) || 0;
+      skills.set(id, current);
+    }
+    for (const modifier of mechanics.saveAttributeModifiers || []) {
+      saves.set(modifier.attributeKey, (saves.get(modifier.attributeKey) || 0) + (Number(modifier.bonus) || 0));
+    }
+  }
+  const amplifiedSkills = [...skills.values()].filter(skill => skill.bonus + allSkills > 3);
+  if (amplifiedSkills.length || allSkills > 3) warnings.push(`Mehrere Merkmale addieren sich zu starken Fertigkeitsboni${amplifiedSkills.length ? `: ${amplifiedSkills.map(skill => `${skill.name} +${skill.bonus + allSkills}`).join(', ')}` : `: allgemein +${allSkills}`}. Prüfe, ob die zugrunde liegenden Begabungen und Ausbildungen tatsächlich unabhängig sind. Die freie Auswahl bleibt erhalten.`);
+  const amplifiedSaves = [...saves.values()].some(bonus => bonus + allSaves > 2);
+  if (amplifiedSaves || allSaves > 2) warnings.push('Mehrere Merkmale ergeben mehr als +2 auf mindestens eine Attributsrettung. Prüfe die gemeinsame Stärke dieser passiven Boni; sie addieren sich weiterhin.');
 }
 
 function reviewTransformationChoices(traits, warnings) {

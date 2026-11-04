@@ -1,19 +1,23 @@
 // Same five-second default and 24-hour segment limit as the interactive timeline.
 // Only trusted contributions advance mechanics; wall-clock time is never used.
+import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
+import { isTrustedSceneTimeComment } from './scene-recovery-day.js';
+import { getSceneConditionAnchor } from './scene-condition-anchor.js';
 export const SCENE_CONTRIBUTION_SECONDS = 5;
 export function isConditionClockContribution(comment = {}) {
-  return comment.importedHistoricalMechanics !== true && (comment.serverValidatedMechanics === true || comment.serverCommitted === true);
+  return !isSilentSceneRegeneration(comment) && comment.importedHistoricalMechanics !== true && (comment.serverValidatedMechanics === true || comment.serverCommitted === true);
 }
 export function sceneSegmentSeconds(segment = {}) {
-  const value = Number(segment.durationSeconds);
+  const supplied = segment.durationSeconds;
+  const value = supplied == null || typeof supplied === 'boolean' || String(supplied).trim() === '' ? NaN : Number(supplied);
   return Number.isFinite(value) ? Math.max(0, Math.min(86400, Math.round(value))) : SCENE_CONTRIBUTION_SECONDS;
 }
 export function advanceSceneConditionClock(clock = {}, comment = {}, segmentLimit = null) {
   if (!isConditionClockContribution(comment)) return clock;
   const event = comment.sceneTimeEvent;
-  if (event && Number.isInteger(Number(event.anchorDay)) && Number(event.anchorDay) >= 1 && Number.isFinite(Number(event.anchorSeconds)) && Number(event.anchorSeconds) >= 0 && Number(event.anchorSeconds) < 86400) {
-    const cursor = (Number(event.anchorDay) - 1) * 86400 + Math.floor(Number(event.anchorSeconds));
-    return { cursor, seconds: Math.max(clock.seconds ?? cursor, cursor) };
+  if (event) {
+    const anchor = isTrustedSceneTimeComment(comment) ? getSceneConditionAnchor(event) : null;
+    return anchor ? { cursor: anchor.cursor, seconds: Math.max(clock.seconds ?? anchor.cursor, anchor.cursor) } : clock;
   }
   if (!Number.isFinite(clock.cursor) || comment.combatStatus || comment.combatEncounter || comment.combatRulesRelease) return clock;
   const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];

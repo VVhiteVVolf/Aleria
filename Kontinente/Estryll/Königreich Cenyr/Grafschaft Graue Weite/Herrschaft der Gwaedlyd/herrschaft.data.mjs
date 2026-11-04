@@ -101,7 +101,7 @@ export default createTerritory({
       "Nach dem Untergang ihrer Heimat flohen die Gwaedlyd nach Cenyr und fanden schließlich in Tredegar eine neue Heimat. Sie erhielten von Graf Tredegar ein Lehen, das sie seitdem verwalten. Trotz ihrer Verluste blieben die Gwaedlyd ihrem Ruf als tapfere Krieger treu und haben ihre neue Herrschaft in Tredegar mit derselben Entschlossenheit aufgebaut, die sie schon in Vennyr auszeichnete."
     ],
     "culture": [
-      "Die Kultur der Gwaedlyd ist tief in ihren kriegerischen Traditionen und ihrer Verbindung zur Dame des Sees verwurzelt. Als Nachkommen von Agravaine, dem berüchtigten Ritter aus Vennyr, wird in der Familie Mut und Entschlossenheit hochgehalten. Ihr Wappen, das einen blutroten Wolf zeigt, steht symbolisch für ihre wilde und unbezwingbare Natur im Kampf, während sie sich gleichzeitig als loyale Beschützer des Landes und des Meeres verstehen.",
+      "Die Kultur der Gwaedlyd ist tief in ihren kriegerischen Traditionen und ihrer Verbindung zur Dame des Sees verwurzelt. Als Nachkommen von Agravaine dem Hai, dem berüchtigten Ritter aus Vennyr, wird in der Familie Mut und Entschlossenheit hochgehalten. Ihr Wappen, das einen schwarzen Hai mit Blut am Maul über Wellen zeigt, steht symbolisch für ihre wilde und unbezwingbare Natur im Kampf, während sie sich gleichzeitig als loyale Beschützer des Landes und des Meeres verstehen.",
       "Ihre Rolle als Morwyr, furchtlose Seeritter, prägt die Gwaedlyd bis heute. Die See und ihre Geheimnisse sind eng mit ihrem Erbe verbunden, und sie verehren die Dame des Sees, die Göttin der Wasser und Magie, als ihre Schutzpatronin. Diese enge Verbindung zur See und ihre Erfahrung als Kämpfer auf den Wellen zeigt sich besonders in ihrer heutigen maritimen Tradition in Tredegar.",
       "Obwohl sie für ihre Härte im Kampf bekannt sind, hat die Familie eine gewisse Kälte und Strenge im Umgang miteinander und anderen. Emotionale Zurückhaltung und Disziplin sind zentrale Werte. Dennoch sind sie auch für ihre kreative Seite bekannt, insbesondere durch ihre Förderung der Kunst in der Siedlung Aldwyn, die sich als kulturelles Zentrum unter ihrer Herrschaft etabliert hat. Hier fließen Kunst, Musik und Handwerk zusammen und bringen einen einzigartigen kulturellen Reichtum in ihre Herrschaft.",
       "Die Gwaedlyd haben es geschafft, ihre kriegerischen Wurzeln mit einem tiefen Sinn für Kunst und Kultur zu verbinden, und ihre Herrschaft ist ein Spiegelbild dieser Dualität."
@@ -139,7 +139,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gwaedlyd-tredegar"
         }
       ]
     }

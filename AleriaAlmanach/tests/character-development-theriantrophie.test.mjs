@@ -11,6 +11,7 @@ import { createCharacterArchiveProfileItem } from '../modules/character-archive/
 import { sanitizeCharacterCombatProfile as serverSanitize } from '../../firebase/functions/src/generated/combat/combat-profile-model.js';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { getDevelopmentTraitTestBatches } from './support/development-trait-batches.mjs';
+import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
 
 const root = new URL('../../', import.meta.url);
 const definitions = [...THERIANTHROPY_TRAIT_DEFINITIONS, ...SYMBIOSIS_TRAIT_DEFINITIONS];
@@ -49,10 +50,10 @@ test('symbiosis names real clans and animals and reuses their actual emblems', a
   assert.ok(getTransformationTraitOrigin('development-trait-symbiose-diuid-baer').lineageId === getTransformationTraitOrigin('development-trait-symbiose-haig-baer').lineageId);
 });
 
-test('the module and clan sources remain authoritative; all previous 114 definitions are intact', async () => {
+test('module and clan sources remain authoritative; previous 114 definitions are exact or explicitly revised by the balance manifest', async () => {
   const before = JSON.parse(await readFile(new URL('diagnostics/theriantrophie-traits-20261102/catalog-before.json', root), 'utf8'));
   assert.equal(before.length, 114);
-  assert.deepEqual(before.map(trait => DEVELOPMENT_TRAITS.find(current => current.id === trait.id)), before);
+  assertDevelopmentTraitSnapshotPreserved(before);
   const source = JSON.parse(await readFile(new URL('diagnostics/theriantrophie-traits-20261102/source-review.json', root), 'utf8'));
   assert.ok(source.moduleText.includes('Symbiosis Animalis Sacra'));
   assert.ok(source.moduleText.includes('Tierkommunikation') && source.moduleText.includes('Urform'));

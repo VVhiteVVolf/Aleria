@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   getTrustedSceneDay,
+  getTrustedSceneCursorSeconds,
   isTrustedMechanicalComment,
   isTrustedSceneContributionComment,
   isTrustedSkillChallengeComment,
@@ -55,4 +56,18 @@ test('normale Serverbeiträge zählen Zustandsdauern herunter, ohne selbst Mecha
   assert.equal(isTrustedSceneContributionComment(comment), true);
   assert.equal(isTrustedMechanicalComment(comment), false);
   assert.equal(isTrustedSceneContributionComment({ ...comment, importedHistoricalMechanics: true }), false);
+});
+
+test('the rest cursor includes elapsed trusted contributions and cannot be rewound by a later anchor', () => {
+  const anchor = anchorSeconds => ({ serverCommitted: true, mechanicalAudit: true, sceneTimeEvent: { anchorDay: 1, anchorSeconds } });
+  const speech = { serverCommitted: true, commentMode: 'character', commentSegments: [{ text: 'Eine Stunde vergeht.', durationSeconds: 3600 }] };
+  assert.equal(getTrustedSceneCursorSeconds([anchor(100), speech]), 3700);
+  assert.equal(getTrustedSceneCursorSeconds([anchor(100), speech, anchor(200)]), 3700);
+  assert.equal(getTrustedSceneCursorSeconds([anchor(100), { ...speech, serverCommitted: false }]), 100);
+});
+
+test('an absent anchor is not midnight and does not erase the rest cursor', () => {
+  const comment = seconds => ({ serverCommitted: true, mechanicalAudit: true, sceneTimeEvent: { anchorDay: 1, anchorSeconds: seconds } });
+  for (const value of [undefined, null, '', false]) assert.equal(getTrustedSceneCursorSeconds([comment(100), comment(value)]), 100);
+  assert.equal(getTrustedSceneCursorSeconds([comment(0)]), 0);
 });

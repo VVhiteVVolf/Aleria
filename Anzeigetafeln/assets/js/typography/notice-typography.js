@@ -1,4 +1,4 @@
-import { NOTICE_HANDWRITING, noticeLanguageFonts, normalizeNoticeTypography } from './notice-font-catalog.mjs?v=20261031-schoolbell';
+import { NOTICE_HANDWRITING, noticeLanguageFonts, normalizeNoticeTypography } from './notice-font-catalog.mjs?v=20261103-tlapanui-ishtaran';
 import { ensureNoticeFont } from './notice-font-loader.mjs';
 
 const esc = value => window.TafelRuntime.esc(value);

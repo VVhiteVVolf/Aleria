@@ -8,7 +8,7 @@ export function conditionsAtContributionStart(conditions = []) {
 }
 
 export function beginCombatContribution(states, comment = {}) {
-  if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease) return states;
+  if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest) return states;
   for (const actorId of getCommentActorIds(comment)) {
     const state = states.get(actorId);
     if (!state) continue;

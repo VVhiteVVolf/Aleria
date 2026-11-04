@@ -7,6 +7,9 @@ import {renderBoard} from '../board/board-view.mjs';
 import {mountBoardDrag} from '../board/board-drag.mjs';
 import {createEditor} from '../editor/editor-controller.mjs';
 import {mountGitHubDialog} from '../github/github-dialog.mjs';
+import {mountRequestGitHubDialog} from '../github/request-github-dialog.mjs';
+import {mountRequests} from '../requests/requests-controller.mjs';
+import {collectWorkspaceRequests,fingerprintRequest,isRequestModule} from '../requests/request-model.mjs';
 import {createProjectTransfer} from './project-transfer.mjs';
 import {loadPreferences,savePreferences} from './preferences.mjs';
 
@@ -16,11 +19,11 @@ export function mountWorkspace({store,autosave}) {
   const {ask,toast}=createDialogs({root:find('text-dialog'),toastRoot:find('toast')});
   const active=()=>store.get().boards.find(board=>board.id===activeId)||store.get().boards[0];
   const remember=()=>savePreferences({boardId:active().id,view,zoom});
-  function modifyModule(id,mutator,options={}){const boardId=active().id;store.change(workspace=>{const module=workspace.boards.find(board=>board.id===boardId)?.modules.find(item=>item.id===id);if(module)mutator(module);},options);}
-  function duplicateModule(id){if(active().modules.length>=500){toast('Maximal 500 Module pro Pinnwand.');return;}const copy=structuredClone(active().modules.find(item=>item.id===id));copy.id=uid();copy.title=`${copy.title} · Kopie`.slice(0,200);copy.x=Math.min(3500,copy.x+35);copy.y=Math.min(2500,copy.y+35);store.change(workspace=>workspace.boards.find(board=>board.id===active().id).modules.push(copy));}
-  const editor=createEditor(find('editor-dialog'),{getModule:id=>active().modules.find(module=>module.id===id),updateModule:modifyModule,onDuplicate:duplicateModule,onDelete:id=>store.change(workspace=>{const board=workspace.boards.find(item=>item.id===active().id);board.modules=board.modules.filter(module=>module.id!==id);}),ask,toast});
+  function modifyModule(id,mutator,options={}){const {boardId=active().id,...changeOptions}=options;store.change(workspace=>{const module=workspace.boards.find(board=>board.id===boardId)?.modules.find(item=>item.id===id);if(module)mutator(module);},changeOptions);}
+  function duplicateModule(id){if(active().modules.length>=500){toast('Maximal 500 Karten pro Pinnwand.');return;}const copy=structuredClone(active().modules.find(item=>item.id===id));copy.id=uid();copy.title=`${copy.title} · Kopie`.slice(0,200);copy.x=Math.min(3500,copy.x+35);copy.y=Math.min(2500,copy.y+35);if(copy.requestMeta)delete copy.requestMeta.submission;store.change(workspace=>workspace.boards.find(board=>board.id===active().id).modules.push(copy));}
+  const editor=createEditor(find('editor-dialog'),{getModule:id=>active().modules.find(module=>module.id===id),captureContext:()=>active().id,updateModule:modifyModule,onDuplicate:duplicateModule,onShare:id=>beginRequestShare(active().modules.filter(module=>module.id===id&&isRequestModule(module))),onDelete:id=>store.change(workspace=>{const board=workspace.boards.find(item=>item.id===active().id);board.modules=board.modules.filter(module=>module.id!==id);}),ask,toast});
   function createIdea(template){
-    if(active().modules.length>=500){toast('Maximal 500 Module pro Pinnwand.');return;}
+    if(active().modules.length>=500){toast('Maximal 500 Karten pro Pinnwand.');return;}
     const index=active().modules.length,module=createModule(template,{x:40+(index%3)*330,y:35+Math.floor(index/3)*385});
     module.y=Math.min(2500,module.y);const boardId=active().id;
     store.change(workspace=>workspace.boards.find(board=>board.id===boardId).modules.push(module));
@@ -28,16 +31,32 @@ export function mountWorkspace({store,autosave}) {
   }
   const openTemplates=mountTemplatePicker(find('template-dialog'),createIdea);
   const openGitHub=mountGitHubDialog(find('github-dialog'),{getWorkspace:store.get,toast});
+  const openRequestGitHub=mountRequestGitHubDialog(find('request-github-dialog'),{toast});
+  const requests=mountRequests(find('requests-dialog'),{store,toast,onCreate:createIdea,onOpen:(boardId,moduleId)=>{activeId=boardId;render();editor.open(moduleId);},onShare:beginRequestShare});
+  function beginRequestShare(selected){
+    if(!selected.length){requests.create();return;}
+    const all=collectWorkspaceRequests(store.get()),counts=new Map();
+    for(const entry of all)counts.set(entry.module.id,(counts.get(entry.module.id)||0)+1);
+    if(selected.some(module=>counts.get(module.id)!==1)){toast('Zwei Wünsche besitzen dieselbe Kennung. Dupliziere einen davon als eigene Karte und entferne die doppelte Importfassung.');return;}
+    const snapshots=new Map(selected.map(module=>[module.id,structuredClone(module)]));
+    const targets=new Map(all.filter(entry=>snapshots.has(entry.module.id)).map(entry=>[entry.module.id,entry.boardId]));
+    openRequestGitHub({requests:[...snapshots.values()],workspaceId:store.get().id,onSaved:async result=>{
+      const proofs=await Promise.all(result.requestIds.map(async id=>({id,fingerprint:await fingerprintRequest(snapshots.get(id))})));
+      const byId=new Map(proofs.map(proof=>[proof.id,proof]));
+      store.change(workspace=>{for(const [id,proof] of byId){const module=workspace.boards.find(board=>board.id===targets.get(id))?.modules.find(module=>module.id===id);if(!module||!isRequestModule(module))continue;module.requestMeta.submission={repository:result.repository,branch:result.branch,sha:result.sha,url:result.url,sentAt:new Date().toISOString(),fingerprint:proof.fingerprint};}},{reason:'request-shared'});
+    }});
+  }
   const transfer=createProjectTransfer({input:find('import-file'),store,ask,toast,onImported:id=>{activeId=id;query='';type='all';find('search').value='';find('type-filter').value='all';render();}});
   mountIcons();
   find('template-nav').innerHTML=TEMPLATES.map(template=>`<button data-action="create-idea" data-template="${template.id}">${icon(template.icon)}${h(template.name)}<span>＋</span></button>`).join('');
   find('type-filter').insertAdjacentHTML('beforeend',TEMPLATES.map(template=>`<option value="${template.id}">${h(template.name)}</option>`).join(''));
   find('help-dialog').innerHTML=`<div class="modal-top"><div><div class="eyebrow">WILLKOMMEN IN DEINER WERKSTATT</div><h2 id="help-title">Von einem Funken zur Geschichte.</h2></div>${closeButton()}</div><div class="help-steps">${[
-    ['Gib der Idee eine Form.','Wähle links eine Vorlage oder klicke auf „Neues Modul“. Charaktere, Storys, Orte, Mindmaps, Moodboards und freie Notizen warten auf dich.'],
-    ['Mach dir die Pinnwand zu eigen.','Ziehe ein Modul am Punktgriff an seinen Platz. Der kleine Pfeil klappt es zur Miniatur ein. Raster und Liste helfen beim Sortieren. Am Griff kannst du auch die Pfeiltasten verwenden.'],
+    ['Eine Idee festhalten.','Klicke auf „Idee hinzufügen“ und wähle eine Vorlage. Schreibe auf der Karte, was du sammeln möchtest. Du kannst jederzeit weiterarbeiten.'],
+    ['Mach dir die Pinnwand zu eigen.','Ziehe eine Karte am Punktgriff an seinen Platz. Der kleine Pfeil klappt es zur Miniatur ein. Raster und Liste helfen beim Sortieren. Am Griff kannst du auch die Pfeiltasten verwenden.'],
     ['Gehe in die Tiefe.','Klicke eine Karte an. Ergänze Portraits, Texte und Stichpunkte, erstelle weitere Seiten oder ziehe in einer Mindmap Verbindungen zwischen Gedanken. Die Eingabe „Liste“ verwendet einen Punkt pro Zeile.'],
-    ['Nimm deine Ideen mit.','Änderungen werden automatisch in diesem Browser gespeichert. Export sichert alle Pinnwände und Bilder in einer JSON-Datei. Import fügt Pinnwände aus einer Sicherung hinzu. Browserdaten zu löschen entfernt auch lokale Projekte – deshalb regelmäßig exportieren.'],
-    ['Ein Backup, wenn du es möchtest.','Über „GitHub“ kannst du das Projekt in deinem eigenen Backup-Repository sichern. Dein Token bleibt nur während des geöffneten Dialogs im Arbeitsspeicher. Die Sicherung enthält keine Anwendung und startet kein Deployment.'],
+    ['Einen Wunsch vorbereiten.','Über „Wunsch erstellen“ wählst du Modulwunsch oder Avatarwunsch. Beschreibe die gewünschte Umsetzung und füge Referenzbilder hinzu. „Bereit zur Übergabe“ merkt nur vor, dass du fertig bist.'],
+    ['Lokal speichern oder als Datei sichern.','Änderungen werden automatisch nur in diesem Browser gespeichert. „Datei sichern“ lädt das ganze Projekt mit Bildern herunter. „Datei öffnen“ fügt eine Sicherung hinzu. Sichere wichtige Arbeit als Datei, bevor du Browserdaten löschst.'],
+    ['Wünsche zur Umsetzung übergeben.','„Wünsche auf GitHub speichern“ überträgt nur die von dir ausgewählten Wünsche in ein eigenes privates Repository. Beschreibungen und Bilder lassen sich anschließend in VS Code ansehen. Erst die Erfolgsmeldung bestätigt die Übertragung. Weitere Änderungen bitte erneut übertragen. Das vollständige Projektbackup findest du unten auf der Seite.'],
     ['Ein paar kleine Abkürzungen.','Strg+Z macht die letzte Projektänderung rückgängig, Strg+Umschalt+Z wiederholt sie. In Textfeldern gelten die gewohnten Textabkürzungen. Strg+S exportiert dein Projekt.']
   ].map(([title,text],index)=>`<div class="help-step"><b>${index+1}</b><div><strong>${h(title)}</strong><p>${h(text)}</p></div></div>`).join('')}</div><div class="modal-footer"><button class="button primary" data-action="close">Los geht’s</button></div>`;
   function render(){
@@ -48,7 +67,7 @@ export function mountWorkspace({store,autosave}) {
     document.querySelectorAll('[data-action="view"]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.view===view));
     const count=renderBoard(surface,board,{view,zoom,query,type});
     find('module-count').textContent=`${count} ${count===1?'Idee':'Ideen'}${count!==board.modules.length?` von ${board.modules.length}`:''}`;
-    find('demo-badge').hidden=!board.example;find('zoom-controls').hidden=view!=='board';find('zoom-label').textContent=`${Math.round(zoom*100)} %`;
+    find('demo-badge').hidden=true;find('zoom-controls').hidden=view!=='board';find('zoom-label').textContent=`${Math.round(zoom*100)} %`;
     document.querySelector('[data-action="undo"]').disabled=!store.canUndo();document.querySelector('[data-action="redo"]').disabled=!store.canRedo();
     remember();
   }
@@ -57,6 +76,9 @@ export function mountWorkspace({store,autosave}) {
   async function action(button){
     const name=button.dataset.action,id=button.closest('[data-module]')?.dataset.module;
     if(name==='templates')openTemplates();
+    if(name==='new-request')requests.create();
+    if(name==='requests')requests.open();
+    if(name==='share-requests')beginRequestShare(collectWorkspaceRequests(store.get()).map(entry=>entry.module));
     if(name==='create-idea')createIdea(button.dataset.template);
     if(name==='select-board'){activeId=button.dataset.board;render();find('board-viewport').scrollTo(0,0);}
     if(name==='new-board'){
@@ -66,7 +88,7 @@ export function mountWorkspace({store,autosave}) {
     }
     if(name==='rename-board'){const name=await ask({title:'Pinnwand umbenennen',label:'Name',value:active().name});if(name)store.change(workspace=>{workspace.boards.find(board=>board.id===activeId).name=name;});}
     if(name==='delete-board'){
-      if(!await ask({title:'Pinnwand entfernen?',description:`„${active().name}“ mit allen Modulen entfernen. Über Rückgängig kannst du sie wiederherstellen.`,input:false,confirm:'Pinnwand entfernen',danger:true}))return;
+      if(!await ask({title:'Pinnwand entfernen?',description:`„${active().name}“ mit allen Karten entfernen. Über Rückgängig kannst du sie wiederherstellen.`,input:false,confirm:'Pinnwand entfernen',danger:true}))return;
       const id=activeId;store.change(workspace=>{workspace.boards=workspace.boards.filter(board=>board.id!==id);if(!workspace.boards.length)workspace.boards.push({id:uid(),name:'Mein Ideenraum',example:false,modules:[]});});
     }
     if(name==='view'){view=button.dataset.view;render();find('board-viewport').scrollTo(0,0);}

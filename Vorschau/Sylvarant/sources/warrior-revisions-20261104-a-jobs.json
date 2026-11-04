@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "provider": "built-in image_gen",
+  "createdAt": "2026-11-04",
+  "purpose": "Gezielte Nutzerkorrekturen an Cerunia und Rinia; echte Bild-Edits, Originale erhalten.",
+  "jobs": [
+    {
+      "id": "house-cerunia-v2",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in blau-silberner R?stung mit geradem zweischneidigem Gladius und R?ckenk?cher.",
+      "equipment": [
+        "Gerader zweischneidiger Gladius",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Segment- und Kettenpanzer"
+      ],
+      "houseId": "house-cerunia",
+      "assetStem": "house-cerunia-v2",
+      "category": "warriors",
+      "mount": null,
+      "palette": [
+        "Dunkelblau",
+        "Gold",
+        "Silberweiß"
+      ],
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-cerunia.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. A faithful localized weapon correction of the EXISTING Sylvarant warrior, not a newly designed character.\n\nInput images: Image 1 is the PRIMARY EDIT TARGET; preserve it. Image 2 is supporting matte painted STYLE ONLY; do not copy its knight design, griffin, blue palette, sword shape, background or colour mist.\n\nPRIMARY EDIT: Replace ONLY the curved sabre blade and its sword furniture in his existing right hand (viewer left) with ONE unmistakable Roman GLADIUS: a short STRAIGHT symmetric double-edged steel sword with two straight parallel cutting edges tapering to a symmetric triangular spear point, small rounded straight guard, dark simple grip and rounded pommel. The gladius points quietly downward in the identical hand position; the new straight blade is fully visible with transparent margin and must not curve. The hand naturally encloses its grip. The sword must not be a sabre, scimitar or single-edged weapon. Preserve the exact young man's face, expression, medium brown curly hair, rounded human ears, open Roman helmet, head orientation, body proportions, pose, armour, white shoulder cloth, navy tunic, gold and silver trident-and-wreath embroidery, back quiver and arrows, belts and boots from Image 1. The user explicitly liked this figure very much: preserve it faithfully.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nFinal constraints: keep the exact individual from Image 1, quiet complete full-body portrait, 2:3, 1024x1536. Young adult, anatomically human rounded ears. No shield, extra weapon, extra character or scenery. All helmet, quiver, weapon, fingers and both complete feet inside canvas. True transparent PNG background with Alpha=0 outside the actual physical silhouette and in every open gap; retain opaque character materials. REMOVE ALL source outer glow, colour mist, brown/grey halo, shadow and backdrop. No ground, floor, paper, text, frame or watermark. Thin soft painted contours, matte muted colours, clear simplified shapes, fine even pigment grain. Alter only the specified weapon and necessary gripping-finger detail; preserve all other person/design features.",
+      "supersedesAssetStem": "house-cerunia"
+    },
+    {
+      "id": "house-rinia-v2",
+      "prototypeId": "prototype-03",
+      "role": "Marinekriegerin",
+      "description": "Marinekriegerin in silbernem Schuppenpanzer und petrolfarbenem Mantel mit langem Dreizack und R?ckenk?cher.",
+      "equipment": [
+        "Dreizack mit genau drei Zinken und langem geradem Schaft",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "houseId": "house-rinia",
+      "assetStem": "house-rinia-v2",
+      "category": "warriors",
+      "mount": null,
+      "palette": [
+        "Petrol",
+        "Schwarz",
+        "Silber"
+      ],
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-rinia.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. A faithful localized weapon correction of the EXISTING Sylvarant warrior, not a newly designed character.\n\nInput images: Image 1 is the PRIMARY EDIT TARGET; preserve it. Image 2 is supporting matte painted STYLE ONLY; do not copy its knight design, griffin, blue palette, sword shape, background or colour mist.\n\nPRIMARY EDIT: Replace ONLY the sabre in her existing weapon hand with ONE complete functional TRIDENT held naturally in that same hand. The trident must have EXACTLY THREE clearly separated metal prongs: ONE central straight prong and TWO symmetric outer prongs, and a long continuous perfectly STRAIGHT wooden shaft. The weapon is a readable tall polearm, not a little symbol or a forked sword. Orient its head upward and butt downward, with shaft passing naturally through her closed gripping hand. Entire trident head, all THREE prongs, long straight shaft and butt must fit inside the image with transparent margin; if needed angle it very slightly away from her body while retaining the woman's existing arm position. Do not add a fourth prong or extra spear. Preserve the exact young woman's face, expression, dark brown tied hair, rounded human ears, open ribbed Roman helmet, head orientation, body proportions, pose, armour, petrol cloak, silver trident-and-laurel embroidery, back quiver and arrows, belts and boots from Image 1. Preserve existing palette, clothing, helmet and Roman cultural design. No Greek or Corinthian helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nFinal constraints: keep the exact individual from Image 1, quiet complete full-body portrait, 2:3, 1024x1536. Young adult, anatomically human rounded ears. No shield, extra weapon, extra character or scenery. All helmet, quiver, weapon, fingers and both complete feet inside canvas. True transparent PNG background with Alpha=0 outside the actual physical silhouette and in every open gap; retain opaque character materials. REMOVE ALL source outer glow, colour mist, brown/grey halo, shadow and backdrop. No ground, floor, paper, text, frame or watermark. Thin soft painted contours, matte muted colours, clear simplified shapes, fine even pigment grain. Alter only the specified weapon and necessary gripping-finger detail; preserve all other person/design features.",
+      "supersedesAssetStem": "house-rinia"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { createFamilyPerson, createMarriage, createMarriedAwayBranch, createParentages } from '../../data/family-record-builders.js';
 import { createWorldPersonId } from '../../domain/family-schema.js';
-import { LAGA_KNOWN_LINKS, LAGA_KNOWN_WARDS } from './laga-known-links.js';
+import { LAGA_KNOWN_LINKS, LAGA_KNOWN_WARDS } from './laga-known-links.js?v=20261104-lore-fixes-v1';
 import {
   LAGA_SKELETON_BASE_REVISION, LAGA_SKELETON_REVISION, LAGA_CURRENT_HEAD, LAGA_SKELETON_NOTE,
   LAGA_PLACEHOLDERS, LAGA_PLACEHOLDER_PARTNERS, LAGA_HEAD_NUMBERS, LAGA_AWAY_NUMBERS,

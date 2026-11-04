@@ -1,3 +1,5 @@
+import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
+
 export const COMMENT_ACTIVITY_RECENT_LIMIT = 30;
 
 function milliseconds(value) {
@@ -25,6 +27,7 @@ export function createCommentActivityPreview(comment) {
 }
 
 export function buildCommentThreadActivity(threadId, comments) {
-  const recentComments = comments.map(createCommentActivityPreview).sort((a, b) => b.activityAtClient - a.activityAtClient || b.id.localeCompare(a.id)).slice(0, COMMENT_ACTIVITY_RECENT_LIMIT);
-  return { version: 1, threadId, commentCount: comments.length, recentComments };
+  const visibleComments = comments.filter(comment => !isSilentSceneRegeneration(comment));
+  const recentComments = visibleComments.map(createCommentActivityPreview).sort((a, b) => b.activityAtClient - a.activityAtClient || b.id.localeCompare(a.id)).slice(0, COMMENT_ACTIVITY_RECENT_LIMIT);
+  return { version: 1, threadId, commentCount: visibleComments.length, recentComments };
 }

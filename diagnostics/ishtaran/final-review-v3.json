@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-03",
+  "scope": "Local Ishtaran preparation page; no commit/push/deploy",
+  "result": "passed",
+  "emblemPairs": 38,
+  "newYouthTraditionalFigures": 35,
+  "retainedEmblemFigures": [
+    "source-03",
+    "pool-18",
+    "pool-20"
+  ],
+  "retainedClassFigure": "ghulam",
+  "hybridHeadgear": [
+    "pool-25",
+    "pool-26"
+  ],
+  "runtimeUniqueFigures": 39,
+  "physicalWarriorManifestEntries": 46,
+  "checks": {
+    "previewTests": {
+      "passed": 99,
+      "failed": 0
+    },
+    "publicationPolicyTests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "warriorAssetAudit": {
+      "passed": 46,
+      "failed": 0
+    },
+    "desktopPairDialogs": {
+      "passed": 38,
+      "failed": 0
+    },
+    "mobilePairDialogs": {
+      "passed": 38,
+      "failed": 0
+    },
+    "desktopClassDialogs": {
+      "passed": 8,
+      "failed": 0
+    },
+    "mobileClassDialogs": {
+      "passed": 8,
+      "failed": 0
+    },
+    "productionVisualReview": "all38pairedfigures reviewed on light/dark, plus retainedclassoriginal confirmed",
+    "viewportReset": true,
+    "localShortlist": "original empty baseline preserved"
+  },
+  "evidence": [
+    "browser-pairs-desktop-v3.json",
+    "browser-pairs-mobile-v3.json",
+    "browser-classes-mobile-v3.json",
+    "source-final-light-dark.jpg",
+    "pool-14-26-final-light-dark.jpg",
+    "pool-01-13-v3-production-qa.json",
+    "emblem-warriors/retained-image-proof.json",
+    "ishtaran-final-page.png"
+  ]
+}

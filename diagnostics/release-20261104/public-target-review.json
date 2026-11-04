@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-11-04T04:22:45.453863+00:00",
+  "target": "E:/Aleria/.tmp/release-public-20261104",
+  "status": "privacy-and-data-freeze-ready",
+  "head": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+  "privacy": {
+    "verified": true,
+    "textFilesChecked": 5696,
+    "findingsCount": 0
+  },
+  "database": {
+    "records": 262,
+    "integrityFindings": [],
+    "privacyVerified": true,
+    "filesChecked": 506,
+    "databaseFiles": 265,
+    "generatedCatalogFiles": 241,
+    "privateFindingsCount": 0,
+    "parentDeltas": []
+  },
+  "legacyRemoval": {
+    "path": "CharakterDatenbank/records/familien/haus-twyllod/glendower-o-cenyr--glendower-o-cenyr/character.json",
+    "authorizedByParent": true,
+    "targetOnly": true,
+    "canonicalPath": "CharakterDatenbank/records/unzugeordnet/unassigned/glendower-o-cenyr--glendower-o-cenyr/character.json",
+    "canonicalRecordSha256": "4bf335e74805e23f2639c91b195194594cb01b5c5caafa40477f92b9f6f592c7",
+    "canonicalRecordUnchanged": true,
+    "registryIdentities": 1,
+    "fullOriginalRetainedInExistingPrivateArchive": true,
+    "fullOriginalSha256": "91a1d0ba7555ee1b086544ca3804a0ecab4d14b79d394ee85676e4b2959ea130"
+  },
+  "boundedReconciliation": {
+    "method": "diagnostics/reference-catalogs-20261103/reconcile-stored-public-projections.mjs --apply",
+    "selectedRecords": 2,
+    "recordFilesRewritten": 0,
+    "changedFiles": [
+      "CharakterDatenbank/generated/characters.snapshot.json"
+    ],
+    "protectedFieldsPreserved": true,
+    "precondition": "Fresh full privacy scan clear; existing genealogy-only projection differences; no private matches in parent deltas.",
+    "postcondition": "262 records, zero integrity findings and zero remaining parent deltas."
+  },
+  "rebuiltFromTargetSources": [
+    {
+      "command": "node Karten/tools/build-households.mjs",
+      "result": "773 family crests; one reviewed local assignment list"
+    },
+    {
+      "command": "node AleriaAlmanach/scripts/build-regional-equipment.mjs",
+      "result": "22 countries, 711 regions, 773 houses"
+    },
+    {
+      "command": "node js/biography/build-public-biographies.mjs",
+      "result": "70 public biographies; 15 with documented education"
+    },
+    {
+      "command": "node AleriaAlmanach/scripts/build-quest-catalog.mjs",
+      "result": "15 quests, 3 boards, 72 maps, 93 modules"
+    }
+  ],
+  "focusedTests": {
+    "command": "node --test --experimental-test-isolation=none Karten/tests/households.test.mjs AleriaAlmanach/tests/regional-equipment.test.mjs AleriaAlmanach/tests/biography-transfer.test.mjs",
+    "passed": 19,
+    "failed": 0
+  },
+  "artifactFingerprints": [
+    {
+      "path": "CharakterDatenbank/generated/characters.snapshot.json",
+      "sha256": "6b06ba182974ecbb1afa94b2032b150f97f8e3763a938c695f56c8536b40ff65",
+      "bytes": 7934300
+    },
+    {
+      "path": "Karten/modules/households/households.generated.json",
+      "sha256": "706ad224ce9b968a32310b3733d4845d5415899149fff702584c527dcf5f10a0",
+      "bytes": 537222
+    },
+    {
+      "path": "AleriaAlmanach/modules/regional-equipment/regional-equipment-catalog.js",
+      "sha256": "5ef1621494c5b2b2d4e8059d2b0c34945e2d6c6d11c261a248c85b3d0071748d",
+      "bytes": 651924
+    },
+    {
+      "path": "js/biography/public-biographies.generated.js",
+      "sha256": "ff42ea48841aa9dc8fa9cf81424a24c2358f0ba4391f22194b2e3c90dda1cfeb",
+      "bytes": 702459
+    },
+    {
+      "path": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "sha256": "66b46804620ed05c86d58181da6ed8314c9568c902b39900fb28a16a7582198d",
+      "bytes": 219763
+    },
+    {
+      "path": "diagnostics/reference-catalogs-20261103/public-database-integrity.json",
+      "sha256": "bb0e78c91c83bf9ec4310d8f533e046021409bfdb1a7187b4d853279f14c6e8e",
+      "bytes": 39
+    },
+    {
+      "path": "diagnostics/reference-catalogs-20261103/public-database-full-privacy-audit.json",
+      "sha256": "ddd3bb7b414f782830872f025ff0cbc83f12e0ee22f363c8b03a72fd368fc76d",
+      "bytes": 15599
+    }
+  ],
+  "ownership": {
+    "mainProductSourcesChanged": false,
+    "privateWorkingSourcesChanged": false,
+    "gitIndexChanged": false,
+    "gitRefsChanged": false,
+    "commitOrDeployPerformed": false,
+    "junctionsChanged": false
+  },
+  "nextGate": "Root runs established full release gates and reviews/stages only this public worktree. No release/push/deploy pass is claimed here."
+}

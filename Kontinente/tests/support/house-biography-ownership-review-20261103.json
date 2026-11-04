@@ -1,0 +1,304 @@
+{
+  "reviewedAt": "2026-11-03",
+  "reason": "The existing house-biography fingerprint policy removes only the force-managed houseBiographyModule flag when attaching newly approved defaults. Exact predecessor/current ownership arrays are checked; no graph, person or unrelated managed field is omitted from historical proofs.",
+  "reviews": [
+    {
+      "familyId": "haus-caerdyn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-drewi",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule",
+            "braighSourceCounterInventory",
+            "faernaSourceCounterInventory"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "braighSourceCounterInventory",
+            "faernaSourceCounterInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-gwanrhyd",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-bochdew",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-udgorn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-balauric",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule",
+            "braighSourceCounterInventory"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "braighSourceCounterInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-morgryn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-gwenyen",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-crwynog",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference",
+            "houseBiographyModule"
+          ],
+          "after": [
+            "blankFamily",
+            "chartLayoutPolicy",
+            "sourceNote",
+            "sourceInventory",
+            "warriorReference"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-cwningod",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "afterPresent": true,
+          "before": [
+            "blankFamily",
+            "sourceNote",
+            "houseBiographyModule",
+            "vennyrSourceCounterInventory",
+            "aislearneachSourceCounterInventory",
+            "parzifalPortraitCorrection",
+            "cwingodSourcePortraitInventory"
+          ],
+          "after": [
+            "blankFamily",
+            "sourceNote",
+            "vennyrSourceCounterInventory",
+            "aislearneachSourceCounterInventory",
+            "parzifalPortraitCorrection",
+            "cwingodSourcePortraitInventory"
+          ]
+        }
+      ]
+    }
+  ]
+}

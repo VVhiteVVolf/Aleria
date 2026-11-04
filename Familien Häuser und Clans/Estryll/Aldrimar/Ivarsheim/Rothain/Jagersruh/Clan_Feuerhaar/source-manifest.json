@@ -1,0 +1,82 @@
+{
+  "id": "haus-feuerhaar",
+  "source": {
+    "attachmentId": "197e0a06-9e16-4835-9605-db3652a76e29",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\197e0a06-9e16-4835-9605-db3652a76e29\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/feuerhaar/animexx-original.html",
+    "bytes": 116526,
+    "sha256": "57a20c2c636dd66d5070f352cccedb630cea096a2321714167751cca6246a3fc",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-feuerhaar",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Jägersruh",
+      "barony": "Rothain",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rothain.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-feuerhaar",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-feuerhaar",
+    "familyId": "haus-feuerhaar",
+    "slug": "feuerhaar",
+    "canonicalSlug": "feuerhaar",
+    "attachmentId": "197e0a06-9e16-4835-9605-db3652a76e29",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/RC4eBtK.png",
+    "sourceUrl": "https://i.imgur.com/RC4eBtK.png",
+    "path": "Stammbäume/assets/images/references/haus-feuerhaar/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-feuerhaar/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:320px; width:213px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 204477,
+    "sha256": "92dd4a0b68592e3c2019f2d1cc4c00feddd469935af9dc02108beca59fc4fe50",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Verhüllter Bogenschütze mit grüner Kleidung und Baumzeichen.",
+    "sha": "92dd4a0b68592e3c2019f2d1cc4c00feddd469935af9dc02108beca59fc4fe50",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Der heutige Rang ist Thane von Rothain mit Sitz Jägersruh. Die alte Formulierung Thane von Jägersruh bleibt höchstens historischer Sprachgebrauch, keine neue Verwaltungsebene.",
+    "Ivarheims und Ivarstatt werden im jeweiligen Jarltumskontext Ivarsheim. Im Gründungsbericht wird aus einer unbenannten Jarlstochter keine neue Person oder Ehe angelegt.",
+    "Robyns Unholdjagd, das gebrochene Versprechen und der spätere Zweikampf bleiben Gründungsüberlieferung. Kein neues benanntes Ungeheuer und keine persönlichen Fähigkeiten daraus erzeugen.",
+    "Aktuelle Kartenlage: Rothain liegt im Süden Ivarsheims. Fürstliche und räumliche Altangaben ändern keine Karte oder Ortszuordnung.",
+    "Genannte Güter und Orte vor ungeprüfter Verlinkung mit dem heutigen Ortsregister abgleichen. Fjellhain gehört nach den aktuellen Gebietsdaten zu Rothain und wird nicht gleichzeitig als Grendel-Gut ausgegeben.",
+    "Im Krieg blieb der Clan den Lehnsherren treu. Abwertende Autorenfloskeln über seine angebliche Irrelevanz werden zu neutralem historischen Text redigiert.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

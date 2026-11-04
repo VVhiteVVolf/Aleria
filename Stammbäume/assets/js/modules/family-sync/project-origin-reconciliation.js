@@ -1,7 +1,7 @@
 import {
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
-} from '../../services/family-registry-upgrade.js?v=20261027-uathneach-warriors-v1';
+} from '../../services/family-registry-upgrade.js?v=20261104-content-lore-v1';
 
 export function reconcileFamilyWithProjectOrigin({ family, projectOriginFamily }) {
   if (

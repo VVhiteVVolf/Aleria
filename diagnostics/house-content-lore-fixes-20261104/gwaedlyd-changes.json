@@ -1,0 +1,71 @@
+{
+  "schema": "aleria.gwaedlyd-content-correction",
+  "date": "2026-11-04",
+  "status": "complete-local",
+  "authority": "User: natuerlich Hai; preserve existing heraldry and correct the public territorial culture text.",
+  "territoryId": "herrschaft-gwaedlyd",
+  "contentVersion": "20261104-gwaedlyd-lore-v1",
+  "changes": [
+    {
+      "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs",
+      "before": "Als Nachkommen von Agravaine, dem berüchtigten Ritter aus Vennyr",
+      "after": "Als Nachkommen von Agravaine dem Hai, dem berüchtigten Ritter aus Vennyr"
+    },
+    {
+      "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs",
+      "before": "Ihr Wappen, das einen blutroten Wolf zeigt,",
+      "after": "Ihr Wappen, das einen schwarzen Hai mit Blut am Maul über Wellen zeigt,"
+    },
+    {
+      "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/Herrschaft der Gwaedlyd.html",
+      "before": "../../../../kontinente.registry.js?v=tal-der-milane-20261019",
+      "after": "../../../../kontinente.registry.js?v=20261104-gwaedlyd-lore-v1"
+    },
+    {
+      "path": "Kontinente/kontinente.registry.js",
+      "before": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs?v=graue-weite-20261019",
+      "after": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs?v=20261104-gwaedlyd-lore-v1"
+    }
+  ],
+  "files": [
+    {
+      "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs",
+      "beforeSha256": "be7634ddfe94dcce94218f2af0172dc807529c586132576aa6c58009eb8e53cf",
+      "afterSha256": "e1bb37bd9632fdb74ac26a7c16aa1e250d87f5db31ea03e4a7f6f112c16ed8da"
+    },
+    {
+      "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/Herrschaft der Gwaedlyd.html",
+      "beforeSha256": "60a495e32481faa130d33826e494d887d954f69e5879166c130b440078409c6f",
+      "afterSha256": "22a0cd79aeee2381c8ede905fd1e51b9e0189dcfe429206acb5956b0a1c325c5"
+    },
+    {
+      "path": "Kontinente/kontinente.registry.js",
+      "beforeSha256": "58e0f33af977c516d8fe57929d2dbe338d8d9b3cf8509835a9ae9f4593da321c",
+      "afterSha256": "0d59831f28988ffc3272dd7f7b7d50b674e5c3a3ddd2399f5ea66fd0fdd91935"
+    }
+  ],
+  "evidence": {
+    "houseSource": "Familien Häuser und Clans/Estryll/Cenyr/Graue_Weite/Schimmerkueste/Haus_Gwaedlyd/haus.content.mjs:96",
+    "activeCrest": "Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-gwaedlyd.png",
+    "crestInspected": true,
+    "crestShows": "Black shark with blood at its mouth above waves, not a wolf."
+  },
+  "validation": {
+    "sourceBeforeHashMatchesCapturedReceipt": true,
+    "onlyFirstCultureParagraphChanged": true,
+    "allOtherTerritoryDataUnchanged": true,
+    "registryEntryCount": 575,
+    "onlyGwaedlydRegistryEntryChanged": true,
+    "html": "Dynamic shell contains no exported culture copy; only its registry cache query changed.",
+    "generator": "No Graue-Weite territorial generator is present; the page owns herrschaft.data.mjs directly.",
+    "houseAndFamilySourcesChanged": false,
+    "runtimeTerritoryModuleLoadedWithRealDataHelpers": true,
+    "renderedArticleCultureContainsCorrectedShark": true,
+    "nodeSyntaxChecksPassed": true,
+    "scopedGitDiffCheckPassed": true
+  },
+  "publication": {
+    "pushed": false,
+    "deployed": false
+  }
+}

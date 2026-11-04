@@ -1,0 +1,93 @@
+{
+  "id": "haus-silberblut",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "422ba630-8037-4cb8-bf53-75e6f36426c0",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\422ba630-8037-4cb8-bf53-75e6f36426c0\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/silberblut/animexx-original.html",
+    "bytes": 114941,
+    "sha256": "e07a3c837bf3ef239956324234edb6ce44d94b7e1ca72e91f16b91047093a43a",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-silberblut",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Silberquell",
+      "barony": "Thanentum Schimmerküste",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "439341a48e96c8d8d04ce82f0aadae08162864f0e881bd5609589c5b77bdb6d6"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-silberblut",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-silberblut",
+    "familyId": "haus-silberblut",
+    "slug": "silberblut",
+    "canonicalSlug": "silberblut",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "422ba630-8037-4cb8-bf53-75e6f36426c0",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/SSFSP56.png",
+    "sourceUrl": "https://i.imgur.com/SSFSP56.png",
+    "path": "Stammbäume/assets/images/references/haus-silberblut/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-silberblut/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:320px; width:213px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 313729,
+    "sha256": "c6a9fda164e6d401e899caa3ab201cccf72e9b6b21006143e8d1ab73f76d4be0",
+    "sha": "c6a9fda164e6d401e899caa3ab201cccf72e9b6b21006143e8d1ab73f76d4be0",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Hell gerüsteter Krieger mit geschlossenem Helm, Schwert und rot-silbernem Wappenschild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Aktueller Rang Thane und Sitz Silberquell unter Varangr bleiben erhalten. Amtierender Thanentitel, gemeinsames Herrschaftserbe und dauerhafter Hausrang werden nicht gleichgesetzt.",
+    "Herkunftserzählung des legitimierten Järnblod-Sohnes nur als historische Prosa, keine Übernahme neuer Eltern-, Ehe- oder Lebensdaten.",
+    "Die alte Minenliste ist territorial falsch: Ehrenberg gehört zur Eigenverwaltung Varangrs; Eisenbruch und Rabenstollen gehören zum östlichen Blutstahl-Verwaltungsverband. Der westliche Silberblut-Verband mit Schatztal wird nach aktuellem Ortsregister beschrieben.",
+    "Vier aufeinanderfolgende Thanentitel sind eine erzählte Amtsfolge, keine Militärstatistik. Keine neuen Amtsinhaber aus Hoflisten ableiten.",
+    "Das Motto im Fließtext bleibt ein überlieferter Wahlspruch, ersetzt aber keinen leeren aktuellen Profilwert automatisch. Keine Kriegszahlen und keine Stammbaumtabellen übernehmen.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn."
+  ]
+}

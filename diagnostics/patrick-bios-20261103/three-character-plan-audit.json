@@ -1,0 +1,102 @@
+{
+  "scope": "Only three explicitly authorized public biographies; Gwen here is a draft, no live document created.",
+  "sourceInputsUnchanged": true,
+  "characters": [
+    {
+      "id": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "changedFields": [
+        "biography",
+        "inventory",
+        "updatedAt"
+      ],
+      "allNonIconBiographyFieldsIdentical": true,
+      "originalItemsRetained": true,
+      "assignedIcons": 12,
+      "pendingIcons": 0,
+      "sourceBiographySha256": "d798d13c6b19842e77028e01d2f421b90a2a63124fbc5e33410f7209dad9336c"
+    },
+    {
+      "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "changedFields": [
+        "biography",
+        "inventory",
+        "updatedAt"
+      ],
+      "allNonIconBiographyFieldsIdentical": true,
+      "originalItemsRetained": true,
+      "assignedIcons": 12,
+      "pendingIcons": 0,
+      "sourceBiographySha256": "517dc685efb451af5204ca4544f6648644c9843b978218a645db1470e483611c"
+    },
+    {
+      "id": "person--family-tree--unknown-cadogan-spouse",
+      "changedFields": [
+        "biography",
+        "inventory",
+        "updatedAt"
+      ],
+      "allNonIconBiographyFieldsIdentical": true,
+      "originalItemsRetained": true,
+      "assignedIcons": 10,
+      "pendingIcons": 0,
+      "sourceBiographySha256": "d77f49891857b00fa4594daae3c0ad55e89fd9d822e17f20db0a9f218ba84480"
+    }
+  ],
+  "creatures": [
+    {
+      "id": "companion-cadogan-sgrechiwr-silberstolz",
+      "name": "Silberstolz",
+      "species": "Erlenglanz-Pferd",
+      "ownerCharacterId": "person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "bestiaryReference": {
+        "id": "tiere/pferde/erlenglanz",
+        "name": "Erlenglanz",
+        "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html"
+      },
+      "level": 1,
+      "needsStatReview": true
+    },
+    {
+      "id": "companion-rhiannon-draenmelyn-perle",
+      "name": "Perle",
+      "species": "Rhyfel-Pferd",
+      "ownerCharacterId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "level": 1,
+      "needsStatReview": true
+    },
+    {
+      "id": "companion-gwen-hamnett-sir-balthasar",
+      "name": "Sir Balthasar",
+      "species": "Samtlicht-Kater",
+      "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/samtlicht",
+        "name": "Samtlicht",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/samtlicht/index.html"
+      },
+      "level": 1,
+      "needsStatReview": true
+    },
+    {
+      "id": "companion-gwen-hamnett-sonnenaufgang",
+      "name": "Sonnenaufgang",
+      "species": "Goldmähne-Pferd",
+      "ownerCharacterId": "person--family-tree--unknown-cadogan-spouse",
+      "bestiaryReference": {
+        "id": "tiere/pferde/goldmaehne",
+        "name": "Goldmähne",
+        "url": "/Bestiarium/tiere/pferde/goldmaehne/index.html"
+      },
+      "level": 1,
+      "needsStatReview": true
+    }
+  ],
+  "pending": [],
+  "idempotent": true,
+  "passed": true
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "requestedHouseCorrections": 7,
+  "alignedClassPrototypes": 1,
+  "changes": {
+    "house-cerunia": "Gerader zweischneidiger Gladius; übrige Gestaltung erhalten.",
+    "house-maborel": "Kleine verbundene Lamellen mit abwechselnd olivgrünen und hellen Reihen; offener spätrömischer Helm; Schildkröten-Scutum und gerader Gladius erhalten.",
+    "house-rinia": "Dreizack mit genau drei Zinken, langem geradem Schaft und natürlichem Griff.",
+    "house-stalitia": "Reicher römisch-ritterlicher Harnisch, geschlossener Kammhelm, langer Metall- und Kettenrock, durchgehend gepanzerte Beine und Füße.",
+    "pool-07": "Gerades zweischneidiges Schwert für den Marinekrieger mit Schlüsselwappen.",
+    "pool-10": "Gerades zweischneidiges Schwert für den Marinekrieger mit Ankerwappen.",
+    "pool-11": "Reicher silberner Harnisch, geschlossener Kammhelm, dunkelroter Mantel und Akanthus-/Kapitellbeschläge; vollständig gepanzerte Beine.",
+    "prototype-03": "Marine-Klassenbasis ebenfalls mit geradem Gladius."
+  },
+  "verification": {
+    "visualReview": "Alle acht aufbereitete v2-Figuren auf neutralem Grund angesehen; gewünschte Waffen, Rüstungen, offene Maborel-Helmform und vollständige Silhouetten bestätigt.",
+    "targetedTestsPassed": 8,
+    "warriorFilesAudited": 43,
+    "alphaOrMarginFailures": 0,
+    "alphaOrMarginWarnings": 0,
+    "toolOriginalsVerified": 8,
+    "preservedPreviousFigureTriples": 35,
+    "otherHousesUnchanged": 23,
+    "browserStatus": "limited: bekannter CUA-timeoutMs-Verbindungsfehler; keine neue Browser-Sichtprüfung behauptet."
+  },
+  "selectedHouseJobs": "sources/house-warrior-revisions.json",
+  "selectedPrototype": "sources/prototype-revisions.json",
+  "evidence": [
+    "diagnostics/argentum-sylvarant/revisions-20261104/corrected-figures.jpg",
+    "diagnostics/argentum-sylvarant/revisions-20261104/source-original-audit.json",
+    "diagnostics/argentum-sylvarant/warriors/audit.json"
+  ],
+  "publication": "Lokal eingebunden; kein Push oder Deploy."
+}

@@ -1,0 +1,161 @@
+{
+  "provenance": "Initial review of the twelve existing canonical family records before the local Ährental house-page projection, 2026-11-03. No uploaded genealogy was imported. Graph hashes are historical audit references, not permanent constraints on later authorized genealogy editing.",
+  "records": [
+    {
+      "id": "haus-grawn",
+      "initialGraphFingerprint": "fd4f2937211edb0974176e11c8cfa559c9baf6b85c67b8bf6680ddd457a8bd73",
+      "initialCanonicalProfile": {
+        "rankId": "county",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Tristams Ebene",
+        "seat": "Glyndraith",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      }
+    },
+    {
+      "id": "haus-marchog",
+      "initialGraphFingerprint": "4c7d072551e14e07fea64864a6331029e5b2cbbc744f672329ba242786ffa260",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Tristams Ebene",
+        "seat": "Glyndraith",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-morcanhuc",
+      "initialGraphFingerprint": "748fce68ee50e556271d72ab0408ac562f8e202cf81404ec6c553a05fb5c10f8",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Tristams Ebene",
+        "seat": "Glyndraith",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-baedd",
+      "initialGraphFingerprint": "d417b3ef8180fbc74b4f59ebd538752cdcddcb4f84b8be9e1a282782cf4c66e6",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Eberkamm",
+        "seat": "Eirwyn",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-ciarog",
+      "initialGraphFingerprint": "ed0c58e800b60e0e7b7edfaa0798808e97193a37a206e3f66b4584724fb7c50f",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Graue Bucht",
+        "seat": "Caer Diwedd",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-sgwarnog",
+      "initialGraphFingerprint": "df8a12e2432568a907f0217c690c3857ce42ce074f3e3870fd94195d6de18452",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Flusstal",
+        "seat": "Aldwynd",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-gwythiad",
+      "initialGraphFingerprint": "a85a18f4d0b59a33b2b888d6890cc86caa920d7d17624fd88ccdf033b8708618",
+      "initialCanonicalProfile": {
+        "rankId": "knight",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Tristams Ebene",
+        "seat": "Glyndraith",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-aroglyn",
+      "initialGraphFingerprint": "e8cfbceb31478f84ce1b7fc7de4e2762a84eeb93c22328f69d97b02626edcaa2",
+      "initialCanonicalProfile": {
+        "rankId": "commoner",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Tristams Ebene",
+        "seat": "Glyndraith",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-chiffyddlon",
+      "initialGraphFingerprint": "a01abee6283af4aae544ad8f5d72e2cac0dffbcd5ca3e3a794e9b9b1866f3fce",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Ausgestorben",
+        "seat": "",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-gwarchod",
+      "initialGraphFingerprint": "9a7c4d1032e0b6d1fe8789b0e6bf8451767cdd8606ceccf1dd2b8437ec77642a",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Ausgestorben",
+        "seat": "",
+        "liegeHouseId": "haus-grawn",
+        "liegeHouseName": "Haus Grawn O'Glyndraith"
+      }
+    },
+    {
+      "id": "haus-cruithenaech",
+      "initialGraphFingerprint": "32597942f85be98eb9893ea3ee64a404675485bdc6a75b8d417231f6e8e335a1",
+      "initialCanonicalProfile": {
+        "rankId": "unknown",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Antike Crannath Clans",
+        "seat": "Dun Clachrath",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      }
+    },
+    {
+      "id": "haus-warthog",
+      "initialGraphFingerprint": "c866f2a9b83b0cc4a1e750ba5b77295e7d807c8dd0cd8316821ec1ac5f1f6f67",
+      "initialCanonicalProfile": {
+        "rankId": "unknown",
+        "kingdom": "Cenyr",
+        "county": "Ährental",
+        "barony": "Antike Crannath Clans",
+        "seat": "Ri Torraird",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      }
+    }
+  ]
+}

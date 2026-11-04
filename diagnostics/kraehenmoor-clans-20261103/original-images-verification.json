@@ -1,0 +1,340 @@
+{
+  "schema": "aleria.original-house-image-verification",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "canonicalCounty": "Krähenmoor",
+  "suppliedAttachments": 14,
+  "count": 13,
+  "new": 13,
+  "missingOriginalIds": [
+    "haus-jaernblod"
+  ],
+  "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+  "entries": [
+    {
+      "id": "haus-schattenherz",
+      "slug": "schattenherz",
+      "assetPath": "Stammbäume/assets/images/references/haus-schattenherz/krieger.png",
+      "status": "new-original",
+      "sha256": "d76e676f8550619da7dd6eb12d0e567848ae3a841d718e8a2ec187ed6e8d73d1",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-blutstahl",
+      "slug": "blutstahl",
+      "assetPath": "Stammbäume/assets/images/references/haus-blutstahl/krieger.png",
+      "status": "new-original",
+      "sha256": "976ae1a3d20c7408b8d58836eb4529ced5751271351536d16992e0094f285bd0",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-silberblut",
+      "slug": "silberblut",
+      "assetPath": "Stammbäume/assets/images/references/haus-silberblut/krieger.png",
+      "status": "new-original",
+      "sha256": "c6a9fda164e6d401e899caa3ab201cccf72e9b6b21006143e8d1ab73f76d4be0",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-varangr",
+      "slug": "varangr",
+      "assetPath": "Stammbäume/assets/images/references/haus-varangr/krieger.png",
+      "status": "new-original",
+      "sha256": "01687f30ec6b3175d9cfbd544fe4fb467be701d2a234d563677b73dcc6b85460",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-kaltherz",
+      "slug": "kaltherz",
+      "assetPath": "Stammbäume/assets/images/references/haus-kaltherz/krieger.png",
+      "status": "new-original",
+      "sha256": "9ed88bbf8986757fb6a49fedf160dec3fddd3fc17778b725a69be55c7351a0f1",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-feuerherz",
+      "slug": "feuerherz",
+      "assetPath": "Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+      "status": "new-original",
+      "sha256": "2112b40bcaaebf8cbc20aa06c24d1bd49daa9cc750ccca56f50609783dbab80a",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-vragi",
+      "slug": "vragi",
+      "assetPath": "Stammbäume/assets/images/references/haus-vragi/krieger.png",
+      "status": "new-original",
+      "sha256": "90c1f8969e768bd52353048fc9ac95f421386d1345d17b9fb39821d793cf52da",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-schwarzblut",
+      "slug": "schwarzblut",
+      "assetPath": "Stammbäume/assets/images/references/haus-schwarzblut/krieger.png",
+      "status": "new-original",
+      "sha256": "1839877dcd392fe422843f937852e1c912fc2067a4d95d5d18a726397fe6d35c",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-goldglanz",
+      "slug": "goldglanz",
+      "assetPath": "Stammbäume/assets/images/references/haus-goldglanz/krieger.png",
+      "status": "new-original",
+      "sha256": "582184ee77cf8c54660a6ec4db261bf6f6ff9dcab2a0774322a2c76141d66e78",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-hjerte",
+      "slug": "hjerte",
+      "assetPath": "Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+      "status": "new-original",
+      "sha256": "915d9531c33419244ff1f685499f02214dac0eff9228393ae7bca52f8c497d2a",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "slug": "kaldhrafn",
+      "assetPath": "Stammbäume/assets/images/references/haus-kaldhrafn/krieger.png",
+      "status": "new-original",
+      "sha256": "b9e0ddf55698099f59bad3d1f4cf4f24998131fe5fc3938e0ae78e227f108300",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "slug": "morfhia",
+      "assetPath": "Stammbäume/assets/images/references/haus-mac-morfhia/krieger.png",
+      "status": "new-original",
+      "sha256": "5da2ddaf091ee82b86204daad2533fcbaaab6e135d5279762bef41938440a474",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "slug": "corcaigh",
+      "assetPath": "Stammbäume/assets/images/references/haus-mac-corcaigh/krieger.png",
+      "status": "new-original",
+      "sha256": "94e678dd70804dd84b2ccca47866fda7a66b28fe6c35d975fd3be82047c410f6",
+      "shaMatches": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unchangedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "visualReviewPending": false,
+  "visualReviewComplete": true,
+  "status": "passed",
+  "notes": [
+    "13 Originaldateien für 13 kanonische Krähenmoor-Familien neu gesichert und tatsächlich angesehen.",
+    "14 Anhänge insgesamt; Järnblod enthält keine originale Hausfigur. Dessen Bildlücke ist in missing-originals.json gesondert dokumentiert, ohne Ersatz durch ein Personenportrait.",
+    "Source-Aliase: jarnblod → haus-jaernblod, morfhia → haus-mac-morfhia, corcaigh → haus-mac-corcaigh.",
+    "Alle Originale unverändert RGBA 408×612 mit geprüften Hashes und transparenten Außenbereichen.",
+    "Abgebildete Tiere bleiben Teil der vorhandenen Illustration; keine neuen benannten Tierbegleiter oder Personenzuordnungen erstellt.",
+    "Keine Biografien, Register, Graphen oder Generatoren verändert."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "haus-sterkr",
+  "source": {
+    "attachmentId": "f383dfe8-6b32-4c83-b870-01c6b69506ac",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f383dfe8-6b32-4c83-b870-01c6b69506ac\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/sterkr/animexx-original.html",
+    "bytes": 109207,
+    "sha256": "46701baaa6bc44674de6f6817b987c5116d1b8ffec08835d5d0339c14ee930b1",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-sterkr",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-brathfengr",
+      "liegeHouseName": "Clan Brathfengr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-sterkr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "sterkr",
+    "familyId": "haus-sterkr",
+    "attachmentId": "f383dfe8-6b32-4c83-b870-01c6b69506ac",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/FmfCkCf.png",
+    "path": "Stammbäume/assets/images/references/haus-sterkr/krieger.png",
+    "sourceStyle": "float:right; height:330px; width:220px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 330416,
+    "sha256": "1c19d734e3443950aa9cba0b5bd00ae630380b325ea06482d32dcdc962eafd9a",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-sterkr",
+    "url": "https://i.imgur.com/FmfCkCf.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-sterkr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Auf einem Felsen sitzender Geigenspieler mit Schild und Schwert.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-3.png"
+  },
+  "decisions": [
+    "Aegir der Streicher ist der Gründer der Sterkr. Die mehrfach kopierte Windrufer-Erzählung ist gemeinsamer Kulturkontext, keine eigenständige Gründung durch Jurgen.",
+    "Die lange identische Windrufer-Handlung wird nicht nochmals als vollständige Sterkr-Chronik ausgegeben. Übernommen wird ein ausreichend ausführlicher, auf Aegir und seine Stellung im gemeinsamen Ursprung begrenzter Text.",
+    "Klangheim/Skaldenheim und Brathfengr als Lehnsherr bleiben maßgeblich. Keine aus der Bardengeschichte erfundenen Güter, Hausrituale oder Religion ergänzen.",
+    "Neutralität im Prätendentenkrieg und erhaltene Beziehungen sind eigenständige übernehmbare Angaben; fehlende Kapitel bleiben unbelegt.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

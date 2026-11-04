@@ -13,6 +13,18 @@ import { changesRequireBuild } from '../build/ignore-site-build.mjs';
 const now = Date.parse('2026-10-15T12:00:00Z');
 const options = { now, runtime: 'node/test', siteId: 'test-site' };
 const checkCount = SITE_BUILD_TASKS.filter(task => !task.always).length;
+test('Firebase function gates prepare locked runtime dependencies before server tests', () => {
+  for (const task of SITE_BUILD_TASKS) {
+    const serverTest = task.commands.findIndex(command => command[0] === '--test'
+      && command.some(argument => argument.startsWith('firebase/functions/tests/')));
+    if (serverTest < 0) continue;
+    const preparation = task.commands.findIndex(command => command[0] === 'netlify/build/prepare-runtime-checks.mjs');
+    assert.ok(preparation >= 0 && preparation < serverTest, task.id + ' needs its own dependency preparation');
+    for (const input of ['firebase/functions/package.json', 'firebase/functions/package-lock.json']) {
+      assert.ok(task.inputs.includes(input), task.id + ' must invalidate checks when locked dependencies change');
+    }
+  }
+});
 const source = file => ({ file, object: '100644 blob ' + 'a'.repeat(40) });
 const tree = [
   'netlify/build/run-site-build.mjs', 'netlify.toml', 'shared/calendar.js',
@@ -62,7 +74,7 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
   assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
 });
 
 

@@ -1,0 +1,142 @@
+{
+  "status": "pass",
+  "date": "2026-11-03",
+  "scope": 14,
+  "checks": [
+    "archive bytes/hash",
+    "explicit attachment and biography scope",
+    "eight-string chapter schema",
+    "biography schema and length",
+    "no technical editorial prose",
+    "no numeric military totals"
+  ],
+  "houses": [
+    {
+      "id": "haus-schattenherz",
+      "sourceSha256": "053542e2bdf6ec9fa4c5a172d1ec5966f86b577bf08e19e8d9d116a65fe5b1ff",
+      "archiveByteIdentical": true,
+      "biographyWords": 104,
+      "chapterWords": 140,
+      "rankId": "thane",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-blutstahl",
+      "sourceSha256": "3e5169326dd3e413494ccb40d617681a4c2e36afdf252f1e74f252359a64f656",
+      "archiveByteIdentical": true,
+      "biographyWords": 234,
+      "chapterWords": 964,
+      "rankId": "thane",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-silberblut",
+      "sourceSha256": "e07a3c837bf3ef239956324234edb6ce44d94b7e1ca72e91f16b91047093a43a",
+      "archiveByteIdentical": true,
+      "biographyWords": 246,
+      "chapterWords": 1081,
+      "rankId": "thane",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-varangr",
+      "sourceSha256": "b2f84eabee7b7687b98a890030eb6ab15577b6bbdca862d1c8bd44cea44c73f0",
+      "archiveByteIdentical": true,
+      "biographyWords": 250,
+      "chapterWords": 1368,
+      "rankId": "jarl",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-kaltherz",
+      "sourceSha256": "8056e8e6ff33433ececbc55eab97f6dfd930eb87f6148844eb5fbade32d74d6f",
+      "archiveByteIdentical": true,
+      "biographyWords": 241,
+      "chapterWords": 973,
+      "rankId": "hesire",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-feuerherz",
+      "sourceSha256": "fa656f00e283bc712a6cfc34ed2ca91ded8fe760b987dc7b4e5738f8a4238be0",
+      "archiveByteIdentical": true,
+      "biographyWords": 251,
+      "chapterWords": 1014,
+      "rankId": "hesire",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-vragi",
+      "sourceSha256": "b29132ca404e1b6b09b70c2ea729946857f9ea8544bb40364336c8675a127ff2",
+      "archiveByteIdentical": true,
+      "biographyWords": 237,
+      "chapterWords": 970,
+      "rankId": "hesire",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-schwarzblut",
+      "sourceSha256": "293fcf2debe99a647fa9aea0178e3b40dfc24cca69cff18a7d1c0bbbe3075160",
+      "archiveByteIdentical": true,
+      "biographyWords": 232,
+      "chapterWords": 1040,
+      "rankId": "hesire",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-goldglanz",
+      "sourceSha256": "15ce3e3368cb6027d460681079bb1cc85f02b8d0eff7ab02944feda3a108f899",
+      "archiveByteIdentical": true,
+      "biographyWords": 239,
+      "chapterWords": 1046,
+      "rankId": "hesire",
+      "historicalEra": "active"
+    },
+    {
+      "id": "haus-hjerte",
+      "sourceSha256": "e1cdd385999d4f7a5f7a41e8c988cc59a6a78fc110e7bb79e749fb0cdd1deca3",
+      "archiveByteIdentical": true,
+      "biographyWords": 258,
+      "chapterWords": 2041,
+      "rankId": "thane",
+      "historicalEra": "historical-time-open"
+    },
+    {
+      "id": "haus-jaernblod",
+      "sourceSha256": "338a1c441a4786f45e5cbedcfcfcb8e16b1ba8426589373e158f969647d9cdc6",
+      "archiveByteIdentical": true,
+      "biographyWords": 260,
+      "chapterWords": 1064,
+      "rankId": "thane",
+      "historicalEra": "historical-time-open"
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "sourceSha256": "12f03a0af61b31bda2858a66723d15f9d242d93f890af2042f68999c0a718699",
+      "archiveByteIdentical": true,
+      "biographyWords": 230,
+      "chapterWords": 731,
+      "rankId": "unknown",
+      "historicalEra": "ancient"
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "sourceSha256": "3587e273eb4a6a0faca2fa8b66fad7cb8cd66fe543ddd2c0ec73e1b0943105bf",
+      "archiveByteIdentical": true,
+      "biographyWords": 117,
+      "chapterWords": 519,
+      "rankId": "unknown",
+      "historicalEra": "ancient"
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "sourceSha256": "7d3b2dec19faee18146d922ac7ed162ef95822b878db2e8345093fd1d7c726ce",
+      "archiveByteIdentical": true,
+      "biographyWords": 130,
+      "chapterWords": 507,
+      "rankId": "unknown",
+      "historicalEra": "ancient"
+    }
+  ],
+  "productionWrites": false
+}

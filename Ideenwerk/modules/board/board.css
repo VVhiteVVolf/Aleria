@@ -2,3 +2,19 @@
 @media(min-width:1700px){.board-viewport{height:690px}}
 @media(max-width:960px){.canvas-hint{display:none}.view-grid{padding:20px;gap:16px}.view-list .idea-card{grid-template-columns:80px 1fr}.view-list .card-bottom{display:none}.view-list .card-type{letter-spacing:.2px;font-size:7px;flex-direction:column;gap:7px}.view-list .card-top{justify-content:center}}
 @media(max-width:680px){.board-viewport{height:540px}.canvas-topline{padding:13px}.demo-badge{font-size:5px;letter-spacing:.6px}.canvas-bottomline{padding:10px 12px}.canvas-bottomline>span{font-size:9px}.view-grid{grid-template-columns:1fr;padding:18px}.view-list{padding:12px}.view-grid .idea-card{max-width:none}.view-list .card-subtitle{font-size:9px}}
+.card-type{font-size:10px;letter-spacing:.6px}
+.card-subtitle{font-size:12px;color:#77856c}
+.card-bottom{font-size:10px;color:#768467}
+.canvas-hint{font-size:10px}
+.board-empty{margin:0 auto;width:min(100%,700px)}
+.board-empty-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.board-empty>small{display:block;max-width:400px;margin:20px auto 0;font-size:11px;line-height:1.8;color:#6f7d63}
+@media(max-width:680px){.board-empty{padding:60px 22px}.board-empty h2{font-size:22px}.board-empty p{font-size:12px}.board-empty-actions .button{width:100%}.canvas-bottomline{align-items:flex-start;flex-wrap:wrap}.canvas-bottomline>span{max-width:230px;line-height:1.7}}
+.request-card-preview{display:block;min-height:150px}
+.request-card-preview>img{width:100%;height:115px;object-fit:contain;background:#ffffff40}
+.request-card-preview>span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;padding:10px 13px;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.request-card-preview:not(:has(img))>span{padding:20px;-webkit-line-clamp:5}
+.is-collapsed .request-card-preview{min-height:49px;height:49px}
+.is-collapsed .request-card-preview>img{height:49px}
+.is-collapsed .request-card-preview>img+span{display:none}
+.is-collapsed .request-card-preview:not(:has(img))>span{padding:5px;font-size:6px;-webkit-line-clamp:4;line-height:1.5}

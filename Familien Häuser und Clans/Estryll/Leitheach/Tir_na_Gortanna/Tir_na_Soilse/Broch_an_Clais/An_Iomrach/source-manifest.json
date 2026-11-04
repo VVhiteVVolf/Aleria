@@ -1,0 +1,168 @@
+{
+  "id": "haus-iomrach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "3d57ef3b-968f-40b2-9ffb-cd55d56883e0",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\3d57ef3b-968f-40b2-9ffb-cd55d56883e0\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/an-iomrach/animexx-original.html",
+    "bytes": 79415,
+    "sha256": "3ce59094ee5d270058fe41e870d84b44ee8a06f641b3b74b52cb2f9364c54ab7",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-iomrach",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Clais",
+      "barony": "Tir na Soilse",
+      "county": "Tir na Gortanna",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dal-cruthin",
+      "liegeHouseName": "Clan Dál’Cruthin",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Soilse",
+        "Broch an Clais"
+      ]
+    },
+    "graphFingerprint": "41ee99e777ec8d6cc2bf817956c8a9fe30f2a7840382cf5af08b7c12427c228d",
+    "historicalMetadata": {
+      "historicalStatus": "extinct",
+      "extinctHouse": false,
+      "ownHouseStatus": "extinct",
+      "extinctionEvent": {
+        "year": "1733",
+        "cause": "Überfall der Schwarzblutmarodeure auf Broch an Clais",
+        "administrativeExtinction": true,
+        "survivorIds": [
+          "ybhna-iomrach",
+          "conan-iomrach"
+        ]
+      }
+    }
+  },
+  "territory": {
+    "id": "haus-iomrach",
+    "title": "An’Iomrach",
+    "territoryId": "leitheach-herrschaft-somhairle",
+    "territoryName": "Tir na Soilse",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Soilse",
+        "slug": "leitheach-herrschaft-somhairle"
+      }
+    ],
+    "selectionBasis": "Geografischer Ruecklink nach Tir na Soilse, dessen heutige Verwaltung bei Somhairle liegt",
+    "historical": true,
+    "notes": [
+      "Kein heutiger Herrschaftsanspruch der Iomrach: historischer Untergang1733, Somhairle ist heutiger Verwalter des Gebiets."
+    ]
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-iomrach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-iomrach",
+    "slug": "an-iomrach",
+    "canonicalSlug": "iomrach",
+    "attachmentId": "3d57ef3b-968f-40b2-9ffb-cd55d56883e0",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/JakWr3E.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 278696,
+    "sha256": "74fba2d603e515c9bea6711830c192750d868469196b1e790d477b1c4e576c4b",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-iomrach",
+    "title": "An’Iomrach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Gortanna",
+    "historical": true,
+    "historicalStatus": "extinct",
+    "sourceUrl": "https://i.imgur.com/JakWr3E.png",
+    "path": "Stammbäume/assets/images/references/haus-iomrach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-iomrach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "74fba2d603e515c9bea6711830c192750d868469196b1e790d477b1c4e576c4b",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Historische grüne Hausdarstellung mit erwachsener Figur und Kind.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "3ce59094ee5d270058fe41e870d84b44ee8a06f641b3b74b52cb2f9364c54ab7",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-iomrach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug an-iomrach wird der bestehenden ID haus-iomrach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "1733 bezeichnet das administrative Ende der Herrschaft. Überlebende Ybhna und Cónán nicht töten oder aus ihren bestehenden Akten löschen; auswärtiger Mündel-/Erbenstatus Cónáns bleibt erhalten.",
+    "Aktuelle Verwaltung Somhairle nicht als neue Iomrach-Herrschaft oder genealogische Verschmelzung darstellen. Historischen Lairdrang erhalten, keine heutige Oberhauptreihe erfinden.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

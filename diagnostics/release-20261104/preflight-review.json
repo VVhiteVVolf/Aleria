@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "scope": "Local overall-public-release preflight. Paths and counts only; no private recognition values or content retained.",
+  "authorization": {
+    "source": "Latest parent-confirmed user request: push and deploy all local public changes after Venalys.",
+    "olderLocalOnlyNotes": "Superseded for public release by latest explicit user authorization; privacy and original-source preservation remain binding."
+  },
+  "gitSnapshot": {
+    "branch": "master",
+    "head": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+    "counts": {
+      " M": 582,
+      " D": 22,
+      "??": 5137
+    },
+    "trackedChanged": 604,
+    "untrackedFiles": 5137,
+    "staged": 0,
+    "snapshotNote": "Initial complete --untracked-files=all snapshot; other authorized task work continued afterward. Refresh before final staging.",
+    "largeChangedFilesOver100MiB": []
+  },
+  "decision": {
+    "status": "ready-for-isolated-public-projection-audit",
+    "directMainWorkspaceStagingSafe": false,
+    "reason": "Main workspace intentionally contains private untracked files and mixed projections. Do not git add -A there. Stage only the separately audited public worktree.",
+    "indexMutatedByThisReview": false,
+    "worktreeCreatedByThisReview": false,
+    "commitOrDeployPerformed": false,
+    "cleanupPerformed": false
+  },
+  "existingRelease": {
+    "docs": [
+      "netlify/docs/LOCAL_RELEASES.md",
+      "netlify/docs/TEMPORARY_STORAGE.md"
+    ],
+    "entry": "netlify/release/release.mjs",
+    "command": "node netlify/release/release.mjs --publish --push",
+    "requiredBranch": "master",
+    "lastCommitMarker": "[skip netlify]",
+    "immutableSnapshot": true,
+    "sourceArchivesAllowedInGit": true,
+    "sourceArchivesOmittedFromStaticPackage": true
+  },
+  "publicProjection": {
+    "preparer": "diagnostics/combat-sheets-20261102/prepare-public-worktree.mjs",
+    "rootCreatedTarget": ".tmp/release-public-20261104",
+    "base": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+    "recognitionSourcesCount": 4,
+    "recognitionValuesPersisted": false,
+    "privateIndexUsedInMemory": true,
+    "directPrivatePathCandidates": [],
+    "privateIdentityBinaryPathFindings": [],
+    "mixedFileCandidates": [
+      {
+        "path": "AGENTS.md",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/modules/quests/README.md",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/modules/quests/quest-catalog.json",
+        "identityMatches": 3,
+        "privatePathTokens": 19,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/modules/regional-equipment/regional-equipment-catalog.js",
+        "identityMatches": 0,
+        "privatePathTokens": 8,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/package.json",
+        "identityMatches": 0,
+        "privatePathTokens": 7,
+        "status": "tracked"
+      },
+      {
+        "path": "AleriaAlmanach/scripts/build-quest-preparations.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "tracked"
+      },
+      {
+        "path": "CharakterDatenbank/generated/characters.snapshot.json",
+        "identityMatches": 11,
+        "privatePathTokens": 24,
+        "status": "tracked"
+      },
+      {
+        "identityMatches": 11,
+        "privatePathTokens": 9,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 7,
+        "privatePathTokens": 9,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 8,
+        "privatePathTokens": 9,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 9,
+        "privatePathTokens": 9,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 11,
+        "privatePathTokens": 8,
+        "status": "untracked"
+      },
+      {
+        "path": "CharakterDatenbank/registry.json",
+        "identityMatches": 11,
+        "privatePathTokens": 4,
+        "status": "tracked"
+      },
+      {
+        "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Albholz/source-manifest.json",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.biography.mjs",
+        "identityMatches": 1,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.content.mjs",
+        "identityMatches": 5,
+        "privatePathTokens": 2,
+        "status": "tracked"
+      },
+      {
+        "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.data.js",
+        "identityMatches": 5,
+        "privatePathTokens": 2,
+        "status": "tracked"
+      },
+      {
+        "path": "Familien Häuser und Clans/modules/house-coverage/cenyr-house-coverage-node.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 6,
+        "status": "untracked"
+      },
+      {
+        "path": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
+        "identityMatches": 3,
+        "privatePathTokens": 11,
+        "status": "tracked"
+      },
+      {
+        "path": "Karten/modules/households/households.generated.json",
+        "identityMatches": 0,
+        "privatePathTokens": 8,
+        "status": "tracked"
+      },
+      {
+        "path": "Stammbäume/assets/js/data/families.registry.js",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "tracked"
+      },
+      {
+        "path": "Stammbäume/assets/js/data/house-argall-family.js",
+        "identityMatches": 1,
+        "privatePathTokens": 1,
+        "status": "tracked"
+      },
+      {
+        "path": "Stammbäume/tests/argall-gwynthor.test.js",
+        "identityMatches": 0,
+        "privatePathTokens": 2,
+        "status": "untracked"
+      },
+      {
+        "path": "Vorschau/Ishtaran/sources/audit-name-proposals.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 4,
+        "privatePathTokens": 2,
+        "status": "untracked"
+      },
+      {
+        "identityMatches": 6,
+        "privatePathTokens": 4,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/biography-redesign-20261102/coverage.json",
+        "identityMatches": 11,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/biography-redesign-20261102/inventory.json",
+        "identityMatches": 11,
+        "privatePathTokens": 12,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/cenyr-house-completeness-20261103/art-audit/inventory.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/cenyr-house-completeness-20261103/coverage-audit/audit-house-references.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/character-development-audit-20261102/unrelated-before.json",
+        "identityMatches": 8,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/character-identity-review-20261103/scan-public-duplicates.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/character-trait-review-20261102/public-biographies-before.json",
+        "identityMatches": 11,
+        "privatePathTokens": 5,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/character-trait-review-20261102/registry-before.json",
+        "identityMatches": 11,
+        "privatePathTokens": 4,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/character-trait-review-20261102/snapshot-before.json",
+        "identityMatches": 11,
+        "privatePathTokens": 24,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/combat-sheets-20261102/WORKING-STATE.md",
+        "identityMatches": 0,
+        "privatePathTokens": 3,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/combat-sheets-20261102/audit-public-worktree.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 4,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/combat-sheets-20261102/prepare-public-worktree.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 16,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/house-content-lore-fixes-20261104/refresh-cache-versions.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/house-life-status-20261104/refresh-cache-versions.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/house-lore-fixes-20261104/before-public-data.json",
+        "identityMatches": 103,
+        "privatePathTokens": 0,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/house-lore-fixes-20261104/refresh-module-versions.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/klaueninsel-house-pages-20261103/before.json",
+        "identityMatches": 1,
+        "privatePathTokens": 0,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+        "identityMatches": 1,
+        "privatePathTokens": 0,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/knight-equipment-20261102/online-inspection.json",
+        "identityMatches": 4,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "diagnostics/kronental-clans-20261103/review-sources.py",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/kronental-clans-20261103/source-content.json",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/kronental-clans-20261103/source-review-decisions.json",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/reference-catalogs-20261103/WORKING-STATE.md",
+        "identityMatches": 0,
+        "privatePathTokens": 1,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/reference-catalogs-20261103/audit-public-database-private-links.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 4,
+        "status": "untracked"
+      },
+      {
+        "path": "diagnostics/rianna-lefraye-biographies-20261102/before.json",
+        "identityMatches": 8,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "js/biography/public-biographies.generated.js",
+        "identityMatches": 11,
+        "privatePathTokens": 5,
+        "status": "tracked"
+      },
+      {
+        "path": "js/biography/sources/knight-training.json",
+        "identityMatches": 5,
+        "privatePathTokens": 0,
+        "status": "tracked"
+      },
+      {
+        "path": "js/biography/sources/public-biographies.json",
+        "identityMatches": 11,
+        "privatePathTokens": 5,
+        "status": "tracked"
+      },
+      {
+        "path": "netlify/build/site-build-tasks.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 28,
+        "status": "tracked"
+      },
+      {
+        "path": "netlify/tests/site-build.test.mjs",
+        "identityMatches": 0,
+        "privatePathTokens": 4,
+        "status": "tracked"
+      }
+    ],
+    "candidatesNote": "A token match is not proof of secret payload; the preparer applies narrow module transforms, JSON filtering, reviewed data-free exceptions, or baseline retention. Final target must pass both independent audits.",
+    "allowNewSources": [
+      "Vorschau/Solestia/sources/",
+      "Vorschau/Solestia/assets/estates/generated/",
+      "Vorschau/Venalys/sources/",
+      "Vorschau/Venalys/assets/estates/generated/",
+      "Fonts/Ishtaran-Gesamtpaket-1.000/",
+      "Fonts/Tlapanui-Gesamtpaket-2.000/"
+    ]
+  },
+  "methodChanges": [
+    {
+      "path": "diagnostics/combat-sheets-20261102/prepare-public-worktree.mjs",
+      "changes": [
+        "Use same local private-recognition index as independent auditor; values remain in memory.",
+        "Withhold new argall-captain diagnostic path variant.",
+        "Filter embedded recognized private identity/name strings and JSON keys, not only exact scalar values.",
+        "Withhold filenames that contain recognized private identities.",
+        "Preserve public Cenyr coverage builder by removing its private-record import and initializing empty denied sets in the already-filtered target only.",
+        "Keep reviewed Ishtaran name-audit source that names an excluded directory but contains no private identity data."
+      ]
+    }
+  ],
+  "checks": {
+    "preparerSyntax": true,
+    "syntheticPolicyTests": {
+      "passed": true,
+      "count": 8,
+      "checks": [
+        "embedded-private-identity-string-removed",
+        "embedded-private-name-string-removed",
+        "new-private-diagnostic-path-withheld",
+        "solestia-and-venalys-originals-kept",
+        "public-language-archives-kept",
+        "unrelated-public-data-unchanged"
+      ],
+      "privateFixtureValues": "synthetic only; no real private identity appears in output or test file",
+      "writes": 0
+    },
+    "publicSourcePublicationTests": {
+      "command": "node --test --experimental-test-isolation=none netlify/tests/frontend-source-publication.test.mjs netlify/tests/house-source-publication.test.mjs",
+      "passed": 7,
+      "failed": 0
+    },
+    "actualTargetPrivacyAudits": "Pending root projection/application; no target or publication audit pass is claimed here."
+  },
+  "deletions": {
+    "count": 22,
+    "paths": [
+      "CharakterDatenbank/records/familien/haus-twyllod/glendower-o-cenyr--glendower-o-cenyr/character.json",
+      "Stammbäume/assets/data/published-families/backups/haus-draig/r00000003-20261101T040507211Z-d75209f37d9933178eaca88a0aae4da669fbd370b669151e9ec09c4549e7c572.json",
+      "Stammbäume/assets/data/published-families/backups/haus-draig/r00000004-20261102T210946589Z.json",
+      "Stammbäume/assets/data/published-families/backups/haus-draig/r00000004-20261103T001715223Z-400d7893e9abacd8f11cbb4bdda008c469f9d1513346bd229847081c5d0dc5aa.json",
+      "diagnostics/combat-sheets-20261102/final-public-privacy-verification.json",
+      "diagnostics/combat-sheets-20261102/public-preparation.json",
+      "diagnostics/combat-sheets-20261102/public-quest-index-refresh.json",
+      "diagnostics/reference-catalogs-20261103/audit-public-database-projections.mjs",
+      "diagnostics/reference-catalogs-20261103/check-public-database-integrity.mjs",
+      "diagnostics/reference-catalogs-20261103/economy-line-ending-reseal.json",
+      "diagnostics/reference-catalogs-20261103/final-reference-verification.tap",
+      "diagnostics/reference-catalogs-20261103/firebase-deployment-verification.json",
+      "diagnostics/reference-catalogs-20261103/public-database-full-privacy-audit.json",
+      "diagnostics/reference-catalogs-20261103/public-database-integrity.json",
+      "diagnostics/reference-catalogs-20261103/public-preflight-continuation-summary.json",
+      "diagnostics/reference-catalogs-20261103/public-privacy-verification.json",
+      "diagnostics/reference-catalogs-20261103/reconcile-public-glendower-path.mjs",
+      "diagnostics/reference-catalogs-20261103/reconcile-stored-public-projections.mjs",
+      "diagnostics/reference-catalogs-20261103/reference-focused-tests.tap",
+      "diagnostics/reference-catalogs-20261103/release-files.json",
+      "diagnostics/reference-catalogs-20261103/source-fixture-copy.json",
+      "netlify/docs/releases/2026-11-02-public.md"
+    ],
+    "retainedArchive": {
+      "location": "C:/Users/fhg_r/AppData/Local/Temp/aleria-archive-dedupe-20261103",
+      "head": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+      "byteIdenticalCount": 22,
+      "totalBytes": 926029,
+      "verifiedBy": "Independent solestia_heraldry read-only HEAD-byte audit",
+      "preserve": true
+    },
+    "releaseDecision": {
+      "approvedDeletion": "CharakterDatenbank/records/familien/haus-twyllod/glendower-o-cenyr--glendower-o-cenyr/character.json",
+      "condition": "Parent explicitly approved legacy-path removal if current single biography survives; run canonical identity/database audit.",
+      "other21": "Retain current HEAD baselines in public projection; preserve archived proofs."
+    }
+  },
+  "sourceBoundaries": {
+    "policy": "netlify/build/publication-policy.mjs",
+    "staticSelector": "netlify/build/site-publish.mjs",
+    "gitBoundary": "Separate filtered public worktree plus independent commit-content audit; shouldPublish alone is not a Git privacy gate.",
+    "diagnosticsAndGenerators": "Excluded from static package. Public prompts, methods, provenance and sources may remain in Git; private payloads may not.",
+    "newRealmImages": "Generator originals remain Git sources; runtime production/previews remain public. No deletion or lossy conversion performed.",
+    "inventories": "Mixed JSON/source inventories must be filtered in target and checked for recognized private values. Do not blindly stage source inventories from main workspace."
+  },
+  "commands": [
+    {
+      "phase": "plan-from-main",
+      "command": "node diagnostics/combat-sheets-20261102/prepare-public-worktree.mjs --target=.tmp/release-public-20261104"
+    },
+    {
+      "phase": "apply-from-main",
+      "command": "node diagnostics/combat-sheets-20261102/prepare-public-worktree.mjs --target=.tmp/release-public-20261104 --apply"
+    },
+    {
+      "phase": "commit-content-audit-from-main",
+      "command": "node diagnostics/combat-sheets-20261102/audit-public-worktree.mjs --target=.tmp/release-public-20261104"
+    },
+    {
+      "phase": "refresh-database-integrity-in-public-target",
+      "command": "node diagnostics/reference-catalogs-20261103/check-public-database-integrity.mjs",
+      "workingDirectory": ".tmp/release-public-20261104",
+      "note": "The retained HEAD helper derives its root from its own file location and has no --target switch. Rebuild the integrity report after approved legacy-path deletion."
+    },
+    {
+      "phase": "database-and-catalog-audit-from-main",
+      "command": "node diagnostics/reference-catalogs-20261103/audit-public-database-private-links.mjs --target=.tmp/release-public-20261104 --catalogs",
+      "prerequisite": ".tmp/release-public-20261104/diagnostics/reference-catalogs-20261103/public-database-integrity.json must exist; auditor consumes its findings. Existing integrity helper is in preserved archive worktree."
+    },
+    {
+      "phase": "generated-projection-rebuild-if-needed",
+      "commands": [
+        "node Karten/tools/build-households.mjs",
+        "node AleriaAlmanach/scripts/build-regional-equipment.mjs",
+        "node js/biography/build-public-biographies.mjs",
+        "node AleriaAlmanach/scripts/build-quest-catalog.mjs"
+      ],
+      "note": "Run only in public target, after filtering, as needed to restore current public generated projections. Verify required inputs exist; do not regenerate from private main-workspace inputs."
+    },
+    {
+      "phase": "stage-after-audits",
+      "command": "Review git -C .tmp/release-public-20261104 status --porcelain=v1 -z; stage only verified public target changes and approved legacy-path deletion. Never stage main workspace wholesale."
+    },
+    {
+      "phase": "commit",
+      "command": "Create reviewed public target commit with [skip netlify]; no history rewrite."
+    },
+    {
+      "phase": "master-ref-after-public-commit",
+      "command": "In main workspace: git reset --mixed <verified-public-commit>",
+      "note": "Keeps all private working files unchanged while moving master/index to the reviewed descendant. Confirm ancestry and no concurrent Git operations."
+    },
+    {
+      "phase": "attach-public-target",
+      "command": "git -C .tmp/release-public-20261104 checkout --ignore-other-worktrees master",
+      "note": "Only when target HEAD and master already equal the same verified public commit. No content changes expected; main workspace must remain idle during release."
+    },
+    {
+      "phase": "release-from-public-target",
+      "command": "node netlify/release/release.mjs --publish --push"
+    }
+  ],
+  "blockersBeforePublishing": [
+    "Do not stage/push main private authoring workspace directly.",
+    "Independent public target identity/commit and database/catalog audits must pass.",
+    "Preserve current single Glendower identity while removing only explicitly approved legacy path.",
+    "Run established release validation after all current public source work is frozen."
+  ],
+  "preserved": [
+    "Full main authoring sources and raw originals",
+    "Existing private archive worktree",
+    "Git history and index",
+    "Live Firebase resources and person relationships",
+    "diagnostics/solestia/source-original-audit.json",
+    "diagnostics/solestia/estate-source-audit.json"
+  ],
+  "auditWrites": [
+    "diagnostics/release-20261104/preflight-review.json"
+  ],
+  "limitations": [
+    "No credentials, network sessions or production state read.",
+    "No commit, push, deploy, cleanup or application of public projection performed by reviewer.",
+    "File counts are a named snapshot; refresh when staging because parallel authorized work continued."
+  ]
+}

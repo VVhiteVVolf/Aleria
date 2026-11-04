@@ -9,9 +9,9 @@ vm.runInNewContext(readFileSync(new URL('../../AleriaAlmanach/modules/language/l
 const scripts = context.window.AleriaLanguageScripts;
 const languages = noticeLanguageFonts(scripts.entries);
 
-test('eight real local handwriting fonts and all twelve canonical language scripts are available', () => {
+test('eight real local handwriting fonts and all fourteen canonical language scripts are available', () => {
   assert.equal(NOTICE_HANDWRITING.length, 8);
-  assert.equal(languages.length, 12);
+  assert.equal(languages.length, 14);
   for (const font of [...NOTICE_HANDWRITING, ...languages]) {
     assert.ok(existsSync(new URL(font.url)), font.family);
     for (const dependency of font.dependencies || []) assert.ok(existsSync(new URL(dependency)), dependency);

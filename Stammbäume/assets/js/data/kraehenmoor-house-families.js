@@ -5,13 +5,13 @@ import {
 import { HOUSE_HJERTE_FAMILY } from './house-hjerte-family.js';
 import { HOUSE_JAERNBLOD_FAMILY } from './house-jaernblod-family.js';
 import { HOUSE_BLUTSTAHL_FAMILY } from './house-blutstahl-family.js';
-import { HOUSE_FEUERHERZ_FAMILY } from './house-feuerherz-family.js';
-import { HOUSE_GOLDGLANZ_FAMILY } from './house-goldglanz-family.js';
+import { HOUSE_FEUERHERZ_FAMILY } from './house-feuerherz-family.js?v=20261104-life-status-v1';
+import { HOUSE_GOLDGLANZ_FAMILY } from './house-goldglanz-family.js?v=20261104-life-status-v1';
 import { HOUSE_KALTHERZ_FAMILY } from './house-kaltherz-family.js';
-import { HOUSE_SCHATTENHERZ_FAMILY } from './house-schattenherz-family.js';
+import { HOUSE_SCHATTENHERZ_FAMILY } from './house-schattenherz-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_SCHWARZBLUT_FAMILY } from './house-schwarzblut-family.js';
 import { HOUSE_SCHWARZSTOLZ_FAMILY } from './house-schwarzstolz-family.js';
-import { HOUSE_SILBERBLUT_FAMILY } from './house-silberblut-family.js';
+import { HOUSE_SILBERBLUT_FAMILY } from './house-silberblut-family.js?v=20261104-life-status-v1';
 import { HOUSE_VRAGI_FAMILY } from './house-vragi-family.js';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS,

@@ -262,6 +262,9 @@ body.creature-profile-open { overflow: hidden; }
 .creature-attribute-grid { display: grid; grid-template-columns: repeat(3, minmax(90px, 1fr)); gap: 0.45rem; }
 .creature-attribute-grid label { display: grid; grid-template-columns: 1fr 3.3rem; gap: 0.35rem; align-items: center; padding: 0.42rem; border: 1px solid rgba(135, 92, 46, 0.4); }
 .creature-attribute-grid label > span { grid-column: 1 / -1; }
+.creature-attribute-grid label > small { grid-column: 1 / -1; font-size: 11px; }
+.creature-dossier-attributes small { display: block; font-size: 10px; }
+.creature-condition-mechanics { grid-column: 1 / -1; }
 .creature-attribute-grid label b { color: var(--creature-ink); text-align: center; }
 
 .creature-table { overflow-x: auto; }

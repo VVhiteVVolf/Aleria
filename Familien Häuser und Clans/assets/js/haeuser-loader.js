@@ -8,8 +8,8 @@
   start();
 
   function start() {
-    const requestedId = readRequestedId();
-    const entry = findEntry(requestedId) || findDefaultEntry();
+    const { id: requestedId, explicit } = readHouseRequest();
+    const entry = findEntry(requestedId) || (explicit ? null : findDefaultEntry());
 
     if (!entry) {
       withRoot(() => renderMissingState(requestedId));
@@ -29,19 +29,19 @@
     loadDataScript(entry);
   }
 
-  function readRequestedId() {
+  function readHouseRequest() {
     const params = new URLSearchParams(window.location.search);
     const fallbackId = getRoot()?.dataset.defaultId || "";
-    return normalizeId(
-      params.get("haus")
+    const explicitId = params.get("haus")
       || params.get("haeuser")
       || params.get("house")
       || params.get("familie")
       || params.get("clan")
-      || params.get("id")
-      || window.location.hash.slice(1)
-      || fallbackId
-    );
+      || params.get("id");
+    return {
+      id: normalizeId(explicitId || window.location.hash.slice(1) || fallbackId),
+      explicit: Boolean(explicitId),
+    };
   }
 
   function findEntry(id) {

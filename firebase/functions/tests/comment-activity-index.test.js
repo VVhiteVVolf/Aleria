@@ -9,7 +9,7 @@ test('derived summaries follow edits/deletions and reject a late older snapshot 
   const writes = [];
   const database = {
     collection(name) {
-      if (name === 'comments') return { where: (_field, _operator, thread) => ({ select: () => ({ get: async () => ({ docs: comments.filter(comment => comment.entryId === thread).map(comment => ({ id: comment.id, data: () => comment })), readTime: { seconds, nanoseconds: 0 } }) }) }) };
+      if (name === 'comments') return { where: (_field, _operator, thread) => ({ select: (...fields) => ({ get: async () => ({ docs: comments.filter(comment => comment.entryId === thread).map(comment => ({ id: comment.id, data: () => Object.fromEntries(fields.filter(field => Object.hasOwn(comment, field)).map(field => [field, comment[field]])) })), readTime: { seconds, nanoseconds: 0 } }) }) }) };
       assert.equal(name, 'comment_activity');
       return { doc: id => id };
     },
@@ -25,9 +25,15 @@ test('derived summaries follow edits/deletions and reject a late older snapshot 
   seconds = 1; comments[0] = { ...comments[0], text: 'late original' };
   await refreshCommentThreadActivity(thread, database);
   assert.equal(stored.get(ref).recentComments[0].text, 'edited');
-  seconds = 4; comments = [];
+  seconds = 4; comments.push({ id: 'quiet-reset', entryId: thread, createdAtClient: 5,
+    commentKind: 'scene-regeneration-event', serverValidatedMechanics: true,
+    sceneRegeneration: { participants: [{ actorId: 'gawain' }] } });
+  await refreshCommentThreadActivity(thread, database);
+  assert.equal(stored.get(ref).commentCount, 1);
+  assert.deepEqual(stored.get(ref).recentComments.map(comment => comment.id), ['one']);
+  seconds = 5; comments = [];
   await refreshCommentThreadActivity(thread, database);
   assert.equal(stored.get(ref).commentCount, 0);
   assert.deepEqual(stored.get(ref).recentComments, []);
-  assert.equal(writes.length, 3);
+  assert.equal(writes.length, 4);
 });

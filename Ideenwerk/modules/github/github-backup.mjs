@@ -1,18 +1,9 @@
+import {createGitHubRepositoryClient,encodeGitHubPath as encodePath} from './github-repository-client.mjs';
 export const BACKUP_BRANCH='ideenwerk-backup';
 const MARKER='.ideenwerk-backup.json';
 const COMMIT_MESSAGE='Ideenwerk: Projektsicherung [skip ci] [skip netlify]';
-function encodePath(path){return path.split('/').map(encodeURIComponent).join('/');}
 export function createGitHubBackupClient({token,repository,fetchRef=globalThis.fetch}) {
-  if(!/^[A-Za-z0-9][A-Za-z0-9-]*\/[A-Za-z0-9_.-]+$/.test(repository))throw new Error('Repository bitte als Benutzer/Repository eintragen.');
-  if(!token.trim())throw new Error('Bitte einen GitHub-Zugriffstoken eintragen.');
-  const base=`https://api.github.com/repos/${repository}`;
-  async function request(path,{method='GET',body,allow404=false}={}) {
-    let response;
-    try{response=await fetchRef(`${base}${path}`,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token.trim()}`,'X-GitHub-Api-Version':'2026-03-10',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(30000),cache:'no-store',credentials:'omit',redirect:'error'});}catch{throw new Error('GitHub ist gerade nicht erreichbar. Deine lokale Arbeit ist weiterhin vorhanden.');}
-    if(response.status===404&&allow404)return null;
-    if(!response.ok){const error=new Error(({401:'Der GitHub-Token ist ungültig oder abgelaufen.',403:'Kein Schreibzugriff. Der Token benötigt für dieses Repository „Contents: Read and write“.',404:'Repository oder Backup-Branch nicht gefunden. Bitte Ziel und Token-Berechtigungen prüfen.',409:'Das Repository ist leer oder wurde gleichzeitig verändert. Bitte mit einer README initialisieren bzw. das Ziel erneut prüfen.',422:'Der Backup-Branch wurde gleichzeitig verändert oder ist geschützt. Bitte das Ziel erneut prüfen.'})[response.status]||`GitHub-Anfrage fehlgeschlagen (HTTP ${response.status}).`);error.status=response.status;throw error;}
-    return response.json();
-  }
+  const request=createGitHubRepositoryClient({token,repository,fetchRef});
   async function inspect() {
     const repo=await request('');
     if(repo.default_branch===BACKUP_BRANCH)throw new Error('Der Backup-Branch darf nicht der Standardbranch sein. Bitte ein eigenes, initialisiertes Backup-Repository verwenden.');

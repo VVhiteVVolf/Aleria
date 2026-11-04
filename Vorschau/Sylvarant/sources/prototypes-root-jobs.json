@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "id": "prototype-07",
+      "houseId": "house-pullo",
+      "exclusiveHouseId": "house-pullo",
+      "category": "warriors",
+      "assetStem": "house-pullo",
+      "name": "Arkaner Schattenkämpfer · Pullo",
+      "role": "Arkaner Schattenkämpfer",
+      "description": "Ein geheimnisvoller junger Schattenkämpfer des Hauses Pullo mit geschlossener spätrömischer Helmmaske unter einer tiefvioletten Kapuze. Zwei Schwerter, dunkler edler Plattenpanzer und ein kleines Delfinzeichen greifen die Loyalität und Geheimhaltung des Hauses auf.",
+      "equipment": [
+        "Zwei Schwerter",
+        "Geschlossener Helm mit Kapuze",
+        "Edler dunkler Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Violett",
+        "Goldgelb",
+        "Dunkles Eisen"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. Asset type: Sylvarant – exklusiver Pullo-Hauskrieger und siebter Klassenprototyp, arkaner Schattenkämpfer. Bildreferenz1 liefert NUR den freigegebenen Malstil. Bildreferenz2 ist das tatsächliche erhaltene Pullo-Wappen und bestimmt die Palette und ein klein getragenes Delfinzeichen. Keine bloße Umfärbung des Referenzritters.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nMotiv: Ein junger erwachsener Mensch von etwa25Jahren, schlank-athletischer Mann mit anatomisch menschlichen abgerundeten Ohren. Das Haus Pullo sind die Schatten der Mede, für Geheimhaltung und Spionage bekannt. Darstellung einer Rolle, keine konkrete benannte Person oder erfundener Amtsträger. Er trägt wohlhabende, funktionale lateinisch-römische Rüstung mit ritterlichem Hauch: dunkler matteisenfarbener geschichteter Brustpanzer über engem Kettenhemd, kurze römische Pteryges aus tiefviolettem Leder, geschlossene Plattenunterarme und Schienbeine, ein zweigeteilter dunkler purpurfarbener Mantel. Goldgelbe dezente Saum- und Beschlagakzente greifen das Pullo-Wappen auf; ein kleiner violetter Delfin auf einer mattgoldenen Brustplakette, kein schwebendes Wappen. Visage durch einen geschlossenen spätrömischen Helm mit schmalen horizontalen Augenschlitzen und schlichten Wangenplatten verdeckt; darüber eine tiefe stoffene Kapuze. KEIN griechischer oder korinthischer Helm und kein westlicher Standard-Topfhelm. Die Helmform ist unter der Kapuze noch lesbar. Keine sichtbare alte oder dicke Person.\n\nBewaffnung: genau ZWEI funktionale lateinische Schwertklingen, je eine in jeder Hand, beide in ruhiger wacher Bereitschaft schräg seitlich nach unten gehalten. Keine gekreuzten, verschmolzenen Griffe; beide Hände haben klare Anatomie. Kein Schild, keine dritte gezogene Waffe. Das Arkane und Nebulöse entsteht durch dunkle verdeckte Silhouette, Schatten in der Kapuze und sehr sparsame violette unregelmäßige Gravurornamente auf dem getragenen Panzer; KEIN Szenennebel, keine Außenwolken, kein leuchtender Augen-Effekt oder definierter neuer Zauber. Ruhige aufrechte Dreiviertel-Ganzkörperpose, Beine leicht versetzt, kein Angriff. Der Eindruck ist geheimnisvoll, loyal und gefährlich, zugleich edel und präzise gerüstet.\n\n1024x1536 PNG, echter transparenter Alphakanal außen und in allen Zwischenräumen. Ganzer Kopf, beide ganzen Schwertspitzen, sämtliche Mantelzipfel und beide Füße vollständig imBild mit bequemem freien Rand. Keine Umgebung, Bodenfläche, äußerenSchatten/Glow/Schrift/Wasserzeichen. Der Prototyp ist AUSSCHLIESSLICH HausPullo zugeordnet; keine anderen Häuser damit illustrieren.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "C:/Users/fhg_r/Downloads/Länder/Das Kaiserreich Argentum/Sylvarant/Pullo.png"
+      ]
+    }
+  ]
+}

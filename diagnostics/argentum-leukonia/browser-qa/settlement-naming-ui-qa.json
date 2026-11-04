@@ -1,0 +1,371 @@
+{
+  "date": "2026-11-03",
+  "tabId": "1982820749",
+  "cities": [
+    {
+      "id": "ort-01",
+      "name": "Vespranum",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-02",
+      "name": "Castelvara",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-03",
+      "name": "Aurelissa",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-04",
+      "name": "Velostria",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-05",
+      "name": "Lacervia",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-06",
+      "name": "Sarnetum",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-07",
+      "name": "Lorentum",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-08",
+      "name": "Porto Nerante",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-09",
+      "name": "Valestrum",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-10",
+      "name": "Riventia",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-11",
+      "name": "Velcaris",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-12",
+      "name": "Caeloria",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-13",
+      "name": "Clusentia",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-14",
+      "name": "Castrena",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-15",
+      "name": "Porto Lascio",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-16",
+      "name": "Savinara",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-17",
+      "name": "Lacastella",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-18",
+      "name": "Bellavento",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-19",
+      "name": "Tervanto",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-20",
+      "name": "Arventium",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-21",
+      "name": "Porto Salvo",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    },
+    {
+      "id": "ort-22",
+      "name": "Porto Vessaro",
+      "card": true,
+      "option": true,
+      "mapLabel": true
+    }
+  ],
+  "originals": [
+    {
+      "name": "Alvanista",
+      "card": true,
+      "option": true
+    },
+    {
+      "name": "Aspio",
+      "card": true,
+      "option": true
+    },
+    {
+      "name": "Zaphias",
+      "card": true,
+      "option": true
+    },
+    {
+      "name": "Allantaic",
+      "card": true,
+      "option": true
+    }
+  ],
+  "oldLabels": [],
+  "placementsUnchanged": true,
+  "selectionUnchanged": true,
+  "portoLascio": {
+    "before": {
+      "name": "Ort 15 (Name offen)",
+      "style": "left:12%;top:56.6722%"
+    },
+    "after": {
+      "name": "Porto Lascio",
+      "style": "left:12%;top:56.6722%"
+    },
+    "positionUnchanged": true
+  },
+  "dossiers": [
+    {
+      "facts": [
+        {
+          "label": "Sitz im Entwurf",
+          "value": "Aurelissa"
+        },
+        {
+          "label": "Rang",
+          "value": "Archon"
+        },
+        {
+          "label": "Rahmen",
+          "value": "Gold"
+        }
+      ],
+      "imagesLoaded": true,
+      "title": "Haus Pelagia",
+      "expectedSeat": "Aurelissa",
+      "seatMatches": true
+    },
+    {
+      "facts": [
+        {
+          "label": "Sitz im Entwurf",
+          "value": "Bellavento"
+        },
+        {
+          "label": "Rang",
+          "value": "Archon"
+        },
+        {
+          "label": "Rahmen",
+          "value": "Bronze"
+        }
+      ],
+      "imagesLoaded": true,
+      "title": "Haus Orania",
+      "expectedSeat": "Bellavento",
+      "seatMatches": true
+    },
+    {
+      "facts": [
+        {
+          "label": "Sitz im Entwurf",
+          "value": "Arventium"
+        },
+        {
+          "label": "Rang",
+          "value": "Archon"
+        },
+        {
+          "label": "Rahmen",
+          "value": "Silber"
+        }
+      ],
+      "imagesLoaded": true,
+      "title": "Haus Apinia",
+      "expectedSeat": "Arventium",
+      "seatMatches": true
+    }
+  ],
+  "largeMap": {
+    "imageLoaded": true,
+    "labelCount": 22,
+    "labels": [
+      {
+        "clipped": false,
+        "name": "Vespranum"
+      },
+      {
+        "clipped": false,
+        "name": "Castelvara"
+      },
+      {
+        "clipped": false,
+        "name": "Aurelissa"
+      },
+      {
+        "clipped": false,
+        "name": "Velostria"
+      },
+      {
+        "clipped": false,
+        "name": "Lacervia"
+      },
+      {
+        "clipped": false,
+        "name": "Sarnetum"
+      },
+      {
+        "clipped": false,
+        "name": "Lorentum"
+      },
+      {
+        "clipped": false,
+        "name": "Porto Nerante"
+      },
+      {
+        "clipped": false,
+        "name": "Valestrum"
+      },
+      {
+        "clipped": false,
+        "name": "Riventia"
+      },
+      {
+        "clipped": false,
+        "name": "Velcaris"
+      },
+      {
+        "clipped": false,
+        "name": "Caeloria"
+      },
+      {
+        "clipped": false,
+        "name": "Clusentia"
+      },
+      {
+        "clipped": false,
+        "name": "Castrena"
+      },
+      {
+        "clipped": false,
+        "name": "Porto Lascio"
+      },
+      {
+        "clipped": false,
+        "name": "Savinara"
+      },
+      {
+        "clipped": false,
+        "name": "Lacastella"
+      },
+      {
+        "clipped": false,
+        "name": "Bellavento"
+      },
+      {
+        "clipped": false,
+        "name": "Tervanto"
+      },
+      {
+        "clipped": false,
+        "name": "Arventium"
+      },
+      {
+        "clipped": false,
+        "name": "Porto Salvo"
+      },
+      {
+        "clipped": false,
+        "name": "Porto Vessaro"
+      }
+    ],
+    "open": true,
+    "portoLascioStyle": "left:12%;top:56.6722%"
+  },
+  "pinLabels": [
+    "Haus Lex · Alvanista · Archon",
+    "Haus Pelagia · Aurelissa · Archon",
+    "Haus Tremelia · Aspio · Archon",
+    "Haus Mede · Zaphias · Kaiserliche Linie",
+    "Haus Orania · Bellavento · Archon",
+    "Haus Apinia · Arventium · Archon"
+  ],
+  "visualReview": {
+    "originalMapNamesPreserved": true,
+    "portoLascioReadable": true,
+    "portoLascioLabelPosition": "left:12%;top:56.6722%",
+    "labelsInsideMap": true,
+    "existingCrestLayerTouchesSomeAssignedCityLabels": true
+  },
+  "status": "passed-targeted-settlement-naming-check",
+  "screenshot": "browser-qa/settlement-naming-map.jpg"
+}

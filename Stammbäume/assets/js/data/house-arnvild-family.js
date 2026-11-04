@@ -6,7 +6,7 @@ import {
   createMarriage,
   createParentages
 } from './family-record-builders.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { HOUSE_ARNVILD_PORTRAITS } from './house-arnvild-portraits.js';
 import {
   SCHWARZFENN_EXTINCT_HOUSE_GROUPS,

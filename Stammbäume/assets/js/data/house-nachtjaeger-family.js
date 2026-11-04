@@ -265,11 +265,11 @@ export const HOUSE_NACHTJAEGER_FAMILY = Object.freeze({
     awayWoman('asthildr-nachtjaeger', 'Ásthildr Nachtjäger', '1587', '1659', 'Clan Schattenherz'),
     spouse('ulfgar-schattenherz', 'Ulfgar Schattenherz', 'male', '1584', '1632', 'house-schattenherz'),
 
-    person('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1650', {
+    person('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1652', {
       title: 'Hesir des Clans Nachtjäger',
       extensions: { chartCenterBetweenSpousePersonIds: ['ingunn-1614-feuerherz', 'orka-riesentot'] }
     }),
-    spouse('ingunn-1614-feuerherz', 'Ingunn Feuerherz', 'female', '1614', '1645', 'house-feuerherz', { title: 'Erste Ehefrau Sturlaugrs' }),
+    spouse('ingunn-1614-feuerherz', 'Ingunn Feuerherz', 'female', '1614', '1651', 'house-feuerherz', { title: 'Erste Ehefrau Sturlaugrs' }),
     spouse('orka-riesentot', 'Orka Riesentot', 'female', '1630', '1704', 'house-riesentot', { title: 'Zweite Ehefrau Sturlaugrs' }),
     awayWoman('valdis-nachtjaeger', 'Valdís Nachtjäger', '1614', '1701', 'Clan Vragi'),
     spouse('hrafnkell-vragi', 'Hrafnkell Vragi', 'male', '1610', '1677', 'house-vragi'),
@@ -328,8 +328,8 @@ export const HOUSE_NACHTJAEGER_FAMILY = Object.freeze({
     marriage('marriage-ketill-gudrun-freiwinter'),
     marriage('marriage-vidarr-arnkatla-nachtjaeger'),
     marriage('marriage-asthildr-ulfgar-nachtjaeger'),
-    alignPartnerOverChildren(marriage('marriage-sturlaugr-ingunn-nachtjaeger'), 'ingunn-1614-feuerherz'),
-    marriage('marriage-sturlaugr-orka-nachtjaeger'),
+    alignPartnerOverChildren(marriage('marriage-sturlaugr-ingunn-nachtjaeger', { status: 'ended', end: '1651' }), 'ingunn-1614-feuerherz'),
+    marriage('marriage-sturlaugr-orka-nachtjaeger', { status: 'ended', end: '1652' }),
     marriage('marriage-valdis-hrafnkell-nachtjaeger'),
     marriage('marriage-joekull-malfrid-nachtjaeger'),
     marriage('marriage-kjartan-gunnhildr-nachtjaeger'),

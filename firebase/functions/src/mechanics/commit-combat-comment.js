@@ -80,7 +80,8 @@ function ruleSelectionDescriptors(entry) {
   const selections = Array.isArray(entry?.segment?.combatAction?.ruleSelections)
     ? entry.segment.combatAction.ruleSelections
     : [];
-  return selections.slice(0, 20).map(selection => ({
+  if (selections.length > 20) fail('invalid-argument', 'Ein Kampfabschnitt unterstützt höchstens 20 ausgewählte Unterstützungsregeln. Entferne überzählige Auswahlen.');
+  return selections.map(selection => ({
     role: 'rule-source',
     actorId: cleanText(selection?.sourceActorId, 240),
     ruleId: cleanText(selection?.ruleId, 160),
@@ -105,7 +106,8 @@ function combatSegments(metadata) {
         if (!targetId || seenTargets.has(targetId)) return false;
         seenTargets.add(targetId);
         return true;
-      }).slice(0, 20);
+      });
+      if (submissions.length > 20) fail('invalid-argument', 'Ein Kampfabschnitt unterstützt höchstens 20 unterschiedliche Ziele. Entferne überzählige Ziele vor dem Speichern.');
       return submissions.map((submitted, targetIndex) => ({
         segment,
         index,
@@ -817,4 +819,4 @@ export async function commitCombatCommentOperation(request, {
 export const commitCombatComment = onCall({ region: 'europe-west1', maxInstances: 20, concurrency: 20,
   enforceAppCheck: false, timeoutSeconds: 30 }, request => commitCombatCommentOperation(request));
 
-export const combatCommentInternals = Object.freeze({ consumeAbilityUse, getEffectiveCommentResources });
+export const combatCommentInternals = Object.freeze({ consumeAbilityUse, getEffectiveCommentResources, combatSegments, ruleSelectionDescriptors });

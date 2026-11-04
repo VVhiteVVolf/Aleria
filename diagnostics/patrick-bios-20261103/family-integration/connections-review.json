@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "id": "cadogan-parents",
+      "confirmed": true,
+      "evidence": "Gareth + existing unnamed mother"
+    },
+    {
+      "id": "cadogan-siblings",
+      "confirmed": true,
+      "evidence": "Fflur and Colwyn"
+    },
+    {
+      "id": "cadogan-gwen-daughters",
+      "confirmed": true,
+      "evidence": "Eluned/Meinwen, both existing parents"
+    },
+    {
+      "id": "rhiannon-parents",
+      "confirmed": true,
+      "evidence": "Ifor + Nest"
+    },
+    {
+      "id": "rhiannon-siblings",
+      "confirmed": true,
+      "evidence": "Afan/Meurig/Caradog"
+    },
+    {
+      "id": "rhiannon-children",
+      "confirmed": true,
+      "evidence": "Gareth/Meredith/Rhydwen"
+    },
+    {
+      "id": "rhiannon-father-in-law",
+      "confirmed": true,
+      "evidence": "Emyr is Iestyn parent"
+    },
+    {
+      "id": "rhiannon-nieces-nephews",
+      "confirmed": true,
+      "evidence": "Six named relatives descend from her existing brothers"
+    }
+  ],
+  "conservation": [
+    {
+      "id": "haus-sgrechiwr",
+      "topologyUnchanged": true,
+      "houseProfileDocumentUnchanged": true,
+      "personCountUnchanged": true,
+      "allWorldIdentitiesUnchanged": true
+    },
+    {
+      "id": "haus-draenmelyn",
+      "topologyUnchanged": true,
+      "houseProfileDocumentUnchanged": true,
+      "personCountUnchanged": true,
+      "allWorldIdentitiesUnchanged": true
+    },
+    {
+      "id": "haus-swyll",
+      "topologyUnchanged": true,
+      "houseProfileDocumentUnchanged": true,
+      "personCountUnchanged": true,
+      "allWorldIdentitiesUnchanged": true
+    }
+  ],
+  "confirmedCorrections": [
+    {
+      "field": "Cadogan birthplace stat",
+      "from": "Gwynthor",
+      "to": "Lynthor",
+      "evidence": "His own uploaded Geschichte & Vergangenheit explicitly names Lynthor."
+    },
+    {
+      "field": "Rhiannon role",
+      "from": "Bedienstete des Hauses Draig",
+      "to": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
+      "evidence": "Her new biography describes this current office."
+    }
+  ],
+  "genealogicalConflicts": [],
+  "editorialNotes": [
+    {
+      "field": "Rhiannon parent card Nest Draenmelyn",
+      "note": "Graph records Nest without a birth-house surname. No extra ancestry or house identity inferred."
+    },
+    {
+      "field": "Perle narrative Ryfel",
+      "note": "Original card spelling retained; actual bestiary binding uses existing Rhyfel profile."
+    }
+  ],
+  "finalSharedSource": {
+    "raw": "e32aadac151628796112c87cb1c73d212bd20300d752d32f0518b2e0d2137332",
+    "factory": "18e21bfd58a315b26fe114ab1e76c8965832bfc7fd58656ad19a120449e78102",
+    "generated": "d992fd6ccc1142d799b86c1ca1e920bccdf7674f46448d7fa5c1edd9896f85d7"
+  },
+  "familyAddition": {
+    "id": "haus-hamnett",
+    "profile": {
+      "rankId": "commoner",
+      "county": "Silberinsel",
+      "kingdom": "Cenyr",
+      "seat": "",
+      "barony": "",
+      "liegeHouseId": ""
+    },
+    "projectionWorldPersonId": "person--family-tree--unknown-cadogan-spouse",
+    "newWorldPeople": 0,
+    "newGenealogicalEdges": 0,
+    "individualResidence": "Gwynthor"
+  },
+  "verifiedOriginalImageAliases": {
+    "count": 5,
+    "manifest": "AleriaAlmanach/modules/patrick-biographies/biography-assets.originals.json",
+    "originalSourcePreserved": true
+  }
+}

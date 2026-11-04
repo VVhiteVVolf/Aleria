@@ -47,7 +47,7 @@ test('known house crests and allegiance chains follow existing family records', 
   assert.equal(pin('gwynthor-marking-041').dominionId, 'cw-haus-penrudd');
   assert.equal(pin('gwynthor-marking-080').dominionId, 'cw-haus-penrudd');
   assert.equal(pin('gwynthor-marking-138').house, 'Familie Twyllod');
-  assert.match(pin('gwynthor-marking-138').crestLink, /family=haus-twyllod/);
+  assert.equal(pin('gwynthor-marking-138').crestLink, '/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-twyllod');
   assert.deepEqual([pin('gwynthor-marking-138').x, pin('gwynthor-marking-138').y], [.9609375, .6537460317460319]);
   assert.equal(node('cw-haus-bradrhith').parentId, 'cw-haus-awenydd');
   assert.equal(node('cw-haus-tlawd').parentId, 'msa3c53vomlanj');

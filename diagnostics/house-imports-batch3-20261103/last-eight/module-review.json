@@ -1,0 +1,972 @@
+{
+  "expected": 15,
+  "available": 15,
+  "houses": [
+    {
+      "id": "haus-pysgod",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-blaidd-tredegar",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-brithyll",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-gwialen",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-illygoden-tredegar",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-gwaedlyd-tredegar",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-coedwig",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-draenog",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-wivern",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-morfil",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-lyfant-caer-asgwrn",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        },
+        {
+          "name": "Cledwyn leads southern Lyfant line",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-dornach",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-brathaireann",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-tonnmharra",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "haus-tanwyn",
+      "checks": [
+        {
+          "name": "existing graph unchanged",
+          "passed": true
+        },
+        {
+          "name": "canonical profile unchanged",
+          "passed": true
+        },
+        {
+          "name": "module present",
+          "passed": true
+        },
+        {
+          "name": "canonical seat",
+          "passed": true
+        },
+        {
+          "name": "canonical county",
+          "passed": true
+        },
+        {
+          "name": "canonical rank",
+          "passed": true
+        },
+        {
+          "name": "military profile omitted",
+          "passed": true
+        },
+        {
+          "name": "source genealogy and empty prompts absent",
+          "passed": true
+        },
+        {
+          "name": "no statistical military headcounts",
+          "passed": true
+        },
+        {
+          "name": "person cards bind existing named people",
+          "passed": true
+        },
+        {
+          "name": "main figure resolves locally",
+          "passed": true
+        },
+        {
+          "name": "original figure bytes preserved",
+          "passed": true
+        },
+        {
+          "name": "generated page data present",
+          "passed": true
+        },
+        {
+          "name": "existing family read-only iframe",
+          "passed": true
+        },
+        {
+          "name": "Tanwyn remains historical without a current ruler",
+          "passed": true
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "protectedOrigins": [
+    {
+      "id": "haus-blaidd",
+      "graphUnchanged": true,
+      "profileUnchanged": true,
+      "revisionUnchanged": true
+    },
+    {
+      "id": "haus-illygoden",
+      "graphUnchanged": true,
+      "profileUnchanged": true,
+      "revisionUnchanged": true
+    },
+    {
+      "id": "haus-gwaedlyd",
+      "graphUnchanged": true,
+      "profileUnchanged": true,
+      "revisionUnchanged": true
+    },
+    {
+      "id": "haus-lyfant",
+      "graphUnchanged": true,
+      "profileUnchanged": true,
+      "revisionUnchanged": true
+    }
+  ],
+  "failed": [],
+  "complete": true
+}

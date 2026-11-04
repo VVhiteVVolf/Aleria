@@ -1,0 +1,79 @@
+{
+  "id": "haus-skald",
+  "source": {
+    "attachmentId": "72d0e77f-461c-4ab4-9b42-a77baa9001f0",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\72d0e77f-461c-4ab4-9b42-a77baa9001f0\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/skald/animexx-original.html",
+    "bytes": 124616,
+    "sha256": "45dd7b6b7642a981c00cd4ce9c67985df32694c837e6c0e1b131d4d8348bc10a",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-skald",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-brathfengr",
+      "liegeHouseName": "Clan Brathfengr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-skald",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "skald",
+    "familyId": "haus-skald",
+    "attachmentId": "72d0e77f-461c-4ab4-9b42-a77baa9001f0",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/1XhQ5ZF.png",
+    "path": "Stammbäume/assets/images/references/haus-skald/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 315005,
+    "sha256": "02802d281c75fb57aebbfb31d7a99b176e6fc1ff458a85ee820dd98e8db9c9e6",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-skald",
+    "url": "https://i.imgur.com/1XhQ5ZF.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-skald/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Singende weibliche Hausfigur mit Harfe, Rundschild und originaler Felsbasis.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-3.png"
+  },
+  "decisions": [
+    "Hier gehört die vollständige Windrufer-Erzählung als eigentliche Ursprungsgeschichte hin. Sie ist nicht automatisch die persönliche Chronik aller drei Schülerhäuser.",
+    "Die Befreiung des albischen Dorfes und die spätere Bedeutung Klangheims bleiben Gründungsüberlieferung; keine neue Chronologie oder Datierung erzeugen.",
+    "Der kulturell bedeutende Gründer begründet keinen höheren heutigen Rang: Das Profil bleibt Hesire unter Brathfengr.",
+    "Die Quelle nennt Neutralität im Prätendentenkrieg. Leere Kapitel zu Besitz, Ritualen und Religion werden nicht erfunden.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

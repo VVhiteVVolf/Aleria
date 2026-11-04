@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "house-pool-07-v2",
+      "houseId": "pool-07",
+      "assetStem": "house-pool-07-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Ritter",
+      "description": "Ritter in dunkelgrünem und silbernem Harnisch mit rotem Mantel, geschlossenem spanischem Cabasset ohne Krempenkamm und Weinschlauchzeichen. Beide Hände liegen auf dem Großschwert.",
+      "equipment": [
+        "Großschwert, senkrecht aufgestellt",
+        "Schwerer Platten- und Kettenharnisch",
+        "Geschlossener spanischer Cabasset mit glatter hoher Birnenkalotte",
+        "Roter Mantel"
+      ],
+      "palette": [
+        "Lederrot",
+        "Elfenbein",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "mount": null,
+      "references": [
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated/house-pool-07.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit ONLY THE HELMET on the first referenced Solestia BOTA-wineskin house knight. The second reference supplies ONLY the approved matte simplified painting style. Preserve everything below the helmet EXACTLY: same silver/dark-green heavy plates, red cloak, small red bota chest badge with ivory spout/cord, posture, two overlapping gauntleted hands on the pommel of the same complete upright broad greatsword, green/red slashed trousers, full legs/feet, colors and framing. Do not redesign or recolor the body, do not change sword length or hands.\n\nThe current first-image helmet is a MORION with a tall applied central crest and broad curled boat-shaped brim. REMOVE that outline completely. Replace it with a clearly DIFFERENT closed Spanish CABASSET helmet:\nA smooth HIGH PEAR-SHAPED conical silver skull, narrowing gently to a pointed/rounded peak made from the skull itself; no applied ridge, no giant crest, no plume. Its sides are narrow and smooth without broad swept-out wings. At the back only a SMALL SHORT neck guard, at the front no pointed or upturned brim. A small straight hinged face visor attached directly beneath the rounded brow, narrow single eye slit and EXACTLY FOUR neat VERTICAL breathing slots on the flat face mask. No round perforation matrix. The closed visor descends with straight nearly parallel edges and a small chin plate; matte silver with one restrained thin gold-bronze edge and one tiny hinge. The whole silhouette should look like a tall smooth pear/cone over a compact straight visor, NOT like the old crested morion, NOT a Corinthian T-nose helmet, NOT a western bucket greathelm or sallet. No feathers, horns, scrollwork or large crest. Keep a natural human head proportion under this helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nExact1024x1536 transparent PNG, calm complete full-body silhouette unchanged, helmet top/swordtip/soles fully within canvas. True alpha transparency outside and in open gaps, no floor, background, exterior halo, haze or shadow. Keep matte muted pigments, thin soft painted contours and even fine grain; no CGI, glossy3D, photorealism, typography or watermark. Only the new smooth cabasset silhouette and visor details may change.",
+      "supersedesAssetStem": "house-pool-07"
+    }
+  ]
+}

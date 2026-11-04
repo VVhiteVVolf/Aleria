@@ -1,0 +1,7 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {FAMILY_REGISTRY} from '../../Stammbäume/assets/js/data/families.registry.js';
+const catalog=JSON.parse(readFileSync('Gallerien/krieger/data/catalog.json','utf8'));
+const sources=['haus-arth','haus-pawen','haus-crafanc','haus-diafol-talgarth','haus-cwningod','haus-blodyn-talgarth','haus-blodyn-aberdail','haus-dianc-aberdail','haus-arfordir-aberdail','haus-dyfrgi-caer-cryftlawd','haus-walwrs-caer-deheuol','haus-unigol','haus-morthwyll','haus-eirth','haus-selwyn','haus-ard-follmhar'];
+const result=FAMILY_REGISTRY.filter(record=>record.folderPath[0]==='Cenyr'&&record.folderPath[1]==='Klaueninsel'&&!sources.includes(record.id)).map(record=>({id:record.id,title:record.title,profile:record.houseProfile,folderPath:record.folderPath,sourceRevision:record.family.extensions.sourceRevision||0,emblem:record.family.document.emblem,motto:record.family.document.motto,description:record.family.document.description,biography:record.family.extensions.houseBiographyModule,sourceNote:record.family.extensions.sourceNote,people:record.family.persons,images:catalog.illustrations.filter(image=>image.houseIds.includes(record.id)).map(({id,image,sources})=>({id,image,sources}))}));
+writeFileSync(new URL('lower-houses.json',import.meta.url),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result.map(({id,title,profile,images,description,people})=>({id,title,rank:profile.rankId,images:images.map(i=>i.image),description,people:people.length})),null,2));

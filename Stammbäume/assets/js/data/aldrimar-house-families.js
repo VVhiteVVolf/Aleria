@@ -4,10 +4,10 @@ import {
   ALDRIMAR_HOUSE_PROFILES
 } from './aldrimar-house-profiles.js';
 import { HOUSE_VARULV_FAMILY } from './house-varulv-family.js';
-import { HOUSE_VARANGR_FAMILY } from './house-varangr-family.js';
-import { HOUSE_WARGH_FAMILY } from './house-wargh-family.js';
+import { HOUSE_VARANGR_FAMILY } from './house-varangr-family.js?v=20261104-lore-fixes-v1';
+import { HOUSE_WARGH_FAMILY } from './house-wargh-family.js?v=20261104-life-status-v1';
 import { HOUSE_RAGNULF_FAMILY } from './house-ragnulf-family.js';
-import { HOUSE_VAEREN_FAMILY } from './house-vaeren-family.js';
+import { HOUSE_VAEREN_FAMILY } from './house-vaeren-family.js?v=20261104-lore-fixes-v1';
 
 export const ALDRIMAR_JARL_CLAN_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'vaeren', title: 'Clan Vaeren', jarltum: 'Kronental', royal: true }),

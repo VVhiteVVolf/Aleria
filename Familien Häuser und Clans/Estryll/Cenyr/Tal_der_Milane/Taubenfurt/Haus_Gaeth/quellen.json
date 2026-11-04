@@ -1,0 +1,35 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-gaeth",
+  "attachmentId": "dd08cbc0-fde4-4ca3-b825-e594d8fb610c",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "f0fae8e6d66bc735665de3b6c64e0f42604ea208f7011cd179eb4c5bdd1650d1",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hauskrieger",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/5Uk7FbB.png",
+      "sha256": "cdfbfd844d121863a9b65425f517938ebe5bb824f05af7ca083bd8f8d89e3644",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-gaeth",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-gaeth-family.js",
+    "Stammbäume/assets/js/data/house-gaeth-portraits.js",
+    "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryNumbersOmitted": true
+}

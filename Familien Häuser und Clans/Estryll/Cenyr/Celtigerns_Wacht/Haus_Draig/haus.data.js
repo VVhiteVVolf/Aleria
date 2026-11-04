@@ -536,7 +536,7 @@ window.HAEUSER_DATA = {
           {
             "name": "Gruffyd Draig",
             "role": "",
-            "detail": "1169–1172",
+            "detail": "1169–1171",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draig&mode=view&person=gruffyd-draig",
             "imageKey": "hof-heads-6"
           },

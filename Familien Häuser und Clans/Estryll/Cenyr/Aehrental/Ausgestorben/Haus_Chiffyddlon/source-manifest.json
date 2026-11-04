@@ -1,0 +1,44 @@
+{
+  "source": {
+    "attachmentId": "51f39ce8-c331-4cb0-9c7c-9c5bfa360dfc",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "bcb11bb6da430c92491afdf36452b4ac2f74e7bcc80021353023aac438a4e955"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-chiffyddlon",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-chiffyddlon",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 4,
+    "currentSeat": "",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Ritterliche Hausdarstellung",
+      "localPath": "assets/hausdarstellung-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "note": "Ergänzende Darstellung; keine neue benannte Person oder genealogische Aussage.",
+      "sha256": "bbc2b257b870a8649de4a883516d3dfe0927ab027540c8b35b0a2db836cac3d1",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json"
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Das O’Glyndraith im überlieferten Namen erzeugt keinen heutigen Stammsitz. Der aktuelle Sitz bleibt leer."
+  ]
+}

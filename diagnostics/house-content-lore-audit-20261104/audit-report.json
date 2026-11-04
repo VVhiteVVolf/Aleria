@@ -1,0 +1,56 @@
+{
+  "schema": "aleria.public-house-content-lore-audit-summary",
+  "date": "2026-11-04",
+  "status": "complete-read-only-review",
+  "request": "Inhaltliche Lorefehler in Haus- und Clangeschichten von Leitheach, Cenyr und Aldrimar; keine Stammbaumchronologie.",
+  "productFilesChanged": false,
+  "scope": {
+    "publicCurrentHouseSourcesInventoried": 418,
+    "Cenyr": 277,
+    "Aldrimar": 112,
+    "Leitheach": 29,
+    "method": "Broad narrative screening with structured territorial comparison and targeted cross-house verification. Not a claim of exhaustive sentence-by-sentence proof of every narrative.",
+    "exclusions": ["Private or secret dossiers", "Live user-authored biography drafts", "Genealogical chronology and status arithmetic", "Ignored supplied genealogy tables", "Military statistics"]
+  },
+  "confirmedSubstantiveFindings": [
+    {
+      "id": "ALD-CONTENT-01",
+      "house": "Varulv",
+      "issue": "The house narrative claims a departure from the Greens in order to join Arn, although Arn's camp is Green.",
+      "report": "aldrimar.json"
+    },
+    {
+      "id": "ALD-CONTENT-02",
+      "house": "Feuerherz",
+      "issue": "Exclusive toll revenue in the house narrative conflicts with the current territory's explicitly diversified economy and active resource use.",
+      "report": "aldrimar.json"
+    },
+    {
+      "id": "cenyr-gwaedlyd-symbolism",
+      "house": "Gwaedlyd O'Tredegar",
+      "issue": "Territorial culture explains a blood-red wolf, but the house tradition and actual active emblem show a shark.",
+      "report": "cenyr.json",
+      "imageVisuallyVerifiedByRoot": "Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-gwaedlyd.png"
+    },
+    {
+      "id": "fiadhrach-elven-description",
+      "house": "Fiadhrach",
+      "issue": "Active house prose calls the clan elven despite the user's explicit no-elves world canon.",
+      "report": "cross-region.json"
+    }
+  ],
+  "leitheachEditorialFindings": [
+    { "id": "leitheach-cumhaill-conflicts-placeholder", "issue": "The Cumhaill page denies recorded feuds although other current house histories describe them.", "report": "leitheach.json" },
+    { "id": "leitheach-laoch-customs-placeholder", "issue": "The Laoch page denies recorded customs but describes regular Senan rituals and talismans.", "report": "leitheach.json" }
+  ],
+  "qualification": [
+    "No confirmed major competing historical narrative was established in Leitheach.",
+    "Gwefrydd's royal versus comital elevation may reflect delegation; it remains a question, not a proven contradiction.",
+    "Lyfant's exile versus ancestral return requires an unstated earlier connection; it remains narrative drift under review, not a proven impossibility.",
+    "Different residential towns and territorial castles were retained as questions where the sources may describe different concepts.",
+    "Goldglanz's missing second service connection is incomplete information, not proof that the first connection is false.",
+    "Regional reports also retain lower-priority editorial and structural notes; these are not inflated into additional substantive plot conflicts."
+  ],
+  "sources": ["cenyr.json", "aldrimar.json", "leitheach.json", "cross-region.json"],
+  "publication": { "pushed": false, "deployed": false }
+}

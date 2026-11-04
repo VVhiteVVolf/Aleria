@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { normalizeSkillCheckSettings } from '../modules/skill-checks/skill-check-model.js';
 
 function loadSegmentEditors({ creature = false } = {}) {
   const character = {
@@ -191,4 +192,39 @@ test('Szeneninstanzen von Kreaturen verwenden das Set ihres eigenen Kommentarabs
   assert.equal(actor.name, 'Eule II.');
   assert.equal(actor.portrait, 'https://i.imgur.com/kampf.png');
   assert.equal(actor.emotes[0].img, 'https://i.imgur.com/kampf-emote.png');
+});
+
+test('freie Rettungswurf-Ursachen bleiben in Erstellung, Bearbeitung und lokalem Entwurf erhalten', () => {
+  const context = loadSegmentEditors();
+  Object.assign(context, {
+    normalizeSceneTimeDurationSeconds: value => Number(value) || 5,
+    normalizeCommentLanguage: value => String(value || 'common'),
+    commentKindUsesLanguage: () => false,
+    getSceneTimeSegmentDuration: () => 5,
+    getCommentLanguage: () => 'common'
+  });
+  vm.runInContext(`
+    const _commentKind = 'interact', _selectedEmoteIdx = null, _manualMode = false, _portraitUrl = '';
+    const cause = { actionKind: 'spell', damageType: 'Gift', saveTags: ['fear', 'fear', 'unbekannt'] };
+    const created = makeCommentSegment('interact', 'Lokale Rettung', null, 'left', 5, 'common', '', { mechanicMode: 'skill', skillId: 'save:constitution', skillSaveContext: cause });
+    _commentSegments = [created]; _editCommentSegments = [created];
+    cause.saveTags.push('bleeding');
+  `, context);
+  vm.runInContext(fs.readFileSync(new URL('../modules/comments/comments-draft.js', import.meta.url), 'utf8'), context);
+  const expected = { actionKind: 'spell', damageType: 'gift', saveTags: ['fear', 'poison'] };
+  for (const expression of ['buildCommentSegmentsForSave()[0].skillSaveContext', 'buildEditCommentSegmentsForSave()[0].skillSaveContext', 'getCommentDraftPayload().segments[0].skillSaveContext']) {
+    assert.deepEqual(JSON.parse(JSON.stringify(vm.runInContext(expression, context))), expected, expression);
+  }
+});
+
+test('die klassische Kontext-Transportgrenze stimmt mit der Regelvalidierung überein', () => {
+  const context = loadSegmentEditors();
+  for (const value of [null, {}, { actionKind: 'spell', damageType: 'Feuer', saveTags: ['fear'] },
+    { actionKind: 'invalid', damageType: '<script>', saveTags: ['poison', 'poison', 'wrong'] }, { damageType: 'Gift' }]) {
+    context.input = value;
+    const result = JSON.parse(JSON.stringify(vm.runInContext('normalizeCommentSkillSaveContext(input)', context)));
+    const normalized = normalizeSkillCheckSettings({ saveContext: value }).saveContext;
+    normalized.saveTags.sort();
+    assert.deepEqual(result, normalized);
+  }
 });

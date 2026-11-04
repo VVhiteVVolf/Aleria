@@ -1,0 +1,10 @@
+# Tirghan Ishtarans – Szenenbild
+
+Erstellt am 3. November 2026 mit dem integrierten ImageGen-Werkzeug. Original-PNG bleibt neben der für die Webseite optimierten WebP-Datei erhalten.
+
+Stilgrundlage: `AleriaAlmanach/docs/art/image-style-presets.json`, Preset `anime-scene-portrait`.
+
+## Prompt
+
+Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen.
+Eigenständiges ruhiges Szenenbild für das Sprachmodul Tirghan Ishtarans im Fantasy-Almanach Aleria. Eine erwachsene Gelehrte in schlichter seldschukisch inspirierter blaugrauer Gewandung sitzt am niedrigen hölzernen Schreibpult in einer offenen Madrasa und bespricht eine Manuskriptseite mit einem erwachsenen Schüler in ockerfarbener Kleidung. Beide menschliche Gesichtszüge, natürlich abgerundete Ohren. Ein einfacher Rohrgriffel, ein Tintenfass und ein einziges offenes Manuskript mit winzigen abstrakten bogenförmigen Zeichen als Sprachmotiv. Ruhiger heller Innenhof hinter einem seldschukisch angeregten Steinbogen, ein schmaler Wasserlauf und zurückhaltende blaugrüne Kachelakzente. Ishtaran auf Tirnara ist eine weltliche Kultur der Gelehrsamkeit, Wissenschaft, Balance und Religionsfreiheit; Madrasa hier als Ort des Lernens, keine religiöse Zeremonie und keine religiösen Symbole. Warmes spätes Licht im Hof, kühler Schatten am Pult, klare ruhige Komposition, wenige Requisiten, sanft konzentrierte Mimik. Kein Schriftzug, kein Titel, keine Beschriftungen, keine Wasserzeichen, keine modernen Objekte. Eine einzelne hochformatige Illustration, kein Vergleichsblatt.

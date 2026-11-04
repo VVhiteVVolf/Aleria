@@ -1,0 +1,12 @@
+.culture-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:35px}
+.culture-grid article{padding:24px;background:#eee2c8;border-top:2px solid var(--accent)}
+.culture-grid p{color:var(--muted);font-size:16px}
+.region-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.region-card{min-width:0;padding:24px;background:#eee2c8;border:1px solid var(--line)}
+.region-card>.eyebrow{margin-top:22px}
+.region-card>p:not(.eyebrow){font-size:15px;color:var(--muted)}
+.region-card .art-button img{height:160px}
+.region-card .region-house,.region-card .region-city{font:11px/1.7 var(--sans)}
+@media(max-width:900px){.culture-grid,.region-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.culture-grid,.region-grid{grid-template-columns:1fr}}
+@media print{.region-card{break-inside:avoid}}

@@ -1,5 +1,5 @@
 import { HOUSE_MAC_ARD_CUMHAILL_FAMILY } from '../../data/house-mac-ard-cumhaill-family.js';
-import { HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY } from '../../data/house-fir-an-gallchobhair-family.js';
+import { HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY } from '../../data/house-fir-an-gallchobhair-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_CHULAINN_FAMILY } from '../../data/house-chulainn-family.js';
 import { HOUSE_AILELLA_FAMILY } from '../../data/house-ailella-family.js';
 import { HOUSE_MORNA_FAMILY } from '../../data/house-morna-family.js';

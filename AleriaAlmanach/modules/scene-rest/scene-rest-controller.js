@@ -1,4 +1,6 @@
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
+import { regenerateSceneParticipants } from '../scene-regeneration/scene-regeneration-service.js';
+import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v4';
 import {
@@ -13,16 +15,18 @@ import {
   renderSceneRestCandidates,
   renderSceneRestComment,
   renderSceneRestPreview,
+  renderSceneRegenerationPreview,
   SCENE_REST_ICON_URL,
   setSceneRestStatus,
   setSceneRestSubmitting,
   setSceneRestType,
   updateSceneRestSelectionCount
-} from './scene-rest-ui.js?v=20260906-character-vitality-v1';
+} from './scene-rest-ui.js?v=20261103-scene-regeneration-v1';
 
 const profileResolver = new CombatProfileResolver();
 let activeCandidates = [];
 let activeThreadId = '';
+let submitting = false;
 
 function clone(value) {
   if (!value || typeof value !== 'object') return value;
@@ -83,7 +87,16 @@ function actorFromStoredEntry(entry = {}, availableById = new Map()) {
 function collectSceneParticipantActors(comments, availableById) {
   const actors = new Map();
   comments.forEach(comment => {
-    if (isSceneRestComment(comment)) return;
+    if (isSceneRestComment(comment) || isSilentSceneRegeneration(comment)) return;
+    for (const participant of comment.combatEncounter?.participants || []) {
+      const actor = actorFromStoredEntry({
+        actorId: participant.actorId,
+        sceneActorSourceId: participant.persistence?.sourceCreatureId || participant.sourceId,
+        charName: participant.name,
+        portrait: participant.portrait
+      }, availableById);
+      if (actor?.id) actors.set(String(actor.id), actor);
+    }
     const segments = Array.isArray(comment?.commentSegments)
       ? comment.commentSegments.filter(segment => !segment?.narrator && (segment?.sceneActorId || segment?.actorId || segment?.characterId))
       : [];
@@ -208,6 +221,7 @@ function buildDialogPayload() {
       portrait: candidate.portrait,
       persistence: candidate.profile.persistence,
       recoveryDayKey,
+      recoverPendingDaily: true,
       dayChanged: range.endDay > range.startDay
     }));
   const definition = getSceneRestType(type);
@@ -251,6 +265,10 @@ function updateTimeOutput(range) {
 }
 
 function updatePreview() {
+  if (document.getElementById('scene-rest-type')?.value === 'regenerate') {
+    renderSceneRegenerationPreview(updateSceneRestSelectionCount());
+    return;
+  }
   const payload = buildDialogPayload();
   updateTimeOutput(payload.range);
   renderSceneRestPreview(payload.sceneRest, payload.sceneTimeEvent);
@@ -266,7 +284,8 @@ function setInitialTime(threadId) {
   if (timeInput) timeInput.value = formatClock(start);
 }
 
-function openSceneRestDialog() {
+function openSceneRestDialog(type = 'short') {
+  if (submitting) return;
   const thread = getCurrentThread();
   if (!thread || thread.kind !== 'session') {
     globalThis.showAppStatus?.('Rasten ist nur in interaktiven Szenen verfügbar.', 'error');
@@ -277,14 +296,14 @@ function openSceneRestDialog() {
   ensureSceneRestDialog();
   activeCandidates = buildRestCandidates(activeThreadId);
   renderSceneRestCandidates(activeCandidates);
-  setSceneRestType('short');
+  setSceneRestType(type);
   setInitialTime(activeThreadId);
   const search = document.getElementById('scene-rest-participant-search');
   if (search) search.value = '';
   filterSceneRestCandidates('');
   setSceneRestStatus(activeCandidates.some(candidate => candidate.sceneParticipant)
     ? 'Alle bisherigen Szenenfiguren sind vorausgewählt.'
-    : 'Noch hat keine Figur in dieser Szene kommentiert. Bitte wähle mindestens eine Figur.');
+    : 'Bitte wähle mindestens eine Figur für die Erholung.');
   updatePreview();
   if (typeof globalThis.activateDialog === 'function') {
     globalThis.activateDialog('scene-rest-overlay', { initialFocus: '[data-scene-rest-action="select-type"], input, button' });
@@ -294,6 +313,7 @@ function openSceneRestDialog() {
 }
 
 function closeSceneRestDialog() {
+  if (submitting) return;
   if (typeof globalThis.deactivateDialog === 'function') globalThis.deactivateDialog('scene-rest-overlay');
   else document.getElementById('scene-rest-overlay')?.classList.remove('active');
   activeCandidates = [];
@@ -315,6 +335,15 @@ function getRestCommentText(rest) {
 }
 
 async function submitSceneRest() {
+  if (submitting) return;
+  if (String(globalThis.getCurrentCommentThreadId?.() || '') !== activeThreadId) {
+    setSceneRestStatus('Öffne die Erholung bitte in der aktuellen Szene erneut.', 'error');
+    return;
+  }
+  if (document.getElementById('scene-rest-type')?.value === 'regenerate') {
+    await submitSceneRegeneration();
+    return;
+  }
   const { range, sceneRest, sceneTimeEvent } = buildDialogPayload();
   if (!range.valid) {
     setSceneRestStatus('Bitte eine gültige Beginn-Uhrzeit im Format HH:MM:SS angeben.', 'error');
@@ -333,6 +362,7 @@ async function submitSceneRest() {
     orderKey: globalThis.getNextCommentOrderKey?.(activeThreadId, null) ?? Date.now()
   };
   setSceneRestSubmitting(true);
+  submitting = true;
   setSceneRestStatus('Rast, Zeitfortschritt und Profilwerte werden gemeinsam gespeichert …');
   try {
     const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
@@ -347,6 +377,7 @@ async function submitSceneRest() {
       document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', { detail: { updates: result.profileUpdates } }));
     }
     const threadId = activeThreadId;
+    submitting = false;
     closeSceneRestDialog();
     globalThis.requestCommentAutoScroll?.(threadId);
     await globalThis.loadCommentsIntoPage?.(threadId, true, { page: 'last' });
@@ -359,6 +390,31 @@ async function submitSceneRest() {
       : (error?.message || 'Die Rast konnte nicht gespeichert werden.');
     setSceneRestStatus(message, 'error');
   } finally {
+    submitting = false;
+    setSceneRestSubmitting(false);
+  }
+}
+
+async function submitSceneRegeneration() {
+  const selectedIds = getSelectedActorIds();
+  const selected = activeCandidates.filter(candidate => selectedIds.has(candidate.actorId));
+  if (!selected.length) {
+    setSceneRestStatus('Wähle mindestens eine Figur aus.', 'error');
+    return;
+  }
+  const threadId = activeThreadId;
+  submitting = true;
+  setSceneRestSubmitting(true);
+  setSceneRestStatus('');
+  try {
+    await regenerateSceneParticipants(threadId, selected, getCachedComments(threadId));
+    submitting = false;
+    closeSceneRestDialog();
+    await globalThis.loadCommentsIntoPage?.(threadId, true);
+  } catch (error) {
+    setSceneRestStatus(error?.message || 'Die Figuren konnten nicht regeneriert werden.', 'error');
+  } finally {
+    submitting = false;
     setSceneRestSubmitting(false);
   }
 }
@@ -367,7 +423,9 @@ document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-scene-rest-action]');
   if (!trigger) return;
   const action = trigger.dataset.sceneRestAction;
+  if (submitting) return;
   if (action === 'open') openSceneRestDialog();
+  if (action === 'open-regeneration') openSceneRestDialog('regenerate');
   if (action === 'close') closeSceneRestDialog();
   if (action === 'select-type') {
     setSceneRestType(trigger.dataset.restType || 'short');

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "revision": "20261104",
+  "geometry": {
+    "width": 6144,
+    "height": 3524
+  },
+  "maps": [
+    {
+      "id": "normal",
+      "sourceFile": "Alternative Maps/Venalys Normal.png",
+      "sha256": "08cba4befe661c28485a78438b3fbb780334f820aa0fac74a9b94d1b7b35a1da",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "original": "Vorschau/Venalys/sources/originals/map-20261104.png",
+      "publishedOriginal": false,
+      "noGeometryEdits": true,
+      "sourcePath": "C:/Users/fhg_r/Downloads/Venalys/Alternative Maps/Venalys Normal.png"
+    },
+    {
+      "id": "districts",
+      "sourceFile": "Alternative Maps/Venalys Regionen.png",
+      "sha256": "703107ea3c4429cebcfcd78845dc91b90d82f97ab28b89b0f7dbdb118440b397",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "original": "Vorschau/Venalys/sources/originals/map-districts-20261104.png",
+      "publishedOriginal": false,
+      "noGeometryEdits": true,
+      "sourcePath": "C:/Users/fhg_r/Downloads/Venalys/Alternative Maps/Venalys Regionen.png"
+    }
+  ],
+  "webImages": [
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-20261104.png",
+      "sourceSha256": "08cba4befe661c28485a78438b3fbb780334f820aa0fac74a9b94d1b7b35a1da",
+      "path": "Vorschau/Venalys/assets/map.webp",
+      "sha256": "f66bd68cd47dd88d132f956c55538ebdfb00f935669ce08dee2a05fc47271da9",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 2935526
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-20261104.png",
+      "sourceSha256": "08cba4befe661c28485a78438b3fbb780334f820aa0fac74a9b94d1b7b35a1da",
+      "path": "Vorschau/Venalys/assets/map-full.webp",
+      "sha256": "ac2b81527501ae0f3e286cc39255e7ca64505818ed315db709a7babf169510b6",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "bytes": 6609720
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-districts-20261104.png",
+      "sourceSha256": "703107ea3c4429cebcfcd78845dc91b90d82f97ab28b89b0f7dbdb118440b397",
+      "path": "Vorschau/Venalys/assets/map-districts.webp",
+      "sha256": "0865ebe9be1e6e5ec46158ba49eccfe4f0da75dae6e752d5c860c7989753acef",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 2827684
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-districts-20261104.png",
+      "sourceSha256": "703107ea3c4429cebcfcd78845dc91b90d82f97ab28b89b0f7dbdb118440b397",
+      "path": "Vorschau/Venalys/assets/map-districts-full.webp",
+      "sha256": "ba0c95967afc0a7b85a1c79a93c88f355457ca2f8a1fff6f0b3c30463fc70729",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "bytes": 6376156
+    }
+  ],
+  "originalsPreserved": true,
+  "sourceDirectory": "C:/Users/fhg_r/Downloads/Venalys/Alternative Maps"
+}

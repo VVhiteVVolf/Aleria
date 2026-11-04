@@ -145,7 +145,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": true,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-brithyll"
         }
       ]
     }

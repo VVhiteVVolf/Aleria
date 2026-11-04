@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-03",
+  "imageRevision": "mede-v2",
+  "completed": true,
+  "source": "Vorschau/Leukonia/sources/house-warrior-revisions.json",
+  "activeHouseId": "house-mede",
+  "activeAssetStem": "house-mede-v2",
+  "activePrototypeId": "prototype-01",
+  "activeSource": "assets/warriors/generated/house-mede-v2.png",
+  "activeSourceSha256": "f8b2b90670316d02418b6831fa33667f978d9a10b8e369eebe5979e628a21a8e",
+  "activeProduction": "assets/warriors/production/house-mede-v2.png",
+  "activeProductionSha256": "d868aafd48070c639fb9d87447840079de44801028d2c210c4b72bc3ec3021a3",
+  "activePreview": "assets/warriors/previews/house-mede-v2.webp",
+  "activePreviewSha256": "4c725b97fb18469013548da19aef7e00561fe18055387bfd5f103c3476e024b4",
+  "identityAndScope": "Mede retains house-mede, imperial crest and Zaphias domain; only its illustration revision changes.",
+  "preservation": {
+    "otherHouseFiguresUnchanged": 38,
+    "productionAndPreviewHashesMatched": 76,
+    "baseline": "pre-mede-v2-stable-38.json",
+    "previousMedeRawAndProductionAndPreview": "all three checksums match the original seven-house receipt",
+    "suppliedOriginalCrests": "all eight original checksums remain valid"
+  },
+  "publication": {
+    "previousProduction": false,
+    "previousPreview": false,
+    "activeV2Production": true,
+    "activeV2Preview": true,
+    "suppliedMedeCrest": true
+  },
+  "finalActivePairing": {
+    "houses": 39,
+    "houseWarriors": 39,
+    "uniqueSourceAndProductionHashes": 39,
+    "prototypeImagesReused": false,
+    "manifestEntriesIncludingPreviousMede": 47
+  },
+  "verification": {
+    "leukoniaContractTestsPassed": 14,
+    "sharedPlacementTestsPassed": 5,
+    "publicationTestsPassed": 13,
+    "totalTargetedTestsPassed": 32,
+    "runner": "node --test --experimental-test-isolation=none"
+  },
+  "previousHistoricalAudit": "contract-audit-2026-11-03.json",
+  "materialDefects": [],
+  "visualReview": {
+    "file": "Vorschau/Leukonia/assets/warriors/previews/house-mede-v2.webp",
+    "findings": [
+      "Deutlich reichere geschlossene Plattenr?stung mit antiken Pteryges und geschlossenem Lorbeerhelm.",
+      "Petrolfarbener Prunkmantel, Goldarbeit und Olivenzweige vermitteln die ausdr?cklich gew?nschte kaiserliche Pracht.",
+      "Helmbusch, beide gepanzerten F??e, Schwertspitze und ovaler Schild vollst?ndig sichtbar."
+    ],
+    "materialDefects": []
+  }
+}

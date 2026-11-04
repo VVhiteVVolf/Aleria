@@ -16,7 +16,7 @@ import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
 import { TRAHERN_DRAIG_BIOGRAPHY } from './person-biographies/trahern-draig.js';
 import { MYRIAD_DRAIG_BIOGRAPHY } from './person-biographies/myriad-draig.js';
 import { GAWAIN_PUBLIC_BIOGRAPHY, GAWAIN_PUBLIC_SUMMARY } from '../../../../AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs';
-import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
+import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20261104-lore-fixes-v1';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
@@ -381,7 +381,7 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
     person('esyllt-arth', 'Esyllt Arth', 'female', '1696', '????', 'house-arth', { familyRole: 'affair' }),
     person('nesta', 'Nesta', 'female', '????', '????', '', { familyRole: 'affair' }),
     person('matilda', 'Matilda', 'female', '????', '????', '', { familyRole: 'affair' }),
-    person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'affair' }),
+    person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1725', 'house-cenyr', { familyRole: 'affair' }),
     person(
       ARGALL_DRAIG_AFFAIR.shylene.id,
       ARGALL_DRAIG_AFFAIR.shylene.name,

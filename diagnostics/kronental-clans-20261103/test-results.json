@@ -1,0 +1,154 @@
+{
+  "status": "pass",
+  "tests": 105,
+  "failures": 0,
+  "runs": [
+    {
+      "path": "Familien Häuser und Clans/tests/kronental-house-pages.test.mjs",
+      "chunk_id": "eb2280",
+      "wall_time_seconds": 4.4678637,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 753.4392\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/kraehenmoor-house-pages.test.mjs",
+      "chunk_id": "926152",
+      "wall_time_seconds": 4.3610604,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 580.5486\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/schwarzfenn-house-pages.test.mjs",
+      "chunk_id": "50ce17",
+      "wall_time_seconds": 4.045102,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 357.0678\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/ivarsheim-house-pages.test.mjs",
+      "chunk_id": "f61197",
+      "wall_time_seconds": 4.2543426,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 236.7665\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/roriksheim-house-pages.test.mjs",
+      "chunk_id": "c7ecb2",
+      "wall_time_seconds": 4.481449,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..10\r\n# tests 10\r\n# suites 0\r\n# pass 10\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 592.2848\r\n"
+    },
+    {
+      "path": "Stammbäume/tests/vennyr-warrior-images.test.js",
+      "chunk_id": "86221a",
+      "wall_time_seconds": 4.1738998,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..9\r\n# tests 9\r\n# suites 0\r\n# pass 9\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 396.0525\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/prepared-house-content.test.mjs",
+      "chunk_id": "185a5e",
+      "wall_time_seconds": 1.1353897,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..9\r\n# tests 9\r\n# suites 0\r\n# pass 9\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 50.6893\r\n"
+    },
+    {
+      "path": "Familien Häuser und Clans/tests/house-content-scope.test.mjs",
+      "chunk_id": "f5a04e",
+      "wall_time_seconds": 0.8077315,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..8\r\n# tests 8\r\n# suites 0\r\n# pass 8\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 30.6267\r\n"
+    },
+    {
+      "path": "Gallerien/krieger/tests/gallery-catalog.test.mjs",
+      "chunk_id": "039aab",
+      "wall_time_seconds": 4.9681113,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..9\r\n# tests 9\r\n# suites 0\r\n# pass 9\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 487.4806\r\n"
+    },
+    {
+      "path": "Gallerien/krieger/tests/scoped-catalog.test.mjs",
+      "chunk_id": "152d44",
+      "wall_time_seconds": 1.3707394,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "1..12\r\n# tests 12\r\n# suites 0\r\n# pass 12\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 53.1752\r\n"
+    },
+    {
+      "path": "netlify/tests/house-source-publication.test.mjs",
+      "chunk_id": "db89ac",
+      "wall_time_seconds": 1.703557,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..4\r\n# tests 4\r\n# suites 0\r\n# pass 4\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 21.3798\r\n"
+    },
+    {
+      "path": "netlify/tests/frontend-source-publication.test.mjs",
+      "chunk_id": "f0a682",
+      "wall_time_seconds": 1.9037671999999999,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..3\r\n# tests 3\r\n# suites 0\r\n# pass 3\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 21.8919\r\n"
+    },
+    {
+      "path": "netlify/tests/reference-art-publication.test.mjs",
+      "chunk_id": "c2bb66",
+      "wall_time_seconds": 1.3733081,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "1..1\r\n# tests 1\r\n# suites 0\r\n# pass 1\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 15.6597\r\n"
+    }
+  ],
+  "consistency": [
+    {
+      "check": "house-content --houses=<29> --check",
+      "exitCode": 0,
+      "log": "diagnostics/kronental-clans-20261103/check-house-content.txt"
+    },
+    {
+      "check": "gallery --houses=<29> --check",
+      "exitCode": 0,
+      "log": "diagnostics/kronental-clans-20261103/check-gallery.txt"
+    },
+    {
+      "check": "git diff --check for task paths",
+      "exitCode": 0
+    }
+  ],
+  "finalFocusedRuns": [
+    {
+      "suite": 0,
+      "tests": 10,
+      "passed": 10,
+      "log": "diagnostics/kronental-clans-20261103/final-suite-0.txt"
+    },
+    {
+      "suite": 8,
+      "tests": 9,
+      "passed": 9,
+      "log": "diagnostics/kronental-clans-20261103/final-suite-8.txt"
+    },
+    {
+      "suite": 9,
+      "tests": 12,
+      "passed": 12,
+      "log": "diagnostics/kronental-clans-20261103/final-suite-9.txt"
+    }
+  ],
+  "unrelatedWorkspaceWhitespace": {
+    "path": "AleriaAlmanach/modules/landing/group-landing-scenes.js",
+    "line": 34,
+    "message": "new blank line at EOF",
+    "changedByThisTask": false,
+    "blockingForThisTask": false
+  }
+}

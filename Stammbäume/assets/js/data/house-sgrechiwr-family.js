@@ -8,6 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_SGRECHIWR_PORTRAITS } from './house-sgrechiwr-portraits.js';
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
+import { withPatrickBiographyFamily } from './patrick-biography-family-overlay.js';
 
 const SGRECHIWR_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png';
 const SGRECHIWR_HOUSE_ID = 'house-sgrechiwr';
@@ -68,7 +69,7 @@ const FFLUR_IDS = ['fflur-sgrechiwr', 'unknown-fflur-spouse'];
 const GODWYN_IDS = ['godwyn-sgrechiwr', 'aerona-balchder'];
 const AMLODD_IDS = ['amlodd-sgrechiwr', 'unknown-amlodd-spouse'];
 
-export const HOUSE_SGRECHIWR_FAMILY = Object.freeze({
+export const HOUSE_SGRECHIWR_FAMILY = Object.freeze(withPatrickBiographyFamily({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -253,4 +254,4 @@ export const HOUSE_SGRECHIWR_FAMILY = Object.freeze({
     blankFamily: false,
     sourceRevision: 1
   }
-});
+}));

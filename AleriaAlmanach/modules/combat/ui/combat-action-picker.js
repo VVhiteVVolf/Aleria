@@ -56,6 +56,14 @@ export function bindActionPicker(composer, actor = {}) {
     select.dispatchEvent(new Event('change', { bubbles: true }));
   };
   bindActionTable(composer, actor, select, choose);
+  composer.addEventListener('click', event => {
+    const shortcut = event.target.closest('[data-combat-select-action]');
+    if (!shortcut) return;
+    const action = (actor.actions || []).find(entry => entry.id === shortcut.dataset.combatSelectAction);
+    if (!action || action.compatible === false) return;
+    select.value = action.id;
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+  });
   picker.addEventListener('click', event => {
     const option = event.target.closest('[data-combat-action-option]');
     if (option) choose(option);

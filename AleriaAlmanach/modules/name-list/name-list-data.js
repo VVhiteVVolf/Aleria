@@ -40,7 +40,7 @@ function sanitizeNameListData(data = {}) {
     archiveLabel: String(data.archiveLabel || 'Namensarchiv').trim(),
     introduction: String(data.introduction || '').trim(),
     ornamentText: String(data.ornamentText || 'Rheunwaith').trim(),
-    ornamentStyle: ['rheunwaith', 'ogham', 'karnrith', 'laerelis', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'plain'].includes(ornamentStyle) ? ornamentStyle : 'plain',
+    ornamentStyle: ['rheunwaith', 'ogham', 'karnrith', 'laerelis', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'tlapanui', 'ishtaran', 'plain'].includes(ornamentStyle) ? ornamentStyle : 'plain',
     groups: sanitizeNameListGroups(data.groups),
     footer: String(data.footer || 'Aleria Almanach · Namensarchiv').trim()
   };

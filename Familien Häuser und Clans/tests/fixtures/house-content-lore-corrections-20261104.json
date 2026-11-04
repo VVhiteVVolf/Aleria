@@ -1,0 +1,236 @@
+{
+  "schema": "aleria.reviewed-house-content-lore-expectations",
+  "date": "2026-11-04",
+  "families": {
+    "haus-varulv": {
+      "biographyFingerprint": "4bf3dc58b8617dd242095ad4815f2dfc1a6fd989c36bc73d4b126575d23a35ce",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-content-lore-v1",
+      "biographyChanged": true,
+      "previousBiography": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Clan Varulv",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/references/haus-varulv/krieger.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Varulv sind der Jarlsclan von Roriksheim. Von Rorikshall im Rorikstal aus stehen sie über den großen Clans des Jarltums und dienen dem Königshaus Vaeren. Ihre Stellung verbindet die Verantwortung für das Land mit einer ausgeprägten Kriegertradition.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Clan Varulv"
+          ],
+          [
+            "Rang",
+            "Jarl"
+          ],
+          [
+            "Stammsitz",
+            "Rorikshall"
+          ],
+          [
+            "Jarltum",
+            "Roriksheim"
+          ],
+          [
+            "Oberhaupt",
+            "Gleipnir Varulv"
+          ],
+          [
+            "Erbe",
+            "Geri Varulv"
+          ],
+          [
+            "Lehnsherr",
+            "Clan Vaeren"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über den Clan",
+          "biographyText": "Die Varulv sind der Jarlsclan von Roriksheim. Von Rorikshall im Rorikstal aus stehen sie über den großen Clans des Jarltums und dienen dem Königshaus Vaeren. Ihre Stellung verbindet die Verantwortung für das Land mit einer ausgeprägten Kriegertradition.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Im Krieg der Prätendenten zerbrach die geplante Verbindung zum Königshaus durch den Giftmord an Astrid Varulv und König Roger Vaeren. Eldar Varulv schloss sich daraufhin Arn Vaeren an. Während Eldar zeitweise verwundet war, belasteten die unterschiedlichen Fraktionen seiner Vasallen die Herrschaft zusätzlich.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Mut und raue Entschlossenheit prägen das überlieferte Bild des Clans. Die Aufnahme in den Kreis seiner Krieger verlangt jedoch ebenso den Zusammenhalt der Gemeinschaft: Selbst ein besonders starker Anwärter muss sich auf seine Gefährten verlassen können."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Bei der Huskarlprüfung stellen sich Anwärter dem Rausch des Berserkerpilzes. Andere Clansleute müssen sie dabei bändigen und schützen. Der geweihte Armreif kennzeichnet die bestandene Prüfung. Kettenpanzer, ergänzende Metallplatten, Pelzbesätze und Streitäxte gehören zum beschriebenen Erscheinungsbild ihrer Krieger."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Rorikshall ist der Sitz des Jarlsclans; das Rorikstal bildet seinen unmittelbaren Herrschaftsraum innerhalb Roriksheims."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Kultur und Glaube",
+              "text": "Die Silvanische Symbiose der Varulv ist eine erbliche Bindung an den Wolf. Sie ist vom Rausch der Huskarlprüfung zu unterscheiden und geht weder auf das Pilzritual noch auf einen Zatrach-Fluch zurück."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die Freiwinter hielten den Varulv im Prätendentenkrieg die Treue. Schwarzdorn, Kampfgeborene, Skaal und Nachtjäger verfolgten zeitweise andere Interessen. Nach dem Krieg halfen Heiratsallianzen, die Beziehungen zu Skaal und Skald zu beruhigen; das Misstrauen verschwand dadurch nicht vollständig."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+              "title": "Clan Varulv · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-varulv"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    },
+    "haus-feuerherz": {
+      "biographyFingerprint": "7b00e88234e025aa7912203c3c1a99569ceb3443d7d0634352e412df325ce3da",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-content-lore-v1",
+      "biographyChanged": true,
+      "previousBiography": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Clan Feuerherz",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Clan Feuerherz ist ein Hesirenclan von Moortal in Nebelmoor unter den Varangr. Er führt sein Erbe auf die Hjerte zurück und verbindet diesen Anspruch mit offener Rede, leidenschaftlichem Mut und einer ausgeprägten Abneigung gegen Täuschung.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Clan Feuerherz"
+          ],
+          [
+            "Rang",
+            "Hesire"
+          ],
+          [
+            "Stammsitz",
+            "Moortal"
+          ],
+          [
+            "Jarltum",
+            "Krähenmoor"
+          ],
+          [
+            "Oberhaupt",
+            "Lythar Feuerherz"
+          ],
+          [
+            "Erbe",
+            "Rolfur Feuerherz"
+          ],
+          [
+            "Lehnsherr",
+            "Clan Varangr"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-feuerherz.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über den Clan",
+          "biographyText": "Clan Feuerherz ist ein Hesirenclan von Moortal in Nebelmoor unter den Varangr. Er führt sein Erbe auf die Hjerte zurück und verbindet diesen Anspruch mit offener Rede, leidenschaftlichem Mut und einer ausgeprägten Abneigung gegen Täuschung.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Das Haus entstand, als Fjalmar sich im Streit um die Führung der Hjerte von seinem Bruder Kjalmar trennte. Aus derselben Spaltung gingen die Kaltherzen hervor, deren berechnende Art den Feuerherzen als Verrat an den Tugenden des Stammclans gilt. Im Prätendentenkrieg unterstützten sie den Jarl. Der gemeinsame Gegner dämpfte die Fehde zeitweise; nach dem Krieg lebte sie wieder auf.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Tapferkeit, Ehrlichkeit und Loyalität stehen über Reichtum und raffinierter Politik. Die Feuerherzen tragen das Herz auf der Zunge und stehen offen zu ihren Taten. Dieselbe Entschlossenheit kann in Sturheit und unbedachte Angriffe umschlagen, wenn Stolz oder Ehre berührt werden."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Kinder sollen lernen, Verantwortung zu übernehmen und ihr Wort zu halten. Im Kampf bevorzugt der Clan Speere, Äxte und Schwerter sowie den unmittelbaren Zusammenstoß. Seine Infanteristen und Waldläufer sind an Nässe, Schlamm und lange Entbehrungen gewöhnt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Besitzungen liegen in den kalten Sümpfen südlich von Moortal, nahe Schimmerküste und Rabenweide. Kleine Holz- und Schilfsiedlungen, schwieriger Boden und morsches Holz begrenzen den Wohlstand. Die Kontrolle von Wald- und Sumpfpfaden sowie Zölle auf den passierbaren Wegen sichern einen bescheidenen Ertrag."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Kultur und Glaube",
+              "text": "Gemeinschaft und gegenseitiger Beistand zählen mehr als Luxus. Die Härte der Heimat ist ein wesentlicher Teil des stolzen Selbstbilds."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die Kaltherzen bleiben die erbitterten Rivalen um das wahre Hjerte-Erbe. Diesen Streit wollen die Feuerherzen durch sichtbaren Mut und offene Überlegenheit entscheiden."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-feuerherz.png",
+              "title": "Clan Feuerherz · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-feuerherz"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    },
+    "haus-fiadhrach": {
+      "biographyFingerprint": "c963e246a920889f148c157aa657d8795dd3f9ab36b1bb693a49cce71c6de4eb",
+      "biographySourceRevision": 2,
+      "contentVersion": "20261104-content-lore-v1",
+      "biographyChanged": false
+    }
+  }
+}

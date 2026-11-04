@@ -1,0 +1,268 @@
+/** Generated runtime metadata. Authoring prompts remain in sources. */
+export const HOUSES = [
+  {
+    "id": "house-ducal",
+    "name": "Haus Alveira",
+    "crest": "assets/originals/previews/solestia.webp",
+    "fullsize": "assets/originals/solestia.png",
+    "original": "assets/originals/solestia.png",
+    "ready": true,
+    "motif": "Ein schwarzer Stierkopf vor einer goldenen Strahlensonne, in einem dunkelgrün-goldenen Blumenrahmen.",
+    "palette": [
+      "Schwarz",
+      "Gold",
+      "Dunkelgrün",
+      "Rot",
+      "Elfenbein"
+    ],
+    "frame": "Dunkelgrün-goldener Blumenrahmen",
+    "culture": "solestia",
+    "rank": "Herzog",
+    "localTitle": "Sobirà",
+    "estateId": "sobira",
+    "sourceSeat": "ort-01",
+    "status": "supplied"
+  },
+  {
+    "id": "pool-01",
+    "name": "Haus Belvar",
+    "crest": "assets/emblems/previews/pool-01.webp",
+    "fullsize": "assets/emblems/production/pool-01.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein elfenbein-burgunderroter Tanzfächer auf Kobaltblau.",
+    "palette": [
+      "Elfenbein",
+      "Burgunderrot",
+      "Kobaltblau",
+      "Gold"
+    ],
+    "frame": "Gold-bordeauxfarbener Kreisrahmen mit geometrischer gezackter Bordüre",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-02",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-02",
+    "name": "Haus Urdain",
+    "crest": "assets/emblems/previews/pool-02.webp",
+    "fullsize": "assets/emblems/production/pool-02.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein Kastagnettenpaar aus schwarzem und ockerfarbenem Holz an roter Kordel auf Creme.",
+    "palette": [
+      "Schwarzholz",
+      "Ocker",
+      "Dunkelrot",
+      "Creme"
+    ],
+    "frame": "Dunkelroter Kreisrahmen mit sparsamen ockerfarbenen Zacken und cremigen Kanten",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-03",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-03",
+    "name": "Haus Olarven",
+    "crest": "assets/emblems/previews/pool-03.webp",
+    "fullsize": "assets/emblems/production/pool-03.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein violetter Safrankrokus mit roten Narben auf Elfenbein.",
+    "palette": [
+      "Violett",
+      "Gold",
+      "Rot",
+      "Elfenbein",
+      "Petrol"
+    ],
+    "frame": "Petrolfarbener Kreisrahmen mit flachen goldenen Blatt- und Punktornamenten",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-04",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-04",
+    "name": "Haus Arzun",
+    "crest": "assets/emblems/previews/pool-04-v2.webp",
+    "fullsize": "assets/emblems/production/pool-04-v2.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein silbernes heraldisch aufbäumendes Hausschwein auf Purpur.",
+    "palette": [
+      "Silber",
+      "Purpur",
+      "Schwarz"
+    ],
+    "frame": "Dunkler geschlossener Kreisrahmen mit hellen silber-elfenbeinfarbenen Ranken wie in der Vorlage",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-05",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-05",
+    "name": "Haus Sorvane",
+    "crest": "assets/emblems/previews/pool-05.webp",
+    "fullsize": "assets/emblems/production/pool-05.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein kobaltblau-elfenbeinfarbener Keramikkrug auf Terrakotta.",
+    "palette": [
+      "Kobaltblau",
+      "Elfenbein",
+      "Terrakotta",
+      "Olivgrün"
+    ],
+    "frame": "Olivgrüner Kreisrahmen mit einer schlichten elfenbeinfarbenen geometrischen Bordüre",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-06",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-06",
+    "name": "Haus Calderan",
+    "crest": "assets/emblems/previews/pool-06.webp",
+    "fullsize": "assets/emblems/production/pool-06.png",
+    "original": null,
+    "ready": true,
+    "motif": "Eine goldene Sonnenuhr auf Petrol.",
+    "palette": [
+      "Mattgold",
+      "Petrol",
+      "Eisengrau"
+    ],
+    "frame": "Eisengrauer Kreisring mit flach gemalten kleinen goldenen Keilornamenten",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-07",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-07",
+    "name": "Haus Navrel",
+    "crest": "assets/emblems/previews/pool-07.webp",
+    "fullsize": "assets/emblems/production/pool-07.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein roter Bota-Weinschlauch mit hellem Ausgießer auf Dunkelgrün.",
+    "palette": [
+      "Lederrot",
+      "Elfenbein",
+      "Dunkelgrün",
+      "Silber"
+    ],
+    "frame": "Geschlossener matter Silberkreis mit sparsamen dunkelgrünen Blattornamenten",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-08",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-08",
+    "name": "Haus Ilarve",
+    "crest": "assets/emblems/previews/pool-08.webp",
+    "fullsize": "assets/emblems/production/pool-08.png",
+    "original": null,
+    "ready": true,
+    "motif": "Eine schwarze Peineta auf goldenem Feld.",
+    "palette": [
+      "Schwarz",
+      "Gold",
+      "Weinrot",
+      "Elfenbein"
+    ],
+    "frame": "Weinrot-elfenbeinfarbener Kreisrahmen mit flacher iberischer Rankenbordüre",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-09",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-09",
+    "name": "Haus Vardena",
+    "crest": "assets/emblems/previews/pool-09.webp",
+    "fullsize": "assets/emblems/production/pool-09.png",
+    "original": null,
+    "ready": true,
+    "motif": "Zwei bronzene Reitersporen auf Nachtblau.",
+    "palette": [
+      "Bronze",
+      "Silber",
+      "Nachtblau"
+    ],
+    "frame": "Geschlossener matter Silberkreis mit kleinen nachtblauen rhombischen Feldern",
+    "culture": "solestia",
+    "rank": "Baron",
+    "localTitle": "Regulo",
+    "estateId": "regulo",
+    "sourceSeat": "ort-10",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-10",
+    "name": "Haus Meroval",
+    "crest": "assets/emblems/previews/pool-10.webp",
+    "fullsize": "assets/emblems/production/pool-10.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein heller Mörser mit Stößel auf Olivgrün.",
+    "palette": [
+      "Elfenbein",
+      "Olivgrün",
+      "Weinrot",
+      "Kupfer"
+    ],
+    "frame": "Weinrot-kupferner geschlossener Kreisrahmen mit wenigen iberischen Blattornamenten",
+    "culture": "solestia",
+    "rank": "Ritterfürst",
+    "localTitle": "Hidalgo",
+    "estateId": "hidalgo",
+    "sourceSeat": "ort-01",
+    "status": "proposal"
+  },
+  {
+    "id": "pool-11",
+    "name": "Haus Zerain",
+    "crest": "assets/emblems/previews/pool-11.webp",
+    "fullsize": "assets/emblems/production/pool-11.png",
+    "original": null,
+    "ready": true,
+    "motif": "Ein heller Hufeisenbogen mit blau-türkisem Azulejo-Muster auf Ocker.",
+    "palette": [
+      "Elfenbein",
+      "Ocker",
+      "Kobaltblau",
+      "Türkis",
+      "Dunkles Holz",
+      "Silber"
+    ],
+    "frame": "Dunkler Holz-Kreisrahmen mit schlichten mattsilbernen Kanten und wenigen geometrischen Einlagen",
+    "culture": "solestia",
+    "rank": "Ritterfürst",
+    "localTitle": "Hidalgo",
+    "estateId": "hidalgo",
+    "sourceSeat": "ort-01",
+    "status": "proposal"
+  }
+];

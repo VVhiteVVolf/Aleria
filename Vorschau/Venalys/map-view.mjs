@@ -2,6 +2,7 @@ import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { targetName } from './assignment-view.mjs';
 
 export function createVenalysMap({ root, targets, districts, houses, geometry, getDraft, onTarget }) {
+  const mappedTargets = targets.filter(target => Array.isArray(target.point));
   const dialog = root.querySelector('#map-dialog');
   const surfaces = [...root.querySelectorAll('[data-role="map-surface"]')];
   const districtIds = new Set(districts.map(d => d.id));
@@ -10,8 +11,8 @@ export function createVenalysMap({ root, targets, districts, houses, geometry, g
 
   function surfaceMarkup(draft, { fullsize = false } = {}) {
     const polygons = districts.filter(d => d.polygon?.length).map(d => `<polygon points="${d.polygon.map(p => p.join(',')).join(' ')}" class="district-shape${activeTarget === d.id ? ' is-active' : ''}" data-action="focus-target" data-target="${e(d.id)}" data-drop-seat="${e(d.id)}" tabindex="0" role="button" aria-label="${e(targetName(d, draft))} auswählen"><title>${e(targetName(d, draft))}</title></polygon>`).join('');
-    const labels = targets.map(t => `<button class="venalys-map-label${districtIds.has(t.id) ? ' district-label' : ''}${activeTarget === t.id ? ' is-active' : ''}" data-action="focus-target" data-target="${e(t.id)}" style="left:${t.point[0]}%;top:${t.point[1]}%">${e(targetName(t, draft))}</button>`).join('');
-    const crests = targets.filter(t => draft.assignments[t.id]?.length).map(t => `<div class="crest-group venalys-crest-group" style="left:${t.point[0]}%;top:${t.point[1]}%">${draft.assignments[t.id].map(id => {
+    const labels = mappedTargets.map(t => `<button class="venalys-map-label${districtIds.has(t.id) ? ' district-label' : ''}${activeTarget === t.id ? ' is-active' : ''}" data-action="focus-target" data-target="${e(t.id)}" style="left:${t.point[0]}%;top:${t.point[1]}%">${e(targetName(t, draft))}</button>`).join('');
+    const crests = mappedTargets.filter(t => draft.assignments[t.id]?.length).map(t => `<div class="crest-group venalys-crest-group" style="left:${t.point[0]}%;top:${t.point[1]}%">${draft.assignments[t.id].map(id => {
       const house = houses.find(h => h.id === id);
       return `<button class="clan-pin" data-clan="${e(id)}" data-action="show-house" data-house="${e(id)}" aria-label="Haus ${e(house.name)} · ${e(targetName(t, draft))}"><img src="${e(house.crest)}" width="40" height="40" alt="Wappen ${e(house.name)}"></button>`;
     }).join('')}</div>`).join('');
@@ -27,7 +28,7 @@ export function createVenalysMap({ root, targets, districts, houses, geometry, g
   function render() {
     const draft = getDraft();
     for (const surface of surfaces) surface.innerHTML = surfaceMarkup(draft, { fullsize: Boolean(surface.closest('dialog')) });
-    root.querySelector('[data-role="map-caption"]').textContent = `${districts.length} Stadtbezirke · ${targets.length - districts.length} Außenorte · Ein Haus kann an mehreren Stellen stehen.`;
+    root.querySelector('[data-role="map-caption"]').textContent = `${districts.length} Stadtbezirke · ${mappedTargets.length - districts.length} Außenorte · Ein Haus kann an mehreren Stellen stehen.`;
     sizeDialog();
   }
 

@@ -1,6 +1,9 @@
 import { readFile, readdir, realpath } from 'node:fs/promises';
 import { isAbsolute, relative, resolve, sep } from 'node:path';
 import { markCharacterDatabaseOverlay } from './character-database-model.mjs';
+import { markCharacterCompanionOverlay } from './character-companion-overlays.mjs';
+import { markCharacterResidenceOverlay } from './character-residence-overlays.mjs';
+import { markReviewedCharacterMetadata } from './character-reviewed-metadata-overlays.mjs';
 
 function assertArchivePath(root, path) {
   const fromRoot = relative(root, path);
@@ -34,15 +37,22 @@ export async function readCharacterExportOverlays({ workspaceRoot, archiveRoot, 
         if (registered) throw Error('Kein gültiger aleria-character-Export.');
         continue;
       }
+      const character=markCharacterDatabaseOverlay(exported.character, {
+        replaceExportedFields: ['replace-exported-fields','replace-reviewed-metadata-fields'].includes(exported.mergeStrategy),
+        mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques',
+        replaceCombatTraits: exported.mergeStrategy === 'replace-combat-traits',
+        removeTraitAbilityIds: exported.traitReview?.removeAbilityIds || [],
+        removeTraitConditionIds: exported.traitReview?.removeConditionIds || []
+      });
+      if(exported.companionBindings){
+        if(Object.hasOwn(character,'inventory')||Object.hasOwn(character,'combatProfile'))throw Error('Ein Begleiterbeleg darf keine vollständigen Inventar- oder Kampffelder enthalten.');
+        markCharacterCompanionOverlay(character,exported.companionBindings,exported.exportedAt);
+      }
+      if(exported.residencePlacement)markCharacterResidenceOverlay(character,exported.residencePlacement,exported.exportedAt);
+      if(exported.mergeStrategy==='replace-reviewed-metadata-fields')markReviewedCharacterMetadata(character,exported.exportedAt);
       overlays.push({ path, assignedTab: exported.assignedTab,
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
-        character: markCharacterDatabaseOverlay(exported.character, {
-          replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields',
-          mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques',
-          replaceCombatTraits: exported.mergeStrategy === 'replace-combat-traits',
-          removeTraitAbilityIds: exported.traitReview?.removeAbilityIds || [],
-          removeTraitConditionIds: exported.traitReview?.removeConditionIds || []
-        }) });
+        character });
     } catch (error) {
       if (registered) throw Error(`Registrierte öffentliche Charakterquelle kann nicht gelesen werden: ${path}: ${error.message}`, { cause: error });
       // Unrelated top-level JSON documents have never been character sources.

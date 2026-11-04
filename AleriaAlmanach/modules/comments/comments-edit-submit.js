@@ -103,6 +103,7 @@ async function submitEditComment() {
       const sameSkillMechanics = normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.commentKind, segment) === 'skill'
         && String(original.skillResolution.actorId || '') === actorId
         && String(original.skillResolution.skillId || '') === String(segment.skillId || '')
+        && JSON.stringify(normalizeCommentSkillSaveContext(original.skillResolution.saveContext)) === JSON.stringify(normalizeCommentSkillSaveContext(segment.skillSaveContext))
         && String(original.skillResolution.targetChallengeId || '') === String(segment.skillTargetChallengeId || '');
       if (!sameSkillMechanics) {
         skillMechanicsError = 'Eine bereits ausgewertete Fertigkeit darf beim Bearbeiten nicht verändert oder neu gewürfelt werden. Erstelle dafür einen neuen Beitrag.';

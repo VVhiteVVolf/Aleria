@@ -18,11 +18,13 @@ function districtName(value) {
   return name;
 }
 
-export function createAssignmentState({ houseIds, districts, pointIds }) {
+export function createAssignmentState({ houseIds, districts, pointIds, legacyPointIds = [] }) {
   const houses = new Set(houseIds), districtIds = new Set(districts.map(d => d.id));
   const targets = new Set([...districtIds, ...pointIds]);
+  const legacyTargets = new Set([...districtIds,...legacyPointIds]);
   if (!houses.size || houses.size !== houseIds.length || districtIds.size !== districts.length
-      || targets.size !== districts.length + pointIds.length)
+      || targets.size !== districts.length + pointIds.length
+      || new Set(legacyPointIds).size !== legacyPointIds.length || legacyPointIds.some(id => !pointIds.includes(id)))
     throw Error('Die Venalys-Zuordnungsdaten enthalten doppelte oder fehlende Kennungen.');
   const initial = {
     districtNames: Object.fromEntries(districts.map(d => [d.id, districtName(d.name)])),
@@ -35,11 +37,12 @@ export function createAssignmentState({ houseIds, districts, pointIds }) {
   function validate(value) {
     if (value?.schema !== DRAFT_SCHEMA || value.schemaVersion !== 1 || value.realm !== 'venalys')
       throw Error('Diese Datei ist kein Venalys-Bezirksentwurf.');
-    if (!exactKeys(value.districtNames, districtIds) || !exactKeys(value.assignments, targets))
+    const compatible = legacyPointIds.length > 0 && exactKeys(value.assignments,legacyTargets);
+    if (!exactKeys(value.districtNames, districtIds) || (!exactKeys(value.assignments, targets) && !compatible))
       throw Error('Die Bezirks- oder Ortsliste des Entwurfs ist unvollständig oder unbekannt.');
     const names = Object.fromEntries([...districtIds].map(id => [id, districtName(value.districtNames[id])]));
     const assignments = Object.fromEntries([...targets].map(id => {
-      const entries = value.assignments[id];
+      const entries = compatible && !legacyTargets.has(id) ? [] : value.assignments[id];
       if (!Array.isArray(entries) || new Set(entries).size !== entries.length || entries.some(h => !houses.has(h)))
         throw Error('Die Hauszuordnungen enthalten unbekannte oder doppelte Häuser.');
       return [id, [...entries].sort((a, b) => houseOrder.get(a) - houseOrder.get(b))];

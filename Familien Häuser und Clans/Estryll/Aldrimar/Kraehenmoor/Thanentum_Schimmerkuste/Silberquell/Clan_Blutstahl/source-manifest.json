@@ -1,0 +1,95 @@
+{
+  "id": "haus-blutstahl",
+  "contentVersion": "20261103-kraehenmoor-v1",
+  "source": {
+    "attachmentId": "5ebf8980-61e7-489f-896b-e41be7243739",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\5ebf8980-61e7-489f-896b-e41be7243739\\Eingefügter Text.txt",
+    "archive": "diagnostics/kraehenmoor-clans-20261103/sources/blutstahl/animexx-original.html",
+    "bytes": 120435,
+    "sha256": "3e5169326dd3e413494ccb40d617681a4c2e36afdf252f1e74f252359a64f656",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-blutstahl",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Silberquell",
+      "barony": "Thanentum Schimmerküste",
+      "county": "Krähenmoor",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-varangr",
+      "liegeHouseName": "Clan Varangr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+        "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "20ec9ef3068d32a2da3b99793bb820c2ca54ab6d8b012221cff2a672b58ae100"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-blutstahl",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-blutstahl",
+    "familyId": "haus-blutstahl",
+    "slug": "blutstahl",
+    "canonicalSlug": "blutstahl",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Krähenmoor",
+    "attachmentId": "5ebf8980-61e7-489f-896b-e41be7243739",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/mkMUZoc.png",
+    "sourceUrl": "https://i.imgur.com/mkMUZoc.png",
+    "path": "Stammbäume/assets/images/references/haus-blutstahl/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-blutstahl/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:450px; width:300px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 228669,
+    "sha256": "976ae1a3d20c7408b8d58836eb4529ced5751271351536d16992e0094f285bd0",
+    "sha": "976ae1a3d20c7408b8d58836eb4529ced5751271351536d16992e0094f285bd0",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Gerüsteter Krieger mit Hörnerhelm, Schwert und rot-silbernem Rundschild.",
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "format": "PNG",
+    "original": true,
+    "representative": true,
+    "namedPersonId": ""
+  },
+  "decisions": [
+    "Aktueller Rang Thane, gemeinsamer Sitz Silberquell, Schimmerküste, Lehnsherr Varangr. Das historische Ausbleiben weiterer amtierender Thanen ist kein Grund zur heutigen Rangabstufung.",
+    "Die Gründungserzählung der Tochter des letzten Järnblod bleibt historische Prosa; die vorhandenen Identitäten Fenrir und Skalli werden nicht genealogisch verändert oder erneut angelegt.",
+    "Der Quelltext nennt Raveld erst Hesir, dann Thane und lässt Sigrun nach dem angeblichen Kriegsende weiterkämpfen. Sichtbar ohne ungesicherten persönlichen Titel und ohne widersprüchliche Nachkriegsfortsetzung redigieren; Niederlage, Führungsübernahme und späterer Einflussverlust bleiben erhalten.",
+    "Die absolute Behauptung, alle Erwachsenen seien gefallen, wird wegen der zugleich beschriebenen Überlebenden nicht übernommen; schwere Verluste und Ravelds Tod bleiben erhalten.",
+    "Die relative Datierung des Krieges gegen Ceitheach vor zwanzig Jahren nicht in eine neue Jahreszahl umrechnen und die relative Angabe auslassen. Keine Militärzahlen.",
+    "Östlicher Ortsverband nach aktuellen Schimmerküste-Seiten: Eisenbruch, Rabenstollen, Silbertal, Eyrstatt, Roknes, Svarthamn und Erynes. Kein Besitzanspruch auf den ganzen Küstenraum Krähenmoors.",
+    "Aktuelle IDs, Ränge, Orte, Historiengruppen und die fünf erloschenen Clans bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert. Die bestehenden Graphen und Profile bleiben unverändert.",
+    "Die repräsentative Hausfigur ist keine Darstellung eines neu benannten Angehörigen.",
+    "Sindre Brandstolz bleibt Bootsmann und wird kein Clanoberhaupt. Goldzunge bleibt bürgerlich ohne Lehnsherrn.",
+    "Abschlussprüfung: vergleichende Flottengröße neutralisiert; historische Seemacht ohne Militärstatistik erhalten."
+  ]
+}

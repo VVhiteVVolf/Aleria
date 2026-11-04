@@ -7,7 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_RIESENTOD_PORTRAITS } from './house-riesentod-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   KRONENTAL_HOUSE_EMBLEMS,
   KRONENTAL_HOUSE_PROFILES
@@ -363,7 +363,7 @@ export const HOUSE_RIESENTOD_FAMILY = Object.freeze({
     }),
     spouse('portha-wellenschild', 'Portha Wellenschild', 'female', '1627', '1704', 'house-wellenschild'),
     awayWoman('orka-riesentot', 'Orka Riesentod', '1630', '1704', 'Clan Nachtjäger'),
-    spouse('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1650', 'house-nachtjaeger'),
+    spouse('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1652', 'house-nachtjaeger'),
 
     person('einarr-riesentod', 'Einarr Riesentod', 'male', '1649', '1720', {
       title: 'Hesir des Clans Riesentod'
@@ -446,7 +446,7 @@ export const HOUSE_RIESENTOD_FAMILY = Object.freeze({
       { status: 'ended', end: '1661' }
     ),
     alignChildrenBelowPair('marriage-portha-hakon-wellenschild', { status: 'ended', end: '1681' }),
-    partnership('marriage-sturlaugr-orka-nachtjaeger', { status: 'ended', end: '1650' }),
+    partnership('marriage-sturlaugr-orka-nachtjaeger', { status: 'ended', end: '1652' }),
     alignChildrenBelowPair('marriage-einarr-sygne-riesentod', { status: 'ended', end: '1714' }),
     partnership('marriage-hranvald-yrnhild-hyrmgardr', { status: 'ended', end: '1705' }),
     partnership('marriage-svana-erlend-sturmgeborene', { status: 'ended', end: '1725' }),

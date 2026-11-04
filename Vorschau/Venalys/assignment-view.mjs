@@ -25,15 +25,23 @@ export function renderAssignedHouses(target, draft, houses) {
 }
 
 export function renderTargets(targets, draft, houses, selected, { districts = false } = {}) {
-  return targets.map(target => `<article class="seat-card venalys-target" id="target-${e(target.id)}" data-drop-seat="${e(target.id)}"><header><div><p class="eyebrow">${districts ? 'Stadtbezirk' : e(target.kind)}</p><h3>${e(targetName(target, draft))}</h3></div><button data-action="locate-target" data-target="${e(target.id)}" aria-label="${e(targetName(target, draft))} auf der Karte ansehen">Karte ↗</button></header>${districts ? `<div class="district-name-editor"><label class="district-name-label">Bezirksname<input data-role="district-name" data-district="${e(target.id)}" value="${e(draft.districtNames[target.id])}" maxlength="80" autocomplete="off"></label><button data-action="commit-district-name" data-district="${e(target.id)}">Namen übernehmen</button><p>Mit Enter, beim Verlassen oder über den Knopf übernehmen.</p></div>` : ''}<p class="geography">${e(target.description || '')}</p>${renderAssignedHouses(target, draft, houses)}<button class="seat-target" data-action="place-at-seat" data-drop-seat="${e(target.id)}" ${selected ? '' : 'disabled'}>Gewähltes Haus hier zusätzlich zuordnen</button></article>`).join('');
+  const mapped = targets.filter(target => target.status !== 'unmapped');
+  return mapped.map(target => `<article class="seat-card venalys-target" id="target-${e(target.id)}" data-drop-seat="${e(target.id)}"><header><div><p class="eyebrow">${districts ? 'Stadtbezirk' : e(target.kind)}</p><h3>${e(targetName(target, draft))}</h3></div><button data-action="locate-target" data-target="${e(target.id)}" aria-label="${e(targetName(target, draft))} auf der Karte ansehen">Karte ↗</button></header>${districts ? `<div class="district-name-editor"><label class="district-name-label">Bezirksname<input data-role="district-name" data-district="${e(target.id)}" value="${e(draft.districtNames[target.id])}" maxlength="80" autocomplete="off"></label><button data-action="commit-district-name" data-district="${e(target.id)}">Namen übernehmen</button><p>Mit Enter, beim Verlassen oder über den Knopf übernehmen.</p></div>` : ''}<p class="geography">${e(target.description || '')}</p>${renderAssignedHouses(target, draft, houses)}<button class="seat-target" data-action="place-at-seat" data-drop-seat="${e(target.id)}" ${selected ? '' : 'disabled'}>Gewähltes Haus hier zusätzlich zuordnen</button></article>`).join('') + renderUnmappedTargets(targets,draft,houses);
+}
+
+export function renderUnmappedTargets(targets,draft,houses) {
+  const occupied = targets.filter(target => target.status === 'unmapped' && draft.assignments[target.id]?.length);
+  if (!occupied.length) return '';
+  return `<section class="unmapped-targets"><h3>Noch nicht verortete Orte</h3><p>Diese Orte haben bereits Hauszuordnungen, sind auf der aktuellen Karte aber nicht verortet. Die Zuordnungen bleiben erhalten und lassen sich einzeln lösen.</p><div class="seat-grid">${occupied.map(target => `<article class="seat-card venalys-target" id="target-${e(target.id)}"><p class="eyebrow">${e(target.kind)} · Nicht verortet</p><h3>${e(target.name)}</h3>${renderAssignedHouses(target,draft,houses)}</article>`).join('')}</div></section>`;
 }
 
 export function renderTargetOptions(targets, draft) {
-  const names = targets.map(t => targetName(t, draft));
-  return '<option value="">Bezirk oder Ort wählen …</option>' + targets.map((target, index) => {
+  const visible = targets.filter(target => target.status !== 'unmapped' || draft.assignments[target.id]?.length);
+  const names = visible.map(t => targetName(t, draft));
+  return '<option value="">Bezirk oder Ort wählen …</option>' + visible.map((target, index) => {
     const name = names[index];
     const duplicate = names.filter(value => value === name).length > 1;
     const key = target.id.startsWith('district-') ? `Bezirk ${target.id.slice(9)}` : target.id.replace(/^poi-/, '').toUpperCase();
-    return `<option value="${e(target.id)}">${e(name)}${duplicate ? ` · ${e(key)}` : ''}</option>`;
+    return `<option value="${e(target.id)}">${e(name)}${target.status === 'unmapped' ? ' · Nicht verortet' : ''}${duplicate ? ` · ${e(key)}` : ''}</option>`;
   }).join('');
 }

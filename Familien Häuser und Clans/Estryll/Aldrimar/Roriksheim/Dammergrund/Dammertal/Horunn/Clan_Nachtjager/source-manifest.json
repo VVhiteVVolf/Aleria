@@ -1,0 +1,87 @@
+{
+  "id": "haus-nachtjaeger",
+  "source": {
+    "attachmentId": "42185341-945e-4f5a-80af-9e19af0f1957",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\42185341-945e-4f5a-80af-9e19af0f1957\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/nachtjaeger/animexx-original.html",
+    "bytes": 110645,
+    "sha256": "86763c470742681077f7a60d9fc1ffe7032c0b09f4e4e01e9cc06e403a0f8e98",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-nachtjaeger",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Horunn",
+      "barony": "Dämmergrund",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vangandr",
+      "liegeHouseName": "Clan Vangandr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Dämmertal",
+        "Horunn"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-daemmertal.png",
+        "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-nachtjaeger",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "nachtjaeger",
+    "familyId": "haus-nachtjaeger",
+    "attachmentId": "42185341-945e-4f5a-80af-9e19af0f1957",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/NXNB91D.png",
+    "path": "Stammbäume/assets/images/references/haus-nachtjaeger/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 247290,
+    "sha256": "fcdbd8a6ab0289ae3db5873d54791014109c58f4d35590acbd2cdf28f9661cf4",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-nachtjaeger",
+    "url": "https://i.imgur.com/NXNB91D.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-nachtjaeger/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Sitzender Krieger mit Hirschgeweihhelm, Speer und Hirschschild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-2.png"
+  },
+  "decisions": [
+    "Der örtliche Registerweg bleibt Aldrimar/Roriksheim/Dämmergrund/Dämmertal/Horunn. Kadettenherkunft Varulv und aktuelle Lehnsherrschaft Vangandr sind getrennte Angaben.",
+    "Die Quelle beschreibt Dämmertal als östliches Hesirentum und den Dunkelhain im Süden. Aktuelle Orts- und Kartenpositionen haben Vorrang; keine Kartenänderung aus der Vorlage ableiten.",
+    "Fannarr Varulv und Vidarr Nachtjäger sind vorhandene Identitäten. Textlich überlieferte Gründung und Fraktionswechsel dürfen erhalten bleiben, ohne neue Personen oder genealogische Verbindungen anzulegen.",
+    "Jagdprüfung, Armreif, Schutzzeichen, Waldhandwerk und der Rückzug vor dem Dunkelhain sind konkrete übernehmbare Hausinhalte.",
+    "Geister und Unholde in der Umgebung sind Erzähl- und Gefahrenkontext. Keine benannte Kreatur, keinen persönlichen Wolf oder neue Inventarverknüpfung daraus erzeugen.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

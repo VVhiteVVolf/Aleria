@@ -44,6 +44,7 @@ export const IVARSHEIM_HOUSE_EMBLEMS = Object.freeze({
   feuerhaar: `${HOUSE_ROOT}/clan-feuerhaar.png`,
   skogg: `${HOUSE_ROOT}/clan-skogg.png`,
   silberzunge: `${HOUSE_ROOT}/clan-silberzunge.png`,
+  hrafnvald: `${HOUSE_ROOT}/clan-hrafnvald.png`,
   trachwyll: `${HOUSE_ROOT}/haus-trachwyll.png`,
   grendel: `${HOUSE_ROOT}/clan-grendel.png`,
   hyrmgardr: `${HOUSE_ROOT}/clan-hyrmgarthr.png`,
@@ -97,6 +98,9 @@ export const IVARSHEIM_HOUSE_PROFILES = Object.freeze({
     baronyEmblem: IVARSHEIM_REGION_EMBLEMS.saatgrund
   }),
   silberzunge: ivarsheimProfile('hesire', IVARSFELS_PATH, {
+    baronyEmblem: IVARSHEIM_REGION_EMBLEMS.ivarsklamm
+  }),
+  hrafnvald: ivarsheimProfile('huskarl', IVARSFELS_PATH, {
     baronyEmblem: IVARSHEIM_REGION_EMBLEMS.ivarsklamm
   }),
   trachwyll: ivarsheimProfile('hesire', IVARSFELS_PATH, {

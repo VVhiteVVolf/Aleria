@@ -111,7 +111,8 @@ function jumpToLatestCommentByAuthor(source = null) {
   const query = normalizeCommentJumpText(input?.value || '');
   const scroll = getActiveCommentsScroll(source);
   const threadId = String(scroll?.dataset?.commentThreadId || '').trim();
-  const comments = sortCommentsByTimeline(_commentCache[threadId] || []);
+  const history = sortCommentsByTimeline(_commentCache[threadId] || []);
+  const comments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(history) || history;
 
   if (!query) {
     setCommentJumpStatus(tools, 'Gib zuerst einen Kommentatornamen ein.');
@@ -133,7 +134,7 @@ function jumpToLatestCommentByAuthor(source = null) {
   if (input) input.removeAttribute('aria-invalid');
   let target = getCommentElementForJump(match.id);
   if (!target && typeof setCommentPageForCommentId === 'function') {
-    setCommentPageForCommentId(threadId, match.id, comments);
+    setCommentPageForCommentId(threadId, match.id, history);
     target = getCommentElementForJump(match.id);
   }
   if (!target) {

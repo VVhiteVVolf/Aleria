@@ -3,6 +3,7 @@ import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { createAssignmentState, DRAFT_STORAGE_KEY } from './assignment-state.mjs';
 import { renderHouseGroups, renderTargets, renderTargetOptions, targetName } from './assignment-view.mjs';
 import { createVenalysMap } from './map-view.mjs';
+import { legacyPointIds } from './territory-data.mjs';
 
 // Every name submission uses the same validated state operation. The field
 // stays mounted, so a successful commit preserves editing focus and selection.
@@ -27,7 +28,8 @@ export function commitDistrictName(field, { state, onChange, onError }) {
 /** The editor owns selection, persistence and events; its state owns validation. */
 export function mountAssignmentControls({ root, houses, districts, pointsOfInterest, mapGeometry }) {
   const targets = [...districts, ...pointsOfInterest];
-  const state = createAssignmentState({ houseIds: houses.map(h => h.id), districts, pointIds: pointsOfInterest.map(p => p.id) });
+  const mappedTargets = targets.filter(target => target.status !== 'unmapped');
+  const state = createAssignmentState({ houseIds: houses.map(h => h.id), districts, pointIds: pointsOfInterest.map(p => p.id),legacyPointIds });
   const select = role => root.querySelector(`[data-role="${role}"]`);
   const houseSelect = select('house-select'), targetSelect = select('target-select');
   let selectedHouse = null, selectedTarget = null, timer;
@@ -43,6 +45,11 @@ export function mountAssignmentControls({ root, houses, districts, pointsOfInter
   }
   function render({ keepEditors = false } = {}) {
     const draft = state.current();
+    if (targets.find(target => target.id === selectedTarget)?.status === 'unmapped'
+        && !draft.assignments[selectedTarget]?.length) {
+      selectedTarget = null;
+      map.locate(null);
+    }
     if (!keepEditors) {
       select('house-groups').innerHTML = renderHouseGroups(houses, selectedHouse);
       select('districts').innerHTML = renderTargets(districts, draft, houses, selectedHouse, { districts: true });
@@ -58,7 +65,7 @@ export function mountAssignmentControls({ root, houses, districts, pointsOfInter
     }
     targetSelect.innerHTML = renderTargetOptions(targets, draft);
     houseSelect.value = selectedHouse || ''; targetSelect.value = selectedTarget || '';
-    root.querySelector('[data-action="assign-selected"]').disabled = !selectedHouse || !selectedTarget;
+    root.querySelector('[data-action="assign-selected"]').disabled = !selectedHouse || !selectedTarget || targets.find(target => target.id === selectedTarget)?.status === 'unmapped';
     root.querySelector('[data-action="remove-selected"]').disabled = !selectedHouse || !selectedTarget || !draft.assignments[selectedTarget].includes(selectedHouse);
     root.querySelector('[data-action="cancel-selection"]').disabled = !selectedHouse;
     root.querySelector('[data-action="undo"]').disabled = !state.canUndo();
@@ -68,7 +75,7 @@ export function mountAssignmentControls({ root, houses, districts, pointsOfInter
     const target = targets.find(t => t.id === selectedTarget);
     select('active-target').innerHTML = target ? `Ausgewählt: <strong>${e(targetName(target, draft))}</strong> · ${draft.assignments[target.id].length} Häuser · <a href="#target-${e(target.id)}">${draft.districtNames[target.id] ? 'Bezirksname und Häuser bearbeiten' : 'Hauszuordnungen ansehen'} ↗</a>` : 'Ein Bezirks- oder Ortsname auf der Karte wählt das Gebiet aus.';
     map.render();
-    controls.render({ settlements: targets.map(t => ({ ...t, name: targetName(t, draft) })) });
+    controls.render({ settlements: mappedTargets.map(t => ({ ...t, name: targetName(t, draft) })) });
   }
   function choose(id) {
     selectedHouse = houses.some(h => h.id === id) ? id : null;
@@ -79,6 +86,7 @@ export function mountAssignmentControls({ root, houses, districts, pointsOfInter
     catch (error) { notice(error.message || 'Der Entwurf konnte nicht geändert werden.'); }
   }
   function assign(id, targetId) {
+    if (targets.find(target => target.id === targetId)?.status === 'unmapped') return;
     change(() => state.assign(id, targetId), 'Haus zusätzlich zugeordnet. Andere Bezirke und Orte bleiben erhalten.');
   }
   function commitName(field) {
@@ -124,9 +132,9 @@ export function mountAssignmentControls({ root, houses, districts, pointsOfInter
       case 'zoom-in': map.zoomBy(.4); break;
       case 'zoom-out': map.zoomBy(-.4); break;
       case 'fit-map': map.fit(); break;
-      case 'toggle-map-mode': map.toggleMode(button); controls.render({ settlements: targets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
-      case 'toggle-crests': map.toggleCrests(button); controls.render({ settlements: targets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
-      case 'toggle-names': map.toggleNames(button); controls.render({ settlements: targets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
+      case 'toggle-map-mode': map.toggleMode(button); controls.render({ settlements: mappedTargets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
+      case 'toggle-crests': map.toggleCrests(button); controls.render({ settlements: mappedTargets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
+      case 'toggle-names': map.toggleNames(button); controls.render({ settlements: mappedTargets.map(t => ({ ...t, name: targetName(t, state.current()) })) }); break;
       case 'undo': change(state.undo, 'Letzte Änderung zurückgenommen.'); break;
       case 'reset': change(state.reset, 'Ausgangsstand: neutrale Bezirksnamen und keine Hauszuordnungen.'); break;
       case 'import': select('import-file').click(); break;

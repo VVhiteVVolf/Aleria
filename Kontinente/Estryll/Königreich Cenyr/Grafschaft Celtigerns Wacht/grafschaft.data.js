@@ -4,6 +4,7 @@
   const familyTreePage = "/Stammbäume/Stammbaum.html";
   const housePage = "/Familien%20H%C3%A4user%20und%20Clans/";
   const houseImageRoot = "/Stammbäume/assets/images/houses";
+  const neutralCrest = "/Stammbäume/assets/images/placeholders/neutral-crest.png";
 
   function family(id, name, emblem, options = {}) {
     return Object.freeze({
@@ -59,8 +60,8 @@
       family("haus-draenmelyn", "Draenmelyn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-pendrwn", "Pendrwn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-swyll", "Swyll", "Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png", { seat: "Gwynthor", liege: "Draig" }),
-      family("haus-cochdon", "Cochdon", "Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png", { seat: "Gwynthor", rank: "Bürgerliche Familie", href: `${familyTreePage}?family=haus-cochdon&mode=view` }),
-      family("haus-twyllod", "Twyllod", "Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png", { seat: "Twyllod-Hof · Gwynthor", rank: "Bürgerliche Familie", href: `${familyTreePage}?family=haus-twyllod&mode=view` }),
+      family("haus-cochdon", "Cochdon", "Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png", { seat: "Gwynthor", rank: "Bürgerliche Familie", href: `${housePage}kleinehaeuser.html?haus=haus-cochdon` }),
+      family("haus-twyllod", "Twyllod", "Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png", { seat: "Twyllod-Hof · Gwynthor", rank: "Bürgerliche Familie", href: `${housePage}kleinehaeuser.html?haus=haus-twyllod` }),
       family("haus-aelmor", "Aelmor", "Llamreis Ankunft/Bürgerliche/Gwynthor/Aelmor.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-maerllys", "Maerllys", "Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-braglas", "Braglas", "Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png", { seat: "Gwynthor", liege: "Draig" }),
@@ -78,13 +79,21 @@
       family("haus-fontani", "Fontani", "Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png", { seat: "Gwynthor · Badehaus", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-rhwyd", "Rhwyd", "Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-penrudd", "Penrudd", "Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png", { seat: "Bannkreis Gwynthor · Zum Roten Tor · Penrudd-Hof", liege: "Draig", rank: "Bürgerliches Haus" }),
-      family("haus-llythfor", "Llythfor", "Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png", { seat: "Gwynthor", rank: "Bürgerliche Familie", href: `${familyTreePage}?family=haus-llythfor&mode=view` }),
+      family("haus-llythfor", "Llythfor", "Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png", { seat: "Gwynthor", rank: "Bürgerliche Familie", href: `${housePage}kleinehaeuser.html?haus=haus-llythfor` }),
       family("haus-gwregysdu", "Gwregysdu", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-valerus", "Valerus", "Venalys/haus-valerus.png", { seat: "Gwynthor · Die rote Klaue", rank: "Bürgerliches Haus" }),
       family("haus-fearnan", "Fearnan", "/AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-torvik", "Torvik", "/AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-celynfor", "Celynfor", "/AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-blevis", "Blevis", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-brogar", "Brogar", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-crewe", "Crewe", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-glyn", "Glyn", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-jernigan", "Jernigan", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-talfryn", "Talfryn", neutralCrest, { seat: "Llysfaen", liege: "Wyrm" }),
+      family("haus-tarw", "Tarw", neutralCrest, { seat: "Craithglyn", liege: "Wyrm" }),
+      family("haus-tynged", "Tynged", neutralCrest, { seat: "Craithglyn", liege: "Wyrm" }),
     ]),
     familySection("Ausgestorbene Häuser", [
       family("haus-ard-conbhron", "Ard Conbhrón", "Antike Crannath Clans/haus-ard-conbhron.png", { seat: "Lycath", page: "haus.html" }),

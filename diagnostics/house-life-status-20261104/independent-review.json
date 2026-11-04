@@ -1,0 +1,45 @@
+{
+  "schema": "aleria.house-life-status-independent-review",
+  "date": "2026-11-04",
+  "status": "pass",
+  "scope": {
+    "resolvedCases": 15,
+    "publicCounterpartEntries": 30,
+    "registryRecordsScannedForAdditionalCopies": 781,
+    "additionalIdentityOccurrencesOutsideThirty": 0,
+    "livingCases": 13,
+    "confirmedDeaths": 2,
+    "changedCanonicalFields": 34,
+    "managedFamilies": 15,
+    "publicRecordsPreserved": 424,
+    "earlierChronologyFieldsPreserved": 71,
+    "remainingDateAndSexCasesUnchanged": 5
+  },
+  "checks": [
+    "All fifteen reviewed world identities have exactly two entries across all 781 registry records, thirty occurrences in total, with no additional copies outside the reviewed baseline. Both entries agree with the authorized life-status decision.",
+    "Hadvar Varangr retains the attested death year 1713; Afanen Arth retains 1710. The two previously active counterpart marriages now end in those existing death years.",
+    "Only targeted person status/death and two partnership status/end pairs differ in the protected public baseline. IDs, relationship assignments, other years, personal notes, portraits and biographies remain protected.",
+    "The original seventy-one-field chronology amendment and five unapproved year/sex discrepancies remain intact.",
+    "The new inventory and marker are separate from the earlier lore correction. The shared application preserves earlier individual field revisions, applies canonical values field by field and is idempotent.",
+    "Saved-record migrations preserve local profiles, seats, emblems, view settings, inheritance notes, neighboring persons and edited or explicitly removed house biographies.",
+    "The eighteen Gwyvern extension containers were independently reconstructed and matched against the immutable before hash; only previously absent empty containers at the receipt's exact paths are normalized.",
+    "family-record-builders.js has no Git diff; no global reinterpretation of historical unknown death fields was introduced.",
+    "The versioned reverse import chain and index.html, register.html, Stammbaum.html and house-page entry points use 20261104-life-status-v1."
+  ],
+  "independentExecution": {
+    "newLifeStatusTests": { "passed": 7, "failed": 0 },
+    "priorLoreCorrectionTests": { "passed": 8, "failed": 0 },
+    "additionalReadOnlyChecks": "34 fields, 15 families, 30 counterpart entries, exactly two copies per identity, reconstructed Gwyvern hash and all eighteen metadata-container paths verified.",
+    "runnerNote": "node --test could not spawn test workers because of sandbox EPERM. Direct node execution of both test modules completed all fifteen tests successfully."
+  },
+  "evidence": [
+    "before.json",
+    "preservation.json",
+    "metadata-containers.json",
+    "cache-version-changes.json",
+    "remaining-five-counterparts.json",
+    "../../Stammbäume/assets/data/source-inventories/house-life-status-corrections-20261104.json",
+    "../../Familien Häuser und Clans/tests/fixtures/house-life-status-corrections-20261104.json"
+  ],
+  "publication": "local-only; no commit, push or deploy performed by this review"
+}

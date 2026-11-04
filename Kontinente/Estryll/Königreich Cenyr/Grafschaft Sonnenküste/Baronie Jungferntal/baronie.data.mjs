@@ -1,4 +1,4 @@
-import { createTerritory } from '../../../../modules/sonnenkueste/territory-page.mjs?v=sonnenkueste-20261019';
+import { createTerritory } from '../../../../modules/sonnenkueste/territory-page.mjs?v=20261103-sonnenkueste-v1';
 
 export default createTerritory({
   "id": "baronie-jungferntal",
@@ -121,7 +121,8 @@ export default createTerritory({
           "liege": "Haus Illewod O'Aberon",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-morforwyn"
         }
       ]
     },
@@ -133,20 +134,40 @@ export default createTerritory({
           "familyId": "haus-rhelian",
           "imageSrc": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-rhelian.png",
           "seat": "Carngol",
-          "liege": "Haus Illewod O'Aberon",
+          "liege": "Haus Morforwyn O'Carngol",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rhelian"
         },
         {
           "name": "Aelryn",
           "familyId": "haus-aelryn",
           "imageSrc": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-aelryn.png",
           "seat": "Carngol",
-          "liege": "Haus Illewod O'Aberon",
+          "liege": "Haus Morforwyn O'Carngol",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aelryn"
+        },
+        {
+          "name": "Caerwen",
+          "familyId": "haus-caerwen",
+          "imageSrc": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-caerwen.png",
+          "seat": "Carngol",
+          "liege": "Haus Morforwyn O'Carngol",
+          "rank": "Ritterherrenhaus",
+          "featured": false,
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caerwen"
+        },
+        {
+          "name": "Nerwynn",
+          "familyId": "haus-nerwynn",
+          "imageSrc": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-nerwynn.png",
+          "seat": "Carngol",
+          "liege": "Haus Morforwyn O'Carngol",
+          "rank": "Ritterherrenhaus",
+          "featured": false,
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nerwynn"
         }
       ]
     }

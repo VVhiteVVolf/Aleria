@@ -1,0 +1,51 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-ard-follmhar",
+  "source": {
+    "attachmentId": "1748ae0f-2a67-44dd-a5c8-792a4b71c3c8",
+    "file": "animexx-original.html",
+    "sha256": "5d2f48ef7fafbb9f95596690c5e569b212402394609211f80a5ff8d0984c8f0b",
+    "bytes": 65992,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "supplied genealogy ignored; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-ard-follmhar"
+  },
+  "militaryStatistics": "ignored entirely",
+  "previousFamilySourceRevision": 1,
+  "biographySourceRevision": 2,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/9Ng0rZy.png",
+      "role": "house-illustration",
+      "sha256": "7b9d2df8e91018b5150556a7427c2dfb950034a903f43417d6f569f5a8b09515",
+      "bytes": 273243,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 409,
+      "height": 610,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/klaueninseln-house-families.js"
+  ],
+  "statusDecision": {
+    "legacyClaim": "AUSGESTORBEN in empty head and succession template",
+    "extinct": false,
+    "rank": "Offen",
+    "reason": "Current family and territory rank remain unknown; the documented destruction of Ard Dunrath does not establish extinction of every lineage.",
+    "currentSources": [
+      "Karten/Cenyr/klaueninseln/places.source.json",
+      "Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/baronie.data.mjs"
+    ]
+  }
+}

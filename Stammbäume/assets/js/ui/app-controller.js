@@ -21,7 +21,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   saveFamilyToLibrary
-} from '../services/family-library.js?v=20261024-vortigerns-v1';
+} from '../services/family-library.js?v=20261104-content-lore-v1';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {
@@ -34,17 +34,17 @@ import {
 import { createCadetDialog } from './cadet-dialog.js';
 import { escapeHtml } from './dom.js';
 import { createEditAccessDialog } from './edit-access-dialog.js';
-import { createFamilySaveDialog } from './family-save-dialog.js';
+import { createFamilySaveDialog } from './family-save-dialog.js?v=20261104-content-lore-v1';
 import { renderFamilyLegend, renderFamilyReadingGuide } from './legend-ui.js';
 import { createLineColorsDialog } from './line-colors-dialog.js';
 import { createLineageDialog } from './lineage-dialog.js';
 import { createLineageTimeGapDialog } from './lineage-time-gap-dialog.js';
 import { createLineageOriginDialog } from './lineage-origin-dialog.js';
-import { createNewFamilyDialog } from './new-family-dialog.js';
+import { createNewFamilyDialog } from './new-family-dialog.js?v=20261104-content-lore-v1';
 import { createPersonDialog } from './person-dialog.js';
 import { renderPersonInspector } from './person-inspector.js';
 import { createRelatedPersonDialog } from './related-person-dialog.js';
-import { createRelationActionsDialog } from './relation-actions-dialog.js';
+import { createRelationActionsDialog } from './relation-actions-dialog.js?v=20261104-content-lore-v1';
 import {
   findExistingImport,
   relationForAction

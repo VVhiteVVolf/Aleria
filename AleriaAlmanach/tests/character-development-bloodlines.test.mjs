@@ -10,6 +10,7 @@ import { applyTypedCombatDamage } from '../modules/combat/combat-effect-model.js
 import { renderDevelopmentTraits } from '../modules/character-development/development-ui.js';
 import { createCharacterArchiveProfileItem } from '../modules/character-archive/character-archive-model.js';
 import { sanitizeCharacterCombatProfile as serverSanitize } from '../../firebase/functions/src/generated/combat/combat-profile-model.js';
+import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
 
 const root = new URL('../../', import.meta.url);
 const bloodlines = DEVELOPMENT_TRAITS.filter(trait => getBloodlineTraitOrigin(trait.id));
@@ -30,10 +31,10 @@ test('ten innate human bloodlines have real source pages and five origins of eac
   }
 });
 
-test('previous 104 definitions remain unchanged; authors examples distinguish direct and distant ancestry', async () => {
+test('previous 104 definitions stay exact or have an explicit complete balance revision; authors ancestry examples remain protected', async () => {
   const before = JSON.parse(await readFile(new URL('diagnostics/blood-carriers-20261102/catalog-before.json', root), 'utf8'));
   assert.equal(before.length, 104);
-  assert.deepEqual(before.map(trait => DEVELOPMENT_TRAITS.find(current => current.id === trait.id)), before);
+  assertDevelopmentTraitSnapshotPreserved(before);
   const myriad = getBloodlineTraitOrigin('development-trait-bluttraeger-succubusspross').examples[0];
   const aradin = getBloodlineTraitOrigin('development-trait-bluttraeger-vampirspross').examples[0];
   assert.equal(myriad.name, 'Myriad Draig'); assert.match(myriad.reason, /Afallith/);

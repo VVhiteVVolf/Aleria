@@ -1,0 +1,249 @@
+{
+  "schema": "aleria.confirmed-character-retirements",
+  "schemaVersion": 1,
+  "preparedAt": "2026-11-03T16:18:54.872Z",
+  "summary": {
+    "retiredDocuments": 3,
+    "membershipUpdates": 0,
+    "canonicalProfileWrites": 0,
+    "liveResourceWrites": 0
+  },
+  "entries": [
+    {
+      "legacyId": "6atOllMA637Z2VNAZAxf",
+      "canonicalCharacterId": "person--haus-draig--gethin-1722-draig",
+      "expectedUpdateTime": "2026-11-02T23:00:11.395595Z",
+      "canonicalExpectedUpdateTime": "2026-11-02T23:00:11.395595Z",
+      "beforeSha256": "da0ed37a1d7ae0331d81b967c635af6f99e9f364ff7887724a35bf8a55e43dac",
+      "canonicalBeforeSha256": "5f92173153b56a75f1ef7deb56a72bb83d05c5cf63eb23d54f8ef4c31d5ccb04",
+      "patch": {
+        "archived": true,
+        "mergeIdentity": {
+          "schemaVersion": 1,
+          "status": "merged",
+          "canonicalCharacterId": "person--haus-draig--gethin-1722-draig",
+          "canonicalWorldPersonId": "person--haus-draig--gethin-1722-draig",
+          "confirmedOn": "2026-11-03",
+          "evidence": "gethin-draig-zuordnung-2026-10-14"
+        }
+      },
+      "rollback": {
+        "archived": {
+          "restoreRestValue": {
+            "booleanValue": false
+          }
+        },
+        "mergeIdentity": {
+          "deleteField": true
+        }
+      }
+    },
+    {
+      "legacyId": "XWJ6XXwvpESHR3zAXkJx",
+      "canonicalCharacterId": "15ml9RhSvJPXof7z4qY3",
+      "expectedUpdateTime": "2026-09-06T01:03:35.765063Z",
+      "canonicalExpectedUpdateTime": "2026-11-02T21:05:42.453432Z",
+      "beforeSha256": "e4ccdc18f82615fdd6a99a81f76a36766e6097dd566e3be3d2a5f4222c91ffe5",
+      "canonicalBeforeSha256": "5395cee5222d37daec56c7b300af6182cdfe4c0afb8ef5afea27c056a8a1c7ba",
+      "patch": {
+        "archived": true,
+        "mergeIdentity": {
+          "schemaVersion": 1,
+          "status": "merged",
+          "canonicalCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "canonicalWorldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+          "confirmedOn": "2026-11-03",
+          "evidence": "registered-source-alias-and-matching-countess-profile-2026-11-03"
+        }
+      },
+      "rollback": {
+        "archived": {
+          "restoreRestValue": {
+            "booleanValue": false
+          }
+        },
+        "mergeIdentity": {
+          "deleteField": true
+        }
+      }
+    },
+    {
+      "legacyId": "mRCEkgEQByaxQWC0PJN5",
+      "canonicalCharacterId": "fBCCU7G0r163GXUBqgYg",
+      "expectedUpdateTime": "2026-06-25T22:06:55.060854Z",
+      "canonicalExpectedUpdateTime": "2026-06-25T22:06:54.966366Z",
+      "beforeSha256": "123f4245b6f2e9e47516a81752d06aa6bc61b9b08ebffe06da71385f8927905a",
+      "canonicalBeforeSha256": "08462245641ecb87e7f600399c88e2183cbcb92c569e84357123890d8215fc60",
+      "patch": {
+        "archived": true,
+        "mergeIdentity": {
+          "schemaVersion": 1,
+          "status": "merged",
+          "canonicalCharacterId": "fBCCU7G0r163GXUBqgYg",
+          "canonicalWorldPersonId": "person--haus-gelyn--dehlia-gelyn",
+          "confirmedOn": "2026-11-03",
+          "evidence": "registered-source-alias-and-matching-chaplain-profile-2026-11-03"
+        }
+      },
+      "rollback": {
+        "archived": {
+          "restoreRestValue": {
+            "booleanValue": false
+          }
+        },
+        "mergeIdentity": {
+          "deleteField": true
+        }
+      }
+    }
+  ],
+  "writes": [
+    {
+      "update": {
+        "name": "projects/aleriaprojekt/databases/(default)/documents/characters/6atOllMA637Z2VNAZAxf",
+        "fields": {
+          "archived": {
+            "booleanValue": true
+          },
+          "mergeIdentity": {
+            "mapValue": {
+              "fields": {
+                "schemaVersion": {
+                  "integerValue": "1"
+                },
+                "status": {
+                  "stringValue": "merged"
+                },
+                "canonicalCharacterId": {
+                  "stringValue": "person--haus-draig--gethin-1722-draig"
+                },
+                "canonicalWorldPersonId": {
+                  "stringValue": "person--haus-draig--gethin-1722-draig"
+                },
+                "confirmedOn": {
+                  "stringValue": "2026-11-03"
+                },
+                "evidence": {
+                  "stringValue": "gethin-draig-zuordnung-2026-10-14"
+                }
+              }
+            }
+          }
+        }
+      },
+      "updateMask": {
+        "fieldPaths": [
+          "archived",
+          "mergeIdentity"
+        ]
+      },
+      "currentDocument": {
+        "updateTime": "2026-11-02T23:00:11.395595Z"
+      }
+    },
+    {
+      "update": {
+        "name": "projects/aleriaprojekt/databases/(default)/documents/characters/XWJ6XXwvpESHR3zAXkJx",
+        "fields": {
+          "archived": {
+            "booleanValue": true
+          },
+          "mergeIdentity": {
+            "mapValue": {
+              "fields": {
+                "schemaVersion": {
+                  "integerValue": "1"
+                },
+                "status": {
+                  "stringValue": "merged"
+                },
+                "canonicalCharacterId": {
+                  "stringValue": "15ml9RhSvJPXof7z4qY3"
+                },
+                "canonicalWorldPersonId": {
+                  "stringValue": "person--haus-aderyn--gwendolyn-aderyn"
+                },
+                "confirmedOn": {
+                  "stringValue": "2026-11-03"
+                },
+                "evidence": {
+                  "stringValue": "registered-source-alias-and-matching-countess-profile-2026-11-03"
+                }
+              }
+            }
+          }
+        }
+      },
+      "updateMask": {
+        "fieldPaths": [
+          "archived",
+          "mergeIdentity"
+        ]
+      },
+      "currentDocument": {
+        "updateTime": "2026-09-06T01:03:35.765063Z"
+      }
+    },
+    {
+      "update": {
+        "name": "projects/aleriaprojekt/databases/(default)/documents/characters/mRCEkgEQByaxQWC0PJN5",
+        "fields": {
+          "archived": {
+            "booleanValue": true
+          },
+          "mergeIdentity": {
+            "mapValue": {
+              "fields": {
+                "schemaVersion": {
+                  "integerValue": "1"
+                },
+                "status": {
+                  "stringValue": "merged"
+                },
+                "canonicalCharacterId": {
+                  "stringValue": "fBCCU7G0r163GXUBqgYg"
+                },
+                "canonicalWorldPersonId": {
+                  "stringValue": "person--haus-gelyn--dehlia-gelyn"
+                },
+                "confirmedOn": {
+                  "stringValue": "2026-11-03"
+                },
+                "evidence": {
+                  "stringValue": "registered-source-alias-and-matching-chaplain-profile-2026-11-03"
+                }
+              }
+            }
+          }
+        }
+      },
+      "updateMask": {
+        "fieldPaths": [
+          "archived",
+          "mergeIdentity"
+        ]
+      },
+      "currentDocument": {
+        "updateTime": "2026-06-25T22:06:55.060854Z"
+      }
+    },
+    {
+      "verify": "projects/aleriaprojekt/databases/(default)/documents/characters/person--haus-draig--gethin-1722-draig",
+      "currentDocument": {
+        "updateTime": "2026-11-02T23:00:11.395595Z"
+      }
+    },
+    {
+      "verify": "projects/aleriaprojekt/databases/(default)/documents/characters/15ml9RhSvJPXof7z4qY3",
+      "currentDocument": {
+        "updateTime": "2026-11-02T21:05:42.453432Z"
+      }
+    },
+    {
+      "verify": "projects/aleriaprojekt/databases/(default)/documents/characters/fBCCU7G0r163GXUBqgYg",
+      "currentDocument": {
+        "updateTime": "2026-06-25T22:06:54.966366Z"
+      }
+    }
+  ]
+}

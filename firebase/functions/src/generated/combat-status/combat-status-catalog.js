@@ -14,7 +14,7 @@ export const COMBAT_STATUS_PRESETS = Object.freeze([
   { id: 'prone', name: 'Liegend', kind: 'condition', icon: 'Prone_Condition_Icon.webp', blockedResource: 'bonus-action', description: 'Die Figur liegt am Boden und verliert im nächsten eigenen Beitrag ihre Bonusaktion. Kein Bewegungsabzug und kein Angriffsnachteil.' },
   { id: 'restrained', name: 'Festgesetzt', kind: 'condition', icon: 'Restrained_Condition_Icon.webp', description: 'Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.' },
   { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.', mechanics: { blocksActions: true } },
-  { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft. Aufweckbedingungen nach Quelle berücksichtigen.' },
+  { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft und kann keine selbstbestimmten Handlungen oder Reaktionen ausführen. „Abwarten / Zug aussetzen“ lässt den Zug verstreichen; Rettungswürfe bleiben möglich. Aufweckbedingungen und Entfernung richten sich nach der Quelle.', mechanics: { blocksActions: true } },
   { id: 'wet', name: 'Nass', kind: 'condition', icon: 'Wet_Condition_Icon.webp', description: 'Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.' },
   ...HEALTH_STATUS_PRESETS
 ]);

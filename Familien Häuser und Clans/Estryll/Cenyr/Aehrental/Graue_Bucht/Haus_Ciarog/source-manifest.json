@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "49f613c0-24e0-4f40-acfd-9f6ee0e0bc38",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "e6d3c167e990ff7c3bcb9cd29228d3f7383b065fdfd8445f3020131e1e1f2d4f"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-ciarog",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-ciarog",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 4,
+    "currentSeat": "Caer Diwedd",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/Ip2UOfO.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "70e649bf49a63d4d0001ae90079cdc7a39a2cc878afb1146013ecda1048c188f",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die aktuelle Schreibweise Ciaróg und der Ritterfürstenrang haben Vorrang; die Vorlage begründet keine Kern-Ausbildung."
+  ]
+}

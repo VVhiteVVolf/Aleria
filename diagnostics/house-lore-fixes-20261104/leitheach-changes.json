@@ -1,0 +1,472 @@
+{
+  "schema": "aleria.house-lore-corrections",
+  "schemaVersion": 1,
+  "status": "completed-source-corrections-awaiting-root-field-upgrades-and-builds",
+  "scope": "Leitheach",
+  "authorization": "User correction request 2026-11-04: children birth years take priority; choose coherent parent chronology; Wunbhna/Maolmhuire alive; Dal T’Saor administration ended 1735.",
+  "beforeAt": "2026-11-03T23:08:09.999Z",
+  "sourceFiles": [
+    {
+      "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+      "beforeSha256": "e369e782dac5245f916de9ee27173df66e8ef962f0651d5edb3d19ce43cef462",
+      "beforeBytes": 16654,
+      "afterSha256": "057b6aa4ff3286d3fdba5e4660e550e54c4c43b43a76f9561019ad38cc2628ac",
+      "afterBytes": 16656
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-fir-an-gallchobhair-family.js",
+      "beforeSha256": "b70fcbe565ce651e1b134b552887f2f3746e9a8277f55d8f098a2f72b7f746be",
+      "beforeBytes": 31202,
+      "afterSha256": "84844becf7a1bf995c8a20cb4915d884ba8ffe52243f8278448c0cb9ac48aef0",
+      "afterBytes": 31515
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+      "beforeSha256": "404a93ba77398c10a3b1b723169ff5a98968985868ef0209963e85b710551cc3",
+      "beforeBytes": 19023,
+      "afterSha256": "b7a8194bd8610b413a3a2598933dc791db1e34d812539b024c06b9c6c2b0b852",
+      "afterBytes": 19044
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+      "beforeSha256": "89ce9ba8fd33501a0aeb3ea56525e67175a25f6de3144536b238329d6e0d714c",
+      "beforeBytes": 23964,
+      "afterSha256": "e0a6d66f631f1d492aaa6efeb54347938746dbdbdab66a9548c9798fc6950514",
+      "afterBytes": 23985
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs",
+      "beforeSha256": "c6e11292cd2404ade064bc6de997eb11fb37eed2781e92ebf13e906afb395d62",
+      "beforeBytes": 7638,
+      "afterSha256": "cba24da2011afc3a0d4266f9c6ad40d6d19334aa5107c62422adfca04bd0d2fe",
+      "afterBytes": 8081
+    },
+    {
+      "path": "Kontinente/modules/leitheach/pages.source.json",
+      "beforeSha256": "11196356f27f85515fcc82c007243933d5b7b4c98bdcdb1cb3fde46ecf970cfc",
+      "beforeBytes": 216768,
+      "afterSha256": "5b5efbbe55f3c7062a64cee158ef4da862253639abfd6d84fa403557ad91742a",
+      "afterBytes": 217400
+    }
+  ],
+  "before": [
+    {
+      "id": "haus-gallchobhair",
+      "sourceRevision": 12,
+      "persons": [
+        {
+          "id": "aonghus-gallchobhair",
+          "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+          "name": "Aonghus Gallchobhair",
+          "birth": "1635",
+          "death": "1672",
+          "status": "dead"
+        },
+        {
+          "id": "etain-ancient",
+          "worldPersonId": "person--family-tree--etain-ancient",
+          "name": "Ètáin",
+          "birth": "1622",
+          "death": "1695",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "5c22efd80bf36986f5902b1e7ef2e97cae1c24cc20366dc3e8c270f902d5e202",
+        "partnerships": "937eba5da8d121e5cad7734300cea9bbfe6c848c9584a29a66ca5771bbd54b26",
+        "parentagesExceptResolvedCeardaiochtNotes": "755528a2bc207be86b5a6abc6da1ac724a78e7d3a7d399a8fc616ee70c6d9782",
+        "houses": "86130951867447c40118cd0580cd6925cbf87ed4e5e8844f4919ffea921a956c",
+        "profile": "f9fc2cee02141ff509b376bfe85801505172655522720592c44a1cf33cf3eeea"
+      }
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "sourceRevision": 6,
+      "persons": [
+        {
+          "id": "aonghus-gallchobhair",
+          "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+          "name": "Aonghus Gallchobhair",
+          "birth": "1635",
+          "death": "1672",
+          "status": "dead"
+        },
+        {
+          "id": "etain-ancient",
+          "worldPersonId": "person--family-tree--etain-ancient",
+          "name": "Ètáin",
+          "birth": "1622",
+          "death": "1695",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "baa42a378fb2e162fa17f29057d08f9b617e39e898f377aef2ff2c848edd32d8",
+        "partnerships": "a4627aa911788a62cda9ddf77dbcac40d2a1525b02536ceb8f41bd672d12e0c0",
+        "parentagesExceptResolvedCeardaiochtNotes": "8a2fa1958ea9eb548e93f15d6679e391f364cb7a63efbc5ef2421e2677cc0ee3",
+        "houses": "18ff7572163339d5ddd4d7f1871d0c25543ad325804d513412c3fd38e65d87f4",
+        "profile": "0ac4f0a6e5b4a1f77ea67ab80b1992aba36f81bf6506633334348bc304861814"
+      }
+    },
+    {
+      "id": "haus-choinnich",
+      "sourceRevision": 7,
+      "persons": [
+        {
+          "id": "maolmhuire-spouse-choinnich",
+          "worldPersonId": "person--family-tree--maolmhuire-spouse-choinnich",
+          "name": "Maolmhuire",
+          "birth": "????",
+          "death": "????",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "8bdada6a273bf317d7be2a782a41f0b867b49e19658f1dfdacc49425d4cabb74",
+        "partnerships": "1b7912da8f017f0c6f49b6f5568851b31c475a29f69fca3e8c1d3f74a52b89b1",
+        "parentagesExceptResolvedCeardaiochtNotes": "b2ebedf478ae7ee6238e65fa03e75543bb8f48b50c5cd4d28a138c88b62fe1b2",
+        "houses": "3e683b1fa4e73e53e93683183d434e190dc6c0230e9e30e895e15429f934fcec",
+        "profile": "d888478c5da4d0d4a0008ed1fe45947e5fbb49c0c268c5c09696d5fe55daf237"
+      }
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "sourceRevision": 5,
+      "persons": [
+        {
+          "id": "wunbhna-spouse-tsaoir",
+          "worldPersonId": "person--family-tree--wunbhna-spouse-tsaoir",
+          "name": "Wunbhna",
+          "birth": "????",
+          "death": "????",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "b79236e453702037280bb52076d05274b26f337533949fb79a9ff66e3f9d4601",
+        "partnerships": "6cb020a34db716b36c1eb3bb8d99e45b4d0934984ab5d2dd5be6d8f17e479f0d",
+        "parentagesExceptResolvedCeardaiochtNotes": "f2b74308740cc4af5b059b7193b041cad1c4642cb7dc5bd9ebada2d772cbe8e5",
+        "houses": "87c2f608dd5ea42ddf2b2fc50acf3073698d42ef1aec3f9fcd0e1a3cd8813de4",
+        "profile": "3af1e54628e3ca62101990e80b72e716bb06269ef3cdab98b28ce81f1f0d350a"
+      }
+    }
+  ],
+  "contentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs",
+  "afterAt": "2026-11-03T23:10:57.977Z",
+  "after": [
+    {
+      "id": "haus-gallchobhair",
+      "sourceRevision": 12,
+      "persons": [
+        {
+          "id": "aonghus-gallchobhair",
+          "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+          "name": "Aonghus Gallchobhair",
+          "birth": "1610",
+          "death": "1672",
+          "status": "dead"
+        },
+        {
+          "id": "etain-ancient",
+          "worldPersonId": "person--family-tree--etain-ancient",
+          "name": "Ètáin",
+          "birth": "1612",
+          "death": "1695",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "5c22efd80bf36986f5902b1e7ef2e97cae1c24cc20366dc3e8c270f902d5e202",
+        "partnerships": "937eba5da8d121e5cad7734300cea9bbfe6c848c9584a29a66ca5771bbd54b26",
+        "parentagesExceptResolvedCeardaiochtNotes": "755528a2bc207be86b5a6abc6da1ac724a78e7d3a7d399a8fc616ee70c6d9782",
+        "houses": "86130951867447c40118cd0580cd6925cbf87ed4e5e8844f4919ffea921a956c",
+        "profile": "f9fc2cee02141ff509b376bfe85801505172655522720592c44a1cf33cf3eeea"
+      }
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "sourceRevision": 6,
+      "persons": [
+        {
+          "id": "aonghus-gallchobhair",
+          "worldPersonId": "person--haus-gallchobhair--aonghus-gallchobhair",
+          "name": "Aonghus Gallchobhair",
+          "birth": "1610",
+          "death": "1672",
+          "status": "dead"
+        },
+        {
+          "id": "etain-ancient",
+          "worldPersonId": "person--family-tree--etain-ancient",
+          "name": "Ètáin",
+          "birth": "1612",
+          "death": "1695",
+          "status": "dead"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "baa42a378fb2e162fa17f29057d08f9b617e39e898f377aef2ff2c848edd32d8",
+        "partnerships": "a4627aa911788a62cda9ddf77dbcac40d2a1525b02536ceb8f41bd672d12e0c0",
+        "parentagesExceptResolvedCeardaiochtNotes": "8a2fa1958ea9eb548e93f15d6679e391f364cb7a63efbc5ef2421e2677cc0ee3",
+        "houses": "18ff7572163339d5ddd4d7f1871d0c25543ad325804d513412c3fd38e65d87f4",
+        "profile": "0ac4f0a6e5b4a1f77ea67ab80b1992aba36f81bf6506633334348bc304861814"
+      }
+    },
+    {
+      "id": "haus-choinnich",
+      "sourceRevision": 7,
+      "persons": [
+        {
+          "id": "maolmhuire-spouse-choinnich",
+          "worldPersonId": "person--family-tree--maolmhuire-spouse-choinnich",
+          "name": "Maolmhuire",
+          "birth": "????",
+          "death": "",
+          "status": "alive"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "8bdada6a273bf317d7be2a782a41f0b867b49e19658f1dfdacc49425d4cabb74",
+        "partnerships": "1b7912da8f017f0c6f49b6f5568851b31c475a29f69fca3e8c1d3f74a52b89b1",
+        "parentagesExceptResolvedCeardaiochtNotes": "b2ebedf478ae7ee6238e65fa03e75543bb8f48b50c5cd4d28a138c88b62fe1b2",
+        "houses": "3e683b1fa4e73e53e93683183d434e190dc6c0230e9e30e895e15429f934fcec",
+        "profile": "d888478c5da4d0d4a0008ed1fe45947e5fbb49c0c268c5c09696d5fe55daf237"
+      }
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "sourceRevision": 5,
+      "persons": [
+        {
+          "id": "wunbhna-spouse-tsaoir",
+          "worldPersonId": "person--family-tree--wunbhna-spouse-tsaoir",
+          "name": "Wunbhna",
+          "birth": "????",
+          "death": "",
+          "status": "alive"
+        }
+      ],
+      "protectedHashes": {
+        "personsExceptApprovedFields": "b79236e453702037280bb52076d05274b26f337533949fb79a9ff66e3f9d4601",
+        "partnerships": "6cb020a34db716b36c1eb3bb8d99e45b4d0934984ab5d2dd5be6d8f17e479f0d",
+        "parentagesExceptResolvedCeardaiochtNotes": "f2b74308740cc4af5b059b7193b041cad1c4642cb7dc5bd9ebada2d772cbe8e5",
+        "houses": "87c2f608dd5ea42ddf2b2fc50acf3073698d42ef1aec3f9fcd0e1a3cd8813de4",
+        "profile": "3af1e54628e3ca62101990e80b72e716bb06269ef3cdab98b28ce81f1f0d350a"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "aonghus-parent-chronology",
+      "before": {
+        "aonghusBirth": "1635",
+        "etainBirth": "1622",
+        "childrenBirths": [
+          1630,
+          1632,
+          1634
+        ]
+      },
+      "after": {
+        "aonghusBirth": "1610",
+        "etainBirth": "1612",
+        "childrenBirths": [
+          1630,
+          1632,
+          1634
+        ]
+      },
+      "reasons": [
+        "New user authorization supersedes the earlier priority of 1635.",
+        "Aonghus 1610 restores the previously documented earlier dating and remains compatible with the origin generation.",
+        "Etain 1612 gives a maternal age of 18 at the first unchanged birth.",
+        "Founders death years 1672/1695 and the existing Laird succession through 1672 remain intact.",
+        "Both copies of each shared identity are synchronized; no original supplied genealogy is newly imported."
+      ],
+      "chronology": [
+        {
+          "id": "wiomar-ceardaiocht",
+          "birth": 1630,
+          "fatherAge": 20,
+          "motherAge": 18
+        },
+        {
+          "id": "wunaire-ceardaiocht",
+          "birth": 1632,
+          "fatherAge": 22,
+          "motherAge": 20
+        },
+        {
+          "id": "seamus-ceardaiocht",
+          "birth": 1634,
+          "fatherAge": 24,
+          "motherAge": 22
+        }
+      ]
+    },
+    {
+      "id": "dal-t-saor-administration",
+      "before": "Territory title, overview and ruling-clan box imply current rule.",
+      "after": "Historical territorial label, explicit administrative end in 1735, former ruler and seat, historical rank, extinct card variant.",
+      "reasons": [
+        "The house administration ended; Quona and Junaid remain alive with existing identities and relationships.",
+        "Territory ID, hierarchy, Sruthlann seat reference, Clan Mac Airt allegiance and canonical iframe links remain."
+      ]
+    },
+    {
+      "id": "council-mages-alive",
+      "before": "Wunbhna and Maolmhuire have death ???? and normalized status dead.",
+      "after": "Both have empty death and explicit status alive; birth ???? remains unknown.",
+      "reasons": [
+        "Explicit user determination that both current council mages are alive.",
+        "No birth year, additional person, office, marriage or parentage has been invented."
+      ]
+    }
+  ],
+  "affectedFamilyIds": [
+    "haus-gallchobhair",
+    "haus-dal-ceardaiocht",
+    "haus-dal-t-saor",
+    "haus-choinnich"
+  ],
+  "modifiedCanonModules": [
+    "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+    "Stammbäume/assets/js/data/house-fir-an-gallchobhair-family.js",
+    "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+    "Stammbäume/assets/js/data/house-ua-choinnich-family.js"
+  ],
+  "fieldUpgradeRequests": [
+    {
+      "familyId": "haus-gallchobhair",
+      "persons": {
+        "aonghus-gallchobhair": [
+          "birth"
+        ],
+        "etain-ancient": [
+          "birth"
+        ]
+      },
+      "extensions": [
+        "sourceNote",
+        "sourceCorrections"
+      ]
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "persons": {
+        "aonghus-gallchobhair": [
+          "birth",
+          "notes"
+        ],
+        "etain-ancient": [
+          "birth"
+        ]
+      },
+      "publicParentages": [
+        {
+          "ids": [
+            "ceardaiocht-parentage-wiomar-ceardaiocht",
+            "ceardaiocht-parentage-wunaire-ceardaiocht",
+            "ceardaiocht-parentage-seamus-ceardaiocht"
+          ],
+          "fields": [
+            "notes"
+          ]
+        }
+      ],
+      "extensions": [
+        "sourceNote",
+        "sourceCorrections",
+        "sourceDiscrepancies"
+      ]
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "persons": {
+        "wunbhna-spouse-tsaoir": [
+          "death",
+          "status"
+        ]
+      }
+    },
+    {
+      "familyId": "haus-choinnich",
+      "persons": {
+        "maolmhuire-spouse-choinnich": [
+          "death",
+          "status"
+        ]
+      }
+    }
+  ],
+  "revisions": {
+    "baseSourceRevisionChanged": false,
+    "contentVersionChanged": false,
+    "biographySourceRevisionChanged": false,
+    "owner": "root applies targeted field-upgrade revisions and final biography migrations"
+  },
+  "verification": {
+    "freshRegistryImport": "pass",
+    "fourRecordsProtectedPersonsExceptApprovedFields": "pass",
+    "allFourPartnershipGraphs": "unchanged",
+    "allFourParentageGraphsExceptThreeResolvedPublicNotes": "unchanged",
+    "allFourHousesAndProfiles": "unchanged",
+    "sharedFounderDates": "pass",
+    "childDatesAndBiologicalEdges": "unchanged",
+    "publicSurvivorsQuonaJunaid": "alive-unchanged",
+    "councilMages": "alive-no-death-unknown-birth",
+    "remaining26TerritoryObjects": "unchanged-at-write",
+    "syntaxChecks": {
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "builds": {
+    "executed": [],
+    "rootToRun": [
+      "node Kontinente/scripts/build-leitheach.mjs",
+      "node Kontinente/scripts/build-leitheach.mjs --check"
+    ],
+    "note": "No generator with shared registry outputs was run. Root owns house builds, registry integration, final cache versions and regression fixtures.",
+    "houseBuildFamilyIds": [
+      "haus-gallchobhair",
+      "haus-dal-ceardaiocht",
+      "haus-dal-t-saor",
+      "haus-choinnich"
+    ]
+  },
+  "untouched": [
+    "Historical audit evidence under diagnostics/house-lore-audit-20261103 and diagnostics/leitheach-clans-20261103",
+    "Private dossiers and nonpublic relationship data",
+    "Images, source archives, IDs and graph topology",
+    "All other counter-record date/status/sex differences"
+  ],
+  "previousDefaultNotes": [
+    {
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "value": "Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Das bereits festgelegte Geburtsjahr 1635 ersetzt die erneute Altangabe 1610."
+    },
+    {
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+      "value": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten."
+    },
+    {
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+      "value": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten."
+    },
+    {
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-seamus-ceardaiocht",
+      "value": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten."
+    }
+  ],
+  "previousDefaultNotesSource": {
+    "path": "diagnostics/leitheach-clans-20261103/baseline.json",
+    "familyId": "haus-dal-ceardaiocht",
+    "verifiedPublicOnly": true,
+    "purpose": "Exact prior defaults for conditional note replacement; retain local authored notes when they differ."
+  }
+}

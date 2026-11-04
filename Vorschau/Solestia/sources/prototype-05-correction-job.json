@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "jobs": [
+    {
+      "id": "prototype-05",
+      "assetStem": "prototype-05",
+      "category": "warriors",
+      "replaces": "prototype-05-v1",
+      "prompt": "Precise single-element edit. First image is the EXACT target mounted Solestia cavalry prototype. Preserve the entire horse, rider, lance, hands, four legs/hooves, reins, saddle, stirrups, armor silhouette, closed Spanish morion, feathers, colors, lighting, matte painted style, framing and dimensions without any change. Second image supplies ONLY approved matte painting style, never its griffin/badge or exterior halo. The ONLY edit is the chest medallion: completely REMOVE the gold griffin animal and its round green medallion, replace that area with a simple SMALL DARK-GREEN VERTICAL CLOTH/ARMOR PANEL with a thin muted bronze edge and a few understated engraved bronze LEAF SCROLLS. No animal, creature, coat of arms, heraldic shield, symbol or letters on the chest. Neutral class prototype, not a named house. Keep the rest pixel-faithful. Transparent background outside silhouette and open gaps, no new fog/halo/shadow. EXACT1024x1536PNG full mounted figure.",
+      "references": [
+        "E:/Aleria/Vorschau/Solestia/assets/warriors/generated-archive/prototype-05-v1.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    }
+  ]
+}

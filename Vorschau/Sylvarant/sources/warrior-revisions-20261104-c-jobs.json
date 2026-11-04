@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "provider": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "pool-07-v2",
+      "houseId": "pool-07",
+      "assetStem": "house-pool-07-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in gr?n-silberner R?stung mit Schl?sselwappen, geradem zweischneidigem Schwert und R?ckenk?cher.",
+      "equipment": [
+        "Gerades zweischneidiges Schwert",
+        "Rückenköcher",
+        "Offener römischer Marinehelm",
+        "Beweglicher Ketten- und Plattenpanzer"
+      ],
+      "palette": [
+        "Mattsilber",
+        "Waldgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Asset type: existing Sylvarant house warrior PNG for Aleria. Input Image 1 is the exact EDIT TARGET. Input Image 2 supplies ONLY the approved painting STYLE; never copy its colors, armor, closed helmet, heraldry or pose. Make a surgical local edit of the held weapon in Image 1. Keep the exact same person, youthful face, expression, gaze, hair, naturally rounded human ears, entire Roman helmet, neck, anatomy, clothes, armor, cloak, colors, all key/anchor emblems, hands except minimally necessary grip correction, stance, boots and back quiver with its arrows, all untouched and visually identical to Image 1. Do not redesign or redraw the character. Retain the full 1024x1536 2:3 composition, exact figure scale and positions, complete feet and complete weapon tip inside frame. The whole weapon remains outside the leg. Change ONLY the curved saber into ONE normal STRAIGHT DOUBLE-EDGED SWORD: a perfectly straight blade center axis from guard to tip, two straight symmetrical cutting edges, broad normal blade tapering evenly to a centered symmetrical pointed tip, a subtle central ridge, no curved saber outline whatsoever. The blade, grip and pommel must share one straight functional axis. Give it a normal compact crossguard and leather-wrapped functional sword grip, the hand actually gripping the handle; no saber knuckle bow. Maintain the original point-down direction and overall length. No katana, no scimitar, no saber, no curved or bent blade, no arc, no single edge, no broad ornate fantasy weapon, no extra weapons. Scene/backdrop: actual transparent RGBA PNG outside the precise character and sword silhouette and in all open gaps; remove any exterior colored aura inherited from references, no backdrop, no ground, no shadow. No text or watermark.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nEdit target identity: key-emblem young human marine in forest-green clothing, silver and bronze Roman armor, open silver Roman helmet, dark curly hair, back quiver visible over image-right shoulder, free hand resting near belt. Preserve his entire image exactly; only replace the curved weapon at image-left with a straight normal two-edged sword. Keep the small silver key emblem on the chest unchanged.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-07.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-07"
+    },
+    {
+      "id": "pool-10-v2",
+      "houseId": "pool-10",
+      "assetStem": "house-pool-10-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in bronzefarbenem Schuppenpanzer mit Ankerwappen, geradem zweischneidigem Schwert und R?ckenk?cher.",
+      "equipment": [
+        "Gerades zweischneidiges Schwert",
+        "Rückenköcher",
+        "Offener römischer Spangenhelm",
+        "Bronzefarbener Schuppenpanzer"
+      ],
+      "palette": [
+        "Bronze",
+        "Creme",
+        "Olivgrün"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Asset type: existing Sylvarant house warrior PNG for Aleria. Input Image 1 is the exact EDIT TARGET. Input Image 2 supplies ONLY the approved painting STYLE; never copy its colors, armor, closed helmet, heraldry or pose. Make a surgical local edit of the held weapon in Image 1. Keep the exact same person, youthful face, expression, gaze, hair, naturally rounded human ears, entire Roman helmet, neck, anatomy, clothes, armor, cloak, colors, all key/anchor emblems, hands except minimally necessary grip correction, stance, boots and back quiver with its arrows, all untouched and visually identical to Image 1. Do not redesign or redraw the character. Retain the full 1024x1536 2:3 composition, exact figure scale and positions, complete feet and complete weapon tip inside frame. The whole weapon remains outside the leg. Change ONLY the curved saber into ONE normal STRAIGHT DOUBLE-EDGED SWORD: a perfectly straight blade center axis from guard to tip, two straight symmetrical cutting edges, broad normal blade tapering evenly to a centered symmetrical pointed tip, a subtle central ridge, no curved saber outline whatsoever. The blade, grip and pommel must share one straight functional axis. Give it a normal compact crossguard and leather-wrapped functional sword grip, the hand actually gripping the handle; no saber knuckle bow. Maintain the original point-down direction and overall length. No katana, no scimitar, no saber, no curved or bent blade, no arc, no single edge, no broad ornate fantasy weapon, no extra weapons. Scene/backdrop: actual transparent RGBA PNG outside the precise character and sword silhouette and in all open gaps; remove any exterior colored aura inherited from references, no backdrop, no ground, no shadow. No text or watermark.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nEdit target identity: anchor-emblem young human marine in cream and olive clothing, bronze scale armor, open bronze Roman helmet with silver center band, short dark hair, back quiver visible over image-left shoulder, free hand relaxed beside image-right hip. Preserve his entire image exactly; only replace the curved weapon at image-left with a straight normal two-edged sword. Keep both bronze anchor emblems unchanged.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-10.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-10"
+    }
+  ]
+}

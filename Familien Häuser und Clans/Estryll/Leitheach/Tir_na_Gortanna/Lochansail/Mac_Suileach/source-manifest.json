@@ -1,0 +1,144 @@
+{
+  "id": "haus-suileach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "b3443da9-03ce-4d76-a63e-c2db9b951309",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\b3443da9-03ce-4d76-a63e-c2db9b951309\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/mac-faill-suileach/animexx-original.html",
+    "bytes": 152437,
+    "sha256": "428ae3ba3901b7f0d184b71dddef41bae08c183e0a8aac04a98a3d39879ad0f3",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-suileach",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "mor-tiarna",
+      "seat": "Lochansail",
+      "barony": "",
+      "county": "Tir na Gortanna",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        ""
+      ],
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png"
+      }
+    },
+    "graphFingerprint": "d6722ac14f1a3e0339dbbec1dcedca1e853aab294d504a76b4618c3e9bd2fa22",
+    "historicalMetadata": {
+      "historicalStatus": "extinct",
+      "extinctHouse": false,
+      "ownHouseStatus": "extinct",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-suileach",
+    "title": "Mac Suileach",
+    "territoryId": "leitheach-tir-na-gortanna",
+    "territoryName": "Tir na Gortanna",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+    "territoryType": "Oberherrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      }
+    ],
+    "selectionBasis": "Historisches Haus ohne eigene heutige Territorialseite; zugehoerige Oberherrschaft",
+    "historical": true,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-suileach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-suileach",
+    "slug": "suileach",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-ca18e598-248c-4e8e-98f9-74e7b7eb5f4f.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-suileach/krieger-human-ears-v2.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/ear-correction-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "editTarget": "E:/Aleria/Stammbäume/assets/images/references/haus-suileach/krieger-generated-v1.png",
+    "originalGenerationSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-6378ec2b-0321-4ed0-bcaa-f1da2717b129.png",
+    "supersedesAssetPath": "Stammbäume/assets/images/references/haus-suileach/krieger-generated-v1.png",
+    "representative": true,
+    "namedPersonId": "",
+    "anatomy": "normal rounded human ears",
+    "sha256": "1a303e2511d4d016d96e6e6bba5b363741f2a7aa8198c2730f2570e0f9ba8c02",
+    "original": false,
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2295849,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-suileach, Rang Mor Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug mac-faill-suileach wird der bestehenden ID haus-suileach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Bestehender historicalStatus extinct hat Vorrang; frühere Mor-Tiarna-Stellung erhalten. Verbannung und verlorene Herrschaft nicht als belegten Tod sämtlicher Nachkommen auslegen.",
+    "Mac Faill Suileach ist die gelieferte Form der bestehenden Akte haus-suileach. Kein neuer Clan, keine neue Landeszuordnung oder aktueller Herrscher über Lochansail.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen.",
+    "Nutzerkorrektur: normale menschliche Ohren; korrigierte Fassung ersetzt die verworfene Zwischenfassung. Gelieferte Originale bleiben unverändert."
+  ],
+  "supersededIllustration": {
+    "id": "haus-suileach",
+    "slug": "suileach",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-6378ec2b-0321-4ed0-bcaa-f1da2717b129.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-suileach/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Leitheach/clan-mac-suileach.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "5ff8652e27d01d04676b5b01f42287f05d42e6e085971b41de13a4da081d64e6",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2225418,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "measurementSize": [2200, 1262],
+  "unmappedIds": ["poi-r01", "poi-r02", "poi-r03", "poi-r04"],
+  "nameRelocations": {
+    "poi-d01": [632.5,388.5], "poi-d02": [830,554], "poi-d03": [940.5,648.5],
+    "poi-d04": [715.5,342.5], "poi-d05": [1032.5,553.5], "poi-d06": [1467.5,264.5],
+    "poi-d07": [1444.5,399.5], "poi-d08": [1270.5,452.5], "poi-d11": [1409.5,555.5],
+    "poi-t05": [1394,330]
+  },
+  "newPoints": [
+    { "id":"poi-d16", "name":"Avelano", "kind":"Dorf", "pixel":[785.5,178.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d17", "name":"Cerenza", "kind":"Dorf", "pixel":[1324.5,200.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d18", "name":"Pavello", "kind":"Dorf", "pixel":[1337.5,298.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d19", "name":"Vestara", "kind":"Dorf", "pixel":[859.5,318.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d20", "name":"Lorento", "kind":"Dorf", "pixel":[1000.5,393.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d21", "name":"Narvella", "kind":"Dorf", "pixel":[1110.5,403.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d22", "name":"Elvanto", "kind":"Dorf", "pixel":[815.5,457.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d23", "name":"Dorvessa", "kind":"Dorf", "pixel":[919.5,459.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d24", "name":"Calvessa", "kind":"Dorf", "pixel":[1157.5,519.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-d25", "name":"Orseta", "kind":"Dorf", "pixel":[1202.5,646.5], "sourceKind":"DorfKleinerOrtGehöftHofWeilerEtc.png" },
+    { "id":"poi-n01", "name":"Marentia", "kind":"Küstensiedlung", "pixel":[639,175], "sourceKind":"Alternative Maps/Venalys Normal.png" },
+    { "id":"poi-n02", "name":"Corvenza", "kind":"Küstensiedlung", "pixel":[716,130], "sourceKind":"Alternative Maps/Venalys Normal.png" },
+    { "id":"poi-n03", "name":"Altavero", "kind":"Küstensiedlung", "pixel":[1321,119], "sourceKind":"Alternative Maps/Venalys Normal.png" },
+    { "id":"poi-n04", "name":"Feressa", "kind":"Küstensiedlung", "pixel":[1418,125], "sourceKind":"Alternative Maps/Venalys Normal.png" },
+    { "id":"poi-a15", "name":"Anwesen 15", "kind":"Anwesen", "pixel":[650,277], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a16", "name":"Anwesen 16", "kind":"Anwesen", "pixel":[1415,239], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a17", "name":"Anwesen 17", "kind":"Anwesen", "pixel":[1282,338], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a18", "name":"Anwesen 18", "kind":"Anwesen", "pixel":[985,455], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a19", "name":"Anwesen 19", "kind":"Anwesen", "pixel":[1072,468], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a20", "name":"Anwesen 20", "kind":"Anwesen", "pixel":[1229,556], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a21", "name":"Anwesen 21", "kind":"Anwesen", "pixel":[984,608], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-a22", "name":"Anwesen 22", "kind":"Anwesen", "pixel":[1150,608], "sourceKind":"Venalys Anwesen.png" },
+    { "id":"poi-t07", "name":"Taverne, Herberge oder Bordell", "kind":"Taverne, Herberge oder Bordell", "pixel":[862,250], "sourceKind":"Tavernentype2.png" },
+    { "id":"poi-t08", "name":"Taverne, Herberge oder Bordell", "kind":"Taverne, Herberge oder Bordell", "pixel":[1243,285], "sourceKind":"Tavernentype2.png" }
+  ]
+}

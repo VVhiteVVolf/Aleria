@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "id": "regions",
+      "number": 1,
+      "short": "Gelieferte Karte",
+      "file": "Kaiserreich (Sylvarant).png",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Sylvarant\\Kaiserreich (Sylvarant).png",
+      "sourceSha256": "25926dcf8657110a9d7559166f195f68e3bfa0c3ae7e46f7edef6e7f0e8d5878",
+      "sourceImageSize": [
+        8126,
+        8192
+      ],
+      "originalRetained": true,
+      "map": "assets/maps/sylvarant.webp",
+      "sha256": "818cb42c49a71a34d6286d58c671fe05aef219de72946e347f196669453def85",
+      "imageSize": [
+        4063,
+        4096
+      ],
+      "noGeometryEdits": true,
+      "sourceMarkers": [
+        {
+          "area": 10867,
+          "bbox": [
+            5649,
+            219,
+            5799,
+            369
+          ],
+          "centre": [
+            5724.0,
+            294.0
+          ]
+        },
+        {
+          "area": 15508,
+          "bbox": [
+            4720,
+            1161,
+            4914,
+            1342
+          ],
+          "centre": [
+            4817.0,
+            1251.5
+          ]
+        },
+        {
+          "area": 10874,
+          "bbox": [
+            5457,
+            1454,
+            5608,
+            1604
+          ],
+          "centre": [
+            5532.5,
+            1529.0
+          ]
+        },
+        {
+          "area": 15046,
+          "bbox": [
+            2058,
+            1727,
+            2252,
+            1907
+          ],
+          "centre": [
+            2155.0,
+            1817.0
+          ]
+        },
+        {
+          "area": 25886,
+          "bbox": [
+            3292,
+            1928,
+            3486,
+            2126
+          ],
+          "centre": [
+            3389.0,
+            2027.0
+          ]
+        },
+        {
+          "area": 25885,
+          "bbox": [
+            6905,
+            2289,
+            7099,
+            2487
+          ],
+          "centre": [
+            7002.0,
+            2388.0
+          ]
+        },
+        {
+          "area": 10867,
+          "bbox": [
+            2751,
+            2645,
+            2901,
+            2795
+          ],
+          "centre": [
+            2826.0,
+            2720.0
+          ]
+        },
+        {
+          "area": 10877,
+          "bbox": [
+            5652,
+            2709,
+            5803,
+            2859
+          ],
+          "centre": [
+            5727.5,
+            2784.0
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            5220,
+            2739,
+            5371,
+            2889
+          ],
+          "centre": [
+            5295.5,
+            2814.0
+          ]
+        },
+        {
+          "area": 10876,
+          "bbox": [
+            4543,
+            2969,
+            4694,
+            3119
+          ],
+          "centre": [
+            4618.5,
+            3044.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            2977,
+            3100,
+            3128,
+            3250
+          ],
+          "centre": [
+            3052.5,
+            3175.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            1382,
+            3440,
+            1533,
+            3590
+          ],
+          "centre": [
+            1457.5,
+            3515.0
+          ]
+        },
+        {
+          "area": 10870,
+          "bbox": [
+            2718,
+            4038,
+            2868,
+            4188
+          ],
+          "centre": [
+            2793.0,
+            4113.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            7466,
+            4188,
+            7616,
+            4338
+          ],
+          "centre": [
+            7541.0,
+            4263.0
+          ]
+        },
+        {
+          "area": 35414,
+          "bbox": [
+            4653,
+            4238,
+            4957,
+            4542
+          ],
+          "centre": [
+            4805.0,
+            4390.0
+          ]
+        },
+        {
+          "area": 10879,
+          "bbox": [
+            5359,
+            5007,
+            5510,
+            5157
+          ],
+          "centre": [
+            5434.5,
+            5082.0
+          ]
+        },
+        {
+          "area": 10879,
+          "bbox": [
+            702,
+            5178,
+            853,
+            5328
+          ],
+          "centre": [
+            777.5,
+            5253.0
+          ]
+        },
+        {
+          "area": 10868,
+          "bbox": [
+            4046,
+            5295,
+            4197,
+            5445
+          ],
+          "centre": [
+            4121.5,
+            5370.0
+          ]
+        },
+        {
+          "area": 10874,
+          "bbox": [
+            2880,
+            5394,
+            3030,
+            5545
+          ],
+          "centre": [
+            2955.0,
+            5469.5
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            6770,
+            5459,
+            6921,
+            5609
+          ],
+          "centre": [
+            6845.5,
+            5534.0
+          ]
+        },
+        {
+          "area": 10871,
+          "bbox": [
+            2114,
+            5726,
+            2265,
+            5876
+          ],
+          "centre": [
+            2189.5,
+            5801.0
+          ]
+        },
+        {
+          "area": 10877,
+          "bbox": [
+            5996,
+            6286,
+            6147,
+            6436
+          ],
+          "centre": [
+            6071.5,
+            6361.0
+          ]
+        },
+        {
+          "area": 26036,
+          "bbox": [
+            671,
+            6562,
+            866,
+            6760
+          ],
+          "centre": [
+            768.5,
+            6661.0
+          ]
+        },
+        {
+          "area": 25663,
+          "bbox": [
+            3130,
+            6654,
+            3324,
+            6852
+          ],
+          "centre": [
+            3227.0,
+            6753.0
+          ]
+        },
+        {
+          "area": 10869,
+          "bbox": [
+            7187,
+            7313,
+            7337,
+            7463
+          ],
+          "centre": [
+            7262.0,
+            7388.0
+          ]
+        },
+        {
+          "area": 25885,
+          "bbox": [
+            5571,
+            7515,
+            5765,
+            7713
+          ],
+          "centre": [
+            5668.0,
+            7614.0
+          ]
+        }
+      ],
+      "bakedNames": true,
+      "bakedCityLabels": [
+        "Hauptstadt"
+      ]
+    }
+  ],
+  "visualReview": {
+    "archonates": 7,
+    "imperialDomains": 1,
+    "settlements": 26,
+    "circles": 18,
+    "squares": 7,
+    "diamonds": 1,
+    "notes": "Im ungeteilten blauen Südostgebiet steht Archonat zweimal. Ohne eine trennende Grenze wird kein zusätzliches Archonat erfunden."
+  }
+}

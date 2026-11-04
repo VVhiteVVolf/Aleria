@@ -15,19 +15,19 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "registerPage": true,
   "prepared": false,
-  "contentVersion": "20261024-vortigerns-v1",
-  "biographySourceRevision": 6,
-  "biographyPreviousDefaultFingerprints": [],
+  "contentVersion": "20261104-lore-fixes-v1",
+  "biographySourceRevision": 7,
+  "biographyPreviousDefaultFingerprints": ["4668:8808ac9:7c5b3a77"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte des Hauses",
   "biographySummary": {
     "overview": "Haus Dyngwn O’Mathragon zählt zu den angesehenen Ritterfürstenhäusern Cenyrs. Sein Ruf beruht auf meisterlichem Schwertkampf und einer Disziplin, die Ausbildung und Alltag gleichermaßen prägt. In Mathragon verkörpert es das Ideal eines Ritters, dessen Ansehen aus beständiger Pflichterfüllung erwächst. Auch außerhalb des Königreichs werden die Dyngwn als Vertreter cenyrischer Ritterlichkeit wahrgenommen.",
-    "history": "Das Haus führt seinen Ursprung auf einen einfachen Ritter und eine Adlige aus der Umgebung Mathragons zurück. Als Gründer ist Kynwas Schwertarm verzeichnet. Die Überlieferung nennt außerdem Goronwy, Cadogan und Morgan in der Ritterfürstenfolge; eine lückenlose Chronik aller Generationen liegt nicht vor. Morgan steht in der alten Hofliste seit 1653, wird im aktuellen Gegenaktenabgleich jedoch ausdrücklich als verstorben geführt. Ein nachfolgendes amtierendes Oberhaupt wird deshalb nicht eigenmächtig eingesetzt.",
+    "history": "Das Haus führt seinen Ursprung auf einen einfachen Ritter und eine Adlige aus der Umgebung Mathragons zurück. Als Gründer ist Kynwas Schwertarm verzeichnet. Die Überlieferung nennt außerdem Goronwy, Cadogan und Morgan in der Ritterfürstenfolge; eine lückenlose Chronik aller Generationen liegt nicht vor. Morgan Dyngwn lebt und führt das Haus seit 1653 als Ritterfürst.",
     "character": "Disziplin, Loyalität und Ehre bilden den Maßstab des Hauses. Strenge soll persönliche Verlässlichkeit hervorbringen und nicht bloß äußeren Gehorsam. Ein Dyngwn soll Mut mit Bescheidenheit verbinden und das Wohl des Königreichs über eigene Vorteile stellen. Diese Haltung erklärt den Ruf seiner Angehörigen als Waffenmeister und als Amtsträger im Dienst der Krone.",
     "customs": "Die bekannte Ritterschule vermittelt Schwertkunst und die Tugenden des Ritterstands. Ihre anspruchsvolle Ausbildung steht im Mittelpunkt der Haustradition. Unterricht, Übung und die Erwartung eines vorbildlichen Auftretens gehören zusammen; bloße Begabung ersetzt die geforderte Selbstbeherrschung nicht.",
     "holdings": "Bergbau und Schmiedekunst sind die überlieferten wirtschaftlichen Grundlagen. Erze werden zu Waffen, Rüstungen und Werkzeugen verarbeitet. Schwert- und Kampfkunstschulen ergänzen dieses Handwerk und ziehen Schüler aus dem Adel und aus anderen Kriegerkreisen an.",
     "culture": "Die Dyngwn richten ihr Handeln an den Neun Göttlichen aus. Zum cenyrischen Ritterideal gehören Salbung und Eid am Gewässer sowie die besondere Bindung an die Dame der See. Schlichte, würdige Ausrüstung und das Schwert als bevorzugte Waffe spiegeln den Anspruch des Hauses wider.",
-    "relations": "Die bestehende Familienakte bewahrt die überlieferte Erbfolge mit Gwlgawd, Garith, Derwyn und Hael. Sie ersetzt keine noch ungeklärte Amtsnachfolge. Eine konkrete Fehde ist in den Hauskapiteln nicht ausgearbeitet."
+    "relations": "Morgan Dyngwn führt das Haus als Ritterfürst im Dienst der Krone. Die überlieferte Erbfolge nennt Gwlgawd, Garith, Derwyn und Hael. Eine konkrete Fehde ist nicht überliefert."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -116,12 +116,12 @@ export const HOUSE_CONTENT = {
       "Die Dyngwn genießen den Respekt und die Hochachtung ihrer Mitmenschen, nicht durch übermäßigen Stolz oder erhabenes Auftreten, sondern durch ein tief verwurzeltes Engagement für Disziplin, Ehre und Tugendhaftigkeit. Sie folgen den Prinzipien der Neun Göttlichen mit besonderer Hingabe und sehen in jeder Tugend und Lehre der Götter eine Richtschnur für ihr Leben und ihre Entscheidungen. Jeder Dyngwn-Ritter betrachtet sich als Werkzeug des Göttlichen, demütig im Glauben, aber fest in der Tat, was ihnen sowohl geistliche als auch weltliche Anerkennung einbringt.",
       "In ihrer Kultur und religiösen Praxis legen sie großen Wert darauf, dass ihr Handeln stets den Lehren der Götter entspricht und dass sie ihren Status als geachtete Ritter und Verteidiger des Reiches durch ehrbares Verhalten und selbstlose Pflichterfüllung verdienen. Durch diese Haltung verkörpern die Dyngwn die Ideale Cenyrs, und ihr starker Glaube an die Neun Göttlichen prägt nicht nur ihr individuelles Leben, sondern auch das gesamte Haus."
     ],
-    "conflictsAlliances": "Die bestehende Familienakte bewahrt die überlieferte Erbfolge mit Gwlgawd, Garith, Derwyn und Hael. Sie ersetzt keine noch ungeklärte Amtsnachfolge. Eine konkrete Fehde ist in den Hauskapiteln nicht ausgearbeitet.",
+    "conflictsAlliances": "Morgan Dyngwn führt das Haus als Ritterfürst im Dienst der Krone. Die überlieferte Erbfolge nennt Gwlgawd, Garith, Derwyn und Hael. Eine konkrete Fehde ist nicht überliefert.",
     "values": [
       "Das Haus Dyngwn verkörpert die Werte von Disziplin, Loyalität und Ehre. Die Dyngwn glauben an die Bedeutung von Strenge und Ordnung, sowohl in der Ausbildung als auch im persönlichen Leben, und sehen sich als die Hüter der Tradition und Ideale des cenyrischen Rittertums. Sie streben danach, stets das Wohl des Königreichs über persönliche Interessen zu stellen und sich in jeder Hinsicht als würdige Vertreter Cenyrs zu erweisen. Für die Dyngwn ist ein wahrer Ritter nicht nur ein Kämpfer, sondern auch ein Vorbild in Mut und Bescheidenheit. Ihre Verpflichtung, das Reich zu schützen und sich an seine höchsten Tugenden zu halten, formt jede Entscheidung und jedes Handeln, und die Mitglieder des Hauses setzen Ehre und Pflicht stets an die erste Stelle."
     ],
-    "succession": "Die überlieferte Erbfolge ist im Hofbereich mit den vorhandenen Personen verknüpft. Sie ersetzt keine noch unbekannte Amtsübergabe.",
-    "court": "Die folgenden Persönlichkeiten gehören zur überlieferten Amts- und Familiengeschichte. Unbekannte Amtszeiten bleiben offen. Morgan ist trotz unbekannten Todesjahrs als verstorben belegt; ein späteres amtierendes Oberhaupt ist offen.",
+    "succession": "Morgan Dyngwn ist das amtierende Oberhaupt. Die überlieferte Erbfolge nennt Gwlgawd, Garith, Derwyn und Hael.",
+    "court": "Morgan Dyngwn führt das Haus seit 1653. Die weiteren Persönlichkeiten gehören zur überlieferten Amts- und Familiengeschichte; unbekannte frühere Amtszeiten bleiben offen.",
     "familyTree": "Die vorhandene Familienakte ist hier eingebettet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
     "historicalFigures": "Diese Persönlichkeiten prägten die überlieferte Geschichte des Hauses."
   },
@@ -177,7 +177,7 @@ export const HOUSE_CONTENT = {
       "role": "Ritterfürst",
       "image": "../Stammbäume/assets/images/portraits/haus-neidr/morgan-dyngwn.jpg",
       "silhouette": "male",
-      "detail": "Ritterfürst · Oberhaupt des Hauses Dyngwn seit 1653 · Verstorben"
+      "detail": "Ritterfürst · Oberhaupt des Hauses Dyngwn seit 1653"
     }
   ],
   "heirs": [
@@ -233,6 +233,6 @@ export const HOUSE_CONTENT = {
     }
   ],
   "trivia": [],
-  "currentHead": "Nicht sicher überliefert",
+  "currentHead": "Morgan Dyngwn",
   "firstHeir": "Gwlgawd Dyngwn"
 };

@@ -194,7 +194,8 @@ export default createTerritory({
           "liege": "Haus Pendrag",
           "rank": "Grafenhaus",
           "featured": true,
-          "featuredLabel": "Grafenhaus"
+          "featuredLabel": "Grafenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-grawn"
         },
         {
           "name": "Marchog",
@@ -204,7 +205,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-marchog"
         },
         {
           "name": "Morcanhuc",
@@ -214,7 +216,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-morcanhuc"
         },
         {
           "name": "Baedd",
@@ -224,7 +227,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-baedd"
         },
         {
           "name": "Ciaróg",
@@ -234,7 +238,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-ciarog"
         },
         {
           "name": "Sgwarnog",
@@ -244,7 +249,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Baronenhaus",
           "featured": false,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-sgwarnog"
         }
       ]
     },
@@ -259,7 +265,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterherrenhaus",
           "featured": false,
-          "featuredLabel": "Ritterherrenhaus"
+          "featuredLabel": "Ritterherrenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwythiad"
         }
       ]
     },
@@ -274,7 +281,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Bürgerliches Haus",
           "featured": false,
-          "featuredLabel": "Bürgerliches Haus"
+          "featuredLabel": "Bürgerliches Haus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aroglyn"
         }
       ]
     },
@@ -290,7 +298,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-chiffyddlon"
         },
         {
           "name": "Gwarchod",
@@ -300,7 +309,8 @@ export default createTerritory({
           "liege": "Haus Grawn O'Glyndraith",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gwarchod"
         }
       ]
     },
@@ -315,7 +325,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cruithenaech"
         },
         {
           "name": "Warthog",
@@ -325,7 +336,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Offen",
           "featured": false,
-          "featuredLabel": "Offen"
+          "featuredLabel": "Offen",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warthog"
         }
       ]
     }

@@ -6,12 +6,13 @@ import {
   IVARSHEIM_EXTINCT_HOUSE_GROUPS,
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { HOUSE_FEUERHAAR_FAMILY } from './house-feuerhaar-family.js';
-import { HOUSE_GRENDEL_FAMILY } from './house-grendel-family.js';
+import { HOUSE_GRENDEL_FAMILY } from './house-grendel-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_HYRMGARTHR_FAMILY } from './house-hyrmgarthr-family.js';
 import { HOUSE_SILBERZUNGE_FAMILY } from './house-silberzunge-family.js';
 import { HOUSE_SKOGG_FAMILY } from './house-skogg-family.js';
+import { HOUSE_HRAFNVALD_FAMILY } from './house-hrafnvald-family.js?v=20261103-ivarsheim-v1';
 import {
   HOUSE_TRACHWYLL_IVARSFELS_FAMILY,
   HOUSE_TRACHWYLL_TALFRONWYN_FAMILY
@@ -21,6 +22,7 @@ export const IVARSHEIM_ACTIVE_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'feuerhaar', title: 'Clan Feuerhaar', rank: 'Thane', territory: 'Jägersruh' }),
   Object.freeze({ slug: 'skogg', title: 'Clan Skogg', rank: 'Thane', territory: 'Kornweiler' }),
   Object.freeze({ slug: 'silberzunge', title: 'Clan Silberzunge', rank: 'Hesire', territory: 'Ivarsfels' }),
+  Object.freeze({ slug: 'hrafnvald', title: 'Clan Hrafnvald', rank: 'Huskarl', territory: 'Ivarsfels' }),
   Object.freeze({ slug: 'trachwyll', title: 'Haus Trachwyll', rank: 'Hesire', territory: 'Ivarsfels' }),
   Object.freeze({ slug: 'grendel', title: 'Clan Grendel', rank: 'Thane', territory: 'Hjerimsheim' }),
   Object.freeze({
@@ -147,9 +149,11 @@ export const IVARSHEIM_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
             ? HOUSE_TRACHWYLL_IVARSFELS_FAMILY
             : definition.slug === 'grendel'
               ? HOUSE_GRENDEL_FAMILY
-              : definition.slug === 'hyrmgardr'
-                ? HOUSE_HYRMGARTHR_FAMILY
-                : activeHouseFamily(definition)
+              : definition.slug === 'hrafnvald'
+                ? HOUSE_HRAFNVALD_FAMILY
+                : definition.slug === 'hyrmgardr'
+                  ? HOUSE_HYRMGARTHR_FAMILY
+                  : activeHouseFamily(definition)
   )),
   ...IVARSHEIM_EXTINCT_HOUSE_DEFINITIONS.map(extinctHouseFamily)
 ]);

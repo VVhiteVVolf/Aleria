@@ -25,3 +25,5 @@ Fraktionen/docs/sources/*.html -text whitespace=-blank-at-eol
 Archiv/Quellen/kuestenchroniken-2026-10-24/*.html -text whitespace=-blank-at-eol
 # Generated Bestiarium bundle preserves upstream CSS template-literal whitespace.
 AleriaAlmanach/DokumentenWerkstatt/assets/book-reader.bundle.js linguist-generated whitespace=-blank-at-eol
+# House import manifests also verify the exact original HTML bytes.
+"Familien Häuser und Clans/**/animexx-*.html" -text whitespace=-blank-at-eol

@@ -1,4 +1,5 @@
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
+import { getCombatWardDeflectionPolicy } from './combat-ward-policy.js';
 
 // Each weapon hit, including a follow-up, checks the remaining ward charges.
 // Return fresh conditions so previews never mutate a character's stored state.
@@ -17,10 +18,11 @@ export async function resolveCombatWard({ attack, conditions = [], dice, actor, 
       deflected: false, shattered: true, chargesBefore: charges, chargesAfter: 0, roll: null
     } };
   }
-  let deflected = deflectChance >= 100;
+  const policy = getCombatWardDeflectionPolicy(deflectChance);
+  let deflected = policy.automaticDeflection;
   let roll = null;
-  if (!deflected && deflectChance > 0 && typeof dice.rollWardDeflection === 'function') {
-    const threshold = Math.max(1, Math.min(20, Math.round(deflectChance / 100 * 20)));
+  if (policy.requiresRoll && typeof dice.rollWardDeflection === 'function') {
+    const threshold = policy.threshold;
     const result = await dice.rollWardDeflection({ threshold, actorName: actor.name, targetName: target.name, container });
     deflected = Number(result.natural) <= threshold;
     roll = { natural: Number(result.natural), threshold, rollId: result.id || '' };

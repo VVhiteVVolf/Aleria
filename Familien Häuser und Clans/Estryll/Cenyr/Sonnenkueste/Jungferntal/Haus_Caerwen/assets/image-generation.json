@@ -1,0 +1,42 @@
+{
+  "schema": "aleria.house-figure-generation",
+  "version": 1,
+  "houseId": "haus-caerwen",
+  "generatedAt": "2026-11-03",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "defaultSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12f-fb44-7d93-b36e-5e3217ddae0a\\exec-25b5d2cf-d22e-4997-864e-cc8b74f18c30.png",
+  "prompt": "Use case: stylized-concept. Asset: ONE representative Aleria house figure, portrait 2:3, full body completely visible. Reference 1 is ONLY the mandatory painting style, not an armor template. Reference 2 supplies the house crest colors and motif.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\nSubject and equipment: Jungferntal riverbank knight under Morforwyn. Forest green split surcoat over silver-grey half plate and mail. Broad rounded bell-shaped iron helmet with a raised open visor and visible calm face, small alder leaf engraved on brow. Silver trident-and-alder chest emblem. Long functional trident held upright, no shield. Short dark green cape suitable for wet wooded banks.\nNeutral upright three-quarter stance, feet visible, calm readable silhouette, simple large shapes. NO environment, ground plane, cast shadow, glow, text, watermark or extra person. Genuine transparent PNG outside the figure and through all open gaps. Do not copy the reference knight's standard helmet or armor; use the specified individual design.",
+  "references": [
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-caerwen.png"
+  ],
+  "transparentBackground": true,
+  "aspectRatio": "2:3",
+  "image": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Jungferntal/Haus_Caerwen/assets/hausdarstellung-2026-11-03.png",
+  "referenceInspection": "Approved house-knight style and the matching crest were inspected before generation.",
+  "qa": {
+    "status": "passed",
+    "contactSheet": "diagnostics/sonnenkueste-house-pages-20261103/jungferntal-contact-sheet.png",
+    "reviewedOnLightAndDarkBackground": true,
+    "fullBodyVisible": true,
+    "helmetAndShieldDesign": "broad brimmed helmet with raised visor; visible face; no shield",
+    "heraldicMotifReviewed": true,
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "fullyTransparentPixels": 949929,
+    "alphaBoundingBox": [
+      0,
+      12,
+      1024,
+      1511
+    ],
+    "note": "Original generated alpha preserved. Clean cutout visually inspected on white and dark backgrounds; no visible external halo or ground shadow. Visible faces, weapon grips and complete feet reviewed."
+  },
+  "sha256": "ae18ffe7e636b3fdeecf6998b36fb3ff78cf2ba484c18cbe2d6599a6c1bf6720",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA"
+  }
+}

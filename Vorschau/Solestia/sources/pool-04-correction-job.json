@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "jobs": [
+    {
+      "id": "pool-04-v2",
+      "replaces": "pool-04-v1",
+      "assetStem": "pool-04",
+      "category": "emblems",
+      "prompt": "Use case: precise-object-edit. Edit the attached flat painted circular purple/silver GRIFFIN heraldic emblem. Preserve its exact circle, black/silver acanthus frame, purple wood field, existing griffin head, FOUR existing limbs (two eagle foreclaws and two lion hind legs), one tail, colors and matte flat painted linework. Add only the missing SECOND clearly visible feathered WING. There must be exactly TWO SEPARATE wings, both attached to the griffin's upper back, not just two layers of feathers inside one wing. Keep the large existing foreground wing rising up-right intact. Add a distinct slightly smaller FAR wing behind the neck, sweeping diagonally UP-LEFT into the empty purple area above and left of the head, with its own obvious curved leading edge and feather fan. Two wing bases merge naturally into the back, no extra arm or foot. Both wings fully inside the inner purple field, no frame overlap. Retain the four limbs and single tail, don't add further animals. Entire interior of circle opaque alpha255, outside fully transparent alpha0, no shadows, no text. Square PNG, front-on, FLAT matte painted heraldry with only sparse pigment texture, no3D, embossing or glossy lighting.",
+      "references": [
+        "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-04-v1.png"
+      ]
+    }
+  ],
+  "status": "withdrawn-early-concept",
+  "referenceArchives": [
+    {
+      "originalReference": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-04-v1.png",
+      "retainedAt": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/early-pool-04-v1.png"
+    }
+  ]
+}

@@ -11,14 +11,14 @@ import { HOUSE_FREIWINTER_FAMILY } from './house-freiwinter-family.js';
 import { HOUSE_FROSTGEBORENE_FAMILY } from './house-frostgeborene-family.js';
 import { HOUSE_EISENJUNGFER_FAMILY } from './house-eisenjungfer-family.js';
 import { HOUSE_KAMPFGEBORENE_FAMILY } from './house-kampfgeborene-family.js';
-import { HOUSE_NACHTJAEGER_FAMILY } from './house-nachtjaeger-family.js';
+import { HOUSE_NACHTJAEGER_FAMILY } from './house-nachtjaeger-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_SCHWARZDORN_FAMILY } from './house-schwarzdorn-family.js';
 import { HOUSE_SKAAL_FAMILY } from './house-skaal-family.js';
 import { HOUSE_SKALD_FAMILY } from './house-skald-family.js';
 import { HOUSE_SKJEGG_FAMILY } from './house-skjegg-family.js';
 import { HOUSE_SOEKEREN_FAMILY } from './house-soekeren-family.js';
 import { HOUSE_STERKR_FAMILY } from './house-sterkr-family.js';
-import { HOUSE_VANGANDR_FAMILY } from './house-vangandr-family.js';
+import { HOUSE_VANGANDR_FAMILY } from './house-vangandr-family.js?v=20261104-lore-fixes-v1';
 import { extendRorikshallSkalliRetinueFamily } from './rorikshall-skalli-retinue-families.js';
 
 export const RORIKSHEIM_ACTIVE_CLAN_DEFINITIONS = Object.freeze([

@@ -168,7 +168,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-draenog"
         },
         {
           "name": "Lyfant O'Caer Asgwrn",
@@ -178,7 +179,8 @@ export default createTerritory({
           "liege": "Haus Pysgod O'Tredegar",
           "rank": "Ritterfürstenhaus",
           "featured": false,
-          "featuredLabel": "Ritterfürstenhaus"
+          "featuredLabel": "Ritterfürstenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-lyfant-caer-asgwrn"
         }
       ]
     }

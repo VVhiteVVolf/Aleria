@@ -8,5 +8,7 @@ export const PROJECT_FONTS = [
   ['Kanaanith Monumental', 'Kanaanith', new URL('../../../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2', import.meta.url).href],
   ['Lingua Argenti Monumental', 'Lingua Argenti', new URL('../../../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff2', import.meta.url).href],
   ['Stoicheia Polis', 'Stoicheia', new URL('../../../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff2', import.meta.url).href],
+  ['Tavarua Bildschnitt', 'Tavarua · Nuatlapa (Tlapanui)', new URL('../../../../Fonts/Tlapanui-Gesamtpaket-2.000/Fonts/TavaruaBildschnitt-Regular.woff2', import.meta.url).href],
+  ['Ayluun Mondbogen', 'Ayluun · Tirghan (Ishtaran)', new URL('../../../../Fonts/Ishtaran-Web-1.001/AyluunMondbogen-Regular.woff', import.meta.url).href],
   ['Faehrtenlaut', 'Fährtenlaut', new URL('../../../../Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff2', import.meta.url).href]
 ].map(([family, label, url]) => ({ family, label, url }));

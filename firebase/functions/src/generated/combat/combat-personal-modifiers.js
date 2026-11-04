@@ -20,9 +20,10 @@ export function conditionalSkillModifier(profile, skill) {
     .reduce((sum, m) => sum + m.bonus, 0);
 }
 function passiveSources(profile) {
-  return [...(profile.abilities || []).filter(a => a.active !== false && a.activationType === 'passive'),
-    ...(profile.quirks || []).filter(a => a.active !== false && isHealthTraitMechanicallyActive(a, profile) && isPsychologicalTraitMechanicallyActive(a, profile)),
-    ...(profile.conditions || []).filter(a => a.active !== false && a.substance)];
+  return [...(profile.abilities || []).filter(a => a.activationType === 'passive'),
+    ...(profile.quirks || []), ...(profile.conditions || [])]
+    .filter(source => source.active !== false && isHealthTraitMechanicallyActive(source, profile)
+      && isPsychologicalTraitMechanicallyActive(source, profile));
 }
 export function conditionalSaveModifier(profile, context = {}) {
   const effects = context.effects || [];

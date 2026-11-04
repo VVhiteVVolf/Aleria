@@ -5123,7 +5123,7 @@
       "title": "Herrschaft der Dál T’Saor",
       "shortTitle": "Herrschaft der Dál T’Saor",
       "type": "Herrschaft",
-      "kicker": "Herrschaft · Dal T’Saor",
+      "kicker": "Historische Herrschaft · Dal T’Saor",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
       "parentLabel": "Tir an Comhchuibhis",
       "hierarchy": [
@@ -5157,9 +5157,11 @@
       "crestAlt": "Banner Herrschaft der Dál T’Saor",
       "copy": {
         "overview": [
-          "Herrschaft der Dál T’Saor ist die städtische Herrschaft des Clans in Sruthlann. Die Stadt ist zugleich der Sitz seines unmittelbaren Lehnsherrn; ein eigenes Landschaftsgebiet wird hierfür nicht abgegrenzt."
+          "Die Herrschaft der Dál T’Saor war die städtische Laird-Herrschaft des Clans in Sruthlann. Ihre Hausverwaltung erlosch 1735. Sruthlann ist zugleich der Sitz des unmittelbaren Lehnsherrn Clan Mac Airt; ein eigenes Landschaftsgebiet wird hierfür nicht abgegrenzt."
         ],
-        "history": [],
+        "history": [
+          "1735 wurde die in der Stammburg verbliebene Hauslinie durch ein Unheil aus dem Dunkelhain vernichtet. Damit endeten die örtliche Hauptlinie und ihre Hausverwaltung. Quona und Junaid überlebten außerhalb der Burg und lebten in ihren angeheirateten Häusern weiter. Das Ende der Verwaltung bedeutet deshalb keine vollständige Auslöschung aller Angehörigen."
+        ],
         "culture": [],
         "economy": [],
         "defense": [],
@@ -5171,19 +5173,23 @@
           "rows": [
             {
               "label": "Typ",
-              "value": "Städtische Laird-Herrschaft"
+              "value": "Erloschene städtische Laird-Herrschaft"
             },
             {
-              "label": "Herrschender Clan",
+              "label": "Ende der Hausverwaltung",
+              "value": "1735"
+            },
+            {
+              "label": "Ehemals herrschender Clan",
               "value": "Dal T’Saor",
               "href": "/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view"
             },
             {
-              "label": "Rang",
+              "label": "Historischer Rang",
               "value": "Laird (Ritterfürst)"
             },
             {
-              "label": "Sitz",
+              "label": "Früherer Sitz",
               "value": "Sruthlann"
             },
             {
@@ -5196,7 +5202,7 @@
       ],
       "families": [
         {
-          "title": "Herrschender Clan",
+          "title": "Historischer Clan",
           "houses": [
             {
               "familyId": "haus-dal-t-saor",
@@ -5208,9 +5214,10 @@
               "rank": "Laird (Ritterfürst)",
               "liege": "Clan Mac Airt",
               "featured": true,
-              "featuredLabel": "Herrschender Clan"
+              "featuredLabel": "Historischer Clan"
             }
-          ]
+          ],
+          "variant": "extinct"
         }
       ],
       "councilGroups": [],

@@ -1,0 +1,6 @@
+@import url('../shared/country-workbench/heraldry-gallery.css');
+
+.sylvarant-art-dialog h2{overflow-wrap:anywhere}
+.sylvarant-art-dialog .art-detail-layout figure{position:static}
+.sylvarant-art-dialog .art-detail-layout figure img{max-height:72vh;object-fit:contain}
+.sylvarant-art-dialog .prototype-art-detail figure img{height:72vh}

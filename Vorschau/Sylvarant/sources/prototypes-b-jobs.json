@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "provider": "image_gen.imagegen",
+  "style": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "prototype-03",
+      "category": "warriors",
+      "assetStem": "prototype-03",
+      "name": "Marinekrieger",
+      "role": "Marinekrieger",
+      "description": "Wohlgerüsteter Marinekrieger mit beweglicher römischer Rüstung, offenem Helm, Stahlsäbel und Rückenköcher.",
+      "equipment": [
+        "Stahlsäbel",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "palette": [
+        "Dunkelpetrol",
+        "Silber",
+        "Bronze"
+      ],
+      "mount": null,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. One entirely new class prototype from Sylvarant in the fictional Empire Argentum. No person name, house assignment or newly coined class name. Reference1 sets ONLY the approved matte painted RPG character STYLE; its Western knight helmet, blue colours, heraldry and exterior colour mist are NOT design instructions. Roman-Latin equipment with a knightly touch, wealthy and well armoured, NO Greek/Corinthian helmets or Greek influence. No firearms.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nIndividual design: Ein junger erwachsener Mann von25Jahren, schlank-athletisch, warmolivfarbene Haut und dunkles kurzes lockiges Haar, ruhiges waches Gesicht. Eine vollständige wohlausgestattete marine Kampffigur im rein römisch-lateinischen Stil mit ritterlichem Hauch. Offener römischer Weisenau-inspirierter Stahlhelm: flache gerundete Kalotte, klarer horizontaler Stirnschirm, kurzer Nackenschutz und einfache funktionale Wangenlaschen; dezente bronzene gestempelte Beschläge an Schläfen und Stirn, kein griechischer Nasal-/Korintherhelm und kein hoher Querbusch. Der Helm lässt das Menschengesicht offen. Beweglicher wohlhabender Panzer aus dunklem Kettenhemd, wenigen breiten silbergrauen Torso- und Schultersegmenten, sorgfältigen bronzenen Kanteneinfassungen und schmalen Unterarmschienen. Dunkelpetrolfarbene knielange Tunika mit geteilten Seiten, etwas kürzerer dunkelblauer Schulterumhang mit wenigen goldbraunen Saumnähten, edler brauner Ledergürtel, stählerne Knieschalen und dunkle feste Halbstiefel. Keine Religionszeichen und keine Hausheraldik. In der rechten Hand EIN funktionaler gebogener STAHLSÄBEL, ruhig seitlich mit Klinge nach unten; linke Hand entspannt am Gürtel. EIN RÜCKENKÖCHER hinter der linken Schulter mit sichtbaren Pfeilfedern, KEIN Bogen in der Hand. Keine zweite gezogene Waffe und KEIN Schild. Ruhige aufrechte Dreiviertelpose mit leicht versetzten Füßen, keine Kampf- oder Schiffsszene.\n\nMatte subdued palette: Dunkelpetrol, Silber, Bronze. Quiet upright full-body composition; exact1024x1536,2:3. Young adult20-28,fit,normal rounded human ears. ENTIRE highest helmet/hair/crest, every weapon tip and both full feet visible with minimum8percent transparent margin on ALL FOUR sides. For mounted figure show ENTIRE horse, four legs and four complete separate hooves, tail and rider sword with the same margin. Make subject smaller to fit. NO SHIELD for this prototype. No background, ground, outer shadows, glow, colour mist, paper, black rectangle, text, watermark or frame. True transparent PNG exterior and open gaps, body and materials opaque. Simple clear shapes, thin soft painted contours, uniform fine pigment grain, no photorealism, thick comics outlines or CGI."
+    },
+    {
+      "id": "prototype-04",
+      "category": "warriors",
+      "assetStem": "prototype-04",
+      "name": "Ranger",
+      "role": "Ranger",
+      "description": "Gepanzerte Langbogenschützin mit offenem römischem Helm, Rückenköcher und leichtem edlem Mantel über Ketten- und Plattenrüstung.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener römischer Kammhelm",
+        "Ketten- und Plattenpanzer",
+        "Leichter Mantel"
+      ],
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "mount": null,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: stylized-concept. One entirely new class prototype from Sylvarant in the fictional Empire Argentum. No person name, house assignment or newly coined class name. Reference1 sets ONLY the approved matte painted RPG character STYLE; its Western knight helmet, blue colours, heraldry and exterior colour mist are NOT design instructions. Roman-Latin equipment with a knightly touch, wealthy and well armoured, NO Greek/Corinthian helmets or Greek influence. No firearms.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nIndividual design: Eine junge erwachsene Frau von24Jahren, schlank und fit-athletisch, hellolivfarbene Haut, ruhige klare jugendliche Gesichtszüge und dunkles glattes Haar im tiefen Zopf. Vollständig gerüstete wohlhabende Rangerin mit einer eigenständigen anderen Silhouette als Marinekrieger und Reiter. Offener spätrömischer Intercisa-inspirierter Kammhelm aus mattem Silberstahl, mit deutlichem schmalem Scheitelband und zwei kurzen klappbaren Wangenplatten; niedriger kurzer dunkelgrüner Längskamm, kein griechischer Helm, keine riesigen Federn. Menschliches Gesicht und Kinn frei. Gut geschützter enger Kettenhauberk über schlichter grüner Untertunika, matte leicht gebogene Brustplatte, wenige breite römische Schultersegmente, feste Armschiene am Bogenarm und kompakte Metallknieschalen. Ein leichter EDler waldgrüner Mantel mit schmalem kupferfarbenem und elfenbeinfarbenem Saum hängt hinter nur einer Schulter, keine Kapuze, keine Rogue-/Schurkenkleidung, keine Lederbikini- oder Pullo-Schablone. Dunkle funktionale Stiefel. In einer Hand EIN langer eleganter Holzbogen mit durchgehender sichtbarer Bogensehne, ruhig aufrecht neben dem Körper, beide Bogenenden vollständig im Bild; die andere Hand locker am Schulterriemen des Köchers. EIN RÜCKENKÖCHER mit sichtbaren Pfeilfedern hinter der Schulter, kein angelegter Pfeil, keine Schießhaltung. KEIN Schild und keine gezogene Klinge. Ruhiger aufrechter Dreiviertelstand, beide Füße vollständig sichtbar, normale menschliche abgerundete Ohren.\n\nMatte subdued palette: Waldgrün, Silber, Kupfer. Quiet upright full-body composition; exact1024x1536,2:3. Young adult20-28,fit,normal rounded human ears. ENTIRE highest helmet/hair/crest, every weapon tip and both full feet visible with minimum8percent transparent margin on ALL FOUR sides. For mounted figure show ENTIRE horse, four legs and four complete separate hooves, tail and rider sword with the same margin. Make subject smaller to fit. NO SHIELD for this prototype. No background, ground, outer shadows, glow, colour mist, paper, black rectangle, text, watermark or frame. True transparent PNG exterior and open gaps, body and materials opaque. Simple clear shapes, thin soft painted contours, uniform fine pigment grain, no photorealism, thick comics outlines or CGI."
+    },
+    {
+      "id": "prototype-05",
+      "category": "warriors",
+      "assetStem": "prototype-05",
+      "name": "Edler Reiter",
+      "role": "Edler Reiter",
+      "description": "Junger Schwertreiter ohne Helm auf einem Equo. Sein römisch-ritterlicher Harnisch und die schlichte hochwertige Reitausrüstung verbinden Schutz und Wohlstand.",
+      "equipment": [
+        "Reiterschwert",
+        "Römisch-ritterlicher Harnisch",
+        "Sattel mit Steigbügeln",
+        "Funktionaler Zaum"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Silber",
+        "Elfenbein",
+        "Gold"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Bestiarium/assets/horse-profiles/equo.webp"
+      ],
+      "prompt": "Use case: stylized-concept. One entirely new class prototype from Sylvarant in the fictional Empire Argentum. No person name, house assignment or newly coined class name. Reference1 sets ONLY the approved matte painted RPG character STYLE; its Western knight helmet, blue colours, heraldry and exterior colour mist are NOT design instructions. Reference2 provides only the Equo HORSE BREED, not setting, characters or composition. Roman-Latin equipment with a knightly touch, wealthy and well armoured, NO Greek/Corinthian helmets or Greek influence. No firearms.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nIndividual design: Ein junger erwachsener Mann von24Jahren, schlank-athletisch, KEIN HELM und KEINE Kopfbedeckung. Kurzes dunkles leicht welliges Haar, offenes jugendliches bartloses Gesicht, natürliche menschliche abgerundete Ohren. Edler wohlhabender römisch-lateinischer SCHWERTREITER mit ritterlichem Hauch, keinesfalls griechische oder kataphraktische Helmmaske. Matt silbergrauer römisch-ritterlicher Harnisch mit leicht gewölbter Brustplatte, einfachen sorgfältigen Goldkanten, kurzen überlappenden römischen Schultersegmenten, Kettenunterärmeln und gegliederten Armschienen. Dunkelrote Untertunika und kurzer geteilter Pteryges-Schurz, kleiner elfenbeinfarbener Schulterüberwurf, feste gepanzerte Knie und dunkle Reitstiefel. Keine konkrete Hausheraldik und kein neues Klassensymbol. In rechter Hand EIN gerades langes Reiterschwert, ruhig seitlich leicht nach oben gehalten, gesamte Klinge und Spitze deutlich im Bild; linke Hand hält echte getrennte Zügel. KEIN Schild, keine Lanze, kein Bogen. Er sitzt auf GENAU EINEM Equo, der tatsächlichen Pferderasse aus Bildreferenz2: dunkel anthrazitgraues Fell, schwarze Mähne und schwarzer Schweif, kräftige Brust, kompakter robuster belastbarer Körper und solide Beine, kein riesiges Kaltblut und kein dünnes Wüstenpferd. Pferd steht ruhig in seitlicher Dreiviertelansicht, Kopf nach links leicht zum Betrachter. Vollständige Pferdesilhouette mit GENAU VIER klar voneinander getrennten Beinen und VIER vollständigen Hufen, alle mit erkennbaren Abständen; Kopf, beide Pferdeohren und ganzer Schweif im Bild. Schweif wächst ausschließlich aus der Hinterhand. Anatomisch plausibler Rücken und Sattel, Brustgurt, normale seitliche Steigbügel mit Reitstiefeln darin, Zügel mit Zaum und Gebiss verbunden. Kleine dunkelrote hochwertige Satteldecke mit elfenbeinfarbenem Saum, nur eine kurze funktionale Schutzplatte an der Pferdebrust, Pferdekopf und Beine offen, KEIN laufendes Ganzkörper-Pferdepanzerkostüm. Referenz2 zeigt nur die RASSE; keine Stallumgebung, keine anderen Pferde und keinen Pfleger kopieren. Gesamtes Pferd und gesamter Reiter samt Schwert mit komfortablem8ProzentRand, ruhiger vollständiger Aufbau, keine Reitsprung- oder Angriffsszene.\n\nMatte subdued palette: Dunkelrot, Silber, Elfenbein, Gold. Quiet upright full-body composition; exact1024x1536,2:3. Young adult20-28,fit,normal rounded human ears. ENTIRE highest helmet/hair/crest, every weapon tip and both full feet visible with minimum8percent transparent margin on ALL FOUR sides. For mounted figure show ENTIRE horse, four legs and four complete separate hooves, tail and rider sword with the same margin. Make subject smaller to fit. NO SHIELD for this prototype. No background, ground, outer shadows, glow, colour mist, paper, black rectangle, text, watermark or frame. True transparent PNG exterior and open gaps, body and materials opaque. Simple clear shapes, thin soft painted contours, uniform fine pigment grain, no photorealism, thick comics outlines or CGI."
+    }
+  ]
+}

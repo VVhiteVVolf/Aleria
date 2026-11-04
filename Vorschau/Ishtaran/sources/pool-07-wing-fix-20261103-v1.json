@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "id": "pool-07",
+  "revision": "wing-fix-20261103-v1",
+  "request": "Remove only the extra folded diagonal foreground wing crossing the eagle torso; preserve raised rear wing, head, legs, tail, palette and frame.",
+  "status": "complete",
+  "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8af9df97-180d-401f-b8e9-58c6e95afa12.png",
+  "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8af9df97-180d-401f-b8e9-58c6e95afa12.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "editTool": "image_gen.imagegen",
+  "editReference": "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\generated-archive\\pool-07-before-wing-fix-20261103-v1\\production.png",
+  "editPrompt": "Use case: precise-object-edit. This is a STRICT LOCAL CORRECTION of the SINGLE attached image, NOT a redesign or a new emblem. The attached archived production image is the edit target and sole visual reference.\n\nONLY CHANGE: remove the EXTRA FOLDED DIAGONAL FOREGROUND WING that lies across the eagle's chest and torso. Its long overlapping flight feathers run from the near shoulder in the image centre diagonally down toward the lower right across the body. Eliminate that entire extra folded wing and replace only its footprint with a natural compact golden EAGLE TORSO with short body feathers. The far wing is hidden behind the body, not separately visible.\n\nKEEP EXACTLY ONE VISIBLE WING: preserve the existing large spread REAR WING in the upper-right quadrant, including its entire fan, original feather arrangement, position, scale and silhouette. Preserve the separate lower-right TAIL exactly; the tail is not the wing being removed. Preserve the eagle HEAD, hooked beak, eye, neck silhouette, both legs, toes and talons in their original positions and proportions.\n\nALL OTHER PIXELS / DESIGN FEATURES ARE INVARIANTS: keep the same circular frame, exact border geometry, dark iron material, gold interlace, four gold diamond ornaments, every floral ornament and its position, night-green painted wood grain, palette, hand-painted texture, composition, square canvas, circle size and transparent margins. Keep all ornament shapes and colors unchanged. No new details, no shifted emblems, no extra birds, no new wing, no text. A small corrective inpainting confined to the central torso area only. Do not redraw or restyle the ring, background, head, raised wing, legs or tail.\n\nThe existing Seljuk/Ottoman/Cuman-inspired heraldic style has priority over any generic cultural language in the archival style specification below. That specification is provided to PRESERVE the existing material and alpha contract, not to replace the current design:\n\n# Universeller Wappen-Prompt\n\n**Wappenname:** Pool07 – Goldener Adler (bestehendes Wappen, lokale Flügelkorrektur)\n\n**Zentrales Symbol:** Der vorhandene goldene Adler im linken Profil auf Nachtgrün. Nur EIN sichtbarer ausgebreiteter Flügel hinten oben rechts; der zusätzliche gefaltete diagonale Vorderflügel über Brust und Körper wird entfernt.\n\n**Farbpalette:** Gold · Nachtgrün · Schwarzes Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SCHWARZEM EISEN wie im Referenzbild mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nDie vorhandenen goldenen geometrischen Flechtbänder, vier goldenen Rauten und alle rot-gold-grünen Pflanzenornamente positionsgleich bewahren.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nFinal check: one raised wing visible upper-right, compact anatomically plausible torso with no extra diagonal folded wing over it, original separate tail lower-right, original head and two legs, original entire round frame and ornaments. TRUE transparent PNG RGBA; entire disc inside the outer circle fully opaque, only the exterior transparent. No outer shadow, glow or halo.",
+  "oldGenerationRecord": {
+    "id": "pool-07",
+    "name": "Unzugeordnetes Wappen 07 – Goldrabe",
+    "motif": "Ein einzelner großer goldener Rabe mit klar gezeichnetem Schnabel, im Profil stehend und ein Flügel leicht geöffnet, auf nachtdunkelgrünem bemaltem Holzfeld.",
+    "colors": [
+      "Gold",
+      "Nachtgrün",
+      "Schwarzes Eisen"
+    ],
+    "frame": "SCHWARZEM EISEN",
+    "ornament": "Geschlossener schwarzer Eisenring mit sparsamer goldener geometrischer Flechtornamentik und kleinen Rauten.",
+    "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 07 – Goldrabe\n\n**Zentrales Symbol:** Ein einzelner großer goldener Rabe mit klar gezeichnetem Schnabel, im Profil stehend und ein Flügel leicht geöffnet, auf nachtdunkelgrünem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Nachtgrün · Schwarzes Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SCHWARZEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener schwarzer Eisenring mit sparsamer goldener geometrischer Flechtornamentik und kleinen Rauten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+      "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+      "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+    ],
+    "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-cd4a6cd9-80bd-4e65-8bcf-ad8f7140eee5.png",
+    "production": "assets/emblems/production/pool-07.png",
+    "preview": "assets/emblems/previews/pool-07.webp",
+    "generatedArchive": "assets/emblems/generated/pool-07.png",
+    "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-cd4a6cd9-80bd-4e65-8bcf-ad8f7140eee5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "sourceSha256": "622da6e18ca77ba7856d20d2c8beb3ebada2ea53b83e72a3614055e2d9001412",
+    "sha256": "137ba3dee7de6a47a37af400ab3a6fbd6afdb858b544b280749243b42fdc73d7",
+    "previewSha256": "942df553ac75df2c86d385a8cf697b64a2d4d1b8d6da250c1c0740649a1c0721",
+    "size": [
+      1316,
+      1316
+    ],
+    "mode": "RGBA",
+    "previewAlphaIdentical": true,
+    "validationStatus": "passed",
+    "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+    "alphaPreparation": {
+      "size": [
+        1316,
+        1316
+      ],
+      "padding": {
+        "left": 35,
+        "top": 29
+      },
+      "circle": {
+        "centre": [
+          658,
+          658
+        ],
+        "radius": 579
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ]
+    }
+  },
+  "originalArchive": [
+    {
+      "file": "assets\\emblems\\generated-archive\\pool-07-before-wing-fix-20261103-v1\\generated.png",
+      "sha256": "622da6e18ca77ba7856d20d2c8beb3ebada2ea53b83e72a3614055e2d9001412",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets\\emblems\\generated-archive\\pool-07-before-wing-fix-20261103-v1\\preview.webp",
+      "sha256": "942df553ac75df2c86d385a8cf697b64a2d4d1b8d6da250c1c0740649a1c0721",
+      "size": [
+        600,
+        600
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets\\emblems\\generated-archive\\pool-07-before-wing-fix-20261103-v1\\production.png",
+      "sha256": "137ba3dee7de6a47a37af400ab3a6fbd6afdb858b544b280749243b42fdc73d7",
+      "size": [
+        1316,
+        1316
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "previousAuditRecord": {
+    "id": "pool-07",
+    "source": "assets/emblems/generated/pool-07.png",
+    "sourceSha256": "622da6e18ca77ba7856d20d2c8beb3ebada2ea53b83e72a3614055e2d9001412",
+    "production": "assets/emblems/production/pool-07.png",
+    "productionSha256": "137ba3dee7de6a47a37af400ab3a6fbd6afdb858b544b280749243b42fdc73d7",
+    "preview": "assets/emblems/previews/pool-07.webp",
+    "previewSha256": "942df553ac75df2c86d385a8cf697b64a2d4d1b8d6da250c1c0740649a1c0721",
+    "previewSize": [
+      600,
+      600
+    ],
+    "previewAlphaIdentical": true,
+    "exactCircle": true,
+    "interiorAlpha": 255,
+    "exteriorAlpha": 0,
+    "originalUnchanged": true,
+    "size": [
+      1316,
+      1316
+    ],
+    "padding": {
+      "left": 35,
+      "top": 29
+    },
+    "circle": {
+      "centre": [
+        658,
+        658
+      ],
+      "radius": 579
+    },
+    "rgbUnchanged": true,
+    "alphaValues": [
+      0,
+      255
+    ]
+  },
+  "editedGeneratorArchive": "assets\\emblems\\generated-archive\\pool-07-wing-fix-20261103-v1\\edited-generator.png",
+  "sourceSha256": "a953f47d172646d9b77d58b5f81e80d6b5220433ef903d42fb4d17cb35284f45",
+  "productionSha256": "4798a81589b5969463a72275b0d91058f991432842f4c137457529c36319fa58",
+  "previewSha256": "66796b13f7d86b069a9d1198b5e9a4ef7014b93dff4ac7be6bb34108a5098d40",
+  "alphaPreparation": {
+    "size": [
+      1260,
+      1260
+    ],
+    "padding": {
+      "left": 4,
+      "top": 4
+    },
+    "circle": {
+      "centre": [
+        630,
+        630
+      ],
+      "radius": 550
+    },
+    "rgbUnchanged": true,
+    "alphaValues": [
+      0,
+      255
+    ]
+  },
+  "exactCircle": true,
+  "interiorAlpha": 255,
+  "exteriorAlpha": 0,
+  "rgbUnchangedByAlphaPreparation": true,
+  "toolOriginalUnchanged": true,
+  "beforeVersionsVerified": true,
+  "warriorPool07Unchanged": {
+    "assets\\warriors\\generated\\pool-07.png": "1cb4232faa367266a6b94b5398b1eff69ee14709a2e6aadfd1d39adc2fbd1139",
+    "assets\\warriors\\production\\pool-07.png": "b46fab3750f0f08bb30e7e8cbc079a414ba941472c1487414001c9c94919f02e",
+    "assets\\warriors\\previews\\pool-07.webp": "7a91eff31ed9b781c5f4b3d7edd5083c88296d59e11cfd7598d636811202c7e7"
+  },
+  "visualCandidateReview": "Extra folded foreground wing removed; one raised rear wing remains; torso compact, head/legs/tail and frame visually preserved.",
+  "finalVisualReview": {
+    "status": "passed",
+    "method": "view_image of final production plus before/after light/dark contact",
+    "oneVisibleRaisedWing": true,
+    "extraFoldedForegroundWingRemoved": true,
+    "compactTorso": true,
+    "headLegsTailVisuallyPreserved": true,
+    "frameFloralLayoutAndPaletteVisuallyPreserved": true,
+    "transparentExteriorClean": true,
+    "opaqueInteriorNoHoles": true,
+    "evidence": "diagnostics/ishtaran/pool-07-wing-fix-light-dark.jpg",
+    "frameComparison": "Existing frame design, four diamond ornaments and floral arrangement visually preserved; no byte-identical pre-edit raster claim."
+  }
+}

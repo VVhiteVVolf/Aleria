@@ -1,0 +1,83 @@
+{
+  "id": "haus-windhueter",
+  "source": {
+    "attachmentId": "f43fd362-3e21-43a3-964c-236458abdc52",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f43fd362-3e21-43a3-964c-236458abdc52\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/windhueter/animexx-original.html",
+    "bytes": 51318,
+    "sha256": "4a3e60aa684c764f7b984136e7d09349df407375ab57783ab50b99ffe1c23d6a",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-windhueter",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Aldrimarer (jüngst ausgestorben)",
+      "barony": "Ausgestorbene Häuser",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Ivarsfels"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-windhueter",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-windhueter",
+    "familyId": "haus-windhueter",
+    "slug": "windhueter",
+    "canonicalSlug": "windhueter",
+    "attachmentId": "f43fd362-3e21-43a3-964c-236458abdc52",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/cFuY5tg.png",
+    "sourceUrl": "https://i.imgur.com/cFuY5tg.png",
+    "path": "Stammbäume/assets/images/references/haus-windhueter/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-windhueter/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:400px; width:267px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 266927,
+    "sha256": "41ce6ef25a2d9ad48f492b6738916ac827eb05a0bc2eba1d9900045d066ea379",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Gerüsteter Krieger in Blau mit geschlossenem Helm, Horn und Windzeichen.",
+    "sha": "41ce6ef25a2d9ad48f492b6738916ac827eb05a0bc2eba1d9900045d066ea379",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Jüngst erloschene Aldrimarer von Ivarsfels, nicht Teil der antiken Gruppen. Die Einordnung bleibt von der historisch-kulturellen Verbindung nach Klangheim getrennt.",
+    "Die entfernte Verwandtschaft mit Klangheimer Clans wird bereits in der Quelle selbst als unsicher oder legendenhaft beschrieben. Keine neuen genealogischen Verbindungen oder Namenslisten daraus ableiten.",
+    "Die Wendung falsche Seite ist eine wertende Autorenfloskel. Neutral bleiben: Parteinahme und anschließender Untergang, ohne eine im eigenen Abschnitt nicht genannte konkrete Fraktion zu erfinden.",
+    "Keine eigenen Güter, Religion, Gründungsjahre oder Hofämter aus den leeren Kapiteln ergänzen. Rang bleibt offen.",
+    "Die Verbindung zu Blutklinge ist durch dessen Text belegt; sie kann als Beziehung genannt werden, ohne beide Akten zusammenzulegen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

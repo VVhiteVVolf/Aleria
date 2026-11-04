@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "title": "Am Bachufer",
+  "generatedAt": "2026-11-03",
+  "tool": "image_gen.imagegen (built-in)",
+  "promptFile": "01-bachufer.txt",
+  "asset": "AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+  "sourcePath": "C:/Users/fhg_r/.codex/generated_images/01a1a11d-a599-70c1-a00e-29476597e69b/exec-2024e933-6681-46ae-a54a-6aca5a26d4f9.png",
+  "width": 1024,
+  "height": 1536,
+  "sha256": "0e22f04c49175d47c2abe8f79685b8db0d8067e7cc25cf8d36b920e698bb9404",
+  "preset": "anime-scene-portrait",
+  "visualReview": {
+    "women": 4,
+    "horses": 4,
+    "cats": 1,
+    "thrushes": 1,
+    "goldfish": 0,
+    "distinctHairstyles": true,
+    "midday": true,
+    "safeCampfire": true,
+    "observedAnatomicalDefects": [],
+    "heulwenBlazeCorrected": true
+  },
+  "status": "selected-for-main-and-scene",
+  "correction": {
+    "promptFile": "01-bachufer-correction.txt",
+    "priorDraft": "01-bachufer-draft-v1.png",
+    "scope": "Far-left Heulwen facial white blaze only",
+    "reason": "Initial draft shrank broad continuous blaze to a forehead mark",
+    "result": "Continuous white blaze now visible forehead to muzzle; overall composition and cast preserved"
+  },
+  "rootVisualReview": {
+    "women": 4,
+    "horses": 4,
+    "cats": 1,
+    "thrushes": 1,
+    "goldfish": 0,
+    "identitiesAndHairChecked": true,
+    "humanLimbsChecked": true,
+    "middayAndCampfire": true,
+    "noApparentMaterialDefects": true
+  },
+  "selection": {
+    "number": 1,
+    "date": "2026-11-03",
+    "instruction": "Wir nehmen bild 1 als Haupt und szenenbild statt das aktuelle"
+  }
+}

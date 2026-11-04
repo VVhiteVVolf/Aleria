@@ -1,0 +1,359 @@
+{
+  "schema": "aleria.public-house-content-lore-audit",
+  "date": "2026-11-04",
+  "region": "Aldrimar",
+  "scope": "Inhaltlicher Read-only-Abgleich; keine Stammbaum-, Lebensdaten- oder Statusarithmetik",
+  "coverage": {
+    "houseSources": 112,
+    "byRegisterCounty": {
+      "Schwarzfenn": 11,
+      "Roriksheim": 33,
+      "Kronental": 29,
+      "Krähenmoor": 26,
+      "Ivarsheim": 13
+    },
+    "territorialPages": {
+      "roriksheim": 15,
+      "ivarsheim": 8,
+      "schwarzfenn": 9,
+      "kraehenmoor": 11,
+      "heldenwacht": 16
+    },
+    "centralSources": [
+      "Kontinente/modules/aldrimar/kingdom.source.json",
+      "Kontinente/modules/aldrimar/succession.source.json",
+      "Kontinente/modules/heldenwacht/authority.source.json"
+    ],
+    "method": "Alle 112 aktuellen Hausquellen: Profile, Ueberblicke, Dienstbindungen und Sitzverweise strukturiert abgeglichen. Ausfuehrliche Erzaehlungen gezielt fuer Ursprungsclans, Migration, Gruendungen, Praetendentenkrieg und wirtschaftliche Rollen gegengeprueft."
+  },
+  "findings": [
+    {
+      "id": "ALD-CONTENT-01",
+      "status": "confirmed",
+      "priority": "high",
+      "topic": "Falsche Fraktionsbezeichnung bei der Varulv-Parteinahme",
+      "summary": "Die Varulv verlassen angeblich die Gruenen, um sich Arn anzuschliessen; die gemeinsamen Kriegsdarstellungen behandeln Arns Sturmgeborenen-Lager als gruen. Der Satz verwechselt die Abkehr vom ermordeten Roger beziehungsweise einem bisherigen Buendnis mit einem Wechsel zu einer anderen Farbe.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+          "line": 112,
+          "quote": "... wendeten sich die Varulv von den Grünen ab und schlossen sich Arn Vaeren an."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Vaeren/haus.content.mjs",
+          "line": 112,
+          "quote": "Die Grüne Fraktion, zu der die Vaeren-Sturmgeborenen gehörten, pflegte enge Beziehungen sowohl zu den Sturmgeborenen als auch zu den Frostaugen."
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Jarltumliche_Herrschaft_Tal_der_Helden/Heldenwacht/Clan_Riesentod/haus.content.mjs",
+          "line": 112,
+          "quote": "Diese Ungerechtigkeit und der Tod Ulfriks führten zu einem Aufstand des Riesentod-Clans, der von Arn niedergeschlagen wurde. ... Sein Neffe Eorlund fügte sich unter der neuen Führung und schloss sich den Grünen an ..."
+        },
+        {
+          "path": "Kontinente/modules/aldrimar/succession.source.json",
+          "line": 788,
+          "quote": "Seine Ehe mit Astrid Varulv verband die Vaeren und Varulv. Noch während der Feier nach der Trauung wurden beide ermordet; die daraus entstandene Allianz wirkte später zugunsten Arns fort."
+        }
+      ],
+      "recommendation": "Faktionswort im Varulv-Satz nach dem belegten Buendnisverlauf redaktionell klaeren; keine genealogischen oder Kriegsdatumswerte aendern."
+    },
+    {
+      "id": "ALD-CONTENT-02",
+      "status": "confirmed",
+      "priority": "high",
+      "topic": "Feuerherz: ausschliessliche Zolleinnahmen gegen belegte vielfaeltige Wirtschaft",
+      "summary": "Die ausfuehrliche Hausseite schliesst andere Einnahmequellen aus. Die aktuelle Territorialquelle nennt gerade mehrere wirtschaftlich genutzte Ressourcen und spezialisierte Siedlungen.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+          "line": 110,
+          "quote": "Ihre einzige Einnahmequelle stammt aus dem Zoll und der Kontrolle der Wald- und Sumpfpfade ..."
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 1297,
+          "quote": "Die Wirtschaft der Feuerherzen ist vielfältiger als die der Kaltherzen ..."
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 1300,
+          "quote": "Rostklamm und Totengrundstollen: Diese Bergbausiedlungen sind essenziell für die Versorgung der Region mit Erz und Steinmaterial."
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 1301,
+          "quote": "Die Feuerherzen sichern ihren Einfluss durch die geschickte Nutzung dieser Ressourcen ..."
+        }
+      ],
+      "recommendation": "Die absolute Aussage einzige Einnahmequelle entfernen oder auf eine wichtige Zolleinnahme begrenzen; Jagd, Leder, Handwerk und Bergbau aus der aktuellen Territorialquelle beruecksichtigen."
+    },
+    {
+      "id": "ALD-CONTENT-03",
+      "status": "incomplete-reference-not-a-direct-contradiction",
+      "priority": "low",
+      "topic": "Goldglanz: Schwarzfenn-Paechterregister nennt nur einen der beiden Lehnsherren",
+      "summary": "Die gebietsuebergreifenden Paechterlisten in Schwarzfenn nennen nur Blutstahl. Kanonischer Auftrag und eigene Hausseite sowie Heimat-Territorialquelle nennen Blutstahl und Silberblut gemeinsam. Dies ist nur eine fehlende Zusatzbindung: Die Schwarzfenn-Quelle behauptet keine ausschliessliche Bindung an Blutstahl, deshalb kein harter Lorewiderspruch.",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/schwarzfenn/pages.source.json",
+          "line": 245,
+          "quote": "\"liege\": \"Clan Blutstahl\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Goldglanz/haus.content.mjs",
+          "line": 24,
+          "quote": "Clan Goldglanz ... dient gemeinsam den Blutstahl und Silberblut."
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 2988,
+          "quote": "Die Goldglanz sind beiden Thanenclans, Silberblut und Blutstahl, lehnspflichtig."
+        }
+      ],
+      "recommendation": "Beide Lehnsherren auch in Schwarzfenn-Paechterverweisen ausweisen; Paechterstatus ist dort bereits korrekt bezeichnet."
+    },
+    {
+      "id": "ALD-CONTENT-04",
+      "status": "confirmed",
+      "priority": "low",
+      "topic": "Sechs historische Hausseiten setzen Registerkategorien als Besitzmittelpunkt ein",
+      "cases": [
+        {
+          "familyId": "haus-isvanyr",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Isvanyr/haus.content.mjs",
+              "line": 28,
+              "quote": "Norrnaigh (Nordmänner) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Isvanyr/haus.content.mjs",
+              "line": 24,
+              "quote": "Die Isvanyr waren ein historischer Norrnaigh-Clan von Piraten und Plünderern im Gebiet des heutigen Heldenwacht. Ihr genauer Rang und Stammsitz sind nicht überliefert."
+            }
+          ],
+          "currentSeat": "",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        },
+        {
+          "familyId": "haus-mac-mamhar",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Mamhar/haus.content.mjs",
+              "line": 28,
+              "quote": "Glaennath (Alben) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kronental/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Mamhar/haus.content.mjs",
+              "line": 24,
+              "quote": "Clan Mac Mamhar war ein altes Glaennath-Haus im Gebiet, das später Kronental und heute Heldenwacht genannt wird. Ein genauer Rang und Stammsitz sind nicht überliefert."
+            }
+          ],
+          "currentSeat": "",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        },
+        {
+          "familyId": "haus-an-borach",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_An_Borach/haus.content.mjs",
+              "line": 28,
+              "quote": "Glaennath (Alben) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_An_Borach/haus.content.mjs",
+              "line": 24,
+              "quote": "Haus An Borach war ein altes Glaennath-Haus im Gebiet des heutigen Kornweiler. Seine eigene Herrschaft ist untergegangen."
+            }
+          ],
+          "currentSeat": "Kornweiler",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        },
+        {
+          "familyId": "haus-mac-luin",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_Mac_Luin/haus.content.mjs",
+              "line": 28,
+              "quote": "Glaennath (Alben) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Glaennath_Alben/Haus_Mac_Luin/haus.content.mjs",
+              "line": 24,
+              "quote": "Die Mac Luin waren ein altes Herrscherhaus der Glaennath mit Sitz in Ard Eabhraig. Ihr befestigter Hochlandraum schützte die nördlichen Zugänge des Fürstentums, bevor die Wanderung der Norrnaigh das Machtgefüge veränderte."
+            }
+          ],
+          "currentSeat": "Ard Eabhraig",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        },
+        {
+          "familyId": "haus-blutklinge",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+              "line": 28,
+              "quote": "Aldrimarer (jüngst ausgestorben) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+              "line": 24,
+              "quote": "Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus von Ivarsfels."
+            }
+          ],
+          "currentSeat": "Ivarsfels",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        },
+        {
+          "familyId": "haus-windhueter",
+          "evidence": [
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+              "line": 28,
+              "quote": "Aldrimarer (jüngst ausgestorben) war der überlieferte Mittelpunkt der Familie."
+            },
+            {
+              "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+              "line": 24,
+              "quote": "Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus aus Ivarsfels. Es gehörte zum Umfeld der Skalden."
+            }
+          ],
+          "currentSeat": "Ivarsfels",
+          "note": "Aktives Besitz-/Mittelpunkt-Feld verwendet eine Kultur-/Registerkategorie statt eines Orts; keine alte Stammbaumtabelle."
+        }
+      ],
+      "recommendation": "Aktive sections.holdings an belegte Ortsangaben binden oder ausdruecklich unbekannt lassen; Ursprungsquellen unveraendert erhalten."
+    }
+  ],
+  "suspicions": [
+    {
+      "familyId": "haus-silberzunge",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Ivarsfels",
+      "territorySeat": "Sølborg",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Clan_Silberzunge/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Ivarsfels\","
+        },
+        {
+          "path": "Kontinente/modules/ivarsheim/pages.source.json",
+          "line": 2336,
+          "quote": "\"value\": \"Sølborg\""
+        }
+      ]
+    },
+    {
+      "familyId": "haus-trachwyll",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Ivarsfels",
+      "territorySeat": "Caer Trachwyll",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ivarsklamm/Ivarsfels/Haus_Trachwyll/haus.content.mjs",
+          "line": 85,
+          "quote": "\"seat\": \"Ivarsfels\","
+        },
+        {
+          "path": "Kontinente/modules/ivarsheim/pages.source.json",
+          "line": 2061,
+          "quote": "\"value\": \"Caer Trachwyll\""
+        }
+      ]
+    },
+    {
+      "familyId": "haus-graumahne",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Wolfsklamm",
+      "territorySeat": "Grámborg",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Graumahne/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Wolfsklamm\","
+        },
+        {
+          "path": "Kontinente/modules/schwarzfenn/pages.source.json",
+          "line": 2168,
+          "quote": "\"value\": \"Grámborg\""
+        }
+      ]
+    },
+    {
+      "familyId": "haus-schmetterschild",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Wolfsklamm",
+      "territorySeat": "Skrammborg",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Schmetterschild/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Wolfsklamm\","
+        },
+        {
+          "path": "Kontinente/modules/schwarzfenn/pages.source.json",
+          "line": 2450,
+          "quote": "\"value\": \"Skrammborg\""
+        }
+      ]
+    },
+    {
+      "familyId": "haus-kaltherz",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Moortal",
+      "territorySeat": "Norrborg",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Kaltherz/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Moortal\","
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 876,
+          "quote": "\"value\": \"Norrborg\""
+        }
+      ]
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "topic": "Familiensitz und Sitz der Herrschaft werden unterschiedlich gefuehrt",
+      "houseSeat": "Moortal",
+      "territorySeat": "Suthborg",
+      "status": "needs-distinction-not-proven-contradiction",
+      "reason": "Ein Wohnsitz in der Jarltumshauptstadt und eine eigene Herrschaftsburg koennen gleichzeitig bestehen. Der Gegensatz ist in den Quellen nicht ausdruecklich erklaert; keine automatische Sitz- oder Registerverschiebung.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Moortal\","
+        },
+        {
+          "path": "Kontinente/modules/kraehenmoor/pages.source.json",
+          "line": 1221,
+          "quote": "\"value\": \"Suthborg\""
+        }
+      ]
+    }
+  ],
+  "nonFindings": [
+    "Wolfshorns korrigierte Lage in Daemmergrund unter Vangandr ist nicht erneut als Fehler aufgefuehrt.",
+    "Vanir/Vangandr/Fiadhrach folgen in den gelesenen Erzaehlungen demselben Ablauf: Buendnis gegen Ulvasar/Bjornskar, geschwaechte Vanir aufgenommen, Massaker, Fluch. Keine zweite oder widersprechende Gruendung bewiesen.",
+    "Connair wird in den Hausprofilen als bei Wolfspfad bezeichnet; deshalb kein Widerspruch aus dem Ortsuebergang konstruiert.",
+    "Seitenwechsel der Gullvig, Schwarzdorn und Ragnulf-Vasallen werden zeitlich erzaehlt und sind fuer sich kein Widerspruch.",
+    "Skaals heutige Verehrung der Neun Goettlichen wird von ihrer Herkunft aus dem alten Pantheon unterschieden; ihre blaue Kriegsparteinahme ist daher kein sicherer Religionswiderspruch.",
+    "Vaeren: Koenig Sigurd und territorialer Jarl Skjor besitzen unterschiedliche Aemter; kein Oberhauptkonflikt.",
+    "Fiadhrach-Formulierung elbisches Adelshaus wird vom Root-Agenten separat gegen die ausdrueckliche Keine-Elfen-Festlegung geprueft; hier nicht doppelt gezaehlt."
+  ],
+  "mutations": "Nur dieser Pruefbeleg; keine Produktdateien geaendert."
+}

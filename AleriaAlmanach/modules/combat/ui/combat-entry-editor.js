@@ -3,6 +3,8 @@ import { getSpellManaCost } from '../combat-resource-progression.js';
 import { detachCatalogSpell, getSpellCatalogPageHref } from '../../spell-catalog/spell-catalog.js';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
+import { summarizeCombatMechanics } from './combat-mechanics-presentation.js';
+import { describeCombatWardDeflection, COMBAT_WARD_PERCENTAGE_HELP } from './combat-ward-presentation.js';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -76,16 +78,19 @@ function renderSpellLevelOptions(value = 0) {
 function renderMechanicsFields(item) {
   const mechanics = item.mechanics || {};
   const fields = [
-    ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'Rüstungsklasse'],
+    ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'Rüstungsklasse'], ['initiative', 'Initiative'],
     ['skill', 'Fertigkeiten'], ['savingThrow', 'Rettungswürfe'], ['spellAttack', 'Zauberangriff'],
     ['spellSaveDc', 'Zauber-SG'], ['movement', 'Bewegung'], ['maximumHitPoints', 'Maximale TP'],
-    ['passivePerception', 'Passive Wahrnehmung']
+    ['passivePerception', 'Passive Wahrnehmung'], ['combatStartTemporaryHitPoints', 'Temporäre TP zu Kampfbeginn']
   ];
   return `<fieldset class="combat-entry-editor-mechanics"><legend>Strukturierte Wirkung</legend>
     <p>Diese Werte werden vom Kampfsystem berechnet und von AleriaGPT verbindlich gelesen.</p>
+    <p data-entry-role="mechanics-summary"${summarizeCombatMechanics(mechanics) ? '' : ' hidden'}>${escapeHtml(summarizeCombatMechanics(mechanics))}</p>
     <div class="combat-entry-editor-number-grid">${fields.map(([key, label]) => `<label><span>${label}</span><input type="number" min="-9999" max="9999" data-entry-field="mechanics.${key}" value="${escapeHtml(mechanics[key] ?? 0)}"></label>`).join('')}</div>
     <label><span>Geltung des allgemeinen Angriffsbonus</span><select data-entry-field="mechanics.attackScope"><option value=""${selected(mechanics.attackScope, '')}>Waffen und Zauber</option><option value="weapon"${selected(mechanics.attackScope, 'weapon')}>Nur Waffenangriffe und Waffentechniken</option></select></label>
     <label><span>Angriffswurf</span><select data-entry-field="mechanics.attackRollMode"><option value="normal"${selected(mechanics.attackRollMode, 'normal')}>Normal</option><option value="advantage"${selected(mechanics.attackRollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(mechanics.attackRollMode, 'disadvantage')}>Nachteil</option></select></label>
+    <label class="check"><input type="checkbox" data-entry-field="mechanics.naturalOneReroll"${checked(mechanics.naturalOneReroll)}> Natürliche 1 einmal neu würfeln; Ersatzwurf gilt</label>
+    <label><span>Kritischer Fehlschlag bis natürliche</span><input type="number" min="1" max="3" data-entry-field="mechanics.criticalFailureMaximum" value="${escapeHtml(mechanics.criticalFailureMaximum || 1)}"></label>
   </fieldset>`;
 }
 
@@ -128,6 +133,7 @@ function renderEffects(item, {
         <label class="check"><input type="checkbox" data-entry-field="effects.${index}.magical"${checked(effect.magical)}> Magisch</label>
         <label><span>Ressource</span><select data-entry-field="effects.${index}.resourceId"><option value="">Keine</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(effect.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
         <label><span>Zustandsname</span><input data-entry-field="effects.${index}.condition.name" value="${escapeHtml(effect.condition?.name)}"></label>
+        ${effect.condition?.ward?.enabled ? `<p class="wide">Magische Abwehr: ${escapeHtml(describeCombatWardDeflection(effect.condition.ward))}. ${escapeHtml(COMBAT_WARD_PERCENTAGE_HELP)}</p>` : ''}
         <label><span>Zustands-ID / zu entfernen</span><input data-entry-field="effects.${index}.conditionId" value="${escapeHtml(effect.conditionId)}"></label>
         <label><span>Zustands-Tags</span><input data-entry-field="effects.${index}.conditionTags" value="${escapeHtml(effect.conditionTags)}" placeholder="Gift, Furcht, Fluch …"></label>
         <label><span>Zustandsdauer</span><select data-entry-field="effects.${index}.condition.durationModel.kind"><option value="permanent"${selected(effect.condition?.durationModel?.kind, 'permanent')}>Bis entfernt</option><option value="actor-comments"${selected(effect.condition?.durationModel?.kind, 'actor-comments')}>Eigene Beiträge</option><option value="scene-comments"${selected(effect.condition?.durationModel?.kind, 'scene-comments')}>Szenenbeiträge</option><option value="combat"${selected(effect.condition?.durationModel?.kind, 'combat')}>Bis Kampfende</option><option value="short-rest"${selected(effect.condition?.durationModel?.kind, 'short-rest')}>Bis kurze Rast</option><option value="long-rest"${selected(effect.condition?.durationModel?.kind, 'long-rest')}>Bis lange Rast</option><option value="day"${selected(effect.condition?.durationModel?.kind, 'day')}>Bis Tageswechsel</option><option value="concentration"${selected(effect.condition?.durationModel?.kind, 'concentration')}>Konzentration</option></select></label>
@@ -264,6 +270,10 @@ function renderRegeneration(item) {
     </div></fieldset>`;
 }
 
+function renderVoiceRequirement(item) {
+  return `<label class="check"><input type="checkbox" data-entry-field="requiresVoice"${checked(item.requiresVoice)}> Eigene Stimme erforderlich</label>`;
+}
+
 function renderAbility(item) {
   const inventoryTrigger = item.inventoryUseTrigger || {};
   const restoredResource = inventoryTrigger.restoreResources?.[0] || {};
@@ -271,6 +281,7 @@ function renderAbility(item) {
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Darstellung</span><select data-entry-field="delivery"><option value="ability"${selected(item.delivery, 'ability')}>Fähigkeit</option><option value="weapon"${selected(item.delivery, 'weapon')}>Waffentechnik</option><option value="spell"${selected(item.delivery, 'spell')}>Zauberformel</option><option value="prayer"${selected(item.delivery, 'prayer')}>Gebet / heiliger Schwur</option><option value="song"${selected(item.delivery, 'song')}>Gesang</option></select></label>
     <label class="check"><input type="checkbox" data-entry-field="combatUsable"${checked(item.combatUsable)}> In der interaktiven Szene auswählbar</label>
+    ${renderVoiceRequirement(item)}
     <label><span>Würfelformel</span><input data-entry-field="rollFormula" value="${escapeHtml(String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W8"></label>
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
@@ -317,6 +328,7 @@ function renderTechnique(item) {
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Ziel</span><input data-entry-field="target" value="${escapeHtml(item.target)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
+    ${renderVoiceRequirement(item)}
     <fieldset class="wide combat-entry-editor-weapons"><legend>Erlaubte Waffenarten</legend>${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<label><input type="checkbox" data-entry-weapon-type="${option.id}"${checked(weaponTypes.includes(option.id))}> ${option.label}</label>`).join('')}<small>Ohne Auswahl gilt die Technik für jede Waffenart.</small></fieldset>
     ${state.weapons.length ? `<fieldset class="wide combat-entry-editor-weapons"><legend>Konkrete Waffenbindung</legend>${state.weapons.map(weapon => `<label><input type="checkbox" data-entry-weapon-id="${escapeHtml(weapon.id)}"${checked(compatibleWeaponIds.includes(weapon.id))}> ${escapeHtml(weapon.name)}</label>`).join('')}<small>Eine Auswahl beschränkt die Technik zusätzlich auf genau diese Gegenstände.</small></fieldset>` : ''}
     <label class="wide"><span>Beschreibung</span><textarea data-entry-field="description" rows="4">${escapeHtml(item.description)}</textarea></label>
@@ -389,6 +401,7 @@ function renderSpell(item) {
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
     <label class="check"><input type="checkbox" data-entry-field="concentration"${checked(item.concentration)}> Benötigt Konzentration</label>
+    ${renderVoiceRequirement(item)}
     <label><span>Kanalisierung</span><input type="number" min="0" max="99" data-entry-field="channelComments" value="${escapeHtml(item.channelComments ?? 0)}"><small>0 = sofort, sonst Anzahl verschiedener eigener Gesamtbeiträge bis zur Wirkung</small></label>
     <label class="check"><input type="checkbox" data-entry-field="halfDamageOnSave"${checked(item.halfDamageOnSave)}> Halber Schaden bei gelungener Rettung</label>
     <label class="wide"><span>Beschreibung & Wirkung</span><textarea data-entry-field="description" rows="5">${escapeHtml(item.description)}</textarea></label>
@@ -465,6 +478,14 @@ function updateCost(field) {
   }
 }
 
+function refreshMechanicsSummary(field) {
+  if (!field.dataset.entryField?.startsWith('mechanics.')) return;
+  const summary = field.closest('.combat-entry-editor-mechanics')?.querySelector('[data-entry-role="mechanics-summary"]');
+  if (!summary) return;
+  summary.textContent = summarizeCombatMechanics(state.item?.mechanics);
+  summary.hidden = !summary.textContent;
+}
+
 function syncSingleActivationCost(field) {
   if (field.dataset.entryField !== 'activationType' || !Array.isArray(state.item?.costs)) return;
   const actionCosts = state.item.costs.filter(cost => COMMENT_ACTION_RESOURCE_IDS.has(String(cost.resourceId || '')));
@@ -499,6 +520,7 @@ document.addEventListener('input', event => {
   else {
     setAtPath(state.item, field.dataset.entryField, fieldValue(field));
     syncSingleActivationCost(field);
+    refreshMechanicsSummary(field);
   }
 });
 
@@ -536,6 +558,7 @@ document.addEventListener('change', event => {
   else {
     setAtPath(state.item, field.dataset.entryField, fieldValue(field));
     syncSingleActivationCost(field);
+    refreshMechanicsSummary(field);
   }
 });
 

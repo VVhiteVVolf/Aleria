@@ -1,0 +1,18649 @@
+// Generated from Fonts/Tlapanui-Gesamtpaket-2.000/Daten/. Run npm run build:languages.
+const TLAPANUI_REFERENCE_DATA = Object.freeze({
+  "meta": {
+    "sprache": "Nuatlapa",
+    "bedeutung": "Rede der Inselgemeinschaft",
+    "schrift": "Tavarua",
+    "schrift_bedeutung": "Zeichen von Welle und Stufe",
+    "version": "1.000",
+    "datum": "3. November 2026"
+  },
+  "kanon": [
+    [
+      "Tlapanui",
+      "Inselvolk aus Sundara"
+    ],
+    [
+      "Tlapatlan",
+      "ursprünglicher Landesname"
+    ],
+    [
+      "Calidaria",
+      "kaiserlicher Name des Archipels"
+    ],
+    [
+      "Sundara",
+      "Herkunftsraum der Vorfahren"
+    ],
+    [
+      "Argentum",
+      "Silbernes Kaiserreich"
+    ],
+    [
+      "Sylvarant",
+      "östliche Kernprovinz"
+    ],
+    [
+      "Leukonia",
+      "später annektierte Provinz"
+    ]
+  ],
+  "silben": [
+    {
+      "Nr": 1,
+      "Silbe": "apa",
+      "Bedeutung": "Mensch",
+      "Typ": "Klangwurzel",
+      "Aussprache": "apa",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 2,
+      "Silbe": "aru",
+      "Bedeutung": "Gemeinschaft",
+      "Typ": "Klangwurzel",
+      "Aussprache": "aru",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 3,
+      "Silbe": "ava",
+      "Bedeutung": "Meer",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ava",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 4,
+      "Silbe": "ehu",
+      "Bedeutung": "Wind",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ehu",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 5,
+      "Silbe": "ika",
+      "Bedeutung": "Fisch",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ika",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 6,
+      "Silbe": "ila",
+      "Bedeutung": "Lied",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ila",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 7,
+      "Silbe": "ina",
+      "Bedeutung": "Familie",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ina",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 8,
+      "Silbe": "ipu",
+      "Bedeutung": "Gefäß",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ipu",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 9,
+      "Silbe": "kae",
+      "Bedeutung": "Kanu",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kae",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 10,
+      "Silbe": "kai",
+      "Bedeutung": "Nahrung",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kai",
+      "Register": "Volk"
+    },
+    {
+      "Nr": 11,
+      "Silbe": "kala",
+      "Bedeutung": "Stein",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kala",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 12,
+      "Silbe": "kama",
+      "Bedeutung": "Hand",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kama",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 13,
+      "Silbe": "kana",
+      "Bedeutung": "Haus",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kana",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 14,
+      "Silbe": "kapu",
+      "Bedeutung": "heiliges Verbot",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kapu",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 15,
+      "Silbe": "karo",
+      "Bedeutung": "Riff",
+      "Typ": "Klangwurzel",
+      "Aussprache": "karo",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 16,
+      "Silbe": "kava",
+      "Bedeutung": "Getränk",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kava",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 17,
+      "Silbe": "kea",
+      "Bedeutung": "hell",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kea",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 18,
+      "Silbe": "kela",
+      "Bedeutung": "Schnitzerei",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kela",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 19,
+      "Silbe": "kiri",
+      "Bedeutung": "Haut",
+      "Typ": "Klangwurzel",
+      "Aussprache": "kiri",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 20,
+      "Silbe": "koro",
+      "Bedeutung": "Dorf",
+      "Typ": "Klangwurzel",
+      "Aussprache": "koro",
+      "Register": "Alltag"
+    },
+    {
+      "Nr": 21,
+      "Silbe": "laka",
+      "Bedeutung": "Pfad",
+      "Typ": "Klangwurzel",
+      "Aussprache": "laka",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 22,
+      "Silbe": "lani",
+      "Bedeutung": "Himmel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "lani",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 23,
+      "Silbe": "lapa",
+      "Bedeutung": "Tuch",
+      "Typ": "Klangwurzel",
+      "Aussprache": "lapa",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 24,
+      "Silbe": "lari",
+      "Bedeutung": "Sprecher",
+      "Typ": "Klangwurzel",
+      "Aussprache": "lari",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 25,
+      "Silbe": "loku",
+      "Bedeutung": "Bucht",
+      "Typ": "Klangwurzel",
+      "Aussprache": "loku",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 26,
+      "Silbe": "lua",
+      "Bedeutung": "zwei",
+      "Typ": "Klangwurzel",
+      "Aussprache": "lua",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 27,
+      "Silbe": "mae",
+      "Bedeutung": "Blüte",
+      "Typ": "Klangwurzel",
+      "Aussprache": "mae",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 28,
+      "Silbe": "mana",
+      "Bedeutung": "Lebenskraft",
+      "Typ": "Klangwurzel",
+      "Aussprache": "mana",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 29,
+      "Silbe": "mara",
+      "Bedeutung": "Platz",
+      "Typ": "Klangwurzel",
+      "Aussprache": "mara",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 30,
+      "Silbe": "matu",
+      "Bedeutung": "Elternteil",
+      "Typ": "Klangwurzel",
+      "Aussprache": "matu",
+      "Register": "Land und Meer"
+    },
+    {
+      "Nr": 31,
+      "Silbe": "mea",
+      "Bedeutung": "Ding",
+      "Typ": "Klangwurzel",
+      "Aussprache": "mea",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 32,
+      "Silbe": "miki",
+      "Bedeutung": "klein",
+      "Typ": "Klangwurzel",
+      "Aussprache": "miki",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 33,
+      "Silbe": "moa",
+      "Bedeutung": "Vogel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "moa",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 34,
+      "Silbe": "moku",
+      "Bedeutung": "Insel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "moku",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 35,
+      "Silbe": "naka",
+      "Bedeutung": "Schale",
+      "Typ": "Klangwurzel",
+      "Aussprache": "naka",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 36,
+      "Silbe": "nalo",
+      "Bedeutung": "Welle",
+      "Typ": "Klangwurzel",
+      "Aussprache": "nalo",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 37,
+      "Silbe": "nami",
+      "Bedeutung": "Tiefe",
+      "Typ": "Klangwurzel",
+      "Aussprache": "nami",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 38,
+      "Silbe": "nara",
+      "Bedeutung": "Geschichte",
+      "Typ": "Klangwurzel",
+      "Aussprache": "nara",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 39,
+      "Silbe": "nava",
+      "Bedeutung": "Reise",
+      "Typ": "Klangwurzel",
+      "Aussprache": "nava",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 40,
+      "Silbe": "nui",
+      "Bedeutung": "groß",
+      "Typ": "Klangwurzel",
+      "Aussprache": "nui",
+      "Register": "Natur"
+    },
+    {
+      "Nr": 41,
+      "Silbe": "oha",
+      "Bedeutung": "Gruß",
+      "Typ": "Klangwurzel",
+      "Aussprache": "oha",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 42,
+      "Silbe": "ola",
+      "Bedeutung": "Leben",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ola",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 43,
+      "Silbe": "ono",
+      "Bedeutung": "drei",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ono",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 44,
+      "Silbe": "ora",
+      "Bedeutung": "Atem",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ora",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 45,
+      "Silbe": "paha",
+      "Bedeutung": "Felswand",
+      "Typ": "Klangwurzel",
+      "Aussprache": "paha",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 46,
+      "Silbe": "paku",
+      "Bedeutung": "Werkzeug",
+      "Typ": "Klangwurzel",
+      "Aussprache": "paku",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 47,
+      "Silbe": "pala",
+      "Bedeutung": "Farbe",
+      "Typ": "Klangwurzel",
+      "Aussprache": "pala",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 48,
+      "Silbe": "pani",
+      "Bedeutung": "Brotfrucht",
+      "Typ": "Klangwurzel",
+      "Aussprache": "pani",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 49,
+      "Silbe": "patu",
+      "Bedeutung": "Mauer",
+      "Typ": "Klangwurzel",
+      "Aussprache": "patu",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 50,
+      "Silbe": "pua",
+      "Bedeutung": "Blume",
+      "Typ": "Klangwurzel",
+      "Aussprache": "pua",
+      "Register": "Ritus und Überlieferung"
+    },
+    {
+      "Nr": 51,
+      "Silbe": "raka",
+      "Bedeutung": "Krieg",
+      "Typ": "Klangwurzel",
+      "Aussprache": "raka",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 52,
+      "Silbe": "rano",
+      "Bedeutung": "Kratersee",
+      "Typ": "Klangwurzel",
+      "Aussprache": "rano",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 53,
+      "Silbe": "rapa",
+      "Bedeutung": "Bildzeichen",
+      "Typ": "Klangwurzel",
+      "Aussprache": "rapa",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 54,
+      "Silbe": "rima",
+      "Bedeutung": "fünf",
+      "Typ": "Klangwurzel",
+      "Aussprache": "rima",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 55,
+      "Silbe": "roa",
+      "Bedeutung": "lang",
+      "Typ": "Klangwurzel",
+      "Aussprache": "roa",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 56,
+      "Silbe": "sala",
+      "Bedeutung": "Gesetz",
+      "Typ": "Klangwurzel",
+      "Aussprache": "sala",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 57,
+      "Silbe": "sani",
+      "Bedeutung": "Rat",
+      "Typ": "Klangwurzel",
+      "Aussprache": "sani",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 58,
+      "Silbe": "sava",
+      "Bedeutung": "Hafen",
+      "Typ": "Klangwurzel",
+      "Aussprache": "sava",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 59,
+      "Silbe": "soro",
+      "Bedeutung": "Stimme",
+      "Typ": "Klangwurzel",
+      "Aussprache": "soro",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 60,
+      "Silbe": "sua",
+      "Bedeutung": "Feuer",
+      "Typ": "Klangwurzel",
+      "Aussprache": "sua",
+      "Register": "Staat und Recht"
+    },
+    {
+      "Nr": 61,
+      "Silbe": "taha",
+      "Bedeutung": "Seite",
+      "Typ": "Klangwurzel",
+      "Aussprache": "taha",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 62,
+      "Silbe": "tala",
+      "Bedeutung": "Rede",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tala",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 63,
+      "Silbe": "tama",
+      "Bedeutung": "Kind",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tama",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 64,
+      "Silbe": "tani",
+      "Bedeutung": "Morgen",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tani",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 65,
+      "Silbe": "tapa",
+      "Bedeutung": "Rinde",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tapa",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 66,
+      "Silbe": "taro",
+      "Bedeutung": "Wurzel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "taro",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 67,
+      "Silbe": "tava",
+      "Bedeutung": "Schiff",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tava",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 68,
+      "Silbe": "teka",
+      "Bedeutung": "Fischhaken",
+      "Typ": "Klangwurzel",
+      "Aussprache": "teka",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 69,
+      "Silbe": "tika",
+      "Bedeutung": "richtig",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tika",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 70,
+      "Silbe": "tiri",
+      "Bedeutung": "Faden",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tiri",
+      "Register": "Handwerk"
+    },
+    {
+      "Nr": 71,
+      "Silbe": "toka",
+      "Bedeutung": "Basalt",
+      "Typ": "Klangwurzel",
+      "Aussprache": "toka",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 72,
+      "Silbe": "toro",
+      "Bedeutung": "Markt",
+      "Typ": "Klangwurzel",
+      "Aussprache": "toro",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 73,
+      "Silbe": "tua",
+      "Bedeutung": "Rücken",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tua",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 74,
+      "Silbe": "tunu",
+      "Bedeutung": "kochen",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tunu",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 75,
+      "Silbe": "ula",
+      "Bedeutung": "rot",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ula",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 76,
+      "Silbe": "uri",
+      "Bedeutung": "dunkel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "uri",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 77,
+      "Silbe": "vaha",
+      "Bedeutung": "Mund",
+      "Typ": "Klangwurzel",
+      "Aussprache": "vaha",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 78,
+      "Silbe": "vai",
+      "Bedeutung": "Wasser",
+      "Typ": "Klangwurzel",
+      "Aussprache": "vai",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 79,
+      "Silbe": "vara",
+      "Bedeutung": "Feld",
+      "Typ": "Klangwurzel",
+      "Aussprache": "vara",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 80,
+      "Silbe": "vatu",
+      "Bedeutung": "Bauwerk",
+      "Typ": "Klangwurzel",
+      "Aussprache": "vatu",
+      "Register": "Handel und Reise"
+    },
+    {
+      "Nr": 81,
+      "Silbe": "xala",
+      "Bedeutung": "kaiserlich",
+      "Typ": "Klangwurzel",
+      "Aussprache": "xala",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 82,
+      "Silbe": "xiri",
+      "Bedeutung": "Schreiber",
+      "Typ": "Klangwurzel",
+      "Aussprache": "xiri",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 83,
+      "Silbe": "yara",
+      "Bedeutung": "Ahne",
+      "Typ": "Klangwurzel",
+      "Aussprache": "yara",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 84,
+      "Silbe": "yavi",
+      "Bedeutung": "Stern",
+      "Typ": "Klangwurzel",
+      "Aussprache": "yavi",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 85,
+      "Silbe": "zama",
+      "Bedeutung": "Fest",
+      "Typ": "Klangwurzel",
+      "Aussprache": "zama",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 86,
+      "Silbe": "zaro",
+      "Bedeutung": "Gold",
+      "Typ": "Klangwurzel",
+      "Aussprache": "zaro",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 87,
+      "Silbe": "tlaka",
+      "Bedeutung": "Stufe",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tlaka",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 88,
+      "Silbe": "tlani",
+      "Bedeutung": "Nacht",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tlani",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 89,
+      "Silbe": "tlapa",
+      "Bedeutung": "Name",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tlapa",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 90,
+      "Silbe": "tsama",
+      "Bedeutung": "Muschel",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tsama",
+      "Register": "Krieg und Schutz"
+    },
+    {
+      "Nr": 91,
+      "Silbe": "tsiri",
+      "Bedeutung": "Sonne",
+      "Typ": "Klangwurzel",
+      "Aussprache": "tsiri",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 92,
+      "Silbe": "chala",
+      "Bedeutung": "Feder",
+      "Typ": "Klangwurzel",
+      "Aussprache": "chala",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 93,
+      "Silbe": "chiri",
+      "Bedeutung": "Klinge",
+      "Typ": "Klangwurzel",
+      "Aussprache": "chiri",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 94,
+      "Silbe": "quara",
+      "Bedeutung": "Straße",
+      "Typ": "Klangwurzel",
+      "Aussprache": "quara",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 95,
+      "Silbe": "quiri",
+      "Bedeutung": "Kreis",
+      "Typ": "Klangwurzel",
+      "Aussprache": "quiri",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 96,
+      "Silbe": "aure",
+      "Bedeutung": "Würde",
+      "Typ": "Klangwurzel",
+      "Aussprache": "aure",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 97,
+      "Silbe": "evara",
+      "Bedeutung": "Provinz",
+      "Typ": "Klangwurzel",
+      "Aussprache": "evara",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 98,
+      "Silbe": "inara",
+      "Bedeutung": "Urteil",
+      "Typ": "Klangwurzel",
+      "Aussprache": "inara",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 99,
+      "Silbe": "otava",
+      "Bedeutung": "Fremder",
+      "Typ": "Klangwurzel",
+      "Aussprache": "otava",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 100,
+      "Silbe": "ulani",
+      "Bedeutung": "Wanderer",
+      "Typ": "Klangwurzel",
+      "Aussprache": "ulani",
+      "Register": "Kaiserliches Register"
+    },
+    {
+      "Nr": 101,
+      "Silbe": "ha-",
+      "Bedeutung": "belebt",
+      "Typ": "Präfix",
+      "Aussprache": "ha",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 102,
+      "Silbe": "ma-",
+      "Bedeutung": "gemeinschaftlich",
+      "Typ": "Präfix",
+      "Aussprache": "ma",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 103,
+      "Silbe": "na-",
+      "Bedeutung": "örtlich",
+      "Typ": "Präfix",
+      "Aussprache": "na",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 104,
+      "Silbe": "ta-",
+      "Bedeutung": "gerichtet",
+      "Typ": "Präfix",
+      "Aussprache": "ta",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 105,
+      "Silbe": "va-",
+      "Bedeutung": "beweglich",
+      "Typ": "Präfix",
+      "Aussprache": "va",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 106,
+      "Silbe": "ra-",
+      "Bedeutung": "sprechend",
+      "Typ": "Präfix",
+      "Aussprache": "ra",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 107,
+      "Silbe": "ka-",
+      "Bedeutung": "wirkend",
+      "Typ": "Präfix",
+      "Aussprache": "ka",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 108,
+      "Silbe": "la-",
+      "Bedeutung": "verbunden",
+      "Typ": "Präfix",
+      "Aussprache": "la",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 109,
+      "Silbe": "pa-",
+      "Bedeutung": "stofflich",
+      "Typ": "Präfix",
+      "Aussprache": "pa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 110,
+      "Silbe": "sa-",
+      "Bedeutung": "geordnet",
+      "Typ": "Präfix",
+      "Aussprache": "sa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 111,
+      "Silbe": "tla-",
+      "Bedeutung": "gestuft",
+      "Typ": "Präfix",
+      "Aussprache": "tla",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 112,
+      "Silbe": "tsa-",
+      "Bedeutung": "wiederholt",
+      "Typ": "Präfix",
+      "Aussprache": "tsa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 113,
+      "Silbe": "cha-",
+      "Bedeutung": "rituell",
+      "Typ": "Präfix",
+      "Aussprache": "cha",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 114,
+      "Silbe": "qua-",
+      "Bedeutung": "kaiserlich",
+      "Typ": "Präfix",
+      "Aussprache": "qua",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 115,
+      "Silbe": "i-",
+      "Bedeutung": "innerlich",
+      "Typ": "Präfix",
+      "Aussprache": "i",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 116,
+      "Silbe": "u-",
+      "Bedeutung": "fern",
+      "Typ": "Präfix",
+      "Aussprache": "u",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 117,
+      "Silbe": "a-",
+      "Bedeutung": "offen",
+      "Typ": "Präfix",
+      "Aussprache": "a",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 118,
+      "Silbe": "e-",
+      "Bedeutung": "hervorgehoben",
+      "Typ": "Präfix",
+      "Aussprache": "e",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 119,
+      "Silbe": "o-",
+      "Bedeutung": "umfassend",
+      "Typ": "Präfix",
+      "Aussprache": "o",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 120,
+      "Silbe": "nui-",
+      "Bedeutung": "groß",
+      "Typ": "Präfix",
+      "Aussprache": "nui",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 121,
+      "Silbe": "iti-",
+      "Bedeutung": "klein",
+      "Typ": "Präfix",
+      "Aussprache": "iti",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 122,
+      "Silbe": "roa-",
+      "Bedeutung": "lang",
+      "Typ": "Präfix",
+      "Aussprache": "roa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 123,
+      "Silbe": "mara-",
+      "Bedeutung": "öffentlich",
+      "Typ": "Präfix",
+      "Aussprache": "mara",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 124,
+      "Silbe": "tava-",
+      "Bedeutung": "seefahrend",
+      "Typ": "Präfix",
+      "Aussprache": "tava",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 125,
+      "Silbe": "rano-",
+      "Bedeutung": "tief",
+      "Typ": "Präfix",
+      "Aussprache": "rano",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 126,
+      "Silbe": "sol-",
+      "Bedeutung": "sonnenbezogen",
+      "Typ": "Präfix",
+      "Aussprache": "sol",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 127,
+      "Silbe": "lun-",
+      "Bedeutung": "mondbezogen",
+      "Typ": "Präfix",
+      "Aussprache": "lun",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 128,
+      "Silbe": "mar-",
+      "Bedeutung": "meerbezogen",
+      "Typ": "Präfix",
+      "Aussprache": "mar",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 129,
+      "Silbe": "aur-",
+      "Bedeutung": "golden",
+      "Typ": "Präfix",
+      "Aussprache": "aur",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 130,
+      "Silbe": "cal-",
+      "Bedeutung": "calidarisch",
+      "Typ": "Präfix",
+      "Aussprache": "cal",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 131,
+      "Silbe": "-na",
+      "Bedeutung": "Person",
+      "Typ": "Suffix",
+      "Aussprache": "na",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 132,
+      "Silbe": "-ni",
+      "Bedeutung": "zugehörig",
+      "Typ": "Suffix",
+      "Aussprache": "ni",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 133,
+      "Silbe": "-nu",
+      "Bedeutung": "Ding",
+      "Typ": "Suffix",
+      "Aussprache": "nu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 134,
+      "Silbe": "-ra",
+      "Bedeutung": "handelnd",
+      "Typ": "Suffix",
+      "Aussprache": "ra",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 135,
+      "Silbe": "-ri",
+      "Bedeutung": "Eigenschaft",
+      "Typ": "Suffix",
+      "Aussprache": "ri",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 136,
+      "Silbe": "-ru",
+      "Bedeutung": "Ergebnis",
+      "Typ": "Suffix",
+      "Aussprache": "ru",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 137,
+      "Silbe": "-la",
+      "Bedeutung": "Ort",
+      "Typ": "Suffix",
+      "Aussprache": "la",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 138,
+      "Silbe": "-li",
+      "Bedeutung": "kleine Form",
+      "Typ": "Suffix",
+      "Aussprache": "li",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 139,
+      "Silbe": "-lu",
+      "Bedeutung": "Sammelbegriff",
+      "Typ": "Suffix",
+      "Aussprache": "lu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 140,
+      "Silbe": "-ta",
+      "Bedeutung": "Handlung",
+      "Typ": "Suffix",
+      "Aussprache": "ta",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 141,
+      "Silbe": "-ti",
+      "Bedeutung": "Werkzeug",
+      "Typ": "Suffix",
+      "Aussprache": "ti",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 142,
+      "Silbe": "-tu",
+      "Bedeutung": "Zustand",
+      "Typ": "Suffix",
+      "Aussprache": "tu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 143,
+      "Silbe": "-pa",
+      "Bedeutung": "Fläche",
+      "Typ": "Suffix",
+      "Aussprache": "pa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 144,
+      "Silbe": "-pi",
+      "Bedeutung": "Teil",
+      "Typ": "Suffix",
+      "Aussprache": "pi",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 145,
+      "Silbe": "-pu",
+      "Bedeutung": "Inhalt",
+      "Typ": "Suffix",
+      "Aussprache": "pu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 146,
+      "Silbe": "-ka",
+      "Bedeutung": "Herkunft",
+      "Typ": "Suffix",
+      "Aussprache": "ka",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 147,
+      "Silbe": "-ki",
+      "Bedeutung": "Fachform",
+      "Typ": "Suffix",
+      "Aussprache": "ki",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 148,
+      "Silbe": "-ku",
+      "Bedeutung": "Gefäß",
+      "Typ": "Suffix",
+      "Aussprache": "ku",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 149,
+      "Silbe": "-ma",
+      "Bedeutung": "weibliche Form",
+      "Typ": "Suffix",
+      "Aussprache": "ma",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 150,
+      "Silbe": "-mi",
+      "Bedeutung": "verkleinert",
+      "Typ": "Suffix",
+      "Aussprache": "mi",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 151,
+      "Silbe": "-mu",
+      "Bedeutung": "Stoff",
+      "Typ": "Suffix",
+      "Aussprache": "mu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 152,
+      "Silbe": "-ana",
+      "Bedeutung": "weiblicher Name",
+      "Typ": "Suffix",
+      "Aussprache": "ana",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 153,
+      "Silbe": "-aria",
+      "Bedeutung": "Provinzform",
+      "Typ": "Suffix",
+      "Aussprache": "aria",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 154,
+      "Silbe": "-oria",
+      "Bedeutung": "Amtssprache",
+      "Typ": "Suffix",
+      "Aussprache": "oria",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 155,
+      "Silbe": "-ium",
+      "Bedeutung": "Institution",
+      "Typ": "Suffix",
+      "Aussprache": "ium",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 156,
+      "Silbe": "-um",
+      "Bedeutung": "sächliche Lehnform",
+      "Typ": "Suffix",
+      "Aussprache": "um",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 157,
+      "Silbe": "-us",
+      "Bedeutung": "männliche Lehnform",
+      "Typ": "Suffix",
+      "Aussprache": "us",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 158,
+      "Silbe": "-or",
+      "Bedeutung": "Amtsträger",
+      "Typ": "Suffix",
+      "Aussprache": "or",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 159,
+      "Silbe": "-a",
+      "Bedeutung": "offene Form",
+      "Typ": "Suffix",
+      "Aussprache": "a",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 160,
+      "Silbe": "-is",
+      "Bedeutung": "gelehrte Form",
+      "Typ": "Suffix",
+      "Aussprache": "is",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 161,
+      "Silbe": "-e",
+      "Bedeutung": "Ruf",
+      "Typ": "Suffix",
+      "Aussprache": "e",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 162,
+      "Silbe": "-ai",
+      "Bedeutung": "Rufvariante",
+      "Typ": "Suffix",
+      "Aussprache": "ai",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 163,
+      "Silbe": "-ao",
+      "Bedeutung": "Vokalglanz",
+      "Typ": "Suffix",
+      "Aussprache": "ao",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 164,
+      "Silbe": "-ea",
+      "Bedeutung": "Wortausgang",
+      "Typ": "Suffix",
+      "Aussprache": "ea",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 165,
+      "Silbe": "-eo",
+      "Bedeutung": "Herkunft",
+      "Typ": "Suffix",
+      "Aussprache": "eo",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 166,
+      "Silbe": "-ia",
+      "Bedeutung": "Bewegung",
+      "Typ": "Suffix",
+      "Aussprache": "ia",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 167,
+      "Silbe": "-io",
+      "Bedeutung": "Beziehung",
+      "Typ": "Suffix",
+      "Aussprache": "io",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 168,
+      "Silbe": "-ua",
+      "Bedeutung": "tiefe Form",
+      "Typ": "Suffix",
+      "Aussprache": "ua",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 169,
+      "Silbe": "-ui",
+      "Bedeutung": "Inselform",
+      "Typ": "Suffix",
+      "Aussprache": "ui",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 170,
+      "Silbe": "-tl",
+      "Bedeutung": "Stufenform",
+      "Typ": "Suffix",
+      "Aussprache": "tl",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 171,
+      "Silbe": "-tla",
+      "Bedeutung": "Stadtgebiet",
+      "Typ": "Suffix",
+      "Aussprache": "tla",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 172,
+      "Silbe": "-tli",
+      "Bedeutung": "Siedlung",
+      "Typ": "Suffix",
+      "Aussprache": "tli",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 173,
+      "Silbe": "-tlan",
+      "Bedeutung": "Grenzort",
+      "Typ": "Suffix",
+      "Aussprache": "tlan",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 174,
+      "Silbe": "-pan",
+      "Bedeutung": "Küstenort",
+      "Typ": "Suffix",
+      "Aussprache": "pan",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 175,
+      "Silbe": "-can",
+      "Bedeutung": "Abstammung",
+      "Typ": "Suffix",
+      "Aussprache": "can",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 176,
+      "Silbe": "-yan",
+      "Bedeutung": "fahrend",
+      "Typ": "Suffix",
+      "Aussprache": "yan",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 177,
+      "Silbe": "-van",
+      "Bedeutung": "groß",
+      "Typ": "Suffix",
+      "Aussprache": "van",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 178,
+      "Silbe": "-hau",
+      "Bedeutung": "Himmel",
+      "Typ": "Suffix",
+      "Aussprache": "hau",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 179,
+      "Silbe": "-nui",
+      "Bedeutung": "Ozean",
+      "Typ": "Suffix",
+      "Aussprache": "nui",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 180,
+      "Silbe": "-rangi",
+      "Bedeutung": "Kanu",
+      "Typ": "Suffix",
+      "Aussprache": "rangi",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 181,
+      "Silbe": "-moana",
+      "Bedeutung": "Versammlungsplatz",
+      "Typ": "Suffix",
+      "Aussprache": "moana",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 182,
+      "Silbe": "-vaka",
+      "Bedeutung": "verboten",
+      "Typ": "Suffix",
+      "Aussprache": "vaka",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 183,
+      "Silbe": "-mara",
+      "Bedeutung": "Lebenskraft",
+      "Typ": "Suffix",
+      "Aussprache": "mara",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 184,
+      "Silbe": "-tapu",
+      "Bedeutung": "Krieger",
+      "Typ": "Suffix",
+      "Aussprache": "tapu",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 185,
+      "Silbe": "-mana",
+      "Bedeutung": "lang",
+      "Typ": "Suffix",
+      "Aussprache": "mana",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 186,
+      "Silbe": "-toa",
+      "Bedeutung": "klein",
+      "Typ": "Suffix",
+      "Aussprache": "toa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 187,
+      "Silbe": "-roa",
+      "Bedeutung": "Feuer",
+      "Typ": "Suffix",
+      "Aussprache": "roa",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 188,
+      "Silbe": "-iti",
+      "Bedeutung": "Wasser",
+      "Typ": "Suffix",
+      "Aussprache": "iti",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 189,
+      "Silbe": "-ahi",
+      "Bedeutung": "Himmel",
+      "Typ": "Suffix",
+      "Aussprache": "ahi",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 190,
+      "Silbe": "-vai",
+      "Bedeutung": "Dorf",
+      "Typ": "Suffix",
+      "Aussprache": "vai",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 191,
+      "Silbe": "-lani",
+      "Bedeutung": "Quelle",
+      "Typ": "Suffix",
+      "Aussprache": "lani",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 192,
+      "Silbe": "-koro",
+      "Bedeutung": "fünf",
+      "Typ": "Suffix",
+      "Aussprache": "koro",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 193,
+      "Silbe": "-puna",
+      "Bedeutung": "Hafenklang",
+      "Typ": "Suffix",
+      "Aussprache": "puna",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 194,
+      "Silbe": "-rima",
+      "Bedeutung": "Reiseklang",
+      "Typ": "Suffix",
+      "Aussprache": "rima",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 195,
+      "Silbe": "-sava",
+      "Bedeutung": "fremder Klang",
+      "Typ": "Suffix",
+      "Aussprache": "sava",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 196,
+      "Silbe": "-tava",
+      "Bedeutung": "feierlicher Klang",
+      "Typ": "Suffix",
+      "Aussprache": "tava",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 197,
+      "Silbe": "-xara",
+      "Bedeutung": "Küstenform",
+      "Typ": "Suffix",
+      "Aussprache": "xara",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 198,
+      "Silbe": "-zara",
+      "Bedeutung": "Inselform",
+      "Typ": "Suffix",
+      "Aussprache": "zara",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 199,
+      "Silbe": "-co",
+      "Bedeutung": "westliche Lehnform",
+      "Typ": "Suffix",
+      "Aussprache": "co",
+      "Register": "produktiv"
+    },
+    {
+      "Nr": 200,
+      "Silbe": "-mex",
+      "Bedeutung": "alte Lehnform",
+      "Typ": "Suffix",
+      "Aussprache": "mex",
+      "Register": "produktiv"
+    }
+  ],
+  "woerter": [
+    {
+      "Nr": 1,
+      "Nuatlapa": "Hapa",
+      "Deutsch": "belebtes oder tätiges mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + apa",
+      "Aussprache": "hapa"
+    },
+    {
+      "Nr": 2,
+      "Nuatlapa": "Mapa",
+      "Deutsch": "gemeinschaftliches mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + apa",
+      "Aussprache": "mapa"
+    },
+    {
+      "Nr": 3,
+      "Nuatlapa": "Tlapa",
+      "Deutsch": "rituell oder gestuftes mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + apa",
+      "Aussprache": "tɬapa"
+    },
+    {
+      "Nr": 4,
+      "Nuatlapa": "Quapa",
+      "Deutsch": "kaiserlich geordnetes mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + apa",
+      "Aussprache": "kwapa"
+    },
+    {
+      "Nr": 5,
+      "Nuatlapa": "Apana",
+      "Deutsch": "Person des Bereichs mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -na",
+      "Aussprache": "apana"
+    },
+    {
+      "Nr": 6,
+      "Nuatlapa": "Aparia",
+      "Deutsch": "Ort oder Provinz des mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -aria",
+      "Aussprache": "aparia"
+    },
+    {
+      "Nr": 7,
+      "Nuatlapa": "Apaor",
+      "Deutsch": "Amtsträger für mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -or",
+      "Aussprache": "apaor"
+    },
+    {
+      "Nr": 8,
+      "Nuatlapa": "Apaiti",
+      "Deutsch": "kleines mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -iti",
+      "Aussprache": "apaiti"
+    },
+    {
+      "Nr": 9,
+      "Nuatlapa": "aparoa",
+      "Deutsch": "großes oder langes mensch",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -roa",
+      "Aussprache": "aparoa"
+    },
+    {
+      "Nr": 10,
+      "Nuatlapa": "Apasava",
+      "Deutsch": "reisende oder hafenbezogene Form von mensch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "apa + -sava",
+      "Aussprache": "apasava"
+    },
+    {
+      "Nr": 11,
+      "Nuatlapa": "Haru",
+      "Deutsch": "belebtes oder tätiges gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + aru",
+      "Aussprache": "haru"
+    },
+    {
+      "Nr": 12,
+      "Nuatlapa": "Maru",
+      "Deutsch": "gemeinschaftliches gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + aru",
+      "Aussprache": "maru"
+    },
+    {
+      "Nr": 13,
+      "Nuatlapa": "Tlaru",
+      "Deutsch": "rituell oder gestuftes gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + aru",
+      "Aussprache": "tɬaru"
+    },
+    {
+      "Nr": 14,
+      "Nuatlapa": "Quaru",
+      "Deutsch": "kaiserlich geordnetes gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + aru",
+      "Aussprache": "kwaru"
+    },
+    {
+      "Nr": 15,
+      "Nuatlapa": "Aruna",
+      "Deutsch": "Person des Bereichs gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -na",
+      "Aussprache": "aruna"
+    },
+    {
+      "Nr": 16,
+      "Nuatlapa": "Aruaria",
+      "Deutsch": "Ort oder Provinz des gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -aria",
+      "Aussprache": "aruaria"
+    },
+    {
+      "Nr": 17,
+      "Nuatlapa": "Aruor",
+      "Deutsch": "Amtsträger für gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -or",
+      "Aussprache": "aruor"
+    },
+    {
+      "Nr": 18,
+      "Nuatlapa": "Aruiti",
+      "Deutsch": "kleines gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -iti",
+      "Aussprache": "aruiti"
+    },
+    {
+      "Nr": 19,
+      "Nuatlapa": "aruroa",
+      "Deutsch": "großes oder langes gemeinschaft",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -roa",
+      "Aussprache": "aruroa"
+    },
+    {
+      "Nr": 20,
+      "Nuatlapa": "Arusava",
+      "Deutsch": "reisende oder hafenbezogene Form von gemeinschaft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "aru + -sava",
+      "Aussprache": "arusava"
+    },
+    {
+      "Nr": 21,
+      "Nuatlapa": "Hava",
+      "Deutsch": "belebtes oder tätiges meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ava",
+      "Aussprache": "hava"
+    },
+    {
+      "Nr": 22,
+      "Nuatlapa": "Mava",
+      "Deutsch": "gemeinschaftliches meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ava",
+      "Aussprache": "mava"
+    },
+    {
+      "Nr": 23,
+      "Nuatlapa": "Tlava",
+      "Deutsch": "rituell oder gestuftes meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ava",
+      "Aussprache": "tɬava"
+    },
+    {
+      "Nr": 24,
+      "Nuatlapa": "Quava",
+      "Deutsch": "kaiserlich geordnetes meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ava",
+      "Aussprache": "kwava"
+    },
+    {
+      "Nr": 25,
+      "Nuatlapa": "Avana",
+      "Deutsch": "Person des Bereichs meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -na",
+      "Aussprache": "avana"
+    },
+    {
+      "Nr": 26,
+      "Nuatlapa": "Avaria",
+      "Deutsch": "Ort oder Provinz des meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -aria",
+      "Aussprache": "avaria"
+    },
+    {
+      "Nr": 27,
+      "Nuatlapa": "Avaor",
+      "Deutsch": "Amtsträger für meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -or",
+      "Aussprache": "avaor"
+    },
+    {
+      "Nr": 28,
+      "Nuatlapa": "Avaiti",
+      "Deutsch": "kleines meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -iti",
+      "Aussprache": "avaiti"
+    },
+    {
+      "Nr": 29,
+      "Nuatlapa": "avaroa",
+      "Deutsch": "großes oder langes meer",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -roa",
+      "Aussprache": "avaroa"
+    },
+    {
+      "Nr": 30,
+      "Nuatlapa": "Avasava",
+      "Deutsch": "reisende oder hafenbezogene Form von meer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ava + -sava",
+      "Aussprache": "avasava"
+    },
+    {
+      "Nr": 31,
+      "Nuatlapa": "Haehu",
+      "Deutsch": "belebtes oder tätiges wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ehu",
+      "Aussprache": "haehu"
+    },
+    {
+      "Nr": 32,
+      "Nuatlapa": "Maehu",
+      "Deutsch": "gemeinschaftliches wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ehu",
+      "Aussprache": "maehu"
+    },
+    {
+      "Nr": 33,
+      "Nuatlapa": "Tlaehu",
+      "Deutsch": "rituell oder gestuftes wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ehu",
+      "Aussprache": "tɬaehu"
+    },
+    {
+      "Nr": 34,
+      "Nuatlapa": "Quaehu",
+      "Deutsch": "kaiserlich geordnetes wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ehu",
+      "Aussprache": "kwaehu"
+    },
+    {
+      "Nr": 35,
+      "Nuatlapa": "Ehuna",
+      "Deutsch": "Person des Bereichs wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -na",
+      "Aussprache": "ehuna"
+    },
+    {
+      "Nr": 36,
+      "Nuatlapa": "Ehuaria",
+      "Deutsch": "Ort oder Provinz des wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -aria",
+      "Aussprache": "ehuaria"
+    },
+    {
+      "Nr": 37,
+      "Nuatlapa": "Ehuor",
+      "Deutsch": "Amtsträger für wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -or",
+      "Aussprache": "ehuor"
+    },
+    {
+      "Nr": 38,
+      "Nuatlapa": "Ehuiti",
+      "Deutsch": "kleines wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -iti",
+      "Aussprache": "ehuiti"
+    },
+    {
+      "Nr": 39,
+      "Nuatlapa": "ehuroa",
+      "Deutsch": "großes oder langes wind",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -roa",
+      "Aussprache": "ehuroa"
+    },
+    {
+      "Nr": 40,
+      "Nuatlapa": "Ehusava",
+      "Deutsch": "reisende oder hafenbezogene Form von wind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ehu + -sava",
+      "Aussprache": "ehusava"
+    },
+    {
+      "Nr": 41,
+      "Nuatlapa": "Haika",
+      "Deutsch": "belebtes oder tätiges fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ika",
+      "Aussprache": "haika"
+    },
+    {
+      "Nr": 42,
+      "Nuatlapa": "Maika",
+      "Deutsch": "gemeinschaftliches fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ika",
+      "Aussprache": "maika"
+    },
+    {
+      "Nr": 43,
+      "Nuatlapa": "Tlaika",
+      "Deutsch": "rituell oder gestuftes fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ika",
+      "Aussprache": "tɬaika"
+    },
+    {
+      "Nr": 44,
+      "Nuatlapa": "Quaika",
+      "Deutsch": "kaiserlich geordnetes fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ika",
+      "Aussprache": "kwaika"
+    },
+    {
+      "Nr": 45,
+      "Nuatlapa": "Ikana",
+      "Deutsch": "Person des Bereichs fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -na",
+      "Aussprache": "ikana"
+    },
+    {
+      "Nr": 46,
+      "Nuatlapa": "Ikaria",
+      "Deutsch": "Ort oder Provinz des fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -aria",
+      "Aussprache": "ikaria"
+    },
+    {
+      "Nr": 47,
+      "Nuatlapa": "Ikaor",
+      "Deutsch": "Amtsträger für fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -or",
+      "Aussprache": "ikaor"
+    },
+    {
+      "Nr": 48,
+      "Nuatlapa": "Ikaiti",
+      "Deutsch": "kleines fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -iti",
+      "Aussprache": "ikaiti"
+    },
+    {
+      "Nr": 49,
+      "Nuatlapa": "ikaroa",
+      "Deutsch": "großes oder langes fisch",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -roa",
+      "Aussprache": "ikaroa"
+    },
+    {
+      "Nr": 50,
+      "Nuatlapa": "Ikasava",
+      "Deutsch": "reisende oder hafenbezogene Form von fisch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ika + -sava",
+      "Aussprache": "ikasava"
+    },
+    {
+      "Nr": 51,
+      "Nuatlapa": "Haila",
+      "Deutsch": "belebtes oder tätiges lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ila",
+      "Aussprache": "haila"
+    },
+    {
+      "Nr": 52,
+      "Nuatlapa": "Maila",
+      "Deutsch": "gemeinschaftliches lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ila",
+      "Aussprache": "maila"
+    },
+    {
+      "Nr": 53,
+      "Nuatlapa": "Tlaila",
+      "Deutsch": "rituell oder gestuftes lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ila",
+      "Aussprache": "tɬaila"
+    },
+    {
+      "Nr": 54,
+      "Nuatlapa": "Quaila",
+      "Deutsch": "kaiserlich geordnetes lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ila",
+      "Aussprache": "kwaila"
+    },
+    {
+      "Nr": 55,
+      "Nuatlapa": "Ilana",
+      "Deutsch": "Person des Bereichs lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -na",
+      "Aussprache": "ilana"
+    },
+    {
+      "Nr": 56,
+      "Nuatlapa": "Ilaria",
+      "Deutsch": "Ort oder Provinz des lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -aria",
+      "Aussprache": "ilaria"
+    },
+    {
+      "Nr": 57,
+      "Nuatlapa": "Ilaor",
+      "Deutsch": "Amtsträger für lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -or",
+      "Aussprache": "ilaor"
+    },
+    {
+      "Nr": 58,
+      "Nuatlapa": "Ilaiti",
+      "Deutsch": "kleines lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -iti",
+      "Aussprache": "ilaiti"
+    },
+    {
+      "Nr": 59,
+      "Nuatlapa": "ilaroa",
+      "Deutsch": "großes oder langes lied",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -roa",
+      "Aussprache": "ilaroa"
+    },
+    {
+      "Nr": 60,
+      "Nuatlapa": "Ilasava",
+      "Deutsch": "reisende oder hafenbezogene Form von lied",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ila + -sava",
+      "Aussprache": "ilasava"
+    },
+    {
+      "Nr": 61,
+      "Nuatlapa": "Haina",
+      "Deutsch": "belebtes oder tätiges familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ina",
+      "Aussprache": "haina"
+    },
+    {
+      "Nr": 62,
+      "Nuatlapa": "Maina",
+      "Deutsch": "gemeinschaftliches familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ina",
+      "Aussprache": "maina"
+    },
+    {
+      "Nr": 63,
+      "Nuatlapa": "Tlaina",
+      "Deutsch": "rituell oder gestuftes familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ina",
+      "Aussprache": "tɬaina"
+    },
+    {
+      "Nr": 64,
+      "Nuatlapa": "Quaina",
+      "Deutsch": "kaiserlich geordnetes familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ina",
+      "Aussprache": "kwaina"
+    },
+    {
+      "Nr": 65,
+      "Nuatlapa": "Inana",
+      "Deutsch": "Person des Bereichs familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -na",
+      "Aussprache": "inana"
+    },
+    {
+      "Nr": 66,
+      "Nuatlapa": "Inaria",
+      "Deutsch": "Ort oder Provinz des familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -aria",
+      "Aussprache": "inaria"
+    },
+    {
+      "Nr": 67,
+      "Nuatlapa": "Inaor",
+      "Deutsch": "Amtsträger für familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -or",
+      "Aussprache": "inaor"
+    },
+    {
+      "Nr": 68,
+      "Nuatlapa": "Inaiti",
+      "Deutsch": "kleines familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -iti",
+      "Aussprache": "inaiti"
+    },
+    {
+      "Nr": 69,
+      "Nuatlapa": "inaroa",
+      "Deutsch": "großes oder langes familie",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -roa",
+      "Aussprache": "inaroa"
+    },
+    {
+      "Nr": 70,
+      "Nuatlapa": "Inasava",
+      "Deutsch": "reisende oder hafenbezogene Form von familie",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ina + -sava",
+      "Aussprache": "inasava"
+    },
+    {
+      "Nr": 71,
+      "Nuatlapa": "Haipu",
+      "Deutsch": "belebtes oder tätiges gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + ipu",
+      "Aussprache": "haipu"
+    },
+    {
+      "Nr": 72,
+      "Nuatlapa": "Maipu",
+      "Deutsch": "gemeinschaftliches gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + ipu",
+      "Aussprache": "maipu"
+    },
+    {
+      "Nr": 73,
+      "Nuatlapa": "Tlaipu",
+      "Deutsch": "rituell oder gestuftes gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + ipu",
+      "Aussprache": "tɬaipu"
+    },
+    {
+      "Nr": 74,
+      "Nuatlapa": "Quaipu",
+      "Deutsch": "kaiserlich geordnetes gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + ipu",
+      "Aussprache": "kwaipu"
+    },
+    {
+      "Nr": 75,
+      "Nuatlapa": "Ipuna",
+      "Deutsch": "Person des Bereichs gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -na",
+      "Aussprache": "ipuna"
+    },
+    {
+      "Nr": 76,
+      "Nuatlapa": "Ipuaria",
+      "Deutsch": "Ort oder Provinz des gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -aria",
+      "Aussprache": "ipuaria"
+    },
+    {
+      "Nr": 77,
+      "Nuatlapa": "Ipuor",
+      "Deutsch": "Amtsträger für gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -or",
+      "Aussprache": "ipuor"
+    },
+    {
+      "Nr": 78,
+      "Nuatlapa": "Ipuiti",
+      "Deutsch": "kleines gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -iti",
+      "Aussprache": "ipuiti"
+    },
+    {
+      "Nr": 79,
+      "Nuatlapa": "ipuroa",
+      "Deutsch": "großes oder langes gefäß",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -roa",
+      "Aussprache": "ipuroa"
+    },
+    {
+      "Nr": 80,
+      "Nuatlapa": "Ipusava",
+      "Deutsch": "reisende oder hafenbezogene Form von gefäß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ipu + -sava",
+      "Aussprache": "ipusava"
+    },
+    {
+      "Nr": 81,
+      "Nuatlapa": "Hakae",
+      "Deutsch": "belebtes oder tätiges kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + kae",
+      "Aussprache": "hakae"
+    },
+    {
+      "Nr": 82,
+      "Nuatlapa": "Makae",
+      "Deutsch": "gemeinschaftliches kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + kae",
+      "Aussprache": "makae"
+    },
+    {
+      "Nr": 83,
+      "Nuatlapa": "Tlakae",
+      "Deutsch": "rituell oder gestuftes kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + kae",
+      "Aussprache": "tɬakae"
+    },
+    {
+      "Nr": 84,
+      "Nuatlapa": "Quakae",
+      "Deutsch": "kaiserlich geordnetes kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + kae",
+      "Aussprache": "kwakae"
+    },
+    {
+      "Nr": 85,
+      "Nuatlapa": "Kaena",
+      "Deutsch": "Person des Bereichs kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -na",
+      "Aussprache": "kaena"
+    },
+    {
+      "Nr": 86,
+      "Nuatlapa": "Kaearia",
+      "Deutsch": "Ort oder Provinz des kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -aria",
+      "Aussprache": "kaearia"
+    },
+    {
+      "Nr": 87,
+      "Nuatlapa": "Kaeor",
+      "Deutsch": "Amtsträger für kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -or",
+      "Aussprache": "kaeor"
+    },
+    {
+      "Nr": 88,
+      "Nuatlapa": "Kaeiti",
+      "Deutsch": "kleines kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -iti",
+      "Aussprache": "kaeiti"
+    },
+    {
+      "Nr": 89,
+      "Nuatlapa": "kaeroa",
+      "Deutsch": "großes oder langes kanu",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -roa",
+      "Aussprache": "kaeroa"
+    },
+    {
+      "Nr": 90,
+      "Nuatlapa": "Kaesava",
+      "Deutsch": "reisende oder hafenbezogene Form von kanu",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kae + -sava",
+      "Aussprache": "kaesava"
+    },
+    {
+      "Nr": 91,
+      "Nuatlapa": "Hakai",
+      "Deutsch": "belebtes oder tätiges nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ha- + kai",
+      "Aussprache": "hakai"
+    },
+    {
+      "Nr": 92,
+      "Nuatlapa": "Makai",
+      "Deutsch": "gemeinschaftliches nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "ma- + kai",
+      "Aussprache": "makai"
+    },
+    {
+      "Nr": 93,
+      "Nuatlapa": "Tlakai",
+      "Deutsch": "rituell oder gestuftes nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "tla- + kai",
+      "Aussprache": "tɬakai"
+    },
+    {
+      "Nr": 94,
+      "Nuatlapa": "Quakai",
+      "Deutsch": "kaiserlich geordnetes nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "qua- + kai",
+      "Aussprache": "kwakai"
+    },
+    {
+      "Nr": 95,
+      "Nuatlapa": "Kaina",
+      "Deutsch": "Person des Bereichs nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -na",
+      "Aussprache": "kaina"
+    },
+    {
+      "Nr": 96,
+      "Nuatlapa": "Kaiaria",
+      "Deutsch": "Ort oder Provinz des nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -aria",
+      "Aussprache": "kaiaria"
+    },
+    {
+      "Nr": 97,
+      "Nuatlapa": "Kaior",
+      "Deutsch": "Amtsträger für nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -or",
+      "Aussprache": "kaior"
+    },
+    {
+      "Nr": 98,
+      "Nuatlapa": "Kaiti",
+      "Deutsch": "kleines nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -iti",
+      "Aussprache": "kaiti"
+    },
+    {
+      "Nr": 99,
+      "Nuatlapa": "kairoa",
+      "Deutsch": "großes oder langes nahrung",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -roa",
+      "Aussprache": "kairoa"
+    },
+    {
+      "Nr": 100,
+      "Nuatlapa": "Kaisava",
+      "Deutsch": "reisende oder hafenbezogene Form von nahrung",
+      "Wortart": "Substantiv",
+      "Kategorie": "Volk",
+      "Herleitung": "kai + -sava",
+      "Aussprache": "kaisava"
+    },
+    {
+      "Nr": 101,
+      "Nuatlapa": "Hakala",
+      "Deutsch": "belebtes oder tätiges stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kala",
+      "Aussprache": "hakala"
+    },
+    {
+      "Nr": 102,
+      "Nuatlapa": "Makala",
+      "Deutsch": "gemeinschaftliches stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kala",
+      "Aussprache": "makala"
+    },
+    {
+      "Nr": 103,
+      "Nuatlapa": "Tlakala",
+      "Deutsch": "rituell oder gestuftes stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kala",
+      "Aussprache": "tɬakala"
+    },
+    {
+      "Nr": 104,
+      "Nuatlapa": "Quakala",
+      "Deutsch": "kaiserlich geordnetes stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kala",
+      "Aussprache": "kwakala"
+    },
+    {
+      "Nr": 105,
+      "Nuatlapa": "Kalana",
+      "Deutsch": "Person des Bereichs stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -na",
+      "Aussprache": "kalana"
+    },
+    {
+      "Nr": 106,
+      "Nuatlapa": "Kalaria",
+      "Deutsch": "Ort oder Provinz des stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -aria",
+      "Aussprache": "kalaria"
+    },
+    {
+      "Nr": 107,
+      "Nuatlapa": "Kalaor",
+      "Deutsch": "Amtsträger für stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -or",
+      "Aussprache": "kalaor"
+    },
+    {
+      "Nr": 108,
+      "Nuatlapa": "Kalaiti",
+      "Deutsch": "kleines stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -iti",
+      "Aussprache": "kalaiti"
+    },
+    {
+      "Nr": 109,
+      "Nuatlapa": "kalaroa",
+      "Deutsch": "großes oder langes stein",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -roa",
+      "Aussprache": "kalaroa"
+    },
+    {
+      "Nr": 110,
+      "Nuatlapa": "Kalasava",
+      "Deutsch": "reisende oder hafenbezogene Form von stein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kala + -sava",
+      "Aussprache": "kalasava"
+    },
+    {
+      "Nr": 111,
+      "Nuatlapa": "Hakama",
+      "Deutsch": "belebtes oder tätiges hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kama",
+      "Aussprache": "hakama"
+    },
+    {
+      "Nr": 112,
+      "Nuatlapa": "Makama",
+      "Deutsch": "gemeinschaftliches hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kama",
+      "Aussprache": "makama"
+    },
+    {
+      "Nr": 113,
+      "Nuatlapa": "Tlakama",
+      "Deutsch": "rituell oder gestuftes hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kama",
+      "Aussprache": "tɬakama"
+    },
+    {
+      "Nr": 114,
+      "Nuatlapa": "Quakama",
+      "Deutsch": "kaiserlich geordnetes hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kama",
+      "Aussprache": "kwakama"
+    },
+    {
+      "Nr": 115,
+      "Nuatlapa": "Kamana",
+      "Deutsch": "Person des Bereichs hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -na",
+      "Aussprache": "kamana"
+    },
+    {
+      "Nr": 116,
+      "Nuatlapa": "Kamaria",
+      "Deutsch": "Ort oder Provinz des hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -aria",
+      "Aussprache": "kamaria"
+    },
+    {
+      "Nr": 117,
+      "Nuatlapa": "Kamaor",
+      "Deutsch": "Amtsträger für hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -or",
+      "Aussprache": "kamaor"
+    },
+    {
+      "Nr": 118,
+      "Nuatlapa": "Kamaiti",
+      "Deutsch": "kleines hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -iti",
+      "Aussprache": "kamaiti"
+    },
+    {
+      "Nr": 119,
+      "Nuatlapa": "kamaroa",
+      "Deutsch": "großes oder langes hand",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -roa",
+      "Aussprache": "kamaroa"
+    },
+    {
+      "Nr": 120,
+      "Nuatlapa": "Kamasava",
+      "Deutsch": "reisende oder hafenbezogene Form von hand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kama + -sava",
+      "Aussprache": "kamasava"
+    },
+    {
+      "Nr": 121,
+      "Nuatlapa": "Hakana",
+      "Deutsch": "belebtes oder tätiges haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kana",
+      "Aussprache": "hakana"
+    },
+    {
+      "Nr": 122,
+      "Nuatlapa": "Makana",
+      "Deutsch": "gemeinschaftliches haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kana",
+      "Aussprache": "makana"
+    },
+    {
+      "Nr": 123,
+      "Nuatlapa": "Tlakana",
+      "Deutsch": "rituell oder gestuftes haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kana",
+      "Aussprache": "tɬakana"
+    },
+    {
+      "Nr": 124,
+      "Nuatlapa": "Quakana",
+      "Deutsch": "kaiserlich geordnetes haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kana",
+      "Aussprache": "kwakana"
+    },
+    {
+      "Nr": 125,
+      "Nuatlapa": "Kanana",
+      "Deutsch": "Person des Bereichs haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -na",
+      "Aussprache": "kanana"
+    },
+    {
+      "Nr": 126,
+      "Nuatlapa": "Kanaria",
+      "Deutsch": "Ort oder Provinz des haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -aria",
+      "Aussprache": "kanaria"
+    },
+    {
+      "Nr": 127,
+      "Nuatlapa": "Kanaor",
+      "Deutsch": "Amtsträger für haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -or",
+      "Aussprache": "kanaor"
+    },
+    {
+      "Nr": 128,
+      "Nuatlapa": "Kanaiti",
+      "Deutsch": "kleines haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -iti",
+      "Aussprache": "kanaiti"
+    },
+    {
+      "Nr": 129,
+      "Nuatlapa": "kanaroa",
+      "Deutsch": "großes oder langes haus",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -roa",
+      "Aussprache": "kanaroa"
+    },
+    {
+      "Nr": 130,
+      "Nuatlapa": "Kanasava",
+      "Deutsch": "reisende oder hafenbezogene Form von haus",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kana + -sava",
+      "Aussprache": "kanasava"
+    },
+    {
+      "Nr": 131,
+      "Nuatlapa": "Hakapu",
+      "Deutsch": "belebtes oder tätiges heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kapu",
+      "Aussprache": "hakapu"
+    },
+    {
+      "Nr": 132,
+      "Nuatlapa": "Makapu",
+      "Deutsch": "gemeinschaftliches heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kapu",
+      "Aussprache": "makapu"
+    },
+    {
+      "Nr": 133,
+      "Nuatlapa": "Tlakapu",
+      "Deutsch": "rituell oder gestuftes heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kapu",
+      "Aussprache": "tɬakapu"
+    },
+    {
+      "Nr": 134,
+      "Nuatlapa": "Quakapu",
+      "Deutsch": "kaiserlich geordnetes heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kapu",
+      "Aussprache": "kwakapu"
+    },
+    {
+      "Nr": 135,
+      "Nuatlapa": "Kapuna",
+      "Deutsch": "Person des Bereichs heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -na",
+      "Aussprache": "kapuna"
+    },
+    {
+      "Nr": 136,
+      "Nuatlapa": "Kapuaria",
+      "Deutsch": "Ort oder Provinz des heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -aria",
+      "Aussprache": "kapuaria"
+    },
+    {
+      "Nr": 137,
+      "Nuatlapa": "Kapuor",
+      "Deutsch": "Amtsträger für heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -or",
+      "Aussprache": "kapuor"
+    },
+    {
+      "Nr": 138,
+      "Nuatlapa": "Kapuiti",
+      "Deutsch": "kleines heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -iti",
+      "Aussprache": "kapuiti"
+    },
+    {
+      "Nr": 139,
+      "Nuatlapa": "kapuroa",
+      "Deutsch": "großes oder langes heiliges verbot",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -roa",
+      "Aussprache": "kapuroa"
+    },
+    {
+      "Nr": 140,
+      "Nuatlapa": "Kapusava",
+      "Deutsch": "reisende oder hafenbezogene Form von heiliges verbot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kapu + -sava",
+      "Aussprache": "kapusava"
+    },
+    {
+      "Nr": 141,
+      "Nuatlapa": "Hakaro",
+      "Deutsch": "belebtes oder tätiges riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + karo",
+      "Aussprache": "hakaro"
+    },
+    {
+      "Nr": 142,
+      "Nuatlapa": "Makaro",
+      "Deutsch": "gemeinschaftliches riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + karo",
+      "Aussprache": "makaro"
+    },
+    {
+      "Nr": 143,
+      "Nuatlapa": "Tlakaro",
+      "Deutsch": "rituell oder gestuftes riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + karo",
+      "Aussprache": "tɬakaro"
+    },
+    {
+      "Nr": 144,
+      "Nuatlapa": "Quakaro",
+      "Deutsch": "kaiserlich geordnetes riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + karo",
+      "Aussprache": "kwakaro"
+    },
+    {
+      "Nr": 145,
+      "Nuatlapa": "Karona",
+      "Deutsch": "Person des Bereichs riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -na",
+      "Aussprache": "karona"
+    },
+    {
+      "Nr": 146,
+      "Nuatlapa": "Karoaria",
+      "Deutsch": "Ort oder Provinz des riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -aria",
+      "Aussprache": "karoaria"
+    },
+    {
+      "Nr": 147,
+      "Nuatlapa": "Karor",
+      "Deutsch": "Amtsträger für riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -or",
+      "Aussprache": "karor"
+    },
+    {
+      "Nr": 148,
+      "Nuatlapa": "Karoiti",
+      "Deutsch": "kleines riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -iti",
+      "Aussprache": "karoiti"
+    },
+    {
+      "Nr": 149,
+      "Nuatlapa": "karoroa",
+      "Deutsch": "großes oder langes riff",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -roa",
+      "Aussprache": "karoroa"
+    },
+    {
+      "Nr": 150,
+      "Nuatlapa": "Karosava",
+      "Deutsch": "reisende oder hafenbezogene Form von riff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "karo + -sava",
+      "Aussprache": "karosava"
+    },
+    {
+      "Nr": 151,
+      "Nuatlapa": "Hakava",
+      "Deutsch": "belebtes oder tätiges getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kava",
+      "Aussprache": "hakava"
+    },
+    {
+      "Nr": 152,
+      "Nuatlapa": "Makava",
+      "Deutsch": "gemeinschaftliches getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kava",
+      "Aussprache": "makava"
+    },
+    {
+      "Nr": 153,
+      "Nuatlapa": "Tlakava",
+      "Deutsch": "rituell oder gestuftes getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kava",
+      "Aussprache": "tɬakava"
+    },
+    {
+      "Nr": 154,
+      "Nuatlapa": "Quakava",
+      "Deutsch": "kaiserlich geordnetes getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kava",
+      "Aussprache": "kwakava"
+    },
+    {
+      "Nr": 155,
+      "Nuatlapa": "Kavana",
+      "Deutsch": "Person des Bereichs getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -na",
+      "Aussprache": "kavana"
+    },
+    {
+      "Nr": 156,
+      "Nuatlapa": "Kavaria",
+      "Deutsch": "Ort oder Provinz des getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -aria",
+      "Aussprache": "kavaria"
+    },
+    {
+      "Nr": 157,
+      "Nuatlapa": "Kavaor",
+      "Deutsch": "Amtsträger für getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -or",
+      "Aussprache": "kavaor"
+    },
+    {
+      "Nr": 158,
+      "Nuatlapa": "Kavaiti",
+      "Deutsch": "kleines getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -iti",
+      "Aussprache": "kavaiti"
+    },
+    {
+      "Nr": 159,
+      "Nuatlapa": "kavaroa",
+      "Deutsch": "großes oder langes getränk",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -roa",
+      "Aussprache": "kavaroa"
+    },
+    {
+      "Nr": 160,
+      "Nuatlapa": "Kavasava",
+      "Deutsch": "reisende oder hafenbezogene Form von getränk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kava + -sava",
+      "Aussprache": "kavasava"
+    },
+    {
+      "Nr": 161,
+      "Nuatlapa": "Hakea",
+      "Deutsch": "belebtes oder tätiges hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kea",
+      "Aussprache": "hakea"
+    },
+    {
+      "Nr": 162,
+      "Nuatlapa": "Makea",
+      "Deutsch": "gemeinschaftliches hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kea",
+      "Aussprache": "makea"
+    },
+    {
+      "Nr": 163,
+      "Nuatlapa": "Tlakea",
+      "Deutsch": "rituell oder gestuftes hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kea",
+      "Aussprache": "tɬakea"
+    },
+    {
+      "Nr": 164,
+      "Nuatlapa": "Quakea",
+      "Deutsch": "kaiserlich geordnetes hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kea",
+      "Aussprache": "kwakea"
+    },
+    {
+      "Nr": 165,
+      "Nuatlapa": "Keana",
+      "Deutsch": "Person des Bereichs hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -na",
+      "Aussprache": "keana"
+    },
+    {
+      "Nr": 166,
+      "Nuatlapa": "Kearia",
+      "Deutsch": "Ort oder Provinz des hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -aria",
+      "Aussprache": "kearia"
+    },
+    {
+      "Nr": 167,
+      "Nuatlapa": "Keaor",
+      "Deutsch": "Amtsträger für hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -or",
+      "Aussprache": "keaor"
+    },
+    {
+      "Nr": 168,
+      "Nuatlapa": "Keaiti",
+      "Deutsch": "kleines hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -iti",
+      "Aussprache": "keaiti"
+    },
+    {
+      "Nr": 169,
+      "Nuatlapa": "kearoa",
+      "Deutsch": "großes oder langes hell",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -roa",
+      "Aussprache": "kearoa"
+    },
+    {
+      "Nr": 170,
+      "Nuatlapa": "Keasava",
+      "Deutsch": "reisende oder hafenbezogene Form von hell",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kea + -sava",
+      "Aussprache": "keasava"
+    },
+    {
+      "Nr": 171,
+      "Nuatlapa": "Hakela",
+      "Deutsch": "belebtes oder tätiges schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kela",
+      "Aussprache": "hakela"
+    },
+    {
+      "Nr": 172,
+      "Nuatlapa": "Makela",
+      "Deutsch": "gemeinschaftliches schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kela",
+      "Aussprache": "makela"
+    },
+    {
+      "Nr": 173,
+      "Nuatlapa": "Tlakela",
+      "Deutsch": "rituell oder gestuftes schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kela",
+      "Aussprache": "tɬakela"
+    },
+    {
+      "Nr": 174,
+      "Nuatlapa": "Quakela",
+      "Deutsch": "kaiserlich geordnetes schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kela",
+      "Aussprache": "kwakela"
+    },
+    {
+      "Nr": 175,
+      "Nuatlapa": "Kelana",
+      "Deutsch": "Person des Bereichs schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -na",
+      "Aussprache": "kelana"
+    },
+    {
+      "Nr": 176,
+      "Nuatlapa": "Kelaria",
+      "Deutsch": "Ort oder Provinz des schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -aria",
+      "Aussprache": "kelaria"
+    },
+    {
+      "Nr": 177,
+      "Nuatlapa": "Kelaor",
+      "Deutsch": "Amtsträger für schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -or",
+      "Aussprache": "kelaor"
+    },
+    {
+      "Nr": 178,
+      "Nuatlapa": "Kelaiti",
+      "Deutsch": "kleines schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -iti",
+      "Aussprache": "kelaiti"
+    },
+    {
+      "Nr": 179,
+      "Nuatlapa": "kelaroa",
+      "Deutsch": "großes oder langes schnitzerei",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -roa",
+      "Aussprache": "kelaroa"
+    },
+    {
+      "Nr": 180,
+      "Nuatlapa": "Kelasava",
+      "Deutsch": "reisende oder hafenbezogene Form von schnitzerei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kela + -sava",
+      "Aussprache": "kelasava"
+    },
+    {
+      "Nr": 181,
+      "Nuatlapa": "Hakiri",
+      "Deutsch": "belebtes oder tätiges haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + kiri",
+      "Aussprache": "hakiri"
+    },
+    {
+      "Nr": 182,
+      "Nuatlapa": "Makiri",
+      "Deutsch": "gemeinschaftliches haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + kiri",
+      "Aussprache": "makiri"
+    },
+    {
+      "Nr": 183,
+      "Nuatlapa": "Tlakiri",
+      "Deutsch": "rituell oder gestuftes haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + kiri",
+      "Aussprache": "tɬakiri"
+    },
+    {
+      "Nr": 184,
+      "Nuatlapa": "Quakiri",
+      "Deutsch": "kaiserlich geordnetes haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + kiri",
+      "Aussprache": "kwakiri"
+    },
+    {
+      "Nr": 185,
+      "Nuatlapa": "Kirina",
+      "Deutsch": "Person des Bereichs haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -na",
+      "Aussprache": "kirina"
+    },
+    {
+      "Nr": 186,
+      "Nuatlapa": "Kiriaria",
+      "Deutsch": "Ort oder Provinz des haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -aria",
+      "Aussprache": "kiriaria"
+    },
+    {
+      "Nr": 187,
+      "Nuatlapa": "Kirior",
+      "Deutsch": "Amtsträger für haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -or",
+      "Aussprache": "kirior"
+    },
+    {
+      "Nr": 188,
+      "Nuatlapa": "Kiriti",
+      "Deutsch": "kleines haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -iti",
+      "Aussprache": "kiriti"
+    },
+    {
+      "Nr": 189,
+      "Nuatlapa": "kiriroa",
+      "Deutsch": "großes oder langes haut",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -roa",
+      "Aussprache": "kiriroa"
+    },
+    {
+      "Nr": 190,
+      "Nuatlapa": "Kirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von haut",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "kiri + -sava",
+      "Aussprache": "kirisava"
+    },
+    {
+      "Nr": 191,
+      "Nuatlapa": "Hakoro",
+      "Deutsch": "belebtes oder tätiges dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ha- + koro",
+      "Aussprache": "hakoro"
+    },
+    {
+      "Nr": 192,
+      "Nuatlapa": "Makoro",
+      "Deutsch": "gemeinschaftliches dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "ma- + koro",
+      "Aussprache": "makoro"
+    },
+    {
+      "Nr": 193,
+      "Nuatlapa": "Tlakoro",
+      "Deutsch": "rituell oder gestuftes dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "tla- + koro",
+      "Aussprache": "tɬakoro"
+    },
+    {
+      "Nr": 194,
+      "Nuatlapa": "Quakoro",
+      "Deutsch": "kaiserlich geordnetes dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "qua- + koro",
+      "Aussprache": "kwakoro"
+    },
+    {
+      "Nr": 195,
+      "Nuatlapa": "Korona",
+      "Deutsch": "Person des Bereichs dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -na",
+      "Aussprache": "korona"
+    },
+    {
+      "Nr": 196,
+      "Nuatlapa": "Koroaria",
+      "Deutsch": "Ort oder Provinz des dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -aria",
+      "Aussprache": "koroaria"
+    },
+    {
+      "Nr": 197,
+      "Nuatlapa": "Koror",
+      "Deutsch": "Amtsträger für dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -or",
+      "Aussprache": "koror"
+    },
+    {
+      "Nr": 198,
+      "Nuatlapa": "Koroiti",
+      "Deutsch": "kleines dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -iti",
+      "Aussprache": "koroiti"
+    },
+    {
+      "Nr": 199,
+      "Nuatlapa": "kororoa",
+      "Deutsch": "großes oder langes dorf",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -roa",
+      "Aussprache": "kororoa"
+    },
+    {
+      "Nr": 200,
+      "Nuatlapa": "Korosava",
+      "Deutsch": "reisende oder hafenbezogene Form von dorf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Alltag",
+      "Herleitung": "koro + -sava",
+      "Aussprache": "korosava"
+    },
+    {
+      "Nr": 201,
+      "Nuatlapa": "Halaka",
+      "Deutsch": "belebtes oder tätiges pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + laka",
+      "Aussprache": "halaka"
+    },
+    {
+      "Nr": 202,
+      "Nuatlapa": "Malaka",
+      "Deutsch": "gemeinschaftliches pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + laka",
+      "Aussprache": "malaka"
+    },
+    {
+      "Nr": 203,
+      "Nuatlapa": "Tlalaka",
+      "Deutsch": "rituell oder gestuftes pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + laka",
+      "Aussprache": "tɬalaka"
+    },
+    {
+      "Nr": 204,
+      "Nuatlapa": "Qualaka",
+      "Deutsch": "kaiserlich geordnetes pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + laka",
+      "Aussprache": "kwalaka"
+    },
+    {
+      "Nr": 205,
+      "Nuatlapa": "Lakana",
+      "Deutsch": "Person des Bereichs pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -na",
+      "Aussprache": "lakana"
+    },
+    {
+      "Nr": 206,
+      "Nuatlapa": "Lakaria",
+      "Deutsch": "Ort oder Provinz des pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -aria",
+      "Aussprache": "lakaria"
+    },
+    {
+      "Nr": 207,
+      "Nuatlapa": "Lakaor",
+      "Deutsch": "Amtsträger für pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -or",
+      "Aussprache": "lakaor"
+    },
+    {
+      "Nr": 208,
+      "Nuatlapa": "Lakaiti",
+      "Deutsch": "kleines pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -iti",
+      "Aussprache": "lakaiti"
+    },
+    {
+      "Nr": 209,
+      "Nuatlapa": "lakaroa",
+      "Deutsch": "großes oder langes pfad",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -roa",
+      "Aussprache": "lakaroa"
+    },
+    {
+      "Nr": 210,
+      "Nuatlapa": "Lakasava",
+      "Deutsch": "reisende oder hafenbezogene Form von pfad",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "laka + -sava",
+      "Aussprache": "lakasava"
+    },
+    {
+      "Nr": 211,
+      "Nuatlapa": "Halani",
+      "Deutsch": "belebtes oder tätiges himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + lani",
+      "Aussprache": "halani"
+    },
+    {
+      "Nr": 212,
+      "Nuatlapa": "Malani",
+      "Deutsch": "gemeinschaftliches himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + lani",
+      "Aussprache": "malani"
+    },
+    {
+      "Nr": 213,
+      "Nuatlapa": "Tlalani",
+      "Deutsch": "rituell oder gestuftes himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + lani",
+      "Aussprache": "tɬalani"
+    },
+    {
+      "Nr": 214,
+      "Nuatlapa": "Qualani",
+      "Deutsch": "kaiserlich geordnetes himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + lani",
+      "Aussprache": "kwalani"
+    },
+    {
+      "Nr": 215,
+      "Nuatlapa": "Lanina",
+      "Deutsch": "Person des Bereichs himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -na",
+      "Aussprache": "lanina"
+    },
+    {
+      "Nr": 216,
+      "Nuatlapa": "Laniaria",
+      "Deutsch": "Ort oder Provinz des himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -aria",
+      "Aussprache": "laniaria"
+    },
+    {
+      "Nr": 217,
+      "Nuatlapa": "Lanior",
+      "Deutsch": "Amtsträger für himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -or",
+      "Aussprache": "lanior"
+    },
+    {
+      "Nr": 218,
+      "Nuatlapa": "Laniti",
+      "Deutsch": "kleines himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -iti",
+      "Aussprache": "laniti"
+    },
+    {
+      "Nr": 219,
+      "Nuatlapa": "laniroa",
+      "Deutsch": "großes oder langes himmel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -roa",
+      "Aussprache": "laniroa"
+    },
+    {
+      "Nr": 220,
+      "Nuatlapa": "Lanisava",
+      "Deutsch": "reisende oder hafenbezogene Form von himmel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lani + -sava",
+      "Aussprache": "lanisava"
+    },
+    {
+      "Nr": 221,
+      "Nuatlapa": "Halapa",
+      "Deutsch": "belebtes oder tätiges tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + lapa",
+      "Aussprache": "halapa"
+    },
+    {
+      "Nr": 222,
+      "Nuatlapa": "Malapa",
+      "Deutsch": "gemeinschaftliches tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + lapa",
+      "Aussprache": "malapa"
+    },
+    {
+      "Nr": 223,
+      "Nuatlapa": "Tlalapa",
+      "Deutsch": "rituell oder gestuftes tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + lapa",
+      "Aussprache": "tɬalapa"
+    },
+    {
+      "Nr": 224,
+      "Nuatlapa": "Qualapa",
+      "Deutsch": "kaiserlich geordnetes tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + lapa",
+      "Aussprache": "kwalapa"
+    },
+    {
+      "Nr": 225,
+      "Nuatlapa": "Lapana",
+      "Deutsch": "Person des Bereichs tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -na",
+      "Aussprache": "lapana"
+    },
+    {
+      "Nr": 226,
+      "Nuatlapa": "Laparia",
+      "Deutsch": "Ort oder Provinz des tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -aria",
+      "Aussprache": "laparia"
+    },
+    {
+      "Nr": 227,
+      "Nuatlapa": "Lapaor",
+      "Deutsch": "Amtsträger für tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -or",
+      "Aussprache": "lapaor"
+    },
+    {
+      "Nr": 228,
+      "Nuatlapa": "Lapaiti",
+      "Deutsch": "kleines tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -iti",
+      "Aussprache": "lapaiti"
+    },
+    {
+      "Nr": 229,
+      "Nuatlapa": "laparoa",
+      "Deutsch": "großes oder langes tuch",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -roa",
+      "Aussprache": "laparoa"
+    },
+    {
+      "Nr": 230,
+      "Nuatlapa": "Lapasava",
+      "Deutsch": "reisende oder hafenbezogene Form von tuch",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lapa + -sava",
+      "Aussprache": "lapasava"
+    },
+    {
+      "Nr": 231,
+      "Nuatlapa": "Halari",
+      "Deutsch": "belebtes oder tätiges sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + lari",
+      "Aussprache": "halari"
+    },
+    {
+      "Nr": 232,
+      "Nuatlapa": "Malari",
+      "Deutsch": "gemeinschaftliches sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + lari",
+      "Aussprache": "malari"
+    },
+    {
+      "Nr": 233,
+      "Nuatlapa": "Tlalari",
+      "Deutsch": "rituell oder gestuftes sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + lari",
+      "Aussprache": "tɬalari"
+    },
+    {
+      "Nr": 234,
+      "Nuatlapa": "Qualari",
+      "Deutsch": "kaiserlich geordnetes sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + lari",
+      "Aussprache": "kwalari"
+    },
+    {
+      "Nr": 235,
+      "Nuatlapa": "Larina",
+      "Deutsch": "Person des Bereichs sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -na",
+      "Aussprache": "larina"
+    },
+    {
+      "Nr": 236,
+      "Nuatlapa": "Lariaria",
+      "Deutsch": "Ort oder Provinz des sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -aria",
+      "Aussprache": "lariaria"
+    },
+    {
+      "Nr": 237,
+      "Nuatlapa": "Larior",
+      "Deutsch": "Amtsträger für sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -or",
+      "Aussprache": "larior"
+    },
+    {
+      "Nr": 238,
+      "Nuatlapa": "Lariti",
+      "Deutsch": "kleines sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -iti",
+      "Aussprache": "lariti"
+    },
+    {
+      "Nr": 239,
+      "Nuatlapa": "lariroa",
+      "Deutsch": "großes oder langes sprecher",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -roa",
+      "Aussprache": "lariroa"
+    },
+    {
+      "Nr": 240,
+      "Nuatlapa": "Larisava",
+      "Deutsch": "reisende oder hafenbezogene Form von sprecher",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lari + -sava",
+      "Aussprache": "larisava"
+    },
+    {
+      "Nr": 241,
+      "Nuatlapa": "Haloku",
+      "Deutsch": "belebtes oder tätiges bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + loku",
+      "Aussprache": "haloku"
+    },
+    {
+      "Nr": 242,
+      "Nuatlapa": "Maloku",
+      "Deutsch": "gemeinschaftliches bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + loku",
+      "Aussprache": "maloku"
+    },
+    {
+      "Nr": 243,
+      "Nuatlapa": "Tlaloku",
+      "Deutsch": "rituell oder gestuftes bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + loku",
+      "Aussprache": "tɬaloku"
+    },
+    {
+      "Nr": 244,
+      "Nuatlapa": "Qualoku",
+      "Deutsch": "kaiserlich geordnetes bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + loku",
+      "Aussprache": "kwaloku"
+    },
+    {
+      "Nr": 245,
+      "Nuatlapa": "Lokuna",
+      "Deutsch": "Person des Bereichs bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -na",
+      "Aussprache": "lokuna"
+    },
+    {
+      "Nr": 246,
+      "Nuatlapa": "Lokuaria",
+      "Deutsch": "Ort oder Provinz des bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -aria",
+      "Aussprache": "lokuaria"
+    },
+    {
+      "Nr": 247,
+      "Nuatlapa": "Lokuor",
+      "Deutsch": "Amtsträger für bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -or",
+      "Aussprache": "lokuor"
+    },
+    {
+      "Nr": 248,
+      "Nuatlapa": "Lokuiti",
+      "Deutsch": "kleines bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -iti",
+      "Aussprache": "lokuiti"
+    },
+    {
+      "Nr": 249,
+      "Nuatlapa": "lokuroa",
+      "Deutsch": "großes oder langes bucht",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -roa",
+      "Aussprache": "lokuroa"
+    },
+    {
+      "Nr": 250,
+      "Nuatlapa": "Lokusava",
+      "Deutsch": "reisende oder hafenbezogene Form von bucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "loku + -sava",
+      "Aussprache": "lokusava"
+    },
+    {
+      "Nr": 251,
+      "Nuatlapa": "Halua",
+      "Deutsch": "belebtes oder tätiges zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + lua",
+      "Aussprache": "halua"
+    },
+    {
+      "Nr": 252,
+      "Nuatlapa": "Malua",
+      "Deutsch": "gemeinschaftliches zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + lua",
+      "Aussprache": "malua"
+    },
+    {
+      "Nr": 253,
+      "Nuatlapa": "Tlalua",
+      "Deutsch": "rituell oder gestuftes zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + lua",
+      "Aussprache": "tɬalua"
+    },
+    {
+      "Nr": 254,
+      "Nuatlapa": "Qualua",
+      "Deutsch": "kaiserlich geordnetes zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + lua",
+      "Aussprache": "kwalua"
+    },
+    {
+      "Nr": 255,
+      "Nuatlapa": "Luana",
+      "Deutsch": "Person des Bereichs zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -na",
+      "Aussprache": "luana"
+    },
+    {
+      "Nr": 256,
+      "Nuatlapa": "Luaria",
+      "Deutsch": "Ort oder Provinz des zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -aria",
+      "Aussprache": "luaria"
+    },
+    {
+      "Nr": 257,
+      "Nuatlapa": "Luaor",
+      "Deutsch": "Amtsträger für zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -or",
+      "Aussprache": "luaor"
+    },
+    {
+      "Nr": 258,
+      "Nuatlapa": "Luaiti",
+      "Deutsch": "kleines zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -iti",
+      "Aussprache": "luaiti"
+    },
+    {
+      "Nr": 259,
+      "Nuatlapa": "luaroa",
+      "Deutsch": "großes oder langes zwei",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -roa",
+      "Aussprache": "luaroa"
+    },
+    {
+      "Nr": 260,
+      "Nuatlapa": "Luasava",
+      "Deutsch": "reisende oder hafenbezogene Form von zwei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "lua + -sava",
+      "Aussprache": "luasava"
+    },
+    {
+      "Nr": 261,
+      "Nuatlapa": "Hamae",
+      "Deutsch": "belebtes oder tätiges blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + mae",
+      "Aussprache": "hamae"
+    },
+    {
+      "Nr": 262,
+      "Nuatlapa": "Mamae",
+      "Deutsch": "gemeinschaftliches blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + mae",
+      "Aussprache": "mamae"
+    },
+    {
+      "Nr": 263,
+      "Nuatlapa": "Tlamae",
+      "Deutsch": "rituell oder gestuftes blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + mae",
+      "Aussprache": "tɬamae"
+    },
+    {
+      "Nr": 264,
+      "Nuatlapa": "Quamae",
+      "Deutsch": "kaiserlich geordnetes blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + mae",
+      "Aussprache": "kwamae"
+    },
+    {
+      "Nr": 265,
+      "Nuatlapa": "Maena",
+      "Deutsch": "Person des Bereichs blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -na",
+      "Aussprache": "maena"
+    },
+    {
+      "Nr": 266,
+      "Nuatlapa": "Maearia",
+      "Deutsch": "Ort oder Provinz des blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -aria",
+      "Aussprache": "maearia"
+    },
+    {
+      "Nr": 267,
+      "Nuatlapa": "Maeor",
+      "Deutsch": "Amtsträger für blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -or",
+      "Aussprache": "maeor"
+    },
+    {
+      "Nr": 268,
+      "Nuatlapa": "Maeiti",
+      "Deutsch": "kleines blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -iti",
+      "Aussprache": "maeiti"
+    },
+    {
+      "Nr": 269,
+      "Nuatlapa": "maeroa",
+      "Deutsch": "großes oder langes blüte",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -roa",
+      "Aussprache": "maeroa"
+    },
+    {
+      "Nr": 270,
+      "Nuatlapa": "Maesava",
+      "Deutsch": "reisende oder hafenbezogene Form von blüte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mae + -sava",
+      "Aussprache": "maesava"
+    },
+    {
+      "Nr": 271,
+      "Nuatlapa": "Hamana",
+      "Deutsch": "belebtes oder tätiges lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + mana",
+      "Aussprache": "hamana"
+    },
+    {
+      "Nr": 272,
+      "Nuatlapa": "Mamana",
+      "Deutsch": "gemeinschaftliches lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + mana",
+      "Aussprache": "mamana"
+    },
+    {
+      "Nr": 273,
+      "Nuatlapa": "Tlamana",
+      "Deutsch": "rituell oder gestuftes lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + mana",
+      "Aussprache": "tɬamana"
+    },
+    {
+      "Nr": 274,
+      "Nuatlapa": "Quamana",
+      "Deutsch": "kaiserlich geordnetes lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + mana",
+      "Aussprache": "kwamana"
+    },
+    {
+      "Nr": 275,
+      "Nuatlapa": "Manana",
+      "Deutsch": "Person des Bereichs lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -na",
+      "Aussprache": "manana"
+    },
+    {
+      "Nr": 276,
+      "Nuatlapa": "Manaria",
+      "Deutsch": "Ort oder Provinz des lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -aria",
+      "Aussprache": "manaria"
+    },
+    {
+      "Nr": 277,
+      "Nuatlapa": "Manaor",
+      "Deutsch": "Amtsträger für lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -or",
+      "Aussprache": "manaor"
+    },
+    {
+      "Nr": 278,
+      "Nuatlapa": "Manaiti",
+      "Deutsch": "kleines lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -iti",
+      "Aussprache": "manaiti"
+    },
+    {
+      "Nr": 279,
+      "Nuatlapa": "manaroa",
+      "Deutsch": "großes oder langes lebenskraft",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -roa",
+      "Aussprache": "manaroa"
+    },
+    {
+      "Nr": 280,
+      "Nuatlapa": "Manasava",
+      "Deutsch": "reisende oder hafenbezogene Form von lebenskraft",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mana + -sava",
+      "Aussprache": "manasava"
+    },
+    {
+      "Nr": 281,
+      "Nuatlapa": "Hamara",
+      "Deutsch": "belebtes oder tätiges platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + mara",
+      "Aussprache": "hamara"
+    },
+    {
+      "Nr": 282,
+      "Nuatlapa": "Mamara",
+      "Deutsch": "gemeinschaftliches platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + mara",
+      "Aussprache": "mamara"
+    },
+    {
+      "Nr": 283,
+      "Nuatlapa": "Tlamara",
+      "Deutsch": "rituell oder gestuftes platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + mara",
+      "Aussprache": "tɬamara"
+    },
+    {
+      "Nr": 284,
+      "Nuatlapa": "Quamara",
+      "Deutsch": "kaiserlich geordnetes platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + mara",
+      "Aussprache": "kwamara"
+    },
+    {
+      "Nr": 285,
+      "Nuatlapa": "Marana",
+      "Deutsch": "Person des Bereichs platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -na",
+      "Aussprache": "marana"
+    },
+    {
+      "Nr": 286,
+      "Nuatlapa": "Mararia",
+      "Deutsch": "Ort oder Provinz des platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -aria",
+      "Aussprache": "mararia"
+    },
+    {
+      "Nr": 287,
+      "Nuatlapa": "Maraor",
+      "Deutsch": "Amtsträger für platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -or",
+      "Aussprache": "maraor"
+    },
+    {
+      "Nr": 288,
+      "Nuatlapa": "Maraiti",
+      "Deutsch": "kleines platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -iti",
+      "Aussprache": "maraiti"
+    },
+    {
+      "Nr": 289,
+      "Nuatlapa": "mararoa",
+      "Deutsch": "großes oder langes platz",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -roa",
+      "Aussprache": "mararoa"
+    },
+    {
+      "Nr": 290,
+      "Nuatlapa": "Marasava",
+      "Deutsch": "reisende oder hafenbezogene Form von platz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "mara + -sava",
+      "Aussprache": "marasava"
+    },
+    {
+      "Nr": 291,
+      "Nuatlapa": "Hamatu",
+      "Deutsch": "belebtes oder tätiges elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ha- + matu",
+      "Aussprache": "hamatu"
+    },
+    {
+      "Nr": 292,
+      "Nuatlapa": "Mamatu",
+      "Deutsch": "gemeinschaftliches elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "ma- + matu",
+      "Aussprache": "mamatu"
+    },
+    {
+      "Nr": 293,
+      "Nuatlapa": "Tlamatu",
+      "Deutsch": "rituell oder gestuftes elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "tla- + matu",
+      "Aussprache": "tɬamatu"
+    },
+    {
+      "Nr": 294,
+      "Nuatlapa": "Quamatu",
+      "Deutsch": "kaiserlich geordnetes elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "qua- + matu",
+      "Aussprache": "kwamatu"
+    },
+    {
+      "Nr": 295,
+      "Nuatlapa": "Matuna",
+      "Deutsch": "Person des Bereichs elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -na",
+      "Aussprache": "matuna"
+    },
+    {
+      "Nr": 296,
+      "Nuatlapa": "Matuaria",
+      "Deutsch": "Ort oder Provinz des elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -aria",
+      "Aussprache": "matuaria"
+    },
+    {
+      "Nr": 297,
+      "Nuatlapa": "Matuor",
+      "Deutsch": "Amtsträger für elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -or",
+      "Aussprache": "matuor"
+    },
+    {
+      "Nr": 298,
+      "Nuatlapa": "Matuiti",
+      "Deutsch": "kleines elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -iti",
+      "Aussprache": "matuiti"
+    },
+    {
+      "Nr": 299,
+      "Nuatlapa": "maturoa",
+      "Deutsch": "großes oder langes elternteil",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -roa",
+      "Aussprache": "maturoa"
+    },
+    {
+      "Nr": 300,
+      "Nuatlapa": "Matusava",
+      "Deutsch": "reisende oder hafenbezogene Form von elternteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Land und Meer",
+      "Herleitung": "matu + -sava",
+      "Aussprache": "matusava"
+    },
+    {
+      "Nr": 301,
+      "Nuatlapa": "Hamea",
+      "Deutsch": "belebtes oder tätiges ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + mea",
+      "Aussprache": "hamea"
+    },
+    {
+      "Nr": 302,
+      "Nuatlapa": "Mamea",
+      "Deutsch": "gemeinschaftliches ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + mea",
+      "Aussprache": "mamea"
+    },
+    {
+      "Nr": 303,
+      "Nuatlapa": "Tlamea",
+      "Deutsch": "rituell oder gestuftes ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + mea",
+      "Aussprache": "tɬamea"
+    },
+    {
+      "Nr": 304,
+      "Nuatlapa": "Quamea",
+      "Deutsch": "kaiserlich geordnetes ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + mea",
+      "Aussprache": "kwamea"
+    },
+    {
+      "Nr": 305,
+      "Nuatlapa": "Meana",
+      "Deutsch": "Person des Bereichs ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -na",
+      "Aussprache": "meana"
+    },
+    {
+      "Nr": 306,
+      "Nuatlapa": "Mearia",
+      "Deutsch": "Ort oder Provinz des ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -aria",
+      "Aussprache": "mearia"
+    },
+    {
+      "Nr": 307,
+      "Nuatlapa": "Meaor",
+      "Deutsch": "Amtsträger für ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -or",
+      "Aussprache": "meaor"
+    },
+    {
+      "Nr": 308,
+      "Nuatlapa": "Meaiti",
+      "Deutsch": "kleines ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -iti",
+      "Aussprache": "meaiti"
+    },
+    {
+      "Nr": 309,
+      "Nuatlapa": "mearoa",
+      "Deutsch": "großes oder langes ding",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -roa",
+      "Aussprache": "mearoa"
+    },
+    {
+      "Nr": 310,
+      "Nuatlapa": "Measava",
+      "Deutsch": "reisende oder hafenbezogene Form von ding",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "mea + -sava",
+      "Aussprache": "measava"
+    },
+    {
+      "Nr": 311,
+      "Nuatlapa": "Hamiki",
+      "Deutsch": "belebtes oder tätiges klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + miki",
+      "Aussprache": "hamiki"
+    },
+    {
+      "Nr": 312,
+      "Nuatlapa": "Mamiki",
+      "Deutsch": "gemeinschaftliches klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + miki",
+      "Aussprache": "mamiki"
+    },
+    {
+      "Nr": 313,
+      "Nuatlapa": "Tlamiki",
+      "Deutsch": "rituell oder gestuftes klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + miki",
+      "Aussprache": "tɬamiki"
+    },
+    {
+      "Nr": 314,
+      "Nuatlapa": "Quamiki",
+      "Deutsch": "kaiserlich geordnetes klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + miki",
+      "Aussprache": "kwamiki"
+    },
+    {
+      "Nr": 315,
+      "Nuatlapa": "Mikina",
+      "Deutsch": "Person des Bereichs klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -na",
+      "Aussprache": "mikina"
+    },
+    {
+      "Nr": 316,
+      "Nuatlapa": "Mikiaria",
+      "Deutsch": "Ort oder Provinz des klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -aria",
+      "Aussprache": "mikiaria"
+    },
+    {
+      "Nr": 317,
+      "Nuatlapa": "Mikior",
+      "Deutsch": "Amtsträger für klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -or",
+      "Aussprache": "mikior"
+    },
+    {
+      "Nr": 318,
+      "Nuatlapa": "Mikiti",
+      "Deutsch": "kleines klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -iti",
+      "Aussprache": "mikiti"
+    },
+    {
+      "Nr": 319,
+      "Nuatlapa": "mikiroa",
+      "Deutsch": "großes oder langes klein",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -roa",
+      "Aussprache": "mikiroa"
+    },
+    {
+      "Nr": 320,
+      "Nuatlapa": "Mikisava",
+      "Deutsch": "reisende oder hafenbezogene Form von klein",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "miki + -sava",
+      "Aussprache": "mikisava"
+    },
+    {
+      "Nr": 321,
+      "Nuatlapa": "Hamoa",
+      "Deutsch": "belebtes oder tätiges vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + moa",
+      "Aussprache": "hamoa"
+    },
+    {
+      "Nr": 322,
+      "Nuatlapa": "Mamoa",
+      "Deutsch": "gemeinschaftliches vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + moa",
+      "Aussprache": "mamoa"
+    },
+    {
+      "Nr": 323,
+      "Nuatlapa": "Tlamoa",
+      "Deutsch": "rituell oder gestuftes vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + moa",
+      "Aussprache": "tɬamoa"
+    },
+    {
+      "Nr": 324,
+      "Nuatlapa": "Quamoa",
+      "Deutsch": "kaiserlich geordnetes vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + moa",
+      "Aussprache": "kwamoa"
+    },
+    {
+      "Nr": 325,
+      "Nuatlapa": "Moana",
+      "Deutsch": "Person des Bereichs vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -na",
+      "Aussprache": "moana"
+    },
+    {
+      "Nr": 326,
+      "Nuatlapa": "Moaria",
+      "Deutsch": "Ort oder Provinz des vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -aria",
+      "Aussprache": "moaria"
+    },
+    {
+      "Nr": 327,
+      "Nuatlapa": "Moaor",
+      "Deutsch": "Amtsträger für vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -or",
+      "Aussprache": "moaor"
+    },
+    {
+      "Nr": 328,
+      "Nuatlapa": "Moaiti",
+      "Deutsch": "kleines vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -iti",
+      "Aussprache": "moaiti"
+    },
+    {
+      "Nr": 329,
+      "Nuatlapa": "moaroa",
+      "Deutsch": "großes oder langes vogel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -roa",
+      "Aussprache": "moaroa"
+    },
+    {
+      "Nr": 330,
+      "Nuatlapa": "Moasava",
+      "Deutsch": "reisende oder hafenbezogene Form von vogel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moa + -sava",
+      "Aussprache": "moasava"
+    },
+    {
+      "Nr": 331,
+      "Nuatlapa": "Hamoku",
+      "Deutsch": "belebtes oder tätiges insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + moku",
+      "Aussprache": "hamoku"
+    },
+    {
+      "Nr": 332,
+      "Nuatlapa": "Mamoku",
+      "Deutsch": "gemeinschaftliches insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + moku",
+      "Aussprache": "mamoku"
+    },
+    {
+      "Nr": 333,
+      "Nuatlapa": "Tlamoku",
+      "Deutsch": "rituell oder gestuftes insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + moku",
+      "Aussprache": "tɬamoku"
+    },
+    {
+      "Nr": 334,
+      "Nuatlapa": "Quamoku",
+      "Deutsch": "kaiserlich geordnetes insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + moku",
+      "Aussprache": "kwamoku"
+    },
+    {
+      "Nr": 335,
+      "Nuatlapa": "Mokuna",
+      "Deutsch": "Person des Bereichs insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -na",
+      "Aussprache": "mokuna"
+    },
+    {
+      "Nr": 336,
+      "Nuatlapa": "Mokuaria",
+      "Deutsch": "Ort oder Provinz des insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -aria",
+      "Aussprache": "mokuaria"
+    },
+    {
+      "Nr": 337,
+      "Nuatlapa": "Mokuor",
+      "Deutsch": "Amtsträger für insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -or",
+      "Aussprache": "mokuor"
+    },
+    {
+      "Nr": 338,
+      "Nuatlapa": "Mokuiti",
+      "Deutsch": "kleines insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -iti",
+      "Aussprache": "mokuiti"
+    },
+    {
+      "Nr": 339,
+      "Nuatlapa": "mokuroa",
+      "Deutsch": "großes oder langes insel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -roa",
+      "Aussprache": "mokuroa"
+    },
+    {
+      "Nr": 340,
+      "Nuatlapa": "Mokusava",
+      "Deutsch": "reisende oder hafenbezogene Form von insel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "moku + -sava",
+      "Aussprache": "mokusava"
+    },
+    {
+      "Nr": 341,
+      "Nuatlapa": "Hanaka",
+      "Deutsch": "belebtes oder tätiges schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + naka",
+      "Aussprache": "hanaka"
+    },
+    {
+      "Nr": 342,
+      "Nuatlapa": "Manaka",
+      "Deutsch": "gemeinschaftliches schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + naka",
+      "Aussprache": "manaka"
+    },
+    {
+      "Nr": 343,
+      "Nuatlapa": "Tlanaka",
+      "Deutsch": "rituell oder gestuftes schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + naka",
+      "Aussprache": "tɬanaka"
+    },
+    {
+      "Nr": 344,
+      "Nuatlapa": "Quanaka",
+      "Deutsch": "kaiserlich geordnetes schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + naka",
+      "Aussprache": "kwanaka"
+    },
+    {
+      "Nr": 345,
+      "Nuatlapa": "Nakana",
+      "Deutsch": "Person des Bereichs schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -na",
+      "Aussprache": "nakana"
+    },
+    {
+      "Nr": 346,
+      "Nuatlapa": "Nakaria",
+      "Deutsch": "Ort oder Provinz des schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -aria",
+      "Aussprache": "nakaria"
+    },
+    {
+      "Nr": 347,
+      "Nuatlapa": "Nakaor",
+      "Deutsch": "Amtsträger für schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -or",
+      "Aussprache": "nakaor"
+    },
+    {
+      "Nr": 348,
+      "Nuatlapa": "Nakaiti",
+      "Deutsch": "kleines schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -iti",
+      "Aussprache": "nakaiti"
+    },
+    {
+      "Nr": 349,
+      "Nuatlapa": "nakaroa",
+      "Deutsch": "großes oder langes schale",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -roa",
+      "Aussprache": "nakaroa"
+    },
+    {
+      "Nr": 350,
+      "Nuatlapa": "Nakasava",
+      "Deutsch": "reisende oder hafenbezogene Form von schale",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "naka + -sava",
+      "Aussprache": "nakasava"
+    },
+    {
+      "Nr": 351,
+      "Nuatlapa": "Hanalo",
+      "Deutsch": "belebtes oder tätiges welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + nalo",
+      "Aussprache": "hanalo"
+    },
+    {
+      "Nr": 352,
+      "Nuatlapa": "Manalo",
+      "Deutsch": "gemeinschaftliches welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + nalo",
+      "Aussprache": "manalo"
+    },
+    {
+      "Nr": 353,
+      "Nuatlapa": "Tlanalo",
+      "Deutsch": "rituell oder gestuftes welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + nalo",
+      "Aussprache": "tɬanalo"
+    },
+    {
+      "Nr": 354,
+      "Nuatlapa": "Quanalo",
+      "Deutsch": "kaiserlich geordnetes welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + nalo",
+      "Aussprache": "kwanalo"
+    },
+    {
+      "Nr": 355,
+      "Nuatlapa": "Nalona",
+      "Deutsch": "Person des Bereichs welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -na",
+      "Aussprache": "nalona"
+    },
+    {
+      "Nr": 356,
+      "Nuatlapa": "Naloaria",
+      "Deutsch": "Ort oder Provinz des welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -aria",
+      "Aussprache": "naloaria"
+    },
+    {
+      "Nr": 357,
+      "Nuatlapa": "Nalor",
+      "Deutsch": "Amtsträger für welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -or",
+      "Aussprache": "nalor"
+    },
+    {
+      "Nr": 358,
+      "Nuatlapa": "Naloiti",
+      "Deutsch": "kleines welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -iti",
+      "Aussprache": "naloiti"
+    },
+    {
+      "Nr": 359,
+      "Nuatlapa": "naloroa",
+      "Deutsch": "großes oder langes welle",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -roa",
+      "Aussprache": "naloroa"
+    },
+    {
+      "Nr": 360,
+      "Nuatlapa": "Nalosava",
+      "Deutsch": "reisende oder hafenbezogene Form von welle",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nalo + -sava",
+      "Aussprache": "nalosava"
+    },
+    {
+      "Nr": 361,
+      "Nuatlapa": "Hanami",
+      "Deutsch": "belebtes oder tätiges tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + nami",
+      "Aussprache": "hanami"
+    },
+    {
+      "Nr": 362,
+      "Nuatlapa": "Manami",
+      "Deutsch": "gemeinschaftliches tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + nami",
+      "Aussprache": "manami"
+    },
+    {
+      "Nr": 363,
+      "Nuatlapa": "Tlanami",
+      "Deutsch": "rituell oder gestuftes tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + nami",
+      "Aussprache": "tɬanami"
+    },
+    {
+      "Nr": 364,
+      "Nuatlapa": "Quanami",
+      "Deutsch": "kaiserlich geordnetes tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + nami",
+      "Aussprache": "kwanami"
+    },
+    {
+      "Nr": 365,
+      "Nuatlapa": "Namina",
+      "Deutsch": "Person des Bereichs tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -na",
+      "Aussprache": "namina"
+    },
+    {
+      "Nr": 366,
+      "Nuatlapa": "Namiaria",
+      "Deutsch": "Ort oder Provinz des tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -aria",
+      "Aussprache": "namiaria"
+    },
+    {
+      "Nr": 367,
+      "Nuatlapa": "Namior",
+      "Deutsch": "Amtsträger für tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -or",
+      "Aussprache": "namior"
+    },
+    {
+      "Nr": 368,
+      "Nuatlapa": "Namiti",
+      "Deutsch": "kleines tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -iti",
+      "Aussprache": "namiti"
+    },
+    {
+      "Nr": 369,
+      "Nuatlapa": "namiroa",
+      "Deutsch": "großes oder langes tiefe",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -roa",
+      "Aussprache": "namiroa"
+    },
+    {
+      "Nr": 370,
+      "Nuatlapa": "Namisava",
+      "Deutsch": "reisende oder hafenbezogene Form von tiefe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nami + -sava",
+      "Aussprache": "namisava"
+    },
+    {
+      "Nr": 371,
+      "Nuatlapa": "Hanara",
+      "Deutsch": "belebtes oder tätiges geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + nara",
+      "Aussprache": "hanara"
+    },
+    {
+      "Nr": 372,
+      "Nuatlapa": "Manara",
+      "Deutsch": "gemeinschaftliches geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + nara",
+      "Aussprache": "manara"
+    },
+    {
+      "Nr": 373,
+      "Nuatlapa": "Tlanara",
+      "Deutsch": "rituell oder gestuftes geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + nara",
+      "Aussprache": "tɬanara"
+    },
+    {
+      "Nr": 374,
+      "Nuatlapa": "Quanara",
+      "Deutsch": "kaiserlich geordnetes geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + nara",
+      "Aussprache": "kwanara"
+    },
+    {
+      "Nr": 375,
+      "Nuatlapa": "Narana",
+      "Deutsch": "Person des Bereichs geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -na",
+      "Aussprache": "narana"
+    },
+    {
+      "Nr": 376,
+      "Nuatlapa": "Nararia",
+      "Deutsch": "Ort oder Provinz des geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -aria",
+      "Aussprache": "nararia"
+    },
+    {
+      "Nr": 377,
+      "Nuatlapa": "Naraor",
+      "Deutsch": "Amtsträger für geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -or",
+      "Aussprache": "naraor"
+    },
+    {
+      "Nr": 378,
+      "Nuatlapa": "Naraiti",
+      "Deutsch": "kleines geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -iti",
+      "Aussprache": "naraiti"
+    },
+    {
+      "Nr": 379,
+      "Nuatlapa": "nararoa",
+      "Deutsch": "großes oder langes geschichte",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -roa",
+      "Aussprache": "nararoa"
+    },
+    {
+      "Nr": 380,
+      "Nuatlapa": "Narasava",
+      "Deutsch": "reisende oder hafenbezogene Form von geschichte",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nara + -sava",
+      "Aussprache": "narasava"
+    },
+    {
+      "Nr": 381,
+      "Nuatlapa": "Hanava",
+      "Deutsch": "belebtes oder tätiges reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + nava",
+      "Aussprache": "hanava"
+    },
+    {
+      "Nr": 382,
+      "Nuatlapa": "Manava",
+      "Deutsch": "gemeinschaftliches reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + nava",
+      "Aussprache": "manava"
+    },
+    {
+      "Nr": 383,
+      "Nuatlapa": "Tlanava",
+      "Deutsch": "rituell oder gestuftes reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + nava",
+      "Aussprache": "tɬanava"
+    },
+    {
+      "Nr": 384,
+      "Nuatlapa": "Quanava",
+      "Deutsch": "kaiserlich geordnetes reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + nava",
+      "Aussprache": "kwanava"
+    },
+    {
+      "Nr": 385,
+      "Nuatlapa": "Navana",
+      "Deutsch": "Person des Bereichs reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -na",
+      "Aussprache": "navana"
+    },
+    {
+      "Nr": 386,
+      "Nuatlapa": "Navaria",
+      "Deutsch": "Ort oder Provinz des reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -aria",
+      "Aussprache": "navaria"
+    },
+    {
+      "Nr": 387,
+      "Nuatlapa": "Navaor",
+      "Deutsch": "Amtsträger für reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -or",
+      "Aussprache": "navaor"
+    },
+    {
+      "Nr": 388,
+      "Nuatlapa": "Navaiti",
+      "Deutsch": "kleines reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -iti",
+      "Aussprache": "navaiti"
+    },
+    {
+      "Nr": 389,
+      "Nuatlapa": "navaroa",
+      "Deutsch": "großes oder langes reise",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -roa",
+      "Aussprache": "navaroa"
+    },
+    {
+      "Nr": 390,
+      "Nuatlapa": "Navasava",
+      "Deutsch": "reisende oder hafenbezogene Form von reise",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nava + -sava",
+      "Aussprache": "navasava"
+    },
+    {
+      "Nr": 391,
+      "Nuatlapa": "Hanui",
+      "Deutsch": "belebtes oder tätiges groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ha- + nui",
+      "Aussprache": "hanui"
+    },
+    {
+      "Nr": 392,
+      "Nuatlapa": "Manui",
+      "Deutsch": "gemeinschaftliches groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "ma- + nui",
+      "Aussprache": "manui"
+    },
+    {
+      "Nr": 393,
+      "Nuatlapa": "Tlanui",
+      "Deutsch": "rituell oder gestuftes groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "tla- + nui",
+      "Aussprache": "tɬanui"
+    },
+    {
+      "Nr": 394,
+      "Nuatlapa": "Quanui",
+      "Deutsch": "kaiserlich geordnetes groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "qua- + nui",
+      "Aussprache": "kwanui"
+    },
+    {
+      "Nr": 395,
+      "Nuatlapa": "Nuina",
+      "Deutsch": "Person des Bereichs groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -na",
+      "Aussprache": "nuina"
+    },
+    {
+      "Nr": 396,
+      "Nuatlapa": "Nuiaria",
+      "Deutsch": "Ort oder Provinz des groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -aria",
+      "Aussprache": "nuiaria"
+    },
+    {
+      "Nr": 397,
+      "Nuatlapa": "Nuior",
+      "Deutsch": "Amtsträger für groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -or",
+      "Aussprache": "nuior"
+    },
+    {
+      "Nr": 398,
+      "Nuatlapa": "Nuiti",
+      "Deutsch": "kleines groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -iti",
+      "Aussprache": "nuiti"
+    },
+    {
+      "Nr": 399,
+      "Nuatlapa": "nuiroa",
+      "Deutsch": "großes oder langes groß",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -roa",
+      "Aussprache": "nuiroa"
+    },
+    {
+      "Nr": 400,
+      "Nuatlapa": "Nuisava",
+      "Deutsch": "reisende oder hafenbezogene Form von groß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Natur",
+      "Herleitung": "nui + -sava",
+      "Aussprache": "nuisava"
+    },
+    {
+      "Nr": 401,
+      "Nuatlapa": "Haoha",
+      "Deutsch": "belebtes oder tätiges gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + oha",
+      "Aussprache": "haoha"
+    },
+    {
+      "Nr": 402,
+      "Nuatlapa": "Maoha",
+      "Deutsch": "gemeinschaftliches gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + oha",
+      "Aussprache": "maoha"
+    },
+    {
+      "Nr": 403,
+      "Nuatlapa": "Tlaoha",
+      "Deutsch": "rituell oder gestuftes gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + oha",
+      "Aussprache": "tɬaoha"
+    },
+    {
+      "Nr": 404,
+      "Nuatlapa": "Quaoha",
+      "Deutsch": "kaiserlich geordnetes gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + oha",
+      "Aussprache": "kwaoha"
+    },
+    {
+      "Nr": 405,
+      "Nuatlapa": "Ohana",
+      "Deutsch": "Person des Bereichs gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -na",
+      "Aussprache": "ohana"
+    },
+    {
+      "Nr": 406,
+      "Nuatlapa": "Oharia",
+      "Deutsch": "Ort oder Provinz des gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -aria",
+      "Aussprache": "oharia"
+    },
+    {
+      "Nr": 407,
+      "Nuatlapa": "Ohaor",
+      "Deutsch": "Amtsträger für gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -or",
+      "Aussprache": "ohaor"
+    },
+    {
+      "Nr": 408,
+      "Nuatlapa": "Ohaiti",
+      "Deutsch": "kleines gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -iti",
+      "Aussprache": "ohaiti"
+    },
+    {
+      "Nr": 409,
+      "Nuatlapa": "oharoa",
+      "Deutsch": "großes oder langes gruß",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -roa",
+      "Aussprache": "oharoa"
+    },
+    {
+      "Nr": 410,
+      "Nuatlapa": "Ohasava",
+      "Deutsch": "reisende oder hafenbezogene Form von gruß",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "oha + -sava",
+      "Aussprache": "ohasava"
+    },
+    {
+      "Nr": 411,
+      "Nuatlapa": "Haola",
+      "Deutsch": "belebtes oder tätiges leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + ola",
+      "Aussprache": "haola"
+    },
+    {
+      "Nr": 412,
+      "Nuatlapa": "Maola",
+      "Deutsch": "gemeinschaftliches leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + ola",
+      "Aussprache": "maola"
+    },
+    {
+      "Nr": 413,
+      "Nuatlapa": "Tlaola",
+      "Deutsch": "rituell oder gestuftes leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + ola",
+      "Aussprache": "tɬaola"
+    },
+    {
+      "Nr": 414,
+      "Nuatlapa": "Quaola",
+      "Deutsch": "kaiserlich geordnetes leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + ola",
+      "Aussprache": "kwaola"
+    },
+    {
+      "Nr": 415,
+      "Nuatlapa": "Olana",
+      "Deutsch": "Person des Bereichs leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -na",
+      "Aussprache": "olana"
+    },
+    {
+      "Nr": 416,
+      "Nuatlapa": "Olaria",
+      "Deutsch": "Ort oder Provinz des leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -aria",
+      "Aussprache": "olaria"
+    },
+    {
+      "Nr": 417,
+      "Nuatlapa": "Olaor",
+      "Deutsch": "Amtsträger für leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -or",
+      "Aussprache": "olaor"
+    },
+    {
+      "Nr": 418,
+      "Nuatlapa": "Olaiti",
+      "Deutsch": "kleines leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -iti",
+      "Aussprache": "olaiti"
+    },
+    {
+      "Nr": 419,
+      "Nuatlapa": "olaroa",
+      "Deutsch": "großes oder langes leben",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -roa",
+      "Aussprache": "olaroa"
+    },
+    {
+      "Nr": 420,
+      "Nuatlapa": "Olasava",
+      "Deutsch": "reisende oder hafenbezogene Form von leben",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ola + -sava",
+      "Aussprache": "olasava"
+    },
+    {
+      "Nr": 421,
+      "Nuatlapa": "Haono",
+      "Deutsch": "belebtes oder tätiges drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + ono",
+      "Aussprache": "haono"
+    },
+    {
+      "Nr": 422,
+      "Nuatlapa": "Maono",
+      "Deutsch": "gemeinschaftliches drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + ono",
+      "Aussprache": "maono"
+    },
+    {
+      "Nr": 423,
+      "Nuatlapa": "Tlaono",
+      "Deutsch": "rituell oder gestuftes drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + ono",
+      "Aussprache": "tɬaono"
+    },
+    {
+      "Nr": 424,
+      "Nuatlapa": "Quaono",
+      "Deutsch": "kaiserlich geordnetes drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + ono",
+      "Aussprache": "kwaono"
+    },
+    {
+      "Nr": 425,
+      "Nuatlapa": "Onona",
+      "Deutsch": "Person des Bereichs drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -na",
+      "Aussprache": "onona"
+    },
+    {
+      "Nr": 426,
+      "Nuatlapa": "Onoaria",
+      "Deutsch": "Ort oder Provinz des drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -aria",
+      "Aussprache": "onoaria"
+    },
+    {
+      "Nr": 427,
+      "Nuatlapa": "Onor",
+      "Deutsch": "Amtsträger für drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -or",
+      "Aussprache": "onor"
+    },
+    {
+      "Nr": 428,
+      "Nuatlapa": "Onoiti",
+      "Deutsch": "kleines drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -iti",
+      "Aussprache": "onoiti"
+    },
+    {
+      "Nr": 429,
+      "Nuatlapa": "onoroa",
+      "Deutsch": "großes oder langes drei",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -roa",
+      "Aussprache": "onoroa"
+    },
+    {
+      "Nr": 430,
+      "Nuatlapa": "Onosava",
+      "Deutsch": "reisende oder hafenbezogene Form von drei",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ono + -sava",
+      "Aussprache": "onosava"
+    },
+    {
+      "Nr": 431,
+      "Nuatlapa": "Haora",
+      "Deutsch": "belebtes oder tätiges atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + ora",
+      "Aussprache": "haora"
+    },
+    {
+      "Nr": 432,
+      "Nuatlapa": "Maora",
+      "Deutsch": "gemeinschaftliches atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + ora",
+      "Aussprache": "maora"
+    },
+    {
+      "Nr": 433,
+      "Nuatlapa": "Tlaora",
+      "Deutsch": "rituell oder gestuftes atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + ora",
+      "Aussprache": "tɬaora"
+    },
+    {
+      "Nr": 434,
+      "Nuatlapa": "Quaora",
+      "Deutsch": "kaiserlich geordnetes atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + ora",
+      "Aussprache": "kwaora"
+    },
+    {
+      "Nr": 435,
+      "Nuatlapa": "Orana",
+      "Deutsch": "Person des Bereichs atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -na",
+      "Aussprache": "orana"
+    },
+    {
+      "Nr": 436,
+      "Nuatlapa": "Oraria",
+      "Deutsch": "Ort oder Provinz des atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -aria",
+      "Aussprache": "oraria"
+    },
+    {
+      "Nr": 437,
+      "Nuatlapa": "Oraor",
+      "Deutsch": "Amtsträger für atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -or",
+      "Aussprache": "oraor"
+    },
+    {
+      "Nr": 438,
+      "Nuatlapa": "Oraiti",
+      "Deutsch": "kleines atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -iti",
+      "Aussprache": "oraiti"
+    },
+    {
+      "Nr": 439,
+      "Nuatlapa": "oraroa",
+      "Deutsch": "großes oder langes atem",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -roa",
+      "Aussprache": "oraroa"
+    },
+    {
+      "Nr": 440,
+      "Nuatlapa": "Orasava",
+      "Deutsch": "reisende oder hafenbezogene Form von atem",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ora + -sava",
+      "Aussprache": "orasava"
+    },
+    {
+      "Nr": 441,
+      "Nuatlapa": "Hapaha",
+      "Deutsch": "belebtes oder tätiges felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + paha",
+      "Aussprache": "hapaha"
+    },
+    {
+      "Nr": 442,
+      "Nuatlapa": "Mapaha",
+      "Deutsch": "gemeinschaftliches felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + paha",
+      "Aussprache": "mapaha"
+    },
+    {
+      "Nr": 443,
+      "Nuatlapa": "Tlapaha",
+      "Deutsch": "rituell oder gestuftes felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + paha",
+      "Aussprache": "tɬapaha"
+    },
+    {
+      "Nr": 444,
+      "Nuatlapa": "Quapaha",
+      "Deutsch": "kaiserlich geordnetes felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + paha",
+      "Aussprache": "kwapaha"
+    },
+    {
+      "Nr": 445,
+      "Nuatlapa": "Pahana",
+      "Deutsch": "Person des Bereichs felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -na",
+      "Aussprache": "pahana"
+    },
+    {
+      "Nr": 446,
+      "Nuatlapa": "Paharia",
+      "Deutsch": "Ort oder Provinz des felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -aria",
+      "Aussprache": "paharia"
+    },
+    {
+      "Nr": 447,
+      "Nuatlapa": "Pahaor",
+      "Deutsch": "Amtsträger für felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -or",
+      "Aussprache": "pahaor"
+    },
+    {
+      "Nr": 448,
+      "Nuatlapa": "Pahaiti",
+      "Deutsch": "kleines felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -iti",
+      "Aussprache": "pahaiti"
+    },
+    {
+      "Nr": 449,
+      "Nuatlapa": "paharoa",
+      "Deutsch": "großes oder langes felswand",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -roa",
+      "Aussprache": "paharoa"
+    },
+    {
+      "Nr": 450,
+      "Nuatlapa": "Pahasava",
+      "Deutsch": "reisende oder hafenbezogene Form von felswand",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paha + -sava",
+      "Aussprache": "pahasava"
+    },
+    {
+      "Nr": 451,
+      "Nuatlapa": "Hapaku",
+      "Deutsch": "belebtes oder tätiges werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + paku",
+      "Aussprache": "hapaku"
+    },
+    {
+      "Nr": 452,
+      "Nuatlapa": "Mapaku",
+      "Deutsch": "gemeinschaftliches werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + paku",
+      "Aussprache": "mapaku"
+    },
+    {
+      "Nr": 453,
+      "Nuatlapa": "Tlapaku",
+      "Deutsch": "rituell oder gestuftes werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + paku",
+      "Aussprache": "tɬapaku"
+    },
+    {
+      "Nr": 454,
+      "Nuatlapa": "Quapaku",
+      "Deutsch": "kaiserlich geordnetes werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + paku",
+      "Aussprache": "kwapaku"
+    },
+    {
+      "Nr": 455,
+      "Nuatlapa": "Pakuna",
+      "Deutsch": "Person des Bereichs werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -na",
+      "Aussprache": "pakuna"
+    },
+    {
+      "Nr": 456,
+      "Nuatlapa": "Pakuaria",
+      "Deutsch": "Ort oder Provinz des werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -aria",
+      "Aussprache": "pakuaria"
+    },
+    {
+      "Nr": 457,
+      "Nuatlapa": "Pakuor",
+      "Deutsch": "Amtsträger für werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -or",
+      "Aussprache": "pakuor"
+    },
+    {
+      "Nr": 458,
+      "Nuatlapa": "Pakuiti",
+      "Deutsch": "kleines werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -iti",
+      "Aussprache": "pakuiti"
+    },
+    {
+      "Nr": 459,
+      "Nuatlapa": "pakuroa",
+      "Deutsch": "großes oder langes werkzeug",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -roa",
+      "Aussprache": "pakuroa"
+    },
+    {
+      "Nr": 460,
+      "Nuatlapa": "Pakusava",
+      "Deutsch": "reisende oder hafenbezogene Form von werkzeug",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "paku + -sava",
+      "Aussprache": "pakusava"
+    },
+    {
+      "Nr": 461,
+      "Nuatlapa": "Hapala",
+      "Deutsch": "belebtes oder tätiges farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + pala",
+      "Aussprache": "hapala"
+    },
+    {
+      "Nr": 462,
+      "Nuatlapa": "Mapala",
+      "Deutsch": "gemeinschaftliches farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + pala",
+      "Aussprache": "mapala"
+    },
+    {
+      "Nr": 463,
+      "Nuatlapa": "Tlapala",
+      "Deutsch": "rituell oder gestuftes farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + pala",
+      "Aussprache": "tɬapala"
+    },
+    {
+      "Nr": 464,
+      "Nuatlapa": "Quapala",
+      "Deutsch": "kaiserlich geordnetes farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + pala",
+      "Aussprache": "kwapala"
+    },
+    {
+      "Nr": 465,
+      "Nuatlapa": "Palana",
+      "Deutsch": "Person des Bereichs farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -na",
+      "Aussprache": "palana"
+    },
+    {
+      "Nr": 466,
+      "Nuatlapa": "Palaria",
+      "Deutsch": "Ort oder Provinz des farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -aria",
+      "Aussprache": "palaria"
+    },
+    {
+      "Nr": 467,
+      "Nuatlapa": "Palaor",
+      "Deutsch": "Amtsträger für farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -or",
+      "Aussprache": "palaor"
+    },
+    {
+      "Nr": 468,
+      "Nuatlapa": "Palaiti",
+      "Deutsch": "kleines farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -iti",
+      "Aussprache": "palaiti"
+    },
+    {
+      "Nr": 469,
+      "Nuatlapa": "palaroa",
+      "Deutsch": "großes oder langes farbe",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -roa",
+      "Aussprache": "palaroa"
+    },
+    {
+      "Nr": 470,
+      "Nuatlapa": "Palasava",
+      "Deutsch": "reisende oder hafenbezogene Form von farbe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pala + -sava",
+      "Aussprache": "palasava"
+    },
+    {
+      "Nr": 471,
+      "Nuatlapa": "Hapani",
+      "Deutsch": "belebtes oder tätiges brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + pani",
+      "Aussprache": "hapani"
+    },
+    {
+      "Nr": 472,
+      "Nuatlapa": "Mapani",
+      "Deutsch": "gemeinschaftliches brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + pani",
+      "Aussprache": "mapani"
+    },
+    {
+      "Nr": 473,
+      "Nuatlapa": "Tlapani",
+      "Deutsch": "rituell oder gestuftes brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + pani",
+      "Aussprache": "tɬapani"
+    },
+    {
+      "Nr": 474,
+      "Nuatlapa": "Quapani",
+      "Deutsch": "kaiserlich geordnetes brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + pani",
+      "Aussprache": "kwapani"
+    },
+    {
+      "Nr": 475,
+      "Nuatlapa": "Panina",
+      "Deutsch": "Person des Bereichs brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -na",
+      "Aussprache": "panina"
+    },
+    {
+      "Nr": 476,
+      "Nuatlapa": "Paniaria",
+      "Deutsch": "Ort oder Provinz des brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -aria",
+      "Aussprache": "paniaria"
+    },
+    {
+      "Nr": 477,
+      "Nuatlapa": "Panior",
+      "Deutsch": "Amtsträger für brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -or",
+      "Aussprache": "panior"
+    },
+    {
+      "Nr": 478,
+      "Nuatlapa": "Paniti",
+      "Deutsch": "kleines brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -iti",
+      "Aussprache": "paniti"
+    },
+    {
+      "Nr": 479,
+      "Nuatlapa": "paniroa",
+      "Deutsch": "großes oder langes brotfrucht",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -roa",
+      "Aussprache": "paniroa"
+    },
+    {
+      "Nr": 480,
+      "Nuatlapa": "Panisava",
+      "Deutsch": "reisende oder hafenbezogene Form von brotfrucht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pani + -sava",
+      "Aussprache": "panisava"
+    },
+    {
+      "Nr": 481,
+      "Nuatlapa": "Hapatu",
+      "Deutsch": "belebtes oder tätiges mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + patu",
+      "Aussprache": "hapatu"
+    },
+    {
+      "Nr": 482,
+      "Nuatlapa": "Mapatu",
+      "Deutsch": "gemeinschaftliches mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + patu",
+      "Aussprache": "mapatu"
+    },
+    {
+      "Nr": 483,
+      "Nuatlapa": "Tlapatu",
+      "Deutsch": "rituell oder gestuftes mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + patu",
+      "Aussprache": "tɬapatu"
+    },
+    {
+      "Nr": 484,
+      "Nuatlapa": "Quapatu",
+      "Deutsch": "kaiserlich geordnetes mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + patu",
+      "Aussprache": "kwapatu"
+    },
+    {
+      "Nr": 485,
+      "Nuatlapa": "Patuna",
+      "Deutsch": "Person des Bereichs mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -na",
+      "Aussprache": "patuna"
+    },
+    {
+      "Nr": 486,
+      "Nuatlapa": "Patuaria",
+      "Deutsch": "Ort oder Provinz des mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -aria",
+      "Aussprache": "patuaria"
+    },
+    {
+      "Nr": 487,
+      "Nuatlapa": "Patuor",
+      "Deutsch": "Amtsträger für mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -or",
+      "Aussprache": "patuor"
+    },
+    {
+      "Nr": 488,
+      "Nuatlapa": "Patuiti",
+      "Deutsch": "kleines mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -iti",
+      "Aussprache": "patuiti"
+    },
+    {
+      "Nr": 489,
+      "Nuatlapa": "paturoa",
+      "Deutsch": "großes oder langes mauer",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -roa",
+      "Aussprache": "paturoa"
+    },
+    {
+      "Nr": 490,
+      "Nuatlapa": "Patusava",
+      "Deutsch": "reisende oder hafenbezogene Form von mauer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "patu + -sava",
+      "Aussprache": "patusava"
+    },
+    {
+      "Nr": 491,
+      "Nuatlapa": "Hapua",
+      "Deutsch": "belebtes oder tätiges blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ha- + pua",
+      "Aussprache": "hapua"
+    },
+    {
+      "Nr": 492,
+      "Nuatlapa": "Mapua",
+      "Deutsch": "gemeinschaftliches blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "ma- + pua",
+      "Aussprache": "mapua"
+    },
+    {
+      "Nr": 493,
+      "Nuatlapa": "Tlapua",
+      "Deutsch": "rituell oder gestuftes blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "tla- + pua",
+      "Aussprache": "tɬapua"
+    },
+    {
+      "Nr": 494,
+      "Nuatlapa": "Quapua",
+      "Deutsch": "kaiserlich geordnetes blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "qua- + pua",
+      "Aussprache": "kwapua"
+    },
+    {
+      "Nr": 495,
+      "Nuatlapa": "Puana",
+      "Deutsch": "Person des Bereichs blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -na",
+      "Aussprache": "puana"
+    },
+    {
+      "Nr": 496,
+      "Nuatlapa": "Puaria",
+      "Deutsch": "Ort oder Provinz des blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -aria",
+      "Aussprache": "puaria"
+    },
+    {
+      "Nr": 497,
+      "Nuatlapa": "Puaor",
+      "Deutsch": "Amtsträger für blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -or",
+      "Aussprache": "puaor"
+    },
+    {
+      "Nr": 498,
+      "Nuatlapa": "Puaiti",
+      "Deutsch": "kleines blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -iti",
+      "Aussprache": "puaiti"
+    },
+    {
+      "Nr": 499,
+      "Nuatlapa": "puaroa",
+      "Deutsch": "großes oder langes blume",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -roa",
+      "Aussprache": "puaroa"
+    },
+    {
+      "Nr": 500,
+      "Nuatlapa": "Puasava",
+      "Deutsch": "reisende oder hafenbezogene Form von blume",
+      "Wortart": "Substantiv",
+      "Kategorie": "Ritus und Überlieferung",
+      "Herleitung": "pua + -sava",
+      "Aussprache": "puasava"
+    },
+    {
+      "Nr": 501,
+      "Nuatlapa": "Haraka",
+      "Deutsch": "belebtes oder tätiges krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + raka",
+      "Aussprache": "haraka"
+    },
+    {
+      "Nr": 502,
+      "Nuatlapa": "Maraka",
+      "Deutsch": "gemeinschaftliches krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + raka",
+      "Aussprache": "maraka"
+    },
+    {
+      "Nr": 503,
+      "Nuatlapa": "Tlaraka",
+      "Deutsch": "rituell oder gestuftes krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + raka",
+      "Aussprache": "tɬaraka"
+    },
+    {
+      "Nr": 504,
+      "Nuatlapa": "Quaraka",
+      "Deutsch": "kaiserlich geordnetes krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + raka",
+      "Aussprache": "kwaraka"
+    },
+    {
+      "Nr": 505,
+      "Nuatlapa": "Rakana",
+      "Deutsch": "Person des Bereichs krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -na",
+      "Aussprache": "rakana"
+    },
+    {
+      "Nr": 506,
+      "Nuatlapa": "Rakaria",
+      "Deutsch": "Ort oder Provinz des krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -aria",
+      "Aussprache": "rakaria"
+    },
+    {
+      "Nr": 507,
+      "Nuatlapa": "Rakaor",
+      "Deutsch": "Amtsträger für krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -or",
+      "Aussprache": "rakaor"
+    },
+    {
+      "Nr": 508,
+      "Nuatlapa": "Rakaiti",
+      "Deutsch": "kleines krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -iti",
+      "Aussprache": "rakaiti"
+    },
+    {
+      "Nr": 509,
+      "Nuatlapa": "rakaroa",
+      "Deutsch": "großes oder langes krieg",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -roa",
+      "Aussprache": "rakaroa"
+    },
+    {
+      "Nr": 510,
+      "Nuatlapa": "Rakasava",
+      "Deutsch": "reisende oder hafenbezogene Form von krieg",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "raka + -sava",
+      "Aussprache": "rakasava"
+    },
+    {
+      "Nr": 511,
+      "Nuatlapa": "Harano",
+      "Deutsch": "belebtes oder tätiges kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + rano",
+      "Aussprache": "harano"
+    },
+    {
+      "Nr": 512,
+      "Nuatlapa": "Marano",
+      "Deutsch": "gemeinschaftliches kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + rano",
+      "Aussprache": "marano"
+    },
+    {
+      "Nr": 513,
+      "Nuatlapa": "Tlarano",
+      "Deutsch": "rituell oder gestuftes kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + rano",
+      "Aussprache": "tɬarano"
+    },
+    {
+      "Nr": 514,
+      "Nuatlapa": "Quarano",
+      "Deutsch": "kaiserlich geordnetes kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + rano",
+      "Aussprache": "kwarano"
+    },
+    {
+      "Nr": 515,
+      "Nuatlapa": "Ranona",
+      "Deutsch": "Person des Bereichs kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -na",
+      "Aussprache": "ranona"
+    },
+    {
+      "Nr": 516,
+      "Nuatlapa": "Ranoaria",
+      "Deutsch": "Ort oder Provinz des kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -aria",
+      "Aussprache": "ranoaria"
+    },
+    {
+      "Nr": 517,
+      "Nuatlapa": "Ranor",
+      "Deutsch": "Amtsträger für kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -or",
+      "Aussprache": "ranor"
+    },
+    {
+      "Nr": 518,
+      "Nuatlapa": "Ranoiti",
+      "Deutsch": "kleines kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -iti",
+      "Aussprache": "ranoiti"
+    },
+    {
+      "Nr": 519,
+      "Nuatlapa": "ranoroa",
+      "Deutsch": "großes oder langes kratersee",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -roa",
+      "Aussprache": "ranoroa"
+    },
+    {
+      "Nr": 520,
+      "Nuatlapa": "Ranosava",
+      "Deutsch": "reisende oder hafenbezogene Form von kratersee",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rano + -sava",
+      "Aussprache": "ranosava"
+    },
+    {
+      "Nr": 521,
+      "Nuatlapa": "Harapa",
+      "Deutsch": "belebtes oder tätiges bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + rapa",
+      "Aussprache": "harapa"
+    },
+    {
+      "Nr": 522,
+      "Nuatlapa": "Marapa",
+      "Deutsch": "gemeinschaftliches bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + rapa",
+      "Aussprache": "marapa"
+    },
+    {
+      "Nr": 523,
+      "Nuatlapa": "Tlarapa",
+      "Deutsch": "rituell oder gestuftes bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + rapa",
+      "Aussprache": "tɬarapa"
+    },
+    {
+      "Nr": 524,
+      "Nuatlapa": "Quarapa",
+      "Deutsch": "kaiserlich geordnetes bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + rapa",
+      "Aussprache": "kwarapa"
+    },
+    {
+      "Nr": 525,
+      "Nuatlapa": "Rapana",
+      "Deutsch": "Person des Bereichs bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -na",
+      "Aussprache": "rapana"
+    },
+    {
+      "Nr": 526,
+      "Nuatlapa": "Raparia",
+      "Deutsch": "Ort oder Provinz des bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -aria",
+      "Aussprache": "raparia"
+    },
+    {
+      "Nr": 527,
+      "Nuatlapa": "Rapaor",
+      "Deutsch": "Amtsträger für bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -or",
+      "Aussprache": "rapaor"
+    },
+    {
+      "Nr": 528,
+      "Nuatlapa": "Rapaiti",
+      "Deutsch": "kleines bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -iti",
+      "Aussprache": "rapaiti"
+    },
+    {
+      "Nr": 529,
+      "Nuatlapa": "raparoa",
+      "Deutsch": "großes oder langes bildzeichen",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -roa",
+      "Aussprache": "raparoa"
+    },
+    {
+      "Nr": 530,
+      "Nuatlapa": "Rapasava",
+      "Deutsch": "reisende oder hafenbezogene Form von bildzeichen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rapa + -sava",
+      "Aussprache": "rapasava"
+    },
+    {
+      "Nr": 531,
+      "Nuatlapa": "Harima",
+      "Deutsch": "belebtes oder tätiges fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + rima",
+      "Aussprache": "harima"
+    },
+    {
+      "Nr": 532,
+      "Nuatlapa": "Marima",
+      "Deutsch": "gemeinschaftliches fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + rima",
+      "Aussprache": "marima"
+    },
+    {
+      "Nr": 533,
+      "Nuatlapa": "Tlarima",
+      "Deutsch": "rituell oder gestuftes fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + rima",
+      "Aussprache": "tɬarima"
+    },
+    {
+      "Nr": 534,
+      "Nuatlapa": "Quarima",
+      "Deutsch": "kaiserlich geordnetes fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + rima",
+      "Aussprache": "kwarima"
+    },
+    {
+      "Nr": 535,
+      "Nuatlapa": "Rimana",
+      "Deutsch": "Person des Bereichs fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -na",
+      "Aussprache": "rimana"
+    },
+    {
+      "Nr": 536,
+      "Nuatlapa": "Rimaria",
+      "Deutsch": "Ort oder Provinz des fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -aria",
+      "Aussprache": "rimaria"
+    },
+    {
+      "Nr": 537,
+      "Nuatlapa": "Rimaor",
+      "Deutsch": "Amtsträger für fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -or",
+      "Aussprache": "rimaor"
+    },
+    {
+      "Nr": 538,
+      "Nuatlapa": "Rimaiti",
+      "Deutsch": "kleines fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -iti",
+      "Aussprache": "rimaiti"
+    },
+    {
+      "Nr": 539,
+      "Nuatlapa": "rimaroa",
+      "Deutsch": "großes oder langes fünf",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -roa",
+      "Aussprache": "rimaroa"
+    },
+    {
+      "Nr": 540,
+      "Nuatlapa": "Rimasava",
+      "Deutsch": "reisende oder hafenbezogene Form von fünf",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "rima + -sava",
+      "Aussprache": "rimasava"
+    },
+    {
+      "Nr": 541,
+      "Nuatlapa": "Haroa",
+      "Deutsch": "belebtes oder tätiges lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + roa",
+      "Aussprache": "haroa"
+    },
+    {
+      "Nr": 542,
+      "Nuatlapa": "Maroa",
+      "Deutsch": "gemeinschaftliches lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + roa",
+      "Aussprache": "maroa"
+    },
+    {
+      "Nr": 543,
+      "Nuatlapa": "Tlaroa",
+      "Deutsch": "rituell oder gestuftes lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + roa",
+      "Aussprache": "tɬaroa"
+    },
+    {
+      "Nr": 544,
+      "Nuatlapa": "Quaroa",
+      "Deutsch": "kaiserlich geordnetes lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + roa",
+      "Aussprache": "kwaroa"
+    },
+    {
+      "Nr": 545,
+      "Nuatlapa": "Roana",
+      "Deutsch": "Person des Bereichs lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -na",
+      "Aussprache": "roana"
+    },
+    {
+      "Nr": 546,
+      "Nuatlapa": "Roaria",
+      "Deutsch": "Ort oder Provinz des lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -aria",
+      "Aussprache": "roaria"
+    },
+    {
+      "Nr": 547,
+      "Nuatlapa": "Roaor",
+      "Deutsch": "Amtsträger für lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -or",
+      "Aussprache": "roaor"
+    },
+    {
+      "Nr": 548,
+      "Nuatlapa": "Roaiti",
+      "Deutsch": "kleines lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -iti",
+      "Aussprache": "roaiti"
+    },
+    {
+      "Nr": 549,
+      "Nuatlapa": "roaroa",
+      "Deutsch": "großes oder langes lang",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -roa",
+      "Aussprache": "roaroa"
+    },
+    {
+      "Nr": 550,
+      "Nuatlapa": "Roasava",
+      "Deutsch": "reisende oder hafenbezogene Form von lang",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "roa + -sava",
+      "Aussprache": "roasava"
+    },
+    {
+      "Nr": 551,
+      "Nuatlapa": "Hasala",
+      "Deutsch": "belebtes oder tätiges gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + sala",
+      "Aussprache": "hasala"
+    },
+    {
+      "Nr": 552,
+      "Nuatlapa": "Masala",
+      "Deutsch": "gemeinschaftliches gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + sala",
+      "Aussprache": "masala"
+    },
+    {
+      "Nr": 553,
+      "Nuatlapa": "Tlasala",
+      "Deutsch": "rituell oder gestuftes gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + sala",
+      "Aussprache": "tɬasala"
+    },
+    {
+      "Nr": 554,
+      "Nuatlapa": "Quasala",
+      "Deutsch": "kaiserlich geordnetes gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + sala",
+      "Aussprache": "kwasala"
+    },
+    {
+      "Nr": 555,
+      "Nuatlapa": "Salana",
+      "Deutsch": "Person des Bereichs gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -na",
+      "Aussprache": "salana"
+    },
+    {
+      "Nr": 556,
+      "Nuatlapa": "Salaria",
+      "Deutsch": "Ort oder Provinz des gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -aria",
+      "Aussprache": "salaria"
+    },
+    {
+      "Nr": 557,
+      "Nuatlapa": "Salaor",
+      "Deutsch": "Amtsträger für gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -or",
+      "Aussprache": "salaor"
+    },
+    {
+      "Nr": 558,
+      "Nuatlapa": "Salaiti",
+      "Deutsch": "kleines gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -iti",
+      "Aussprache": "salaiti"
+    },
+    {
+      "Nr": 559,
+      "Nuatlapa": "salaroa",
+      "Deutsch": "großes oder langes gesetz",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -roa",
+      "Aussprache": "salaroa"
+    },
+    {
+      "Nr": 560,
+      "Nuatlapa": "Salasava",
+      "Deutsch": "reisende oder hafenbezogene Form von gesetz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sala + -sava",
+      "Aussprache": "salasava"
+    },
+    {
+      "Nr": 561,
+      "Nuatlapa": "Hasani",
+      "Deutsch": "belebtes oder tätiges rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + sani",
+      "Aussprache": "hasani"
+    },
+    {
+      "Nr": 562,
+      "Nuatlapa": "Masani",
+      "Deutsch": "gemeinschaftliches rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + sani",
+      "Aussprache": "masani"
+    },
+    {
+      "Nr": 563,
+      "Nuatlapa": "Tlasani",
+      "Deutsch": "rituell oder gestuftes rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + sani",
+      "Aussprache": "tɬasani"
+    },
+    {
+      "Nr": 564,
+      "Nuatlapa": "Quasani",
+      "Deutsch": "kaiserlich geordnetes rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + sani",
+      "Aussprache": "kwasani"
+    },
+    {
+      "Nr": 565,
+      "Nuatlapa": "Sanina",
+      "Deutsch": "Person des Bereichs rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -na",
+      "Aussprache": "sanina"
+    },
+    {
+      "Nr": 566,
+      "Nuatlapa": "Saniaria",
+      "Deutsch": "Ort oder Provinz des rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -aria",
+      "Aussprache": "saniaria"
+    },
+    {
+      "Nr": 567,
+      "Nuatlapa": "Sanior",
+      "Deutsch": "Amtsträger für rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -or",
+      "Aussprache": "sanior"
+    },
+    {
+      "Nr": 568,
+      "Nuatlapa": "Saniti",
+      "Deutsch": "kleines rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -iti",
+      "Aussprache": "saniti"
+    },
+    {
+      "Nr": 569,
+      "Nuatlapa": "saniroa",
+      "Deutsch": "großes oder langes rat",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -roa",
+      "Aussprache": "saniroa"
+    },
+    {
+      "Nr": 570,
+      "Nuatlapa": "Sanisava",
+      "Deutsch": "reisende oder hafenbezogene Form von rat",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sani + -sava",
+      "Aussprache": "sanisava"
+    },
+    {
+      "Nr": 571,
+      "Nuatlapa": "Hasava",
+      "Deutsch": "belebtes oder tätiges hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + sava",
+      "Aussprache": "hasava"
+    },
+    {
+      "Nr": 572,
+      "Nuatlapa": "Masava",
+      "Deutsch": "gemeinschaftliches hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + sava",
+      "Aussprache": "masava"
+    },
+    {
+      "Nr": 573,
+      "Nuatlapa": "Tlasava",
+      "Deutsch": "rituell oder gestuftes hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + sava",
+      "Aussprache": "tɬasava"
+    },
+    {
+      "Nr": 574,
+      "Nuatlapa": "Quasava",
+      "Deutsch": "kaiserlich geordnetes hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + sava",
+      "Aussprache": "kwasava"
+    },
+    {
+      "Nr": 575,
+      "Nuatlapa": "Savana",
+      "Deutsch": "Person des Bereichs hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -na",
+      "Aussprache": "savana"
+    },
+    {
+      "Nr": 576,
+      "Nuatlapa": "Savaria",
+      "Deutsch": "Ort oder Provinz des hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -aria",
+      "Aussprache": "savaria"
+    },
+    {
+      "Nr": 577,
+      "Nuatlapa": "Savaor",
+      "Deutsch": "Amtsträger für hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -or",
+      "Aussprache": "savaor"
+    },
+    {
+      "Nr": 578,
+      "Nuatlapa": "Savaiti",
+      "Deutsch": "kleines hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -iti",
+      "Aussprache": "savaiti"
+    },
+    {
+      "Nr": 579,
+      "Nuatlapa": "savaroa",
+      "Deutsch": "großes oder langes hafen",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -roa",
+      "Aussprache": "savaroa"
+    },
+    {
+      "Nr": 580,
+      "Nuatlapa": "Savasava",
+      "Deutsch": "reisende oder hafenbezogene Form von hafen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sava + -sava",
+      "Aussprache": "savasava"
+    },
+    {
+      "Nr": 581,
+      "Nuatlapa": "Hasoro",
+      "Deutsch": "belebtes oder tätiges stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + soro",
+      "Aussprache": "hasoro"
+    },
+    {
+      "Nr": 582,
+      "Nuatlapa": "Masoro",
+      "Deutsch": "gemeinschaftliches stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + soro",
+      "Aussprache": "masoro"
+    },
+    {
+      "Nr": 583,
+      "Nuatlapa": "Tlasoro",
+      "Deutsch": "rituell oder gestuftes stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + soro",
+      "Aussprache": "tɬasoro"
+    },
+    {
+      "Nr": 584,
+      "Nuatlapa": "Quasoro",
+      "Deutsch": "kaiserlich geordnetes stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + soro",
+      "Aussprache": "kwasoro"
+    },
+    {
+      "Nr": 585,
+      "Nuatlapa": "Sorona",
+      "Deutsch": "Person des Bereichs stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -na",
+      "Aussprache": "sorona"
+    },
+    {
+      "Nr": 586,
+      "Nuatlapa": "Soroaria",
+      "Deutsch": "Ort oder Provinz des stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -aria",
+      "Aussprache": "soroaria"
+    },
+    {
+      "Nr": 587,
+      "Nuatlapa": "Soror",
+      "Deutsch": "Amtsträger für stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -or",
+      "Aussprache": "soror"
+    },
+    {
+      "Nr": 588,
+      "Nuatlapa": "Soroiti",
+      "Deutsch": "kleines stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -iti",
+      "Aussprache": "soroiti"
+    },
+    {
+      "Nr": 589,
+      "Nuatlapa": "sororoa",
+      "Deutsch": "großes oder langes stimme",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -roa",
+      "Aussprache": "sororoa"
+    },
+    {
+      "Nr": 590,
+      "Nuatlapa": "Sorosava",
+      "Deutsch": "reisende oder hafenbezogene Form von stimme",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "soro + -sava",
+      "Aussprache": "sorosava"
+    },
+    {
+      "Nr": 591,
+      "Nuatlapa": "Hasua",
+      "Deutsch": "belebtes oder tätiges feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ha- + sua",
+      "Aussprache": "hasua"
+    },
+    {
+      "Nr": 592,
+      "Nuatlapa": "Masua",
+      "Deutsch": "gemeinschaftliches feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "ma- + sua",
+      "Aussprache": "masua"
+    },
+    {
+      "Nr": 593,
+      "Nuatlapa": "Tlasua",
+      "Deutsch": "rituell oder gestuftes feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "tla- + sua",
+      "Aussprache": "tɬasua"
+    },
+    {
+      "Nr": 594,
+      "Nuatlapa": "Quasua",
+      "Deutsch": "kaiserlich geordnetes feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "qua- + sua",
+      "Aussprache": "kwasua"
+    },
+    {
+      "Nr": 595,
+      "Nuatlapa": "Suana",
+      "Deutsch": "Person des Bereichs feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -na",
+      "Aussprache": "suana"
+    },
+    {
+      "Nr": 596,
+      "Nuatlapa": "Suaria",
+      "Deutsch": "Ort oder Provinz des feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -aria",
+      "Aussprache": "suaria"
+    },
+    {
+      "Nr": 597,
+      "Nuatlapa": "Suaor",
+      "Deutsch": "Amtsträger für feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -or",
+      "Aussprache": "suaor"
+    },
+    {
+      "Nr": 598,
+      "Nuatlapa": "Suaiti",
+      "Deutsch": "kleines feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -iti",
+      "Aussprache": "suaiti"
+    },
+    {
+      "Nr": 599,
+      "Nuatlapa": "suaroa",
+      "Deutsch": "großes oder langes feuer",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -roa",
+      "Aussprache": "suaroa"
+    },
+    {
+      "Nr": 600,
+      "Nuatlapa": "Suasava",
+      "Deutsch": "reisende oder hafenbezogene Form von feuer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Staat und Recht",
+      "Herleitung": "sua + -sava",
+      "Aussprache": "suasava"
+    },
+    {
+      "Nr": 601,
+      "Nuatlapa": "Hataha",
+      "Deutsch": "belebtes oder tätiges seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + taha",
+      "Aussprache": "hataha"
+    },
+    {
+      "Nr": 602,
+      "Nuatlapa": "Mataha",
+      "Deutsch": "gemeinschaftliches seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + taha",
+      "Aussprache": "mataha"
+    },
+    {
+      "Nr": 603,
+      "Nuatlapa": "Tlataha",
+      "Deutsch": "rituell oder gestuftes seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + taha",
+      "Aussprache": "tɬataha"
+    },
+    {
+      "Nr": 604,
+      "Nuatlapa": "Quataha",
+      "Deutsch": "kaiserlich geordnetes seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + taha",
+      "Aussprache": "kwataha"
+    },
+    {
+      "Nr": 605,
+      "Nuatlapa": "Tahana",
+      "Deutsch": "Person des Bereichs seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -na",
+      "Aussprache": "tahana"
+    },
+    {
+      "Nr": 606,
+      "Nuatlapa": "Taharia",
+      "Deutsch": "Ort oder Provinz des seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -aria",
+      "Aussprache": "taharia"
+    },
+    {
+      "Nr": 607,
+      "Nuatlapa": "Tahaor",
+      "Deutsch": "Amtsträger für seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -or",
+      "Aussprache": "tahaor"
+    },
+    {
+      "Nr": 608,
+      "Nuatlapa": "Tahaiti",
+      "Deutsch": "kleines seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -iti",
+      "Aussprache": "tahaiti"
+    },
+    {
+      "Nr": 609,
+      "Nuatlapa": "taharoa",
+      "Deutsch": "großes oder langes seite",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -roa",
+      "Aussprache": "taharoa"
+    },
+    {
+      "Nr": 610,
+      "Nuatlapa": "Tahasava",
+      "Deutsch": "reisende oder hafenbezogene Form von seite",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taha + -sava",
+      "Aussprache": "tahasava"
+    },
+    {
+      "Nr": 611,
+      "Nuatlapa": "Hatala",
+      "Deutsch": "belebtes oder tätiges rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tala",
+      "Aussprache": "hatala"
+    },
+    {
+      "Nr": 612,
+      "Nuatlapa": "Matala",
+      "Deutsch": "gemeinschaftliches rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tala",
+      "Aussprache": "matala"
+    },
+    {
+      "Nr": 613,
+      "Nuatlapa": "Tlatala",
+      "Deutsch": "rituell oder gestuftes rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tala",
+      "Aussprache": "tɬatala"
+    },
+    {
+      "Nr": 614,
+      "Nuatlapa": "Quatala",
+      "Deutsch": "kaiserlich geordnetes rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tala",
+      "Aussprache": "kwatala"
+    },
+    {
+      "Nr": 615,
+      "Nuatlapa": "Talana",
+      "Deutsch": "Person des Bereichs rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -na",
+      "Aussprache": "talana"
+    },
+    {
+      "Nr": 616,
+      "Nuatlapa": "Talaria",
+      "Deutsch": "Ort oder Provinz des rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -aria",
+      "Aussprache": "talaria"
+    },
+    {
+      "Nr": 617,
+      "Nuatlapa": "Talaor",
+      "Deutsch": "Amtsträger für rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -or",
+      "Aussprache": "talaor"
+    },
+    {
+      "Nr": 618,
+      "Nuatlapa": "Talaiti",
+      "Deutsch": "kleines rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -iti",
+      "Aussprache": "talaiti"
+    },
+    {
+      "Nr": 619,
+      "Nuatlapa": "talaroa",
+      "Deutsch": "großes oder langes rede",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -roa",
+      "Aussprache": "talaroa"
+    },
+    {
+      "Nr": 620,
+      "Nuatlapa": "Talasava",
+      "Deutsch": "reisende oder hafenbezogene Form von rede",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tala + -sava",
+      "Aussprache": "talasava"
+    },
+    {
+      "Nr": 621,
+      "Nuatlapa": "Hatama",
+      "Deutsch": "belebtes oder tätiges kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tama",
+      "Aussprache": "hatama"
+    },
+    {
+      "Nr": 622,
+      "Nuatlapa": "Matama",
+      "Deutsch": "gemeinschaftliches kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tama",
+      "Aussprache": "matama"
+    },
+    {
+      "Nr": 623,
+      "Nuatlapa": "Tlatama",
+      "Deutsch": "rituell oder gestuftes kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tama",
+      "Aussprache": "tɬatama"
+    },
+    {
+      "Nr": 624,
+      "Nuatlapa": "Quatama",
+      "Deutsch": "kaiserlich geordnetes kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tama",
+      "Aussprache": "kwatama"
+    },
+    {
+      "Nr": 625,
+      "Nuatlapa": "Tamana",
+      "Deutsch": "Person des Bereichs kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -na",
+      "Aussprache": "tamana"
+    },
+    {
+      "Nr": 626,
+      "Nuatlapa": "Tamaria",
+      "Deutsch": "Ort oder Provinz des kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -aria",
+      "Aussprache": "tamaria"
+    },
+    {
+      "Nr": 627,
+      "Nuatlapa": "Tamaor",
+      "Deutsch": "Amtsträger für kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -or",
+      "Aussprache": "tamaor"
+    },
+    {
+      "Nr": 628,
+      "Nuatlapa": "Tamaiti",
+      "Deutsch": "kleines kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -iti",
+      "Aussprache": "tamaiti"
+    },
+    {
+      "Nr": 629,
+      "Nuatlapa": "tamaroa",
+      "Deutsch": "großes oder langes kind",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -roa",
+      "Aussprache": "tamaroa"
+    },
+    {
+      "Nr": 630,
+      "Nuatlapa": "Tamasava",
+      "Deutsch": "reisende oder hafenbezogene Form von kind",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tama + -sava",
+      "Aussprache": "tamasava"
+    },
+    {
+      "Nr": 631,
+      "Nuatlapa": "Hatani",
+      "Deutsch": "belebtes oder tätiges morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tani",
+      "Aussprache": "hatani"
+    },
+    {
+      "Nr": 632,
+      "Nuatlapa": "Matani",
+      "Deutsch": "gemeinschaftliches morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tani",
+      "Aussprache": "matani"
+    },
+    {
+      "Nr": 633,
+      "Nuatlapa": "Tlatani",
+      "Deutsch": "rituell oder gestuftes morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tani",
+      "Aussprache": "tɬatani"
+    },
+    {
+      "Nr": 634,
+      "Nuatlapa": "Quatani",
+      "Deutsch": "kaiserlich geordnetes morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tani",
+      "Aussprache": "kwatani"
+    },
+    {
+      "Nr": 635,
+      "Nuatlapa": "Tanina",
+      "Deutsch": "Person des Bereichs morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -na",
+      "Aussprache": "tanina"
+    },
+    {
+      "Nr": 636,
+      "Nuatlapa": "Taniaria",
+      "Deutsch": "Ort oder Provinz des morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -aria",
+      "Aussprache": "taniaria"
+    },
+    {
+      "Nr": 637,
+      "Nuatlapa": "Tanior",
+      "Deutsch": "Amtsträger für morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -or",
+      "Aussprache": "tanior"
+    },
+    {
+      "Nr": 638,
+      "Nuatlapa": "Taniti",
+      "Deutsch": "kleines morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -iti",
+      "Aussprache": "taniti"
+    },
+    {
+      "Nr": 639,
+      "Nuatlapa": "taniroa",
+      "Deutsch": "großes oder langes morgen",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -roa",
+      "Aussprache": "taniroa"
+    },
+    {
+      "Nr": 640,
+      "Nuatlapa": "Tanisava",
+      "Deutsch": "reisende oder hafenbezogene Form von morgen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tani + -sava",
+      "Aussprache": "tanisava"
+    },
+    {
+      "Nr": 641,
+      "Nuatlapa": "Hatapa",
+      "Deutsch": "belebtes oder tätiges rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tapa",
+      "Aussprache": "hatapa"
+    },
+    {
+      "Nr": 642,
+      "Nuatlapa": "Matapa",
+      "Deutsch": "gemeinschaftliches rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tapa",
+      "Aussprache": "matapa"
+    },
+    {
+      "Nr": 643,
+      "Nuatlapa": "Tlatapa",
+      "Deutsch": "rituell oder gestuftes rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tapa",
+      "Aussprache": "tɬatapa"
+    },
+    {
+      "Nr": 644,
+      "Nuatlapa": "Quatapa",
+      "Deutsch": "kaiserlich geordnetes rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tapa",
+      "Aussprache": "kwatapa"
+    },
+    {
+      "Nr": 645,
+      "Nuatlapa": "Tapana",
+      "Deutsch": "Person des Bereichs rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -na",
+      "Aussprache": "tapana"
+    },
+    {
+      "Nr": 646,
+      "Nuatlapa": "Taparia",
+      "Deutsch": "Ort oder Provinz des rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -aria",
+      "Aussprache": "taparia"
+    },
+    {
+      "Nr": 647,
+      "Nuatlapa": "Tapaor",
+      "Deutsch": "Amtsträger für rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -or",
+      "Aussprache": "tapaor"
+    },
+    {
+      "Nr": 648,
+      "Nuatlapa": "Tapaiti",
+      "Deutsch": "kleines rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -iti",
+      "Aussprache": "tapaiti"
+    },
+    {
+      "Nr": 649,
+      "Nuatlapa": "taparoa",
+      "Deutsch": "großes oder langes rinde",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -roa",
+      "Aussprache": "taparoa"
+    },
+    {
+      "Nr": 650,
+      "Nuatlapa": "Tapasava",
+      "Deutsch": "reisende oder hafenbezogene Form von rinde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tapa + -sava",
+      "Aussprache": "tapasava"
+    },
+    {
+      "Nr": 651,
+      "Nuatlapa": "Hataro",
+      "Deutsch": "belebtes oder tätiges wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + taro",
+      "Aussprache": "hataro"
+    },
+    {
+      "Nr": 652,
+      "Nuatlapa": "Mataro",
+      "Deutsch": "gemeinschaftliches wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + taro",
+      "Aussprache": "mataro"
+    },
+    {
+      "Nr": 653,
+      "Nuatlapa": "Tlataro",
+      "Deutsch": "rituell oder gestuftes wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + taro",
+      "Aussprache": "tɬataro"
+    },
+    {
+      "Nr": 654,
+      "Nuatlapa": "Quataro",
+      "Deutsch": "kaiserlich geordnetes wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + taro",
+      "Aussprache": "kwataro"
+    },
+    {
+      "Nr": 655,
+      "Nuatlapa": "Tarona",
+      "Deutsch": "Person des Bereichs wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -na",
+      "Aussprache": "tarona"
+    },
+    {
+      "Nr": 656,
+      "Nuatlapa": "Taroaria",
+      "Deutsch": "Ort oder Provinz des wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -aria",
+      "Aussprache": "taroaria"
+    },
+    {
+      "Nr": 657,
+      "Nuatlapa": "Taror",
+      "Deutsch": "Amtsträger für wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -or",
+      "Aussprache": "taror"
+    },
+    {
+      "Nr": 658,
+      "Nuatlapa": "Taroiti",
+      "Deutsch": "kleines wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -iti",
+      "Aussprache": "taroiti"
+    },
+    {
+      "Nr": 659,
+      "Nuatlapa": "taroroa",
+      "Deutsch": "großes oder langes wurzel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -roa",
+      "Aussprache": "taroroa"
+    },
+    {
+      "Nr": 660,
+      "Nuatlapa": "Tarosava",
+      "Deutsch": "reisende oder hafenbezogene Form von wurzel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "taro + -sava",
+      "Aussprache": "tarosava"
+    },
+    {
+      "Nr": 661,
+      "Nuatlapa": "Hatava",
+      "Deutsch": "belebtes oder tätiges schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tava",
+      "Aussprache": "hatava"
+    },
+    {
+      "Nr": 662,
+      "Nuatlapa": "Matava",
+      "Deutsch": "gemeinschaftliches schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tava",
+      "Aussprache": "matava"
+    },
+    {
+      "Nr": 663,
+      "Nuatlapa": "Tlatava",
+      "Deutsch": "rituell oder gestuftes schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tava",
+      "Aussprache": "tɬatava"
+    },
+    {
+      "Nr": 664,
+      "Nuatlapa": "Quatava",
+      "Deutsch": "kaiserlich geordnetes schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tava",
+      "Aussprache": "kwatava"
+    },
+    {
+      "Nr": 665,
+      "Nuatlapa": "Tavana",
+      "Deutsch": "Person des Bereichs schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -na",
+      "Aussprache": "tavana"
+    },
+    {
+      "Nr": 666,
+      "Nuatlapa": "Tavaria",
+      "Deutsch": "Ort oder Provinz des schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -aria",
+      "Aussprache": "tavaria"
+    },
+    {
+      "Nr": 667,
+      "Nuatlapa": "Tavaor",
+      "Deutsch": "Amtsträger für schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -or",
+      "Aussprache": "tavaor"
+    },
+    {
+      "Nr": 668,
+      "Nuatlapa": "Tavaiti",
+      "Deutsch": "kleines schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -iti",
+      "Aussprache": "tavaiti"
+    },
+    {
+      "Nr": 669,
+      "Nuatlapa": "tavaroa",
+      "Deutsch": "großes oder langes schiff",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -roa",
+      "Aussprache": "tavaroa"
+    },
+    {
+      "Nr": 670,
+      "Nuatlapa": "Tavasava",
+      "Deutsch": "reisende oder hafenbezogene Form von schiff",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tava + -sava",
+      "Aussprache": "tavasava"
+    },
+    {
+      "Nr": 671,
+      "Nuatlapa": "Hateka",
+      "Deutsch": "belebtes oder tätiges fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + teka",
+      "Aussprache": "hateka"
+    },
+    {
+      "Nr": 672,
+      "Nuatlapa": "Mateka",
+      "Deutsch": "gemeinschaftliches fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + teka",
+      "Aussprache": "mateka"
+    },
+    {
+      "Nr": 673,
+      "Nuatlapa": "Tlateka",
+      "Deutsch": "rituell oder gestuftes fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + teka",
+      "Aussprache": "tɬateka"
+    },
+    {
+      "Nr": 674,
+      "Nuatlapa": "Quateka",
+      "Deutsch": "kaiserlich geordnetes fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + teka",
+      "Aussprache": "kwateka"
+    },
+    {
+      "Nr": 675,
+      "Nuatlapa": "Tekana",
+      "Deutsch": "Person des Bereichs fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -na",
+      "Aussprache": "tekana"
+    },
+    {
+      "Nr": 676,
+      "Nuatlapa": "Tekaria",
+      "Deutsch": "Ort oder Provinz des fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -aria",
+      "Aussprache": "tekaria"
+    },
+    {
+      "Nr": 677,
+      "Nuatlapa": "Tekaor",
+      "Deutsch": "Amtsträger für fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -or",
+      "Aussprache": "tekaor"
+    },
+    {
+      "Nr": 678,
+      "Nuatlapa": "Tekaiti",
+      "Deutsch": "kleines fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -iti",
+      "Aussprache": "tekaiti"
+    },
+    {
+      "Nr": 679,
+      "Nuatlapa": "tekaroa",
+      "Deutsch": "großes oder langes fischhaken",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -roa",
+      "Aussprache": "tekaroa"
+    },
+    {
+      "Nr": 680,
+      "Nuatlapa": "Tekasava",
+      "Deutsch": "reisende oder hafenbezogene Form von fischhaken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "teka + -sava",
+      "Aussprache": "tekasava"
+    },
+    {
+      "Nr": 681,
+      "Nuatlapa": "Hatika",
+      "Deutsch": "belebtes oder tätiges richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tika",
+      "Aussprache": "hatika"
+    },
+    {
+      "Nr": 682,
+      "Nuatlapa": "Matika",
+      "Deutsch": "gemeinschaftliches richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tika",
+      "Aussprache": "matika"
+    },
+    {
+      "Nr": 683,
+      "Nuatlapa": "Tlatika",
+      "Deutsch": "rituell oder gestuftes richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tika",
+      "Aussprache": "tɬatika"
+    },
+    {
+      "Nr": 684,
+      "Nuatlapa": "Quatika",
+      "Deutsch": "kaiserlich geordnetes richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tika",
+      "Aussprache": "kwatika"
+    },
+    {
+      "Nr": 685,
+      "Nuatlapa": "Tikana",
+      "Deutsch": "Person des Bereichs richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -na",
+      "Aussprache": "tikana"
+    },
+    {
+      "Nr": 686,
+      "Nuatlapa": "Tikaria",
+      "Deutsch": "Ort oder Provinz des richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -aria",
+      "Aussprache": "tikaria"
+    },
+    {
+      "Nr": 687,
+      "Nuatlapa": "Tikaor",
+      "Deutsch": "Amtsträger für richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -or",
+      "Aussprache": "tikaor"
+    },
+    {
+      "Nr": 688,
+      "Nuatlapa": "Tikaiti",
+      "Deutsch": "kleines richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -iti",
+      "Aussprache": "tikaiti"
+    },
+    {
+      "Nr": 689,
+      "Nuatlapa": "tikaroa",
+      "Deutsch": "großes oder langes richtig",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -roa",
+      "Aussprache": "tikaroa"
+    },
+    {
+      "Nr": 690,
+      "Nuatlapa": "Tikasava",
+      "Deutsch": "reisende oder hafenbezogene Form von richtig",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tika + -sava",
+      "Aussprache": "tikasava"
+    },
+    {
+      "Nr": 691,
+      "Nuatlapa": "Hatiri",
+      "Deutsch": "belebtes oder tätiges faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ha- + tiri",
+      "Aussprache": "hatiri"
+    },
+    {
+      "Nr": 692,
+      "Nuatlapa": "Matiri",
+      "Deutsch": "gemeinschaftliches faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "ma- + tiri",
+      "Aussprache": "matiri"
+    },
+    {
+      "Nr": 693,
+      "Nuatlapa": "Tlatiri",
+      "Deutsch": "rituell oder gestuftes faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tla- + tiri",
+      "Aussprache": "tɬatiri"
+    },
+    {
+      "Nr": 694,
+      "Nuatlapa": "Quatiri",
+      "Deutsch": "kaiserlich geordnetes faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "qua- + tiri",
+      "Aussprache": "kwatiri"
+    },
+    {
+      "Nr": 695,
+      "Nuatlapa": "Tirina",
+      "Deutsch": "Person des Bereichs faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -na",
+      "Aussprache": "tirina"
+    },
+    {
+      "Nr": 696,
+      "Nuatlapa": "Tiriaria",
+      "Deutsch": "Ort oder Provinz des faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -aria",
+      "Aussprache": "tiriaria"
+    },
+    {
+      "Nr": 697,
+      "Nuatlapa": "Tirior",
+      "Deutsch": "Amtsträger für faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -or",
+      "Aussprache": "tirior"
+    },
+    {
+      "Nr": 698,
+      "Nuatlapa": "Tiriti",
+      "Deutsch": "kleines faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -iti",
+      "Aussprache": "tiriti"
+    },
+    {
+      "Nr": 699,
+      "Nuatlapa": "tiriroa",
+      "Deutsch": "großes oder langes faden",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -roa",
+      "Aussprache": "tiriroa"
+    },
+    {
+      "Nr": 700,
+      "Nuatlapa": "Tirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von faden",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handwerk",
+      "Herleitung": "tiri + -sava",
+      "Aussprache": "tirisava"
+    },
+    {
+      "Nr": 701,
+      "Nuatlapa": "Hatoka",
+      "Deutsch": "belebtes oder tätiges basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + toka",
+      "Aussprache": "hatoka"
+    },
+    {
+      "Nr": 702,
+      "Nuatlapa": "Matoka",
+      "Deutsch": "gemeinschaftliches basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + toka",
+      "Aussprache": "matoka"
+    },
+    {
+      "Nr": 703,
+      "Nuatlapa": "Tlatoka",
+      "Deutsch": "rituell oder gestuftes basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + toka",
+      "Aussprache": "tɬatoka"
+    },
+    {
+      "Nr": 704,
+      "Nuatlapa": "Quatoka",
+      "Deutsch": "kaiserlich geordnetes basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + toka",
+      "Aussprache": "kwatoka"
+    },
+    {
+      "Nr": 705,
+      "Nuatlapa": "Tokana",
+      "Deutsch": "Person des Bereichs basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -na",
+      "Aussprache": "tokana"
+    },
+    {
+      "Nr": 706,
+      "Nuatlapa": "Tokaria",
+      "Deutsch": "Ort oder Provinz des basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -aria",
+      "Aussprache": "tokaria"
+    },
+    {
+      "Nr": 707,
+      "Nuatlapa": "Tokaor",
+      "Deutsch": "Amtsträger für basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -or",
+      "Aussprache": "tokaor"
+    },
+    {
+      "Nr": 708,
+      "Nuatlapa": "Tokaiti",
+      "Deutsch": "kleines basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -iti",
+      "Aussprache": "tokaiti"
+    },
+    {
+      "Nr": 709,
+      "Nuatlapa": "tokaroa",
+      "Deutsch": "großes oder langes basalt",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -roa",
+      "Aussprache": "tokaroa"
+    },
+    {
+      "Nr": 710,
+      "Nuatlapa": "Tokasava",
+      "Deutsch": "reisende oder hafenbezogene Form von basalt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toka + -sava",
+      "Aussprache": "tokasava"
+    },
+    {
+      "Nr": 711,
+      "Nuatlapa": "Hatoro",
+      "Deutsch": "belebtes oder tätiges markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + toro",
+      "Aussprache": "hatoro"
+    },
+    {
+      "Nr": 712,
+      "Nuatlapa": "Matoro",
+      "Deutsch": "gemeinschaftliches markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + toro",
+      "Aussprache": "matoro"
+    },
+    {
+      "Nr": 713,
+      "Nuatlapa": "Tlatoro",
+      "Deutsch": "rituell oder gestuftes markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + toro",
+      "Aussprache": "tɬatoro"
+    },
+    {
+      "Nr": 714,
+      "Nuatlapa": "Quatoro",
+      "Deutsch": "kaiserlich geordnetes markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + toro",
+      "Aussprache": "kwatoro"
+    },
+    {
+      "Nr": 715,
+      "Nuatlapa": "Torona",
+      "Deutsch": "Person des Bereichs markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -na",
+      "Aussprache": "torona"
+    },
+    {
+      "Nr": 716,
+      "Nuatlapa": "Toroaria",
+      "Deutsch": "Ort oder Provinz des markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -aria",
+      "Aussprache": "toroaria"
+    },
+    {
+      "Nr": 717,
+      "Nuatlapa": "Toror",
+      "Deutsch": "Amtsträger für markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -or",
+      "Aussprache": "toror"
+    },
+    {
+      "Nr": 718,
+      "Nuatlapa": "Toroiti",
+      "Deutsch": "kleines markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -iti",
+      "Aussprache": "toroiti"
+    },
+    {
+      "Nr": 719,
+      "Nuatlapa": "tororoa",
+      "Deutsch": "großes oder langes markt",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -roa",
+      "Aussprache": "tororoa"
+    },
+    {
+      "Nr": 720,
+      "Nuatlapa": "Torosava",
+      "Deutsch": "reisende oder hafenbezogene Form von markt",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "toro + -sava",
+      "Aussprache": "torosava"
+    },
+    {
+      "Nr": 721,
+      "Nuatlapa": "Hatua",
+      "Deutsch": "belebtes oder tätiges rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + tua",
+      "Aussprache": "hatua"
+    },
+    {
+      "Nr": 722,
+      "Nuatlapa": "Matua",
+      "Deutsch": "gemeinschaftliches rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + tua",
+      "Aussprache": "matua"
+    },
+    {
+      "Nr": 723,
+      "Nuatlapa": "Tlatua",
+      "Deutsch": "rituell oder gestuftes rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + tua",
+      "Aussprache": "tɬatua"
+    },
+    {
+      "Nr": 724,
+      "Nuatlapa": "Quatua",
+      "Deutsch": "kaiserlich geordnetes rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + tua",
+      "Aussprache": "kwatua"
+    },
+    {
+      "Nr": 725,
+      "Nuatlapa": "Tuana",
+      "Deutsch": "Person des Bereichs rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -na",
+      "Aussprache": "tuana"
+    },
+    {
+      "Nr": 726,
+      "Nuatlapa": "Tuaria",
+      "Deutsch": "Ort oder Provinz des rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -aria",
+      "Aussprache": "tuaria"
+    },
+    {
+      "Nr": 727,
+      "Nuatlapa": "Tuaor",
+      "Deutsch": "Amtsträger für rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -or",
+      "Aussprache": "tuaor"
+    },
+    {
+      "Nr": 728,
+      "Nuatlapa": "Tuaiti",
+      "Deutsch": "kleines rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -iti",
+      "Aussprache": "tuaiti"
+    },
+    {
+      "Nr": 729,
+      "Nuatlapa": "tuaroa",
+      "Deutsch": "großes oder langes rücken",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -roa",
+      "Aussprache": "tuaroa"
+    },
+    {
+      "Nr": 730,
+      "Nuatlapa": "Tuasava",
+      "Deutsch": "reisende oder hafenbezogene Form von rücken",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tua + -sava",
+      "Aussprache": "tuasava"
+    },
+    {
+      "Nr": 731,
+      "Nuatlapa": "Hatunu",
+      "Deutsch": "belebtes oder tätiges kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + tunu",
+      "Aussprache": "hatunu"
+    },
+    {
+      "Nr": 732,
+      "Nuatlapa": "Matunu",
+      "Deutsch": "gemeinschaftliches kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + tunu",
+      "Aussprache": "matunu"
+    },
+    {
+      "Nr": 733,
+      "Nuatlapa": "Tlatunu",
+      "Deutsch": "rituell oder gestuftes kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + tunu",
+      "Aussprache": "tɬatunu"
+    },
+    {
+      "Nr": 734,
+      "Nuatlapa": "Quatunu",
+      "Deutsch": "kaiserlich geordnetes kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + tunu",
+      "Aussprache": "kwatunu"
+    },
+    {
+      "Nr": 735,
+      "Nuatlapa": "Tununa",
+      "Deutsch": "Person des Bereichs kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -na",
+      "Aussprache": "tununa"
+    },
+    {
+      "Nr": 736,
+      "Nuatlapa": "Tunuaria",
+      "Deutsch": "Ort oder Provinz des kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -aria",
+      "Aussprache": "tunuaria"
+    },
+    {
+      "Nr": 737,
+      "Nuatlapa": "Tunuor",
+      "Deutsch": "Amtsträger für kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -or",
+      "Aussprache": "tunuor"
+    },
+    {
+      "Nr": 738,
+      "Nuatlapa": "Tunuiti",
+      "Deutsch": "kleines kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -iti",
+      "Aussprache": "tunuiti"
+    },
+    {
+      "Nr": 739,
+      "Nuatlapa": "tunuroa",
+      "Deutsch": "großes oder langes kochen",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -roa",
+      "Aussprache": "tunuroa"
+    },
+    {
+      "Nr": 740,
+      "Nuatlapa": "Tunusava",
+      "Deutsch": "reisende oder hafenbezogene Form von kochen",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tunu + -sava",
+      "Aussprache": "tunusava"
+    },
+    {
+      "Nr": 741,
+      "Nuatlapa": "Haula",
+      "Deutsch": "belebtes oder tätiges rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + ula",
+      "Aussprache": "haula"
+    },
+    {
+      "Nr": 742,
+      "Nuatlapa": "Maula",
+      "Deutsch": "gemeinschaftliches rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + ula",
+      "Aussprache": "maula"
+    },
+    {
+      "Nr": 743,
+      "Nuatlapa": "Tlaula",
+      "Deutsch": "rituell oder gestuftes rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + ula",
+      "Aussprache": "tɬaula"
+    },
+    {
+      "Nr": 744,
+      "Nuatlapa": "Quaula",
+      "Deutsch": "kaiserlich geordnetes rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + ula",
+      "Aussprache": "kwaula"
+    },
+    {
+      "Nr": 745,
+      "Nuatlapa": "Ulana",
+      "Deutsch": "Person des Bereichs rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -na",
+      "Aussprache": "ulana"
+    },
+    {
+      "Nr": 746,
+      "Nuatlapa": "Ularia",
+      "Deutsch": "Ort oder Provinz des rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -aria",
+      "Aussprache": "ularia"
+    },
+    {
+      "Nr": 747,
+      "Nuatlapa": "Ulaor",
+      "Deutsch": "Amtsträger für rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -or",
+      "Aussprache": "ulaor"
+    },
+    {
+      "Nr": 748,
+      "Nuatlapa": "Ulaiti",
+      "Deutsch": "kleines rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -iti",
+      "Aussprache": "ulaiti"
+    },
+    {
+      "Nr": 749,
+      "Nuatlapa": "ularoa",
+      "Deutsch": "großes oder langes rot",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -roa",
+      "Aussprache": "ularoa"
+    },
+    {
+      "Nr": 750,
+      "Nuatlapa": "Ulasava",
+      "Deutsch": "reisende oder hafenbezogene Form von rot",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ula + -sava",
+      "Aussprache": "ulasava"
+    },
+    {
+      "Nr": 751,
+      "Nuatlapa": "Hauri",
+      "Deutsch": "belebtes oder tätiges dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + uri",
+      "Aussprache": "hauri"
+    },
+    {
+      "Nr": 752,
+      "Nuatlapa": "Mauri",
+      "Deutsch": "gemeinschaftliches dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + uri",
+      "Aussprache": "mauri"
+    },
+    {
+      "Nr": 753,
+      "Nuatlapa": "Tlauri",
+      "Deutsch": "rituell oder gestuftes dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + uri",
+      "Aussprache": "tɬauri"
+    },
+    {
+      "Nr": 754,
+      "Nuatlapa": "Quauri",
+      "Deutsch": "kaiserlich geordnetes dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + uri",
+      "Aussprache": "kwauri"
+    },
+    {
+      "Nr": 755,
+      "Nuatlapa": "Urina",
+      "Deutsch": "Person des Bereichs dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -na",
+      "Aussprache": "urina"
+    },
+    {
+      "Nr": 756,
+      "Nuatlapa": "Uriaria",
+      "Deutsch": "Ort oder Provinz des dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -aria",
+      "Aussprache": "uriaria"
+    },
+    {
+      "Nr": 757,
+      "Nuatlapa": "Urior",
+      "Deutsch": "Amtsträger für dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -or",
+      "Aussprache": "urior"
+    },
+    {
+      "Nr": 758,
+      "Nuatlapa": "Uriti",
+      "Deutsch": "kleines dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -iti",
+      "Aussprache": "uriti"
+    },
+    {
+      "Nr": 759,
+      "Nuatlapa": "uriroa",
+      "Deutsch": "großes oder langes dunkel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -roa",
+      "Aussprache": "uriroa"
+    },
+    {
+      "Nr": 760,
+      "Nuatlapa": "Urisava",
+      "Deutsch": "reisende oder hafenbezogene Form von dunkel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "uri + -sava",
+      "Aussprache": "urisava"
+    },
+    {
+      "Nr": 761,
+      "Nuatlapa": "Havaha",
+      "Deutsch": "belebtes oder tätiges mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + vaha",
+      "Aussprache": "havaha"
+    },
+    {
+      "Nr": 762,
+      "Nuatlapa": "Mavaha",
+      "Deutsch": "gemeinschaftliches mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + vaha",
+      "Aussprache": "mavaha"
+    },
+    {
+      "Nr": 763,
+      "Nuatlapa": "Tlavaha",
+      "Deutsch": "rituell oder gestuftes mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + vaha",
+      "Aussprache": "tɬavaha"
+    },
+    {
+      "Nr": 764,
+      "Nuatlapa": "Quavaha",
+      "Deutsch": "kaiserlich geordnetes mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + vaha",
+      "Aussprache": "kwavaha"
+    },
+    {
+      "Nr": 765,
+      "Nuatlapa": "Vahana",
+      "Deutsch": "Person des Bereichs mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -na",
+      "Aussprache": "vahana"
+    },
+    {
+      "Nr": 766,
+      "Nuatlapa": "Vaharia",
+      "Deutsch": "Ort oder Provinz des mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -aria",
+      "Aussprache": "vaharia"
+    },
+    {
+      "Nr": 767,
+      "Nuatlapa": "Vahaor",
+      "Deutsch": "Amtsträger für mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -or",
+      "Aussprache": "vahaor"
+    },
+    {
+      "Nr": 768,
+      "Nuatlapa": "Vahaiti",
+      "Deutsch": "kleines mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -iti",
+      "Aussprache": "vahaiti"
+    },
+    {
+      "Nr": 769,
+      "Nuatlapa": "vaharoa",
+      "Deutsch": "großes oder langes mund",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -roa",
+      "Aussprache": "vaharoa"
+    },
+    {
+      "Nr": 770,
+      "Nuatlapa": "Vahasava",
+      "Deutsch": "reisende oder hafenbezogene Form von mund",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vaha + -sava",
+      "Aussprache": "vahasava"
+    },
+    {
+      "Nr": 771,
+      "Nuatlapa": "Havai",
+      "Deutsch": "belebtes oder tätiges wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + vai",
+      "Aussprache": "havai"
+    },
+    {
+      "Nr": 772,
+      "Nuatlapa": "Mavai",
+      "Deutsch": "gemeinschaftliches wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + vai",
+      "Aussprache": "mavai"
+    },
+    {
+      "Nr": 773,
+      "Nuatlapa": "Tlavai",
+      "Deutsch": "rituell oder gestuftes wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + vai",
+      "Aussprache": "tɬavai"
+    },
+    {
+      "Nr": 774,
+      "Nuatlapa": "Quavai",
+      "Deutsch": "kaiserlich geordnetes wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + vai",
+      "Aussprache": "kwavai"
+    },
+    {
+      "Nr": 775,
+      "Nuatlapa": "Vaina",
+      "Deutsch": "Person des Bereichs wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -na",
+      "Aussprache": "vaina"
+    },
+    {
+      "Nr": 776,
+      "Nuatlapa": "Vaiaria",
+      "Deutsch": "Ort oder Provinz des wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -aria",
+      "Aussprache": "vaiaria"
+    },
+    {
+      "Nr": 777,
+      "Nuatlapa": "Vaior",
+      "Deutsch": "Amtsträger für wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -or",
+      "Aussprache": "vaior"
+    },
+    {
+      "Nr": 778,
+      "Nuatlapa": "Vaiti",
+      "Deutsch": "kleines wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -iti",
+      "Aussprache": "vaiti"
+    },
+    {
+      "Nr": 779,
+      "Nuatlapa": "vairoa",
+      "Deutsch": "großes oder langes wasser",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -roa",
+      "Aussprache": "vairoa"
+    },
+    {
+      "Nr": 780,
+      "Nuatlapa": "Vaisava",
+      "Deutsch": "reisende oder hafenbezogene Form von wasser",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vai + -sava",
+      "Aussprache": "vaisava"
+    },
+    {
+      "Nr": 781,
+      "Nuatlapa": "Havara",
+      "Deutsch": "belebtes oder tätiges feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + vara",
+      "Aussprache": "havara"
+    },
+    {
+      "Nr": 782,
+      "Nuatlapa": "Mavara",
+      "Deutsch": "gemeinschaftliches feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + vara",
+      "Aussprache": "mavara"
+    },
+    {
+      "Nr": 783,
+      "Nuatlapa": "Tlavara",
+      "Deutsch": "rituell oder gestuftes feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + vara",
+      "Aussprache": "tɬavara"
+    },
+    {
+      "Nr": 784,
+      "Nuatlapa": "Quavara",
+      "Deutsch": "kaiserlich geordnetes feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + vara",
+      "Aussprache": "kwavara"
+    },
+    {
+      "Nr": 785,
+      "Nuatlapa": "Varana",
+      "Deutsch": "Person des Bereichs feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -na",
+      "Aussprache": "varana"
+    },
+    {
+      "Nr": 786,
+      "Nuatlapa": "Vararia",
+      "Deutsch": "Ort oder Provinz des feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -aria",
+      "Aussprache": "vararia"
+    },
+    {
+      "Nr": 787,
+      "Nuatlapa": "Varaor",
+      "Deutsch": "Amtsträger für feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -or",
+      "Aussprache": "varaor"
+    },
+    {
+      "Nr": 788,
+      "Nuatlapa": "Varaiti",
+      "Deutsch": "kleines feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -iti",
+      "Aussprache": "varaiti"
+    },
+    {
+      "Nr": 789,
+      "Nuatlapa": "vararoa",
+      "Deutsch": "großes oder langes feld",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -roa",
+      "Aussprache": "vararoa"
+    },
+    {
+      "Nr": 790,
+      "Nuatlapa": "Varasava",
+      "Deutsch": "reisende oder hafenbezogene Form von feld",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vara + -sava",
+      "Aussprache": "varasava"
+    },
+    {
+      "Nr": 791,
+      "Nuatlapa": "Havatu",
+      "Deutsch": "belebtes oder tätiges bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ha- + vatu",
+      "Aussprache": "havatu"
+    },
+    {
+      "Nr": 792,
+      "Nuatlapa": "Mavatu",
+      "Deutsch": "gemeinschaftliches bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "ma- + vatu",
+      "Aussprache": "mavatu"
+    },
+    {
+      "Nr": 793,
+      "Nuatlapa": "Tlavatu",
+      "Deutsch": "rituell oder gestuftes bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "tla- + vatu",
+      "Aussprache": "tɬavatu"
+    },
+    {
+      "Nr": 794,
+      "Nuatlapa": "Quavatu",
+      "Deutsch": "kaiserlich geordnetes bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "qua- + vatu",
+      "Aussprache": "kwavatu"
+    },
+    {
+      "Nr": 795,
+      "Nuatlapa": "Vatuna",
+      "Deutsch": "Person des Bereichs bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -na",
+      "Aussprache": "vatuna"
+    },
+    {
+      "Nr": 796,
+      "Nuatlapa": "Vatuaria",
+      "Deutsch": "Ort oder Provinz des bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -aria",
+      "Aussprache": "vatuaria"
+    },
+    {
+      "Nr": 797,
+      "Nuatlapa": "Vatuor",
+      "Deutsch": "Amtsträger für bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -or",
+      "Aussprache": "vatuor"
+    },
+    {
+      "Nr": 798,
+      "Nuatlapa": "Vatuiti",
+      "Deutsch": "kleines bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -iti",
+      "Aussprache": "vatuiti"
+    },
+    {
+      "Nr": 799,
+      "Nuatlapa": "vaturoa",
+      "Deutsch": "großes oder langes bauwerk",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -roa",
+      "Aussprache": "vaturoa"
+    },
+    {
+      "Nr": 800,
+      "Nuatlapa": "Vatusava",
+      "Deutsch": "reisende oder hafenbezogene Form von bauwerk",
+      "Wortart": "Substantiv",
+      "Kategorie": "Handel und Reise",
+      "Herleitung": "vatu + -sava",
+      "Aussprache": "vatusava"
+    },
+    {
+      "Nr": 801,
+      "Nuatlapa": "Haxala",
+      "Deutsch": "belebtes oder tätiges kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + xala",
+      "Aussprache": "haxala"
+    },
+    {
+      "Nr": 802,
+      "Nuatlapa": "Maxala",
+      "Deutsch": "gemeinschaftliches kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + xala",
+      "Aussprache": "maxala"
+    },
+    {
+      "Nr": 803,
+      "Nuatlapa": "Tlaxala",
+      "Deutsch": "rituell oder gestuftes kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + xala",
+      "Aussprache": "tɬaxala"
+    },
+    {
+      "Nr": 804,
+      "Nuatlapa": "Quaxala",
+      "Deutsch": "kaiserlich geordnetes kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + xala",
+      "Aussprache": "kwaxala"
+    },
+    {
+      "Nr": 805,
+      "Nuatlapa": "Xalana",
+      "Deutsch": "Person des Bereichs kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -na",
+      "Aussprache": "xalana"
+    },
+    {
+      "Nr": 806,
+      "Nuatlapa": "Xalaria",
+      "Deutsch": "Ort oder Provinz des kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -aria",
+      "Aussprache": "xalaria"
+    },
+    {
+      "Nr": 807,
+      "Nuatlapa": "Xalaor",
+      "Deutsch": "Amtsträger für kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -or",
+      "Aussprache": "xalaor"
+    },
+    {
+      "Nr": 808,
+      "Nuatlapa": "Xalaiti",
+      "Deutsch": "kleines kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -iti",
+      "Aussprache": "xalaiti"
+    },
+    {
+      "Nr": 809,
+      "Nuatlapa": "xalaroa",
+      "Deutsch": "großes oder langes kaiserlich",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -roa",
+      "Aussprache": "xalaroa"
+    },
+    {
+      "Nr": 810,
+      "Nuatlapa": "Xalasava",
+      "Deutsch": "reisende oder hafenbezogene Form von kaiserlich",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xala + -sava",
+      "Aussprache": "xalasava"
+    },
+    {
+      "Nr": 811,
+      "Nuatlapa": "Haxiri",
+      "Deutsch": "belebtes oder tätiges schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + xiri",
+      "Aussprache": "haxiri"
+    },
+    {
+      "Nr": 812,
+      "Nuatlapa": "Maxiri",
+      "Deutsch": "gemeinschaftliches schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + xiri",
+      "Aussprache": "maxiri"
+    },
+    {
+      "Nr": 813,
+      "Nuatlapa": "Tlaxiri",
+      "Deutsch": "rituell oder gestuftes schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + xiri",
+      "Aussprache": "tɬaxiri"
+    },
+    {
+      "Nr": 814,
+      "Nuatlapa": "Quaxiri",
+      "Deutsch": "kaiserlich geordnetes schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + xiri",
+      "Aussprache": "kwaxiri"
+    },
+    {
+      "Nr": 815,
+      "Nuatlapa": "Xirina",
+      "Deutsch": "Person des Bereichs schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -na",
+      "Aussprache": "xirina"
+    },
+    {
+      "Nr": 816,
+      "Nuatlapa": "Xiriaria",
+      "Deutsch": "Ort oder Provinz des schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -aria",
+      "Aussprache": "xiriaria"
+    },
+    {
+      "Nr": 817,
+      "Nuatlapa": "Xirior",
+      "Deutsch": "Amtsträger für schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -or",
+      "Aussprache": "xirior"
+    },
+    {
+      "Nr": 818,
+      "Nuatlapa": "Xiriti",
+      "Deutsch": "kleines schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -iti",
+      "Aussprache": "xiriti"
+    },
+    {
+      "Nr": 819,
+      "Nuatlapa": "xiriroa",
+      "Deutsch": "großes oder langes schreiber",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -roa",
+      "Aussprache": "xiriroa"
+    },
+    {
+      "Nr": 820,
+      "Nuatlapa": "Xirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von schreiber",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "xiri + -sava",
+      "Aussprache": "xirisava"
+    },
+    {
+      "Nr": 821,
+      "Nuatlapa": "Hayara",
+      "Deutsch": "belebtes oder tätiges ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + yara",
+      "Aussprache": "hayara"
+    },
+    {
+      "Nr": 822,
+      "Nuatlapa": "Mayara",
+      "Deutsch": "gemeinschaftliches ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + yara",
+      "Aussprache": "mayara"
+    },
+    {
+      "Nr": 823,
+      "Nuatlapa": "Tlayara",
+      "Deutsch": "rituell oder gestuftes ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + yara",
+      "Aussprache": "tɬayara"
+    },
+    {
+      "Nr": 824,
+      "Nuatlapa": "Quayara",
+      "Deutsch": "kaiserlich geordnetes ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + yara",
+      "Aussprache": "kwayara"
+    },
+    {
+      "Nr": 825,
+      "Nuatlapa": "Yarana",
+      "Deutsch": "Person des Bereichs ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -na",
+      "Aussprache": "yarana"
+    },
+    {
+      "Nr": 826,
+      "Nuatlapa": "Yararia",
+      "Deutsch": "Ort oder Provinz des ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -aria",
+      "Aussprache": "yararia"
+    },
+    {
+      "Nr": 827,
+      "Nuatlapa": "Yaraor",
+      "Deutsch": "Amtsträger für ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -or",
+      "Aussprache": "yaraor"
+    },
+    {
+      "Nr": 828,
+      "Nuatlapa": "Yaraiti",
+      "Deutsch": "kleines ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -iti",
+      "Aussprache": "yaraiti"
+    },
+    {
+      "Nr": 829,
+      "Nuatlapa": "yararoa",
+      "Deutsch": "großes oder langes ahne",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -roa",
+      "Aussprache": "yararoa"
+    },
+    {
+      "Nr": 830,
+      "Nuatlapa": "Yarasava",
+      "Deutsch": "reisende oder hafenbezogene Form von ahne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yara + -sava",
+      "Aussprache": "yarasava"
+    },
+    {
+      "Nr": 831,
+      "Nuatlapa": "Hayavi",
+      "Deutsch": "belebtes oder tätiges stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + yavi",
+      "Aussprache": "hayavi"
+    },
+    {
+      "Nr": 832,
+      "Nuatlapa": "Mayavi",
+      "Deutsch": "gemeinschaftliches stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + yavi",
+      "Aussprache": "mayavi"
+    },
+    {
+      "Nr": 833,
+      "Nuatlapa": "Tlayavi",
+      "Deutsch": "rituell oder gestuftes stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + yavi",
+      "Aussprache": "tɬayavi"
+    },
+    {
+      "Nr": 834,
+      "Nuatlapa": "Quayavi",
+      "Deutsch": "kaiserlich geordnetes stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + yavi",
+      "Aussprache": "kwayavi"
+    },
+    {
+      "Nr": 835,
+      "Nuatlapa": "Yavina",
+      "Deutsch": "Person des Bereichs stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -na",
+      "Aussprache": "yavina"
+    },
+    {
+      "Nr": 836,
+      "Nuatlapa": "Yaviaria",
+      "Deutsch": "Ort oder Provinz des stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -aria",
+      "Aussprache": "yaviaria"
+    },
+    {
+      "Nr": 837,
+      "Nuatlapa": "Yavior",
+      "Deutsch": "Amtsträger für stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -or",
+      "Aussprache": "yavior"
+    },
+    {
+      "Nr": 838,
+      "Nuatlapa": "Yaviti",
+      "Deutsch": "kleines stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -iti",
+      "Aussprache": "yaviti"
+    },
+    {
+      "Nr": 839,
+      "Nuatlapa": "yaviroa",
+      "Deutsch": "großes oder langes stern",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -roa",
+      "Aussprache": "yaviroa"
+    },
+    {
+      "Nr": 840,
+      "Nuatlapa": "Yavisava",
+      "Deutsch": "reisende oder hafenbezogene Form von stern",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "yavi + -sava",
+      "Aussprache": "yavisava"
+    },
+    {
+      "Nr": 841,
+      "Nuatlapa": "Hazama",
+      "Deutsch": "belebtes oder tätiges fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + zama",
+      "Aussprache": "hazama"
+    },
+    {
+      "Nr": 842,
+      "Nuatlapa": "Mazama",
+      "Deutsch": "gemeinschaftliches fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + zama",
+      "Aussprache": "mazama"
+    },
+    {
+      "Nr": 843,
+      "Nuatlapa": "Tlazama",
+      "Deutsch": "rituell oder gestuftes fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + zama",
+      "Aussprache": "tɬazama"
+    },
+    {
+      "Nr": 844,
+      "Nuatlapa": "Quazama",
+      "Deutsch": "kaiserlich geordnetes fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + zama",
+      "Aussprache": "kwazama"
+    },
+    {
+      "Nr": 845,
+      "Nuatlapa": "Zamana",
+      "Deutsch": "Person des Bereichs fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -na",
+      "Aussprache": "zamana"
+    },
+    {
+      "Nr": 846,
+      "Nuatlapa": "Zamaria",
+      "Deutsch": "Ort oder Provinz des fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -aria",
+      "Aussprache": "zamaria"
+    },
+    {
+      "Nr": 847,
+      "Nuatlapa": "Zamaor",
+      "Deutsch": "Amtsträger für fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -or",
+      "Aussprache": "zamaor"
+    },
+    {
+      "Nr": 848,
+      "Nuatlapa": "Zamaiti",
+      "Deutsch": "kleines fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -iti",
+      "Aussprache": "zamaiti"
+    },
+    {
+      "Nr": 849,
+      "Nuatlapa": "zamaroa",
+      "Deutsch": "großes oder langes fest",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -roa",
+      "Aussprache": "zamaroa"
+    },
+    {
+      "Nr": 850,
+      "Nuatlapa": "Zamasava",
+      "Deutsch": "reisende oder hafenbezogene Form von fest",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zama + -sava",
+      "Aussprache": "zamasava"
+    },
+    {
+      "Nr": 851,
+      "Nuatlapa": "Hazaro",
+      "Deutsch": "belebtes oder tätiges gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + zaro",
+      "Aussprache": "hazaro"
+    },
+    {
+      "Nr": 852,
+      "Nuatlapa": "Mazaro",
+      "Deutsch": "gemeinschaftliches gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + zaro",
+      "Aussprache": "mazaro"
+    },
+    {
+      "Nr": 853,
+      "Nuatlapa": "Tlazaro",
+      "Deutsch": "rituell oder gestuftes gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + zaro",
+      "Aussprache": "tɬazaro"
+    },
+    {
+      "Nr": 854,
+      "Nuatlapa": "Quazaro",
+      "Deutsch": "kaiserlich geordnetes gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + zaro",
+      "Aussprache": "kwazaro"
+    },
+    {
+      "Nr": 855,
+      "Nuatlapa": "Zarona",
+      "Deutsch": "Person des Bereichs gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -na",
+      "Aussprache": "zarona"
+    },
+    {
+      "Nr": 856,
+      "Nuatlapa": "Zaroaria",
+      "Deutsch": "Ort oder Provinz des gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -aria",
+      "Aussprache": "zaroaria"
+    },
+    {
+      "Nr": 857,
+      "Nuatlapa": "Zaror",
+      "Deutsch": "Amtsträger für gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -or",
+      "Aussprache": "zaror"
+    },
+    {
+      "Nr": 858,
+      "Nuatlapa": "Zaroiti",
+      "Deutsch": "kleines gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -iti",
+      "Aussprache": "zaroiti"
+    },
+    {
+      "Nr": 859,
+      "Nuatlapa": "zaroroa",
+      "Deutsch": "großes oder langes gold",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -roa",
+      "Aussprache": "zaroroa"
+    },
+    {
+      "Nr": 860,
+      "Nuatlapa": "Zarosava",
+      "Deutsch": "reisende oder hafenbezogene Form von gold",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "zaro + -sava",
+      "Aussprache": "zarosava"
+    },
+    {
+      "Nr": 861,
+      "Nuatlapa": "Hatlaka",
+      "Deutsch": "belebtes oder tätiges stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + tlaka",
+      "Aussprache": "hatɬaka"
+    },
+    {
+      "Nr": 862,
+      "Nuatlapa": "Matlaka",
+      "Deutsch": "gemeinschaftliches stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + tlaka",
+      "Aussprache": "matɬaka"
+    },
+    {
+      "Nr": 863,
+      "Nuatlapa": "Tlatlaka",
+      "Deutsch": "rituell oder gestuftes stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + tlaka",
+      "Aussprache": "tɬatɬaka"
+    },
+    {
+      "Nr": 864,
+      "Nuatlapa": "Quatlaka",
+      "Deutsch": "kaiserlich geordnetes stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + tlaka",
+      "Aussprache": "kwatɬaka"
+    },
+    {
+      "Nr": 865,
+      "Nuatlapa": "Tlakahna",
+      "Deutsch": "Person des Bereichs stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -na",
+      "Aussprache": "tɬakahna"
+    },
+    {
+      "Nr": 866,
+      "Nuatlapa": "Tlakaria",
+      "Deutsch": "Ort oder Provinz des stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -aria",
+      "Aussprache": "tɬakaria"
+    },
+    {
+      "Nr": 867,
+      "Nuatlapa": "Tlakaor",
+      "Deutsch": "Amtsträger für stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -or",
+      "Aussprache": "tɬakaor"
+    },
+    {
+      "Nr": 868,
+      "Nuatlapa": "Tlakaiti",
+      "Deutsch": "kleines stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -iti",
+      "Aussprache": "tɬakaiti"
+    },
+    {
+      "Nr": 869,
+      "Nuatlapa": "tlakaroa",
+      "Deutsch": "großes oder langes stufe",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -roa",
+      "Aussprache": "tɬakaroa"
+    },
+    {
+      "Nr": 870,
+      "Nuatlapa": "Tlakasava",
+      "Deutsch": "reisende oder hafenbezogene Form von stufe",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlaka + -sava",
+      "Aussprache": "tɬakasava"
+    },
+    {
+      "Nr": 871,
+      "Nuatlapa": "Hatlani",
+      "Deutsch": "belebtes oder tätiges nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + tlani",
+      "Aussprache": "hatɬani"
+    },
+    {
+      "Nr": 872,
+      "Nuatlapa": "Matlani",
+      "Deutsch": "gemeinschaftliches nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + tlani",
+      "Aussprache": "matɬani"
+    },
+    {
+      "Nr": 873,
+      "Nuatlapa": "Tlatlani",
+      "Deutsch": "rituell oder gestuftes nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + tlani",
+      "Aussprache": "tɬatɬani"
+    },
+    {
+      "Nr": 874,
+      "Nuatlapa": "Quatlani",
+      "Deutsch": "kaiserlich geordnetes nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + tlani",
+      "Aussprache": "kwatɬani"
+    },
+    {
+      "Nr": 875,
+      "Nuatlapa": "Tlanina",
+      "Deutsch": "Person des Bereichs nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -na",
+      "Aussprache": "tɬanina"
+    },
+    {
+      "Nr": 876,
+      "Nuatlapa": "Tlaniaria",
+      "Deutsch": "Ort oder Provinz des nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -aria",
+      "Aussprache": "tɬaniaria"
+    },
+    {
+      "Nr": 877,
+      "Nuatlapa": "Tlanior",
+      "Deutsch": "Amtsträger für nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -or",
+      "Aussprache": "tɬanior"
+    },
+    {
+      "Nr": 878,
+      "Nuatlapa": "Tlaniti",
+      "Deutsch": "kleines nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -iti",
+      "Aussprache": "tɬaniti"
+    },
+    {
+      "Nr": 879,
+      "Nuatlapa": "tlaniroa",
+      "Deutsch": "großes oder langes nacht",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -roa",
+      "Aussprache": "tɬaniroa"
+    },
+    {
+      "Nr": 880,
+      "Nuatlapa": "Tlanisava",
+      "Deutsch": "reisende oder hafenbezogene Form von nacht",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlani + -sava",
+      "Aussprache": "tɬanisava"
+    },
+    {
+      "Nr": 881,
+      "Nuatlapa": "Hatlapa",
+      "Deutsch": "belebtes oder tätiges name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + tlapa",
+      "Aussprache": "hatɬapa"
+    },
+    {
+      "Nr": 882,
+      "Nuatlapa": "Matlapa",
+      "Deutsch": "gemeinschaftliches name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + tlapa",
+      "Aussprache": "matɬapa"
+    },
+    {
+      "Nr": 883,
+      "Nuatlapa": "Tlatlapa",
+      "Deutsch": "rituell oder gestuftes name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + tlapa",
+      "Aussprache": "tɬatɬapa"
+    },
+    {
+      "Nr": 884,
+      "Nuatlapa": "Quatlapa",
+      "Deutsch": "kaiserlich geordnetes name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + tlapa",
+      "Aussprache": "kwatɬapa"
+    },
+    {
+      "Nr": 885,
+      "Nuatlapa": "Tlapana",
+      "Deutsch": "Person des Bereichs name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -na",
+      "Aussprache": "tɬapana"
+    },
+    {
+      "Nr": 886,
+      "Nuatlapa": "Tlaparia",
+      "Deutsch": "Ort oder Provinz des name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -aria",
+      "Aussprache": "tɬaparia"
+    },
+    {
+      "Nr": 887,
+      "Nuatlapa": "Tlapaor",
+      "Deutsch": "Amtsträger für name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -or",
+      "Aussprache": "tɬapaor"
+    },
+    {
+      "Nr": 888,
+      "Nuatlapa": "Tlapaiti",
+      "Deutsch": "kleines name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -iti",
+      "Aussprache": "tɬapaiti"
+    },
+    {
+      "Nr": 889,
+      "Nuatlapa": "tlaparoa",
+      "Deutsch": "großes oder langes name",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -roa",
+      "Aussprache": "tɬaparoa"
+    },
+    {
+      "Nr": 890,
+      "Nuatlapa": "Tlapasava",
+      "Deutsch": "reisende oder hafenbezogene Form von name",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tlapa + -sava",
+      "Aussprache": "tɬapasava"
+    },
+    {
+      "Nr": 891,
+      "Nuatlapa": "Hatsama",
+      "Deutsch": "belebtes oder tätiges muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ha- + tsama",
+      "Aussprache": "hatsama"
+    },
+    {
+      "Nr": 892,
+      "Nuatlapa": "Matsama",
+      "Deutsch": "gemeinschaftliches muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "ma- + tsama",
+      "Aussprache": "matsama"
+    },
+    {
+      "Nr": 893,
+      "Nuatlapa": "Tlatsama",
+      "Deutsch": "rituell oder gestuftes muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tla- + tsama",
+      "Aussprache": "tɬatsama"
+    },
+    {
+      "Nr": 894,
+      "Nuatlapa": "Quatsama",
+      "Deutsch": "kaiserlich geordnetes muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "qua- + tsama",
+      "Aussprache": "kwatsama"
+    },
+    {
+      "Nr": 895,
+      "Nuatlapa": "Tsamana",
+      "Deutsch": "Person des Bereichs muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -na",
+      "Aussprache": "tsamana"
+    },
+    {
+      "Nr": 896,
+      "Nuatlapa": "Tsamaria",
+      "Deutsch": "Ort oder Provinz des muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -aria",
+      "Aussprache": "tsamaria"
+    },
+    {
+      "Nr": 897,
+      "Nuatlapa": "Tsamaor",
+      "Deutsch": "Amtsträger für muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -or",
+      "Aussprache": "tsamaor"
+    },
+    {
+      "Nr": 898,
+      "Nuatlapa": "Tsamaiti",
+      "Deutsch": "kleines muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -iti",
+      "Aussprache": "tsamaiti"
+    },
+    {
+      "Nr": 899,
+      "Nuatlapa": "tsamaroa",
+      "Deutsch": "großes oder langes muschel",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -roa",
+      "Aussprache": "tsamaroa"
+    },
+    {
+      "Nr": 900,
+      "Nuatlapa": "Tsamasava",
+      "Deutsch": "reisende oder hafenbezogene Form von muschel",
+      "Wortart": "Substantiv",
+      "Kategorie": "Krieg und Schutz",
+      "Herleitung": "tsama + -sava",
+      "Aussprache": "tsamasava"
+    },
+    {
+      "Nr": 901,
+      "Nuatlapa": "Hatsiri",
+      "Deutsch": "belebtes oder tätiges sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + tsiri",
+      "Aussprache": "hatsiri"
+    },
+    {
+      "Nr": 902,
+      "Nuatlapa": "Matsiri",
+      "Deutsch": "gemeinschaftliches sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + tsiri",
+      "Aussprache": "matsiri"
+    },
+    {
+      "Nr": 903,
+      "Nuatlapa": "Tlatsiri",
+      "Deutsch": "rituell oder gestuftes sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + tsiri",
+      "Aussprache": "tɬatsiri"
+    },
+    {
+      "Nr": 904,
+      "Nuatlapa": "Quatsiri",
+      "Deutsch": "kaiserlich geordnetes sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + tsiri",
+      "Aussprache": "kwatsiri"
+    },
+    {
+      "Nr": 905,
+      "Nuatlapa": "Tsirina",
+      "Deutsch": "Person des Bereichs sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -na",
+      "Aussprache": "tsirina"
+    },
+    {
+      "Nr": 906,
+      "Nuatlapa": "Tsiriaria",
+      "Deutsch": "Ort oder Provinz des sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -aria",
+      "Aussprache": "tsiriaria"
+    },
+    {
+      "Nr": 907,
+      "Nuatlapa": "Tsirior",
+      "Deutsch": "Amtsträger für sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -or",
+      "Aussprache": "tsirior"
+    },
+    {
+      "Nr": 908,
+      "Nuatlapa": "Tsiriti",
+      "Deutsch": "kleines sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -iti",
+      "Aussprache": "tsiriti"
+    },
+    {
+      "Nr": 909,
+      "Nuatlapa": "tsiriroa",
+      "Deutsch": "großes oder langes sonne",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -roa",
+      "Aussprache": "tsiriroa"
+    },
+    {
+      "Nr": 910,
+      "Nuatlapa": "Tsirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von sonne",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tsiri + -sava",
+      "Aussprache": "tsirisava"
+    },
+    {
+      "Nr": 911,
+      "Nuatlapa": "Hachala",
+      "Deutsch": "belebtes oder tätiges feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + chala",
+      "Aussprache": "hatʃala"
+    },
+    {
+      "Nr": 912,
+      "Nuatlapa": "Machala",
+      "Deutsch": "gemeinschaftliches feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + chala",
+      "Aussprache": "matʃala"
+    },
+    {
+      "Nr": 913,
+      "Nuatlapa": "Tlachala",
+      "Deutsch": "rituell oder gestuftes feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + chala",
+      "Aussprache": "tɬatʃala"
+    },
+    {
+      "Nr": 914,
+      "Nuatlapa": "Quachala",
+      "Deutsch": "kaiserlich geordnetes feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + chala",
+      "Aussprache": "kwatʃala"
+    },
+    {
+      "Nr": 915,
+      "Nuatlapa": "Chalana",
+      "Deutsch": "Person des Bereichs feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -na",
+      "Aussprache": "tʃalana"
+    },
+    {
+      "Nr": 916,
+      "Nuatlapa": "Chalaria",
+      "Deutsch": "Ort oder Provinz des feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -aria",
+      "Aussprache": "tʃalaria"
+    },
+    {
+      "Nr": 917,
+      "Nuatlapa": "Chalaor",
+      "Deutsch": "Amtsträger für feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -or",
+      "Aussprache": "tʃalaor"
+    },
+    {
+      "Nr": 918,
+      "Nuatlapa": "Chalaiti",
+      "Deutsch": "kleines feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -iti",
+      "Aussprache": "tʃalaiti"
+    },
+    {
+      "Nr": 919,
+      "Nuatlapa": "chalaroa",
+      "Deutsch": "großes oder langes feder",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -roa",
+      "Aussprache": "tʃalaroa"
+    },
+    {
+      "Nr": 920,
+      "Nuatlapa": "Chalasava",
+      "Deutsch": "reisende oder hafenbezogene Form von feder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chala + -sava",
+      "Aussprache": "tʃalasava"
+    },
+    {
+      "Nr": 921,
+      "Nuatlapa": "Hachiri",
+      "Deutsch": "belebtes oder tätiges klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + chiri",
+      "Aussprache": "hatʃiri"
+    },
+    {
+      "Nr": 922,
+      "Nuatlapa": "Machiri",
+      "Deutsch": "gemeinschaftliches klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + chiri",
+      "Aussprache": "matʃiri"
+    },
+    {
+      "Nr": 923,
+      "Nuatlapa": "Tlachiri",
+      "Deutsch": "rituell oder gestuftes klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + chiri",
+      "Aussprache": "tɬatʃiri"
+    },
+    {
+      "Nr": 924,
+      "Nuatlapa": "Quachiri",
+      "Deutsch": "kaiserlich geordnetes klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + chiri",
+      "Aussprache": "kwatʃiri"
+    },
+    {
+      "Nr": 925,
+      "Nuatlapa": "Chirina",
+      "Deutsch": "Person des Bereichs klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -na",
+      "Aussprache": "tʃirina"
+    },
+    {
+      "Nr": 926,
+      "Nuatlapa": "Chiriaria",
+      "Deutsch": "Ort oder Provinz des klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -aria",
+      "Aussprache": "tʃiriaria"
+    },
+    {
+      "Nr": 927,
+      "Nuatlapa": "Chirior",
+      "Deutsch": "Amtsträger für klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -or",
+      "Aussprache": "tʃirior"
+    },
+    {
+      "Nr": 928,
+      "Nuatlapa": "Chiriti",
+      "Deutsch": "kleines klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -iti",
+      "Aussprache": "tʃiriti"
+    },
+    {
+      "Nr": 929,
+      "Nuatlapa": "chiriroa",
+      "Deutsch": "großes oder langes klinge",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -roa",
+      "Aussprache": "tʃiriroa"
+    },
+    {
+      "Nr": 930,
+      "Nuatlapa": "Chirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von klinge",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "chiri + -sava",
+      "Aussprache": "tʃirisava"
+    },
+    {
+      "Nr": 931,
+      "Nuatlapa": "Haquara",
+      "Deutsch": "belebtes oder tätiges straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + quara",
+      "Aussprache": "hakwara"
+    },
+    {
+      "Nr": 932,
+      "Nuatlapa": "Maquara",
+      "Deutsch": "gemeinschaftliches straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + quara",
+      "Aussprache": "makwara"
+    },
+    {
+      "Nr": 933,
+      "Nuatlapa": "Tlaquara",
+      "Deutsch": "rituell oder gestuftes straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + quara",
+      "Aussprache": "tɬakwara"
+    },
+    {
+      "Nr": 934,
+      "Nuatlapa": "Quaquara",
+      "Deutsch": "kaiserlich geordnetes straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + quara",
+      "Aussprache": "kwakwara"
+    },
+    {
+      "Nr": 935,
+      "Nuatlapa": "Quarana",
+      "Deutsch": "Person des Bereichs straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -na",
+      "Aussprache": "kwarana"
+    },
+    {
+      "Nr": 936,
+      "Nuatlapa": "Quararia",
+      "Deutsch": "Ort oder Provinz des straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -aria",
+      "Aussprache": "kwararia"
+    },
+    {
+      "Nr": 937,
+      "Nuatlapa": "Quaraor",
+      "Deutsch": "Amtsträger für straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -or",
+      "Aussprache": "kwaraor"
+    },
+    {
+      "Nr": 938,
+      "Nuatlapa": "Quaraiti",
+      "Deutsch": "kleines straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -iti",
+      "Aussprache": "kwaraiti"
+    },
+    {
+      "Nr": 939,
+      "Nuatlapa": "quararoa",
+      "Deutsch": "großes oder langes straße",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -roa",
+      "Aussprache": "kwararoa"
+    },
+    {
+      "Nr": 940,
+      "Nuatlapa": "Quarasava",
+      "Deutsch": "reisende oder hafenbezogene Form von straße",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quara + -sava",
+      "Aussprache": "kwarasava"
+    },
+    {
+      "Nr": 941,
+      "Nuatlapa": "Haquiri",
+      "Deutsch": "belebtes oder tätiges kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + quiri",
+      "Aussprache": "hakwiri"
+    },
+    {
+      "Nr": 942,
+      "Nuatlapa": "Maquiri",
+      "Deutsch": "gemeinschaftliches kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + quiri",
+      "Aussprache": "makwiri"
+    },
+    {
+      "Nr": 943,
+      "Nuatlapa": "Tlaquiri",
+      "Deutsch": "rituell oder gestuftes kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + quiri",
+      "Aussprache": "tɬakwiri"
+    },
+    {
+      "Nr": 944,
+      "Nuatlapa": "Quaquiri",
+      "Deutsch": "kaiserlich geordnetes kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + quiri",
+      "Aussprache": "kwakwiri"
+    },
+    {
+      "Nr": 945,
+      "Nuatlapa": "Quirina",
+      "Deutsch": "Person des Bereichs kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -na",
+      "Aussprache": "kwirina"
+    },
+    {
+      "Nr": 946,
+      "Nuatlapa": "Quiriaria",
+      "Deutsch": "Ort oder Provinz des kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -aria",
+      "Aussprache": "kwiriaria"
+    },
+    {
+      "Nr": 947,
+      "Nuatlapa": "Quirior",
+      "Deutsch": "Amtsträger für kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -or",
+      "Aussprache": "kwirior"
+    },
+    {
+      "Nr": 948,
+      "Nuatlapa": "Quiriti",
+      "Deutsch": "kleines kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -iti",
+      "Aussprache": "kwiriti"
+    },
+    {
+      "Nr": 949,
+      "Nuatlapa": "quiriroa",
+      "Deutsch": "großes oder langes kreis",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -roa",
+      "Aussprache": "kwiriroa"
+    },
+    {
+      "Nr": 950,
+      "Nuatlapa": "Quirisava",
+      "Deutsch": "reisende oder hafenbezogene Form von kreis",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "quiri + -sava",
+      "Aussprache": "kwirisava"
+    },
+    {
+      "Nr": 951,
+      "Nuatlapa": "Haure",
+      "Deutsch": "belebtes oder tätiges würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + aure",
+      "Aussprache": "haure"
+    },
+    {
+      "Nr": 952,
+      "Nuatlapa": "Maure",
+      "Deutsch": "gemeinschaftliches würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + aure",
+      "Aussprache": "maure"
+    },
+    {
+      "Nr": 953,
+      "Nuatlapa": "Tlaure",
+      "Deutsch": "rituell oder gestuftes würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + aure",
+      "Aussprache": "tɬaure"
+    },
+    {
+      "Nr": 954,
+      "Nuatlapa": "Quaure",
+      "Deutsch": "kaiserlich geordnetes würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + aure",
+      "Aussprache": "kwaure"
+    },
+    {
+      "Nr": 955,
+      "Nuatlapa": "Aurena",
+      "Deutsch": "Person des Bereichs würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -na",
+      "Aussprache": "aurena"
+    },
+    {
+      "Nr": 956,
+      "Nuatlapa": "Aurearia",
+      "Deutsch": "Ort oder Provinz des würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -aria",
+      "Aussprache": "aurearia"
+    },
+    {
+      "Nr": 957,
+      "Nuatlapa": "Aureor",
+      "Deutsch": "Amtsträger für würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -or",
+      "Aussprache": "aureor"
+    },
+    {
+      "Nr": 958,
+      "Nuatlapa": "Aureiti",
+      "Deutsch": "kleines würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -iti",
+      "Aussprache": "aureiti"
+    },
+    {
+      "Nr": 959,
+      "Nuatlapa": "aureroa",
+      "Deutsch": "großes oder langes würde",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -roa",
+      "Aussprache": "aureroa"
+    },
+    {
+      "Nr": 960,
+      "Nuatlapa": "Auresava",
+      "Deutsch": "reisende oder hafenbezogene Form von würde",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "aure + -sava",
+      "Aussprache": "auresava"
+    },
+    {
+      "Nr": 961,
+      "Nuatlapa": "Haevara",
+      "Deutsch": "belebtes oder tätiges provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + evara",
+      "Aussprache": "haevara"
+    },
+    {
+      "Nr": 962,
+      "Nuatlapa": "Maevara",
+      "Deutsch": "gemeinschaftliches provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + evara",
+      "Aussprache": "maevara"
+    },
+    {
+      "Nr": 963,
+      "Nuatlapa": "Tlaevara",
+      "Deutsch": "rituell oder gestuftes provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + evara",
+      "Aussprache": "tɬaevara"
+    },
+    {
+      "Nr": 964,
+      "Nuatlapa": "Quaevara",
+      "Deutsch": "kaiserlich geordnetes provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + evara",
+      "Aussprache": "kwaevara"
+    },
+    {
+      "Nr": 965,
+      "Nuatlapa": "Evarana",
+      "Deutsch": "Person des Bereichs provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -na",
+      "Aussprache": "evarana"
+    },
+    {
+      "Nr": 966,
+      "Nuatlapa": "Evararia",
+      "Deutsch": "Ort oder Provinz des provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -aria",
+      "Aussprache": "evararia"
+    },
+    {
+      "Nr": 967,
+      "Nuatlapa": "Evaraor",
+      "Deutsch": "Amtsträger für provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -or",
+      "Aussprache": "evaraor"
+    },
+    {
+      "Nr": 968,
+      "Nuatlapa": "Evaraiti",
+      "Deutsch": "kleines provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -iti",
+      "Aussprache": "evaraiti"
+    },
+    {
+      "Nr": 969,
+      "Nuatlapa": "evararoa",
+      "Deutsch": "großes oder langes provinz",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -roa",
+      "Aussprache": "evararoa"
+    },
+    {
+      "Nr": 970,
+      "Nuatlapa": "Evarasava",
+      "Deutsch": "reisende oder hafenbezogene Form von provinz",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "evara + -sava",
+      "Aussprache": "evarasava"
+    },
+    {
+      "Nr": 971,
+      "Nuatlapa": "Hainara",
+      "Deutsch": "belebtes oder tätiges urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + inara",
+      "Aussprache": "hainara"
+    },
+    {
+      "Nr": 972,
+      "Nuatlapa": "Mainara",
+      "Deutsch": "gemeinschaftliches urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + inara",
+      "Aussprache": "mainara"
+    },
+    {
+      "Nr": 973,
+      "Nuatlapa": "Tlainara",
+      "Deutsch": "rituell oder gestuftes urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + inara",
+      "Aussprache": "tɬainara"
+    },
+    {
+      "Nr": 974,
+      "Nuatlapa": "Quainara",
+      "Deutsch": "kaiserlich geordnetes urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + inara",
+      "Aussprache": "kwainara"
+    },
+    {
+      "Nr": 975,
+      "Nuatlapa": "Inarana",
+      "Deutsch": "Person des Bereichs urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -na",
+      "Aussprache": "inarana"
+    },
+    {
+      "Nr": 976,
+      "Nuatlapa": "Inararia",
+      "Deutsch": "Ort oder Provinz des urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -aria",
+      "Aussprache": "inararia"
+    },
+    {
+      "Nr": 977,
+      "Nuatlapa": "Inaraor",
+      "Deutsch": "Amtsträger für urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -or",
+      "Aussprache": "inaraor"
+    },
+    {
+      "Nr": 978,
+      "Nuatlapa": "Inaraiti",
+      "Deutsch": "kleines urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -iti",
+      "Aussprache": "inaraiti"
+    },
+    {
+      "Nr": 979,
+      "Nuatlapa": "inararoa",
+      "Deutsch": "großes oder langes urteil",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -roa",
+      "Aussprache": "inararoa"
+    },
+    {
+      "Nr": 980,
+      "Nuatlapa": "Inarasava",
+      "Deutsch": "reisende oder hafenbezogene Form von urteil",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "inara + -sava",
+      "Aussprache": "inarasava"
+    },
+    {
+      "Nr": 981,
+      "Nuatlapa": "Haotava",
+      "Deutsch": "belebtes oder tätiges fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + otava",
+      "Aussprache": "haotava"
+    },
+    {
+      "Nr": 982,
+      "Nuatlapa": "Maotava",
+      "Deutsch": "gemeinschaftliches fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + otava",
+      "Aussprache": "maotava"
+    },
+    {
+      "Nr": 983,
+      "Nuatlapa": "Tlaotava",
+      "Deutsch": "rituell oder gestuftes fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + otava",
+      "Aussprache": "tɬaotava"
+    },
+    {
+      "Nr": 984,
+      "Nuatlapa": "Quaotava",
+      "Deutsch": "kaiserlich geordnetes fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + otava",
+      "Aussprache": "kwaotava"
+    },
+    {
+      "Nr": 985,
+      "Nuatlapa": "Otavana",
+      "Deutsch": "Person des Bereichs fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -na",
+      "Aussprache": "otavana"
+    },
+    {
+      "Nr": 986,
+      "Nuatlapa": "Otavaria",
+      "Deutsch": "Ort oder Provinz des fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -aria",
+      "Aussprache": "otavaria"
+    },
+    {
+      "Nr": 987,
+      "Nuatlapa": "Otavaor",
+      "Deutsch": "Amtsträger für fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -or",
+      "Aussprache": "otavaor"
+    },
+    {
+      "Nr": 988,
+      "Nuatlapa": "Otavaiti",
+      "Deutsch": "kleines fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -iti",
+      "Aussprache": "otavaiti"
+    },
+    {
+      "Nr": 989,
+      "Nuatlapa": "otavaroa",
+      "Deutsch": "großes oder langes fremder",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -roa",
+      "Aussprache": "otavaroa"
+    },
+    {
+      "Nr": 990,
+      "Nuatlapa": "Otavasava",
+      "Deutsch": "reisende oder hafenbezogene Form von fremder",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "otava + -sava",
+      "Aussprache": "otavasava"
+    },
+    {
+      "Nr": 991,
+      "Nuatlapa": "Haulani",
+      "Deutsch": "belebtes oder tätiges wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ha- + ulani",
+      "Aussprache": "haulani"
+    },
+    {
+      "Nr": 992,
+      "Nuatlapa": "Maulani",
+      "Deutsch": "gemeinschaftliches wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ma- + ulani",
+      "Aussprache": "maulani"
+    },
+    {
+      "Nr": 993,
+      "Nuatlapa": "Tlaulani",
+      "Deutsch": "rituell oder gestuftes wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "tla- + ulani",
+      "Aussprache": "tɬaulani"
+    },
+    {
+      "Nr": 994,
+      "Nuatlapa": "Quaulani",
+      "Deutsch": "kaiserlich geordnetes wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "qua- + ulani",
+      "Aussprache": "kwaulani"
+    },
+    {
+      "Nr": 995,
+      "Nuatlapa": "Ulanina",
+      "Deutsch": "Person des Bereichs wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -na",
+      "Aussprache": "ulanina"
+    },
+    {
+      "Nr": 996,
+      "Nuatlapa": "Ulaniaria",
+      "Deutsch": "Ort oder Provinz des wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -aria",
+      "Aussprache": "ulaniaria"
+    },
+    {
+      "Nr": 997,
+      "Nuatlapa": "Ulanior",
+      "Deutsch": "Amtsträger für wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -or",
+      "Aussprache": "ulanior"
+    },
+    {
+      "Nr": 998,
+      "Nuatlapa": "Ulaniti",
+      "Deutsch": "kleines wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -iti",
+      "Aussprache": "ulaniti"
+    },
+    {
+      "Nr": 999,
+      "Nuatlapa": "ulaniroa",
+      "Deutsch": "großes oder langes wanderer",
+      "Wortart": "Adjektiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -roa",
+      "Aussprache": "ulaniroa"
+    },
+    {
+      "Nr": 1000,
+      "Nuatlapa": "Ulanisava",
+      "Deutsch": "reisende oder hafenbezogene Form von wanderer",
+      "Wortart": "Substantiv",
+      "Kategorie": "Kaiserliches Register",
+      "Herleitung": "ulani + -sava",
+      "Aussprache": "ulanisava"
+    }
+  ],
+  "namen_maennlich": [
+    {
+      "Nr": 1,
+      "Name": "Akanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "akanui",
+      "Klangbestandteile": "Aka + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 2,
+      "Name": "Akaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "akaroa",
+      "Klangbestandteile": "Aka + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 3,
+      "Name": "Akatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "akatane",
+      "Klangbestandteile": "Aka + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 4,
+      "Name": "Akavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "akavaka",
+      "Klangbestandteile": "Aka + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 5,
+      "Name": "Akarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "akarangi",
+      "Klangbestandteile": "Aka + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 6,
+      "Name": "Akamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "akamoana",
+      "Klangbestandteile": "Aka + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 7,
+      "Name": "Akahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "akahau",
+      "Klangbestandteile": "Aka + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 8,
+      "Name": "Akatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "akatoa",
+      "Klangbestandteile": "Aka + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 9,
+      "Name": "Akamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "akamara",
+      "Klangbestandteile": "Aka + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 10,
+      "Name": "Akatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "akatapu",
+      "Klangbestandteile": "Aka + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 11,
+      "Name": "Akamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "akamana",
+      "Klangbestandteile": "Aka + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 12,
+      "Name": "Akakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "akakoro",
+      "Klangbestandteile": "Aka + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 13,
+      "Name": "Akapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "akapuna",
+      "Klangbestandteile": "Aka + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 14,
+      "Name": "Akarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "akarima",
+      "Klangbestandteile": "Aka + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 15,
+      "Name": "Akasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "akasava",
+      "Klangbestandteile": "Aka + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 16,
+      "Name": "Akatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "akatava",
+      "Klangbestandteile": "Aka + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 17,
+      "Name": "Akaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "akaxara",
+      "Klangbestandteile": "Aka + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 18,
+      "Name": "Akazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "akazaro",
+      "Klangbestandteile": "Aka + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 19,
+      "Name": "Akaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "akaorius",
+      "Klangbestandteile": "Aka + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 20,
+      "Name": "Akanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "akanus",
+      "Klangbestandteile": "Aka + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 21,
+      "Name": "Arunui",
+      "Geschlecht": "männlich",
+      "Aussprache": "arunui",
+      "Klangbestandteile": "Aru + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 22,
+      "Name": "Aruroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruroa",
+      "Klangbestandteile": "Aru + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 23,
+      "Name": "Arutane",
+      "Geschlecht": "männlich",
+      "Aussprache": "arutane",
+      "Klangbestandteile": "Aru + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 24,
+      "Name": "Aruvaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruvaka",
+      "Klangbestandteile": "Aru + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 25,
+      "Name": "Arurangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "arurangi",
+      "Klangbestandteile": "Aru + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 26,
+      "Name": "Arumoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "arumoana",
+      "Klangbestandteile": "Aru + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 27,
+      "Name": "Aruhau",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruhau",
+      "Klangbestandteile": "Aru + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 28,
+      "Name": "Arutoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "arutoa",
+      "Klangbestandteile": "Aru + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 29,
+      "Name": "Arumara",
+      "Geschlecht": "männlich",
+      "Aussprache": "arumara",
+      "Klangbestandteile": "Aru + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 30,
+      "Name": "Arutapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "arutapu",
+      "Klangbestandteile": "Aru + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 31,
+      "Name": "Arumana",
+      "Geschlecht": "männlich",
+      "Aussprache": "arumana",
+      "Klangbestandteile": "Aru + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 32,
+      "Name": "Arukoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "arukoro",
+      "Klangbestandteile": "Aru + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 33,
+      "Name": "Arupuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "arupuna",
+      "Klangbestandteile": "Aru + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 34,
+      "Name": "Arurima",
+      "Geschlecht": "männlich",
+      "Aussprache": "arurima",
+      "Klangbestandteile": "Aru + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 35,
+      "Name": "Arusava",
+      "Geschlecht": "männlich",
+      "Aussprache": "arusava",
+      "Klangbestandteile": "Aru + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 36,
+      "Name": "Arutava",
+      "Geschlecht": "männlich",
+      "Aussprache": "arutava",
+      "Klangbestandteile": "Aru + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 37,
+      "Name": "Aruxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruxara",
+      "Klangbestandteile": "Aru + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 38,
+      "Name": "Aruzaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruzaro",
+      "Klangbestandteile": "Aru + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 39,
+      "Name": "Aruorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruorius",
+      "Klangbestandteile": "Aru + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 40,
+      "Name": "Aruanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "aruanus",
+      "Klangbestandteile": "Aru + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 41,
+      "Name": "Avanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "avanui",
+      "Klangbestandteile": "Ava + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 42,
+      "Name": "Avaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "avaroa",
+      "Klangbestandteile": "Ava + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 43,
+      "Name": "Avatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "avatane",
+      "Klangbestandteile": "Ava + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 44,
+      "Name": "Avavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "avavaka",
+      "Klangbestandteile": "Ava + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 45,
+      "Name": "Avarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "avarangi",
+      "Klangbestandteile": "Ava + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 46,
+      "Name": "Avamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "avamoana",
+      "Klangbestandteile": "Ava + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 47,
+      "Name": "Avahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "avahau",
+      "Klangbestandteile": "Ava + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 48,
+      "Name": "Avatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "avatoa",
+      "Klangbestandteile": "Ava + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 49,
+      "Name": "Avamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "avamara",
+      "Klangbestandteile": "Ava + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 50,
+      "Name": "Avatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "avatapu",
+      "Klangbestandteile": "Ava + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 51,
+      "Name": "Avamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "avamana",
+      "Klangbestandteile": "Ava + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 52,
+      "Name": "Avakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "avakoro",
+      "Klangbestandteile": "Ava + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 53,
+      "Name": "Avapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "avapuna",
+      "Klangbestandteile": "Ava + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 54,
+      "Name": "Avarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "avarima",
+      "Klangbestandteile": "Ava + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 55,
+      "Name": "Avasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "avasava",
+      "Klangbestandteile": "Ava + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 56,
+      "Name": "Avatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "avatava",
+      "Klangbestandteile": "Ava + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 57,
+      "Name": "Avaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "avaxara",
+      "Klangbestandteile": "Ava + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 58,
+      "Name": "Avazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "avazaro",
+      "Klangbestandteile": "Ava + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 59,
+      "Name": "Avaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "avaorius",
+      "Klangbestandteile": "Ava + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 60,
+      "Name": "Avanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "avanus",
+      "Klangbestandteile": "Ava + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 61,
+      "Name": "Ekanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekanui",
+      "Klangbestandteile": "Eka + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 62,
+      "Name": "Ekaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekaroa",
+      "Klangbestandteile": "Eka + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 63,
+      "Name": "Ekatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekatane",
+      "Klangbestandteile": "Eka + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 64,
+      "Name": "Ekavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekavaka",
+      "Klangbestandteile": "Eka + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 65,
+      "Name": "Ekarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekarangi",
+      "Klangbestandteile": "Eka + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 66,
+      "Name": "Ekamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekamoana",
+      "Klangbestandteile": "Eka + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 67,
+      "Name": "Ekahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekahau",
+      "Klangbestandteile": "Eka + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 68,
+      "Name": "Ekatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekatoa",
+      "Klangbestandteile": "Eka + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 69,
+      "Name": "Ekamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekamara",
+      "Klangbestandteile": "Eka + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 70,
+      "Name": "Ekatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekatapu",
+      "Klangbestandteile": "Eka + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 71,
+      "Name": "Ekamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekamana",
+      "Klangbestandteile": "Eka + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 72,
+      "Name": "Ekakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekakoro",
+      "Klangbestandteile": "Eka + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 73,
+      "Name": "Ekapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekapuna",
+      "Klangbestandteile": "Eka + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 74,
+      "Name": "Ekarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekarima",
+      "Klangbestandteile": "Eka + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 75,
+      "Name": "Ekasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekasava",
+      "Klangbestandteile": "Eka + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 76,
+      "Name": "Ekatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekatava",
+      "Klangbestandteile": "Eka + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 77,
+      "Name": "Ekaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekaxara",
+      "Klangbestandteile": "Eka + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 78,
+      "Name": "Ekazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekazaro",
+      "Klangbestandteile": "Eka + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 79,
+      "Name": "Ekaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekaorius",
+      "Klangbestandteile": "Eka + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 80,
+      "Name": "Ekanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "ekanus",
+      "Klangbestandteile": "Eka + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 81,
+      "Name": "Erunui",
+      "Geschlecht": "männlich",
+      "Aussprache": "erunui",
+      "Klangbestandteile": "Eru + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 82,
+      "Name": "Eruroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruroa",
+      "Klangbestandteile": "Eru + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 83,
+      "Name": "Erutane",
+      "Geschlecht": "männlich",
+      "Aussprache": "erutane",
+      "Klangbestandteile": "Eru + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 84,
+      "Name": "Eruvaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruvaka",
+      "Klangbestandteile": "Eru + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 85,
+      "Name": "Erurangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "erurangi",
+      "Klangbestandteile": "Eru + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 86,
+      "Name": "Erumoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "erumoana",
+      "Klangbestandteile": "Eru + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 87,
+      "Name": "Eruhau",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruhau",
+      "Klangbestandteile": "Eru + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 88,
+      "Name": "Erutoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "erutoa",
+      "Klangbestandteile": "Eru + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 89,
+      "Name": "Erumara",
+      "Geschlecht": "männlich",
+      "Aussprache": "erumara",
+      "Klangbestandteile": "Eru + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 90,
+      "Name": "Erutapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "erutapu",
+      "Klangbestandteile": "Eru + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 91,
+      "Name": "Erumana",
+      "Geschlecht": "männlich",
+      "Aussprache": "erumana",
+      "Klangbestandteile": "Eru + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 92,
+      "Name": "Erukoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "erukoro",
+      "Klangbestandteile": "Eru + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 93,
+      "Name": "Erupuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "erupuna",
+      "Klangbestandteile": "Eru + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 94,
+      "Name": "Erurima",
+      "Geschlecht": "männlich",
+      "Aussprache": "erurima",
+      "Klangbestandteile": "Eru + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 95,
+      "Name": "Erusava",
+      "Geschlecht": "männlich",
+      "Aussprache": "erusava",
+      "Klangbestandteile": "Eru + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 96,
+      "Name": "Erutava",
+      "Geschlecht": "männlich",
+      "Aussprache": "erutava",
+      "Klangbestandteile": "Eru + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 97,
+      "Name": "Eruxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruxara",
+      "Klangbestandteile": "Eru + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 98,
+      "Name": "Eruzaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruzaro",
+      "Klangbestandteile": "Eru + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 99,
+      "Name": "Eruorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruorius",
+      "Klangbestandteile": "Eru + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 100,
+      "Name": "Eruanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "eruanus",
+      "Klangbestandteile": "Eru + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 101,
+      "Name": "Ikanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikanui",
+      "Klangbestandteile": "Ika + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 102,
+      "Name": "Ikaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikaroa",
+      "Klangbestandteile": "Ika + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 103,
+      "Name": "Ikatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikatane",
+      "Klangbestandteile": "Ika + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 104,
+      "Name": "Ikavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikavaka",
+      "Klangbestandteile": "Ika + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 105,
+      "Name": "Ikarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikarangi",
+      "Klangbestandteile": "Ika + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 106,
+      "Name": "Ikamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikamoana",
+      "Klangbestandteile": "Ika + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 107,
+      "Name": "Ikahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikahau",
+      "Klangbestandteile": "Ika + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 108,
+      "Name": "Ikatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikatoa",
+      "Klangbestandteile": "Ika + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 109,
+      "Name": "Ikamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikamara",
+      "Klangbestandteile": "Ika + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 110,
+      "Name": "Ikatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikatapu",
+      "Klangbestandteile": "Ika + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 111,
+      "Name": "Ikamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikamana",
+      "Klangbestandteile": "Ika + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 112,
+      "Name": "Ikakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikakoro",
+      "Klangbestandteile": "Ika + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 113,
+      "Name": "Ikapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikapuna",
+      "Klangbestandteile": "Ika + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 114,
+      "Name": "Ikarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikarima",
+      "Klangbestandteile": "Ika + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 115,
+      "Name": "Ikasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikasava",
+      "Klangbestandteile": "Ika + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 116,
+      "Name": "Ikatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikatava",
+      "Klangbestandteile": "Ika + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 117,
+      "Name": "Ikaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikaxara",
+      "Klangbestandteile": "Ika + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 118,
+      "Name": "Ikazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikazaro",
+      "Klangbestandteile": "Ika + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 119,
+      "Name": "Ikaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikaorius",
+      "Klangbestandteile": "Ika + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 120,
+      "Name": "Ikanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "ikanus",
+      "Klangbestandteile": "Ika + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 121,
+      "Name": "Irunui",
+      "Geschlecht": "männlich",
+      "Aussprache": "irunui",
+      "Klangbestandteile": "Iru + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 122,
+      "Name": "Iruroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruroa",
+      "Klangbestandteile": "Iru + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 123,
+      "Name": "Irutane",
+      "Geschlecht": "männlich",
+      "Aussprache": "irutane",
+      "Klangbestandteile": "Iru + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 124,
+      "Name": "Iruvaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruvaka",
+      "Klangbestandteile": "Iru + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 125,
+      "Name": "Irurangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "irurangi",
+      "Klangbestandteile": "Iru + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 126,
+      "Name": "Irumoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "irumoana",
+      "Klangbestandteile": "Iru + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 127,
+      "Name": "Iruhau",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruhau",
+      "Klangbestandteile": "Iru + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 128,
+      "Name": "Irutoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "irutoa",
+      "Klangbestandteile": "Iru + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 129,
+      "Name": "Irumara",
+      "Geschlecht": "männlich",
+      "Aussprache": "irumara",
+      "Klangbestandteile": "Iru + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 130,
+      "Name": "Irutapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "irutapu",
+      "Klangbestandteile": "Iru + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 131,
+      "Name": "Irumana",
+      "Geschlecht": "männlich",
+      "Aussprache": "irumana",
+      "Klangbestandteile": "Iru + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 132,
+      "Name": "Irukoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "irukoro",
+      "Klangbestandteile": "Iru + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 133,
+      "Name": "Irupuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "irupuna",
+      "Klangbestandteile": "Iru + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 134,
+      "Name": "Irurima",
+      "Geschlecht": "männlich",
+      "Aussprache": "irurima",
+      "Klangbestandteile": "Iru + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 135,
+      "Name": "Irusava",
+      "Geschlecht": "männlich",
+      "Aussprache": "irusava",
+      "Klangbestandteile": "Iru + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 136,
+      "Name": "Irutava",
+      "Geschlecht": "männlich",
+      "Aussprache": "irutava",
+      "Klangbestandteile": "Iru + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 137,
+      "Name": "Iruxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruxara",
+      "Klangbestandteile": "Iru + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 138,
+      "Name": "Iruzaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruzaro",
+      "Klangbestandteile": "Iru + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 139,
+      "Name": "Iruorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruorius",
+      "Klangbestandteile": "Iru + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 140,
+      "Name": "Iruanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "iruanus",
+      "Klangbestandteile": "Iru + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 141,
+      "Name": "Kaenui",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaenui",
+      "Klangbestandteile": "Kae + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 142,
+      "Name": "Kaeroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaeroa",
+      "Klangbestandteile": "Kae + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 143,
+      "Name": "Kaetane",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaetane",
+      "Klangbestandteile": "Kae + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 144,
+      "Name": "Kaevaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaevaka",
+      "Klangbestandteile": "Kae + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 145,
+      "Name": "Kaerangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaerangi",
+      "Klangbestandteile": "Kae + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 146,
+      "Name": "Kaemoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaemoana",
+      "Klangbestandteile": "Kae + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 147,
+      "Name": "Kaehau",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaehau",
+      "Klangbestandteile": "Kae + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 148,
+      "Name": "Kaetoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaetoa",
+      "Klangbestandteile": "Kae + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 149,
+      "Name": "Kaemara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaemara",
+      "Klangbestandteile": "Kae + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 150,
+      "Name": "Kaetapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaetapu",
+      "Klangbestandteile": "Kae + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 151,
+      "Name": "Kaemana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaemana",
+      "Klangbestandteile": "Kae + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 152,
+      "Name": "Kaekoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaekoro",
+      "Klangbestandteile": "Kae + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 153,
+      "Name": "Kaepuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaepuna",
+      "Klangbestandteile": "Kae + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 154,
+      "Name": "Kaerima",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaerima",
+      "Klangbestandteile": "Kae + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 155,
+      "Name": "Kaesava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaesava",
+      "Klangbestandteile": "Kae + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 156,
+      "Name": "Kaetava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaetava",
+      "Klangbestandteile": "Kae + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 157,
+      "Name": "Kaexara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaexara",
+      "Klangbestandteile": "Kae + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 158,
+      "Name": "Kaezaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaezaro",
+      "Klangbestandteile": "Kae + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 159,
+      "Name": "Kaeorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaeorius",
+      "Klangbestandteile": "Kae + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 160,
+      "Name": "Kaeanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaeanus",
+      "Klangbestandteile": "Kae + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 161,
+      "Name": "Kainui",
+      "Geschlecht": "männlich",
+      "Aussprache": "kainui",
+      "Klangbestandteile": "Kai + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 162,
+      "Name": "Kairoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kairoa",
+      "Klangbestandteile": "Kai + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 163,
+      "Name": "Kaitane",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaitane",
+      "Klangbestandteile": "Kai + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 164,
+      "Name": "Kaivaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaivaka",
+      "Klangbestandteile": "Kai + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 165,
+      "Name": "Kairangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "kairangi",
+      "Klangbestandteile": "Kai + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 166,
+      "Name": "Kaimoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaimoana",
+      "Klangbestandteile": "Kai + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 167,
+      "Name": "Kaihau",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaihau",
+      "Klangbestandteile": "Kai + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 168,
+      "Name": "Kaitoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaitoa",
+      "Klangbestandteile": "Kai + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 169,
+      "Name": "Kaimara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaimara",
+      "Klangbestandteile": "Kai + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 170,
+      "Name": "Kaitapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaitapu",
+      "Klangbestandteile": "Kai + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 171,
+      "Name": "Kaimana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaimana",
+      "Klangbestandteile": "Kai + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 172,
+      "Name": "Kaikoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaikoro",
+      "Klangbestandteile": "Kai + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 173,
+      "Name": "Kaipuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaipuna",
+      "Klangbestandteile": "Kai + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 174,
+      "Name": "Kairima",
+      "Geschlecht": "männlich",
+      "Aussprache": "kairima",
+      "Klangbestandteile": "Kai + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 175,
+      "Name": "Kaisava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaisava",
+      "Klangbestandteile": "Kai + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 176,
+      "Name": "Kaitava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaitava",
+      "Klangbestandteile": "Kai + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 177,
+      "Name": "Kaixara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaixara",
+      "Klangbestandteile": "Kai + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 178,
+      "Name": "Kaizaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaizaro",
+      "Klangbestandteile": "Kai + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 179,
+      "Name": "Kaiorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaiorius",
+      "Klangbestandteile": "Kai + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 180,
+      "Name": "Kaianus",
+      "Geschlecht": "männlich",
+      "Aussprache": "kaianus",
+      "Klangbestandteile": "Kai + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 181,
+      "Name": "Karonui",
+      "Geschlecht": "männlich",
+      "Aussprache": "karonui",
+      "Klangbestandteile": "Karo + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 182,
+      "Name": "Karoroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "karoroa",
+      "Klangbestandteile": "Karo + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 183,
+      "Name": "Karotane",
+      "Geschlecht": "männlich",
+      "Aussprache": "karotane",
+      "Klangbestandteile": "Karo + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 184,
+      "Name": "Karovaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "karovaka",
+      "Klangbestandteile": "Karo + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 185,
+      "Name": "Karorangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "karorangi",
+      "Klangbestandteile": "Karo + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 186,
+      "Name": "Karomoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "karomoana",
+      "Klangbestandteile": "Karo + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 187,
+      "Name": "Karohau",
+      "Geschlecht": "männlich",
+      "Aussprache": "karohau",
+      "Klangbestandteile": "Karo + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 188,
+      "Name": "Karotoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "karotoa",
+      "Klangbestandteile": "Karo + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 189,
+      "Name": "Karomara",
+      "Geschlecht": "männlich",
+      "Aussprache": "karomara",
+      "Klangbestandteile": "Karo + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 190,
+      "Name": "Karotapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "karotapu",
+      "Klangbestandteile": "Karo + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 191,
+      "Name": "Karomana",
+      "Geschlecht": "männlich",
+      "Aussprache": "karomana",
+      "Klangbestandteile": "Karo + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 192,
+      "Name": "Karokoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "karokoro",
+      "Klangbestandteile": "Karo + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 193,
+      "Name": "Karopuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "karopuna",
+      "Klangbestandteile": "Karo + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 194,
+      "Name": "Karorima",
+      "Geschlecht": "männlich",
+      "Aussprache": "karorima",
+      "Klangbestandteile": "Karo + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 195,
+      "Name": "Karosava",
+      "Geschlecht": "männlich",
+      "Aussprache": "karosava",
+      "Klangbestandteile": "Karo + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 196,
+      "Name": "Karotava",
+      "Geschlecht": "männlich",
+      "Aussprache": "karotava",
+      "Klangbestandteile": "Karo + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 197,
+      "Name": "Karoxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "karoxara",
+      "Klangbestandteile": "Karo + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 198,
+      "Name": "Karozaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "karozaro",
+      "Klangbestandteile": "Karo + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 199,
+      "Name": "Karorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "karorius",
+      "Klangbestandteile": "Karo + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 200,
+      "Name": "Karoanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "karoanus",
+      "Klangbestandteile": "Karo + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 201,
+      "Name": "Lakanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakanui",
+      "Klangbestandteile": "Laka + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 202,
+      "Name": "Lakaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakaroa",
+      "Klangbestandteile": "Laka + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 203,
+      "Name": "Lakatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakatane",
+      "Klangbestandteile": "Laka + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 204,
+      "Name": "Lakavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakavaka",
+      "Klangbestandteile": "Laka + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 205,
+      "Name": "Lakarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakarangi",
+      "Klangbestandteile": "Laka + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 206,
+      "Name": "Lakamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakamoana",
+      "Klangbestandteile": "Laka + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 207,
+      "Name": "Lakahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakahau",
+      "Klangbestandteile": "Laka + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 208,
+      "Name": "Lakatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakatoa",
+      "Klangbestandteile": "Laka + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 209,
+      "Name": "Lakamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakamara",
+      "Klangbestandteile": "Laka + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 210,
+      "Name": "Lakatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakatapu",
+      "Klangbestandteile": "Laka + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 211,
+      "Name": "Lakamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakamana",
+      "Klangbestandteile": "Laka + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 212,
+      "Name": "Lakakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakakoro",
+      "Klangbestandteile": "Laka + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 213,
+      "Name": "Lakapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakapuna",
+      "Klangbestandteile": "Laka + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 214,
+      "Name": "Lakarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakarima",
+      "Klangbestandteile": "Laka + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 215,
+      "Name": "Lakasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakasava",
+      "Klangbestandteile": "Laka + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 216,
+      "Name": "Lakatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakatava",
+      "Klangbestandteile": "Laka + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 217,
+      "Name": "Lakaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakaxara",
+      "Klangbestandteile": "Laka + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 218,
+      "Name": "Lakazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakazaro",
+      "Klangbestandteile": "Laka + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 219,
+      "Name": "Lakaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakaorius",
+      "Klangbestandteile": "Laka + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 220,
+      "Name": "Lakanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "lakanus",
+      "Klangbestandteile": "Laka + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 221,
+      "Name": "Laninui",
+      "Geschlecht": "männlich",
+      "Aussprache": "laninui",
+      "Klangbestandteile": "Lani + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 222,
+      "Name": "Laniroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "laniroa",
+      "Klangbestandteile": "Lani + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 223,
+      "Name": "Lanitane",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanitane",
+      "Klangbestandteile": "Lani + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 224,
+      "Name": "Lanivaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanivaka",
+      "Klangbestandteile": "Lani + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 225,
+      "Name": "Lanirangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanirangi",
+      "Klangbestandteile": "Lani + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 226,
+      "Name": "Lanimoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanimoana",
+      "Klangbestandteile": "Lani + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 227,
+      "Name": "Lanihau",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanihau",
+      "Klangbestandteile": "Lani + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 228,
+      "Name": "Lanitoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanitoa",
+      "Klangbestandteile": "Lani + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 229,
+      "Name": "Lanimara",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanimara",
+      "Klangbestandteile": "Lani + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 230,
+      "Name": "Lanitapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanitapu",
+      "Klangbestandteile": "Lani + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 231,
+      "Name": "Lanimana",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanimana",
+      "Klangbestandteile": "Lani + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 232,
+      "Name": "Lanikoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanikoro",
+      "Klangbestandteile": "Lani + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 233,
+      "Name": "Lanipuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanipuna",
+      "Klangbestandteile": "Lani + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 234,
+      "Name": "Lanirima",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanirima",
+      "Klangbestandteile": "Lani + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 235,
+      "Name": "Lanisava",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanisava",
+      "Klangbestandteile": "Lani + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 236,
+      "Name": "Lanitava",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanitava",
+      "Klangbestandteile": "Lani + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 237,
+      "Name": "Lanixara",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanixara",
+      "Klangbestandteile": "Lani + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 238,
+      "Name": "Lanizaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanizaro",
+      "Klangbestandteile": "Lani + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 239,
+      "Name": "Laniorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "laniorius",
+      "Klangbestandteile": "Lani + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 240,
+      "Name": "Lanianus",
+      "Geschlecht": "männlich",
+      "Aussprache": "lanianus",
+      "Klangbestandteile": "Lani + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 241,
+      "Name": "Makonui",
+      "Geschlecht": "männlich",
+      "Aussprache": "makonui",
+      "Klangbestandteile": "Mako + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 242,
+      "Name": "Makoroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "makoroa",
+      "Klangbestandteile": "Mako + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 243,
+      "Name": "Makotane",
+      "Geschlecht": "männlich",
+      "Aussprache": "makotane",
+      "Klangbestandteile": "Mako + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 244,
+      "Name": "Makovaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "makovaka",
+      "Klangbestandteile": "Mako + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 245,
+      "Name": "Makorangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "makorangi",
+      "Klangbestandteile": "Mako + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 246,
+      "Name": "Makomoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "makomoana",
+      "Klangbestandteile": "Mako + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 247,
+      "Name": "Makohau",
+      "Geschlecht": "männlich",
+      "Aussprache": "makohau",
+      "Klangbestandteile": "Mako + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 248,
+      "Name": "Makotoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "makotoa",
+      "Klangbestandteile": "Mako + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 249,
+      "Name": "Makomara",
+      "Geschlecht": "männlich",
+      "Aussprache": "makomara",
+      "Klangbestandteile": "Mako + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 250,
+      "Name": "Makotapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "makotapu",
+      "Klangbestandteile": "Mako + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 251,
+      "Name": "Makomana",
+      "Geschlecht": "männlich",
+      "Aussprache": "makomana",
+      "Klangbestandteile": "Mako + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 252,
+      "Name": "Makokoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "makokoro",
+      "Klangbestandteile": "Mako + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 253,
+      "Name": "Makopuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "makopuna",
+      "Klangbestandteile": "Mako + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 254,
+      "Name": "Makorima",
+      "Geschlecht": "männlich",
+      "Aussprache": "makorima",
+      "Klangbestandteile": "Mako + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 255,
+      "Name": "Makosava",
+      "Geschlecht": "männlich",
+      "Aussprache": "makosava",
+      "Klangbestandteile": "Mako + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 256,
+      "Name": "Makotava",
+      "Geschlecht": "männlich",
+      "Aussprache": "makotava",
+      "Klangbestandteile": "Mako + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 257,
+      "Name": "Makoxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "makoxara",
+      "Klangbestandteile": "Mako + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 258,
+      "Name": "Makozaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "makozaro",
+      "Klangbestandteile": "Mako + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 259,
+      "Name": "Makorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "makorius",
+      "Klangbestandteile": "Mako + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 260,
+      "Name": "Makoanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "makoanus",
+      "Klangbestandteile": "Mako + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 261,
+      "Name": "Mananui",
+      "Geschlecht": "männlich",
+      "Aussprache": "mananui",
+      "Klangbestandteile": "Mana + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 262,
+      "Name": "Manaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "manaroa",
+      "Klangbestandteile": "Mana + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 263,
+      "Name": "Manatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "manatane",
+      "Klangbestandteile": "Mana + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 264,
+      "Name": "Manavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "manavaka",
+      "Klangbestandteile": "Mana + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 265,
+      "Name": "Manarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "manarangi",
+      "Klangbestandteile": "Mana + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 266,
+      "Name": "Manamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "manamoana",
+      "Klangbestandteile": "Mana + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 267,
+      "Name": "Manahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "manahau",
+      "Klangbestandteile": "Mana + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 268,
+      "Name": "Manatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "manatoa",
+      "Klangbestandteile": "Mana + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 269,
+      "Name": "Manamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "manamara",
+      "Klangbestandteile": "Mana + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 270,
+      "Name": "Manatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "manatapu",
+      "Klangbestandteile": "Mana + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 271,
+      "Name": "Manamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "manamana",
+      "Klangbestandteile": "Mana + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 272,
+      "Name": "Manakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "manakoro",
+      "Klangbestandteile": "Mana + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 273,
+      "Name": "Manapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "manapuna",
+      "Klangbestandteile": "Mana + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 274,
+      "Name": "Manarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "manarima",
+      "Klangbestandteile": "Mana + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 275,
+      "Name": "Manasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "manasava",
+      "Klangbestandteile": "Mana + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 276,
+      "Name": "Manatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "manatava",
+      "Klangbestandteile": "Mana + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 277,
+      "Name": "Manaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "manaxara",
+      "Klangbestandteile": "Mana + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 278,
+      "Name": "Manazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "manazaro",
+      "Klangbestandteile": "Mana + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 279,
+      "Name": "Manaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "manaorius",
+      "Klangbestandteile": "Mana + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 280,
+      "Name": "Mananus",
+      "Geschlecht": "männlich",
+      "Aussprache": "mananus",
+      "Klangbestandteile": "Mana + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 281,
+      "Name": "Matunui",
+      "Geschlecht": "männlich",
+      "Aussprache": "matunui",
+      "Klangbestandteile": "Matu + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 282,
+      "Name": "Maturoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "maturoa",
+      "Klangbestandteile": "Matu + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 283,
+      "Name": "Matutane",
+      "Geschlecht": "männlich",
+      "Aussprache": "matutane",
+      "Klangbestandteile": "Matu + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 284,
+      "Name": "Matuvaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuvaka",
+      "Klangbestandteile": "Matu + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 285,
+      "Name": "Maturangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "maturangi",
+      "Klangbestandteile": "Matu + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 286,
+      "Name": "Matumoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "matumoana",
+      "Klangbestandteile": "Matu + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 287,
+      "Name": "Matuhau",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuhau",
+      "Klangbestandteile": "Matu + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 288,
+      "Name": "Matutoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "matutoa",
+      "Klangbestandteile": "Matu + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 289,
+      "Name": "Matumara",
+      "Geschlecht": "männlich",
+      "Aussprache": "matumara",
+      "Klangbestandteile": "Matu + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 290,
+      "Name": "Matutapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "matutapu",
+      "Klangbestandteile": "Matu + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 291,
+      "Name": "Matumana",
+      "Geschlecht": "männlich",
+      "Aussprache": "matumana",
+      "Klangbestandteile": "Matu + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 292,
+      "Name": "Matukoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "matukoro",
+      "Klangbestandteile": "Matu + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 293,
+      "Name": "Matupuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "matupuna",
+      "Klangbestandteile": "Matu + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 294,
+      "Name": "Maturima",
+      "Geschlecht": "männlich",
+      "Aussprache": "maturima",
+      "Klangbestandteile": "Matu + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 295,
+      "Name": "Matusava",
+      "Geschlecht": "männlich",
+      "Aussprache": "matusava",
+      "Klangbestandteile": "Matu + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 296,
+      "Name": "Matutava",
+      "Geschlecht": "männlich",
+      "Aussprache": "matutava",
+      "Klangbestandteile": "Matu + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 297,
+      "Name": "Matuxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuxara",
+      "Klangbestandteile": "Matu + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 298,
+      "Name": "Matuzaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuzaro",
+      "Klangbestandteile": "Matu + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 299,
+      "Name": "Matuorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuorius",
+      "Klangbestandteile": "Matu + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 300,
+      "Name": "Matuanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "matuanus",
+      "Klangbestandteile": "Matu + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 301,
+      "Name": "Nakanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakanui",
+      "Klangbestandteile": "Naka + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 302,
+      "Name": "Nakaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakaroa",
+      "Klangbestandteile": "Naka + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 303,
+      "Name": "Nakatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakatane",
+      "Klangbestandteile": "Naka + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 304,
+      "Name": "Nakavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakavaka",
+      "Klangbestandteile": "Naka + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 305,
+      "Name": "Nakarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakarangi",
+      "Klangbestandteile": "Naka + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 306,
+      "Name": "Nakamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakamoana",
+      "Klangbestandteile": "Naka + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 307,
+      "Name": "Nakahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakahau",
+      "Klangbestandteile": "Naka + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 308,
+      "Name": "Nakatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakatoa",
+      "Klangbestandteile": "Naka + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 309,
+      "Name": "Nakamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakamara",
+      "Klangbestandteile": "Naka + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 310,
+      "Name": "Nakatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakatapu",
+      "Klangbestandteile": "Naka + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 311,
+      "Name": "Nakamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakamana",
+      "Klangbestandteile": "Naka + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 312,
+      "Name": "Nakakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakakoro",
+      "Klangbestandteile": "Naka + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 313,
+      "Name": "Nakapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakapuna",
+      "Klangbestandteile": "Naka + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 314,
+      "Name": "Nakarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakarima",
+      "Klangbestandteile": "Naka + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 315,
+      "Name": "Nakasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakasava",
+      "Klangbestandteile": "Naka + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 316,
+      "Name": "Nakatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakatava",
+      "Klangbestandteile": "Naka + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 317,
+      "Name": "Nakaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakaxara",
+      "Klangbestandteile": "Naka + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 318,
+      "Name": "Nakazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakazaro",
+      "Klangbestandteile": "Naka + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 319,
+      "Name": "Nakaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakaorius",
+      "Klangbestandteile": "Naka + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 320,
+      "Name": "Nakanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "nakanus",
+      "Klangbestandteile": "Naka + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 321,
+      "Name": "Naronui",
+      "Geschlecht": "männlich",
+      "Aussprache": "naronui",
+      "Klangbestandteile": "Naro + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 322,
+      "Name": "Naroroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "naroroa",
+      "Klangbestandteile": "Naro + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 323,
+      "Name": "Narotane",
+      "Geschlecht": "männlich",
+      "Aussprache": "narotane",
+      "Klangbestandteile": "Naro + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 324,
+      "Name": "Narovaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "narovaka",
+      "Klangbestandteile": "Naro + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 325,
+      "Name": "Narorangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "narorangi",
+      "Klangbestandteile": "Naro + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 326,
+      "Name": "Naromoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "naromoana",
+      "Klangbestandteile": "Naro + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 327,
+      "Name": "Narohau",
+      "Geschlecht": "männlich",
+      "Aussprache": "narohau",
+      "Klangbestandteile": "Naro + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 328,
+      "Name": "Narotoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "narotoa",
+      "Klangbestandteile": "Naro + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 329,
+      "Name": "Naromara",
+      "Geschlecht": "männlich",
+      "Aussprache": "naromara",
+      "Klangbestandteile": "Naro + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 330,
+      "Name": "Narotapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "narotapu",
+      "Klangbestandteile": "Naro + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 331,
+      "Name": "Naromana",
+      "Geschlecht": "männlich",
+      "Aussprache": "naromana",
+      "Klangbestandteile": "Naro + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 332,
+      "Name": "Narokoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "narokoro",
+      "Klangbestandteile": "Naro + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 333,
+      "Name": "Naropuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "naropuna",
+      "Klangbestandteile": "Naro + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 334,
+      "Name": "Narorima",
+      "Geschlecht": "männlich",
+      "Aussprache": "narorima",
+      "Klangbestandteile": "Naro + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 335,
+      "Name": "Narosava",
+      "Geschlecht": "männlich",
+      "Aussprache": "narosava",
+      "Klangbestandteile": "Naro + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 336,
+      "Name": "Narotava",
+      "Geschlecht": "männlich",
+      "Aussprache": "narotava",
+      "Klangbestandteile": "Naro + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 337,
+      "Name": "Naroxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "naroxara",
+      "Klangbestandteile": "Naro + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 338,
+      "Name": "Narozaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "narozaro",
+      "Klangbestandteile": "Naro + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 339,
+      "Name": "Narorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "narorius",
+      "Klangbestandteile": "Naro + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 340,
+      "Name": "Naroanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "naroanus",
+      "Klangbestandteile": "Naro + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 341,
+      "Name": "Pakunui",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakunui",
+      "Klangbestandteile": "Paku + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 342,
+      "Name": "Pakuroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuroa",
+      "Klangbestandteile": "Paku + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 343,
+      "Name": "Pakutane",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakutane",
+      "Klangbestandteile": "Paku + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 344,
+      "Name": "Pakuvaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuvaka",
+      "Klangbestandteile": "Paku + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 345,
+      "Name": "Pakurangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakurangi",
+      "Klangbestandteile": "Paku + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 346,
+      "Name": "Pakumoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakumoana",
+      "Klangbestandteile": "Paku + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 347,
+      "Name": "Pakuhau",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuhau",
+      "Klangbestandteile": "Paku + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 348,
+      "Name": "Pakutoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakutoa",
+      "Klangbestandteile": "Paku + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 349,
+      "Name": "Pakumara",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakumara",
+      "Klangbestandteile": "Paku + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 350,
+      "Name": "Pakutapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakutapu",
+      "Klangbestandteile": "Paku + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 351,
+      "Name": "Pakumana",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakumana",
+      "Klangbestandteile": "Paku + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 352,
+      "Name": "Pakukoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakukoro",
+      "Klangbestandteile": "Paku + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 353,
+      "Name": "Pakupuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakupuna",
+      "Klangbestandteile": "Paku + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 354,
+      "Name": "Pakurima",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakurima",
+      "Klangbestandteile": "Paku + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 355,
+      "Name": "Pakusava",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakusava",
+      "Klangbestandteile": "Paku + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 356,
+      "Name": "Pakutava",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakutava",
+      "Klangbestandteile": "Paku + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 357,
+      "Name": "Pakuxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuxara",
+      "Klangbestandteile": "Paku + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 358,
+      "Name": "Pakuzaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuzaro",
+      "Klangbestandteile": "Paku + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 359,
+      "Name": "Pakuorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuorius",
+      "Klangbestandteile": "Paku + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 360,
+      "Name": "Pakuanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "pakuanus",
+      "Klangbestandteile": "Paku + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 361,
+      "Name": "Rapanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapanui",
+      "Klangbestandteile": "Rapa + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 362,
+      "Name": "Raparoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "raparoa",
+      "Klangbestandteile": "Rapa + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 363,
+      "Name": "Rapatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapatane",
+      "Klangbestandteile": "Rapa + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 364,
+      "Name": "Rapavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapavaka",
+      "Klangbestandteile": "Rapa + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 365,
+      "Name": "Raparangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "raparangi",
+      "Klangbestandteile": "Rapa + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 366,
+      "Name": "Rapamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapamoana",
+      "Klangbestandteile": "Rapa + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 367,
+      "Name": "Rapahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapahau",
+      "Klangbestandteile": "Rapa + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 368,
+      "Name": "Rapatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapatoa",
+      "Klangbestandteile": "Rapa + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 369,
+      "Name": "Rapamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapamara",
+      "Klangbestandteile": "Rapa + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 370,
+      "Name": "Rapatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapatapu",
+      "Klangbestandteile": "Rapa + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 371,
+      "Name": "Rapamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapamana",
+      "Klangbestandteile": "Rapa + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 372,
+      "Name": "Rapakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapakoro",
+      "Klangbestandteile": "Rapa + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 373,
+      "Name": "Rapapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapapuna",
+      "Klangbestandteile": "Rapa + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 374,
+      "Name": "Raparima",
+      "Geschlecht": "männlich",
+      "Aussprache": "raparima",
+      "Klangbestandteile": "Rapa + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 375,
+      "Name": "Rapasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapasava",
+      "Klangbestandteile": "Rapa + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 376,
+      "Name": "Rapatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapatava",
+      "Klangbestandteile": "Rapa + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 377,
+      "Name": "Rapaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapaxara",
+      "Klangbestandteile": "Rapa + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 378,
+      "Name": "Rapazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapazaro",
+      "Klangbestandteile": "Rapa + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 379,
+      "Name": "Rapaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapaorius",
+      "Klangbestandteile": "Rapa + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 380,
+      "Name": "Rapanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "rapanus",
+      "Klangbestandteile": "Rapa + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 381,
+      "Name": "Tamanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamanui",
+      "Klangbestandteile": "Tama + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 382,
+      "Name": "Tamaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamaroa",
+      "Klangbestandteile": "Tama + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 383,
+      "Name": "Tamatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamatane",
+      "Klangbestandteile": "Tama + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 384,
+      "Name": "Tamavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamavaka",
+      "Klangbestandteile": "Tama + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 385,
+      "Name": "Tamarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamarangi",
+      "Klangbestandteile": "Tama + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 386,
+      "Name": "Tamamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamamoana",
+      "Klangbestandteile": "Tama + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 387,
+      "Name": "Tamahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamahau",
+      "Klangbestandteile": "Tama + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 388,
+      "Name": "Tamatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamatoa",
+      "Klangbestandteile": "Tama + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 389,
+      "Name": "Tamamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamamara",
+      "Klangbestandteile": "Tama + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 390,
+      "Name": "Tamatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamatapu",
+      "Klangbestandteile": "Tama + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 391,
+      "Name": "Tamamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamamana",
+      "Klangbestandteile": "Tama + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 392,
+      "Name": "Tamakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamakoro",
+      "Klangbestandteile": "Tama + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 393,
+      "Name": "Tamapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamapuna",
+      "Klangbestandteile": "Tama + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 394,
+      "Name": "Tamarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamarima",
+      "Klangbestandteile": "Tama + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 395,
+      "Name": "Tamasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamasava",
+      "Klangbestandteile": "Tama + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 396,
+      "Name": "Tamatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamatava",
+      "Klangbestandteile": "Tama + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 397,
+      "Name": "Tamaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamaxara",
+      "Klangbestandteile": "Tama + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 398,
+      "Name": "Tamazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamazaro",
+      "Klangbestandteile": "Tama + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 399,
+      "Name": "Tamaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamaorius",
+      "Klangbestandteile": "Tama + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 400,
+      "Name": "Tamanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "tamanus",
+      "Klangbestandteile": "Tama + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 401,
+      "Name": "Taronui",
+      "Geschlecht": "männlich",
+      "Aussprache": "taronui",
+      "Klangbestandteile": "Taro + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 402,
+      "Name": "Taroroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "taroroa",
+      "Klangbestandteile": "Taro + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 403,
+      "Name": "Tarotane",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarotane",
+      "Klangbestandteile": "Taro + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 404,
+      "Name": "Tarovaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarovaka",
+      "Klangbestandteile": "Taro + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 405,
+      "Name": "Tarorangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarorangi",
+      "Klangbestandteile": "Taro + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 406,
+      "Name": "Taromoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "taromoana",
+      "Klangbestandteile": "Taro + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 407,
+      "Name": "Tarohau",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarohau",
+      "Klangbestandteile": "Taro + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 408,
+      "Name": "Tarotoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarotoa",
+      "Klangbestandteile": "Taro + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 409,
+      "Name": "Taromara",
+      "Geschlecht": "männlich",
+      "Aussprache": "taromara",
+      "Klangbestandteile": "Taro + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 410,
+      "Name": "Tarotapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarotapu",
+      "Klangbestandteile": "Taro + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 411,
+      "Name": "Taromana",
+      "Geschlecht": "männlich",
+      "Aussprache": "taromana",
+      "Klangbestandteile": "Taro + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 412,
+      "Name": "Tarokoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarokoro",
+      "Klangbestandteile": "Taro + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 413,
+      "Name": "Taropuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "taropuna",
+      "Klangbestandteile": "Taro + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 414,
+      "Name": "Tarorima",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarorima",
+      "Klangbestandteile": "Taro + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 415,
+      "Name": "Tarosava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarosava",
+      "Klangbestandteile": "Taro + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 416,
+      "Name": "Tarotava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarotava",
+      "Klangbestandteile": "Taro + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 417,
+      "Name": "Taroxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "taroxara",
+      "Klangbestandteile": "Taro + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 418,
+      "Name": "Tarozaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarozaro",
+      "Klangbestandteile": "Taro + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 419,
+      "Name": "Tarorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "tarorius",
+      "Klangbestandteile": "Taro + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 420,
+      "Name": "Taroanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "taroanus",
+      "Klangbestandteile": "Taro + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 421,
+      "Name": "Tavanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavanui",
+      "Klangbestandteile": "Tava + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 422,
+      "Name": "Tavaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavaroa",
+      "Klangbestandteile": "Tava + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 423,
+      "Name": "Tavatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavatane",
+      "Klangbestandteile": "Tava + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 424,
+      "Name": "Tavavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavavaka",
+      "Klangbestandteile": "Tava + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 425,
+      "Name": "Tavarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavarangi",
+      "Klangbestandteile": "Tava + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 426,
+      "Name": "Tavamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavamoana",
+      "Klangbestandteile": "Tava + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 427,
+      "Name": "Tavahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavahau",
+      "Klangbestandteile": "Tava + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 428,
+      "Name": "Tavatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavatoa",
+      "Klangbestandteile": "Tava + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 429,
+      "Name": "Tavamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavamara",
+      "Klangbestandteile": "Tava + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 430,
+      "Name": "Tavatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavatapu",
+      "Klangbestandteile": "Tava + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 431,
+      "Name": "Tavamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavamana",
+      "Klangbestandteile": "Tava + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 432,
+      "Name": "Tavakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavakoro",
+      "Klangbestandteile": "Tava + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 433,
+      "Name": "Tavapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavapuna",
+      "Klangbestandteile": "Tava + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 434,
+      "Name": "Tavarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavarima",
+      "Klangbestandteile": "Tava + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 435,
+      "Name": "Tavasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavasava",
+      "Klangbestandteile": "Tava + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 436,
+      "Name": "Tavatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavatava",
+      "Klangbestandteile": "Tava + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 437,
+      "Name": "Tavaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavaxara",
+      "Klangbestandteile": "Tava + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 438,
+      "Name": "Tavazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavazaro",
+      "Klangbestandteile": "Tava + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 439,
+      "Name": "Tavaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavaorius",
+      "Klangbestandteile": "Tava + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 440,
+      "Name": "Tavanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "tavanus",
+      "Klangbestandteile": "Tava + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 441,
+      "Name": "Tlakanui",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakanui",
+      "Klangbestandteile": "Tlaka + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 442,
+      "Name": "Tlakaroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakaroa",
+      "Klangbestandteile": "Tlaka + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 443,
+      "Name": "Tlakatane",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakatane",
+      "Klangbestandteile": "Tlaka + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 444,
+      "Name": "Tlakavaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakavaka",
+      "Klangbestandteile": "Tlaka + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 445,
+      "Name": "Tlakarangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakarangi",
+      "Klangbestandteile": "Tlaka + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 446,
+      "Name": "Tlakamoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakamoana",
+      "Klangbestandteile": "Tlaka + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 447,
+      "Name": "Tlakahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakahau",
+      "Klangbestandteile": "Tlaka + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 448,
+      "Name": "Tlakatoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakatoa",
+      "Klangbestandteile": "Tlaka + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 449,
+      "Name": "Tlakamara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakamara",
+      "Klangbestandteile": "Tlaka + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 450,
+      "Name": "Tlakatapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakatapu",
+      "Klangbestandteile": "Tlaka + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 451,
+      "Name": "Tlakamana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakamana",
+      "Klangbestandteile": "Tlaka + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 452,
+      "Name": "Tlakakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakakoro",
+      "Klangbestandteile": "Tlaka + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 453,
+      "Name": "Tlakapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakapuna",
+      "Klangbestandteile": "Tlaka + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 454,
+      "Name": "Tlakarima",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakarima",
+      "Klangbestandteile": "Tlaka + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 455,
+      "Name": "Tlakasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakasava",
+      "Klangbestandteile": "Tlaka + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 456,
+      "Name": "Tlakatava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakatava",
+      "Klangbestandteile": "Tlaka + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 457,
+      "Name": "Tlakaxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakaxara",
+      "Klangbestandteile": "Tlaka + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 458,
+      "Name": "Tlakazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakazaro",
+      "Klangbestandteile": "Tlaka + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 459,
+      "Name": "Tlakaorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakaorius",
+      "Klangbestandteile": "Tlaka + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 460,
+      "Name": "Tlakanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "tɬakanus",
+      "Klangbestandteile": "Tlaka + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 461,
+      "Name": "Tsaronui",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaronui",
+      "Klangbestandteile": "Tsaro + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 462,
+      "Name": "Tsaroroa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaroroa",
+      "Klangbestandteile": "Tsaro + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 463,
+      "Name": "Tsarotane",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarotane",
+      "Klangbestandteile": "Tsaro + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 464,
+      "Name": "Tsarovaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarovaka",
+      "Klangbestandteile": "Tsaro + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 465,
+      "Name": "Tsarorangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarorangi",
+      "Klangbestandteile": "Tsaro + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 466,
+      "Name": "Tsaromoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaromoana",
+      "Klangbestandteile": "Tsaro + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 467,
+      "Name": "Tsarohau",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarohau",
+      "Klangbestandteile": "Tsaro + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 468,
+      "Name": "Tsarotoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarotoa",
+      "Klangbestandteile": "Tsaro + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 469,
+      "Name": "Tsaromara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaromara",
+      "Klangbestandteile": "Tsaro + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 470,
+      "Name": "Tsarotapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarotapu",
+      "Klangbestandteile": "Tsaro + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 471,
+      "Name": "Tsaromana",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaromana",
+      "Klangbestandteile": "Tsaro + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 472,
+      "Name": "Tsarokoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarokoro",
+      "Klangbestandteile": "Tsaro + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 473,
+      "Name": "Tsaropuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaropuna",
+      "Klangbestandteile": "Tsaro + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 474,
+      "Name": "Tsarorima",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarorima",
+      "Klangbestandteile": "Tsaro + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 475,
+      "Name": "Tsarosava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarosava",
+      "Klangbestandteile": "Tsaro + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 476,
+      "Name": "Tsarotava",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarotava",
+      "Klangbestandteile": "Tsaro + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 477,
+      "Name": "Tsaroxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaroxara",
+      "Klangbestandteile": "Tsaro + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 478,
+      "Name": "Tsarozaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarozaro",
+      "Klangbestandteile": "Tsaro + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 479,
+      "Name": "Tsarorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsarorius",
+      "Klangbestandteile": "Tsaro + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 480,
+      "Name": "Tsaroanus",
+      "Geschlecht": "männlich",
+      "Aussprache": "tsaroanus",
+      "Klangbestandteile": "Tsaro + anus",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 481,
+      "Name": "Quaranui",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaranui",
+      "Klangbestandteile": "Quara + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 482,
+      "Name": "Quararoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwararoa",
+      "Klangbestandteile": "Quara + roa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 483,
+      "Name": "Quaratane",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaratane",
+      "Klangbestandteile": "Quara + tane",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 484,
+      "Name": "Quaravaka",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaravaka",
+      "Klangbestandteile": "Quara + vaka",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 485,
+      "Name": "Quararangi",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwararangi",
+      "Klangbestandteile": "Quara + rangi",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 486,
+      "Name": "Quaramoana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaramoana",
+      "Klangbestandteile": "Quara + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 487,
+      "Name": "Quarahau",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwarahau",
+      "Klangbestandteile": "Quara + hau",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 488,
+      "Name": "Quaratoa",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaratoa",
+      "Klangbestandteile": "Quara + toa",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 489,
+      "Name": "Quaramara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaramara",
+      "Klangbestandteile": "Quara + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 490,
+      "Name": "Quaratapu",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaratapu",
+      "Klangbestandteile": "Quara + tapu",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 491,
+      "Name": "Quaramana",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaramana",
+      "Klangbestandteile": "Quara + mana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 492,
+      "Name": "Quarakoro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwarakoro",
+      "Klangbestandteile": "Quara + koro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 493,
+      "Name": "Quarapuna",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwarapuna",
+      "Klangbestandteile": "Quara + puna",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 494,
+      "Name": "Quararima",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwararima",
+      "Klangbestandteile": "Quara + rima",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 495,
+      "Name": "Quarasava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwarasava",
+      "Klangbestandteile": "Quara + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 496,
+      "Name": "Quaratava",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaratava",
+      "Klangbestandteile": "Quara + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 497,
+      "Name": "Quaraxara",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaraxara",
+      "Klangbestandteile": "Quara + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 498,
+      "Name": "Quarazaro",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwarazaro",
+      "Klangbestandteile": "Quara + zaro",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 499,
+      "Name": "Quaraorius",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaraorius",
+      "Klangbestandteile": "Quara + orius",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 500,
+      "Name": "Quaranus",
+      "Geschlecht": "männlich",
+      "Aussprache": "kwaranus",
+      "Klangbestandteile": "Quara + anus",
+      "Status": "neuer Vorname"
+    }
+  ],
+  "namen_weiblich": [
+    {
+      "Nr": 1,
+      "Name": "Alanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alanui",
+      "Klangbestandteile": "Ala + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 2,
+      "Name": "Alarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alarani",
+      "Klangbestandteile": "Ala + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 3,
+      "Name": "Alalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alalani",
+      "Klangbestandteile": "Ala + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 4,
+      "Name": "Alamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alamoana",
+      "Klangbestandteile": "Ala + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 5,
+      "Name": "Alavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alavai",
+      "Klangbestandteile": "Ala + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 6,
+      "Name": "Alapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alapua",
+      "Klangbestandteile": "Ala + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 7,
+      "Name": "Alamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alamara",
+      "Klangbestandteile": "Ala + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 8,
+      "Name": "Alatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alatala",
+      "Klangbestandteile": "Ala + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 9,
+      "Name": "Alasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alasava",
+      "Klangbestandteile": "Ala + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 10,
+      "Name": "Alatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alatava",
+      "Klangbestandteile": "Ala + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 11,
+      "Name": "Alaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaxara",
+      "Klangbestandteile": "Ala + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 12,
+      "Name": "Alazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alazara",
+      "Klangbestandteile": "Ala + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 13,
+      "Name": "Alaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaria",
+      "Klangbestandteile": "Ala + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 14,
+      "Name": "Alaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaelia",
+      "Klangbestandteile": "Ala + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 15,
+      "Name": "Alaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaoria",
+      "Klangbestandteile": "Ala + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 16,
+      "Name": "Alana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alana",
+      "Klangbestandteile": "Ala + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 17,
+      "Name": "Alaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaina",
+      "Klangbestandteile": "Ala + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 18,
+      "Name": "Alauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alauna",
+      "Klangbestandteile": "Ala + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 19,
+      "Name": "Alaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alaure",
+      "Klangbestandteile": "Ala + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 20,
+      "Name": "Alacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "alacalia",
+      "Klangbestandteile": "Ala + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 21,
+      "Name": "Ananui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ananui",
+      "Klangbestandteile": "Ana + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 22,
+      "Name": "Anarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anarani",
+      "Klangbestandteile": "Ana + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 23,
+      "Name": "Analani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "analani",
+      "Klangbestandteile": "Ana + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 24,
+      "Name": "Anamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anamoana",
+      "Klangbestandteile": "Ana + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 25,
+      "Name": "Anavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anavai",
+      "Klangbestandteile": "Ana + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 26,
+      "Name": "Anapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anapua",
+      "Klangbestandteile": "Ana + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 27,
+      "Name": "Anamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anamara",
+      "Klangbestandteile": "Ana + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 28,
+      "Name": "Anatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anatala",
+      "Klangbestandteile": "Ana + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 29,
+      "Name": "Anasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anasava",
+      "Klangbestandteile": "Ana + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 30,
+      "Name": "Anatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anatava",
+      "Klangbestandteile": "Ana + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 31,
+      "Name": "Anaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaxara",
+      "Klangbestandteile": "Ana + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 32,
+      "Name": "Anazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anazara",
+      "Klangbestandteile": "Ana + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 33,
+      "Name": "Anaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaria",
+      "Klangbestandteile": "Ana + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 34,
+      "Name": "Anaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaelia",
+      "Klangbestandteile": "Ana + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 35,
+      "Name": "Anaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaoria",
+      "Klangbestandteile": "Ana + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 36,
+      "Name": "Anana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anana",
+      "Klangbestandteile": "Ana + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 37,
+      "Name": "Anaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaina",
+      "Klangbestandteile": "Ana + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 38,
+      "Name": "Anauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anauna",
+      "Klangbestandteile": "Ana + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 39,
+      "Name": "Anaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anaure",
+      "Klangbestandteile": "Ana + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 40,
+      "Name": "Anacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "anacalia",
+      "Klangbestandteile": "Ana + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 41,
+      "Name": "Avanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avanui",
+      "Klangbestandteile": "Ava + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 42,
+      "Name": "Avarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avarani",
+      "Klangbestandteile": "Ava + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 43,
+      "Name": "Avalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avalani",
+      "Klangbestandteile": "Ava + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 44,
+      "Name": "Avamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avamoana",
+      "Klangbestandteile": "Ava + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 45,
+      "Name": "Avavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avavai",
+      "Klangbestandteile": "Ava + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 46,
+      "Name": "Avapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avapua",
+      "Klangbestandteile": "Ava + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 47,
+      "Name": "Avamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avamara",
+      "Klangbestandteile": "Ava + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 48,
+      "Name": "Avatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avatala",
+      "Klangbestandteile": "Ava + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 49,
+      "Name": "Avasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avasava",
+      "Klangbestandteile": "Ava + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 50,
+      "Name": "Avatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avatava",
+      "Klangbestandteile": "Ava + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 51,
+      "Name": "Avaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaxara",
+      "Klangbestandteile": "Ava + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 52,
+      "Name": "Avazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avazara",
+      "Klangbestandteile": "Ava + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 53,
+      "Name": "Avaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaria",
+      "Klangbestandteile": "Ava + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 54,
+      "Name": "Avaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaelia",
+      "Klangbestandteile": "Ava + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 55,
+      "Name": "Avaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaoria",
+      "Klangbestandteile": "Ava + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 56,
+      "Name": "Avana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avana",
+      "Klangbestandteile": "Ava + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 57,
+      "Name": "Avaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaina",
+      "Klangbestandteile": "Ava + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 58,
+      "Name": "Avauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avauna",
+      "Klangbestandteile": "Ava + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 59,
+      "Name": "Avaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avaure",
+      "Klangbestandteile": "Ava + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 60,
+      "Name": "Avacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "avacalia",
+      "Klangbestandteile": "Ava + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 61,
+      "Name": "Ehanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehanui",
+      "Klangbestandteile": "Eha + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 62,
+      "Name": "Eharani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "eharani",
+      "Klangbestandteile": "Eha + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 63,
+      "Name": "Ehalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehalani",
+      "Klangbestandteile": "Eha + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 64,
+      "Name": "Ehamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehamoana",
+      "Klangbestandteile": "Eha + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 65,
+      "Name": "Ehavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehavai",
+      "Klangbestandteile": "Eha + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 66,
+      "Name": "Ehapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehapua",
+      "Klangbestandteile": "Eha + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 67,
+      "Name": "Ehamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehamara",
+      "Klangbestandteile": "Eha + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 68,
+      "Name": "Ehatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehatala",
+      "Klangbestandteile": "Eha + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 69,
+      "Name": "Ehasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehasava",
+      "Klangbestandteile": "Eha + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 70,
+      "Name": "Ehatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehatava",
+      "Klangbestandteile": "Eha + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 71,
+      "Name": "Ehaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehaxara",
+      "Klangbestandteile": "Eha + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 72,
+      "Name": "Ehazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehazara",
+      "Klangbestandteile": "Eha + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 73,
+      "Name": "Eharia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "eharia",
+      "Klangbestandteile": "Eha + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 74,
+      "Name": "Ehaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehaelia",
+      "Klangbestandteile": "Eha + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 75,
+      "Name": "Ehaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehaoria",
+      "Klangbestandteile": "Eha + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 76,
+      "Name": "Ehana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehana",
+      "Klangbestandteile": "Eha + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 77,
+      "Name": "Ehaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehaina",
+      "Klangbestandteile": "Eha + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 78,
+      "Name": "Ehauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehauna",
+      "Klangbestandteile": "Eha + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 79,
+      "Name": "Ehaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehaure",
+      "Klangbestandteile": "Eha + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 80,
+      "Name": "Ehacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ehacalia",
+      "Klangbestandteile": "Eha + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 81,
+      "Name": "Elanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elanui",
+      "Klangbestandteile": "Ela + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 82,
+      "Name": "Elarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elarani",
+      "Klangbestandteile": "Ela + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 83,
+      "Name": "Elalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elalani",
+      "Klangbestandteile": "Ela + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 84,
+      "Name": "Elamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elamoana",
+      "Klangbestandteile": "Ela + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 85,
+      "Name": "Elavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elavai",
+      "Klangbestandteile": "Ela + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 86,
+      "Name": "Elapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elapua",
+      "Klangbestandteile": "Ela + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 87,
+      "Name": "Elamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elamara",
+      "Klangbestandteile": "Ela + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 88,
+      "Name": "Elatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elatala",
+      "Klangbestandteile": "Ela + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 89,
+      "Name": "Elasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elasava",
+      "Klangbestandteile": "Ela + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 90,
+      "Name": "Elatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elatava",
+      "Klangbestandteile": "Ela + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 91,
+      "Name": "Elaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaxara",
+      "Klangbestandteile": "Ela + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 92,
+      "Name": "Elazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elazara",
+      "Klangbestandteile": "Ela + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 93,
+      "Name": "Elaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaria",
+      "Klangbestandteile": "Ela + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 94,
+      "Name": "Elaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaelia",
+      "Klangbestandteile": "Ela + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 95,
+      "Name": "Elaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaoria",
+      "Klangbestandteile": "Ela + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 96,
+      "Name": "Elana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elana",
+      "Klangbestandteile": "Ela + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 97,
+      "Name": "Elaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaina",
+      "Klangbestandteile": "Ela + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 98,
+      "Name": "Elauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elauna",
+      "Klangbestandteile": "Ela + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 99,
+      "Name": "Elaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elaure",
+      "Klangbestandteile": "Ela + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 100,
+      "Name": "Elacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "elacalia",
+      "Klangbestandteile": "Ela + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 101,
+      "Name": "Inanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inanui",
+      "Klangbestandteile": "Ina + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 102,
+      "Name": "Inarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inarani",
+      "Klangbestandteile": "Ina + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 103,
+      "Name": "Inalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inalani",
+      "Klangbestandteile": "Ina + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 104,
+      "Name": "Inamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inamoana",
+      "Klangbestandteile": "Ina + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 105,
+      "Name": "Inavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inavai",
+      "Klangbestandteile": "Ina + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 106,
+      "Name": "Inapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inapua",
+      "Klangbestandteile": "Ina + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 107,
+      "Name": "Inamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inamara",
+      "Klangbestandteile": "Ina + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 108,
+      "Name": "Inatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inatala",
+      "Klangbestandteile": "Ina + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 109,
+      "Name": "Inasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inasava",
+      "Klangbestandteile": "Ina + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 110,
+      "Name": "Inatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inatava",
+      "Klangbestandteile": "Ina + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 111,
+      "Name": "Inaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaxara",
+      "Klangbestandteile": "Ina + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 112,
+      "Name": "Inazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inazara",
+      "Klangbestandteile": "Ina + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 113,
+      "Name": "Inaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaria",
+      "Klangbestandteile": "Ina + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 114,
+      "Name": "Inaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaelia",
+      "Klangbestandteile": "Ina + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 115,
+      "Name": "Inaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaoria",
+      "Klangbestandteile": "Ina + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 116,
+      "Name": "Inana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inana",
+      "Klangbestandteile": "Ina + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 117,
+      "Name": "Inaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaina",
+      "Klangbestandteile": "Ina + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 118,
+      "Name": "Inauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inauna",
+      "Klangbestandteile": "Ina + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 119,
+      "Name": "Inaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inaure",
+      "Klangbestandteile": "Ina + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 120,
+      "Name": "Inacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "inacalia",
+      "Klangbestandteile": "Ina + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 121,
+      "Name": "Ivanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivanui",
+      "Klangbestandteile": "Iva + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 122,
+      "Name": "Ivarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivarani",
+      "Klangbestandteile": "Iva + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 123,
+      "Name": "Ivalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivalani",
+      "Klangbestandteile": "Iva + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 124,
+      "Name": "Ivamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivamoana",
+      "Klangbestandteile": "Iva + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 125,
+      "Name": "Ivavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivavai",
+      "Klangbestandteile": "Iva + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 126,
+      "Name": "Ivapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivapua",
+      "Klangbestandteile": "Iva + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 127,
+      "Name": "Ivamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivamara",
+      "Klangbestandteile": "Iva + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 128,
+      "Name": "Ivatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivatala",
+      "Klangbestandteile": "Iva + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 129,
+      "Name": "Ivasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivasava",
+      "Klangbestandteile": "Iva + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 130,
+      "Name": "Ivatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivatava",
+      "Klangbestandteile": "Iva + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 131,
+      "Name": "Ivaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaxara",
+      "Klangbestandteile": "Iva + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 132,
+      "Name": "Ivazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivazara",
+      "Klangbestandteile": "Iva + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 133,
+      "Name": "Ivaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaria",
+      "Klangbestandteile": "Iva + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 134,
+      "Name": "Ivaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaelia",
+      "Klangbestandteile": "Iva + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 135,
+      "Name": "Ivaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaoria",
+      "Klangbestandteile": "Iva + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 136,
+      "Name": "Ivana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivana",
+      "Klangbestandteile": "Iva + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 137,
+      "Name": "Ivaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaina",
+      "Klangbestandteile": "Iva + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 138,
+      "Name": "Ivauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivauna",
+      "Klangbestandteile": "Iva + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 139,
+      "Name": "Ivaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivaure",
+      "Klangbestandteile": "Iva + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 140,
+      "Name": "Ivacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ivacalia",
+      "Klangbestandteile": "Iva + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 141,
+      "Name": "Keanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keanui",
+      "Klangbestandteile": "Kea + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 142,
+      "Name": "Kearani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kearani",
+      "Klangbestandteile": "Kea + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 143,
+      "Name": "Kealani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kealani",
+      "Klangbestandteile": "Kea + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 144,
+      "Name": "Keamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keamoana",
+      "Klangbestandteile": "Kea + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 145,
+      "Name": "Keavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keavai",
+      "Klangbestandteile": "Kea + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 146,
+      "Name": "Keapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keapua",
+      "Klangbestandteile": "Kea + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 147,
+      "Name": "Keamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keamara",
+      "Klangbestandteile": "Kea + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 148,
+      "Name": "Keatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keatala",
+      "Klangbestandteile": "Kea + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 149,
+      "Name": "Keasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keasava",
+      "Klangbestandteile": "Kea + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 150,
+      "Name": "Keatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keatava",
+      "Klangbestandteile": "Kea + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 151,
+      "Name": "Keaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keaxara",
+      "Klangbestandteile": "Kea + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 152,
+      "Name": "Keazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keazara",
+      "Klangbestandteile": "Kea + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 153,
+      "Name": "Kearia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kearia",
+      "Klangbestandteile": "Kea + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 154,
+      "Name": "Keaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keaelia",
+      "Klangbestandteile": "Kea + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 155,
+      "Name": "Keaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keaoria",
+      "Klangbestandteile": "Kea + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 156,
+      "Name": "Keana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keana",
+      "Klangbestandteile": "Kea + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 157,
+      "Name": "Keaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keaina",
+      "Klangbestandteile": "Kea + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 158,
+      "Name": "Keauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keauna",
+      "Klangbestandteile": "Kea + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 159,
+      "Name": "Keaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keaure",
+      "Klangbestandteile": "Kea + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 160,
+      "Name": "Keacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "keacalia",
+      "Klangbestandteile": "Kea + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 161,
+      "Name": "Kirinui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirinui",
+      "Klangbestandteile": "Kiri + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 162,
+      "Name": "Kirirani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirirani",
+      "Klangbestandteile": "Kiri + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 163,
+      "Name": "Kirilani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirilani",
+      "Klangbestandteile": "Kiri + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 164,
+      "Name": "Kirimoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirimoana",
+      "Klangbestandteile": "Kiri + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 165,
+      "Name": "Kirivai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirivai",
+      "Klangbestandteile": "Kiri + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 166,
+      "Name": "Kiripua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiripua",
+      "Klangbestandteile": "Kiri + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 167,
+      "Name": "Kirimara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirimara",
+      "Klangbestandteile": "Kiri + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 168,
+      "Name": "Kiritala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiritala",
+      "Klangbestandteile": "Kiri + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 169,
+      "Name": "Kirisava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirisava",
+      "Klangbestandteile": "Kiri + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 170,
+      "Name": "Kiritava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiritava",
+      "Klangbestandteile": "Kiri + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 171,
+      "Name": "Kirixara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirixara",
+      "Klangbestandteile": "Kiri + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 172,
+      "Name": "Kirizara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirizara",
+      "Klangbestandteile": "Kiri + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 173,
+      "Name": "Kiriaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiriaria",
+      "Klangbestandteile": "Kiri + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 174,
+      "Name": "Kirielia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirielia",
+      "Klangbestandteile": "Kiri + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 175,
+      "Name": "Kirioria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirioria",
+      "Klangbestandteile": "Kiri + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 176,
+      "Name": "Kiriana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiriana",
+      "Klangbestandteile": "Kiri + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 177,
+      "Name": "Kirina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kirina",
+      "Klangbestandteile": "Kiri + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 178,
+      "Name": "Kiriuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiriuna",
+      "Klangbestandteile": "Kiri + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 179,
+      "Name": "Kiriaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiriaure",
+      "Klangbestandteile": "Kiri + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 180,
+      "Name": "Kiricalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "kiricalia",
+      "Klangbestandteile": "Kiri + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 181,
+      "Name": "Laninui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "laninui",
+      "Klangbestandteile": "Lani + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 182,
+      "Name": "Lanirani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanirani",
+      "Klangbestandteile": "Lani + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 183,
+      "Name": "Lanilani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanilani",
+      "Klangbestandteile": "Lani + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 184,
+      "Name": "Lanimoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanimoana",
+      "Klangbestandteile": "Lani + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 185,
+      "Name": "Lanivai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanivai",
+      "Klangbestandteile": "Lani + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 186,
+      "Name": "Lanipua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanipua",
+      "Klangbestandteile": "Lani + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 187,
+      "Name": "Lanimara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanimara",
+      "Klangbestandteile": "Lani + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 188,
+      "Name": "Lanitala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanitala",
+      "Klangbestandteile": "Lani + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 189,
+      "Name": "Lanisava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanisava",
+      "Klangbestandteile": "Lani + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 190,
+      "Name": "Lanitava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanitava",
+      "Klangbestandteile": "Lani + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 191,
+      "Name": "Lanixara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanixara",
+      "Klangbestandteile": "Lani + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 192,
+      "Name": "Lanizara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanizara",
+      "Klangbestandteile": "Lani + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 193,
+      "Name": "Laniaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "laniaria",
+      "Klangbestandteile": "Lani + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 194,
+      "Name": "Lanielia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanielia",
+      "Klangbestandteile": "Lani + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 195,
+      "Name": "Lanioria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanioria",
+      "Klangbestandteile": "Lani + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 196,
+      "Name": "Laniana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "laniana",
+      "Klangbestandteile": "Lani + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 197,
+      "Name": "Lanina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanina",
+      "Klangbestandteile": "Lani + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 198,
+      "Name": "Laniuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "laniuna",
+      "Klangbestandteile": "Lani + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 199,
+      "Name": "Laniaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "laniaure",
+      "Klangbestandteile": "Lani + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 200,
+      "Name": "Lanicalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lanicalia",
+      "Klangbestandteile": "Lani + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 201,
+      "Name": "Luanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luanui",
+      "Klangbestandteile": "Lua + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 202,
+      "Name": "Luarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luarani",
+      "Klangbestandteile": "Lua + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 203,
+      "Name": "Lualani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "lualani",
+      "Klangbestandteile": "Lua + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 204,
+      "Name": "Luamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luamoana",
+      "Klangbestandteile": "Lua + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 205,
+      "Name": "Luavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luavai",
+      "Klangbestandteile": "Lua + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 206,
+      "Name": "Luapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luapua",
+      "Klangbestandteile": "Lua + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 207,
+      "Name": "Luamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luamara",
+      "Klangbestandteile": "Lua + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 208,
+      "Name": "Luatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luatala",
+      "Klangbestandteile": "Lua + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 209,
+      "Name": "Luasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luasava",
+      "Klangbestandteile": "Lua + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 210,
+      "Name": "Luatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luatava",
+      "Klangbestandteile": "Lua + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 211,
+      "Name": "Luaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaxara",
+      "Klangbestandteile": "Lua + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 212,
+      "Name": "Luazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luazara",
+      "Klangbestandteile": "Lua + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 213,
+      "Name": "Luaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaria",
+      "Klangbestandteile": "Lua + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 214,
+      "Name": "Luaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaelia",
+      "Klangbestandteile": "Lua + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 215,
+      "Name": "Luaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaoria",
+      "Klangbestandteile": "Lua + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 216,
+      "Name": "Luana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luana",
+      "Klangbestandteile": "Lua + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 217,
+      "Name": "Luaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaina",
+      "Klangbestandteile": "Lua + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 218,
+      "Name": "Luauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luauna",
+      "Klangbestandteile": "Lua + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 219,
+      "Name": "Luaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luaure",
+      "Klangbestandteile": "Lua + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 220,
+      "Name": "Luacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "luacalia",
+      "Klangbestandteile": "Lua + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 221,
+      "Name": "Maenui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maenui",
+      "Klangbestandteile": "Mae + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 222,
+      "Name": "Maerani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maerani",
+      "Klangbestandteile": "Mae + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 223,
+      "Name": "Maelani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maelani",
+      "Klangbestandteile": "Mae + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 224,
+      "Name": "Maemoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maemoana",
+      "Klangbestandteile": "Mae + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 225,
+      "Name": "Maevai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maevai",
+      "Klangbestandteile": "Mae + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 226,
+      "Name": "Maepua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maepua",
+      "Klangbestandteile": "Mae + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 227,
+      "Name": "Maemara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maemara",
+      "Klangbestandteile": "Mae + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 228,
+      "Name": "Maetala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maetala",
+      "Klangbestandteile": "Mae + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 229,
+      "Name": "Maesava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maesava",
+      "Klangbestandteile": "Mae + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 230,
+      "Name": "Maetava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maetava",
+      "Klangbestandteile": "Mae + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 231,
+      "Name": "Maexara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maexara",
+      "Klangbestandteile": "Mae + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 232,
+      "Name": "Maezara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maezara",
+      "Klangbestandteile": "Mae + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 233,
+      "Name": "Maearia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maearia",
+      "Klangbestandteile": "Mae + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 234,
+      "Name": "Maelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maelia",
+      "Klangbestandteile": "Mae + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 235,
+      "Name": "Maeoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maeoria",
+      "Klangbestandteile": "Mae + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 236,
+      "Name": "Maeana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maeana",
+      "Klangbestandteile": "Mae + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 237,
+      "Name": "Maeina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maeina",
+      "Klangbestandteile": "Mae + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 238,
+      "Name": "Maeuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maeuna",
+      "Klangbestandteile": "Mae + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 239,
+      "Name": "Maeaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maeaure",
+      "Klangbestandteile": "Mae + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 240,
+      "Name": "Maecalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maecalia",
+      "Klangbestandteile": "Mae + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 241,
+      "Name": "Mananui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "mananui",
+      "Klangbestandteile": "Mana + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 242,
+      "Name": "Manarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manarani",
+      "Klangbestandteile": "Mana + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 243,
+      "Name": "Manalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manalani",
+      "Klangbestandteile": "Mana + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 244,
+      "Name": "Manamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manamoana",
+      "Klangbestandteile": "Mana + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 245,
+      "Name": "Manavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manavai",
+      "Klangbestandteile": "Mana + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 246,
+      "Name": "Manapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manapua",
+      "Klangbestandteile": "Mana + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 247,
+      "Name": "Manamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manamara",
+      "Klangbestandteile": "Mana + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 248,
+      "Name": "Manatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manatala",
+      "Klangbestandteile": "Mana + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 249,
+      "Name": "Manasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manasava",
+      "Klangbestandteile": "Mana + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 250,
+      "Name": "Manatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manatava",
+      "Klangbestandteile": "Mana + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 251,
+      "Name": "Manaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaxara",
+      "Klangbestandteile": "Mana + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 252,
+      "Name": "Manazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manazara",
+      "Klangbestandteile": "Mana + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 253,
+      "Name": "Manaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaria",
+      "Klangbestandteile": "Mana + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 254,
+      "Name": "Manaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaelia",
+      "Klangbestandteile": "Mana + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 255,
+      "Name": "Manaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaoria",
+      "Klangbestandteile": "Mana + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 256,
+      "Name": "Manana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manana",
+      "Klangbestandteile": "Mana + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 257,
+      "Name": "Manaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaina",
+      "Klangbestandteile": "Mana + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 258,
+      "Name": "Manauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manauna",
+      "Klangbestandteile": "Mana + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 259,
+      "Name": "Manaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manaure",
+      "Klangbestandteile": "Mana + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 260,
+      "Name": "Manacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "manacalia",
+      "Klangbestandteile": "Mana + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 261,
+      "Name": "Maranui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maranui",
+      "Klangbestandteile": "Mara + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 262,
+      "Name": "Mararani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "mararani",
+      "Klangbestandteile": "Mara + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 263,
+      "Name": "Maralani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maralani",
+      "Klangbestandteile": "Mara + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 264,
+      "Name": "Maramoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maramoana",
+      "Klangbestandteile": "Mara + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 265,
+      "Name": "Maravai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maravai",
+      "Klangbestandteile": "Mara + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 266,
+      "Name": "Marapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "marapua",
+      "Klangbestandteile": "Mara + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 267,
+      "Name": "Maramara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maramara",
+      "Klangbestandteile": "Mara + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 268,
+      "Name": "Maratala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maratala",
+      "Klangbestandteile": "Mara + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 269,
+      "Name": "Marasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "marasava",
+      "Klangbestandteile": "Mara + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 270,
+      "Name": "Maratava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maratava",
+      "Klangbestandteile": "Mara + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 271,
+      "Name": "Maraxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maraxara",
+      "Klangbestandteile": "Mara + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 272,
+      "Name": "Marazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "marazara",
+      "Klangbestandteile": "Mara + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 273,
+      "Name": "Mararia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "mararia",
+      "Klangbestandteile": "Mara + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 274,
+      "Name": "Maraelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maraelia",
+      "Klangbestandteile": "Mara + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 275,
+      "Name": "Maraoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maraoria",
+      "Klangbestandteile": "Mara + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 276,
+      "Name": "Marana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "marana",
+      "Klangbestandteile": "Mara + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 277,
+      "Name": "Maraina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maraina",
+      "Klangbestandteile": "Mara + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 278,
+      "Name": "Marauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "marauna",
+      "Klangbestandteile": "Mara + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 279,
+      "Name": "Maraure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maraure",
+      "Klangbestandteile": "Mara + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 280,
+      "Name": "Maracalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "maracalia",
+      "Klangbestandteile": "Mara + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 281,
+      "Name": "Naminui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "naminui",
+      "Klangbestandteile": "Nami + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 282,
+      "Name": "Namirani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namirani",
+      "Klangbestandteile": "Nami + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 283,
+      "Name": "Namilani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namilani",
+      "Klangbestandteile": "Nami + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 284,
+      "Name": "Namimoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namimoana",
+      "Klangbestandteile": "Nami + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 285,
+      "Name": "Namivai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namivai",
+      "Klangbestandteile": "Nami + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 286,
+      "Name": "Namipua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namipua",
+      "Klangbestandteile": "Nami + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 287,
+      "Name": "Namimara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namimara",
+      "Klangbestandteile": "Nami + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 288,
+      "Name": "Namitala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namitala",
+      "Klangbestandteile": "Nami + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 289,
+      "Name": "Namisava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namisava",
+      "Klangbestandteile": "Nami + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 290,
+      "Name": "Namitava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namitava",
+      "Klangbestandteile": "Nami + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 291,
+      "Name": "Namixara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namixara",
+      "Klangbestandteile": "Nami + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 292,
+      "Name": "Namizara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namizara",
+      "Klangbestandteile": "Nami + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 293,
+      "Name": "Namiaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namiaria",
+      "Klangbestandteile": "Nami + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 294,
+      "Name": "Namielia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namielia",
+      "Klangbestandteile": "Nami + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 295,
+      "Name": "Namioria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namioria",
+      "Klangbestandteile": "Nami + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 296,
+      "Name": "Namiana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namiana",
+      "Klangbestandteile": "Nami + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 297,
+      "Name": "Namina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namina",
+      "Klangbestandteile": "Nami + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 298,
+      "Name": "Namiuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namiuna",
+      "Klangbestandteile": "Nami + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 299,
+      "Name": "Namiaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namiaure",
+      "Klangbestandteile": "Nami + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 300,
+      "Name": "Namicalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "namicalia",
+      "Klangbestandteile": "Nami + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 301,
+      "Name": "Navanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navanui",
+      "Klangbestandteile": "Nava + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 302,
+      "Name": "Navarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navarani",
+      "Klangbestandteile": "Nava + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 303,
+      "Name": "Navalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navalani",
+      "Klangbestandteile": "Nava + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 304,
+      "Name": "Navamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navamoana",
+      "Klangbestandteile": "Nava + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 305,
+      "Name": "Navavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navavai",
+      "Klangbestandteile": "Nava + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 306,
+      "Name": "Navapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navapua",
+      "Klangbestandteile": "Nava + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 307,
+      "Name": "Navamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navamara",
+      "Klangbestandteile": "Nava + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 308,
+      "Name": "Navatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navatala",
+      "Klangbestandteile": "Nava + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 309,
+      "Name": "Navasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navasava",
+      "Klangbestandteile": "Nava + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 310,
+      "Name": "Navatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navatava",
+      "Klangbestandteile": "Nava + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 311,
+      "Name": "Navaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaxara",
+      "Klangbestandteile": "Nava + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 312,
+      "Name": "Navazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navazara",
+      "Klangbestandteile": "Nava + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 313,
+      "Name": "Navaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaria",
+      "Klangbestandteile": "Nava + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 314,
+      "Name": "Navaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaelia",
+      "Klangbestandteile": "Nava + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 315,
+      "Name": "Navaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaoria",
+      "Klangbestandteile": "Nava + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 316,
+      "Name": "Navana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navana",
+      "Klangbestandteile": "Nava + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 317,
+      "Name": "Navaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaina",
+      "Klangbestandteile": "Nava + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 318,
+      "Name": "Navauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navauna",
+      "Klangbestandteile": "Nava + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 319,
+      "Name": "Navaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navaure",
+      "Klangbestandteile": "Nava + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 320,
+      "Name": "Navacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "navacalia",
+      "Klangbestandteile": "Nava + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 321,
+      "Name": "Ohanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohanui",
+      "Klangbestandteile": "Oha + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 322,
+      "Name": "Oharani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "oharani",
+      "Klangbestandteile": "Oha + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 323,
+      "Name": "Ohalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohalani",
+      "Klangbestandteile": "Oha + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 324,
+      "Name": "Ohamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohamoana",
+      "Klangbestandteile": "Oha + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 325,
+      "Name": "Ohavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohavai",
+      "Klangbestandteile": "Oha + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 326,
+      "Name": "Ohapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohapua",
+      "Klangbestandteile": "Oha + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 327,
+      "Name": "Ohamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohamara",
+      "Klangbestandteile": "Oha + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 328,
+      "Name": "Ohatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohatala",
+      "Klangbestandteile": "Oha + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 329,
+      "Name": "Ohasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohasava",
+      "Klangbestandteile": "Oha + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 330,
+      "Name": "Ohatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohatava",
+      "Klangbestandteile": "Oha + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 331,
+      "Name": "Ohaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohaxara",
+      "Klangbestandteile": "Oha + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 332,
+      "Name": "Ohazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohazara",
+      "Klangbestandteile": "Oha + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 333,
+      "Name": "Oharia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "oharia",
+      "Klangbestandteile": "Oha + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 334,
+      "Name": "Ohaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohaelia",
+      "Klangbestandteile": "Oha + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 335,
+      "Name": "Ohaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohaoria",
+      "Klangbestandteile": "Oha + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 336,
+      "Name": "Ohana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohana",
+      "Klangbestandteile": "Oha + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 337,
+      "Name": "Ohaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohaina",
+      "Klangbestandteile": "Oha + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 338,
+      "Name": "Ohauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohauna",
+      "Klangbestandteile": "Oha + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 339,
+      "Name": "Ohaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohaure",
+      "Klangbestandteile": "Oha + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 340,
+      "Name": "Ohacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ohacalia",
+      "Klangbestandteile": "Oha + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 341,
+      "Name": "Puanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puanui",
+      "Klangbestandteile": "Pua + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 342,
+      "Name": "Puarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puarani",
+      "Klangbestandteile": "Pua + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 343,
+      "Name": "Pualani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "pualani",
+      "Klangbestandteile": "Pua + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 344,
+      "Name": "Puamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puamoana",
+      "Klangbestandteile": "Pua + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 345,
+      "Name": "Puavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puavai",
+      "Klangbestandteile": "Pua + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 346,
+      "Name": "Puapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puapua",
+      "Klangbestandteile": "Pua + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 347,
+      "Name": "Puamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puamara",
+      "Klangbestandteile": "Pua + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 348,
+      "Name": "Puatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puatala",
+      "Klangbestandteile": "Pua + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 349,
+      "Name": "Puasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puasava",
+      "Klangbestandteile": "Pua + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 350,
+      "Name": "Puatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puatava",
+      "Klangbestandteile": "Pua + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 351,
+      "Name": "Puaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaxara",
+      "Klangbestandteile": "Pua + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 352,
+      "Name": "Puazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puazara",
+      "Klangbestandteile": "Pua + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 353,
+      "Name": "Puaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaria",
+      "Klangbestandteile": "Pua + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 354,
+      "Name": "Puaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaelia",
+      "Klangbestandteile": "Pua + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 355,
+      "Name": "Puaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaoria",
+      "Klangbestandteile": "Pua + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 356,
+      "Name": "Puana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puana",
+      "Klangbestandteile": "Pua + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 357,
+      "Name": "Puaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaina",
+      "Klangbestandteile": "Pua + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 358,
+      "Name": "Puauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puauna",
+      "Klangbestandteile": "Pua + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 359,
+      "Name": "Puaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puaure",
+      "Klangbestandteile": "Pua + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 360,
+      "Name": "Puacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "puacalia",
+      "Klangbestandteile": "Pua + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 361,
+      "Name": "Rimanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimanui",
+      "Klangbestandteile": "Rima + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 362,
+      "Name": "Rimarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimarani",
+      "Klangbestandteile": "Rima + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 363,
+      "Name": "Rimalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimalani",
+      "Klangbestandteile": "Rima + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 364,
+      "Name": "Rimamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimamoana",
+      "Klangbestandteile": "Rima + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 365,
+      "Name": "Rimavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimavai",
+      "Klangbestandteile": "Rima + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 366,
+      "Name": "Rimapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimapua",
+      "Klangbestandteile": "Rima + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 367,
+      "Name": "Rimamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimamara",
+      "Klangbestandteile": "Rima + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 368,
+      "Name": "Rimatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimatala",
+      "Klangbestandteile": "Rima + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 369,
+      "Name": "Rimasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimasava",
+      "Klangbestandteile": "Rima + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 370,
+      "Name": "Rimatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimatava",
+      "Klangbestandteile": "Rima + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 371,
+      "Name": "Rimaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaxara",
+      "Klangbestandteile": "Rima + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 372,
+      "Name": "Rimazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimazara",
+      "Klangbestandteile": "Rima + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 373,
+      "Name": "Rimaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaria",
+      "Klangbestandteile": "Rima + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 374,
+      "Name": "Rimaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaelia",
+      "Klangbestandteile": "Rima + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 375,
+      "Name": "Rimaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaoria",
+      "Klangbestandteile": "Rima + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 376,
+      "Name": "Rimana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimana",
+      "Klangbestandteile": "Rima + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 377,
+      "Name": "Rimaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaina",
+      "Klangbestandteile": "Rima + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 378,
+      "Name": "Rimauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimauna",
+      "Klangbestandteile": "Rima + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 379,
+      "Name": "Rimaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimaure",
+      "Klangbestandteile": "Rima + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 380,
+      "Name": "Rimacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "rimacalia",
+      "Klangbestandteile": "Rima + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 381,
+      "Name": "Saninui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "saninui",
+      "Klangbestandteile": "Sani + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 382,
+      "Name": "Sanirani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanirani",
+      "Klangbestandteile": "Sani + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 383,
+      "Name": "Sanilani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanilani",
+      "Klangbestandteile": "Sani + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 384,
+      "Name": "Sanimoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanimoana",
+      "Klangbestandteile": "Sani + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 385,
+      "Name": "Sanivai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanivai",
+      "Klangbestandteile": "Sani + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 386,
+      "Name": "Sanipua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanipua",
+      "Klangbestandteile": "Sani + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 387,
+      "Name": "Sanimara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanimara",
+      "Klangbestandteile": "Sani + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 388,
+      "Name": "Sanitala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanitala",
+      "Klangbestandteile": "Sani + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 389,
+      "Name": "Sanisava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanisava",
+      "Klangbestandteile": "Sani + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 390,
+      "Name": "Sanitava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanitava",
+      "Klangbestandteile": "Sani + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 391,
+      "Name": "Sanixara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanixara",
+      "Klangbestandteile": "Sani + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 392,
+      "Name": "Sanizara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanizara",
+      "Klangbestandteile": "Sani + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 393,
+      "Name": "Saniaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "saniaria",
+      "Klangbestandteile": "Sani + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 394,
+      "Name": "Sanielia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanielia",
+      "Klangbestandteile": "Sani + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 395,
+      "Name": "Sanioria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanioria",
+      "Klangbestandteile": "Sani + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 396,
+      "Name": "Saniana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "saniana",
+      "Klangbestandteile": "Sani + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 397,
+      "Name": "Sanina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanina",
+      "Klangbestandteile": "Sani + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 398,
+      "Name": "Saniuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "saniuna",
+      "Klangbestandteile": "Sani + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 399,
+      "Name": "Saniaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "saniaure",
+      "Klangbestandteile": "Sani + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 400,
+      "Name": "Sanicalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "sanicalia",
+      "Klangbestandteile": "Sani + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 401,
+      "Name": "Talanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talanui",
+      "Klangbestandteile": "Tala + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 402,
+      "Name": "Talarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talarani",
+      "Klangbestandteile": "Tala + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 403,
+      "Name": "Talalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talalani",
+      "Klangbestandteile": "Tala + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 404,
+      "Name": "Talamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talamoana",
+      "Klangbestandteile": "Tala + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 405,
+      "Name": "Talavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talavai",
+      "Klangbestandteile": "Tala + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 406,
+      "Name": "Talapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talapua",
+      "Klangbestandteile": "Tala + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 407,
+      "Name": "Talamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talamara",
+      "Klangbestandteile": "Tala + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 408,
+      "Name": "Talatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talatala",
+      "Klangbestandteile": "Tala + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 409,
+      "Name": "Talasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talasava",
+      "Klangbestandteile": "Tala + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 410,
+      "Name": "Talatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talatava",
+      "Klangbestandteile": "Tala + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 411,
+      "Name": "Talaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaxara",
+      "Klangbestandteile": "Tala + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 412,
+      "Name": "Talazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talazara",
+      "Klangbestandteile": "Tala + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 413,
+      "Name": "Talaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaria",
+      "Klangbestandteile": "Tala + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 414,
+      "Name": "Talaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaelia",
+      "Klangbestandteile": "Tala + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 415,
+      "Name": "Talaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaoria",
+      "Klangbestandteile": "Tala + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 416,
+      "Name": "Talana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talana",
+      "Klangbestandteile": "Tala + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 417,
+      "Name": "Talaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaina",
+      "Klangbestandteile": "Tala + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 418,
+      "Name": "Talauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talauna",
+      "Klangbestandteile": "Tala + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 419,
+      "Name": "Talaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talaure",
+      "Klangbestandteile": "Tala + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 420,
+      "Name": "Talacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "talacalia",
+      "Klangbestandteile": "Tala + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 421,
+      "Name": "Ulanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulanui",
+      "Klangbestandteile": "Ula + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 422,
+      "Name": "Ularani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ularani",
+      "Klangbestandteile": "Ula + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 423,
+      "Name": "Ulalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulalani",
+      "Klangbestandteile": "Ula + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 424,
+      "Name": "Ulamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulamoana",
+      "Klangbestandteile": "Ula + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 425,
+      "Name": "Ulavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulavai",
+      "Klangbestandteile": "Ula + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 426,
+      "Name": "Ulapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulapua",
+      "Klangbestandteile": "Ula + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 427,
+      "Name": "Ulamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulamara",
+      "Klangbestandteile": "Ula + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 428,
+      "Name": "Ulatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulatala",
+      "Klangbestandteile": "Ula + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 429,
+      "Name": "Ulasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulasava",
+      "Klangbestandteile": "Ula + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 430,
+      "Name": "Ulatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulatava",
+      "Klangbestandteile": "Ula + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 431,
+      "Name": "Ulaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulaxara",
+      "Klangbestandteile": "Ula + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 432,
+      "Name": "Ulazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulazara",
+      "Klangbestandteile": "Ula + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 433,
+      "Name": "Ularia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ularia",
+      "Klangbestandteile": "Ula + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 434,
+      "Name": "Ulaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulaelia",
+      "Klangbestandteile": "Ula + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 435,
+      "Name": "Ulaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulaoria",
+      "Klangbestandteile": "Ula + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 436,
+      "Name": "Ulana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulana",
+      "Klangbestandteile": "Ula + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 437,
+      "Name": "Ulaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulaina",
+      "Klangbestandteile": "Ula + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 438,
+      "Name": "Ulauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulauna",
+      "Klangbestandteile": "Ula + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 439,
+      "Name": "Ulaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulaure",
+      "Klangbestandteile": "Ula + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 440,
+      "Name": "Ulacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "ulacalia",
+      "Klangbestandteile": "Ula + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 441,
+      "Name": "Vainui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vainui",
+      "Klangbestandteile": "Vai + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 442,
+      "Name": "Vairani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vairani",
+      "Klangbestandteile": "Vai + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 443,
+      "Name": "Vailani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vailani",
+      "Klangbestandteile": "Vai + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 444,
+      "Name": "Vaimoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaimoana",
+      "Klangbestandteile": "Vai + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 445,
+      "Name": "Vaivai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaivai",
+      "Klangbestandteile": "Vai + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 446,
+      "Name": "Vaipua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaipua",
+      "Klangbestandteile": "Vai + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 447,
+      "Name": "Vaimara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaimara",
+      "Klangbestandteile": "Vai + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 448,
+      "Name": "Vaitala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaitala",
+      "Klangbestandteile": "Vai + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 449,
+      "Name": "Vaisava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaisava",
+      "Klangbestandteile": "Vai + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 450,
+      "Name": "Vaitava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaitava",
+      "Klangbestandteile": "Vai + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 451,
+      "Name": "Vaixara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaixara",
+      "Klangbestandteile": "Vai + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 452,
+      "Name": "Vaizara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaizara",
+      "Klangbestandteile": "Vai + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 453,
+      "Name": "Vaiaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaiaria",
+      "Klangbestandteile": "Vai + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 454,
+      "Name": "Vaielia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaielia",
+      "Klangbestandteile": "Vai + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 455,
+      "Name": "Vaioria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaioria",
+      "Klangbestandteile": "Vai + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 456,
+      "Name": "Vaiana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaiana",
+      "Klangbestandteile": "Vai + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 457,
+      "Name": "Vaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaina",
+      "Klangbestandteile": "Vai + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 458,
+      "Name": "Vaiuna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaiuna",
+      "Klangbestandteile": "Vai + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 459,
+      "Name": "Vaiaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaiaure",
+      "Klangbestandteile": "Vai + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 460,
+      "Name": "Vaicalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "vaicalia",
+      "Klangbestandteile": "Vai + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 461,
+      "Name": "Yaranui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaranui",
+      "Klangbestandteile": "Yara + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 462,
+      "Name": "Yararani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yararani",
+      "Klangbestandteile": "Yara + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 463,
+      "Name": "Yaralani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaralani",
+      "Klangbestandteile": "Yara + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 464,
+      "Name": "Yaramoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaramoana",
+      "Klangbestandteile": "Yara + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 465,
+      "Name": "Yaravai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaravai",
+      "Klangbestandteile": "Yara + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 466,
+      "Name": "Yarapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yarapua",
+      "Klangbestandteile": "Yara + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 467,
+      "Name": "Yaramara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaramara",
+      "Klangbestandteile": "Yara + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 468,
+      "Name": "Yaratala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaratala",
+      "Klangbestandteile": "Yara + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 469,
+      "Name": "Yarasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yarasava",
+      "Klangbestandteile": "Yara + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 470,
+      "Name": "Yaratava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaratava",
+      "Klangbestandteile": "Yara + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 471,
+      "Name": "Yaraxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaraxara",
+      "Klangbestandteile": "Yara + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 472,
+      "Name": "Yarazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yarazara",
+      "Klangbestandteile": "Yara + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 473,
+      "Name": "Yararia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yararia",
+      "Klangbestandteile": "Yara + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 474,
+      "Name": "Yaraelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaraelia",
+      "Klangbestandteile": "Yara + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 475,
+      "Name": "Yaraoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaraoria",
+      "Klangbestandteile": "Yara + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 476,
+      "Name": "Yarana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yarana",
+      "Klangbestandteile": "Yara + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 477,
+      "Name": "Yaraina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaraina",
+      "Klangbestandteile": "Yara + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 478,
+      "Name": "Yarauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yarauna",
+      "Klangbestandteile": "Yara + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 479,
+      "Name": "Yaraure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaraure",
+      "Klangbestandteile": "Yara + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 480,
+      "Name": "Yaracalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "yaracalia",
+      "Klangbestandteile": "Yara + calia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 481,
+      "Name": "Zamanui",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamanui",
+      "Klangbestandteile": "Zama + nui",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 482,
+      "Name": "Zamarani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamarani",
+      "Klangbestandteile": "Zama + rani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 483,
+      "Name": "Zamalani",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamalani",
+      "Klangbestandteile": "Zama + lani",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 484,
+      "Name": "Zamamoana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamamoana",
+      "Klangbestandteile": "Zama + moana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 485,
+      "Name": "Zamavai",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamavai",
+      "Klangbestandteile": "Zama + vai",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 486,
+      "Name": "Zamapua",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamapua",
+      "Klangbestandteile": "Zama + pua",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 487,
+      "Name": "Zamamara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamamara",
+      "Klangbestandteile": "Zama + mara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 488,
+      "Name": "Zamatala",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamatala",
+      "Klangbestandteile": "Zama + tala",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 489,
+      "Name": "Zamasava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamasava",
+      "Klangbestandteile": "Zama + sava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 490,
+      "Name": "Zamatava",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamatava",
+      "Klangbestandteile": "Zama + tava",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 491,
+      "Name": "Zamaxara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaxara",
+      "Klangbestandteile": "Zama + xara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 492,
+      "Name": "Zamazara",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamazara",
+      "Klangbestandteile": "Zama + zara",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 493,
+      "Name": "Zamaria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaria",
+      "Klangbestandteile": "Zama + aria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 494,
+      "Name": "Zamaelia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaelia",
+      "Klangbestandteile": "Zama + elia",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 495,
+      "Name": "Zamaoria",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaoria",
+      "Klangbestandteile": "Zama + oria",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 496,
+      "Name": "Zamana",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamana",
+      "Klangbestandteile": "Zama + ana",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 497,
+      "Name": "Zamaina",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaina",
+      "Klangbestandteile": "Zama + ina",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 498,
+      "Name": "Zamauna",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamauna",
+      "Klangbestandteile": "Zama + una",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 499,
+      "Name": "Zamaure",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamaure",
+      "Klangbestandteile": "Zama + aure",
+      "Status": "neuer Vorname"
+    },
+    {
+      "Nr": 500,
+      "Name": "Zamacalia",
+      "Geschlecht": "weiblich",
+      "Aussprache": "zamacalia",
+      "Klangbestandteile": "Zama + calia",
+      "Status": "neuer Vorname"
+    }
+  ]
+});

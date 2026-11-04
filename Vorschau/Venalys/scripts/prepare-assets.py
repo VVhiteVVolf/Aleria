@@ -115,8 +115,11 @@ def prepare_supplied(source_folder: Path) -> dict:
         originals.append(archive(source, REALM / f"assets/originals/{asset_id}.png", relative(source)))
     write_json(SOURCE_MANIFEST, originals)
     web = []
+    active_maps = read_json(SOURCES / "active-map-sources.json", {})
     for stem, target in [("map-normal", "map"), ("map-districts", "map-districts")]:
-        source = REALM / f"sources/originals/{stem}.png"
+        map_id = "normal" if stem == "map-normal" else "districts"
+        active = next((entry for entry in active_maps.get("maps", []) if entry["id"] == map_id), None)
+        source = ROOT / active["original"] if active else REALM / f"sources/originals/{stem}.png"
         web.append(web_image(source, REALM / f"assets/{target}.webp", 4096, 91))
         web.append(web_image(source, REALM / f"assets/{target}-full.webp", 8192, 94))
     for asset_id in (*PATRICIAN_IDS, *EXISTING_IDS):

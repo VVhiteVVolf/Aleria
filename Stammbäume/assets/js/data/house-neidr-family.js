@@ -234,7 +234,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     person('rheidwn-wylan', 'Rheidwn Wylan', 'male', '????', '????', 'house-wylan'),
 
     // Datierte Linie ab Daffyds Generation
-    person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '1593'),
+    person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '1608'),
     person('igraine-neidr', 'Igraine Neidr', 'female', '1579', '????'),
     person('bettrys-wylan', 'Bettrys Wylan', 'female', '1558', '????', 'house-wylan'),
     person('mari', 'Mari', 'female', '1565', '????', '', { familyRole: 'affair' }),
@@ -250,8 +250,9 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
       notes: 'Die ausgearbeitete Pyrth-Hausquelle belegt ihre Lebensdaten und Ehe mit Jowaneth Pyrth.'
     }),
     person('enya-luga', 'Enya Luga', 'female', '????', '????', 'house-luga'),
-    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '????', 'house-dyngwn', {
-      notes: 'Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.',
+    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '', 'house-dyngwn', {
+      status: 'alive',
+      notes: 'Morgan Dyngwn lebt und führt sein Haus als Ritterfürst.',
       extensions: { registryManagedFields: ['death', 'status', 'notes'] }
     }),
     person('lancelot-draig', 'Lancelot Draig', 'male', '1411', '', 'house-draig'),
@@ -374,7 +375,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     createMarriage('affair-daffyd-banw', 'daffyd-neidr', 'banw', { type: 'affair', status: 'ended' }),
     createMarriage('marriage-igraine-morien', 'igraine-neidr', 'morien-crefyddol'),
     createMarriage('marriage-gwynnan-enya', ...GWYNNAN_IDS),
-    createMarriage('marriage-aoirghe-morgan', 'aoirghe-neidr', 'morgan-dyngwn'),
+    createMarriage('marriage-aoirghe-morgan', 'aoirghe-neidr', 'morgan-dyngwn', { status: 'ended', end: '1630' }),
     createMarriage('marriage-lancelot-gwyneth', 'lancelot-draig', 'gwyneth-neidr'),
     createMarriage('union-prynhawn-iowaneth', 'prynhawn-neidr', 'iowaneth-pyrth', {
       status: 'ended',

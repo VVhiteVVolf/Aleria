@@ -1,0 +1,10 @@
+.sylvarant-placement .map-canvas{min-width:950px}
+.sylvarant-placement .crest-group{max-width:220px;flex-wrap:wrap;white-space:normal}
+.sylvarant-placement .house-choice{align-items:flex-start;flex-direction:column;gap:10px}
+.sylvarant-placement .house-choice>span{min-width:0;width:100%}
+.sylvarant-placement .house-choice strong{font-size:18px;overflow-wrap:break-word}
+.sylvarant-placement .seat-card>header{min-height:0}
+#map-dialog .map-canvas{min-width:0}
+#map-dialog .city-name{font-size:clamp(3px,1.1cqw,8px);padding:.25cqw .6cqw;border-bottom-width:.2cqw}
+#map-dialog .map-zoom button{padding:6px 8px;font-size:11px;white-space:nowrap}
+@media print{.sylvarant-placement .map-canvas{min-width:0}}

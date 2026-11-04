@@ -1,0 +1,4137 @@
+{
+  "schema": "aleria.leitheach-registry-house-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T21:20:01.308Z",
+  "publicOnly": true,
+  "status": "complete",
+  "scope": {
+    "principality": "Leitheach",
+    "continent": "Estryll",
+    "territorySource": "Kontinente/modules/leitheach/pages.source.json",
+    "territoryCatalog": "Karten/Leitheach/territories.import.json",
+    "territoryId": "fuerstentum-leitheach",
+    "href": "Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+    "baseline": "diagnostics/leitheach-clans-20261103/baseline.json"
+  },
+  "summary": {
+    "families": 29,
+    "activeHouseholds": 26,
+    "historicalHouseAdministrations": 3,
+    "suppliedAttachments": 28,
+    "additionalFamilies": 1,
+    "initialHousePages": 0,
+    "initialBiographies": 0,
+    "initialGalleryFigures": 0,
+    "originalFigures": 26,
+    "newIllustrationsRequired": 3,
+    "rankCounts": {
+      "ard-tiarna": 1,
+      "laird": 17,
+      "mor-tiarna": 6,
+      "dun-tiarna": 4,
+      "sept-head": 1
+    }
+  },
+  "canonicalAllowlist": [
+    "haus-mac-ard-cumhaill",
+    "haus-ua-eirce",
+    "haus-fiachrach",
+    "haus-ruin-ua-laoch",
+    "haus-ua-gaelach",
+    "haus-gallchobhair",
+    "haus-cleir",
+    "haus-ghaiscioch",
+    "haus-dal-ceardaiocht",
+    "haus-na-mhuir",
+    "haus-gruenhand",
+    "haus-dal-cruthin",
+    "haus-suileach",
+    "haus-frisealach",
+    "haus-ard-trodach",
+    "haus-nic-caoimhe",
+    "haus-iomrach",
+    "haus-somhairle",
+    "haus-fir-an-tarvo",
+    "haus-ruitheach",
+    "haus-gortach",
+    "haus-mac-airt",
+    "haus-choinnich",
+    "haus-nic-blar-leitheach",
+    "haus-laidir",
+    "haus-dal-t-saor",
+    "haus-tir-an-cuinn",
+    "haus-airgid",
+    "haus-amrhan"
+  ],
+  "historicalIds": [
+    "haus-suileach",
+    "haus-iomrach",
+    "haus-dal-t-saor"
+  ],
+  "additionalFamilyIds": [
+    "haus-gruenhand"
+  ],
+  "relatedRegisterGuards": [
+    {
+      "id": "haus-nic-blar",
+      "folderPath": [
+        "Ceitheach",
+        "Tir na Scian",
+        "Lochcoille"
+      ]
+    },
+    {
+      "id": "haus-cleirigh",
+      "folderPath": [
+        "Blaithneach",
+        "Tir na Dílse",
+        "Eorach"
+      ]
+    },
+    {
+      "id": "haus-draig",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    {
+      "id": "haus-aderyn",
+      "folderPath": [
+        "Cenyr",
+        "Tal der Milane",
+        "Yvains Klamm",
+        "Penbryn"
+      ]
+    },
+    {
+      "id": "haus-marwolaeth",
+      "folderPath": [
+        "Cenyr",
+        "Vortigerns Ruh",
+        "Tanwens Flamme",
+        "Mathragon"
+      ]
+    },
+    {
+      "id": "haus-suedstahl",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ]
+    },
+    {
+      "id": "haus-albholz",
+      "folderPath": [
+        "Aldrimar",
+        "Kronental",
+        "Jarltümliche Herrschaft – Tal der Helden",
+        "Heldenwacht"
+      ]
+    }
+  ],
+  "findings": [
+    "Leitheach und Ceitheach sind eigenstaendige Fuerstentuemer. Nur die29tatsaechlich inLeitheach gefuehrten Familien einschliessen; keineCenyr-Akten aus Heirats- oderDienstbindungen hinzufuegen.",
+    "MacSuileach,AnIomrach undDalTSaor sind historische Hausverwaltungen trotz unveraenderter operativerRegistry-statusactive. Iomrach undDalTSaor besitzen kanonische auswaertige Ueberlebende.",
+    "Die26Originale bleiben unveraendert, einschliesslich berittener,sitzender undmehrfigurigerDarstellungen. Gruenhand,Suileach undDalTSaor sind die3echtenBildluecken.",
+    "RangundIdentitaet behalten: haus-amrhan,haus-dal-t-saor,haus-nic-blar-leitheach. Letztere Lairdlinie ist von Ceitheachs MorTiarna-Akte haus-nic-blar getrennt. haus-cleir ist nicht Blaithneachs haus-cleirigh.",
+    "Somhairle bleibtLaird und heutigerVerwalterBrochanClais;CleirSitzCairnFaire,UaEirceSenanbail,FiachrachMarbail. Gruenhand bleibtSept unterNaMhuir inBrochanCoill.",
+    "Keinegelieferten Genealogien oderMilitaerstatistiken ausgewertet; keineGraphen,ProfileoderPersonenveraendert."
+  ],
+  "imageAudit": {
+    "manifest": "diagnostics/leitheach-clans-20261103/original-images.json",
+    "missing": "diagnostics/leitheach-clans-20261103/missing-originals.json",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "contactSheetIndependentlyViewed": true,
+    "allOriginalHashesVerified": true
+  },
+  "records": [
+    {
+      "id": "haus-mac-ard-cumhaill",
+      "title": "Clan Mac Ard Cumhaill",
+      "rankId": "ard-tiarna",
+      "profile": {
+        "rankId": "ard-tiarna",
+        "seat": "Dun Athar",
+        "barony": "",
+        "county": "Tir na Sleagh",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh",
+          "Dun Athar"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Dun Athar"
+      ],
+      "sourceRevision": 16,
+      "description": "Der albische Fürstenclan von Tir na Sleagh: von Fionnbarr und den nur lückenhaft überlieferten frühen Ard Mac Cumhaill bis zu Fionn und seiner Erbfolge der Gegenwart.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-mac-ard-cumhaill-family.js",
+        "Stammbäume/assets/js/data/leitheach-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "mac-ard-cumhaill",
+        "attachmentId": "a1094e91-6bdf-46de-8efd-088401229cd0",
+        "sha256": "d7771c68c6b61be7e94ff4acbb6f6b806b9c0dcc819b8681734f3f1228980fb3"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Dun_Athar/Clan_Mac_Ard_Cumhaill/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-mac-ard-cumhaill.png",
+        "portraitCount": 66,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-mac-ard-cumhaill/krieger.png",
+            "url": "https://i.imgur.com/Z0TGI4J.png",
+            "sha256": "bb8af064025c9fb071352b0391d7867c2d15f1749dbed286fde8c37703408078",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "fionn-1686-cumhail",
+          "name": "Fionn Cumhail",
+          "title": "Ard Mac Cumhaill · Ard Tiarna von Leitheach · seit 1722"
+        },
+        "heirs": [
+          {
+            "id": "faolan-1714-cumhail",
+            "name": "Faolan Cumhail",
+            "title": "1. Stelle der Erbfolge"
+          },
+          {
+            "id": "oisin-1716-cumhail",
+            "name": "Oisín Cumhail",
+            "title": "2. Stelle der Erbfolge"
+          },
+          {
+            "id": "fiona-cumhail",
+            "name": "Fiona Cumhail",
+            "title": "3. Stelle der überlieferten Erbfolgetafel"
+          },
+          {
+            "id": "finn-cumhail",
+            "name": "Finn Cumhail",
+            "title": "4. Stelle der überlieferten Erbfolgetafel"
+          }
+        ],
+        "founder": {
+          "id": "fionnbarr-cumhail",
+          "name": "Fionnbarr Cumhail",
+          "title": "Gründer des Clans · erster Ard Mac Cumhaill"
+        }
+      },
+      "territory": {
+        "id": "haus-mac-ard-cumhaill",
+        "title": "Clan Mac Ard Cumhaill",
+        "territoryId": "fuerstentum-leitheach",
+        "territoryName": "Fürstentum Leitheach",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+        "territoryType": "Fürstentum",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ua-eirce",
+      "title": "Clan Ua’Eirce",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Senanbail",
+        "barony": "Tir na nIúr",
+        "county": "Tir na Sleagh",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh",
+          "Tir na nIúr",
+          "Senanbail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na nIúr",
+        "Senanbail"
+      ],
+      "sourceRevision": 3,
+      "description": "Junger Kadettenclan der Mac Cumhaill, der die südliche Region der Oberherrschaft verwaltet und für Ordnung, Pflichtbewusstsein und verlässliche Landesverteidigung steht.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-eirce-family.js",
+        "Stammbäume/assets/js/data/leitheach-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-eirce",
+        "attachmentId": "05545172-f8d8-4fc5-b9ac-983d581404ad",
+        "sha256": "a2923ced092867c8d473fcd7bc3d96f8f4a5cd24d37765748d0d34d382b748ae"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_nIur/Senanbail/Clan_Ua_Eirce/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-eirce.png",
+        "portraitCount": 27,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ua-eirce/krieger.png",
+            "url": "https://i.imgur.com/614OWV5.png",
+            "sha256": "e14576bdf12ac1f93c41cac2b2c7eae4cfae6807758471fe66b34e4e4e029a33",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "brock-eirce",
+          "name": "Brock Eirce",
+          "title": "Laird von Ua’Eirce · seit 1720"
+        },
+        "heirs": [
+          {
+            "id": "nechtan-eirce",
+            "name": "Nechtan Eirce",
+            "title": "1. Stelle der Erbfolge"
+          },
+          {
+            "id": "uisdean-eirce",
+            "name": "Uisdean Eirce",
+            "title": "2. Stelle der Erbfolge"
+          }
+        ],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-ua-eirce",
+        "title": "Clan Ua’Eirce",
+        "territoryId": "leitheach-herrschaft-eirce",
+        "territoryName": "Tir na nIúr",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sleagh",
+            "slug": "leitheach-tir-na-sleagh"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na nIúr",
+            "slug": "leitheach-herrschaft-eirce"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-fiachrach",
+      "title": "Clan Uí Fiachrach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Mârbail",
+        "barony": "Tir na Seamróige",
+        "county": "Tir na Sleagh",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh",
+          "Tir na Seamróige",
+          "Mârbail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na Seamróige",
+        "Mârbail"
+      ],
+      "sourceRevision": 4,
+      "description": "Junger Laird-Clan des Fürstentums Leitheach, dessen verstreute, günstig gelegene Besitzungen und bemerkenswerter Aufstieg mit Gelegenheit, Anpassungsfähigkeit und dem Segen der Glücksmaid verbunden werden.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ui-fiachrach-family.js",
+        "Stammbäume/assets/js/data/leitheach-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "na-fiachrach",
+        "attachmentId": "1e1a735c-b9ce-4932-ace6-681b679f46bd",
+        "sha256": "6a031db98a10957fb849dc413866c8a927a4d7649e19de9b9947eb451054c8d4"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_Seamroige/Marbail/Clan_Ui_Fiachrach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ui-fiachrach.png",
+        "portraitCount": 32,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-fiachrach/krieger.png",
+            "url": "https://i.imgur.com/6mfROrJ.png",
+            "sha256": "a34ab7626357f1b823674c0758446eb70e1f6525443c7423d85c4a467d932566",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "grada-fiachrach",
+          "name": "Gráda Fiachrach",
+          "title": "Laird des Clans Uí Fiachrach · seit 1734"
+        },
+        "heirs": [
+          {
+            "id": "ultach-fiachrach",
+            "name": "Ultach Fiachrach",
+            "title": "2. Stelle der Erbfolge"
+          },
+          {
+            "id": "seamus-fiachrach",
+            "name": "Séamus Fiachrach",
+            "title": "1. Stelle der Erbfolge"
+          },
+          {
+            "id": "gadhra-fiachrach",
+            "name": "Gadhra Fiachrach",
+            "title": "3. Stelle der Erbfolge"
+          },
+          {
+            "id": "connla-fiachrach",
+            "name": "Connla Fiachrach",
+            "title": "4. Stelle der Erbfolge"
+          }
+        ],
+        "founder": {
+          "id": "seamair-fiachrach",
+          "name": "Seamair Fiachrach",
+          "title": "Gründer und erster Laird des Clans Fiachrach"
+        }
+      },
+      "territory": {
+        "id": "haus-fiachrach",
+        "title": "Clan Uí Fiachrach",
+        "territoryId": "leitheach-herrschaft-fiachrach",
+        "territoryName": "Tir na Seamróige",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sleagh",
+            "slug": "leitheach-tir-na-sleagh"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Seamróige",
+            "slug": "leitheach-herrschaft-fiachrach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ruin-ua-laoch",
+      "title": "Ruin Ua Laoch",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Abhainn",
+        "barony": "Tir na gCoiréal",
+        "county": "Tir na Sleagh",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sleagh",
+          "Tir na gCoiréal",
+          "Broch an Abhainn"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na gCoiréal",
+        "Broch an Abhainn"
+      ],
+      "sourceRevision": 7,
+      "description": "Die aus Senán „Laoch“ Cumhail hervorgegangene Heldenlinie bewahrt ein kriegerisches Ideal aus Mut, Standhaftigkeit, Opferbereitschaft und Schutzpflicht.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ruin-ua-laoch-family.js",
+        "Stammbäume/assets/js/data/leitheach-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ruin-ua-laoch",
+        "attachmentId": "0814ba1a-e76c-4cf1-95eb-e372685a651f",
+        "sha256": "849734baaf01a1b31b706bd00d3973bc2d6abf7cf6bff51083cf62881b7fa3d7"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
+        "portraitCount": 33,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ruin-ua-laoch/krieger.png",
+            "url": "https://i.imgur.com/aFy1QsQ.png",
+            "sha256": "68498666f3c05f06732faf8b68bdd5330dba5b960cc85d967277a7dfddd95b6c",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "reamonn-laoch",
+          "name": "Reamonn Laoch",
+          "title": "Laird des Clans Ruin Ua Laoch · seit 1728"
+        },
+        "heirs": [
+          {
+            "id": "zadran-laoch",
+            "name": "Zadrán Laoch",
+            "title": "1. Stelle der Erbfolge"
+          },
+          {
+            "id": "eamon-laoch",
+            "name": "Eamon Laoch",
+            "title": "2. Stelle der Erbfolge"
+          },
+          {
+            "id": "fergal-laoch",
+            "name": "Fergal Laoch",
+            "title": "3. Stelle der Erbfolge"
+          }
+        ],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-ruin-ua-laoch",
+        "title": "Ruin Ua Laoch",
+        "territoryId": "leitheach-herrschaft-laoch",
+        "territoryName": "Tir na gCoiréal",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sleagh",
+            "slug": "leitheach-tir-na-sleagh"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na gCoiréal",
+            "slug": "leitheach-herrschaft-laoch"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ua-gaelach",
+      "title": "Clan Ua’Gaelach",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Nossail",
+        "barony": "",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Nossail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Nossail"
+      ],
+      "sourceRevision": 13,
+      "description": "Aus Donnchadh Cumhaills Kadettenlinie hervorgegangener Mor-Tiarna-Clan von Tir na Sinsear mit Sitz in Nossail.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-gaelach-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-gaelach",
+        "attachmentId": "8591b29e-db13-49a0-aee0-ec52972315ad",
+        "sha256": "4bb1da7a1fa7995bce89e2cf39ea728791ba25786cf164cbcb72be276d6547ab"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Nossail/Clan_Ua_Gaelach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-gaelach.png",
+        "portraitCount": 17,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ua-gaelach/krieger.png",
+            "url": "https://i.imgur.com/iOUCk5v.png",
+            "sha256": "b0d51e8329ee806dbd87e4856a94f4136e7d2591e952bda3075901ea0cecf2d9",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "ciaran-gealach",
+          "name": "Ciaran Gealach",
+          "title": "Mor Tiarna von Tir na Sinsear · seit 1731"
+        },
+        "heirs": [],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-ua-gaelach",
+        "title": "Clan Ua’Gaelach",
+        "territoryId": "leitheach-tir-na-sinsear",
+        "territoryName": "Tir na Sinsear",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-gallchobhair",
+      "title": "Fir An’Gallchobhair",
+      "rankId": "dun-tiarna",
+      "profile": {
+        "rankId": "dun-tiarna",
+        "seat": "Dun Laog",
+        "barony": "Tir na Coimhthioch",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-ua-gaelach",
+        "liegeHouseName": "Clan Ua’Gaelach",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Tir na Coimhthioch",
+          "Dun Laog"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Dun Laog"
+      ],
+      "sourceRevision": 11,
+      "description": "Der Dún-Tiarna-Clan von Dun Laog in Tir na Sinsear, mit den aus seiner Linie hervorgegangenen Laird-Clans Ua’Cleir, Ua’Ghaiscíoch und Dál’Ceardaíocht.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-fir-an-gallchobhair-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "fir-an-gallchobhair",
+        "attachmentId": "8216ef13-7549-4802-b85a-c24232678de9",
+        "sha256": "cef6dc1b34a0c0dbee7b12e3389950e9f65f98dcabd20be3462763d323ea029b"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Dun_Laog/Fir_An_Gallchobhair/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png",
+        "portraitCount": 44,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-gallchobhair/krieger.png",
+            "url": "https://i.imgur.com/IQoksLd.png",
+            "sha256": "fe6a829a3226161e6144845ff138f648ccd1f7a96a1834274c8b6cd1ee42b044",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "faolan-gallchobhair",
+          "name": "Faolan Gallchobhair",
+          "title": "Dún Tiarna von Dun Laog · seit 1724"
+        },
+        "heirs": [],
+        "founder": {
+          "id": "utgar-gallchobhair",
+          "name": "Utgar Gallchobhair",
+          "title": "Gründer · erster Dún Tiarna von Dun Laog"
+        }
+      },
+      "territory": {
+        "id": "haus-gallchobhair",
+        "title": "Fir An’Gallchobhair",
+        "territoryId": "leitheach-tir-na-coimhthioch",
+        "territoryName": "Tir na Coimhthioch",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
+        "territoryType": "Lehensherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Coimhthioch",
+            "slug": "leitheach-tir-na-coimhthioch"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-cleir",
+      "title": "Clan Ua’Cleir",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Cairn Fàire",
+        "barony": "Tir na bhFiach",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gallchobhair",
+        "liegeHouseName": "Fir An’Gallchobhair",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Tir na Coimhthioch",
+          "Tir na bhFiach",
+          "Cairn Fàire"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na bhFiach",
+        "Cairn Fàire"
+      ],
+      "sourceRevision": 3,
+      "description": "Laird-Clan in Tir na Sinsear und Kadettenlinie der Fir An’Gallchobhair, begründet durch Gilleón Gallchobhair.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-cleir-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-cleir",
+        "attachmentId": "a02e8d85-8a20-4118-b4ce-646f9c08b2ea",
+        "sha256": "b12bd9a41893fe693d3878bd5ebd7d25e9665ec77834fa0c66794d852877d808"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_bhFiach/Cairn_Faire/Clan_Ua_Cleir/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-cleir.png",
+        "portraitCount": 9,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-cleir/krieger.png",
+            "url": "https://i.imgur.com/w9TCdC0.png",
+            "sha256": "9dc1c03531c61f1024ae92f6f21de3ae368ac7ee63f30f9fb5b02e127286dab1",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "colm-cleir",
+          "name": "Colm Cleir",
+          "title": "Laird des Clans Ua’Cleir · seit 1724"
+        },
+        "heirs": [],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-cleir",
+        "title": "Clan Ua’Cleir",
+        "territoryId": "leitheach-herrschaft-cleir",
+        "territoryName": "Tir na bhFiach",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Coimhthioch",
+            "slug": "leitheach-tir-na-coimhthioch"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na bhFiach",
+            "slug": "leitheach-herrschaft-cleir"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ghaiscioch",
+      "title": "Clan Ua’Ghaiscíoch",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Dun Laog",
+        "barony": "Tir na nArmúr",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gallchobhair",
+        "liegeHouseName": "Fir An’Gallchobhair",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Tir na Coimhthioch",
+          "Tir na nArmúr",
+          "Dun Laog"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na nArmúr",
+        "Dun Laog"
+      ],
+      "sourceRevision": 5,
+      "description": "Laird-Clan in Tir na Sinsear und Kadettenlinie der Fir An’Gallchobhair, begründet durch Taerlach Gallchobhair.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-ghaiscioch-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-ghaiscioch",
+        "attachmentId": "2de25d27-593a-4fa0-8eee-b2d5195731e9",
+        "sha256": "4145d10b2734c8faa0ed8e6de8b1ca5fe3dc499b7f09ea10cda58e2c7671c2d8"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_nArmur/Dun_Laog/Clan_Ua_Ghaiscioch/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-ghaiscioch.png",
+        "portraitCount": 11,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ghaiscioch/krieger.png",
+            "url": "https://i.imgur.com/IXzYdX0.png",
+            "sha256": "733973f7cc679a541df50fd44c299db8cc42d89b992e17fdbe32aa9ecaca4120",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "darragh-ua-ghaiscioch",
+          "name": "Darragh Ghaiscíoch",
+          "title": "Laird des Clans Ua’Ghaiscíoch · seit 1733"
+        },
+        "heirs": [
+          {
+            "id": "lorghus-ghaiscioch",
+            "name": "Lorghus Ghaiscíoch",
+            "title": "Erster in der Erbfolge"
+          },
+          {
+            "id": "brogan-ghaiscioch",
+            "name": "Brogan Ghaiscíoch",
+            "title": "Zweiter in der Erbfolge"
+          },
+          {
+            "id": "ailis-ghaiscioch",
+            "name": "Ailis Ghaiscíoch",
+            "title": "Dritte in der Erbfolge · Mündel Emyrs Blachs"
+          }
+        ],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-ghaiscioch",
+        "title": "Clan Ua’Ghaiscíoch",
+        "territoryId": "leitheach-herrschaft-ghaiscioch",
+        "territoryName": "Tir na nArmúr",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/Herrschaft der Ua’Ghaiscíoch.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Coimhthioch",
+            "slug": "leitheach-tir-na-coimhthioch"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na nArmúr",
+            "slug": "leitheach-herrschaft-ghaiscioch"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-dal-ceardaiocht",
+      "title": "Clan Dál’Ceardaíocht",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Dun Laog",
+        "barony": "Tir na hInneonach",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gallchobhair",
+        "liegeHouseName": "Fir An’Gallchobhair",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Tir na Coimhthioch",
+          "Tir na hInneonach",
+          "Dun Laog"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na hInneonach",
+        "Dun Laog"
+      ],
+      "sourceRevision": 5,
+      "description": "Laird-Clan in Tir na Sinsear und Kadettenlinie der Fir An’Gallchobhair, begründet durch Aonghus Gallchobhair.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "dal-ceardaiocht",
+        "attachmentId": "c3e467f4-ed11-4d67-8cb1-53e5d5df8bd3",
+        "sha256": "d9a73e595bc3274f58eb1d74cab55a52de7d52ebd633e4bc55de1f727e60977c"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Coimhthioch/Tir_na_hInneonach/Dun_Laog/Clan_Dal_Ceardaiocht/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-dal-ceardaiocht.png",
+        "portraitCount": 9,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-dal-ceardaiocht/krieger.png",
+            "url": "https://i.imgur.com/abMIDm3.png",
+            "sha256": "c96336ec2ef8f860a462c9b323cfee4cdd4d3e6cc060a389d455a1a753820650",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "caibrel-ceardaiocht",
+          "name": "Caibrel Ceardaíocht",
+          "title": "Laird des Clans Dál’Ceardaíocht · seit 1720"
+        },
+        "heirs": [
+          {
+            "id": "rogan-ceardaiocht",
+            "name": "Rógán Ceardaíocht",
+            "title": "Erster in der Erbfolge"
+          },
+          {
+            "id": "jocan-ceardaiocht",
+            "name": "Jocán Ceardaíocht",
+            "title": "Zweiter in der Erbfolge"
+          },
+          {
+            "id": "etain-ceardaiocht",
+            "name": "Étaín Ceardaíocht",
+            "title": "Dritte in der Erbfolge"
+          }
+        ],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-dal-ceardaiocht",
+        "title": "Clan Dál’Ceardaíocht",
+        "territoryId": "leitheach-herrschaft-ceardaiocht",
+        "territoryName": "Tir na hInneonach",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Coimhthioch",
+            "slug": "leitheach-tir-na-coimhthioch"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na hInneonach",
+            "slug": "leitheach-herrschaft-ceardaiocht"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-na-mhuir",
+      "title": "Clan Na’Mhuir",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Coill",
+        "barony": "Tir na Fancha",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [
+          "Broch an Abhainn"
+        ],
+        "liegeHouseId": "haus-ua-gaelach",
+        "liegeHouseName": "Clan Ua’Gaelach",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/tir-na-fancha.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "barony": "assets/images/regions/Leitheach/tir-na-fancha.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sinsear",
+          "Tir na Fancha",
+          "Broch an Coill"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Fancha",
+        "Broch an Coill"
+      ],
+      "sourceRevision": 5,
+      "description": "Laird-Clan von Tir na Fancha mit Sitz in Broch an Coill, unmittelbar unter Clan Ua’Gaelach.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-na-mhuir-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "na-mhuir",
+        "attachmentId": "27bf4582-bf61-4c5a-871f-e7e52b62af9e",
+        "sha256": "0065938b917372a49b851cb0e462352480d2823a15c6a0fd78f2d64ab6bef9d5"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Clan_Na_Mhuir/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-na-mhuir.png",
+        "portraitCount": 26,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-na-mhuir/krieger.png",
+            "url": "https://i.imgur.com/2jtAcd2.png",
+            "sha256": "3ba4e3418cf484dcaff7f35f240d2bc3094fc19065d63cc4ae2833bf0f5ada81",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "aodhagan-mhuir",
+          "name": "Aodhagán Mhuir",
+          "title": "Laird des Clans Na’Mhuir · seit 1720"
+        },
+        "heirs": [],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-na-mhuir",
+        "title": "Clan Na’Mhuir",
+        "territoryId": "leitheach-tir-na-fancha",
+        "territoryName": "Tir na Fancha",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Fancha",
+            "slug": "leitheach-tir-na-fancha"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-gruenhand",
+      "title": "Sept Grünhand aus Leith",
+      "rankId": "sept-head",
+      "profile": {
+        "rankId": "sept-head",
+        "seat": "Broch an Coill",
+        "barony": "Tir na Fancha",
+        "county": "Tir na Sinsear",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-na-mhuir",
+        "liegeHouseName": "Clan Na’Mhuir",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "assets/images/regions/Leitheach/tir-na-fancha.png",
+          ""
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Leitheach/tir-na-fancha.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png"
+        }
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Fancha",
+        "Broch an Coill"
+      ],
+      "sourceRevision": 4,
+      "description": "Familie aus dem Druidenhain, die in Broch an Coill als Sept dem Clan Na’Mhuir dient und seinem Laird verschworen ist.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/sept-gruenhand-family.js",
+        "Stammbäume/assets/js/data/tir-na-sinsear-house-profiles.js"
+      ],
+      "attachment": null,
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/sept-gruenhand-aus-leith.png",
+        "portraitCount": 8,
+        "missingPortraits": [],
+        "originalAssets": [],
+        "needsNewIllustration": true
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "peregrain-gruenhand",
+          "name": "Peregráin Grünhand",
+          "title": "Gründervater und erstes überliefertes Septoberhaupt der Grünhand aus Leith"
+        },
+        "heirs": [],
+        "founder": {
+          "id": "peregrain-gruenhand",
+          "name": "Peregráin Grünhand",
+          "title": "Gründervater und erstes überliefertes Septoberhaupt der Grünhand aus Leith"
+        }
+      },
+      "territory": {
+        "id": "haus-gruenhand",
+        "title": "Sept Grünhand aus Leith",
+        "territoryId": "leitheach-tir-na-fancha",
+        "territoryName": "Tir na Fancha",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sinsear",
+            "slug": "leitheach-tir-na-sinsear"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Fancha",
+            "slug": "leitheach-tir-na-fancha"
+          }
+        ],
+        "selectionBasis": "Sept im bestehenden Tir-na-Fancha-Gebiet des Lehnshauses",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-dal-cruthin",
+      "title": "Clan Dál’Cruthin",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Lochansail",
+        "barony": "",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Lochansail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Lochansail"
+      ],
+      "sourceRevision": 11,
+      "description": "Mor-Tiarna-Clan von Tir na Gortanna mit Sitz in Lochansail; gegründet von Fearghus, einem Bastard der Mac Suileach.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-dal-cruthin-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "dal-cruthin",
+        "attachmentId": "e6858f0a-09eb-42b1-8ef6-968dbded0211",
+        "sha256": "0c96aba99e4a205ef1a109a40fb90813cb01d22292ddb60cb0b1e92f913b9441"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-dal-cruthin.png",
+        "portraitCount": 39,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-dal-cruthin/krieger.png",
+            "url": "https://i.imgur.com/U1pG9FC.png",
+            "sha256": "e3a8a46a61e5707d84cf588be09cb628c6f051c2708b6ef26a764b222ef832ad",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "cathaoir-cruthin",
+          "name": "Cathaoir Cruthin",
+          "title": "Mor Tiarna von Tir na Gortanna · seit 1694"
+        },
+        "heirs": [
+          {
+            "id": "meallchu-cruthin",
+            "name": "Meallchú Cruthin",
+            "title": "Erster der Erbfolge des Mor Tiarna"
+          },
+          {
+            "id": "kolman-cruthin",
+            "name": "Kólmán Cruthin",
+            "title": "Zweiter der Erbfolge des Mor Tiarna"
+          }
+        ],
+        "founder": {
+          "id": "fearghus-founder-cruthin",
+          "name": "Fearghus Cruthin",
+          "title": "Gründer und erster Mor Tiarna des Clans Dál’Cruthin"
+        }
+      },
+      "territory": {
+        "id": "haus-dal-cruthin",
+        "title": "Clan Dál’Cruthin",
+        "territoryId": "leitheach-tir-na-gortanna",
+        "territoryName": "Tir na Gortanna",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-suileach",
+      "title": "Mac Suileach",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Lochansail",
+        "barony": "",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          ""
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png"
+        }
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Lochansail"
+      ],
+      "sourceRevision": 1,
+      "description": "Vorbereitete Hauptakte des erloschenen früheren Mor-Tiarna-Hauses Mac Suileach in Tir na Gortanna.",
+      "historical": true,
+      "historicalMetadata": {
+        "historicalStatus": "extinct",
+        "extinctHouse": false,
+        "ownHouseStatus": "extinct",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-families.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "mac-faill-suileach",
+        "attachmentId": "b3443da9-03ce-4d76-a63e-c2db9b951309",
+        "sha256": "428ae3ba3901b7f0d184b71dddef41bae08c183e0a8aac04a98a3d39879ad0f3"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Mac_Suileach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-mac-suileach.png",
+        "portraitCount": 0,
+        "missingPortraits": [],
+        "originalAssets": [],
+        "needsNewIllustration": true
+      },
+      "leadershipEvidence": {
+        "currentHead": null,
+        "heirs": [],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-suileach",
+        "title": "Mac Suileach",
+        "territoryId": "leitheach-tir-na-gortanna",
+        "territoryName": "Tir na Gortanna",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          }
+        ],
+        "selectionBasis": "Historisches Haus ohne eigene heutige Territorialseite; zugehoerige Oberherrschaft",
+        "historical": true,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-frisealach",
+      "title": "Ard Frisealach",
+      "rankId": "dun-tiarna",
+      "profile": {
+        "rankId": "dun-tiarna",
+        "seat": "Lasbun",
+        "barony": "Tir na Lúibe",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dal-cruthin",
+        "liegeHouseName": "Clan Dál’Cruthin",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Tir na Lúibe",
+          "Lasbun"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Lúibe",
+        "Lasbun"
+      ],
+      "sourceRevision": 7,
+      "description": "Dún-Tiarna-Haus der Lehensherrschaft Ard Frisealach mit Sitz in Lasbun, Tir na Gortanna.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ard-frisealach-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ard-frisealach",
+        "attachmentId": "1d99285d-6218-4470-a66b-02557f400754",
+        "sha256": "673190664cb2ef2a75bace2dd98bf13eacf7ff3dfd8188cc92ebd84f7c2c4302"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Luibe/Lasbun/Ard_Frisealach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ard-frisealach.png",
+        "portraitCount": 45,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-frisealach/krieger.png",
+            "url": "https://i.imgur.com/ytzqni6.png",
+            "sha256": "af3fc42bed0e73a9e45cc670ca09f816a9f59c42ae580be8715f41ea5f7a1aaa",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "giollanaimhe-frisealach",
+          "name": "Giollanáimhe Frisealach",
+          "title": "Dún Tiarna der Ard Frisealach · seit 1730"
+        },
+        "heirs": [
+          {
+            "id": "koarnach-frisealach",
+            "name": "Koarnach Frisealach",
+            "title": "Erster in der Erbfolge des Dún Tiarna"
+          },
+          {
+            "id": "yachthar-frisealach",
+            "name": "Yachthar Frisealach",
+            "title": "Zweiter in der Erbfolge des Dún Tiarna"
+          },
+          {
+            "id": "nioran-frisealach",
+            "name": "Niorán Frisealach",
+            "title": "Dritter in der Erbfolge des Dún Tiarna"
+          }
+        ],
+        "founder": {
+          "id": "tadhghan-founder-frisealach",
+          "name": "Tadhghán Frisealach",
+          "title": "Gründer und erster Dún Tiarna der Ard Frisealach"
+        }
+      },
+      "territory": {
+        "id": "haus-frisealach",
+        "title": "Ard Frisealach",
+        "territoryId": "leitheach-herrschaft-frisealach",
+        "territoryName": "Tir na Lúibe",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
+        "territoryType": "Lehensherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Lúibe",
+            "slug": "leitheach-herrschaft-frisealach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ard-trodach",
+      "title": "Ard Trodach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Lochansail",
+        "barony": "Tir na gComhrac",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dal-cruthin",
+        "liegeHouseName": "Clan Dál’Cruthin",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Tir na gComhrac",
+          "Lochansail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na gComhrac",
+        "Lochansail"
+      ],
+      "sourceRevision": 8,
+      "description": "Laird-Clan innerhalb Lochansails in der Eigenbaronie des Mor Tiarna von Tir na Gortanna.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ard-trodach-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ard-trodach",
+        "attachmentId": "93c01461-aece-44c9-ba9d-453b55dbb9f1",
+        "sha256": "1d53c9abade73f34228877b3e2e9281042aeb7d1a2b1cd49d2a7b03e3fe67c90"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_gComhrac/Lochansail/Ard_Trodach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ard-trodach.png",
+        "portraitCount": 33,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ard-trodach/krieger.png",
+            "url": "https://i.imgur.com/UVJ9BAy.png",
+            "sha256": "709a21018b942da9a20d9e7940a85f5f1e5b25fcf7c4536195e0d19136ae2aca",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "caireall-trodach",
+          "name": "Caireall Trodach",
+          "title": "Laird der Ard Trodach · seit 1703"
+        },
+        "heirs": [
+          {
+            "id": "haolthan-trodach",
+            "name": "Haolthán Trodach",
+            "title": "Erster in der Erbfolge des Laird"
+          },
+          {
+            "id": "maithnu-trodach",
+            "name": "Maithnú Trodach",
+            "title": "Zweiter in der Erbfolge des Laird"
+          }
+        ],
+        "founder": {
+          "id": "fothadh-founder-trodach",
+          "name": "Fothadh Trodach",
+          "title": "Gründer und erster Laird der Ard Trodach"
+        }
+      },
+      "territory": {
+        "id": "haus-ard-trodach",
+        "title": "Ard Trodach",
+        "territoryId": "leitheach-herrschaft-ard-trodach",
+        "territoryName": "Tir na gComhrac",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na gComhrac",
+            "slug": "leitheach-herrschaft-ard-trodach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-nic-caoimhe",
+      "title": "Nic Caoimhe",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Lochansail",
+        "barony": "Tir na Lasrach",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dal-cruthin",
+        "liegeHouseName": "Clan Dál’Cruthin",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Tir na Lasrach",
+          "Lochansail"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Lasrach",
+        "Lochansail"
+      ],
+      "sourceRevision": 4,
+      "description": "Matriarchal geführter Laird-Clan innerhalb Lochansails in Tir na Gortanna.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-nic-caoimhe-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "nic-caoimhe",
+        "attachmentId": "389f47bc-8e12-49d3-9e57-663412937a9f",
+        "sha256": "ccde2b8777851fa2881ed12d60efd3389bd2c33934c73cd0d755e942ae4fc416"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Lasrach/Lochansail/Nic_Caoimhe/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-nic-caoimhe.png",
+        "portraitCount": 27,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-nic-caoimhe/krieger.png",
+            "url": "https://i.imgur.com/f47xqMv.png",
+            "sha256": "046221cb212b7613d4e889bc08a58d783ff3998855043c30edec63099f0f7ea1",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "ciannait-caoimhe",
+          "name": "Ciannait Caoimhe",
+          "title": "Laird der Nic Caoimhe · seit 1729"
+        },
+        "heirs": [
+          {
+            "id": "yllana-caoimhe",
+            "name": "Yllána Caoimhe",
+            "title": "Erste in der Erbfolge der Laird"
+          },
+          {
+            "id": "realtin-caoimhe",
+            "name": "Réaltin Caoimhe",
+            "title": "Zweite in der Erbfolge der Laird"
+          }
+        ],
+        "founder": {
+          "id": "fainne-founder-caoimhe",
+          "name": "Fainne Caoimhe",
+          "title": "Gründerin und erste Laird der Nic Caoimhe"
+        }
+      },
+      "territory": {
+        "id": "haus-nic-caoimhe",
+        "title": "Nic Caoimhe",
+        "territoryId": "leitheach-herrschaft-nic-caoimhe",
+        "territoryName": "Tir na Lasrach",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Lasrach",
+            "slug": "leitheach-herrschaft-nic-caoimhe"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-iomrach",
+      "title": "An’Iomrach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Clais",
+        "barony": "Tir na Soilse",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dal-cruthin",
+        "liegeHouseName": "Clan Dál’Cruthin",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Tir na Soilse",
+          "Broch an Clais"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Soilse",
+        "Broch an Clais"
+      ],
+      "sourceRevision": 4,
+      "description": "Ehemaliger Laird-Clan von Broch an Clais, 1733 als Herrschaft vernichtet; Cónán überlebte als auswärtiges Mündel.",
+      "historical": true,
+      "historicalMetadata": {
+        "historicalStatus": "extinct",
+        "extinctHouse": false,
+        "ownHouseStatus": "extinct",
+        "extinctionEvent": {
+          "year": "1733",
+          "cause": "Überfall der Schwarzblutmarodeure auf Broch an Clais",
+          "administrativeExtinction": true,
+          "survivorIds": [
+            "ybhna-iomrach",
+            "conan-iomrach"
+          ]
+        }
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-iomrach-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "an-iomrach",
+        "attachmentId": "3d57ef3b-968f-40b2-9ffb-cd55d56883e0",
+        "sha256": "3ce59094ee5d270058fe41e870d84b44ee8a06f641b3b74b52cb2f9364c54ab7"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-an-iomrach.png",
+        "portraitCount": 16,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-iomrach/krieger.png",
+            "url": "https://i.imgur.com/JakWr3E.png",
+            "sha256": "74fba2d603e515c9bea6711830c192750d868469196b1e790d477b1c4e576c4b",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": null,
+        "heirs": [
+          {
+            "id": "conan-iomrach",
+            "name": "Cónán Iomrach",
+            "title": "Letzter Überlebender und Erbe der An’Iomrach · Mündel Oisean Somhairles"
+          }
+        ],
+        "founder": {
+          "id": "conan-founder-iomrach",
+          "name": "Cónán Iomrach",
+          "title": "Gründer und erster Laird der An’Iomrach"
+        }
+      },
+      "territory": {
+        "id": "haus-iomrach",
+        "title": "An’Iomrach",
+        "territoryId": "leitheach-herrschaft-somhairle",
+        "territoryName": "Tir na Soilse",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Soilse",
+            "slug": "leitheach-herrschaft-somhairle"
+          }
+        ],
+        "selectionBasis": "Geografischer Ruecklink nach Tir na Soilse, dessen heutige Verwaltung bei Somhairle liegt",
+        "historical": true,
+        "notes": [
+          "Kein heutiger Herrschaftsanspruch der Iomrach: historischer Untergang1733, Somhairle ist heutiger Verwalter des Gebiets."
+        ]
+      }
+    },
+    {
+      "id": "haus-somhairle",
+      "title": "Sidhe Somhairle",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Clais",
+        "barony": "Tir na Soilse",
+        "county": "Tir na Gortanna",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dal-cruthin",
+        "liegeHouseName": "Clan Dál’Cruthin",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Gortanna",
+          "Tir na Soilse",
+          "Broch an Clais"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Soilse",
+        "Broch an Clais"
+      ],
+      "sourceRevision": 4,
+      "description": "Aus Glaennmor in Tir na Dun stammender Laird-Clan und gegenwärtiger Verwalter von Broch an Clais.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-sidhe-somhairle-family.js",
+        "Stammbäume/assets/js/data/tir-na-gortanna-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "sidhe-somhairle",
+        "attachmentId": "f278954f-0c2d-4850-9117-7d82f8a6fd77",
+        "sha256": "f2d9717420a42332e09d428c882cc0e6512df4dfbf821d9fc13db28e57721209"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
+        "portraitCount": 30,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-somhairle/krieger.png",
+            "url": "https://i.imgur.com/nkWkUsh.png",
+            "sha256": "1e5fce828714d0eeef883e9b6e1fd63018b83cad3bf01b136ef6a6b5b78083d3",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "klaihn-somhairle",
+          "name": "Klaihn Somhairle",
+          "title": "Laird der Sidhe Somhairle · seit 1720"
+        },
+        "heirs": [
+          {
+            "id": "oisean-somhairle",
+            "name": "Oisean Somhairle",
+            "title": "Erster in der Erbfolge der Sidhe Somhairle"
+          },
+          {
+            "id": "hectan-somhairle",
+            "name": "Hectan Somhairle",
+            "title": "Zweiter in der Erbfolge der Sidhe Somhairle"
+          }
+        ],
+        "founder": {
+          "id": "siomhrach-founder-somhairle",
+          "name": "St. Síomhrach Somhairle",
+          "title": "Heilige Gründerin und erste Laird der Sidhe Somhairle"
+        }
+      },
+      "territory": {
+        "id": "haus-somhairle",
+        "title": "Sidhe Somhairle",
+        "territoryId": "leitheach-herrschaft-somhairle",
+        "territoryName": "Tir na Soilse",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Gortanna",
+            "slug": "leitheach-tir-na-gortanna"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Soilse",
+            "slug": "leitheach-herrschaft-somhairle"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-fir-an-tarvo",
+      "title": "Clan Fir An’Tarvo",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Dun Rothar",
+        "barony": "",
+        "county": "Tir na Tonn",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-tonn.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Tonn",
+          "Dun Rothar"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Dun Rothar"
+      ],
+      "sourceRevision": 5,
+      "description": "Mor-Tiarna-Clan von Tir na Tonn mit Sitz in Dun Rothar; die Familie versteht Tarvonius als ihren Ahnherrn, obwohl die frühe Abstammung historisch ungesichert ist.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-fir-an-tarvo-family.js",
+        "Stammbäume/assets/js/data/tir-na-tonn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "fir-an-tarvo",
+        "attachmentId": "d8c688d9-948e-4235-a938-14b102033512",
+        "sha256": "576e2e01cb2dd57d42e32c6538a9385f3d6f409da8baef57358ab224082b0c84"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Dun_Rothar/Clan_Fir_An_Tarvo/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "portraitCount": 27,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-fir-an-tarvo/krieger.png",
+            "url": "https://i.imgur.com/OPM82Cv.png",
+            "sha256": "8cbb0b3b2a02c7a929980275e54217da0efe5f0fce935c95e621336c85cc0f80",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "neartan-tarvo",
+          "name": "Neartán Tarvo",
+          "title": "Mor Tiarna von Tir na Tonn · seit 1704"
+        },
+        "heirs": [
+          {
+            "id": "athluan-tarvo",
+            "name": "Athluan Tarvo",
+            "title": "Erster der Erbfolge des Mor Tiarna"
+          },
+          {
+            "id": "uallghus-tarvo",
+            "name": "Uallghus Tarvo",
+            "title": "Zweiter der Erbfolge des Mor Tiarna"
+          },
+          {
+            "id": "crispus-tarvo",
+            "name": "Crispus Tarvo",
+            "title": "Dritter der Erbfolge des Mor Tiarna"
+          }
+        ],
+        "founder": {
+          "id": "tarvonius-tarvo",
+          "name": "Tarvonius",
+          "title": "Angenommener Ahnherr und Gründer der Kolonie Tarvonnis"
+        }
+      },
+      "territory": {
+        "id": "haus-fir-an-tarvo",
+        "title": "Clan Fir An’Tarvo",
+        "territoryId": "leitheach-tir-na-tonn",
+        "territoryName": "Tir na Tonn",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Tonn",
+            "slug": "leitheach-tir-na-tonn"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-ruitheach",
+      "title": "Dál’Ruitheach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Iar",
+        "barony": "Tir na nDambaí",
+        "county": "Tir na Tonn",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-fir-an-tarvo",
+        "liegeHouseName": "Clan Fir An’Tarvo",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-tonn.png",
+          "assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Tonn",
+          "Tir na nDambaí",
+          "Broch an Iar"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Tir na nDambaí",
+        "Broch an Iar"
+      ],
+      "sourceRevision": 3,
+      "description": "Laird-Clan der westlichen Herrschaft von Tir na Tonn mit Sitz in Broch an Iar.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-dal-ruitheach-family.js",
+        "Stammbäume/assets/js/data/tir-na-tonn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "dal-ruitheach",
+        "attachmentId": "40d12756-3c78-41bf-8280-531ebb0ceb4b",
+        "sha256": "46b9bd04d3c985a93f9c24564cd729b62f4847e24b35147f3368c4d3315e73c4"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_nDambai/Broch_an_Iar/Dal_Ruitheach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "portraitCount": 19,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-ruitheach/krieger.png",
+            "url": "https://i.imgur.com/0H43J2L.png",
+            "sha256": "d187064b36b87302b55f0a740fb1c177aff096a66c1fa289bf9f33f8f6217266",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "muirinn-ruitheach",
+          "name": "Muirinn Ruitheach",
+          "title": "Laird von Broch an Iar · seit 1724"
+        },
+        "heirs": [
+          {
+            "id": "troscan-ruitheach",
+            "name": "Troscán Ruitheach",
+            "title": "Erster der Erbfolge des Laird"
+          },
+          {
+            "id": "nibhn-ruitheach",
+            "name": "Níbhn Ruitheach",
+            "title": "Zweiter der Erbfolge des Laird"
+          }
+        ],
+        "founder": {
+          "id": "ruaidhri-founder-ruitheach",
+          "name": "Ruaidhrígh Ruitheach",
+          "title": "Gründer des Dál’Ruitheach-Clans · „der Biber“"
+        }
+      },
+      "territory": {
+        "id": "haus-ruitheach",
+        "title": "Dál’Ruitheach",
+        "territoryId": "leitheach-herrschaft-ruitheach",
+        "territoryName": "Tir na nDambaí",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Tonn",
+            "slug": "leitheach-tir-na-tonn"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na nDambaí",
+            "slug": "leitheach-herrschaft-ruitheach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-gortach",
+      "title": "Ru’Gortach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Broch an Ear",
+        "barony": "Tir na Breithe",
+        "county": "Tir na Tonn",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-fir-an-tarvo",
+        "liegeHouseName": "Clan Fir An’Tarvo",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-tonn.png",
+          "assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Tonn",
+          "Tir na Breithe",
+          "Broch an Ear"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Tir na Breithe",
+        "Broch an Ear"
+      ],
+      "sourceRevision": 8,
+      "description": "Laird-Clan der östlichen Herrschaft von Tir na Tonn mit Sitz in Broch an Ear.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ru-gortach-family.js",
+        "Stammbäume/assets/js/data/tir-na-tonn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ru-gortach",
+        "attachmentId": "59a36c24-0470-41be-9e9c-5aa073bd9666",
+        "sha256": "fe08c2457a2898acabc0b95055fb361b8ef49ed32331babb266278f3650c377d"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Tonn/Tir_na_Breithe/Broch_an_Ear/Ru_Gortach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "portraitCount": 34,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-gortach/krieger.png",
+            "url": "https://i.imgur.com/UCkiO84.png",
+            "sha256": "02b087a8fed194ca7a21336e1a398f7ce06d27ff2c97babd5ed664c750fb0142",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "kinneth-gortach",
+          "name": "Kinneth Gortach",
+          "title": "Laird von Broch an Ear · seit 1731"
+        },
+        "heirs": [
+          {
+            "id": "peighneachan-gortach",
+            "name": "Peighneachan Gortach",
+            "title": "Erster der Erbfolge des Laird"
+          },
+          {
+            "id": "eilis-gortach",
+            "name": "Eilis Gortach",
+            "title": "Zweite der Erbfolge des Laird"
+          },
+          {
+            "id": "loicin-gortach",
+            "name": "Loicín Gortach",
+            "title": "Dritter der Erbfolge des Laird"
+          }
+        ],
+        "founder": {
+          "id": "aodhluan-founder-gortach",
+          "name": "Aodhluán Gortach",
+          "title": "Gründer des Ru’Gortach-Clans"
+        }
+      },
+      "territory": {
+        "id": "haus-gortach",
+        "title": "Ru’Gortach",
+        "territoryId": "leitheach-herrschaft-gortach",
+        "territoryName": "Tir na Breithe",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Tonn",
+            "slug": "leitheach-tir-na-tonn"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Breithe",
+            "slug": "leitheach-herrschaft-gortach"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-mac-airt",
+      "title": "Clan Mac Airt",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Sruthlann",
+        "barony": "",
+        "county": "Tir an Comhchuibhis",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Sruthlann"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Sruthlann"
+      ],
+      "sourceRevision": 9,
+      "description": "Mor-Tiarna-Clan von Tir an Comhchuibhis mit Sitz in Sruthlann; der Clan führt seine sagenhafte Gründung auf den Fianna Colman zurück.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-mac-airt-family.js",
+        "Stammbäume/assets/js/data/tir-an-comhchuibhis-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "mac-airt",
+        "attachmentId": "0554ce4a-70db-4080-944c-369e5ed3c8a8",
+        "sha256": "5beff4e1c0d649e04eb7043802d679cd35c14ec86de56b30488498f1691aa231"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Sruthlann/Clan_Mac_Airt/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-mac-airt.png",
+        "portraitCount": 17,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-mac-airt/krieger.png",
+            "url": "https://i.imgur.com/UKlWOZ5.png",
+            "sha256": "7b3b1d253590640a36c17558c005b745ac3ac68b92c8e71fd4130c28fba25d3c",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "cormac-1664-airt",
+          "name": "Cormac Airt",
+          "title": "Mor Tiarna von Tir an Comhchuibhis · Herr von Sruthlann · seit 1715"
+        },
+        "heirs": [
+          {
+            "id": "bairre-airt",
+            "name": "Bairre Airt",
+            "title": "Erster der Erbfolge des Mor Tiarna"
+          }
+        ],
+        "founder": {
+          "id": "colman-founder-airt",
+          "name": "Colman Airt",
+          "title": "Legendärer Gründer des Clan Mac Airt"
+        }
+      },
+      "territory": {
+        "id": "haus-mac-airt",
+        "title": "Clan Mac Airt",
+        "territoryId": "leitheach-tir-na-comhchuibhis",
+        "territoryName": "Tir an Comhchuibhis",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir an Comhchuibhis",
+            "slug": "leitheach-tir-na-comhchuibhis"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-choinnich",
+      "title": "Ua’Choinnich",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Sruthlann",
+        "barony": "Tir na gCrúb",
+        "county": "Tir an Comhchuibhis",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-airt",
+        "liegeHouseName": "Clan Mac Airt",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Tir na gCrúb",
+          "Sruthlann"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na gCrúb",
+        "Sruthlann"
+      ],
+      "sourceRevision": 6,
+      "description": "Laird-Clan in Sruthlann unter dem Mor Tiarna des Clan Mac Airt; die überlieferte Linie reicht vom Gründer Sweeney bis zur Generation ab 1720.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+        "Stammbäume/assets/js/data/tir-an-comhchuibhis-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-choinnich",
+        "attachmentId": "5224d1a5-150a-4143-a2be-915441dfcc47",
+        "sha256": "6526acfe67631b7d69226e62e09cb7ed985dccba55515a09744df90ca82c62ab"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_gCrub/Sruthlann/Ua_Choinnich/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-choinnich.png",
+        "portraitCount": 11,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-choinnich/krieger.png",
+            "url": "https://i.imgur.com/d1NS2HC.png",
+            "sha256": "fe5b2d5271d45c31e6aabd8f4bff381f77eb3e5c434ea2c9188d0893fcf00df2",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "tiarnog-choinnich",
+          "name": "Tiarnóg Choinnich",
+          "title": "Laird des Clan Ua’Choinnich in Sruthlann · seit 1720"
+        },
+        "heirs": [],
+        "founder": {
+          "id": "sweeney-founder-choinnich",
+          "name": "Sweeney Choinnich",
+          "title": "Gründer und erster überlieferter Laird des Clan Ua’Choinnich"
+        }
+      },
+      "territory": {
+        "id": "haus-choinnich",
+        "title": "Ua’Choinnich",
+        "territoryId": "leitheach-herrschaft-choinnich",
+        "territoryName": "Tir na gCrúb",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir an Comhchuibhis",
+            "slug": "leitheach-tir-na-comhchuibhis"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na gCrúb",
+            "slug": "leitheach-herrschaft-choinnich"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-nic-blar-leitheach",
+      "title": "Nic’Blar · Leitheach",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Sruthlann",
+        "barony": "Tir na Rún",
+        "county": "Tir an Comhchuibhis",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-airt",
+        "liegeHouseName": "Clan Mac Airt",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "barony": "assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Tir na Rún",
+          "Sruthlann"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na Rún",
+        "Sruthlann"
+      ],
+      "sourceRevision": 4,
+      "description": "Parallele Leitheacher Hauslinie der Schwestern Tórlaith und Pallaith; Laird in Sruthlann unter dem Clan Mac Airt.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-nic-blar-family.js",
+        "Stammbäume/assets/js/data/tir-an-comhchuibhis-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "nic-blar",
+        "attachmentId": "f0c1afe9-7e2d-4940-8f57-354492eb4fba",
+        "sha256": "110fdfae5e6db31edee9bdb74e51a38bec59d1897ba0c8a20453902fdffb6132"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Ceitheach/clan-nic-blar.png",
+        "portraitCount": 25,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-nic-blar-leitheach/krieger.png",
+            "url": "https://i.imgur.com/Pxjk3vn.png",
+            "sha256": "c4cef9911743cb687e81c630f06ff345bd20a7fa4a0f734809432d96645ddaf0",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "sceolaith-blar",
+          "name": "Sceolaith Blár",
+          "title": "Laird der Nic’Blar in Sruthlann · seit 1738"
+        },
+        "heirs": [
+          {
+            "id": "gobaith-blar",
+            "name": "Gobaith Blár",
+            "title": "Erste in der Erbfolge der Laird"
+          },
+          {
+            "id": "sluagh-blar",
+            "name": "Sluagh Blár",
+            "title": "Zweite in der Erbfolge der Laird"
+          }
+        ],
+        "founder": {
+          "id": "torlaith-blar",
+          "name": "Tórlaith Blár",
+          "title": "Begründerin der Leitheacher Nic’Blar-Linie · Mor Tiarna von Tir na Scian"
+        }
+      },
+      "territory": {
+        "id": "haus-nic-blar-leitheach",
+        "title": "Nic’Blar · Leitheach",
+        "territoryId": "leitheach-herrschaft-nic-blar",
+        "territoryName": "Tir na Rún",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir an Comhchuibhis",
+            "slug": "leitheach-tir-na-comhchuibhis"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na Rún",
+            "slug": "leitheach-herrschaft-nic-blar"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-laidir",
+      "title": "Ruin’Laidir",
+      "rankId": "dun-tiarna",
+      "profile": {
+        "rankId": "dun-tiarna",
+        "seat": "Claisean",
+        "barony": "Tir na Dídine",
+        "county": "Tir an Comhchuibhis",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-airt",
+        "liegeHouseName": "Clan Mac Airt",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "barony": "assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Tir na Dídine",
+          "Claisean"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Tir na Dídine",
+        "Claisean"
+      ],
+      "sourceRevision": 3,
+      "description": "Dún-Tiarna-Haus der eigenen Lehensherrschaft in Tir an Comhchuibhis mit Sitz in Claisean.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ruin-laidir-family.js",
+        "Stammbäume/assets/js/data/tir-an-comhchuibhis-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ruin-laidir",
+        "attachmentId": "d5493995-95a8-4d3c-b332-ee8b2a9cb25b",
+        "sha256": "fbb88ad984137e6495629ce8c564ee9ce89d302a8783b890f8c4ac3e3d6661fc"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Didine/Claisean/Ruin_Laidir/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ruin-laidir.png",
+        "portraitCount": 22,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-laidir/krieger.png",
+            "url": "https://i.imgur.com/4Xvyl3C.png",
+            "sha256": "89bb9804dcbd619155d203ce7843efc38324f6189d9213da5eaf3cde0a8bb093",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "rioghnan-laidir",
+          "name": "Ríoghnán Laidir",
+          "title": "Dún Tiarna der Ruin’Laidir · Herr von Claisean · seit 1709"
+        },
+        "heirs": [],
+        "founder": {
+          "id": "lughaidh-founder-laidir",
+          "name": "Lughaidh Laidir",
+          "title": "Gründer und erstes überliefertes Oberhaupt der Ruin’Laidir"
+        }
+      },
+      "territory": {
+        "id": "haus-laidir",
+        "title": "Ruin’Laidir",
+        "territoryId": "leitheach-herrschaft-laidir",
+        "territoryName": "Tir na Dídine",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
+        "territoryType": "Lehensherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir an Comhchuibhis",
+            "slug": "leitheach-tir-na-comhchuibhis"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na Dídine",
+            "slug": "leitheach-herrschaft-laidir"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "title": "Dal T’Saor",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Sruthlann",
+        "barony": "Herrschaft der Dál T’Saor",
+        "county": "Tir an Comhchuibhis",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-airt",
+        "liegeHouseName": "Clan Mac Airt",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "assets/images/houses/Leitheach/clan-dal-t-saor.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+          "barony": "assets/images/houses/Leitheach/clan-dal-t-saor.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir an Comhchuibhis",
+          "Herrschaft der Dál T’Saor",
+          "Sruthlann"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir an Comhchuibhis",
+        "Herrschaft der Dál T’Saor",
+        "Sruthlann"
+      ],
+      "sourceRevision": 4,
+      "description": "Erloschener Laird-Clan aus Sruthlann. Die in der Stammburg verbliebene Hauslinie wurde 1735 durch ein finsteres Unheil aus dem Dunkelhain ausgelöscht.",
+      "historical": true,
+      "historicalMetadata": {
+        "historicalStatus": "extinct",
+        "extinctHouse": false,
+        "ownHouseStatus": "extinct",
+        "extinctionEvent": {
+          "year": "1735",
+          "cause": "Finsteres Unheil aus dem Dunkelhain in der T’Saoir-Burg",
+          "administrativeExtinction": true,
+          "survivorIds": [
+            "quona-tsaoir",
+            "junaid-tsaoir"
+          ]
+        }
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+        "Stammbäume/assets/js/data/tir-an-comhchuibhis-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "dal-t-saoir",
+        "attachmentId": "8d7ee86f-d6b0-4aad-bbe7-5c26737034f2",
+        "sha256": "8a3258d8621c1a728c639032b25bfac763dbf678c60573238ef5c90d49da0130"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+        "portraitCount": 4,
+        "missingPortraits": [],
+        "originalAssets": [],
+        "needsNewIllustration": true
+      },
+      "leadershipEvidence": {
+        "currentHead": null,
+        "heirs": [],
+        "founder": {
+          "id": "lorcan-founder-tsaoir",
+          "name": "Lorcan T’Saoir",
+          "title": "Gründer und erster überlieferter Laird des Dal T’Saoir"
+        }
+      },
+      "territory": {
+        "id": "haus-dal-t-saor",
+        "title": "Dal T’Saor",
+        "territoryId": "leitheach-herrschaft-dal-t-saor",
+        "territoryName": "Herrschaft der Dál T’Saor",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/Herrschaft der Dál T’Saor.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir an Comhchuibhis",
+            "slug": "leitheach-tir-na-comhchuibhis"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Herrschaft der Dál T’Saor",
+            "slug": "leitheach-herrschaft-dal-t-saor"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": true,
+        "notes": [
+          "Die eigene vorhandene Ortsseite enthaelt noch die alte Herrschender-Clan-Beschriftung. Kanonischer historischerStatus/extinctionEvent1735 hat fuer die Hausseite Vorrang."
+        ]
+      }
+    },
+    {
+      "id": "haus-tir-an-cuinn",
+      "title": "Clan Tir An’Cuinn",
+      "rankId": "mor-tiarna",
+      "profile": {
+        "rankId": "mor-tiarna",
+        "seat": "Ceanntire",
+        "barony": "",
+        "county": "Tir na Sruth",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-mac-ard-cumhaill",
+        "liegeHouseName": "Clan Mac Ard Cumhaill",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sruth.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sruth.png",
+          "barony": "",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sruth",
+          "Ceanntire"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sruth",
+        "Ceanntire"
+      ],
+      "sourceRevision": 6,
+      "description": "Mor-Tiarna-Clan von Tir na Sruth mit Sitz in Ceanntire. Zwei ausdrückliche Überlieferungslücken trennen den frühen Gründerkreis von der ab 1603 datierten Linie.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-tir-an-cuinn-family.js",
+        "Stammbäume/assets/js/data/tir-na-sruth-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "tir-an-cuinn",
+        "attachmentId": "5deb4e19-f339-4ec6-862f-4c025f0ba7f6",
+        "sha256": "ad303877ce9fb3d0b95a751c2a5a1c231f5a628f5c2af17958e7059e8729b891"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Ceanntire/Clan_Tir_An_Cuinn/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-tir-an-cuinn.png",
+        "portraitCount": 10,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-tir-an-cuinn/krieger.png",
+            "url": "https://i.imgur.com/QDu7Arg.png",
+            "sha256": "7b1968bcd114d51cd36c34e5665e026534052befb860758f9cbad43dffd11ed4",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "gofraidh-cuinn",
+          "name": "Gofraidh Cuinn",
+          "title": "Mor Tiarna von Tir na Sruth · seit 1705"
+        },
+        "heirs": [
+          {
+            "id": "gorm-cuinn",
+            "name": "Gorm Cuinn",
+            "title": "Erster der Erbfolge des Mor Tiarna"
+          },
+          {
+            "id": "brendan-1718-cuinn",
+            "name": "Brendan Cuinn",
+            "title": "Zweiter der Erbfolge des Mor Tiarna"
+          }
+        ],
+        "founder": {
+          "id": "nathrachan-cuinn",
+          "name": "Nathrachán Cuinn",
+          "title": "Enterbter Cuinn-Erbe und Begründer des Kadettenhauses Ua’Amhran"
+        }
+      },
+      "territory": {
+        "id": "haus-tir-an-cuinn",
+        "title": "Clan Tir An’Cuinn",
+        "territoryId": "leitheach-tir-na-sruth",
+        "territoryName": "Tir na Sruth",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+        "territoryType": "Oberherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sruth",
+            "slug": "leitheach-tir-na-sruth"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-airgid",
+      "title": "Tir An’Airgid",
+      "rankId": "dun-tiarna",
+      "profile": {
+        "rankId": "dun-tiarna",
+        "seat": "Cel Leagan",
+        "barony": "Tir na gCorr",
+        "county": "Tir na Sruth",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-tir-an-cuinn",
+        "liegeHouseName": "Clan Tir An’Cuinn",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sruth.png",
+          "assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sruth.png",
+          "barony": "assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sruth",
+          "Tir na gCorr",
+          "Cel Leagan"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sruth",
+        "Tir na gCorr",
+        "Cel Leagan"
+      ],
+      "sourceRevision": 4,
+      "description": "Dún-Tiarna-Haus der eigenen Lehensherrschaft Tir An’Airgid mit Sitz in Cel Leagan, unter dem Mor Tiarna des Clan Tir An’Cuinn.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-tir-an-airgid-family.js",
+        "Stammbäume/assets/js/data/tir-na-sruth-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "tir-an-airgid",
+        "attachmentId": "48cd9e75-cc27-4632-a158-5f73692c925e",
+        "sha256": "cb1c24b6d1ef625102c8f284cf0184a577f9482a2d978d75223b468e8ea04bca"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_gCorr/Cel_Leagan/Tir_An_Airgid/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-tir-an-airgid.png",
+        "portraitCount": 27,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-airgid/krieger.png",
+            "url": "https://i.imgur.com/Fd9hXvV.png",
+            "sha256": "3dddcf4ccfea4937e5a7ec1af8b904c1bba71b029a2fe8b5fdba8fdac6ff6552",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "tomaltach-airgid",
+          "name": "Tomaltach Airgid",
+          "title": "Dún Tiarna der Tir An’Airgid · seit 1728"
+        },
+        "heirs": [],
+        "founder": {
+          "id": "tomaltach-founder-airgid",
+          "name": "Tomaltach Airgid",
+          "title": "Begründer und erster überlieferter Dún Tiarna der Tir An’Airgid"
+        }
+      },
+      "territory": {
+        "id": "haus-airgid",
+        "title": "Tir An’Airgid",
+        "territoryId": "leitheach-herrschaft-airgid",
+        "territoryName": "Tir na gCorr",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
+        "territoryType": "Lehensherrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sruth",
+            "slug": "leitheach-tir-na-sruth"
+          },
+          {
+            "type": "Lehensherrschaft",
+            "name": "Tir na gCorr",
+            "slug": "leitheach-herrschaft-airgid"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    },
+    {
+      "id": "haus-amrhan",
+      "title": "Ua’Amhran",
+      "rankId": "laird",
+      "profile": {
+        "rankId": "laird",
+        "seat": "Ceanntire",
+        "barony": "Tir na hÉisteachta",
+        "county": "Tir na Sruth",
+        "kingdom": "Leitheach",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-tir-an-cuinn",
+        "liegeHouseName": "Clan Tir An’Cuinn",
+        "folderIcons": [
+          "assets/images/regions/Leitheach/leitheach.png",
+          "assets/images/regions/Leitheach/tir-na-sruth.png",
+          "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+          ""
+        ],
+        "regionEmblems": {
+          "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+          "county": "assets/images/regions/Leitheach/tir-na-sruth.png",
+          "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+          "seat": ""
+        },
+        "folderPath": [
+          "Leitheach",
+          "Tir na Sruth",
+          "Tir na hÉisteachta",
+          "Ceanntire"
+        ]
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sruth",
+        "Tir na hÉisteachta",
+        "Ceanntire"
+      ],
+      "sourceRevision": 4,
+      "description": "Bardenreicher Kadettenclan der Tir An’Cuinn und unmittelbar in Ceanntire ansässige Lairds. Das Haus ging aus der verbotenen, später als gottgepriesen verehrten Ehe Nathracháns und Amerlaiths hervor.",
+      "historical": false,
+      "historicalMetadata": {
+        "historicalStatus": "active",
+        "extinctHouse": false,
+        "ownHouseStatus": "active",
+        "extinctionEvent": null
+      },
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ua-amrhan-family.js",
+        "Stammbäume/assets/js/data/tir-na-sruth-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ua-amhran",
+        "attachmentId": "ae72d1e7-6804-4952-abc4-45cb2245bc57",
+        "sha256": "01fa28aff3446dcb7d5f82d1f59447af73aa43b812011bf1866ac88dce731b85"
+      },
+      "housePage": {
+        "registeredInitially": false,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs"
+      },
+      "houseBiography": {
+        "presentInitially": false
+      },
+      "gallery": {
+        "initialIllustrationIds": []
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Leitheach/clan-ua-amrhan.png",
+        "portraitCount": 27,
+        "missingPortraits": [],
+        "originalAssets": [
+          {
+            "path": "Stammbäume/assets/images/references/haus-amrhan/krieger.png",
+            "url": "https://i.imgur.com/ejfdx9A.png",
+            "sha256": "e861e59a0ab29a860f48b9a073be8f4d27239c720985363b2f6090104bc75543",
+            "primary": true
+          }
+        ],
+        "needsNewIllustration": false
+      },
+      "leadershipEvidence": {
+        "currentHead": {
+          "id": "fionntan-amrhan",
+          "name": "Fionntan Amrhan",
+          "title": "Laird des Clan Ua’Amhran · seit 1737"
+        },
+        "heirs": [
+          {
+            "id": "scannlan-amrhan",
+            "name": "Scannlán Amrhan",
+            "title": "Erster der Erbfolge des Laird"
+          },
+          {
+            "id": "xiston-amrhan",
+            "name": "Xiston Amrhan",
+            "title": "Zweiter der Erbfolge des Laird"
+          },
+          {
+            "id": "muiris-amrhan",
+            "name": "Muiris Amrhan",
+            "title": "Dritter der Erbfolge des Laird"
+          }
+        ],
+        "founder": null
+      },
+      "territory": {
+        "id": "haus-amrhan",
+        "title": "Ua’Amhran",
+        "territoryId": "leitheach-herrschaft-amhran",
+        "territoryName": "Tir na hÉisteachta",
+        "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
+        "territoryType": "Herrschaft",
+        "hierarchy": [
+          {
+            "type": "Sammlung",
+            "name": "Kontinente",
+            "slug": "kontinente"
+          },
+          {
+            "type": "Kontinent",
+            "name": "Estryll",
+            "slug": "estryll"
+          },
+          {
+            "type": "Fürstentum",
+            "name": "Fürstentum Leitheach",
+            "slug": "fuerstentum-leitheach"
+          },
+          {
+            "type": "Oberherrschaft",
+            "name": "Tir na Sruth",
+            "slug": "leitheach-tir-na-sruth"
+          },
+          {
+            "type": "Herrschaft",
+            "name": "Tir na hÉisteachta",
+            "slug": "leitheach-herrschaft-amhran"
+          }
+        ],
+        "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+        "historical": false,
+        "notes": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schema": "aleria.kronental-source-review-validation",
+  "reviewedAt": "2026-11-03",
+  "status": "pass",
+  "scope": 19,
+  "checks": [
+    "19 explicit attachment IDs and canonical aliases",
+    "byte-identical archives and SHA-256",
+    "exact eight-string reviewed chapter schema",
+    "short biography map and length bounds",
+    "no technical author notes or placeholders in product strings",
+    "no numeric military totals",
+    "five historical houses remain extinct; Frostzorn active outlaw",
+    "existing detailed Suedstahl/Albholz public context and extra sections flagged for preservation",
+    "all canonical supporting source paths exist"
+  ],
+  "territorialName": "Heldenwacht; historical label Kronental remains unchanged in registry/profile",
+  "vorn": "Current Vorn born1697, no accession date asserted; founder Vorn Frostauge separate",
+  "productionWrites": false,
+  "houses": [
+    {
+      "id": "haus-vaeren",
+      "sourceSha256": "c48aea08b1050fbcdc61702409f9719ab381f02c8daf9fc64a7fa7d2eaa29768",
+      "archiveByteIdentical": true,
+      "biographyWords": 216,
+      "chapterWords": 376,
+      "rankId": "royal",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-riesentod",
+      "sourceSha256": "872d6a0e8580736e8557679023b5c1cf73f836cf139a9642e07b9e77bb0b48b2",
+      "archiveByteIdentical": true,
+      "biographyWords": 149,
+      "chapterWords": 202,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-eisenbieger",
+      "sourceSha256": "947df95d804a6b0a4eb4c1b83a3a4b001669065a692a643bec91cc26f71d0141",
+      "archiveByteIdentical": true,
+      "biographyWords": 168,
+      "chapterWords": 320,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "sourceSha256": "0ce6f2cfe13617a7d1cb08781d735b08f88a0e9a3e327c67d5b47eece9011bb1",
+      "archiveByteIdentical": true,
+      "biographyWords": 154,
+      "chapterWords": 259,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-frostauge",
+      "sourceSha256": "fc4d0b89abf4943ff0e4b477c9bfd562b6c76568058a41136fa130c06f626186",
+      "archiveByteIdentical": true,
+      "biographyWords": 162,
+      "chapterWords": 228,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-wellenschild",
+      "sourceSha256": "9b1b221bfae8b64755a859bc2aed562f1811cb308d0c8e964b7d4f6c2ad7ccbd",
+      "archiveByteIdentical": true,
+      "biographyWords": 240,
+      "chapterWords": 1964,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-gullvig",
+      "sourceSha256": "25a809307a6ec1004b8464624db4769a82310e5150c9ef777e95b5eee663d9b5",
+      "archiveByteIdentical": true,
+      "biographyWords": 225,
+      "chapterWords": 1711,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-wellensaenger",
+      "sourceSha256": "691afaab2594f07829e09b06a261709e2688992a15bb4d50c174af14416896da",
+      "archiveByteIdentical": true,
+      "biographyWords": 231,
+      "chapterWords": 1212,
+      "rankId": "hesire",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-spindelschlag",
+      "sourceSha256": "8186104bb95f2d67217cc70a514a2ecddb1c215e85e95cf65ed509f312412055",
+      "archiveByteIdentical": true,
+      "biographyWords": 225,
+      "chapterWords": 851,
+      "rankId": "commoner",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-suedstahl",
+      "sourceSha256": "a98045254d74a97e354c1cf8870f914ce289fbb0b47af523d16f41b056eec118",
+      "archiveByteIdentical": true,
+      "biographyWords": 239,
+      "chapterWords": 593,
+      "rankId": "huskarl",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": true
+    },
+    {
+      "id": "haus-albholz",
+      "sourceSha256": "724da6eb070d280712d78fb1742840a5a19242830e156b8359e8c3c4f62550ea",
+      "archiveByteIdentical": true,
+      "biographyWords": 239,
+      "chapterWords": 630,
+      "rankId": "huskarl",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": true
+    },
+    {
+      "id": "haus-wellenkrone",
+      "sourceSha256": "6af11e44fed4ac2d7b89b0bc53b00d6ee6a094edffc02e3bf810369abb2a5f6c",
+      "archiveByteIdentical": true,
+      "biographyWords": 24,
+      "chapterWords": 26,
+      "rankId": "huskarl",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "sourceSha256": "3cf6bec40046e282b34c1b7c9fb0acd18114954997bcb16389f7d6b26089354d",
+      "archiveByteIdentical": true,
+      "biographyWords": 24,
+      "chapterWords": 26,
+      "rankId": "huskarl",
+      "historicalEra": "active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-frostzorn",
+      "sourceSha256": "eea9ea91fb11f45d70e93c5102bd53459a912f7a3045b7a755c10f8686958e72",
+      "archiveByteIdentical": true,
+      "biographyWords": 230,
+      "chapterWords": 473,
+      "rankId": "unknown",
+      "historicalEra": "outlaw-active",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-grimr",
+      "sourceSha256": "6d210c5d61faf43194cb70a391b886a947c37b0b2c544cbd2086495bc7937b43",
+      "archiveByteIdentical": true,
+      "biographyWords": 122,
+      "chapterWords": 135,
+      "rankId": "unknown",
+      "historicalEra": "historical-time-open",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-skaife",
+      "sourceSha256": "2eeb724cb338e9b0376df5e8b8a7dd8b6d24c57b3112c952c89908e15f23dc33",
+      "archiveByteIdentical": true,
+      "biographyWords": 107,
+      "chapterWords": 148,
+      "rankId": "unknown",
+      "historicalEra": "historical-time-open",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-holmr",
+      "sourceSha256": "256e5dfb2cba7dfc142d64c8665dc8afd1f8719a4374cded5fa51ebe748d8e90",
+      "archiveByteIdentical": true,
+      "biographyWords": 54,
+      "chapterWords": 58,
+      "rankId": "unknown",
+      "historicalEra": "historical-time-open",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-isvanyr",
+      "sourceSha256": "1996b26e110d2f1b66c1c53a97434a89e98e8780b0738f9f22e37c7a7482f30a",
+      "archiveByteIdentical": true,
+      "biographyWords": 126,
+      "chapterWords": 230,
+      "rankId": "unknown",
+      "historicalEra": "ancient",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "sourceSha256": "b7e64f2272512cd3dac24513424fafdea492417dc74262fe78698930b0a0b106",
+      "archiveByteIdentical": true,
+      "biographyWords": 108,
+      "chapterWords": 485,
+      "rankId": "unknown",
+      "historicalEra": "ancient",
+      "existingBiographyPresent": false,
+      "existingHousePageRetained": false
+    }
+  ]
+}

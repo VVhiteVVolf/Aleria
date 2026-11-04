@@ -12,7 +12,7 @@ import {
   SILBERINSEL_HOUSE_EMBLEMS,
   SILBERINSEL_HOUSE_PROFILES
 } from './silberinsel-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 
@@ -275,19 +275,19 @@ export const HOUSE_TIWNA_FAMILY = Object.freeze({
     person('caled-tiwna', 'Caled Tiwna', 'male', '1634', '1669'),
     awayWoman('meiriona-tiwna', 'Meiriona Tiwna', '1632', '1669', 'Haus Neidr'),
     person('eiddon-tiwna', 'Eiddon Tiwna', 'male', '1632', '1700'),
-    spouse('morwen-pawen', 'Morwen Pawen', 'female', '1642', '1659', 'house-pawen'),
+    spouse('morwen-pawen', 'Morwen Pawen', 'female', '1632', '1659', 'house-pawen'),
     spouse('custenin-brithyll', 'Custenin Brithyll', 'male', '1628', '1702', 'house-brithyll'),
     spouse('blawd-wylan', 'Blawd Wylan', 'female', '1633', '1681', 'house-wylan'),
     spouse('gildas-neidr', 'Gildas Neidr', 'male', '1630', '1662', 'house-neidr'),
     spouse('frewi-pysgod', 'Frewi Pysgod', 'female', '1632', '1701', 'house-pysgod'),
 
     person('gavin-tiwna', 'Gavin Tiwna', 'male', '1651', '1714', { title: 'Baron des Hauses Tiwna 1705–1714' }),
-    awayWoman('dylis-tiwna', 'Dylis Tiwna', '1662', '1720', 'Haus Canwyll'),
+    awayWoman('dylis-tiwna', 'Dylis Tiwna', '1650', '1720', 'Haus Canwyll'),
     person('trahaearn-tiwna', 'Trahaearn Tiwna', 'male', '1653', '1700'),
     awayWoman('teleri-tiwna', 'Teleri Tiwna', '1659', '1711', 'Haus Cuilen'),
     person('gwalchmai-tiwna', 'Gwalchmai Tiwna', 'male', '1655', '1710'),
     spouse('essylt-roich', 'Essylt Roich', 'female', '1654', '1711', 'house-roich'),
-    spouse('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1662', '1720', 'house-canwyll'),
+    spouse('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1652', '1720', 'house-canwyll'),
     spouse('dearbhail-reannachain', 'Dearbhail Reannachain', 'female', '1655', '1689', 'house-reannachain'),
     spouse('aengus-cuilen', 'Aengus Cuilen', 'male', '1656', '1720', 'house-cuilen'),
     spouse('hafren-crefyddol', 'Hafren Crefyddol', 'female', '1655', '1689', 'house-crefyddol'),

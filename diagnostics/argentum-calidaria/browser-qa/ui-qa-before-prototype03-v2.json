@@ -1,0 +1,504 @@
+{
+  "date": "2026-11-03",
+  "tabId": "1982820840",
+  "status": "functions-and-unchanged-prototypes-passed-awaiting-final-art-and-mobile-map-fix",
+  "desktop": {
+    "prototypeVisualReview": {
+      "allFiveSeen": true,
+      "headsComplete": true,
+      "solesComplete": true,
+      "weaponsComplete": true
+    },
+    "map": {
+      "image": "assets/maps/calidaria-normal.webp",
+      "imageLoaded": true,
+      "labelCount": 22,
+      "labels": [
+        {
+          "clipped": false,
+          "name": "Ort 01"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 02"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 03"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 04"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 05"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 06"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 07"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 08"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 09"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 10"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 11"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 12"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 13"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 14"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 15"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 16"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 17"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 18"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 19"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 20"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 21"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 22"
+        }
+      ],
+      "open": true,
+      "scrollWidth": 1380,
+      "targets": 22,
+      "title": "Variante 1 · Normal",
+      "width": 1380
+    }
+  },
+  "mobile": {
+    "page": {
+      "clientWidth": 377,
+      "height": 844,
+      "scrollWidth": 377,
+      "width": 392
+    },
+    "prototypeVisualReview": {
+      "unchangedFourSeen": true,
+      "headsComplete": true,
+      "solesComplete": true,
+      "weaponsComplete": true
+    },
+    "map": {
+      "imageLoaded": true,
+      "labels": [
+        {
+          "clipped": false,
+          "name": "Ort 01"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 02"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 03"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 04"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 05"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 06"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 07"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 08"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 09"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 10"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 11"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 12"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 13"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 14"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 15"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 16"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 17"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 18"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 19"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 20"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 21"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 22"
+        }
+      ],
+      "open": true,
+      "scrollWidth": 374,
+      "targets": 22,
+      "width": 374
+    },
+    "mapIssue": {
+      "ids": [
+        "ort-20",
+        "ort-21",
+        "ort-22"
+      ],
+      "detail": "Lower labels extend beyond fitted map canvas at392×844",
+      "screenshot": "browser-qa/mobile-map-before-label-fix.jpg",
+      "ownerNotified": true
+    }
+  },
+  "dossiers": [
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungMacuahuitl mit Stahlschneiden · Offener Jaguarhelm · Jaguarpelz · Faser- und Lamellenpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-01.png",
+        "assets/warriors/production/prototype-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Jaguar-Krieger"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungTepoztopilli mit Stahlschneiden · Stirnschutz · Stahlschuppen über Faserpanzer · Leichte Beinschienen",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-02.png",
+        "assets/warriors/production/prototype-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Lanzenkriegerin"
+    },
+    {
+      "id": "prototype-03",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungGroße Hakenwaffe aus Stahl · Holz-Eisen-Knochen-Maske · Haizahndekoration · Gewebter Wickelschurz",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-03.png",
+        "assets/warriors/production/prototype-03.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Moai-/Meeresberserker"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungBogen · Rückenköcher · Offener Adlerhelm mit Federfächer · Leichter Gewebe- und Stahlpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-04.png",
+        "assets/warriors/production/prototype-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Adlerkriegerin"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungStahlsäbel · Rundschild mit Wellenmotiv · Leichter argentisch beeinflusster Panzer · Bewegliche Inselkleidung",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-05.png",
+        "assets/warriors/production/prototype-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Marinekrieger"
+    },
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungMacuahuitl mit Stahlschneiden · Offener Jaguarhelm · Jaguarpelz · Faser- und Lamellenpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-01.png",
+        "assets/warriors/production/prototype-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Jaguar-Krieger"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungTepoztopilli mit Stahlschneiden · Stirnschutz · Stahlschuppen über Faserpanzer · Leichte Beinschienen",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-02.png",
+        "assets/warriors/production/prototype-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Lanzenkriegerin"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungBogen · Rückenköcher · Offener Adlerhelm mit Federfächer · Leichter Gewebe- und Stahlpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-04.png",
+        "assets/warriors/production/prototype-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Adlerkriegerin"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungStahlsäbel · Rundschild mit Wellenmotiv · Leichter argentisch beeinflusster Panzer · Bewegliche Inselkleidung",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-05.png",
+        "assets/warriors/production/prototype-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Marinekrieger"
+    }
+  ],
+  "functions": {
+    "variants": {
+      "image": "assets/maps/calidaria-regions.webp",
+      "labels": 22,
+      "pressed": "true",
+      "targets": 22
+    },
+    "zoom": "135 %",
+    "fit": {
+      "canvas": 1325,
+      "label": "Ganze Karte",
+      "viewport": 1380
+    },
+    "hideNames": {
+      "display": "none",
+      "hidden": true,
+      "visibility": "visible"
+    },
+    "desktopMove": {
+      "caption": "1 von 28 Häusern zugeordnet · 22 Orte · Archonate.",
+      "free": "27 ohne Sitz",
+      "house": "colony-01"
+    },
+    "dynamicSeat": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfOrt 06RangNicht festgelegtFarbenSilber · Indigo · GoldRahmenGold",
+    "persistence": {
+      "caption": "1 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "house": "colony-01"
+    },
+    "undo": {
+      "caption": "0 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "colony01Free": true,
+      "free": "28 ohne Sitz"
+    },
+    "mobileTarget": {
+      "caption": "1 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "free": "27 ohne Sitz",
+      "house": "tlapanui-10"
+    },
+    "reset": {
+      "assigned": 0,
+      "caption": "0 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "free": 28,
+      "selection": ""
+    },
+    "nativeInputLimitations": "Mouse/stylus pointer behavior and import atomicity verified by shared models; no native drag or file-chooser completion claimed.",
+    "export": {
+      "productDownload": true,
+      "filename": "calidaria-sitzentwurf.json",
+      "bytes": 748,
+      "houses": 28,
+      "assigned": 0,
+      "exactBaseline": true,
+      "validModelImportAndUndo": true,
+      "foreignInvalidAndIncompleteImportsAtomic": true,
+      "report": "browser-qa/export-model-check.json"
+    }
+  },
+  "initial": {
+    "assigned": 0,
+    "caption": "0 von 28 Häusern zugeordnet · 22 Orte · Normal.",
+    "clientWidth": 1425,
+    "free": "28 ohne Sitz",
+    "heroStats": [
+      "7",
+      "1",
+      "22",
+      "28",
+      "5"
+    ],
+    "houseOptions": 28,
+    "scrollWidth": 1425,
+    "seatOptions": 22,
+    "title": "Calidaria"
+  },
+  "modelChecks": {
+    "passed": 15,
+    "command": "node --test --experimental-test-isolation=none Vorschau/Calidaria/tests/territory-placement.test.mjs Vorschau/tests/placement-state.test.mjs Vorschau/tests/placement-controls.test.mjs"
+  },
+  "viewportReset": true
+}

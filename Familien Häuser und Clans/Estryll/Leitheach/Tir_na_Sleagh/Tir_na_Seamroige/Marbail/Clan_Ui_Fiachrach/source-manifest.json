@@ -1,0 +1,159 @@
+{
+  "id": "haus-fiachrach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "1e1a735c-b9ce-4932-ace6-681b679f46bd",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\1e1a735c-b9ce-4932-ace6-681b679f46bd\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/na-fiachrach/animexx-original.html",
+    "bytes": 101966,
+    "sha256": "6a031db98a10957fb849dc413866c8a927a4d7649e19de9b9947eb451054c8d4",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-fiachrach",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Mârbail",
+      "barony": "Tir na Seamróige",
+      "county": "Tir na Sleagh",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na Seamróige",
+        "Mârbail"
+      ]
+    },
+    "graphFingerprint": "d0327942363f09857fc7df17067927f23074ded77b7cfec92a626f7abc75c400",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-fiachrach",
+    "title": "Clan Uí Fiachrach",
+    "territoryId": "leitheach-herrschaft-fiachrach",
+    "territoryName": "Tir na Seamróige",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Seamróige",
+        "slug": "leitheach-herrschaft-fiachrach"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-fiachrach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-fiachrach",
+    "slug": "na-fiachrach",
+    "canonicalSlug": "fiachrach",
+    "attachmentId": "1e1a735c-b9ce-4932-ace6-681b679f46bd",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/6mfROrJ.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 296637,
+    "sha256": "a34ab7626357f1b823674c0758446eb70e1f6525443c7423d85c4a467d932566",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-fiachrach",
+    "title": "Clan Uí Fiachrach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sleagh",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/6mfROrJ.png",
+    "path": "Stammbäume/assets/images/references/haus-fiachrach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-fiachrach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "a34ab7626357f1b823674c0758446eb70e1f6525443c7423d85c4a467d932566",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Sitzender grün-goldener Krieger mit geschlossenem Helm und Kleeblattschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "6a031db98a10957fb849dc413866c8a927a4d7649e19de9b9947eb451054c8d4",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-fiachrach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Der Quellslug na-fiachrach wird der bestehenden ID haus-fiachrach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Die allgemeine Tiarna-Passage wird als kulturelles Ideal erhalten. Daraus folgen keine automatisch vergebenen Klassen, Fianna-Ränge oder neuen Fähigkeiten einzelner Personen.",
+    "Der bestehende Gründer heißt Seamair Fiachrach, nicht Seamir. Gegenwärtiger Hausname Uí Fiachrach/ID haus-fiachrach hat Vorrang vor Na-Fiachrach-Vorlage.",
+    "Glück, Omen und der Ruf des Gründers bleiben kulturelle Deutung; keine automatische göttliche Gabe oder neuen Glücksmechaniken.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

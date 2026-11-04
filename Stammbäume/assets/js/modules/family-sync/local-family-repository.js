@@ -1,4 +1,4 @@
-import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261024-vortigerns-v1';
+import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261104-content-lore-v1';
 import { loadPersistedFamily, persistFamily } from '../../services/family-persistence.js';
 import { assertValidFamily } from '../../domain/family-schema.js';
 

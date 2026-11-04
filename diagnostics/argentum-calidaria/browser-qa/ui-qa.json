@@ -1,0 +1,2321 @@
+{
+  "date": "2026-11-03",
+  "tabId": "1982820840",
+  "status": "passed-final-29-houses-5-prototypes-2-artworks-v2",
+  "desktop": {
+    "prototypeVisualReview": {
+      "allFiveSeen": true,
+      "headsComplete": true,
+      "solesComplete": true,
+      "weaponsComplete": true,
+      "activePrototype03V2": true
+    },
+    "map": {
+      "image": "assets/maps/calidaria-normal.webp",
+      "imageLoaded": true,
+      "labelCount": 22,
+      "labels": [
+        {
+          "clipped": false,
+          "name": "Ort 01"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 02"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 03"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 04"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 05"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 06"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 07"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 08"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 09"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 10"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 11"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 12"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 13"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 14"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 15"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 16"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 17"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 18"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 19"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 20"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 21"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 22"
+        }
+      ],
+      "open": true,
+      "scrollWidth": 1380,
+      "targets": 22,
+      "title": "Variante 1 · Normal",
+      "width": 1380
+    },
+    "houseVisualReview": {
+      "all29Opened": true,
+      "allCrestsSeen": true,
+      "completeCircularFrames": true,
+      "correctTitlesAndImages": true
+    },
+    "mede": {
+      "capital": "Hauptstadt (Name offen)",
+      "seatId": "ort-06",
+      "figure": "../Leukonia/assets/warriors/previews/house-mede-v2.webp",
+      "fullFigureSeen": true,
+      "correctCrest": true
+    },
+    "finalHero": {
+      "clientWidth": 1425,
+      "image": "assets/emblems/previews/province-calidaria-v2.webp",
+      "loaded": true,
+      "scrollWidth": 1425,
+      "stats": [
+        "7",
+        "1",
+        "22",
+        "29",
+        "5"
+      ],
+      "y": 65
+    }
+  },
+  "mobile": {
+    "page": {
+      "clientWidth": 377,
+      "height": 844,
+      "scrollWidth": 377,
+      "width": 392
+    },
+    "prototypeVisualReview": {
+      "unchangedFourSeen": true,
+      "headsComplete": true,
+      "solesComplete": true,
+      "weaponsComplete": true,
+      "allFiveSeen": true,
+      "activePrototype03V2": true
+    },
+    "map": {
+      "imageLoaded": true,
+      "labels": [
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 01"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 02"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 03"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 04"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 05"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Hauptstadt (Name offen)"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 07"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 08"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 09"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 10"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 11"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 12"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 13"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 14"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 15"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 16"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 17"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 18"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 19"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 20"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 21"
+        },
+        {
+          "clipped": false,
+          "fontSize": "3.96688px",
+          "name": "Ort 22"
+        }
+      ],
+      "medePins": [
+        {
+          "label": "Haus Mede · Hauptstadt (Name offen) · Kaiserliche Linie",
+          "loaded": true
+        }
+      ],
+      "open": true,
+      "scrollWidth": 374,
+      "targets": 22,
+      "width": 374
+    },
+    "mapIssue": {
+      "ids": [
+        "ort-20",
+        "ort-21",
+        "ort-22"
+      ],
+      "detail": "Lower labels extend beyond fitted map canvas at392×844",
+      "screenshot": "browser-qa/mobile-map-before-label-fix.jpg",
+      "ownerNotified": true,
+      "resolved": true
+    },
+    "mapBeforeFix": {
+      "imageLoaded": true,
+      "labels": [
+        {
+          "clipped": false,
+          "name": "Ort 01"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 02"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 03"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 04"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 05"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 06"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 07"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 08"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 09"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 10"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 11"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 12"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 13"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 14"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 15"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 16"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 17"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 18"
+        },
+        {
+          "clipped": false,
+          "name": "Ort 19"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 20"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 21"
+        },
+        {
+          "clipped": true,
+          "name": "Ort 22"
+        }
+      ],
+      "open": true,
+      "scrollWidth": 374,
+      "targets": 22,
+      "width": 374
+    },
+    "finalHero": {
+      "clientWidth": 377,
+      "crestBox": {
+        "height": 180,
+        "width": 180
+      },
+      "image": "assets/emblems/previews/province-calidaria-v2.webp",
+      "loaded": true,
+      "scrollWidth": 377
+    },
+    "houseChecks": {
+      "all29Opened": true,
+      "correctTitlesAndImages": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  "dossiers": [
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungMacuahuitl mit Stahlschneiden · Offener Jaguarhelm · Jaguarpelz · Faser- und Lamellenpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-01.png",
+        "assets/warriors/production/prototype-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Jaguar-Krieger"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungTepoztopilli mit Stahlschneiden · Stirnschutz · Stahlschuppen über Faserpanzer · Leichte Beinschienen",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-02.png",
+        "assets/warriors/production/prototype-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Lanzenkriegerin"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungBogen · Rückenköcher · Offener Adlerhelm mit Federfächer · Leichter Gewebe- und Stahlpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-04.png",
+        "assets/warriors/production/prototype-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Adlerkriegerin"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungStahlsäbel · Rundschild mit Wellenmotiv · Leichter argentisch beeinflusster Panzer · Bewegliche Inselkleidung",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-05.png",
+        "assets/warriors/production/prototype-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Marinekrieger"
+    },
+    {
+      "id": "prototype-01",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungMacuahuitl mit Stahlschneiden · Offener Jaguarhelm · Jaguarpelz · Faser- und Lamellenpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-01.png",
+        "assets/warriors/production/prototype-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Jaguar-Krieger"
+    },
+    {
+      "id": "prototype-02",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungTepoztopilli mit Stahlschneiden · Stirnschutz · Stahlschuppen über Faserpanzer · Leichte Beinschienen",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-02.png",
+        "assets/warriors/production/prototype-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Lanzenkriegerin"
+    },
+    {
+      "id": "prototype-04",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungBogen · Rückenköcher · Offener Adlerhelm mit Federfächer · Leichter Gewebe- und Stahlpanzer",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-04.png",
+        "assets/warriors/production/prototype-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Adlerkriegerin"
+    },
+    {
+      "id": "prototype-05",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungStahlsäbel · Rundschild mit Wellenmotiv · Leichter argentisch beeinflusster Panzer · Bewegliche Inselkleidung",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-05.png",
+        "assets/warriors/production/prototype-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Marinekrieger"
+    },
+    {
+      "id": "prototype-03",
+      "revision": "v2",
+      "kind": "prototype",
+      "viewport": "desktop-1440x1000",
+      "facts": "AusrüstungGroße Hakenwaffe aus Stahl · Holz-Eisen-Knochen-Maske · Haizahndekoration · Gewebter Wickelschurz",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-03-v2.png",
+        "assets/warriors/production/prototype-03-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-03-v2.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Moai-/Meeresberserker",
+      "visualReview": {
+        "completeHead": true,
+        "completeSoles": true,
+        "completeWeapon": true
+      }
+    },
+    {
+      "id": "prototype-03",
+      "revision": "v2",
+      "kind": "prototype",
+      "viewport": "mobile-392x844",
+      "facts": "AusrüstungGroße Hakenwaffe aus Stahl · Holz-Eisen-Knochen-Maske · Haizahndekoration · Gewebter Wickelschurz",
+      "fullsizeLinks": [
+        "assets/warriors/production/prototype-03-v2.png",
+        "assets/warriors/production/prototype-03-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/warriors/previews/prototype-03-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Moai-/Meeresberserker",
+      "visualReview": {
+        "completeHead": true,
+        "completeSoles": true,
+        "completeWeapon": true
+      }
+    }
+  ],
+  "functions": {
+    "variants": {
+      "image": "assets/maps/calidaria-regions.webp",
+      "labels": 22,
+      "pressed": "true",
+      "targets": 22
+    },
+    "zoom": "135 %",
+    "fit": {
+      "canvas": 1325,
+      "label": "Ganze Karte",
+      "viewport": 1380
+    },
+    "hideNames": {
+      "display": "none",
+      "hidden": true,
+      "visibility": "visible"
+    },
+    "desktopMove": {
+      "caption": "1 von 28 Häusern zugeordnet · 22 Orte · Archonate.",
+      "free": "27 ohne Sitz",
+      "house": "colony-01"
+    },
+    "dynamicSeat": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfOrt 06RangNicht festgelegtFarbenSilber · Indigo · GoldRahmenGold",
+    "persistence": {
+      "caption": "1 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "house": "colony-01"
+    },
+    "undo": {
+      "caption": "0 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "colony01Free": true,
+      "free": "28 ohne Sitz"
+    },
+    "mobileTarget": {
+      "caption": "1 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "free": "27 ohne Sitz",
+      "house": "tlapanui-10"
+    },
+    "reset": {
+      "assigned": 0,
+      "caption": "0 zugeordnete Wappen auf der Karte · 22 Orte · Normal.",
+      "free": 28,
+      "selection": ""
+    },
+    "nativeInputLimitations": "Mouse/stylus pointer behavior and import atomicity verified by shared models; no native drag or file-chooser completion claimed.",
+    "export": {
+      "productDownload": true,
+      "filename": "calidaria-sitzentwurf (1).json",
+      "bytes": 776,
+      "houses": 29,
+      "assigned": 1,
+      "free": 28,
+      "medeSeat": "ort-06",
+      "exactBaseline": true,
+      "validModelImportAndUndo": true,
+      "foreignInvalidAndPrior28ImportsAtomic": true,
+      "report": "browser-qa/final-29-export-model-check.json"
+    },
+    "final29Reset": {
+      "assigned": [
+        {
+          "house": "house-mede",
+          "seat": "ort-06"
+        }
+      ],
+      "caption": "1 zugeordnetes Wappen auf der Karte · 22 Orte · Normal.",
+      "free": "28 ohne Sitz",
+      "selection": ""
+    },
+    "exportBeforeMede": {
+      "productDownload": true,
+      "filename": "calidaria-sitzentwurf.json",
+      "bytes": 748,
+      "houses": 28,
+      "assigned": 0,
+      "exactBaseline": true,
+      "validModelImportAndUndo": true,
+      "foreignInvalidAndIncompleteImportsAtomic": true,
+      "report": "browser-qa/export-model-check.json"
+    },
+    "final29Persistence": {
+      "assigned": [
+        {
+          "house": "house-mede",
+          "seat": "ort-06"
+        }
+      ],
+      "free": "28 ohne Sitz",
+      "noRestoreWarning": true
+    }
+  },
+  "initial": {
+    "title": "Calidaria",
+    "heroStats": [
+      "7",
+      "1",
+      "22",
+      "29",
+      "5"
+    ],
+    "houses": 29,
+    "assigned": 1,
+    "free": 28,
+    "medeSeat": "ort-06",
+    "capital": "Hauptstadt (Name offen)",
+    "caption": "1 zugeordnetes Wappen auf der Karte · 22 Orte · Normal."
+  },
+  "modelChecks": {
+    "passed": 15,
+    "command": "node --test --experimental-test-isolation=none Vorschau/Calidaria/tests/territory-placement.test.mjs Vorschau/tests/placement-state.test.mjs Vorschau/tests/placement-controls.test.mjs"
+  },
+  "viewportReset": true,
+  "scopeChange": {
+    "latestInstruction": "29 houses:28new and existingMede; initialMede seatort-06diamond",
+    "initialFree": 28,
+    "initialAssigned": 1,
+    "initialMedeSeat": "ort-06",
+    "prior28HouseBaselineArchived": "browser-qa/ui-qa-before-prototype03-v2.json"
+  },
+  "newBaselineAfterReload": {
+    "capital": "Hauptstadt (Name offen)",
+    "capitalHouses": [
+      "house-mede"
+    ],
+    "caption": "1 zugeordnetes Wappen auf der Karte · 22 Orte · Normal.",
+    "free": "28 ohne Sitz",
+    "houseOptions": 29,
+    "notice": "Der gespeicherte Entwurf konnte nicht geladen werden. Die Ausgangszuordnung wird angezeigt."
+  },
+  "houseDossiers": [
+    {
+      "id": "house-mede",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungKaiserliches HausSitz im EntwurfHauptstadt (Name offen)RangKaiserliche LinieFarbenPetrol · Gold · ElfenbeinRahmenGold",
+      "fullsizeLinks": [
+        "../Leukonia/assets/warriors/production/house-mede-v2.png",
+        "../Leukonia/assets/warriors/production/house-mede-v2.png",
+        "../Leukonia/assets/originals/mede.png",
+        "../Leukonia/assets/originals/mede.png",
+        "../Leukonia/assets/originals/mede.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "../Leukonia/assets/warriors/previews/house-mede-v2.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "../Leukonia/assets/originals/previews/mede.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Mede",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-01",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Indigo · GoldRahmenGold",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-01.png",
+        "assets/emblems/production/colony-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 01",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-02",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSchwarz · Elfenbein · EisenRahmenEisen",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-02.png",
+        "assets/emblems/production/colony-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 02",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-03",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenGold · Dunkelrot · BronzeRahmenBronze",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-03.png",
+        "assets/emblems/production/colony-03.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 03",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-04",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenBronze · Dunkelgrün · SilberRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-04.png",
+        "assets/emblems/production/colony-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 04",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-05",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Weinrot · Dunkler StahlRahmendunklem Stahl",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-05.png",
+        "assets/emblems/production/colony-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 05",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-06",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Blau · GoldRahmenGold",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-06.png",
+        "assets/emblems/production/colony-06.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 06",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-07",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Petrol · BronzeRahmenBronze",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-07.png",
+        "assets/emblems/production/colony-07.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 07",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-08",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Mattschwarz · DunkelbraunRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-08.png",
+        "assets/emblems/production/colony-08.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-08.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 08",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-09",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenGold · Nachtblau · SchwarzRahmenschwarzem Eisen",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-09.png",
+        "assets/emblems/production/colony-09.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-09.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 09",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-10",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenBronze · Creme · RotRahmenrot bemaltem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-10.png",
+        "assets/emblems/production/colony-10.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-10.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 10",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-11",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Dunkelrot · SilberRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-11.png",
+        "assets/emblems/production/colony-11.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-11.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 11",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-01",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenOcker · Mattschwarz · RotRahmenrot bemaltem Hartholz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-01.png",
+        "assets/emblems/production/tlapanui-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-01.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 01 · Jaguar",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-02",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Türkis · DunkelbraunRahmendunklem Hartholz mit schmaler innenliegender Faser-Seilbindung",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-02.png",
+        "assets/emblems/production/tlapanui-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-02.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 02 · Meeresschildkröte",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-03",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSchwarz · Ocker · KnochenweißRahmenknochenweiß bemaltem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-03.png",
+        "assets/emblems/production/tlapanui-03.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-03.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 03 · Fregattvogel",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-04",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Dunkelblau · HolzbraunRahmenmittelbraunem Hartholz mit einfacher Seilbindung",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-04.png",
+        "assets/emblems/production/tlapanui-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-04.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 04 · Hammerhai",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-05",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenKorallrot · Schwarz · DunkelbraunRahmendunkelbraunem Hartholz mit wenigen hellen Knochenplättchen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-05.png",
+        "assets/emblems/production/tlapanui-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-05.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 05 · Mantarochen",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-06",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenRot · Dunkelgrün · OckerRahmenockerfarben bemaltem geschnitztem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-06.png",
+        "assets/emblems/production/tlapanui-06.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-06.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 06 · Ara",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-07",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenMoosgrün · Creme · RotRahmendunklem Hartholz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-07.png",
+        "assets/emblems/production/tlapanui-07.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-07.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 07 · Krokodil",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-08",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Rostrot · EisenRahmendunklem Holz mit schmalen matten Eisenbeschlägen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-08.png",
+        "assets/emblems/production/tlapanui-08.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-08.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 08 · Oktopus",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-09",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Waldgrün · BraunRahmenwarmbraunem Hartholz mit vereinzelten rot gefärbten Knocheneinlagen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-09.png",
+        "assets/emblems/production/tlapanui-09.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-09.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 09 · Schlange",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-10",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilberweiß · Nachtblau · RostrotRahmenDunkles Holz mit schmalem rostrot bemaltem Rand und vier kleinen Knochenrechtecken",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-10.png",
+        "assets/emblems/production/tlapanui-10.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-10.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 10 · Fliegender Fisch",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-11",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Petrol · OckerRahmenEin einzelner schmaler ockerbrauner Holzring mit vier cremefarbenen Dreieckskerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-11-v2.png",
+        "assets/emblems/production/tlapanui-11-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-11-v2.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 11 · Nautilus",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-12",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenKorallrot · Cremeweiß · DunkelbraunRahmenDunkelbraunes Holz mit wenigen breiten weißen Dreieckskerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-12.png",
+        "assets/emblems/production/tlapanui-12.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-12.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 12 · Muschelhorn",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-13",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenTürkis · Dunkelbraun · ElfenbeinRahmenSchlichter heller Knochen-Holz-Verbundring mit wenigen großen roten Bindungen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-13.png",
+        "assets/emblems/production/tlapanui-13.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-13.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 13 · Doppelwelle",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-14",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Ocker · DunkelrotRahmenDunkler schlichter Holzring mit wenigen Seilbindungen, alle Formen geschlossen innerhalb des Kreises",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-14.png",
+        "assets/emblems/production/tlapanui-14.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-14.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 14 · Auslegerkanu",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-15",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Dunkelweinrot · KnochenweißRahmenDunkler Holzring mit schmalen knochenweißen geometrischen Kerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-15.png",
+        "assets/emblems/production/tlapanui-15.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-15.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 15 · Fischhaken",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-16",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenOcker · Cremeweiß · DunkelgrünRahmenEinfacher rotbrauner Holzring mit vier schlichten dunklen Metallklammern",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-16.png",
+        "assets/emblems/production/tlapanui-16.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-16.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 16 · Kakaofrüchte",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-17",
+      "kind": "house",
+      "viewport": "desktop-1440x1000",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenDunkelgrün · Sand · RostrotRahmenMatt rostrot bemalter Holzring, schmale elfenbeinfarbene geometrische Bordüre",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-17.png",
+        "assets/emblems/production/tlapanui-17.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-17.webp"
+        }
+      ],
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 17 · Palme",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "house-mede",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungKaiserliches HausSitz im EntwurfHauptstadt (Name offen)RangKaiserliche LinieFarbenPetrol · Gold · ElfenbeinRahmenGold",
+      "fullsizeLinks": [
+        "../Leukonia/assets/warriors/production/house-mede-v2.png",
+        "../Leukonia/assets/warriors/production/house-mede-v2.png",
+        "../Leukonia/assets/originals/mede.png",
+        "../Leukonia/assets/originals/mede.png",
+        "../Leukonia/assets/originals/mede.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "../Leukonia/assets/warriors/previews/house-mede-v2.webp"
+        },
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "../Leukonia/assets/originals/previews/mede.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Haus Mede",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-01",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Indigo · GoldRahmenGold",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-01.png",
+        "assets/emblems/production/colony-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-01.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 01",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-02",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSchwarz · Elfenbein · EisenRahmenEisen",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-02.png",
+        "assets/emblems/production/colony-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-02.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 02",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-03",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenGold · Dunkelrot · BronzeRahmenBronze",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-03.png",
+        "assets/emblems/production/colony-03.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-03.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 03",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-04",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenBronze · Dunkelgrün · SilberRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-04.png",
+        "assets/emblems/production/colony-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-04.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 04",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-05",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Weinrot · Dunkler StahlRahmendunklem Stahl",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-05.png",
+        "assets/emblems/production/colony-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-05.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 05",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-06",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Blau · GoldRahmenGold",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-06.png",
+        "assets/emblems/production/colony-06.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-06.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 06",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-07",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Petrol · BronzeRahmenBronze",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-07.png",
+        "assets/emblems/production/colony-07.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-07.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 07",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-08",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Mattschwarz · DunkelbraunRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-08.png",
+        "assets/emblems/production/colony-08.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-08.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 08",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-09",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenGold · Nachtblau · SchwarzRahmenschwarzem Eisen",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-09.png",
+        "assets/emblems/production/colony-09.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-09.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 09",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-10",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenBronze · Creme · RotRahmenrot bemaltem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-10.png",
+        "assets/emblems/production/colony-10.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-10.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 10",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "colony-11",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungArgentisches SiedlerhausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Dunkelrot · SilberRahmenSilber",
+      "fullsizeLinks": [
+        "assets/emblems/production/colony-11.png",
+        "assets/emblems/production/colony-11.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/colony-11.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Kolonistenhaus 11",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-01",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenOcker · Mattschwarz · RotRahmenrot bemaltem Hartholz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-01.png",
+        "assets/emblems/production/tlapanui-01.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-01.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 01 · Jaguar",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-02",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Türkis · DunkelbraunRahmendunklem Hartholz mit schmaler innenliegender Faser-Seilbindung",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-02.png",
+        "assets/emblems/production/tlapanui-02.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-02.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 02 · Meeresschildkröte",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-03",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSchwarz · Ocker · KnochenweißRahmenknochenweiß bemaltem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-03.png",
+        "assets/emblems/production/tlapanui-03.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-03.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 03 · Fregattvogel",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-04",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Dunkelblau · HolzbraunRahmenmittelbraunem Hartholz mit einfacher Seilbindung",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-04.png",
+        "assets/emblems/production/tlapanui-04.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-04.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 04 · Hammerhai",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-05",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenKorallrot · Schwarz · DunkelbraunRahmendunkelbraunem Hartholz mit wenigen hellen Knochenplättchen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-05.png",
+        "assets/emblems/production/tlapanui-05.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-05.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 05 · Mantarochen",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-06",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenRot · Dunkelgrün · OckerRahmenockerfarben bemaltem geschnitztem Holz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-06.png",
+        "assets/emblems/production/tlapanui-06.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-06.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 06 · Ara",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-07",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenMoosgrün · Creme · RotRahmendunklem Hartholz",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-07.png",
+        "assets/emblems/production/tlapanui-07.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-07.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 07 · Krokodil",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-08",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenElfenbein · Rostrot · EisenRahmendunklem Holz mit schmalen matten Eisenbeschlägen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-08.png",
+        "assets/emblems/production/tlapanui-08.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-08.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 08 · Oktopus",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-09",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenWeiß · Waldgrün · BraunRahmenwarmbraunem Hartholz mit vereinzelten rot gefärbten Knocheneinlagen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-09.png",
+        "assets/emblems/production/tlapanui-09.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-09.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Unbenannter Tlapanui-Hausentwurf 09 · Schlange",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-10",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilberweiß · Nachtblau · RostrotRahmenDunkles Holz mit schmalem rostrot bemaltem Rand und vier kleinen Knochenrechtecken",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-10.png",
+        "assets/emblems/production/tlapanui-10.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-10.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 10 · Fliegender Fisch",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-11",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Petrol · OckerRahmenEin einzelner schmaler ockerbrauner Holzring mit vier cremefarbenen Dreieckskerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-11-v2.png",
+        "assets/emblems/production/tlapanui-11-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-11-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 11 · Nautilus",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-12",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenKorallrot · Cremeweiß · DunkelbraunRahmenDunkelbraunes Holz mit wenigen breiten weißen Dreieckskerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-12.png",
+        "assets/emblems/production/tlapanui-12.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-12.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 12 · Muschelhorn",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-13",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenTürkis · Dunkelbraun · ElfenbeinRahmenSchlichter heller Knochen-Holz-Verbundring mit wenigen großen roten Bindungen",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-13.png",
+        "assets/emblems/production/tlapanui-13.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-13.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 13 · Doppelwelle",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-14",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenCreme · Ocker · DunkelrotRahmenDunkler schlichter Holzring mit wenigen Seilbindungen, alle Formen geschlossen innerhalb des Kreises",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-14.png",
+        "assets/emblems/production/tlapanui-14.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-14.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 14 · Auslegerkanu",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-15",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenSilber · Dunkelweinrot · KnochenweißRahmenDunkler Holzring mit schmalen knochenweißen geometrischen Kerben",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-15.png",
+        "assets/emblems/production/tlapanui-15.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-15.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 15 · Fischhaken",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-16",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenOcker · Cremeweiß · DunkelgrünRahmenEinfacher rotbrauner Holzring mit vier schlichten dunklen Metallklammern",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-16.png",
+        "assets/emblems/production/tlapanui-16.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-16.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 16 · Kakaofrüchte",
+      "titleMatches": true,
+      "crestMatches": true
+    },
+    {
+      "id": "tlapanui-17",
+      "kind": "house",
+      "viewport": "mobile-392x844",
+      "facts": "GestaltungsrichtungTlapanui-geprägtes HausSitz im EntwurfNoch offenRangNicht festgelegtFarbenDunkelgrün · Sand · RostrotRahmenMatt rostrot bemalter Holzring, schmale elfenbeinfarbene geometrische Bordüre",
+      "fullsizeLinks": [
+        "assets/emblems/production/tlapanui-17.png",
+        "assets/emblems/production/tlapanui-17.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/tlapanui-17.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapanui-Entwurf 17 · Palme",
+      "titleMatches": true,
+      "crestMatches": true
+    }
+  ],
+  "finalCounts": {
+    "assigned": [
+      {
+        "house": "house-mede",
+        "seat": "ort-06"
+      }
+    ],
+    "caption": "1 zugeordnetes Wappen auf der Karte · 22 Orte · Normal.",
+    "clientWidth": 377,
+    "extraArt": 2,
+    "free": "28 ohne Sitz",
+    "heroStats": [
+      "7",
+      "1",
+      "22",
+      "29",
+      "5"
+    ],
+    "houses": 29,
+    "notice": "",
+    "prototypes": 5,
+    "scrollWidth": 377
+  },
+  "artDossiers": [
+    {
+      "id": "province-calidaria",
+      "revision": "v2",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenDunkelpetrol · Elfenbein · Mattes Ockergold · RostrotRahmenFlach gemalter Lorbeerrahmen in mattem Ockergold und Elfenbein",
+      "fullsizeLinks": [
+        "assets/emblems/production/province-calidaria-v2.png",
+        "assets/emblems/production/province-calidaria-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/province-calidaria-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Calidaria · Provinzwappen",
+      "imageMatches": true
+    },
+    {
+      "id": "ancient-tlapatlan",
+      "revision": "v2",
+      "viewport": "mobile-392x844",
+      "facts": "FarbenKnochenweiß · Dunkelblau · Ocker · RostrotRahmenEin einzelner schmaler dunkelbrauner Holzring mit großen sparsamen Dreieckskerben.",
+      "fullsizeLinks": [
+        "assets/emblems/production/ancient-tlapatlan-v2.png",
+        "assets/emblems/production/ancient-tlapatlan-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/ancient-tlapatlan-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapatlan · Antikes Zeichen",
+      "imageMatches": true
+    },
+    {
+      "id": "province-calidaria",
+      "revision": "v2",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenDunkelpetrol · Elfenbein · Mattes Ockergold · RostrotRahmenFlach gemalter Lorbeerrahmen in mattem Ockergold und Elfenbein",
+      "fullsizeLinks": [
+        "assets/emblems/production/province-calidaria-v2.png",
+        "assets/emblems/production/province-calidaria-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/province-calidaria-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Calidaria · Provinzwappen",
+      "imageMatches": true
+    },
+    {
+      "id": "ancient-tlapatlan",
+      "revision": "v2",
+      "viewport": "desktop-1440x1000",
+      "facts": "FarbenKnochenweiß · Dunkelblau · Ocker · RostrotRahmenEin einzelner schmaler dunkelbrauner Holzring mit großen sparsamen Dreieckskerben.",
+      "fullsizeLinks": [
+        "assets/emblems/production/ancient-tlapatlan-v2.png",
+        "assets/emblems/production/ancient-tlapatlan-v2.png"
+      ],
+      "headingVisible": true,
+      "images": [
+        {
+          "loaded": true,
+          "objectFit": "contain",
+          "src": "assets/emblems/previews/ancient-tlapatlan-v2.webp"
+        }
+      ],
+      "open": true,
+      "overflowX": false,
+      "scrollTop": 0,
+      "title": "Tlapatlan · Antikes Zeichen",
+      "imageMatches": true
+    }
+  ],
+  "console": {
+    "applicationErrors": [],
+    "ignoredExtensionErrors": 4
+  },
+  "initialBeforeMede": {
+    "assigned": 0,
+    "caption": "0 von 28 Häusern zugeordnet · 22 Orte · Normal.",
+    "clientWidth": 1425,
+    "free": "28 ohne Sitz",
+    "heroStats": [
+      "7",
+      "1",
+      "22",
+      "28",
+      "5"
+    ],
+    "houseOptions": 28,
+    "scrollWidth": 1425,
+    "seatOptions": 22,
+    "title": "Calidaria"
+  },
+  "artVisualReview": {
+    "bothV2SeenOnDesktopAndMobile": true,
+    "completeCircularFrames": true,
+    "provinceFlatStyleSeen": true,
+    "ancientTribalStyleSeen": true
+  },
+  "httpAssetChecks": {
+    "report": "browser-qa/house-prototype-http-assets.json",
+    "houseAndPrototypePreviewFullsizePaths": 70,
+    "allHttp200": true
+  },
+  "rootReportedFinalChecks": {
+    "tests": 12,
+    "unchangedGeneratorOriginalHashes": 39,
+    "reportedByRoot": true
+  },
+  "uiFixesVerified": {
+    "duplicateScopePrefixRemoved": true,
+    "poolCardWrappingImproved": true,
+    "captionSingularCorrect": true,
+    "mobileLowerMapLabelsNoLongerClipped": true
+  },
+  "summary": {
+    "houseWindows": 58,
+    "prototypeWindows": 10,
+    "provinceAncientWindows": 4,
+    "activeViewChecks": 72,
+    "finalAssigned": [
+      {
+        "house": "house-mede",
+        "seat": "ort-06"
+      }
+    ],
+    "finalFree": 28,
+    "viewportReset": true,
+    "sourceChangesByQaAgent": false
+  },
+  "handoff": {
+    "tabId": "1982820840",
+    "url": "http://127.0.0.1:8897/Vorschau/Calidaria/#anfang",
+    "view": "Final Calidaria hero with province-calidaria-v2",
+    "markedDeliverable": true
+  }
+}

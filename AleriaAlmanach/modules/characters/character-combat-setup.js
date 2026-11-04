@@ -1,4 +1,5 @@
 import { renderDevelopmentOverview, handleDevelopmentAction } from '../character-development/development-overview.js';
+import { getDevelopmentAttributePreview } from '../character-development/development-attribute-preview.js';
 import { updateDevelopmentPlan } from '../character-development/development-plan-input.js';
 import { renderCreationSkillsStep, renderCreationClassStep, renderCreationClassOptions, getCreationProficiencyLabel } from '../character-development/creation-training-ui.js';
 import { updateCreationTrainingChoice, acceptCreationSkillSuggestions, acceptCreationClassSuggestions, getSelectedCreationClasses, createCreationTrainingChoices } from '../character-development/creation-training-model.js';
@@ -152,14 +153,14 @@ function renderReviewStep(draft, preview) {
   const ancestry = getCharacterCreationTemplate('ancestry', draft.selections.ancestryId);
   const background = getCharacterCreationTemplate('background', draft.selections.backgroundId);
   const classTemplate = getCharacterCreationTemplate('class', draft.selections.classId);
-  const final = getCreationFinalAttributes(draft);
+  const attributes = getDevelopmentAttributePreview(preview.profile);
   const errors = preview.errors;
   return `<section class="cp-setup-step cp-setup-review">
     <header><span>Schritt 7</span><h3>Deinen Bogen prüfen</h3><p>Erst „In den Entwurf übernehmen“ verändert den geöffneten Charakterbogen. Dauerhaft gespeichert wird weiterhin mit „Figur speichern“.</p></header>
     ${errors.length ? `<div class="cp-setup-errors">${errors.map(error => `<p>${escapeHtml(error)}</p>`).join('')}</div>` : ''}
     <div class="cp-setup-review-grid">
       <article><span>Ausgang</span><strong>${escapeHtml(ancestry?.label || '—')} · ${escapeHtml(background?.label || '—')} · ${escapeHtml(getSelectedCreationClasses(draft).map(c=>c.label).join(' / ') || '—')}</strong><small>${skipped.has('templates') ? 'Herkunft wird nicht angewandt.' : 'Herkunft und gewählte Ausbildungen werden verknüpft.'}</small></article>
-      <article><span>Attribute</span><strong>${COMBAT_ATTRIBUTE_DEFINITIONS.map(attribute => `${attribute.shortLabel} ${final[attribute.key]}`).join(' · ')}</strong><small>${skipped.has('attributes') ? 'Vorhandene Werte bleiben bestehen.' : CHARACTER_CREATION_METHODS.find(method => method.id === draft.attributeMethod)?.label}</small></article>
+      <article><span>Wirksame Attribute</span><strong>${attributes.map(attribute => `${attribute.shortLabel} ${attribute.score}`).join(' · ')}</strong><small>Nach Steigerungen, aktiven Merkmalen und Obergrenzen. ${skipped.has('attributes') ? 'Vorhandene Grundwerte bleiben bestehen.' : CHARACTER_CREATION_METHODS.find(method => method.id === draft.attributeMethod)?.label}</small></article>
       <article><span>Fertigkeiten</span><strong>${Object.values(draft.skillChoices).filter(value=>value!=='none').length} manuell gewählte Fertigkeiten</strong><small>${skipped.has('skills') ? 'Vorhandene Ausbildung bleibt bestehen.' : 'Nur deine Auswahl wird angewandt.'}</small></article>
       <article><span>Kampf & Ressourcen</span><strong>${escapeHtml(getSelectedCreationClasses(draft).map(c=>c.label).join(' / ')||'Freie Ausbildung')} · Gesamtstufe ${preview.after.level}</strong><small>Die Ausrüstung bleibt individuell. ${draft.resetLevelOne && !skipped.has('resources') ? 'Frische Grundlage mit gewähltem Aufstieg.' : 'Vorhandene Grundressourcen mit gewählten Anpassungen.'}</small></article>
     </div>

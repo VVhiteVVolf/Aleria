@@ -4,50 +4,6 @@
   "suppliedPngCount": 22,
   "webImages": [
     {
-      "source": "Vorschau/Venalys/sources/originals/map-normal.png",
-      "sourceSha256": "69a88072ef82dfb55dc771e0cfec30799c582cbc26d7d7724ece67b4f4259963",
-      "path": "Vorschau/Venalys/assets/map.webp",
-      "sha256": "b885d54bf8cacf8a8758acc977a7949ffd5fc0e72f06508bf365c0ac0817bfbe",
-      "dimensions": [
-        4096,
-        2349
-      ],
-      "bytes": 2843314
-    },
-    {
-      "source": "Vorschau/Venalys/sources/originals/map-normal.png",
-      "sourceSha256": "69a88072ef82dfb55dc771e0cfec30799c582cbc26d7d7724ece67b4f4259963",
-      "path": "Vorschau/Venalys/assets/map-full.webp",
-      "sha256": "31b19d99dfb7ce8c60ad2b23b4644f4e9f6e573351bee5b8cd94fc3c5ae3ac03",
-      "dimensions": [
-        8192,
-        4698
-      ],
-      "bytes": 10061802
-    },
-    {
-      "source": "Vorschau/Venalys/sources/originals/map-districts.png",
-      "sourceSha256": "8b132603cfad69ed22e0035148d64ba45f03179b7cee05fb5de7d2dc93be7259",
-      "path": "Vorschau/Venalys/assets/map-districts.webp",
-      "sha256": "8c45f55dd21a19be54ab74daae9eb8f5d9cc5653f8702d911bc5670c69fb580f",
-      "dimensions": [
-        4096,
-        2349
-      ],
-      "bytes": 2451950
-    },
-    {
-      "source": "Vorschau/Venalys/sources/originals/map-districts.png",
-      "sourceSha256": "8b132603cfad69ed22e0035148d64ba45f03179b7cee05fb5de7d2dc93be7259",
-      "path": "Vorschau/Venalys/assets/map-districts-full.webp",
-      "sha256": "03b67defe87e6f8f219e99ad0bbefddfb75ec16449c22464db8eefd2a0350ca8",
-      "dimensions": [
-        8192,
-        4698
-      ],
-      "bytes": 9181882
-    },
-    {
       "source": "Vorschau/Venalys/assets/originals/vinicius.png",
       "sourceSha256": "ab332d7dc3c04040160c8a2e5321f2385c419e5bd7fbe8913fcf156e7cfa8e67",
       "path": "Vorschau/Venalys/assets/crests/vinicius.webp",
@@ -134,6 +90,51 @@
         600
       ],
       "bytes": 136826
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-20261104.png",
+      "sourceSha256": "08cba4befe661c28485a78438b3fbb780334f820aa0fac74a9b94d1b7b35a1da",
+      "path": "Vorschau/Venalys/assets/map.webp",
+      "sha256": "f66bd68cd47dd88d132f956c55538ebdfb00f935669ce08dee2a05fc47271da9",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 2935526
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-20261104.png",
+      "sourceSha256": "08cba4befe661c28485a78438b3fbb780334f820aa0fac74a9b94d1b7b35a1da",
+      "path": "Vorschau/Venalys/assets/map-full.webp",
+      "sha256": "ac2b81527501ae0f3e286cc39255e7ca64505818ed315db709a7babf169510b6",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "bytes": 6609720
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-districts-20261104.png",
+      "sourceSha256": "703107ea3c4429cebcfcd78845dc91b90d82f97ab28b89b0f7dbdb118440b397",
+      "path": "Vorschau/Venalys/assets/map-districts.webp",
+      "sha256": "0865ebe9be1e6e5ec46158ba49eccfe4f0da75dae6e752d5c860c7989753acef",
+      "dimensions": [
+        4096,
+        2349
+      ],
+      "bytes": 2827684
+    },
+    {
+      "source": "Vorschau/Venalys/sources/originals/map-districts-20261104.png",
+      "sourceSha256": "703107ea3c4429cebcfcd78845dc91b90d82f97ab28b89b0f7dbdb118440b397",
+      "path": "Vorschau/Venalys/assets/map-districts-full.webp",
+      "sha256": "ba0c95967afc0a7b85a1c79a93c88f355457ca2f8a1fff6f0b3c30463fc70729",
+      "dimensions": [
+        6144,
+        3524
+      ],
+      "bytes": 6376156
     }
-  ]
+  ],
+  "activeMapRevision": "20261104"
 }

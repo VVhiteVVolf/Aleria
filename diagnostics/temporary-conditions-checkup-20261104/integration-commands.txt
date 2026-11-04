@@ -1,0 +1,32 @@
+Working directory: E:\Aleria\firebase\functions
+Source mechanics synced by parent before either run.
+Only disposable demo emulator projects are used. Production writes: 0.
+
+Combat emulator: 127.0.0.1:8180 / demo-aleria-combat-checkup
+$env:FIRESTORE_EMULATOR_HOST = '127.0.0.1:8180'
+$combatIntegrationFiles = @('combat-checkup','combat-party','combat-development','combat-status','combat-nondamage','combat-loadout','combat-berserk','combat-checkup-regressions','combat-special-action-recovery','combat-post-audit','combat-trait-checkup','temporary-conditions-checkup') | ForEach-Object { "tests/integration/$_.integration.mjs" }
+node --test --test-concurrency=1 @combatIntegrationFiles
+Log: emulator-tests.txt
+
+Health emulator: 127.0.0.1:8182 / demo-aleria-item-duels
+$env:FIRESTORE_EMULATOR_HOST = '127.0.0.1:8182'
+node --test --test-concurrency=1 tests/integration/health-substances.integration.mjs
+Log: health-emulator-tests.txt
+
+Final source-ownership guard validation after the last server-only correction:
+$env:FIRESTORE_EMULATOR_HOST = '127.0.0.1:8180'
+node --test --test-concurrency=1 tests/integration/combat-status.integration.mjs tests/integration/temporary-conditions-checkup.integration.mjs
+Log: final-source-ownership-emulator-tests.txt
+Result: 13 passed, 0 failed. This overlaps 11 cases of the full 84-case suite
+and adds two final actor/source ownership transaction cases.
+
+Full combat result: 84 passed, 0 failed.
+Health result: 4 passed, 0 failed.
+Unique transaction cases across these runs: 90 (84 + 4 + 2).
+Both owned emulators were stopped after successful verification. Their Java
+launcher and child process IDs, ancestry and exact demo-project arguments were
+verified before stopping; unrelated processes were not touched.
+
+Default Node file isolation is intentional. Disabling it would mix the fixtures'
+setup hooks and invalidate the transaction assertions. The files run serially
+within each emulator because each fixture resets that emulator's demo project.

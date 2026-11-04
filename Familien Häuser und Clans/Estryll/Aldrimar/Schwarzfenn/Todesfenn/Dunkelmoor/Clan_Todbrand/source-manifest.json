@@ -1,0 +1,87 @@
+{
+  "id": "haus-todbrand",
+  "source": {
+    "attachmentId": "4a5a2a98-0a91-4946-94fb-c07b9f3b11f8",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\4a5a2a98-0a91-4946-94fb-c07b9f3b11f8\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/todbrand/animexx-original.html",
+    "bytes": 111889,
+    "sha256": "c6ffab73ac0f793fb989fda50a8a526b146dc4041252f0cb87b835719cbdcc11",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-todbrand",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Dunkelmoor",
+      "barony": "Todesfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-todbrand",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-todbrand",
+    "familyId": "haus-todbrand",
+    "slug": "todbrand",
+    "canonicalSlug": "todbrand",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "4a5a2a98-0a91-4946-94fb-c07b9f3b11f8",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/S3Vb0Pk.png",
+    "sourceUrl": "https://i.imgur.com/S3Vb0Pk.png",
+    "path": "Stammbäume/assets/images/references/haus-todbrand/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-todbrand/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 295388,
+    "sha256": "b864ea6d5dd96a23b77b58adaf039efcf58f5be224d802dd4354e277d75071a2",
+    "sha": "b864ea6d5dd96a23b77b58adaf039efcf58f5be224d802dd4354e277d75071a2",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Grün gerüsteter Hauskrieger mit Schild und kleinem Wildschwein als Teil des Originalmotivs.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Heutiger Sitz Dunkelmoor, Thanentum Todesfenn, Lehnsherr Ragnulf. Nordals alte Verbannung ist Geschichte und hebt die aktuelle Stellung nicht auf.",
+    "Loegaire bleibt der überlieferte Fianna und Freund Nordals; aus seinem persönlichen Namen wird kein neues eigenständiges Haus mit erfundener Genealogie angelegt.",
+    "Die dreijährige Belagerung ist erzählte Ereignisdauer, keine Truppenstatistik. Neue Lebensdaten, Massen-Todeslisten oder Kriegsjahre werden daraus nicht berechnet.",
+    "Der kontrafaktische Satz, der Krieg hätte um fünfzehn Jahre verkürzt werden können, ist unbelegte Spekulation und entfällt. Die Behinderung des Durchmarschs und ihre Folgen bleiben erhalten.",
+    "Hallsvalr und die östlichen Banditenorte gelten laut aktuellem Gebietstext nicht als gesicherter Todbrand-Besitz. Eisbrand und Silberzähne bleiben eine gegnerische, nicht anerkannte Macht.",
+    "Statue Loegaires, Schwertkunst, Treueschwur und Verehrung des Templers sind konkrete Hausinhalte; keine persönlichen Ausrüstungs- oder Klassenänderungen.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

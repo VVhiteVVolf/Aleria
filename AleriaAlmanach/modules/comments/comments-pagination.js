@@ -44,7 +44,8 @@ function pushCommentTimelineCommentPages(pages, items, options = {}) {
 }
 
 function buildCommentTimelinePages(comments) {
-  const allComments = Array.isArray(comments) ? comments : [];
+  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  const allComments = Array.isArray(visibleComments) ? visibleComments : [];
   const pages = [];
   let segmentItems = [];
   let breakCount = 0;
@@ -105,7 +106,8 @@ function setCommentPageTarget(threadId, target, totalCount) {
 }
 
 function getCommentPaginationWindow(comments, threadId) {
-  const allComments = Array.isArray(comments) ? comments : [];
+  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  const allComments = Array.isArray(visibleComments) ? visibleComments : [];
   const totalCount = allComments.length;
   const pages = buildCommentTimelinePages(allComments);
   const pageCount = Math.max(1, pages.length);

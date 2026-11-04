@@ -1,5 +1,6 @@
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { getAuraTargetMechanics } from './combat-profile-model.js?v=20260928-equipment-art-v4';
+import { reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 
 const NUMERIC_MECHANIC_KEYS = Object.freeze([
   'attack', 'damage', 'armorClass', 'initiative', 'skill', 'savingThrow',
@@ -156,6 +157,7 @@ function normalizeAuraTemporaryHitPointTracker(value = {}, encounterId = '') {
   return {
     encounterId: text(source.encounterId, 180),
     baseline: number(source.baseline, 0, 0, 9999),
+    ...(Array.isArray(source.baselineCriticalConditionIds) ? { baselineCriticalConditionIds: source.baselineCriticalConditionIds.map(String).slice(0, 60) } : {}),
     sources: (Array.isArray(source.sources) ? source.sources : [])
       .map(entry => ({
         sourceActorId: text(entry?.sourceActorId, 180),
@@ -167,7 +169,12 @@ function normalizeAuraTemporaryHitPointTracker(value = {}, encounterId = '') {
 
 function reconcileAuraTemporaryHitPoints(state = {}, applications = [], encounterId = '') {
   const previousTemporary = number(state.temporary, 0, 0, 9999);
-  const previousTracker = normalizeAuraTemporaryHitPointTracker(state.encounterAuraTemporaryHitPoints, encounterId);
+  let previousTracker = normalizeAuraTemporaryHitPointTracker(state.encounterAuraTemporaryHitPoints, encounterId);
+  if (previousTracker?.baselineCriticalConditionIds?.length) {
+    const activeIds = new Set((state.temporaryConditions || []).filter(condition => condition.active !== false).map(condition => condition.id));
+    const retainedIds = previousTracker.baselineCriticalConditionIds.filter(id => activeIds.has(id));
+    if (!retainedIds.length) previousTracker = { ...previousTracker, baseline: 0, baselineCriticalConditionIds: [] };
+  }
   const previousPeak = Math.max(0, ...(previousTracker?.sources || []).map(entry => entry.maximum));
   const nextSources = [...new Map(applications
     .filter(application => application.temporaryHitPoints > 0)
@@ -177,6 +184,8 @@ function reconcileAuraTemporaryHitPoints(state = {}, applications = [], encounte
     }])).values()];
   const nextPeak = Math.max(0, ...nextSources.map(entry => entry.maximum));
   const baseline = previousTracker?.baseline ?? previousTemporary;
+  const baselineCriticalConditionIds = previousTracker?.baselineCriticalConditionIds
+    || (previousTracker ? [] : (state.temporaryConditions || []).filter(condition => condition.active !== false && condition.criticalTemporaryOwned).map(condition => condition.id));
   const adjustedTemporary = previousTracker
     ? (previousTemporary > previousPeak
       ? previousTemporary
@@ -187,7 +196,8 @@ function reconcileAuraTemporaryHitPoints(state = {}, applications = [], encounte
     .map(application => application.temporaryHitPoints));
   return {
     temporary: Math.max(adjustedTemporary, grantedPeak),
-    tracker: nextSources.length ? { encounterId, baseline, sources: nextSources } : null
+    tracker: nextSources.length ? { encounterId, baseline, sources: nextSources,
+      ...(baselineCriticalConditionIds.length ? { baselineCriticalConditionIds } : {}) } : null
   };
 }
 
@@ -219,7 +229,7 @@ export function applyCombatEncounterAuraApplicationsToStateMap(states, event = {
     } else {
       delete nextState.encounterAuraTemporaryHitPoints;
     }
-    states.set(actorId, nextState);
+    states.set(actorId, reconcileCriticalTemporaryOwnership(state, nextState));
   });
 
   applications.forEach(application => {

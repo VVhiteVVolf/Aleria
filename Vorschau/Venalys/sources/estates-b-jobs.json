@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Zwei Venalys-Staendecomics nach den aktuellen Nutzerfestlegungen: einfache Buerger und vielfaeltige Neuankoemmlinge.",
+  "stylePreset": "fantasy-class-icon",
+  "styleOverride": "Current user comic-human requirement and actual Leukonia production references; independent Venalys design.",
+  "jobs": [
+    {
+      "id": "estate-plebejer",
+      "assetStem": "plebejer",
+      "category": "estates",
+      "name": "Plebejer",
+      "description": "Freundliche junge venalische Handwerkerin mit schlichter Arbeitskleidung und einem humorvoll prall gefuellten Werkzeugkorb; einfache Buergerin ohne Elendsdarstellung.",
+      "palette": [
+        "Rostrot",
+        "Creme",
+        "Salbei",
+        "Lederbraun"
+      ],
+      "prompt": "Use case: illustration-story. Asset type: a warm humorous social-estate cartoon for the fantasy merchant republic of VENALYS in Aleria, intended to appear beside its existing estate comics.\nInput images: the three supplied Leukonia production illustrations are STYLE REFERENCES ONLY. Match their very large expressive human heads, short adult cartoon proportions, thick irregular DARK BROWN pen outlines, simple faces, few large FLAT warm muted color shapes and fine even paper-print grain INSIDE the figures. Do not copy their Roman dress, wreaths, keys, staffs or paperwork. This is a new independent design.\n\nStyle: playful completely TWO-DIMENSIONAL printed storybook cartoon people. Heads about one quarter of each person's height. Young adults, slim or ordinary build, friendly expressive faces with small simple eyes and confident smiles. No old or obese people. Human ROUND ears. At most TWO separate flat tones per material. Warm restrained ochre, rust, sage, cream, teal and brown. NO volumetric modeling, gradients, highlights, reflections, realistic materials, detailed RPG-portrait painting, anime, 3D, CGI or toy appearance.\n\nCultural context: VENALYS is an urban Italic / early Italian merchant republic with late-Roman heritage, NOT the Spanish-Iberian Solestia. Use practical early Italian civic clothing where the local craftsperson is concerned, no Spanish morion, large Spanish feather hats, slashed Spanish puffed sleeves or courtly ruffs. All figures anonymous, no invented named person, office-holder or family emblem.\n\nOutput: exactly 1024x1536 portrait 2:3 PNG. Fully visible bodies from tops of heads/headwear to BOTH shoes, all carried objects uncut; use generous clear margin of at least 6 percent on every side. TRUE TRANSPARENT PNG alpha background including all gaps, no scenery, ground, drop shadow, colored halo, colored mist, vignette, paper backdrop, border or panel. No writing, labels, names, speech balloons, numbers, logos, watermarks or heraldic frame. Do not recreate the haze of the reference viewer.\n\nSubject: exactly ONE young adult VENALIAN CRAFTSWOMAN, representing ordinary citizens and manual trades. Friendly capable youthful face, large head, warm modest smile, brown hair tucked under a plain CREAM LINEN HEADSCARF tied behind her head. Simple rust-red fitted sleeveless early Italian working bodice over a cream linen blouse with practical sleeves rolled to the elbows, a plain sage-green calf-length work skirt and small linen apron, closed brown leather shoes. No costly embroidery, jewelry, noble insignia, weapons or beggar's rags. This is useful ordinary workwear, not poverty.\n\nShe hugs ONE COMICALLY LARGE WICKER TOOL BASKET at hip height, supporting it with her left forearm; two simple wooden-handled tools and a little folded linen protrude visibly from the basket. Her right hand cheerfully holds ONE small wooden-handled mallet upright next to the basket. The basket is humorously full and broad, but must not conceal her face, hands or shoes. She looks ready to get on with a job, standing upright with a jaunty little lean, not bowing or asking for charity. Exactly two arms and two hands. Endearing humor comes from the oversized practical basket, never from humiliation. Exactly one full figure.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f",
+          "role": "Comic style only; viewed before generation"
+        }
+      ]
+    },
+    {
+      "id": "estate-advena",
+      "assetStem": "advena",
+      "category": "estates",
+      "name": "Advena",
+      "description": "Zwei gleichwertige Ankoemmlinge: ein bescheidener junger Gefluechteter aus Shirazad mit Reisebuendel und eine wohlhabende junge ishtaranische Haendlerin mit Warenrolle und Geldbeutel. Keine starre Kaste oder einheitliche Vermoegensschublade.",
+      "palette": [
+        "Ocker",
+        "Creme",
+        "Petrol",
+        "Rostrot",
+        "Mattgold"
+      ],
+      "prompt": "Use case: illustration-story. Asset type: a warm humorous social-estate cartoon for the fantasy merchant republic of VENALYS in Aleria, intended to appear beside its existing estate comics.\nInput images: the three supplied Leukonia production illustrations are STYLE REFERENCES ONLY. Match their very large expressive human heads, short adult cartoon proportions, thick irregular DARK BROWN pen outlines, simple faces, few large FLAT warm muted color shapes and fine even paper-print grain INSIDE the figures. Do not copy their Roman dress, wreaths, keys, staffs or paperwork. This is a new independent design.\n\nStyle: playful completely TWO-DIMENSIONAL printed storybook cartoon people. Heads about one quarter of each person's height. Young adults, slim or ordinary build, friendly expressive faces with small simple eyes and confident smiles. No old or obese people. Human ROUND ears. At most TWO separate flat tones per material. Warm restrained ochre, rust, sage, cream, teal and brown. NO volumetric modeling, gradients, highlights, reflections, realistic materials, detailed RPG-portrait painting, anime, 3D, CGI or toy appearance.\n\nCultural context: VENALYS is an urban Italic / early Italian merchant republic with late-Roman heritage, NOT the Spanish-Iberian Solestia. Use practical early Italian civic clothing where the local craftsperson is concerned, no Spanish morion, large Spanish feather hats, slashed Spanish puffed sleeves or courtly ruffs. All figures anonymous, no invented named person, office-holder or family emblem.\n\nOutput: exactly 1024x1536 portrait 2:3 PNG. Fully visible bodies from tops of heads/headwear to BOTH shoes, all carried objects uncut; use generous clear margin of at least 6 percent on every side. TRUE TRANSPARENT PNG alpha background including all gaps, no scenery, ground, drop shadow, colored halo, colored mist, vignette, paper backdrop, border or panel. No writing, labels, names, speech balloons, numbers, logos, watermarks or heraldic frame. Do not recreate the haze of the reference viewer.\n\nSubject: exactly TWO young adult newcomers standing SIDE BY SIDE as ONE compact grouped illustration. ADVENTURERS / NEWCOMERS here include business partners, merchants and opportunists as well as refugees; they have varied means and must find their own standing. This must NOT portray Advena as a fixed lowest social caste or a uniformly poor group. Both people are equally upright, equally dignified, equally friendly, equally confidently smiling; neither bows to the other or dominates the other. Their bodies and heads share the same scale. No local person, guard, border, checkpoint or subordinate servant.\n\nLEFT: a young man recently displaced from SHIRAZAD, modest means, ordinary warm brown skin, short dark hair and a small simple ochre wrapped travel cap with no jewels. His clothing is a clean but well-worn plain sand-colored long belted tunic under a short warm brown travel cloak, simple dark trousers and closed brown shoes. A tiny unobtrusive patch on the cloak is allowed; NO tears, starvation, chains, begging gesture, wounds or helpless expression. He holds a simple cream cloth TRAVEL BUNDLE in one hand at his side. His other open hand makes a friendly little conversational greeting at chest height. Optimistic and resourceful young adult traveler.\n\nRIGHT: a young well-to-do ISHTARANIAN TRADING WOMAN, warm olive complexion, long dark hair mostly tucked under a small tasteful ochre-and-cream TURBAN with a little matte gold brooch, no crown or veil covering her face. Long elegant TEAL KAFTAN with just two simple gold trim lines, rust sash, wide practical leather belt, closed travel shoes, one small gold earring and a money purse hanging clearly on the belt. She holds ONE cream WOVEN-CLOTH MERCHANDISE ROLL tucked under her arm and gestures conversationally with her other hand. Tasteful prosperous commercial dress, not royal costume, armor or harem stereotyping. The purse indicates means, not moral superiority.\n\nThey glance toward each other in a warm respectful meeting, standing on the SAME invisible level with a small comfortable gap. Exactly FOUR arms, FOUR hands and FOUR feet visible in total. Narrow the whole combined group rather than cropping it: each person's height about 72 to 80 percent of the canvas, combined width no more than 86 percent, all turbans, bundles, cloth roll and shoes inside the free 6 percent margin. Keep the large-headed FLAT comic proportions of the references despite the two-person group. No furniture or connecting background. Two full people ONLY, one transparent illustration.",
+      "transparent_background": true,
+      "references": [
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+        "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484",
+          "role": "Comic style only; viewed before generation"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f",
+          "role": "Comic style only; viewed before generation"
+        }
+      ]
+    }
+  ]
+}

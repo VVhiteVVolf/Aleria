@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "tool": "built-in image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "warrior-pool-01",
+      "assetStem": "pool-01",
+      "category": "warriors",
+      "houseId": "pool-01",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist",
+      "description": "A young man aged 24, lean muscular, olive complexion, short curly black hair and clean-shaven face. Heavy infantry. A closed silver Greek Corinthian helmet with a tall smooth brow, ordinary nose guard and enclosing cheekplates, clear narrow eye openings, no animal face; a very small dark-blue longitudinal brush. Articulated iron lorica segmentata over a dark navy knee-length tunic, narrow silver-edged navy shoulder mantle, layered blue leather pteryges. A tall rectangular navy tower shield with a small silver wolf head, weathered old-gold meander edge. Left hand carries shield beside body; right hand holds a straight sword angled quietly down and outward, blade separate from shin. Silver wolf-head brooch fastening mantle, no wolf helmet. Feet in strapped boots slightly staggered, body turned three-quarter left.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelblau",
+        "Altgold"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 24, lean muscular, olive complexion, short curly black hair and clean-shaven face. Heavy infantry. A closed silver Greek Corinthian helmet with a tall smooth brow, ordinary nose guard and enclosing cheekplates, clear narrow eye openings, no animal face; a very small dark-blue longitudinal brush. Articulated iron lorica segmentata over a dark navy knee-length tunic, narrow silver-edged navy shoulder mantle, layered blue leather pteryges. A tall rectangular navy tower shield with a small silver wolf head, weathered old-gold meander edge. Left hand carries shield beside body; right hand holds a straight sword angled quietly down and outward, blade separate from shin. Silver wolf-head brooch fastening mantle, no wolf helmet. Feet in strapped boots slightly staggered, body turned three-quarter left.\n\nExact heraldic motive: Ein großer silberner Wolfskopf im klaren Seitenprofil nach links, kurzes geschlossenes Maul und scharfe aufrechte Ohren auf dunkelblauem Feld. Palette: Silber, Dunkelblau, Altgold.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-01.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A closed silver Greek Corinthian helmet with a tall smooth brow, ordinary nose guard and enclosing cheekplates, clear narrow eye openings, no animal face; a very small dark-blue longitudinal brush.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-02",
+      "assetStem": "pool-02",
+      "category": "warriors",
+      "houseId": "pool-02",
+      "prototypeId": "prototype-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "description": "A young athletic woman aged 26, warm brown skin, dark eyes, black hair gathered low. Heavily armoured lance bearer. A rounded bronze Byzantine enclosed spangenhelm, smooth high brow and joined cheek-and-chin plates with a narrow human eye opening, no horns or animal face. Fitted bronze scale cuirass, alternating narrow red leather and bronze pteryges, dark red long tunic and short red half-cape. A small gold ram embroidered on the chest tabard and the rolled spiral used only in two ordinary belt rosettes. Holds a long straight lance close to the right shoulder, left hand resting on a belt; vertical spear shaft and head entirely visible. Compact balanced upright stance, silver-grey shin guards.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelrot",
+        "Bronze"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young athletic woman aged 26, warm brown skin, dark eyes, black hair gathered low. Heavily armoured lance bearer. A rounded bronze Byzantine enclosed spangenhelm, smooth high brow and joined cheek-and-chin plates with a narrow human eye opening, no horns or animal face. Fitted bronze scale cuirass, alternating narrow red leather and bronze pteryges, dark red long tunic and short red half-cape. A small gold ram embroidered on the chest tabard and the rolled spiral used only in two ordinary belt rosettes. Holds a long straight lance close to the right shoulder, left hand resting on a belt; vertical spear shaft and head entirely visible. Compact balanced upright stance, silver-grey shin guards.\n\nExact heraldic motive: Ein goldener Widder in ruhigem Seitenprofil mit deutlich eingerollten Hörnern auf dunkelrotem Feld. Palette: Gold, Dunkelrot, Bronze.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-02.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A rounded bronze Byzantine enclosed spangenhelm, smooth high brow and joined cheek-and-chin plates with a narrow human eye opening, no horns or animal face.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-03",
+      "assetStem": "pool-03",
+      "category": "warriors",
+      "houseId": "pool-03",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist",
+      "description": "A young man aged 22, pale olive skin, cropped chestnut hair, faint short moustache. Heavy infantry with a hand axe and no shield. An enclosed antique Roman cavalry helmet: simple dark iron dome and smooth ordinary human-form metal faceplate with narrow eye openings and straight nose, no beast features, mail neck curtain, no plume. Dense black iron scales on a tightly tailored ochre arming coat, broad ochre sash, short heavy dark leather skirt strips, iron greaves and plain boots. Black boar silhouette as a small painted breastplate patch. Black and ochre triangular seam rhythm, no fur or tusk decorations. Right hand carries a one-handed axe lowered beside the thigh, left hand relaxed on belt, both hands and axe fully separate from body silhouette. Quiet stance turned to the right.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Schwarz",
+        "Ocker",
+        "Eisen"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 22, pale olive skin, cropped chestnut hair, faint short moustache. Heavy infantry with a hand axe and no shield. An enclosed antique Roman cavalry helmet: simple dark iron dome and smooth ordinary human-form metal faceplate with narrow eye openings and straight nose, no beast features, mail neck curtain, no plume. Dense black iron scales on a tightly tailored ochre arming coat, broad ochre sash, short heavy dark leather skirt strips, iron greaves and plain boots. Black boar silhouette as a small painted breastplate patch. Black and ochre triangular seam rhythm, no fur or tusk decorations. Right hand carries a one-handed axe lowered beside the thigh, left hand relaxed on belt, both hands and axe fully separate from body silhouette. Quiet stance turned to the right.\n\nExact heraldic motive: Ein kräftiger schwarzer Keiler im Profil nach rechts, heller kleiner Hauer und geschlossene klare Silhouette auf ockergelbem Feld. Palette: Schwarz, Ocker, Eisen.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-03.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "An enclosed antique Roman cavalry helmet: simple dark iron dome and smooth ordinary human-form metal faceplate with narrow eye openings and straight nose, no beast features, mail neck curtain, no plume.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-04",
+      "assetStem": "pool-04",
+      "category": "warriors",
+      "houseId": "pool-04",
+      "prototypeId": "prototype-04",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "description": "A young adult woman aged 23, light olive skin, auburn single braid visible at one shoulder, calm alert face. Spear-and-back-quiver ranged role. Open-faced silver oval Roman infantry helmet with smooth low dome, flat rectangular cheekpieces and no crest. Short overlapping olive leather lamellae over an ivory pleated tunic, exposed forearms with simple bronze cuffs, olive shoulder scarf gathered to one side, ivory trousers with calf bindings. Small ivory standing deer stitched on the olive front cloth, ordinary branching olive seam embroidery on tunic hem, no antlers or animal helmet. Right hand holds a simple spear diagonally upright beside her body; a clearly visible back quiver with arrow fletchings rises behind the opposite shoulder. Left hand lightly at waist, relaxed contrapposto, entire spear and feet visible.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Olivgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young adult woman aged 23, light olive skin, auburn single braid visible at one shoulder, calm alert face. Spear-and-back-quiver ranged role. Open-faced silver oval Roman infantry helmet with smooth low dome, flat rectangular cheekpieces and no crest. Short overlapping olive leather lamellae over an ivory pleated tunic, exposed forearms with simple bronze cuffs, olive shoulder scarf gathered to one side, ivory trousers with calf bindings. Small ivory standing deer stitched on the olive front cloth, ordinary branching olive seam embroidery on tunic hem, no antlers or animal helmet. Right hand holds a simple spear diagonally upright beside her body; a clearly visible back quiver with arrow fletchings rises behind the opposite shoulder. Left hand lightly at waist, relaxed contrapposto, entire spear and feet visible.\n\nExact heraldic motive: Ein elfenbeinweißer stehender Hirsch mit gut lesbarem sechsendigem Geweih auf olivgrünem Feld. Palette: Elfenbein, Olivgrün, Bronze.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-04.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-05",
+      "assetStem": "pool-05",
+      "category": "warriors",
+      "houseId": "pool-05",
+      "prototypeId": "prototype-04",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "description": "A young athletic man aged 25, tan skin, straight shoulder-length dark hair tucked behind ears, clean-shaven angular face. Spear-and-back-quiver ranged role. A restrained silver Attic-inspired helmet with low swept brow and short wine-red longitudinal crest, no wings. Narrow dark silver scale vest over a long wine-red split tunic, black leather diagonal harness and belt, silver wrist guards and simple brown shin-high boots. Small silver falcon with precisely two wings embroidered on breast cloth, fine feather-like stitch rhythm only on the sleeve edging. Left hand holds the long spear vertically near its midpoint, right hand relaxed near a hip pouch. Distinct back quiver and arrow fletching visible over right shoulder. Lean upright pose facing three-quarter left, no shield.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Silber",
+        "Weinrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young athletic man aged 25, tan skin, straight shoulder-length dark hair tucked behind ears, clean-shaven angular face. Spear-and-back-quiver ranged role. A restrained silver Attic-inspired helmet with low swept brow and short wine-red longitudinal crest, no wings. Narrow dark silver scale vest over a long wine-red split tunic, black leather diagonal harness and belt, silver wrist guards and simple brown shin-high boots. Small silver falcon with precisely two wings embroidered on breast cloth, fine feather-like stitch rhythm only on the sleeve edging. Left hand holds the long spear vertically near its midpoint, right hand relaxed near a hip pouch. Distinct back quiver and arrow fletching visible over right shoulder. Lean upright pose facing three-quarter left, no shield.\n\nExact heraldic motive: Ein silberner Falke mit genau zwei ausgebreiteten Flügeln frontal, gerader schmaler Stoß, auf tiefem weinrotem Feld. Palette: Silber, Weinrot, Schwarz.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-06",
+      "assetStem": "pool-06",
+      "category": "warriors",
+      "houseId": "pool-06",
+      "prototypeId": "prototype-03",
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "description": "A young athletic woman aged 27, medium olive skin, short dark wavy hair and focused youthful face. Late-Roman cataphract with a long straight riding sword. A silver Byzantine cataphract spangenhelm, gently pointed banded dome, straight nasal and fitted ordinary cheek guards, mail covering chin and neck, no extravagant crest. Gold-bronze small scale cuirass, silver arm guards, split dark green over-robe and green sash. A gold griffin motif small and stitched on green saddle cloth, feather rhythm abstracted only into overlapping shoulder scales. She sits in a functional saddle on one complete dark charcoal grey Equo military horse, black mane and black tail, compact strong chest and solid legs, no giant draught build. Horse quietly stands three-quarter left, four clearly separated legs and four complete visible hooves, whole head, ears and tail. Short dark green barding over flanks with matte silver scale neck defence; legs anatomically exposed. Left hand holds separate reins, right hand holds riding sword quietly angled up, full blade away from horse ears. No lance.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html",
+        "profile": "Bestiarium/tiere/pferde/equo/profil.json"
+      },
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young athletic woman aged 27, medium olive skin, short dark wavy hair and focused youthful face. Late-Roman cataphract with a long straight riding sword. A silver Byzantine cataphract spangenhelm, gently pointed banded dome, straight nasal and fitted ordinary cheek guards, mail covering chin and neck, no extravagant crest. Gold-bronze small scale cuirass, silver arm guards, split dark green over-robe and green sash. A gold griffin motif small and stitched on green saddle cloth, feather rhythm abstracted only into overlapping shoulder scales. She sits in a functional saddle on one complete dark charcoal grey Equo military horse, black mane and black tail, compact strong chest and solid legs, no giant draught build. Horse quietly stands three-quarter left, four clearly separated legs and four complete visible hooves, whole head, ears and tail. Short dark green barding over flanks with matte silver scale neck defence; legs anatomically exposed. Left hand holds separate reins, right hand holds riding sword quietly angled up, full blade away from horse ears. No lance.\n\nExact heraldic motive: Ein goldener aufgerichteter Greif im Profil nach links mit genau einem sichtbar gefalteten Flügel und einem Löwenschwanz auf dunkelgrünem Feld. Palette: Gold, Dunkelgrün, Silber.\nImage 3 supplies the Equo breed anatomy only; do not include its scene or other horses.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-06.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\equo.webp"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A silver Byzantine cataphract spangenhelm, gently pointed banded dome, straight nasal and fitted ordinary cheek guards, mail covering chin and neck, no extravagant crest.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-07",
+      "assetStem": "pool-07",
+      "category": "warriors",
+      "houseId": "pool-07",
+      "prototypeId": "prototype-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "description": "A young man aged 28, slim tall athletic build, warm olive skin, short neat black beard and close cropped hair. Heavy lance bearer. A closed bronze Greek Corinthian helmet, high arched brow, narrow almond eye openings, normal long human nasal and enclosing cheek plates; no crest or animal construction. Long ivory scale armour coat below waist, bronze shoulder splints, teal wide half-cape falling behind left elbow, teal under-tunic and bronze greaves. Small bronze heron between ivory reeds on chest clasp, narrow reed-stitch border at cape hem, no bird mask. Long lance angled slightly away from left shoulder, both hands at different practical shaft heights, spear held securely with lower end separated from feet. Upright straight stance with a calm small turn of the head.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Bronze",
+        "Petrol",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 28, slim tall athletic build, warm olive skin, short neat black beard and close cropped hair. Heavy lance bearer. A closed bronze Greek Corinthian helmet, high arched brow, narrow almond eye openings, normal long human nasal and enclosing cheek plates; no crest or animal construction. Long ivory scale armour coat below waist, bronze shoulder splints, teal wide half-cape falling behind left elbow, teal under-tunic and bronze greaves. Small bronze heron between ivory reeds on chest clasp, narrow reed-stitch border at cape hem, no bird mask. Long lance angled slightly away from left shoulder, both hands at different practical shaft heights, spear held securely with lower end separated from feet. Upright straight stance with a calm small turn of the head.\n\nExact heraldic motive: Ein bronzefarbener Reiher mit langem Hals und genau zwei schlanken Beinen, ruhig stehend zwischen zwei kleinen elfenbeinfarbenen Schilfhalmen auf petrolfarbenem Feld. Palette: Bronze, Petrol, Elfenbein.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-07.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A closed bronze Greek Corinthian helmet, high arched brow, narrow almond eye openings, normal long human nasal and enclosing cheek plates; no crest or animal construction.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-08",
+      "assetStem": "pool-08",
+      "category": "warriors",
+      "houseId": "pool-08",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist",
+      "description": "A young woman aged 24, fit compact athletic build, pale skin and dark braided hair, resolute youthful face. Heavy sword infantry. A normal closed silver Corinthian-inspired helmet lowered in use, narrow human eye openings, enclosing cheekplates and long straight nose guard, small dark-red horsehair crest, no lion face. Black iron rectangular lamellar torso, black-red layered skirt panels, silver scale shoulder guards, a small short dark-red cloak at right shoulder, silver greaves. A black tall oval-ended tower shield painted with a small silver lion head, carried outward in left hand. Right hand rests a straight sword diagonally down across the outer side, blade unobstructed. Lion mane rhythm only as subtle radiating stitched lines at collar, no animal armour or oversized ornament. Body angled right, left foot advanced.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Dunkelrot"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young woman aged 24, fit compact athletic build, pale skin and dark braided hair, resolute youthful face. Heavy sword infantry. A normal closed silver Corinthian-inspired helmet lowered in use, narrow human eye openings, enclosing cheekplates and long straight nose guard, small dark-red horsehair crest, no lion face. Black iron rectangular lamellar torso, black-red layered skirt panels, silver scale shoulder guards, a small short dark-red cloak at right shoulder, silver greaves. A black tall oval-ended tower shield painted with a small silver lion head, carried outward in left hand. Right hand rests a straight sword diagonally down across the outer side, blade unobstructed. Lion mane rhythm only as subtle radiating stitched lines at collar, no animal armour or oversized ornament. Body angled right, left foot advanced.\n\nExact heraldic motive: Ein einzelner silberner Löwenkopf frontal mit stilisierter breiter Mähne auf fast schwarzem Feld. Palette: Silber, Schwarz, Dunkelrot.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-08.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A normal closed silver Corinthian-inspired helmet lowered in use, narrow human eye openings, enclosing cheekplates and long straight nose guard, small dark-red horsehair crest, no lion face.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-09",
+      "assetStem": "pool-09",
+      "category": "warriors",
+      "houseId": "pool-09",
+      "prototypeId": "prototype-06",
+      "role": "Miliz · einfacher Legionär",
+      "description": "A young man aged 21, light brown skin, lively youthful clean-shaven face, short curly brown hair. Simple militia legionary. Low open-faced bronze Montefortino helmet with small ordinary knob, plain cheek flaps, no plume. Short plain mail shirt over an ivory tunic with a wide dark green hem, green wool neck scarf, simple brown belt, bare knees and calf wraps. An ordinary small oval ivory wooden shield with a dark green oak tree painted at centre, held low at the left side. Right hand holds a short straight sword downward with a natural relaxed grip. No ornate plate, no noble jewels. Calm casual stance with one knee softly relaxed, full feet visible.",
+      "equipment": [
+        "Schwert und Schild im Bildentwurf"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 21, light brown skin, lively youthful clean-shaven face, short curly brown hair. Simple militia legionary. Low open-faced bronze Montefortino helmet with small ordinary knob, plain cheek flaps, no plume. Short plain mail shirt over an ivory tunic with a wide dark green hem, green wool neck scarf, simple brown belt, bare knees and calf wraps. An ordinary small oval ivory wooden shield with a dark green oak tree painted at centre, held low at the left side. Right hand holds a short straight sword downward with a natural relaxed grip. No ornate plate, no noble jewels. Calm casual stance with one knee softly relaxed, full feet visible.\n\nExact heraldic motive: Ein einzelner dunkelgrüner Eichenbaum mit kurzer kräftiger Wurzel und großer klarer runder Krone auf elfenbeinfarbenem Feld. Palette: Dunkelgrün, Elfenbein, Silber.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-09.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-10",
+      "assetStem": "pool-10",
+      "category": "warriors",
+      "houseId": "pool-10",
+      "prototypeId": "prototype-04",
+      "role": "Fernkämpfer mit Speer und Rückenköcher",
+      "description": "A young woman aged 26, slender trained body, tawny skin, short dark tightly curled hair, soft youthful face. Spear-and-back-quiver ranged fighter. An iron late-Roman ridge helmet with two low brow bands and ordinary cheek plates, no plume. Short black mail bolero over a cream long-sleeved tunic, fitted dark red leather vest and red waist wrap, ivory loose trousers gathered into black calf boots. Crimson crab stitched small on cream chest panel; segmented cuff construction subtly recalls shell plates, fully ordinary armour. Spear held slanting upward in right hand, left forearm loose across waist. Visible back quiver with clear arrow feathers behind left shoulder, quiver strap crosses torso. No shield, no crab claws on body. Weight on rear leg, calm three-quarter right view.",
+      "equipment": [
+        "Speer",
+        "Rückenköcher"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Cremeweiß",
+        "Schwarz"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young woman aged 26, slender trained body, tawny skin, short dark tightly curled hair, soft youthful face. Spear-and-back-quiver ranged fighter. An iron late-Roman ridge helmet with two low brow bands and ordinary cheek plates, no plume. Short black mail bolero over a cream long-sleeved tunic, fitted dark red leather vest and red waist wrap, ivory loose trousers gathered into black calf boots. Crimson crab stitched small on cream chest panel; segmented cuff construction subtly recalls shell plates, fully ordinary armour. Spear held slanting upward in right hand, left forearm loose across waist. Visible back quiver with clear arrow feathers behind left shoulder, quiver strap crosses torso. No shield, no crab claws on body. Weight on rear leg, calm three-quarter right view.\n\nExact heraldic motive: Eine dunkelrote Krabbe von oben mit genau zwei großen Scheren und symmetrisch angeordneten acht dünnen Laufbeinen auf cremeweißem Feld. Palette: Dunkelrot, Cremeweiß, Schwarz.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-10.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-11",
+      "assetStem": "pool-11",
+      "category": "warriors",
+      "houseId": "pool-11",
+      "prototypeId": "prototype-01",
+      "role": "Schwerer Infanterist",
+      "description": "A young man aged 27, athletic waist and shoulders, warm brown skin, cropped black hair, clean-shaven. Heavy infantry with a one-handed axe. An enclosed bronze late-Roman cavalry helmet with ordinary flat human faceplate, narrow eye openings, straight nose and broad neck protection; short black central crest, no animal features. Matte bronze shaped cuirass over black tunic, long split black leather pteryges with copper rivets, narrow gold shoulder sash, dark greaves. Small gold scorpion motif engraved flat on belt plate and painted small on the black breast cloth; no stinger, spikes or claw armour. Right hand holds the axe just below head at thigh level, axe blade facing outward, left hand carries a simple dark round buckler close to side. A still broad but slim athletic stance, no bulky body.",
+      "equipment": [
+        "Schwert oder Axt",
+        "gegebenenfalls Turmschild"
+      ],
+      "palette": [
+        "Gold",
+        "Schwarz",
+        "Kupfer"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 27, athletic waist and shoulders, warm brown skin, cropped black hair, clean-shaven. Heavy infantry with a one-handed axe. An enclosed bronze late-Roman cavalry helmet with ordinary flat human faceplate, narrow eye openings, straight nose and broad neck protection; short black central crest, no animal features. Matte bronze shaped cuirass over black tunic, long split black leather pteryges with copper rivets, narrow gold shoulder sash, dark greaves. Small gold scorpion motif engraved flat on belt plate and painted small on the black breast cloth; no stinger, spikes or claw armour. Right hand holds the axe just below head at thigh level, axe blade facing outward, left hand carries a simple dark round buckler close to side. A still broad but slim athletic stance, no bulky body.\n\nExact heraldic motive: Ein goldener Skorpion von oben, zwei deutliche Scheren, gegliederter eingerollter Schwanz, acht Beine, klar stilisiert auf mattschwarzem Feld. Palette: Gold, Schwarz, Kupfer.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-11.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "An enclosed bronze late-Roman cavalry helmet with ordinary flat human faceplate, narrow eye openings, straight nose and broad neck protection; short black central crest, no animal features.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-12",
+      "assetStem": "pool-12",
+      "category": "warriors",
+      "houseId": "pool-12",
+      "prototypeId": "prototype-03",
+      "role": "Berittener mit Schwert · Kataphrakt",
+      "description": "A young man aged 25, lean athletic rider, fair olive skin, dark eyes, short brown curls and clean-shaven face. Late-antique cataphract with a long straight sword. A traditional Byzantine conical iron banded helmet with a long straight nasal and mail aventail enclosing lower face and neck; clearly human eyes visible, no horns or crest. Silver-grey stepped lamellar cuirass and modest arm splints over rust-brown split riding robe, dark brown belt, fitted trousers. Small silver ibex embroidered on the rust saddle cloth, sweeping curves used only as seam ornament at robe hem. Whole dark anthracite Equo horse with black mane and tail, robust compact body and muscular chest, ordinary head. Horse turned three-quarter right, all four legs slightly staggered with four complete visible hooves, full tail and ears. Practical dark leather saddle, reins separately held in left hand; right hand carries full straight sword angled down outside horse silhouette. Short silver scale peytral and dark brown flank cloth, horse legs exposed. No lance.",
+      "equipment": [
+        "Reiterschwert",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Silber",
+        "Rostbraun",
+        "Dunkelbraun"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html",
+        "profile": "Bestiarium/tiere/pferde/equo/profil.json"
+      },
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 25, lean athletic rider, fair olive skin, dark eyes, short brown curls and clean-shaven face. Late-antique cataphract with a long straight sword. A traditional Byzantine conical iron banded helmet with a long straight nasal and mail aventail enclosing lower face and neck; clearly human eyes visible, no horns or crest. Silver-grey stepped lamellar cuirass and modest arm splints over rust-brown split riding robe, dark brown belt, fitted trousers. Small silver ibex embroidered on the rust saddle cloth, sweeping curves used only as seam ornament at robe hem. Whole dark anthracite Equo horse with black mane and tail, robust compact body and muscular chest, ordinary head. Horse turned three-quarter right, all four legs slightly staggered with four complete visible hooves, full tail and ears. Practical dark leather saddle, reins separately held in left hand; right hand carries full straight sword angled down outside horse silhouette. Short silver scale peytral and dark brown flank cloth, horse legs exposed. No lance.\n\nExact heraldic motive: Ein silberner aufsteigender Steinbock im Profil nach rechts mit zwei nach hinten gebogenen Hörnern auf rostbraunem Feld. Palette: Silber, Rostbraun, Dunkelbraun.\nImage 3 supplies the Equo breed anatomy only; do not include its scene or other horses.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-12.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\equo.webp"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A traditional Byzantine conical iron banded helmet with a long straight nasal and mail aventail enclosing lower face and neck; clearly human eyes visible, no horns or crest.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-13",
+      "assetStem": "pool-13",
+      "category": "warriors",
+      "houseId": "pool-13",
+      "prototypeId": "prototype-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "description": "A young woman aged 22, slender athletic build, dark brown skin, dark hair in a low tucked knot, calm youthful face. Heavily armoured lance bearer. A closed bronze Byzantine round-domed infantry helmet with enclosing cheek and chin guards, narrow ordinary eye opening, small ivory cloth neck drape, no plume. Long navy mail shirt over ivory tunic, bronze laced waist plates and bronze shoulder lamellae, ivory sleeve cuffs and navy skirt lining, simple silver greaves. Small gold torch motif on a narrow navy breast tabard, ivory flame-shape stitching flat at hem, no real fire or glow. Right hand holds a long lance near upright but leaning gently outward, left hand braces shaft below chest. Entire shaft and metal head clear, no instrument or shield. Quiet tall elegant posture facing slightly left.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelblau",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young woman aged 22, slender athletic build, dark brown skin, dark hair in a low tucked knot, calm youthful face. Heavily armoured lance bearer. A closed bronze Byzantine round-domed infantry helmet with enclosing cheek and chin guards, narrow ordinary eye opening, small ivory cloth neck drape, no plume. Long navy mail shirt over ivory tunic, bronze laced waist plates and bronze shoulder lamellae, ivory sleeve cuffs and navy skirt lining, simple silver greaves. Small gold torch motif on a narrow navy breast tabard, ivory flame-shape stitching flat at hem, no real fire or glow. Right hand holds a long lance near upright but leaning gently outward, left hand braces shaft below chest. Entire shaft and metal head clear, no instrument or shield. Quiet tall elegant posture facing slightly left.\n\nExact heraldic motive: Eine einzelne goldene antike Fackel mit großer klarer elfenbeinfarbener Flamme auf dunkelblauem Feld; die Flamme bleibt heraldisch flach. Palette: Gold, Dunkelblau, Elfenbein.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-13.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "A closed bronze Byzantine round-domed infantry helmet with enclosing cheek and chin guards, narrow ordinary eye opening, small ivory cloth neck drape, no plume.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-14",
+      "assetStem": "pool-14",
+      "category": "warriors",
+      "houseId": "pool-14",
+      "prototypeId": "prototype-06",
+      "role": "Miliz · einfacher Legionär",
+      "description": "A young woman aged 23, fit lean build, sun-browned skin and chin-length wavy brown hair, bright youthful face. Plain militia legionary. A simple open bronze pilos helmet with low conical crown, ordinary leather chin strap, no crest. Terracotta knee-length linen tunic, modest dark green leather breast vest with plain shoulder straps, cream mantle folded over one shoulder, simple leather boots and shin wraps. A small cream oval shield with a terracotta amphora, dark green border, held loosely in left hand. Short straight sword lowered beside right leg, hand naturally around hilt. Equipment visibly less elaborate than heavy infantry, no rich jewellery. Upright lightly turned stance, slight relaxed smile.",
+      "equipment": [
+        "Schwert und Schild im Bildentwurf"
+      ],
+      "palette": [
+        "Cremeweiß",
+        "Terrakotta",
+        "Dunkelgrün"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young woman aged 23, fit lean build, sun-browned skin and chin-length wavy brown hair, bright youthful face. Plain militia legionary. A simple open bronze pilos helmet with low conical crown, ordinary leather chin strap, no crest. Terracotta knee-length linen tunic, modest dark green leather breast vest with plain shoulder straps, cream mantle folded over one shoulder, simple leather boots and shin wraps. A small cream oval shield with a terracotta amphora, dark green border, held loosely in left hand. Short straight sword lowered beside right leg, hand naturally around hilt. Equipment visibly less elaborate than heavy infantry, no rich jewellery. Upright lightly turned stance, slight relaxed smile.\n\nExact heraldic motive: Eine große cremeweiße antike Amphore mit genau zwei Henkelgriffen, dunkelgrüner Zierlinie und rundem Fuß auf terrakottafarbenem Feld. Palette: Cremeweiß, Terrakotta, Dunkelgrün.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-14.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-15",
+      "assetStem": "pool-15",
+      "category": "warriors",
+      "houseId": "pool-15",
+      "prototypeId": "prototype-07",
+      "role": "Römischer Kampfbarde",
+      "description": "A young man aged 24, slim athletic frame, olive skin, dark eyes, medium wavy black hair and clean-shaven face. Roman battle bard with curved sabre and a portable lyre. Open-faced silver Attic-inspired low helmet with small cheek guards and a dark purple cloth tie, no plume. Fitted matte gold-bronze leather-backed breast cuirass over purple-red short tunic, double narrow burgundy pteryges, thin silver bracers, gold-bordered folded shoulder mantle. Lyre emblem stitched small on the purple chest panel. Left hand supports a small gold wooden lyre at the hip with an open frame and distinct simple straight strings; right hand holds a curved sabre angled outward and down, blade separate from both lyre and leg. Balanced quiet stance with one foot ahead, no performance stage.",
+      "equipment": [
+        "Säbel",
+        "Instrument"
+      ],
+      "palette": [
+        "Gold",
+        "Purpurrot",
+        "Silber"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 24, slim athletic frame, olive skin, dark eyes, medium wavy black hair and clean-shaven face. Roman battle bard with curved sabre and a portable lyre. Open-faced silver Attic-inspired low helmet with small cheek guards and a dark purple cloth tie, no plume. Fitted matte gold-bronze leather-backed breast cuirass over purple-red short tunic, double narrow burgundy pteryges, thin silver bracers, gold-bordered folded shoulder mantle. Lyre emblem stitched small on the purple chest panel. Left hand supports a small gold wooden lyre at the hip with an open frame and distinct simple straight strings; right hand holds a curved sabre angled outward and down, blade separate from both lyre and leg. Balanced quiet stance with one foot ahead, no performance stage.\n\nExact heraldic motive: Eine goldene antike Lyra mit sieben geraden sichtbaren Saiten auf dunklem purpurrotem Feld. Palette: Gold, Purpurrot, Silber.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-15.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-16",
+      "assetStem": "pool-16",
+      "category": "warriors",
+      "houseId": "pool-16",
+      "prototypeId": "prototype-02",
+      "role": "Schwer gepanzerter Lanzenträger",
+      "description": "A young man aged 26, slim long-limbed athletic build, light olive skin, short dense black curls, a fine neat moustache. Heavy lance bearer. Dark iron Greek Chalcidian helmet with rounded close-fitting skull, ordinary straight nose guard and wide enclosing cheek plates, low brow ridge, no crest. Long ivory fabric-lined mail coat, dark green broad shoulder cape clasped with a simple bronze pin, black lamellar waist corslet and leather skirt, plain iron shin splints. Dark green olive branch sewn on ivory chest cloth and five small dark stud accents at belt, no crown or invented insignia. Lance held upright in left hand with shaft close to outer body edge, right hand resting against hip, natural fingers. Long ivory and green cloth planes differentiate silhouette from scale-armoured figures. Quiet forward stance with slight torso turn.",
+      "equipment": [
+        "Lanze",
+        "schwere Rüstung"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young man aged 26, slim long-limbed athletic build, light olive skin, short dense black curls, a fine neat moustache. Heavy lance bearer. Dark iron Greek Chalcidian helmet with rounded close-fitting skull, ordinary straight nose guard and wide enclosing cheek plates, low brow ridge, no crest. Long ivory fabric-lined mail coat, dark green broad shoulder cape clasped with a simple bronze pin, black lamellar waist corslet and leather skirt, plain iron shin splints. Dark green olive branch sewn on ivory chest cloth and five small dark stud accents at belt, no crown or invented insignia. Lance held upright in left hand with shaft close to outer body edge, right hand resting against hip, natural fingers. Long ivory and green cloth planes differentiate silhouette from scale-armoured figures. Quiet forward stance with slight torso turn.\n\nExact heraldic motive: Ein dunkelgrüner einzelner diagonaler Olivenzweig mit wenigen großen Blättern und fünf schwarzen Oliven auf elfenbeinfarbenem Feld. Palette: Dunkelgrün, Elfenbein, Schwarz.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-16.png"
+      ],
+      "transparent_background": true,
+      "helmetDirection": "Dark iron Greek Chalcidian helmet with rounded close-fitting skull, ordinary straight nose guard and wide enclosing cheek plates, low brow ridge, no crest.",
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    },
+    {
+      "id": "warrior-pool-17",
+      "assetStem": "pool-17",
+      "category": "warriors",
+      "houseId": "pool-17",
+      "prototypeId": "prototype-07",
+      "role": "Römischer Kampfbarde",
+      "description": "A young adult woman aged 28, slim fit build, medium brown skin, dark brown eyes, black hair in two short practical braids, composed youthful face. Roman battle bard with a sabre and portable kithara. A low open bronze Montefortino-derived helmet with a blunted crown knob, simple cheek flaps and blue-grey fabric band, no plume. Tailored burgundy small scale cuirass, blue-grey long split tunic with gold edging, dark red single shoulder drape, matte gold bracers and leather boots. A small dark-red pomegranate with two leaves is stitched on the blue-grey torso sash, restrained seed-like stitch details along belt. Right hand supports a small dark wooden kithara with two pale upright arms and clear strings at the hip; left hand holds a curved sabre downward away from the instrument and toes. Quiet three-quarter pose to the right, full clear silhouette.",
+      "equipment": [
+        "Säbel",
+        "Instrument"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Blaugrau",
+        "Gold"
+      ],
+      "mount": null,
+      "prompt": "Use case: stylized-concept. New independent house-warrior illustration for Leukonia, Fantasy Empire Argentum. Not a named person; no invented rank, story or genealogy. Image 1 is ONLY the approved matte painted STYLE reference: its western plate armour, blue palette and outer colour haze are not design requirements. Image 2 is the exact house EMBLEM reference: preserve the motif and palette as restrained embroidery, painted shield or functional small fitting. Do not copy a prototype figure or simply recolour a pose. Distinct Greek, Roman and Byzantine armour construction and helmet forms, within Roman-Latin-Campanian Leukonia. Heavy troop types favour closed traditional metal helmets. Young adult human aged 20-30, slim athletic body, human ears. Quiet upright full-body three-quarter pose. 1024x1536 portrait PNG, true transparent background including all open gaps. Whole figure, helmet, weapon tips and both feet fit with at least 8 percent clear margin. For riders: entire horse, four separate hooves, ears and tail in frame. No ground plane, environment, exterior shadow, glow, paper, colour fog, text, modern gear, firearms, watermarks, thick comic outlines, CGI or photorealism. Traditional human helmet forms, no literal animal helmets, horns, antlers, animal costumes or animal masks. Hands grip aligned shafts/hilts plausibly; weapons remain separate readable objects. All figure materials opaque.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\n\nSpecific individual art direction:\nA young adult woman aged 28, slim fit build, medium brown skin, dark brown eyes, black hair in two short practical braids, composed youthful face. Roman battle bard with a sabre and portable kithara. A low open bronze Montefortino-derived helmet with a blunted crown knob, simple cheek flaps and blue-grey fabric band, no plume. Tailored burgundy small scale cuirass, blue-grey long split tunic with gold edging, dark red single shoulder drape, matte gold bracers and leather boots. A small dark-red pomegranate with two leaves is stitched on the blue-grey torso sash, restrained seed-like stitch details along belt. Right hand supports a small dark wooden kithara with two pale upright arms and clear strings at the hip; left hand holds a curved sabre downward away from the instrument and toes. Quiet three-quarter pose to the right, full clear silhouette.\n\nExact heraldic motive: Ein einzelner dunkelroter leicht geöffneter Granatapfel mit kleiner goldener Krone und zwei grünen Blättern auf blaugrauem Feld. Palette: Dunkelrot, Blaugrau, Gold.",
+      "referenced_image_paths": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Leukonia\\assets\\emblems\\production\\pool-17.png"
+      ],
+      "transparent_background": true,
+      "artRevision": "2026-11-03-greek-roman-byzantine-varied-closed-heavy-helmets"
+    }
+  ],
+  "latestUserCorrection": "Greek/Roman/Byzantine armour and helmets must vary visibly. Closed helmets welcome for heavy troop types. No literal animal helmets."
+}

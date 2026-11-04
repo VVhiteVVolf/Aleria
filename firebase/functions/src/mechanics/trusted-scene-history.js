@@ -1,4 +1,5 @@
 import { isTrustedSceneTimeComment } from '../generated/scene-time/scene-recovery-day.js';
+import { getSceneConditionClock } from '../generated/scene-time/scene-condition-clock.js';
 export { isTrustedSceneTimeComment, getSceneRecoveryDay as getTrustedSceneDay } from '../generated/scene-time/scene-recovery-day.js';
 
 function isImportedHistory(comment = {}) {
@@ -28,14 +29,8 @@ export function isTrustedHerausforderungComment(comment = {}) {
 export function getTrustedSceneCursorSeconds(comments = [], fallbackDay = 1, fallbackSeconds = 0) {
   const fallback = ((Math.max(1, Number(fallbackDay) || 1) - 1) * 86400)
     + Math.max(0, Math.min(86399, Number(fallbackSeconds) || 0));
-  return (Array.isArray(comments) ? comments : [])
-    .filter(isTrustedSceneTimeComment)
-    .reduce((cursor, comment) => {
-      const day = Number(comment.sceneTimeEvent?.anchorDay);
-      const seconds = Number(comment.sceneTimeEvent?.anchorSeconds);
-      if (!Number.isInteger(day) || day < 1 || !Number.isFinite(seconds) || seconds < 0 || seconds > 86399) return cursor;
-      return Math.max(cursor, ((day - 1) * 86400) + Math.floor(seconds));
-    }, fallback);
+  const clock = getSceneConditionClock(Array.isArray(comments) ? comments : []);
+  return Math.max(fallback, clock.seconds ?? fallback);
 }
 
 export function sortSceneHistory(comments = []) {

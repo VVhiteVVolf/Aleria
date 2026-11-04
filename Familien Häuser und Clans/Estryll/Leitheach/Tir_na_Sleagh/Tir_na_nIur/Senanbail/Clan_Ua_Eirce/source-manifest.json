@@ -1,0 +1,158 @@
+{
+  "id": "haus-ua-eirce",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "05545172-f8d8-4fc5-b9ac-983d581404ad",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\05545172-f8d8-4fc5-b9ac-983d581404ad\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ua-eirce/animexx-original.html",
+    "bytes": 96469,
+    "sha256": "a2923ced092867c8d473fcd7bc3d96f8f4a5cd24d37765748d0d34d382b748ae",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ua-eirce",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Senanbail",
+      "barony": "Tir na nIúr",
+      "county": "Tir na Sleagh",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sleagh",
+        "Tir na nIúr",
+        "Senanbail"
+      ]
+    },
+    "graphFingerprint": "7886754050a6d64352f7674d44b693903f6061764e0295c817dd52f0f442d646",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-ua-eirce",
+    "title": "Clan Ua’Eirce",
+    "territoryId": "leitheach-herrschaft-eirce",
+    "territoryName": "Tir na nIúr",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na nIúr",
+        "slug": "leitheach-herrschaft-eirce"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ua-eirce",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-ua-eirce",
+    "slug": "ua-eirce",
+    "canonicalSlug": "ua-eirce",
+    "attachmentId": "05545172-f8d8-4fc5-b9ac-983d581404ad",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/614OWV5.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 297566,
+    "sha256": "e14576bdf12ac1f93c41cac2b2c7eae4cfae6807758471fe66b34e4e4e029a33",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-ua-eirce",
+    "title": "Clan Ua’Eirce",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sleagh",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/614OWV5.png",
+    "path": "Stammbäume/assets/images/references/haus-ua-eirce/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ua-eirce/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "e14576bdf12ac1f93c41cac2b2c7eae4cfae6807758471fe66b34e4e4e029a33",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Berittener grüner Hauskrieger mit Speer und Rundschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "a2923ced092867c8d473fcd7bc3d96f8f4a5cd24d37765748d0d34d382b748ae",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-ua-eirce, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die allgemeine Tiarna-Passage wird als kulturelles Ideal erhalten. Daraus folgen keine automatisch vergebenen Klassen, Fianna-Ränge oder neuen Fähigkeiten einzelner Personen.",
+    "Relative Altersangabe etwa 450 Jahre nicht zu einem neuen Gründungsdatum verrechnen. Der belegte heutige Sitz Senanbail hat Vorrang vor pauschaler Südzuordnung.",
+    "Mormaer werden als bevorzugte berittene Kriegerkultur beschrieben, nicht als nordischer Hausrang oder neu zugewiesene Personenklasse.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

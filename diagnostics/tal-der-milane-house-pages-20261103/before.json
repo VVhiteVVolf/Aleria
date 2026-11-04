@@ -1,0 +1,4725 @@
+[
+  {
+    "id": "haus-aderyn",
+    "title": "Haus Aderyn O'Penbryn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "county",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/haus-aderyn.png",
+    "motto": "Y nod ger bron. – Das Ziel vor Augen.",
+    "sourceRevision": 15,
+    "sourceNote": "Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Sechs belegte Kadettenzweige hängen jeweils direkt unter ihrem Gründerpaar: Gereint und Tudful begründen Haus Gaeth, Mordred und Thalena Haus Hebog, Agravaine und Thalena Haus Mwyalchen, Gwynham und Rhianu Haus Tylluan, Aeron und Rhianu Haus Eryr sowie Merfyn und Meriel Gaeth Haus Ilyuncu. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Agravaines Individualporträt wird aus der ausgearbeiteten Mwyalchen-Gegenakte wiederverwendet. Die neue Registergliederung führt Aderyn unter Yvains Klamm und Penbryn. Die bekannten Wappen der in dieser Akte vorkommenden Häuser des Tals der Milane werden aus dem gemeinsamen Grafschaftsmodul bezogen.",
+    "graphFingerprint": "381828fd49197c09526d786d442baf476668801c04ccc1196da48ef6fa6ea838",
+    "people": [
+      {
+        "id": "unknown-yvain-rhiannon-father",
+        "name": "Unbekannter Vater der Aderyn-Geschwister",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "unknown",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-yvain-rhiannon-mother",
+        "name": "Unbekannte Mutter der Aderyn-Geschwister",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "unknown",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "yvain-aderyn",
+        "name": "Yvain Aderyn",
+        "title": "Gründer des Hauses Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/yvain-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "rhiannon-aderyn",
+        "name": "Rhiannon Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/rhiannon-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fainche-gormard",
+        "name": "Fainche Gormárd",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/fainche-gormard.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "vortigern-pendrag",
+        "name": "Vortigern Pendrag",
+        "title": "Erster König von Cenyr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/vortigern-pendrag.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "owain-aderyn",
+        "name": "Owain Aderyn",
+        "title": "Früher Graf des Tals der Milane",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/owain-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "aranrhod-aderyn",
+        "name": "Aranrhod Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "uilean-ua-fionnghal",
+        "name": "Uilean Ua Fíonnghal",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/uilean-ua-fionnghal.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iorwerth-ancient-grawn",
+        "name": "Iorwerth Grawn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brinthan-aderyn",
+        "name": "Brinthan Aderyn",
+        "title": "Früher Graf des Tals der Milane",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gereint-aderyn",
+        "name": "Gereint Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "beileag-duilb",
+        "name": "Beileag Duilb",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudful",
+        "name": "Tudful",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kimball-aderyn",
+        "name": "Kimball Aderyn",
+        "title": "Früher Graf des Tals der Milane",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "mordred-aderyn",
+        "name": "Mordred Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fonnait-oglivy",
+        "name": "Fonnait Oglivy",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalena-ancient-spouse",
+        "name": "Thalena",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lynette-aderyn",
+        "name": "Lynette Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "raewyn-aderyn",
+        "name": "Raewyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tiwlip-aderyn",
+        "name": "Tiwlip Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "talfryn-aderyn",
+        "name": "Talfryn Aderyn",
+        "title": "Graf des Tals der Milane bis 1163",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/talfryn-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "agravaine-aderyn",
+        "name": "Agravaine Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/agravaine-aderyn.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwynham-aderyn",
+        "name": "Gwynham Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendal-gaeth",
+        "name": "Gwendal Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ivain-hebog",
+        "name": "Ivain Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gruffyd-draig",
+        "name": "Gruffyd Draig O'Gwnthor",
+        "title": "",
+        "notes": "Die Aderyn-Tabelle nennt 1157; die bereits kanonische Haus-Draig-Akte belegt 1171.",
+        "portrait": "assets/images/portraits/haus-draig/gruffyd-draig.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sianwen-wylan",
+        "name": "Sianwen Wylan",
+        "title": "",
+        "notes": "Die Aderyn-Quelle lässt die Lebensdaten offen; die kanonische Haus-Wylan-Akte belegt 1122–1203.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalena-1126-spouse",
+        "name": "Thalena",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhianu-1130-spouse",
+        "name": "Rhianu",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ywen-aderyn",
+        "name": "Ywen Aderyn",
+        "title": "Graf des Tals der Milane bis 1274",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/ywen-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "evaine-neidr",
+        "name": "Evaine Neidr",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "trevelyan-aderyn",
+        "name": "Trevelyan Aderyn",
+        "title": "Graf des Tals der Milane 1274–1285",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/trevelyan-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "aeron-aderyn",
+        "name": "Aeron Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ffion-illewod",
+        "name": "Ffion Illewod O'Aberon",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhianu-1266-spouse",
+        "name": "Rhianu",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchgwyn-aderyn",
+        "name": "Gwalchgwyn Aderyn",
+        "title": "Graf des Tals der Milane 1285–1297",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwalchgwyn-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwenhwyfar-1270-aderyn",
+        "name": "Gwenhwyfar Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwenhwyfar-1270-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "myfanwy-hebog",
+        "name": "Myfanwy Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "geraint-gaeth",
+        "name": "Geraint Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/geraint-gaeth.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "taran-ancient-aderyn",
+        "name": "Taran Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "willow-aderyn",
+        "name": "Willow Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/willow-aderyn.jpg",
+        "status": "unknown",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glaodhaich-tairise",
+        "name": "Glaodhaich Tairise",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nodawl-aderyn",
+        "name": "Nodawl Aderyn",
+        "title": "Graf des Tals der Milane bis 1629",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/nodawl-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "siors-aderyn",
+        "name": "Siors Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/siors-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ceredig-aderyn",
+        "name": "Ceredig Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/ceredig-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siriol-aderyn",
+        "name": "Siriol Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eirwyn-mwyalchen",
+        "name": "Eirwyn Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwladus-tylluan",
+        "name": "Gwladus Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eiddyl-eryr",
+        "name": "Eiddyl Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/eiddyl-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "llwydawg-aderyn",
+        "name": "Llwydawg Aderyn",
+        "title": "Graf des Tals der Milane 1629–1670",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/llwydawg-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "arglwyddes-aderyn",
+        "name": "Arglwyddes Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "clwyd-aderyn",
+        "name": "Clywd Aderyn",
+        "title": "",
+        "notes": "Die Quellkarte schreibt Clywd; die Kinderüberschrift verwendet die Variante Clwyd.",
+        "portrait": "assets/images/portraits/haus-aderyn/clwyd-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwydolwyn-aderyn",
+        "name": "Gwydolwyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "erasesanne-seymour",
+        "name": "Erasesanne Seymour",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchgwyn-arth",
+        "name": "Gwalchgwyn Arth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-arth/gwalchgwyn-arth.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ellun-gaeth",
+        "name": "Ellun Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "colman-conochbhair",
+        "name": "Cólman Conochbhair",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "anarawd-aderyn",
+        "name": "Anarawd Aderyn",
+        "title": "Graf des Tals der Milane 1670–1686",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/anarawd-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ellanah-aderyn",
+        "name": "Ellanah Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhosyn-aderyn",
+        "name": "Rhosyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "loyde-aderyn",
+        "name": "Loyde Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/loyde-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "heledd-aderyn",
+        "name": "Heledd Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhynnon-aderyn",
+        "name": "Rhynnon Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/rhynnon-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rionach-mata",
+        "name": "Rionach Mata",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "hefin-pysgod",
+        "name": "Hefin Pysgod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pysgod/hefin-pysgod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "maelgwyn-grawn",
+        "name": "Maelgwyn Grawn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-grawn/maelgwyn-grawn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwennan-illysywen",
+        "name": "Gwennan Illysywen",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "odin-feuerhaar",
+        "name": "Odin Feuerhaar",
+        "title": "",
+        "notes": "Die Stammbaumgrafik wirkt wie Eldhari; die genealogische Tabelle nennt ausdrücklich Feuerhaar.",
+        "portrait": "assets/images/portraits/haus-aderyn/odin-feuerhaar.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenyth-llwynog",
+        "name": "Gwenyth Llwynog",
+        "title": "",
+        "notes": "Die Kinderüberschrift verwendet dafür die Namensvariante Guenevere.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dungarth-aderyn",
+        "name": "Dungarth Aderyn",
+        "title": "Graf des Tals der Milane 1686–1705",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pendrag/dungarth-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "myf-aderyn",
+        "name": "Myf Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "efnisien-aderyn",
+        "name": "Efnisien Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/efnisien-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carnedyr-aderyn",
+        "name": "Carnedyr Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/carnedyr-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "taran-1653-aderyn",
+        "name": "Taran Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/taran-1653-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tesni-aderyn",
+        "name": "Tesni Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caradwyn-pendrag",
+        "name": "Caradwyn Pendrag",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pendrag/caradwyn-pendrag.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "armel-creyr",
+        "name": "Armel Créyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-creyr/armel-creyr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siana-tylluan",
+        "name": "Siana Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "braith-gafyr-1648",
+        "name": "Braith Gafyr",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ailin-midgna",
+        "name": "Ailin Midgna",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalen-hebog",
+        "name": "Thalen Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/thalen-hebog.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "catel-aderyn",
+        "name": "Catel Aderyn",
+        "title": "Graf des Tals der Milane 1705–1720",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/catel-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "merfyn-aderyn",
+        "name": "Merfyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/merfyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cadwallon-aderyn",
+        "name": "Cadwallon Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/cadwallon-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "grufydd-aderyn",
+        "name": "Grufydd Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/grufydd-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carwyn-aderyn",
+        "name": "Carwyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-neidr/carwyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thivya-aderyn",
+        "name": "Thivya Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/thivya-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "frewi-aderyn",
+        "name": "Frewi Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "conwy-aderyn",
+        "name": "Conwy Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/conwy-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "micah-aderyn",
+        "name": "Micah Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/micah-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalena-1676-aderyn",
+        "name": "Thalena Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/thalena-1676-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mifawi-illewod",
+        "name": "Mifawi Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/mifawi-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meriel-gaeth",
+        "name": "Meriel Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/meriel-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bronwyn-gafyr",
+        "name": "Bronwyn Gafyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/bronwyn-gafyr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cynan-neidr",
+        "name": "Cynan Neidr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-neidr/cynan-neidr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "emma-luitpolding",
+        "name": "Emma Luitpolding",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/emma-luitpolding.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nurit-rosenstolz",
+        "name": "Nurit Rosenstolz",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/nurit-rosenstolz.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "slevin-gaeth",
+        "name": "Slevin Gaeth",
+        "title": "Hoffalkner von Penbryn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/slevin-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gareth-aderyn",
+        "name": "Gareth Aderyn",
+        "title": "Graf des Tals der Milane seit 1720",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gareth-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwendolyn-aderyn",
+        "name": "Gwendolyn Aderyn",
+        "title": "Gräfin von Celtigerns Wacht",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwilym-aderyn",
+        "name": "Gwilym Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwilym-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bledyn-aderyn",
+        "name": "Bledyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/bledyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "venora-aderyn",
+        "name": "Venora Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tir-addawol/venora-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "selwyn-aderyn",
+        "name": "Selwyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/selwyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rheanne-aderyn",
+        "name": "Rheanne Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/rheanne-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "colwynn-aderyn",
+        "name": "Colwynn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dienyddiwr/colwynn-aderyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gais-aderyn",
+        "name": "Gais Aderyn",
+        "title": "",
+        "notes": "Die Partnerüberschrift verwendet die Kurzform Gai.",
+        "portrait": "assets/images/portraits/haus-aderyn/gais-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "roderic-aderyn",
+        "name": "Roderic Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/roderic-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "jeannae-aderyn",
+        "name": "Jeannae Aderyn",
+        "title": "",
+        "notes": "Die Kinderliste schreibt Jeanae; die bereits kanonische Haus-Gwyvern-Akte verwendet Jeannae.",
+        "portrait": "assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "catrin-blodyn",
+        "name": "Catrin Blodyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/catrin-blodyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "galahad-draig",
+        "name": "Galahad Draig",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-draig/galahad-draig.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenhwyfar-mwyalchen",
+        "name": "Gwenhwyfar Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwenhwyfar-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "agna-baerenfell",
+        "name": "Agna Bärenfell",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/agna-baerenfell.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "merryn-tir-addawol",
+        "name": "Merryn Tir Addawol",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tir-addawol/merryn-tir-addawol.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eluned-draenog",
+        "name": "Eluned Draenog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/eluned-draenog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sheev-mwyalchen",
+        "name": "Sheev Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/sheev-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "enfys-dienyddiwr",
+        "name": "Enfys Dienyddiwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dienyddiwr/enfys-dienyddiwr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "branna-loganne",
+        "name": "Branna Loganne",
+        "title": "",
+        "notes": "Die Kinderüberschrift verwendet die Namensvariante Brannat.",
+        "portrait": "assets/images/portraits/haus-aderyn/branna-loganne.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "duana-goidin",
+        "name": "Duana Goidin",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/duana-goidin.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mervyn-gwyvern",
+        "name": "Mervyn Gwyvern",
+        "title": "",
+        "notes": "Die Aderyn-Tabelle schreibt Merwyn; die bereits kanonische Haus-Gwyvern-Akte verwendet Mervyn.",
+        "portrait": "assets/images/portraits/haus-gwyvern/mervyn-gwyvern.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "catwan-aderyn",
+        "name": "Catwan Aderyn",
+        "title": "Erbe des Hauses Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/catwan-aderyn.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "cwgon-aderyn",
+        "name": "Cwgon Aderyn",
+        "title": "Erbe des Hauses Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/cwgon-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "arthen-aderyn",
+        "name": "Arthen Aderyn",
+        "title": "Erbe des Hauses Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/arthen-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "rhenawedd-aderyn",
+        "name": "Rhenawedd Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/rhenawedd-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwilydd-aderyn",
+        "name": "Gwilydd Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwilydd-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "elowen-aderyn",
+        "name": "Elowen Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/elowen-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhiwallon-aderyn",
+        "name": "Rhiwallon Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/rhiwallon-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cynfyn-aderyn",
+        "name": "Cynfyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/cynfyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dilys-aderyn",
+        "name": "Dilys Aderyn",
+        "title": "",
+        "notes": "Die Partnerüberschrift verwendet die verkürzte Schreibweise Dily; die ausgearbeitete Hebog-Gegenakte belegt das Geburtsjahr 1722.",
+        "portrait": "assets/images/portraits/haus-aderyn/dilys-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwil-aderyn",
+        "name": "Gwil Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwil-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ewynn-aderyn",
+        "name": "Ewynn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/ewynn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "edlym-aderyn",
+        "name": "Edlym Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/edlym-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eilir-aderyn",
+        "name": "Eilir Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/eilir-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "yale-aderyn",
+        "name": "Yale Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/yale-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lleulu-aderyn",
+        "name": "Lleulu Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/lleulu-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wyett-aderyn",
+        "name": "Wyett Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/wyett-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wula-aderyn",
+        "name": "Wula Aderyn",
+        "title": "Wegverlobt an Haus Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/wula-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aysha-eryr",
+        "name": "Aysha Eryr O'Penbryn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/aysha-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "leolin-hebog",
+        "name": "Leolin Hebog",
+        "title": "",
+        "notes": "Die ausgearbeitete Hebog-Gegenakte belegt das Geburtsjahr 1721.",
+        "portrait": "assets/images/portraits/haus-aderyn/leolin-hebog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marvin-ilyuncu",
+        "name": "Marvin Ilyuncu",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/marvin-ilyuncu.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-eryr",
+    "title": "Haus Eryr O'Penbryn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-eryr.png",
+    "motto": "Fel un, rydyn ni'n codi ein hunain yn uwch. – Gemeinsam, erheben wir uns höher hinauf!",
+    "sourceRevision": 2,
+    "sourceNote": "Die Eryr werden als von Aeron Aderyn und Rhianu begründeter Kadettenzweig geführt. Hausknoten und einziger Zeitsprung stehen strikt seriell: Aeron/Rhianu, Haus Eryr, Überlieferungslücke, Eiddyl. Die detaillierte Genealogie und die bereits kanonische Aderyn-Akte belegen Aerons Geburt 1262; die abweichende Hofangabe 1286 wird verworfen. Ellanahs Illysywen-Kinder und Malvinas Baedd-Kinder bleiben ausschließlich in ihren Zielhäusern; im Eryr-Baum stehen dafür direkte Wegverheiratet-Knoten. Umgekehrt werden die Kinder Sheevs und Mererids ausschließlich hier fortgeführt. Venora, Meriel und Sian erhalten ebenfalls direkte Zielhausknoten; Ayshas Verbindung mit Catwan bleibt ausdrücklich eine Verlobung. Neutrale Standardsilhouetten der Quelle wurden nicht als individuelle Porträts importiert.",
+    "graphFingerprint": "5ffb0b79595d68b6900f6a58dd424a0b0e6bf1ab1e5a552de2659c1e86a477f1",
+    "people": [
+      {
+        "id": "aeron-aderyn",
+        "name": "Aeron Aderyn",
+        "title": "Gründer und erster Ritterfürst des Hauses Eryr",
+        "notes": "Die Hierarchietabelle und die kanonische Aderyn-Akte nennen 1262; die Hofübersicht nennt abweichend 1286.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "rhianu-1266-spouse",
+        "name": "Rhianu",
+        "title": "Mitgründerin des Hauses Eryr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eiddyl-eryr",
+        "name": "Eiddyl Eryr",
+        "title": "Ritterfürst des Hauses Eryr bis 1652",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/eiddyl-eryr.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "siriol-aderyn",
+        "name": "Siriol Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wyndham-eryr",
+        "name": "Wyndham Eryr",
+        "title": "Ritterfürst des Hauses Eryr 1652–1663",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/wyndham-eryr.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ellanah-eryr",
+        "name": "Ellanah Eryr",
+        "title": "Wegverheiratet an Haus Illysywen",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eirian-mwyalchen-eryr",
+        "name": "Eirian Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "llwyd-illysywen",
+        "name": "Llwyd Illysywen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illysywen/llwyd-illysywen.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cynfelyn-eryr",
+        "name": "Cynfelyn Eryr",
+        "title": "Ritterfürst des Hauses Eryr 1663–1690",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/cynfelyn-eryr.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "manon-tylluan-eryr",
+        "name": "Manon Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sheev-eryr",
+        "name": "Sheev Eryr",
+        "title": "Ritterfürst des Hauses Eryr 1690–1697",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-chiffyddlon/sheev-eryr.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "malvina-eryr",
+        "name": "Malvina Eryr",
+        "title": "Wegverheiratet an Haus Baedd",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "glyndwr-eryr",
+        "name": "Glyndwr Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/glyndwr-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mererid-1657-chiffyddlon",
+        "name": "Mererid Chiffyddlon",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kimbal-baedd",
+        "name": "Kimbal Baedd",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-baedd/kimbal-baedd.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "noreen-cleirigh",
+        "name": "Noreen Cléirigh",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gruffyd-eryr",
+        "name": "Gruffyd Eryr",
+        "title": "Ritterfürst des Hauses Eryr 1697–1734",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/gruffyd-eryr.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "venora-eryr",
+        "name": "Venora Eryr",
+        "title": "Wegverheiratet an Haus Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/venora-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "enevold-eryr",
+        "name": "Enevold Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/enevold-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ellis-eryr",
+        "name": "Ellis Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/ellis-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carwyn-mwyalchen-eryr",
+        "name": "Carwyn Mwyalchen",
+        "title": "",
+        "notes": "Die Kinderüberschrift schreibt Carwen; die Partnerkarte verwendet Carwyn.",
+        "portrait": "assets/images/portraits/haus-eryr/carwyn-mwyalchen-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bowen-tylluan",
+        "name": "Bowen Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/bowen-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ewynn-hebog-eryr",
+        "name": "Ewynn Hebog",
+        "title": "",
+        "notes": "Die Kinderüberschrift schreibt Enwynn; die Partnerkarte verwendet Ewynn.",
+        "portrait": "assets/images/portraits/haus-eryr/ewynn-hebog-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "serena-eryr-spouse",
+        "name": "Serena",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "daffyd-eryr",
+        "name": "Daffyd Eryr",
+        "title": "Ritterfürst des Hauses Eryr seit 1734",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/daffyd-eryr.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "quellyn-eryr",
+        "name": "Quellyn Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/quellyn-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "victaryon-eryr",
+        "name": "Victaryon Eryr",
+        "title": "",
+        "notes": "Unverheiratet und ohne Nachkommen gefallen.",
+        "portrait": "assets/images/portraits/haus-eryr/victaryon-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meriel-eryr",
+        "name": "Meriel Eryr",
+        "title": "Wegverheiratet an Haus Feuerhaar",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/meriel-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "artus-eryr",
+        "name": "Artus Eryr",
+        "title": "",
+        "notes": "Im Alter von acht Jahren verstorben.",
+        "portrait": "assets/images/portraits/haus-eryr/artus-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhian-gaeth-eryr",
+        "name": "Rhian Gaeth",
+        "title": "",
+        "notes": "Die Altquelle schreibt Geath; im Almanach lautet der Hausname Gaeth.",
+        "portrait": "assets/images/portraits/haus-eryr/rhian-gaeth-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhyannon-gaeth-eryr",
+        "name": "Rhyannon Gaeth",
+        "title": "",
+        "notes": "Die Altquelle schreibt Geath; im Almanach lautet der Hausname Gaeth.",
+        "portrait": "assets/images/portraits/haus-eryr/rhyannon-gaeth-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aksel-feuerhaar",
+        "name": "Aksel Feuerhaar",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/aksel-feuerhaar.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aled-eryr",
+        "name": "Aled Eryr",
+        "title": "Erster Erbe des Hauses Eryr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/aled-eryr.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "aeron-1715-eryr",
+        "name": "Aeron Eryr",
+        "title": "Zweiter Erbe des Hauses Eryr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/aeron-1715-eryr.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "sian-eryr",
+        "name": "Sian Eryr",
+        "title": "Wegverheiratet an Haus Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/sian-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "euron-eryr",
+        "name": "Euron Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/euron-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "balon-eryr",
+        "name": "Balon Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/balon-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aysha-eryr",
+        "name": "Aysha Eryr O'Penbryn",
+        "title": "Wegverlobt an Haus Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/aysha-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "quenton-eryr",
+        "name": "Quenton Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/quenton-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brynthan-ilyuncu",
+        "name": "Bynthan Ilyuncu",
+        "title": "",
+        "notes": "Die ausgearbeitete Ilyuncu-Gegenakte belegt die Schreibweise Bynthan; die technische ID bleibt aus Kompatibilitätsgründen stabil.",
+        "portrait": "assets/images/portraits/haus-eryr/brynthan-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "catwan-aderyn",
+        "name": "Catwan Aderyn",
+        "title": "Erbe des Hauses Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/catwan-aderyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-tylluan",
+    "title": "Haus Tylluan O'Penbryn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-tylluan.png",
+    "motto": "",
+    "sourceRevision": 3,
+    "sourceNote": "Gwynham Aderyn und Rhianu begründen den Tylluan-Kadettenzweig. Der Hausknoten und der einzige Zeitsprung stehen strikt seriell vor Niadhnair und Gwladus. Niadhnairs ehelicher Sohn Blegwywyrd und sein Bastard Arawn werden ihren jeweiligen Müttern eindeutig zugeordnet; Gwion führt als Arawns Sohn den Bastardstatus in dieser Linie fort. Gwladus, Manon, Siana, Wynthonya, Jenara und Talaith erhalten direkte Wegverheiratet-Knoten; ihre Kinder werden nur in der jeweils fortführenden Hausakte gezeigt. Umgekehrt werden die Tylluan-Kinder von Tudorwen Créyr, Gwendolen Gaeth, Evaine Illewod, Venora Eryr, Tegan Gwarchod, Thalena Hebog und Tatumn Mwyalchen ausschließlich hier fortgeführt. Die Quellenvarianten Blegwyrd und Logane wurden an die bereits kanonischen Formen Blegwywyrd und Loganne angeglichen. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.",
+    "graphFingerprint": "7a81da33f4850dffd7115de234b0d9c523fc2d693be20017c95f190494e775aa",
+    "people": [
+      {
+        "id": "gwynham-aderyn",
+        "name": "Gwynham Aderyn",
+        "title": "Gründer und erster Ritterfürst des Hauses Tylluan",
+        "notes": "Die Tylluan-Hofliste nennt abweichend 1150 als Geburt; die kanonische Aderyn-Akte und die detaillierte Hierarchie belegen 1126.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "rhianu-1130-spouse",
+        "name": "Rhianu",
+        "title": "Mitgründerin des Hauses Tylluan",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "niadhnair-tylluan",
+        "name": "Niadhnair Tylluan",
+        "title": "Ritterfürst des Hauses Tylluan bis 1653",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/niadhnair-tylluan.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwladus-tylluan",
+        "name": "Gwladus Tylluan",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "clodagh-laga",
+        "name": "Clodagh Laga",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arwen-tylluan-affair",
+        "name": "Arwen",
+        "title": "Affäre Niadhnairs · Mutter Arawns",
+        "notes": "Aus dieser Affäre stammt ausschließlich Arawn Tylluan.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "siors-aderyn",
+        "name": "Siors Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/siors-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "blegwywyrd-tylluan",
+        "name": "Blegwywyrd Tylluan",
+        "title": "Ritterfürst des Hauses Tylluan 1653–1674",
+        "notes": "Die Tylluan-Quelle schreibt verkürzt Blegwyrd; die bereits kanonische Créyr-Gegenakte führt dieselbe Weltperson als Blegwywyrd.",
+        "portrait": "assets/images/portraits/haus-creyr/blegwywyrd-tylluan.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "arawn-tylluan",
+        "name": "Arawn Tylluan",
+        "title": "Bastardsohn Niadhnairs & Arwens",
+        "notes": "Die Quelle ordnet Arawn ausdrücklich Niadhnairs Affäre mit Arwen zu.",
+        "portrait": "assets/images/portraits/haus-tylluan/arawn-tylluan.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudorwen-creyr",
+        "name": "Tudorwen Créyr",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lleu-tylluan-spouse",
+        "name": "Lleu",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwynham-1630-tylluan",
+        "name": "Gwynham Tylluan",
+        "title": "Ritterfürst des Hauses Tylluan 1674–1685",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/gwynham-1630-tylluan.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "manon-tylluan-eryr",
+        "name": "Manon Tylluan",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwion-tylluan",
+        "name": "Gwion Tylluan",
+        "title": "Bastardsohn Arawns & Lleus",
+        "notes": "Gwion führt als Sohn des Bastards Arawn den Bastardstatus in dieser Linie fort.",
+        "portrait": "assets/images/portraits/haus-tylluan/gwion-tylluan.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendolen-gaeth",
+        "name": "Gwendolen Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cynfelyn-eryr",
+        "name": "Cynfelyn Eryr",
+        "title": "Ritterfürst des Hauses Eryr 1663–1690",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/cynfelyn-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "shan-tylluan",
+        "name": "Shan Tylluan",
+        "title": "Ritterfürst des Hauses Tylluan 1685–1723",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/shan-tylluan.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "siana-tylluan",
+        "name": "Siana Tylluan",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "evaine-illewod",
+        "name": "Evaine Illewod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-illewod/evaine-illewod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "efnisien-aderyn",
+        "name": "Efnisien Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/efnisien-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bowen-tylluan",
+        "name": "Bowen Tylluan",
+        "title": "Ritterfürst des Hauses Tylluan seit 1723",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/bowen-tylluan.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "wynthonya-tylluan",
+        "name": "Wynthonya Tylluan",
+        "title": "Wegverheiratet an Haus Feuerhaar",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/wynthonya-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wyett-tylluan",
+        "name": "Wyett Tylluan",
+        "title": "Kommandant der Schattengarde",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwarchod/wyett-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "venora-eryr",
+        "name": "Venora Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/venora-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ingvar-feuerhaar",
+        "name": "Ingvar Feuerhaar",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/ingvar-feuerhaar.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tegan-gwarchod",
+        "name": "Tegan Gwarchod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwarchod/tegan-gwarchod.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lucan-tylluan",
+        "name": "Lucan Tylluan",
+        "title": "Erster Erbe des Hauses Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/lucan-tylluan.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "jenara-tylluan",
+        "name": "Jenara Tylluan",
+        "title": "Wegverheiratet an Haus Wivern",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/jenara-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendal-tylluan",
+        "name": "Gwendal Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/gwendal-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "talaith-tylluan",
+        "name": "Talaith Tylluan",
+        "title": "Wegverheiratet an Haus Loganne",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/talaith-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalena-hebog",
+        "name": "Thalena Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/thalena-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wynoc-wivern",
+        "name": "Wynoc Wivern",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/wynoc-wivern.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tatumn-mwyalchen",
+        "name": "Tatumn Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/tatumn-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cyrelas-loganne",
+        "name": "Cyrelas Loganne",
+        "title": "",
+        "notes": "Die Altquelle schreibt den Hausnamen Logane; die bestehende Aderyn-Akte verwendet die kanonische Form Loganne.",
+        "portrait": "assets/images/portraits/haus-tylluan/cyrelas-loganne.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arian-tylluan",
+        "name": "Arian Tylluan",
+        "title": "Zweiter Erbe des Hauses Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/arian-tylluan.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "madoc-tylluan",
+        "name": "Madoc Tylluan",
+        "title": "Dritter Erbe des Hauses Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/madoc-tylluan.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "thivya-tylluan",
+        "name": "Thivya Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/thivya-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "deri-tylluan",
+        "name": "Deri Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/deri-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "skywyn-tylluan",
+        "name": "Skywyn Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/skywyn-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tesni-ilyuncu",
+        "name": "Tesni Ilyuncu",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/tesni-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-mwyalchen",
+    "title": "Haus Mwyalchen O'Penbryn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-mwyalchen.png",
+    "motto": "",
+    "sourceRevision": 4,
+    "sourceNote": "Agravaine Aderyn und Thalena begründen Haus Mwyalchen. Hausknoten und einziger Zeitsprung stehen strikt seriell vor Iorwerth und Eirwyn. Frauen, deren Nachkommen in einem anderen Haus fortgeführt werden, erhalten direkte Wegverheiratet- oder Wegverlobt-Knoten; die fremden Kinder werden in dieser Akte nicht gedoppelt. Umgekehrt werden nur die Mwyalchen-Linien von Iorwerth, Kelyddon, Cadwallen, Arglwydd, Gwynham, Cieran, Agravaine, Gwalchgwyn, Daddweir, Sheev, Gwindor, Gower und Conway hier fortgeführt. Mithlas Camoran ist ausdrücklich Gwindors aufgenommenes Mündel und daher als Mündel statt als leibliches Kind gerahmt. Die fehlerhafte Quellüberschrift „Sheev & Chryl“ wurde anhand der unmittelbar zugeordneten Partnerzeilen berichtigt: Tirion und Orbo stammen von Sheev und Rheanne; Chryl ist Conways Ehefrau und Mutter Ieuans. Die Hofliste nennt einen dritten Erben namens Iorwerth, liefert ihm jedoch weder Abstammung noch eigene Karte; er wurde deshalb nicht als unverbundene Person erfunden. Die Schreibvariante Dadweir wurde mit der kanonischen Ciaróg-Gegenakte Daddweir zusammengeführt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.",
+    "graphFingerprint": "d8a16fc2ebccac557110c30bcd9e07e6407682763d6f00a7cbccd0f28c251ffe",
+    "people": [
+      {
+        "id": "agravaine-aderyn",
+        "name": "Agravaine Aderyn",
+        "title": "Gründer und erster Ritterfürst des Hauses Mwyalchen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/agravaine-aderyn.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "thalena-1126-spouse",
+        "name": "Thalena",
+        "title": "Mitgründerin des Hauses Mwyalchen",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iorwerth-mwyalchen",
+        "name": "Iorwerth Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen bis 1647",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/iorwerth-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "eirwyn-mwyalchen",
+        "name": "Eirwyn Mwyalchen",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenfrewi-gaeth",
+        "name": "Gwenfrewi Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "nodawl-aderyn",
+        "name": "Nodawl Aderyn",
+        "title": "Graf des Tals der Milane bis 1629",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/nodawl-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kelyddon-mwyalchen",
+        "name": "Kelyddon Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen 1647–1653",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/kelyddon-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "eirian-mwyalchen-eryr",
+        "name": "Eirian Mwyalchen",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "malvina-hebog-mwyalchen",
+        "name": "Malvina Hebog O’Talwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wyndham-eryr",
+        "name": "Wyndham Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/wyndham-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cadwallen-mwyalchen",
+        "name": "Cadwallen Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen 1653–1690",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/cadwallen-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "adda-mwyalchen",
+        "name": "Adda Mwyalchen",
+        "title": "Wegverheiratet an Haus Suiste",
+        "notes": "Gegenaktenabgleich 08.10.2026: death nach Blaithneach-Quelle suiste:135:1: ???? → 1709.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arglwydd-mwyalchen",
+        "name": "Arglwydd Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wyrm/arglwydd-mwyalchen.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "moira-gairner",
+        "name": "Moira Gáirner",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "fachtna-suiste",
+        "name": "Fachtna Suiste",
+        "title": "",
+        "notes": "Gegenaktenabgleich 08.10.2026: death nach Blaithneach-Quelle suiste:130:1: ???? → 1706.",
+        "portrait": "assets/images/portraits/haus-mwyalchen/fachtna-suiste.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ceridwen-wyrm",
+        "name": "Ceridwen Wyrm",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwynham-mwyalchen",
+        "name": "Gwynham Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen 1690–1718",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dyngwn/gwynham-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "arwyn-mwyalchen",
+        "name": "Arwyn Mwyalchen",
+        "title": "Wegverheiratet an Haus Pyrth",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cieran-mwyalchen",
+        "name": "Cieran Mwyalchen",
+        "title": "",
+        "notes": "Die ausgearbeitete Feuerhaar-Gegenakte präzisiert das zuvor offene Todesjahr auf 1700.",
+        "portrait": "assets/images/portraits/haus-mwyalchen/cieran-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caradwyn-dyngwn",
+        "name": "Caradwyn Dyngwn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ysgonan-pyrth",
+        "name": "Ysgonan Pyrth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-pyrth/ysgonan-pyrth.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ingrid-feuerhaar",
+        "name": "Ingrid Feuerhaar",
+        "title": "",
+        "notes": "Die ältere Mwyalchen-Akte führte Ingrid widersprüchlich als Eldhári. Die Feuerhaar-Quelle und ihre eingezeichnete Abstammung belegen sie als Tochter Odins und Heledd Aderyns.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "agravaine-1673-mwyalchen",
+        "name": "Agravaine Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen seit 1718",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/agravaine-1673-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "carwyn-mwyalchen-eryr",
+        "name": "Carwyn Mwyalchen",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/carwyn-mwyalchen-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchgwyn-mwyalchen",
+        "name": "Gwalchgwyn Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gwalchgwyn-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "niniel-mwyalchen",
+        "name": "Niniel Mwyalchen",
+        "title": "Wegverheiratet an Haus Gafyr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/niniel-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "daddweir-mwyalchen",
+        "name": "Daddweir Mwyalchen",
+        "title": "",
+        "notes": "Die Mwyalchen-Quelle schreibt den Vornamen Dadweir; die bestehende Ciaróg-Gegenakte führt dieselbe Weltperson kanonisch als Daddweir.",
+        "portrait": "assets/images/portraits/haus-ciarog/daddweir-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "deliah-mwyalchen",
+        "name": "Deliah Mwyalchen",
+        "title": "Wegverheiratet an Haus Arwydd",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-arwydd/deliah-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenog-gaeth",
+        "name": "Gwenog Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gwenog-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gruffyd-eryr",
+        "name": "Gruffyd Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/gruffyd-eryr.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "laragh-nessa",
+        "name": "Laragh Nessa",
+        "title": "",
+        "notes": "Gegenaktenabgleich 08.10.2026: death nach Blaithneach-Quelle nessa:150:1: 1720 → 1731.",
+        "portrait": "assets/images/portraits/haus-nessa/laragh-nessa.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ferydnand-gafyr",
+        "name": "Ferydnand Gafyr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gafyr/ferydnand-gafyr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "orla-ciarog",
+        "name": "Orla Ciaróg",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "idris-arwydd",
+        "name": "Idris Arwydd",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-arwydd/idris-arwydd.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sheev-mwyalchen",
+        "name": "Sheev Mwyalchen",
+        "title": "Erster Erbe des Hauses Mwyalchen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/sheev-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "wynthonya-mwyalchen",
+        "name": "Wynthonya Mwyalchen",
+        "title": "Wegverheiratet an Haus Draenog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/wynthonya-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenhwyfar-mwyalchen",
+        "name": "Gwenhwyfar Mwyalchen",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwenhwyfar-mwyalchen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwindor-mwyalchen",
+        "name": "Gwindor Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gwindor-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tatumn-mwyalchen",
+        "name": "Tatumn Mwyalchen",
+        "title": "Wegverheiratet an Haus Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/tatumn-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gower-mwyalchen",
+        "name": "Gower Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gower-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "naili-mwyalchen",
+        "name": "Naili Mwyalchen",
+        "title": "Wegverheiratet an Haus Pawen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/naili-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "conway-mwyalchen",
+        "name": "Conway Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/conway-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rheanne-aderyn",
+        "name": "Rheanne Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/rheanne-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "erwm-draenog",
+        "name": "Erwm Draenog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/erwm-draenog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwilym-aderyn",
+        "name": "Gwilym Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwilym-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenith-hwyaden",
+        "name": "Gwenith Hwyaden",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gwenith-hwyaden.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendal-tylluan",
+        "name": "Gwendal Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/gwendal-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "koritha-camoran",
+        "name": "Koritha Camoran",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/koritha-camoran.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lwyd-pawen",
+        "name": "Lwyd Pawen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/lwyd-pawen.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "chryl-hebog",
+        "name": "Chryl Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/chryl-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tirion-mwyalchen",
+        "name": "Tirion Mwyalchen",
+        "title": "Wegverlobt an Haus Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/tirion-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "orbo-mwyalchen",
+        "name": "Orbo Mwyalchen",
+        "title": "Zweiter Erbe des Hauses Mwyalchen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/orbo-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "aedd-mwyalchen",
+        "name": "Aedd Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/aedd-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mag-mwyalchen",
+        "name": "Mag Mwyalchen",
+        "title": "Wegverlobt an ein unbekanntes Haus",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/mag-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mithlas-camoran",
+        "name": "Mithlas Camoran",
+        "title": "Aufgenommenes Mündel Gwindors",
+        "notes": "Mithlas wird laut Quelle als Gwindors aufgenommenes Mündel geführt.",
+        "portrait": "assets/images/portraits/haus-mwyalchen/mithlas-camoran.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gloyw-mwyalchen",
+        "name": "Gloyw Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gloyw-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cloi-mwyalchen",
+        "name": "Cloi Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/cloi-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "enid-mwyalchen",
+        "name": "Enid Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/enid-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ieuan-mwyalchen",
+        "name": "Ieuan Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/ieuan-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bevan-ilyuncu",
+        "name": "Bevan Ilyuncu",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/bevan-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-orbo-betrothed-mwyalchen",
+        "name": "Unbekannte Verlobte",
+        "title": "Nicht namentlich überlieferte Verlobung",
+        "notes": "",
+        "portrait": "",
+        "status": "unknown",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-aedd-betrothed-mwyalchen",
+        "name": "Unbekannte Verlobte",
+        "title": "Nicht namentlich überlieferte Verlobung",
+        "notes": "",
+        "portrait": "",
+        "status": "unknown",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "unknown-mag-betrothed-mwyalchen",
+        "name": "Unbekannter Verlobter",
+        "title": "Nicht namentlich überlieferte Verlobung",
+        "notes": "",
+        "portrait": "",
+        "status": "unknown",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-ilyuncu",
+    "title": "Haus Ilyuncu O'Caer Gwennol",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Schwalbenhort",
+      "Caer Gwennol"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Caer Gwennol",
+      "barony": "Schwalbenhort",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Schwalbenhort.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Schwalbenhort/haus-ilyuncu.png",
+    "motto": "",
+    "sourceRevision": 2,
+    "sourceNote": "Merfyn Aderyn und Meriel Gaeth begründen 1720 den Ilyuncu-Kadettenzweig. Die Quellzeile, die Merfyn fälschlich Catel und Mifawi zuordnet, wird nicht als neue Abstammung übernommen; seine kanonische Herkunft bleibt in der Aderyn-Akte erhalten. Gildas, Bogus und Ywen sind Kinder des Gründerpaars; Bynthan, Tesni, Bevan und Marvin stammen ausschließlich aus Gildas' Ehe mit Saeth Hebog. Ywens Kinder mit Gaven werden nur in Dinefwr fortgeführt. Tesni und Ywen erhalten hier direkte Wegverheiratet-Knoten; Sian und Saeth besitzen diese Gegenknoten bereits in Eryr beziehungsweise Hebog. Bevan/Tirion und Marvin/Wula bleiben entsprechend den Gegenakten verlobt. Die Schreibweise Bynthan folgt der Ilyuncu-Quelle bei stabiler technischer Gegenakten-ID. Ciara Sliabhs Individualporträt und das Sliabh-Wappen werden aus der ausgearbeiteten Vasallenakte wiederverwendet.",
+    "graphFingerprint": "80a4d1e22747a739c5eb78c3a6eee417e71d648cdcfcdea6ae71b41cbe2c3bd8",
+    "people": [
+      {
+        "id": "merfyn-aderyn",
+        "name": "Merfyn Aderyn",
+        "title": "Gründer und Ritterfürst des Hauses Ilyuncu seit 1720",
+        "notes": "Merfyn bleibt dieselbe Weltperson wie in Haus Aderyn und begründet 1720 den Ilyuncu-Kadettenzweig.",
+        "portrait": "assets/images/portraits/haus-aderyn/merfyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "meriel-gaeth",
+        "name": "Meriel Gaeth",
+        "title": "Mitgründerin des Hauses Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/meriel-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gildas-ilyuncu",
+        "name": "Gildas Ilyuncu",
+        "title": "Erster Erbe des Hauses Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/gildas-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "bogus-ilyuncu",
+        "name": "Bogus Ilyuncu",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-ilyuncu/bogus-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ywen-ilyuncu",
+        "name": "Ywen Ilyuncu",
+        "title": "Wegverheiratet an Haus Dinefwr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dinefwr/ywen-ilyuncu.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "saeth-hebog",
+        "name": "Saeth Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/saeth-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ciara-sliabh",
+        "name": "Ciara Sliabh",
+        "title": "Verlobte Bogus Ilyuncus",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/ciara-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gaven-dinefwr",
+        "name": "Gaven Dinefwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dinefwr/gaven-dinefwr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brynthan-ilyuncu",
+        "name": "Bynthan Ilyuncu",
+        "title": "Zweiter Erbe des Hauses Ilyuncu",
+        "notes": "Die bereitgestellte Ilyuncu-Quelle schreibt Bynthan; die technische ID bleibt wegen der bereits bestehenden Eryr-Gegenakte stabil.",
+        "portrait": "assets/images/portraits/haus-eryr/brynthan-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "tesni-ilyuncu",
+        "name": "Tesni Ilyuncu",
+        "title": "Wegverheiratet an Haus Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/tesni-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bevan-ilyuncu",
+        "name": "Bevan Ilyuncu",
+        "title": "Dritter Erbe des Hauses Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/bevan-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "marvin-ilyuncu",
+        "name": "Marvin Ilyuncu",
+        "title": "Vierter Erbe des Hauses Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/marvin-ilyuncu.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "sian-eryr",
+        "name": "Sian Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/sian-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "madoc-tylluan",
+        "name": "Madoc Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/madoc-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tirion-mwyalchen",
+        "name": "Tirion Mwyalchen",
+        "title": "Verlobte Bevan Ilyuncus",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/tirion-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wula-aderyn",
+        "name": "Wula Aderyn",
+        "title": "Verlobte Marvin Ilyuncus",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/wula-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-sliabh",
+    "title": "Haus Sliabh O'Caer Gwennol",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Schwalbenhort",
+      "Caer Gwennol"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Caer Gwennol",
+      "barony": "Schwalbenhort",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-ilyuncu",
+      "liegeHouseName": "Haus Ilyuncu O'Caer Gwennol",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Schwalbenhort.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Schwalbenhort/haus-sliabh.png",
+    "motto": "Tannau'n Clymu Popeth",
+    "sourceRevision": 1,
+    "sourceNote": "Die ausdrückliche Ortsvorgabe Caer Gwennol hat Vorrang vor dem widersprüchlichen Glyndraith-Feld der alten Hausvorlage. Sliabh ist ein niederes Ritterherrenhaus und unmittelbarer Vasall Ilyuncus. Odhran und Labhoise begründen 1720 das Haus; Gormán, Ciara und Lomhán sind ihre Kinder. Haodh, Latharna und Alwyn stammen ausschließlich von Gormán und Oideach, Cónán und Brinley ausschließlich von Lomhán und Wiórna. Ciara/Bogus und Cónán/Caryl bleiben Verlobungen. Die vier generischen unbekannten Verlobtenkarten der Vorlage werden nicht als Personen erfunden. Die Schreibweisen Ilyuncu und Durdynn folgen den kanonischen Registerhäusern.",
+    "graphFingerprint": "2aa19eb86d22a8e3275bac417a75889e1e0e5a18af6e2ced1da14687fa7c71c1",
+    "people": [
+      {
+        "id": "odhran-sliabh",
+        "name": "Odhran Sliabh",
+        "title": "Gründer und Ritterherr des Hauses Sliabh seit 1720",
+        "notes": "Einst Bergmann in Ceitheach; von Merfyn Aderyn nach Cenyr geführt und 1720 zum Gründer des Hauses Sliabh erhoben.",
+        "portrait": "assets/images/portraits/haus-sliabh/odhran-sliabh.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "labhoise-sliabh",
+        "name": "Labhoise Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/labhoise-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gorman-sliabh",
+        "name": "Gormán Sliabh",
+        "title": "Erster Erbe des Hauses Sliabh",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/gorman-sliabh.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "ciara-sliabh",
+        "name": "Ciara Sliabh",
+        "title": "Wegverlobt an Haus Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/ciara-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lomhan-sliabh",
+        "name": "Lomhán Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/lomhan-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "oideach-sliabh",
+        "name": "Oideach",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/oideach-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bogus-ilyuncu",
+        "name": "Bogus Ilyuncu",
+        "title": "Verlobter Ciara Sliabhs",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-ilyuncu/bogus-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "wiorna-sliabh",
+        "name": "Wiórna",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/wiorna-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "haodh-sliabh",
+        "name": "Haodh Sliabh",
+        "title": "Zweiter Erbe des Hauses Sliabh",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/haodh-sliabh.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "latharna-sliabh",
+        "name": "Latharna Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/latharna-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "alwyn-sliabh",
+        "name": "Alwyn Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/alwyn-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "conan-sliabh",
+        "name": "Cónán Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/conan-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brinley-sliabh",
+        "name": "Brinley Sliabh",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/brinley-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caryl-durdynn",
+        "name": "Caryl Durdynn",
+        "title": "Verlobte Cónán Sliabhs",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-durdynn/caryl-durdynn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-gaeth",
+    "title": "Haus Gaeth O'Penllyn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Taubenfurt",
+      "Penllyn"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Penllyn",
+      "barony": "Taubenfurt",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Taubenfurt.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Taubenfurt/haus-gaeth.png",
+    "motto": "",
+    "sourceRevision": 1,
+    "sourceNote": "Gereint Aderyn und Tudful begründen Haus Gaeth. Drei Überlieferungslücken sind als absolute, strikt serielle Generationentrenner modelliert: jeweils erst Paar beziehungsweise Hausknoten, dann genau ein Zeitsprung und erst danach die folgende Generation. Die Hauptlinie führt über Gwendal, Geraint, Gwayne, Meredydd, Gereint, Cledwyn und Edwyn. Branwen, Gwenlian, Gwenfrewi, Myfanwy, Ellun, Gwendolen, Wynndie, Gwenog, Rhian, Rhyannon und Tudful erhalten direkte Wegverheiratet-Knoten; fremde Nachkommen werden ausschließlich in ihrer jeweils fortführenden Hausakte gezeigt. Merfyn Aderyn und Meriel Gaeth begründen Haus Ilyuncu, dessen Hausknoten unmittelbar unter ihrem gemeinsamen Paar sitzt. Die Gaeth-Nachkommen werden nur unter den Paaren Edwyn und Carys, Morweidd und Carynn, Slevin und Thalena, Uthred und Jeanne, Rheinallt und Owena, Arian und Aithne sowie Tudor und Eurfron fortgeführt. Bereits ausgearbeitete Gegenakten bestimmen bei abweichenden Namen, Lebensdaten, Partnerschafts-IDs und Porträts den Kanon; die Varianten Meredydd 1611–1677, Sulwen 1613–1675, Clwyd, Rhiann, Jennae, Eurfon und Merfyn Ilyuncu bleiben an den betroffenen Personen dokumentiert. Wiederholte schwarze Standardsilhouetten und die gerenderte Gesamtgrafik wurden nicht als Individualporträts importiert.",
+    "graphFingerprint": "9e83635e8ed4243e63a741e9a3ba0e31f9e18b926803185c560cf2bf264e011c",
+    "people": [
+      {
+        "id": "gereint-aderyn",
+        "name": "Gereint Aderyn",
+        "title": "Gründer und erster Baron des Hauses Gaeth",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "tudful",
+        "name": "Tudful",
+        "title": "Mitgründerin des Hauses Gaeth",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwendal-gaeth",
+        "name": "Gwendal Gaeth",
+        "title": "Baron des Hauses Gaeth bis 1179",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "branwen-gaeth",
+        "name": "Branwen Gaeth",
+        "title": "Wegverheiratet an Haus Mata",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lynette-aderyn",
+        "name": "Lynette Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eamon-mata",
+        "name": "Eámon Mata",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "geraint-gaeth",
+        "name": "Geraint Gaeth",
+        "title": "Baron des Hauses Gaeth bis 1303",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/geraint-gaeth.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwenlian-gaeth",
+        "name": "Gwenlian Gaeth",
+        "title": "Wegverheiratet an Haus Hebog",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenhwyfar-1270-aderyn",
+        "name": "Gwenhwyfar Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwenhwyfar-1270-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "hywel-hebog",
+        "name": "Hywel Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/hywel-hebog.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwayne-gaeth",
+        "name": "Gwayne Gaeth",
+        "title": "Baron des Hauses Gaeth bis 1658",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-wylan/gwayne-gaeth.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwenfrewi-gaeth",
+        "name": "Gwenfrewi Gaeth",
+        "title": "Wegverheiratet an Haus Mwyalchen",
+        "notes": "Die Gaeth-Quelle lässt das Todesjahr offen; die ausgearbeitete Mwyalchen-Gegenakte belegt 1679.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "akkarin-gaeth",
+        "name": "Akkarin Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/akkarin-gaeth.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "caru-wylan",
+        "name": "Caru Wylan",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iorwerth-mwyalchen",
+        "name": "Iorwerth Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/iorwerth-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meredydd-gaeth",
+        "name": "Meredydd Gaeth",
+        "title": "Baron des Hauses Gaeth 1658–1668",
+        "notes": "Die Gaeth-Altdaten nennen 1611–1677; die bereits ausgearbeitete Chiffyddlon-Gegenakte führt dieselbe Weltperson kanonisch als 1606–1668.",
+        "portrait": "assets/images/portraits/haus-chiffyddlon/meredydd-gaeth.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "myfanwy-gaeth",
+        "name": "Myfanwy Gaeth",
+        "title": "Wegverheiratet an Haus Hebog",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ellun-gaeth",
+        "name": "Ellun Gaeth",
+        "title": "Wegverheiratet an Haus Aderyn",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sulwen-chiffyddlon",
+        "name": "Sulwen Chiffyddlon",
+        "title": "",
+        "notes": "Die Gaeth-Altdaten nennen 1613–1675; die ausgearbeitete Chiffyddlon-Gegenakte belegt 1609–1670.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "trahaern-hebog",
+        "name": "Trahaern Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/trahaern-hebog.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "clwyd-aderyn",
+        "name": "Clywd Aderyn",
+        "title": "",
+        "notes": "Die Gaeth-Quelle verwendet die Variante Clwyd; die Aderyn-Gegenakte führt die Quellschreibweise Clywd.",
+        "portrait": "assets/images/portraits/haus-aderyn/clwyd-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gereint-gaeth",
+        "name": "Gereint Gaeth",
+        "title": "Baron des Hauses Gaeth 1668–1696",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hwyaden/gereint-gaeth.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "gwendolen-gaeth",
+        "name": "Gwendolen Gaeth",
+        "title": "Wegverheiratet an Haus Tylluan",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meeghan-hwyaden",
+        "name": "Meeghan Hwyaden",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwynham-1630-tylluan",
+        "name": "Gwynham Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/gwynham-1630-tylluan.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "cledwyn-gaeth",
+        "name": "Cledwyn Gaeth",
+        "title": "Baron des Hauses Gaeth 1696–1720",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/cledwyn-gaeth.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "wynndie-gaeth",
+        "name": "Wynndie Gaeth",
+        "title": "Wegverheiratet an Haus Dienyddiwr",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "saoirse-cleirigh",
+        "name": "Saoirse Cléirigh",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "delwen-dienyddiwr",
+        "name": "Delwen Dienyddiwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dienyddiwr/delwen-dienyddiwr.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "edwyn-gaeth",
+        "name": "Edwyn Gaeth",
+        "title": "Baron des Hauses Gaeth seit 1720",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dinefwr/edwyn-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "morweidd-gaeth",
+        "name": "Morweidd Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/morweidd-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenog-gaeth",
+        "name": "Gwenog Gaeth",
+        "title": "Wegverheiratet an Haus Mwyalchen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/gwenog-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meriel-gaeth",
+        "name": "Meriel Gaeth",
+        "title": "Wegverheiratet und Mitgründerin des Hauses Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/meriel-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "slevin-gaeth",
+        "name": "Slevin Gaeth",
+        "title": "Hoffalkner von Penbryn",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/slevin-gaeth.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carys-dinefwr",
+        "name": "Carys Dinefwr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-dinefwr/carys-dinefwr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "carynn-morwyn",
+        "name": "Carynn Morwyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/carynn-morwyn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "agravaine-1673-mwyalchen",
+        "name": "Agravaine Mwyalchen",
+        "title": "Ritterfürst des Hauses Mwyalchen seit 1718",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/agravaine-1673-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "merfyn-aderyn",
+        "name": "Merfyn Aderyn",
+        "title": "Mitgründer des Hauses Ilyuncu",
+        "notes": "Die Gaeth-Quelle bezeichnet ihn nach dem gegründeten Zweig als Merfyn Ilyuncu; die Aderyn-Gegenakte führt seine Herkunft kanonisch als Merfyn Aderyn.",
+        "portrait": "assets/images/portraits/haus-aderyn/merfyn-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalena-1676-aderyn",
+        "name": "Thalena Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/thalena-1676-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "uthred-gaeth",
+        "name": "Uthred Gaeth",
+        "title": "Erster Erbe des Hauses Gaeth",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/uthred-gaeth.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "rhian-gaeth-eryr",
+        "name": "Rhian Gaeth",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "Die Gaeth-Quelle schreibt Rhiann; die ausgearbeitete Eryr-Gegenakte führt dieselbe Weltperson kanonisch als Rhian.",
+        "portrait": "assets/images/portraits/haus-eryr/rhian-gaeth-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rhyannon-gaeth-eryr",
+        "name": "Rhyannon Gaeth",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/rhyannon-gaeth-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arian-gaeth",
+        "name": "Arian Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/arian-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "rheinallt-gaeth",
+        "name": "Rheinallt Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/rheinallt-gaeth.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudor-gaeth",
+        "name": "Tudor Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-creyr/tudor-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudful-1700-gaeth",
+        "name": "Tudful Gaeth",
+        "title": "Wegverheiratet an Haus Hebog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/tudful-1700-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "jeanne-saethwyr",
+        "name": "Jeanne",
+        "title": "",
+        "notes": "Die Gaeth-Quelle schreibt Jennae Saethwyr; die ausgearbeitete Saethwyr-Gegenakte führt dieselbe Weltperson kanonisch als Jeanne.",
+        "portrait": "assets/images/portraits/haus-saethwyr/jeanne-saethwyr.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "daffyd-eryr",
+        "name": "Daffyd Eryr",
+        "title": "Ritterfürst des Hauses Eryr seit 1734",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/daffyd-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "quellyn-eryr",
+        "name": "Quellyn Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/quellyn-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aithne-luachra",
+        "name": "Aithne Luachra",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "owena-gaeth-spouse",
+        "name": "Owena",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/owena-gaeth-spouse.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurfron-creyr",
+        "name": "Eurfron Créyr",
+        "title": "",
+        "notes": "Die Gaeth-Quelle schreibt Eurfon; die ausgearbeitete Créyr-Gegenakte führt dieselbe Weltperson kanonisch als Eurfron.",
+        "portrait": "assets/images/portraits/haus-creyr/eurfron-creyr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meilyr-hebog",
+        "name": "Meilyr Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/meilyr-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "karris-gaeth",
+        "name": "Karris Gaeth",
+        "title": "Zweiter Erbe des Hauses Gaeth",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/karris-gaeth.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "tymora-gaeth",
+        "name": "Tymora Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/tymora-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kani-gaeth",
+        "name": "Kani Gaeth",
+        "title": "Dritter Erbe des Hauses Gaeth",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/kani-gaeth.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "wenna-gaeth",
+        "name": "Wenna Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/wenna-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tiwlip-gaeth",
+        "name": "Tiwlip Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/tiwlip-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "marvo-gaeth",
+        "name": "Marvo Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/marvo-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ceinlys-gaeth",
+        "name": "Ceinlys Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/ceinlys-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "morin-gaeth",
+        "name": "Morin Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/morin-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aeron-gaeth",
+        "name": "Aeron Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/aeron-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "arddun-gaeth",
+        "name": "Arddun Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/arddun-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-hebog",
+    "title": "Haus Hebog O'Talwyn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Falkenhöh",
+      "Talwyn"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Talwyn",
+      "barony": "Falkenhöh",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Falkenhöh.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Falkenhöh/haus-hebog.png",
+    "motto": "",
+    "sourceRevision": 2,
+    "sourceNote": "Mordred Aderyn und Thalena begründen Haus Hebog. Drei Überlieferungslücken sind als strikt serielle, globale Generationentrenner modelliert: Der erste folgt auf Gründerpaar und Hausknoten; der zweite wird gemeinsam von Ivain/Raewyn und Hafren/Noghán gespeist; der dritte gemeinsam von Hywel/Gwenlian und Myfanwy/Gwalchgwyn. Dahinter bleiben die fachlichen Elternschaften getrennt, sodass kein paralleler Zeitsprung und keine falsche Abstammung entsteht. Die Hauptlinie führt über Ivain, Hywel, Trahaern, Mordred, Thalen, Sabrian, Meilyr und Leolin. Malvina, Armela, Meredyddwynn, Ewynn, Thalena, Saeth, Chryl, Glinda und Aliza erhalten direkte Wegverheiratet- beziehungsweise Wegverlobt-Knoten; fremde Nachkommen werden ausschließlich in ihrer fortführenden Hausakte gezeigt. Die Mwyalchen-Kinder Malvinas, die Gwarchod-Kinder Meredyddwynns, die Eryr-Kinder Ewynns, die Tylluan-Kinder Thalenas und das Mwyalchen-Kind Chryls werden daher hier nicht gedoppelt. Die fehlerhafte Kinderüberschrift „Sabrian & Solveig“ wurde anhand der unmittelbar zugeordneten Partnerkarte zu Sabrian und Klothilde berichtigt. Bereits ausgearbeitete Gegenakten bestimmen bei Abweichungen Namen, Lebensdaten, Partnerschafts-IDs und Porträts; dies betrifft insbesondere Trahaern, Armela, Thalen, Dilys und Iorwerth. Wiederholte schwarze Standardsilhouetten und die gerenderte Gesamtgrafik wurden nicht als Individualporträts importiert.",
+    "graphFingerprint": "6ea524bb52023363c10408d3c363c24c9a53f6e577df4ef1adc601800ef32837",
+    "people": [
+      {
+        "id": "mordred-aderyn",
+        "name": "Mordred Aderyn",
+        "title": "Gründer und erster Baron des Hauses Hebog",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "thalena-ancient-spouse",
+        "name": "Thalena",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ivain-hebog",
+        "name": "Ivain Hebog",
+        "title": "Baron des Hauses Hebog bis 1201",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "hafren-hebog",
+        "name": "Hafren Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "raewyn-aderyn",
+        "name": "Raewyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "noghan-airdmhor",
+        "name": "Noghán Airdmhor",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "hywel-hebog",
+        "name": "Hywel Hebog",
+        "title": "Baron des Hauses Hebog bis 1341",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/hywel-hebog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "myfanwy-hebog",
+        "name": "Myfanwy Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwenlian-gaeth",
+        "name": "Gwenlian Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gwalchgwyn-aderyn",
+        "name": "Gwalchgwyn Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/gwalchgwyn-aderyn.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "trahaern-hebog",
+        "name": "Trahaern Hebog",
+        "title": "Baron des Hauses Hebog bis 1676",
+        "notes": "Die Hebog-Quelle schreibt Trahaearn; die ausgearbeitete Gaeth-Gegenakte führt kanonisch Trahaern.",
+        "portrait": "assets/images/portraits/haus-gaeth/trahaern-hebog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "malvina-hebog-mwyalchen",
+        "name": "Malvina Hebog O’Talwyn",
+        "title": "Wegverheiratet an Haus Mwyalchen",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "myfanwy-gaeth",
+        "name": "Myfanwy Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "kelyddon-mwyalchen",
+        "name": "Kelyddon Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/kelyddon-mwyalchen.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "mordred-hebog",
+        "name": "Mordred Hebog",
+        "title": "Baron des Hauses Hebog 1676–1689",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/mordred-hebog.png",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "armela-hebog",
+        "name": "Armela Hebog",
+        "title": "Wegverheiratet an Haus Crefyddol",
+        "notes": "Die Hebog-Quelle nennt 1636–1712; die ausgearbeitete Crefyddol-Gegenakte führt dieselbe Weltperson kanonisch als 1635–1689.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "ingeborg-feuerhaar",
+        "name": "Ingeborg Feuerhaar",
+        "title": "",
+        "notes": "Die ältere Hebog-Akte führte Ingeborg widersprüchlich als Eldhári. Die Feuerhaar-Quelle und ihre eingezeichnete Abstammung belegen sie als Tochter Ketills und Unndís.",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lunet-crefyddol",
+        "name": "Lunet Crefyddol",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-crefyddol/lunet-crefyddol.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "thalen-hebog",
+        "name": "Thalen Hebog",
+        "title": "Baron des Hauses Hebog 1689–1692",
+        "notes": "Die Hebog-Quelle nennt 1654; die ausgearbeitete Aderyn-Gegenakte führt kanonisch 1655.",
+        "portrait": "assets/images/portraits/haus-aderyn/thalen-hebog.jpg",
+        "status": "dead",
+        "lineageRole": "head"
+      },
+      {
+        "id": "meredyddwynn-hebog",
+        "name": "Meredyddwynn Hebog",
+        "title": "Wegverheiratet an Haus Gwarchod",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwarchod/meredyddwynn-hebog.png",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tesni-aderyn",
+        "name": "Tesni Aderyn",
+        "title": "",
+        "notes": "",
+        "portrait": "",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "maiwyn-gwarchod",
+        "name": "Maiwyn Gwarchod",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwarchod/maiwyn-gwarchod.jpg",
+        "status": "dead",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sabrian-hebog",
+        "name": "Sabrian Hebog",
+        "title": "Baron des Hauses Hebog seit 1692",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/sabrian-hebog.png",
+        "status": "alive",
+        "lineageRole": "head"
+      },
+      {
+        "id": "ewynn-hebog-eryr",
+        "name": "Ewynn Hebog",
+        "title": "Wegverheiratet an Haus Eryr",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/ewynn-hebog-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "griffith-hebog",
+        "name": "Griffith Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwyvern/griffith-hebog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "klothilde-ridderspore",
+        "name": "Klothilde Ridderspore",
+        "title": "",
+        "notes": "Die Partnerkarte nennt Klothilde. Die spätere Kinderüberschrift „Sabrian & Solveig“ ist ein offenkundiger Tabellenfehler.",
+        "portrait": "",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "enevold-eryr",
+        "name": "Enevold Eryr",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-eryr/enevold-eryr.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "liliwen-gwyvern",
+        "name": "Liliwen Gwyvern",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gwyvern/liliwen-gwyvern.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "meilyr-hebog",
+        "name": "Meilyr Hebog",
+        "title": "Erster Erbe des Hauses Hebog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/meilyr-hebog.png",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "thalena-hebog",
+        "name": "Thalena Hebog",
+        "title": "Wegverheiratet an Haus Tylluan",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/thalena-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "saeth-hebog",
+        "name": "Saeth Hebog",
+        "title": "Wegverheiratet an Haus Ilyuncu",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/saeth-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "sath-hebog",
+        "name": "Sath Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/sath-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "chryl-hebog",
+        "name": "Chryl Hebog",
+        "title": "Wegverheiratet an Haus Mwyalchen",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/chryl-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "tudful-1700-gaeth",
+        "name": "Tudful Gaeth",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-gaeth/tudful-1700-gaeth.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "lucan-tylluan",
+        "name": "Lucan Tylluan",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tylluan/lucan-tylluan.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "gildas-ilyuncu",
+        "name": "Gildas Ilyuncu",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/gildas-ilyuncu.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "karelia-goldbaer",
+        "name": "Karelia Goldbär",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/karelia-goldbaer.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "conway-mwyalchen",
+        "name": "Conway Mwyalchen",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/conway-mwyalchen.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "leolin-hebog",
+        "name": "Leolin Hebog",
+        "title": "Zweiter Erbe des Hauses Hebog",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-aderyn/leolin-hebog.jpg",
+        "status": "alive",
+        "lineageRole": "mainline"
+      },
+      {
+        "id": "glinda-hebog",
+        "name": "Glinda Hebog",
+        "title": "Wegverlobt an Haus Gwefrydd",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-hebog/glinda-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "eurig-hebog",
+        "name": "Eurig Hebog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/eurig-hebog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "aliza-hebog",
+        "name": "Aliza Hebog",
+        "title": "Wegverlobt an Haus Tir Addawol",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tir-addawol/aliza-hebog.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "dilys-aderyn",
+        "name": "Dilys Aderyn",
+        "title": "",
+        "notes": "Die Aderyn-Gegenakte verwendet die kanonische Schreibweise Dilys; die Hebog-Quelle schreibt Dylis.",
+        "portrait": "assets/images/portraits/haus-aderyn/dilys-aderyn.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "iorwerth-gwefrydd",
+        "name": "Iorwerth Gwefrydd",
+        "title": "",
+        "notes": "Die Hebog-Quelle nennt 1723; die ausgearbeitete Gwefrydd-Gegenakte belegt kanonisch 1718.",
+        "portrait": "assets/images/portraits/haus-gwefrydd/iorwerth-gwefrydd.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "brina-llwynog",
+        "name": "Brina Llwynog",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-llwynog/brina-llwynog.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "bhreac-tir-addawol",
+        "name": "Bhreac Tir Addawol",
+        "title": "",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-tir-addawol/bhreac-tir-addawol.jpg",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-bronnor",
+    "title": "Haus Bronnor",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "98fe8794e613188bf0e31b45e3588374704e0dfc32c8dbd99b96b50026dae066",
+    "people": [
+      {
+        "id": "haus-bronnor-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-bronnor-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-caerfran",
+    "title": "Haus Caerfrán",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-caerfran.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "226c5fa0b9d49b9169905ffe7991692568d58852742a90e9aeb0e740a631b908",
+    "people": [
+      {
+        "id": "haus-caerfran-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-caerfran-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-coedrudd",
+    "title": "Haus Coedrudd",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-coedrudd.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "11cbd36324aa30e3adbbb5cd50e5e97e364ce690f1e2cad7f59b97e0fc163c0b",
+    "people": [
+      {
+        "id": "haus-coedrudd-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-coedrudd-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-barcud",
+    "title": "Haus Barcud",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-barcud.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "ad7af083f6b9039535dcf82e090bbb1325be9a23859f36daa90e227a073d1374",
+    "people": [
+      {
+        "id": "haus-barcud-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-barcud-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-durdynn",
+    "title": "Haus Durdynn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-durdynn.png",
+    "motto": "",
+    "sourceRevision": 1,
+    "sourceNote": "Die Durdynn-Quelle selbst liegt noch nicht vor. Deshalb wird keine konkrete Elternschaft für Caryl erfunden: Das vorhandene unbekannte Gründerpaar führt ausschließlich über einen seriellen, als wahrscheinlich markierten Überlieferungssprung zu ihr. Belegt und beidseitig gespiegelt ist nur ihre Verlobung mit Cónán Sliabh. Eine spätere vollständige Durdynn-Quelle kann diese Teilakte revisionsgebunden ersetzen.",
+    "graphFingerprint": "d5516c8872ba7d60094106a9249bda221835c9703bc0b02a21459d12d998f05a",
+    "people": [
+      {
+        "id": "haus-durdynn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "portrait": "",
+        "status": "dead"
+      },
+      {
+        "id": "haus-durdynn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "portrait": "",
+        "status": "dead"
+      },
+      {
+        "id": "caryl-durdynn",
+        "name": "Caryl Durdynn",
+        "title": "Wegverlobt an Haus Sliabh",
+        "notes": "Bislang einzige namentlich belegte Person dieses Durdynn-Zweigs; ihre genaue Abstammung und ihr Geburtsjahr sind nicht überliefert.",
+        "portrait": "assets/images/portraits/haus-durdynn/caryl-durdynn.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      },
+      {
+        "id": "conan-sliabh",
+        "name": "Cónán Sliabh",
+        "title": "Verlobter Caryl Durdynns",
+        "notes": "",
+        "portrait": "assets/images/portraits/haus-sliabh/conan-sliabh.png",
+        "status": "alive",
+        "lineageRole": "branch"
+      }
+    ]
+  },
+  {
+    "id": "haus-gwylen",
+    "title": "Haus Gwylen",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-gwylen.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "ab9ae22bd3157170cdc3f03e1245a94d01d81b0a8d3ba96d8c26dd5a811ba612",
+    "people": [
+      {
+        "id": "haus-gwylen-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-gwylen-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-faelwyn",
+    "title": "Haus Faelwyn",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-faelwyn.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "c14e1151e6bcb33be856516f150d83c9f0e7e4d737b6b034a73d0dbf511df225",
+    "people": [
+      {
+        "id": "haus-faelwyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-faelwyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-gwyntell",
+    "title": "Haus Gwyntell",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-gwyntell.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "84e349e455f73ed7557e5d9ab2b1b4e2b47d2a86f96e3ae40262e47bf1c7b797",
+    "people": [
+      {
+        "id": "haus-gwyntell-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-gwyntell-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-gwyliadwr",
+    "title": "Haus Gwyliadwr",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-gwyliadwr.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "48b30ad4178c28e5a3dc539a94849b247bca396b7d47c0c8c5fac5f4a41595a5",
+    "people": [
+      {
+        "id": "haus-gwyliadwr-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-gwyliadwr-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-helyg",
+    "title": "Haus Helyg",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-helyg.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "b566709dfab396a4406130ea75452701ce1ac85dfa02d52d65e8806d046ffc2f",
+    "people": [
+      {
+        "id": "haus-helyg-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-helyg-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-ffwnarch",
+    "title": "Haus Ffwnarch",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Yvains Klamm",
+      "Penbryn"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Penbryn",
+      "barony": "Yvains Klamm",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-aderyn",
+      "liegeHouseName": "Haus Aderyn O'Penbryn",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-ffwnarch.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "9f37386063b8ba50f9668de9e3c360368f9ec72e51fe77a71bc0fe0ea3adbd70",
+    "people": [
+      {
+        "id": "haus-ffwnarch-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-ffwnarch-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-gormard",
+    "title": "Clan Ui Gormárd",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Antike Crannath Clans",
+      "Dun Talonach"
+    ],
+    "profile": {
+      "rankId": "mor-tiarna",
+      "seat": "Dun Talonach",
+      "barony": "Antike Crannath Clans",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/AntikeIcon.png",
+        "barony": "assets/images/regions/AntikeIcon.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Antike Crannath Clans/clan-ui-gormard.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "ac00026f1db06786a095dba5a696f22910c331a91697575ed56bf8f190f22cd7",
+    "people": [
+      {
+        "id": "haus-gormard-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-gormard-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  },
+  {
+    "id": "haus-ua-fionnghal",
+    "title": "Clan Ua Fíonnghal",
+    "folderPath": [
+      "Cenyr",
+      "Tal der Milane",
+      "Antike Crannath Clans",
+      "Tûr Briste"
+    ],
+    "profile": {
+      "rankId": "dun-tiarna",
+      "seat": "Tûr Briste",
+      "barony": "Antike Crannath Clans",
+      "county": "Tal der Milane",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gormard",
+      "liegeHouseName": "Clan Ui Gormárd",
+      "regionEmblems": {
+        "seat": "assets/images/regions/AntikeIcon.png",
+        "barony": "assets/images/regions/AntikeIcon.png",
+        "county": "assets/images/regions/tal-der-milane.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "emblem": "assets/images/houses/Tal der Milane/Antike Crannath Clans/clan-ua-fionnghal.png",
+    "motto": "",
+    "sourceRevision": 0,
+    "graphFingerprint": "dd23deba8153c7aaafdb7ae5f218cf29f24962961137e6cd4dbfa7ff4cfdacef",
+    "people": [
+      {
+        "id": "haus-ua-fionnghal-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      },
+      {
+        "id": "haus-ua-fionnghal-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "notes": "",
+        "portrait": "",
+        "status": "alive"
+      }
+    ]
+  }
+]

@@ -1,8 +1,7 @@
 import { beginCombatContribution } from './combat-contribution-start.js';
+import { applySceneRegenerationToStateMap, isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
 import { advanceSceneConditionClock, sceneClockBeforeSegment } from '../scene-time/scene-condition-clock.js';
 import { advanceSubstanceStateMap } from '../character-health/substance-state.js';
-import { getHealthOverlayDelta, resolveHealthWalkingMovement } from '../character-health/health-trait-policy.js';
-import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
 import { getDroppedCombatWeapon } from './combat-weapon-availability.js';
 // Pure combat-state helpers.
 import { getLightAttackDamageModifier } from './combat-technique-damage.js';
@@ -15,17 +14,16 @@ import { sceneItemEvents, applySceneItemEvent, applyDroppedWeaponsToStates } fro
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { reconcileClassDamageCondition } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260906-character-vitality-v1';
-import { getArmorStanceExcess } from './combat-armor-stances.js';
+import { getCombatStateAttributeEffects } from './combat-state-attribute-effects.js';
+import { getCombatStoredConditions } from './combat-runtime-condition-projection.js';
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
-import { beginCriticalContribution, expireCriticalTemporaryHitPoints } from '../combat-critical/combat-critical-lifecycle.js';
+import { beginCriticalContribution, expireCriticalTemporaryHitPoints, reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
-import { getEffectiveCombatAttribute, getAttributeModifier, getUniversalDamageBonus } from './combat-profile-model.js?v=20260928-equipment-art-v4';
-import { getBurningArmorPenalty } from './combat-creature-traits.js';
 import { applyChallengeCombatSnapshots } from '../herausforderung/herausforderung-combat-snapshots.js';
 
 function finiteOrNull(value) {
@@ -259,6 +257,8 @@ import { getCombatRulesRelease, applyCombatRulesReleaseToStates } from './combat
 
 // Apply a receipt without starting a contribution or advancing any clocks.
 export function applyCombatResolutionState(states, resolution, sceneItems = new Map()) {
+  const beforeParticipants = new Map([...new Set([resolution.actorId, resolution.targetId].filter(Boolean).map(String))]
+    .map(id => [id, states.get(id) || {}]));
   if (resolution.sceneItemEvent) {
     applySceneItemEvent(sceneItems, resolution.sceneItemEvent);
     applyDroppedWeaponsToStates(states, sceneItems);
@@ -339,6 +339,10 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
   reconcileConcentrationConditions(states);
   for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
   if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(states, sceneItems);
+  for (const [id, before] of beforeParticipants) {
+    const after = states.get(id);
+    if (after) states.set(id, reconcileCriticalTemporaryOwnership(before, after));
+  }
   return states;
 }
 
@@ -351,6 +355,12 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    if (isSilentSceneRegeneration(comment)) {
+      if (stopCommentId && String(comment.id || '') === stopCommentId) break;
+      applySceneRegenerationToStateMap(states, comment);
+      reconcileConcentrationConditions(states, { pruneEmpty: true });
+      continue;
+    }
     const release = getCombatRulesRelease(comment);
     if (release) {
       if (stopCommentId && String(comment.id || '') === stopCommentId) break;
@@ -462,54 +472,37 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     ? state.temporaryConditions.map(reconcileClassDamageCondition).map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
     : [];
   resources = capCriticalResources(resources, temporaryConditions);
-  const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
-    const mechanics = condition?.mechanics || {};
-    ['attack', 'damage', 'armorClass', 'savingThrow', 'skill', 'spellAttack', 'spellSaveDc', 'passivePerception', 'movement', 'initiative'].forEach(key => {
-      result[key] = (Number(result[key]) || 0) + (Number(mechanics[key]) || 0);
-    });
-    return result;
-  }, getHealthOverlayDelta(profile, temporaryConditions));
-  const movement = resolveHealthWalkingMovement(profile, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0));
-  const namedSkillBonus = name => temporaryConditions.flatMap(condition => condition.mechanics?.skillModifiers || [])
-    .filter(modifier => getSkillIdentity(modifier.name) === getSkillIdentity(name)).reduce((sum, modifier) => sum + Number(modifier.bonus || 0), 0);
-  const namedSaveBonus = attribute => temporaryConditions.flatMap(condition => condition.mechanics?.saveAttributeModifiers || [])
-    .filter(modifier => modifier.attributeKey === attribute).reduce((sum, modifier) => sum + Number(modifier.bonus || 0), 0)
-    + Number(temporaryMechanics.saveAttributeDeltas[attribute] || 0);
-  const perceptionBonus = namedSkillBonus('Wahrnehmung');
   // A generic attack modifier applies to every attack. Damage bonuses are
   // weapon-only unless their source explicitly includes all effects.
   const magicalAction = ['spell', 'song', 'prayer'].includes(profile.profileActionKind);
-  const temporaryDamageBonus = magicalAction
-    ? getUniversalDamageBonus({ conditions: temporaryConditions })
-    : Number(temporaryMechanics.damage || 0);
-  const temporarySpellAttackBonus = Number(temporaryMechanics.attack || 0) + Number(temporaryMechanics.spellAttack || 0);
-  const strengthBefore = getAttributeModifier(getEffectiveCombatAttribute(profile, 'strength'));
-  temporaryMechanics.armorClass = Number(temporaryMechanics.armorClass || 0)
-    - getArmorStanceExcess([...(profile.conditions || []), ...temporaryConditions]) + getArmorStanceExcess(profile.conditions)
-    - getBurningArmorPenalty({ ...profile, temporaryConditions }) + getBurningArmorPenalty(profile);
-  const strengthAfter = getEffectiveCombatAttribute({ ...profile,
-    conditions: [...(profile.conditions || []), ...temporaryConditions] }, 'strength');
-  const strengthDelta = getAttributeModifier(strengthAfter) - strengthBefore;
-  const weaponStrengthDelta = ['weapon', 'technique'].includes(profile.profileActionKind || 'weapon')
-    && profile.weapon?.attackAttribute === 'strength' ? strengthDelta : 0;
+  const statEffects = getCombatStateAttributeEffects(profile, temporaryConditions);
+  const movement = Math.max(0, Number(profile.movement || 0) + statEffects.movementDelta);
+  const temporaryDamageBonus = magicalAction ? statEffects.universalDamageDelta : statEffects.weapon.damage;
+  const temporarySpellAttackBonus = statEffects.spellAttackDelta;
   const normalizedResources = normalizeCombatResources(resources || []);
   const actionEconomyIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
   const spellSlotIds = new Set((profile.magic?.slotResourceIds || []).map(String));
   const aiSnapshot = profile.aiSnapshot ? {
     ...profile.aiSnapshot,
-    attributes: (profile.aiSnapshot.attributes || []).map(attribute => attribute.key === 'strength'
-      ? { ...attribute, score: strengthAfter.score, modifier: getAttributeModifier(strengthAfter) } : attribute),
+    attributes: (profile.aiSnapshot.attributes || []).map(attribute => {
+      const effective = statEffects.attributes.find(entry => entry.key === attribute.key);
+      if (!effective) return attribute;
+      const { maximum, ...original } = attribute;
+      return { ...original, score: effective.score, modifier: effective.modifier,
+        modifierOverride: effective.modifierOverride,
+        ...(effective.effectiveMaximum == null ? {} : { maximum: effective.effectiveMaximum }) };
+    }),
     derivedCombatValues: {
       ...(profile.aiSnapshot.derivedCombatValues || {}),
       currentHitPoints: normalized.current,
       maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
       temporaryHitPoints: normalized.temporary,
-      armorClass: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
-      initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
+      armorClass: Number(profile.totalDefense || 0) + statEffects.armorClassDelta,
+      initiative: Number(profile.initiative || 0) + statEffects.initiativeDelta,
       movementMeters: movement,
       spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
-      spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
-      passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0) + perceptionBonus
+      spellSaveDc: Number(profile.spellSaveDc || 0) + statEffects.spellSaveDcDelta,
+      passivePerception: Number(profile.passivePerception || 0) + statEffects.passivePerceptionDelta
     },
     hitPointRules: profile.aiSnapshot.hitPointRules ? {
       ...profile.aiSnapshot.hitPointRules,
@@ -524,10 +517,22 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       spellSlots: normalizedResources.filter(resource => spellSlotIds.has(resource.id))
     } : profile.aiSnapshot.magic,
     specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
+    naturalRollPolicy: statEffects.naturalRollPolicy,
     temporaryConditions,
-    conditionsAndEffects: [...(profile.aiSnapshot.conditionsAndEffects || []), ...temporaryConditions],
-    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) + namedSkillBonus(skill.name) + (skill.attributeKey === 'strength' ? strengthDelta : 0) })),
-    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) + namedSaveBonus(save.attributeKey) + (save.attributeKey === 'strength' ? strengthDelta : 0) })),
+    conditionsAndEffects: [...getCombatStoredConditions({ conditions: profile.aiSnapshot.conditionsAndEffects || [],
+      temporaryConditions: profile.temporaryConditions || [] }), ...temporaryConditions],
+    skills: (profile.aiSnapshot.skills || []).map(skill => {
+      const delta = statEffects.skills.find(entry => entry.id === skill.id);
+      return { ...skill, total: Number(skill.total || 0) + (delta?.delta || 0),
+        ...(delta ? { effectiveProficiency: delta.effectiveProficiency } : {}) };
+    }),
+    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0)
+      + (statEffects.savingThrows[save.attributeKey] || 0) })),
+    weapons: (profile.aiSnapshot.weapons || []).map(weapon => {
+      const delta = statEffects.weapons.find(entry => entry.id === weapon.id);
+      return delta ? { ...weapon, totalAttackModifier: Number(weapon.totalAttackModifier || 0) + delta.attack,
+        totalDamageModifier: Number(weapon.totalDamageModifier || 0) + delta.damage } : weapon;
+    }),
     concentration: state.concentration || null,
     channeling: state.channeling || null
   } : profile.aiSnapshot;
@@ -542,33 +547,32 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     resources,
     ...(profile.selectedAction?.spendAllRegularActions ? { resourceCosts: getActionPaymentCosts(profile.selectedAction, profile.paymentMode, { ...profile, resources }) } : {}),
     abilities,
-    conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
+    conditions: [...getCombatStoredConditions(profile), ...temporaryConditions],
     temporaryConditions,
     concentration: state.concentration || null,
-    selectedAction: profile.selectedAction?.secondarySave?.fixedDc == null && (profile.selectedAction?.secondarySave?.useWeaponAttribute ? profile.weapon?.attackAttribute : profile.selectedAction?.secondarySave?.dcAttributeKey) === 'strength' ? {
+    selectedAction: profile.selectedAction?.secondarySave ? {
       ...profile.selectedAction, secondarySave: { ...profile.selectedAction.secondarySave,
-        dc: Number(profile.selectedAction.secondarySave.dc || 0) + strengthDelta }
+        dc: Number(profile.selectedAction.secondarySave.dc || 0) + statEffects.secondarySaveDelta }
     } : profile.selectedAction,
     channeling: state.channeling || null,
     inventory: state.inventory && typeof state.inventory === 'object'
       ? JSON.parse(JSON.stringify(state.inventory))
       : profile.inventory,
-    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0) + weaponStrengthDelta
-      + (['spell', 'song', 'prayer'].includes(profile.profileActionKind) ? Number(temporaryMechanics.spellAttack || 0) : 0),
-    actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
+    attackModifier: Number(profile.attackModifier || 0) + (magicalAction ? temporarySpellAttackBonus : statEffects.weapon.attack),
+    actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + statEffects.spellSaveDcDelta,
     movement,
-    initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
+    initiative: Number(profile.initiative || 0) + statEffects.initiativeDelta,
     ...(profile.selectedAction?.inheritDamageModifier === false ? {
-      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
+      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus,
       damageModifier: 0
     } : profile.selectedAction?.lightAttack ? {
-      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
-      damageModifier: getLightAttackDamageModifier(Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta, profile.selectedAction)
-    } : { damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus + weaponStrengthDelta }),
-    totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
+      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus,
+      damageModifier: getLightAttackDamageModifier(Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus, profile.selectedAction)
+    } : { damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus }),
+    totalDefense: Number(profile.totalDefense || 0) + statEffects.armorClassDelta,
     spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
-    spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
-    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0) + perceptionBonus,
+    spellSaveDc: Number(profile.spellSaveDc || 0) + statEffects.spellSaveDcDelta,
+    passivePerception: Number(profile.passivePerception || 0) + statEffects.passivePerceptionDelta,
     aiSnapshot,
     hitPoints: profile.hitPoints ? {
       ...profile.hitPoints,

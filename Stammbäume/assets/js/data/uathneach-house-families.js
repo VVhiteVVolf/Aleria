@@ -1,7 +1,7 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { structure, clansById, settlementsById, territoriesById } from './uathneach-territorial-catalog.js';
-import { withLagaFamilySkeleton } from '../modules/laga-family/laga-family.js';
+import { withLagaFamilySkeleton } from '../modules/laga-family/laga-family.js?v=20261104-lore-fixes-v1';
 
 export const UATHNEACH_HOUSE_FAMILIES = Object.freeze(structure.clans.map(clan => {
   const region = territoriesById.get(clan.regionId), territory = territoriesById.get(clan.territoryId);

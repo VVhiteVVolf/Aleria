@@ -1,0 +1,82 @@
+{
+  "id": "haus-skogg",
+  "source": {
+    "attachmentId": "4ff13624-f39f-48db-9671-228f57196186",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\4ff13624-f39f-48db-9671-228f57196186\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/skogg/animexx-original.html",
+    "bytes": 132633,
+    "sha256": "56731ce8bc769c399199ca3141eecab601e1e0fb0fa2f022ed13d372b810b626",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-skogg",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Kornweiler",
+      "barony": "Saatgrund",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-saatgrund.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-skogg",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-skogg",
+    "familyId": "haus-skogg",
+    "slug": "skogg",
+    "canonicalSlug": "skogg",
+    "attachmentId": "4ff13624-f39f-48db-9671-228f57196186",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/VdDKLQl.png",
+    "sourceUrl": "https://i.imgur.com/VdDKLQl.png",
+    "path": "Stammbäume/assets/images/references/haus-skogg/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-skogg/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 219846,
+    "sha256": "0e856d44a9179c80487b4515932088a4469e216542769bf3bb3a1e19102062ec",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Gerüsteter Krieger mit Hörnerhelm, grünem Baumwappen und Schild.",
+    "sha": "0e856d44a9179c80487b4515932088a4469e216542769bf3bb3a1e19102062ec",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Kornweiler/Saatgrund und Wargh als Lehnsherr haben Vorrang. Winterwacht ist eine eigene unter Saatgrund verschachtelte Herrschaft, nicht ein gleichrangiges neues Thanentum.",
+    "Heimdalls Rettung und Ausbildung durch Cíaran Tir An Bórach bleiben Erzählung. Uathach Bórach ist bereits kanonisch Mitgründerin der Skogg; keine weiteren Genealogien importieren.",
+    "Tir An Bórach ist in der Geschichte ein alter Orts- und Kulturbezug. Den Namen nicht ungeprüft in einen heutigen Staat, neuen Registerort oder neue Familien-ID umdeuten.",
+    "Cíarans Alterszahl ist für die Erzählung nicht erforderlich und wird ohne neu errechnete Lebensdaten als hohes Alter wiedergegeben.",
+    "Saatkrieger, Primogenitur, die Ablehnung von Holmgängen und der Schutz der Höfe sind eigenständige übernehmbare Inhalte. Aus der Gildengründung keine heutigen Besetzungen oder neuen Inventare erzeugen.",
+    "Saatgrund liegt im Südosten; die nördliche Unterherrschaft Winterwacht bleibt örtlich und administrativ getrennt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

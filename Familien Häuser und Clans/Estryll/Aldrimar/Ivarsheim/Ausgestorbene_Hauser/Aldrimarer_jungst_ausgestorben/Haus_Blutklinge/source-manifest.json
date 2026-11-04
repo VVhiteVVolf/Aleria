@@ -1,0 +1,83 @@
+{
+  "id": "haus-blutklinge",
+  "source": {
+    "attachmentId": "c8c55b2c-ee49-4fca-9a55-3a2b78fabf76",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\c8c55b2c-ee49-4fca-9a55-3a2b78fabf76\\Eingefügter Text.txt",
+    "archive": "diagnostics/ivarsheim-clans-20261103/sources/blutklinge/animexx-original.html",
+    "bytes": 50726,
+    "sha256": "3daca23d8cdf2b06e61005685d71ed5847e904ef963a3dc9bc64048124bf3683",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-blutklinge",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Aldrimarer (jüngst ausgestorben)",
+      "barony": "Ausgestorbene Häuser",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Ivarsfels"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-blutklinge",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-blutklinge",
+    "familyId": "haus-blutklinge",
+    "slug": "blutklinge",
+    "canonicalSlug": "blutklinge",
+    "attachmentId": "c8c55b2c-ee49-4fca-9a55-3a2b78fabf76",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/NUsb9Fc.png",
+    "sourceUrl": "https://i.imgur.com/NUsb9Fc.png",
+    "path": "Stammbäume/assets/images/references/haus-blutklinge/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-blutklinge/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:400px; width:267px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 288464,
+    "sha256": "29a8a2b62a04eff285b40edb9032c59e923394b73af05b64af8e83cfbb82c8c9",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Axtkämpfer mit rotem Helm, Schuppenrüstung und Sonnen-Schildzeichen.",
+    "sha": "29a8a2b62a04eff285b40edb9032c59e923394b73af05b64af8e83cfbb82c8c9",
+    "contactSheet": "diagnostics/ivarsheim-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Jüngst erloschenes Aldrimarer-Haus, kein antiker Norrnaigh- oder Glaennath-Clan. Ivarsfels ist der historische Ortsbezug; die Registerkultur ist kein Sitz.",
+    "Stabile Identität haus-blutklinge, sichtbarer Titel Haus Blutklinge. Blutklingen in der Caption begründet keine zusätzliche Familie.",
+    "Die Quelle enthält nur einen kurzen Geschichtsabsatz. Keine Traditionen, Güter, Religion, Gründer, Hofämter oder eigenen Kriegerbiografien ergänzen.",
+    "Der Registerrang bleibt unknown. Die knappe Geschichte erlaubt keine Adelstitel- oder Huskarleinstufung aus der alten Infotabelle.",
+    "Parteinahme für die Roten und Untergang durch Herleif werden als historische Erzählung erhalten; keine Todeslisten oder genealogischen Statusänderungen importieren.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

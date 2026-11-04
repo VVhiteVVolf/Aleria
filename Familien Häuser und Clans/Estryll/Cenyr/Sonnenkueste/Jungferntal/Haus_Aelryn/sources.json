@@ -1,0 +1,28 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-aelryn",
+  "source": {
+    "kind": "existing named register house; current user-approved liege assignment",
+    "originalAttachment": null
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "graphChanged": false,
+    "treatment": "existing unknown founder pair preserved",
+    "familyId": "haus-aelryn"
+  },
+  "militaryStatistics": "ignored entirely",
+  "biographySourceRevision": 1,
+  "previousFamilySourceRevision": 0,
+  "images": [],
+  "artwork": {
+    "illustration": "assets/hausdarstellung-2026-11-03.png",
+    "reviewAndGeneration": "primary agent",
+    "emblem": "Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-aelryn.png",
+    "emblemOriginal": "https://64.media.tumblr.com/752872b85fb385a96644bef7d669382b/2ba92da21ba51ec3-5c/s250x400/4f6ea075f65add73de157551a23842b2a2abb062.pnj",
+    "emblemSha256": "dc4d515b845007f14d312fed547b817a9d7326d192de86a30d8a7981e2f01dfe",
+    "emblemVisuallyReviewed": true
+  }
+}

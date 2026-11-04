@@ -1,0 +1,138 @@
+{
+  "status": "listed-only-no-alignment",
+  "count": 5,
+  "findings": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "fields": [
+        "birth",
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "????",
+            "death": "????"
+          }
+        },
+        {
+          "familyId": "haus-wyrm",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "1100",
+            "death": "1177"
+          }
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "values": {
+            "birth": "1099",
+            "death": "1166"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "fields": [
+        "birth"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1698"
+          }
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1701"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "female"
+          }
+        },
+        {
+          "familyId": "haus-sterkr",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "male"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "fields": [
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1182"
+          }
+        },
+        {
+          "familyId": "haus-illewod",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1172"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "male"
+          }
+        },
+        {
+          "familyId": "haus-pendrag",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "female"
+          }
+        }
+      ]
+    }
+  ]
+}

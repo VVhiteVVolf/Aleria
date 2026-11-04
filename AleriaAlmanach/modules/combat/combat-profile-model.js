@@ -1,4 +1,6 @@
 import { normalizeDevelopment } from '../character-development/development-state.js';
+import { projectCombatRuntimeConditions } from './combat-runtime-condition-projection.js';
+import { reconcileDevelopmentTraitRevision } from '../character-development/development-trait-revisions.js';
 import { isHealthTraitMechanicallyActive, resolveHealthWalkingMovement } from '../character-health/health-trait-policy.js';
 import { isPsychologicalTraitMechanicallyActive } from '../character-development/development-psychological-policy.js';
 import { resolveCombatAttributeEffects } from './combat-attribute-effects.js';
@@ -197,6 +199,8 @@ function sanitizeMechanicalModifiers(value = {}) {
     initiative: normalizeNumber(source.initiative, 0, -99, 99),
     skill: normalizeNumber(source.skill, 0, -99, 99),
     savingThrow: normalizeNumber(source.savingThrow, 0, -99, 99),
+    ...(source.naturalOneReroll === true ? { naturalOneReroll: true } : {}),
+    ...(Number(source.criticalFailureMaximum) > 1 ? { criticalFailureMaximum: Math.trunc(normalizeNumber(source.criticalFailureMaximum, 1, 1, 3)) } : {}),
     spellAttack: normalizeNumber(source.spellAttack, 0, -99, 99),
     spellSaveDc: normalizeNumber(source.spellSaveDc, 0, -99, 99),
     movement: normalizeNumber(source.movement, 0, -999, 999),
@@ -462,6 +466,10 @@ function sanitizeProficiencies(value = {}) {
 }
 
 function sanitizeQuirk(value = {}, index = 0) {
+  return reconcileDevelopmentTraitRevision(sanitizeQuirkFields(value, index), sanitizeQuirkFields);
+}
+
+function sanitizeQuirkFields(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   const type = normalizeText(source.type, 20);
   return {
@@ -489,6 +497,7 @@ function sanitizeQuirk(value = {}, index = 0) {
 function sanitizeCondition(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   return {
+    ...(source.presetId ? { presetId: normalizeText(source.presetId, 80) } : {}),
     armorStance: source.armorStance === true,
     stanceGroup: normalizeText(source.stanceGroup, 120),
     tags: normalizeText(source.tags, 500),
@@ -546,6 +555,7 @@ function sanitizeAbility(value = {}, index = 0) {
     ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     delivery: ABILITY_DELIVERIES.has(delivery) ? delivery : 'ability',
+    ...(source.requiresVoice === true ? { requiresVoice: true } : {}),
     // Erlaubt Fähigkeiten wie Spells eine Rettungswurf-Auflösung (z.B. Arkaner Schrei gegen
     // Konstitution) statt nur automatischer oder angriffswurfbasierter Auflösung.
     resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : '',
@@ -600,6 +610,7 @@ function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
     slotResourceId: cantrip ? '' : normalizeText(source.slotResourceId, 120),
     slotCost: cantrip ? 0 : normalizeNumber(source.slotCost, 1, 1, 99),
     presentationKind: SPELL_PRESENTATION_KINDS.has(normalizeText(source.presentationKind, 20)) ? normalizeText(source.presentationKind, 20) : 'spell',
+    ...(source.requiresVoice === true ? { requiresVoice: true } : {}),
     ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : 'spell-attack',
@@ -808,6 +819,7 @@ function sanitizeTechnique(value = {}, index = 0) {
     ...(source.weaponLabel ? { weaponLabel: normalizeText(source.weaponLabel, 160) } : {}),
     ...(source.cultureTraining ? { cultureTraining: sanitizeCultureTechniqueTraining(source.cultureTraining) } : {}),
     trainingForm: normalizeText(source.trainingForm, 140),
+    ...(source.requiresVoice === true ? { requiresVoice: true } : {}),
     ...(normalizeText(source.combatStyleId, 120) ? { combatStyleId: normalizeText(source.combatStyleId, 120) } : {}),
     ...(source.catalogTechniqueId?{catalogTechniqueId:normalizeText(source.catalogTechniqueId,180)}:{}),
     ...(normalizeText(source.combatStyleFormId, 120) ? { combatStyleFormId: normalizeText(source.combatStyleFormId, 120) } : {}),
@@ -1107,11 +1119,15 @@ export function getAttributeModifier(attribute = {}) {
 
 export function createCombatProfileReadModel(profile = {}) {
   if (isCombatProfileReadModel(profile)) return profile;
-  return freezeCombatProfileReadModel({ ...profile, ...sanitizeCharacterCombatProfile(profile) });
+  return freezeCombatProfileReadModel({ ...profile, ...normalizeCalculationProfile(profile) });
+}
+
+function normalizeCalculationProfile(profile) {
+  return projectCombatRuntimeConditions(profile, sanitizeCharacterCombatProfile, sanitizeCondition);
 }
 
 function getCalculationProfile(profile) {
-  return isCombatProfileReadModel(profile) ? profile : sanitizeCharacterCombatProfile(profile);
+  return isCombatProfileReadModel(profile) ? profile : normalizeCalculationProfile(profile);
 }
 
 export function getEffectiveCombatLevel(profile = {}) {
@@ -1174,7 +1190,21 @@ function collectActiveMechanicalSources(profile) {
     .map(entry => entry.mechanics);
 }
 
-const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackScope', 'damageScope', 'attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'weaponBonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
+export function getCombatStartTemporaryHitPoints(profile = {}) {
+  return Math.max(0, ...collectActiveMechanicalSources(getCalculationProfile(profile)).map(mechanics => Number(mechanics?.combatStartTemporaryHitPoints) || 0));
+}
+
+// Dice policies belong to the actual roller, including a defending spell target.
+// Repeated sources never grant repeated rerolls or expand the failure range twice.
+export function getNaturalRollPolicy(profile = {}) {
+  const sources = collectActiveMechanicalSources(getCalculationProfile(profile));
+  return {
+    naturalOneReroll: sources.some(source => source?.naturalOneReroll === true),
+    criticalFailureMaximum: Math.max(1, ...sources.map(source => Math.min(3, Math.trunc(Number(source?.criticalFailureMaximum) || 1))))
+  };
+}
+
+const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackScope', 'damageScope', 'attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'weaponBonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes', 'naturalOneReroll', 'criticalFailureMaximum']);
 
 function mergeMechanicalModifiers(sources = []) {
   const merged = sources.reduce((result, source) => {
@@ -1253,6 +1283,17 @@ export function getHitPointProgression(profile = {}) {
 
 export function getMaximumHitPoints(profile = {}) {
   return getHitPointProgression(profile).maximum;
+}
+
+export function getCombatInitiative(profile = {}) {
+  const normalized = getCalculationProfile(profile);
+  return getAttributeModifier(getAttribute(normalized, 'dexterity')) + normalized.combat.initiativeBonus
+    + sumMechanicalModifier(normalized, 'initiative');
+}
+
+export function getCombatMovement(profile = {}) {
+  const normalized = getCalculationProfile(profile);
+  return resolveHealthWalkingMovement(normalized, normalized.combat.movement + sumMechanicalModifier(normalized, 'movement'));
 }
 
 export function setCharacterHitPointMaximum(profile, maximum, vitalityBonus = getHitPointProgression(profile).vitality) {
@@ -1557,8 +1598,8 @@ export function resolveCharacterCombatProfile(character = {}) {
     totalDefense,
     armorClassTotal: totalDefense,
     armorRoutine: getArmorRoutine(profile),
-    initiative: dexterityModifier + profile.combat.initiativeBonus + sumMechanicalModifier(profile, 'initiative'),
-    movement: resolveHealthWalkingMovement(profile, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
+    initiative: getCombatInitiative(profile),
+    movement: getCombatMovement(profile),
     passivePerception: getPassivePerception(calculation),
     weapon: activeWeapon,
     armor: primaryArmor,

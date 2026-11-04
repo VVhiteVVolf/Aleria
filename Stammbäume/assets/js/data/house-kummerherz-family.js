@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { ALDRIMAR_HOUSE_EMBLEMS } from './aldrimar-house-profiles.js';
 import { HOUSE_KUMMERHERZ_PORTRAITS } from './house-kummerherz-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRAEHENMOOR_HOUSE_EMBLEMS } from './kraehenmoor-house-profiles.js';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';

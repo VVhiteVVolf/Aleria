@@ -1,0 +1,70 @@
+{
+  "id": "haus-hrafnvald",
+  "source": null,
+  "authority": {
+    "familyId": "haus-hrafnvald",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Ivarsfels",
+      "barony": "Ivarsklamm",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-hrafnvald",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-hrafnvald",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-b944fe21-201d-4b34-afa3-c6a700736f60.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-hrafnvald/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/ivarsheim-clans-20261103/hrafnvald-image-prompts.json",
+    "sha256": "349b9ff73dfa02bf1e7847f5bc3e9922a696f146db5c1a450ae533dee04b0b34"
+  },
+  "authorialDecisions": {
+    "authorialCreation": true,
+    "authorization": "Neuer Nutzerauftrag vom 3. November 2026, durch Root für diesen isolierten Arbeitsauftrag konkretisiert.",
+    "newlyAuthored": [
+      "Clanname Hrafnvald, kanonische ID haus-hrafnvald und dessen genaue Einordnung als Huskarlclan unter Wargh in Ivarsfels, Ivarsklamm, Ivarsheim, Aldrimar.",
+      "Das kleine alteingesessene Geschlecht mit einem kleinen umfriedeten Hof sowie Gastrecht und Schutz heimkehrender Familien als neue Hauslore.",
+      "Torleif Hrafnvald, geboren 1681 und lebend, als neuer amtierender Clanherr. Keine Eltern, Partner, Nachkommen, Amtsbeginn oder Verwandtschaft zu Liv festgelegt.",
+      "Motto Unser Tor bleibt offen.; heller Rabe, dunkles tealfarbenes Feld, silberner Schlüssel und einfache Eisenfassung. Die Deutung als Aufmerksamkeit und Verantwortung für das Tor ist Bestandteil dieser neuen Ausarbeitung."
+    ],
+    "retainedPublicEvidence": [
+      "Livs vitale Identitätsfelder entsprechen existingPerson aus liv-origin-reference.json: Name Liv, ID liv, Welt-ID person--family-tree--liv, geboren 1688, weiblich, lebend, ohne individuelles Portrait.",
+      "Die beendete Ehe mit Hrolf und Livs Fortzug 1731 sind vorhandene öffentliche Tatsachen. Die neue Hrafnvald-Zuordnung wird ausdrücklich nicht als bereits in den alten Biografien genannter Clanname oder Ort ausgegeben.",
+      "Wolfshorn und Bleiddorn bleiben eigenständige Akten. Die vorhandenen Personennamen, Profile und genealogischen Verbindungen werden nicht geändert."
+    ],
+    "omissions": [
+      "Keine Namen oder Daten für Gründer, Eltern, Partner und Kinder Torleifs erfunden.",
+      "Keine genealogische Kante zwischen Torleif und Liv; keine Heirat, Elternschaft, Adoption oder Geschwisterschaft eingefügt.",
+      "Keine Kinder nach Hrafnvald verschoben und kein heutiger Aufenthalt oder Sterbestatus von Livs Kindern neu behauptet.",
+      "Keine eigene große Herrschaft, kein Machtwechsel in Ivarsfels, keine neuen Truppenstärken, Militärprofile oder Flottenzahlen.",
+      "Keine historischen Hoflisten oder gelieferten Genealogien als Quelle genutzt. Keine zusätzliche Religionslehre oder unbenannte Amtsbesetzung erfunden."
+    ],
+    "identityModel": "Livs bestehende vitale Identität (ID, Welt-ID, Name, Geschlecht, Geburt, Lebensstatus und Portraitstatus) bleibt erhalten. Ausschließlich die neue Hrafnvald-Akte ordnet sie house-hrafnvald und familyRole core zu und erläutert dort ihre Herkunft. Wolfshorn und Bleiddorn bleiben unverändert. Torleif und Liv sind zwei getrennte Wurzeln ohne erfundene Verwandtschaft.",
+    "publicReference": "diagnostics/ivarsheim-clans-20261103/liv-origin-reference.json",
+    "familyModule": "Stammbäume/assets/js/data/house-hrafnvald-family.js"
+  },
+  "decisions": [
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Aktuelle Orts- und Rangangaben sowie stabile Identitäten haben Vorrang."
+  ]
+}

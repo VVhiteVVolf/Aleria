@@ -276,11 +276,11 @@ export const HOUSE_DYNGWN_FAMILY = Object.freeze({
     spouse('irgraine-crefyddol', 'Irgraine Crefyddol', 'female', '1585', '1655', { houseId: 'house-crefyddol' }),
 
     awayWoman('sioned-dyngwn', 'Sioned Dyngwn', '1602', '1689', 'Haus Draig'),
-    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '????', {
+    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '', {
       title: 'Ritterfürst · Oberhaupt des Hauses Dyngwn seit 1653',
       lineageRole: 'head',
-      status: 'dead',
-      notes: 'Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.'
+      status: 'alive',
+      notes: 'Morgan Dyngwn lebt und führt sein Haus als Ritterfürst.'
     }),
     awayWoman('aeronwy-dyngwn', 'Aeronwy Dyngwn', '1614', '1698', 'Haus Morfil'),
     awayWoman('rhondia-dyngwn', 'Rhondia Dyngwn', '1622', '1699', 'Haus Morthwyll'),
@@ -397,8 +397,8 @@ export const HOUSE_DYNGWN_FAMILY = Object.freeze({
     createMarriage('marriage-myfanwy-gorn-dyngwn', ...COUPLES.myfanwy),
     createMarriage('marriage-arthur-irgraine-dyngwn', ...COUPLES.arthur),
     createMarriage('marriage-cadfael-sioned', ...COUPLES.sioned),
-    createMarriage('marriage-aoirghe-morgan', ...COUPLES.morganAoirghe),
-    createMarriage('marriage-rhonwen-morgan-grael', ...COUPLES.morganRhonwen, { status: 'widowed' }),
+    createMarriage('marriage-aoirghe-morgan', ...COUPLES.morganAoirghe, { status: 'ended', end: '1630' }),
+    createMarriage('marriage-rhonwen-morgan-grael', ...COUPLES.morganRhonwen),
     createMarriage('marriage-aeronwy-murvin-dyngwn', ...COUPLES.aeronwy, { status: 'ended', end: '1682' }),
     createMarriage('marriage-rhondia-merlion-dyngwn', ...COUPLES.rhondia),
     createMarriage('marriage-gwennoeth-dewey-ceirwyn', ...COUPLES.dewey, { status: 'widowed', end: '1700' }),

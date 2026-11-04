@@ -16,6 +16,7 @@ function buildInlineScriptTableEditor(page) {
   return `
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Schriftzeichen-Tabelle</div>
+      <div class="module-editor-help">${escapeHtml(SCRIPT_TABLE_EDITOR_HELP)}</div>
       <div class="inline-edit-grid">
         <div class="inline-edit-field"><span class="inline-edit-label">Archivzeile</span><input class="inline-edit-input" value="${escapeHtml(data.archiveLabel)}" data-script-table-inline-field="archiveLabel"></div>
         <div class="inline-edit-field"><span class="inline-edit-label">Schriftstil</span><select class="inline-edit-select" data-script-table-inline-field="scriptStyle">${buildScriptTableStyleOptions(data.scriptStyle)}</select></div>

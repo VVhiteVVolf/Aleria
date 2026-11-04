@@ -180,7 +180,7 @@ function normalizeSceneTimeEvent(input = {}) {
 }
 
 function normalizeSceneTimeAnchorSeconds(value, fallback = '') {
-  const numeric = value !== null && value !== undefined && value !== '' ? Number(value) : NaN;
+  const numeric = ['number', 'string'].includes(typeof value) && String(value).trim() !== '' ? Number(value) : NaN;
   if (Number.isFinite(numeric)) return Math.max(0, Math.min(86399, Math.floor(numeric)));
   const match = String(fallback || '').match(/(?:^|\s)([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?/);
   if (!match) return null;
@@ -188,7 +188,7 @@ function normalizeSceneTimeAnchorSeconds(value, fallback = '') {
 }
 
 function normalizeSceneTimeDurationSeconds(value) {
-  const seconds = Number(value);
+  const seconds = value == null || typeof value === 'boolean' || String(value).trim() === '' ? NaN : Number(value);
   return Number.isFinite(seconds) ? Math.max(0, Math.min(86400, Math.round(seconds))) : SCENE_TIME_DEFAULT_SEGMENT_SECONDS;
 }
 
@@ -231,7 +231,8 @@ function getSceneTimelineAleriaDate(startDate, dayIndex = 1) {
 function buildSceneTimeline(comments = []) {
   let cursor = null;
   let aleriaDayIndex = 1;
-  return (typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(comments) : comments).map(comment => {
+  const visible = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  return (typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(visible) : visible).map(comment => {
     if (isSceneTimeEventComment(comment)) {
       const event = normalizeSceneTimeEvent(comment.sceneTimeEvent || comment);
       const previousClockDay = Number.isFinite(cursor) ? getSceneDayFromSeconds(cursor) : null;

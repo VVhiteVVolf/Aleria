@@ -1,0 +1,1293 @@
+[
+  {
+    "id": "haus-trachwyll",
+    "title": "Haus Trachwyll",
+    "path": [
+      "Aldrimar",
+      "Ivarsheim",
+      "Ivarsklamm",
+      "Ivarsfels"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "93dc8c096b637515efb7f27006cbfe2889c967a43ba2ef752d61c11bb8b6ee2d",
+    "houseProfile": {
+      "rankId": "hesire",
+      "seat": "Ivarsfels",
+      "barony": "Ivarsklamm",
+      "county": "Ivarsheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wargh",
+      "liegeHouseName": "Clan Wargh",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-ivarsklamm.png",
+        "county": "assets/images/regions/aldrimar-ivarsheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  {
+    "id": "haus-trachwyll-talfronwyn",
+    "title": "Haus Trachwyll O'Talfronwyn",
+    "path": [
+      "Vennyr",
+      "Tir Gogledd",
+      "Talfronwyn"
+    ],
+    "sourceRevision": 4,
+    "graphFingerprint": "b84388dcb4e5ec4fbeee11390691abcb9c2ebac0f33e5774f0459aaabe5f0602",
+    "houseProfile": {
+      "rankId": "county",
+      "seat": "",
+      "barony": "Talfronwyn",
+      "county": "Tir Gogledd",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Gogledd.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    }
+  },
+  {
+    "id": "haus-blodyn",
+    "title": "Haus Blodyn O'Llyndor",
+    "path": [
+      "Vennyr",
+      "Blütenland",
+      "Baronie Hoyers Krone",
+      "Lyndor"
+    ],
+    "sourceRevision": 7,
+    "graphFingerprint": "e50e11ea0dd6732dd9a8f0bcdbb1cf62291e1230262cf18e19c61a539645ee71",
+    "houseProfile": {
+      "rankId": "royal",
+      "seat": "Lyndor",
+      "barony": "Baronie Hoyers Krone",
+      "county": "Blütenland",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/lyndor.png",
+        "barony": "assets/images/regions/hoyers-krone.png",
+        "county": "assets/images/regions/bluetenland.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    }
+  },
+  {
+    "id": "haus-blodyn-talgarth",
+    "title": "Haus Blodyn O'Talgarth",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Sturmklaue",
+      "Talgarth"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "48290cf5d56f4f9ef7e4d21b1f134dd3ed91e3d70780c3d45efeb5bd0190d182",
+    "houseProfile": {
+      "rankId": "knight-prince",
+      "seat": "Talgarth",
+      "barony": "Sturmklaue",
+      "county": "Klaueninsel",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-arth",
+      "liegeHouseName": "Haus Arth O'Talgarth",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+        "county": "assets/images/regions/klaueninsel.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Blodyn O'Talgarth",
+      "housePage": true,
+      "image": "../Familien Häuser und Clans/Estryll/Cenyr/Klaueninsel/Sturmklaue/Haus_Blodyn_Talgarth/assets/hausdarstellung-original.png",
+      "imageWidth": 38,
+      "imageSquare": false,
+      "imageTall": true,
+      "description": "Haus Blodyn O’Talgarth ist der in Talgarth ansässige Zweig des alten Königsgeschlechts von Vennyr. Die heutige Cenyr-Akte wird als Ritterfürstenhaus in Sturmklaue auf der Klaueninsel geführt und steht unter Haus Arth O’Talgarth. Yhon Blodyn führt die Familie und trägt seit 1720 den überlieferten Königstitel von Vennyr.",
+      "quote": "Datblyg dy nerth a thyfu! · Entfalte deine Kraft und wachse!",
+      "quoteBy": "",
+      "commentSequence": [],
+      "stats": [
+        [
+          "Voller Name",
+          "Haus Blodyn O'Talgarth"
+        ],
+        [
+          "Rang",
+          "Ritterfürst"
+        ],
+        [
+          "Stammsitz",
+          "Talgarth"
+        ],
+        [
+          "Grafschaft",
+          "Klaueninsel"
+        ],
+        [
+          "Oberhaupt",
+          "Yhon Blodyn"
+        ],
+        [
+          "Erbe",
+          "Cerys Blodyn"
+        ],
+        [
+          "Lehnsherr",
+          "Haus Arth O'Talgarth"
+        ],
+        [
+          "Ursprung",
+          "Avallorn · königliches Haus Blodyn in Vennyr"
+        ],
+        [
+          "Schutzpatronin",
+          "Die Dame der See · Nimue"
+        ]
+      ],
+      "house": {
+        "crestImage": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 80,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Über das Haus",
+        "biographyText": "Haus Blodyn O’Talgarth ist der in Talgarth ansässige Zweig des alten Königsgeschlechts von Vennyr. Die heutige Cenyr-Akte wird als Ritterfürstenhaus in Sturmklaue auf der Klaueninsel geführt und steht unter Haus Arth O’Talgarth. Yhon Blodyn führt die Familie und trägt seit 1720 den überlieferten Königstitel von Vennyr.",
+        "abilitiesTitle": "Einfluss und Aufgaben",
+        "abilities": [],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "Die Herkunft reicht nach Avallorn zurück, wo die Blodyn als heilige Wächter der Dame wirkten. Vor dem Untergang des Landes fuhren sie mit ihrem Gefolge nach Osten. Gemeinsam mit den Alben Thuaidhneachs drängten sie die Nordmänner zurück und begründeten Vennyr. Hoyer wurde erster König; der Anspruch der Familie beruht auf der königlichen Herkunft seiner Mutter. Lyndor im Blütenland war ihr alter Herrschaftssitz.",
+        "worksTitle": "Prägende Ereignisse",
+        "works": [],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Werte und Stellung",
+            "text": "Die Familie versteht sich als Beschützerin der Dame der See und ihrer Heiligtümer. Religiöse Hingabe, Stärke und Durchhaltevermögen bestimmen dieses Selbstbild. Der Verlust Vennyrs prägt die jüngere Geschichte. Yhon entschied sich dafür, den Kampf gegen die Nordmänner fortzusetzen, während sein Cousin Yvain den Aufbau Aberdails übernahm."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Traditionen und Hausleben",
+            "text": "Das Haus bewahrt eine ausgeprägte Derwyn-Tradition. Der geistliche Ritterdienst und die Weitergabe der Lehren der Dame besitzen hohes Ansehen. Zum Ritterritus gehört die Salbung an einem Gewässer mit Eiden auf die Neun Göttlichen und die Dame. Das Motto „Entfalte deine Kraft und wachse!“ verbindet persönliche Stärke mit Erneuerung."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besitz und Lebensgrundlage",
+            "text": "Talgarth ist der heutige Sitz. Die Familie lebt dort im Umfeld ihres Lehnsherrn Arth. Die ältere Königsherrschaft in Vennyr begründet keinen heutigen Besitzanspruch über alle Blodyn-Niederlassungen in Cenyr. Yvains Baronie in Aberdail und Yhons Talgarther Zweig bleiben örtlich wie in den Familienakten getrennt."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Kultur und Glaube",
+            "text": "Die Blodyn gehören zur Alerischen Kirche und verehren besonders Nimue, die Dame der See. Ihre nördliche vennyriische Hauskultur gilt als rustikal, bodenständig und stark von Ritualen geprägt. Die Ausbildungstraditionen der Rhyfelwyr, Rhiddwyr, Morwyr, Ceidwyn und Derwyn verbinden Erfahrungen von Land- und Seefahrt mit geistlichem Dienst."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Verbindungen",
+            "text": "Cerys ist als erste Erbin Vennyrs bestätigt. Ihr Bruder Griffin starb 1720 und gehört zur Erinnerung der Familie; Telyn Diafol ist Yhons aufgenommenes Mündel. Haus Arth ist der wichtigste heutige Lehnspartner. Die Rivalität zum Draca-Clan und die alte, später beigelegte Spannung zu den Pendrag gehören zur gemeinsamen Hausgeschichte."
+          }
+        ],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausmotto",
+        "quotes": [],
+        "connectionsTitle": "Verbündete und Kadettenhäuser",
+        "connections": [],
+        "documentsTitle": "Mehr über das Haus",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Haus Blodyn O'Talgarth · vollständige Hausseite",
+            "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blodyn-talgarth"
+          },
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Königliches Haus Blodyn · Herkunft in Vennyr",
+            "text": "Eigenständige Ursprungsakte in Vennyr mit dem bereits ausgearbeiteten Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-blodyn&mode=view"
+          },
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Haus Blodyn O’Aberdail · eigener heutiger Zweig",
+            "text": "Yvains Familie und die Erbfolge der Baronie werden in ihrer eigenen Akte bewahrt.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-blodyn-aberdail&mode=view"
+          }
+        ],
+        "footer": ""
+      }
+    }
+  },
+  {
+    "id": "haus-blodyn-aberdail",
+    "title": "Haus Blodyn O'Aberdail",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Blutklaue",
+      "Aberdail"
+    ],
+    "sourceRevision": 3,
+    "graphFingerprint": "140b67599fe9f2a180abd6a1bcc280e3eb078e0264dcd1ad2eb49907a15adf94",
+    "houseProfile": {
+      "rankId": "barony",
+      "seat": "Aberdail",
+      "barony": "Blutklaue",
+      "county": "Klaueninsel",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-arth",
+      "liegeHouseName": "Haus Arth O'Talgarth",
+      "regionEmblems": {
+        "seat": "assets/images/placeholders/neutral-crest.png",
+        "barony": "assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png",
+        "county": "assets/images/regions/klaueninsel.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Blodyn O'Aberdail",
+      "housePage": true,
+      "image": "../Familien Häuser und Clans/Estryll/Cenyr/Klaueninsel/Sturmklaue/Haus_Blodyn_Talgarth/assets/hausdarstellung-original.png",
+      "imageWidth": 38,
+      "imageSquare": false,
+      "imageTall": true,
+      "description": "Haus Blodyn O’Aberdail ist der baroniale Exilzweig des alten Königsgeschlechts von Vennyr. Sein Sitz Aberdail liegt in Blutklaue auf der Klaueninsel. Yvain Blodyn führt das Haus als Baron. Das bestehende Lehensprofil ordnet die Familie unmittelbar Haus Arth O’Talgarth zu. Der Aufbau Aberdails prägt ihre heutige Aufgabe.",
+      "quote": "Datblyg dy nerth a thyfu! · Entfalte deine Kraft und wachse!",
+      "quoteBy": "",
+      "commentSequence": [],
+      "stats": [
+        [
+          "Voller Name",
+          "Haus Blodyn O'Aberdail"
+        ],
+        [
+          "Rang",
+          "Baron"
+        ],
+        [
+          "Stammsitz",
+          "Aberdail"
+        ],
+        [
+          "Grafschaft",
+          "Klaueninsel"
+        ],
+        [
+          "Oberhaupt",
+          "Yvain Blodyn"
+        ],
+        [
+          "Erbe",
+          "Dalvin Blodyn"
+        ],
+        [
+          "Lehnsherr",
+          "Haus Arth O'Talgarth"
+        ],
+        [
+          "Ursprung",
+          "Avallorn · königliches Haus Blodyn in Vennyr"
+        ],
+        [
+          "Schutzpatronin",
+          "Die Dame der See · Nimue"
+        ]
+      ],
+      "house": {
+        "crestImage": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 80,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Über das Haus",
+        "biographyText": "Haus Blodyn O’Aberdail ist der baroniale Exilzweig des alten Königsgeschlechts von Vennyr. Sein Sitz Aberdail liegt in Blutklaue auf der Klaueninsel. Yvain Blodyn führt das Haus als Baron. Das bestehende Lehensprofil ordnet die Familie unmittelbar Haus Arth O’Talgarth zu. Der Aufbau Aberdails prägt ihre heutige Aufgabe.",
+        "abilitiesTitle": "Einfluss und Aufgaben",
+        "abilities": [],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "Die gemeinsame Herkunft reicht nach Avallorn zurück. Dort galten die Blodyn als heilige Wächter der Dame. Vor dem Untergang fuhren sie nach Osten, unterstützten die Alben Thuaidhneachs gegen die Nordmänner und begründeten Vennyr. Hoyer wurde erster König. Der königliche Anspruch beruhte auf der Herkunft seiner Mutter; Lyndor im Blütenland wurde zum alten Sitz.",
+        "worksTitle": "Prägende Ereignisse",
+        "works": [],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Werte und Stellung",
+            "text": "Nach dem Verlust Vennyrs gingen Yvain und sein Cousin Yhon unterschiedliche Wege. Yhon setzte von Talgarth aus den Kampf gegen die Nordmänner fort. Yvain widmete sich dem Aufbau der kleinen Stadt Aberdail und erlangte dort den Baronenrang. Die Familie verbindet ihr altes religiöses Selbstverständnis mit der Verantwortung für die neue Heimat."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Traditionen und Hausleben",
+            "text": "Die Verehrung der Dame der See und der Schutz ihrer Heiligtümer bestimmen die gemeinsame Hauskultur. Die Blodyn bewahren eine ausgeprägte Derwyn-Tradition und den geistlichen Ritterdienst. Der Ritterritus verbindet eine Salbung am Gewässer mit Eiden auf die Neun Göttlichen und die Dame. Das Motto lautet „Entfalte deine Kraft und wachse!“."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besitz und Lebensgrundlage",
+            "text": "Aberdail bildet den heutigen Mittelpunkt. Der baroniale Aufbau ist Teil des Neubeginns nach dem Verlust der Königsherrschaft in Vennyr. Zum bestehenden Lehensgefüge gehören die Ritterfürstenhäuser Dianc und Arfordir in Aberdail. Der Talgarther Zweig Yhons ist eine eigene Niederlassung unter demselben übergeordneten Lehnsherrn und wird nicht als Herrschaft über Yvains Baronie behandelt."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Kultur und Glaube",
+            "text": "Die Familie gehört zur Alerischen Kirche und verehrt besonders Nimue, die Dame der See. Ihre vennyriische Kultur wird als bodenständig, rustikal und stark von Ritualen geprägt beschrieben. Die überlieferten Ausbildungen der Rhyfelwyr, Rhiddwyr, Morwyr, Ceidwyn und Derwyn bewahren die Erfahrungen der früheren Heimat mit Landkampf, Seefahrt und geistlichem Dienst."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Verbindungen",
+            "text": "Dalvin und Erec stehen in dieser Reihenfolge in der bestätigten Erbfolge Aberdails. Die eigene Akte umfasst Yvain, Bronwen Blaidd und ihre Söhne. Haus Arth bleibt der unmittelbare Lehnsherr. Der Verlust Vennyrs, die Rivalität zum Draca-Clan und die später beigelegten Spannungen zu den Pendrag gehören zur gemeinsamen Geschichte der Blodyn."
+          }
+        ],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausmotto",
+        "quotes": [],
+        "connectionsTitle": "Verbündete und Kadettenhäuser",
+        "connections": [],
+        "documentsTitle": "Mehr über das Haus",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Haus Blodyn O'Aberdail · vollständige Hausseite",
+            "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-blodyn-aberdail"
+          },
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Königliches Haus Blodyn · Herkunft in Vennyr",
+            "text": "Eigenständige Ursprungsakte in Vennyr mit dem bereits ausgearbeiteten Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-blodyn&mode=view"
+          },
+          {
+            "icon": "../Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+            "title": "Haus Blodyn O’Talgarth · eigener heutiger Zweig",
+            "text": "Yhons Familie und die Erbfolge Vennyrs werden in ihrer eigenen Akte bewahrt.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-blodyn-talgarth&mode=view"
+          }
+        ],
+        "footer": ""
+      }
+    }
+  },
+  {
+    "id": "haus-caerdyn",
+    "title": "Haus Caerdyn",
+    "path": [
+      "Vennyr",
+      "Tir Gogledd",
+      "Talfronwyn"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "bb022653562e29cc31570ca7bf64a1ee6cd8656bbbb3aebdc3253d36707d7e36",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Talfronwyn",
+      "barony": "",
+      "county": "Tir Gogledd",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-trachwyll-talfronwyn",
+      "liegeHouseName": "Haus Trachwyll",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Gogledd.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Caerdyn",
+      "image": "assets/images/houses/Vennyr/haus-caerdyn.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Caerdyn mit Sitz in Talfronwyn, Tir Gogledd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Talfronwyn"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Gogledd"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Trachwyll"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Caerdyn mit Sitz in Talfronwyn, Tir Gogledd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-caerdyn.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-drewi",
+    "title": "Haus Drewi",
+    "path": [
+      "Vennyr",
+      "Tir Gogledd",
+      "Dyfryn"
+    ],
+    "sourceRevision": 4,
+    "graphFingerprint": "5d084bac50449844672e7d0b5ea4e60da58d3022df953cf306bbde724819f605",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Dyfryn",
+      "barony": "",
+      "county": "Tir Gogledd",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-trachwyll-talfronwyn",
+      "liegeHouseName": "Haus Trachwyll",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Gogledd.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Drewi",
+      "image": "assets/images/houses/Vennyr/haus-drewi.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Drewi mit Sitz in Dyfryn, Tir Gogledd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Dyfryn"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Gogledd"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Trachwyll"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Drewi mit Sitz in Dyfryn, Tir Gogledd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-drewi.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-gwanrhyd",
+    "title": "Haus Gwanrhyd",
+    "path": [
+      "Vennyr",
+      "Tir Dwyrain",
+      "Branon"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "8491fdf12f944f47ad365967b7c241d36798dfd717c33d4d9fc6fc59f80130aa",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Branon",
+      "barony": "",
+      "county": "Tir Dwyrain",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-blaidd",
+      "liegeHouseName": "Haus Blaidd",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Dwyrain.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Gwanrhyd",
+      "image": "assets/images/houses/Vennyr/haus-gwanrhyd.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Gwanrhyd mit Sitz in Branon, Tir Dwyrain, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Branon"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Dwyrain"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Blaidd"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Gwanrhyd mit Sitz in Branon, Tir Dwyrain, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-gwanrhyd.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-bochdew",
+    "title": "Haus Bochdew",
+    "path": [
+      "Vennyr",
+      "Tir Dwyrain",
+      "Caer Ynys"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "f956c5510c8c54c61dd5ce35ad417b4ccb65dcbe512ba48226eef424e39e8d11",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Caer Ynys",
+      "barony": "",
+      "county": "Tir Dwyrain",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-blaidd",
+      "liegeHouseName": "Haus Blaidd",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Dwyrain.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Bochdew",
+      "image": "assets/images/houses/Vennyr/haus-bochdew.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Bochdew mit Sitz in Caer Ynys, Tir Dwyrain, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Caer Ynys"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Dwyrain"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Blaidd"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Bochdew mit Sitz in Caer Ynys, Tir Dwyrain, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-bochdew.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-udgorn",
+    "title": "Haus Udgorn",
+    "path": [
+      "Vennyr",
+      "Tir Gorllewin",
+      "Mynyddharbwr"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "c0ca0d717daa1d83550adfa1e68f861fd530b0529cff1f6c8f988f6b729c7d12",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Mynyddharbwr",
+      "barony": "",
+      "county": "Tir Gorllewin",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dyfrgi",
+      "liegeHouseName": "Haus Dyfrgi",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Gorllewin.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Udgorn",
+      "image": "assets/images/houses/Vennyr/haus-udgorn.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Udgorn mit Sitz in Mynyddharbwr, Tir Gorllewin, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Mynyddharbwr"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Gorllewin"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Dyfrgi"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Udgorn mit Sitz in Mynyddharbwr, Tir Gorllewin, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-udgorn.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-balauric",
+    "title": "Haus Balauric",
+    "path": [
+      "Vennyr",
+      "Tir Gorllewin",
+      "Mynyddharbwr"
+    ],
+    "sourceRevision": 3,
+    "graphFingerprint": "cd743f3c357c0b5cecfa9e7d81ce083a69d9bedca7c9f32e4fae96c64d820c88",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Mynyddharbwr",
+      "barony": "",
+      "county": "Tir Gorllewin",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dyfrgi",
+      "liegeHouseName": "Haus Dyfrgi",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Gorllewin.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Balauric",
+      "image": "assets/images/houses/Vennyr/haus-balauric.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Balauric mit Sitz in Mynyddharbwr, Tir Gorllewin, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Mynyddharbwr"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Gorllewin"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Dyfrgi"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Balauric mit Sitz in Mynyddharbwr, Tir Gorllewin, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-balauric.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-morgryn",
+    "title": "Haus Morgryn",
+    "path": [
+      "Vennyr",
+      "Tir Arfordir",
+      "Serenlyn"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "70536a8c3516e92dc1bab8fd709a194fe9075dabad43dbefd9e142c7627e6204",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Serenlyn",
+      "barony": "",
+      "county": "Tir Arfordir",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-arfordir",
+      "liegeHouseName": "Haus Arfordir",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Arfordir.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Morgryn",
+      "image": "assets/images/houses/Vennyr/haus-morgryn.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Morgryn mit Sitz in Serenlyn, Tir Arfordir, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Serenlyn"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Arfordir"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Arfordir"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Morgryn mit Sitz in Serenlyn, Tir Arfordir, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-morgryn.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-gwenyen",
+    "title": "Haus Gwenyen",
+    "path": [
+      "Vennyr",
+      "Tir Arfordir",
+      "Gwych"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "0451b04f54997c60062ed10dcdbb9fe25b8c0bb7e603a729bea6f73b8d3fb149",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Gwych",
+      "barony": "",
+      "county": "Tir Arfordir",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-arfordir",
+      "liegeHouseName": "Haus Arfordir",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Arfordir.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Gwenyen",
+      "image": "assets/images/houses/Vennyr/haus-gwenyen.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Gwenyen mit Sitz in Gwych, Tir Arfordir, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Gwych"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Arfordir"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Arfordir"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Gwenyen mit Sitz in Gwych, Tir Arfordir, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-gwenyen.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  },
+  {
+    "id": "haus-crwynog",
+    "title": "Haus Crwynog",
+    "path": [
+      "Vennyr",
+      "Tir Mynddoedd",
+      "Gwynlann"
+    ],
+    "sourceRevision": 2,
+    "graphFingerprint": "81e93ddc78df41fdba0e50dfc6c06336dbe516f0cadf22456efd85ac2c997181",
+    "houseProfile": {
+      "rankId": "unknown",
+      "seat": "Gwynlann",
+      "barony": "",
+      "county": "Tir Mynddoedd",
+      "kingdom": "Vennyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dianc",
+      "liegeHouseName": "Haus Dianc",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "assets/images/regions/Vennyr/Tir Mynddoedd.png",
+        "kingdom": "assets/images/regions/vennyr.png"
+      }
+    },
+    "biography": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Crwynog",
+      "image": "assets/images/houses/Vennyr/haus-crwynog.png",
+      "imageWidth": 30,
+      "imageSquare": true,
+      "housePage": true,
+      "description": "Haus Crwynog mit Sitz in Gwynlann, Tir Mynddoedd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+      "stats": [
+        [
+          "Sitz",
+          "Gwynlann"
+        ],
+        [
+          "Oberherrschaft",
+          "Tir Mynddoedd"
+        ],
+        [
+          "Herrschaft",
+          ""
+        ],
+        [
+          "Lehensherr",
+          "Haus Dianc"
+        ],
+        [
+          "Religion",
+          "Alerische Kirche"
+        ]
+      ],
+      "house": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Übersicht",
+        "biographyText": "Haus Crwynog mit Sitz in Gwynlann, Tir Mynddoedd, Vennyr, unter undefined. Die überlieferte Genealogie verbindet das Haus mit seinen Herkunfts- und Heiratslinien; nicht einzeln bekannte Generationen bleiben als Überlieferungslücken sichtbar.",
+        "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Religion und Schwertleite",
+            "text": "Das Rittertum Vennyrs hat seinen Ursprung in Avallorn. Bei der Schwertleite an einem See oder Gewässer wird der Knappe zum Ritter geschlagen und gesalbt. Er schwört auf jeden der neun Göttlichen und ihre Tugenden; ein zusätzlicher zehnter Eid gilt der Dame des Sees, der Schutzgöttin Cenyrs und Vennyrs."
+          }
+        ],
+        "historyTitle": "Geschichte des Hauses",
+        "historyText": "",
+        "worksTitle": "Bekannte Taten & Ereignisse",
+        "works": [],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausworte & Zitate",
+        "quotes": [],
+        "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+        "connections": [],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "",
+        "crestImage": "assets/images/houses/Vennyr/haus-crwynog.png"
+      },
+      "commentSequence": [],
+      "quote": "",
+      "quoteBy": ""
+    }
+  }
+]

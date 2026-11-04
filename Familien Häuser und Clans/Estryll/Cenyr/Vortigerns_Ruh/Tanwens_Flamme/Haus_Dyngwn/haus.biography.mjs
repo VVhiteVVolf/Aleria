@@ -31,7 +31,7 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      "Nicht sicher überliefert"
+      "Morgan Dyngwn"
     ],
     [
       "Erbe",
@@ -52,7 +52,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte des Hauses",
-    "historyText": "Das Haus führt seinen Ursprung auf einen einfachen Ritter und eine Adlige aus der Umgebung Mathragons zurück. Als Gründer ist Kynwas Schwertarm verzeichnet. Die Überlieferung nennt außerdem Goronwy, Cadogan und Morgan in der Ritterfürstenfolge; eine lückenlose Chronik aller Generationen liegt nicht vor. Morgan steht in der alten Hofliste seit 1653, wird im aktuellen Gegenaktenabgleich jedoch ausdrücklich als verstorben geführt. Ein nachfolgendes amtierendes Oberhaupt wird deshalb nicht eigenmächtig eingesetzt.",
+    "historyText": "Das Haus führt seinen Ursprung auf einen einfachen Ritter und eine Adlige aus der Umgebung Mathragons zurück. Als Gründer ist Kynwas Schwertarm verzeichnet. Die Überlieferung nennt außerdem Goronwy, Cadogan und Morgan in der Ritterfürstenfolge; eine lückenlose Chronik aller Generationen liegt nicht vor. Morgan Dyngwn lebt und führt das Haus seit 1653 als Ritterfürst.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -84,7 +84,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Die bestehende Familienakte bewahrt die überlieferte Erbfolge mit Gwlgawd, Garith, Derwyn und Hael. Sie ersetzt keine noch ungeklärte Amtsnachfolge. Eine konkrete Fehde ist in den Hauskapiteln nicht ausgearbeitet."
+        "text": "Morgan Dyngwn führt das Haus als Ritterfürst im Dienst der Krone. Die überlieferte Erbfolge nennt Gwlgawd, Garith, Derwyn und Hael. Eine konkrete Fehde ist nicht überliefert."
       }
     ],
     "triviaTitle": "Besonderheiten",

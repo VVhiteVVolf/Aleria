@@ -7,6 +7,7 @@ import { getCombatFormPresentation } from '../../AleriaAlmanach/modules/combat-s
 import { getBonusDamageFormulas, getUniversalDamageBonus } from '../../AleriaAlmanach/modules/combat/combat-profile-model.js';
 import { combineDamageFormulas, buildDamageNotation } from '../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 import { entryIcon, dieIcon, passiveIcon } from './guide-assets.mjs';
+import { withCurrentGuideTraits } from './guide-trait-rules.mjs';
 
 const dice = text => String(text || '').replace(/(\d)d(\d)/gi, '$1W$2');
 const signed = value => `${value >= 0 ? '+' : ''}${value}`;
@@ -81,6 +82,7 @@ function describeVariant(character, loadout, action) {
 }
 
 export function buildGuideArsenal(guide, character) {
+  character = withCurrentGuideTraits(character);
   const base = resolveCombatProfile(character, { includeAiSnapshot: false });
   const mount = getCombatMounts(character)[0];
   const weapons = [...base.weapons].sort((a,b) => Number(b.id === guide.weaponId) - Number(a.id === guide.weaponId));

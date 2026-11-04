@@ -1,0 +1,157 @@
+{
+  "id": "haus-gortach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "59a36c24-0470-41be-9e9c-5aa073bd9666",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\59a36c24-0470-41be-9e9c-5aa073bd9666\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ru-gortach/animexx-original.html",
+    "bytes": 99617,
+    "sha256": "fe08c2457a2898acabc0b95055fb361b8ef49ed32331babb266278f3650c377d",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-gortach",
+    "baselineSourceRevision": 8,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Broch an Ear",
+      "barony": "Tir na Breithe",
+      "county": "Tir na Tonn",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-fir-an-tarvo",
+      "liegeHouseName": "Clan Fir An’Tarvo",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-tonn.png",
+        "assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+        "barony": "assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Tir na Breithe",
+        "Broch an Ear"
+      ]
+    },
+    "graphFingerprint": "dec153d7a0e874bb765ab58b8ba8aa0cf85bc93373bed447250d738ba4cd21ed",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-gortach",
+    "title": "Ru’Gortach",
+    "territoryId": "leitheach-herrschaft-gortach",
+    "territoryName": "Tir na Breithe",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Breithe",
+        "slug": "leitheach-herrschaft-gortach"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-gortach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-gortach",
+    "slug": "ru-gortach",
+    "canonicalSlug": "gortach",
+    "attachmentId": "59a36c24-0470-41be-9e9c-5aa073bd9666",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/UCkiO84.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 288466,
+    "sha256": "02b087a8fed194ca7a21336e1a398f7ce06d27ff2c97babd5ed664c750fb0142",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-gortach",
+    "title": "Ru’Gortach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Tonn",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/UCkiO84.png",
+    "path": "Stammbäume/assets/images/references/haus-gortach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-gortach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "02b087a8fed194ca7a21336e1a398f7ce06d27ff2c97babd5ed664c750fb0142",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Blau-goldener Hauskrieger mit Hammer und Fellmantel.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "fe08c2457a2898acabc0b95055fb361b8ef49ed32331babb266278f3650c377d",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-gortach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug ru-gortach wird der bestehenden ID haus-gortach zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

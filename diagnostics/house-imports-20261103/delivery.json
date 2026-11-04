@@ -1,0 +1,377 @@
+{
+  "localOnly": true,
+  "push": false,
+  "deploy": false,
+  "firebaseWrites": false,
+  "houseCount": 12,
+  "mainAndGalleryImages": 13,
+  "originalIllustrations": 9,
+  "newIllustrations": 4,
+  "existingFamilyGraphsUnchanged": true,
+  "sourceGenealogyImported": false,
+  "militaryStatisticsImported": false,
+  "directTerritoryHouseLinks": 21,
+  "houses": [
+    {
+      "id": "haus-cruithenaech",
+      "name": "Clan Cruithenaech",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Antike_Crannath_Clans/Clan_Cruithenaech/haus.content.mjs",
+      "page": "kleinehaeuser.html",
+      "prepared": true,
+      "extinct": false,
+      "seat": "Dun Clachrath",
+      "parentHouseId": "",
+      "sourceSha256": "9dbab10416f69d21fcf900325990e26437eb0f03155e64a925f530badd2bda2e",
+      "mainImage": "Estryll/Cenyr/Aehrental/Antike_Crannath_Clans/Clan_Cruithenaech/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "b7900270d006b20dfaf4055745d910361e0c4ffa3b60f28c6e3432a664df7e84",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 1,
+      "founderId": null,
+      "headIds": [],
+      "heirIds": []
+    },
+    {
+      "id": "haus-warthog",
+      "name": "Clan Warthog",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Antike_Crannath_Clans/Clan_Warthog/haus.content.mjs",
+      "page": "kleinehaeuser.html",
+      "prepared": true,
+      "extinct": false,
+      "seat": "Ri Torraird",
+      "parentHouseId": "",
+      "sourceSha256": "d263bd38fd862b69887445aa485a1ed7dff5b31826f28b9381413196f2ce4d62",
+      "mainImage": "Estryll/Cenyr/Aehrental/Antike_Crannath_Clans/Clan_Warthog/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "c490cd3ef5bfc17503f03cdc6d7f881ac5125c45edec31d78dd68a2f42ac01ed",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 1,
+      "founderId": null,
+      "headIds": [],
+      "heirIds": []
+    },
+    {
+      "id": "haus-chiffyddlon",
+      "name": "Haus Chiffyddlon O'Glyndraith",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Ausgestorben/Haus_Chiffyddlon/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": true,
+      "seat": "",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "bcb11bb6da430c92491afdf36452b4ac2f74e7bcc80021353023aac438a4e955",
+      "mainImage": "Estryll/Cenyr/Aehrental/Ausgestorben/Haus_Chiffyddlon/assets/hausdarstellung-2026-11-03.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-2026-11-03.png",
+          "sha256": "bbc2b257b870a8649de4a883516d3dfe0927ab027540c8b35b0a2db836cac3d1",
+          "role": "Ritterliche Hausdarstellung",
+          "status": "generated-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 5,
+      "founderId": "iorwerth-founder-chiffyddlon",
+      "headIds": [
+        "iorwerth-founder-chiffyddlon",
+        "urien-chiffyddlon",
+        "maelor-chiffyddlon",
+        "grufudd-chiffyddlon",
+        "iorwerth-chiffyddlon",
+        "maelgwn-chiffyddlon",
+        "gwilym-chiffyddlon"
+      ],
+      "heirIds": []
+    },
+    {
+      "id": "haus-gwarchod",
+      "name": "Haus Gwarchod O'Glyndraith",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Ausgestorben/Haus_Gwarchod/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": true,
+      "seat": "",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "e11f5f17571840844d050c9ffc8f74b2c30fa00b8e1bbec794ddbb557b08e694",
+      "mainImage": "Estryll/Cenyr/Aehrental/Ausgestorben/Haus_Gwarchod/assets/hausdarstellung-2026-11-03.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-2026-11-03.png",
+          "sha256": "a64ff6b78718f5935e1b745d7679246c0d13172d005324260e758bfdeb933217",
+          "role": "Ritterliche Hausdarstellung",
+          "status": "generated-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 3,
+      "founderId": "ector-founder-gwarchod",
+      "headIds": [
+        "ector-founder-gwarchod",
+        "drystan-gwarchod",
+        "garselid-gwarchod",
+        "maiwyn-gwarchod",
+        "gwernwy-gwarchod"
+      ],
+      "heirIds": [
+        "delwyn-gwarchod"
+      ]
+    },
+    {
+      "id": "haus-baedd",
+      "name": "Haus Baedd O'Eirwyn",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Eberkamm/Haus_Baedd/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Eirwyn",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "ebae6526fa081be4726f31ed229a53481a34d4757fe68a54d733d49fae35d281",
+      "mainImage": "Estryll/Cenyr/Aehrental/Eberkamm/Haus_Baedd/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "992b9f633d05bf35e055c3eeb1943906751b03667596ad7084a7f9ac0f76c3df",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": "rhun-ancient-baedd",
+      "headIds": [
+        "rhun-ancient-baedd",
+        "dyfnwal-baedd",
+        "kimbal-baedd",
+        "vaughan-baedd"
+      ],
+      "heirIds": [
+        "cei-baedd",
+        "viggo-baedd",
+        "auryn-baedd"
+      ]
+    },
+    {
+      "id": "haus-sgwarnog",
+      "name": "Haus Sgwarnog O'Aldwynd",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Flusstal/Haus_Sgwarnog/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Aldwynd",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "8e1f27f730fc2b4ccac1668e70e1b82b6ff90db0107841478ef060bab6278163",
+      "mainImage": "Estryll/Cenyr/Aehrental/Flusstal/Haus_Sgwarnog/assets/feudalritter-2026-11-03.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "7df57e235c6326a715e0f57bd58c0901be93710b29825b12f0589819c19e88ef",
+          "role": "Fußknecht",
+          "status": "downloaded-and-visually-reviewed"
+        },
+        {
+          "path": "assets/feudalritter-2026-11-03.png",
+          "sha256": "1b504ad3a5cbcd9d445f95c8ada98ff7b92d8a32da60b944ed225d56f68a43b3",
+          "role": "Feudalritter",
+          "status": "generated-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 5,
+      "founderId": "mael-founder-sgwarnog",
+      "headIds": [
+        "mael-founder-sgwarnog",
+        "mathonwy-sgwarnog",
+        "maldwyn-sgwarnog",
+        "morcant-sgwarnog"
+      ],
+      "heirIds": [
+        "mabon-sgwarnog",
+        "math-1719-sgwarnog",
+        "mael-1725-sgwarnog"
+      ]
+    },
+    {
+      "id": "haus-ciarog",
+      "name": "Haus Ciaróg O'Caer Diwedd",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Graue_Bucht/Haus_Ciarog/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Caer Diwedd",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "e6d3c167e990ff7c3bcb9cd29228d3f7383b065fdfd8445f3020131e1e1f2d4f",
+      "mainImage": "Estryll/Cenyr/Aehrental/Graue_Bucht/Haus_Ciarog/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "70e649bf49a63d4d0001ae90079cdc7a39a2cc878afb1146013ecda1048c188f",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 5,
+      "founderId": "brogan-ciarog",
+      "headIds": [
+        "brogan-ciarog",
+        "hywel-ciarog",
+        "carranog-ciarog",
+        "amaethon-ciarog",
+        "tarrant-ciarog"
+      ],
+      "heirIds": [
+        "karanteg-ciarog",
+        "loyd-ciarog"
+      ]
+    },
+    {
+      "id": "haus-aroglyn",
+      "name": "Haus Aroglyn",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Aroglyn/haus.content.mjs",
+      "page": "kleinehaeuser.html",
+      "prepared": true,
+      "extinct": false,
+      "seat": "Glyndraith",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "1fd1c01612c41232e229bffb520671d736b7c5a54c4b0440a507ace7bca722b3",
+      "mainImage": "Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Aroglyn/assets/hausdarstellung-2026-11-03.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-2026-11-03.png",
+          "sha256": "ef9aea0504d41c8eec218a4194f97355382e42f7bbb4594fd4a4c1fe77f531ec",
+          "role": "Bürgerliche Hausdarstellung",
+          "status": "generated-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 1,
+      "founderId": null,
+      "headIds": [],
+      "heirIds": []
+    },
+    {
+      "id": "haus-grawn",
+      "name": "Haus Grawn O'Glyndraith",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Grawn/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Glyndraith",
+      "parentHouseId": "",
+      "sourceSha256": "1c7b26d84df33d973488d514f1d7467f5c6ef378a2bbecf9f3586fc6cb8d3e2b",
+      "mainImage": "Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Grawn/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "f3932bd76d07f153f52fd57d781b941622714a2fee5653f6e524925d1d068505",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 7,
+      "founderId": "tristam-grawn",
+      "headIds": [
+        "tristam-grawn",
+        "iorwerth-ancient-grawn",
+        "dystan-grawn",
+        "maelgwyn-grawn",
+        "petyr-grawn",
+        "hewet-grawn",
+        "iorwerth-1685-grawn"
+      ],
+      "heirIds": [
+        "afon-grawn"
+      ]
+    },
+    {
+      "id": "haus-gwythiad",
+      "name": "Haus Gwythiad",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Gwythiad/haus.content.mjs",
+      "page": "kleinehaeuser.html",
+      "prepared": true,
+      "extinct": false,
+      "seat": "Glyndraith",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "401920d351a5ec8d9f89e31a876cf7e8c48c3fc5e9b5d3855b469e8546b8f326",
+      "mainImage": "Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Gwythiad/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "64bc216b185b180e735d52a5a5f957f7a30dffbfb32bcb817be53101ddb04640",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 1,
+      "founderId": null,
+      "headIds": [],
+      "heirIds": []
+    },
+    {
+      "id": "haus-marchog",
+      "name": "Haus Marchog O'Glyndraith",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Marchog/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Glyndraith",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "8666969fa9907ae3dc70e2848969d4ebb070d35b15aa2b0ce949eabfe0587642",
+      "mainImage": "Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Marchog/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "045d6d048e623555359b82b59c37dd92cb356d5e1a2d7b45d8a02d156ee50dcc",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 4,
+      "founderId": "breannain-marchog",
+      "headIds": [
+        "breannain-marchog"
+      ],
+      "heirIds": [
+        "rhodrhi-marchog",
+        "hevedydd-marchog",
+        "llyonell-marchog",
+        "brizio-marchog",
+        "caraf-marchog"
+      ]
+    },
+    {
+      "id": "haus-morcanhuc",
+      "name": "Haus Morcanhuc O'Glyndraith",
+      "contentPath": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Morcanhuc/haus.content.mjs",
+      "page": "haus.html",
+      "prepared": false,
+      "extinct": false,
+      "seat": "Glyndraith",
+      "parentHouseId": "haus-grawn",
+      "sourceSha256": "b710c376bbb09518b6f3989c1222b218fbbea032da07cc3e78b3218fc2c5268c",
+      "mainImage": "Estryll/Cenyr/Aehrental/Tristams_Ebene/Haus_Morcanhuc/assets/hausdarstellung-original.png",
+      "images": [
+        {
+          "path": "assets/hausdarstellung-original.png",
+          "sha256": "d06a95e7fad82d95cad888b1ea7ee764037c8e423eb170493cb7dabc1cfe4cf7",
+          "role": "Hausdarstellung",
+          "status": "downloaded-and-visually-reviewed"
+        }
+      ],
+      "biographySourceRevision": 2,
+      "founderId": "arthos-morcanhuc",
+      "headIds": [
+        "arthos-morcanhuc"
+      ],
+      "heirIds": [
+        "charlton-1724-morcanhuc",
+        "ianto-morcanhuc",
+        "iorwerth-morcanhuc"
+      ]
+    }
+  ]
+}

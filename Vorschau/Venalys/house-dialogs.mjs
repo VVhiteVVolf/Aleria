@@ -1,19 +1,17 @@
 import { renderHouseDossier } from '../shared/house-detail-render.mjs';
 import { escapeHtml as e, rankLabel } from '../shared/country-workbench/render.mjs';
 import { targetName } from './assignment-view.mjs';
+import { createArtDialogSession } from '../shared/country-workbench/art-dialog-session.mjs';
+import { renderEstateDetails } from '../shared/country-workbench/estate-view.mjs';
 
-export function createVenalysHouseDialogs({ dialog, houses, warriors, targets, getDraft, onChoose }) {
-  let trigger;
-  dialog.addEventListener('close', () => trigger?.isConnected && trigger.focus({ preventScroll: true }));
-  dialog.addEventListener('click', event => {
-    const button = event.target.closest('button[data-action]');
-    if (button?.dataset.action === 'close-art') dialog.close();
-    if (button?.dataset.action === 'select-from-dialog') {
-      dialog.close();
-      onChoose(button.dataset.house);
-    }
-  });
+export function createVenalysHouseDialogs({ dialog, houses, warriors, estates = [], targets, getDraft, onChoose }) {
+  const session = createArtDialogSession({ dialog,onSelect:onChoose });
   return {
+    showEstate(id) {
+      const estate = estates.find(item => item.id === id);
+      if (estate) session.open(renderEstateDetails(estate,{ source:'Venalys · Gesellschaftlicher Stand' }));
+    },
+    destroy:session.destroy,
     showHouse(id) {
       const house = houses.find(h => h.id === id);
       if (!house) return;
@@ -36,10 +34,7 @@ export function createVenalysHouseDialogs({ dialog, houses, warriors, targets, g
         originalLink: house.isNew ? null : house.original,
       }, e);
       else html = `<header class="house-detail-heading"><p class="eyebrow">${e(house.source || 'Geliefertes Patrizierwappen')}</p><h2 id="art-title">Haus ${e(house.name)}</h2></header><div class="art-detail-layout"><figure><a href="${e(crest.fullsize)}" target="_blank" rel="noopener"><img src="${e(crest.image)}" width="480" height="480" alt="Wappen Haus ${e(house.name)}"></a><figcaption><a href="${e(crest.fullsize)}" target="_blank" rel="noopener">Geliefertes Wappen in Großansicht ↗</a></figcaption></figure><div><p>${e(house.motif || '')}</p><dl>${facts.map(f => `<div><dt>${e(f.label)}</dt><dd>${e(f.value)}</dd></div>`).join('')}</dl><button class="primary" data-action="select-from-dialog" data-house="${e(id)}">Dieses Haus auf der Karte zuordnen</button></div></div>`;
-      trigger = document.activeElement;
-      dialog.querySelector('[data-role="art-details"]').innerHTML = html;
-      if (!dialog.open) dialog.showModal();
-      dialog.scrollTop = 0;
+      session.open(html);
     },
   };
 }

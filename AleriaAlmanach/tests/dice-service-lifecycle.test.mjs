@@ -66,3 +66,19 @@ test('failed initialization selects the existing safe text engine once; disabled
   assert.equal((await disabled.service.prepare({ id: 'a' })).isFallback, true);
   assert.equal(disabled.count(), 0);
 });
+
+test('dice feedback distinguishes pending luck, bad luck and a real spell saving throw', async () => {
+  const h = harness(); h.service.settings.animationEnabled = false;
+  let natural = 1;
+  h.service.parser = { execute: async () => ({ dice: [natural], keptDice: [natural], total: natural, notation: '1d20', natural }) };
+  h.service.audio = { startRoll() {}, finishRoll() {}, cancelRoll() {} };
+  h.service.history = { add: () => ({ id: 'roll' }) };
+  const pending = await h.service.roll('1d20', null, { rollType: 'attack', naturalRollPolicy: { naturalOneReroll: true } });
+  assert.match(pending.special, /Glückswiederholung folgt/);
+  natural = 3;
+  const unlucky = await h.service.roll('1d20', null, { rollType: 'saving-throw', naturalRollPolicy: { criticalFailureMaximum: 3 } });
+  assert.match(unlucky.special, /Pechvogel/);
+  natural = 20;
+  const saving = await h.service.roll('1d20', null, { rollType: 'saving-throw' });
+  assert.equal(saving.special, undefined);
+});

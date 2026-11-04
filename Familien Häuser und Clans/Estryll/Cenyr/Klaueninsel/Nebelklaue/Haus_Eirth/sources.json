@@ -1,0 +1,54 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-eirth",
+  "source": {
+    "attachmentId": "70b54d91-3e1a-4e9d-8e6b-bc69c6bede01",
+    "file": "animexx-original.html",
+    "sha256": "93e46e09dcd8619dfa55c6871833980fb409c449a7972b31465289e1af9ab131",
+    "bytes": 86036,
+    "archivedByteIdentically": true
+  },
+  "decisions": "SOURCE_DECISIONS.md",
+  "genealogy": {
+    "treatment": "supplied genealogy ignored; existing family tree iframe only",
+    "graphChanged": false,
+    "familyId": "haus-eirth"
+  },
+  "militaryStatistics": "ignored entirely",
+  "previousFamilySourceRevision": 4,
+  "biographySourceRevision": 5,
+  "images": [
+    {
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/lMzChk9.png",
+      "role": "house-illustration",
+      "sha256": "e5918be57636b58c12d2af881c298ec5e3ac9059cddb55f804ade2e63282acc9",
+      "bytes": 248481,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 408,
+      "height": 612,
+      "mode": "RGBA"
+    },
+    {
+      "file": "assets/herrschaftsbanner-original.png",
+      "source": "https://i.imgur.com/1dBiZqX.png",
+      "role": "territory-banner",
+      "sha256": "a205c14e5e0630b564daef78ff125f34b83ea67daf4bec040657bc4211354550",
+      "bytes": 301766,
+      "reviewed": true,
+      "treatment": "original unchanged",
+      "format": "PNG",
+      "width": 497,
+      "height": 502,
+      "mode": "RGBA"
+    }
+  ],
+  "registerReferences": [
+    "Stammbäume/assets/js/data/klaueninseln-house-profiles.js",
+    "Stammbäume/assets/js/data/house-eirth-family.js"
+  ]
+}

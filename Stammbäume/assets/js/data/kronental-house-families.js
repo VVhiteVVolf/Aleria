@@ -7,15 +7,15 @@ import {
   KRONENTAL_HOUSE_EMBLEMS,
   KRONENTAL_HOUSE_PROFILES
 } from './kronental-house-profiles.js';
-import { HOUSE_WELLENSCHILD_FAMILY } from './house-wellenschild-family.js';
+import { HOUSE_WELLENSCHILD_FAMILY } from './house-wellenschild-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_EIBENSCHILD_FAMILY } from './house-eibenschild-family.js';
 import { HOUSE_EISENBIEGER_FAMILY } from './house-eisenbieger-family.js';
 import { HOUSE_FROSTAUGE_FAMILY } from './house-frostauge-family.js';
 import { HOUSE_FROSTZORN_FAMILY } from './house-frostzorn-family.js';
 import { HOUSE_GULLVIG_FAMILY } from './house-gullvig-family.js';
-import { HOUSE_RIESENTOD_FAMILY } from './house-riesentod-family.js';
+import { HOUSE_RIESENTOD_FAMILY } from './house-riesentod-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_SPINDELSCHLAG_FAMILY } from './house-spindelschlag-family.js';
-import { HOUSE_STURMGEBORENE_FAMILY } from './house-sturmgeborene-family.js';
+import { HOUSE_STURMGEBORENE_FAMILY } from './house-sturmgeborene-family.js?v=20261104-life-status-v1';
 import { HOUSE_SUEDSTAHL_FAMILY } from './house-suedstahl-family.js';
 import { HOUSE_ALBHOLZ_FAMILY } from './house-albholz-family.js';
 import { HOUSE_WELLENSAENGER_FAMILY } from './house-wellensaenger-family.js';

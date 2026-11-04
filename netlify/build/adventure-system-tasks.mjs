@@ -13,7 +13,7 @@ const currencyArtInputs = ['AleriaAlmanach/modules/currency/', 'AleriaAlmanach/a
   'AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png'];
 const mechanicalFeatures = ['combat', 'combat-critical', 'combat-status', 'combat-styles', 'characters', 'classes',
   'creatures', 'character-equipment', 'character-inventory', 'item-definitions', 'item-register', 'item-builder',
-  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'trade-catalog', 'house-armor']
+  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'scene-regeneration', 'trade-catalog', 'house-armor']
   .map(name => `AleriaAlmanach/modules/${name}/`);
 const groupTests = ['group-adventure-content', 'group-community', 'group-roster-window', 'group-scene-state',
   'group-landing-model', 'group-landing-inventory', 'group-landing-integration', 'group-account',

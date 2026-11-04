@@ -1,0 +1,481 @@
+{
+  "schema": "aleria.schwarzfenn-initial-review",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "publicOnly": true,
+  "expectedCount": 11,
+  "expectedCounty": "Schwarzfenn",
+  "mainSeat": "Wolfsklamm",
+  "extinctIds": [
+    "haus-arnvild",
+    "haus-mac-bronaigh",
+    "haus-svartholmr"
+  ],
+  "records": [
+    {
+      "id": "haus-ragnulf",
+      "title": "Clan Ragnulf",
+      "documentTitle": "Clan Ragnulf",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-schwarzfenn.png",
+          "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "7b7d14658ce8db252a8065ec6cf96e2aa19db418e7b0c82ae112313ad8806f89",
+      "titleFingerprint": "db7e64c98b167ad9d91461ce6377eea5cd8f286d041c85f9fb5031cbd6f8b48c",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Ragnulf/haus.content.mjs",
+      "inputSlug": "ragnulf",
+      "sourceArchiveSha256": "eaf9334f61b70b460df39578abe6f9e309f8257e80f7d5684755e8d15601c3f1"
+    },
+    {
+      "id": "haus-helgr",
+      "title": "Clan Helgr",
+      "documentTitle": "Clan Helgr",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Lichtfenn",
+        "Finstermoor"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Finstermoor",
+        "barony": "Lichtfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-lichtfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 8,
+      "motto": "",
+      "graphFingerprint": "a1a111ea512d53292e9773d64e355609997d0c4b83ce6bdb28e73da340519986",
+      "titleFingerprint": "a3564a980fae7357316503550d9d88d07564522cce662c931a74bf7b4b57f87a",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Lichtfenn/Finstermoor/Clan_Helgr/haus.content.mjs",
+      "inputSlug": "helgr",
+      "sourceArchiveSha256": "427de59f07f3c26c30f4185c7b44ad7a649317239b337e64bc0c26fe1be6dd5e"
+    },
+    {
+      "id": "haus-kummerherz",
+      "title": "Clan Kummerherz",
+      "documentTitle": "Clan Kummerherz",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Gramfenn",
+        "Trauerwald"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Trauerwald",
+        "barony": "Gramfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-gramfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "23fffa08a9998d86276c7ab2f47465b376d926725ad8b50bb8cf0149911d4356",
+      "titleFingerprint": "05c1bd4e4b1d220911d707170edd86643017d297a2f1c8d0e9954af5a36636a7",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Gramfenn/Trauerwald/Clan_Kummerherz/haus.content.mjs",
+      "inputSlug": "kummerherz",
+      "sourceArchiveSha256": "3ee07e0c2b70da9311695208b98afc2b6b95218b9213d790be379293f5f6838b"
+    },
+    {
+      "id": "haus-todbrand",
+      "title": "Clan Todbrand",
+      "documentTitle": "Clan Todbrand",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Todesfenn",
+        "Dunkelmoor"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Dunkelmoor",
+        "barony": "Todesfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "df8e7638e1a64dd8a32186f42cba282cd92e46c17ec7803ba30eacee2348ce99",
+      "titleFingerprint": "0512679005e35e03690432aa28efaec2e17d6d5fbf308910d3e97e7764e9385c",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Todesfenn/Dunkelmoor/Clan_Todbrand/haus.content.mjs",
+      "inputSlug": "todbrand",
+      "sourceArchiveSha256": "c6ffab73ac0f793fb989fda50a8a526b146dc4041252f0cb87b835719cbdcc11"
+    },
+    {
+      "id": "haus-graumahne",
+      "title": "Clan Graumähne",
+      "documentTitle": "Clan Graumähne",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 7,
+      "motto": "",
+      "graphFingerprint": "ceb546fac7505bad6743e1f2b542e0b88ce7d037ba217a11e7badf64120e86ef",
+      "titleFingerprint": "95ec0e475717d0843f755ea81944629ab8b352449b343584d4a58881edbfeac3",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Graumahne/haus.content.mjs",
+      "inputSlug": "graumaehne",
+      "sourceArchiveSha256": "1fd65a3edf5513233fd4bcdd879b0ef5b1e6467d3fb58217699324598851742d"
+    },
+    {
+      "id": "haus-schmetterschild",
+      "title": "Clan Schmetterschild",
+      "documentTitle": "Clan Schmetterschild",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "Im Feuer geprüft, im Stahl verewigt.",
+      "graphFingerprint": "23f2d0a097525dda6f5a69775fc23281d4e6d212375f379aabe51ef8fed624b8",
+      "titleFingerprint": "db4c781977fcc390f9c4571b63da15025cf409c2ccd34aac12d8d07358431642",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Schmetterschild/haus.content.mjs",
+      "inputSlug": "schmetterschild",
+      "sourceArchiveSha256": "5c0f89a6dc706a94bf1ec1bf025ed8b978a23ba5d33f4524e13a2b01f78f8e47"
+    },
+    {
+      "id": "haus-hrafn",
+      "title": "Clan Hrafn",
+      "documentTitle": "Clan Hrafn",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Flussblick",
+        "Flusswall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Flusswall",
+        "barony": "Flussblick",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-flussblick.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "",
+      "graphFingerprint": "0a4fbc25fc0c73feccf27e02188b8b4bd5f2c3543b895cc78899204b0b7ef202",
+      "titleFingerprint": "43d51a4b5f8ed9de19e6aef887d22c9e1386f5024baf5f978c75fa0b5229d08b",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Flussblick/Flusswall/Clan_Hrafn/haus.content.mjs",
+      "inputSlug": "hrafn",
+      "sourceArchiveSha256": "4f7138e7b25653a0e6eec692ab98126a7bfaa4ced411620c8d80b85aa7b18827"
+    },
+    {
+      "id": "haus-eisbrand",
+      "title": "Haus Eisbrand",
+      "documentTitle": "Haus Eisbrand",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Todesfenn",
+        "Hallsvalr"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Hallsvalr",
+        "barony": "Todesfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "4fddd367bb089f1680c41b85886c41a26aa525ce56208ac5c50a94669e8ae56f",
+      "titleFingerprint": "5a182d3cc2f1c02fe34bd958c3415126ea3f505c23f1299752c7c9cd84831b11",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Todesfenn/Hallsvalr/Haus_Eisbrand/haus.content.mjs",
+      "inputSlug": "eisbrand",
+      "sourceArchiveSha256": "c557fe7b2af8b8ad1067458f77cb4e7047b7cec7712cb22ff903703775807c47"
+    },
+    {
+      "id": "haus-svartholmr",
+      "title": "Clan Svartholmr",
+      "documentTitle": "Clan Svartholmr",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Stornborg"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "943bebe11bfd7807d98943e622ba7c9cfc076910531a1130eb469514a8449928",
+      "titleFingerprint": "8e6d51cddce7946af76b164e3c4a3a2fe31cf7d526b351cff0c07df43d78fdbf",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Svartholmr/haus.content.mjs",
+      "inputSlug": "svartholmr",
+      "sourceArchiveSha256": "1d1692fc686aeae7a7cbbb726adff0c75eea3c2a2ff69e2ca84504b32a27e7c7"
+    },
+    {
+      "id": "haus-arnvild",
+      "title": "Clan Arnvild",
+      "documentTitle": "Clan Arnvild",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Aldrimarer (jüngst ausradiert)"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Aldrimarer (jüngst ausradiert)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Flusswall"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "…",
+      "graphFingerprint": "a8a6c55aab1161a13124863eb85a328b34bbbeec4f5ae8a8859373a4f33227f4",
+      "titleFingerprint": "eb08390fdbc1cbaf4828b864948fc97bf84a2c76e2641661ab89ec445790f64a",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Aldrimarer_jungst_ausradiert/Clan_Arnvild/haus.content.mjs",
+      "inputSlug": "arnvild",
+      "sourceArchiveSha256": "5a0b55c00f959e95593240f3245f1b27ef95613dc9b27d5f8540ba44fc1e73ee"
+    },
+    {
+      "id": "haus-mac-bronaigh",
+      "title": "Clan Mac Bronaigh",
+      "documentTitle": "Clan Mac Bronaigh",
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Antike Crannath Clans"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Antike Crannath Clans",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Coil na Bróin"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "49e7a7d3223b89fe45ef8fdb996da5d92f61c3f4f54277dd5f2a1518ef0f1dce",
+      "titleFingerprint": "d7917ac2c374d4765ff6d58f96a3244229b30acb98c5344180a620684819bff3",
+      "hadBiography": false,
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Antike_Crannath_Clans/Clan_Mac_Bronaigh/haus.content.mjs",
+      "inputSlug": "mac-bronaigh",
+      "sourceArchiveSha256": "941a084cc4a7c1d5e2245772b542a5e63b793d52f65ccd8b398ffe4d62016e10"
+    }
+  ],
+  "originalAssets": [
+    {
+      "id": "haus-ragnulf",
+      "path": "Stammbäume/assets/images/references/haus-ragnulf/krieger.png",
+      "sha256": "936a0b8332467ab4b369be14b2f2f65ea6c87ce5462f2187e925d6f37ddb1226",
+      "primary": true
+    },
+    {
+      "id": "haus-helgr",
+      "path": "Stammbäume/assets/images/references/haus-helgr/krieger.png",
+      "sha256": "138762f7b7220f09ce4787667076435fb1e867337400c94c52b0f9b5d1ad6ced",
+      "primary": true
+    },
+    {
+      "id": "haus-kummerherz",
+      "path": "Stammbäume/assets/images/references/haus-kummerherz/krieger.png",
+      "sha256": "9c553d4a9ddf524b3e37f34f60d0ed267c87e4aa4d139b35c5d75e567740211e",
+      "primary": true
+    },
+    {
+      "id": "haus-todbrand",
+      "path": "Stammbäume/assets/images/references/haus-todbrand/krieger.png",
+      "sha256": "b864ea6d5dd96a23b77b58adaf039efcf58f5be224d802dd4354e277d75071a2",
+      "primary": true
+    },
+    {
+      "id": "haus-eisbrand",
+      "path": "Stammbäume/assets/images/references/haus-eisbrand/krieger.png",
+      "sha256": "44e030a09a7d60eb0d17b0cadd3c02daa08b1fdf8736505786242a7f6e283405",
+      "primary": true
+    },
+    {
+      "id": "haus-graumahne",
+      "path": "Stammbäume/assets/images/references/haus-graumahne/krieger.png",
+      "sha256": "0d78ef80c5f7f781986217ad574b9c897e5961b93dd5edc6f4e3113eabcafb11",
+      "primary": true
+    },
+    {
+      "id": "haus-schmetterschild",
+      "path": "Stammbäume/assets/images/references/haus-schmetterschild/krieger.png",
+      "sha256": "b21111058f0de0b8ba51472fc98bc60afebe53085770ed17939ac12f9c4f30b5",
+      "primary": true
+    },
+    {
+      "id": "haus-hrafn",
+      "path": "Stammbäume/assets/images/references/haus-hrafn/krieger.png",
+      "sha256": "fc5bc1eb516cb79936736f790f297874b80f08aa733fe688175a69f80eaba6f1",
+      "primary": true
+    },
+    {
+      "id": "haus-arnvild",
+      "path": "Stammbäume/assets/images/references/haus-arnvild/krieger.png",
+      "sha256": "60ea0a0e9d5c70b74f77453848e41391f470bf86d070f17fc4bdac7d4af0c6db",
+      "primary": true
+    },
+    {
+      "id": "haus-svartholmr",
+      "path": "Stammbäume/assets/images/references/haus-svartholmr/krieger.png",
+      "sha256": "08ffbd515942904e38d74c0ab887fceb1f006506d8589dc5c4deec1b6b0c2d30",
+      "primary": true
+    },
+    {
+      "id": "haus-mac-bronaigh",
+      "path": "Stammbäume/assets/images/references/haus-mac-bronaigh/krieger.png",
+      "sha256": "0c3b73e25de4f9a0df3645b829a8e2f3846c6b7be3bc7013a751c34388764ce5",
+      "primary": true
+    }
+  ]
+}

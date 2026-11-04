@@ -8,7 +8,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_FEUERHERZ_PORTRAITS } from './house-feuerherz-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS,
   KRAEHENMOOR_HOUSE_PROFILES
@@ -242,14 +242,14 @@ export const HOUSE_FEUERHERZ_FAMILY = Object.freeze(withCeitheachSourceCounterUp
     spouse('oran-leite', 'Oran Leite', 'male', '????', '????', 'house-leite'),
 
     person('drengur-feuerherz', 'Drengur Feuerherz', 'male', '1610', '1641'),
-    awayWoman('ingunn-1614-feuerherz', 'Ingunn Feuerherz', '1614', '1645', 'Clan Nachtjäger'),
+    awayWoman('ingunn-1614-feuerherz', 'Ingunn Feuerherz', '1614', '1651', 'Clan Nachtjäger'),
     person('haraldur-feuerherz', 'Haraldur Feuerherz', 'male', '1620', '1671', {
       title: 'Hesir des Clans Feuerherz von 1652 bis 1671'
     }),
     awayWoman('ingunn-1611-feuerherz', 'Ingunn Feuerherz', '1611', '1685', 'Clan Ragnulf'),
     awayWoman('isbjorg-feuerherz', 'Isbjörg Feuerherz', '1606', '1700', 'Clan Schmetterschild'),
-    spouse('vanadis-varangr', 'Vanadis Varangr', 'female', '1609', '????', 'house-varangr'),
-    spouse('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1650', 'house-nachtjaeger'),
+    spouse('vanadis-varangr', 'Vanadis Varangr', 'female', '1609', '', 'house-varangr'),
+    spouse('sturlaugr-nachtjaeger', 'Sturlaugr Nachtjäger', 'male', '1611', '1652', 'house-nachtjaeger'),
     spouse('johild-kummerherz', 'Johild Kummerherz', 'female', '1620', '1704', 'house-kummerherz'),
     spouse('ketill-ragnulf', 'Ketill Ragnulf', 'male', '1608', '1645', 'house-ragnulf'),
     spouse('sighvat-schmetterschild', 'Sighvat Schmetterschild', 'male', '1600', '1683', 'house-schmetterschild', {
@@ -312,7 +312,7 @@ export const HOUSE_FEUERHERZ_FAMILY = Object.freeze(withCeitheachSourceCounterUp
     partnership('marriage-sverin-fjorga-feuerherz', { status: 'ended', end: '1652' }),
     partnership('marriage-oran-alfrun-leite', { status: 'ended' }),
     partnership('marriage-vanadis-drengur-varangr', { status: 'ended', end: '1641' }),
-    partnership('marriage-sturlaugr-ingunn-nachtjaeger', { status: 'ended', end: '1645' }),
+    partnership('marriage-sturlaugr-ingunn-nachtjaeger', { status: 'ended', end: '1651' }),
     partnership('marriage-haraldur-johild-kummerherz', { status: 'ended', end: '1671' }),
     partnership('marriage-ketill-ingunn-ragnulf', { status: 'ended', end: '1645' }),
     partnership('marriage-sighvat-isbjorg-schmetterschild', { status: 'ended', end: '1683' }),

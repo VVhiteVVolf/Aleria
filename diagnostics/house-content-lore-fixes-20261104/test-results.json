@@ -1,0 +1,65 @@
+{
+  "schema": "aleria.house-content-lore-tests",
+  "date": "2026-11-04",
+  "status": "pass",
+  "passed": 64,
+  "failed": 0,
+  "suites": [
+    {
+      "name": "biography-boundaries",
+      "passed": 3,
+      "failed": 0,
+      "log": "suite-biography-boundaries.log"
+    },
+    {
+      "name": "lore",
+      "passed": 8,
+      "failed": 0,
+      "log": "suite-lore.log"
+    },
+    {
+      "name": "roriksheim",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-roriksheim.log"
+    },
+    {
+      "name": "kraehenmoor",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-kraehenmoor.log"
+    },
+    {
+      "name": "graue-weite",
+      "passed": 8,
+      "failed": 0,
+      "log": "suite-graue-weite.log"
+    },
+    {
+      "name": "life-status-final",
+      "passed": 7,
+      "failed": 0,
+      "log": "suite-life-status-final.log"
+    },
+    {
+      "name": "content-scope",
+      "passed": 8,
+      "failed": 0,
+      "log": "suite-content-scope.log"
+    },
+    {
+      "name": "leitheach",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-leitheach.log"
+    }
+  ],
+  "checks": [
+    "Scoped three-house generation --check",
+    "424 family graph hashes unchanged",
+    "424 family document hashes unchanged",
+    "422 unselected biography hashes unchanged",
+    "Scoped git diff --check"
+  ],
+  "note": "The initial life-status run had one obsolete document-revision expectation (7 versus the authorized biography revision8); its field-specific status assertions were retained and the corrected suite passed7/7."
+}

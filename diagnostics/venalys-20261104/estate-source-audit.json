@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "mode": "independent-read-only-file-source-alpha-audit",
+  "scope": "Five active Venalys estate runtime records, source jobs/results A/B, raw/tool originals, production/previews and contact sheet",
+  "runtimeModule": "Vorschau/Venalys/estate-data.mjs",
+  "runtimeImport": "Node 24 ESM file import",
+  "manifest": {
+    "path": "assets/estates/manifest.json",
+    "sha256": "51ddd0243d3e5583f85ba997ef0e39a17ff3d4cfdcfbb44a0d568ff091967d31",
+    "entries": 5
+  },
+  "sourceManifests": [
+    {
+      "path": "sources\\estates-a-jobs.json",
+      "sha256": "3df6e3a6c40947a204cd3159a1ae19a4ab7f7f5c12e7967424170e31eda61903"
+    },
+    {
+      "path": "sources\\estates-a-results.json",
+      "sha256": "bb40537b4a68380e08fdaf9ea4db927f66d72721305cc89e07dc65f95c2eb7f3"
+    },
+    {
+      "path": "sources\\estates-b-jobs.json",
+      "sha256": "ea7a3d4c138dd57fbf9174f43fb1c692f5414ba1243f002cd4a89630e4bab093"
+    },
+    {
+      "path": "sources\\estates-b-results.json",
+      "sha256": "483f8c677088ba5f5316937e128131af322c440d609b198ee6a2cf99262a0dde"
+    }
+  ],
+  "records": [
+    {
+      "id": "advena",
+      "source": "assets/estates/generated/advena.png",
+      "production": "assets/estates/production/advena.png",
+      "preview": "assets/estates/previews/advena.webp",
+      "sourceSha256": "2a5c0f90febb4d6fa3706bda41c6a567968ed58f73dbcd667d41289075dd52d7",
+      "productionSha256": "b47a553115547f7dbabf67616a9fd52dffa3741ccb19e95965b7a7b3faffe4a8",
+      "previewSha256": "c5e2b17264a1947f21d5447815aa045ca40e525a81e303346ea7d7443c1c16eb",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-f52ef9a6-3731-4414-a20f-c54d92947321.png",
+      "toolOriginalExists": true,
+      "toolOriginalSha256": "2a5c0f90febb4d6fa3706bda41c6a567968ed58f73dbcd667d41289075dd52d7",
+      "sourceMatchesToolOriginal": true,
+      "sourceMatchesResultHash": true,
+      "sourceMatchesManifestHash": true,
+      "productionMatchesManifestHash": true,
+      "previewMatchesManifestHash": true,
+      "fullPromptPresent": true,
+      "references": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "exists": true,
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "exists": true,
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "exists": true,
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f"
+        }
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "productionDimensions": [
+        1024,
+        1536
+      ],
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "sourceAlphaRange": [
+        0,
+        254
+      ],
+      "productionAlphaRange": [
+        0,
+        255
+      ],
+      "previewAlphaRange": [
+        0,
+        255
+      ],
+      "productionRgbUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "productionBoundingBox": [
+        22,
+        165,
+        997,
+        1407
+      ],
+      "productionMargins": {
+        "left": 22,
+        "top": 165,
+        "right": 27,
+        "bottom": 129
+      },
+      "productionTouchesCanvas": false,
+      "productionTransparentPixels": 738073,
+      "previewTransparentPixels": 405811,
+      "runtime": {
+        "id": "advena",
+        "image": "assets/estates/previews/advena.webp",
+        "fullsize": "assets/estates/production/advena.png",
+        "ready": true,
+        "imageMatchesPreview": true,
+        "fullsizeMatchesProduction": true
+      },
+      "visualReview": "Zwei junge aufrechte Ankömmlinge auf gleicher Höhe: schlichter Reisender mit Bündel links, wohlhabende Händlerin mit Kaftan, Turban, Stoffrolle und Beutel rechts. Gleichwertige freundliche Begegnung, keine starre soziale Unterschicht."
+    },
+    {
+      "id": "magnarier",
+      "source": "assets/estates/generated/magnarier.png",
+      "production": "assets/estates/production/magnarier.png",
+      "preview": "assets/estates/previews/magnarier.webp",
+      "sourceSha256": "803d1a04946211f69bd01dc4db5ed034b40d8ed6f15415297807c2c50bf85976",
+      "productionSha256": "7ee67759bd6227eb33187a7cb98873e4037e0cc8abe0132694ab02a566b4e2f0",
+      "previewSha256": "effb127c00bb192433dac4e350579b8c2e859e9ec7154095051f104698ac9a32",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-ee8d01ff-b26e-4e7c-9335-66e07fb9bc14.png",
+      "toolOriginalExists": true,
+      "toolOriginalSha256": "803d1a04946211f69bd01dc4db5ed034b40d8ed6f15415297807c2c50bf85976",
+      "sourceMatchesToolOriginal": true,
+      "sourceMatchesResultHash": true,
+      "sourceMatchesManifestHash": true,
+      "productionMatchesManifestHash": true,
+      "previewMatchesManifestHash": true,
+      "fullPromptPresent": true,
+      "references": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "exists": true,
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "exists": true,
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "exists": true,
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+          "exists": true,
+          "sha256": "65814ba161693a82179a5ee12b2bd9396283a9fc1ddbc48f11c4d007c1be9962"
+        }
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "productionDimensions": [
+        1024,
+        1536
+      ],
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "sourceAlphaRange": [
+        0,
+        254
+      ],
+      "productionAlphaRange": [
+        0,
+        255
+      ],
+      "previewAlphaRange": [
+        0,
+        255
+      ],
+      "productionRgbUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "productionBoundingBox": [
+        128,
+        107,
+        892,
+        1444
+      ],
+      "productionMargins": {
+        "left": 128,
+        "top": 107,
+        "right": 132,
+        "bottom": 92
+      },
+      "productionTouchesCanvas": false,
+      "productionTransparentPixels": 1026470,
+      "previewTransparentPixels": 570569,
+      "runtime": {
+        "id": "magnarier",
+        "image": "assets/estates/previews/magnarier.webp",
+        "fullsize": "assets/estates/production/magnarier.png",
+        "ready": true,
+        "imageMatchesPreview": true,
+        "fullsizeMatchesProduction": true
+      },
+      "visualReview": "Junge Frau im offenen Armet und Condottieri-Harnisch mit geradem Schwert; ritterliche Stellung klar, keine spanische Morion-Kopie."
+    },
+    {
+      "id": "mercantier",
+      "source": "assets/estates/generated/mercantier.png",
+      "production": "assets/estates/production/mercantier.png",
+      "preview": "assets/estates/previews/mercantier.webp",
+      "sourceSha256": "c2a2ff84746c15a56a5c8cdd2a7ed39f228e83a5ee8054da16d8ce62855dbf58",
+      "productionSha256": "1c5eeea711f6c9f369ef408fec1868583508972cb8a66a74667963863e6ba3ac",
+      "previewSha256": "132b804bdfeeff527ca1840997d5abb523cb30d993023b7fefa6e9868ea9fe87",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-df671676-95f6-4160-b1d9-17d3a75797f1.png",
+      "toolOriginalExists": true,
+      "toolOriginalSha256": "c2a2ff84746c15a56a5c8cdd2a7ed39f228e83a5ee8054da16d8ce62855dbf58",
+      "sourceMatchesToolOriginal": true,
+      "sourceMatchesResultHash": true,
+      "sourceMatchesManifestHash": true,
+      "productionMatchesManifestHash": true,
+      "previewMatchesManifestHash": true,
+      "fullPromptPresent": true,
+      "references": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "exists": true,
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "exists": true,
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "exists": true,
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+          "exists": true,
+          "sha256": "65814ba161693a82179a5ee12b2bd9396283a9fc1ddbc48f11c4d007c1be9962"
+        }
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "productionDimensions": [
+        1024,
+        1536
+      ],
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "sourceAlphaRange": [
+        0,
+        254
+      ],
+      "productionAlphaRange": [
+        0,
+        255
+      ],
+      "previewAlphaRange": [
+        0,
+        255
+      ],
+      "productionRgbUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "productionBoundingBox": [
+        55,
+        142,
+        875,
+        1440
+      ],
+      "productionMargins": {
+        "left": 55,
+        "top": 142,
+        "right": 149,
+        "bottom": 96
+      },
+      "productionTouchesCanvas": false,
+      "productionTransparentPixels": 975242,
+      "previewTransparentPixels": 542238,
+      "runtime": {
+        "id": "mercantier",
+        "image": "assets/estates/previews/mercantier.webp",
+        "fullsize": "assets/estates/production/mercantier.png",
+        "ready": true,
+        "imageMatchesPreview": true,
+        "fullsizeMatchesProduction": true
+      },
+      "visualReview": "Junger wohlhabender Bürger mit weichem Hut, Handelsbuch und Beutel; kein Adelssymbol oder Schwert."
+    },
+    {
+      "id": "patrizier",
+      "source": "assets/estates/generated/patrizier.png",
+      "production": "assets/estates/production/patrizier.png",
+      "preview": "assets/estates/previews/patrizier.webp",
+      "sourceSha256": "e6510c1c786093f307d5fe905ebc4408ff4b45bd293945cb202c38ce26475d44",
+      "productionSha256": "8e085cb594acf3523c543fcc72b10108003351dd56a519f3db1e030168e76185",
+      "previewSha256": "a7067bf7e448dda47a188b5ddefd6d35db394ccc96e0aca8578c17e36added07",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-26cef19c-8836-45d9-8999-6794ce00a00e.png",
+      "toolOriginalExists": true,
+      "toolOriginalSha256": "e6510c1c786093f307d5fe905ebc4408ff4b45bd293945cb202c38ce26475d44",
+      "sourceMatchesToolOriginal": true,
+      "sourceMatchesResultHash": true,
+      "sourceMatchesManifestHash": true,
+      "productionMatchesManifestHash": true,
+      "previewMatchesManifestHash": true,
+      "fullPromptPresent": true,
+      "references": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "exists": true,
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "exists": true,
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "exists": true,
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/mercantrier.png",
+          "exists": true,
+          "sha256": "65814ba161693a82179a5ee12b2bd9396283a9fc1ddbc48f11c4d007c1be9962"
+        }
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "productionDimensions": [
+        1024,
+        1536
+      ],
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "sourceAlphaRange": [
+        0,
+        254
+      ],
+      "productionAlphaRange": [
+        0,
+        255
+      ],
+      "previewAlphaRange": [
+        0,
+        255
+      ],
+      "productionRgbUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "productionBoundingBox": [
+        134,
+        136,
+        858,
+        1456
+      ],
+      "productionMargins": {
+        "left": 134,
+        "top": 136,
+        "right": 166,
+        "bottom": 80
+      },
+      "productionTouchesCanvas": false,
+      "productionTransparentPixels": 916896,
+      "previewTransparentPixels": 510426,
+      "runtime": {
+        "id": "patrizier",
+        "image": "assets/estates/previews/patrizier.webp",
+        "fullsize": "assets/estates/production/patrizier.png",
+        "ready": true,
+        "imageMatchesPreview": true,
+        "fullsizeMatchesProduction": true
+      },
+      "visualReview": "Junger Würdenträger in langem frühitalienischem Mantel, italienischer Kappe, Siegelbrief und Ring; kein erfundenes Regierungsamt."
+    },
+    {
+      "id": "plebejer",
+      "source": "assets/estates/generated/plebejer.png",
+      "production": "assets/estates/production/plebejer.png",
+      "preview": "assets/estates/previews/plebejer.webp",
+      "sourceSha256": "04a86c948531f35125bebea75331ab4db3f4fbed5c37fd5f083af9a789dda30b",
+      "productionSha256": "1df8d4bb079b819185f7b61a1f8bd8786a5059adad839237902a21da032d736e",
+      "previewSha256": "1c6b3a5f4d71c522dc55fb77fa8158918233d3fed44a82d8fa22e82d01344f5b",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-292a2387-f048-474a-81f2-addc25399743.png",
+      "toolOriginalExists": true,
+      "toolOriginalSha256": "04a86c948531f35125bebea75331ab4db3f4fbed5c37fd5f083af9a789dda30b",
+      "sourceMatchesToolOriginal": true,
+      "sourceMatchesResultHash": true,
+      "sourceMatchesManifestHash": true,
+      "productionMatchesManifestHash": true,
+      "previewMatchesManifestHash": true,
+      "fullPromptPresent": true,
+      "references": [
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/illustris.png",
+          "exists": true,
+          "sha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/patrizier.png",
+          "exists": true,
+          "sha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484"
+        },
+        {
+          "path": "E:/Aleria/Vorschau/Leukonia/assets/castes/production/magnarier.png",
+          "exists": true,
+          "sha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f"
+        }
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "productionDimensions": [
+        1024,
+        1536
+      ],
+      "previewDimensions": [
+        768,
+        1152
+      ],
+      "sourceAlphaRange": [
+        0,
+        254
+      ],
+      "productionAlphaRange": [
+        0,
+        255
+      ],
+      "previewAlphaRange": [
+        0,
+        255
+      ],
+      "productionRgbUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "productionBoundingBox": [
+        49,
+        61,
+        954,
+        1503
+      ],
+      "productionMargins": {
+        "left": 49,
+        "top": 61,
+        "right": 70,
+        "bottom": 33
+      },
+      "productionTouchesCanvas": false,
+      "productionTransparentPixels": 787161,
+      "previewTransparentPixels": 434410,
+      "runtime": {
+        "id": "plebejer",
+        "image": "assets/estates/previews/plebejer.webp",
+        "fullsize": "assets/estates/production/plebejer.png",
+        "ready": true,
+        "imageMatchesPreview": true,
+        "fullsizeMatchesProduction": true
+      },
+      "visualReview": "Junge freundliche Handwerkerin mit Kopftuch und übergroßem Werkzeugkorb; einfache Bürgerin ohne Elends- oder Demütigungsdarstellung."
+    }
+  ],
+  "checks": {
+    "runtimeCountFive": true,
+    "sourceManifestCountFive": true,
+    "toolOriginalsByteIdentical": true,
+    "allRecordedHashesMatch": true,
+    "runtimePathsMatch": true,
+    "fullPromptsAndReferencesPresent": true,
+    "productionRgbUnchanged": true,
+    "noTransparentGapsExposed": true,
+    "allCorePixelsOpaque": true,
+    "productionAndPreviewsTransparent": true,
+    "noProductionCanvasTouch": true
+  },
+  "passed": true,
+  "visualContactSheet": {
+    "path": "diagnostics/venalys-20261104/estates/contact-sheet.jpg",
+    "viewed": true,
+    "review": "Alle fünf Motive im selben flachen warmen Comicstil mit großen ausdrucksvollen Köpfen, dicken braunen Konturen und rundmenschlichen Ohren. Kleidung und Requisiten unterscheiden Adel, Bürger und Handwerk ohne Solestia-Kopie. Die Advena bleiben eine gemischte Herkunftsgruppe mit gleichwertiger Darstellung. Köpfe, Schuhe und Requisiten vollständig sichtbar; keine äußeren Schatten oder Farbhöfe in den Produktionskontakten."
+  },
+  "changes": "Only this audit report written; no image/source/manifest/runtime or Git changes.",
+  "browserPass": false
+}

@@ -1,3 +1,5 @@
+import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
+
 export function collectGroupScenes(sections = []) {
   const found = new Map();
   for (const section of sections) for (const entry of section.entries || []) for (const [pageIndex, page] of (entry.pages || []).entries()) {
@@ -19,7 +21,7 @@ export function projectGroupScene(scene, comments = [], { calendar, resolveStart
   const time = seconds == null ? '' : [Math.floor(seconds / 3600), Math.floor(seconds % 3600 / 60)].map(value => String(value).padStart(2, '0')).join(':');
   return { ...scene, date, time, ordinal: date ? calendar.ordinal(date) : null,
     dateLabel: date ? calendar.format(date) : 'Datum offen', dayLabel: date ? calendar.playDayLabel(date) : 'Play-Tag offen',
-    commentCount: comments.length, phase: [...comments].reverse().find(comment => comment.sceneTimeEvent?.title)?.sceneTimeEvent.title || scene.phase };
+    commentCount: comments.filter(comment => !isSilentSceneRegeneration(comment)).length, phase: [...comments].reverse().find(comment => comment.sceneTimeEvent?.title)?.sceneTimeEvent.title || scene.phase };
 }
 
 export function classifyGroupScene(scene, active, calendar, worldDate) {

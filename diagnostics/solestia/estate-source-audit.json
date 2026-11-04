@@ -1,0 +1,908 @@
+{
+  "schemaVersion": 1,
+  "country": "Solestia",
+  "checkedAtUtc": "2026-11-04T03:09:06.240041+00:00",
+  "scope": "Independent estate raw-original, pipeline hash, alpha-only RGB preservation and runtime selection audit; no images, manifests or source files changed.",
+  "expectedCount": 9,
+  "sourceCount": 9,
+  "manifestCount": 9,
+  "runtimeCount": 9,
+  "passed": true,
+  "issues": [],
+  "notes": [
+    {
+      "assetStem": "conde",
+      "kind": "tight-but-free-production-framing",
+      "minimumMarginPixels": 23,
+      "note": "No nontransparent production pixel touches canvas; root separately inspected complete silhouettes."
+    },
+    {
+      "assetStem": "hidalgo",
+      "kind": "tight-but-free-production-framing",
+      "minimumMarginPixels": 10,
+      "note": "No nontransparent production pixel touches canvas; root separately inspected complete silhouettes."
+    },
+    {
+      "assetStem": "senor",
+      "kind": "tight-but-free-production-framing",
+      "minimumMarginPixels": 6,
+      "note": "No nontransparent production pixel touches canvas; root separately inspected complete silhouettes."
+    },
+    {
+      "assetStem": "caballero",
+      "kind": "tight-but-free-production-framing",
+      "minimumMarginPixels": 12,
+      "note": "No nontransparent production pixel touches canvas; root separately inspected complete silhouettes."
+    },
+    {
+      "assetStem": "escudero",
+      "kind": "sha-computed-from-originals",
+      "note": "Historical result entry has no SHA field; tooloriginal and workspace raw were compared directly, and computed digest matches pipeline sourceSha256."
+    },
+    {
+      "assetStem": "paje",
+      "kind": "sha-computed-from-originals",
+      "note": "Historical result entry has no SHA field; tooloriginal and workspace raw were compared directly, and computed digest matches pipeline sourceSha256."
+    },
+    {
+      "assetStem": "pechero",
+      "kind": "sha-computed-from-originals",
+      "note": "Historical result entry has no SHA field; tooloriginal and workspace raw were compared directly, and computed digest matches pipeline sourceSha256."
+    }
+  ],
+  "assets": [
+    {
+      "id": "estate-sobira",
+      "assetStem": "sobira",
+      "raw": "assets/estates/generated/sobira.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-44ffc66f-0991-4938-8f03-726af5da44fc.png",
+      "resultManifest": "sources/estates-a-results.json",
+      "jobManifest": "sources/estates-a-jobs.json",
+      "jobId": "estate-sobira",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "fc8d9437d5e1605c9a97bd089dc9ec3b5fb715baeb26dd33d2c16e7640fe1746",
+      "toolOriginalSha256": "fc8d9437d5e1605c9a97bd089dc9ec3b5fb715baeb26dd33d2c16e7640fe1746",
+      "resultRecordSha256": "fc8d9437d5e1605c9a97bd089dc9ec3b5fb715baeb26dd33d2c16e7640fe1746",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/sobira.png",
+        "preview": "assets/estates/previews/sobira.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          27,
+          46,
+          997,
+          1484
+        ],
+        "productionMargins": {
+          "left": 27,
+          "top": 46,
+          "right": 27,
+          "bottom": 52
+        },
+        "minimumProductionMarginPixels": 27,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "sobira",
+          "name": "Sobir?",
+          "fullsize": "assets/estates/production/sobira.png",
+          "image": "assets/estates/previews/sobira.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-conde",
+      "assetStem": "conde",
+      "raw": "assets/estates/generated/conde.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-442cc609-3e0f-4373-aef0-dfea19ea7038.png",
+      "resultManifest": "sources/estates-a-results.json",
+      "jobManifest": "sources/estates-a-jobs.json",
+      "jobId": "estate-conde",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "258c2543359e1367433da23d22282b5ed3dacc4335d84f5f048e5a8be12d15ba",
+      "toolOriginalSha256": "258c2543359e1367433da23d22282b5ed3dacc4335d84f5f048e5a8be12d15ba",
+      "resultRecordSha256": "258c2543359e1367433da23d22282b5ed3dacc4335d84f5f048e5a8be12d15ba",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/conde.png",
+        "preview": "assets/estates/previews/conde.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          25,
+          44,
+          989,
+          1513
+        ],
+        "productionMargins": {
+          "left": 25,
+          "top": 44,
+          "right": 35,
+          "bottom": 23
+        },
+        "minimumProductionMarginPixels": 23,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "conde",
+          "name": "Conde",
+          "fullsize": "assets/estates/production/conde.png",
+          "image": "assets/estates/previews/conde.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-regulo",
+      "assetStem": "regulo",
+      "raw": "assets/estates/generated/regulo.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-7b33a935-dd14-46ed-ad0c-0f18d56bd156.png",
+      "resultManifest": "sources/estates-a-results.json",
+      "jobManifest": "sources/estates-a-jobs.json",
+      "jobId": "estate-regulo",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "8c32a6246381adf312fef58138fb35470b8661386f9785859fd47ef53bf43513",
+      "toolOriginalSha256": "8c32a6246381adf312fef58138fb35470b8661386f9785859fd47ef53bf43513",
+      "resultRecordSha256": "8c32a6246381adf312fef58138fb35470b8661386f9785859fd47ef53bf43513",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/regulo.png",
+        "preview": "assets/estates/previews/regulo.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          40,
+          59,
+          937,
+          1512
+        ],
+        "productionMargins": {
+          "left": 40,
+          "top": 59,
+          "right": 87,
+          "bottom": 24
+        },
+        "minimumProductionMarginPixels": 24,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "regulo",
+          "name": "Regulo",
+          "fullsize": "assets/estates/production/regulo.png",
+          "image": "assets/estates/previews/regulo.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-hidalgo",
+      "assetStem": "hidalgo",
+      "raw": "assets/estates/generated/hidalgo.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-4fa396e8-9487-4968-9f88-0d1bf2d7fe42.png",
+      "resultManifest": "sources/estates-b-results.json",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-hidalgo",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "4de6c42195466d016009e98930b75d430bd2de6132773de6e807202e9b149589",
+      "toolOriginalSha256": "4de6c42195466d016009e98930b75d430bd2de6132773de6e807202e9b149589",
+      "resultRecordSha256": "4de6c42195466d016009e98930b75d430bd2de6132773de6e807202e9b149589",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/hidalgo.png",
+        "preview": "assets/estates/previews/hidalgo.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          29,
+          18,
+          999,
+          1526
+        ],
+        "productionMargins": {
+          "left": 29,
+          "top": 18,
+          "right": 25,
+          "bottom": 10
+        },
+        "minimumProductionMarginPixels": 10,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "hidalgo",
+          "name": "Hidalgo",
+          "fullsize": "assets/estates/production/hidalgo.png",
+          "image": "assets/estates/previews/hidalgo.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-senor",
+      "assetStem": "senor",
+      "raw": "assets/estates/generated/senor.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-10b802dc-f696-43e3-b4df-6839bf9c5e13.png",
+      "resultManifest": "sources/estates-b-results.json",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-senor",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "158504ed508ba44bff22a966388636165e74fc27899dde21fc2143d334bdab0f",
+      "toolOriginalSha256": "158504ed508ba44bff22a966388636165e74fc27899dde21fc2143d334bdab0f",
+      "resultRecordSha256": "158504ed508ba44bff22a966388636165e74fc27899dde21fc2143d334bdab0f",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/senor.png",
+        "preview": "assets/estates/previews/senor.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          55,
+          18,
+          981,
+          1530
+        ],
+        "productionMargins": {
+          "left": 55,
+          "top": 18,
+          "right": 43,
+          "bottom": 6
+        },
+        "minimumProductionMarginPixels": 6,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "senor",
+          "name": "Se?or",
+          "fullsize": "assets/estates/production/senor.png",
+          "image": "assets/estates/previews/senor.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-caballero",
+      "assetStem": "caballero",
+      "raw": "assets/estates/generated/caballero.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-6cab1b61-6f0d-49cd-a736-6ae36c887f1f.png",
+      "resultManifest": "sources/estates-b-results.json",
+      "jobManifest": "sources/estates-b-jobs.json",
+      "jobId": "estate-caballero",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "14ece069aab46a67098284a1336857af8a2f3214a40d6d7284c8223444eedffb",
+      "toolOriginalSha256": "14ece069aab46a67098284a1336857af8a2f3214a40d6d7284c8223444eedffb",
+      "resultRecordSha256": "14ece069aab46a67098284a1336857af8a2f3214a40d6d7284c8223444eedffb",
+      "sha256MatchesResultRecord": true,
+      "matchingJobCount": 1,
+      "referencesCount": 3,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/caballero.png",
+        "preview": "assets/estates/previews/caballero.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          44,
+          13,
+          805,
+          1524
+        ],
+        "productionMargins": {
+          "left": 44,
+          "top": 13,
+          "right": 219,
+          "bottom": 12
+        },
+        "minimumProductionMarginPixels": 12,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "caballero",
+          "name": "Caballero",
+          "fullsize": "assets/estates/production/caballero.png",
+          "image": "assets/estates/previews/caballero.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-escudero",
+      "assetStem": "escudero",
+      "raw": "assets/estates/generated/escudero.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-61395dc1-56ac-4a2f-9f5e-1e44efe00f3c.png",
+      "resultManifest": "sources/estates-root-results.json",
+      "jobManifest": "sources/estates-root-jobs.json",
+      "jobId": "estate-escudero",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "bd3eb9b788ab3752ad9989a0d50d6c8aa6a9d4bea56bfcc73f184b6529ac1bf8",
+      "toolOriginalSha256": "bd3eb9b788ab3752ad9989a0d50d6c8aa6a9d4bea56bfcc73f184b6529ac1bf8",
+      "resultRecordSha256": null,
+      "sha256MatchesResultRecord": null,
+      "matchingJobCount": 1,
+      "referencesCount": 1,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/escudero.png",
+        "preview": "assets/estates/previews/escudero.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          77,
+          75,
+          976,
+          1503
+        ],
+        "productionMargins": {
+          "left": 77,
+          "top": 75,
+          "right": 48,
+          "bottom": 33
+        },
+        "minimumProductionMarginPixels": 33,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "escudero",
+          "name": "Escudero",
+          "fullsize": "assets/estates/production/escudero.png",
+          "image": "assets/estates/previews/escudero.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-paje",
+      "assetStem": "paje",
+      "raw": "assets/estates/generated/paje.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-c743415a-9717-4678-b58d-93e24fd72ada.png",
+      "resultManifest": "sources/estates-root-results.json",
+      "jobManifest": "sources/estates-root-jobs.json",
+      "jobId": "estate-paje",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "9a9243273eb8e26f4b0c16c1ef150c4a6ebddf20d982fcbe4c7ffd1738228ef2",
+      "toolOriginalSha256": "9a9243273eb8e26f4b0c16c1ef150c4a6ebddf20d982fcbe4c7ffd1738228ef2",
+      "resultRecordSha256": null,
+      "sha256MatchesResultRecord": null,
+      "matchingJobCount": 1,
+      "referencesCount": 1,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/paje.png",
+        "preview": "assets/estates/previews/paje.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          75,
+          109,
+          993,
+          1478
+        ],
+        "productionMargins": {
+          "left": 75,
+          "top": 109,
+          "right": 31,
+          "bottom": 58
+        },
+        "minimumProductionMarginPixels": 31,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "paje",
+          "name": "Paje",
+          "fullsize": "assets/estates/production/paje.png",
+          "image": "assets/estates/previews/paje.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    },
+    {
+      "id": "estate-pechero",
+      "assetStem": "pechero",
+      "raw": "assets/estates/generated/pechero.png",
+      "toolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-48490d02-f501-4d5d-a44e-39b51c50db59.png",
+      "resultManifest": "sources/estates-root-results.json",
+      "jobManifest": "sources/estates-root-jobs.json",
+      "jobId": "estate-pechero",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "b90025ab8ebc9148d45af0b100d98acbc29c4c8ad75c03f57fbe76fb7033bc9a",
+      "toolOriginalSha256": "b90025ab8ebc9148d45af0b100d98acbc29c4c8ad75c03f57fbe76fb7033bc9a",
+      "resultRecordSha256": null,
+      "sha256MatchesResultRecord": null,
+      "matchingJobCount": 1,
+      "referencesCount": 1,
+      "referenceFilesExist": true,
+      "manifestEntryCount": 1,
+      "pipeline": {
+        "production": "assets/estates/production/pechero.png",
+        "preview": "assets/estates/previews/pechero.webp",
+        "hashChecks": {
+          "source": true,
+          "production": true,
+          "preview": true,
+          "receiptSourceMatchesRaw": true
+        },
+        "manifestProof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "alphaAudit": {
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "productionDimensions": [
+          1024,
+          1536
+        ],
+        "previewDimensions": [
+          768,
+          1152
+        ],
+        "sourceAlphaRange": [
+          0,
+          254
+        ],
+        "productionAlphaRange": [
+          0,
+          255
+        ],
+        "previewAlphaRange": [
+          0,
+          255
+        ],
+        "rgbBytesUnchanged": true,
+        "originalTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "productionBoundingBox": [
+          29,
+          92,
+          980,
+          1507
+        ],
+        "productionMargins": {
+          "left": 29,
+          "top": 92,
+          "right": 44,
+          "bottom": 29
+        },
+        "minimumProductionMarginPixels": 29,
+        "touchesProductionCanvas": false,
+        "manifestProofMatchesIndependentChecks": true,
+        "manifestDimensionsMatch": true
+      },
+      "runtime": {
+        "matchingCount": 1,
+        "selection": {
+          "id": "pechero",
+          "name": "Pechero",
+          "fullsize": "assets/estates/production/pechero.png",
+          "image": "assets/estates/previews/pechero.webp",
+          "ready": true
+        },
+        "matchesReceipt": true
+      }
+    }
+  ],
+  "duplicateContents": [],
+  "protectedFileCount": 37,
+  "protectedFilesChangedDuringAudit": [],
+  "mainSourceAuditPreserved": true,
+  "auditWrites": [
+    "diagnostics/solestia/estate-source-audit.json"
+  ]
+}

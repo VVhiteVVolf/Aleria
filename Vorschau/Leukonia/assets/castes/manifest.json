@@ -1,0 +1,630 @@
+{
+  "schema": "aleria.leukonia.castes",
+  "version": 1,
+  "entries": [
+    {
+      "id": "illustris",
+      "source": "assets/castes/generated/illustris.png",
+      "sourceSha256": "65ea719f8caf3d0540dda58522d0b4c587233a94a7b36b14a27d401cf034718d",
+      "production": "assets/castes/production/illustris.png",
+      "productionSha256": "8803da6050bc5bd984d7ac27ecdb00eb1682acd5e8895d41fb1e059d9dfd0883",
+      "preview": "assets/castes/previews/illustris.webp",
+      "previewSha256": "98b408a0f78dbe44361b8405065d89fe9c0359ae981ca3545afc6d19a88f8f71",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          33,
+          0,
+          1010,
+          1504
+        ],
+        "margins": {
+          "left": 33,
+          "top": 0,
+          "right": 14,
+          "bottom": 32
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 606985,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 965879,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          36,
+          75,
+          1005,
+          1496
+        ],
+        "margins": {
+          "left": 36,
+          "top": 75,
+          "right": 19,
+          "bottom": 40
+        },
+        "minimumMarginPixels": 19,
+        "touchesCanvas": false,
+        "transparentPixels": 628374,
+        "opaquePixels": 939881,
+        "partialAlphaPixels": 4609,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          25,
+          54,
+          756,
+          1124
+        ],
+        "margins": {
+          "left": 25,
+          "top": 54,
+          "right": 12,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 345647,
+        "opaquePixels": 521169,
+        "partialAlphaPixels": 17920,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "magnarier",
+      "source": "assets/castes/generated/magnarier.png",
+      "sourceSha256": "15b171268f456d3aa9c74ab274791f58c52d66ecc72af5387fed28bce350d0fe",
+      "production": "assets/castes/production/magnarier.png",
+      "productionSha256": "97a7c761f13c9cd205a12115a5259389edf275b08a95955e297afb7ef03b6b8f",
+      "preview": "assets/castes/previews/magnarier.webp",
+      "previewSha256": "b1622b39113aef892882144d36e88951cbd4a127c1f9290c81d7ce118ed1d610",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1004,
+          1518
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 20,
+          "bottom": 18
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 758444,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 814420,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          51,
+          36,
+          998,
+          1508
+        ],
+        "margins": {
+          "left": 51,
+          "top": 36,
+          "right": 26,
+          "bottom": 28
+        },
+        "minimumMarginPixels": 26,
+        "touchesCanvas": false,
+        "transparentPixels": 782861,
+        "opaquePixels": 785140,
+        "partialAlphaPixels": 4863,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          36,
+          25,
+          751,
+          1133
+        ],
+        "margins": {
+          "left": 36,
+          "top": 25,
+          "right": 17,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 17,
+        "touchesCanvas": false,
+        "transparentPixels": 431325,
+        "opaquePixels": 432964,
+        "partialAlphaPixels": 20447,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "mercantrier",
+      "source": "assets/castes/generated/mercantrier.png",
+      "sourceSha256": "917f57daa98b19532a4e315763889bc95a6a76b5b55b3855520d98d4cc29f81d",
+      "production": "assets/castes/production/mercantrier.png",
+      "productionSha256": "65814ba161693a82179a5ee12b2bd9396283a9fc1ddbc48f11c4d007c1be9962",
+      "preview": "assets/castes/previews/mercantrier.webp",
+      "previewSha256": "7d9685fd761df6faf9829ffe4eaf76524c0fb583e4f0ee0495003684f2433586",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1023,
+          1520
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 1,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 823011,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 749853,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          118,
+          25,
+          879,
+          1512
+        ],
+        "margins": {
+          "left": 118,
+          "top": 25,
+          "right": 145,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 24,
+        "touchesCanvas": false,
+        "transparentPixels": 840179,
+        "opaquePixels": 729239,
+        "partialAlphaPixels": 3446,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          86,
+          16,
+          662,
+          1136
+        ],
+        "margins": {
+          "left": 86,
+          "top": 16,
+          "right": 106,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 466163,
+        "opaquePixels": 404055,
+        "partialAlphaPixels": 14518,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "patrizier",
+      "source": "assets/castes/generated/patrizier.png",
+      "sourceSha256": "a7e27f53915088d230bb722fa553aacf2cf87148b63a3083d1c832a2f2683d1f",
+      "production": "assets/castes/production/patrizier.png",
+      "productionSha256": "3b25d12e54a6acc725ec871232e44640db051c4c410baa3c4210bf1c66bdc484",
+      "preview": "assets/castes/previews/patrizier.webp",
+      "previewSha256": "9d2005995af46483c53a07c90df0b8df52f079d19225b22b64c05b76331fd32b",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1010,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 14,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 691072,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 881792,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          44,
+          52,
+          947,
+          1513
+        ],
+        "margins": {
+          "left": 44,
+          "top": 52,
+          "right": 77,
+          "bottom": 23
+        },
+        "minimumMarginPixels": 23,
+        "touchesCanvas": false,
+        "transparentPixels": 713995,
+        "opaquePixels": 854848,
+        "partialAlphaPixels": 4021,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          31,
+          37,
+          713,
+          1136
+        ],
+        "margins": {
+          "left": 31,
+          "top": 37,
+          "right": 55,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 395746,
+        "opaquePixels": 475361,
+        "partialAlphaPixels": 13629,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "plebejer",
+      "source": "assets/castes/generated/plebejer.png",
+      "sourceSha256": "a02323e27a4b34bd208f4d403f207f7dcac50a4c469a1f43f5ba956cb4896771",
+      "production": "assets/castes/production/plebejer.png",
+      "productionSha256": "52b981586b5a8b3afb5b233bbb9af8e25ac69ceab7159d4345ced3fcdda56e4b",
+      "preview": "assets/castes/previews/plebejer.webp",
+      "previewSha256": "3f2fd3be1f1a4a042d75cd9e921b59e13826b979dac3e6c435ffd243c2e25ead",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          19,
+          1011,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 19,
+          "right": 13,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 821307,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 751557,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          17,
+          92,
+          1008,
+          1488
+        ],
+        "margins": {
+          "left": 17,
+          "top": 92,
+          "right": 16,
+          "bottom": 48
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 846761,
+        "opaquePixels": 721538,
+        "partialAlphaPixels": 4565,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          10,
+          67,
+          758,
+          1118
+        ],
+        "margins": {
+          "left": 10,
+          "top": 67,
+          "right": 10,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 468510,
+        "opaquePixels": 398599,
+        "partialAlphaPixels": 17627,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "servi",
+      "source": "assets/castes/generated/servi.png",
+      "sourceSha256": "5678e310e20e7f3b410c1dcfa3cee4b8c30da2dcc72237e1eea89e26aad5efda",
+      "production": "assets/castes/production/servi.png",
+      "productionSha256": "f0697733fda70c341492e0e38fbb5633069d46faa6e9457435e0536fa0a6e273",
+      "preview": "assets/castes/previews/servi.webp",
+      "previewSha256": "3a33591d93cd2d945c80eff26fb22df1372f7d2197faf5979aab4499c9ab480c",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          19,
+          1023,
+          1522
+        ],
+        "margins": {
+          "left": 0,
+          "top": 19,
+          "right": 1,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 798915,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 773949,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          69,
+          69,
+          981,
+          1512
+        ],
+        "margins": {
+          "left": 69,
+          "top": 69,
+          "right": 43,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 24,
+        "touchesCanvas": false,
+        "transparentPixels": 828006,
+        "opaquePixels": 740182,
+        "partialAlphaPixels": 4676,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          49,
+          49,
+          738,
+          1136
+        ],
+        "margins": {
+          "left": 49,
+          "top": 49,
+          "right": 30,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 458398,
+        "opaquePixels": 409507,
+        "partialAlphaPixels": 16831,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

@@ -1,0 +1,1544 @@
+{
+  "houses": [
+    {
+      "id": "house-afronia",
+      "name": "Haus Afronia",
+      "crest": "assets/originals/previews/afronia.webp",
+      "fullsize": "assets/originals/afronia.png",
+      "original": "assets/originals/afronia.png",
+      "motif": "Ein blauer Adler mit ausgebreiteten Flügeln auf goldenem Feld.",
+      "palette": [
+        "Blau",
+        "Gold"
+      ],
+      "frame": "Blau-goldener Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-avidius",
+      "name": "Haus Avidius",
+      "crest": "assets/originals/previews/avidius.webp",
+      "fullsize": "assets/originals/avidius.png",
+      "original": "assets/originals/avidius.png",
+      "motif": "Eine stehende Frau in antikem Gewand mit gesenktem Schwert und rundem goldfarbenem Symbol auf blauem Feld.",
+      "palette": [
+        "Blau",
+        "Kupfer",
+        "Elfenbein"
+      ],
+      "frame": "Kupfer- und blaufarbener Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-bruttia",
+      "name": "Haus Bruttia",
+      "crest": "assets/originals/previews/bruttia.webp",
+      "fullsize": "assets/originals/bruttia.png",
+      "original": "assets/originals/bruttia.png",
+      "motif": "Ein schwarzer springender Hase im Seitenprofil auf goldenem Feld.",
+      "palette": [
+        "Schwarz",
+        "Gold"
+      ],
+      "frame": "Schwarz-goldener Mäanderrahmen",
+      "note": "Bruttia ist ein Agrarhaus. Die Familie gilt als bodenständig und fleißig.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-caepo",
+      "name": "Haus Caepo",
+      "crest": "assets/originals/previews/caepo.webp",
+      "fullsize": "assets/originals/caepo.png",
+      "original": "assets/originals/caepo.png",
+      "motif": "Ein steigendes schwarzes Pferd zwischen Lorbeerzweigen auf türkisfarbenem Feld.",
+      "palette": [
+        "Schwarz",
+        "Türkis",
+        "Gold"
+      ],
+      "frame": "Schwarz-goldener Rahmen mit Lorbeerornamenten",
+      "note": "Haus Caepo stellt die besten Pferdezüchter des Landes.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-cerunia",
+      "name": "Haus Cerunia",
+      "crest": "assets/originals/previews/cerunia.webp",
+      "fullsize": "assets/originals/cerunia.png",
+      "original": "assets/originals/cerunia.png",
+      "motif": "Ein goldener Dreizack zwischen silberweißen Pflanzenranken auf dunkelblauem Feld.",
+      "palette": [
+        "Dunkelblau",
+        "Gold",
+        "Silberweiß"
+      ],
+      "frame": "Blau-schwarzer Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-faleria",
+      "name": "Haus Faleria",
+      "crest": "assets/originals/previews/faleria.webp",
+      "fullsize": "assets/originals/faleria.png",
+      "original": "assets/originals/faleria.png",
+      "motif": "Eine silberweiße Taube mit ausgebreiteten Flügeln zwischen Lorbeerzweigen auf hellblauem Feld.",
+      "palette": [
+        "Hellblau",
+        "Silberweiß"
+      ],
+      "frame": "Silberweißer Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-flamen",
+      "name": "Haus Flamen",
+      "crest": "assets/originals/previews/flamen.webp",
+      "fullsize": "assets/originals/flamen.png",
+      "original": "assets/originals/flamen.png",
+      "motif": "Ein einzelner schwarzer Baum mit breiter Krone auf goldenem Feld.",
+      "palette": [
+        "Schwarz",
+        "Gold"
+      ],
+      "frame": "Schwarz-goldener Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-maborel",
+      "name": "Haus Maborel",
+      "crest": "assets/originals/previews/maborel.webp",
+      "fullsize": "assets/originals/maborel.png",
+      "original": "assets/originals/maborel.png",
+      "motif": "Eine Schildkröte in Aufsicht mit olivgrünem Panzer und elfenbeinfarbenen Gliedmaßen auf dunklem Feld.",
+      "palette": [
+        "Dunkelgrün",
+        "Olivgrün",
+        "Elfenbein"
+      ],
+      "frame": "Brauner Rahmen mit elfenbeinfarbenem Mäandermuster",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-mede",
+      "name": "Haus Mede",
+      "crest": "assets/originals/previews/mede.webp",
+      "fullsize": "assets/originals/mede.png",
+      "original": "assets/originals/mede.png",
+      "motif": "Ein goldener aufrechter Olivenzweig mit seitlichen Zweigen auf petrolfarbenem Feld.",
+      "palette": [
+        "Petrol",
+        "Gold",
+        "Elfenbein"
+      ],
+      "frame": "Goldener Mäanderrahmen",
+      "culture": "argentum",
+      "rank": "Kaiserliche Linie",
+      "caste": "Illustris",
+      "imperialDomain": true,
+      "sourceSeat": "ort-15",
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-pullo",
+      "name": "Haus Pullo",
+      "crest": "assets/originals/previews/pullo.webp",
+      "fullsize": "assets/originals/pullo.png",
+      "original": "assets/originals/pullo.png",
+      "motif": "Ein violetter Delfin über violetten Lorbeerzweigen auf goldenem Feld.",
+      "palette": [
+        "Violett",
+        "Gold",
+        "Elfenbein"
+      ],
+      "frame": "Violett-elfenbeinfarbener Mäanderrahmen",
+      "note": "Haus Pullo ist der Schatten der Mede, ihnen loyal verbunden und stets bereit. Spionage und Geheimhaltung gehören zu seinem Profil.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-rinia",
+      "name": "Haus Rinia",
+      "crest": "assets/originals/previews/rinia.webp",
+      "fullsize": "assets/originals/rinia.png",
+      "original": "assets/originals/rinia.png",
+      "motif": "Ein silberner Dreizack zwischen silbernen Lorbeerzweigen auf petrolfarbenem Feld.",
+      "palette": [
+        "Petrol",
+        "Schwarz",
+        "Silber"
+      ],
+      "frame": "Breiter silberner Schmuckrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-stalitia",
+      "name": "Haus Stalitia",
+      "crest": "assets/originals/previews/stalitia.webp",
+      "fullsize": "assets/originals/stalitia.png",
+      "original": "assets/originals/stalitia.png",
+      "motif": "Eine schwarze antike Säule zwischen grünen Lorbeerzweigen auf grauem Feld.",
+      "palette": [
+        "Schwarz",
+        "Grau",
+        "Grün"
+      ],
+      "frame": "Schwarz-grauer Mäanderrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-sylvian",
+      "name": "Haus Sylvian",
+      "crest": "assets/originals/previews/sylvian.webp",
+      "fullsize": "assets/originals/sylvian.png",
+      "original": "assets/originals/sylvian.png",
+      "motif": "Ein gepanzerter Krieger mit römischem Kammhelm, erhobener Hand und goldenem Rundschild vor petrolfarbenem Feld.",
+      "palette": [
+        "Petrol",
+        "Silber",
+        "Gold"
+      ],
+      "frame": "Goldener Rahmen mit silbernen Lorbeerzweigen",
+      "note": "Die Sylvian werden vom Volk abgöttisch geliebt und gelten als Volkshelden. Sie treten für das Volk ein; oft entstammt der Volkstribun ihrem Haus. Ein Sylvian betrügt das Volk nicht.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-syx",
+      "name": "Haus Syx",
+      "crest": "assets/originals/previews/syx.webp",
+      "fullsize": "assets/originals/syx.png",
+      "original": "assets/originals/syx.png",
+      "motif": "Ein senkrechtes silbernes Schwert vor einem runden Schild, von grünen Lorbeerzweigen umgeben.",
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Grün"
+      ],
+      "frame": "Silber-schwarzer Schmuckrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-umbranox",
+      "name": "Haus Umbranox",
+      "crest": "assets/originals/previews/umbranox.webp",
+      "fullsize": "assets/originals/umbranox.png",
+      "original": "assets/originals/umbranox.png",
+      "motif": "Ein steigender dunkelroter Löwe auf goldenem Feld.",
+      "palette": [
+        "Dunkelrot",
+        "Gold",
+        "Elfenbein"
+      ],
+      "frame": "Elfenbeinfarbener Mäanderrahmen",
+      "note": "Umbranox ist ein sehr reiches Bankhaus und mit Avenicci verwandt. Ein genauer Verwandtschaftsgrad ist nicht festgelegt.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-vineben",
+      "name": "Haus Vineben",
+      "crest": "assets/originals/previews/vineben.webp",
+      "fullsize": "assets/originals/vineben.png",
+      "original": "assets/originals/vineben.png",
+      "motif": "Ein silbernes Fabelwesen mit Pferdevorderkörper und geschupptem Fischschwanz auf weinrotem Feld.",
+      "palette": [
+        "Silberweiß",
+        "Weinrot"
+      ],
+      "frame": "Weinrot-silberweißer Mäanderrahmen",
+      "note": "Haus Vineben ist für seine Künstler und Musiker bekannt.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "house-vulpin",
+      "name": "Haus Vulpin",
+      "crest": "assets/originals/previews/vulpin.webp",
+      "fullsize": "assets/originals/vulpin.png",
+      "original": "assets/originals/vulpin.png",
+      "motif": "Eine weiße Wolfsfigur mit zwei kleineren Tieren auf graugrünem Feld.",
+      "palette": [
+        "Elfenbein",
+        "Graugrün",
+        "Gold"
+      ],
+      "frame": "Dunkelbraun-goldener Mäanderrahmen",
+      "note": "Vulpin ist ein sehr altes und kriegerisches Haus.",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "imperialDomain": false,
+      "sourceSeat": null,
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "pool-01",
+      "name": "Zusatzwappen 01",
+      "crest": "assets/emblems/previews/pool-01.webp",
+      "fullsize": "assets/emblems/production/pool-01.png",
+      "original": null,
+      "motif": "Ein einzelner silberner kräftiger Keiler im klaren Seitenprofil nach links auf dunkelrotem Feld. Vier kurze gut getrennte Beine, ein kurzer Schweif, ein deutliches kleines weißes Hauerpaar und geschlossener Rüssel. Keine weiteren Tiere.",
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Dunkle Bronze"
+      ],
+      "frame": "Dunkler matter Bronzerahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-02",
+      "name": "Zusatzwappen 02",
+      "crest": "assets/emblems/previews/pool-02.webp",
+      "fullsize": "assets/emblems/production/pool-02.png",
+      "original": null,
+      "motif": "Ein einzelner goldener Skorpion symmetrisch von oben auf mattschwarzem Feld. Genau zwei vordere Scheren, genau acht kurze klar getrennte Laufbeine und ein einziger gegliederter eingerollter Schwanz mit einer kleinen Spitze. Keine zusätzlichen Gliedmaßen.",
+      "palette": [
+        "Gold",
+        "Mattschwarz",
+        "Heller Stahl"
+      ],
+      "frame": "Heller matter Stahlring",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-03",
+      "name": "Zusatzwappen 03",
+      "crest": "assets/emblems/previews/pool-03.webp",
+      "fullsize": "assets/emblems/production/pool-03.png",
+      "original": null,
+      "motif": "Ein einzelner schwarzer stehender Bär im klaren Seitenprofil nach rechts auf ockergelbem Feld. Vier erkennbare Tatzen, ein kurzer Schwanz, runde Ohren und geschlossener Mund. Kräftige schlichte heraldische Silhouette, keine Landschaft.",
+      "palette": [
+        "Schwarz",
+        "Ocker",
+        "Eisen"
+      ],
+      "frame": "Eiserner Nietring",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-04",
+      "name": "Zusatzwappen 04",
+      "crest": "assets/emblems/previews/pool-04.webp",
+      "fullsize": "assets/emblems/production/pool-04.png",
+      "original": null,
+      "motif": "Ein einzelner silberner Hirschkopf frontal auf tiefem purpurfarbenem Feld. Ein ruhiges klares Gesicht, zwei normale Ohren und ein symmetrisches sechsendiges Geweih mit genau drei Spitzen je Seite, kein Körper und keine weiteren Köpfe.",
+      "palette": [
+        "Silber",
+        "Purpur",
+        "Bronze"
+      ],
+      "frame": "Bronzener Akanthusrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-05",
+      "name": "Zusatzwappen 05",
+      "crest": "assets/emblems/previews/pool-05.webp",
+      "fullsize": "assets/emblems/production/pool-05.png",
+      "original": null,
+      "motif": "Ein einzelner goldener Phönix frontal auf dunkelgrünem Feld mit genau zwei deutlich erhobenen ausgebreiteten Flügeln, einem einzigen kleinen Vogelkopf, zwei kleinen Beinen und einem klaren geschwungenen gefiederten Schwanz. Ein Vogel, keine zusätzlichen Flügel und kein äußerer Feuerschein.",
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "frame": "Silberner Lorbeerrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-06",
+      "name": "Zusatzwappen 06",
+      "crest": "assets/emblems/previews/pool-06.webp",
+      "fullsize": "assets/emblems/production/pool-06.png",
+      "original": null,
+      "motif": "Eine einzelne elfenbeinfarbene Steinbrücke frontal mit genau drei runden gleich großen Bögen über genau zwei dunkelblauen flachen Wellenlinien auf rostrot bemaltem Feld. Die Bogenöffnungen sind mit deckender rostroter Feldfarbe gefüllt; keine transparenten Innenlöcher, keine Landschaft.",
+      "palette": [
+        "Elfenbein",
+        "Rostrot",
+        "Dunkelblau"
+      ],
+      "frame": "Dunkler Eisenring",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-07",
+      "name": "Zusatzwappen 07",
+      "crest": "assets/emblems/previews/pool-07.webp",
+      "fullsize": "assets/emblems/production/pool-07.png",
+      "original": null,
+      "motif": "Ein einziger matt silberner Schlüssel diagonal von links unten nach rechts oben auf waldgrünem Feld. Ein klarer rautenförmiger Griff mit kleinem deckend grünem Innenfeld, ein gerader Schaft und ein einziger einfacher rechtwinkliger Bart. Keine zusätzlichen Schlüssel.",
+      "palette": [
+        "Mattsilber",
+        "Waldgrün",
+        "Bronze"
+      ],
+      "frame": "Matter Bronzerahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-08",
+      "name": "Zusatzwappen 08",
+      "crest": "assets/emblems/previews/pool-08.webp",
+      "fullsize": "assets/emblems/production/pool-08.png",
+      "original": null,
+      "motif": "Eine einzelne elfenbeinfarbene einfache Glocke frontal auf purpurfarbenem Feld. Klarer gewölbter Glockenkörper mit breitem unterem Saum, ein kleiner sichtbarer Klöppel und eine kleine Aufhängung oben, keine Schleifen oder Schrift.",
+      "palette": [
+        "Elfenbein",
+        "Purpur",
+        "Bronze"
+      ],
+      "frame": "Schlichter Bronzerahmen mit vier Rosetten",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-09",
+      "name": "Zusatzwappen 09",
+      "crest": "assets/emblems/previews/pool-09.webp",
+      "fullsize": "assets/emblems/production/pool-09.png",
+      "original": null,
+      "motif": "Eine einzelne antike goldene römische Öllampe im Seitenprofil nach rechts auf schwarzem Feld. Kleiner flacher Ölkörper mit einem klaren kurzen Ausguss, genau eine kleine rote Flamme am Docht des Ausgusses und ein einfacher runder Griff an der Rückseite. Keine zweite Lampe und kein äußerer Lichtschein.",
+      "palette": [
+        "Gold",
+        "Schwarz",
+        "Rot"
+      ],
+      "frame": "Silberner Ring mit roten Einlagen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-10",
+      "name": "Zusatzwappen 10",
+      "crest": "assets/emblems/previews/pool-10.webp",
+      "fullsize": "assets/emblems/production/pool-10.png",
+      "original": null,
+      "motif": "Ein einziger bronzener antiker Anker senkrecht auf cremefarbenem Feld. Klarer runder oberer Ring, ein gerader Schaft mit kurzem waagerechtem Stock und genau zwei nach oben gekrümmte Ankerarme. Keine Seile, Pflanzen oder zusätzlichen Symbole.",
+      "palette": [
+        "Bronze",
+        "Creme",
+        "Olivgrün"
+      ],
+      "frame": "Olivgrüner Holzring mit Silberbeschlägen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-11",
+      "name": "Zusatzwappen 11",
+      "crest": "assets/emblems/previews/pool-11.webp",
+      "fullsize": "assets/emblems/production/pool-11.png",
+      "original": null,
+      "motif": "Ein einzelnes silbernes römisches Säulenkapitell frontal auf dunkelrotem Feld. Ein breiter flacher oberer Abakus und wenige großflächig vereinfachte Akanthusblätter unter ihm; nur das Kapitell ohne langen Säulenschaft, kein Tempel oder Gebäude.",
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "frame": "Schwarzer Eisenring mit wenigen Goldakzenten",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-12",
+      "name": "Zusatzwappen 12",
+      "crest": "assets/emblems/previews/pool-12.webp",
+      "fullsize": "assets/emblems/production/pool-12.png",
+      "original": null,
+      "motif": "Eine einzelne goldene Biene symmetrisch von oben auf indigoblauem Feld. Ein Kopf mit genau zwei kleinen Fühlern, ein kompakter leicht gestreifter Körper, genau sechs dünne Beine und zwei Paare klar getrennte ovale helle Flügel. Keine weiteren Insekten und keine Blüten.",
+      "palette": [
+        "Gold",
+        "Indigo",
+        "Silber"
+      ],
+      "frame": "Silberner Ring mit kleinen Kordelelementen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    },
+    {
+      "id": "pool-13",
+      "name": "Zusatzwappen 13",
+      "crest": "assets/emblems/previews/pool-13.webp",
+      "fullsize": "assets/emblems/production/pool-13.png",
+      "original": null,
+      "motif": "Ein einzelner elfenbeinfarbener Pfau frontal auf dunkelgrünem Feld mit einem einzigen vollständigen geöffneten halbkreisförmigen Schwanzrad. Kleiner Kopf mit drei kurzen Schopffedern, ein schlanker Hals und zwei kleine klare Füße; großflächige einfache Augenflecken in dunklem Grün und Bronze innerhalb des elfenbeinfarbenen Schwanzfächers. Ein Vogel, keine zusätzlichen Flügel oder zweiten Köpfe.",
+      "palette": [
+        "Elfenbein",
+        "Dunkelgrün",
+        "Bronze"
+      ],
+      "frame": "Bronzener Zierrahmen",
+      "culture": "argentum",
+      "rank": null,
+      "caste": null,
+      "sourceSeat": null,
+      "status": "proposal",
+      "ready": true
+    }
+  ],
+  "warriors": [
+    {
+      "id": "house-mede",
+      "houseId": "house-mede",
+      "prototypeId": null,
+      "image": "../Leukonia/assets/warriors/previews/house-mede-v2.webp",
+      "fullsize": "../Leukonia/assets/warriors/production/house-mede-v2.png",
+      "ready": true,
+      "description": "Kaiserlicher Prätorianerritter mit reich gearbeitetem Plattenharnisch und geschlossenem Lorbeerhelm. Goldene Olivenranken schmücken den petrolfarbenen Prunkmantel und Schild.",
+      "reason": "Kaiserlicher Prätorianerritter mit reich gearbeitetem Plattenharnisch und geschlossenem Lorbeerhelm. Goldene Olivenranken schmücken den petrolfarbenen Prunkmantel und Schild.",
+      "equipment": [
+        "Verziertes Spatha-Ritterschwert",
+        "ovaler Prunkschild",
+        "vollständiger Plattenharnisch",
+        "geschlossener Lorbeerhelm"
+      ],
+      "palette": [
+        "Petrol",
+        "Elfenbein",
+        "Gold",
+        "Silber"
+      ],
+      "mount": null,
+      "role": "Schwerer Infanterist",
+      "status": "supplied"
+    },
+    {
+      "id": "house-afronia",
+      "houseId": "house-afronia",
+      "prototypeId": "prototype-02",
+      "role": "Schwere Infanteristin",
+      "description": "Schwere Infanteristin mit geschlossenem römischem Helm, blau-goldenem Harnisch, Gladius und aufgestelltem Adler-Scutum.",
+      "reason": "Schwere Infanteristin mit geschlossenem römischem Helm, blau-goldenem Harnisch, Gladius und aufgestelltem Adler-Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Helm",
+        "Schwerer Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Blau",
+        "Gold"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-afronia.webp",
+      "fullsize": "assets/warriors/production/house-afronia.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-avidius",
+      "houseId": "house-avidius",
+      "prototypeId": "prototype-04",
+      "role": "Rangerin",
+      "description": "Rangerin mit offenem römischem Helm, azurblauem Mantel, Langbogen und Rückenköcher. Elfenbeinfarbene Bildstickerei schmückt den Bruststoff.",
+      "reason": "Rangerin mit offenem römischem Helm, azurblauem Mantel, Langbogen und Rückenköcher. Elfenbeinfarbene Bildstickerei schmückt den Bruststoff.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Ketten- und Brustpanzer"
+      ],
+      "palette": [
+        "Blau",
+        "Kupfer",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-avidius.webp",
+      "fullsize": "assets/warriors/production/house-avidius.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-bruttia",
+      "houseId": "house-bruttia",
+      "prototypeId": "prototype-01",
+      "role": "Legionär",
+      "description": "Bodenständiger Legionär mit offenem Helm, robustem Panzer und Schwert. Ein kleines schwarzes Hasenzeichen sitzt auf der ockerfarbenen Tunika.",
+      "reason": "Bodenständiger Legionär mit offenem Helm, robustem Panzer und Schwert. Ein kleines schwarzes Hasenzeichen sitzt auf der ockerfarbenen Tunika.",
+      "equipment": [
+        "Gladius",
+        "Offener römischer Helm",
+        "Robuster Segmentpanzer"
+      ],
+      "palette": [
+        "Schwarz",
+        "Gold"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-bruttia.webp",
+      "fullsize": "assets/warriors/production/house-bruttia.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-caepo",
+      "houseId": "house-caepo",
+      "prototypeId": "prototype-05",
+      "role": "Edler Schwertreiter",
+      "description": "Helmfreier Schwertreiter auf einem Equo mit dunklem Harnisch und petrolfarbenen Stofflagen. Das Pferdezeichen schmückt die Satteldecke.",
+      "reason": "Helmfreier Schwertreiter auf einem Equo mit dunklem Harnisch und petrolfarbenen Stofflagen. Das Pferdezeichen schmückt die Satteldecke.",
+      "equipment": [
+        "Reiterschwert",
+        "Römisch-ritterlicher Harnisch",
+        "Funktionaler Sattel mit Steigbügeln",
+        "Zaum und Zügel"
+      ],
+      "palette": [
+        "Schwarz",
+        "Petrol",
+        "Elfenbein",
+        "Gold"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "image": "assets/warriors/previews/house-caepo.webp",
+      "fullsize": "assets/warriors/production/house-caepo.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-cerunia",
+      "houseId": "house-cerunia",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Reich gerüsteter Marinekrieger mit offenem Helm, Säbel und Rückenköcher. Goldene Dreizackstickerei und silberne Ranken schmücken die dunkelblauen Stoffe.",
+      "reason": "Reich gerüsteter Marinekrieger mit offenem Helm, Säbel und Rückenköcher. Goldene Dreizackstickerei und silberne Ranken schmücken die dunkelblauen Stoffe.",
+      "equipment": [
+        "Stahlsäbel",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Segment- und Kettenpanzer"
+      ],
+      "palette": [
+        "Dunkelblau",
+        "Gold",
+        "Silberweiß"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-cerunia.webp",
+      "fullsize": "assets/warriors/production/house-cerunia.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-faleria",
+      "houseId": "house-faleria",
+      "prototypeId": "prototype-04",
+      "role": "Rangerin",
+      "description": "Gepanzerte Rangerin mit hellem Mantel, offenem römischem Helm, Langbogen und Rückenköcher. Eine silberweiße Taube trägt das Hausmotiv.",
+      "reason": "Gepanzerte Rangerin mit hellem Mantel, offenem römischem Helm, Langbogen und Rückenköcher. Eine silberweiße Taube trägt das Hausmotiv.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Ketten- und Plattenpanzer"
+      ],
+      "palette": [
+        "Hellblau",
+        "Silberweiß"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-faleria.webp",
+      "fullsize": "assets/warriors/production/house-faleria.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-flamen",
+      "houseId": "house-flamen",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Infanterist",
+      "description": "Schwerer Krieger mit geschlossenem römischem Helm, schwarz-goldener Rüstung, Gladius und aufgestelltem Baum-Scutum.",
+      "reason": "Schwerer Krieger mit geschlossenem römischem Helm, schwarz-goldener Rüstung, Gladius und aufgestelltem Baum-Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Helm",
+        "Schwerer Schuppen- und Plattenpanzer"
+      ],
+      "palette": [
+        "Schwarz",
+        "Gold"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-flamen.webp",
+      "fullsize": "assets/warriors/production/house-flamen.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-maborel",
+      "houseId": "house-maborel",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Infanterist",
+      "description": "Schwer gerüsteter Krieger mit polygonalen Panzerplatten, geschlossenem Helm und Schildkrötenzeichen auf einem aufgestellten Scutum.",
+      "reason": "Schwer gerüsteter Krieger mit polygonalen Panzerplatten, geschlossenem Helm und Schildkrötenzeichen auf einem aufgestellten Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Helm",
+        "Polygonaler Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Olivgrün",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-maborel.webp",
+      "fullsize": "assets/warriors/production/house-maborel.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-rinia",
+      "houseId": "house-rinia",
+      "prototypeId": "prototype-03",
+      "role": "Marinekriegerin",
+      "description": "Marinekriegerin mit beweglichem Silberpanzer, offenem römischem Helm, Säbel und Rückenköcher. Ein silberner Dreizack schmückt petrolfarbene Stoffe.",
+      "reason": "Marinekriegerin mit beweglichem Silberpanzer, offenem römischem Helm, Säbel und Rückenköcher. Ein silberner Dreizack schmückt petrolfarbene Stoffe.",
+      "equipment": [
+        "Stahlsäbel",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "palette": [
+        "Petrol",
+        "Schwarz",
+        "Silber"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-rinia.webp",
+      "fullsize": "assets/warriors/production/house-rinia.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-stalitia",
+      "houseId": "house-stalitia",
+      "prototypeId": "prototype-01",
+      "role": "Legionär",
+      "description": "Einfacher Legionär mit graugrünem römischem Panzer, offenem Helm und Schwert. Das Säulenzeichen sitzt auf einer kleinen Stofflasche.",
+      "reason": "Einfacher Legionär mit graugrünem römischem Panzer, offenem Helm und Schwert. Das Säulenzeichen sitzt auf einer kleinen Stofflasche.",
+      "equipment": [
+        "Gladius",
+        "Offener römischer Helm",
+        "Praktischer Segmentpanzer"
+      ],
+      "palette": [
+        "Schwarz",
+        "Grau",
+        "Grün"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-stalitia.webp",
+      "fullsize": "assets/warriors/production/house-stalitia.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-sylvian",
+      "houseId": "house-sylvian",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Infanterist",
+      "description": "Reich gerüsteter Hauskrieger mit geschlossenem römischem Helm, Gladius und aufgestelltem Scutum. Petrol und Bronze betonen die überlieferte Kriegerfigur.",
+      "reason": "Reich gerüsteter Hauskrieger mit geschlossenem römischem Helm, Gladius und aufgestelltem Scutum. Petrol und Bronze betonen die überlieferte Kriegerfigur.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Helm",
+        "Schwerer römisch-ritterlicher Harnisch"
+      ],
+      "palette": [
+        "Petrolblau",
+        "Silber",
+        "Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-sylvian.webp",
+      "fullsize": "assets/warriors/production/house-sylvian.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-syx",
+      "houseId": "house-syx",
+      "prototypeId": "prototype-02",
+      "role": "Schwere Infanteristin",
+      "description": "Schwere Infanteristin mit geschlossenem Vollhelm, grün-schwarzer Rüstung, Gladius und großem aufgestelltem Scutum mit Schwertmotiv.",
+      "reason": "Schwere Infanteristin mit geschlossenem Vollhelm, grün-schwarzer Rüstung, Gladius und großem aufgestelltem Scutum mit Schwertmotiv.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Vollhelm",
+        "Schwerer Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Silber",
+        "Schwarz",
+        "Grün"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-syx.webp",
+      "fullsize": "assets/warriors/production/house-syx.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-umbranox",
+      "houseId": "house-umbranox",
+      "prototypeId": "prototype-05",
+      "role": "Edler Schwertreiter",
+      "description": "Prunkvoller helmfreier Schwertreiter auf einem Equo mit dunkelroten, goldenen und elfenbeinfarbenen Stoffen. Das Löwenzeichen schmückt seine Reitausrüstung.",
+      "reason": "Prunkvoller helmfreier Schwertreiter auf einem Equo mit dunkelroten, goldenen und elfenbeinfarbenen Stoffen. Das Löwenzeichen schmückt seine Reitausrüstung.",
+      "equipment": [
+        "Reiterschwert",
+        "Reicher römisch-ritterlicher Harnisch",
+        "Sattel mit Steigbügeln",
+        "Zaum und Zügel"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Gold",
+        "Elfenbein"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "image": "assets/warriors/previews/house-umbranox.webp",
+      "fullsize": "assets/warriors/production/house-umbranox.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-vineben",
+      "houseId": "house-vineben",
+      "prototypeId": "prototype-06",
+      "role": "Kampfbardin",
+      "description": "Gerüstete Kampfbardin mit reich verziertem Feder- und Hornhelm, Schwert und Harfe. Weinrote Stoffe und silberweiße Seepferdornamente greifen das Hauszeichen auf.",
+      "reason": "Gerüstete Kampfbardin mit reich verziertem Feder- und Hornhelm, Schwert und Harfe. Weinrote Stoffe und silberweiße Seepferdornamente greifen das Hauszeichen auf.",
+      "equipment": [
+        "Schwert",
+        "Harfe",
+        "Offener verzierter Feder- und Hornhelm",
+        "Römischer Stahl- und Kettenpanzer"
+      ],
+      "palette": [
+        "Silberweiß",
+        "Weinrot"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-vineben.webp",
+      "fullsize": "assets/warriors/production/house-vineben.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-vulpin",
+      "houseId": "house-vulpin",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Elitekrieger",
+      "description": "Junger Elitekrieger in altertümlich reich gearbeiteter römischer Rüstung mit Gladius und aufgestelltem Scutum. Ein Wolf mit zwei kleineren Tieren bildet das Hausmotiv.",
+      "reason": "Junger Elitekrieger in altertümlich reich gearbeiteter römischer Rüstung mit Gladius und aufgestelltem Scutum. Ein Wolf mit zwei kleineren Tieren bildet das Hausmotiv.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Helm",
+        "Reicher schwerer Harnisch"
+      ],
+      "palette": [
+        "Tiefes Graugrün",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-vulpin.webp",
+      "fullsize": "assets/warriors/production/house-vulpin.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-01",
+      "houseId": "pool-01",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Infanterist",
+      "description": "Schwer gepanzerter Krieger mit geschlossenem römischem Helm, silbernem Keilermotiv auf Dunkelrot, Gladius und aufgestelltem Scutum.",
+      "reason": "Schwer gepanzerter Krieger mit geschlossenem römischem Helm, silbernem Keilermotiv auf Dunkelrot, Gladius und aufgestelltem Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener römischer Spangenhelm",
+        "Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Dunkle Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-01.webp",
+      "fullsize": "assets/warriors/production/house-pool-01.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-02",
+      "houseId": "pool-02",
+      "prototypeId": "prototype-04",
+      "role": "Ranger",
+      "description": "Leichter gerüsteter Bogenschütze mit offenem römischem Helm, goldenem Skorpiondetail auf schwarzem Panzer und Rückenköcher.",
+      "reason": "Leichter gerüsteter Bogenschütze mit offenem römischem Helm, goldenem Skorpiondetail auf schwarzem Panzer und Rückenköcher.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener kaiserlich-gallischer Helm",
+        "Leichter Schuppenpanzer"
+      ],
+      "palette": [
+        "Gold",
+        "Mattschwarz",
+        "Heller Stahl"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-02.webp",
+      "fullsize": "assets/warriors/production/house-pool-02.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-03",
+      "houseId": "pool-03",
+      "prototypeId": "prototype-02",
+      "role": "Schwere Infanteristin",
+      "description": "Schwere Infanteristin mit geschlossenem Maskenhelm, schwarzem Bär auf Ocker, Gladius und großem aufgestelltem Scutum.",
+      "reason": "Schwere Infanteristin mit geschlossenem Maskenhelm, schwarzem Bär auf Ocker, Gladius und großem aufgestelltem Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum",
+        "Geschlossener spätrömischer Maskenhelm",
+        "Schwerer Schuppen- und Kettenpanzer"
+      ],
+      "palette": [
+        "Schwarz",
+        "Ocker",
+        "Eisen"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-03.webp",
+      "fullsize": "assets/warriors/production/house-pool-03.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-04",
+      "houseId": "pool-04",
+      "prototypeId": "prototype-05",
+      "role": "Edler Reiter",
+      "description": "Helmfreier Reiter auf einem Equo mit silbernem Harnisch, purpurner Satteldecke und kleinem Hirschkopfmotiv.",
+      "reason": "Helmfreier Reiter auf einem Equo mit silbernem Harnisch, purpurner Satteldecke und kleinem Hirschkopfmotiv.",
+      "equipment": [
+        "Reiterschwert",
+        "Silberner Reiterharnisch",
+        "Purpurne Satteldecke",
+        "Funktionales Zaumzeug und Steigbügel"
+      ],
+      "palette": [
+        "Silber",
+        "Purpur",
+        "Bronze"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "image": "assets/warriors/previews/house-pool-04.webp",
+      "fullsize": "assets/warriors/production/house-pool-04.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-05",
+      "houseId": "pool-05",
+      "prototypeId": "prototype-06",
+      "role": "Kampfbarde",
+      "description": "Reich gerüsteter Kampfbarde mit Phönixdetail, dunkelgrünem Waffenrock, Schwert und kleiner tragbarer Harfe.",
+      "reason": "Reich gerüsteter Kampfbarde mit Phönixdetail, dunkelgrünem Waffenrock, Schwert und kleiner tragbarer Harfe.",
+      "equipment": [
+        "Schwert",
+        "Tragbare Rahmenharfe",
+        "Römischer Zierhelm",
+        "Verzierter Schuppenpanzer"
+      ],
+      "palette": [
+        "Gold",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-05.webp",
+      "fullsize": "assets/warriors/production/house-pool-05.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-06",
+      "houseId": "pool-06",
+      "prototypeId": "prototype-01",
+      "role": "Legionär",
+      "description": "Einfacher Legionär mit rostroter Tunika, Kettenpanzer, offener römischer Haube und kleinem Brückenmotiv.",
+      "reason": "Einfacher Legionär mit rostroter Tunika, Kettenpanzer, offener römischer Haube und kleinem Brückenmotiv.",
+      "equipment": [
+        "Schwert",
+        "Kettenpanzer",
+        "Offener Montefortino-Helm",
+        "Einfache Beinschützer"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Rostrot",
+        "Dunkelblau"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-06.webp",
+      "fullsize": "assets/warriors/production/house-pool-06.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-07",
+      "houseId": "pool-07",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger mit waldgrüner Kleidung, silbernem Schlüsselmotiv, Säbel und Rückenköcher.",
+      "reason": "Marinekrieger mit waldgrüner Kleidung, silbernem Schlüsselmotiv, Säbel und Rückenköcher.",
+      "equipment": [
+        "Säbel",
+        "Rückenköcher",
+        "Offener römischer Marinehelm",
+        "Beweglicher Ketten- und Plattenpanzer"
+      ],
+      "palette": [
+        "Mattsilber",
+        "Waldgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-07.webp",
+      "fullsize": "assets/warriors/production/house-pool-07.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-08",
+      "houseId": "pool-08",
+      "prototypeId": "prototype-06",
+      "role": "Kampfbardin",
+      "description": "Edle Kampfbardin in Purpur und Elfenbein mit Glockendetail, Schwert und tragbarer Harfe.",
+      "reason": "Edle Kampfbardin in Purpur und Elfenbein mit Glockendetail, Schwert und tragbarer Harfe.",
+      "equipment": [
+        "Schwert",
+        "Tragbare Rahmenharfe",
+        "Offener spätrömischer Kammhelm",
+        "Verzierter Lamellenpanzer"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Purpur",
+        "Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-08.webp",
+      "fullsize": "assets/warriors/production/house-pool-08.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-09",
+      "houseId": "pool-09",
+      "prototypeId": "prototype-04",
+      "role": "Rangerin",
+      "description": "Rangerin mit schwarzer Rüstung, roten Akzenten, kleinem Öllampenmotiv, Langbogen und Rückenköcher.",
+      "reason": "Rangerin mit schwarzer Rüstung, roten Akzenten, kleinem Öllampenmotiv, Langbogen und Rückenköcher.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener spätrömischer Spangenhelm",
+        "Schuppenpanzer und Armschutz"
+      ],
+      "palette": [
+        "Gold",
+        "Schwarz",
+        "Rot"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-09.webp",
+      "fullsize": "assets/warriors/production/house-pool-09.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-10",
+      "houseId": "pool-10",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Eigenständiger Marinekrieger in Creme und Olivgrün mit bronzenem Ankerdetail, Säbel und Rückenköcher.",
+      "reason": "Eigenständiger Marinekrieger in Creme und Olivgrün mit bronzenem Ankerdetail, Säbel und Rückenköcher.",
+      "equipment": [
+        "Säbel",
+        "Rückenköcher",
+        "Offener römischer Spangenhelm",
+        "Bronzefarbener Schuppenpanzer"
+      ],
+      "palette": [
+        "Bronze",
+        "Creme",
+        "Olivgrün"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-10.webp",
+      "fullsize": "assets/warriors/production/house-pool-10.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-11",
+      "houseId": "pool-11",
+      "prototypeId": "prototype-01",
+      "role": "Legionär",
+      "description": "Junger Legionär mit dunkelroter Tunika, einfachem Kettenpanzer, römischem Helm und silbernem Kapitellmotiv.",
+      "reason": "Junger Legionär mit dunkelroter Tunika, einfachem Kettenpanzer, römischem Helm und silbernem Kapitellmotiv.",
+      "equipment": [
+        "Schwert",
+        "Kettenpanzer",
+        "Offener kaiserlich-gallischer Helm",
+        "Einfache Lederausrüstung"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-11.webp",
+      "fullsize": "assets/warriors/production/house-pool-11.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-12",
+      "houseId": "pool-12",
+      "prototypeId": "prototype-05",
+      "role": "Edle Reiterin",
+      "description": "Helmfreie Reiterin auf einem Equo mit indigo-goldener Rüstung und kleinem Bienenmotiv.",
+      "reason": "Helmfreie Reiterin auf einem Equo mit indigo-goldener Rüstung und kleinem Bienenmotiv.",
+      "equipment": [
+        "Reiterschwert",
+        "Römisch-ritterlicher Reiterharnisch",
+        "Indigofarbene Satteldecke",
+        "Funktionales Zaumzeug und Steigbügel"
+      ],
+      "palette": [
+        "Gold",
+        "Indigo",
+        "Silber"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "image": "assets/warriors/previews/house-pool-12.webp",
+      "fullsize": "assets/warriors/production/house-pool-12.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "pool-13",
+      "houseId": "pool-13",
+      "prototypeId": "prototype-04",
+      "role": "Rangerin",
+      "description": "Rangerin mit offenem römischem Federhelm, dunkelgrüner Rüstung, elfenbeinfarbenem Pfauendetail und Rückenköcher.",
+      "reason": "Rangerin mit offenem römischem Federhelm, dunkelgrüner Rüstung, elfenbeinfarbenem Pfauendetail und Rückenköcher.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener römischer Helm mit kleinem Federfächer",
+        "Leichter Lamellenpanzer"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Dunkelgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pool-13.webp",
+      "fullsize": "assets/warriors/production/house-pool-13.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "house-pullo",
+      "houseId": "house-pullo",
+      "prototypeId": "prototype-07",
+      "role": "Arkaner Schattenkämpfer",
+      "description": "Ein geheimnisvoller junger Schattenkämpfer des Hauses Pullo mit geschlossener spätrömischer Helmmaske unter einer tiefvioletten Kapuze. Zwei Schwerter, dunkler edler Plattenpanzer und ein kleines Delfinzeichen greifen die Loyalität und Geheimhaltung des Hauses auf.",
+      "reason": "Ein geheimnisvoller junger Schattenkämpfer des Hauses Pullo mit geschlossener spätrömischer Helmmaske unter einer tiefvioletten Kapuze. Zwei Schwerter, dunkler edler Plattenpanzer und ein kleines Delfinzeichen greifen die Loyalität und Geheimhaltung des Hauses auf.",
+      "equipment": [
+        "Zwei Schwerter",
+        "Geschlossener Helm mit Kapuze",
+        "Edler dunkler Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Violett",
+        "Goldgelb",
+        "Dunkles Eisen"
+      ],
+      "mount": null,
+      "image": "assets/warriors/previews/house-pullo.webp",
+      "fullsize": "assets/warriors/production/house-pullo.png",
+      "ready": true,
+      "status": "proposal"
+    }
+  ],
+  "prototypes": [
+    {
+      "id": "prototype-01",
+      "name": "Legionär",
+      "role": "Legionär",
+      "description": "Ein schlichter junger Legionär mit offenem römischem Helm, zweckmäßiger Lorica und kurzem Schwert.",
+      "equipment": [
+        "Schwert"
+      ],
+      "palette": [
+        "Eisen",
+        "Creme",
+        "Dunkelrot",
+        "Dunkelbraun"
+      ],
+      "mount": null,
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-01.webp",
+      "fullsize": "assets/warriors/production/prototype-01.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-02",
+      "name": "Schwerer Infanterist",
+      "role": "Schwerer Infanterist",
+      "description": "Ein schwer gepanzerter Infanterist mit geschlossenem spätrömischem Helm, Gladius und großem seitlich aufgestelltem Scutum.",
+      "equipment": [
+        "Gladius",
+        "Großes aufgestelltes Scutum"
+      ],
+      "palette": [
+        "Silber",
+        "Altgold",
+        "Dunkelpurpur",
+        "Elfenbein"
+      ],
+      "mount": null,
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-02.webp",
+      "fullsize": "assets/warriors/production/prototype-02.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-03",
+      "name": "Marinekrieger",
+      "role": "Marinekrieger",
+      "description": "Wohlgerüsteter Marinekrieger mit beweglicher römischer Rüstung, offenem Helm, Stahlsäbel und Rückenköcher.",
+      "equipment": [
+        "Stahlsäbel",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "palette": [
+        "Dunkelpetrol",
+        "Silber",
+        "Bronze"
+      ],
+      "mount": null,
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-03.webp",
+      "fullsize": "assets/warriors/production/prototype-03.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-04",
+      "name": "Ranger",
+      "role": "Ranger",
+      "description": "Gepanzerte Langbogenschützin mit offenem römischem Helm, Rückenköcher und leichtem edlem Mantel über Ketten- und Plattenrüstung.",
+      "equipment": [
+        "Langbogen",
+        "Rückenköcher",
+        "Offener römischer Kammhelm",
+        "Ketten- und Plattenpanzer",
+        "Leichter Mantel"
+      ],
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "mount": null,
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-04.webp",
+      "fullsize": "assets/warriors/production/prototype-04.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-05",
+      "name": "Edler Reiter",
+      "role": "Edler Reiter",
+      "description": "Junger Schwertreiter ohne Helm auf einem Equo. Sein römisch-ritterlicher Harnisch und die schlichte hochwertige Reitausrüstung verbinden Schutz und Wohlstand.",
+      "equipment": [
+        "Reiterschwert",
+        "Römisch-ritterlicher Harnisch",
+        "Sattel mit Steigbügeln",
+        "Funktionaler Zaum"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Silber",
+        "Elfenbein",
+        "Gold"
+      ],
+      "mount": {
+        "name": "Equo",
+        "href": "../../Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-05.webp",
+      "fullsize": "assets/warriors/production/prototype-05.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-06",
+      "name": "Kampfbarde",
+      "role": "Kampfbarde",
+      "description": "Ein edler gepanzerter Kampfbardenentwurf mit römischem Federhelm, Schwert und reich gearbeiteter tragbarer Harfe.",
+      "equipment": [
+        "Schwert",
+        "Tragbare Harfe"
+      ],
+      "palette": [
+        "Petrol",
+        "Elfenbein",
+        "Silber",
+        "Altgold"
+      ],
+      "mount": null,
+      "exclusiveHouseId": null,
+      "image": "assets/warriors/previews/prototype-06.webp",
+      "fullsize": "assets/warriors/production/prototype-06.png",
+      "ready": true,
+      "status": "proposal"
+    },
+    {
+      "id": "prototype-07",
+      "name": "Arkaner Schattenkämpfer · Pullo",
+      "role": "Arkaner Schattenkämpfer",
+      "description": "Ein geheimnisvoller junger Schattenkämpfer des Hauses Pullo mit geschlossener spätrömischer Helmmaske unter einer tiefvioletten Kapuze. Zwei Schwerter, dunkler edler Plattenpanzer und ein kleines Delfinzeichen greifen die Loyalität und Geheimhaltung des Hauses auf.",
+      "equipment": [
+        "Zwei Schwerter",
+        "Geschlossener Helm mit Kapuze",
+        "Edler dunkler Platten- und Kettenpanzer"
+      ],
+      "palette": [
+        "Violett",
+        "Goldgelb",
+        "Dunkles Eisen"
+      ],
+      "mount": null,
+      "exclusiveHouseId": "house-pullo",
+      "image": "assets/warriors/previews/house-pullo.webp",
+      "fullsize": "assets/warriors/production/house-pullo.png",
+      "ready": true,
+      "status": "proposal"
+    }
+  ],
+  "artworks": [
+    {
+      "id": "realm-argentum",
+      "name": "Kaiserreich Argentum",
+      "kind": "realm",
+      "image": "assets/originals/previews/argentum.webp",
+      "fullsize": "assets/originals/argentum.png",
+      "original": "assets/originals/argentum.png",
+      "description": "Das unverändert übernommene Reichswappen des Kaiserreiches Argentum.",
+      "status": "supplied",
+      "ready": true
+    },
+    {
+      "id": "province-sylvarant",
+      "name": "Sylvarant · Provinzwappen",
+      "kind": "province",
+      "description": "Ein silberner Legionär auf dem Berg verzehrt sich nach der Berührung des geflügelten Halbgottes. Die Gestik ist an Michelangelos Schöpfung Adams angelehnt.",
+      "motif": "Ein silberner römischer Legionär steht angespannt auf einem Berg und streckt sich sehnsüchtig nach dem Finger eines geflügelten Halbgottes. Seine freie Hand liegt an der Brust; zwischen den Fingerspitzen bleibt eine kleine Lücke.",
+      "palette": [
+        "Nachtblau",
+        "Silberweiß",
+        "Ockergold"
+      ],
+      "frame": "Flach gemalter silber-ockergoldener Lorbeerrahmen",
+      "image": "assets/emblems/previews/province-sylvarant-v2.webp",
+      "fullsize": "assets/emblems/production/province-sylvarant-v2.png",
+      "ready": true,
+      "status": "proposal"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "aleria.house-life-status-delivery",
+  "status": "complete-local",
+  "date": "2026-11-04",
+  "authority": "Im Zweifel lebend; Tod nur wenn eindeutig.",
+  "resolvedIdentityCases": 15,
+  "livingCases": 13,
+  "confirmedDeaths": [
+    {
+      "name": "Hadvar Varangr",
+      "death": "1713"
+    },
+    {
+      "name": "Afanen Arth (1660)",
+      "death": "1710"
+    }
+  ],
+  "counterpartPersonEntries": 30,
+  "managedFamilies": 15,
+  "changedCanonicalFields": 34,
+  "remainingDateOrSexConflicts": 5,
+  "relationshipAssignmentsPreserved": true,
+  "protectedPublicRecords": 424,
+  "previousChronologyFieldsPreserved": 71,
+  "testsPassed": 117,
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "evidence": [
+    "before.json",
+    "metadata-containers.json",
+    "preservation.json",
+    "remaining-five-counterparts.json",
+    "test-results.json",
+    "independent-review.json"
+  ],
+  "sourceInventory": "Stammbäume/assets/data/source-inventories/house-life-status-corrections-20261104.json"
+}

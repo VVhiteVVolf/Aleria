@@ -1,0 +1,1523 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-03",
+  "status": "unassigned-proposals",
+  "generator": "built-in image_gen.imagegen",
+  "records": [
+    {
+      "id": "pool-01",
+      "name": "Unzugeordnetes Wappen 01 – Steppenwolf",
+      "motif": "Ein silberweißer Steppenwolf im Profil nach links, aufrecht wachsam stehend, langer buschiger Schwanz, klar stilisierte heraldische Silhouette auf dunkelblauem bemaltem Holzfeld.",
+      "colors": [
+        "Silberweiß",
+        "Dunkelblau",
+        "Eisen"
+      ],
+      "frame": "EISEN",
+      "ornament": "Schmale seldschukisch-kumanische geometrische Flechtornamente im dunklen Eisenring; acht kleine silberne Rauten, alle innerhalb der exakten kreisrunden Außenkontur.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 01 – Steppenwolf\n\n**Zentrales Symbol:** Ein silberweißer Steppenwolf im Profil nach links, aufrecht wachsam stehend, langer buschiger Schwanz, klar stilisierte heraldische Silhouette auf dunkelblauem bemaltem Holzfeld.\n\n**Farbpalette:** Silberweiß · Dunkelblau · Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchmale seldschukisch-kumanische geometrische Flechtornamente im dunklen Eisenring; acht kleine silberne Rauten, alle innerhalb der exakten kreisrunden Außenkontur.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Verwende die drei beigefügten Wappen ausschließlich als Referenz für die handgemalte orientalische Heraldik, klare Ornamentbänder und matte Farbflächen. Neue eigenständige Gestaltung; kein Fisch, Drache oder Sonne aus den Referenzen kopieren. Keine zusätzliche äußere Zier: vollständig glatter exakter Kreis, keine vorstehenden Spitzen. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das eine Wappen. Wirklich transparenter Außenbereich, vollständig deckender Innenbereich.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Dahakid.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\jvhv6IP.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-22922906-ed48-4eef-9d1f-5e6bced36835.png",
+      "production": "assets/emblems/production/pool-01.png",
+      "preview": "assets/emblems/previews/pool-01.webp",
+      "generatedArchive": "assets/emblems/generated/pool-01.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-22922906-ed48-4eef-9d1f-5e6bced36835.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "5e9c2898eb20e67df0a0b1008aedea79ad486d1a88ad372f385363276fd1ecbd",
+      "previewSha256": "df673d2ec44bb1ce904c71fcd44d0b0751df90cb9736efd31238fb75b9b0c616",
+      "size": [
+        1374,
+        1374
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "sourceSha256": "7a7ab1208496cdfbaf5aea30f05233a9af21991a48a1ce9fe68ccfaae8223e25",
+      "alphaPreparation": {
+        "size": [
+          1374,
+          1374
+        ],
+        "padding": {
+          "left": 63,
+          "top": 66
+        },
+        "circle": {
+          "centre": [
+            687,
+            687
+          ],
+          "radius": 604
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-02",
+      "name": "Unzugeordnetes Wappen 02 – Schneeleopard",
+      "motif": "Ein schwarzer heraldischer Schneeleopard schreitend im Profil, langer geschwungener Schwanz, dezente klar erkennbare dunkelgraue Rosetten, Kopf zum Betrachter gewendet, auf mattem ockergoldenem bemaltem Holzfeld.",
+      "colors": [
+        "Schwarz",
+        "Ockergold",
+        "Dunkle Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Dunkler geschlossener Bronzerahmen mit schmalen seldschukischen geometrischen Stern- und Rautenornamenten, sparsam, ohne Schrift.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 02 – Schneeleopard\n\n**Zentrales Symbol:** Ein schwarzer heraldischer Schneeleopard schreitend im Profil, langer geschwungener Schwanz, dezente klar erkennbare dunkelgraue Rosetten, Kopf zum Betrachter gewendet, auf mattem ockergoldenem bemaltem Holzfeld.\n\n**Farbpalette:** Schwarz · Ockergold · Dunkle Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nDunkler geschlossener Bronzerahmen mit schmalen seldschukischen geometrischen Stern- und Rautenornamenten, sparsam, ohne Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Verwende die drei beigefügten Wappen ausschließlich als Referenz für die handgemalte orientalische Heraldik, klare Ornamentbänder und matte Farbflächen. Neue eigenständige Gestaltung; kein Fisch, Drache oder Sonne aus den Referenzen kopieren. Keine zusätzliche äußere Zier: vollständig glatter exakter Kreis, keine vorstehenden Spitzen. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das eine Wappen. Wirklich transparenter Außenbereich, vollständig deckender Innenbereich.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Dahakid.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\jvhv6IP.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-b7819c43-7c9b-44e2-b681-d7746906eeb7.png",
+      "production": "assets/emblems/production/pool-02.png",
+      "preview": "assets/emblems/previews/pool-02.webp",
+      "generatedArchive": "assets/emblems/generated/pool-02.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-b7819c43-7c9b-44e2-b681-d7746906eeb7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "ead8b06bb48d2fcba0aefb6e5140efbc669ce721df9e6cb58e75deb195e011ff",
+      "previewSha256": "acdb9f4073bcc12da7f244e1ab00b9e04dfd41614c2ebb26c9840666ede4ec96",
+      "size": [
+        1374,
+        1374
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "sourceSha256": "3e951bab256c8b4f8da57a1e4797fb880e913277283b04285bfde55fed59624a",
+      "alphaPreparation": {
+        "size": [
+          1374,
+          1374
+        ],
+        "padding": {
+          "left": 64,
+          "top": 61
+        },
+        "circle": {
+          "centre": [
+            687,
+            687
+          ],
+          "radius": 604
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-03",
+      "name": "Unzugeordnetes Wappen 03 – Steinbock",
+      "motif": "Ein weißer heraldischer Steinbock in aufrechter steigender Haltung im Profil, zwei lange elegant nach hinten geschwungene geringelte Hörner, auf tief weinrotem bemaltem Holzfeld.",
+      "colors": [
+        "Weiß",
+        "Weinrot",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "ornament": "Schlichter geschlossener Silberring mit gleichmäßig verteilten kleinen dunkelroten Rauten; archaisch seldschukisch-kumanisch und zurückhaltend.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 03 – Steinbock\n\n**Zentrales Symbol:** Ein weißer heraldischer Steinbock in aufrechter steigender Haltung im Profil, zwei lange elegant nach hinten geschwungene geringelte Hörner, auf tief weinrotem bemaltem Holzfeld.\n\n**Farbpalette:** Weiß · Weinrot · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SILBER mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichter geschlossener Silberring mit gleichmäßig verteilten kleinen dunkelroten Rauten; archaisch seldschukisch-kumanisch und zurückhaltend.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Verwende die drei beigefügten Wappen ausschließlich als Referenz für die handgemalte orientalische Heraldik, klare Ornamentbänder und matte Farbflächen. Neue eigenständige Gestaltung; kein Fisch, Drache oder Sonne aus den Referenzen kopieren. Keine zusätzliche äußere Zier: vollständig glatter exakter Kreis, keine vorstehenden Spitzen. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das eine Wappen. Wirklich transparenter Außenbereich, vollständig deckender Innenbereich.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Dahakid.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\jvhv6IP.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-56fbc9d2-637a-47db-965a-d208273b6134.png",
+      "production": "assets/emblems/production/pool-03.png",
+      "preview": "assets/emblems/previews/pool-03.webp",
+      "generatedArchive": "assets/emblems/generated/pool-03.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-56fbc9d2-637a-47db-965a-d208273b6134.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "3ff4254d208f507d1ddc373985064b771db56b591175bc97626a94b49846b6ef",
+      "previewSha256": "bf9444fb94e0d97a779979b59bb6b0c14f4e7a88ea6da60926a0895acf09b81e",
+      "size": [
+        1362,
+        1362
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "sourceSha256": "4d11d62c352b24d54e866e8058d0d49ca1b2ebe8062eb3eabf57b081e3e18afb",
+      "alphaPreparation": {
+        "size": [
+          1362,
+          1362
+        ],
+        "padding": {
+          "left": 58,
+          "top": 55
+        },
+        "circle": {
+          "centre": [
+            681,
+            681
+          ],
+          "radius": 599
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-04",
+      "name": "Unzugeordnetes Wappen 04 – Zypresse",
+      "motif": "Eine große dunkelgrüne schlanke stilisierte Zypresse frontal, vollständige Baumkrone und kurzer Stamm, klare ausgeglichene Form auf deckendem elfenbeinweißem bemaltem Holzfeld.",
+      "colors": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Oxidierte Bronze"
+      ],
+      "frame": "OXIDIERTER BRONZE",
+      "ornament": "Geschlossener dunkler oxidierter Bronzering mit kleinen grünen floralen Einsätzen und zurückhaltenden seldschukischen Rankenornamenten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 04 – Zypresse\n\n**Zentrales Symbol:** Eine große dunkelgrüne schlanke stilisierte Zypresse frontal, vollständige Baumkrone und kurzer Stamm, klare ausgeglichene Form auf deckendem elfenbeinweißem bemaltem Holzfeld.\n\n**Farbpalette:** Dunkelgrün · Elfenbein · Oxidierte Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus OXIDIERTER BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener dunkler oxidierter Bronzering mit kleinen grünen floralen Einsätzen und zurückhaltenden seldschukischen Rankenornamenten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Verwende die drei beigefügten Wappen ausschließlich als Referenz für die handgemalte orientalische Heraldik, klare Ornamentbänder und matte Farbflächen. Neue eigenständige Gestaltung; kein Fisch, Drache oder Sonne aus den Referenzen kopieren. Keine zusätzliche äußere Zier: vollständig glatter exakter Kreis, keine vorstehenden Spitzen. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das eine Wappen. Wirklich transparenter Außenbereich, vollständig deckender Innenbereich.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Dahakid.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\jvhv6IP.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-a349909b-a0a0-4eda-b0f7-949e8b16976b.png",
+      "production": "assets/emblems/production/pool-04.png",
+      "preview": "assets/emblems/previews/pool-04.webp",
+      "generatedArchive": "assets/emblems/generated/pool-04.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-a349909b-a0a0-4eda-b0f7-949e8b16976b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "64dad4859567c1265cbfd63ad42131444c5543aa0c182008d40ec3ced28e6bab",
+      "previewSha256": "5b50210f474791cd04ff542235234ee65211fd88d4f20d28081ffa2d860b3d84",
+      "size": [
+        1350,
+        1350
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "sourceSha256": "3193f12f442b845c8406ae1cf637b179d3e688abca8bec6c7b1db4de82d7169d",
+      "alphaPreparation": {
+        "size": [
+          1350,
+          1350
+        ],
+        "padding": {
+          "left": 51,
+          "top": 53
+        },
+        "circle": {
+          "centre": [
+            675,
+            675
+          ],
+          "radius": 594
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-05",
+      "name": "Unzugeordnetes Wappen 05 – Tulpe",
+      "motif": "Eine einzelne große rote heraldische Tulpe mit drei deutlich geformten Blütenblättern und zwei geschwungenen grünen Blättern, frontal auf vertikal geteiltem bemaltem Holzfeld: links Elfenbein, rechts tiefes Dunkelgrün; dünne elfenbeinfarbene Kontur trennt die grünen Blätter vom dunklen Feld.",
+      "colors": [
+        "Rot",
+        "Elfenbein und Dunkelgrün",
+        "Messing"
+      ],
+      "frame": "MESSING",
+      "ornament": "Geschlossener schmaler Messingring mit feinen osmanisch inspirierten stilisierten Pflanzenornamenten und kleinen roten floralen Akzenten, keine Schrift.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 05 – Tulpe\n\n**Zentrales Symbol:** Eine einzelne große rote heraldische Tulpe mit drei deutlich geformten Blütenblättern und zwei geschwungenen grünen Blättern, frontal auf vertikal geteiltem bemaltem Holzfeld: links Elfenbein, rechts tiefes Dunkelgrün; dünne elfenbeinfarbene Kontur trennt die grünen Blätter vom dunklen Feld.\n\n**Farbpalette:** Rot · Elfenbein und Dunkelgrün · Messing\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus MESSING mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener schmaler Messingring mit feinen osmanisch inspirierten stilisierten Pflanzenornamenten und kleinen roten floralen Akzenten, keine Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Verwende die drei beigefügten Wappen ausschließlich als Referenz für die handgemalte orientalische Heraldik, klare Ornamentbänder und matte Farbflächen. Neue eigenständige Gestaltung; kein Fisch, Drache oder Sonne aus den Referenzen kopieren. Keine zusätzliche äußere Zier: vollständig glatter exakter Kreis, keine vorstehenden Spitzen. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das eine Wappen. Wirklich transparenter Außenbereich, vollständig deckender Innenbereich.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Dahakid.png",
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\jvhv6IP.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-577ef48e-f7fa-4d3b-90cf-2c031d49c09d.png",
+      "production": "assets/emblems/production/pool-05.png",
+      "preview": "assets/emblems/previews/pool-05.webp",
+      "generatedArchive": "assets/emblems/generated/pool-05.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-577ef48e-f7fa-4d3b-90cf-2c031d49c09d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "3dd2f92d21cf8546762261bba35214b125d50c24a7942bddfa1ef99b683bcb8b",
+      "previewSha256": "c8b7ac3d8613ad6fae1b9967cb4d3218556bebe89295a9fbd594b834bd9a8368",
+      "size": [
+        1356,
+        1356
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "sourceSha256": "7214e1f1df88f77e5d6115e023c15606b974e42b06bdfff73e9501451e6057a3",
+      "alphaPreparation": {
+        "size": [
+          1356,
+          1356
+        ],
+        "padding": {
+          "left": 55,
+          "top": 59
+        },
+        "circle": {
+          "centre": [
+            678,
+            678
+          ],
+          "radius": 596
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-06",
+      "name": "Unzugeordnetes Wappen 06 – Jagdfalke",
+      "motif": "Ein einzelner weißer Jagdfalke, frontal aufrecht sitzend mit gerade geschlossen angelegten Flügeln, Füße sichtbar, Kopf im Profil, auf rostrotem bemaltem Holzfeld.",
+      "colors": [
+        "Weiß",
+        "Rostrot",
+        "Silber und Blau"
+      ],
+      "frame": "SILBER",
+      "ornament": "Geschlossener Silberring mit dunkelblauen geometrischen Einsätzen und schmalen seldschukischen Ranken.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 06 – Jagdfalke\n\n**Zentrales Symbol:** Ein einzelner weißer Jagdfalke, frontal aufrecht sitzend mit gerade geschlossen angelegten Flügeln, Füße sichtbar, Kopf im Profil, auf rostrotem bemaltem Holzfeld.\n\n**Farbpalette:** Weiß · Rostrot · Silber und Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SILBER mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Silberring mit dunkelblauen geometrischen Einsätzen und schmalen seldschukischen Ranken.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-f1cea9e3-d873-40ea-b47f-73fdd0bdf72c.png",
+      "production": "assets/emblems/production/pool-06.png",
+      "preview": "assets/emblems/previews/pool-06.webp",
+      "generatedArchive": "assets/emblems/generated/pool-06.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-f1cea9e3-d873-40ea-b47f-73fdd0bdf72c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "a312bc13c6eeea9e6cbbe85d34731278286cfd80981b56dfd2d0065225165257",
+      "sha256": "6b341558f199e2894c51f5c6581dc506057106eb7e157694f1008e3e8540c542",
+      "previewSha256": "eced09a1b97a751d0591c4820d5de7970f10e75429518ae8c6987aa284ba6c5c",
+      "size": [
+        1296,
+        1296
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1296,
+          1296
+        ],
+        "padding": {
+          "left": 24,
+          "top": 29
+        },
+        "circle": {
+          "centre": [
+            648,
+            648
+          ],
+          "radius": 570
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-07",
+      "name": "Unzugeordnetes Wappen 07 – Goldener Adler",
+      "motif": "Goldener Adler mit genau einem sichtbaren, rechts oben ausgebreiteten Flügel und kompaktem Körper auf Nachtgrün.",
+      "colors": [
+        "Gold",
+        "Nachtgrün",
+        "Schwarzes Eisen"
+      ],
+      "frame": "SCHWARZEM EISEN",
+      "ornament": "Geschlossener schwarzer Eisenring mit sparsamer goldener geometrischer Flechtornamentik und kleinen Rauten.",
+      "prompt": "Use case: precise-object-edit. This is a STRICT LOCAL CORRECTION of the SINGLE attached image, NOT a redesign or a new emblem. The attached archived production image is the edit target and sole visual reference.\n\nONLY CHANGE: remove the EXTRA FOLDED DIAGONAL FOREGROUND WING that lies across the eagle's chest and torso. Its long overlapping flight feathers run from the near shoulder in the image centre diagonally down toward the lower right across the body. Eliminate that entire extra folded wing and replace only its footprint with a natural compact golden EAGLE TORSO with short body feathers. The far wing is hidden behind the body, not separately visible.\n\nKEEP EXACTLY ONE VISIBLE WING: preserve the existing large spread REAR WING in the upper-right quadrant, including its entire fan, original feather arrangement, position, scale and silhouette. Preserve the separate lower-right TAIL exactly; the tail is not the wing being removed. Preserve the eagle HEAD, hooked beak, eye, neck silhouette, both legs, toes and talons in their original positions and proportions.\n\nALL OTHER PIXELS / DESIGN FEATURES ARE INVARIANTS: keep the same circular frame, exact border geometry, dark iron material, gold interlace, four gold diamond ornaments, every floral ornament and its position, night-green painted wood grain, palette, hand-painted texture, composition, square canvas, circle size and transparent margins. Keep all ornament shapes and colors unchanged. No new details, no shifted emblems, no extra birds, no new wing, no text. A small corrective inpainting confined to the central torso area only. Do not redraw or restyle the ring, background, head, raised wing, legs or tail.\n\nThe existing Seljuk/Ottoman/Cuman-inspired heraldic style has priority over any generic cultural language in the archival style specification below. That specification is provided to PRESERVE the existing material and alpha contract, not to replace the current design:\n\n# Universeller Wappen-Prompt\n\n**Wappenname:** Pool07 – Goldener Adler (bestehendes Wappen, lokale Flügelkorrektur)\n\n**Zentrales Symbol:** Der vorhandene goldene Adler im linken Profil auf Nachtgrün. Nur EIN sichtbarer ausgebreiteter Flügel hinten oben rechts; der zusätzliche gefaltete diagonale Vorderflügel über Brust und Körper wird entfernt.\n\n**Farbpalette:** Gold · Nachtgrün · Schwarzes Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SCHWARZEM EISEN wie im Referenzbild mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nDie vorhandenen goldenen geometrischen Flechtbänder, vier goldenen Rauten und alle rot-gold-grünen Pflanzenornamente positionsgleich bewahren.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nFinal check: one raised wing visible upper-right, compact anatomically plausible torso with no extra diagonal folded wing over it, original separate tail lower-right, original head and two legs, original entire round frame and ornaments. TRUE transparent PNG RGBA; entire disc inside the outer circle fully opaque, only the exterior transparent. No outer shadow, glow or halo.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\generated-archive\\pool-07-before-wing-fix-20261103-v1\\production.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8af9df97-180d-401f-b8e9-58c6e95afa12.png",
+      "production": "assets/emblems/production/pool-07.png",
+      "preview": "assets/emblems/previews/pool-07.webp",
+      "generatedArchive": "assets/emblems/generated/pool-07.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-8af9df97-180d-401f-b8e9-58c6e95afa12.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "a953f47d172646d9b77d58b5f81e80d6b5220433ef903d42fb4d17cb35284f45",
+      "sha256": "4798a81589b5969463a72275b0d91058f991432842f4c137457529c36319fa58",
+      "previewSha256": "66796b13f7d86b069a9d1198b5e9a4ef7014b93dff4ac7be6bb34108a5098d40",
+      "size": [
+        1260,
+        1260
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "Requested local extra-wing correction; authorized alpha-only circle preparation preserves edited RGB.",
+      "alphaPreparation": {
+        "size": [
+          1260,
+          1260
+        ],
+        "padding": {
+          "left": 4,
+          "top": 4
+        },
+        "circle": {
+          "centre": [
+            630,
+            630
+          ],
+          "radius": 550
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "editReceipt": "sources/pool-07-wing-fix-20261103-v1.json"
+    },
+    {
+      "id": "pool-08",
+      "name": "Unzugeordnetes Wappen 08 – Mondsichel",
+      "motif": "Eine große silberne schmale aufrechte Mondsichel, daneben drei kleine silberne achtstrahlige Sterne, ausgewogene heraldische Komposition auf dunkelviolettem bemaltem Holzfeld.",
+      "colors": [
+        "Silber",
+        "Dunkelviolett",
+        "Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit schmalen seldschukischen geometrischen Ornamenten und wenigen violetten Einsätzen; keine religiöse Schrift.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 08 – Mondsichel\n\n**Zentrales Symbol:** Eine große silberne schmale aufrechte Mondsichel, daneben drei kleine silberne achtstrahlige Sterne, ausgewogene heraldische Komposition auf dunkelviolettem bemaltem Holzfeld.\n\n**Farbpalette:** Silber · Dunkelviolett · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit schmalen seldschukischen geometrischen Ornamenten und wenigen violetten Einsätzen; keine religiöse Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-46abf75c-a3cf-4012-ac65-e12ea67df4dc.png",
+      "production": "assets/emblems/production/pool-08.png",
+      "preview": "assets/emblems/previews/pool-08.webp",
+      "generatedArchive": "assets/emblems/generated/pool-08.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-46abf75c-a3cf-4012-ac65-e12ea67df4dc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "41bd9b3bd291967672c4f7f7f512c37208954b70c07e64021e523ca9d5d4d674",
+      "sha256": "50030e695c43c576f275f4fc3c936cb1269f1b6cdc428e0b04f4b7224f046a67",
+      "previewSha256": "b00869bdb260e47e3edd24ffe763dc0ae5cbf46b82f538bc6c7d4fcda032b34d",
+      "size": [
+        1298,
+        1298
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1298,
+          1298
+        ],
+        "padding": {
+          "left": 27,
+          "top": 24
+        },
+        "circle": {
+          "centre": [
+            649,
+            649
+          ],
+          "radius": 571
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-09",
+      "name": "Unzugeordnetes Wappen 09 – Steppenzelt",
+      "motif": "Ein einzelnes weißes traditionelles kumanisches rundes Steppenzelt frontal, konisches Tuchdach, geschlossener Eingang als dunkle klare Form, wenige dunkelblaue Tuchborten, ohne Boden oder Landschaft auf blaugrünem bemaltem Holzfeld.",
+      "colors": [
+        "Weiß",
+        "Blaugrün",
+        "Holz und Silber"
+      ],
+      "frame": "DUNKLEM HOLZ MIT SILBERBESCHLÄGEN",
+      "ornament": "Geschlossener Holzring mit zurückhaltenden silbernen geometrischen Klammern und Flechtmustern.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 09 – Steppenzelt\n\n**Zentrales Symbol:** Ein einzelnes weißes traditionelles kumanisches rundes Steppenzelt frontal, konisches Tuchdach, geschlossener Eingang als dunkle klare Form, wenige dunkelblaue Tuchborten, ohne Boden oder Landschaft auf blaugrünem bemaltem Holzfeld.\n\n**Farbpalette:** Weiß · Blaugrün · Holz und Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKLEM HOLZ MIT SILBERBESCHLÄGEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Holzring mit zurückhaltenden silbernen geometrischen Klammern und Flechtmustern.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-929f7dbf-2c2c-4e8a-a92c-30cc8c8c8021.png",
+      "production": "assets/emblems/production/pool-09.png",
+      "preview": "assets/emblems/previews/pool-09.webp",
+      "generatedArchive": "assets/emblems/generated/pool-09.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-929f7dbf-2c2c-4e8a-a92c-30cc8c8c8021.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "eb18dad69a43d1e824cc28a85289cae3c8a27f0e79be2aa63a33a24ac988de0f",
+      "sha256": "00a27b69fddd580549356bb55eb7a6f56c09f06c549dbf715debbfe009926565",
+      "previewSha256": "5dc52aefd4751d24b0b7650d2203f70b744e87b5da59a84ccd4843b44bd9f54c",
+      "size": [
+        1314,
+        1314
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1314,
+          1314
+        ],
+        "padding": {
+          "left": 34,
+          "top": 32
+        },
+        "circle": {
+          "centre": [
+            657,
+            657
+          ],
+          "radius": 578
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-10",
+      "name": "Unzugeordnetes Wappen 10 – Ruhender Löwe",
+      "motif": "Ein goldener heraldischer Löwe liegend im Profil, Kopf aufrecht würdevoll zum Betrachter gewendet, Vorderpfoten ordentlich nebeneinander, langer geschwungener Schwanz, auf dunkelrotem bemaltem Holzfeld.",
+      "colors": [
+        "Gold",
+        "Dunkelrot",
+        "Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener matter Bronzering mit seldschukischen Blüten und kleinen dunklen Rauten, keine Krone.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 10 – Ruhender Löwe\n\n**Zentrales Symbol:** Ein goldener heraldischer Löwe liegend im Profil, Kopf aufrecht würdevoll zum Betrachter gewendet, Vorderpfoten ordentlich nebeneinander, langer geschwungener Schwanz, auf dunkelrotem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Dunkelrot · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener matter Bronzering mit seldschukischen Blüten und kleinen dunklen Rauten, keine Krone.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-305b40d4-5560-4da0-9459-a1d21c5f2249.png",
+      "production": "assets/emblems/production/pool-10.png",
+      "preview": "assets/emblems/previews/pool-10.webp",
+      "generatedArchive": "assets/emblems/generated/pool-10.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-305b40d4-5560-4da0-9459-a1d21c5f2249.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "1355c99f539e89af01b14ec943bc9a215ba6d1a187b7ea6b298d88ec309034eb",
+      "sha256": "b561ba197449fb23fc3458419da2afa7f3be4854f42ebd1d9182f99775cd494f",
+      "previewSha256": "e45342cc281a34148c07a87eb403d20504e2309c82b8c45a2bae9ab421ba660b",
+      "size": [
+        1320,
+        1320
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1320,
+          1320
+        ],
+        "padding": {
+          "left": 36,
+          "top": 38
+        },
+        "circle": {
+          "centre": [
+            660,
+            660
+          ],
+          "radius": 580
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-11",
+      "name": "Unzugeordnetes Wappen 11 – Stier",
+      "motif": "Ein einzelner großer schwarzer heraldischer Stier schreitend im Profil, kräftiger ruhiger Körper, zwei helle Hörner, Kopf leicht zum Betrachter gedreht, auf elfenbeinfarbenem bemaltem Holzfeld.",
+      "colors": [
+        "Schwarz",
+        "Elfenbein",
+        "Dunkles Eisen"
+      ],
+      "frame": "DUNKLEM EISEN",
+      "ornament": "Geschlossener dunkler Eisenring mit schlichten genieteten Segmenten und schmalen geometrischen Linien; robuste Steppenheraldik.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 11 – Stier\n\n**Zentrales Symbol:** Ein einzelner großer schwarzer heraldischer Stier schreitend im Profil, kräftiger ruhiger Körper, zwei helle Hörner, Kopf leicht zum Betrachter gedreht, auf elfenbeinfarbenem bemaltem Holzfeld.\n\n**Farbpalette:** Schwarz · Elfenbein · Dunkles Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKLEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener dunkler Eisenring mit schlichten genieteten Segmenten und schmalen geometrischen Linien; robuste Steppenheraldik.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5e6f348b-80d3-4005-bf8f-2d4c940deddb.png",
+      "production": "assets/emblems/production/pool-11.png",
+      "preview": "assets/emblems/previews/pool-11.webp",
+      "generatedArchive": "assets/emblems/generated/pool-11.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-5e6f348b-80d3-4005-bf8f-2d4c940deddb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "19aa9ae444387cc73530eb368cf413f240746829608c60c0e50784921076a2b8",
+      "sha256": "97fbd36876bff95130562fe790fcc97a9b1c801efbfd4a8ffbf9f6e859205b03",
+      "previewSha256": "6b42c3aadb05d37d7ffc57fef2265043b2963ddbe68f9895f729005d5761b631",
+      "size": [
+        1288,
+        1288
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1288,
+          1288
+        ],
+        "padding": {
+          "left": 22,
+          "top": 12
+        },
+        "circle": {
+          "centre": [
+            644,
+            644
+          ],
+          "radius": 566
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-12",
+      "name": "Unzugeordnetes Wappen 12 – Kranich",
+      "motif": "Ein weißer heraldischer Kranich im Profil auf einem sichtbar angewinkelten Bein stehend, langer Hals in eleganter S-Form, rote kleine Kopfzeichnung, Flügel geschlossen, auf olivgrünem bemaltem Holzfeld.",
+      "colors": [
+        "Weiß",
+        "Olivgrün",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "ornament": "Geschlossener Silberring mit zurückhaltenden seldschukischen floralen Ranken und grünen kleinen Blüten, keine äußere Zier.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 12 – Kranich\n\n**Zentrales Symbol:** Ein weißer heraldischer Kranich im Profil auf einem sichtbar angewinkelten Bein stehend, langer Hals in eleganter S-Form, rote kleine Kopfzeichnung, Flügel geschlossen, auf olivgrünem bemaltem Holzfeld.\n\n**Farbpalette:** Weiß · Olivgrün · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SILBER mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Silberring mit zurückhaltenden seldschukischen floralen Ranken und grünen kleinen Blüten, keine äußere Zier.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-0e66b810-f860-416f-9db7-490ce098daac.png",
+      "production": "assets/emblems/production/pool-12.png",
+      "preview": "assets/emblems/previews/pool-12.webp",
+      "generatedArchive": "assets/emblems/generated/pool-12.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-0e66b810-f860-416f-9db7-490ce098daac.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "c6bacfecd1d12b9164769169ec39386fec60d5e17c9eee0002369693ed1ea865",
+      "sha256": "81f28f8294fdf8ad7589f157852a00beb3200bfbeaae7108fb1a9539658f8019",
+      "previewSha256": "2118e8ea23b88bb8d5916c46da9a270f11a5a2bf429a666beb9fce453dc36f54",
+      "size": [
+        1276,
+        1276
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1276,
+          1276
+        ],
+        "padding": {
+          "left": 20,
+          "top": 8
+        },
+        "circle": {
+          "centre": [
+            638,
+            638
+          ],
+          "radius": 561
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-13",
+      "name": "Unzugeordnetes Wappen 13 – Zwei Karpfen",
+      "motif": "Zwei goldene heraldische Karpfen, Kopf an Schwanz einander kreisförmig folgend, beide Fischkörper vollständig klar getrennt und sichtbar, wenige große Schuppenformen, auf dunkelblauem bemaltem Holzfeld.",
+      "colors": [
+        "Gold",
+        "Dunkelblau",
+        "Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit dunkelblauen Emailleeinsätzen und klaren seldschukischen Wasserwellen-Ornamenten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 13 – Zwei Karpfen\n\n**Zentrales Symbol:** Zwei goldene heraldische Karpfen, Kopf an Schwanz einander kreisförmig folgend, beide Fischkörper vollständig klar getrennt und sichtbar, wenige große Schuppenformen, auf dunkelblauem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Dunkelblau · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit dunkelblauen Emailleeinsätzen und klaren seldschukischen Wasserwellen-Ornamenten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-ac1e801a-6778-4a41-bc10-97bc3cbec731.png",
+      "production": "assets/emblems/production/pool-13.png",
+      "preview": "assets/emblems/previews/pool-13.webp",
+      "generatedArchive": "assets/emblems/generated/pool-13.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-ac1e801a-6778-4a41-bc10-97bc3cbec731.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "2b4bd2981b10a98a6fe7758e7bb03a8d068b717a0400356847cff30623bc0168",
+      "sha256": "e24c8254058111c28bc92ef3f1c629b0cffb4c77deabb882fd57f0d1ded409f0",
+      "previewSha256": "204110b502bff05ac28362d25549fa62cfa2c5cb142e322b9ac8fc42ca49cbb5",
+      "size": [
+        1294,
+        1294
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1294,
+          1294
+        ],
+        "padding": {
+          "left": 27,
+          "top": 19
+        },
+        "circle": {
+          "centre": [
+            647,
+            647
+          ],
+          "radius": 569
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-14",
+      "name": "Unzugeordnetes Wappen 14 – Anker",
+      "motif": "Ein einzelner großer silberner historischer Stockanker frontal, gerader Schaft mit Ring oben, symmetrische gebogene Flunken, auf dunkelrotem bemaltem Holzfeld.",
+      "colors": [
+        "Silber",
+        "Dunkelrot",
+        "Dunkles Eisen"
+      ],
+      "frame": "DUNKLEM EISEN",
+      "ornament": "Geschlossener dunkler Eisenring mit silbernem Tauornament vollständig innerhalb des Ringes, schlichte maritime Herkunft ohne Schiff oder Landschaft.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 14 – Anker\n\n**Zentrales Symbol:** Ein einzelner großer silberner historischer Stockanker frontal, gerader Schaft mit Ring oben, symmetrische gebogene Flunken, auf dunkelrotem bemaltem Holzfeld.\n\n**Farbpalette:** Silber · Dunkelrot · Dunkles Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKLEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener dunkler Eisenring mit silbernem Tauornament vollständig innerhalb des Ringes, schlichte maritime Herkunft ohne Schiff oder Landschaft.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-d3e33e55-6e73-4e1f-801e-a4fd69c9cb39.png",
+      "production": "assets/emblems/production/pool-14.png",
+      "preview": "assets/emblems/previews/pool-14.webp",
+      "generatedArchive": "assets/emblems/generated/pool-14.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-d3e33e55-6e73-4e1f-801e-a4fd69c9cb39.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "8d33691ec93dbaa3bea68ced2f76269391d09be0dffd13068ec79e5ad9cfbc90",
+      "sha256": "2499ed5e8878cecd7400699882baed3e28dc9fbba37724281fb322f0033eb630",
+      "previewSha256": "142f4c2aaaab69f0fcc5b4aacf7cb4968ff25db2c54abb6059199230a5b1850d",
+      "size": [
+        1270,
+        1270
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1270,
+          1270
+        ],
+        "padding": {
+          "left": 13,
+          "top": 11
+        },
+        "circle": {
+          "centre": [
+            635,
+            635
+          ],
+          "radius": 558
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-15",
+      "name": "Unzugeordnetes Wappen 15 – Ähren",
+      "motif": "Drei große goldene Weizenähren als aufrechtes gebundenes Bündel mit gut unterscheidbaren Körnerformen und wenigen langen Blättern, auf braungrünem bemaltem Holzfeld.",
+      "colors": [
+        "Gold",
+        "Braungrün",
+        "Holz und Messing"
+      ],
+      "frame": "DUNKLEM HOLZ MIT MESSINGBESCHLÄGEN",
+      "ornament": "Schlichter vollständig geschlossener Holzring, wenige flache Messingnieten und ein schmales geometrisches Randband.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 15 – Ähren\n\n**Zentrales Symbol:** Drei große goldene Weizenähren als aufrechtes gebundenes Bündel mit gut unterscheidbaren Körnerformen und wenigen langen Blättern, auf braungrünem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Braungrün · Holz und Messing\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKLEM HOLZ MIT MESSINGBESCHLÄGEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichter vollständig geschlossener Holzring, wenige flache Messingnieten und ein schmales geometrisches Randband.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-6a35cbaa-f62e-48d8-b6b7-838f1e571ef9.png",
+      "production": "assets/emblems/production/pool-15.png",
+      "preview": "assets/emblems/previews/pool-15.webp",
+      "generatedArchive": "assets/emblems/generated/pool-15.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-6a35cbaa-f62e-48d8-b6b7-838f1e571ef9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "763603f34047d8804e0c4da62d3a65e574b0fd4125276899715b91e6697d380a",
+      "sha256": "c979391e97a036bdc7424aa2ca32d4a2968e1ba727b861c3108d94e26a303ac7",
+      "previewSha256": "d058120e944659131580f067617c1d6a910140169e1dc115947c9ade1bcc515b",
+      "size": [
+        1276,
+        1276
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1276,
+          1276
+        ],
+        "padding": {
+          "left": 16,
+          "top": 10
+        },
+        "circle": {
+          "centre": [
+            638,
+            638
+          ],
+          "radius": 561
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-16",
+      "name": "Unzugeordnetes Wappen 16 – Karawanenbrücke",
+      "motif": "Eine einzige weiße heraldische steinerne Karawanenbrücke frontal mit exakt einem großen Rundbogen, zwei gedrungenen Endpfeilern und waagrechter niedriger Brüstung, keine Menschen oder Kamele, keine Landschaft, auf dunkelblauem bemaltem Holzfeld; der Bogen zeigt deckendes Dunkelblau, kein transparentes Innenloch.",
+      "colors": [
+        "Weiß",
+        "Dunkelblau",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "ornament": "Geschlossener Silberring mit seldschukischen geometrischen Rauten und zurückhaltenden blauen Emaillefeldern.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 16 – Karawanenbrücke\n\n**Zentrales Symbol:** Eine einzige weiße heraldische steinerne Karawanenbrücke frontal mit exakt einem großen Rundbogen, zwei gedrungenen Endpfeilern und waagrechter niedriger Brüstung, keine Menschen oder Kamele, keine Landschaft, auf dunkelblauem bemaltem Holzfeld; der Bogen zeigt deckendes Dunkelblau, kein transparentes Innenloch.\n\n**Farbpalette:** Weiß · Dunkelblau · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SILBER mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Silberring mit seldschukischen geometrischen Rauten und zurückhaltenden blauen Emaillefeldern.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-618fe1e0-af11-44a0-85d7-bd458f74f488.png",
+      "production": "assets/emblems/production/pool-16.png",
+      "preview": "assets/emblems/previews/pool-16.webp",
+      "generatedArchive": "assets/emblems/generated/pool-16.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-618fe1e0-af11-44a0-85d7-bd458f74f488.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "c5d18c2a079aa8f396e2db4ef793f735d76b3281cc8e694729ed05245109d107",
+      "sha256": "026e38a7b3b700ab7625707b9092a78fa4bde24055ff5f713eb27e5565c650d0",
+      "previewSha256": "1188108dddbfa8258e4206417ebdb3aec92c1948aae0449fc8d151d492a7d816",
+      "size": [
+        1320,
+        1320
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1320,
+          1320
+        ],
+        "padding": {
+          "left": 36,
+          "top": 35
+        },
+        "circle": {
+          "centre": [
+            660,
+            660
+          ],
+          "radius": 580
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-17",
+      "name": "Unzugeordnetes Wappen 17 – Speichenrad",
+      "motif": "Ein einzelnes großes rotes Wagenrad frontal mit exakt acht klaren geraden Speichen, runder roter Nabe und gleichmäßig geschlossenem Außenreifen, auf elfenbeinfarbenem bemaltem Holzfeld; zwischen den Speichen deckendes Elfenbein.",
+      "colors": [
+        "Rot",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit abwechselnden kleinen roten Rauten und einfachen geometrischen Steppenornamenten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 17 – Speichenrad\n\n**Zentrales Symbol:** Ein einzelnes großes rotes Wagenrad frontal mit exakt acht klaren geraden Speichen, runder roter Nabe und gleichmäßig geschlossenem Außenreifen, auf elfenbeinfarbenem bemaltem Holzfeld; zwischen den Speichen deckendes Elfenbein.\n\n**Farbpalette:** Rot · Elfenbein · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit abwechselnden kleinen roten Rauten und einfachen geometrischen Steppenornamenten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-7623b14d-ce36-48a8-b4f7-2d8f5829e04d.png",
+      "production": "assets/emblems/production/pool-17.png",
+      "preview": "assets/emblems/previews/pool-17.webp",
+      "generatedArchive": "assets/emblems/generated/pool-17.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-7623b14d-ce36-48a8-b4f7-2d8f5829e04d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "84996323d19bf7e0363f4fe1616a3d167b4b0be7f2cc7af671cae22d872d10e3",
+      "sha256": "fa775c877e58e0884ac676aac51f2809e01a440ea6b1906ede181e5ad2cae080",
+      "previewSha256": "b3cfbab66bce6080b6e30c1c132615d729a102272aa5ae0ae5590b484ca68942",
+      "size": [
+        1310,
+        1310
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1310,
+          1310
+        ],
+        "padding": {
+          "left": 35,
+          "top": 25
+        },
+        "circle": {
+          "centre": [
+            655,
+            655
+          ],
+          "radius": 576
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-18",
+      "name": "Unzugeordnetes Wappen 18 – Feuerschale",
+      "motif": "Eine große goldene antike Feuerschale frontal, flache runde Schale auf kurzem robustem Ständer, drei klar stilisierte gold-orange Flammen darüber, auf schwarzblauem bemaltem Holzfeld; alle Zwischenräume deckend schwarzblau.",
+      "colors": [
+        "Gold",
+        "Schwarzblau",
+        "Dunkelrote Bronze"
+      ],
+      "frame": "DUNKELROTER BRONZE",
+      "ornament": "Geschlossener dunkelroter Bronzering mit sparsamen osmanischen Pflanzenranken und kleinen goldenen Blüten, keine Schrift.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 18 – Feuerschale\n\n**Zentrales Symbol:** Eine große goldene antike Feuerschale frontal, flache runde Schale auf kurzem robustem Ständer, drei klar stilisierte gold-orange Flammen darüber, auf schwarzblauem bemaltem Holzfeld; alle Zwischenräume deckend schwarzblau.\n\n**Farbpalette:** Gold · Schwarzblau · Dunkelrote Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKELROTER BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener dunkelroter Bronzering mit sparsamen osmanischen Pflanzenranken und kleinen goldenen Blüten, keine Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-a2d511a1-82d2-4fe2-82a4-f6d2eb67d371.png",
+      "production": "assets/emblems/production/pool-18.png",
+      "preview": "assets/emblems/previews/pool-18.webp",
+      "generatedArchive": "assets/emblems/generated/pool-18.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-a2d511a1-82d2-4fe2-82a4-f6d2eb67d371.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "adc0023e1ff9ca24a5c9d7892d7422a1e6da9e0e7e39bb6c706a473c9f40d0bf",
+      "sha256": "76c48acc241e3b9014dc9414b5a6411c505e5f37d7ca0c6da0296a0be6cd91fe",
+      "previewSha256": "a9b4999b41a1d19a0050ddb5882297cdebffd327b3e4cae6688e084b83a52ad5",
+      "size": [
+        1326,
+        1326
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1326,
+          1326
+        ],
+        "padding": {
+          "left": 41,
+          "top": 37
+        },
+        "circle": {
+          "centre": [
+            663,
+            663
+          ],
+          "radius": 583
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-19",
+      "name": "Unzugeordnetes Wappen 19 – Hirsch",
+      "motif": "Ein großer silberner heraldischer Hirsch schreitend im Profil, aufrechter Hals und würdiger Kopf mit klarem schlankem Geweih vollständig innerhalb des Feldes, auf blaugrünem bemaltem Holzfeld.",
+      "colors": [
+        "Silber",
+        "Blaugrün",
+        "Bronze und Rot"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit kleinen roten Schmucksteinen und schmaler seldschukischer Flechtornamentik.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 19 – Hirsch\n\n**Zentrales Symbol:** Ein großer silberner heraldischer Hirsch schreitend im Profil, aufrechter Hals und würdiger Kopf mit klarem schlankem Geweih vollständig innerhalb des Feldes, auf blaugrünem bemaltem Holzfeld.\n\n**Farbpalette:** Silber · Blaugrün · Bronze und Rot\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit kleinen roten Schmucksteinen und schmaler seldschukischer Flechtornamentik.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-88cfa5b2-dbc7-40c6-8e00-02867269724b.png",
+      "production": "assets/emblems/production/pool-19.png",
+      "preview": "assets/emblems/previews/pool-19.webp",
+      "generatedArchive": "assets/emblems/generated/pool-19.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-88cfa5b2-dbc7-40c6-8e00-02867269724b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "66e217bb358ecb19a185914024b8daae7d0324c9e759260982b8d69a6452d25d",
+      "sha256": "86e4d58512b39802e140d06f8a4271f1b718c47ca4df6de573306f5e214dc470",
+      "previewSha256": "062c75bc19de1a2e0f60fc42c22f049ffa80dc0b4982240c695687e1e2738f89",
+      "size": [
+        1278,
+        1278
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1278,
+          1278
+        ],
+        "padding": {
+          "left": 19,
+          "top": 17
+        },
+        "circle": {
+          "centre": [
+            639,
+            639
+          ],
+          "radius": 562
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-20",
+      "name": "Unzugeordnetes Wappen 20 – Widderkopf",
+      "motif": "Ein einzelner großer weißer Widderkopf frontal mit zwei symmetrischen eingerollten Hörnern und ruhigem Gesichtsausdruck, auf tief schwarzrotem bemaltem Holzfeld.",
+      "colors": [
+        "Weiß",
+        "Schwarzrot",
+        "Eisen"
+      ],
+      "frame": "MATTEM EISEN",
+      "ornament": "Geschlossener matter Eisenring mit sparsamen kleinen geometrischen Rauten, schlichte archaische Steppenheraldik.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 20 – Widderkopf\n\n**Zentrales Symbol:** Ein einzelner großer weißer Widderkopf frontal mit zwei symmetrischen eingerollten Hörnern und ruhigem Gesichtsausdruck, auf tief schwarzrotem bemaltem Holzfeld.\n\n**Farbpalette:** Weiß · Schwarzrot · Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus MATTEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener matter Eisenring mit sparsamen kleinen geometrischen Rauten, schlichte archaische Steppenheraldik.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-f8fab716-3273-417b-9ab6-b2ed5c2deb16.png",
+      "production": "assets/emblems/production/pool-20.png",
+      "preview": "assets/emblems/previews/pool-20.webp",
+      "generatedArchive": "assets/emblems/generated/pool-20.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-f8fab716-3273-417b-9ab6-b2ed5c2deb16.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "e2e944f5437ccd5e2bf337d7dedfc77975b856c6fdc90297228882307456f190",
+      "sha256": "47fd73601a5a74cb56f7baa8c092edf2a075b10a3cef1c2a7c4931611704898c",
+      "previewSha256": "dbebdfdbbdd31377a492424f06db56508df6212a5cea858bf98653127ece882c",
+      "size": [
+        1312,
+        1312
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1312,
+          1312
+        ],
+        "padding": {
+          "left": 32,
+          "top": 32
+        },
+        "circle": {
+          "centre": [
+            656,
+            656
+          ],
+          "radius": 577
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-21",
+      "name": "Unzugeordnetes Wappen 21 – Achtstern",
+      "motif": "Ein großer exakt achtzackiger goldener geometrischer Stern frontal, acht symmetrische breite Strahlen, keine Schrift und kein Zeichen im Zentrum, auf dunkelblauem bemaltem Holzfeld.",
+      "colors": [
+        "Gold",
+        "Dunkelblau",
+        "Silber"
+      ],
+      "frame": "SILBER",
+      "ornament": "Geschlossener Silberring mit kleinen blauen geometrischen Rauten und schmalen seldschukischen Sternornamenten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 21 – Achtstern\n\n**Zentrales Symbol:** Ein großer exakt achtzackiger goldener geometrischer Stern frontal, acht symmetrische breite Strahlen, keine Schrift und kein Zeichen im Zentrum, auf dunkelblauem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Dunkelblau · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus SILBER mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Silberring mit kleinen blauen geometrischen Rauten und schmalen seldschukischen Sternornamenten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1d2de5d6-772b-4901-94ed-654dbcec37c9.png",
+      "production": "assets/emblems/production/pool-21.png",
+      "preview": "assets/emblems/previews/pool-21.webp",
+      "generatedArchive": "assets/emblems/generated/pool-21.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1d2de5d6-772b-4901-94ed-654dbcec37c9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "722c605386962d2854944a79550868d24d27b5c772301a2d833426f3f273d4f3",
+      "sha256": "b70f6cbd7e43a5bdae623dc9843cdc56575b46123f401bcca11adb22e480a622",
+      "previewSha256": "e39d64eb20f0cd938e5cf9858ea0a219e7c08e9b012a6a3827de928a8c42045f",
+      "size": [
+        1292,
+        1292
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1292,
+          1292
+        ],
+        "padding": {
+          "left": 24,
+          "top": 16
+        },
+        "circle": {
+          "centre": [
+            646,
+            646
+          ],
+          "radius": 568
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-22",
+      "name": "Unzugeordnetes Wappen 22 – Säbel und Fluss",
+      "motif": "Ein einzelner weißsilberner schmaler gesenkter gebogener Säbel diagonal, Spitze unten, klarer einfacher Griff oben, über einem waagrechten roten gewellten Flussband auf grünem bemaltem Holzfeld; das Flussband ist heraldisch flach, keine Landschaft.",
+      "colors": [
+        "Weiß",
+        "Grün und Rot",
+        "Dunkles Holz und Silber"
+      ],
+      "frame": "DUNKLEM HOLZ MIT SILBERBESCHLÄGEN",
+      "ornament": "Geschlossener dunkler Holzring mit silbernen geometrischen Spangen und schmalen Ranken, alle Elemente innerhalb der kreisrunden Kontur.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 22 – Säbel und Fluss\n\n**Zentrales Symbol:** Ein einzelner weißsilberner schmaler gesenkter gebogener Säbel diagonal, Spitze unten, klarer einfacher Griff oben, über einem waagrechten roten gewellten Flussband auf grünem bemaltem Holzfeld; das Flussband ist heraldisch flach, keine Landschaft.\n\n**Farbpalette:** Weiß · Grün und Rot · Dunkles Holz und Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus DUNKLEM HOLZ MIT SILBERBESCHLÄGEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener dunkler Holzring mit silbernen geometrischen Spangen und schmalen Ranken, alle Elemente innerhalb der kreisrunden Kontur.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-07aa27ab-eea3-4ecd-aba0-f8239f1673ae.png",
+      "production": "assets/emblems/production/pool-22.png",
+      "preview": "assets/emblems/previews/pool-22.webp",
+      "generatedArchive": "assets/emblems/generated/pool-22.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-07aa27ab-eea3-4ecd-aba0-f8239f1673ae.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "02f2387caa838ba63f4e4c5b461b23110282c887ceb9764f0f6f8bd0cf09d15c",
+      "sha256": "592125db814f8f3bd4019e3192314e5af44251481cccc3e4e3577cbb860259f6",
+      "previewSha256": "f40ab4eb3778df3aa0d195cd7ca63df738e03feadc9a84d2dfcf4520d4f41dc6",
+      "size": [
+        1290,
+        1290
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1290,
+          1290
+        ],
+        "padding": {
+          "left": 22,
+          "top": 19
+        },
+        "circle": {
+          "centre": [
+            645,
+            645
+          ],
+          "radius": 567
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-23",
+      "name": "Unzugeordnetes Wappen 23 – Zweiturmfestung",
+      "motif": "Eine einzelne rote schlanke heraldische Festung frontal mit genau zwei schmalen gezinnten Türmen, dazwischen einem niedrigen Torbau und einem geschlossenen dunkelroten Tor, auf elfenbeinfarbenem bemaltem Holzfeld; keine Bodenfläche oder Landschaft.",
+      "colors": [
+        "Rot",
+        "Elfenbein",
+        "Bronze und Blau"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit schmalem blauem seldschukischem Flechtband und kleinen elfenbeinfarbenen Akzenten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 23 – Zweiturmfestung\n\n**Zentrales Symbol:** Eine einzelne rote schlanke heraldische Festung frontal mit genau zwei schmalen gezinnten Türmen, dazwischen einem niedrigen Torbau und einem geschlossenen dunkelroten Tor, auf elfenbeinfarbenem bemaltem Holzfeld; keine Bodenfläche oder Landschaft.\n\n**Farbpalette:** Rot · Elfenbein · Bronze und Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit schmalem blauem seldschukischem Flechtband und kleinen elfenbeinfarbenen Akzenten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-435e3c7f-ece5-483c-b309-c7599d35599a.png",
+      "production": "assets/emblems/production/pool-23.png",
+      "preview": "assets/emblems/previews/pool-23.webp",
+      "generatedArchive": "assets/emblems/generated/pool-23.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-435e3c7f-ece5-483c-b309-c7599d35599a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "89da02191ae1006924cb52a062bd0b0405f79451b90ee7b153161d55377c7cae",
+      "sha256": "13d61bffb7fe3555049c5cdc19888b6e0537b9737cfa18fa99c38e95ac6105f0",
+      "previewSha256": "f0c6a02407d2c261c670e59787cfe06c0cb950f72b8cbd9e0573d4e91985286b",
+      "size": [
+        1310,
+        1310
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1310,
+          1310
+        ],
+        "padding": {
+          "left": 31,
+          "top": 35
+        },
+        "circle": {
+          "centre": [
+            655,
+            655
+          ],
+          "radius": 576
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-24",
+      "name": "Unzugeordnetes Wappen 24 – Windhund",
+      "motif": "Ein einzelner goldener schlanker heraldischer Windhund schreitend im Profil mit angehobenem Vorderbein, langer eleganter Schnauze und nach unten gebogenem Schwanz, auf schwarzgrünem bemaltem Holzfeld.",
+      "colors": [
+        "Gold",
+        "Schwarzgrün",
+        "Eisen"
+      ],
+      "frame": "MATTEM EISEN",
+      "ornament": "Geschlossener matter Eisenring mit sparsamer goldener geometrischer Steppenornamentik, keine zusätzlichen Tiere oder Kronen.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 24 – Windhund\n\n**Zentrales Symbol:** Ein einzelner goldener schlanker heraldischer Windhund schreitend im Profil mit angehobenem Vorderbein, langer eleganter Schnauze und nach unten gebogenem Schwanz, auf schwarzgrünem bemaltem Holzfeld.\n\n**Farbpalette:** Gold · Schwarzgrün · Eisen\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus MATTEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener matter Eisenring mit sparsamer goldener geometrischer Steppenornamentik, keine zusätzlichen Tiere oder Kronen.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1443d375-48c2-4835-b620-a3d80c2d8d53.png",
+      "production": "assets/emblems/production/pool-24.png",
+      "preview": "assets/emblems/previews/pool-24.webp",
+      "generatedArchive": "assets/emblems/generated/pool-24.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1443d375-48c2-4835-b620-a3d80c2d8d53.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "a85cf4abdb90a3483dc448402f038352a868759c73149eaf7c51df8e1454e24d",
+      "sha256": "920e5f1acdfb4da69ea80b6078b6ba3af36a3398e88ae91aa0259271fbae234f",
+      "previewSha256": "d27c75dfb28e2d13ed01d84a9051ce59edb6f81c9a0e80b4abc2568c5ca69e87",
+      "size": [
+        1290,
+        1290
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1290,
+          1290
+        ],
+        "padding": {
+          "left": 23,
+          "top": 32
+        },
+        "circle": {
+          "centre": [
+            645,
+            645
+          ],
+          "radius": 567
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-25",
+      "name": "Unzugeordnetes Wappen 25 – Dreieckssegler",
+      "motif": "Ein einzelner weißer heraldischer mittelalterlicher Segler im Profil mit genau einem lateinischen Dreieckssegel, einem Mast und schlankem gebogenem Rumpf; drei schlichte weiße heraldische Wellen unter dem Schiff auf blauem bemaltem Holzfeld, keine Landschaft.",
+      "colors": [
+        "Weiß",
+        "Blau",
+        "Bronze"
+      ],
+      "frame": "BRONZE",
+      "ornament": "Geschlossener Bronzering mit schlichtem Tauornament und wenigen blauen Emailleeinsätzen, keine äußeren Seile oder Schrift.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 25 – Dreieckssegler\n\n**Zentrales Symbol:** Ein einzelner weißer heraldischer mittelalterlicher Segler im Profil mit genau einem lateinischen Dreieckssegel, einem Mast und schlankem gebogenem Rumpf; drei schlichte weiße heraldische Wellen unter dem Schiff auf blauem bemaltem Holzfeld, keine Landschaft.\n\n**Farbpalette:** Weiß · Blau · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus BRONZE mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener Bronzering mit schlichtem Tauornament und wenigen blauen Emailleeinsätzen, keine äußeren Seile oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1543b2ca-e713-43fa-8fb5-92349d6abec9.png",
+      "production": "assets/emblems/production/pool-25.png",
+      "preview": "assets/emblems/previews/pool-25.webp",
+      "generatedArchive": "assets/emblems/generated/pool-25.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-1543b2ca-e713-43fa-8fb5-92349d6abec9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "e416b7f7abcaf08791a25a4c277b9993d0f50b56342ed8eff89752c1649a4eef",
+      "sha256": "f809f191697410b28a55224e5b1af5b9daaf108610b2ccc33480c22d107caa08",
+      "previewSha256": "a1d066d28f831104171f8434d5c87f2ad3eedaf5e78289ab8b327aa63af3aab3",
+      "size": [
+        1292,
+        1292
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1292,
+          1292
+        ],
+        "padding": {
+          "left": 26,
+          "top": 10
+        },
+        "circle": {
+          "centre": [
+            646,
+            646
+          ],
+          "radius": 568
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "pool-26",
+      "name": "Unzugeordnetes Wappen 26 – Granatapfel",
+      "motif": "Ein einzelner großer dunkler granatroter heraldischer Granatapfel frontal, ein deutlich geöffneter Bereich zeigt die roten geordneten Kerne, kleine grüne Blätter und kurze Krone oben; auf waagrecht geteiltem bemaltem Holzfeld oben matt Gold, unten Elfenbein.",
+      "colors": [
+        "Dunkelrot",
+        "Gold und Elfenbein",
+        "Grünes Messing"
+      ],
+      "frame": "GRÜN PATINIERTEM MESSING",
+      "ornament": "Geschlossener grün patinierter Messingring mit zurückhaltenden osmanischen floralen Ranken und kleinen roten Blüten.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Unzugeordnetes Wappen 26 – Granatapfel\n\n**Zentrales Symbol:** Ein einzelner großer dunkler granatroter heraldischer Granatapfel frontal, ein deutlich geöffneter Bereich zeigt die roten geordneten Kerne, kleine grüne Blätter und kurze Krone oben; auf waagrecht geteiltem bemaltem Holzfeld oben matt Gold, unten Elfenbein.\n\n**Farbpalette:** Dunkelrot · Gold und Elfenbein · Grünes Messing\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus GRÜN PATINIERTEM MESSING mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGeschlossener grün patinierter Messingring mit zurückhaltenden osmanischen floralen Ranken und kleinen roten Blüten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nAktuelle kulturelle Vorgabe mit Vorrang vor dem generischen nordisch-keltischen Satz: Ishtaran ist seldschukisch/osmanisch/kumanisch geprägt. Die beigefügten Wappen sind ausschließlich Stilreferenzen für orientalische handgemalte Heraldik, klare Ornamentbänder und matte Pigmentfarben. Verwende das aktuell beschriebene neue Motiv und die neue Palette, kopiere keine Sonne, keinen Wolf und keine Tulpe aus den Referenzen. Vollständig glatte exakte kreisrunde Außenkontur, ohne Spitzen oder überstehende Ornamente. Das Wappen nimmt nur 85 bis 90 Prozent der quadratischen Bildbreite ein: ringsum mindestens 5 Prozent vollständig transparenter Rand. PNG Alpha außen exakt 0, im gesamten Inneren vollständig deckend Alpha 255. Keine halbtransparenten gemalten Flächen, keine transparenten Innenlöcher. Keine äußeren Farbreste oder Schatten. Kein Name, keine Schrift, keine Buchstaben oder Zahlen im Bild. Nur das einzelne Wappen.",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:\\Users\\fhg_r\\Downloads\\Länder\\Ishtaran\\Ishtaran Wappen.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-01.png",
+        "E:\\Aleria\\Vorschau\\Ishtaran\\assets\\emblems\\production\\pool-05.png"
+      ],
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-b2f55d15-e2c9-4109-b109-92effddcbbab.png",
+      "production": "assets/emblems/production/pool-26.png",
+      "preview": "assets/emblems/previews/pool-26.webp",
+      "generatedArchive": "assets/emblems/generated/pool-26.png",
+      "output_hint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0cc-b432-7222-b120-7cc1ea160218\\exec-b2f55d15-e2c9-4109-b109-92effddcbbab.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sourceSha256": "19fb4c0391bda2372b5701746271cb5a2a1ee6cc4e7853394608f295bbd4bc12",
+      "sha256": "0782ce74db370644ab840ba24812135b39e71705b230f94e9d460ceb314d6182",
+      "previewSha256": "fb0b023c1687d41dd7ddc75036e7e42e94342a23e92ec6914dd25f984e9e494e",
+      "size": [
+        1300,
+        1300
+      ],
+      "mode": "RGBA",
+      "previewAlphaIdentical": true,
+      "validationStatus": "passed",
+      "validationNote": "User-authorized shared alpha cleanup and exact circular framing; original RGB pixels retained with transparent padding.",
+      "alphaPreparation": {
+        "size": [
+          1300,
+          1300
+        ],
+        "padding": {
+          "left": 33,
+          "top": 21
+        },
+        "circle": {
+          "centre": [
+            650,
+            650
+          ],
+          "radius": 572
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    }
+  ],
+  "qualityStatus": "passed",
+  "qualityNote": "Exact opaque circular production masks; fully transparent exterior; every original RGB pixel retained in the padded canvas.",
+  "alphaAuthorization": {
+    "date": "2026-11-03",
+    "quote": "Ja, Transparenz technisch bereinigen",
+    "helper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+    "operation": "prepare_emblem_from_source(source, target, coverage=.88)"
+  }
+}

@@ -9,7 +9,7 @@ import { HOUSE_GRIANLAOCH_PORTRAITS } from './house-grianlaoch-portraits.js';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS,
   SONNENKUESTE_HOUSE_PROFILES
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 
 const GRIANLAOCH_HOUSE_ID = 'house-grianlaoch';
 const GRIANLAOCH_EMBLEM = SONNENKUESTE_HOUSE_EMBLEMS.grianlaoch;

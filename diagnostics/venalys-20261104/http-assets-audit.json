@@ -1,0 +1,1326 @@
+{
+  "checkedAt": "2026-11-04T03:52:39.409Z",
+  "baseUrl": "http://127.0.0.1:8897/",
+  "pageStatus": 200,
+  "runtimeClosureCount": 29,
+  "resourceCount": 131,
+  "estateTypes": 5,
+  "estateImageFiles": 10,
+  "issues": [],
+  "resources": [
+    {
+      "path": "Klassenordner/Venalys/condottieri/index.html",
+      "role": "class-link",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 23771,
+      "sha256": "a63d5847209a824932a37ba871a9405e0e2159b84a3640ae53435f63f5f63906",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Klassenordner/Venalys/gondoleri/index.html",
+      "role": "class-link",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 23447,
+      "sha256": "1e6b25620a91bcb9c97b0e58ade2cbc0774db34d0502744627c8686eb0a8707d",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Klassenordner/Venalys/lancieri/index.html",
+      "role": "class-link",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 23144,
+      "sha256": "49e6ddb36ab6c793bbdb52280172e5a07092347f4711314d6c3da60be66cf7c1",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Klassenordner/Venalys/stralieri/index.html",
+      "role": "class-link",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 23401,
+      "sha256": "0f75d2df75d201a3a689587250f237b8a4b6231a8df23c291532d8f07560b9c7",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Leukonia/art-view.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 4687,
+      "sha256": "2ce8c06090bded6e8d11abdb513a1e3108d2a3c867bfd42e430f4d6f0d64015b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/clan-map.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2807,
+      "sha256": "e1d00194f481aeb76cea92625f5d3408f7cf45129b0703e00e11c42e9377cbe1",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/art-dialog-session.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 1353,
+      "sha256": "8cfc6de6aba6cb838893ebf090598aec7daea458afe5907048a6c81fc4cc9838",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/art-dialogs.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 1805,
+      "sha256": "ae42c1cd513f8ee4377cb1d3ab7309cbf8317d6666c4c9626304ddef3679107a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/base.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 7002,
+      "sha256": "fa0c41d3801029887d1059499361de6eb09e2b0333428e146c2689df3a99dde9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/estate-cards.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 1662,
+      "sha256": "fdc76ae4796f235e782554f852507fa2153a2062e4a58b433b5e3bffed511261",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/estate-view.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 2035,
+      "sha256": "62533e6ec4d03713d387da5dc4e1033ae214e95b14756c9d9f4bd8d0364c29e5",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/occupation.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 663,
+      "sha256": "0b17a49348aeeeee79c6bf3025de43456d7862ebaa75ab614250deefc8b0d184",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/placement.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 3093,
+      "sha256": "af790596f1e9ea0e2f812b62695b811df607b7575b75a0d897d81407502a9451",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/render.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 9265,
+      "sha256": "197a8f8731d97cf51514637ab94200962a08f1cb1b0ee44b951f544a7c4dc1bc",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/country-workbench/workbench.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2105,
+      "sha256": "f0f3d49c903453fc836cbc0080ad8ea5a7e5c5aab71f0a1c15da7a95d9874bde",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/house-detail-render.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 2651,
+      "sha256": "82f26e022c01808b9418574eb9812ace1a3c6ad61bce9bc76e3f8e7daf1a5bcc",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/house-details.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2194,
+      "sha256": "37b390dca8e3fec05cd33c9be2c3e371a43da588fa3904b540f5a81aec3b4f2f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/shared/placement-controls.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 4220,
+      "sha256": "9d79d8f52df1878bd97bcbf164078d00f2d55026688c13191a4dfb3b423aa515",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/abor.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 86788,
+      "sha256": "40b69913b8092435630a0c0182fa9a168aa7b299a44c34aa9bd6705ccb2fb2a6",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/arentino.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 108832,
+      "sha256": "f5667c74877dbf6993e99a8d1e6a0a54e8970de24befaa6e19cc9f791b683a9f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/argentinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 97864,
+      "sha256": "2b1376dba0215855b737acc71e11022e508554c77977e82eea2d3738acaa1d4a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/avenicci.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 67528,
+      "sha256": "6ff1c0a69dfdd49ee2c2135f7780eb72f910cecd8639c94017a66d6df745bfba",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/bellaratus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 97934,
+      "sha256": "1241aa062f9a56ac056653f219f756c321c3813a77b35f8843f67400aafe223b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/discipian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 98816,
+      "sha256": "38fe2e67951b726d562c2c9aa2b27864e4a7fdddfea51c17826123e8c900bc72",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/ergalla.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 105102,
+      "sha256": "0bd2d422a464033f030a0fd5d2849d13a6695800b46b8dc843add8a431ae98a6",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/falto.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 136826,
+      "sha256": "1712f7b73e91b3f1344695fe582ce60a0ecdf5a55bd9f545029f061caf57c846",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/falveri.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 91346,
+      "sha256": "6e301602ce52aa8860e2e4588d7ece8ac3a505355eb9378ee89de36627c40aee",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/fidelinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 100100,
+      "sha256": "be598b5cda6e332dfe06e0b4ddab69ab322ad17d2974d3b2565f08b2de65790a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/fortenian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 114150,
+      "sha256": "77256b60826f5ac128fecc233bf4c476ebd2bf96963f814975e670e51b085ab1",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/honoratus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 114946,
+      "sha256": "7b859d51afae43f3090847486cfa5ec10df856e94c1429b4b413faf1a02b6769",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/legarinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 110774,
+      "sha256": "bed54ff64e55af2d2773a1586068d9da905236266e4b5d659ff874d922d3d494",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/nerva.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 115984,
+      "sha256": "a350639db387b2ae706e8900bc2e8fba1b060f656f6f8283a61d579d6ca4a677",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/ordinarius.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 110968,
+      "sha256": "04468d8cd1667eaa5678e8bb3f7ebd958eef7a83f644e519db7ebcf2c3cd5487",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/potenian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 118844,
+      "sha256": "a2819e142ae37ba66a5c85ddddf963d16733c272684a99bc072fde92b86c1ab2",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/rationellus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 89358,
+      "sha256": "ce6f8dcb72e6c94bbd5bab643370ea71b327d08fe09ed56d05ae1062f7c36b98",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/sapienor.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 115394,
+      "sha256": "056f18437c4aac8e7a2c1e0a41d2ad1063f9a6f2c2b59bdd1bf719b907dbf64f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/tullius.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 104124,
+      "sha256": "2c377771967d5a61597d65769aa6322f524956c459500f4b90de68180964f161",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/venalys.webp",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 94884,
+      "sha256": "f379b834365f70e84bbfff97cbc1ef130bfe07ce87225638b3ae60a1658e9965",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/venturian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 116754,
+      "sha256": "0ae1cd080e0d59afe0d41a46f9bdb0842a0842fca67fe71ca9a5e17225141a35",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/victorellus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 116322,
+      "sha256": "69b95c4e76131ec1a1a2310acca7942e4128b03a4af94a3b63c9d2a32db70071",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/crests/vinicius.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 65738,
+      "sha256": "658e75b0f8d9d188dff7bf554aa0da66b54d039d7f1088f73d3fe2d65caed8af",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/previews/advena.webp",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 240196,
+      "sha256": "c5e2b17264a1947f21d5447815aa045ca40e525a81e303346ea7d7443c1c16eb",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/previews/magnarier.webp",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 161274,
+      "sha256": "effb127c00bb192433dac4e350579b8c2e859e9ec7154095051f104698ac9a32",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/previews/mercantier.webp",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 166208,
+      "sha256": "132b804bdfeeff527ca1840997d5abb523cb30d993023b7fefa6e9868ea9fe87",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/previews/patrizier.webp",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 160076,
+      "sha256": "a7067bf7e448dda47a188b5ddefd6d35db394ccc96e0aca8578c17e36added07",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/previews/plebejer.webp",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 220534,
+      "sha256": "1c6b3a5f4d71c522dc55fb77fa8158918233d3fed44a82d8fa22e82d01344f5b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/production/advena.png",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2318774,
+      "sha256": "b47a553115547f7dbabf67616a9fd52dffa3741ccb19e95965b7a7b3faffe4a8",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/production/magnarier.png",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1856377,
+      "sha256": "7ee67759bd6227eb33187a7cb98873e4037e0cc8abe0132694ab02a566b4e2f0",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/production/mercantier.png",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1895420,
+      "sha256": "1c5eeea711f6c9f369ef408fec1868583508972cb8a66a74667963863e6ba3ac",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/production/patrizier.png",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1954295,
+      "sha256": "8e085cb594acf3523c543fcc72b10108003351dd56a519f3db1e030168e76185",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/estates/production/plebejer.png",
+      "role": "estate-image",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2327705,
+      "sha256": "1df8d4bb079b819185f7b61a1f8bd8786a5059adad839237902a21da032d736e",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/map-districts-full.webp",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 6376156,
+      "sha256": "ba0c95967afc0a7b85a1c79a93c88f355457ca2f8a1fff6f0b3c30463fc70729",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/map-districts.webp",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 2827684,
+      "sha256": "0865ebe9be1e6e5ec46158ba49eccfe4f0da75dae6e752d5c860c7989753acef",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/map-full.webp",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 6609720,
+      "sha256": "ac2b81527501ae0f3e286cc39255e7ca64505818ed315db709a7babf169510b6",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/map.webp",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 2935526,
+      "sha256": "f66bd68cd47dd88d132f956c55538ebdfb00f935669ce08dee2a05fc47271da9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/abor.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 369938,
+      "sha256": "72232885141208b5cec7286f658ee2676f67682303e730944f22869671cf530e",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/arentino.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 449755,
+      "sha256": "bf49370c2ceb2f883da738e39f28352e9d9e31d2756b1df03378a6c071fe27d6",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/avenicci.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 296033,
+      "sha256": "de437b6debe655f29de60f7e7a1103d6f6dd870a1b2a7ea042c3f684b493874c",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/falto.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2395600,
+      "sha256": "8064cd0daf1666bd4bb8260d5ff0153e7275e683fa97f7aef6e3d0da84d1f9b4",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/falveri.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 422536,
+      "sha256": "a015e9d9640de8d6986ac0fd73082acd8599fc03f4426b37020b98e1c93bb2dd",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/tullius.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 394018,
+      "sha256": "58d068f43da3c21731bfe5360477f16f83e34e2b01b1fd840117553c902bbe65",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/venalys.png",
+      "role": "map-or-realm-art",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 416704,
+      "sha256": "3be11521ed4a831543ac13d7ee9e2e1f565d8aa1e9b24be3136e4cd0b1a10a4b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/originals/vinicius.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 277669,
+      "sha256": "ab332d7dc3c04040160c8a2e5321f2385c419e5bd7fbe8913fcf156e7cfa8e67",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/argentinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2310060,
+      "sha256": "8ff1c067bbbf08bc763abef41511c4a83c9415acdbae444bc14a180d2fe733e4",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/bellaratus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2425273,
+      "sha256": "30a791a54275fc5de2201202646976f8f7eda889543162ef173d445703bf23aa",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/discipian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2334224,
+      "sha256": "0064cf1f0f9f9ecd713da236a1247b0e7dc13667384071d4c85a101e5af7b036",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/ergalla.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2301294,
+      "sha256": "f25dee60d32ba8fe30c7faaf4d787fb114fd2cdf1e91484718f2c5ad8124cf50",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/fidelinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2380995,
+      "sha256": "f473f5699e4dffef6e99943aee42304cbda8e1ca30a63f5e3ae7ff1a61ceab4f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/fortenian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2428643,
+      "sha256": "72bc47e98d5710fb50fe59675a1edd50c45b9a03d13b1994e5ebee335e73d7b5",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/honoratus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2433433,
+      "sha256": "93791d07c4d833b691398ec229a8dbf247b20748f5368ed2acea448de446cdf3",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/legarinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2568456,
+      "sha256": "ece67d2cfedf6dbe5c2684905f92b56ec50c56b946f979b2cb469a7536bda24a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/nerva.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2719392,
+      "sha256": "b8b38308939861c5d5aab73368dbe45047437a82e8c9681bd55c6b5cf10494e9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/ordinarius.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2496493,
+      "sha256": "23bda31a3f378eba09cda899d20fe9f591566a1b11c9df3c790fd848220a96d9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/potenian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2676975,
+      "sha256": "80914b226a90d5be213019fa18c1f67ac8f75d1f244d2c3c308cfee22836732b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/rationellus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2343027,
+      "sha256": "bf494296522627eea1b4c368a7d1bcb6575c5f9e1ccf147a76b5635927ea256b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/sapienor.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2629318,
+      "sha256": "08dc20afaec43d95c70ec2be1fb1d7d34af20bba2a7a01244c12af9e74b08dd5",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/venturian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2566015,
+      "sha256": "2b43416337c20aa08133940fd63c013e212b4fe60f88a36a3f728037a6b16572",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/production/victorellus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2626615,
+      "sha256": "a0af1ef12a491cd760ac0ffb375d743566eb71d61a75597508a7936bbc98d5b3",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/abor.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 227222,
+      "sha256": "91d212ef13060ed97d0388c046018b992fe41c4802c1540414725abf3414d966",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/argentinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 235504,
+      "sha256": "09ddbd9c7c87487236db6e121fc140326a38832344066c48e8be7354a4739c04",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/avenicci.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 196666,
+      "sha256": "82d51dd04f83c052e3950556f2c636fd919cedf92c10f5d001bd528f55601b69",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/bellaratus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 169782,
+      "sha256": "049a7292ca53627d2e1888194f833fc6390950f24d44102d5917239da9139b2c",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/discipian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 197716,
+      "sha256": "e385fe98b633b1efcabc1f0559fc859aa81c1423d6c8377b440fca4374df8bd9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/ergalla.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 235790,
+      "sha256": "6273fcde174b140eff3bfbfcc455abed3aa577744dac4da6c702a68ec5573641",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/falto.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 196404,
+      "sha256": "abbb36186f5e88af769abd0294134c5ea9044a274464bc7328d75b4379607282",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/falveri.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 169750,
+      "sha256": "4bfec4d6c4070e42dfc89ad856d400614204fcf2bcc359152731852851cba775",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/fidelinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 218880,
+      "sha256": "a86d68a2e43e245ed6187074010a778cbad0312a54e11c9173751b0b6193dad3",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/fortenian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 224316,
+      "sha256": "43545e6912968d6e107d2002ad1178fdaf2d5f1d21b54ab27814ad936a874668",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/honoratus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 220510,
+      "sha256": "95fe121beeb16a27d69b52d35a0fdbfa572883f96bdcd8119aae5814aad61f7b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/legarinus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 169450,
+      "sha256": "6a9858e7ad8290378a53ddeee0dacb42ef4f8735c982e94caefdf8af568cb8f9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/nerva.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 178186,
+      "sha256": "28c60c72900b97ddc82b15641fdba908bb408b7d42b9711889102a7264b064c6",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/ordinarius.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 262142,
+      "sha256": "71c29194f01b3e9e912cdd63e26624f2c3706384dc1ef21962db637fe9c41246",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/potenian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 204178,
+      "sha256": "43855317f93aed8c029d56acb22218d8e9140724b5a7994de80587b3d75cc4f1",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/rationellus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 246670,
+      "sha256": "6e8b34dfc58f3ad950b37bfac39c233aab8393a9b7a1f7c09975fee9f81e28b9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/sapienor.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 189120,
+      "sha256": "5b6f6e59e461e2309d158c5869966daf786918a34ef17cc51bcce518aa6bf9c9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/venturian.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 177378,
+      "sha256": "89b41828c06f8747ed8a97e425af6c52b77c47ee2d2ec69033ef7e5b94bae7ec",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/previews/victorellus.webp",
+      "role": "artwork",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 191768,
+      "sha256": "b41c9001a0f392a63b6e80458a9ddc3f2b4e5a13f6cfca9aef3695acbbba310f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/abor.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2298597,
+      "sha256": "e8457d9b0aa3af5630e5d951e78145d42047c562562ba3d523b603fdb0a73948",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/argentinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2362841,
+      "sha256": "b1d9efbc12d56cbfbc7deb5a569ae6f21589b94ef3fca086d5ed914c1263323a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/avenicci.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2104139,
+      "sha256": "c3d77f31d0855c1c060207320296d578942721644a6a823baba00d806869e2d7",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/bellaratus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2012237,
+      "sha256": "92b4b47672b178cb13ab79b5aafc0f6f332726448ae9aa39546ec642b00308ee",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/discipian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2130556,
+      "sha256": "deb36c85f8b5e5720cf3e757313228d21cd1f27b9bab6ab0087a55648b244225",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/ergalla.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2322376,
+      "sha256": "2e71264c995c6713eee57f1ee06df33951ab0246e7adb10cf864356bbdd16405",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/falto.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2121834,
+      "sha256": "1408701af90b9e36de8dcc93a77bc8bccc5a0c2e21f1055901cc2e54bba56477",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/falveri.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2008263,
+      "sha256": "4ca3ee56e52cf0d4d3bd04bde920e82f5c18b439f208a4f6ef0b1b4f4648c482",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/fidelinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2250489,
+      "sha256": "7659f595f84b66f331a622ca355741ade1767d69fc5b2b5ce5f770354005a5a5",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/fortenian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2249825,
+      "sha256": "96e1e88063beebfecaf651d783bc48bc623c94c733640a35890fe36dcd03df31",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/honoratus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2275695,
+      "sha256": "c67632bb9d3acb87a34fcaeb89e744145b8ed138eadc86d50f311fa18d20459b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/legarinus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1949946,
+      "sha256": "e08f4d4a2898254e945d94af6ac53acbdeeea17aa093af48afe49df3a773ed1a",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/nerva.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2022423,
+      "sha256": "68b0f0ceae3a5d7c3d6d53334a8d46892e02ce8e4c96f87ec2d0783771347bed",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/ordinarius.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2535746,
+      "sha256": "d44ac9471938b1f196f69412fd342bbe6e5d9af7a7fcf762d567d87fb428dedb",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/potenian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2147582,
+      "sha256": "4dbe191a39f4d74f3cc72de5876f7071602f4b3ea17702acf4fc9a68c3acd19b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/rationellus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2497261,
+      "sha256": "656a3a9f9773fdd6ae85af78e28075e0942bd262caa978373b62a6f04478cd7f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/sapienor.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2096179,
+      "sha256": "e378d2a07ddb2f3e122561ce6f78e8a1f92b714ac2a04c5a40c2f4c424455e26",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/venturian.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2007607,
+      "sha256": "d94087e8b53e5117602bd88e62aac42d96b583bf4ff7a874b3ae7ecde00b7ae2",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assets/warriors/production/victorellus.png",
+      "role": "artwork",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2156487,
+      "sha256": "db311eee647d66f78c0531e17fe12491f0c630776026f26aa8ddd022bf09b05b",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assignment-controls.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 11093,
+      "sha256": "62c3f3aa24ed945ab4fcebe526dc7d15ce1441acfc7991e4d8d39f039be4a93d",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assignment-state.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 4790,
+      "sha256": "9422ed667c68ff3dddb3fc263ced8428f126d5f7192d41c6c81702aa14421caf",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/assignment-view.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 4730,
+      "sha256": "b7070d839159884d68416d55ec20e01f27650565c584e1984d6e54802a8a6ebe",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/estate-data.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 3380,
+      "sha256": "2ec3d2c16d6ab86faea3f53ae049e155570c1e4c511f2b6703bc4601b3a22437",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/house-catalog.json",
+      "role": "runtime",
+      "status": 200,
+      "mime": "application/json",
+      "bytes": 29188,
+      "sha256": "6ef9076b9cad5c85917660567a26b9246f488637c6390cafd8bf88c7ddc0dd88",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/house-data.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 144,
+      "sha256": "9a240e9e87525b3fcbf04bc32d547be80545c48cc4ae7d3436d6db411147872f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/house-dialogs.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 3127,
+      "sha256": "aa7636d7534947e2fa89e84d9cc6e58e73d2f10ce22751a02f35e8c1c3f82ec9",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/index.html",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 821,
+      "sha256": "8c91d815835dda4f3ef9d601c116e707c63f96732ce5a7e1393f9ad807b6cb6f",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/map-view.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 4991,
+      "sha256": "ed3ac0e6440ca3d273aaeb91da78a8c799dc8b8251b822c202d1963844310c20",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/page-render.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 8557,
+      "sha256": "d44dfd7525e3a330466db4bdde9f5e14c0e43494e7e07f768803bc1dc86be7c5",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/proposal-page.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 1355,
+      "sha256": "48307fef086d2fa7cc2c47495f443ef00c4304f7aea485adf4eb75e5030e1772",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/realm-context.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 7434,
+      "sha256": "43b6f32787bb866a6e2a489929017c99fddf65a5bd7d0d8ebc1c9065c71cdfc7",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/territory-data.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 53305,
+      "sha256": "9db69557eaec6845606bc0b365b6c28e3aa197c774515c07ba3aac93511ea530",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/venalys.css",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 5285,
+      "sha256": "81454c3671ab401e6d685133294b3579e37b62d15eab9897b3087f6c247b3296",
+      "diskHashMatches": true,
+      "publishable": true
+    },
+    {
+      "path": "Vorschau/Venalys/warrior-data.mjs",
+      "role": "runtime",
+      "status": 200,
+      "mime": "text/javascript",
+      "bytes": 664,
+      "sha256": "9a0c488b4387874a61283e08d713fb1dd91ae1282446cf3b8a01b5c5b0715234",
+      "diskHashMatches": true,
+      "publishable": true
+    }
+  ],
+  "browserStatus": "Not performed; HTTP, dependency and file-byte verification only.",
+  "notes": [
+    "The local preview server serves WebP as application/octet-stream; status and file hashes were independently checked."
+  ]
+}

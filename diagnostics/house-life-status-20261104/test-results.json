@@ -1,0 +1,89 @@
+{
+  "schema": "aleria.house-life-status-tests",
+  "status": "pass",
+  "date": "2026-11-04",
+  "passed": 117,
+  "failed": 0,
+  "suites": [
+    {
+      "name": "life",
+      "passed": 7,
+      "failed": 0,
+      "log": "suite-life.log"
+    },
+    {
+      "name": "lore",
+      "passed": 8,
+      "failed": 0,
+      "log": "suite-lore.log"
+    },
+    {
+      "name": "ivarsheim",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-ivarsheim.log"
+    },
+    {
+      "name": "roriksheim",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-roriksheim.log"
+    },
+    {
+      "name": "kraehenmoor",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-kraehenmoor.log"
+    },
+    {
+      "name": "kronental",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-kronental.log"
+    },
+    {
+      "name": "schwarzfenn",
+      "passed": 10,
+      "failed": 0,
+      "log": "suite-schwarzfenn.log"
+    },
+    {
+      "name": "klaueninsel",
+      "passed": 13,
+      "failed": 0,
+      "log": "suite-klaueninsel.log"
+    },
+    {
+      "name": "celtigerns",
+      "passed": 21,
+      "failed": 0,
+      "log": "suite-celtigerns.log"
+    },
+    {
+      "name": "celtigerns-refresh",
+      "passed": 5,
+      "failed": 0,
+      "log": "suite-celtigerns-refresh.log"
+    },
+    {
+      "name": "relationships",
+      "passed": 4,
+      "failed": 0,
+      "log": "suite-relationships.log"
+    },
+    {
+      "name": "registry-browser",
+      "passed": 9,
+      "failed": 0,
+      "log": "suite-registry-browser.log"
+    }
+  ],
+  "runner": "Direct node execution of node:test suites; child-process-isolated node --test was unavailable (spawn EPERM).",
+  "additionalChecks": [
+    "424-family protected-field preservation",
+    "71 prior chronology corrections preserved",
+    "Scoped git diff --check",
+    "Legacy test runner syntax",
+    "Independent review and identity-copy completeness"
+  ]
+}

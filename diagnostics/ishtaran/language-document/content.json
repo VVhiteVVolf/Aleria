@@ -1,0 +1,123 @@
+{
+  "title": "Ishtaran",
+  "subtitle": "Kultur Geschichte und Sprachkontext",
+  "purpose": "Grundlage für ein eigenständiges Sprachmodul",
+  "date": "Arbeitsstand 3. November 2026",
+  "pages": [
+    {
+      "heading": "01 Herkunft und Geschichte",
+      "blocks": [
+        {"type":"p","text":"Dieses Dokument bündelt die festgelegte Geschichte, Kultur und Namenssprache Ishtarans für die Entwicklung eines Sprachmoduls. Es liefert den kulturellen Rahmen, bestätigtes Vokabular und den aktuellen Namenskorpus. Eine vollständige Sprache mit eigener Grammatik, Schrift und Wörterbuch ist noch zu entwerfen."},
+        {"type":"p","text":"Drei Ebenen bleiben unterscheidbar: Festlegungen des Nutzers sind verbindliche Grundlagen. Die auf der Vorbereitungsseite eingesetzten Haus- und Ortsnamen bilden den aktuellen Arbeitsentwurf. Hinweise für das spätere Sprachmodul sind Gestaltungsaufträge und begründen keine zusätzlichen historischen Tatsachen."},
+        {"type":"h2","text":"Maghath und Maghneach"},
+        {"type":"p","text":"Ishtaran liegt auf Tirnara, dem Kontinent südlich von Lothir, Estryll und Aldervan. Seine Wurzeln liegen bei den Maghath, einer urtümlichen Volksgruppe Tirnaras. Maghneach bezeichnet ihr antikes Fürstentum. Als kulturelle Anregung für diese frühe Epoche dienen die anatolischen Galater und damit ein keltisch geprägtes Volk in einem südlichen Kulturraum. [Q1]"},
+        {"type":"p","text":"Maghath ist der Volksname, Maghneach der Name der antiken fürstlichen Heimat. Das blau-weiße Wappen mit dem Steppenadler gehört zu diesem frühen Erbe. Reale galatische Herrscher, Städte, Stammesverfassungen oder Gottheiten sind durch die Inspiration nicht Teil der Geschichte Alerias geworden."},
+        {"type":"h2","text":"Unterwerfung und Sprachverwirrung"},
+        {"type":"p","text":"Zarakhul unterwarf die Völker Tirnaras nacheinander, unterjochte die Alben und verband die Unterworfenen unter seiner infernalen Sprache. Sprache war damit eine Grundlage der gemeinsamen Tyrannei. Der celestiale Gott Orin störte diese Vereinigung durch Sprachverwirrung: Die Menschen unter Zarakhul sprachen plötzlich fremde Sprachen und konnten sich nicht mehr gemeinsam organisieren. [Q1]"},
+        {"type":"h2","text":"Das spätere Ishtaran"},
+        {"type":"p","text":"Nach dem Zerfall des albischen Königreichs und der Zerschlagung Zarakhuls waren Tirnaras Völker zerstreut und ohne gemeinsame alte Ordnung. Sie waren nicht länger albisch und nicht länger infernalisch. Aus den Maghath ging unter einer neuen Sprache das spätere Ishtaran hervor. Diese Sprache unterschied sich nach der Festlegung des Nutzers gänzlich vom Albischen und den anderen Sprachen. Die neue Kultur ist türkisch und insbesondere seldschukisch inspiriert. [Q1]"},
+        {"type":"p","text":"Für das Sprachmodul ist dieser Bruch wesentlich: Die historische Herkunft der Bevölkerung legt keine albische Grammatik und keine albisch-infernalische Mischsprache fest. Jahreszahlen, Zeitspannen, benannte Staatsgründer und eine genaue sprachliche Übergangsgeschichte sind offen."}
+      ]
+    },
+    {
+      "heading":"02 Kultur und Weltbild",
+      "blocks":[
+        {"type":"h2","text":"Dualität und Freiheit des Glaubens"},
+        {"type":"p","text":"Der eigene Glaube Ishtarans betrachtet zwei entgegengesetzt wirkende, bislang unbenannte Entitäten. Gut und Böse, Tag und Nacht sowie Licht und Dunkelheit beschreiben diese Gegenüberstellung. Die Grundlage ist keine Götterverehrung. Die Entwicklung folgt der ausdrücklichen Abkehr von Göttern und Fanatikern. [Q1]"},
+        {"type":"p","text":"Ishtaran ist weltoffen und gewährt Religionsfreiheit. Religion erhält jedoch keine politische Macht und keinen Platz im Staatssystem. Die Glaubenshaltung der Kultur und die weltliche Staatsordnung sind deshalb getrennt zu beschreiben. Die beiden Entitäten haben noch keine Eigennamen, festgelegten Symbole oder ausgearbeitete Mythologie."},
+        {"type":"h2","text":"Gelehrsamkeit und Madrasa"},
+        {"type":"p","text":"Die Staatsordnung stützt sich auf Gelehrsamkeit. Im Rat des Herrschers steht ein oberster Bildungsrang an der Stelle, die andernorts ein oberster Geistlicher einnehmen könnte. Dieser Gelehrte heißt Sahir. Die Madrasa dient der Wissenschaft, der Esoterik und weiteren Studien. Dualität, Balance und Frieden sind der gemeinsame Nenner. [Q1, Q2]"},
+        {"type":"p","text":"Daraus ergeben sich wichtige Themenfelder für einen späteren Wortschatz: Lernen, Wissen, Prüfung, Forschung, Urteil, Maß und Ausgleich. Die Themen sind aus der Kultur abgeleitete Arbeitsfelder; konkrete ishtaranische Wörter dafür liegen noch nicht vor. Auch eine verbindliche Gelehrtensprache oder ein eigener religiöser Sprachstil ist nicht festgelegt."},
+        {"type":"h2","text":"Adel und weltliche Verantwortung"},
+        {"type":"p","text":"Die Gesellschaft unterscheidet zehn Rangstufen vom Sultan bis zum freien Bürger. Adelstitel, Staatsamt und Kriegerklasse haben jeweils eine eigene Bedeutung. Ein Emir ist ein Fürst oder Herzog, ein Amir der Marschall. Für Timar und Sayyid beziehungsweise Sayyida ist die Grenze des Landbesitzes ausdrücklich relevant. Die genaue Rangfolge steht in Abschnitt 04."},
+        {"type":"h2","text":"Reitkultur Kriegskunst und Überlieferung"},
+        {"type":"p","text":"Seldschukische, osmanische und kumanische Formen prägen die Kriegerausrüstung; persische Helme ergänzen die Gestaltung. Janitscharen und Derwische dienen als starke Inspiration. Bei einigen Darstellungen ist die Verbindung eines Kumanenhelms mit einem Janitscharenhut erlaubt. Rüstung und Stoffe greifen Hausfarben und Wappen auf. Musketen sind ausgeschlossen. [Q2]"},
+        {"type":"p","text":"Die Istharaner reiten überwiegend Sarkal, gelegentlich Shahzade. Der Aschik verbindet Fechtkunst, Musik, Dichtung und die Bewahrung alter Überlieferungen. Damit sind Reiten und mündliche Überlieferung belegte Anknüpfungspunkte für den Sprachkontext. Für Haus Dahakid ist ein Derwisch mit ritterlichen Ausrüstungselementen als besondere Ausnahme bestätigt; der geschichtliche Grund dieser Sonderstellung ist nicht festgelegt."},
+        {"type":"p","text":"Die realen Vorbilder liefern kulturelle und gestalterische Anregungen. Sie legen weder eine reale Staatsreligion noch historische Institutionen oder Bräuche unverändert für Ishtaran fest."}
+      ]
+    },
+    {
+      "heading":"03 Sprachklang und Schreibung",
+      "blocks":[
+        {"type":"h2","text":"Das gewünschte Klangbild"},
+        {"type":"p","text":"Neue Namen sollen alttürkische und tengrisch inspirierte Anklänge besitzen und in der Schreibweise leicht germanisiert sein. Sie sollen für deutschsprachige Leser gut aussprechbar bleiben. Bevorzugt sind kräftige Konsonanten, meist zwei bis drei Silben und Endungen wie an, ar, gan, gut, bek, tegin und lug. Diese Orientierung stammt ausdrücklich aus der Namensvorgabe des Nutzers. [Q2]"},
+        {"type":"p","text":"Die Namensvorschläge bilden eine eigene Fantasy-Namenssprache. Ein vorhandener historisch angeregter Klang macht eine freie Neuschöpfung nicht zu einem historisch belegten alttürkischen Wort. Ebenso bezeichnet die tengrische Inspiration hier ein gewünschtes Motiv- und Klangfeld; sie benennt keine bereits ausgearbeitete Sprache und ersetzt das bestätigte Weltbild der Dualität nicht."},
+        {"type":"h2","text":"Lesbare germanisierte Formen"},
+        {"type":"table","headers":["Ausgangsform im Namensbriefing","Gewünschte Schreibweise"],"widths":[3.65,3.2],"rows":[["Aşina beziehungsweise Ashina","Aschina"],["Kınık","Kinik"],["Çepni","Tschepni"]]},
+        {"type":"p","text":"Diese Beispiele zeigen die Richtung der Schreibanpassung. Sie sind noch keine vollständige Tabelle regelhafter Lautentsprechungen. Türkische Sonderzeichen sollen vermieden werden. Deutsche Umlaute kommen dagegen in ausdrücklich verwendeten Namen vor, etwa Börtan, Börtugan und Göktemir, sowie im festgelegten Amtstitel Müder. Die Vorgabe bedeutet deshalb keine pauschale Beschränkung auf ASCII-Zeichen."},
+        {"type":"p","text":"Göktemir ist die neueste ausdrücklich korrigierte Hausnamensform. Der Titel Va’iz behält seinen Apostroph. Bestätigte Titel und vorhandene Namen werden nicht automatisch an eine später entwickelte Vereinheitlichung angepasst."},
+        {"type":"h2","text":"Endungen als Orientierung für Namen"},
+        {"type":"p","text":"Kutlug, Altugan, Barsbek, Alptegin, Turgut und Börtan veranschaulichen den gewünschten Klang. Die Endungen dürfen bei neuen Vorschlägen als Muster dienen. Noch nicht entschieden ist, ob diese Lautfolgen in der künftigen Sprache eigenständige Wörter oder produktive Suffixe sein sollen. Ihnen sind deshalb bisher keine verbindlichen Bedeutungen, Kasus oder Geschlechter zugeordnet."},
+        {"type":"p","text":"Zwei bis drei Silben sind eine Präferenz und kein Filter, der bereits verwendete kurze Formen wie Alp ausschließt. Für besonders alte Steppengeschlechter wurden kurze, harte Namen gewünscht. Altertümlicher Klang bestätigt jedoch kein tatsächliches Gründungsdatum und keine konkrete Abstammung eines Hauses."},
+        {"type":"h2","text":"Namen und Bezeichnungen auseinanderhalten"},
+        {"type":"p","text":"Hausnamen, Personennamen, Ortsnamen, Titel und Rassenbezeichnungen bilden getrennte Wortgruppen. Für persönliche Vornamen und ihre Reihenfolge gibt es noch keine eigene bestätigte Regel. Der Familiennamenskorpus darf daher nicht automatisch als Vornamensliste verwendet werden. Die deutsche Bezeichnung Istharaner ist im Nutzertext belegt; ein sprachinterner Eigenname der Bevölkerung oder der Sprache ist noch offen."}
+      ]
+    },
+    {
+      "heading":"04 Rangtitel und Staatsämter",
+      "blocks":[
+        {"type":"p","text":"Die folgenden Bedeutungen sind für Alerias Ishtaran ausdrücklich festgelegt. Sie werden auch dann beibehalten, wenn ein ähnlich geschriebenes Wort in einer realen Sprache eine andere Funktion erfüllt. [Q1, Q2]"},
+        {"type":"h2","text":"Die zehn gesellschaftlichen Stufen"},
+        {"type":"ranks"},
+        {"type":"p","text":"Tarkan steht nur etwas unter dem Baron. Timar ist die niedrigste landbesitzberechtigte Adelsform. Sayyid und Sayyida bezeichnen adelige Ritter ohne Landbesitz. Die bestätigte Paarform begründet noch keine allgemeine Regel für die Bildung weiblicher Titel oder Namen."},
+        {"type":"h2","text":"Die acht hohen Staatsämter"},
+        {"type":"offices"},
+        {"type":"p","text":"Emir und Amir dürfen weder zusammengeführt noch als bloße Schreibvarianten behandelt werden. Sahir bezeichnet den obersten Gelehrten, Va’iz den Ratsmagier. Aus diesen Begriffen folgen keine geistlichen Staatsämter. Amtsinhaber, Ernennungsverfahren und erbliche Amtsrechte sind nicht festgelegt."}
+      ]
+    },
+    {
+      "heading":"05 Kriegskunst und weiterer Wortschatz",
+      "blocks":[
+        {"type":"h2","text":"Die acht bestätigten Kriegerklassen"},
+        {"type":"classes"},
+        {"type":"p","text":"Diese Wörter bezeichnen militärische Klassen. Derwisch ist hier der festgelegte Name des Schwertmeisters. Aschik verbindet seine Kampfrolle ausdrücklich mit Dichtung, Musik und Überlieferung. Aus den Klassenbezeichnungen folgen keine weiteren religiösen oder erblichen Zugehörigkeiten. [Q2]"},
+        {"type":"h2","text":"Weitere belegte Begriffe"},
+        {"type":"table","headers":["Begriff","Bedeutung im vorhandenen Kontext"],"widths":[1.25,5.6],"rows":[["Madrasa","Institution der Gelehrsamkeit mit Wissenschaft, Esoterik und weiteren Studien."],["Sarkal","Vorwiegendes Reitpferd Ishtarans; Pferderasse, kein Titel oder Hausname."],["Shahzade","Gelegentlich gerittenes Pferd. Das verknüpfte Bestiariumsprofil führt dieselbe Rasse als Shahzad."],["Maghath","Urtümliche Volksgruppe Tirnaras und Ursprung der späteren Bevölkerung."],["Maghneach","Antikes Fürstentum der Maghath; kein zusätzliches modernes Haus."]]},
+        {"type":"h2","text":"Kulturell begründete Felder für neue Wörter"},
+        {"type":"p","text":"Für ein erstes Wörterbuch bieten sich Begriffe zu Dualität und Ausgleich, Wissen und Forschung, Recht und weltlicher Verwaltung, Familie und Haus, Pferdezucht und Reiten, Waffen und Formation sowie Dichtung und Musik an. Die Karten ergänzen Orts- und Landschaftswörter für Küste, Fluss, See, Wald und Gebirge. Dies sind sinnvolle Arbeitsfelder für das neue Modul, keine bereits übersetzten Vokabeln."}
+      ]
+    },
+    {
+      "heading":"06 Aktueller Namenskorpus",
+      "blocks":[
+        {"type":"p","text":"Dieser Abschnitt enthält die derzeit eingesetzten 37 Hausnamen und 21 Ortsnamen der Vorbereitungsseite. Sie sind ein zusammengehöriger Klangkorpus und bleiben Teil des bearbeitbaren Arbeitsentwurfs. Die Sitzverteilung ist keine ausgearbeitete dynastische Vergangenheit. Haus Dahakid und die Schreibkorrektur Göktemir sind ausdrücklich vom Nutzer vorgegeben beziehungsweise bestätigt. [Q2, Q3]"},
+        {"type":"h2","text":"Die 37 Hausnamen"},
+        {"type":"houseCorpus"},
+        {"type":"p","text":"Die Ranggruppen geben ausschließlich den aktuellen Sitzentwurf wieder. Sie definieren keine unterschiedlichen Sprachen oder zwingend verschiedene Namensendungen. Natürlicher Klang ist wichtiger als eine erzwungene Benennung nach Wappentier, Beruf oder Charakter eines Hauses. Für die aufgeführten Namen ist kein vollständiges verbindliches Bedeutungswörterbuch vorhanden."},
+        {"type":"h2","text":"Die 21 Ortsnamen"},
+        {"type":"cityCorpus"},
+        {"type":"h2","text":"Aktuelle historische und räumliche Besonderheiten"},
+        {"type":"p","text":"Kutlakar ist nach der ausdrücklichen Nutzerkorrektur zerstört. Haus Kutlug wurde im aktuellen Entwurf in das Pascharat Belduran evakuiert und wird dort auf der Karte mit ausgegrautem Wappen gekennzeichnet. Zerstörungsdatum, Angreifer und Verlauf sind offen. Der Name bleibt als historischer Ortsname Teil des Korpus."},
+        {"type":"p","text":"Altasar ist die vorgeschlagene Hauptstadt. Dort sitzen im Entwurf das Sultanhaus Aschina und die Tarkan-Häuser Aybars, Göktemir und Tenguran. Gleicher Wohnort bedeutet keine automatisch festgelegte Lehens- oder Dienstbindung. Die weiteren nicht eingesetzten Namenskandidaten bleiben außerhalb dieses ausgewählten Korpus."}
+      ]
+    },
+    {
+      "heading":"07 Auftrag für das spätere Sprachmodul",
+      "blocks":[
+        {"type":"h2","text":"Was die Ausarbeitung bereits tragen soll"},
+        {"type":"p","text":"Das Modul soll eine eigenständige Fantasy-Sprache für das heutige Ishtaran entwickeln. Es muss den starken geschichtlichen Sprachbruch berücksichtigen und die alttürkisch angeregte, leicht germanisierte Namensästhetik fortführen. Die bestehenden Titel bleiben mit ihren festgelegten Bedeutungen erhalten. Der aktuelle Namenskorpus dient als Ausgangsmaterial für das Klangbild."},
+        {"type":"p","text":"Neue Formen sollen für deutschsprachige Leser lesbar sein und zu Kutlug, Aschina, Altugan, Börtugan, Göktemir und den vorhandenen Städten passen. Dabei sind mögliche Laut- und Wortbildungsregeln erst zu entwerfen. Eine Regel sollte bestehende Formen erklären können, ohne deren Schreibweise oder Bedeutung still zu verändern."},
+        {"type":"h2","text":"Noch zu treffende sprachliche Entscheidungen"},
+        {"type":"list","items":["Eigenname der Sprache und sprachinterne Bezeichnungen für Land und Bevölkerung.","Lautinventar, Aussprachehilfe, Silbenbau und Wortbetonung; Umgang mit Umlauten, Vokalfolgen und Konsonantengruppen.","Schrift und endgültige Rechtschreibung. Die lesbare bisherige Namensschreibung bleibt zunächst die Arbeitsgrundlage.","Grammatik mit Satzbau, Fällen, Mehrzahl, Verben, Zeitformen und gegebenenfalls grammatischem Geschlecht. Auch Vokalharmonie ist noch keine bestätigte Vorgabe.","Persönliche Vornamen, Namensreihenfolge, Anrede und etwaige Abstammungs- oder Herkunftsformeln. Partikeln wie von, bin, ibn oder al sind bisher nicht festgelegt.","Wortbildung und mögliche Bedeutung wiederkehrender Namensbestandteile. Endungen erhalten erst durch eine ausdrücklich neue Regel eine produktive Funktion.","Alltagssprache, höfische und amtliche Register, Dichtung sowie mögliche regionale Unterschiede. Es sind noch keine konkreten Dialekte belegt."]},
+        {"type":"h2","text":"Historische Schichten nur als neue Vorschläge"},
+        {"type":"p","text":"Eine spätere Ausarbeitung kann prüfen, ob einzelne Ortsnamen oder Fachwörter Spuren der maghathischen Vergangenheit bewahren. Ebenso wären sprachliche Folgen der infernalen Unterwerfung ein möglicher neuer Entwurf. Beides ist bisher nicht festgelegt. Die belegte Abstammung der Menschen allein beweist keine solchen Lehnwörter oder Lautgesetze."},
+        {"type":"p","text":"Unbestätigte Fürstenlisten, keltische Priesterherrschaft, benannte Dualitätsgötter und vollständige Stammesordnungen aus früheren Vorschlagstexten bleiben ausgeschlossen. Künstlerische Alters- und Staturvorgaben für Kriegerbilder bestimmen außerdem nicht die Demografie des Landes."}
+      ]
+    },
+    {
+      "heading":"08 Kopiervorlage und Quellen",
+      "blocks":[
+        {"type":"h2","text":"Kompakter Auftrag zur Modulerstellung"},
+        {"type":"p","text":"Entwickle ein eigenständiges Sprachmodul für Ishtaran in Aleria. Das Land liegt auf Tirnara. Seine Bevölkerung ging aus den Maghath und deren antikem Fürstentum Maghneach hervor. Zarakhul unterwarf die Völker unter seiner infernalen Sprache; Orin störte die Tyrannei durch Sprachverwirrung. Nach dem Zerfall des albischen Königreichs und der Zerschlagung Zarakhuls entstand Ishtaran unter einer gänzlich anderen Sprache. Entwirfe eine eigenständige Sprache; eine albisch-infernalische Mischsprache ist nicht festgelegt."},
+        {"type":"p","text":"Die moderne Kultur ist türkisch und seldschukisch inspiriert. Kumanische, osmanische, janitscharische und persische Formen prägen die Kriegskunst. Der eigene Glaube betrachtet zwei unbenannte gegensätzliche Entitäten. Dualität, Balance und Frieden sind kulturelle Bezugspunkte. Ishtaran schützt Religionsfreiheit und hält Religion von politischer Macht fern. Gelehrsamkeit, Wissenschaft und Esoterik werden an der Madrasa gepflegt. Der Sahir ist der oberste Gelehrte, kein oberster Geistlicher."},
+        {"type":"p","text":"Die Namen sollen alttürkische und tengrisch inspirierte Anklänge mit leicht germanisierter Schreibweise verbinden. Bevorzuge kräftige Konsonanten, meist zwei bis drei Silben und Klangmuster wie an, ar, gan, gut, bek, tegin und lug. Beispiele sind Aschina, Kutlug, Altugan, Börtugan, Alptegin und Göktemir. Vermeide türkische Sonderzeichen, erhalte aber vorhandene deutsche Umlaute und bestätigte Schreibungen. Weise freien Neuschöpfungen keine unbelegte historische Etymologie zu."},
+        {"type":"p","text":"Übernimm die Titel, Ämter und Klassen aus diesem Dokument mit ihren Aleria-Bedeutungen. Emir bedeutet Fürst oder Herzog, Amir Marschall. Hausnamen, Vornamen, Ortsnamen und Titel sind getrennte Gruppen. Der aktuelle Haus- und Ortskorpus ist der Arbeitsentwurf; für persönliche Vornamen besteht noch keine feste Regel. Erfinde weder Herrscherpersonen noch eine zusätzliche Religion. Kennzeichne alle neu entwickelten Lautregeln, Grammatik, Bedeutungen, Schriftzeichen und Sprachbeispiele als neuen Sprachentwurf. Liste zunächst die offenen Entscheidungen, bevor du sie begründet ausarbeitest."},
+        {"type":"h2","text":"Quellen und Stand der Zusammenstellung"},
+        {"type":"p","text":"Q1  Eingefügter Chatverlauf. Übernommen wurden die ausdrücklichen Nutzeraussagen zu Maghath, Maghneach und Sprachbruch in den Zeilen 545 bis 558 sowie zu Rangordnung, Dualität, Religionsfreiheit und Madrasa in den Zeilen 1063 bis 1085. Die umgebenden ChatGPT-Vorschläge wurden nicht als Festlegungen behandelt."},
+        {"type":"p","text":"Q2  Direkter Auftrag und spätere Nutzerkorrekturen vom 3. November 2026. Dazu gehören die Namenslogik, die zehn Ränge, acht Ämter und acht Klassen, die Reitpferde sowie die aktuellen Festlegungen zu Dahakid, Kutlakar, Kutlug und Göktemir."},
+        {"type":"p","text":"Q3  Aktueller Stand der Ishtaran-Vorbereitungsseite. Namens- und Sitzkorpus aus house-data.mjs und territory-data.mjs; Kontext und Titel aus realm-context.mjs; Klassen aus warrior-data.mjs. Pferdebezeichnungen mit den vorhandenen Profilen Sarkal und Shahzad im Bestiarium abgeglichen."},
+        {"type":"p","text":"Die Textfassung enthält denselben Inhalt in kopierbarer Form. Die vollständigen Arbeitsquellen bleiben bei der Vorbereitungsseite unter Vorschau/Ishtaran/sources erhalten. Dieses Dokument enthält kein vollständiges Wörterbuch und keine vorweggenommene Sprachgrammatik."}
+      ]
+    }
+  ]
+}

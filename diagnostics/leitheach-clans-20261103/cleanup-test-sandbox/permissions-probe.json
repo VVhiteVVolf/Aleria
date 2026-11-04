@@ -1,0 +1,25 @@
+{
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "sandbox": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox",
+  "results": [
+    {
+      "mode": "0o755",
+      "path": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-permission-probe-755-f556761ed93346e4a6c81ee30743bf67",
+      "createdByThisProbe": true,
+      "childCreation": "passed",
+      "emptyDirectoryRemoval": "passed"
+    },
+    {
+      "mode": "0o700",
+      "path": "E:\\Aleria\\diagnostics\\leitheach-clans-20261103\\cleanup-test-sandbox\\own-permission-probe-700-2d5bf353d5f1454a9bf6f8e5397025f8",
+      "createdByThisProbe": true,
+      "childCreation": "failed",
+      "childWinError": 5,
+      "childErrno": 13,
+      "emptyDirectoryRemoval": "failed",
+      "removalWinError": 5
+    }
+  ],
+  "aclChanged": false,
+  "recursiveRemovalUsed": false
+}

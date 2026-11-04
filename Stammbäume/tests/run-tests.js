@@ -4398,7 +4398,7 @@ test('bildet Haus Gwyvern von Bleddyn und Owena bis zur jüngsten Generation ab'
     'bryn-gwyvern'
   ]);
   assert.equal(graph.getPerson('kenyon-taranvyr').status, 'alive');
-  assert.equal(graph.getPerson('afal-arth').status, 'dead');
+  assert.equal(graph.getPerson('afal-arth').status, 'alive');
   assert.equal(graph.getPerson('heledd-gwyvern').status, 'alive');
   assert.equal(graph.getPerson('bleddyn-draig').familyRole, 'core');
   assert.equal(graph.getPerson('owena-saethwyr').familyRole, 'married');

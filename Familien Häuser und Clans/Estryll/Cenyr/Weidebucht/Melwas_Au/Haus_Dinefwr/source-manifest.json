@@ -1,0 +1,42 @@
+{
+  "source": {
+    "attachmentId": "82031dc3-32a9-499b-9c57-5363a1477329",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "a15652e8da5963648a310b21a8f8ce62caaa5bc9cdd5b653af48846547cc8466"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-dinefwr",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-dinefwr",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 3,
+    "currentSeat": "Cerrigarth",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/R1dsPMg.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "c8eb1b7e8a779b43369de85684cbf1a60f1f4edb196b71dec9f769971f089cbb",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Beynon ist der Gründer des Hauses Dinefwr; Eynon gründete das Bruderhaus Tir Addawol. Erim wird als Stammvater, nicht als neuer erster Ritterfürst geführt."
+  ]
+}

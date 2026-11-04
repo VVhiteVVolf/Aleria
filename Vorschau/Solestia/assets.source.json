@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "sourceDirectory": "C:/Users/fhg_r/Downloads/Länder/Solestia",
+  "suppliedEmblems": [
+    {
+      "id": "realm-solestia",
+      "kind": "realm",
+      "name": "Solestia",
+      "sourceFile": "Solestia Wappen.png",
+      "sourceSha256": "58119b1e979a550fa10d31e98760022ded98b6d7d9a9ba02f01dd04374b97d37",
+      "original": "assets/originals/solestia.png",
+      "originalSha256": "58119b1e979a550fa10d31e98760022ded98b6d7d9a9ba02f01dd04374b97d37",
+      "dimensions": [
+        479,
+        483
+      ],
+      "originalUnchanged": true,
+      "alphaChanged": false,
+      "preview": "assets/originals/previews/solestia.webp",
+      "previewSha256": "69090e6a3439ebe1c4921a7e6e7e89ec4108f8d13df770a7cba1977a59f81e8a",
+      "previewDimensions": [
+        479,
+        483
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": "normal",
+      "number": 1,
+      "file": "Solestia (Normal).png",
+      "short": "Landschaft",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Solestia\\Solestia (Normal).png",
+      "sourceSha256": "a7df5e8d855d1c4d56f58f14e37ed6e4ab5d6db9979a85692601184abc14a53c",
+      "sourceImageSize": [
+        3605,
+        4097
+      ],
+      "originalRetained": true,
+      "map": "assets/maps/solestia-normal.webp",
+      "sha256": "3fee1679b776b51d88009bd4fa8fdd166a3ff1485f100deb7e7403b1af38894d",
+      "imageSize": [
+        3604,
+        4096
+      ],
+      "noGeometryEdits": true,
+      "bakedNames": false,
+      "sourceMarkers": [
+        {
+          "area": 14556,
+          "bbox": [
+            1258,
+            464,
+            1453,
+            658
+          ],
+          "centre": [
+            1355.5,
+            561.0
+          ]
+        },
+        {
+          "area": 6380,
+          "bbox": [
+            2401,
+            996,
+            2497,
+            1094
+          ],
+          "centre": [
+            2449.0,
+            1045.0
+          ]
+        },
+        {
+          "area": 6324,
+          "bbox": [
+            1812,
+            1199,
+            1908,
+            1297
+          ],
+          "centre": [
+            1860.0,
+            1248.0
+          ]
+        },
+        {
+          "area": 6403,
+          "bbox": [
+            264,
+            1384,
+            361,
+            1482
+          ],
+          "centre": [
+            312.5,
+            1433.0
+          ]
+        },
+        {
+          "area": 6324,
+          "bbox": [
+            1404,
+            1562,
+            1500,
+            1660
+          ],
+          "centre": [
+            1452.0,
+            1611.0
+          ]
+        },
+        {
+          "area": 6322,
+          "bbox": [
+            2935,
+            1766,
+            3031,
+            1864
+          ],
+          "centre": [
+            2983.0,
+            1815.0
+          ]
+        },
+        {
+          "area": 6266,
+          "bbox": [
+            1919,
+            2193,
+            2015,
+            2291
+          ],
+          "centre": [
+            1967.0,
+            2242.0
+          ]
+        },
+        {
+          "area": 6380,
+          "bbox": [
+            799,
+            2352,
+            895,
+            2450
+          ],
+          "centre": [
+            847.0,
+            2401.0
+          ]
+        },
+        {
+          "area": 6268,
+          "bbox": [
+            2330,
+            2864,
+            2426,
+            2962
+          ],
+          "centre": [
+            2378.0,
+            2913.0
+          ]
+        },
+        {
+          "area": 6353,
+          "bbox": [
+            1143,
+            3063,
+            1240,
+            3162
+          ],
+          "centre": [
+            1191.5,
+            3112.5
+          ]
+        }
+      ],
+      "anchorsSource": "Solestia Regionen.png",
+      "markersDrawnInSource": false,
+      "regionLabelsBaked": false
+    },
+    {
+      "id": "regions",
+      "number": 2,
+      "file": "Solestia Regionen.png",
+      "short": "Baronien",
+      "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Solestia\\Solestia Regionen.png",
+      "sourceSha256": "cfb795e792cd8dc8af685a5a88bda0f5bd0d92e546c6a55012f02352cdaa6a28",
+      "sourceImageSize": [
+        3605,
+        4097
+      ],
+      "originalRetained": true,
+      "map": "assets/maps/solestia-regions.webp",
+      "sha256": "3f395862c97647c8954f07911c2a60f079b9a8e29e2d58795f99552e34837103",
+      "imageSize": [
+        3604,
+        4096
+      ],
+      "noGeometryEdits": true,
+      "bakedNames": false,
+      "sourceMarkers": [
+        {
+          "area": 14556,
+          "bbox": [
+            1258,
+            464,
+            1453,
+            658
+          ],
+          "centre": [
+            1355.5,
+            561.0
+          ]
+        },
+        {
+          "area": 6380,
+          "bbox": [
+            2401,
+            996,
+            2497,
+            1094
+          ],
+          "centre": [
+            2449.0,
+            1045.0
+          ]
+        },
+        {
+          "area": 6324,
+          "bbox": [
+            1812,
+            1199,
+            1908,
+            1297
+          ],
+          "centre": [
+            1860.0,
+            1248.0
+          ]
+        },
+        {
+          "area": 6403,
+          "bbox": [
+            264,
+            1384,
+            361,
+            1482
+          ],
+          "centre": [
+            312.5,
+            1433.0
+          ]
+        },
+        {
+          "area": 6324,
+          "bbox": [
+            1404,
+            1562,
+            1500,
+            1660
+          ],
+          "centre": [
+            1452.0,
+            1611.0
+          ]
+        },
+        {
+          "area": 6322,
+          "bbox": [
+            2935,
+            1766,
+            3031,
+            1864
+          ],
+          "centre": [
+            2983.0,
+            1815.0
+          ]
+        },
+        {
+          "area": 6266,
+          "bbox": [
+            1919,
+            2193,
+            2015,
+            2291
+          ],
+          "centre": [
+            1967.0,
+            2242.0
+          ]
+        },
+        {
+          "area": 6380,
+          "bbox": [
+            799,
+            2352,
+            895,
+            2450
+          ],
+          "centre": [
+            847.0,
+            2401.0
+          ]
+        },
+        {
+          "area": 6268,
+          "bbox": [
+            2330,
+            2864,
+            2426,
+            2962
+          ],
+          "centre": [
+            2378.0,
+            2913.0
+          ]
+        },
+        {
+          "area": 6353,
+          "bbox": [
+            1143,
+            3063,
+            1240,
+            3162
+          ],
+          "centre": [
+            1191.5,
+            3112.5
+          ]
+        }
+      ],
+      "anchorsSource": "Solestia Regionen.png",
+      "markersDrawnInSource": true,
+      "regionLabelsBaked": true
+    }
+  ]
+}

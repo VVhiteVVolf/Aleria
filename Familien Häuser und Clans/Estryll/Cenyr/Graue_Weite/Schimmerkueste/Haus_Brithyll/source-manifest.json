@@ -1,0 +1,45 @@
+{
+  "source": {
+    "attachmentId": "b0a5725d-8ba8-4bc4-8246-c2148cb4dbaf",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "4ccb19421b67848c484f22afb252a452034045eaf5174f1e782a8e86c0a1dc1b"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-brithyll",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-brithyll",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 3,
+    "currentSeat": "Tredegar",
+    "currentRankId": "knight-prince"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/N9mJOik.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "7b12085eab6c7bfddd3f3c109459182e3403ad58b01fe5405e185a43cbc4cbb3",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Die kopierte Rittereinleitung mit Cumbra, Umbrien und Brechinaucc bleibt ausgeschlossen.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

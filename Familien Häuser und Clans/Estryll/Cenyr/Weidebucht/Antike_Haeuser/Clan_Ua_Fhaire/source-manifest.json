@@ -1,0 +1,43 @@
+{
+  "source": {
+    "attachmentId": "03dfb4cc-dc10-4d8c-ab2c-8ad9e882f3c6",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "28449e947e4b1934cebc97a40a799d5886143dfe9174014c0ba1c061e43ba8f0"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-fhaire",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-fhaire",
+    "profileSource": "Stammbäume/assets/js/data/weidebucht-house-profiles.js",
+    "baselineSourceRevision": 1,
+    "currentSeat": "Bhiorach",
+    "currentRankId": "laird"
+  },
+  "images": [
+    {
+      "role": "Druide des Clans",
+      "url": "https://i.imgur.com/OGfb5LL.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "b88167ae498b13837cf54d37d7092ec64298e6e834ad4db63f777c06ee2e1ed2",
+      "note": "Vorhandenes passendes Original unverändert übernommen und vom Hauptagenten visuell bestätigt."
+    }
+  ],
+  "decisions": [
+    "Aktuelle registrierte Hausprofile, Ränge, tatsächliche Sitze und Lehensbindungen haben Vorrang vor den alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Personen, Verwandtschaften, Hauslinien, Lebenszahlen oder Amtsfolgen werden daraus importiert.",
+    "Alte Hof-, Erb- und Infotabellen werden nicht gerendert. Benannte Karten verweisen ausschließlich auf bestehende Personen mit bereits belegten Rollen.",
+    "Alle militärischen Mengen, Größenvergleiche, Truppen- und Flottenstatistiken werden ausgelassen. Militärprofilfelder bleiben leer und die Profilgruppe ausgeblendet.",
+    "Beschreibende Hausgeschichte, qualitative Ausbildung, Handwerk und Kultur werden nur ohne Widerspruch zum aktuellen Kontext übernommen. Platzhalter bleiben ohne neue Fakten.",
+    "Vorhandene passende Figuren werden unverändert wiederverwendet. Aktuelle lokale Registerwappen und Regionalbanner bleiben maßgeblich.",
+    "Bhiorach bleibt unter Antike Häuser eingeordnet. Der überlieferte Lairdrang bleibt erhalten. Eine vermutete Kadettenherkunft von Ui Trisceil bleibt ausdrücklich unsicher und wird nicht in den Graph übertragen.",
+    "Die passende Originaldarstellung zeigt einen Druiden mit Stab und Flamme. Sie bleibt als Clanfigur erhalten."
+  ]
+}

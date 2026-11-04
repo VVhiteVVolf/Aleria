@@ -1,0 +1,185 @@
+{
+  "provenance": "Initial review of ten existing canonical Weidebucht records before local house-page projection, 2026-11-03. No uploaded genealogy is copied. Graph hashes are one-time audit references; later legitimate graph edits remain allowed. Source and nine original scene hashes identify the supplied non-genealogical artifacts.",
+  "records": [
+    {
+      "id": "haus-wylan",
+      "initialGraphFingerprint": "2d1cd806e9cd8650e3a7bc9cb962bc116d93937f65b82ffdad98940403e0ef97",
+      "initialCanonicalProfile": {
+        "rankId": "county",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "da30d4ac-18ac-470e-855f-26816205a90c",
+        "sha256": "2c982e38e2b24c39db932011f9c839b9579958ba99c12529935efb667f460a2f"
+      },
+      "originalSceneSha256": "4c8b6af57cf4958bfb94ea199a413a6c8c3d1866b0665e21e234f60c1a659fe8"
+    },
+    {
+      "id": "haus-dinefwr",
+      "initialGraphFingerprint": "4319058b5ee37a9d405de472a0b8f4ee14fa464892d301ec4409cc7a82eff60f",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "82031dc3-32a9-499b-9c57-5363a1477329",
+        "sha256": "a15652e8da5963648a310b21a8f8ce62caaa5bc9cdd5b653af48846547cc8466"
+      },
+      "originalSceneSha256": "c8eb1b7e8a779b43369de85684cbf1a60f1f4edb196b71dec9f769971f089cbb"
+    },
+    {
+      "id": "haus-mochdaer",
+      "initialGraphFingerprint": "4c86538b54dc0710bd35749c3122b514920f5455bcd8f9c5f8569610decb5bfc",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "f8f14a3f-e95d-42f4-b979-1856437a626e",
+        "sha256": "84c49e1fc8e37ca3f4bbc2c5dab98eea37b5695ac709645128327f1c085cd207"
+      },
+      "originalSceneSha256": "e9ff42b3ed79de84ba7ee36176e396a2920c6c1c884fb3c935b6471b87428c2c"
+    },
+    {
+      "id": "haus-tir-addawol",
+      "initialGraphFingerprint": "88ec06cda8907ece30d9f16628026e6bb1c74a453a1320be5b37375969f3d4d4",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Hochweide",
+        "seat": "Glyndale",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "575ad120-8ac2-4d14-9912-bcbe5429716f",
+        "sha256": "0c49d11f5508a168f5d60a25249571f2d9c1008ea11a43291dcb0a7792a01433"
+      },
+      "originalSceneSha256": "dd83a82c59c406aa13663118de378d2f6afc7380e44cc04d5fb830f47afa1b25"
+    },
+    {
+      "id": "haus-hwyaden",
+      "initialGraphFingerprint": "0ebc1867a108b32bdc581c97f853d65696902df6b0c720352421a895ce65d1d6",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Borkenstein",
+        "seat": "Trefyddin",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "ee69fea8-3387-4a24-979f-3de6db4905e6",
+        "sha256": "66deaa14882306119fd8e032ce992e720aa9343bb361e71afd0365fd8d7d483d"
+      },
+      "originalSceneSha256": "5c7a8ae24084d49d57cb8039ad5f75e63ef0e787a2ce702ebc7cd3bb4a889a2b"
+    },
+    {
+      "id": "haus-creyr",
+      "initialGraphFingerprint": "d344158c04fa078e0f67e3ec83fe358c632dcc3efd2c68060f79bad976e0e1ad",
+      "initialCanonicalProfile": {
+        "rankId": "barony",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Dunstholm",
+        "seat": "Esgairmor",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "4c0aba4a-b776-4438-8f45-c24768d95764",
+        "sha256": "2aea5dd9b90c638a817d93b6690ddc13ba73ff3663e061786b2405ee7e9dabea"
+      },
+      "originalSceneSha256": "044ba3a86ff4deba4a1a908c941f432aba7de76994fd7f7c94c0cfeb2a6834e2"
+    },
+    {
+      "id": "haus-tannau",
+      "initialGraphFingerprint": "7399ec22c1174c22204184daf5dcb02678607762005a8706264e0a5cbf40c06c",
+      "initialCanonicalProfile": {
+        "rankId": "commoner",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "6b7ea609-57fb-4ce3-9188-94c895ff4068",
+        "sha256": "9f5160de1d356eb9f57d317366d335a5855efe4bd970cb3f3d7ab68bc00acb4b"
+      },
+      "originalSceneSha256": null
+    },
+    {
+      "id": "haus-asyn",
+      "initialGraphFingerprint": "9e2f4367dd37f58d8285551075d6a94140f426f80e5a07ce27a046662d63ecc2",
+      "initialCanonicalProfile": {
+        "rankId": "knight-prince",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Melwas Au",
+        "seat": "Cerrigarth",
+        "liegeHouseId": "haus-wylan",
+        "liegeHouseName": "Haus Wylan O'Cerrigarth"
+      },
+      "source": {
+        "attachmentId": "f4701342-6288-4b01-979f-ec7003b2bf60",
+        "sha256": "2aeb8e828d06441829d8be1e1aeb16ea7f0b94a58212ffdf603d3938e5645486"
+      },
+      "originalSceneSha256": "bf6445504ffe3e100eb4d276be67cc079b0065603fb02ec8bf8b2cb4f7e2e611"
+    },
+    {
+      "id": "haus-fhaire",
+      "initialGraphFingerprint": "9b41d56d090cae7d21d734c74df0d14b5b48569621988666dcb11de5a147b952",
+      "initialCanonicalProfile": {
+        "rankId": "laird",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Antike Häuser",
+        "seat": "Bhiorach",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "03dfb4cc-dc10-4d8c-ab2c-8ad9e882f3c6",
+        "sha256": "28449e947e4b1934cebc97a40a799d5886143dfe9174014c0ba1c061e43ba8f0"
+      },
+      "originalSceneSha256": "b88167ae498b13837cf54d37d7092ec64298e6e834ad4db63f777c06ee2e1ed2"
+    },
+    {
+      "id": "haus-trisceil",
+      "initialGraphFingerprint": "322b45cb836fe4c753fcd8c46761408187db9b9502951c18fc10328ff5c397df",
+      "initialCanonicalProfile": {
+        "rankId": "mor-tiarna",
+        "kingdom": "Cenyr",
+        "county": "Weidebucht",
+        "barony": "Antike Häuser",
+        "seat": "Antikes Cerrigarth",
+        "liegeHouseId": "",
+        "liegeHouseName": ""
+      },
+      "source": {
+        "attachmentId": "2468b897-ffdc-42d1-93e8-0eaf7788d50a",
+        "sha256": "1d191835f94ca04b3b7562485adbd418d6c6e8b4af3b9936b9494d117ebe7d15"
+      },
+      "originalSceneSha256": "c9a952343d3cf2621248ac2aeabf6b908557334f997f4084ad08711fa3932a1d"
+    }
+  ]
+}

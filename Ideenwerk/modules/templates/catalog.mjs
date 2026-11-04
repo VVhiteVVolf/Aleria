@@ -1,4 +1,5 @@
 import {uid} from '../ui/html.mjs';
+import {createRequestMetadata,isRequestModule} from '../requests/request-model.mjs';
 
 const page = (title, blocks) => ({id:uid(), title, blocks:blocks.map(([kind,label,value='']) => ({id:uid(),kind,label,value}))});
 export const TEMPLATES = Object.freeze([
@@ -16,11 +17,17 @@ export const TEMPLATES = Object.freeze([
     page('Hinter den Kulissen', [['text','Geschichte & Geheimnisse'],['bullets','Menschen & Begegnungen'],['text','Regeln dieser Welt']])]},
   {id:'moodboard',name:'Moodboard',short:'Moodboard',icon:'moodboard',color:'rose',description:'Bilder, Farben und Stimmung. Ein Gefühl, das du festhalten möchtest.',hint:'Bildsammlung · Farbstimmung · Notizen',pages:()=>[
     page('Inspiration', [['image','Stimmung'],['image','Farben & Formen'],['image','Details'],['text','Das Gefühl dahinter'],['bullets','Stichworte']])]},
-  {id:'note',name:'Freie Idee',short:'Notiz',icon:'note',color:'butter',description:'Ein Satz, ein Dialog, ein ziemlich verrückter Einfall. Alles darf hier rein.',hint:'Freier Text · Listen · Zusätzliche Seiten',pages:()=>[page('Gedanken', [['text','Platz für deinen Gedanken'],['bullets','Zum Weiterdenken']])]}
+  {id:'note',name:'Freie Idee',short:'Notiz',icon:'note',color:'butter',description:'Ein Satz, ein Dialog, ein ziemlich verrückter Einfall. Alles darf hier rein.',hint:'Freier Text · Listen · Zusätzliche Seiten',pages:()=>[page('Gedanken', [['text','Platz für deinen Gedanken'],['bullets','Zum Weiterdenken']])]},
+  {id:'module-request',name:'Modulwunsch',short:'Modulwunsch',icon:'story',color:'sage',initialTitle:'Neuer Modulwunsch',description:'Beschreibe ein gewünschtes Aleria-Modul, eine Szene oder eine Erweiterung für die Umsetzung.',hint:'Ziel · Inhalte · Referenzbilder · Übergabe',pages:()=>[
+    page('Mein Modulwunsch',[['text','Was soll entstehen?'],['text','Wo gehört es hin?'],['bullets','Das soll enthalten sein'],['text','Was ist dir besonders wichtig?']]),
+    page('Bilder & Hinweise',[['image','Referenzbild'],['text','Was zeigt das Bild, was soll übernommen werden?'],['text','Weitere Hinweise oder Quellen']])]},
+  {id:'avatar-request',name:'Avatarwunsch',short:'Avatarwunsch',icon:'character',color:'peach',initialTitle:'Neuer Avatarwunsch',description:'Wünsche dir ein Charakterbild und zeige mit einem Referenzbild, welche Figur du meinst.',hint:'Figur · Referenzbild · Pose · Kleidung',pages:()=>[
+    page('Figur & Bildwunsch',[['text','Welche Figur ist gemeint?'],['image','Referenzbild der Figur'],['text','Was soll am neuen Bild anders sein?'],['text','Kleidung, Pose und Gesichtsausdruck']]),
+    page('Weitere Details',[['image','Weitere Bildreferenz (optional)'],['text','Was muss erhalten bleiben?'],['text','Verwendung und gewünschtes Format'],['text','Weitere Hinweise']])]}
 ]);
 export const COLORS = ['peach','sage','lavender','sand','rose','butter'];
 export const templateFor = type => TEMPLATES.find(template => template.id === type) || TEMPLATES.at(-1);
 export function createModule(type, position = {x:48,y:48}) {
   const template = templateFor(type);
-  return {id:uid(),type:template.id,title:`Neue ${template.short === 'Charakter' ? 'Figur' : template.short === 'Ort' ? 'Welt' : template.short === 'Moodboard' ? 'Inspiration' : template.short === 'Mindmap' ? 'Mindmap' : template.short === 'Story' ? 'Geschichte' : 'Idee'}`,subtitle:'',color:template.color,status:'sketch',tags:'',collapsed:false,...position,pages:template.pages(),mindmap:{nodes:template.id === 'mindmap' ? [{id:uid(),text:'Meine Idee',x:420,y:230,color:'lavender'}] : [],edges:[]}};
+  return {id:uid(),type:template.id,title:template.initialTitle||`Neue ${template.short === 'Charakter' ? 'Figur' : template.short === 'Ort' ? 'Welt' : template.short === 'Moodboard' ? 'Inspiration' : template.short === 'Mindmap' ? 'Mindmap' : template.short === 'Story' ? 'Geschichte' : 'Idee'}`,subtitle:'',color:template.color,status:'sketch',tags:'',collapsed:false,...position,pages:template.pages(),mindmap:{nodes:template.id === 'mindmap' ? [{id:uid(),text:'Meine Idee',x:420,y:230,color:'lavender'}] : [],edges:[]},...(isRequestModule({type:template.id})?{requestMeta:createRequestMetadata(template.id)}:{})};
 }

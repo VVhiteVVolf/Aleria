@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "records": [
+    {
+      "id": "prototype-01",
+      "assetStem": "prototype-01",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-bbc7c87f-79ac-4534-b3f3-b1377f3ef8f2.png",
+      "workspaceOriginal": "assets/warriors/generated/prototype-01.png",
+      "jobManifest": "sources/prototypes-a-jobs.json",
+      "jobId": "prototype-01",
+      "visualReview": "Complete simple legionary, open Roman helmet, rounded visible human ear, no shield.",
+      "sha256": "f703693d51edaa058680306cd29ded46643552a0573fc3a3b93df15670414c47",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "originalUnchanged": true
+    },
+    {
+      "id": "prototype-02",
+      "assetStem": "prototype-02",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-3733bb27-5ebf-49e1-92ce-ce5c44966008.png",
+      "workspaceOriginal": "assets/warriors/generated/prototype-02.png",
+      "jobManifest": "sources/prototypes-a-jobs.json",
+      "jobId": "prototype-02",
+      "visualReview": "Complete closed-helmet heavy infantryman, gladius, large upright rectangular scutum resting on its lower edge and left hand on top; both boots visible.",
+      "sha256": "5c6b3566e66f015eed5fd37c403083635c4226725e9b3affcdd80966903c66ed",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "originalUnchanged": true
+    },
+    {
+      "id": "prototype-06",
+      "assetStem": "prototype-06",
+      "category": "warriors",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a2df-2daa-7fc3-833f-5422fcaf5b5d\\exec-4611540a-1160-4fb9-86a2-2d6cd2dd96cf.png",
+      "workspaceOriginal": "assets/warriors/generated/prototype-06.png",
+      "jobManifest": "sources/prototypes-a-jobs.json",
+      "jobId": "prototype-06",
+      "visualReview": "Complete armoured bard with rounded visible human ear, sword and ornate triangular portable harp supported by strap and hand.",
+      "sha256": "96018ea2a49f4da8162f7091a5e3a93290aad510899c06026c26591ac11537de",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "originalUnchanged": true
+    }
+  ]
+}

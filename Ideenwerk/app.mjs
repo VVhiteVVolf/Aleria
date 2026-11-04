@@ -3,6 +3,7 @@ import {createWorkspace} from './modules/workspace/seed.mjs';
 import {createWorkspaceStore} from './modules/workspace/store.mjs';
 import {openWorkspaceStorage,createAutosave} from './modules/workspace/storage.mjs';
 import {mountWorkspace} from './modules/workspace/workspace-controller.mjs';
+import {removeUnchangedWorkspaceExamples} from './modules/workspace/example-migration.mjs';
 
 function storageStatus(status,message) {
   const element=document.getElementById('save-state');
@@ -18,11 +19,12 @@ function storageStatus(status,message) {
 async function start() {
   let storage=null,initial=null,loadError=null;
   try{storage=await openWorkspaceStorage();const saved=await storage.load();initial=saved?parseWorkspace(saved):null;}catch(error){loadError=error;storage=null;}
-  const store=createWorkspaceStore(initial||createWorkspace());
+  const migrated=initial?removeUnchangedWorkspaceExamples(initial):{workspace:createWorkspace(),changed:false};
+  const store=createWorkspaceStore(migrated.workspace);
   const autosave=storage?createAutosave(storage,storageStatus):null;
   mountWorkspace({store,autosave});
   if(loadError)storageStatus('error',`Deine bisherigen Browserdaten wurden nicht überschrieben. ${loadError.message} Du kannst eine Sicherung importieren und als Datei weiterarbeiten.`);
-  else if(!initial)autosave.queue(store.get());else storageStatus('saved');
+  else if(!initial||migrated.changed)autosave.queue(store.get());else storageStatus('saved');
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')autosave?.flush();});
   window.addEventListener('beforeunload',event=>{if(autosave?.isPending()||!storage){event.preventDefault();event.returnValue='';}});
 }

@@ -1,0 +1,93 @@
+{
+  "id": "haus-nidfengr",
+  "contentVersion": "20261103-kronental-v1",
+  "source": null,
+  "initialPage": null,
+  "authority": {
+    "familyId": "haus-nidfengr",
+    "baselineSourceRevision": 2,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Heldenwacht",
+      "barony": "Jarltümliche Herrschaft – Tal der Helden",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-tal-der-helden.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "2a82d72e1872f1924b5af380b98dd07f47d4c02024dc0a920a0df7cac1e819bc"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-nidfengr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-nidfengr",
+    "slug": "nidfengr",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-425456de-68a9-48b8-9290-e44d8cb352af.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-nidfengr/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/placeholders/neutral-crest.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "04230d732cb5a142943c3fc00ca5efd7c6ce6a68fa898140c8cbb261e81ddf70",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2194270,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "illustrations": [
+    {
+      "id": "haus-nidfengr",
+      "slug": "nidfengr",
+      "role": "warrior",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-425456de-68a9-48b8-9290-e44d8cb352af.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-nidfengr/krieger-generated-v1.png",
+      "tool": "built-in image_gen",
+      "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+      "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "crestReference": "E:/Aleria/Stammbäume/assets/images/placeholders/neutral-crest.png",
+      "representative": true,
+      "namedPersonId": "",
+      "sha256": "04230d732cb5a142943c3fc00ca5efd7c6ce6a68fa898140c8cbb261e81ddf70",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2194270,
+      "format": "PNG",
+      "mode": "RGBA",
+      "original": false
+    }
+  ],
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "source": {
+    "attachmentId": "403dc3a9-ec73-46d0-b168-664b0ca028bb",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "8e1f27f730fc2b4ccac1668e70e1b82b6ff90db0107841478ef060bab6278163"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Stammbaum"
+    ],
+    "familyId": "haus-sgwarnog",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-sgwarnog",
+    "profileSource": "Stammbäume/assets/js/data/aehrental-house-profiles.js",
+    "baselineSourceRevision": 4,
+    "currentSeat": "Aldwynd",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Fußknecht",
+      "url": "https://i.imgur.com/g2Ld9Mc.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "7df57e235c6326a715e0f57bd58c0901be93710b29825b12f0589819c19e88ef",
+      "note": "Vorhandene passende Darstellung unverändert übernommen."
+    },
+    {
+      "role": "Feudalritter",
+      "localPath": "assets/feudalritter-2026-11-03.png",
+      "status": "generated-and-visually-reviewed",
+      "note": "Ergänzende Darstellung; keine neue benannte Person oder genealogische Aussage.",
+      "sha256": "1b504ad3a5cbcd9d445f95c8ada98ff7b92d8a32da60b944ed225d56f68a43b3",
+      "width": 1024,
+      "height": 1536,
+      "generationManifest": "image-generation.json"
+    }
+  ],
+  "decisions": [
+    "Aktuelle Familienregistrierung, Hausprofile und tatsächliche Sitze haben Vorrang vor sämtlichen alten HTML-Tabellen.",
+    "Die Quellabschnitte Hierarchie und Stammbaum werden vollständig ignoriert. Keine Person, Verwandtschaft, Lebenszahl oder Hauslinie wird daraus importiert.",
+    "Alle alten Infotabellen, Hof- und Erbfolgetabellen bleiben ungerendert. Hofkarten verweisen ausschließlich auf bereits vorhandene Personen und ihre aktuellen registrierten Titel.",
+    "Sämtliche Militärstatistiken, Truppenmengen, Flottenmengen und militärischen Größenvergleiche werden verworfen; militärische Profilfelder bleiben leer und verborgen.",
+    "Beschreibender Text wird nur qualitativ und widerspruchsfrei übernommen. Quellenlücken und Platzhalter erzeugen keine neuen Fakten.",
+    "Wappen und Regionalbanner verwenden die aktuellen lokalen Registerbilder. Abweichende alte Orts-, Amts- oder Herrschaftsangaben begründen keine Änderungen am Register.",
+    "Die widersprüchliche alte Infotabelle ersetzt nicht die beschreibenden Bezüge zu Knecht und Hüter. Original-Fußknecht und ergänzter Feudalritter bleiben getrennt sichtbar."
+  ]
+}

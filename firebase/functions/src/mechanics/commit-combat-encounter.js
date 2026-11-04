@@ -10,6 +10,7 @@ import {
   normalizeCombatEncounterEvent
 } from '../generated/combat/combat-encounter-model.js';
 import { buildCombatEncounterAuraApplications } from '../generated/combat/combat-encounter-aura.js';
+import { buildCombatEncounterStartApplications } from '../generated/combat/combat-encounter-start-effects.js';
 import {
   applyExperienceAward,
   getOrdinaryLevelForExperience
@@ -209,6 +210,10 @@ export const commitCombatEncounter = onCall({
     const enteringActorIds = requested.operation === 'start' || requested.operation === 'add'
       ? requested.participants.filter(participant => participant.status === 'active').map(participant => participant.actorId)
       : [];
+    requested.startApplications = buildCombatEncounterStartApplications(
+      [...mergedParticipants.values()].map(participant => ({ ...participant, profile: resolvedProfiles.get(participant.actorId) })),
+      { enteringActorIds }
+    );
     requested.auraApplications = requested.operation === 'end' ? [] : buildCombatEncounterAuraApplications(
       [...mergedParticipants.values()]
         .filter(participant => participant.status === 'active')
@@ -303,6 +308,25 @@ export const commitCombatEncounter = onCall({
       const record = records.get(target.key);
       event.actorName = record.name || event.actorId;
       criticalUpdates.set(target.key, { entry: target, record, hitPoints: event.after });
+    }
+    {
+      // Entry, departure and ending can also change other participants' aura
+      // pools. Persist only an actual event-owned change, never a general replay
+      // correction of somebody else's live HP or resources.
+      const afterStates = deriveCombatStateFromComments([...history, { combatEncounter: committedEvent }]);
+      for (const participant of mergedParticipants.values()) {
+        const descriptor = persistenceDescriptor(participant);
+        if (!descriptor.persistent) continue;
+        const key = recordKey(descriptor), record = records.get(key);
+        const state = afterStates.get(participant.actorId);
+        const temporary = Number(state?.temporary) || 0;
+        if (temporary === (Number(sceneStates.get(participant.actorId)?.temporary) || 0)) continue;
+        if (!state || temporary === (Number(record.combatProfile?.hitPoints?.temporary) || 0)) continue;
+        const entry = recordsToLoad.find(target => target.key === key);
+        criticalUpdates.set(key, { entry, record, hitPoints: {
+          current: record.combatProfile?.hitPoints?.current ?? null, maximum: state.maximum, temporary
+        } });
+      }
     }
     profileUpdates.push(...persistCriticalHitPointUpdates(transaction, criticalUpdates, commentRef.id, now, mechanicalUndo));
     transaction.create(commentRef, {

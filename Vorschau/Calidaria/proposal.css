@@ -1,0 +1,67 @@
+@import url('../shared/country-workbench/workbench.css');
+@import url('../Leukonia/realm-context.css');
+
+.calidaria-workbench{--paper:#f3edda;--ink:#293630;--muted:#626e64;--accent:#37675e;--line:#c5c7ad;background:#c9d6cb}
+.calidaria-workbench .hero{grid-template-columns:1fr;background:radial-gradient(ellipse at 90% 20%,#92c1ac66,transparent 70%)}
+.calidaria-workbench .hero-with-art{grid-template-columns:1.3fr .85fr;gap:40px}
+.realm-crest .art-button img{height:auto;max-height:390px}
+.calidaria-workbench .lead{max-width:850px}
+.calidaria-workbench .toolbar nav{gap:16px}
+.skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.skip-link:focus{top:12px}
+.culture-grid,.region-grid,.caste-copy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.culture-grid{margin-top:35px;padding-top:30px;border-top:1px solid var(--line)}
+.culture-grid article,.caste-copy-grid article{padding:22px;border:1px solid var(--line);background:#e6e7d7}
+.culture-grid p,.region-card p,.caste-copy-grid p{font-size:15px;color:var(--muted);margin-bottom:0}
+.region-card{padding:24px;border:1px solid var(--line);border-top:5px solid var(--region-colour);background:#f9f5e8;min-width:0}
+.region-card .region-cities{font:12px/1.8 var(--sans);margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.map-variant-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;font:12px/1.6 var(--sans);margin-bottom:18px}
+.map-variant-row>a{margin-left:auto}
+.calidaria-placement .map-canvas{min-width:950px}
+.calidaria-placement .crest-group{max-width:220px;flex-wrap:wrap;white-space:normal}
+.calidaria-placement .house-choice{align-items:flex-start;flex-direction:column;gap:10px}
+.calidaria-placement .house-choice>span{min-width:0;width:100%}
+.calidaria-placement .house-choice strong{font-size:18px;overflow-wrap:break-word}
+.calidaria-placement .seat-card>header{min-height:0}
+#map-dialog .map-variant-row{padding:8px 12px;margin:0;border-bottom:1px solid var(--line)}
+#map-dialog .map-canvas{min-width:0}
+#map-dialog .city-name{font-size:clamp(3px,1.1cqw,8px);padding:.25cqw .6cqw;border-bottom-width:.2cqw}
+#map-dialog .map-zoom button{padding:6px 8px;font-size:11px;white-space:nowrap}
+.art-button{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;width:100%;min-height:0;padding:0;border:0;background:transparent;color:var(--muted);font:11px/1.6 var(--sans)}
+.art-button:hover{background:transparent}
+.art-button img{display:block;width:100%;height:245px;object-fit:contain}
+.art-button span{text-decoration:underline;text-underline-offset:3px}
+.art-pending{font:12px/1.7 var(--sans);color:var(--muted);text-align:center;padding:25px 12px}
+.heraldic-group+.heraldic-group{margin-top:50px;padding-top:40px;border-top:1px solid var(--line)}
+.province-art-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.province-art-grid article{min-width:0;text-align:center}
+.province-art-grid .art-button img{height:320px}
+.province-art-grid .eyebrow{margin-top:25px}
+.province-art-grid p{font-size:15px;color:var(--muted)}
+.house-art-grid,.prototype-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.house-art-card,.prototype-grid article{padding:22px;background:#e7e6d6;border:1px solid var(--line);min-width:0}
+.house-art-card h3{margin-top:25px}
+.house-art-pair{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:12px}
+.house-art-pair.crest-only{grid-template-columns:1fr}
+.house-art-pair .art-button:not(.figure-art-button) img{height:180px}
+.house-art-pair.crest-only .art-button img{height:245px}
+.house-art-pair .figure-art-button img{height:315px}
+.house-art-card p,.prototype-grid article>p{font-size:14px;color:var(--muted)}
+.house-art-card .art-palette,.prototype-grid .art-equipment{font:11px/1.8 var(--sans)}
+.prototype-grid .figure-art-button img{height:365px}
+.prototype-grid .eyebrow{margin-top:25px}
+.calidaria-art-dialog h2{overflow-wrap:anywhere}
+.calidaria-art-dialog .art-detail-layout figure{position:static}
+.calidaria-art-dialog .art-detail-layout figure img{max-height:72vh;object-fit:contain}
+.calidaria-art-dialog .prototype-art-detail figure img{height:72vh}
+.art-facts{margin-top:25px}
+.art-facts>div{border-top:1px solid var(--line);padding:12px 0}
+.art-facts dt{font:10px/1.6 var(--sans);text-transform:uppercase;color:var(--muted)}
+.art-facts dd{font-size:15px;margin:6px 0 0}
+.subtle{font:12px/1.7 var(--sans);color:var(--muted)}
+.imperial-context>summary{padding:30px 7%;cursor:pointer;font-size:25px;border-bottom:1px solid var(--line);color:var(--accent)}
+@media(max-width:1100px){.calidaria-workbench .toolbar{flex-wrap:wrap}.house-art-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.prototype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calidaria-workbench .toolbar nav{width:100%;justify-content:space-between;margin:0}}
+@media(max-width:650px){.culture-grid,.region-grid,.caste-copy-grid,.house-art-grid,.prototype-grid,.province-art-grid{grid-template-columns:1fr}.calidaria-workbench .hero-with-art{grid-template-columns:1fr}.map-variant-row>a{width:100%;margin-left:0}.house-art-card{padding:20px}.prototype-grid .figure-art-button img{height:350px}.calidaria-workbench .history-grid{grid-template-columns:1fr}}
+@media(max-width:420px){.calidaria-workbench .toolbar nav{gap:7px;font-size:10px}}
+@media print{.art-button span,.skip-link,.map-variant-row{display:none}.house-art-card,.prototype-grid article,.region-card{break-inside:avoid}.calidaria-placement .map-canvas{min-width:0}.house-art-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}

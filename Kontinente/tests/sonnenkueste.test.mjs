@@ -33,10 +33,12 @@ test('all six source pages, 60 snippets and three coordinate lists remain byte-i
 
 test('house selection stays local and the county has its own council', () => {
   assert.equal(pages.length, 6);
-  assert.deepEqual(pages.map(page => page.view.familySections.flatMap(s => s.cards).length), [24, 3, 2, 1, 1, 1]);
+  assert.deepEqual(pages.map(page => page.view.familySections.flatMap(s => s.cards).length), [24, 5, 2, 1, 1, 1]);
   const countyHouses = pages[0].view.familySections.flatMap(s => s.cards);
-  assert.ok(!countyHouses.some(h => h.id === 'haus-rhelian' || h.id === 'haus-aelryn'));
-  assert.ok(pages[1].view.familySections.flatMap(s => s.cards).some(h => h.id === 'haus-rhelian'));
+  const jungferntalKnights = ['haus-rhelian', 'haus-aelryn', 'haus-caerwen', 'haus-nerwynn'];
+  assert.ok(!countyHouses.some(h => jungferntalKnights.includes(h.id)));
+  const localHouses = pages[1].view.familySections.flatMap(s => s.cards);
+  for (const id of jungferntalKnights) assert.ok(localHouses.some(h => h.id === id), id);
   assert.ok(pages[0].view.councilGroups.some(g => g.members.some(p => p.name === 'Merwin Illewod')));
   assert.ok(pages.every(page => !page.view.councilGroups.some(g => g.title === 'Königlicher Rat')));
   for (const page of pages) {

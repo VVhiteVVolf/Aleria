@@ -1,0 +1,164 @@
+{
+  "id": "haus-dal-ceardaiocht",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "c3e467f4-ed11-4d67-8cb1-53e5d5df8bd3",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\c3e467f4-ed11-4d67-8cb1-53e5d5df8bd3\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/dal-ceardaiocht/animexx-original.html",
+    "bytes": 99195,
+    "sha256": "d9a73e595bc3274f58eb1d74cab55a52de7d52ebd633e4bc55de1f727e60977c",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-dal-ceardaiocht",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Dun Laog",
+      "barony": "Tir na hInneonach",
+      "county": "Tir na Sinsear",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gallchobhair",
+      "liegeHouseName": "Fir An’Gallchobhair",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na hInneonach",
+        "Dun Laog"
+      ]
+    },
+    "graphFingerprint": "55f4aed696815a350c83aff6d8b86a5c43067973466eceb7d513e7b3458c1575",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-dal-ceardaiocht",
+    "title": "Clan Dál’Ceardaíocht",
+    "territoryId": "leitheach-herrschaft-ceardaiocht",
+    "territoryName": "Tir na hInneonach",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na hInneonach",
+        "slug": "leitheach-herrschaft-ceardaiocht"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-dal-ceardaiocht",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-dal-ceardaiocht",
+    "slug": "dal-ceardaiocht",
+    "canonicalSlug": "dal-ceardaiocht",
+    "attachmentId": "c3e467f4-ed11-4d67-8cb1-53e5d5df8bd3",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/abMIDm3.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 310553,
+    "sha256": "c96336ec2ef8f860a462c9b323cfee4cdd4d3e6cc060a389d455a1a753820650",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-dal-ceardaiocht",
+    "title": "Clan Dál’Ceardaíocht",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sinsear",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/abMIDm3.png",
+    "path": "Stammbäume/assets/images/references/haus-dal-ceardaiocht/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-dal-ceardaiocht/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "c96336ec2ef8f860a462c9b323cfee4cdd4d3e6cc060a389d455a1a753820650",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Blau-goldener Hauskrieger mit Hund und Schwert am Gürtel.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "d9a73e595bc3274f58eb1d74cab55a52de7d52ebd633e4bc55de1f727e60977c",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-dal-ceardaiocht, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Dienst an Gallchobhair innerhalb Tir na Coimhthiochs; unter Tir na Sinsear verschachtelt. Keine pauschale direkte Unterstellung unter Mac Ard Cumhaill aus der Länderübersicht.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

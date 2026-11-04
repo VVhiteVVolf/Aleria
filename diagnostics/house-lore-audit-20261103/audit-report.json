@@ -1,0 +1,3461 @@
+{
+  "schema": "aleria.public-house-lore-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T22:44:01.318Z",
+  "status": "complete-read-only-review",
+  "currentWorldYear": 1740,
+  "productFilesChanged": false,
+  "scope": {
+    "publicFamilies": 424,
+    "Cenyr": 283,
+    "Aldrimar": 112,
+    "Leitheach": 29,
+    "CenyrIncludesCurrentExilePlacement": "Sept Cneacail",
+    "activeHouseSourcesCompared": 416,
+    "familyPersonEntriesScreened": 10312,
+    "publicParentagesScreened": 5699,
+    "publicPartnershipsScreened": 4186,
+    "coverageGaps": [
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer"
+    ],
+    "coverageNote": "Systematischer Struktur- und Chronologieabgleich mit gezielter narrativer Verifikation. Keine Behauptung einer lückenlosen manuellen Satzprüfung sämtlicher überlieferten Texte."
+  },
+  "interpretation": [
+    "Ein bestätigter Konflikt bedeutet: Zwei aktuelle Aussagen sind miteinander unvereinbar. Welche Angabe zu korrigieren ist, folgt daraus nicht automatisch.",
+    "Ausgestorbene Hausverwaltung bedeutet nicht automatisch, dass alle Nachkommen verstorben sind.",
+    "Historische Veränderungen, dokumentierte Generationenlücken und echte Namensgleichheiten werden nicht als Widerspruch gezählt.",
+    "Aktive Ratsverknüpfungen auf als verstorben geführte Personen belegen eine Anzeige- oder Identitätsinkonsistenz. Ohne Todesdatum ist damit nicht bewiesen, dass die tatsächlich gemeinten Ratsmitglieder verstorben sind.",
+    "Die Ceardaíocht-Kinderdatierung und Rhun Wylans Todesjahr waren bereits ausdrücklich als ungelöste Quellenabweichungen dokumentiert."
+  ],
+  "exclusions": [
+    "Private Dossiers und geheime Inhalte",
+    "Restricted/private/hidden Beziehungen und ausschließlich darin geführte Personen",
+    "Gelieferte alte Stammbaumabschnitte",
+    "Militärstatistiken",
+    "Archivbehauptungen ohne aktuelle Gegenstelle"
+  ],
+  "summary": {
+    "confirmedRegionalConflictGroups": 18,
+    "confirmedCounterpartPersonConflicts": 20,
+    "counterpartAliveDeadConflicts": 15,
+    "counterpartBirthOrDeathConflicts": 3,
+    "counterpartSexConflicts": 2,
+    "uncertainRegionalQuestions": 8,
+    "unresolvedIdentityMatches": 3,
+    "rawChronologyCandidates": 40,
+    "IllewodGenerationGapFalsePositives": 12,
+    "additionalConflictingNamedParentPairs": 0
+  },
+  "confirmedRegionalFindings": [
+    {
+      "realm": "Leitheach",
+      "id": "LEI-001",
+      "classification": "accept",
+      "category": "current-rule-versus-ended-administration",
+      "confidence": "high",
+      "familyIds": [
+        "haus-dal-t-saor"
+      ],
+      "title": "Dal T’Saor is simultaneously presented as current territorial ruler and as an administration ended in 1735",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5160,
+          "quote": "Herrschaft der Dál T’Saor ist die städtische Herrschaft des Clans in Sruthlann.",
+          "actualSourceLine": "\"Herrschaft der Dál T’Saor ist die städtische Herrschaft des Clans in Sruthlann. Die Stadt ist zugleich der Sitz seines unmittelbaren Lehnsherrn; ein eigenes Landschaftsgebiet wird hierfür nicht abgegrenzt.\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5177,
+          "quote": "\"label\": \"Herrschender Clan\"",
+          "actualSourceLine": "\"label\": \"Herrschender Clan\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 5178,
+          "quote": "\"value\": \"Dal T’Saor\"",
+          "actualSourceLine": "\"value\": \"Dal T’Saor\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+          "line": 107,
+          "quote": "1735 fiel die Stammburg des Hauses einem finsteren Unheil aus dem Dunkelhain zum Opfer. ... Damit endete die dortige Hauptlinie und Hausverwaltung.",
+          "actualSourceLine": "\"history\": \"1735 fiel die Stammburg des Hauses einem finsteren Unheil aus dem Dunkelhain zum Opfer. Die innerhalb ihrer Mauern verbliebenen Angehörigen kamen um. Damit endete die dortige Hauptlinie und Hausverwaltung.\\n\\nQuona und Junaid hielten sich außerhalb der Burg auf und überlebten. Während die örtliche Hausverwaltung endete, setzten sie ihr Leben an anderen Orten fort.\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 384,
+          "quote": "administrativeExtinction: true,",
+          "actualSourceLine": "administrativeExtinction: true,"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 396,
+          "quote": "historicalStatus: 'extinct',",
+          "actualSourceLine": "historicalStatus: 'extinct',"
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3559,
+          "quote": "\"title\": \"Ausgestorbene Clans\"",
+          "actualSourceLine": "\"title\": \"Ausgestorbene Clans\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3563,
+          "quote": "\"name\": \"Dal T’Saor\"",
+          "actualSourceLine": "\"name\": \"Dal T’Saor\","
+        }
+      ],
+      "explanation": "This is active territorial authoring data, not an archived old article. Its child page and ruling-clan box imply present rule, while the active house narrative, canonical extinction metadata, and even the parent territory classify the administration as historical. The disagreement concerns rule, not the biological survival of Quona and Junaid.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 381,
+          "actualSourceLine": "extinctionEvent: Object.freeze({"
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+          "line": 107,
+          "actualSourceLine": "\"history\": \"1735 fiel die Stammburg des Hauses einem finsteren Unheil aus dem Dunkelhain zum Opfer. Die innerhalb ihrer Mauern verbliebenen Angehörigen kamen um. Damit endete die dortige Hauptlinie und Hausverwaltung.\\n\\nQuona und Junaid hielten sich außerhalb der Burg auf und überlebten. Während die örtliche Hausverwaltung endete, setzten sie ihr Leben an anderen Orten fort.\","
+        }
+      ],
+      "safeResolution": "Authorial decision on how to mark the existing territorial page as historical; do not delete the family, surviving persons, historical rank, seat, or canonical iframe."
+    },
+    {
+      "realm": "Leitheach",
+      "id": "LEI-002",
+      "classification": "accept",
+      "category": "current-office-links-deceased-canonical-identity",
+      "confidence": "high-for-active-data-conflict",
+      "familyIds": [
+        "haus-dal-t-saor"
+      ],
+      "personIds": [
+        "wunbhna-spouse-tsaoir"
+      ],
+      "territoryId": "leitheach-tir-na-gortanna",
+      "title": "Wunbhna is listed as current council mage but linked to a deceased canonical person",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 2095,
+          "quote": "\"office\": \"Ratsmagier des Mor Tiarna\"",
+          "actualSourceLine": "\"office\": \"Ratsmagier des Mor Tiarna\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 2098,
+          "quote": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=wunbhna-spouse-tsaoir\",",
+          "actualSourceLine": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=wunbhna-spouse-tsaoir\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 254,
+          "quote": "spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '????'),",
+          "actualSourceLine": "spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "quote": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),",
+          "actualSourceLine": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "publicRuntimeObservation": {
+        "familyId": "haus-dal-t-saor",
+        "personId": "wunbhna-spouse-tsaoir",
+        "name": "Wunbhna",
+        "birth": "????",
+        "death": "????",
+        "status": "dead"
+      },
+      "explanation": "The active council group uses an exact family/person link, so this is not merely a similar name. The linked record has the nonempty unknown-death marker ???? and is normalized to status dead. No death year is claimed here. This confirms contradictory active data, but cannot decide whether the council entry selected an older namesake, the office list is historical, or the life-state data need authorial review.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-t-saor-family.js",
+          "line": 254,
+          "actualSourceLine": "spouse('wunbhna-spouse-tsaoir', 'Wunbhna', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "actualSourceLine": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "safeResolution": "Verify the intended office-holder identity and time frame. Do not create a new person or resurrect the linked historical person from the name alone."
+    },
+    {
+      "realm": "Leitheach",
+      "id": "LEI-003",
+      "classification": "accept",
+      "category": "current-office-links-deceased-canonical-identity",
+      "confidence": "high-for-active-data-conflict",
+      "familyIds": [
+        "haus-choinnich"
+      ],
+      "personIds": [
+        "maolmhuire-spouse-choinnich"
+      ],
+      "territoryId": "leitheach-tir-na-comhchuibhis",
+      "title": "Maolmhuire is listed as current council mage but linked to a deceased canonical person",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3630,
+          "quote": "\"office\": \"Ratsmagier des Mor Tiarna\"",
+          "actualSourceLine": "\"office\": \"Ratsmagier des Mor Tiarna\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 3633,
+          "quote": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view&person=maolmhuire-spouse-choinnich\",",
+          "actualSourceLine": "\"href\": \"/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view&person=maolmhuire-spouse-choinnich\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+          "line": 252,
+          "quote": "spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '????'),",
+          "actualSourceLine": "spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "quote": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),",
+          "actualSourceLine": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "publicRuntimeObservation": {
+        "familyId": "haus-choinnich",
+        "personId": "maolmhuire-spouse-choinnich",
+        "name": "Maolmhuire",
+        "birth": "????",
+        "death": "????",
+        "status": "dead"
+      },
+      "explanation": "The active council group uses an exact family/person link, so this is not merely a similar name. The linked record has the nonempty unknown-death marker ???? and is normalized to status dead. No death year is claimed here. This confirms contradictory active data, but cannot decide whether the council entry selected an older namesake, the office list is historical, or the life-state data need authorial review.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-ua-choinnich-family.js",
+          "line": 252,
+          "actualSourceLine": "spouse('maolmhuire-spouse-choinnich', 'Maolmhuire', 'female', '????', '????'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/family-record-builders.js",
+          "line": 33,
+          "actualSourceLine": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+        }
+      ],
+      "safeResolution": "Verify the intended office-holder identity and time frame. Do not create a new person or resurrect the linked historical person from the name alone."
+    },
+    {
+      "realm": "Leitheach",
+      "id": "LEI-004",
+      "classification": "accept",
+      "category": "known-unresolved-canonical-chronology",
+      "confidence": "high",
+      "familyIds": [
+        "haus-dal-ceardaiocht"
+      ],
+      "title": "The confirmed children of Aonghus are born before their father; the first two would also have a mother aged eight or ten",
+      "knownBeforeCurrentHouseImport": true,
+      "rawCandidateCount": 5,
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 125,
+          "quote": "person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1635', '1672', {",
+          "actualSourceLine": "person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1635', '1672', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 130,
+          "quote": "spouse('etain-ancient', 'Ètáin', 'female', '1622', '1695'),",
+          "actualSourceLine": "spouse('etain-ancient', 'Ètáin', 'female', '1622', '1695'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 132,
+          "quote": "person('wiomar-ceardaiocht', 'Wíomar Ceardaíocht', 'male', '1630', '1681'),",
+          "actualSourceLine": "person('wiomar-ceardaiocht', 'Wíomar Ceardaíocht', 'male', '1630', '1681'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 134,
+          "quote": "awayWoman('wunaire-ceardaiocht', 'Wúnaire Ceardaíocht', '1632', '1704', TARGETS.ruitheach),",
+          "actualSourceLine": "awayWoman('wunaire-ceardaiocht', 'Wúnaire Ceardaíocht', '1632', '1704', TARGETS.ruitheach),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 136,
+          "quote": "person('seamus-ceardaiocht', 'Séamus Ceardaíocht', 'male', '1634', '1659'),",
+          "actualSourceLine": "person('seamus-ceardaiocht', 'Séamus Ceardaíocht', 'male', '1634', '1659'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 215,
+          "quote": "...childrenOf(['wiomar-ceardaiocht', 'wunaire-ceardaiocht', 'seamus-ceardaiocht'], AONGHUS_FOUNDER_IDS, 'marriage-aonghus-etain', {",
+          "actualSourceLine": "...childrenOf(['wiomar-ceardaiocht', 'wunaire-ceardaiocht', 'seamus-ceardaiocht'], AONGHUS_FOUNDER_IDS, 'marriage-aonghus-etain', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 216,
+          "quote": "notes: 'Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.'",
+          "actualSourceLine": "notes: 'Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.'"
+        }
+      ],
+      "publicRuntimeChildren": [
+        {
+          "personId": "wiomar-ceardaiocht",
+          "name": "Wíomar Ceardaíocht",
+          "birth": "1630",
+          "parentageId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -5,
+          "motherAgeAtBirth": 8
+        },
+        {
+          "personId": "wunaire-ceardaiocht",
+          "name": "Wúnaire Ceardaíocht",
+          "birth": "1632",
+          "parentageId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -3,
+          "motherAgeAtBirth": 10
+        },
+        {
+          "personId": "seamus-ceardaiocht",
+          "name": "Séamus Ceardaíocht",
+          "birth": "1634",
+          "parentageId": "ceardaiocht-parentage-seamus-ceardaiocht",
+          "relationshipType": "biological",
+          "certainty": "confirmed",
+          "visibility": "public",
+          "fatherAgeAtBirth": -1,
+          "motherAgeAtBirth": 12
+        }
+      ],
+      "explanation": "The existing public canonical graph marks these three links as biological and confirmed. Aonghus 1635 is five, three and one years younger than his children (1630/1632/1634). Etain 1622 is eight or ten at the first two births. The source explicitly documents this contradiction as intentionally unresolved; it is one issue, not five independent newly introduced errors.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 128,
+          "actualSourceLine": "notes: 'Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Das bereits festgelegte Geburtsjahr 1635 ersetzt die erneute Altangabe 1610.'"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dal-ceardaiocht-family.js",
+          "line": 216,
+          "actualSourceLine": "notes: 'Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.'"
+        }
+      ],
+      "safeResolution": "Retain the already explicit correction of Aonghus to 1635 until an authorial chronology decision also settles the children/parent links. The superseded old year 1610 is not an authorized automatic fix. No original supplied genealogy was used in this review."
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-01",
+      "title": "Gruffyd Draig: Amtsende 1172, Tod 1171",
+      "familyIds": [
+        "haus-draig"
+      ],
+      "classification": "confirmed-active-narrative-conflict",
+      "status": "open-unmodified",
+      "explanation": "Die aktive Hausseite fuehrt Gruffyds Amtszeit 1169 bis 1172; die aktuelle Personenakte nennt Tod 1171.",
+      "expectedResolution": "Kanonisches Todesjahr nicht still aendern. Amtsende bzw. Zwischenzeit bis Neithons Amtsbeginn 1172 klaeren; keine Regentschaft erfinden.",
+      "evidence": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.content.mjs",
+          "line": 296,
+          "quote": "\"detail\": \"1169–1172\",",
+          "actualSourceLine": "\"detail\": \"1169–1172\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-draig-family.js",
+          "line": 255,
+          "quote": "person('gruffyd-draig', 'Gruffyd', 'male', '1114', '1171'),",
+          "actualSourceLine": "person('gruffyd-draig', 'Gruffyd', 'male', '1114', '1171'),"
+        }
+      ]
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-02",
+      "title": "Morgan Dyngwn: Territorialoberhaupt trotz explizitem Tod",
+      "familyIds": [
+        "haus-dyngwn"
+      ],
+      "classification": "confirmed-active-territorial-conflict",
+      "status": "open-unmodified",
+      "explanation": "Die Territorialseite nennt Morgan als heutiges Oberhaupt. Die aktuelle Hausseite laesst die amtierende Nachfolge offen und fuehrt ihn ausdruecklich historisch/verstorben. Sein Status dead ist explizit, keine automatische Schlussfolgerung aus ???? allein.",
+      "expectedResolution": "Aktuelle Haus- und Personenakte priorisieren; Territorialangabe historisch kennzeichnen oder heutiges Oberhaupt offenlassen.",
+      "evidence": [
+        {
+          "path": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/herrschaft.data.mjs",
+          "line": 52,
+          "quote": "\"value\": \"Morgan Dyngwn\"",
+          "actualSourceLine": "\"value\": \"Morgan Dyngwn\""
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Dyngwn/haus.content.mjs",
+          "line": 236,
+          "quote": "\"currentHead\": \"Nicht sicher überliefert\",",
+          "actualSourceLine": "\"currentHead\": \"Nicht sicher überliefert\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dyngwn-family.js",
+          "line": 282,
+          "quote": "status: 'dead',",
+          "actualSourceLine": "status: 'dead',"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dyngwn-family.js",
+          "line": 283,
+          "quote": "notes: 'Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.'",
+          "actualSourceLine": "notes: 'Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.'"
+        }
+      ]
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-03",
+      "title": "Sylvia O’Cenyr: Siana sechs Jahre nach Muttertod geboren",
+      "familyIds": [
+        "haus-draig",
+        "haus-arth"
+      ],
+      "classification": "confirmed-public-biological-chronology-conflict",
+      "status": "open-unmodified",
+      "explanation": "Sylvia stirbt 1719, Siana wird 1725 geboren. Beide aktuellen Akten enthalten dieselbe direkte, oeffentliche und bestaetigte biologische Mutterkante ohne Zeitsprung oder Ausnahmebeleg.",
+      "expectedResolution": "Datierung oder konkrete Elternzuordnung klaeren. Beide Akten stimmen ueberein und liefern kein sicheres Ersatzjahr; Identitaeten erhalten.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-draig-family.js",
+          "line": 384,
+          "quote": "person('sylvia-cenyr', \"Sylvia O'Cenyr\", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'affair' }),",
+          "actualSourceLine": "person('sylvia-cenyr', \"Sylvia O'Cenyr\", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'affair' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-draig-family.js",
+          "line": 419,
+          "quote": "person('siana-draig', 'Siana', 'female', '1725', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),",
+          "actualSourceLine": "person('siana-draig', 'Siana', 'female', '1725', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-draig-family.js",
+          "line": 618,
+          "quote": "...childrenOf(['siana-draig'], ['owain-draig', 'sylvia-cenyr'], 'affair-owain-sylvia', { legitimacy: 'illegitimate' }),",
+          "actualSourceLine": "...childrenOf(['siana-draig'], ['owain-draig', 'sylvia-cenyr'], 'affair-owain-sylvia', { legitimacy: 'illegitimate' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-arth-family.js",
+          "line": 395,
+          "quote": "person('sylvia-cenyr', \"Sylvia O'Cenyr\", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'bastard' }),",
+          "actualSourceLine": "person('sylvia-cenyr', \"Sylvia O'Cenyr\", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'bastard' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-arth-family.js",
+          "line": 410,
+          "quote": "person('siana-draig', 'Siana Draig', 'female', '1725', '', 'house-draig', { familyRole: 'bastard' }),",
+          "actualSourceLine": "person('siana-draig', 'Siana Draig', 'female', '1725', '', 'house-draig', { familyRole: 'bastard' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-arth-family.js",
+          "line": 524,
+          "quote": "...childrenOf(['siana-draig'], SYLVIA_AFFAIR_IDS, 'affair-owain-sylvia', { legitimacy: 'illegitimate' }),",
+          "actualSourceLine": "...childrenOf(['siana-draig'], SYLVIA_AFFAIR_IDS, 'affair-owain-sylvia', { legitimacy: 'illegitimate' }),"
+        }
+      ]
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-04",
+      "title": "Neidr: Prynhawn 15 Jahre nach Daffyds Tod geboren",
+      "familyIds": [
+        "haus-neidr"
+      ],
+      "classification": "confirmed-public-biological-chronology-conflict",
+      "status": "open-unmodified",
+      "explanation": "Daffyd stirbt 1593, seine direkt zugeordnete biologische Tochter Prynhawn wird 1608 geboren. Kein Zeitsprung an dieser Kante.",
+      "expectedResolution": "Prynhawns durch die aktuelle Pyrth-Gegenakte begruendete Datierung nicht blind zuruecksetzen. Daffyds Datum bzw. Eltern-/Generationszuordnung klaeren.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-neidr-family.js",
+          "line": 237,
+          "quote": "person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '1593'),",
+          "actualSourceLine": "person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '1593'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-neidr-family.js",
+          "line": 249,
+          "quote": "person('prynhawn-neidr', 'Prynhawn Neidr', 'female', '1608', '1655', NEIDR_HOUSE_ID, {",
+          "actualSourceLine": "person('prynhawn-neidr', 'Prynhawn Neidr', 'female', '1608', '1655', NEIDR_HOUSE_ID, {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-neidr-family.js",
+          "line": 250,
+          "quote": "notes: 'Die ausgearbeitete Pyrth-Hausquelle belegt ihre Lebensdaten und Ehe mit Jowaneth Pyrth.'",
+          "actualSourceLine": "notes: 'Die ausgearbeitete Pyrth-Hausquelle belegt ihre Lebensdaten und Ehe mit Jowaneth Pyrth.'"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-neidr-family.js",
+          "line": 432,
+          "quote": "...childrenOf(['gwynnan-neidr', 'aoirghe-neidr', 'prynhawn-neidr'], DAFFYD_IDS, 'marriage-daffyd-bettrys'),",
+          "actualSourceLine": "...childrenOf(['gwynnan-neidr', 'aoirghe-neidr', 'prynhawn-neidr'], DAFFYD_IDS, 'marriage-daffyd-bettrys'),"
+        }
+      ]
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-05",
+      "title": "Morforwyn: Ffeston drei Jahre nach Ofrantons Tod geboren",
+      "familyIds": [
+        "haus-morforwyn"
+      ],
+      "classification": "confirmed-public-biological-chronology-conflict",
+      "status": "open-unmodified",
+      "explanation": "Ofranton stirbt 1630, seine Ehe endet 1630; sein biologischer Sohn Ffeston wird 1633 geboren. Der fruehere Zeitsprung reicht nur bis in Ofrantons Generation.",
+      "expectedResolution": "Lebensdaten oder direkte Kindeszuordnung dieser konkreten Ehe quellenbasiert klaeren; aelteren Zeitsprung nicht pauschal ausdehnen.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-morforwyn-family.js",
+          "line": 322,
+          "quote": "person('ofranton-1599-morforwyn', 'Ofranton', 'male', '1599', '1630'),",
+          "actualSourceLine": "person('ofranton-1599-morforwyn', 'Ofranton', 'male', '1599', '1630'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morforwyn-family.js",
+          "line": 342,
+          "quote": "person('ffeston-morforwyn', 'Ffeston', 'male', '1633', '1659'),",
+          "actualSourceLine": "person('ffeston-morforwyn', 'Ffeston', 'male', '1633', '1659'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morforwyn-family.js",
+          "line": 447,
+          "quote": "createMarriage('marriage-talfamue-ofranton-1599-morforwyn', ...COUPLES.talfamue, { status: 'ended', end: '1630' }),",
+          "actualSourceLine": "createMarriage('marriage-talfamue-ofranton-1599-morforwyn', ...COUPLES.talfamue, { status: 'ended', end: '1630' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morforwyn-family.js",
+          "line": 517,
+          "quote": "...childrenOf(['ysoltmue-morforwyn', 'ffeston-morforwyn'], 'marriage-talfamue-ofranton-1599-morforwyn'),",
+          "actualSourceLine": "...childrenOf(['ysoltmue-morforwyn', 'ffeston-morforwyn'], 'marriage-talfamue-ofranton-1599-morforwyn'),"
+        }
+      ]
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-06",
+      "title": "Tiwna: Morwens Kinder liegen ausserhalb plausibler Lebenszeit",
+      "familyIds": [
+        "haus-tiwna"
+      ],
+      "classification": "confirmed-public-biological-chronology-conflict",
+      "status": "open-unmodified",
+      "explanation": "Morwen (1642 bis 1659) ist biologische Mutter Gavins (1651) und Dylis (1662). Dylis wird drei Jahre nach ihrem Tod geboren; bei Gavin waere Morwen etwa neun. Kein Aufnahme- oder Zeitsprungkontext.",
+      "expectedResolution": "Datierung bzw. Elternzuordnung klaeren. Keine neue Mutter oder Ersatzjahre ohne Belege erfinden.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-tiwna-family.js",
+          "line": 278,
+          "quote": "spouse('morwen-pawen', 'Morwen Pawen', 'female', '1642', '1659', 'house-pawen'),",
+          "actualSourceLine": "spouse('morwen-pawen', 'Morwen Pawen', 'female', '1642', '1659', 'house-pawen'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-tiwna-family.js",
+          "line": 284,
+          "quote": "person('gavin-tiwna', 'Gavin Tiwna', 'male', '1651', '1714', { title: 'Baron des Hauses Tiwna 1705–1714' }),",
+          "actualSourceLine": "person('gavin-tiwna', 'Gavin Tiwna', 'male', '1651', '1714', { title: 'Baron des Hauses Tiwna 1705–1714' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-tiwna-family.js",
+          "line": 285,
+          "quote": "awayWoman('dylis-tiwna', 'Dylis Tiwna', '1662', '1720', 'Haus Canwyll'),",
+          "actualSourceLine": "awayWoman('dylis-tiwna', 'Dylis Tiwna', '1662', '1720', 'Haus Canwyll'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-tiwna-family.js",
+          "line": 381,
+          "quote": "...childrenOf(['gavin-tiwna', 'dylis-tiwna'], 'marriage-madoc-morwen-tiwna'),",
+          "actualSourceLine": "...childrenOf(['gavin-tiwna', 'dylis-tiwna'], 'marriage-madoc-morwen-tiwna'),"
+        }
+      ]
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "active-place-text-conflict",
+      "id": "aldrimar-narrative-haus_blutklinge",
+      "familyId": "haus-blutklinge",
+      "title": "Blutklinge: Kulturkategorie wird im aktiven Fließtext zum Sitz",
+      "confidence": "high",
+      "statementA": "Die große Hausseite nennt Aldrimarer (jüngst ausgestorben) als überlieferten Sitz.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 106,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Haus Blutklinge war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.data.js",
+          "line": 96,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-generated-house-page",
+          "actualSourceLine": "\"overview\": \"Haus Blutklinge war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.\","
+        }
+      ],
+      "statementB": "Profil, kurze Bio und kanonische Definition führen Ivarsfels als letzten Ort.",
+      "evidenceB": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Ivarsfels\"",
+          "kind": "active-source",
+          "actualSourceLine": "\"seat\": \"Ivarsfels\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.content.mjs",
+          "line": 24,
+          "quote": "Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus von Ivarsfels.",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus von Ivarsfels.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Blutklinge/haus.biography.mjs",
+          "line": 11,
+          "quote": "Ivarsfels",
+          "kind": "active-generated-biography",
+          "actualSourceLine": "\"description\": \"Haus Blutklinge war ein jüngst erloschenes aldrimarisches Haus von Ivarsfels.\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 41,
+          "quote": "place: 'Ivarsfels'",
+          "kind": "active-source",
+          "actualSourceLine": "place: 'Ivarsfels',"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 43,
+          "quote": "culture: 'Aldrimarer'",
+          "kind": "active-source",
+          "actualSourceLine": "culture: 'Aldrimarer',"
+        }
+      ],
+      "reason": "Die Bezeichnung Aldrimarer (jüngst ausgestorben) ist eine historische Kultur-/Registerkategorie, kein geografischer Ort. Die Aussagen stehen gleichzeitig in den aktiven Ausgaben.",
+      "strongerCurrentEvidence": "Kanonische place-Definition und damit übereinstimmende aktuelle Bio/Profil nennen Ivarsfels ausdrücklich.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "active-place-text-conflict",
+      "id": "aldrimar-narrative-haus_windhuter",
+      "familyId": "haus-windhueter",
+      "title": "Windhüter: Kulturkategorie wird im aktiven Fließtext zum Sitz",
+      "confidence": "high",
+      "statementA": "Die große Hausseite nennt Aldrimarer (jüngst ausgestorben) als überlieferten Sitz.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 106,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Haus Windhüter war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.data.js",
+          "line": 96,
+          "quote": "Sitz in Aldrimarer (jüngst ausgestorben)",
+          "kind": "active-generated-house-page",
+          "actualSourceLine": "\"overview\": \"Haus Windhüter war eine Familie mit überliefertem Sitz in Aldrimarer (jüngst ausgestorben) im Jarltum Ivarsheim.\","
+        }
+      ],
+      "statementB": "Profil, kurze Bio und kanonische Definition führen Ivarsfels als letzten Ort.",
+      "evidenceB": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 83,
+          "quote": "\"seat\": \"Ivarsfels\"",
+          "kind": "active-source",
+          "actualSourceLine": "\"seat\": \"Ivarsfels\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.content.mjs",
+          "line": 24,
+          "quote": "Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus aus Ivarsfels.",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus aus Ivarsfels. Es gehörte zum Umfeld der Skalden.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Ivarsheim/Ausgestorbene_Hauser/Aldrimarer_jungst_ausgestorben/Haus_Windhuter/haus.biography.mjs",
+          "line": 11,
+          "quote": "Ivarsfels",
+          "kind": "active-generated-biography",
+          "actualSourceLine": "\"description\": \"Haus Windhüter war ein jüngst erloschenes aldrimarisches Haus aus Ivarsfels. Es gehörte zum Umfeld der Skalden.\","
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 49,
+          "quote": "place: 'Ivarsfels'",
+          "kind": "active-source",
+          "actualSourceLine": "place: 'Ivarsfels',"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/ivarsheim-house-families.js",
+          "line": 51,
+          "quote": "culture: 'Aldrimarer'",
+          "kind": "active-source",
+          "actualSourceLine": "culture: 'Aldrimarer',"
+        }
+      ],
+      "reason": "Die Bezeichnung Aldrimarer (jüngst ausgestorben) ist eine historische Kultur-/Registerkategorie, kein geografischer Ort. Die Aussagen stehen gleichzeitig in den aktiven Ausgaben.",
+      "strongerCurrentEvidence": "Kanonische place-Definition und damit übereinstimmende aktuelle Bio/Profil nennen Ivarsfels ausdrücklich.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "active-place-text-conflict",
+      "id": "aldrimar-narrative-hornhall",
+      "familyId": "haus-wolfshorn",
+      "title": "Hornhall: Dämmertal gegen unmittelbare Lage in Dämmergrund",
+      "confidence": "high",
+      "statementA": "Hausseite und kurze Bio verorten die Wehrhalle Hornhall im Dämmertal.",
+      "evidenceA": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+          "line": 24,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+          "line": 106,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-source",
+          "actualSourceLine": "\"overview\": \"Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.data.js",
+          "line": 96,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-generated-house-page",
+          "actualSourceLine": "\"overview\": \"Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.biography.mjs",
+          "line": 11,
+          "quote": "Hornhall im Dämmertal des Thanentums Dämmergrund",
+          "kind": "active-generated-biography",
+          "actualSourceLine": "\"description\": \"Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.\","
+        }
+      ],
+      "statementB": "Die aktuelle Territorialgeografie trennt Hornhall ausdrücklich von Dämmertal und ordnet es unmittelbar Dämmergrund/Vangandr zu.",
+      "evidenceB": [
+        {
+          "path": "Kontinente/modules/roriksheim/pages.source.json",
+          "line": 2849,
+          "quote": "Der Wolfshorn-Grenzsitz Hornhall liegt dagegen in Dämmergrund und untersteht unmittelbar den Vangandr.",
+          "kind": "active-territorial-source",
+          "actualSourceLine": "\"Solvårhof und die verlassene Siedlung Hjamstad gehören zu Dämmertal. Burg Horunn ist Sitz der Nachtjäger. Der Wolfshorn-Grenzsitz Hornhall liegt dagegen in Dämmergrund und untersteht unmittelbar den Vangandr.\""
+        },
+        {
+          "path": "Kontinente/modules/roriksheim/pages.source.json",
+          "line": 4402,
+          "quote": "Hornhall ist der Grenzsitz des Clans Wolfshorn in Dämmergrund.",
+          "kind": "active-territorial-source",
+          "actualSourceLine": "\"Hornhall ist der Grenzsitz des Clans Wolfshorn in Dämmergrund. Die Wolfshorn dienen den Vangandr unmittelbar als Grenzerclan. Der Sitz steht unter Bjoern Wolfshorn.\""
+        }
+      ],
+      "reason": "Beide Aussagen beschreiben den heutigen verbleibenden Wolfshorn-Sitz unter Bjoern. Die aktuelle Territorialquelle unterscheidet Dämmertal ausdrücklich; eine bloße historische Umbenennung erklärt den Gegensatz nicht.",
+      "strongerCurrentEvidence": "Die konkrete aktuelle Grenzsitz-Seite und die ausdrückliche geografische Abgrenzung in der Dämmertal-Seite.",
+      "historicalChangeExplains": false,
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "public-chronology-conflict",
+      "id": "aldrimar-chronology-varangr",
+      "familyId": "haus-varangr",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Rörik Varangr",
+        "birth": "1696",
+        "death": "1720"
+      },
+      "children": [
+        {
+          "name": "Olesja Varangr",
+          "birth": "1723",
+          "yearsAfterParentDeath": 3,
+          "parentageId": "varangr-parentage-olesja-varangr"
+        }
+      ],
+      "statementA": "Rörik Varangr starb laut aktiver Familienakte 1720.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 534,
+          "quote": "Rörik Varangr: Geburt 1696, Tod 1720",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1720', {"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 575,
+          "quote": "Olesja Varangr: Geburt 1723",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('olesja-varangr', 'Olesja Varangr', 'female', '1723', ''),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 193,
+          "quote": "rorik: ['rorik-varangr', 'gisrun-schattenherz']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "rorik: ['rorik-varangr', 'gisrun-schattenherz'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+          "line": 718,
+          "quote": "childrenOf(['fjalar-varangr', 'olesja-varangr'], 'marriage-rorik-gisrun-varangr')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['fjalar-varangr', 'olesja-varangr'], 'marriage-rorik-gisrun-varangr'),"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "public-chronology-conflict",
+      "id": "aldrimar-chronology-sturmgeborene",
+      "familyId": "haus-sturmgeborene",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Kormak Sturmgeborener",
+        "birth": "1625",
+        "death": "1658"
+      },
+      "children": [
+        {
+          "name": "Elinborg Sturmgeborene",
+          "birth": "1665",
+          "yearsAfterParentDeath": 7,
+          "parentageId": "sturmgeborene-parentage-elinborg-sturmgeborene"
+        }
+      ],
+      "statementA": "Kormak Sturmgeborener starb laut aktiver Familienakte 1658.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 308,
+          "quote": "Kormak Sturmgeborener: Geburt 1625, Tod 1658",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('kormak-sturmgeborener', 'Kormak Sturmgeborener', 'male', '1625', '1658'),"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 325,
+          "quote": "Elinborg Sturmgeborene: Geburt 1665",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "awayWoman('elinborg-sturmgeborene', 'Elinborg Sturmgeborene', '1665', '1704', 'Clan Sturmgeborene', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 142,
+          "quote": "'marriage-kormak-magdis-sturmgeborene': ['kormak-sturmgeborener', 'magdis-wellenschild']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "'marriage-kormak-magdis-sturmgeborene': ['kormak-sturmgeborener', 'magdis-wellenschild'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+          "line": 448,
+          "quote": "childrenOf(['ingeborg-sturmgeborene', 'jornborg-sturmgeborene', 'elinborg-sturmgeborene'], 'marriage-kormak-magdis-sturmgeborene')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['ingeborg-sturmgeborene', 'jornborg-sturmgeborene', 'elinborg-sturmgeborene'], 'marriage-kormak-magdis-sturmgeborene'),"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "public-chronology-conflict",
+      "id": "aldrimar-chronology-grendel",
+      "familyId": "haus-grendel",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Gunnar Grendel",
+        "birth": "1585",
+        "death": "1625"
+      },
+      "children": [
+        {
+          "name": "Thordis Grendel",
+          "birth": "1630",
+          "yearsAfterParentDeath": 5,
+          "parentageId": "grendel-parentage-thordis-grendel"
+        }
+      ],
+      "statementA": "Gunnar Grendel starb laut aktiver Familienakte 1625.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 318,
+          "quote": "Gunnar Grendel: Geburt 1585, Tod 1625",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('gunnar-grendel', 'Gunnar Grendel', 'male', '1585', '1625', {"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 335,
+          "quote": "Thordis Grendel: Geburt 1630",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "awayWoman('thordis-grendel', 'Thordis Grendel', '1630', '1700', 'Clan Silberzunge', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 161,
+          "quote": "gunnar: ['hljotrun-wargh', 'gunnar-grendel']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "gunnar: ['hljotrun-wargh', 'gunnar-grendel'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-grendel-family.js",
+          "line": 448,
+          "quote": "childrenOf(['vidar-grendel', 'thordis-grendel'], 'marriage-hljotrun-gunnar-wargh')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['vidar-grendel', 'thordis-grendel'], 'marriage-hljotrun-gunnar-wargh'),"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "public-chronology-conflict",
+      "id": "aldrimar-chronology-nachtjaeger",
+      "familyId": "haus-nachtjaeger",
+      "title": "Biologische Kinder nach dem ausdrücklich datierten Tod eines Elternteils",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "parent": {
+        "name": "Ingunn Feuerherz",
+        "birth": "1614",
+        "death": "1645"
+      },
+      "children": [
+        {
+          "name": "Kjartan Nachtjäger",
+          "birth": "1648",
+          "yearsAfterParentDeath": 3,
+          "parentageId": "nachtjaeger-parentage-kjartan-nachtjaeger"
+        },
+        {
+          "name": "Svandís Nachtjäger",
+          "birth": "1651",
+          "yearsAfterParentDeath": 6,
+          "parentageId": "nachtjaeger-parentage-svandis-nachtjaeger"
+        }
+      ],
+      "statementA": "Ingunn Feuerherz starb laut aktiver Familienakte 1645.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 272,
+          "quote": "Ingunn Feuerherz: Geburt 1614, Tod 1645",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "spouse('ingunn-1614-feuerherz', 'Ingunn Feuerherz', 'female', '1614', '1645', 'house-feuerherz', { title: 'Erste Ehefrau Sturlaugrs' }),"
+        }
+      ],
+      "statementB": "Die folgenden Personen sind bestätigt als biologische Kinder eingetragen und wurden später geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 279,
+          "quote": "Kjartan Nachtjäger: Geburt 1648",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('kjartan-nachtjaeger', 'Kjartan Nachtjäger', 'male', '1648', '1720', { title: 'Hesir des Clans Nachtjäger' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 281,
+          "quote": "Svandís Nachtjäger: Geburt 1651",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "awayWoman('svandis-nachtjaeger', 'Svandís Nachtjäger', '1651', '1711', 'unbekanntes Haus'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 134,
+          "quote": "sturlaugrIngunn: ['sturlaugr-nachtjaeger', 'ingunn-1614-feuerherz']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "sturlaugrIngunn: ['sturlaugr-nachtjaeger', 'ingunn-1614-feuerherz'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+          "line": 363,
+          "quote": "childrenOf(['kjartan-nachtjaeger', 'svandis-nachtjaeger'], 'marriage-sturlaugr-ingunn-nachtjaeger')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['kjartan-nachtjaeger', 'svandis-nachtjaeger'], 'marriage-sturlaugr-ingunn-nachtjaeger'),"
+        }
+      ],
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die konkreten numerischen Lebensdaten und die gleichzeitig bestätigte biologische Zuordnung sind miteinander unvereinbar. Vorhandene Generationentrenner liegen an anderen Stellen; es ist keine Adoption oder zeitversetzte Geburt für diese Kanten belegt.",
+      "strongerCurrentEvidence": "Der öffentliche biologische Elternbezug und die expliziten Jahreszahlen sind aktuelle Canon-Daten. Keine der widersprechenden Jahreszahlen bzw. die Zuordnung hat einen belegten Vorrang; eine inhaltliche Entscheidung bleibt offen.",
+      "correctionApplied": false
+    },
+    {
+      "realm": "Aldrimar",
+      "category": "public-chronology-conflict",
+      "id": "aldrimar-chronology-vangandr",
+      "familyId": "haus-vangandr",
+      "title": "Annegret und ihr biologischer Sohn Torger mit demselben Geburtsjahr",
+      "confidence": "high for incompatible active data; correction direction unresolved",
+      "statementA": "Annegret ist 1700 geboren.",
+      "evidenceA": [
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 335,
+          "quote": "spouse('annegret', 'Annegret', 'female', '1700', '')",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "spouse('annegret', 'Annegret', 'female', '1700', ''),"
+        }
+      ],
+      "statementB": "Ihr bestätigter biologischer Sohn Torger ist ebenfalls 1700 geboren.",
+      "evidenceB": [
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 350,
+          "quote": "person('torger-vangandr', 'Torger Vangandr', 'male', '1700', '')",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('torger-vangandr', 'Torger Vangandr', 'male', '1700', ''),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 144,
+          "quote": "brodd: ['brodd-vangandr', 'annegret']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "brodd: ['brodd-vangandr', 'annegret'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-vangandr-family.js",
+          "line": 461,
+          "quote": "childrenOf(['torger-vangandr'], 'marriage-brodd-annegret-vangandr')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['torger-vangandr'], 'marriage-brodd-annegret-vangandr'),"
+        }
+      ],
+      "parentageId": "vangandr-parentage-torger-vangandr",
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "reason": "Die Mutter wäre im Geburtsjahr ihres biologischen Sohnes selbst neugeboren. Es gibt keinen Generationensprung an dieser Kante. Die veröffentlichte Fluchgeschichte beschreibt keine zeitversetzte Geburt, die diese Datierung erklärt.",
+      "strongerCurrentEvidence": "Beide Jahreszahlen stehen ausdrücklich in der aktiven Akte; keine automatische Übernahme eines Wertes oder einer anderen gleichnamigen Identität ist begründet.",
+      "correctionApplied": false
+    }
+  ],
+  "confirmedCounterpartConflicts": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "birth": [
+          "1100",
+          "1099"
+        ],
+        "death": [
+          "1177",
+          "1166"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-draig--tryffin-draig"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "familyTitle": "Haus Draig",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "????",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-draig-family.js",
+            "line": 254,
+            "declaration": "person('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '????', '????', 'house-saethwyr'),",
+            "actualSourceLine": "person('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '????', '????', 'house-saethwyr'),"
+          }
+        },
+        {
+          "familyId": "haus-wyrm",
+          "familyTitle": "Haus Wyrm",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "birth": "1100",
+          "death": "1177",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin Draig",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wyrm-family.js",
+            "line": 166,
+            "declaration": "spouse('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '1100', '1177', 'house-saethwyr'),",
+            "actualSourceLine": "spouse('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '1100', '1177', 'house-saethwyr'),"
+          }
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "familyTitle": "Haus Saethwyr",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhianwyn-saethwyr",
+          "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "birth": "1099",
+          "death": "1166",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "tryffin-draig",
+              "name": "Tryffin Draig",
+              "worldPersonId": "person--haus-draig--tryffin-draig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-saethwyr-family.js",
+            "line": 128,
+            "declaration": "person('rhianwyn-saethwyr', 'Rhianwyn', 'female', '1099', '1166', SAETHWYR_HOUSE_ID, {",
+            "actualSourceLine": "person('rhianwyn-saethwyr', 'Rhianwyn', 'female', '1099', '1166', SAETHWYR_HOUSE_ID, {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-gwyvern--delyth-gwyvern"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "familyTitle": "Haus Gwyvern",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "delyth-gwyvern",
+              "name": "Delyth",
+              "worldPersonId": "person--haus-gwyvern--delyth-gwyvern"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gwyvern-family.js",
+            "line": 166,
+            "declaration": "person('afal-arth', 'Afal Arth', 'male', '1675', '????', 'house-arth'),",
+            "actualSourceLine": "person('afal-arth', 'Afal Arth', 'male', '1675', '????', 'house-arth'),"
+          }
+        },
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afal-arth",
+          "worldPersonId": "person--haus-arth--afal-arth",
+          "name": "Afal Arth",
+          "birth": "1675",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "delyth-gwyvern",
+              "name": "Delyth Gwyvern",
+              "worldPersonId": "person--haus-gwyvern--delyth-gwyvern"
+            },
+            {
+              "id": "ysbail-cenyr",
+              "name": "Ysbail O'Cenyr",
+              "worldPersonId": "person--haus-cenyr--ysbail-cenyr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-arth-family.js",
+            "line": 342,
+            "declaration": "person('afal-arth', 'Afal Arth', 'male', '1675', '', ARTH_HOUSE_ID, {",
+            "actualSourceLine": "person('afal-arth', 'Afal Arth', 'male', '1675', '', ARTH_HOUSE_ID, {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "birth": [
+          "1698",
+          "1701"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-vaeren--eydis-vaeren"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "familyTitle": "Clan Vaeren",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "eydis-vaeren",
+              "name": "Eydis Vaeren",
+              "worldPersonId": "person--haus-vaeren--eydis-vaeren"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-vaeren-family.js",
+            "line": 406,
+            "declaration": "spouse('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1698', '', 'house-ragnulf'),",
+            "actualSourceLine": "spouse('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1698', '', 'house-ragnulf'),"
+          }
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "familyTitle": "Clan Ragnulf",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulvar-ragnulf",
+          "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "birth": "1701",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Zweiter Erbe · ambitionierter Herausforderer Gunnars",
+          "publicPartners": [
+            {
+              "id": "eydis-vaeren",
+              "name": "Eydis Vaeren",
+              "worldPersonId": "person--haus-vaeren--eydis-vaeren"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-ragnulf-family.js",
+            "line": 465,
+            "declaration": "person('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1701', '', {",
+            "actualSourceLine": "person('gulvar-ragnulf', 'Gulvar Ragnulf', 'male', '1701', '', {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-kummerherz--hogrand-kummerherz"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Kummerherz",
+          "publicPartners": [
+            {
+              "id": "hogrand-kummerherz",
+              "name": "Hogrand Kummerherz",
+              "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 388,
+            "declaration": "awayWoman('bylga-wargh', 'Bylga Wargh', '1673', '????', 'Clan Kummerherz'),",
+            "actualSourceLine": "awayWoman('bylga-wargh', 'Bylga Wargh', '1673', '????', 'Clan Kummerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "bylga-wargh",
+          "worldPersonId": "person--haus-wargh--bylga-wargh",
+          "name": "Bylga Wargh",
+          "birth": "1673",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "hogrand-kummerherz",
+              "name": "Hogrand Kummerherz",
+              "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-kummerherz-family.js",
+            "line": 340,
+            "declaration": "spouse('bylga-wargh', 'Bylga Wargh', 'female', '1673', '', 'house-wargh'),",
+            "actualSourceLine": "spouse('bylga-wargh', 'Bylga Wargh', 'female', '1673', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--bylga-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "bylga-wargh",
+              "name": "Bylga Wargh",
+              "worldPersonId": "person--haus-wargh--bylga-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 389,
+            "declaration": "spouse('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '????', 'house-kummerherz'),",
+            "actualSourceLine": "spouse('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '????', 'house-kummerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "familyTitle": "Clan Kummerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hogrand-kummerherz",
+          "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "Thane des Clans Kummerherz seit 1733",
+          "publicPartners": [
+            {
+              "id": "bylga-wargh",
+              "name": "Bylga Wargh",
+              "worldPersonId": "person--haus-wargh--bylga-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-kummerherz-family.js",
+            "line": 334,
+            "declaration": "person('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '', {",
+            "actualSourceLine": "person('hogrand-kummerherz', 'Hogrand Kummerherz', 'male', '1671', '', {"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wellenschild--laufey-wellenschild"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "laufey-wellenschild",
+              "name": "Laufey Wellenschild",
+              "worldPersonId": "person--haus-wellenschild--laufey-wellenschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 398,
+            "declaration": "person('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '????'),",
+            "actualSourceLine": "person('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hallbjorn-wargh",
+          "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "birth": "1671",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "laufey-wellenschild",
+              "name": "Laufey Wellenschild",
+              "worldPersonId": "person--haus-wellenschild--laufey-wellenschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wellenschild-family.js",
+            "line": 320,
+            "declaration": "spouse('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '', 'house-wargh'),",
+            "actualSourceLine": "spouse('hallbjorn-wargh', 'Hallbjorn Wargh', 'male', '1671', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--hallbjorn-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "hallbjorn-wargh",
+              "name": "Hallbjorn Wargh",
+              "worldPersonId": "person--haus-wargh--hallbjorn-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 399,
+            "declaration": "spouse('laufey-wellenschild', 'Laufey Wellenschild', 'female', '1674', '????', 'house-wellenschild'),",
+            "actualSourceLine": "spouse('laufey-wellenschild', 'Laufey Wellenschild', 'female', '1674', '????', 'house-wellenschild'),"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "familyTitle": "Clan Wellenschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "laufey-wellenschild",
+          "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "hallbjorn-wargh",
+              "name": "Hallbjorn Wargh",
+              "worldPersonId": "person--haus-wargh--hallbjorn-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wellenschild-family.js",
+            "line": 317,
+            "declaration": "awayWoman('laufey-wellenschild', 'Laufey Wellenschild', '1674', '', 'Clan Wargh'),",
+            "actualSourceLine": "awayWoman('laufey-wellenschild', 'Laufey Wellenschild', '1674', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-gullvig--asahel-gullvig"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "asahel-gullvig",
+              "name": "Ásahel Gullvig",
+              "worldPersonId": "person--haus-gullvig--asahel-gullvig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 409,
+            "declaration": "person('olmar-wargh', 'Olmar Wargh', 'male', '1699', '????'),",
+            "actualSourceLine": "person('olmar-wargh', 'Olmar Wargh', 'male', '1699', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "olmar-wargh",
+          "worldPersonId": "person--haus-wargh--olmar-wargh",
+          "name": "Olmar Wargh",
+          "birth": "1699",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "asahel-gullvig",
+              "name": "Ásahel Gullvig",
+              "worldPersonId": "person--haus-gullvig--asahel-gullvig"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gullvig-family.js",
+            "line": 352,
+            "declaration": "spouse('olmar-wargh', 'Olmar Wargh', 'male', '1699', '', 'house-wargh'),",
+            "actualSourceLine": "spouse('olmar-wargh', 'Olmar Wargh', 'male', '1699', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--olmar-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "olmar-wargh",
+              "name": "Olmar Wargh",
+              "worldPersonId": "person--haus-wargh--olmar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 410,
+            "declaration": "spouse('asahel-gullvig', 'Ásahel Gullvig', 'female', '1704', '????', 'house-gullvig'),",
+            "actualSourceLine": "spouse('asahel-gullvig', 'Ásahel Gullvig', 'female', '1704', '????', 'house-gullvig'),"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "familyTitle": "Clan Gullvig",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "asahel-gullvig",
+          "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "birth": "1704",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "olmar-wargh",
+              "name": "Olmar Wargh",
+              "worldPersonId": "person--haus-wargh--olmar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-gullvig-family.js",
+            "line": 347,
+            "declaration": "awayWoman('asahel-gullvig', 'Ásahel Gullvig', '1704', '', 'Clan Wargh'),",
+            "actualSourceLine": "awayWoman('asahel-gullvig', 'Ásahel Gullvig', '1704', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-todbrand--ormrun-todbrand"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "????",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ormrun-todbrand",
+              "name": "Ormrún Todbrand",
+              "worldPersonId": "person--haus-todbrand--ormrun-todbrand"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 411,
+            "declaration": "person('agnar-wargh', 'Agnar Wargh', 'male', '1698', '????'),",
+            "actualSourceLine": "person('agnar-wargh', 'Agnar Wargh', 'male', '1698', '????'),"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "agnar-wargh",
+          "worldPersonId": "person--haus-wargh--agnar-wargh",
+          "name": "Agnar Wargh",
+          "birth": "1698",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ormrun-todbrand",
+              "name": "Ormrún Todbrand",
+              "worldPersonId": "person--haus-todbrand--ormrun-todbrand"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-todbrand-family.js",
+            "line": 345,
+            "declaration": "spouse('agnar-wargh', 'Agnar Wargh', 'male', '1698', '', 'house-wargh'),",
+            "actualSourceLine": "spouse('agnar-wargh', 'Agnar Wargh', 'male', '1698', '', 'house-wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wargh--agnar-wargh"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "familyTitle": "Clan Wargh",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "agnar-wargh",
+              "name": "Agnar Wargh",
+              "worldPersonId": "person--haus-wargh--agnar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wargh-family.js",
+            "line": 412,
+            "declaration": "spouse('ormrun-todbrand', 'Ormrún Todbrand', 'female', '1703', '????', 'house-todbrand'),",
+            "actualSourceLine": "spouse('ormrun-todbrand', 'Ormrún Todbrand', 'female', '1703', '????', 'house-todbrand'),"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "familyTitle": "Clan Todbrand",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ormrun-todbrand",
+          "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "birth": "1703",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Wargh",
+          "publicPartners": [
+            {
+              "id": "agnar-wargh",
+              "name": "Agnar Wargh",
+              "worldPersonId": "person--haus-wargh--agnar-wargh"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-todbrand-family.js",
+            "line": 336,
+            "declaration": "awayWoman('ormrun-todbrand', 'Ormrún Todbrand', '1703', '', 'Clan Wargh'),",
+            "actualSourceLine": "awayWoman('ormrun-todbrand', 'Ormrún Todbrand', '1703', '', 'Clan Wargh'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-silberblut--einar-silberblut"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Silberblut",
+          "publicPartners": [
+            {
+              "id": "einar-silberblut",
+              "name": "Einar Silberblut",
+              "worldPersonId": "person--haus-silberblut--einar-silberblut"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 430,
+            "declaration": "awayWoman('kjellfrid-varangr', 'Kjellfrid Varangr', '1563', '', 'Clan Silberblut'),",
+            "actualSourceLine": "awayWoman('kjellfrid-varangr', 'Kjellfrid Varangr', '1563', '', 'Clan Silberblut'),"
+          }
+        },
+        {
+          "familyId": "haus-silberblut",
+          "familyTitle": "Clan Silberblut",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "kjellfrid-varangr",
+          "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "birth": "1563",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "einar-silberblut",
+              "name": "Einar Silberblut",
+              "worldPersonId": "person--haus-silberblut--einar-silberblut"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-silberblut-family.js",
+            "line": 225,
+            "declaration": "spouse('kjellfrid-varangr', 'Kjellfrid Varangr', 'female', '1563', '????', 'house-varangr'),",
+            "actualSourceLine": "spouse('kjellfrid-varangr', 'Kjellfrid Varangr', 'female', '1563', '????', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-varangr--torvald-1585-varangr"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "torvald-1585-varangr",
+              "name": "Torvald Varangr",
+              "worldPersonId": "person--haus-varangr--torvald-1585-varangr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 445,
+            "declaration": "spouse('gulda-goldglanz', 'Gulda Goldglanz', 'female', '1588', '', 'house-goldglanz'),",
+            "actualSourceLine": "spouse('gulda-goldglanz', 'Gulda Goldglanz', 'female', '1588', '', 'house-goldglanz'),"
+          }
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "familyTitle": "Clan Goldglanz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gulda-goldglanz",
+          "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "birth": "1588",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Varangr",
+          "publicPartners": [
+            {
+              "id": "torvald-1585-varangr",
+              "name": "Torvald Varangr",
+              "worldPersonId": "person--haus-varangr--torvald-1585-varangr"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-goldglanz-family.js",
+            "line": 261,
+            "declaration": "awayWoman('gulda-goldglanz', 'Gulda Goldglanz', '1588', '????', 'Clan Varangr'),",
+            "actualSourceLine": "awayWoman('gulda-goldglanz', 'Gulda Goldglanz', '1588', '????', 'Clan Varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-feuerherz--drengur-feuerherz"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Feuerherz",
+          "publicPartners": [
+            {
+              "id": "drengur-feuerherz",
+              "name": "Drengur Feuerherz",
+              "worldPersonId": "person--haus-feuerherz--drengur-feuerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 451,
+            "declaration": "awayWoman('vanadis-varangr', 'Vanadis Varangr', '1609', '', 'Clan Feuerherz'),",
+            "actualSourceLine": "awayWoman('vanadis-varangr', 'Vanadis Varangr', '1609', '', 'Clan Feuerherz'),"
+          }
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "familyTitle": "Clan Feuerherz",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "vanadis-varangr",
+          "worldPersonId": "person--haus-varangr--vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "birth": "1609",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "drengur-feuerherz",
+              "name": "Drengur Feuerherz",
+              "worldPersonId": "person--haus-feuerherz--drengur-feuerherz"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-feuerherz-family.js",
+            "line": 251,
+            "declaration": "spouse('vanadis-varangr', 'Vanadis Varangr', 'female', '1609', '????', 'house-varangr'),",
+            "actualSourceLine": "spouse('vanadis-varangr', 'Vanadis Varangr', 'female', '1609', '????', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "familyTitle": "Clan Varangr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "1713",
+          "status": "dead",
+          "sex": "male",
+          "title": "Jarl von 1704 bis 1713",
+          "publicPartners": [
+            {
+              "id": "ingeborg-sturmgeborene",
+              "name": "Ingeborg Sturmgeborene",
+              "worldPersonId": "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-varangr-family.js",
+            "line": 497,
+            "declaration": "person('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '1713', {",
+            "actualSourceLine": "person('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '1713', {"
+          }
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "hadvar-varangr",
+          "worldPersonId": "person--haus-varangr--hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "birth": "1642",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ingeborg-sturmgeborene",
+              "name": "Ingeborg Sturmgeborene",
+              "worldPersonId": "person--haus-sturmgeborene--ingeborg-sturmgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+            "line": 343,
+            "declaration": "spouse('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '', 'house-varangr'),",
+            "actualSourceLine": "spouse('hadvar-varangr', 'Hadvar Varangr', 'male', '1642', '', 'house-varangr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "dead",
+          "alive"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-hrafn--osvald-hrafn"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "familyTitle": "Clan Helgr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "????",
+          "status": "dead",
+          "sex": "female",
+          "title": "Wegverheiratet an Clan Hrafn",
+          "publicPartners": [
+            {
+              "id": "osvald-hrafn",
+              "name": "Osvald Hrafn",
+              "worldPersonId": "person--haus-hrafn--osvald-hrafn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-helgr-family.js",
+            "line": 373,
+            "declaration": "awayWoman('leikny-helgr', 'Leikny Helgr', '1655', '????', 'Clan Hrafn'),",
+            "actualSourceLine": "awayWoman('leikny-helgr', 'Leikny Helgr', '1655', '????', 'Clan Hrafn'),"
+          }
+        },
+        {
+          "familyId": "haus-hrafn",
+          "familyTitle": "Clan Hrafn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "leikny-helgr",
+          "worldPersonId": "person--haus-helgr--leikny-helgr",
+          "name": "Leikny Helgr",
+          "birth": "1655",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "osvald-hrafn",
+              "name": "Osvald Hrafn",
+              "worldPersonId": "person--haus-hrafn--osvald-hrafn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-hrafn-family.js",
+            "line": 228,
+            "declaration": "spouse('leikny-helgr', 'Leikny Helgr', 'female', '1655', '', 'house-helgr'),",
+            "actualSourceLine": "spouse('leikny-helgr', 'Leikny Helgr', 'female', '1655', '', 'house-helgr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "sex": [
+          "female",
+          "male"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-graumahne--helmskald-graumahne"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "familyTitle": "Clan Graumähne",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "helmskald-graumahne",
+              "name": "Helmskald Graumähne",
+              "worldPersonId": "person--haus-graumahne--helmskald-graumahne"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-graumahne-family.js",
+            "line": 452,
+            "declaration": "spouse('ljotunn-sterkr', 'Ljotunn Sterkr', 'female', '1677', '', 'house-sterkr'),",
+            "actualSourceLine": "spouse('ljotunn-sterkr', 'Ljotunn Sterkr', 'female', '1677', '', 'house-sterkr'),"
+          }
+        },
+        {
+          "familyId": "haus-sterkr",
+          "familyTitle": "Clan Sterkr",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "ljotunn-sterkr",
+          "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "birth": "1677",
+          "death": "",
+          "status": "alive",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "helmskald-graumahne",
+              "name": "Helmskald Graumähne",
+              "worldPersonId": "person--haus-graumahne--helmskald-graumahne"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sterkr-family.js",
+            "line": 351,
+            "declaration": "person('ljotunn-sterkr', 'Ljotunn Sterkr', 'male', '1677', ''),",
+            "actualSourceLine": "person('ljotunn-sterkr', 'Ljotunn Sterkr', 'male', '1677', ''),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "death": [
+          "1182",
+          "1172"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-illewod--ysolde-illewod"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1182",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ysolde-illewod",
+              "name": "Ysolde Illewod",
+              "worldPersonId": "person--haus-illewod--ysolde-illewod"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wylan-family.js",
+            "line": 217,
+            "declaration": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1182', WYLAN_HOUSE_ID, {",
+            "actualSourceLine": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1182', WYLAN_HOUSE_ID, {"
+          }
+        },
+        {
+          "familyId": "haus-illewod",
+          "familyTitle": "Haus Illewod",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "rhun-wylan",
+          "worldPersonId": "person--haus-wylan--rhun-wylan",
+          "name": "Rhun Wylan",
+          "birth": "1119",
+          "death": "1172",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "ysolde-illewod",
+              "name": "Ysolde Illewod",
+              "worldPersonId": "person--haus-illewod--ysolde-illewod"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 205,
+            "declaration": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1172', 'house-wylan'),",
+            "actualSourceLine": "person('rhun-wylan', 'Rhun Wylan', 'male', '1119', '1172', 'house-wylan'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": true,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "sex": [
+          "male",
+          "female"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-wylan--vorath-wylan"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "male",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vorath-wylan",
+              "name": "Vorath Wylan",
+              "worldPersonId": "person--haus-wylan--vorath-wylan"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-wylan-family.js",
+            "line": 238,
+            "declaration": "person('iesin-pendrag', 'Iesin Pendrag', 'male', '1575', '1656', 'house-pendrag'),",
+            "actualSourceLine": "person('iesin-pendrag', 'Iesin Pendrag', 'male', '1575', '1656', 'house-pendrag'),"
+          }
+        },
+        {
+          "familyId": "haus-pendrag",
+          "familyTitle": "Haus Pendrag",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "iesin-pendrag",
+          "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "birth": "1575",
+          "death": "1656",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vorath-wylan",
+              "name": "Vorath Wylan",
+              "worldPersonId": "person--haus-wylan--vorath-wylan"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+            "line": 284,
+            "declaration": "person('iesin-pendrag', 'Iesin Pendrag', 'female', '1575', '1656'),",
+            "actualSourceLine": "person('iesin-pendrag', 'Iesin Pendrag', 'female', '1575', '1656'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "status": "confirmed-current-counterpart-conflict",
+      "confidence": "high",
+      "fields": {
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [
+        "person--haus-crafanc--elisud-crafanc"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "familyTitle": "Haus Arth O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "elisud-crafanc",
+              "name": "Elisud Crafanc",
+              "worldPersonId": "person--haus-crafanc--elisud-crafanc"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-arth-family.js",
+            "line": 311,
+            "declaration": "person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', ''),",
+            "actualSourceLine": "person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', ''),"
+          }
+        },
+        {
+          "familyId": "haus-crafanc",
+          "familyTitle": "Haus Crafanc O'Talgarth",
+          "realms": [
+            "Cenyr"
+          ],
+          "personId": "afanen-1660-arth",
+          "worldPersonId": "person--haus-arth--afanen-1660-arth",
+          "name": "Afanen Arth",
+          "birth": "1660",
+          "death": "1710",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "elisud-crafanc",
+              "name": "Elisud Crafanc",
+              "worldPersonId": "person--haus-crafanc--elisud-crafanc"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-crafanc-family.js",
+            "line": 262,
+            "declaration": "spouse('afanen-1660-arth', 'Afanen Arth', 'female', '1660', '1710', 'house-arth'),",
+            "actualSourceLine": "spouse('afanen-1660-arth', 'Afanen Arth', 'female', '1660', '1710', 'house-arth'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Die beiden aktuellen Aussagen müssen abgestimmt werden. Aus diesem Audit allein keine Daten verändern; Hauptakte und überlieferte Einzelbelege prüfen."
+    }
+  ],
+  "uncertainRegionalQuestions": [
+    {
+      "realm": "Leitheach",
+      "id": "LEI-U01",
+      "classification": "uncertain",
+      "category": "territorial-wording",
+      "confidence": "medium",
+      "familyIds": [
+        "haus-dal-cruthin"
+      ],
+      "title": "Gortanna brewing paragraph may still imply that Leitheach is part of Aldrimar",
+      "evidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1924,
+          "quote": "... starke Brauerzünfte, die regelmäßig in Wettstreit mit den Brauern aus anderen Teilen Aldrimars treten.",
+          "actualSourceLine": "\"Die Region lebt von Getreide-, Gemüse- und Obstanbau, ergänzt durch Viehhaltung, insbesondere von Rindern, Schafen und Schweinen. Die Böden sind nährstoffreich, das Klima mild, und dank der zentralen Lage verlaufen viele Handelsstraßen durch das Land. Besonders bekannt ist Tir na Gortanna für Käserei, Bierbrauerei und Lederverarbeitung. Lokale Gilden sind gut organisiert, darunter auch starke Brauerzünfte, die regelmäßig in Wettstreit mit den Brauern aus anderen Teilen Aldrimars treten.\""
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 7,
+          "quote": "\"type\": \"Fürstentum\"",
+          "actualSourceLine": "\"type\": \"Fürstentum\","
+        },
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1917,
+          "quote": "Tir na Gortanna ist das fruchtbare Herz Leitheachs ... Kornkammer des Fürstentums",
+          "actualSourceLine": "\"Tir na Gortanna ist das fruchtbare Herz Leitheachs – eine weite, sanfte Landschaft aus Feldern, Wiesen und kleinen Hainen. Die Region gilt als Kornkammer des Fürstentums, geprägt von beständigem Fleiß, Gemeinschaftssinn und einer bodenständigen Lebensart. Hier lebt das Volk der Treabhaire, auch bekannt als das Ackervolk, das für seine Arbeitsethik ebenso gerühmt wird wie für seine lockere, lebensfrohe Art.\""
+        }
+      ],
+      "explanation": "The phrase anderen Teilen Aldrimars suggests inclusion, whereas the active hierarchy places Gortanna under the independent Leitheach principality on Estryll. Trade or competition with Aldrimar is entirely possible, so this is an ambiguous wording issue rather than proof of a different sovereign relationship. The active Cruthin house text itself uses Leitheach correctly.",
+      "preferredCurrentEvidence": [
+        {
+          "path": "Kontinente/modules/leitheach/pages.source.json",
+          "line": 1896,
+          "actualSourceLine": "\"type\": \"Fürstentum\","
+        },
+        {
+          "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Lochansail/Clan_Dal_Cruthin/haus.content.mjs",
+          "line": 24,
+          "actualSourceLine": "\"overview\": \"Clan Dál’Cruthin führt Tir na Gortanna im Rang eines Mor Tiarna und sitzt in Lochansail. Seine Dienstbindung gilt Mac Ard Cumhaill.\","
+        }
+      ],
+      "safeResolution": "Clarify whether the intended comparison is simply with brewers in Aldrimar. No political-border change can be inferred from this sentence."
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-07",
+      "title": "Pendrag: Annegrit bei Gawains Geburt etwa drei Jahre alt",
+      "familyIds": [
+        "haus-pendrag"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Annegrit ist 1548, ihr direkt zugeordneter biologischer Sohn Gawain 1551 geboren. Keine Ueberlieferungsluecke an dieser Kante.",
+      "expectedResolution": "Datierung bzw. Generation klaeren, keine gleichnamige neue Mutter oder vermutetes Ersatzjahr einsetzen.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+          "line": 270,
+          "quote": "person('annegrit-vaeren', 'Annegrit Vaeren', 'female', '1548', '1572', 'house-vaeren'),",
+          "actualSourceLine": "person('annegrit-vaeren', 'Annegrit Vaeren', 'female', '1548', '1572', 'house-vaeren'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+          "line": 273,
+          "quote": "person('gawain-pendragon', 'Gawain Pendrag', 'male', '1551', '1623'),",
+          "actualSourceLine": "person('gawain-pendragon', 'Gawain Pendrag', 'male', '1551', '1623'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-pendrag-family.js",
+          "line": 424,
+          "quote": "...childrenOf(['gawain-pendragon', 'arianwen-pendragon', 'tarwen-pendrag'], RHODRI1_IDS, 'marriage-rhodri-annegrit'),",
+          "actualSourceLine": "...childrenOf(['gawain-pendragon', 'arianwen-pendragon', 'tarwen-pendrag'], RHODRI1_IDS, 'marriage-rhodri-annegrit'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-08",
+      "title": "Dienyddiwr: Eltern bei Robyerts Geburt etwa acht/elf Jahre alt",
+      "familyIds": [
+        "haus-dienyddiwr"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Evaine 1662, Mervyn 1659, biologischer Sohn Robyert 1670, Tochter Revelyn 1673. Die Mutter waere etwa acht bzw. elf, der Vater bei Robyert etwa elf.",
+      "expectedResolution": "Eltern- und Kinderdaten gemeinsam mit der Wylan-Gegenakte klaeren; Identitaeten, Aemter und Verbindungen erhalten.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-dienyddiwr-family.js",
+          "line": 289,
+          "quote": "spouse('evaine-wylan', 'Evaine Wylan', 'female', '1662', '1707', {",
+          "actualSourceLine": "spouse('evaine-wylan', 'Evaine Wylan', 'female', '1662', '1707', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dienyddiwr-family.js",
+          "line": 275,
+          "quote": "person('mervyn-dienyddiwr', 'Mervyn Dienyddiwr', 'male', '1659', '1713', {",
+          "actualSourceLine": "person('mervyn-dienyddiwr', 'Mervyn Dienyddiwr', 'male', '1659', '1713', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dienyddiwr-family.js",
+          "line": 305,
+          "quote": "person('robyert-dienyddiwr', 'Robyert Dienyddiwr', 'male', '1670', '', {",
+          "actualSourceLine": "person('robyert-dienyddiwr', 'Robyert Dienyddiwr', 'male', '1670', '', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dienyddiwr-family.js",
+          "line": 309,
+          "quote": "person('revelyn-dienyddiwr', 'Revelyn Dienyddiwr', 'female', '1673', '', {",
+          "actualSourceLine": "person('revelyn-dienyddiwr', 'Revelyn Dienyddiwr', 'female', '1673', '', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-dienyddiwr-family.js",
+          "line": 442,
+          "quote": "...childrenOf(['robyert-dienyddiwr', 'revelyn-dienyddiwr'], 'marriage-evaine-mervyn'),",
+          "actualSourceLine": "...childrenOf(['robyert-dienyddiwr', 'revelyn-dienyddiwr'], 'marriage-evaine-mervyn'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-09",
+      "title": "Canwyll: Beide Eltern bei Glesnis Geburt etwa sieben",
+      "familyIds": [
+        "haus-canwyll"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Cynwrig und Dylis sind beide 1662, die direkte biologische Tochter Glesni 1669 geboren; keine Adoption oder Ueberlieferungsluecke.",
+      "expectedResolution": "Familiengruppe mit der Grawn-Gegenakte gemeinsam klaeren; keine Datumsvermutung als Kanon einsetzen.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-canwyll-family.js",
+          "line": 296,
+          "quote": "person('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1662', '1720'),",
+          "actualSourceLine": "person('cynwrig-canwyll', 'Cynwrig Canwyll', 'male', '1662', '1720'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-canwyll-family.js",
+          "line": 297,
+          "quote": "spouse('dylis-tiwna', 'Dylis Tiwna', 'female', '1662', '1720', 'house-tiwna'),",
+          "actualSourceLine": "spouse('dylis-tiwna', 'Dylis Tiwna', 'female', '1662', '1720', 'house-tiwna'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-canwyll-family.js",
+          "line": 312,
+          "quote": "awayWoman('glesni-canwyll', 'Glesni Canwyll', '1669', '', 'Haus Grawn'),",
+          "actualSourceLine": "awayWoman('glesni-canwyll', 'Glesni Canwyll', '1669', '', 'Haus Grawn'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-canwyll-family.js",
+          "line": 400,
+          "quote": "...childrenOf(['aeronwen-canwyll', 'glesni-canwyll', 'uvel-canwyll', 'jowan-canwyll'], 'marriage-cynwrig-dylis-canwyll'),",
+          "actualSourceLine": "...childrenOf(['aeronwen-canwyll', 'glesni-canwyll', 'uvel-canwyll', 'jowan-canwyll'], 'marriage-cynwrig-dylis-canwyll'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-10",
+      "title": "Unigol: Tarawg bei Gwenfrewis Geburt etwa acht",
+      "familyIds": [
+        "haus-unigol"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Tarawg ist 1644, biologische Tochter Gwenfrewi 1652 geboren. Gwenfrewis aktuelle Daten folgen ausdruecklich der ausgearbeiteten Chiffyddlon-Gegenakte, nicht einem unbeachteten Archivfehler.",
+      "expectedResolution": "Aktuellen Chiffyddlon-Datenvorrang erhalten; Tarawgs Datum oder Eltern-/Generationszuordnung erneut belegen.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-unigol-family.js",
+          "line": 227,
+          "quote": "person('tarawg-unigol', 'Tarawg Unigol', 'male', '1644', '1706', {",
+          "actualSourceLine": "person('tarawg-unigol', 'Tarawg Unigol', 'male', '1644', '1706', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-unigol-family.js",
+          "line": 240,
+          "quote": "marriedAwayPerson('gwenfrewi-unigol', 'Gwenfrewi Unigol', 'female', '1652', '1705', 'Haus Chiffyddlon', {",
+          "actualSourceLine": "marriedAwayPerson('gwenfrewi-unigol', 'Gwenfrewi Unigol', 'female', '1652', '1705', 'Haus Chiffyddlon', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-unigol-family.js",
+          "line": 241,
+          "quote": "notes: 'Die ausgearbeitete Chiffyddlon-Gegenakte hat Vorrang vor den abweichenden Unigol-Quelldaten 1662–1720.'",
+          "actualSourceLine": "notes: 'Die ausgearbeitete Chiffyddlon-Gegenakte hat Vorrang vor den abweichenden Unigol-Quelldaten 1662–1720.'"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-unigol-family.js",
+          "line": 302,
+          "quote": "...childrenOf(['tryffin-unigol', 'gwenfrewi-unigol', 'penkawr-unigol'], 'marriage-tarawg-rhonwen-unigol'),",
+          "actualSourceLine": "...childrenOf(['tryffin-unigol', 'gwenfrewi-unigol', 'penkawr-unigol'], 'marriage-tarawg-rhonwen-unigol'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-11",
+      "title": "Marwolaeth: Delwen bei Cerys Geburt etwa zehn",
+      "familyIds": [
+        "haus-marwolaeth"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Delwen 1636, biologische Tochter Cerys 1646. Ernste chronologische Plausibilitaetsfrage; der Abstand allein widerlegt die Geburt nicht mathematisch. Keine besondere Ausnahme genannt.",
+      "expectedResolution": "Mit Dyngwn- und Draig-Gegenakten abgleichen; ohne neuen Beleg kein Datum korrigieren.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-marwolaeth-family.js",
+          "line": 240,
+          "quote": "spouse('delwen-dyngwn', 'Delwen Dyngwn', 'female', '1636', '1687', { houseId: 'house-dyngwn' }),",
+          "actualSourceLine": "spouse('delwen-dyngwn', 'Delwen Dyngwn', 'female', '1636', '1687', { houseId: 'house-dyngwn' }),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-marwolaeth-family.js",
+          "line": 248,
+          "quote": "awayWoman('cerys-marwolaeth', 'Cerys Marwolaeth', '1646', '1733', 'Haus Draig'),",
+          "actualSourceLine": "awayWoman('cerys-marwolaeth', 'Cerys Marwolaeth', '1646', '1733', 'Haus Draig'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-marwolaeth-family.js",
+          "line": 343,
+          "quote": "...childrenOf(['gregory-marwolaeth', 'cerys-marwolaeth'], 'marriage-delwen-ninian-dyngwn'),",
+          "actualSourceLine": "...childrenOf(['gregory-marwolaeth', 'cerys-marwolaeth'], 'marriage-delwen-ninian-dyngwn'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Cenyr",
+      "id": "CEN-12",
+      "title": "Morthwyll: Braihs Eltern nur zehn/elf Jahre aelter",
+      "familyIds": [
+        "haus-morthwyll"
+      ],
+      "classification": "uncertain-biological-age-anomaly",
+      "status": "uncertain-needs-source",
+      "explanation": "Rhondia 1622, Merlion 1621, biologische Tochter Braih 1632. Der existierende Zeitsprung betrifft Merlions Vorfahren. Als Plausibilitaetsfrage, nicht als sicherer Zahlendreher behandeln.",
+      "expectedResolution": "Mit Cwingod- und Dyngwn-Gegenakten abgleichen; Identitaeten und Verbindungen bis zum Beleg erhalten.",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-morthwyll-family.js",
+          "line": 220,
+          "quote": "spouse('rhondia-dyngwn', 'Rhondia Dyngwn', 'female', '1622', '1699', 'house-dyngwn', {",
+          "actualSourceLine": "spouse('rhondia-dyngwn', 'Rhondia Dyngwn', 'female', '1622', '1699', 'house-dyngwn', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morthwyll-family.js",
+          "line": 217,
+          "quote": "person('merlion-morthwyll', 'Merlion Morthwyll', 'male', '1621', '1688', {",
+          "actualSourceLine": "person('merlion-morthwyll', 'Merlion Morthwyll', 'male', '1621', '1688', {"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morthwyll-family.js",
+          "line": 234,
+          "quote": "marriedAwayPerson('braih-morthwyll', 'Braih Morthwyll', 'female', '1632', '1675', 'Haus Cwingod'),",
+          "actualSourceLine": "marriedAwayPerson('braih-morthwyll', 'Braih Morthwyll', 'female', '1632', '1675', 'Haus Cwingod'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-morthwyll-family.js",
+          "line": 303,
+          "quote": "...childrenOf(['sayres-morthwyll', 'braih-morthwyll'], 'marriage-rhondia-merlion-dyngwn'),",
+          "actualSourceLine": "...childrenOf(['sayres-morthwyll', 'braih-morthwyll'], 'marriage-rhondia-merlion-dyngwn'),"
+        }
+      ],
+      "confidence": "uncertain"
+    },
+    {
+      "realm": "Aldrimar",
+      "id": "aldrimar-question-riesentod",
+      "familyId": "haus-riesentod",
+      "classification": "improbable chronology, not a confirmed logical contradiction",
+      "title": "Brynhild Freiwinter zehn Jahre alt bei Ketills Geburt",
+      "confidence": "high for computed age, medium/undetermined as lore issue",
+      "evidence": [
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 342,
+          "quote": "spouse('brynhild-freiwinter', 'Brynhild Freiwinter', 'female', '1600', '1679'",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "spouse('brynhild-freiwinter', 'Brynhild Freiwinter', 'female', '1600', '1679', 'house-freiwinter'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 360,
+          "quote": "person('ketill-riesentod', 'Ketill Riesentod', 'male', '1610', '1627')",
+          "kind": "active-canonical-person-record",
+          "actualSourceLine": "person('ketill-riesentod', 'Ketill Riesentod', 'male', '1610', '1627'),"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 162,
+          "quote": "'marriage-brynhild-ragnar-freiwinter': ['ragnar-riesentot', 'brynhild-freiwinter']",
+          "kind": "public-canonical-parent-pair",
+          "actualSourceLine": "'marriage-brynhild-ragnar-freiwinter': ['ragnar-riesentot', 'brynhild-freiwinter'],"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-riesentod-family.js",
+          "line": 481,
+          "quote": "childrenOf(['ketill-riesentod'], 'marriage-brynhild-ragnar-freiwinter')",
+          "kind": "public-canonical-parentage",
+          "actualSourceLine": "...childrenOf(['ketill-riesentod'], 'marriage-brynhild-ragnar-freiwinter'),"
+        }
+      ],
+      "computedAge": 10,
+      "reason": "Sehr auffälliges Alter, aber allein daraus folgt kein sicherer logischer Datenwiderspruch. Als Rückfrage, nicht als bestätigter Fehler führen.",
+      "publicEdgeVerification": {
+        "parentageVisibility": "public",
+        "partnershipVisibility": "public",
+        "type": "biological",
+        "certainty": "confirmed"
+      },
+      "correctionApplied": false
+    }
+  ],
+  "unresolvedIdentityMatches": [
+    {
+      "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1565",
+          "1578"
+        ],
+        "death": [
+          "1734",
+          "1634"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-sturmgeborene",
+          "familyTitle": "Clan Sturmgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1565",
+          "death": "1734",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "runar-1562-sturmgeborener",
+              "name": "Runar Sturmgeborener",
+              "worldPersonId": "person--haus-sturmgeborene--runar-1562-sturmgeborener"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-sturmgeborene-family.js",
+            "line": 278,
+            "declaration": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1565', '1734', 'house-holmr'),",
+            "actualSourceLine": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1565', '1734', 'house-holmr'),"
+          }
+        },
+        {
+          "familyId": "haus-frostauge",
+          "familyTitle": "Clan Frostauge",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "yrgitte-holmr",
+          "worldPersonId": "person--haus-holmr--yrgitte-holmr",
+          "name": "Yrgitte Holmr",
+          "birth": "1578",
+          "death": "1634",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "vilhjalm-frostauge",
+              "name": "Vilhjalm Frostauge",
+              "worldPersonId": "person--haus-frostauge--vilhjalm-frostauge"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-frostauge-family.js",
+            "line": 307,
+            "declaration": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1578', '1634', 'house-holmr'),",
+            "actualSourceLine": "spouse('yrgitte-holmr', 'Yrgitte Holmr', 'female', '1578', '1634', 'house-holmr'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    },
+    {
+      "worldPersonId": "person--family-tree--gunnhildr",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1700",
+          "1652"
+        ],
+        "status": [
+          "alive",
+          "dead"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-schmetterschild",
+          "familyTitle": "Clan Schmetterschild",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1700",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "valtyr-schmetterschild",
+              "name": "Valtyr Schmetterschild",
+              "worldPersonId": "person--haus-schmetterschild--valtyr-schmetterschild"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-schmetterschild-family.js",
+            "line": 375,
+            "declaration": "spouse('gunnhildr', 'Gunnhildr', 'female', '1700', ''),",
+            "actualSourceLine": "spouse('gunnhildr', 'Gunnhildr', 'female', '1700', ''),"
+          }
+        },
+        {
+          "familyId": "haus-nachtjaeger",
+          "familyTitle": "Clan Nachtjäger",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gunnhildr",
+          "worldPersonId": "person--family-tree--gunnhildr",
+          "name": "Gunnhildr",
+          "birth": "1652",
+          "death": "1729",
+          "status": "dead",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "kjartan-nachtjaeger",
+              "name": "Kjartan Nachtjäger",
+              "worldPersonId": "person--haus-nachtjaeger--kjartan-nachtjaeger"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-nachtjaeger-family.js",
+            "line": 280,
+            "declaration": "spouse('gunnhildr', 'Gunnhildr', 'female', '1652', '1729'),",
+            "actualSourceLine": "spouse('gunnhildr', 'Gunnhildr', 'female', '1652', '1729'),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    },
+    {
+      "worldPersonId": "person--family-tree--gwelda",
+      "status": "identity-unresolved-do-not-merge",
+      "confidence": "unresolved",
+      "fields": {
+        "birth": [
+          "1674",
+          "1697"
+        ]
+      },
+      "commonPublicPartnerIdentities": [],
+      "entries": [
+        {
+          "familyId": "haus-schwarzdorn",
+          "familyTitle": "Clan Schwarzdorn",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1674",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "gormund-schwarzdorn",
+              "name": "Gormund Schwarzdorn",
+              "worldPersonId": "person--haus-schwarzdorn--gormund-schwarzdorn"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-schwarzdorn-family.js",
+            "line": 312,
+            "declaration": "spouse('gwelda', 'Gwelda', 'female', '1674', ''),",
+            "actualSourceLine": "spouse('gwelda', 'Gwelda', 'female', '1674', ''),"
+          }
+        },
+        {
+          "familyId": "haus-frostgeborene",
+          "familyTitle": "Haus Frostgeborene",
+          "realms": [
+            "Aldrimar"
+          ],
+          "personId": "gwelda",
+          "worldPersonId": "person--family-tree--gwelda",
+          "name": "Gwelda",
+          "birth": "1697",
+          "death": "",
+          "status": "alive",
+          "sex": "female",
+          "title": "",
+          "publicPartners": [
+            {
+              "id": "bjorn-frostgeborene",
+              "name": "Bjorn Frostgeborener",
+              "worldPersonId": "person--haus-frostgeborene--bjorn-frostgeborene"
+            }
+          ],
+          "source": {
+            "path": "Stammbäume/assets/js/data/house-frostgeborene-family.js",
+            "line": 145,
+            "declaration": "spouse('gwelda', 'Gwelda', 'female', '1697', ''),",
+            "actualSourceLine": "spouse('gwelda', 'Gwelda', 'female', '1697', ''),"
+          }
+        }
+      ],
+      "alreadyExplicitlyDocumentedSourceDisagreement": false,
+      "recommendation": "Keine Gleichsetzung oder automatische Verschmelzung. Gleicher Name und gemeinsame technische ID sind ohne passende Familienbeziehungen kein Identitätsbeweis."
+    }
+  ],
+  "technicalCause": {
+    "path": "Stammbäume/assets/js/data/family-record-builders.js",
+    "line": 33,
+    "fact": "Ohne ausdrücklich gesetzten Status wird ein nichtleeres Todesfeld als dead und ein leeres Todesfeld bei vorhandenem Geburtswert als alive ausgewertet. Auch ???? ist ein nichtleerer Wert.",
+    "inference": "Ein Teil der Gegenaktenkonflikte kann durch unterschiedlich ausgefüllte, unsichere Todesfelder entstanden sein. Das entscheidet keinen Einzelfall und rechtfertigt keine pauschale Statusmigration.",
+    "actualSourceLine": "status: status || (death ? 'dead' : birth ? 'alive' : 'unknown'),"
+  },
+  "rejectedAndNonContradictions": {
+    "leitheach": [
+      {
+        "id": "LEI-R01",
+        "classification": "reject",
+        "topic": "Historical administration versus surviving descendants",
+        "explanation": "Suileach lost administration and was exiled. Iomrach ended in 1733 but Ybhna and Conan survive. Dal T’Saor ended in 1735 but Quona and Junaid survive. Active pages expressly distinguish political/administrative extinction from all descendants dying.",
+        "evidence": [
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/An_Iomrach/haus.content.mjs",
+            "line": 25,
+            "quote": "... Ybhna und Cónán gehören zu den Überlebenden ...",
+            "actualSourceLine": "\"history\": \"Die Überlieferung führt die Familie auf die Erbauer von Broch an Clais zurück. Bereits im Krieg geschwächt, verlor sie durch den Angriff der Schwarzblut-Marodeure endgültig ihre Herrschaft. Heute führen die Sidhe Somhairle die Verwaltung des Ortes.\","
+          },
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Herrschaft_der_Dal_T_Saor/Sruthlann/Dal_T_Saor/haus.content.mjs",
+            "line": 30,
+            "quote": "\"relations\": \"Quona und Junaid überlebten außerhalb der Burg und führten ihr Leben an anderen Orten fort. Der Untergang der Hauptlinie war deshalb keine vollständige Auslöschung aller Angehörigen.\",",
+            "actualSourceLine": "\"relations\": \"Quona und Junaid überlebten außerhalb der Burg und führten ihr Leben an anderen Orten fort. Der Untergang der Hauptlinie war deshalb keine vollständige Auslöschung aller Angehörigen.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R02",
+        "classification": "reject",
+        "topic": "Somhairle migration from Glaennmor",
+        "explanation": "The canonical origin is Glaennmor in Tir na Dun, Ceitheach, and the current seat is Broch an Clais, Leitheach. The current Ceitheach territory source independently marks the Somhairle origin territory historical under Tir na Dun. These are past and present residences, not contradictory current seats.",
+        "evidence": [
+          {
+            "path": "Stammbäume/assets/js/data/house-sidhe-somhairle-family.js",
+            "line": 179,
+            "quote": "description: 'Aus Glaennmor in Tir na Dun stammender Laird-Clan und gegenwärtiger Verwalter von Broch an Clais.',",
+            "actualSourceLine": "description: 'Aus Glaennmor in Tir na Dun stammender Laird-Clan und gegenwärtiger Verwalter von Broch an Clais.',"
+          },
+          {
+            "path": "Kontinente/modules/ceitheach/pages.source.json",
+            "line": 2212,
+            "quote": "\"kicker\": \"Historisches Herrschaft · Clan Sidhe Somhairle\"",
+            "actualSourceLine": "\"kicker\": \"Historisches Herrschaft · Clan Sidhe Somhairle\","
+          },
+          {
+            "path": "Kontinente/modules/ceitheach/pages.source.json",
+            "line": 2214,
+            "quote": "\"parentLabel\": \"Oberherrschaft Tir na Dun\"",
+            "actualSourceLine": "\"parentLabel\": \"Oberherrschaft Tir na Dun\","
+          },
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Gortanna/Tir_na_Soilse/Broch_an_Clais/Sidhe_Somhairle/haus.content.mjs",
+            "line": 24,
+            "quote": "\"overview\": \"Sidhe Somhairle ist ein Haus im Rang Laird mit Sitz in Broch an Clais in Tir na Gortanna, Leitheach. Es dient Clan Dál’Cruthin.\",",
+            "actualSourceLine": "\"overview\": \"Sidhe Somhairle ist ein Haus im Rang Laird mit Sitz in Broch an Clais in Tir na Gortanna, Leitheach. Es dient Clan Dál’Cruthin.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R03",
+        "classification": "reject",
+        "topic": "Laoch seat relocation",
+        "explanation": "The active house text says the earlier lands around the princely city were exchanged for the frontier at Broch an Abhainn. The current place description independently says the Laoch moved there and the castle is still under construction. The old and new locations are explicitly chronological.",
+        "evidence": [
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sleagh/Tir_na_gCoireal/Broch_an_Abhainn/Ruin_Ua_Laoch/haus.content.mjs",
+            "line": 110,
+            "quote": "\"holdings\": \"Ursprünglich wurden den Laoch die fruchtbaren Ländereien im Umland der Fürstenstadt zugesprochen. In jüngerer Zeit jedoch wurde ihre Herrschaft an die wilde Grenzregion verlegt, wo heute Broch an Abhainn errichtet wird – genau an jenem Ort, an dem Senan einst die Bestie erschlug. Zwar verfügen sie dort über weniger Besitz, doch ihre Aufgabe ist umso ehrvoller: den Außenposten festigen und die Region aufbauen – wie einst ihr Ahnherr.\",",
+            "actualSourceLine": "\"holdings\": \"Ursprünglich wurden den Laoch die fruchtbaren Ländereien im Umland der Fürstenstadt zugesprochen. In jüngerer Zeit jedoch wurde ihre Herrschaft an die wilde Grenzregion verlegt, wo heute Broch an Abhainn errichtet wird – genau an jenem Ort, an dem Senan einst die Bestie erschlug. Zwar verfügen sie dort über weniger Besitz, doch ihre Aufgabe ist umso ehrvoller: den Außenposten festigen und die Region aufbauen – wie einst ihr Ahnherr.\","
+          },
+          {
+            "path": "Karten/Leitheach/places.source.json",
+            "line": 1917,
+            "quote": "Errichtet vom Ruin’Laoch Clan, der hierher zog ... Noch ist die Burg unvollendet.",
+            "actualSourceLine": "\"text\": \"Broch an Abhainn\\n\\nBroch an Abhainn, eine im Aufbau befindliche Burg, erhebt sich an der strategisch wichtigen Flussmündung, wo die beiden Nebenflüsse zusammenlaufen. Errichtet vom **Ruin'Laoch Clan**, der hierher zog, um die Region zu schützen und als Lairds zu herrschen, soll die Burg zukünftige Angriffe wie den verheerenden Überfall der **Schwarzblut-Marodeure** vor sieben Jahren verhindern. Noch ist die Burg unvollendet, doch ihre steinernen Mauern wachsen stetig, ein Zeichen des Wiederaufbaus und des Schutzes für die umliegenden Siedlungen.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R04",
+        "classification": "reject",
+        "topic": "Amhran exile versus present Cuinn allegiance",
+        "explanation": "The marriage legend explicitly proceeds from exile to later recognition as a cadet clan. Current Cuinn allegiance does not contradict the earlier banishment.",
+        "evidence": [
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+            "line": 107,
+            "quote": "\"history\": \"Die Ua’Amhran sind die Kadetten des ehrwürdigen Clans Tir An’Cuinn und blicken auf eine bewegte Vergangenheit zurück, die aus einer verbotenen Liebe hervorging. Einst verliebte sich der Erbe des Clans Cuinn in eine unbedeutende Bardin – eine Verbindung, die aufgrund seiner Verantwortung als Erbe und ihres hohen Alters als unmöglich galt, da man wegen des Alters der Bardin keine Nachkommen erwartete.\\n\\nEntgegen dem Willen der Tir An’Cuinn und selbst auf das Anraten der Fianna hin, entschied sich der Erbe dennoch, die Bardin zur Frau zu nehmen. Er verließ seinen Clan und nahm die Verbannung und Enterbung durch die Cuinn in Kauf. Inmitten der Kritik griffen schließlich die Fianna ein und arrangierten, dass er seine Tage als Kadett des Clans verbringen sollte, sollte dies der Wille der Götter sein.\\n\\nEntgegen aller Erwartungen entsprangen dieser Verbindung zahlreiche Nachkommen. In der Überlieferung sahen Druiden und Fianna dies als göttliches Zeichen und bezeichneten die Ehe nachträglich als „ gottgepriesen “, als ob die Götter selbst diese Liebe gesegnet hätten. Aus dieser beinahe totgeglaubten Beziehung entstanden die Ua’Amhran, die nun als anerkannte und gesegnete Kadetten des Tir An’Cuinn Clans gelten.\\n\\nHeute sind die Ua’Amhran ein bedeutender Akteur ihrer Region und ein unverzichtbarer Kadettenclan der Tir An’Cuinn. Bekannt sind sie vor allem für ihre enge Verbindung zur Göttin der Liebe und Barmherzigkeit (die Mutter) sowie zur Göttin der Musik und Kunst (die Maid). Ihren Traditionen folgend, bringen sie oft talentierte Musiker und Barden hervor und verkörpern die Magie der Melodien und Geschichten, die sie als göttliche Gabe betrachten.\",",
+            "actualSourceLine": "\"history\": \"Die Ua’Amhran sind die Kadetten des ehrwürdigen Clans Tir An’Cuinn und blicken auf eine bewegte Vergangenheit zurück, die aus einer verbotenen Liebe hervorging. Einst verliebte sich der Erbe des Clans Cuinn in eine unbedeutende Bardin – eine Verbindung, die aufgrund seiner Verantwortung als Erbe und ihres hohen Alters als unmöglich galt, da man wegen des Alters der Bardin keine Nachkommen erwartete.\\n\\nEntgegen dem Willen der Tir An’Cuinn und selbst auf das Anraten der Fianna hin, entschied sich der Erbe dennoch, die Bardin zur Frau zu nehmen. Er verließ seinen Clan und nahm die Verbannung und Enterbung durch die Cuinn in Kauf. Inmitten der Kritik griffen schließlich die Fianna ein und arrangierten, dass er seine Tage als Kadett des Clans verbringen sollte, sollte dies der Wille der Götter sein.\\n\\nEntgegen aller Erwartungen entsprangen dieser Verbindung zahlreiche Nachkommen. In der Überlieferung sahen Druiden und Fianna dies als göttliches Zeichen und bezeichneten die Ehe nachträglich als „ gottgepriesen “, als ob die Götter selbst diese Liebe gesegnet hätten. Aus dieser beinahe totgeglaubten Beziehung entstanden die Ua’Amhran, die nun als anerkannte und gesegnete Kadetten des Tir An’Cuinn Clans gelten.\\n\\nHeute sind die Ua’Amhran ein bedeutender Akteur ihrer Region und ein unverzichtbarer Kadettenclan der Tir An’Cuinn. Bekannt sind sie vor allem für ihre enge Verbindung zur Göttin der Liebe und Barmherzigkeit (die Mutter) sowie zur Göttin der Musik und Kunst (die Maid). Ihren Traditionen folgend, bringen sie oft talentierte Musiker und Barden hervor und verkörpern die Magie der Melodien und Geschichten, die sie als göttliche Gabe betrachten.\","
+          },
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sruth/Tir_na_hEisteachta/Ceanntire/Ua_Amhran/haus.content.mjs",
+            "line": 30,
+            "quote": "\"relations\": \"Ua’Amhran gilt heute als anerkannter, bedeutender Kadettenclan der Cuinn. Die ältere Ausstoßung ist Teil seiner Geschichte und hebt die bestehende Bindung nicht auf.\",",
+            "actualSourceLine": "\"relations\": \"Ua’Amhran gilt heute als anerkannter, bedeutender Kadettenclan der Cuinn. Die ältere Ausstoßung ist Teil seiner Geschichte und hebt die bestehende Bindung nicht auf.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R05",
+        "classification": "reject",
+        "topic": "Leitheach versus Ceitheach and similar family identifiers",
+        "explanation": "Leitheach is a separate principality. haus-nic-blar-leitheach is its Laird line and must not be treated as the Ceitheach Mor-Tiarna line haus-nic-blar. Ua’Cleir is not automatically Blaithneach Cléirigh. Stable ID spelling haus-amrhan is not itself a lore contradiction.",
+        "evidence": [
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_an_Comhchuibhis/Tir_na_Run/Sruthlann/Nic_Blar_Leitheach/haus.content.mjs",
+            "line": 24,
+            "quote": "\"overview\": \"Nic’Blar · Leitheach ist ein Haus im Rang Laird mit Sitz in Sruthlann in Tir an Comhchuibhis, Leitheach. Es dient Clan Mac Airt.\",",
+            "actualSourceLine": "\"overview\": \"Nic’Blar · Leitheach ist ein Haus im Rang Laird mit Sitz in Sruthlann in Tir an Comhchuibhis, Leitheach. Es dient Clan Mac Airt.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R06",
+        "classification": "reject",
+        "topic": "Princely head Fionn and regional office Tairdelbach",
+        "explanation": "Fionn is Ard Tiarna of Leitheach, while Tairdelbach is named Regent of the prince and Mor Tiarna of Tir na Sleagh. Different offices within the same clan do not require the same holder.",
+        "evidence": [
+          {
+            "path": "Kontinente/modules/leitheach/pages.source.json",
+            "line": 190,
+            "quote": "\"office\": \"Ard Tiarna von Leitheach\",",
+            "actualSourceLine": "\"office\": \"Ard Tiarna von Leitheach\","
+          },
+          {
+            "path": "Kontinente/modules/leitheach/pages.source.json",
+            "line": 599,
+            "quote": "\"office\": \"Mor Tiarna von Tir na Sleagh\",",
+            "actualSourceLine": "\"office\": \"Mor Tiarna von Tir na Sleagh\","
+          },
+          {
+            "path": "Kontinente/modules/leitheach/pages.source.json",
+            "line": 269,
+            "quote": "\"office\": \"Regent des Fürsten\",",
+            "actualSourceLine": "\"office\": \"Regent des Fürsten\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R07",
+        "classification": "reject",
+        "topic": "Gruenhand social rank",
+        "explanation": "The active house prose consistently presents Gruenhand as a commoner sept serving Na’Mhuir in Broch an Coill. Sept leadership and a druid-grove origin do not confer noble rank.",
+        "evidence": [
+          {
+            "path": "Familien Häuser und Clans/Estryll/Leitheach/Tir_na_Sinsear/Tir_na_Fancha/Broch_an_Coill/Sept_Grunhand_aus_Leith/haus.content.mjs",
+            "line": 24,
+            "quote": "\"overview\": \"Die Grünhand aus Leith bilden ein bürgerliches Sept mit Sitz in Broch an Coill, im Herrschaftsgebiet Tir na Fancha der Oberherrschaft Tir na Sinsear. Sie stammen aus dem Druidenhain und dienen dem Laird des Clans Na’Mhuir.\",",
+            "actualSourceLine": "\"overview\": \"Die Grünhand aus Leith bilden ein bürgerliches Sept mit Sitz in Broch an Coill, im Herrschaftsgebiet Tir na Fancha der Oberherrschaft Tir na Sinsear. Sie stammen aus dem Druidenhain und dienen dem Laird des Clans Na’Mhuir.\","
+          }
+        ]
+      },
+      {
+        "id": "LEI-R08",
+        "classification": "reject",
+        "topic": "Alben versus elves and sparse house histories",
+        "explanation": "The active reviewed texts use Alben/Cruinach as cultural names, not as a statement of elves or pointed ears. Sparse default history paragraphs are missing detail, not proof of an inconsistent past. No contradiction was inferred merely from an omission or a cultural term.",
+        "evidence": []
+      }
+    ],
+    "cenyr": [
+      {
+        "case": "Illewod: 12 child-after-parent-death scanner hits",
+        "reason": "Explicit omitted generations, not direct parentage chronology.",
+        "evidence": [
+          {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 461,
+            "quote": "id: 'gap-berwyn-penryn', parentPartnershipId: 'marriage-berwyn-liadan', childIds: ['penryn-illewod', 'ffion-illewod'],",
+            "actualSourceLine": "id: 'gap-berwyn-penryn', parentPartnershipId: 'marriage-berwyn-liadan', childIds: ['penryn-illewod', 'ffion-illewod'],"
+          },
+          {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 462,
+            "quote": "years: 0, fromYear: '1181', toYear: '1248', label: 'Nicht einzeln überlieferte Generationen', notes: '', extensions: {}",
+            "actualSourceLine": "years: 0, fromYear: '1181', toYear: '1248', label: 'Nicht einzeln überlieferte Generationen', notes: '', extensions: {}"
+          },
+          {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 465,
+            "quote": "id: 'gap-penryn-keudawg', parentPartnershipId: 'marriage-penryn-nerys', childIds: ['keudawg-illewod', 'tallwch-illewod', 'rhianu-illewod', 'morgaine-illewod'],",
+            "actualSourceLine": "id: 'gap-penryn-keudawg', parentPartnershipId: 'marriage-penryn-nerys', childIds: ['keudawg-illewod', 'tallwch-illewod', 'rhianu-illewod', 'morgaine-illewod'],"
+          },
+          {
+            "path": "Stammbäume/assets/js/data/house-illewod-family.js",
+            "line": 466,
+            "quote": "years: 0, fromYear: '1320', toYear: '1580', label: 'Die große Überlieferungslücke', notes: 'Erst mit Keudawg (geb. 1580) setzt die datierte Überlieferung wieder ein.', extensions: {}",
+            "actualSourceLine": "years: 0, fromYear: '1320', toYear: '1580', label: 'Die große Überlieferungslücke', notes: 'Erst mit Keudawg (geb. 1580) setzt die datierte Überlieferung wieder ein.', extensions: {}"
+          }
+        ],
+        "status": "rejected-explicit-generation-gaps",
+        "rejectedCandidateCount": 12
+      },
+      {
+        "case": "Dead heirs at Illysywen/Gwarchod",
+        "reason": "Explicitly historical/former succession, not living present-day heirs."
+      },
+      {
+        "case": "Morgan Selwyn",
+        "reason": "Ancient founder and living modern head are distinct canonical namesakes."
+      },
+      {
+        "case": "Different parentHouseId and liegeHouseId at Tiwna/Grianlaoch/Raves",
+        "reason": "Descent/origin and current liege are separate concepts; active liege prose agrees."
+      },
+      {
+        "case": "Cwingod Cra Fryn vs Morea",
+        "reason": "Main seat and explicitly documented secondary trade/city seat, already differentiated."
+      },
+      {
+        "case": "Tir An Muirghin old AUSGESTORBEN table",
+        "reason": "Archived contradictory table is not propagated into the active house page; loss of rule and survival/legacy are separated."
+      }
+    ],
+    "aldrimarNameCollisions": [
+      {
+        "case": "Torvald Varangr",
+        "reason": "Älterer Torvald1585–1646 gehört in die Bürgerkriegserzählung; der gleichnamige1721geborene Nachkomme ist eine andere Person."
+      },
+      {
+        "case": "Elisef Varangr",
+        "reason": "Die1592geborene Königin ist von Elisef1728 zu unterscheiden."
+      },
+      {
+        "case": "Elsa Riesentod",
+        "reason": "Elsa1605–1675 ist mit Ulfrik/Zurik verbunden; Elsa1696 ist in ClanGullvig verheiratet. Keine Zeitreisebehauptung aus dem gleichen Vornamen ableiten."
+      },
+      {
+        "case": "Freydis",
+        "reason": "Freydis Hyrmgarthr1400 ist die verschollene Magierin; Freydis Silberzunge1653 ist eine andere Person. Die Gleichnamigkeit erzeugt keinen Bürgerkriegswiderspruch."
+      }
+    ],
+    "aldrimarOther": [
+      {
+        "case": "Kronental / Heldenwacht",
+        "reason": "Historischer Registername und heutiger Territorialname; ausdrücklich belegte Umbenennung."
+      },
+      {
+        "case": "Schwarzfenn / Wolfsklamm",
+        "reason": "Jarltum und Sitz, keine konkurrierenden Landesnamen."
+      },
+      {
+        "case": "König Sigurd / Jarl Skjor",
+        "reason": "Getrennte königliche und delegierte territoriale Ämter innerhalb ClanVaeren."
+      },
+      {
+        "case": "Wolfshorn / Bleiddorn",
+        "reason": "Verbleibender Herkunftsclan unter Bjoern und eigenständiger Cenyr-Exilzweig; korrekt getrennt. Der bestätigte Hornhall-Ortsfehler ist davon unabhängig."
+      },
+      {
+        "case": "Blutstahl / Silberblut",
+        "reason": "Stabile Thanenränge beider Häuser und Wettstreit um den gemeinsamen einzelnen Amtstitel sind keine doppelte gleichzeitige Amtsbesetzung."
+      },
+      {
+        "case": "Geschichte und heutige Bindung der Nachtjäger",
+        "reason": "Einsetzung durch Varulv in der territorialen Geschichte widerspricht nicht zwingend heutiger Unterstellung unter Vangandr im ThanentumDämmergrund."
+      }
+    ],
+    "elfTerminology": "Keine Elfenbehauptung in den aktiven Hausquellen der drei Länder gefunden; der einzige elf-Treffer ist das Zahlwort in elf Jahre."
+  },
+  "evidenceReports": [
+    "leitheach-findings.json",
+    "cenyr-findings.json",
+    "aldrimar-findings.json",
+    "shared-identity-review.json",
+    "chronology-candidates.json",
+    "parent-counterpart-candidates.json",
+    "public-scope.json"
+  ],
+  "priorities": [
+    "Biologische Zeitabläufe und aktuelle Herrschafts-/Amtseinträge zuerst inhaltlich klären.",
+    "Hornhalls Ortsbeschreibung sowie die fälschlichen Kategorien-Sitze von Blutklinge und Windhüter an die belegten Territorialdaten angleichen.",
+    "Gegenakten zu eindeutig identischen Personen synchronisieren, dabei belegte Lebensdaten erhalten und unklare Todesfelder nicht pauschal umdeuten.",
+    "Ungewöhnliche Elternalter, zweifelhafte Personenverknüpfungen und Namensgleichheiten vor jeder Änderung anhand ihrer Einzelquellen klären."
+  ],
+  "evidenceValidation": {
+    "status": "pass",
+    "evidenceCount": 195,
+    "sourceFiles": 72,
+    "notes": "Alle zitierten Pfade und Zeilennummern überprüft. actualSourceLine enthält jeweils die echte aktuelle Quellzeile; ältere quote-Felder können verkürzte Inhaltswiedergaben sein.",
+    "errors": []
+  }
+}

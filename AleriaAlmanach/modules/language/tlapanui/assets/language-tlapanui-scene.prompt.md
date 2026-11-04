@@ -1,0 +1,10 @@
+# Nuatlapa der Tlapanui – Szenenbild
+
+Erstellt am 3. November 2026 mit dem integrierten ImageGen-Werkzeug. Original-PNG bleibt neben der für die Webseite optimierten WebP-Datei erhalten.
+
+Stilgrundlage: `AleriaAlmanach/docs/art/image-style-presets.json`, Preset `anime-scene-portrait`.
+
+## Prompt
+
+Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen.
+Eigenständiges ruhiges Szenenbild für das Sprachmodul Nuatlapa der Tlapanui im Fantasy-Almanach Aleria. Ein junger erwachsener Inselschreiber sitzt auf einer schattigen offenen hölzernen Veranda und ritzt mit einem schlichten Griffel kleine Bildzeichen in eine Holztafel. Eine erwachsene Frau lauscht seiner Erklärung, beide in schlichter warmer Inselkleidung mit dezenten geometrischen Webmustern, dunklem Haar und natürlich abgerundeten menschlichen Ohren. Kulturelle Anregung Rapa Nui und indigene mesoamerikanische Formen, behutsam eigenständige Fantasy, kein ethnografisches Klischee. Im Hintergrund ruhiger türkisblauer Ozean und ein schlichtes kleines Handelssegelboot, wenige tropische Pflanzen. Friedliches Handelsinselvolk auf Tlapatlan/Calidaria. Holztafel als erzählerischer Fokus; der Gegenstand ist in eine echte vollständige Szene eingebettet. Warmes spätes Tageslicht, gelassene menschliche Interaktion. Sehr klare ruhige Komposition mit wenigen Requisiten, gesamte Bildfläche ausgemalt. Keine Buchstaben, keine Titel, keine Beschriftungen, keine Wasserzeichen, kein moderner Gegenstand. Keine Krieger oder Waffen. Eine einzelne hochformatige Illustration, kein Vergleichsblatt.

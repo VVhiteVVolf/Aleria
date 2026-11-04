@@ -4,6 +4,8 @@ import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attac
 import { parseDamageFormula, combineDamageFormulas, buildDamageNotation } from './rules/combat-mvp-rules.js';
 import { getBonusDamageFormulas, getUniversalDamageBonus, getCombatEffectAttributeModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { resolveCombatEffectDamageType } from './combat-effect-model.js';
+import { getNaturalRollDistribution } from './combat-natural-roll-policy.js';
+import { getNaturalRollPolicy } from './combat-profile-model.js';
 
 export function estimateCombatHitChance(actor, target, options = {}) {
   if (!actor || !target || actor.selectedAction?.compatible === false || actor.equipmentPreparation?.error
@@ -13,11 +15,10 @@ export function estimateCombatHitChance(actor, target, options = {}) {
   const numbers = getCombatAttackNumbers(actor, target, context);
   const { attackModifier } = numbers;
   let probability = 0;
-  for (let natural = 1; natural <= 20; natural += 1) {
+  const roller = context.savingThrowMode ? target : actor;
+  for (const { natural, weight } of getNaturalRollDistribution(roller, context.safeRollMode)) {
     const trial = { ...context, usedRuleFrequencyKeys: new Set(context.usedRuleFrequencyKeys) };
-    const { attack } = evaluateCombatAttackRoll(actor, target, { natural, total: natural + attackModifier }, trial, numbers);
-    const weight = context.safeRollMode === 'advantage' ? (2 * natural - 1) / 400
-      : context.safeRollMode === 'disadvantage' ? (41 - 2 * natural) / 400 : 1 / 20;
+    const { attack } = evaluateCombatAttackRoll(actor, target, { natural, total: natural + attackModifier, naturalRollPolicy: getNaturalRollPolicy(roller) }, trial, numbers);
     if (attack.hit) probability += weight;
   }
   return { probability: Math.max(0, Math.min(1, probability)), label: context.savingThrowMode ? 'Wirkung' : 'Treffer', rollMode: context.safeRollMode };

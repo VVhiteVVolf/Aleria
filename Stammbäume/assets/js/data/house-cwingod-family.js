@@ -2,12 +2,12 @@ import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-coun
 import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from './family-record-builders.js';
-import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
+import { HOUSE_ARTH_FAMILY } from './house-arth-family.js?v=20261104-life-status-v1';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import { HOUSE_EIRTH_FAMILY } from './house-eirth-family.js';
 import { HOUSE_LYFANT_DERWYDDION_FAMILY } from './house-lyfant-family.js';
 import { HOUSE_MORTHWYLL_FAMILY } from './house-morthwyll-family.js';
-import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js';
+import { HOUSE_PAWEN_FAMILY } from './house-pawen-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_PYSGOD_FAMILY } from './house-pysgod-family.js';
 import { HOUSE_UNIGOL_FAMILY } from './house-unigol-family.js';
 import { KLAUENINSEL_HOUSE_EMBLEMS, KLAUENINSEL_HOUSE_PROFILES } from './klaueninseln-house-profiles.js';
@@ -166,7 +166,8 @@ export const HOUSE_CWINGOD_FAMILY = withAislearneachSourceCounterUpgrade(withVen
     houseBiographyModule: HOUSE_CWINGOD_BIOGRAPHY,
     sourceNote: 'Nutzerquelle und Stammbaumgrafik vom 05.10.2026. Cwingod ist die ausdrücklich korrigierte Schreibweise; alte Akten-, Haus- und Weltpersonen-IDs bleiben stabil. 39 Personen, 14 Ehen, 24 Abstammungs-/Aufnahmekanten, fünf Wegheiraten, ein serieller Zeitsprung. Amtsjahre werden von Lebensdaten getrennt. Gegenakten bestimmen Braih, Dumnagual, Mared Lyfant, Tarawgs Lebensdaten und Maelgwns Todesjahr 1740. Rhonwens Quellenkreuz belegt den Tod ohne Todesjahr. Tualas unmögliches 1976 wird zu 1676 korrigiert. Riderch/Engla gegenüber Mervyn und die blaue Hedd-Verbindung sind als Quellenwidersprüche dokumentiert. Leere Hof-, Verlobungs- und Trivia-Vorlagen werden nicht zu Personen. Die ausdrückliche Einordnung lautet Cenyr > Klaueninsel > Talklaue > Cra Fryn, während Morea als Stadt- und Handelssitz erhalten bleibt.',
     registryManagedDocumentFields: ['title', 'description', 'motto'],
-    registryManagedExtensionFields: ['blankFamily', 'sourceNote', 'houseBiographyModule'],
+    // Biography defaults use exact fingerprints; edited or removed bios remain local.
+    registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'liegeHouseId', 'liegeHouseName', 'secondarySeats', 'regionEmblems', 'folderPath'],
     registryManagedRecordFields: ['folderPath', 'title'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings']

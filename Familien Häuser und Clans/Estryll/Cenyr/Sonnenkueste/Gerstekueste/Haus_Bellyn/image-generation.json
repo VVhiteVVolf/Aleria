@@ -1,0 +1,58 @@
+{
+  "schema": "aleria.house-image-generation",
+  "version": 1,
+  "houseId": "haus-bellyn",
+  "generatedAt": "2026-11-03",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: stylized-concept. Asset: ONE representative Aleria house figure, portrait 2:3, full body completely visible. Reference 1 is ONLY the mandatory painting style, not an armor template. Reference 2 supplies the house crest colors and motif.\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.\nSubject and equipment: Middle-aged broad bearded commoner of Aberon, warm amber and brown wool tunic, cream underlayer, simple leather belt, soft flat wool cap. Modest sunrise-pot badge on chest. Hold one ordinary earthenware cup. No armor, weapons, noble jewelry or shield. This is only a representative household figure, no named profession.\nNeutral upright three-quarter stance, feet visible, calm readable silhouette, simple large shapes. NO environment, ground plane, cast shadow, glow, text, watermark or extra person. Genuine transparent PNG outside the figure and through all open gaps. Do not copy the reference knight's standard helmet or armor; use the specified individual design.",
+  "referenced_image_paths": [
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "E:/Aleria/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-bellyn.png"
+  ],
+  "referenceRoles": [
+    "approved painting style only",
+    "house crest colors and motif"
+  ],
+  "transparent_background": true,
+  "defaultSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a130-12f3-70e3-8e86-d1f25daab490\\exec-baf041b6-689c-4b5a-ac78-3300f529e627.png",
+  "workspaceImage": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Bellyn/assets/hausdarstellung-2026-11-03.png",
+  "representativeFigure": true,
+  "canonicalPersonCreated": false,
+  "professionAsserted": false,
+  "productionAlphaModified": false,
+  "visualQA": {
+    "inspected": true,
+    "contactSheet": "diagnostics/sonnenkueste-house-pages-20261103/commoner-figures-contactsheet-20261103.png",
+    "background": "light ivory diagnostic layer only",
+    "findings": [
+      "Full body and feet visible",
+      "House crest motif and subdued colors preserved",
+      "Civilian clothing without armor or military weapons",
+      "No background, ground shadow or visible external halo",
+      "No named profession or canonical person asserted"
+    ],
+    "productionPngUnmodified": true
+  },
+  "pngMetadata": {
+    "id": "haus-bellyn",
+    "image": "Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Bellyn/assets/hausdarstellung-2026-11-03.png",
+    "mode": "RGBA",
+    "width": 1024,
+    "height": 1536,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaZeroPixels": 991483,
+    "corners": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "bb881b6ceab15f062e9f09f79aa1b538771dc54dcf717024b733fd435aac8d96",
+    "sourceByteIdentical": true,
+    "productionAlphaModified": false
+  }
+}

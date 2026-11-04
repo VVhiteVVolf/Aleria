@@ -1,0 +1,796 @@
+{
+  "schema": "aleria.schwarzfenn-registry-house-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T18:36:36.224Z",
+  "publicOnly": true,
+  "scope": {
+    "kingdom": "Aldrimar",
+    "county": "Schwarzfenn",
+    "mainSeat": "Wolfsklamm",
+    "diagnosticBatchName": "wolfsklamm-clans-20261103",
+    "baseline": "diagnostics/wolfsklamm-clans-20261103/baseline.json"
+  },
+  "summary": {
+    "families": 11,
+    "activeFamilies": 8,
+    "extinctClans": 3,
+    "suppliedAttachments": 11,
+    "additionalFamiliesWithoutTemplate": 0,
+    "initialHousePages": 0,
+    "initialHouseBiographies": 0,
+    "initialFamiliesWithGalleryIllustration": 0
+  },
+  "excludedOriginReferences": [
+    {
+      "id": "haus-hjerte",
+      "county": "Kraehenmoor",
+      "reason": "Eigenstaendige erloschene Herkunft der Kummerherz; kein zusaetzlicher heutiger Schwarzfenn-Registerort."
+    },
+    {
+      "name": "Ulfr",
+      "registeredFamilyId": null,
+      "reason": "Historische Herkunftsnennung der Ragnulf; aus dieser Nennung wird keine neue Familienakte erzeugt."
+    }
+  ],
+  "findings": [
+    "Die vorhandene territoriale Identitaet ist Jarltum Schwarzfenn; Wolfsklamm ist sein Hauptsitz. Keine Umbenennung des Jarltums oder der Registerordner.",
+    "Alle elf oeffentlichen Familien sind von den elf gelieferten Vorlagen abgedeckt; keine weiteren Akten aus Lehens- oder Heiratsbindungen abgeleitet.",
+    "Alle drei erloschenen Clans werden erfasst, einschliesslich des antiken Crannath-Clans Mac Bronaigh.",
+    "Graumahne ist die bestehende technische Schreibweise; graumaehne ist nur der Alias des neuen Quellenmanifests.",
+    "Clan Hrafn aus Flusswall bleibt vom neuen Ivarsheimer Clan Hrafnvald getrennt.",
+    "Originaldownloads werden parallel gesichert und durch den Bildquellenmanifest belegt; es gibt keine beauftragte neue Familie."
+  ],
+  "records": [
+    {
+      "id": "haus-ragnulf",
+      "title": "Clan Ragnulf",
+      "rankId": "jarl",
+      "seat": "Wolfsklamm",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-schwarzfenn.png",
+          "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Jarlsclan von Schwarzfenn und Herren von Wolfsklamm. Die Ragnulf führen ihre Herkunft auf den alten Ulfr-Clan zurück und prägten die Einigung der Norrnaigh und Glaennath.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-ragnulf-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "ragnulf",
+        "attachmentId": "c1432687-9ab8-456c-8f71-b374249b1d59"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Ragnulf/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/clan-ragnulf.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-ragnulf/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "936a0b8332467ab4b369be14b2f2f65ea6c87ce5462f2187e925d6f37ddb1226",
+        "portraitCount": 44,
+        "localPortraitCount": 44,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/hTYqsDp.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-helgr",
+      "title": "Clan Helgr",
+      "rankId": "thane",
+      "seat": "Finstermoor",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Lichtfenn",
+        "Finstermoor"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Finstermoor",
+        "barony": "Lichtfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-lichtfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Schwarzfenn. Die Helgr dienen als religiös und kulturell geprägtes Herrschergeschlecht von Finstermoor.",
+      "sourceRevision": 8,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-helgr-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "helgr",
+        "attachmentId": "786dbe31-1674-48ff-8faa-522801208e2c"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Lichtfenn/Finstermoor/Clan_Helgr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-helgr.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-helgr/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "138762f7b7220f09ce4787667076435fb1e867337400c94c52b0f9b5d1ad6ced",
+        "portraitCount": 62,
+        "localPortraitCount": 62,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/Z07jgGv.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-kummerherz",
+      "title": "Clan Kummerherz",
+      "rankId": "thane",
+      "seat": "Trauerwald",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Gramfenn",
+        "Trauerwald"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Trauerwald",
+        "barony": "Gramfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-gramfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Trauerwald im Gramfenn und Kadettenhaus des erloschenen Hjerte-Clans. Die Kummerherzen dienen den Ragnulf als zurückhaltende Jäger, Waldläufer und Verwalter des südlichen Schwarzfenns.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-kummerherz-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "kummerherz",
+        "attachmentId": "f6b0db3c-1650-4208-bca7-e55bb71cd28d"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Gramfenn/Trauerwald/Clan_Kummerherz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-kummerherz.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-kummerherz/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "9c553d4a9ddf524b3e37f34f60d0ed267c87e4aa4d139b35c5d75e567740211e",
+        "portraitCount": 35,
+        "localPortraitCount": 35,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/EW1p1i8.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-todbrand",
+      "title": "Clan Todbrand",
+      "rankId": "thane",
+      "seat": "Dunkelmoor",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Todesfenn",
+        "Dunkelmoor"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Dunkelmoor",
+        "barony": "Todesfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Dunkelmoor im Todesfenn, benannt nach Nordal dem Gebrandmarkten.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-todbrand-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "todbrand",
+        "attachmentId": "4a5a2a98-0a91-4946-94fb-c07b9f3b11f8"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Todesfenn/Dunkelmoor/Clan_Todbrand/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-todbrand.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-todbrand/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "b864ea6d5dd96a23b77b58adaf039efcf58f5be224d802dd4354e277d75071a2",
+        "portraitCount": 31,
+        "localPortraitCount": 31,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/S3Vb0Pk.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-graumahne",
+      "title": "Clan Graumähne",
+      "rankId": "hesire",
+      "seat": "Wolfsklamm",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan von Schwarzfenn mit Sitz in Wolfsklamm. Die Graumähnen führen ihre Überlieferung auf Hrothgar die Graumähne zurück.",
+      "sourceRevision": 7,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-graumahne-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "graumaehne",
+        "attachmentId": "11f468d3-b264-4f3f-8f13-42ed8bc427aa"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Graumahne/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-graumahne.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-graumahne/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "0d78ef80c5f7f781986217ad574b9c897e5961b93dd5edc6f4e3113eabcafb11",
+        "portraitCount": 51,
+        "localPortraitCount": 51,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/OybhN9R.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Manifestalias graumaehne; kanonische Familien-ID bleibt haus-graumahne."
+      ]
+    },
+    {
+      "id": "haus-schmetterschild",
+      "title": "Clan Schmetterschild",
+      "rankId": "hesire",
+      "seat": "Wolfsklamm",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Wolfsfenn",
+        "Wolfsklamm"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfsklamm",
+        "barony": "Wolfsfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Wohlhabender Hesirenclan von Wolfsklamm, bekannt für Bergbau, meisterhafte Schmiedekunst und schwer gerüstete Elitekrieger.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-schmetterschild-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "schmetterschild",
+        "attachmentId": "ac14df5c-2058-43b3-841a-9089a7d83ed7"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Wolfsfenn/Wolfsklamm/Clan_Schmetterschild/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-schmetterschild.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-schmetterschild/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "b21111058f0de0b8ba51472fc98bc60afebe53085770ed17939ac12f9c4f30b5",
+        "portraitCount": 40,
+        "localPortraitCount": 40,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/7REPrWb.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-hrafn",
+      "title": "Clan Hrafn",
+      "rankId": "hesire",
+      "seat": "Flusswall",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Flussblick",
+        "Flusswall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Flusswall",
+        "barony": "Flussblick",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-ragnulf",
+        "liegeHouseName": "Clan Ragnulf",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-flussblick.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Junger Hesirenclan von Flusswall. Raleif Hrafn begründete die Linie nach dem Bürgerkrieg als Vasall der Ragnulf und führte das handwerkliche Erbe der ausgelöschten Arnvild fort.",
+      "sourceRevision": 3,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-hrafn-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "hrafn",
+        "attachmentId": "920791e2-8294-4fc2-9597-a9d17999cb1c"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Flussblick/Flusswall/Clan_Hrafn/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-hrafn.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-hrafn/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "fc5bc1eb516cb79936736f790f297874b80f08aa733fe688175a69f80eaba6f1",
+        "portraitCount": 18,
+        "localPortraitCount": 18,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/EuqiZJ1.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-eisbrand",
+      "title": "Haus Eisbrand",
+      "rankId": "commoner",
+      "seat": "Hallsvalr",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Todesfenn",
+        "Hallsvalr"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Hallsvalr",
+        "barony": "Todesfenn",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Nicht anerkanntes Bastard- und Banditenhaus in Hallsvalr, begründet durch Audun Todbrand.",
+      "sourceRevision": 2,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-eisbrand-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "eisbrand",
+        "attachmentId": "a9380c3b-7656-4a5e-bcd5-690c51e67a1b"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Todesfenn/Hallsvalr/Haus_Eisbrand/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-eisbrand.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-eisbrand/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "44e030a09a7d60eb0d17b0cadd3c02daa08b1fdf8736505786242a7f6e283405",
+        "portraitCount": 14,
+        "localPortraitCount": 14,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/aucPiOG.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Buergerliches, nicht anerkanntes Bastard- und Banditenhaus; bewaffnete Originalfigur begruendet keinen Adelstitel."
+      ]
+    },
+    {
+      "id": "haus-svartholmr",
+      "title": "Clan Svartholmr",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [
+        "Stornborg"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Stornborg"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete historische Familienakte für Clan Svartholmr, ein erloschener Norrnaigh-Clan aus Stornborg im Jarltum Schwarzfenn.",
+      "sourceRevision": 1,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/schwarzfenn-house-families.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "svartholmr",
+        "attachmentId": "a5e9c6f9-5c29-4aab-aca7-baaea005e719"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Svartholmr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-svartholmr.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-svartholmr/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "08ffbd515942904e38d74c0ab887fceb1f006506d8589dc5c4deec1b6b0c2d30",
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/3hjkvtY.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturkategorie im alten Profil ist kein realer Stammsitz. Historische Orte stehen in secondarySeats; bestehendes Baumprofil bleibt unveraendert."
+      ]
+    },
+    {
+      "id": "haus-arnvild",
+      "title": "Clan Arnvild",
+      "rankId": "hesire",
+      "seat": "Aldrimarer (jüngst ausradiert)",
+      "secondarySeats": [
+        "Flusswall"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Aldrimarer (jüngst ausradiert)"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Aldrimarer (jüngst ausradiert)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Flusswall"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Kürzlich ausgelöschter Hesirenclan von Flusswall. Die Arnvild waren Runenhauer, Baumeister und Begründer der religiösen Steinmetzgilde der Glyphenformer.",
+      "sourceRevision": 3,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-arnvild-family.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "arnvild",
+        "attachmentId": "d50ddaba-82c9-40cf-af1c-35b10762c1a6"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Aldrimarer_jungst_ausradiert/Clan_Arnvild/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-arnvild.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-arnvild/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "60ea0a0e9d5c70b74f77453848e41391f470bf86d070f17fc4bdac7d4af0c6db",
+        "portraitCount": 18,
+        "localPortraitCount": 18,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/Cp3rZe5.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Erloschener Clan mit belegtem historischen Hesirenrang; nicht zum unknown-Rang oder zu einem lebenden Clan umdeuten.",
+        "Kulturkategorie im alten Profil ist kein realer Stammsitz. Historische Orte stehen in secondarySeats; bestehendes Baumprofil bleibt unveraendert."
+      ]
+    },
+    {
+      "id": "haus-mac-bronaigh",
+      "title": "Clan Mac Bronaigh",
+      "rankId": "unknown",
+      "seat": "Antike Crannath Clans",
+      "secondarySeats": [
+        "Coil na Bróin"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Schwarzfenn",
+        "Ausgestorbene Clans",
+        "Antike Crannath Clans"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Antike Crannath Clans",
+        "barony": "Ausgestorbene Clans",
+        "county": "Schwarzfenn",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Coil na Bróin"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete historische Familienakte für Clan Mac Bronaigh, ein antiker, erloschener Crannath-Clan aus Coil na Bróin im Jarltum Schwarzfenn.",
+      "sourceRevision": 1,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/schwarzfenn-house-families.js",
+        "Stammbäume/assets/js/data/schwarzfenn-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "mac-bronaigh",
+        "attachmentId": "7409d1c3-6b75-4e21-a34a-2573f494bce1"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Schwarzfenn/Ausgestorbene_Clans/Antike_Crannath_Clans/Clan_Mac_Bronaigh/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-mac-bronaigh.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-mac-bronaigh/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "0c3b73e25de4f9a0df3645b829a8e2f3846c6b7be3bc7013a751c34388764ce5",
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "originalUrl": "https://i.imgur.com/keyIRGu.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "safeguards": [
+        "Kulturkategorie im alten Profil ist kein realer Stammsitz. Historische Orte stehen in secondarySeats; bestehendes Baumprofil bleibt unveraendert."
+      ]
+    }
+  ],
+  "imageReview": {
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg",
+    "actuallyViewed": true,
+    "allElevenPngHashesVerified": true,
+    "originalsUnchanged": true,
+    "newGenerationsNeeded": 0
+  }
+}

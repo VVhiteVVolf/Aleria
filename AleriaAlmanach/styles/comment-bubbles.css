@@ -259,6 +259,8 @@
 .comment-kind-spell[data-comment-language="kanaanith"], .comment-kind-foreign[data-comment-language="kanaanith"] { --language-script-font: "Kanaanith Monumental", serif; }
 .comment-kind-spell[data-comment-language="argenti"], .comment-kind-foreign[data-comment-language="argenti"] { --language-script-font: "Lingua Argenti", serif; }
 .comment-kind-spell[data-comment-language="stoicheia"], .comment-kind-foreign[data-comment-language="stoicheia"] { --language-script-font: "Stoicheia", serif; }
+.comment-kind-spell[data-comment-language="tlapanui"], .comment-kind-foreign[data-comment-language="tlapanui"] { --language-script-font: "Tavarua Bildschnitt", serif; }
+.comment-kind-spell[data-comment-language="ishtaran"], .comment-kind-foreign[data-comment-language="ishtaran"] { --language-script-font: "Ayluun Mondbogen", serif; }
 .comment-kind-spell[data-comment-language="runic"], .comment-kind-foreign[data-comment-language="runic"] { --language-script-font: "Noto Sans Runic", serif; }
 .comment-kind-spell[data-comment-language="ogham"], .comment-kind-foreign[data-comment-language="ogham"] { --language-script-font: "Noto Sans Ogham", serif; }
 .comment-kind-spell[data-comment-language="faehrtenlaut"], .comment-kind-foreign[data-comment-language="faehrtenlaut"] { --language-script-font: "Faehrtenlaut", sans-serif; }
@@ -793,6 +795,24 @@
   src:
     url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff2") format("woff2"),
     url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tavarua Bildschnitt";
+  src:
+    url("../../Fonts/Tlapanui-Gesamtpaket-2.000/Fonts/TavaruaBildschnitt-Regular.woff2") format("woff2"),
+    url("../../Fonts/Tlapanui-Gesamtpaket-2.000/Fonts/TavaruaBildschnitt-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ayluun Mondbogen";
+  src: url("../../Fonts/Ishtaran-Web-1.001/AyluunMondbogen-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

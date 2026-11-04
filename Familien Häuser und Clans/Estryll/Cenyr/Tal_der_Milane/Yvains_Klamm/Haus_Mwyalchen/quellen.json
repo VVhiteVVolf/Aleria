@@ -1,0 +1,35 @@
+{
+  "schema": "aleria.house-source-audit",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "houseId": "haus-mwyalchen",
+  "attachmentId": "d28057e4-c982-4a2a-bafc-3ff705545a4d",
+  "original": {
+    "file": "animexx-original.html",
+    "sha256": "872f413d7770fd9917360fea2053086f3ec8b49b4278fbdf15f8560e3d2c52b8",
+    "byteIdenticalToAttachment": true
+  },
+  "images": [
+    {
+      "role": "Hauskrieger",
+      "file": "assets/hausdarstellung-original.png",
+      "source": "https://i.imgur.com/TwY7HLa.png",
+      "sha256": "a8a425b58e3b1fe47646c68b98c8efafac0d17143f501865eee796945ae2fc6a",
+      "preservedOriginal": true,
+      "visuallyInspected": true
+    }
+  ],
+  "genealogy": {
+    "providedHierarchyIgnored": true,
+    "providedTreeImageIgnored": true,
+    "existingFamilyId": "haus-mwyalchen",
+    "graphChanges": false
+  },
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/house-mwyalchen-family.js",
+    "Stammbäume/assets/js/data/house-mwyalchen-portraits.js",
+    "Stammbäume/assets/js/data/tal-der-milane-house-profiles.js"
+  ],
+  "editorialDecisions": "REDAKTION.md",
+  "militaryNumbersOmitted": true
+}

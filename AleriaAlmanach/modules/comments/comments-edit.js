@@ -86,6 +86,7 @@ async function verifyEditCode() {
           skillId: segment.skillId || segment.skillResolution?.skillId,
           skillCustomModifier: segment.skillCustomModifier ?? segment.skillResolution?.customModifier,
           skillDifficulty: segment.skillDifficulty ?? segment.skillResolution?.difficulty,
+          ...((segment?.skillSaveContext || segment?.skillResolution?.saveContext) ? { skillSaveContext: normalizeCommentSkillSaveContext(segment.skillSaveContext || segment.skillResolution.saveContext) } : {}),
           ...(segment?.skillRequiredSense ? { skillRequiredSense: String(segment.skillRequiredSense).slice(0, 20) } : {}),
           skillRollMode: segment.skillRollMode || segment.skillResolution?.rollMode,
           skillTargetActorKey: segment.skillTargetActorKey || '',

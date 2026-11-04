@@ -1,0 +1,138 @@
+{
+  "id": "haus-gruenhand",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": null,
+  "authority": {
+    "familyId": "haus-gruenhand",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "sept-head",
+      "seat": "Broch an Coill",
+      "barony": "Tir na Fancha",
+      "county": "Tir na Sinsear",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-na-mhuir",
+      "liegeHouseName": "Clan Na’Mhuir",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "assets/images/regions/Leitheach/tir-na-fancha.png",
+        ""
+      ],
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/Leitheach/tir-na-fancha.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png"
+      }
+    },
+    "graphFingerprint": "5a6b8fe9a6393a35008773c86a6e2bde6be95f1a04bde09aca846b7598f81d02",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-gruenhand",
+    "title": "Sept Grünhand aus Leith",
+    "territoryId": "leitheach-tir-na-fancha",
+    "territoryName": "Tir na Fancha",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Fancha",
+        "slug": "leitheach-tir-na-fancha"
+      }
+    ],
+    "selectionBasis": "Sept im bestehenden Tir-na-Fancha-Gebiet des Lehnshauses",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-gruenhand",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-gruenhand",
+    "slug": "gruenhand",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-02018102-09e0-458b-86d9-3e0d8a4dfce9.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-gruenhand/krieger-human-ears-v2.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/ear-correction-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "editTarget": "E:/Aleria/Stammbäume/assets/images/references/haus-gruenhand/krieger-generated-v1.png",
+    "originalGenerationSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-39a41d7f-3f92-4bec-9385-a7a1473fc331.png",
+    "supersedesAssetPath": "Stammbäume/assets/images/references/haus-gruenhand/krieger-generated-v1.png",
+    "representative": true,
+    "namedPersonId": "",
+    "anatomy": "normal rounded human ears",
+    "sha256": "ee85e8c659b811c2f3b37cc60174eb4c42643a5e28fd94753c957e1ce0db6639",
+    "original": false,
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2056115,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "decisions": [
+    "Nur belegter Sept-, Orts-, Herkunfts- und Dienstkontext aus der bestehenden Akte; keine neue Hausgeschichte.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen.",
+    "Nutzerkorrektur: normale menschliche Ohren; korrigierte Fassung ersetzt die verworfene Zwischenfassung. Gelieferte Originale bleiben unverändert."
+  ],
+  "supersededIllustration": {
+    "id": "haus-gruenhand",
+    "slug": "gruenhand",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-39a41d7f-3f92-4bec-9385-a7a1473fc331.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-gruenhand/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/leitheach-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Leitheach/sept-gruenhand-aus-leith.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "d0f27ce1ec4ad81d6c4c05bfabdaa5721537cd33b3b12a80ba010a42d6e13b8c",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2046239,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  }
+}

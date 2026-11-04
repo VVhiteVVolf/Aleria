@@ -11,7 +11,7 @@ import {
 } from './family-record-builders.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_HELGR_PORTRAITS } from './house-helgr-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import {
   SCHWARZFENN_HOUSE_EMBLEMS,
@@ -370,7 +370,7 @@ export const HOUSE_HELGR_FAMILY = withBlaithneachSourceCounterUpgrade(Object.fre
     spouse('tjalda', 'Tjalda', 'female', '1637', '1691'),
 
     person('magnus-helgr', 'Magnus Helgr', 'male', '1653', '????', { title: 'Erster Erbe des Clans Helgr' }),
-    awayWoman('leikny-helgr', 'Leikny Helgr', '1655', '????', 'Clan Hrafn'),
+    awayWoman('leikny-helgr', 'Leikny Helgr', '1655', '', 'Clan Hrafn'),
     awayWoman('pynta-helgr', 'Pynta Helgr', '1657', '????', 'Haus Weissmann'),
     awayWoman('roska-helgr', 'Róska Helgr', '1658', '????', 'Clan Luga'),
     person('kormak-helgr', 'Kormak Helgr', 'male', '1659', '????'),

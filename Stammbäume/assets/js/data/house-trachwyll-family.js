@@ -14,7 +14,7 @@ import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES,
   IVARSHEIM_ORIGIN_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KLAUENINSEL_HOUSE_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';

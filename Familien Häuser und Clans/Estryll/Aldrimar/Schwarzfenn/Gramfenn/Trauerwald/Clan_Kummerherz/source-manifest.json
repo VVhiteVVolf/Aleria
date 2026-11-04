@@ -1,0 +1,87 @@
+{
+  "id": "haus-kummerherz",
+  "source": {
+    "attachmentId": "f6b0db3c-1650-4208-bca7-e55bb71cd28d",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\f6b0db3c-1650-4208-bca7-e55bb71cd28d\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/kummerherz/animexx-original.html",
+    "bytes": 107427,
+    "sha256": "3ee07e0c2b70da9311695208b98afc2b6b95218b9213d790be379293f5f6838b",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-kummerherz",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "thane",
+      "seat": "Trauerwald",
+      "barony": "Gramfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-gramfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-kummerherz",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-kummerherz",
+    "familyId": "haus-kummerherz",
+    "slug": "kummerherz",
+    "canonicalSlug": "kummerherz",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "f6b0db3c-1650-4208-bca7-e55bb71cd28d",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/EW1p1i8.png",
+    "sourceUrl": "https://i.imgur.com/EW1p1i8.png",
+    "path": "Stammbäume/assets/images/references/haus-kummerherz/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-kummerherz/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 309797,
+    "sha256": "9c553d4a9ddf524b3e37f34f60d0ed267c87e4aa4d139b35c5d75e567740211e",
+    "sha": "9c553d4a9ddf524b3e37f34f60d0ed267c87e4aa4d139b35c5d75e567740211e",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Dunkel gerüsteter Krieger mit Hörnerhelm, Fell und gelb-schwarzem Wappenschild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Trauerwald liegt im aktuellen Gramfenn, das im östlichen Schwarzfenn geführt wird. Alte pauschale Südzuordnungen erzeugen keine neue Ortsstruktur.",
+    "Der zerfallene Hjerte-Clan ist der ältere Herkunftszusammenhang von Kummerherz, Kaltherz und Feuerherz. Nicht behaupten, Kummerherz selbst sei vollständig in Kaltherz und Feuerherz aufgegangen.",
+    "Brynjar Hjerte ist bereits der kanonische Gründer. Geiselaustausch und Einsetzung bleiben historische Erzählung, keine neuen genealogischen oder Mündelschaftskanten.",
+    "Außergewöhnliche Nachtsicht und Hörfähigkeit werden in der Quelle als Ruf beschrieben. Keine automatische Silvanische Symbiose, Tierform, Vampirnatur oder neuen Traits daraus ableiten.",
+    "Jorahs Altersangabe wird ohne neu errechnetes Anfangsjahr des Prätendentenkriegs ausgelassen. Belagerung, ausbleibende Hilfe und die Kapitulation bleiben erhalten.",
+    "Ordenssitze und Gilden im Gebiet sind keine automatisch eigenen Clanburgen. Kirchliche Unterstützung und eigene tiefe Frömmigkeit werden unterschieden.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

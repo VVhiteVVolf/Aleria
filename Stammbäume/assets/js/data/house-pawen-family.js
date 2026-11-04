@@ -243,7 +243,7 @@ export const HOUSE_PAWEN_FAMILY = Object.freeze({
     spouse('emrys-crefyddol', 'Emrys Crefyddol', 'male', '1615', '1676', 'house-crefyddol'),
 
     person('rhodri-pawen', 'Rhodri Pawen', 'male', '1641', '1695'),
-    awayWoman('morwen-pawen', 'Morwen Pawen', '1642', '1659', 'Haus Tiwna'),
+    awayWoman('morwen-pawen', 'Morwen Pawen', '1632', '1659', 'Haus Tiwna'),
     person('grufudd-pawen', 'Grufudd Pawen', 'male', '1644', '1710'),
     spouse('branwen-canwyll', 'Branwen Canwyll', 'female', '1640', '1705', 'house-canwyll'),
     spouse('madoc-tiwna', 'Madoc Tiwna', 'male', '1630', '1705', 'house-tiwna', {

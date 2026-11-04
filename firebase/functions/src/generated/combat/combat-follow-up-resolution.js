@@ -7,6 +7,7 @@ import { mergeRestrictedRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import { applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js';
+import { rollProfileD20, naturalRollReceipt } from './combat-natural-roll-policy.js';
 
 // Each follow-up has its own attack, damage, defenses and per-attack equipment rules.
 export async function resolveFollowUpAttacks({ dice, actor, target, weapon, attack, secondarySaves,
@@ -61,18 +62,18 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         + followPreEffects.attackModifier + usage.attack;
       let followDefense = Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
         + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier + usage.armorClass;
-      const followAttackRoll = await dice.rollAttack({
+      const followAttackRoll = await rollProfileD20(dice, 'rollAttack', {
         modifier: followAttackModifier,
         rollMode: followRollMode,
         actorName: actor.name,
         targetName: target.name,
         container: options.container
-      });
-      let followAttack = evaluateAttackRoll(followAttackRoll, followDefense, actor.selectedAction?.criticalThreshold);
+      }, actor);
+      let followAttack = evaluateAttackRoll(followAttackRoll, followDefense, actor.selectedAction?.criticalThreshold, followAttackRoll.naturalRollPolicy.criticalFailureMaximum);
       const followPostApplications = collectFollowRules('post-roll', followAttack);
       const followPostEffects = mergeCombatRuleEffects(followPostApplications);
       if (followPostEffects.attackModifier || followPostEffects.defenseModifier) {
-        followAttack = evaluateAttackRoll({ ...followAttackRoll, total: Number(followAttackRoll.total) + followPostEffects.attackModifier }, followDefense + followPostEffects.defenseModifier, actor.selectedAction?.criticalThreshold);
+        followAttack = evaluateAttackRoll({ ...followAttackRoll, total: Number(followAttackRoll.total) + followPostEffects.attackModifier }, followDefense + followPostEffects.defenseModifier, actor.selectedAction?.criticalThreshold, followAttackRoll.naturalRollPolicy.criticalFailureMaximum);
       }
       followAttack = applyOutcome(followAttack, followPostEffects.outcome, false);
       followDefense += followPostEffects.defenseModifier;
@@ -124,6 +125,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         triggerFurtherEffects: followUp.triggerFurtherEffects === true,
         wardResolution: followWard.wardResolution,
         attack: {
+          ...naturalRollReceipt(followAttackRoll),
           naturalRoll: Number(followAttackRoll.natural),
           diceResults: Array.isArray(followAttackRoll.dice) ? followAttackRoll.dice.slice() : [],
           modifier: followAttackModifier + followPostEffects.attackModifier,

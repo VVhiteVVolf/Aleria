@@ -9,7 +9,7 @@ import { HOUSE_ILLWATH_PORTRAITS } from './house-illwath-portraits.js';
 import {
   SONNENKUESTE_HOUSE_EMBLEMS,
   SONNENKUESTE_HOUSE_PROFILES
-} from './sonnenkueste-house-profiles.js';
+} from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 
 const ILLWATH_HOUSE_ID = 'house-illwath';
 const ILLWATH_EMBLEM = SONNENKUESTE_HOUSE_EMBLEMS.illwath;

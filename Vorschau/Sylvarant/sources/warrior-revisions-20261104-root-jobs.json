@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "pool-11-v2",
+      "houseId": "pool-11",
+      "assetStem": "house-pool-11-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-01",
+      "role": "Reich gerüsteter Legionär",
+      "description": "Ein eindrucksvoll gerüsteter Legionär in silbernem Platten- und Lamellenharnisch, dunkelrotem Mantel und geschlossenem römischem Kammhelm. Das Kapitellzeichen prägt Brust, Gürtel und Rüstungsbeschläge.",
+      "equipment": [
+        "Gerader Gladius",
+        "Geschlossener spätrömischer Kammhelm",
+        "Silberner Platten- und Lamellenharnisch",
+        "Gepanzerte Knie, Schienbeine und Füße",
+        "Dunkelroter Mantel"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Edit the first referenced warrior of the unnamed silver column-capital house for Sylvarant, Aleria. The user finds his outfit much too cheap and wants a distinctly more interesting and impressive design. Completely redesign his ARMOR and HELMET while retaining the same young fit adult human male identity, calm upright full-body stance, rounded human ears under the helmet, silver/dark-red/black house palette and column-capital heraldry. Reference1 is the edit target and identity. Reference2 supplies ONLY this house's silver acanthus column-capital emblem on dark red. Reference3 supplies ONLY approved matte simplified painting, not its western armor, blue palette, griffin or halo.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nNEW DESIGN, clearly a rich Latin-Roman armored champion with a knightly touch: broad matte silver cuirass over dark mail, beautifully ordered fluted vertical breast sections and a small silver column-capital badge inset on a dark-red chest panel. Intricate but readable small capital-leaf motifs on a bronze-edged belt and the knee bosses. Broad articulated Roman shoulder defenses in unequal overlapping plates, one with a restrained black mantle edge. A CLOSED late-Roman ridge/spangen cavalry helmet with a dignified metal face visor, narrow eyes, neat small breathing perforations and fully enclosed cheeks; NO Greek or Corinthian/T-shaped nose helmet. The helmet has a striking compact lengthwise black-and-dark-red crest with a small silver acanthus front clasp, not giant horns or architectural props. An asymmetric rich dark red cloak lined in charcoal falls behind the LEFT shoulder and hangs toward the calf. At the waist a structured long armored skirt of narrow silver lamellar rows, dark leather pteryges and dark red cloth panels to below the knees. Fully plated knees, greaves and covered metal-tipped boots over dark cloth, NO bare thighs, knees or calves. Bracers with dark inset panels and restrained gold-bronze lines. This is a distinctive rich Roman layered silhouette, NOT the previous plain mail shirt with leather straps, cheap short skirt and bare legs, and NOT a copy of the style knight or any existing house warrior.\n\nOne straight double-edged Roman GLADIUS in his right hand, held quietly downward away from the body, clearly straight spine and two straight parallel edges tapering to a central point, small straight bronze guard and ivory grip. Left gauntleted hand rests naturally on the decorated broad belt; no shield, no additional sword, no quiver, no magic. Keep the stance composed but proud with a subtle body turn, both feet grounded, no battle action.\n\nOutput EXACTLY1024x1536, portrait2:3, complete full-body silhouette from crest to soles and swordtip; comfortably80percent of height, free margins on all sides. REAL TRANSPARENT PNG outside silhouette and every gap; absolutely no background, floor, outer shadows, fog or color halo. Do not copy invisible RGB glow from references. Simplify ornament to painted flat readable motifs, matte muted pigments, thin soft painted contours, fine even pigment grain, no glossy photorealism/CGI/3D. No text, watermark, names, buildings, giant architecture attached to armor or extra characters.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-11.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/emblems/production/pool-11.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-11"
+    }
+  ]
+}

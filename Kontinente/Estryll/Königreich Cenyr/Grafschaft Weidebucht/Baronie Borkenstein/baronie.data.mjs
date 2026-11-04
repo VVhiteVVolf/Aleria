@@ -145,7 +145,8 @@ export default createTerritory({
           "liege": "Haus Wylan O'Cerrigarth",
           "rank": "Baronenhaus",
           "featured": true,
-          "featuredLabel": "Baronenhaus"
+          "featuredLabel": "Baronenhaus",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-hwyaden"
         }
       ]
     },
@@ -160,7 +161,8 @@ export default createTerritory({
           "liege": "",
           "rank": "Mor Tiarna",
           "featured": false,
-          "featuredLabel": "Mor Tiarna"
+          "featuredLabel": "Mor Tiarna",
+          "href": "/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-trisceil"
         }
       ]
     }

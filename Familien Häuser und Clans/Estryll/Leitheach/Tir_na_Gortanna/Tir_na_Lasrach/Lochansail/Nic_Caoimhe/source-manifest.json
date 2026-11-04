@@ -1,0 +1,156 @@
+{
+  "id": "haus-nic-caoimhe",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "389f47bc-8e12-49d3-9e57-663412937a9f",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\389f47bc-8e12-49d3-9e57-663412937a9f\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/nic-caoimhe/animexx-original.html",
+    "bytes": 86726,
+    "sha256": "ccde2b8777851fa2881ed12d60efd3389bd2c33934c73cd0d755e942ae4fc416",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-nic-caoimhe",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Lochansail",
+      "barony": "Tir na Lasrach",
+      "county": "Tir na Gortanna",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dal-cruthin",
+      "liegeHouseName": "Clan Dál’Cruthin",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na Lasrach",
+        "Lochansail"
+      ]
+    },
+    "graphFingerprint": "a3203491b853886ee1c02f62fa9200ddfcb578bdb9742ef9f9c411bd7bebe318",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-nic-caoimhe",
+    "title": "Nic Caoimhe",
+    "territoryId": "leitheach-herrschaft-nic-caoimhe",
+    "territoryName": "Tir na Lasrach",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Lasrach",
+        "slug": "leitheach-herrschaft-nic-caoimhe"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-nic-caoimhe",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-nic-caoimhe",
+    "slug": "nic-caoimhe",
+    "canonicalSlug": "nic-caoimhe",
+    "attachmentId": "389f47bc-8e12-49d3-9e57-663412937a9f",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/f47xqMv.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 351957,
+    "sha256": "046221cb212b7613d4e889bc08a58d783ff3998855043c30edec63099f0f7ea1",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-nic-caoimhe",
+    "title": "Nic Caoimhe",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Gortanna",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/f47xqMv.png",
+    "path": "Stammbäume/assets/images/references/haus-nic-caoimhe/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-nic-caoimhe/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "046221cb212b7613d4e889bc08a58d783ff3998855043c30edec63099f0f7ea1",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Sitzende gerüstete Hausfigur mit Holzsessel, Becher und Schwert.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "ccde2b8777851fa2881ed12d60efd3389bd2c33934c73cd0d755e942ae4fc416",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-nic-caoimhe, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

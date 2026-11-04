@@ -1,0 +1,15 @@
+{
+  "id": "chiffyddlon",
+  "mode": "built-in image_gen",
+  "stylePreset": "fantasy-rpg-character",
+  "image": "Familien Häuser und Clans/Estryll/Cenyr/Aehrental/Ausgestorben/Haus_Chiffyddlon/assets/hausdarstellung-2026-11-03.png",
+  "sha256": "bbc2b257b870a8649de4a883516d3dfe0927ab027540c8b35b0a2db836cac3d1",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "transparent": true,
+  "prompt": "Use case: stylized-concept. Edit the supplied approved figure template into the requested different anonymous house representative, retaining only its restrained painted illustration style and full-body portrait composition. Image 1 is the approved style/figure template, never a costume requirement. Image 2 is heraldry reference only, do not redesign that emblem. Output ONE complete upright three-quarter full-body figure, 2:3 portrait, head and both shoes wholly in frame. Simplified large readable shapes, matte muted earthy paint, soft thin painted contour, subtle even fine gouache pigment grain and sparse shading. No realism, no CGI, no thick black comic outline, no shiny metal, no text, no frame. Truly transparent PNG background, no environment, floor, shadow, glow or painted color cloud outside the figure. This is an unnamed representative illustration, not a new named person or officeholder. Subject: a historical Cenyrian house knight in compact silver-steel plate over visible chainmail, deep muted navy cloth and cream lower tabs, restrained dull gold fittings. Distinct helmet: an open-faced Italian-style barbute with a simple T opening and smooth rounded skull, NO plume, NO animal horns. Some of his calm bearded lower face visible. A simple dull-gold snail motif is embroidered on the navy breast cloth, with two understated cream wavy bands at the hem, following image 2. His armour silhouette has broad rounded pauldrons and a short articulated skirt, simple functional construction. Both hands rest quietly on the pommel of one straight longsword held vertically with the tip down. NO shield, NO cape, NO horse. Do not turn the helmet into a snail costume; the snail is a modest house badge only.",
+  "refinement": "Use case: background-extraction. Edit this exact supplied image. Remove ALL of the diffuse brown/grey/teal smoky gradient, glow, haze and shadow surrounding the figure and equipment. The finished PNG is a CLEAN CUTOUT of only the solid painted human, clothing and held items. Outside the precise visible silhouette and inside open gaps there must be 100% actual transparency (alpha 0), not translucent haze, no dark or light backdrop and no outer halo. Preserve exactly the figure's painted style, pose, all colours, small heraldic motif, props, proportions and full-body 2:3 framing. The figure itself is opaque, crisp but softly painted with only narrow natural antialiasing at its actual edge. Do not crop any part, change clothing, add anything, add text, frame or floor.",
+  "unnamedRepresentative": true
+}

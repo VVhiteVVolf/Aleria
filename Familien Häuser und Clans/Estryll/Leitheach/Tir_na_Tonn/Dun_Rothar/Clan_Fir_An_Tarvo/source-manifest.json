@@ -1,0 +1,150 @@
+{
+  "id": "haus-fir-an-tarvo",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "d8c688d9-948e-4235-a938-14b102033512",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\d8c688d9-948e-4235-a938-14b102033512\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/fir-an-tarvo/animexx-original.html",
+    "bytes": 94849,
+    "sha256": "576e2e01cb2dd57d42e32c6538a9385f3d6f409da8baef57358ab224082b0c84",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-fir-an-tarvo",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "mor-tiarna",
+      "seat": "Dun Rothar",
+      "barony": "",
+      "county": "Tir na Tonn",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-mac-ard-cumhaill",
+      "liegeHouseName": "Clan Mac Ard Cumhaill",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-tonn.png",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-tonn.png",
+        "barony": "",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Tonn",
+        "Dun Rothar"
+      ]
+    },
+    "graphFingerprint": "4e3d2d1d401f4a18ef3b41c78e5360f632a7376f4d7efc757d6cb42f8a9d5fee",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-fir-an-tarvo",
+    "title": "Clan Fir An’Tarvo",
+    "territoryId": "leitheach-tir-na-tonn",
+    "territoryName": "Tir na Tonn",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+    "territoryType": "Oberherrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-fir-an-tarvo",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-fir-an-tarvo",
+    "slug": "fir-an-tarvo",
+    "canonicalSlug": "fir-an-tarvo",
+    "attachmentId": "d8c688d9-948e-4235-a938-14b102033512",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/OPM82Cv.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 307375,
+    "sha256": "8cbb0b3b2a02c7a929980275e54217da0efe5f0fce935c95e621336c85cc0f80",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-fir-an-tarvo",
+    "title": "Clan Fir An’Tarvo",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Tonn",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/OPM82Cv.png",
+    "path": "Stammbäume/assets/images/references/haus-fir-an-tarvo/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-fir-an-tarvo/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "8cbb0b3b2a02c7a929980275e54217da0efe5f0fce935c95e621336c85cc0f80",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Türkis-goldener Krieger mit geschlossenem Kammhelm, Schwert und Langschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "576e2e01cb2dd57d42e32c6538a9385f3d6f409da8baef57358ab224082b0c84",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-fir-an-tarvo, Rang Mor Tiarna, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Die individuelle Hausvorlage ist leer. Ergänzte Prosa beschreibt ausschließlich die eigene, ausdrücklich belegte Oberherrschaft aus aktuellen Territorialquellen; regionale Kultur und Wirtschaft nicht als neue persönliche Clanrituale oder Eigentum an jedem Ort ausgeben.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

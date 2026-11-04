@@ -1,0 +1,51 @@
+{
+  "schema": "aleria.house-content-lore-delivery",
+  "date": "2026-11-04",
+  "status": "complete-local",
+  "decisions": [
+    {
+      "house": "Varulv",
+      "result": "Anschluss an Arns grünes Lager; keine falsche Abkehr von den Grünen."
+    },
+    {
+      "house": "Feuerherz",
+      "result": "Zoll als wichtiger Pfeiler neben Jagd, Leder, Handwerk und Erz-/Steinabbau; vorhandene Bergbauorte aus der Territorialquelle übernommen."
+    },
+    {
+      "house": "Gwaedlyd O'Tredegar",
+      "result": "Territorialkultur nennt Agravaine den Hai und den schwarzen Hai mit Blut am Maul über Wellen."
+    },
+    {
+      "house": "Fiadhrach",
+      "result": "Albisches Adelshaus der Glaennath; elbische Bezeichnung entfernt."
+    }
+  ],
+  "houseSources": 3,
+  "houseNarrativeFields": 6,
+  "territorialCultureParagraphs": 1,
+  "changedHouseBiographies": 2,
+  "housePageBuilds": 3,
+  "leitheachEditorialNotes": "Unverändert gemäß Nutzeranweisung unwichtig.",
+  "preservation": {
+    "familyGraphs": 424,
+    "familyDocuments": 424,
+    "unselectedBiographies": 422,
+    "identitiesAndRelationshipsUnchanged": true,
+    "existingImagesUnchanged": true,
+    "personalBiographiesAndNotesProtected": true
+  },
+  "biographyUpgradeFix": "BIO-only revisions preserve earlier metadata ownership boundaries. Regression tests reproduce the prior seat overwrite and verify the fix.",
+  "testsPassed": 64,
+  "evidence": [
+    "integration-plan.json",
+    "preservation.json",
+    "gwaedlyd-changes.json",
+    "test-results.json",
+    "independent-review.json"
+  ],
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

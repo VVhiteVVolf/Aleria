@@ -32,6 +32,8 @@ export const SONNENKUESTE_HOUSE_EMBLEMS = Object.freeze({
   morforwyn: 'assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png',
   rhelian: 'assets/images/houses/Sonnenküste/Jungferntal/haus-rhelian.png',
   aelryn: 'assets/images/houses/Sonnenküste/Jungferntal/haus-aelryn.png',
+  caerwen: 'assets/images/houses/Sonnenküste/Jungferntal/haus-caerwen.png',
+  nerwynn: 'assets/images/houses/Sonnenküste/Jungferntal/haus-nerwynn.png',
   grianlaoch: 'assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png',
   gwaedryn: 'assets/images/houses/Sonnenküste/Gersteküste/haus-gwaedryn.png',
   rhavorn: 'assets/images/houses/Sonnenküste/Gersteküste/haus-rhavorn.png',
@@ -82,6 +84,13 @@ function illewodVassalProfile(rankId, folderPath = ABERON_PATH, options = {}) {
   });
 }
 
+function morforwynKnightProfile() {
+  return profile('knight', CARNGOL_PATH, {
+    liegeHouseId: 'haus-morforwyn',
+    liegeHouseName: "Haus Morforwyn O'Carngol"
+  });
+}
+
 export const SONNENKUESTE_HOUSE_PROFILES = Object.freeze({
   illewod: profile('county', ABERON_PATH),
   teyrngarch: illewodVassalProfile('knight-prince'),
@@ -89,8 +98,10 @@ export const SONNENKUESTE_HOUSE_PROFILES = Object.freeze({
   llwynog: illewodVassalProfile('knight-prince'),
   illwath: illewodVassalProfile('knight-prince', CAER_LLEW_PATH),
   morforwyn: illewodVassalProfile('barony', CARNGOL_PATH),
-  rhelian: illewodVassalProfile('knight', CARNGOL_PATH),
-  aelryn: illewodVassalProfile('knight', CARNGOL_PATH),
+  rhelian: morforwynKnightProfile(),
+  aelryn: morforwynKnightProfile(),
+  caerwen: morforwynKnightProfile(),
+  nerwynn: morforwynKnightProfile(),
   grianlaoch: illewodVassalProfile('knight', ABERON_PATH, {
     secondarySeats: ['Gallchofaen']
   }),

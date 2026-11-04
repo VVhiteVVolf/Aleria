@@ -1,9 +1,17 @@
 import { renderSkillIcon } from './skill-icon-view.js?v=20261016-check-policy-v1';
 import { getCheckDefinition } from './skill-check-model.js?v=20261016-check-policy-v1';
+import { describeNaturalRollReceipt } from '../combat/ui/combat-natural-roll-presentation.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const signed = value => `${value >= 0 ? '+' : '−'}${Math.abs(value)}`;
 const asset = name => new URL(`../../public/assets/herausforderung/${name}-v1.png`, import.meta.url).href;
+
+export function renderSkillRecordedRoll(receipt = {}) {
+  const dice = receipt.diceResults?.length ? `W20 [${receipt.diceResults.join(', ')}]` : receipt.natural != null ? `W20 ${receipt.natural}` : '';
+  const mode = { advantage: 'Vorteil', disadvantage: 'Nachteil' }[receipt.rollMode];
+  const parts = [dice, mode, describeNaturalRollReceipt(receipt)].filter(Boolean);
+  return parts.length ? `<span class="skill-recorded-roll">${escape(parts.join(' · '))}</span>` : '';
+}
 
 export function renderSkillAttemptHeader({ actor, target, targetActor, skillId }) {
   const skill = getCheckDefinition(skillId);

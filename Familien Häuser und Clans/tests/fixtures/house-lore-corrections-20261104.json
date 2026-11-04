@@ -1,0 +1,1443 @@
+{
+  "schema": "aleria.authorized-house-lore-review",
+  "date": "2026-11-04",
+  "publicOnly": true,
+  "authority": "Explicit user decisions; the previous import fixtures and original audits remain unchanged.",
+  "families": {
+    "haus-arth": {
+      "previousGraphFingerprints": [
+        "ad2ea315b3c387edeb097ea1d6ae7c9facfce24d1226068cb53b883304669093"
+      ],
+      "graphFingerprint": "a7efd80c8ac3171d8b57554da62931d69ea83a6d8a1b6bc79675b7494b5b17cc",
+      "biographyFingerprint": "de6a4546f86a7d4716457da0756191d8188e950e63279c52e300c2bc2deece27",
+      "biographySourceRevision": 19,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-blutklinge": {
+      "previousGraphFingerprints": [
+        "a29ecf4934afcc6a3adc50ab574723e2f4f24808d8464e1a996f2c8c5cc84040"
+      ],
+      "graphFingerprint": "a29ecf4934afcc6a3adc50ab574723e2f4f24808d8464e1a996f2c8c5cc84040",
+      "biographyFingerprint": "1cccf8c636ea16baa3061367e4ba487f1b7fb2781fc73095fb5377ee4fc1cbca",
+      "biographySourceRevision": 3,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-canwyll": {
+      "previousGraphFingerprints": [
+        "c6e191936d6efdfbae4742815d357c2b57df76030ddcee79b32220042301f125"
+      ],
+      "graphFingerprint": "9a995681845a591669991450fdccf924c5cff2698c5e735daf0cdc8c87fd572c",
+      "biographyFingerprint": "3dc7eab94a9e6c20a6b2d83b0c88fabfa7655ea8aaadd389da00003e18134654",
+      "biographySourceRevision": 5,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-choinnich": {
+      "previousGraphFingerprints": [
+        "fdbabb7855beb03b11855b1d5249802b66c80acbd3f8c7f967d6f1a46c330ffc"
+      ],
+      "graphFingerprint": "8758db9e20c71931a7119d06f54b605bc474c448d731dfbe5dfe2ef31af3d4d4",
+      "biographyFingerprint": "6fed7aa3306c35e0f9b53102cde0b97c45f71e545e2c4a10e6d796e2fd66512d",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-dal-ceardaiocht": {
+      "previousGraphFingerprints": [
+        "55f4aed696815a350c83aff6d8b86a5c43067973466eceb7d513e7b3458c1575"
+      ],
+      "graphFingerprint": "4d48fa64a8d2f384bb19e9060130bba8d3de5c59b70b4621f9b7403b6304fe8a",
+      "biographyFingerprint": "c82b3c2b7dbaa9e3009a0183b2925b0af566202ff4953acc44c2156486aa10b1",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-dal-t-saor": {
+      "previousGraphFingerprints": [
+        "f3fabf4c7c09693b21f5a0b9121ae0dc375d15101414b5f320c63d80cc0e230e"
+      ],
+      "graphFingerprint": "f1e93f817d7df13e7fac9d4c2d1ce734d1c5e0666271e356c6b5402ff968bea0",
+      "biographyFingerprint": "ecfc6764223586a321e0bd05b4c38227033fbfbf1b73a85793b945d37d1f8299",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-draig": {
+      "previousGraphFingerprints": [
+        "3f44f53eb62562f4432cf13c681ece12f35036b87abf7425cf95aae64b7ead81"
+      ],
+      "graphFingerprint": "33098556edaf12e87e9ba70ae328d8a13f7a1fa2e098579b92eb3148d604b3eb",
+      "biographyFingerprint": "422418d316886f0d926d698f7ed8b15a5ef01009792a0de2541f780cb99f45a0",
+      "biographySourceRevision": 16,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-dyngwn": {
+      "previousGraphFingerprints": [],
+      "graphFingerprint": "d27849bddfe34fa56c28ae1966a7acca48ba447f055b58b3a65e4ddcec510b7c",
+      "biographyFingerprint": "50770af0cdf67be090ea0e8298e3ea243b2bf953f9ea1e59c2e016de3d3ba840",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-feuerherz": {
+      "previousGraphFingerprints": [
+        "32082824c3b689cb8b5b589813e21ed816fa5cdac32c38778d060b581527f4aa"
+      ],
+      "graphFingerprint": "85bd8b7805144ce0ed765ce6974112f392282a12762b269924dc2d36d612385d",
+      "biographyFingerprint": "af9b9c0a95d565874b25a085c1b1e5d919fecdc2243482a01efa949fffd1c335",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-gallchobhair": {
+      "previousGraphFingerprints": [
+        "e96e61a38c2526a9a37e4e131d628f225e30c35d165f7302ebdc0fec83ece39b"
+      ],
+      "graphFingerprint": "0fe238e3c66ab66200307193477c0a956d5113fb03130a9d3e36a0d4ece208e8",
+      "biographyFingerprint": "089635393ad70656c62c64a2c1612470beced2268cb7e38b0c0ab4bf33608c7e",
+      "biographySourceRevision": 13,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-grael": {
+      "previousGraphFingerprints": [],
+      "graphFingerprint": "c8c02ff916575d2b653c89e38dcb99463dbce9e76c7783e3c7c944209c0316f5",
+      "biographyFingerprint": "5c29bf9457d773d28ea90339b89f2f064eee6d762115f65069b321bceb1757ca",
+      "biographySourceRevision": 3,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-grendel": {
+      "previousGraphFingerprints": [
+        "2e22ca17d3548ae49fe8517356c9f2541ff6bc4fcbd105b68abda6a77c278d0b"
+      ],
+      "graphFingerprint": "37a662ccc6d9a8c9dc6ba65f90640a4009e328245efe1988c15008c7eb9f109d",
+      "biographyFingerprint": "515262334211fbaa23b92578c29731be5071316c44ce4ed2625637007145d7dd",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-morforwyn": {
+      "previousGraphFingerprints": [
+        "9e33dffca4bf954fc158ad983ca28cee7084cff2bf920441b8d2295680a71b50"
+      ],
+      "graphFingerprint": "9c3e9480c7ccba25c578329e07c73c9b8da4a671997bcdbf4640bd609e5859ee",
+      "biographyFingerprint": "d66cab7d2f8d75a3254e915c977a085261c974455d1698e182cc667730fb9098",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-morforwyn-linie-marmue": {
+      "previousGraphFingerprints": [
+        "fdb3460cfccc6b0f0a99abde924fcc1ef07963e11835c982bb4a592976e50044"
+      ],
+      "graphFingerprint": "6a275ce7f161ae5279c82e1402a4f0ee8a33e1fc21f90bc3aaf93116bbe9b42b",
+      "biographyFingerprint": "0d1857e35e40850532db65ed7c2f2a16c4ef6f6350421e96e90a6bb7831cc91c",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-nachtjaeger": {
+      "previousGraphFingerprints": [
+        "993b6f666976eb763bdd4458357e8d233b759fe208e12d709ff2baa374347807"
+      ],
+      "graphFingerprint": "aa3051080a3b160dfb346d9f12b3e215a3292e1f4b0897d7d55080cc1604a93c",
+      "biographyFingerprint": "f4b4e697b9fca59257b888122e3b30c91a539b35d01f9a5f727a88edfc5ff117",
+      "biographySourceRevision": 4,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-neidr": {
+      "previousGraphFingerprints": [
+        "74a9d6b8614e6e7e261f057a7b87d0e27c645a6c58385240c12945ef11e90c29"
+      ],
+      "graphFingerprint": "71dd40e11ca8cc460b710137bb63890f7d49ab055636fcf63529ee14dea4e5ed",
+      "biographyFingerprint": "6d12461cd68a4065b71ae001bb38f6f094b2b7d4ca397df2e172068fd5f99e22",
+      "biographySourceRevision": 11,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-pawen": {
+      "previousGraphFingerprints": [
+        "78d35944b8d1613fc600a572ac199dbaa3dab4ef55a375707bda8a7697abc923"
+      ],
+      "graphFingerprint": "5b47347e22ee20fe82e1f4183e0b2144973d18e25b20560a1daac43aff2108d6",
+      "biographyFingerprint": "acf31fea7640d6c6a6a7818610bc1e686154c5b51b38dcb8e2075da42712ee61",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-pendrag": {
+      "previousGraphFingerprints": [],
+      "graphFingerprint": "16739c9d43595f490ace0a5930604a76b7f290d0805db5f77f4d6c0863597fc0",
+      "biographyFingerprint": "9ba50b894907ac21adad8f781cea0a09a5ef46cc79e5b3b1530c844a7ad17cb5",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-riesentod": {
+      "previousGraphFingerprints": [
+        "c4f615538a2eed7169ac1fc9dd43f246c4532370960807ba50d427045b373e7c"
+      ],
+      "graphFingerprint": "34d27648210b11e170cef62edb2b74c43995dd2680c0283af4e08590fdc837a5",
+      "biographyFingerprint": "ae5f34e460601b96cb3a10fea43cb9dc36b3bfc1a2b1041d0e0d5410f5c66672",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-schattenherz": {
+      "previousGraphFingerprints": [
+        "3ca2c11512b9ca1117a2039ce6bdd5f8d4db734cef3294fd4f70f26b98047999"
+      ],
+      "graphFingerprint": "ccb7fff10d5527f95c5c6668c6ee8b030d13c86caf48f3c01a568a85ea8bcfd6",
+      "biographyFingerprint": "f5173177f997c4b9c90d991b517f820cd6fef235ea2fb960b81f98f823514f10",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-sturmgeborene": {
+      "previousGraphFingerprints": [
+        "e8583e494baa68e3cd54666da09a8afe39414db96ea842698abb85caae549929"
+      ],
+      "graphFingerprint": "6e24578319a003663d6cb3095b6b06f6dbdeaa1bffc08dcf6ba92cbed4ea433d",
+      "biographyFingerprint": "4d870d849852c4c03f81ede4fcf532d78bdaae3977136cce00c3f01214d75b5b",
+      "biographySourceRevision": 5,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-tiwna": {
+      "previousGraphFingerprints": [
+        "9e9eda2955f9038a4550efda3e42dd1443599fda316b0de9adc06c254f67bebc"
+      ],
+      "graphFingerprint": "453003e9c5831255543ff2e815141b3152f44e36eb38052d5a82709ba8a9c888",
+      "biographyFingerprint": "d3e3d5ae6fe42b440f38d27009b6028d2ff722b3a405fe82b01a6ef114f0ae22",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-vaeren": {
+      "previousGraphFingerprints": [
+        "524ed2d04e3bd8ad6f2986173a0fdaac59e5142e2fd3ff30ea0dab5d9aa14789"
+      ],
+      "graphFingerprint": "2a8b7aa5c8034943bad5efb3a1f9cf9634058f6192674a900201b88ed44ae944",
+      "biographyFingerprint": "904279ba87fb771710f0ea3f0dcdc0c1e66c0eb2d7f949d227342f361035e231",
+      "biographySourceRevision": 12,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-vangandr": {
+      "previousGraphFingerprints": [
+        "c30b24732c942ca84d40656c379a952db3414e9fb9c8834a62755ee1f085860a"
+      ],
+      "graphFingerprint": "3ef5ce1df79f6455fd02539c5c437b194373871973a38f3b76d43c6094bf0b9a",
+      "biographyFingerprint": "7d44e2941af370f0a3a78700c22f2c679387f33dc914591d74b1280b55107f72",
+      "biographySourceRevision": 3,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-varangr": {
+      "previousGraphFingerprints": [
+        "8c9e210484c163f8e193c7132ba73e0a7e46d5eba896da004685a47927d669b2"
+      ],
+      "graphFingerprint": "42a2b6ed7bf458e3933a42f146b29fb0c9d4122d1f2fb30d3dd18c832b30461e",
+      "biographyFingerprint": "02a99c12c6fcda7350ed1974826762af87cd3e12b0ce054f007f57558fd957b8",
+      "biographySourceRevision": 11,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-wargh": {
+      "previousGraphFingerprints": [
+        "6bed9311621b6aeca98150b71c127919e0376cfda8ac006140072e92cbdfa586"
+      ],
+      "graphFingerprint": "57071ddb160bc94ee9de374e524f0912f53541b497d01746079f01290f55a3d8",
+      "biographyFingerprint": "da15d272f8bb864c8e8aab54bc608163ac95d73bf9ccfc266e00546722ab3c94",
+      "biographySourceRevision": 8,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-wellenschild": {
+      "previousGraphFingerprints": [
+        "ca8d0a35e7e2f04a2f40e6175c85baa01fdc71016ee8600ca6aa21823e745f47"
+      ],
+      "graphFingerprint": "6e45f660fc15089216cd834ea1869cb3fea508613021d3af81d75d2e55e1dcff",
+      "biographyFingerprint": "96041a8968f086e14a5b2ec40a4789d38d45e308296e7801d50f7afce96d4e24",
+      "biographySourceRevision": 6,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-windhueter": {
+      "previousGraphFingerprints": [
+        "20e8322f4dcdfc229d40878733bf5a2999b5bbbe22e35147a19c24318797becb"
+      ],
+      "graphFingerprint": "20e8322f4dcdfc229d40878733bf5a2999b5bbbe22e35147a19c24318797becb",
+      "biographyFingerprint": "42e93c148eaf254eb09c24f08576d5ee57c60b7e7e033a712f288425570b69f7",
+      "biographySourceRevision": 3,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-wolfshorn": {
+      "previousGraphFingerprints": [
+        "5142a6bca7078a6c3d920f99c8fc8772ccc959383298f0129b052236c260a018"
+      ],
+      "graphFingerprint": "534c518536aa4d5a88632feac371b8e85a5e6c691b6afa8f514f435cec72903d",
+      "biographyFingerprint": "937320eff8ccc9fdd4aaf244df2f0b9602c6239e97eda698a79d79a5b355bf77",
+      "biographySourceRevision": 7,
+      "contentVersion": "20261104-lore-fixes-v1"
+    },
+    "haus-wylan": {
+      "previousGraphFingerprints": [],
+      "graphFingerprint": "295be7afad0ca054f6d5781da6a66e671018f8d61d610a415f7cddc9cd60baf4",
+      "biographyFingerprint": "8714c142777645279f9dbbe38351594f2ff493490c8467c3a5cad5c9f89bb235",
+      "biographySourceRevision": 12,
+      "contentVersion": "20261104-lore-fixes-v1"
+    }
+  },
+  "changes": [
+    {
+      "familyId": "haus-gallchobhair",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "birth",
+      "before": "1635",
+      "after": "1610"
+    },
+    {
+      "familyId": "haus-gallchobhair",
+      "collection": "persons",
+      "entityId": "etain-ancient",
+      "field": "birth",
+      "before": "1622",
+      "after": "1612"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "birth",
+      "before": "1635",
+      "after": "1610"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "aonghus-gallchobhair",
+      "field": "notes",
+      "before": "Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Das bereits festgelegte Geburtsjahr 1635 ersetzt die erneute Altangabe 1610.",
+      "after": "Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Die Nutzerkorrektur vom 4. November 2026 gibt den Kinderjahren 1630, 1632 und 1634 Vorrang; dafür wird seine frühere Datierung 1610–1672 wiederhergestellt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "persons",
+      "entityId": "etain-ancient",
+      "field": "birth",
+      "before": "1622",
+      "after": "1612"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wiomar-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-wunaire-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "collection": "parentages",
+      "entityId": "ceardaiocht-parentage-seamus-ceardaiocht",
+      "field": "notes",
+      "before": "Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.",
+      "after": "Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt."
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "collection": "persons",
+      "entityId": "wunbhna-spouse-tsaoir",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-dal-t-saor",
+      "collection": "persons",
+      "entityId": "wunbhna-spouse-tsaoir",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-choinnich",
+      "collection": "persons",
+      "entityId": "maolmhuire-spouse-choinnich",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-choinnich",
+      "collection": "persons",
+      "entityId": "maolmhuire-spouse-choinnich",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-draig",
+      "collection": "persons",
+      "entityId": "sylvia-cenyr",
+      "field": "death",
+      "before": "1719",
+      "after": "1725"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "annegrit-vaeren",
+      "field": "birth",
+      "before": "1548",
+      "after": "1533"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "birth",
+      "before": "1547",
+      "after": "1530"
+    },
+    {
+      "familyId": "haus-vaeren",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "death",
+      "before": "1613",
+      "after": "1599"
+    },
+    {
+      "familyId": "haus-wylan",
+      "collection": "persons",
+      "entityId": "daffyd-neidr",
+      "field": "death",
+      "before": "????",
+      "after": "1608"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "annegrit-vaeren",
+      "field": "birth",
+      "before": "1548",
+      "after": "1533"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "birth",
+      "before": "????",
+      "after": "1530"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "collection": "persons",
+      "entityId": "rhodri-pendrag",
+      "field": "death",
+      "before": "????",
+      "after": "1599"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "daffyd-neidr",
+      "field": "death",
+      "before": "1593",
+      "after": "1608"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "notes",
+      "before": "Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+      "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+    },
+    {
+      "familyId": "haus-arth",
+      "collection": "persons",
+      "entityId": "sylvia-cenyr",
+      "field": "death",
+      "before": "1719",
+      "after": "1725"
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "collection": "persons",
+      "entityId": "ofranton-1599-morforwyn",
+      "field": "death",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "death",
+      "before": "????",
+      "after": ""
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "status",
+      "before": "dead",
+      "after": "alive"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "persons",
+      "entityId": "morgan-dyngwn",
+      "field": "notes",
+      "before": "Die Gegenakte Haus Grael kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.",
+      "after": "Morgan Dyngwn lebt und führt sein Haus als Ritterfürst."
+    },
+    {
+      "familyId": "haus-canwyll",
+      "collection": "persons",
+      "entityId": "cynwrig-canwyll",
+      "field": "birth",
+      "before": "1662",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-canwyll",
+      "collection": "persons",
+      "entityId": "dylis-tiwna",
+      "field": "birth",
+      "before": "1662",
+      "after": "1650"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "morwen-pawen",
+      "field": "birth",
+      "before": "1642",
+      "after": "1632"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "dylis-tiwna",
+      "field": "birth",
+      "before": "1662",
+      "after": "1650"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "collection": "persons",
+      "entityId": "cynwrig-canwyll",
+      "field": "birth",
+      "before": "1662",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-pawen",
+      "collection": "persons",
+      "entityId": "morwen-pawen",
+      "field": "birth",
+      "before": "1642",
+      "after": "1632"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-neidr",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "end",
+      "before": "",
+      "after": "1630"
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "collection": "partnerships",
+      "entityId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "field": "end",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-grael",
+      "collection": "partnerships",
+      "entityId": "marriage-rhonwen-morgan-grael",
+      "field": "status",
+      "before": "widowed",
+      "after": "active"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-aoirghe-morgan",
+      "field": "end",
+      "before": "",
+      "after": "1630"
+    },
+    {
+      "familyId": "haus-dyngwn",
+      "collection": "partnerships",
+      "entityId": "marriage-rhonwen-morgan-grael",
+      "field": "status",
+      "before": "widowed",
+      "after": "active"
+    },
+    {
+      "familyId": "haus-wolfshorn",
+      "collection": "document",
+      "entityId": "",
+      "field": "description",
+      "before": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.",
+      "after": "Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Thanentum Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging."
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-wargh",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-varangr",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-riesentod",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "collection": "partnerships",
+      "entityId": "marriage-kormak-magdis-sturmgeborene",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "persons",
+      "entityId": "kormak-sturmgeborener",
+      "field": "death",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-wellenschild",
+      "collection": "partnerships",
+      "entityId": "marriage-magdis-kormak-wellenschild",
+      "field": "end",
+      "before": "1658",
+      "after": "1666"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "persons",
+      "entityId": "gunnar-grendel",
+      "field": "death",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-grendel",
+      "collection": "partnerships",
+      "entityId": "marriage-hljotrun-gunnar-wargh",
+      "field": "end",
+      "before": "1625",
+      "after": "1631"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "persons",
+      "entityId": "rorik-varangr",
+      "field": "death",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-schattenherz",
+      "collection": "partnerships",
+      "entityId": "marriage-rorik-gisrun-varangr",
+      "field": "end",
+      "before": "1720",
+      "after": "1724"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-feuerherz",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-vangandr",
+      "collection": "persons",
+      "entityId": "annegret",
+      "field": "birth",
+      "before": "1700",
+      "after": "1680"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "sturlaugr-nachtjaeger",
+      "field": "death",
+      "before": "1650",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "persons",
+      "entityId": "ingunn-1614-feuerherz",
+      "field": "death",
+      "before": "1645",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-ingunn-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1651"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "status",
+      "before": "active",
+      "after": "ended"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "collection": "partnerships",
+      "entityId": "marriage-sturlaugr-orka-nachtjaeger",
+      "field": "end",
+      "before": "",
+      "after": "1652"
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "persons",
+      "entityId": "ofranton-1599-morforwyn",
+      "field": "death",
+      "before": "1630",
+      "after": "1633"
+    },
+    {
+      "familyId": "haus-morforwyn-linie-marmue",
+      "collection": "partnerships",
+      "entityId": "marriage-talfamue-ofranton-1599-morforwyn",
+      "field": "end",
+      "before": "1630",
+      "after": "1633"
+    }
+  ],
+  "protectedChildren": [
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "personId": "wiomar-ceardaiocht",
+      "birth": "1630"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "personId": "wunaire-ceardaiocht",
+      "birth": "1632"
+    },
+    {
+      "familyId": "haus-dal-ceardaiocht",
+      "personId": "seamus-ceardaiocht",
+      "birth": "1634"
+    },
+    {
+      "familyId": "haus-draig",
+      "personId": "siana-draig",
+      "birth": "1725"
+    },
+    {
+      "familyId": "haus-neidr",
+      "personId": "prynhawn-neidr",
+      "birth": "1608"
+    },
+    {
+      "familyId": "haus-morforwyn",
+      "personId": "ffeston-morforwyn",
+      "birth": "1633"
+    },
+    {
+      "familyId": "haus-canwyll",
+      "personId": "glesni-canwyll",
+      "birth": "1669"
+    },
+    {
+      "familyId": "haus-tiwna",
+      "personId": "gavin-tiwna",
+      "birth": "1651"
+    },
+    {
+      "familyId": "haus-pendrag",
+      "personId": "gawain-pendragon",
+      "birth": "1551"
+    },
+    {
+      "familyId": "haus-varangr",
+      "personId": "olesja-varangr",
+      "birth": "1723"
+    },
+    {
+      "familyId": "haus-sturmgeborene",
+      "personId": "elinborg-sturmgeborene",
+      "birth": "1665"
+    },
+    {
+      "familyId": "haus-grendel",
+      "personId": "thordis-grendel",
+      "birth": "1630"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "personId": "kjartan-nachtjaeger",
+      "birth": "1648"
+    },
+    {
+      "familyId": "haus-nachtjaeger",
+      "personId": "svandis-nachtjaeger",
+      "birth": "1651"
+    },
+    {
+      "familyId": "haus-vangandr",
+      "personId": "torger-vangandr",
+      "birth": "1700"
+    }
+  ],
+  "preservedCounterpartConflicts": [
+    {
+      "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+      "fields": [
+        "birth",
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-draig",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "????",
+            "death": "????"
+          }
+        },
+        {
+          "familyId": "haus-wyrm",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn Saethwyr",
+          "values": {
+            "birth": "1100",
+            "death": "1177"
+          }
+        },
+        {
+          "familyId": "haus-saethwyr",
+          "personId": "rhianwyn-saethwyr",
+          "name": "Rhianwyn",
+          "values": {
+            "birth": "1099",
+            "death": "1166"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-arth--afal-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-arth",
+          "personId": "afal-arth",
+          "name": "Afal Arth",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gulvar-ragnulf",
+      "fields": [
+        "birth"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-vaeren",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1698"
+          }
+        },
+        {
+          "familyId": "haus-ragnulf",
+          "personId": "gulvar-ragnulf",
+          "name": "Gulvar Ragnulf",
+          "values": {
+            "birth": "1701"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--bylga-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "bylga-wargh",
+          "name": "Bylga Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-kummerherz--hogrand-kummerherz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-kummerherz",
+          "personId": "hogrand-kummerherz",
+          "name": "Hogrand Kummerherz",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hallbjorn-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "hallbjorn-wargh",
+          "name": "Hallbjorn Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--laufey-wellenschild",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-wellenschild",
+          "personId": "laufey-wellenschild",
+          "name": "Laufey Wellenschild",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--olmar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "olmar-wargh",
+          "name": "Olmar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--asahel-gullvig",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-gullvig",
+          "personId": "asahel-gullvig",
+          "name": "Ásahel Gullvig",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wargh--agnar-wargh",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "agnar-wargh",
+          "name": "Agnar Wargh",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ormrun-todbrand",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wargh",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-todbrand",
+          "personId": "ormrun-todbrand",
+          "name": "Ormrún Todbrand",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--kjellfrid-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-silberblut",
+          "personId": "kjellfrid-varangr",
+          "name": "Kjellfrid Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-goldglanz--gulda-goldglanz",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-goldglanz",
+          "personId": "gulda-goldglanz",
+          "name": "Gulda Goldglanz",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--vanadis-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-feuerherz",
+          "personId": "vanadis-varangr",
+          "name": "Vanadis Varangr",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-varangr--hadvar-varangr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-varangr",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-sturmgeborene",
+          "personId": "hadvar-varangr",
+          "name": "Hadvar Varangr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-helgr--leikny-helgr",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-helgr",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "dead"
+          }
+        },
+        {
+          "familyId": "haus-hrafn",
+          "personId": "leikny-helgr",
+          "name": "Leikny Helgr",
+          "values": {
+            "status": "alive"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ljotunn-sterkr",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-graumahne",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "female"
+          }
+        },
+        {
+          "familyId": "haus-sterkr",
+          "personId": "ljotunn-sterkr",
+          "name": "Ljotunn Sterkr",
+          "values": {
+            "sex": "male"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-wylan--rhun-wylan",
+      "fields": [
+        "death"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1182"
+          }
+        },
+        {
+          "familyId": "haus-illewod",
+          "personId": "rhun-wylan",
+          "name": "Rhun Wylan",
+          "values": {
+            "death": "1172"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-pendrag--iesin-pendrag",
+      "fields": [
+        "sex"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "male"
+          }
+        },
+        {
+          "familyId": "haus-pendrag",
+          "personId": "iesin-pendrag",
+          "name": "Iesin Pendrag",
+          "values": {
+            "sex": "female"
+          }
+        }
+      ]
+    },
+    {
+      "worldPersonId": "person--haus-arth--afanen-1660-arth",
+      "fields": [
+        "status"
+      ],
+      "entries": [
+        {
+          "familyId": "haus-arth",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "alive"
+          }
+        },
+        {
+          "familyId": "haus-crafanc",
+          "personId": "afanen-1660-arth",
+          "name": "Afanen Arth",
+          "values": {
+            "status": "dead"
+          }
+        }
+      ]
+    }
+  ],
+  "previousRevisions": {
+    "haus-draig": 15,
+    "haus-wolfshorn": 6,
+    "haus-vaeren": 11,
+    "haus-wargh": 7,
+    "haus-varangr": 10,
+    "haus-riesentod": 7,
+    "haus-sturmgeborene": 4,
+    "haus-wellenschild": 5,
+    "haus-grendel": 5,
+    "haus-blutklinge": 2,
+    "haus-windhueter": 2,
+    "haus-schattenherz": 7,
+    "haus-feuerherz": 5,
+    "haus-vangandr": 2,
+    "haus-nachtjaeger": 3,
+    "haus-gallchobhair": 12,
+    "haus-dal-ceardaiocht": 6,
+    "haus-choinnich": 7,
+    "haus-dal-t-saor": 5,
+    "haus-wylan": 11,
+    "haus-pendrag": 7,
+    "haus-neidr": 10,
+    "haus-arth": 18,
+    "haus-morforwyn": 6,
+    "haus-grael": 2,
+    "haus-dyngwn": 6,
+    "haus-canwyll": 4,
+    "haus-tiwna": 5,
+    "haus-pawen": 5,
+    "haus-morforwyn-linie-marmue": 6
+  }
+}

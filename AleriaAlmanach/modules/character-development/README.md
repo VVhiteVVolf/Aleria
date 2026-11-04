@@ -1,5 +1,28 @@
 # Individuelle Charakterentwicklung
 
+## Balanceprüfung vom 3. November 2026
+
+Die vollständige [Prüfmatrix aller 185 Traits](../../docs/combat/TRAIT_BALANCE_2026-11-03.md)
+dokumentiert 65 überarbeitete und 120 bewusst unveränderte Definitionen. Sie
+ersetzt die früheren Werte in den unten verlinkten historischen Prüfberichten.
+Marotten und gewöhnliche Begabungen verwenden kleine Boni und Mali von meist
+einem Punkt. Neugier gibt +1 Nachforschungen und −1 GES-Rettung. Fachausbildung
+und Expertise bleiben eigene Entscheidungen. Phobien erschweren passende
+Rettungen, ohne die körperliche Schadensanfälligkeit zu verdoppeln.
+
+Glückspilz würfelt bei Angriff, Probe und Attributsrettung jede natürliche 1
+einmal neu und gibt +1 auf Attributsrettungen. Pechvogel erweitert kritische
+Fehlschläge auf natürliche 1–3 und gibt −1 auf Attributsrettungen. Der gemeinsame
+Würfelvertrag und seine Belege gehören in `combat/combat-natural-roll-policy.js`.
+Eiserne Konzentration verwendet ausschließlich `on-concentration-check`.
+
+`combat/combat-encounter-start-effects.js` hält neue Kampfstartbelege für eigene
+temporäre TP. Immer kampfbereit und aktive Self-Aura-Quellen geben beim ersten
+Eintritt in einen Kampf den stärksten passenden Vorrat; mehrere Quellen werden
+nicht addiert. Wiederaufnahme, erneuter Beitritt und Neuladen füllen nichts auf.
+Historische Kampfbeginnbelege ohne `startApplications` erhalten keine neue Wirkung.
+Aktuelle TP und andere Ressourcen gehören nicht zu diesem Effekt.
+
 Autorenauftrag vom 2. November 2026. Der bestehende Stufenassistent berechnet
 jetzt eine frei gewählte Ziel-Gesamtstufe bis 30, einschließlich mehrerer Stufen
 in einem Schritt. Auch auf derselben Stufe lassen sich Ausbildung, Traits,
@@ -88,8 +111,14 @@ normale Traits aus `development-extra-traits.js` ein. `development-ui.js` besitz
 Shopdarstellung und Auswahlverwaltung. Die Dialogintegration verwendet die
 vorhandenen delegierten Listener. Eigene Stile: `styles/character-development.css`.
 
-Der Kaufkatalog enthält aktuell 193 tatsächlich freigegebene Techniken. 949
-Entwurfsangebote werden nicht automatisch zu spielbaren Attacken umgeschrieben.
+Der Kaufkatalog enthält zum Prüfstand vom 3. November 2026 **1.028
+Klassenangebote für 682 unterschiedliche bestätigte Techniken**: 724 Angebote
+für 378 Drachentanz-Techniken und 304 Angebote für 304 Sirenentanz-Techniken.
+Eine gemeinsam gelehrte Technik kann in mehreren Klassen angeboten werden;
+derselbe Charakter erlernt und bezahlt ihre Technikkennung weiterhin nur einmal.
+Die übrigen **303 Huskarl-Entwürfe** des insgesamt 985 Techniken umfassenden
+Autorenkatalogs bleiben vom Kauf ausgeschlossen und werden nicht automatisch
+zu spielbaren Attacken umgeschrieben.
 Klassen ohne freigegebenes Angebot erhalten einen sichtbaren Hinweis; persönliche
 Attacken können weiterhin einzeln ausgearbeitet werden. Eine spätere Rücknahme
 und Wiederaufnahme einer bezahlten Technik erhält den ursprünglichen Kaufbeleg.
@@ -195,7 +224,8 @@ Klasse, Vorfahren und aktuelle Ressourcen bleiben erhalten.
 Myriad Draig (Mutter Afallith als Succubus) und Aradin Hyrmgarthr (vampirische
 Clangeschichte) stehen nach ausdrücklicher Autorenfestlegung als Beispiele bei
 den jeweiligen Linien. Das dokumentiert den Kontext und legt ihnen keinen neuen
-Kampfbogen an. Die bisherigen 104 Katalogdefinitionen bleiben unverändert.
+Kampfbogen an. Die damalige Blutträger-Erweiterung ließ die bisherigen 104
+Definitionen erhalten; spätere Änderungen stehen in der Balanceprüfung oben.
 
 Alle zehn Blutträger haben eigene kreisförmige Comicicons. Prompts und Quellen:
 `diagnostics/blood-carriers-20261102/`; Werte, Bestiariumbelege und Prüfungen im
@@ -264,8 +294,9 @@ nach allen aktiven Effekten, ohne gespeicherte Grundwerte zu überschreiben.
 Eine Obergrenze begrenzt auch freie Modifikatoren. Der Bogen und sein Radar
 zeigen die wirksamen Werte; die Grundwerte bleiben bearbeitbar und erhalten.
 Fertigkeiten, Rettungswürfe, Zauber, Initiative und KI-Daten nutzen dieselbe
-Attributsberechnung. Genie gibt zusätzlich zu seinen sechs Attributspunkten
-einen eigenen Bonus von +1 auf Fertigkeitsproben.
+Attributsberechnung. Genie gibt +2 INT-Attributspunkte und +1 auf Nachforschungen.
+Eidetisches Gedächtnis unterstützt bereits bekanntes Wissen mit +2 Geschichte
+und je +1 Arkane Kunde, Naturkunde und Religion; es erhöht keine allgemeinen Attribute.
 
 `development-trait-groups.js` kapselt die bereits bewährte Auswahl alternativer
 Ausprägungen gemeinsam für Gesundheit und psychologische Prägungen. Nur die

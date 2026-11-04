@@ -1,5 +1,6 @@
 import {COLORS, TEMPLATES} from '../templates/catalog.mjs';
 import {imageSource} from '../ui/html.mjs';
+import {isRequestModule,parseRequestMetadata} from '../requests/request-model.mjs';
 export const FORMAT = 'ideenwerk-project';
 export const VERSION = 1;
 export const MAX_FILE_BYTES = 32 * 1024 * 1024;
@@ -48,7 +49,8 @@ export function parseModule(raw) {
     edgePairs.add(pair);
     return {id:id(edge.id),from:id(edge.from),to:id(edge.to),label:string(edge.label,'Verbindungstext',120)};
   }));
-  return {id:id(raw.id),type:raw.type,title:string(raw.title,'Modultitel',200),subtitle:string(raw.subtitle,'Untertitel',500),color:color(raw.color),status:raw.status,tags:string(raw.tags,'Schlagworte',500),collapsed:raw.collapsed === true,x:position(raw.x,3500),y:position(raw.y,2500),pages,mindmap:{nodes,edges}};
+  return {id:id(raw.id),type:raw.type,title:string(raw.title,'Modultitel',200),subtitle:string(raw.subtitle,'Untertitel',500),color:color(raw.color),status:raw.status,tags:string(raw.tags,'Schlagworte',500),collapsed:raw.collapsed === true,x:position(raw.x,3500),y:position(raw.y,2500),pages,mindmap:{nodes,edges},
+    ...(isRequestModule(raw)?{requestMeta:parseRequestMetadata(raw.requestMeta,raw.type)}:{})};
 }
 export function parseWorkspace(raw) {
   if (!object(raw) || raw.format !== FORMAT || raw.version !== VERSION) fail('Diese Datei gehört nicht zur unterstützten Ideenwerk-Version 1.');

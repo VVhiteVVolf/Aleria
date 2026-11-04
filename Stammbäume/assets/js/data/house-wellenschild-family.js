@@ -8,7 +8,7 @@ import {
   createWardAwayBranch
 } from './family-record-builders.js';
 import { HOUSE_WELLENSCHILD_PORTRAITS } from './house-wellenschild-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import {
   KRAEHENMOOR_HOUSE_EMBLEMS
 } from './kraehenmoor-house-profiles.js';
@@ -309,7 +309,7 @@ export const HOUSE_WELLENSCHILD_FAMILY = Object.freeze({
     awayWoman('magdis-wellenschild', 'Magdis Wellenschild', '1625', '1704', 'Clan Sturmgeborene'),
     person('othrik-wellenschild', 'Othrik Wellenschild', 'male', '1648', '1704'),
     awayWoman('petka-wellenschild', 'Petka Wellenschild', '1656', '1730', 'Clan Kummerherz'),
-    spouse('kormak-sturmgeborener', 'Kormak Sturmgeborener', 'male', '1625', '1658', 'house-sturmgeborene'),
+    spouse('kormak-sturmgeborener', 'Kormak Sturmgeborener', 'male', '1625', '1666', 'house-sturmgeborene'),
     spouse('cynehild-frostauge', 'Cynehild Frostauge', 'female', '1650', '1709', 'house-frostauge'),
     spouse('finnleik-kummerherz', 'Finnleik Kummerherz', 'male', '1656', '1724', 'house-kummerherz'),
 
@@ -353,7 +353,7 @@ export const HOUSE_WELLENSCHILD_FAMILY = Object.freeze({
     directlyAboveOnlyChild('marriage-yrska-thorin-wellenschild', 'magdis-wellenschild', { status: 'ended', end: '1688' }),
     partnership('marriage-kalfur-kenna-wellenschild', { status: 'ended', end: '1677' }),
     partnership('marriage-portha-hakon-wellenschild', { status: 'ended', end: '1681' }),
-    partnership('marriage-magdis-kormak-wellenschild', { status: 'ended', end: '1658' }),
+    partnership('marriage-magdis-kormak-wellenschild', { status: 'ended', end: '1666' }),
     partnership('marriage-othrik-cynehild-wellenschild', { status: 'ended', end: '1704' }),
     partnership('marriage-finnleik-petka-kummerherz', { status: 'ended', end: '1724' }),
     partnership('marriage-tjelvar-ciara-wellenschild'),

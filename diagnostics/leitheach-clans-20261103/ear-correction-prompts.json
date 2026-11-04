@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "reason": "User correction: no elves or pointed elf ears; human ear anatomy for all human/albic people.",
+  "prompts": [
+    {
+      "id": "haus-suileach",
+      "slug": "suileach",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target. Make ONLY this anatomical correction: replace every visible long pointed elf ear with an ordinary, anatomically HUMAN ear, normal small size, a rounded outer helix and soft rounded earlobe. No pointed tips, no elongated sideways ear, no elf anatomy. People called Alben in this setting have human ears; elves do not exist here. Preserve the same character identity, face, expression, age, hair, beard, skin tone, head angle and proportions. Preserve every other detail of the helmet, armor or civilian clothing, heraldry, tartan, cloak, weapons, basket, hands, pose, color palette, matte pigment texture and thin painted outlines. Do not redesign or regenerate the character's equipment. Image 2 is strict existing art-style reference only; it does not change the target's costume. Keep the same complete 2:3 full-body composition and genuinely transparent PNG background, including gaps, without shadows, halo, scenery or text. The only visible change should be normal rounded HUMAN ears.",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/references/haus-suileach/krieger-generated-v1.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "haus-dal-t-saor",
+      "slug": "dal-t-saor",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target. Make ONLY this anatomical correction: replace every visible long pointed elf ear with an ordinary, anatomically HUMAN ear, normal small size, a rounded outer helix and soft rounded earlobe. No pointed tips, no elongated sideways ear, no elf anatomy. People called Alben in this setting have human ears; elves do not exist here. Preserve the same character identity, face, expression, age, hair, beard, skin tone, head angle and proportions. Preserve every other detail of the helmet, armor or civilian clothing, heraldry, tartan, cloak, weapons, basket, hands, pose, color palette, matte pigment texture and thin painted outlines. Do not redesign or regenerate the character's equipment. Image 2 is strict existing art-style reference only; it does not change the target's costume. Keep the same complete 2:3 full-body composition and genuinely transparent PNG background, including gaps, without shadows, halo, scenery or text. The only visible change should be normal rounded HUMAN ears.",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/references/haus-dal-t-saor/krieger-generated-v1.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "haus-gruenhand",
+      "slug": "gruenhand",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target. Make ONLY this anatomical correction: replace every visible long pointed elf ear with an ordinary, anatomically HUMAN ear, normal small size, a rounded outer helix and soft rounded earlobe. No pointed tips, no elongated sideways ear, no elf anatomy. People called Alben in this setting have human ears; elves do not exist here. Preserve the same character identity, face, expression, age, hair, beard, skin tone, head angle and proportions. Preserve every other detail of the helmet, armor or civilian clothing, heraldry, tartan, cloak, weapons, basket, hands, pose, color palette, matte pigment texture and thin painted outlines. Do not redesign or regenerate the character's equipment. Image 2 is strict existing art-style reference only; it does not change the target's costume. Keep the same complete 2:3 full-body composition and genuinely transparent PNG background, including gaps, without shadows, halo, scenery or text. The only visible change should be normal rounded HUMAN ears.",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/references/haus-gruenhand/krieger-generated-v1.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    }
+  ]
+}

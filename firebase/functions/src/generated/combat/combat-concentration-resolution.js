@@ -1,7 +1,9 @@
 import { getSavingThrowTotal, resolveSavingThrowRollMode } from './combat-profile-model.js?v=20260928-equipment-art-v4';
+import { rollProfileD20, naturalRollReceipt, succeedsProfileSavingThrow } from './combat-natural-roll-policy.js';
 import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
 import { getConditionConcentrationOwnerId } from './combat-condition-lifecycle.js';
 import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
+import { withCurrentCombatPermissionState } from './combat-action-permission.js';
 
 // Resolve one affected participant, including the acting figure when a health
 // cost or reflected effect hits them. The caller owns the final state snapshots.
@@ -23,7 +25,8 @@ export async function resolveCombatConcentration({ profile, counterpart, hitPoin
     })) : ruleSources;
     const applications = collectApplicableCombatRules({ phase: 'on-concentration-check', actionKind, profileActionId,
       sources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
-      state: { actorProfile: counterpart, targetProfile: profile, ...attack, damage, concentration: before } });
+      state: { actorProfile: counterpart, targetProfile: profile, ...attack, damage, concentration: before,
+        reactionProfiles: [withCurrentCombatPermissionState(profile, hitPoints, conditions), ...(context.reactionProfiles || [])] } });
     markCombatRuleApplications(applications, usedRuleFrequencyKeys);
     const effects = mergeCombatRuleEffects(applications);
     result.applications = applications;
@@ -33,13 +36,13 @@ export async function resolveCombatConcentration({ profile, counterpart, hitPoin
         ? { ...effect, target: effect.target === 'self' ? 'target' : 'self' } : effect));
     const dc = Math.max(10, Math.floor(damage / 2));
     const modifier = getSavingThrowTotal(profile, 'constitution') + Number(effects.savingThrowModifier || 0);
-    const roll = await dice.rollSavingThrow({ modifier,
+    const roll = await rollProfileD20(dice, 'rollSavingThrow', { modifier,
       rollMode: resolveSavingThrowRollMode(profile, 'constitution', effects.rollMode || 'normal'),
-      actorName: counterpart.name, targetName: profile.name, container });
-    retained = Number(roll.total) >= dc;
+      actorName: counterpart.name, targetName: profile.name, container }, profile);
+    retained = succeedsProfileSavingThrow(roll, dc);
     if (effects.outcome === 'force-save-success') retained = true;
     if (effects.outcome === 'force-save-failure') retained = false;
-    result.saves.push({ type: 'concentration', actorId: profile.characterId, attributeKey: 'constitution', dc,
+    result.saves.push({ ...naturalRollReceipt(roll), type: 'concentration', actorId: profile.characterId, attributeKey: 'constitution', dc,
       naturalRoll: Number(roll.natural), diceResults: Array.isArray(roll.dice) ? roll.dice.slice() : [],
       keptDice: Array.isArray(roll.keptDice) ? roll.keptDice.slice() : [], modifier, total: Number(roll.total),
       succeeded: retained, rollId: roll.id || '', visualMode: roll.visualMode || 'text' });

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "tool": "built-in image_gen.imagegen",
+  "independentGenerationCalls": 7,
+  "originalsIndividuallyViewed": ["prototype-01", "prototype-02", "prototype-03", "prototype-04", "prototype-05", "prototype-06", "prototype-07"],
+  "productionContactSheetsViewed": ["contact-light.jpg", "contact-dark.jpg"],
+  "findings": [
+    "Sieben eigenständige junge erwachsene menschliche Figuren mit unterschiedlichen römisch-kampanischen beziehungsweise spätrömischen Helmen, Rüstungen und Stoffen.",
+    "01: Schwert und vollständiger Turmschild; 02: vollständige Lanze; 03: vollständiges Equo mit vier Hufen und Reiterschwert.",
+    "04: Speer in der Hand und sichtbarer Rückenköcher; 05: Säbel und Rückenköcher; 06: schlichte Milizausrüstung; 07: Säbel und Leier.",
+    "Die gemeinsame Alpha-Aufbereitung entfernt den im Generatorbild vorhandenen äußeren Farbdunst. Offene Figurenzwischenräume bleiben transparent; das Original-RGB bleibt unverändert.",
+    "Bei 01, 02, 03, 04 und 06 meldet die technische Prüfung knappe transparente Ränder von 8 bis 14 Pixeln. Sämtliche Spitzen, Füße und Hufe sind vollständig sichtbar; kein Motiv berührt die Leinwandkante."
+  ],
+  "requiredCorrections": [],
+  "technicalEvidence": ["warriors/audit.json", "audit.json", "Vorschau/Leukonia/assets/warriors/manifest.json", "Vorschau/Leukonia/sources/asset-receipts.json"]
+}

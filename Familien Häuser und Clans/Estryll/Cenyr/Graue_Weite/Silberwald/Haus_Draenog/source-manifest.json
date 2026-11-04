@@ -1,0 +1,46 @@
+{
+  "source": {
+    "attachmentId": "1ebdb645-0558-445f-865d-944dea0cb1ed",
+    "file": "animexx-source-2026-11-03.html",
+    "sha256": "e7a7757315de357817cdd098f1dc8cd43f0e467aae4cd36edbb704ea525b7af3"
+  },
+  "genealogy": {
+    "imported": false,
+    "ignoredSourceSections": [
+      "Hierarchie",
+      "Hierachie",
+      "Familie",
+      "Stammbaum",
+      "Hof"
+    ],
+    "familyId": "haus-draenog",
+    "existingGraphUnchanged": true
+  },
+  "authority": {
+    "familyId": "haus-draenog",
+    "profileSource": "Stammbäume/assets/js/data/graue-weite-house-profiles.js",
+    "baselineSourceRevision": 2,
+    "currentSeat": "Llanforwyn",
+    "currentRankId": "barony"
+  },
+  "images": [
+    {
+      "role": "Hausdarstellung",
+      "url": "https://i.imgur.com/H8IiLKu.png",
+      "localPath": "assets/hausdarstellung-original.png",
+      "status": "downloaded-and-visually-reviewed",
+      "sha256": "e4292a8e53ffeae49c58f5225f2782a158439b7be3a22c6924e3ce7d06a6c659",
+      "note": "Passendes vorhandenes Original vom Hauptagenten tatsächlich angesehen und unverändert übernommen."
+    }
+  ],
+  "decisions": [
+    "Aktuelle Hausprofile, bestehende Familien-IDs, tatsächliche Orte und Ränge bestimmen die Seite. Die hochgeladene HTML-Datei ergänzt nur widerspruchsfreie beschreibende Hausüberlieferung.",
+    "Alle genealogischen Abschnitte einschließlich Familie, Hierarchie, Hierachie, Stammbaum sowie alte Hof-, Erb- und Kadettentabellen werden vollständig ignoriert. Keine Personen, Beziehungen, Lebenszahlen oder Amtsfolgen daraus importiert.",
+    "Alle Militärstatistiken, Truppen- und Flottenmengen sowie militärischen Größenvergleiche werden verworfen. Die Militärprofilfelder sind leer und die Gruppe verborgen.",
+    "Benannte Gründer-, Oberhaupt- und Erbkarten verwenden ausschließlich bestehende Personen mit belegten passenden Rollen. Unbekannte Personen werden nicht ausformuliert.",
+    "Die passende Originalfigur bleibt bytegenau erhalten. Aktuelle Registerwappen werden nicht durch ältere Motivvarianten ersetzt. Es werden keine neuen Bilder erzeugt.",
+    "Der historische Gründer Mathonwy und der heutige gleichnamige Erbe bleiben getrennt. Keine unsichere Erzpatriarch-Identität ergänzt.",
+    "Die drei als gear bezeichneten Zusatzbilder sind alte Wappenvarianten und bleiben Diagnoseoriginale; keine aktiven Itembilder oder Wappenersetzungen. Der als Werte fehlbeschriftete Hofblock wird ignoriert.",
+    "Gottheitsvarianten folgen den aktuellen Religionen-Dateien; Sylvanaeth/Orinor/Tharnor/Aelrith sind belegte avallornische Namen. Nimués aktuelles Epithet lautet Dame des Sees."
+  ]
+}

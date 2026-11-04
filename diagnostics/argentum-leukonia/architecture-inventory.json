@@ -1,0 +1,2175 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-03T16:40:22.751747+00:00",
+  "scope": "Diagnostic architecture and source inventory; this JSON records the inventory phase. Separate local UI implementation was subsequently authorized, but this report does not perform source or runtime mutations.",
+  "authorization": {
+    "runtimeChanges": false,
+    "imageGeneration": false,
+    "deployment": false,
+    "push": false,
+    "newSitesProject": false,
+    "currentDeployStop": "AGENTS.md: Nutzeranweisung vom 3. November 2026: Okay erstmal keine Deploys mehr!",
+    "scope": "Initial diagnostic inventory only. UI implementation was subsequently assigned separately; no deployment is authorized."
+  },
+  "instructions": {
+    "repoAgents": "AGENTS.md",
+    "nestedAgentsFoundUnderVorschau": [],
+    "repoTemplate": "Vorschau/COUNTRY_PREPARATION_TEMPLATE.md",
+    "skill": "C:/Users/fhg_r/.codex/skills/artifact-template-aleria-laender-vorbereitungsseiten/SKILL.md",
+    "artifactConfig": "C:/Users/fhg_r/.codex/skills/artifact-template-aleria-laender-vorbereitungsseiten/artifact-template.json",
+    "retainedReference": "C:/Users/fhg_r/.codex/skills/artifact-template-aleria-laender-vorbereitungsseiten/assets/source/COUNTRY_PREPARATION_TEMPLATE.md",
+    "application": "Use the existing Aleria repository and shared modules. User scope and AGENTS deploy stop override generic skill steps for creating a new Site and deployment."
+  },
+  "sourceInventory": {
+    "directory": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum",
+    "totalFiles": 31,
+    "pngFiles": 31,
+    "mapFiles": 5,
+    "emblemFiles": 26,
+    "uniqueFileHashes": 29,
+    "uniqueEmblemHashes": 24,
+    "existingWarriorImages": 0,
+    "textDocumentsInSuppliedFolder": 0,
+    "groupCounts": {
+      "Provinz Aldervan": 18,
+      "Tirnara Provinz": 10
+    },
+    "familyFilenameLabels": {
+      "Provinz Aldervan": [
+        "Afronia",
+        "Avidius",
+        "Bruttia",
+        "Caepo",
+        "Cerunia",
+        "Faleria",
+        "Flamen",
+        "Maborel",
+        "Pullo",
+        "Rinia",
+        "Stalitia",
+        "Sylvian",
+        "Syx",
+        "Umbranox",
+        "Vineben",
+        "Vulpin"
+      ],
+      "Tirnara Provinz": [
+        "Apinia",
+        "Bolar",
+        "Lex",
+        "Orania",
+        "Pelagia",
+        "Tremelia"
+      ]
+    },
+    "filenameLabelStatus": "Only supplied labels, not proof of rank, current residence, archonate ownership or final naming.",
+    "repeatedCommonLabels": [
+      "Kaiserreich Argentum",
+      "Mede Wappen"
+    ],
+    "byteIdenticalDuplicateGroups": [
+      {
+        "sha256": "e52e021882e1fa9a1551668d047235947b7b53b537b5c581ce61642c01e48c30",
+        "files": [
+          "Provinz Aldervan/Kaiserreich Argentum.png",
+          "Tirnara Provinz/Kaiserreich Argentum.png"
+        ]
+      },
+      {
+        "sha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b",
+        "files": [
+          "Provinz Aldervan/Mede Wappen.png",
+          "Tirnara Provinz/Mede Wappen.png"
+        ]
+      }
+    ],
+    "files": [
+      {
+        "relativePath": "Kaiserreich (Aldervan Portion).png",
+        "filenameLabel": "Kaiserreich (Aldervan Portion)",
+        "sizeBytes": 3214744,
+        "sha256": "da2ec22fc43b63a57734753149cf6209d0f02d83056d27bb834dd99f0370dc31",
+        "dimensions": [
+          1105,
+          1203
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Kaiserreich (Inselgruppe).png",
+        "filenameLabel": "Kaiserreich (Inselgruppe)",
+        "sizeBytes": 3219340,
+        "sha256": "849616c2bb0627c3fe8d699c0be32a517e3092453ed988bc2f95cbdf22b928b0",
+        "dimensions": [
+          1365,
+          1196
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Kaiserreich (Tirnara Portion).png",
+        "filenameLabel": "Kaiserreich (Tirnara Portion)",
+        "sizeBytes": 2456454,
+        "sha256": "44d534cc1f1d37402bc954d23caa2685f5cc7b5450244079ebf3c9525e69e2a2",
+        "dimensions": [
+          1102,
+          909
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Afronia.png",
+        "filenameLabel": "Afronia",
+        "sizeBytes": 243096,
+        "sha256": "639eb9bb49c87e4962cd422693bcb759704cd79e8c9d7e8dd1e05d521a71a337",
+        "dimensions": [
+          401,
+          398
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Avidius.png",
+        "filenameLabel": "Avidius",
+        "sizeBytes": 390174,
+        "sha256": "f6ee3780c5855b014324bd6b11a1c704507564a9b786882be7d3abedd3b3eb31",
+        "dimensions": [
+          424,
+          427
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Bruttia.png",
+        "filenameLabel": "Bruttia",
+        "sizeBytes": 272535,
+        "sha256": "46b5532019c92fbaceb0d69b6aca103f1051d2ae7513e1a31306a79a4436725d",
+        "dimensions": [
+          449,
+          447
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Caepo.png",
+        "filenameLabel": "Caepo",
+        "sizeBytes": 337849,
+        "sha256": "b1c3e56fee30cee0327dc1758632f67092525368ae62352adc8d21d677c90f02",
+        "dimensions": [
+          420,
+          417
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Cerunia.png",
+        "filenameLabel": "Cerunia",
+        "sizeBytes": 319301,
+        "sha256": "c1335b67d4e7c4e6a1be5363764ebac4adb7e08eb290b6450fbf27c3ce5411b5",
+        "dimensions": [
+          435,
+          440
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Faleria.png",
+        "filenameLabel": "Faleria",
+        "sizeBytes": 340003,
+        "sha256": "44d897a52574c94f762bfa42b713f50432baeef8b114d75ea5d4424ada48ecc4",
+        "dimensions": [
+          434,
+          428
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Flamen.png",
+        "filenameLabel": "Flamen",
+        "sizeBytes": 358361,
+        "sha256": "4dd9baf98bfac345c43cac254f9449c5166275b2bcf2351723facfe4a58db5f1",
+        "dimensions": [
+          453,
+          451
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Kaiserreich Argentum.png",
+        "filenameLabel": "Kaiserreich Argentum",
+        "sizeBytes": 350677,
+        "sha256": "e52e021882e1fa9a1551668d047235947b7b53b537b5c581ce61642c01e48c30",
+        "dimensions": [
+          412,
+          413
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Maborel.png",
+        "filenameLabel": "Maborel",
+        "sizeBytes": 349429,
+        "sha256": "545e8b980c82b34c44a8de7500e73b3c65f97f559a58a85dae840d4ca91dd934",
+        "dimensions": [
+          437,
+          441
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Mede Wappen.png",
+        "filenameLabel": "Mede Wappen",
+        "sizeBytes": 297271,
+        "sha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b",
+        "dimensions": [
+          390,
+          387
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Pullo.png",
+        "filenameLabel": "Pullo",
+        "sizeBytes": 346641,
+        "sha256": "7ddb07d8ad79edf12e46718e19b92e75be8734cf951a9b57facd6899cf49444a",
+        "dimensions": [
+          436,
+          435
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Rinia.png",
+        "filenameLabel": "Rinia",
+        "sizeBytes": 1171721,
+        "sha256": "c20eb1c2471c63342affea9f3bfc7aeae02f4bba1081483905ababa717720e81",
+        "dimensions": [
+          831,
+          829
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Stalitia.png",
+        "filenameLabel": "Stalitia",
+        "sizeBytes": 191154,
+        "sha256": "4221e715641e166d7570ff25ded1febfd35e9fec6d283ec44da9b813537d86bf",
+        "dimensions": [
+          441,
+          440
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Sylvian.png",
+        "filenameLabel": "Sylvian",
+        "sizeBytes": 434142,
+        "sha256": "d95c4a756ab686818859c490d0f29ac0d0967a76379c0e9194ca525eaca6ecd5",
+        "dimensions": [
+          455,
+          454
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Syx.png",
+        "filenameLabel": "Syx",
+        "sizeBytes": 279552,
+        "sha256": "2c878d128b0387f8561889b211c30b47ef81900c4419286bfc3c5fb552c97ad7",
+        "dimensions": [
+          375,
+          375
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Umbranox.png",
+        "filenameLabel": "Umbranox",
+        "sizeBytes": 359767,
+        "sha256": "70a70cbbf024f0fbe0d414a117d0cc287fa2b831c6a55ac9f88c245bb2df2785",
+        "dimensions": [
+          438,
+          442
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Vineben.png",
+        "filenameLabel": "Vineben",
+        "sizeBytes": 375482,
+        "sha256": "c41db74cde245d0627d9b9d44576f9d456b53bb76bf20c3ab66d1340ebca57b3",
+        "dimensions": [
+          447,
+          446
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Provinz Aldervan/Vulpin.png",
+        "filenameLabel": "Vulpin",
+        "sizeBytes": 196426,
+        "sha256": "6a22d6261232e64b80a6d4dd310745f68975a92ccf024e4b985aa55a666cf76e",
+        "dimensions": [
+          351,
+          348
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Apinia.png",
+        "filenameLabel": "Apinia",
+        "sizeBytes": 434156,
+        "sha256": "d14b070d58a9ad10cc286a8d1388147378db604d4cb49c1066bdedbfeddf56c4",
+        "dimensions": [
+          500,
+          500
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Bolar.png",
+        "filenameLabel": "Bolar",
+        "sizeBytes": 389341,
+        "sha256": "7e690fdf9cd91688e470784fdcb306746a3dc907a85b280dbc69c2258e6b0cf2",
+        "dimensions": [
+          478,
+          473
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Kaiserreich (Tirnara Normal).png",
+        "filenameLabel": "Kaiserreich (Tirnara Normal)",
+        "sizeBytes": 87503540,
+        "sha256": "c4780e7e6bc4930a93ff61e42759390c07eb17c7c5b916436d3d5719edbee663",
+        "dimensions": [
+          8192,
+          4698
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Kaiserreich (Tirnara Portion).png",
+        "filenameLabel": "Kaiserreich (Tirnara Portion)",
+        "sizeBytes": 80809303,
+        "sha256": "4f3e52b26c958619f2928fa20167bded9cef01833e51962e2d7afb259eef6efa",
+        "dimensions": [
+          8192,
+          4698
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Kaiserreich Argentum.png",
+        "filenameLabel": "Kaiserreich Argentum",
+        "sizeBytes": 350677,
+        "sha256": "e52e021882e1fa9a1551668d047235947b7b53b537b5c581ce61642c01e48c30",
+        "dimensions": [
+          412,
+          413
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Lex.png",
+        "filenameLabel": "Lex",
+        "sizeBytes": 235255,
+        "sha256": "28701760f7d8b33edf3f2da7147ddf15a9c19573b98fe9214d7bab1eab58ee87",
+        "dimensions": [
+          396,
+          397
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Mede Wappen.png",
+        "filenameLabel": "Mede Wappen",
+        "sizeBytes": 297271,
+        "sha256": "da54f31717ad5d77ceaca1e5ad807a0b87a707453907943c0bbc6a0ba382d57b",
+        "dimensions": [
+          390,
+          387
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Orania.png",
+        "filenameLabel": "Orania",
+        "sizeBytes": 225243,
+        "sha256": "c5e75f74a1784ab2e1096d9337e48bf45cb3c378ee4d9968e5a5928f88cee0d0",
+        "dimensions": [
+          355,
+          359
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Pelagia.png",
+        "filenameLabel": "Pelagia",
+        "sizeBytes": 424975,
+        "sha256": "e8757031be3ea3b067df14c14cfbd5f50d8b48be6d3699b333339d7aa08561cb",
+        "dimensions": [
+          454,
+          454
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Tremelia.png",
+        "filenameLabel": "Tremelia",
+        "sizeBytes": 361260,
+        "sha256": "0bf67444df015150e4c38e0b78f2313e4b79697cdda087ca8e811d24537ab11b",
+        "dimensions": [
+          448,
+          448
+        ],
+        "mode": "RGBA",
+        "kind": "supplied-emblem",
+        "sourceOnly": true
+      }
+    ]
+  },
+  "requestSource": {
+    "file": "Vorschau/Leukonia/sources/user-request-2026-11-03.txt",
+    "sha256": "affb0c98cdd5b7f6f8262979077f864881260269b4c0d8be79854e9285c8997a",
+    "type": "Full editorial reading of latest user request, not a verbatim transcript"
+  },
+  "confirmedRequestContext": {
+    "realm": "Kaiserreich Argentum",
+    "realmAlias": "Silbernes Kaiserreich",
+    "initialWorkingProvince": "Leukonia",
+    "provinces": [
+      "Leukonia",
+      "Silverant",
+      "Calidaria"
+    ],
+    "largeProvinces": 3,
+    "proconsulSeats": 3,
+    "peoples": [
+      "Albath",
+      "Argonath",
+      "Tlapanui"
+    ],
+    "albathAlias": "Weißalben",
+    "formerCalidariaName": "Tlapatlan",
+    "government": "Kaiserin (name unspecified); Senate; Konsul abolished. Archonate is a region ruled by an Archon with count-equivalent noble rank. Präfekt and Magistrat are non-hereditary state offices, not further noble ranks.",
+    "socialCastes": [
+      "Illustris: kaiserliche Linie.",
+      "Patrizier: hoher sesshafter Landadel, die Archone.",
+      "Magnarier: etwa Ritterfürstenhäuser.",
+      "Mercantrier: gute Bürgerhäuser bzw. Ritterherrenhäuser.",
+      "Plebejer: Unterschicht, das gemeine Volk.",
+      "Servi: Leibeigene."
+    ],
+    "postAndSenateRoles": [
+      "Prokonsul: Gouverneur einer gesamten Provinz (Leukonia, Silverant oder Calidaria). Die Archone unterstehen den Prokonsulen. Er besitzt automatisch einen hohen Senatssitz und oft ein weiteres Amt.",
+      "Archon: Adliger aus einer bestimmten Region, automatisch Senator und respektierter Bürger.",
+      "Legat: oberster militärischer Führer bzw. Marschall des Reiches.",
+      "Quästor: oberster Verwalter und Kämmerer.",
+      "Prätor: oberster Vorsteher der Justiz bzw. Justiziar.",
+      "Magus: oberster Magier oder Zauberer.",
+      "Pontifex: ranghöchster Geistlicher der staatseigenen Religion Celestische Synode.",
+      "Herold: oberster Würdenträger des Reiches.",
+      "Speculatores: oberster Verantwortlicher für Geheimhaltung und Spionage.",
+      "Artifex: oberster Verantwortlicher für Bildung, Kultur und Unterhaltung.",
+      "Aedil: Sonderrang der Verwaltung unter dem Quästor. Ein Quästor hat fünf Aedile.",
+      "Volkstribun: vom Volk gewählter Repräsentant des gesamten Volkes; einmal jährlich geltendes Vetorecht.",
+      "Nauticus: oberster Verantwortlicher für Seefahrt und Außenhandel, mit Handel, Seefahrt und Häfen betraut; wichtiger Posten unter dem Quästor.",
+      "Honor Custus: Sonderposten, verantwortlich für die Liktorengarde als kaiserliche Leibgarde. Sie schützt die kaiserliche Familie und untersteht allein dem Wort des Kaisers. Legat, Quästor und Konsule haben keine Befehlsgewalt über sie."
+    ],
+    "institutions": [
+      "Judikatur des Othorin: kaiserliche Judikative, zuständig für das Justizsystem. Die Leitung ist zugleich der Prätor des Kaisers.",
+      "Hetären der Lytheris: klerikale Institution und gezielte Priesterschaft der Lytheris. Unterhaltung sowie das Handwerk der Prostitution im klerikalen Sinne und deren Organisation und Unterhaltung im Land. Die oberste geistliche Priesterin der Lytheris leitet das Institut.",
+      "Forum des Tharistos: kaiserliche Handelskammer, an der sich die Regulierung orientiert. Die Leitung ist zugleich der Quästor bzw. Kämmerer des Kaisers.",
+      "Kaiserliche Universität: akademische Institution unter dem Artifex.",
+      "Venaim Rogare Thedros: klerikale Institution für kaiserliche Resozialisierung und das Sozialsystem. Leitung durch den höchsten Geistlichen des Thedros.",
+      "Sepulcretum Kharos: klerikales Bestattungsinstitut, geleitet vom obersten Geistlichen des Kharos.",
+      "Mardrans Contubernium: militärische Institution für Militärsystem, Wehrpflicht, Einbürgerung, Dienst, Pensionierung und Legionssystem. Der Legat führt den höchsten Rang.",
+      "Avrum Divanas: wirtschaftliche Institution für Wirtschaft, Agrar- und Viehsystem. Die höchsten Posten sind die Aedilsposten.",
+      "Auspicium Ordeus: klerikale Institution für Zeremonien, Krönung, Salbung und Auspizien. Leitung durch den obersten Priester des Ordeus.",
+      "Orbus qui Mariella: Waisenheim der Mariella, Waiseninstitut und karitative Arbeit. Leitung durch den obersten Priester der Mariella."
+    ],
+    "legionTerms": [
+      "Legio: Legion mit 4.000 bis 6.000 Mann.",
+      "Exerte: Aufgebot eines Archonats.",
+      "Kohorte: Aufgebot einer Stadt.",
+      "Zenturie: Aufgebot einer kleinen Stadt oder Siedlung.",
+      "Manipel: Einheit innerhalb einer Zenturie, 20 bis 40 Mann.",
+      "Turma: irreguläre Einheit, oft Gefolge eines Prinzen oder Freischärlertruppe aus Hilfstruppen."
+    ],
+    "religion": "Celestische Synode; freedom of religion, proselytism unwanted.",
+    "classPrototypes": [
+      "Schwerer Infanterist mit Schwert oder Axt, manchmal Turmschild.",
+      "Schwer gepanzerter Lanzenträger.",
+      "Berittener mit Schwert, Kataphrakt.",
+      "Fernkämpfer mit Rückenköcher und Speer in der Hand.",
+      "Mariner und Kleriker des Zephyr: besonders, Säbel, Rückenköcher, edel, pompös, seltene Klasse.",
+      "Miliz: einfacher Legionär.",
+      "Römischer Kampfbarde mit Säbel und Instrument."
+    ],
+    "classCountAmbiguity": {
+      "statedCount": 6,
+      "enumeratedRoles": 7,
+      "namedClassIdsConfirmed": false,
+      "treatment": "Keep all seven enumerated prototypes separate pending any explicit correction; do not invent final class names."
+    },
+    "requestedArt": {
+      "socialComicIllustrations": 6,
+      "provinceEmblemsForLeukonia": 1,
+      "archonateBanners": "One per verified archonate; form is legion-banner, not circular house crest.",
+      "additionalHouseEmblemsFormula": "verified city count + 6",
+      "houseEmblemStyle": "Roman/Latin/Campanian; circular outline per existing house-emblem standard.",
+      "warriors": "After heraldry, using seven distinct role prototypes, not other countries class allocations.",
+      "additionalHouseEmblems": 34
+    },
+    "otherExplicitCounts": {
+      "aedilesPerQuaestor": 5,
+      "peopleTribuneAnnualVeto": 1,
+      "legionTroopsRange": [
+        4000,
+        6000
+      ],
+      "manipleTroopsRange": [
+        20,
+        40
+      ]
+    },
+    "latestUserAssignments": {
+      "evidence": "Parent relay of explicit latest user instruction during this task.",
+      "archonHouses": [
+        "Apinia",
+        "Bolar",
+        "Lex",
+        "Orania",
+        "Pelagia",
+        "Tremelia"
+      ],
+      "archonHouseDistribution": "One per six map regions; exact city seats are a marked editable proposal prepared by map specialist.",
+      "imperialHouse": {
+        "name": "Mede",
+        "seat": "Zaphias",
+        "status": "Imperial city domain, not a seventh archonate"
+      },
+      "originalModernHouses": 7,
+      "newHouseEmblems": 34,
+      "totalModernHouses": 41,
+      "initialPlacedHouses": 7,
+      "initialFreeNewHouses": 34,
+      "houseWarriorsRequested": 41,
+      "classPrototypesFirst": 7
+    }
+  },
+  "mapReview": {
+    "status": "measured-awaiting-final-crop-review",
+    "expectedDiagnosticFile": "diagnostics/argentum-leukonia/map-and-art-inventory.json",
+    "authoritativeCandidates": [
+      {
+        "relativePath": "Tirnara Provinz/Kaiserreich (Tirnara Normal).png",
+        "filenameLabel": "Kaiserreich (Tirnara Normal)",
+        "sizeBytes": 87503540,
+        "sha256": "c4780e7e6bc4930a93ff61e42759390c07eb17c7c5b916436d3d5719edbee663",
+        "dimensions": [
+          8192,
+          4698
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Tirnara Provinz/Kaiserreich (Tirnara Portion).png",
+        "filenameLabel": "Kaiserreich (Tirnara Portion)",
+        "sizeBytes": 80809303,
+        "sha256": "4f3e52b26c958619f2928fa20167bded9cef01833e51962e2d7afb259eef6efa",
+        "dimensions": [
+          8192,
+          4698
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      }
+    ],
+    "legacyOverviewMaps": [
+      {
+        "relativePath": "Kaiserreich (Aldervan Portion).png",
+        "filenameLabel": "Kaiserreich (Aldervan Portion)",
+        "sizeBytes": 3214744,
+        "sha256": "da2ec22fc43b63a57734753149cf6209d0f02d83056d27bb834dd99f0370dc31",
+        "dimensions": [
+          1105,
+          1203
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Kaiserreich (Inselgruppe).png",
+        "filenameLabel": "Kaiserreich (Inselgruppe)",
+        "sizeBytes": 3219340,
+        "sha256": "849616c2bb0627c3fe8d699c0be32a517e3092453ed988bc2f95cbdf22b928b0",
+        "dimensions": [
+          1365,
+          1196
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      },
+      {
+        "relativePath": "Kaiserreich (Tirnara Portion).png",
+        "filenameLabel": "Kaiserreich (Tirnara Portion)",
+        "sizeBytes": 2456454,
+        "sha256": "44d534cc1f1d37402bc954d23caa2685f5cc7b5450244079ebf3c9525e69e2a2",
+        "dimensions": [
+          1102,
+          909
+        ],
+        "mode": "RGBA",
+        "kind": "map",
+        "sourceOnly": true
+      }
+    ],
+    "archonateNames": [],
+    "cityNames": [
+      "Alvanista",
+      "Aspio",
+      "Zaphias",
+      "Allantaic"
+    ],
+    "note": "Use the two newly supplied full-resolution Tirnara files for Leukonia. The three root-level mini maps have different extents and are not equivalent variants. Do not preserve prior assumptions about missing boundaries/names without reviewing the newer pair.",
+    "workingProvince": "Leukonia",
+    "provinceIdentityEvidence": "User source places Albath/Leukonia at the southeastern edge of Tirnara; latest user explicitly identifies the Tirnara Provinz directory.",
+    "archonateCount": 6,
+    "archonateShapeSummary": "Five mainland coloured/red-boundary territories plus one island territory.",
+    "settlementCount": 28,
+    "markerCounts": {
+      "square": 5,
+      "circle": 23
+    },
+    "namedSettlements": 4,
+    "unnamedSettlements": 24,
+    "semanticLimits": "A square marker does not by itself establish an archon seat or capital. Island territory has two circles and no square; do not invent a seventh archonate for imperial Zaphias.",
+    "evidence": "Direct actual-view report from /root/ishtaran_emblems; final diagnostic receipt expected at map-and-art-inventory.json.",
+    "diagnosticFile": "diagnostics/argentum-leukonia/map-and-art-inventory.json",
+    "diagnosticSha256": "fe1d30f8c513b9e22392def25a8a5e37e0ebe52b81cd4ec6d66ee42def10514b",
+    "archonates": [
+      {
+        "id": "archonat-nord",
+        "name": "Noerdliches Archonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "colour": "#788bdb",
+        "houseId": "house-lex",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "alvanista",
+        "cityIds": [
+          "alvanista",
+          "ort-01",
+          "ort-02",
+          "ort-04",
+          "ort-05",
+          "ort-06"
+        ],
+        "bannerId": "banner-lex"
+      },
+      {
+        "id": "archonat-west",
+        "name": "Westliches Archonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "colour": "#4cda6f",
+        "houseId": "house-tremelia",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "aspio",
+        "cityIds": [
+          "aspio",
+          "ort-07",
+          "allantaic",
+          "ort-14",
+          "ort-15"
+        ],
+        "bannerId": "banner-tremelia"
+      },
+      {
+        "id": "archonat-nordost",
+        "name": "Nordostarchonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "colour": "#6cddbe",
+        "houseId": "house-pelagia",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "ort-03",
+        "cityIds": [
+          "ort-03",
+          "ort-08",
+          "ort-09",
+          "ort-10",
+          "zaphias"
+        ],
+        "bannerId": "banner-pelagia"
+      },
+      {
+        "id": "archonat-suedwest",
+        "name": "Suedwestliches Archonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "colour": "#e8da43",
+        "houseId": "house-orania",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "ort-18",
+        "cityIds": [
+          "ort-11",
+          "ort-13",
+          "ort-16",
+          "ort-18",
+          "ort-21"
+        ],
+        "bannerId": "banner-orania"
+      },
+      {
+        "id": "archonat-suedost",
+        "name": "Suedostarchonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "colour": "#df8d78",
+        "houseId": "house-apinia",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "ort-20",
+        "cityIds": [
+          "ort-12",
+          "ort-17",
+          "ort-19",
+          "ort-20",
+          "ort-22"
+        ],
+        "bannerId": "banner-apinia"
+      },
+      {
+        "id": "archonat-insel",
+        "name": "Inselarchonat",
+        "nameStatus": "geographic-working-label",
+        "description": "Grau getoente suedliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+        "colour": "#758b87",
+        "houseId": "house-bolar",
+        "assignmentStatus": "editable-proposal",
+        "capitalId": null,
+        "seatProposalId": "ort-23",
+        "cityIds": [
+          "ort-23",
+          "ort-24"
+        ],
+        "bannerId": "banner-bolar"
+      }
+    ],
+    "houseSeatProposals": [
+      {
+        "houseId": "house-lex",
+        "settlementId": "alvanista",
+        "archonateId": "archonat-nord",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-tremelia",
+        "settlementId": "aspio",
+        "archonateId": "archonat-west",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-pelagia",
+        "settlementId": "ort-03",
+        "archonateId": "archonat-nordost",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-orania",
+        "settlementId": "ort-18",
+        "archonateId": "archonat-suedwest",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-apinia",
+        "settlementId": "ort-20",
+        "archonateId": "archonat-suedost",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-bolar",
+        "settlementId": "ort-23",
+        "archonateId": "archonat-insel",
+        "status": "editable-proposal"
+      },
+      {
+        "houseId": "house-mede",
+        "settlementId": "zaphias",
+        "archonateId": "archonat-nordost",
+        "status": "user-confirmed-imperial-domain"
+      }
+    ],
+    "imperialDomain": {
+      "houseId": "house-mede",
+      "settlementId": "zaphias",
+      "withinArchonateId": "archonat-nordost",
+      "isSeparateSeventhArchonate": false
+    },
+    "highResolutionMapSources": [
+      {
+        "id": "normal",
+        "file": "Kaiserreich (Tirnara Normal).png",
+        "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Tirnara Provinz\\Kaiserreich (Tirnara Normal).png",
+        "sourceSha256": "c4780e7e6bc4930a93ff61e42759390c07eb17c7c5b916436d3d5719edbee663",
+        "sourceImageSize": [
+          8192,
+          4698
+        ],
+        "map": "assets/maps/leukonia-normal.webp",
+        "sha256": "7acad4008170504125114ac98af0f8e383b89d039e2ac4da7a383804dac1c8cb",
+        "imageSize": [
+          4096,
+          2349
+        ],
+        "short": "Normal",
+        "originalRetained": true,
+        "scale": 0.5,
+        "noGeometryEdits": true,
+        "bakedNames": true
+      },
+      {
+        "id": "regions",
+        "file": "Kaiserreich (Tirnara Portion).png",
+        "sourcePath": "C:\\Users\\fhg_r\\Downloads\\Länder\\Das Kaiserreich Argentum\\Tirnara Provinz\\Kaiserreich (Tirnara Portion).png",
+        "sourceSha256": "4f3e52b26c958619f2928fa20167bded9cef01833e51962e2d7afb259eef6efa",
+        "sourceImageSize": [
+          8192,
+          4698
+        ],
+        "map": "assets/maps/leukonia-regions.webp",
+        "sha256": "078d5553c4c9571c05c67918b2920dc59461cb33243adf62ec29f6342b1d9b9e",
+        "imageSize": [
+          4096,
+          2349
+        ],
+        "short": "Archonate",
+        "originalRetained": true,
+        "scale": 0.5,
+        "noGeometryEdits": true,
+        "bakedNames": true
+      }
+    ],
+    "settlements": [
+      {
+        "key": "alvanista",
+        "name": "Alvanista",
+        "kind": "square",
+        "region": "nord",
+        "x": 551,
+        "y": 45,
+        "pixelCentre": [
+          2203.5,
+          178.5
+        ],
+        "markerBounds": [
+          2111,
+          85,
+          2297,
+          273
+        ],
+        "markerPixelCount": 22976,
+        "diameter": [
+          186,
+          188
+        ],
+        "point": [
+          26.8982,
+          3.7995
+        ],
+        "id": "alvanista",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": true,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/alvanista-source-pair.jpg"
+      },
+      {
+        "key": "n02",
+        "kind": "circle",
+        "region": "nord",
+        "x": 842,
+        "y": 96,
+        "pixelCentre": [
+          3367.5,
+          382.5
+        ],
+        "markerBounds": [
+          3304,
+          316,
+          3432,
+          450
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          41.1072,
+          8.1418
+        ],
+        "id": "ort-01",
+        "name": "Ort 01 (Name offen)",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": false,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-01-source-pair.jpg"
+      },
+      {
+        "key": "n01",
+        "kind": "circle",
+        "region": "nord",
+        "x": 361,
+        "y": 108,
+        "pixelCentre": [
+          1445.5,
+          432.5
+        ],
+        "markerBounds": [
+          1382,
+          366,
+          1510,
+          500
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          17.6453,
+          9.206
+        ],
+        "id": "ort-02",
+        "name": "Ort 02 (Name offen)",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": false,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-02-source-pair.jpg"
+      },
+      {
+        "key": "ne01",
+        "kind": "circle",
+        "region": "nordost",
+        "x": 1130,
+        "y": 115,
+        "pixelCentre": [
+          4517.5,
+          459.5
+        ],
+        "markerBounds": [
+          4454,
+          393,
+          4582,
+          527
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          55.1453,
+          9.7808
+        ],
+        "id": "ort-03",
+        "name": "Ort 03 (Name offen)",
+        "archonateId": "archonat-nordost",
+        "properNameFromMap": false,
+        "geography": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-03-source-pair.jpg"
+      },
+      {
+        "key": "n03",
+        "kind": "circle",
+        "region": "nord",
+        "x": 990,
+        "y": 140,
+        "pixelCentre": [
+          3960.5,
+          559.5
+        ],
+        "markerBounds": [
+          3897,
+          493,
+          4025,
+          627
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          48.3459,
+          11.9093
+        ],
+        "id": "ort-04",
+        "name": "Ort 04 (Name offen)",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": false,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-04-source-pair.jpg"
+      },
+      {
+        "key": "n04",
+        "kind": "circle",
+        "region": "nord",
+        "x": 640,
+        "y": 206,
+        "pixelCentre": [
+          2558.5,
+          823.5
+        ],
+        "markerBounds": [
+          2495,
+          757,
+          2623,
+          891
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          31.2317,
+          17.5287
+        ],
+        "id": "ort-05",
+        "name": "Ort 05 (Name offen)",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": false,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-05-source-pair.jpg"
+      },
+      {
+        "key": "aspio",
+        "name": "Aspio",
+        "kind": "square",
+        "region": "west",
+        "x": 178,
+        "y": 217,
+        "pixelCentre": [
+          712.5,
+          867.5
+        ],
+        "markerBounds": [
+          620,
+          774,
+          806,
+          962
+        ],
+        "markerPixelCount": 22974,
+        "diameter": [
+          186,
+          188
+        ],
+        "point": [
+          8.6975,
+          18.4653
+        ],
+        "id": "aspio",
+        "archonateId": "archonat-west",
+        "properNameFromMap": true,
+        "geography": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/aspio-source-pair.jpg"
+      },
+      {
+        "key": "n05",
+        "kind": "circle",
+        "region": "nord",
+        "x": 774,
+        "y": 297,
+        "pixelCentre": [
+          3097.5,
+          1187.5
+        ],
+        "markerBounds": [
+          3034,
+          1121,
+          3162,
+          1255
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          37.8113,
+          25.2767
+        ],
+        "id": "ort-06",
+        "name": "Ort 06 (Name offen)",
+        "archonateId": "archonat-nord",
+        "properNameFromMap": false,
+        "geography": "Blau-violettes noerdliches Festlandsgebiet, Bergsaum und ausgedehnte Waelder.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-06-source-pair.jpg"
+      },
+      {
+        "key": "w01",
+        "kind": "circle",
+        "region": "west",
+        "x": 407,
+        "y": 301,
+        "pixelCentre": [
+          1631.5,
+          1202.5
+        ],
+        "markerBounds": [
+          1568,
+          1136,
+          1696,
+          1270
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          19.9158,
+          25.596
+        ],
+        "id": "ort-07",
+        "name": "Ort 07 (Name offen)",
+        "archonateId": "archonat-west",
+        "properNameFromMap": false,
+        "geography": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-07-source-pair.jpg"
+      },
+      {
+        "key": "ne04",
+        "kind": "circle",
+        "region": "nordost",
+        "x": 1119,
+        "y": 327,
+        "pixelCentre": [
+          4474.5,
+          1306.5
+        ],
+        "markerBounds": [
+          4411,
+          1240,
+          4539,
+          1374
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          54.6204,
+          27.8097
+        ],
+        "id": "ort-08",
+        "name": "Ort 08 (Name offen)",
+        "archonateId": "archonat-nordost",
+        "properNameFromMap": false,
+        "geography": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-08-source-pair.jpg"
+      },
+      {
+        "key": "ne02",
+        "kind": "circle",
+        "region": "nordost",
+        "x": 542,
+        "y": 332,
+        "pixelCentre": [
+          2167.5,
+          1327.5
+        ],
+        "markerBounds": [
+          2104,
+          1261,
+          2232,
+          1395
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          26.4587,
+          28.2567
+        ],
+        "id": "ort-09",
+        "name": "Ort 09 (Name offen)",
+        "archonateId": "archonat-nordost",
+        "properNameFromMap": false,
+        "geography": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-09-source-pair.jpg"
+      },
+      {
+        "key": "ne03",
+        "kind": "circle",
+        "region": "nordost",
+        "x": 892,
+        "y": 352,
+        "pixelCentre": [
+          3566.5,
+          1411.5
+        ],
+        "markerBounds": [
+          3501,
+          1347,
+          3633,
+          1477
+        ],
+        "markerPixelCount": 9106,
+        "diameter": [
+          132,
+          130
+        ],
+        "point": [
+          43.5364,
+          30.0447
+        ],
+        "id": "ort-10",
+        "name": "Ort 10 (Name offen)",
+        "archonateId": "archonat-nordost",
+        "properNameFromMap": false,
+        "geography": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-10-source-pair.jpg"
+      },
+      {
+        "key": "sw01",
+        "kind": "circle",
+        "region": "suedwest",
+        "x": 526,
+        "y": 480,
+        "pixelCentre": [
+          2102.5,
+          1920.5
+        ],
+        "markerBounds": [
+          2039,
+          1854,
+          2167,
+          1988
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          25.6653,
+          40.8791
+        ],
+        "id": "ort-11",
+        "name": "Ort 11 (Name offen)",
+        "archonateId": "archonat-suedwest",
+        "properNameFromMap": false,
+        "geography": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-11-source-pair.jpg"
+      },
+      {
+        "key": "zaphias",
+        "name": "Zaphias",
+        "kind": "square",
+        "region": "nordost",
+        "x": 1151,
+        "y": 495,
+        "pixelCentre": [
+          4604.5,
+          1980.5
+        ],
+        "markerBounds": [
+          4512,
+          1887,
+          4698,
+          2075
+        ],
+        "markerPixelCount": 22978,
+        "diameter": [
+          186,
+          188
+        ],
+        "point": [
+          56.2073,
+          42.1562
+        ],
+        "id": "zaphias",
+        "archonateId": "archonat-nordost",
+        "properNameFromMap": true,
+        "geography": "Mintgruenes nordoestliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomaene.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/zaphias-source-pair.jpg"
+      },
+      {
+        "key": "se01",
+        "kind": "circle",
+        "region": "suedost",
+        "x": 1301,
+        "y": 504,
+        "pixelCentre": [
+          5200.5,
+          2015.5
+        ],
+        "markerBounds": [
+          5137,
+          1949,
+          5265,
+          2083
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          63.4827,
+          42.9012
+        ],
+        "id": "ort-12",
+        "name": "Ort 12 (Name offen)",
+        "archonateId": "archonat-suedost",
+        "properNameFromMap": false,
+        "geography": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-12-source-pair.jpg"
+      },
+      {
+        "key": "allantaic",
+        "name": "Allantaic",
+        "kind": "circle",
+        "region": "west",
+        "x": 130,
+        "y": 509,
+        "pixelCentre": [
+          518.5,
+          2031.5
+        ],
+        "markerBounds": [
+          455,
+          1965,
+          583,
+          2099
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          6.3293,
+          43.2418
+        ],
+        "id": "allantaic",
+        "archonateId": "archonat-west",
+        "properNameFromMap": true,
+        "geography": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/allantaic-source-pair.jpg"
+      },
+      {
+        "key": "sw02",
+        "kind": "circle",
+        "region": "suedwest",
+        "x": 890,
+        "y": 532,
+        "pixelCentre": [
+          3558.5,
+          2126.5
+        ],
+        "markerBounds": [
+          3495,
+          2060,
+          3623,
+          2194
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          43.4387,
+          45.2639
+        ],
+        "id": "ort-13",
+        "name": "Ort 13 (Name offen)",
+        "archonateId": "archonat-suedwest",
+        "properNameFromMap": false,
+        "geography": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-13-source-pair.jpg"
+      },
+      {
+        "key": "w02",
+        "kind": "circle",
+        "region": "west",
+        "x": 379,
+        "y": 566,
+        "pixelCentre": [
+          1515.5,
+          2260.5
+        ],
+        "markerBounds": [
+          1452,
+          2194,
+          1580,
+          2328
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          18.4998,
+          48.1162
+        ],
+        "id": "ort-14",
+        "name": "Ort 14 (Name offen)",
+        "archonateId": "archonat-west",
+        "properNameFromMap": false,
+        "geography": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-14-source-pair.jpg"
+      },
+      {
+        "key": "w03",
+        "kind": "circle",
+        "region": "west",
+        "x": 106,
+        "y": 644,
+        "pixelCentre": [
+          424.5,
+          2568.5
+        ],
+        "markerBounds": [
+          361,
+          2502,
+          489,
+          2636
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          5.1819,
+          54.6722
+        ],
+        "id": "ort-15",
+        "name": "Ort 15 (Name offen)",
+        "archonateId": "archonat-west",
+        "properNameFromMap": false,
+        "geography": "Gruenes westliches Festlandsgebiet mit Kueste, Seen und Flussarmen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-15-source-pair.jpg"
+      },
+      {
+        "key": "sw03",
+        "kind": "circle",
+        "region": "suedwest",
+        "x": 689,
+        "y": 670,
+        "pixelCentre": [
+          2756.5,
+          2676.5
+        ],
+        "markerBounds": [
+          2693,
+          2610,
+          2821,
+          2744
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          33.6487,
+          56.9711
+        ],
+        "id": "ort-16",
+        "name": "Ort 16 (Name offen)",
+        "archonateId": "archonat-suedwest",
+        "properNameFromMap": false,
+        "geography": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-16-source-pair.jpg"
+      },
+      {
+        "key": "se02",
+        "kind": "circle",
+        "region": "suedost",
+        "x": 1017,
+        "y": 782,
+        "pixelCentre": [
+          4070.5,
+          3126.5
+        ],
+        "markerBounds": [
+          4007,
+          3060,
+          4135,
+          3194
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          49.6887,
+          66.5496
+        ],
+        "id": "ort-17",
+        "name": "Ort 17 (Name offen)",
+        "archonateId": "archonat-suedost",
+        "properNameFromMap": false,
+        "geography": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-17-source-pair.jpg"
+      },
+      {
+        "key": "sw-square",
+        "kind": "square",
+        "region": "suedwest",
+        "x": 365,
+        "y": 794,
+        "pixelCentre": [
+          1459.5,
+          3172.5
+        ],
+        "markerBounds": [
+          1367,
+          3079,
+          1553,
+          3267
+        ],
+        "markerPixelCount": 22975,
+        "diameter": [
+          186,
+          188
+        ],
+        "point": [
+          17.8162,
+          67.5287
+        ],
+        "id": "ort-18",
+        "name": "Ort 18 (Name offen)",
+        "archonateId": "archonat-suedwest",
+        "properNameFromMap": false,
+        "geography": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-18-source-pair.jpg"
+      },
+      {
+        "key": "se03",
+        "kind": "circle",
+        "region": "suedost",
+        "x": 1362,
+        "y": 808,
+        "pixelCentre": [
+          5448.5,
+          3233.5
+        ],
+        "markerBounds": [
+          5385,
+          3167,
+          5513,
+          3301
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          66.51,
+          68.8272
+        ],
+        "id": "ort-19",
+        "name": "Ort 19 (Name offen)",
+        "archonateId": "archonat-suedost",
+        "properNameFromMap": false,
+        "geography": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-19-source-pair.jpg"
+      },
+      {
+        "key": "se-square",
+        "kind": "square",
+        "region": "suedost",
+        "x": 745,
+        "y": 824,
+        "pixelCentre": [
+          2981.5,
+          3295.5
+        ],
+        "markerBounds": [
+          2889,
+          3202,
+          3075,
+          3390
+        ],
+        "markerPixelCount": 22977,
+        "diameter": [
+          186,
+          188
+        ],
+        "point": [
+          36.3953,
+          70.1469
+        ],
+        "id": "ort-20",
+        "name": "Ort 20 (Name offen)",
+        "archonateId": "archonat-suedost",
+        "properNameFromMap": false,
+        "geography": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-20-source-pair.jpg"
+      },
+      {
+        "key": "sw04",
+        "kind": "circle",
+        "region": "suedwest",
+        "x": 640,
+        "y": 886,
+        "pixelCentre": [
+          2560.5,
+          3539.5
+        ],
+        "markerBounds": [
+          2497,
+          3473,
+          2625,
+          3607
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          31.2561,
+          75.3406
+        ],
+        "id": "ort-21",
+        "name": "Ort 21 (Name offen)",
+        "archonateId": "archonat-suedwest",
+        "properNameFromMap": false,
+        "geography": "Gelbes suedwestliches Festlandsgebiet mit offenen Talraeumen und Gebirgszuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-21-source-pair.jpg"
+      },
+      {
+        "key": "se04",
+        "kind": "circle",
+        "region": "suedost",
+        "x": 1143,
+        "y": 937,
+        "pixelCentre": [
+          4570.5,
+          3746.5
+        ],
+        "markerBounds": [
+          4507,
+          3680,
+          4635,
+          3814
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          55.7922,
+          79.7467
+        ],
+        "id": "ort-22",
+        "name": "Ort 22 (Name offen)",
+        "archonateId": "archonat-suedost",
+        "properNameFromMap": false,
+        "geography": "Orangefarbenes suedostliches Festlandsgebiet mit langer Kueste, Seen und Bergzuegen.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-22-source-pair.jpg"
+      },
+      {
+        "key": "is01",
+        "kind": "circle",
+        "region": "insel",
+        "x": 435,
+        "y": 1055,
+        "pixelCentre": [
+          1738.5,
+          4214.5
+        ],
+        "markerBounds": [
+          1675,
+          4148,
+          1803,
+          4282
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          21.2219,
+          89.7084
+        ],
+        "id": "ort-23",
+        "name": "Ort 23 (Name offen)",
+        "archonateId": "archonat-insel",
+        "properNameFromMap": false,
+        "geography": "Grau getoente suedliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-23-source-pair.jpg"
+      },
+      {
+        "key": "is02",
+        "kind": "circle",
+        "region": "insel",
+        "x": 654,
+        "y": 1094,
+        "pixelCentre": [
+          2615.5,
+          4370.5
+        ],
+        "markerBounds": [
+          2552,
+          4304,
+          2680,
+          4438
+        ],
+        "markerPixelCount": 9122,
+        "diameter": [
+          128,
+          134
+        ],
+        "point": [
+          31.9275,
+          93.0289
+        ],
+        "id": "ort-24",
+        "name": "Ort 24 (Name offen)",
+        "archonateId": "archonat-insel",
+        "properNameFromMap": false,
+        "geography": "Grau getoente suedliche Insel mit zwei vorhandenen Ortskreisen; kein Quadratmarker.",
+        "evidenceCrop": "diagnostics/argentum-leukonia/ort-24-source-pair.jpg"
+      }
+    ]
+  },
+  "architecture": {
+    "recommendedDirectory": "Vorschau/Leukonia/",
+    "entry": "Local noindex/nofollow page for Leukonia, with confirmed imperial context Argentum; no second site.",
+    "baseChoice": "Follow Aldingen/shared composition for one current residence per house. Use the Ishtaran feature composition if richer imperial lore, offices, classes and independent proposal catalogues require extra sections. The newly added normal/region map pair may share a map proposal adapter after dimensions and anchors are visually verified. Latest user fixes seven initial editable house placements (six archon houses and imperial Mede), while34 new house emblems start free.",
+    "references": [
+      {
+        "realm": "Aldingen",
+        "files": [
+          "index.html",
+          "proposal-page.mjs",
+          "house-data.mjs",
+          "territory-data.mjs",
+          "placement-state.mjs",
+          "house-placement.mjs",
+          "art-dialogs.mjs"
+        ],
+        "reuse": "Counties/settlements/territory art composition and thin shared placement configuration; adapt labels to archonate and city, preserve stable IDs."
+      },
+      {
+        "realm": "Venalys",
+        "files": [
+          "assignment-state.mjs",
+          "assignment-controls.mjs",
+          "map-view.mjs"
+        ],
+        "reuse": "Many-to-many district membership and editable district names only when explicitly requested; not a default for Leukonia. Do not copy its bespoke assignment state for ordinary single-seat houses."
+      },
+      {
+        "realm": "Ishtaran",
+        "files": [
+          "proposal-app.mjs",
+          "placement-state.mjs",
+          "house-placement.mjs",
+          "map-data.mjs",
+          "art-dialogs.mjs"
+        ],
+        "reuse": "Feature-owned placement wrapper validates complete move/import candidates atomically while shared state owns history. Variant adapters, independent shortlist and dynamic dossier seat lookup remain separate."
+      }
+    ],
+    "sharedApis": [
+      {
+        "file": "Vorschau/shared/placement-state.mjs",
+        "signature": "createPlacementState({realm, realmLabel=realm, houseIds, seatIds, initialPlacements, lockedPlacements={}, trackHistory=true})",
+        "returns": [
+          "current",
+          "canMove",
+          "canUndo",
+          "move",
+          "undo",
+          "reset",
+          "serialize",
+          "restore"
+        ],
+        "owns": "Snapshot/history/exact complete import schema; one seat or null per house."
+      },
+      {
+        "file": "Vorschau/shared/country-placement.mjs",
+        "signature": "createCountryPlacement({root,onHouse,notice}, {houses,settlements,createPlacementState,createMapProposal,escapeHtml,houseCard,renderSeats,rankLabel,storageKey,resetMessage,exportName,caption})",
+        "returns": [
+          "current",
+          "refresh",
+          "choose"
+        ],
+        "owns": "Local persistence, import/export/reset/undo controller, selection and map/drag composition."
+      },
+      {
+        "file": "Vorschau/shared/clan-map.mjs",
+        "signature": "createClanMap({root,dialog,tooltip,getVariant,escape,onClan,assetUrl,rankLabel,imageSize,hasBakedNames,rootClanLabel,caption})",
+        "returns": [
+          "render",
+          "open",
+          "toggleCrests",
+          "toggleNames"
+        ],
+        "variantContract": {
+          "number": "number",
+          "short": "string",
+          "file": "string",
+          "map": "relative web asset path",
+          "imageSize": "[width,height]",
+          "bakedNames": "boolean based on real place names in source",
+          "settlements": "[{id,name,point,pin,label?,overlayLabel?}]",
+          "clans": "[{id,name,crest,seat,rank,liege}]"
+        },
+        "owns": "Read-only image+overlay, dynamic crest groups, modal/zoom, names and crests visibility; can display empty clans without fake data."
+      },
+      {
+        "file": "Vorschau/shared/placement-controls.mjs",
+        "signature": "createPlacementControls({root,getSelected,onMove,escape,canMove=()=>true})",
+        "owns": "Shared mouse/pen drag and keyboard/touch target selection; unavailable target support."
+      },
+      {
+        "file": "Vorschau/shared/country-workbench/mount.mjs",
+        "signature": "mountCountryWorkbench({context,houses,counties,settlements,warriors,territoryArt,createPlacementState,createMapProposal})",
+        "owns": "Available full generic composition; override country labels/relatedPages/continent rather than inheriting Lothir copy."
+      },
+      {
+        "file": "Vorschau/shared/country-workbench/dialogs.mjs",
+        "signature": "createCountryDialogs({dialog,houses,warriors,territoryArt,settlements,onChoose,getPlacements})",
+        "owns": "Stateless house+warrior and territory dossiers, dynamic current seat."
+      },
+      {
+        "file": "Vorschau/shared/house-detail-render.mjs",
+        "signature": "renderHouseDossier({title,source,warrior,classHref,crest,description,facts,houseId,canPlace,originalLink,headingId},escape)",
+        "owns": "Shared full-length figure beside crest/facts; no placement state."
+      }
+    ],
+    "minimalFeatureModules": [
+      {
+        "file": "realm-context.mjs",
+        "owns": "Confirmed empire/province history, castes, offices, institutions, religion and explicit unresolved terms."
+      },
+      {
+        "file": "territory-data.mjs",
+        "owns": "Archonate list and city list, relation via archonateId, map anchors/labels, source status. No inferred city names or new feudal rank hierarchy."
+      },
+      {
+        "file": "house-data.mjs",
+        "owns": "Seven supplied house identities (six Archon houses plus imperial Mede) and34 new heraldic drafts, stable IDs and only latest explicit initial residence proposals. Rank, caste and state office remain distinct fields.",
+        "initialHouseSeatProposals": [
+          {
+            "houseId": "house-lex",
+            "settlementId": "alvanista",
+            "archonateId": "archonat-nord",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-tremelia",
+            "settlementId": "aspio",
+            "archonateId": "archonat-west",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-pelagia",
+            "settlementId": "ort-03",
+            "archonateId": "archonat-nordost",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-orania",
+            "settlementId": "ort-18",
+            "archonateId": "archonat-suedwest",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-apinia",
+            "settlementId": "ort-20",
+            "archonateId": "archonat-suedost",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-bolar",
+            "settlementId": "ort-23",
+            "archonateId": "archonat-insel",
+            "status": "editable-proposal"
+          },
+          {
+            "houseId": "house-mede",
+            "settlementId": "zaphias",
+            "archonateId": "archonat-nordost",
+            "status": "user-confirmed-imperial-domain"
+          }
+        ]
+      },
+      {
+        "file": "map-data.mjs",
+        "owns": "Authoritative Tirnara normal/region map pair, dimensions and proposal adapter. These two can be variants once verified; the three older provincial mini maps remain separate empire context and must not share city coordinates."
+      },
+      {
+        "file": "placement-state.mjs",
+        "owns": "Thin realm configuration using explicit initialSeatId/sourceSeat, otherwise null. Initial seven placements are editable, not hard-locked. No Ishtaran rank/capacity policy is transferred."
+      },
+      {
+        "file": "house-placement.mjs",
+        "owns": "Local controller configuration and isolated key such as aleria:proposal:leukonia:placements:v1."
+      },
+      {
+        "file": "proposal-page.mjs / proposal-render.mjs",
+        "owns": "Small page composition and extra imperial-context sections; use shared escaping/renderers."
+      },
+      {
+        "file": "art-dialogs.mjs / warrior-view.mjs",
+        "owns": "Province banner, house crest, figure and class prototype presentation, never assignments."
+      },
+      {
+        "file": "scripts/ + sources/",
+        "owns": "Preserved inputs, prompt plans, hashes and explicit builders; no browser imports from excluded archives."
+      }
+    ],
+    "assetReuse": [
+      {
+        "file": "Vorschau/shared/prepare-country-sources.py",
+        "usage": "Explicit config-driven original copying with SHA-256 and dimension records; optional localArchive; optimize WebP without changing boundaries/labels."
+      },
+      {
+        "file": "Vorschau/shared/prepare-country-art.py",
+        "usage": "Existing technical heraldry preparation; do not copy pipeline."
+      },
+      {
+        "file": "Vorschau/shared/warrior-artifacts/pipeline.py",
+        "usage": "Existing WarriorArtifacts processing; new wrapper sets only realm root/schema/QA path; 1024x1536 source, 768x1152 preview; do not run for inventory."
+      }
+    ],
+    "css": [
+      "Reuse country-workbench/workbench.css and shared clan-map.css; feature CSS for Roman banners, social comics and new sections.",
+      "Keep min-height:0 component override on clan-pin for square small map icons.",
+      "Use existing query-versioned imports across changed JS/CSS dependency graphs, no custom global cache clearing."
+    ],
+    "publicationPolicy": {
+      "file": "netlify/build/publication-policy.mjs",
+      "alreadyExcluded": "diagnostics/** and generic Vorschau/*/assets/(warriors|emblems)?/(generated|generated-archive|alternates)/**",
+      "futureExplicitExclusionsNeeded": [
+        "Vorschau/Leukonia/sources/",
+        "Vorschau/Leukonia/scripts/",
+        "authoring-only manifests and prompt modules"
+      ],
+      "activeArtifacts": "Keep active production PNG/WebP and intentional source-original downloads publishable.",
+      "workPerformed": "No policy mutation or publication."
+    },
+    "registration": "No Vorschau/index.html or Vorschau/README.md present. Canonical shared/accepted-realms is a separate admission path and must not be changed for this draft inventory.",
+    "testing": {
+      "existingFiles": [
+        "Vorschau/tests/placement-state.test.mjs",
+        "Vorschau/tests/placement-controls.test.mjs",
+        "Vorschau/tests/aldingen.test.mjs",
+        "Vorschau/tests/ishtaran-data.test.mjs",
+        "Vorschau/tests/ishtaran-placement.test.mjs",
+        "Vorschau/tests/venalys-assignments.test.mjs"
+      ],
+      "futureMeaningfulChecks": [
+        "Original hashes and true city/archonate coverage",
+        "No fabricated assignments or class names",
+        "Local module, asset, class and bestiary links",
+        "Atomic complete import and undo/persistence",
+        "Real desktop/mobile map bounds and every full figure dossier"
+      ],
+      "runner": "node --test --experimental-test-isolation=none <explicit test files> when sandbox child-process spawning returns EPERM",
+      "runNow": false,
+      "reason": "Read-only inventory; no runtime code changes."
+    }
+  },
+  "ambiguitiesAndBoundaries": [
+    "Filename labels alone do not confirm house rank, seat or archonate.",
+    "Archonate-banner count and additional house-emblem count must follow actual map inspection, not supplied house count.",
+    "Seven enumerated warrior roles versus six stated prototypes; preserve discrepancy visibly.",
+    "Mercantrier is the current Argentum user spelling; do not silently replace it with Venalys Mercantier.",
+    "Honor Custus, Speculatores, Aedil and unusual institution names are user terminology, not invitations for Latin normalization.",
+    "Social caste Magnarier and non-hereditary Präfekt/Magistrat posts are different dimensions; do not invent lesser hereditary noble ranks.",
+    "Realm/house emblems are circular; requested archonate legion banners are a separate artifact type.",
+    "No named empress, provincial proconsul, archon, prefect or magistrate was supplied."
+  ],
+  "referenceFiles": [
+    {
+      "file": "AGENTS.md",
+      "sha256": "c93364fb150819393de7c5ad34de55672ded554adbe86d171011194c2bad6e9b"
+    },
+    {
+      "file": "Vorschau/COUNTRY_PREPARATION_TEMPLATE.md",
+      "sha256": "0b2835dc0d7a6a8e5da5fb443fbe7a053e06cf7850cac3c9220a38bb17658f27"
+    },
+    {
+      "file": "Vorschau/Aldingen/index.html",
+      "sha256": "2af249a4d9e886494b2656bf24ec5dab08f64a07cf741c522baa63a5feb07223"
+    },
+    {
+      "file": "Vorschau/Aldingen/placement-state.mjs",
+      "sha256": "4763e9f46a3b40086cc94a268a7b200449105405e5b9978317499e107aecc091"
+    },
+    {
+      "file": "Vorschau/Aldingen/house-placement.mjs",
+      "sha256": "0a3d14ce200de17d716b52be5cf98d13242a8c5129571ae1174910eaaaf02d2a"
+    },
+    {
+      "file": "Vorschau/Venalys/assignment-state.mjs",
+      "sha256": "78c29eaa22f3e05729040e3d6022b10d90251eb492815f1b9cdfa6142866d4f8"
+    },
+    {
+      "file": "Vorschau/Venalys/assignment-controls.mjs",
+      "sha256": "6b5c98b68ff388eb2d442d949e397c169bfa1532e1efcd1a19fef8b67b5fa421"
+    },
+    {
+      "file": "Vorschau/Venalys/map-view.mjs",
+      "sha256": "bf11d7cf63a83870aabdde4a2b10109aeaf8242700126f2e0efac442c907dcb6"
+    },
+    {
+      "file": "Vorschau/Ishtaran/proposal-app.mjs",
+      "sha256": "73abe076bd6533da354649b4611113d04625b056b2127306cb078636f6784faf"
+    },
+    {
+      "file": "Vorschau/Ishtaran/placement-state.mjs",
+      "sha256": "60c78924eb7a556c44581f68f5798e31ec6b663b100a6011fdbcd7be5bada8be"
+    },
+    {
+      "file": "Vorschau/Ishtaran/map-data.mjs",
+      "sha256": "c58dde45d4eb32918a3644bc1e1d9ede0202317ba5c975c9f62f594db094da5a"
+    },
+    {
+      "file": "Vorschau/shared/placement-state.mjs",
+      "sha256": "087ce69d9c9b599de2758a879f5e4626a4a1000239e93a894081afd45badd08e"
+    },
+    {
+      "file": "Vorschau/shared/country-placement.mjs",
+      "sha256": "08d7e4a8e26ff101fa16945c9ae3cbf86084e38ef5d8e864815dd9db8e4813f0"
+    },
+    {
+      "file": "Vorschau/shared/placement-controls.mjs",
+      "sha256": "9d79d8f52df1878bd97bcbf164078d00f2d55026688c13191a4dfb3b423aa515"
+    },
+    {
+      "file": "Vorschau/shared/clan-map.mjs",
+      "sha256": "6b463ef90fa1593d5de70174bc528e1cb97882530426b04a743dbb6c92477e94"
+    },
+    {
+      "file": "Vorschau/shared/country-workbench/mount.mjs",
+      "sha256": "2014c7662e1b4d891b4bd1e8619d25e946fb2e1cf25901b8f9c79f24486a2368"
+    },
+    {
+      "file": "Vorschau/shared/country-workbench/render.mjs",
+      "sha256": "197a8f8731d97cf51514637ab94200962a08f1cb1b0ee44b951f544a7c4dc1bc"
+    },
+    {
+      "file": "Vorschau/shared/country-workbench/dialogs.mjs",
+      "sha256": "dfc40120f6a6c56d93821f97d6d6265a86a9818bf50b2bb92458e06dc9c98db9"
+    },
+    {
+      "file": "Vorschau/shared/house-detail-render.mjs",
+      "sha256": "82f26e022c01808b9418574eb9812ace1a3c6ad61bce9bc76e3f8e7daf1a5bcc"
+    },
+    {
+      "file": "Vorschau/shared/prepare-country-sources.py",
+      "sha256": "fce4b524cb422675bf7c01584af44e1db1f4d38db29db376bf00e45f8ac531f4"
+    },
+    {
+      "file": "Vorschau/shared/prepare-country-art.py",
+      "sha256": "26ab0e5803606ac191aa62af9341a71fc555565d757edfb1dc3618f386b4f47a"
+    },
+    {
+      "file": "Vorschau/shared/warrior-artifacts/pipeline.py",
+      "sha256": "38684cde8a2af272503714036559ff69e034e0516625f87ec084f3e787fcfc6d"
+    },
+    {
+      "file": "netlify/build/publication-policy.mjs",
+      "sha256": "c49b84275b080bf717784dc8328901d8a8d1fcfd96abb096d961b59c555a4bcc"
+    }
+  ],
+  "sourceRevisionNote": "Two authoritative high-resolution Tirnara maps were added to Tirnara Provinz during inventory (2026-11-03 17:07/17:08 local file timestamps); previous 29-file/3-map snapshot is superseded.",
+  "validation": {
+    "sourceFileCount": 31,
+    "sourceHashesStillMatch": true,
+    "noImagesGeneratedByInventory": true
+  }
+}

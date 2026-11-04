@@ -1,0 +1,157 @@
+{
+  "id": "haus-ard-trodach",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "93c01461-aece-44c9-ba9d-453b55dbb9f1",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\93c01461-aece-44c9-ba9d-453b55dbb9f1\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ard-trodach/animexx-original.html",
+    "bytes": 101254,
+    "sha256": "1d53c9abade73f34228877b3e2e9281042aeb7d1a2b1cd49d2a7b03e3fe67c90",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ard-trodach",
+    "baselineSourceRevision": 8,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Lochansail",
+      "barony": "Tir na gComhrac",
+      "county": "Tir na Gortanna",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-dal-cruthin",
+      "liegeHouseName": "Clan Dál’Cruthin",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Gortanna",
+        "Tir na gComhrac",
+        "Lochansail"
+      ]
+    },
+    "graphFingerprint": "c28f9fb9f1280a42d660862898df01240d3cae30ff66ae44b1fe2fe18ac4053c",
+    "historicalMetadata": {
+      "historicalStatus": "active",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-ard-trodach",
+    "title": "Ard Trodach",
+    "territoryId": "leitheach-herrschaft-ard-trodach",
+    "territoryName": "Tir na gComhrac",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na gComhrac",
+        "slug": "leitheach-herrschaft-ard-trodach"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ard-trodach",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-ard-trodach",
+    "slug": "ard-trodach",
+    "canonicalSlug": "ard-trodach",
+    "attachmentId": "93c01461-aece-44c9-ba9d-453b55dbb9f1",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/UVJ9BAy.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 350857,
+    "sha256": "709a21018b942da9a20d9e7940a85f5f1e5b25fcf7c4536195e0d19136ae2aca",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-ard-trodach",
+    "title": "Ard Trodach",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Gortanna",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/UVJ9BAy.png",
+    "path": "Stammbäume/assets/images/references/haus-ard-trodach/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ard-trodach/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "709a21018b942da9a20d9e7940a85f5f1e5b25fcf7c4536195e0d19136ae2aca",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Älterer Speerträger mit Fellmantel und Schottenmuster.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "1d53c9abade73f34228877b3e2e9281042aeb7d1a2b1cd49d2a7b03e3fe67c90",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-ard-trodach, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Die alte kopierte Caoimhe-Herrscherangabe gehört nicht zu Trodach. Keine neue Amtsbesetzung aus Gebietsvorlagen; Caireall Trodach bleibt die bestehende kanonische Person.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

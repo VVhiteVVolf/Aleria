@@ -8,6 +8,8 @@ import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedSceneContrib
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import { undoInventoryFingerprint } from './mechanical-undo-inventory.js';
+import { getSceneConditionAnchor } from '../generated/scene-time/scene-condition-anchor.js';
+import { assertMechanicalActorProfileSource } from './mechanical-profile-source.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -43,20 +45,20 @@ function shouldRecoverDailyOnRest(profile = {}, recoveryDayKey = '', timelineDay
 
 function getRequestedRestTimeline(sceneTimeEvent = {}, previousCursor = 0, minimumAdvanceSeconds = 0) {
   const anchorDay = Number(sceneTimeEvent?.anchorDay);
-  const anchorSeconds = Number(sceneTimeEvent?.anchorSeconds);
-  if (!Number.isInteger(anchorDay) || anchorDay < 1 || anchorDay > 1_000_000) {
+  const anchor = getSceneConditionAnchor(sceneTimeEvent);
+  if (!['number', 'string'].includes(typeof sceneTimeEvent?.anchorDay) || !Number.isInteger(anchorDay) || anchorDay < 1 || anchorDay > 1_000_000) {
     fail('invalid-argument', 'Der Endtag der Rast ist ungültig.');
   }
-  if (!Number.isFinite(anchorSeconds) || anchorSeconds < 0 || anchorSeconds > 86399) {
+  if (!anchor) {
     fail('invalid-argument', 'Die Endzeit der Rast ist ungültig.');
   }
-  const endCursor = ((anchorDay - 1) * 86400) + Math.floor(anchorSeconds);
+  const endCursor = anchor.cursor;
   if (endCursor < previousCursor) fail('failed-precondition', 'Eine Rast darf die Szenenzeit nicht zurückdrehen.');
   const minimumAdvance = Math.max(0, Number(minimumAdvanceSeconds) || 0);
   if (endCursor - previousCursor < minimumAdvance) {
     fail('failed-precondition', 'Der gespeicherte Zeitfortschritt ist kürzer als die angegebene Rastdauer.');
   }
-  return { anchorDay, anchorSeconds: Math.floor(anchorSeconds), endCursor };
+  return { anchorDay, anchorSeconds: anchor.seconds, endCursor };
 }
 
 export async function commitSceneRestOperation(request, { database = getFirestore(), nowClient = Date.now() } = {}) {
@@ -88,6 +90,9 @@ export async function commitSceneRestOperation(request, { database = getFirestor
     const descriptors = requestedRest.participants.map(participant => ({
       participant,
       descriptor: recordDescriptor(participant)
+    }));
+    descriptors.forEach(({ participant, descriptor }) => assertMechanicalActorProfileSource(history, {
+      actorId: participant.actorId, ...descriptor
     }));
     const unique = new Map();
     descriptors.forEach(({ descriptor }) => {
@@ -146,7 +151,8 @@ export async function commitSceneRestOperation(request, { database = getFirestor
         recoveryDayKey,
         definitions,
         conditionsDayChanged: timelineDayChanged,
-        dayChanged: participantDayChanged
+        recoverPendingDaily: true,
+        dayChanged: timelineDayChanged
       });
     });
     const rest = normalizeSceneRest({

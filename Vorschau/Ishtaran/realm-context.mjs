@@ -1,0 +1,52 @@
+/** Bestätigte Landesgrundlagen; Vorschläge und fehlende Festlegungen bleiben sichtbar getrennt. */
+export const REALM_CONTEXT = {
+  title: 'Ishtaran',
+  subtitle: 'Tirnara · Das Erbe der Maghath',
+  summary: 'Aus dem antiken Fürstentum Maghneach ging nach Zarakhuls Tyrannei und Orins Sprachverwirrung Ishtaran hervor. Seine neue Sprache und seldschukisch geprägte Kultur stehen auf einem maghathisch-albischen Fundament.',
+  settlementPlan: { fixedCities: 21, largeCities: 9, capitalCities: 1, countTierCities: 8, baronKnightPrinceTierCities: 12, destroyedCities: 1, additionalEmblems: 26 },
+  history: [
+    { id: 'maghath', title: 'Die Maghath', text: 'Die Maghath waren eine urtümliche albische Volksgruppe Tirnaras. Als kulturelles Vorbild dienen die anatolischen Galater: ein keltisch geprägtes Volk in einem südlichen Kulturraum. Historische galatische Personen, Städte und Ratsordnungen gehören dadurch nicht automatisch zu ihrer Geschichte.' },
+    { id: 'maghneach', title: 'Das antike Fürstentum Maghneach', text: 'Maghneach ist die antike fürstliche Heimat der Maghath. Das neue blau-weiße Steppenadlerwappen erinnert an dieses frühe Zeitalter. Einzelne Fürsten, Gründungsdaten und eine genaue Verfassung sind noch nicht benannt.' },
+    { id: 'zarakhul', title: 'Unter der infernalen Sprache', text: 'Zarakhul unterwarf die Völker Tirnaras und die Alben nacheinander. Seine infernale Sprache verband die unterjochten Völker unter einer gemeinsamen Tyrannei.' },
+    { id: 'orin', title: 'Orins Sprachverwirrung', text: 'Der celestiale Gott Orin störte diese sprachliche Vereinigung. Die Menschen unter Zarakhul sprachen plötzlich fremde Sprachen und konnten sich nicht mehr gemeinsam organisieren. Die Tyrannei verlor damit eine ihrer verbindenden Grundlagen.' },
+    { id: 'ishtaran', title: 'Eine neue Sprache, ein neues Volk', text: 'Nach dem Zerfall des albischen Königreichs und der Zerschlagung Zarakhuls waren Tirnaras Völker zerstreut: nicht länger albisch, aber auch nicht länger infernalisch. Aus den Maghath ging unter einer deutlich anderen Sprache Ishtaran hervor; seine spätere Kultur ist türkisch und seldschukisch inspiriert.' },
+  ],
+  culture: [
+    { title: 'Tirnara', text: 'Ishtaran gehört zu Tirnara, dem Kontinent südlich von Lothir, Estryll und Aldervan. Die gelieferten Normal- und Regionenkarten zeigen das Land. Namen und Adelssitze sind als bearbeitbarer Besprechungsentwurf auf die vorhandenen Ortskreise verteilt.' },
+    { title: 'Dualität und Religionsfreiheit', text: 'Der eigene Glaube betrachtet zwei unbenannte, gegensätzlich wirkende Entitäten: Gut und Böse, Tag und Nacht, Licht und Dunkelheit. Er beruht nicht auf Götterverehrung. Religionsfreiheit und Weltoffenheit sind festgelegt; Religion besitzt keine politische Macht und keinen Platz im Staatssystem.' },
+    { title: 'Gelehrsamkeit und Madrasa', text: 'Gelehrsamkeit trägt die Staatsordnung. An der Madrasa werden Wissenschaft, Esoterik und weitere Studien betrieben. Dualität, Balance und Frieden bilden den gemeinsamen Nenner. Der oberste Gelehrte ist ein Bildungsamt, kein geistlicher Staatsrang.' },
+    { title: 'Krieger und Reitkultur', text: 'Seldschukische, osmanische und kumanische Formen prägen die Ausrüstung. Traditionelle kumanische, osmanische, janitscharische und persische Helme wechseln sichtbar; Wappen und Hausfarben prägen Rüstung und Stoffe. Dahakid erhält als besonderes Haus einen Derwisch mit ritterlichen Elementen. Musketen bleiben ausgeschlossen; die Malweise folgt dem freigestellten matten Aleria-Kriegerstil.' },
+    { title: 'Namensklang', text: 'Neue Namen dürfen alttürkisch und tengrisch anklingen, mit leicht germanisierter, gut lesbarer Schreibweise. Kräftige Konsonanten, zwei bis drei Silben und Endungen wie -an, -ar, -gan, -gut, -bek, -tegin oder -lug dienen als Orientierung. Ein Name bestimmt weder Rang noch Beruf eines Hauses.' },
+  ],
+  offices: [
+    { role: 'Marschall', title: 'Amir', note: 'Vom Fürsten-/Herzogstitel Emir getrennt.' },
+    { role: 'Kämmerer', title: 'Müder', note: '' },
+    { role: 'Justiziar', title: 'Hakim', note: '' },
+    { role: 'Oberster Gelehrter', title: 'Sahir', note: 'Bildung und Gelehrsamkeit; kein geistliches Oberamt.' },
+    { role: 'Ratsmagier', title: 'Va’iz', note: '' },
+    { role: 'Kunst und Unterhaltung', title: 'Nedim', note: '' },
+    { role: 'Spionage und Geheimdienst', title: 'Sirban', note: '' },
+    { role: 'Herold und Diplomatie', title: 'Sefir', note: '' },
+  ],
+  ranks: [
+    { rank: 'König', title: 'Sultan', status: 'Bestätigt', note: 'Haus Aschina ist im Sitzentwurf als Sultanhaus vorgeschlagen; eine Herrscherperson ist nicht festgelegt.' },
+    { rank: 'Fürst / Herzog', title: 'Emir', status: 'Bestätigt', note: 'Nicht mit Amir, dem Marschall, verwechseln.' },
+    { rank: 'Graf', title: 'Pascha', status: 'Bestätigt', note: '' },
+    { rank: 'Baron', title: 'Bey', status: 'Bestätigt', note: '' },
+    { rank: 'Ritterfürst', title: 'Tarkan', status: 'Bestätigt', note: 'Nur etwas kleiner als ein Baron.' },
+    { rank: 'Ritterlicher Herr', title: 'Timar', status: 'Bestätigt', note: 'Niedrigste landbesitzberechtigte Adelsform.' },
+    { rank: 'Ritter', title: 'Sayyid / Sayyida', status: 'Bestätigt', note: 'Edelmann beziehungsweise Edelfrau ohne Landbesitz.' },
+    { rank: 'Knappe', title: 'Alp', status: 'Bestätigt', note: '' },
+    { rank: 'Page', title: 'Sabi', status: 'Bestätigt', note: '' },
+    { rank: 'Freier Bürger', title: 'Reaya', status: 'Bestätigt', note: '' },
+  ],
+  horses: [
+    { id: 'sarkal', name: 'Sarkal', text: 'Das vorwiegende Reitpferd Ishtarans. Das vorhandene Bestiarium führt den Sarkal als hochgewachsenes, sehniges Kriegspferd aus Ishtaran; schnell, ausdauernd und für erfahrene Reiter gezüchtet.', href: '../../Bestiarium/tiere/pferde/sarkal/index.html', image: '../../Bestiarium/assets/horse-profiles/sarkal.webp' },
+    { id: 'shahzad', name: 'Shahzade', text: 'Gelegentlich geritten. Das zugehörige vorhandene Rasseprofil ist im Bestiarium unter „Shahzad“ geführt: ein bewegliches, ausdauerndes Pferd der Shirazad mit Ursprung in den Wüsten Sundaras.', href: '../../Bestiarium/tiere/pferde/shahzad/index.html', image: '../../Bestiarium/assets/horse-profiles/shahzad.webp' },
+  ],
+  openQuestions: [
+    'Die Karten zeigen 21 benannte Ortskreise: die Sultanshauptstadt, acht Paschastädte und zwölf kleine Tarkan-Herrschaften. Die Hauptstadt gehört zu den neun großen Orten. Kutlakar ist zerstört und bleibt unbewohnt.',
+    'Die Hauptstadt erhält im Ausgangsentwurf neben dem Sultanhaus drei zusätzliche Tarkan-Häuser. Paschastädte können bis zu zwei zusätzliche Tarkan-Häuser beherbergen; intakte kleine Tarkanate erhalten jeweils nur ein Haus. Die Kutlug wurden aus Kutlakar nach Belduran evakuiert; ihr Kartenwappen erscheint dort ausgegraut.',
+    'Hausnamen, Ränge und Sitze sind Vorschläge für diese Vorbereitung. Kartenbilder, kanonische Register und Personenakten werden dadurch nicht verändert. Maghneachs antikes Wappen bleibt von der heutigen Hausverteilung getrennt.',
+  ],
+};

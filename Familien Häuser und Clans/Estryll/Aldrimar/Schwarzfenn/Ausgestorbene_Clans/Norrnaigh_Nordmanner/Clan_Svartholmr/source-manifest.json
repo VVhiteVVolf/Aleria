@@ -1,0 +1,89 @@
+{
+  "id": "haus-svartholmr",
+  "source": {
+    "attachmentId": "a5e9c6f9-5c29-4aab-aca7-baaea005e719",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\a5e9c6f9-5c29-4aab-aca7-baaea005e719\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/svartholmr/animexx-original.html",
+    "bytes": 48949,
+    "sha256": "1d1692fc686aeae7a7cbbb726adff0c75eea3c2a2ff69e2ca84504b32a27e7c7",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-svartholmr",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "barony": "Ausgestorbene Clans",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [
+        "Stornborg"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-svartholmr",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-svartholmr",
+    "familyId": "haus-svartholmr",
+    "slug": "svartholmr",
+    "canonicalSlug": "svartholmr",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "a5e9c6f9-5c29-4aab-aca7-baaea005e719",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/3hjkvtY.png",
+    "sourceUrl": "https://i.imgur.com/3hjkvtY.png",
+    "path": "Stammbäume/assets/images/references/haus-svartholmr/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-svartholmr/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:400px; width:268px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 261346,
+    "sha256": "08ffbd515942904e38d74c0ab887fceb1f006506d8589dc5c4deec1b6b0c2d30",
+    "sha": "08ffbd515942904e38d74c0ab887fceb1f006506d8589dc5c4deec1b6b0c2d30",
+    "width": 409,
+    "height": 610,
+    "w": 409,
+    "h": 610,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Krieger in Knochen- und Fellrüstung mit Totenschädelmaske und Axt; Originalmaß 409×610 unverändert.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Antiker Norrnaigh-Zusammenhang, vom jüngsten Untergang der Arnvild trennen. Historischer Sitz Stornborg; Norrnaigh (Nordmänner) ist die Kulturgruppe.",
+    "Sankt Eirin wird zur ausführlichen Gegenquellform Éirinn vereinheitlicht. Keine zweite Heiligenperson erzeugen.",
+    "Anfängliches Bündnis und spätere Feindschaft mit den Ragnulf sind verschiedene historische Phasen. Der Untergang wird nicht als heutige Fehde erzählt.",
+    "Berserker und Ulfhednare sind überlieferte Kriegerbezeichnungen. Daraus keine automatische Theriantrophie, Wolfsform oder neue Klasse für einzelne Personen vergeben.",
+    "Die grausame Jagdglaubensdeutung wird als Überlieferung und Vergleich mit Zatrach formuliert. Skadia und Zatrach werden nicht zu derselben Gottheit erklärt.",
+    "Unbekannt ist in den Werte- und Traditionsfeldern ein Platzhalter. Er wird nicht als zusätzliche Weltinformation oder erfundener Brauch ausgestaltet.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

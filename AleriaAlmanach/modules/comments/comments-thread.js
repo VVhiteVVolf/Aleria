@@ -67,7 +67,8 @@ function sortCommentsByTimeline(comments) {
 }
 
 function sortCommentsByRecentActivity(comments) {
-  return (Array.isArray(comments) ? comments : [])
+  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  return (Array.isArray(visibleComments) ? visibleComments : [])
     .map((comment, index) => ({ comment, index }))
     .sort((a, b) => {
       const av = getCommentActivityMs(a.comment, a.index);
@@ -182,7 +183,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
   };
   const applyPageTarget = comments => {
     if (pageTarget == null) return;
-    setCommentPageTarget(entryId, pageTarget, comments);
+    setCommentPageTarget(entryId, pageTarget, globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments);
     pageTarget = null;
   };
 
@@ -253,11 +254,12 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
 }
 
 function renderCommentsToScroll(scroll, comments) {
-  const sortedComments = typeof dedupeSceneTransitionComments === 'function'
+  const sortedHistory = typeof dedupeSceneTransitionComments === 'function'
     ? dedupeSceneTransitionComments(sortCommentsByTimeline(comments))
     : sortCommentsByTimeline(comments);
-  window.AleriaSkillChecks?.setRenderContext?.(sortedComments);
-  window.AleriaHerausforderung?.setRenderContext?.(sortedComments);
+  const sortedComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(sortedHistory) || sortedHistory;
+  window.AleriaSkillChecks?.setRenderContext?.(sortedHistory);
+  window.AleriaHerausforderung?.setRenderContext?.(sortedHistory);
   const threadId = getCommentPaginationThreadId(scroll);
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
@@ -316,7 +318,7 @@ function renderCommentsToScroll(scroll, comments) {
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);
   }
   syncCommentJumpTools(scroll, sortedComments);
-  globalThis.AleriaCombatEncounter?.renderActivePanel?.(scroll, threadId, sortedComments);
+  globalThis.AleriaCombatEncounter?.renderActivePanel?.(scroll, threadId, sortedHistory);
   if (typeof refreshSessionStatusFromComments === 'function') {
     refreshSessionStatusFromComments(threadId, sortedComments);
   }

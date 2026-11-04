@@ -1,0 +1,37 @@
+{
+  "houseId": "haus-morlan",
+  "kind": "canonical-register-preparation",
+  "date": "2026-11-03",
+  "canonicalRegistrySource": "Stammbäume/assets/js/data/families.registry.js",
+  "canonicalSources": [
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Stammbäume/assets/js/data/parzifal-crew-house-families.js",
+    "Stammbäume/assets/js/data/parzifal-crew-families/morlan.js",
+    "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json"
+  ],
+  "canonicalSnapshot": {
+    "file": "diagnostics/klaueninsel-house-pages-20261103/lower-houses.json",
+    "recordId": "haus-morlan",
+    "recordJsonSha256": "2b1a8f1e0b264dc36be51244deaa6d689d07c935f13d5cf60e08431051dfcf1d",
+    "sourceRevision": 6
+  },
+  "genealogy": {
+    "existingFamilyId": "haus-morlan",
+    "graphChanged": false,
+    "suppliedTreeImported": false
+  },
+  "militaryStatisticsIgnored": true,
+  "image": {
+    "file": "assets/hausdarstellung-2026-11-03.png",
+    "promptManifest": "diagnostics/klaueninsel-house-pages-20261103/image-prompts.json",
+    "metadata": "assets/image-generation.json",
+    "preserveExistingImages": true
+  },
+  "decisions": [
+    "Nur vorhandene öffentliche Registerfakten, Beschreibungen, Personen und deren belegte Aufgaben redigiert. Keine zusätzliche Familie oder Verwandtschaft angelegt.",
+    "Datierte genealogische Gerüste sind keine Hauschronik: keine daraus abgeleiteten Gründungsjahre, Wanderungen, Amtsfolgen oder Oberhäupter.",
+    "Nur reale Personen mit vorhandenem individuellem Portrait erhalten Angehörigenkarten. Namen und Portraitpfade stammen unverändert aus der bestehenden Akte.",
+    "Sämtliche Militärstatistiken ausgelassen. Persönliche Bordaufgaben bleiben von Hausämtern und Hausrang getrennt.",
+    "Morlan und Morglan bleiben getrennte Familien. Aus dem genealogischen Gerüst werden keine Gründungsdaten oder Wanderungsgeschichte abgeleitet."
+  ]
+}

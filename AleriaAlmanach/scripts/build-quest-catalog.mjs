@@ -26,6 +26,9 @@ for (const path of ['Fonts/Rheunwaith-Font-1.000/rheunwaith.js', 'Fonts/Karnrith
 for (const path of ['modules/name-list/name-list-data.js', 'modules/script-table/script-table-data.js',
   'modules/language/morgar/morgar-data.js', 'modules/language/morgar/morgar-tables.js', 'modules/language/morgar/morgar-entry.js',
   'modules/language/laerelis/laerelis-data.js', 'modules/language/laerelis/laerelis-tables.js', 'modules/language/laerelis/laerelis-entry.js',
+  'modules/language/package-language-tables.js',
+  'modules/language/tlapanui/tlapanui-data.js', 'modules/language/tlapanui/tlapanui-entry.js',
+  'modules/language/ishtaran/ishtaran-data.js', 'modules/language/ishtaran/ishtaran-entry.js',
   'modules/language/language-reference-entries.js', 'modules/language/arcane-alphabet-entry.js',
   'modules/religion/nimuiten/nimuiten-entry.js', 'modules/religion/gruener-bund/gruener-bund-entry.js', 'modules/piracy/piracy-entries.js']) {
   vm.runInContext(await read(`AleriaAlmanach/${path}`), context, { filename: path });

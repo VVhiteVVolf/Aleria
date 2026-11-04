@@ -57,6 +57,42 @@ test('ein echter Tageswechsel füllt Tagesressourcen unabhängig von der Rast-Ar
   assert.equal(recovered.find(item => item.id === 'mana-focus').current, 2);
 });
 
+test('nachgeholte Tageserholung prüft jeden Vorrat und jede Fähigkeit getrennt', () => {
+  const dayKey = 'scene:test:day-2';
+  const profile = {
+    characterId: 'mixed-recovery',
+    resources: [
+      { id: 'today', current: 2, maximum: 8, recovery: 'day', recoveryDayKey: dayKey },
+      { id: 'yesterday', current: 0, maximum: 3, recovery: 'day', recoveryDayKey: 'scene:test:day-1' },
+      { id: 'legacy', current: 0, maximum: 4, recovery: 'day' }
+    ],
+    abilities: [
+      { id: 'today', usesCurrent: 0, usesMaximum: 2, recovery: 'day', recoveryDayKey: dayKey },
+      { id: 'yesterday', usesCurrent: 0, usesMaximum: 1, recovery: 'day', recoveryDayKey: 'scene:test:day-1' },
+      { id: 'legacy', usesCurrent: 0, usesMaximum: 3, recovery: 'day' }
+    ]
+  };
+  const original = structuredClone(profile);
+  const participant = buildSceneRestParticipant(profile, 'short', {
+    recoveryDayKey: dayKey, recoverPendingDaily: true, dayChanged: false
+  });
+  assert.deepEqual(participant.after.resources.map(entry => entry.current), [2, 3, 4]);
+  assert.deepEqual(participant.after.abilities.map(entry => entry.usesCurrent), [0, 1, 3]);
+  assert.ok(participant.after.resources.every(entry => entry.recoveryDayKey === dayKey));
+  assert.ok(participant.after.abilities.every(entry => entry.recoveryDayKey === dayKey));
+  const spent = {
+    ...profile,
+    resources: participant.after.resources.map(entry => ({ ...entry, current: 0 })),
+    abilities: participant.after.abilities.map(entry => ({ ...entry, usesCurrent: 0 }))
+  };
+  const repeated = buildSceneRestParticipant(spent, 'long', {
+    recoveryDayKey: dayKey, recoverPendingDaily: true, dayChanged: false
+  });
+  assert.ok(repeated.after.resources.every(entry => entry.current === 0));
+  assert.ok(repeated.after.abilities.every(entry => entry.usesCurrent === 0));
+  assert.deepEqual(profile, original);
+});
+
 test('Rasteinträge werden beim historischen Kampfzustand an der richtigen Stelle angewendet', () => {
   const damageComment = {
     id: 'damage',

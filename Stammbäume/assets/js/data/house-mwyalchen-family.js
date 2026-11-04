@@ -9,7 +9,7 @@ import {
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_MWYALCHEN_PORTRAITS } from './house-mwyalchen-portraits.js';
-import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js';
+import { IVARSHEIM_HOUSE_EMBLEMS } from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,

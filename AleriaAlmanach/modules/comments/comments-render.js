@@ -198,6 +198,7 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (globalThis.AleriaSceneRegenerationPolicy?.isComment(c)) return '';
   if (Array.isArray(c.criticalLifecycle) && c.criticalLifecycle.length) {
     const rows = c.criticalLifecycle.map(event => {
       const change = event.loss != null ? `−${Number(event.loss) || 0} TP`

@@ -9,7 +9,7 @@ test('Die einzelne HTML-Datei enthält alle Laufzeitressourcen und syntaktisch g
   assert.doesNotThrow(()=>new Script(script));
   assert.ok(!/<script[^>]+src=/.test(html));assert.ok(!/<link[^>]+stylesheet/.test(html));
   assert.ok(!/<(?:img|script)[^>]+src="(?:https?:|\.\/)/.test(html));
-  assert.equal([...html.matchAll(/<style>/g)].length,4);
+  assert.equal([...html.matchAll(/<style>/g)].length,5);
   assert.match(html,/data:image\/svg\+xml;base64,/);
   assert.ok(!/from\s+['"]\.\.?\//.test(script));
 });

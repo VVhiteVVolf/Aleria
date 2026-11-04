@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-03",
+  "scope": "Ishtaran editable preparation page only",
+  "status": "complete-local",
+  "houses": 37,
+  "placed": 37,
+  "unassigned": 0,
+  "cityMarkers": 21,
+  "destroyed": "Kutlakar",
+  "evacuatedHouse": {
+    "name": "Kutlug",
+    "city": "Belduran",
+    "mapSymbol": "CSS grayscale; original image unchanged"
+  },
+  "renamedHouse": {
+    "name": "G?ktemir",
+    "houseId": "pool-18",
+    "proposalId": "house-koektemir"
+  },
+  "capital": {
+    "name": "Altasar",
+    "houses": [
+      "Aschina",
+      "Aybars",
+      "Tenguran",
+      "G?ktemir"
+    ]
+  },
+  "finalFive": {
+    "Tenguran": "Altasar",
+    "Salur": "Ayseran",
+    "Ordugan": "Orsakent",
+    "Torgun": "Torgasar",
+    "Albaran": "Kembaran"
+  },
+  "imageEdit": "sources/pool-07-wing-fix-20261103-v1.json",
+  "tests": {
+    "fullPreviewSuite": 108,
+    "publicationPolicy": 2,
+    "focusedFinalDataAndState": 19,
+    "focusedCardsAfterSquareMarkerFix": 14,
+    "namedDesktopDialogs": 38
+  },
+  "browser": {
+    "actualMouseDrag": "Erkut Belduran to Orsakent, then undo; current seat confirmed in house dialog",
+    "mobileTargetSelection": "Tenguran to Orsakent then undo",
+    "persistence": "move, reload and undo passed",
+    "invalidImport": "Kutlakar request rejected atomically",
+    "validImportExport": "file downloaded and read back through native browser file chooser",
+    "mobileViewport": [
+      392,
+      844
+    ],
+    "mobileMarkers": 37,
+    "clippedMarkerGroups": 0,
+    "markerAspect": "square",
+    "destroyedMarkers": 1,
+    "finalViewportReset": true,
+    "merkliste": "unchanged empty baseline"
+  },
+  "evidence": [
+    "browser-final-placement-review.json",
+    "browser-named-house-dialogs.json",
+    "placement-final-map.png",
+    "barsbek-corrected-emblem-browser.png"
+  ],
+  "noPushOrDeploy": true
+}

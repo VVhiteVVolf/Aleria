@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "reason": "Gezielte Nutzerkorrekturen an sieben Hausdarstellungen.",
+  "jobs": [
+    {
+      "id": "house-cerunia-v2",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in blau-silberner R?stung mit geradem zweischneidigem Gladius und R?ckenk?cher.",
+      "equipment": [
+        "Gerader zweischneidiger Gladius",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Segment- und Kettenpanzer"
+      ],
+      "houseId": "house-cerunia",
+      "assetStem": "house-cerunia-v2",
+      "category": "warriors",
+      "mount": null,
+      "palette": [
+        "Dunkelblau",
+        "Gold",
+        "Silberweiß"
+      ],
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-cerunia.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. A faithful localized weapon correction of the EXISTING Sylvarant warrior, not a newly designed character.\n\nInput images: Image 1 is the PRIMARY EDIT TARGET; preserve it. Image 2 is supporting matte painted STYLE ONLY; do not copy its knight design, griffin, blue palette, sword shape, background or colour mist.\n\nPRIMARY EDIT: Replace ONLY the curved sabre blade and its sword furniture in his existing right hand (viewer left) with ONE unmistakable Roman GLADIUS: a short STRAIGHT symmetric double-edged steel sword with two straight parallel cutting edges tapering to a symmetric triangular spear point, small rounded straight guard, dark simple grip and rounded pommel. The gladius points quietly downward in the identical hand position; the new straight blade is fully visible with transparent margin and must not curve. The hand naturally encloses its grip. The sword must not be a sabre, scimitar or single-edged weapon. Preserve the exact young man's face, expression, medium brown curly hair, rounded human ears, open Roman helmet, head orientation, body proportions, pose, armour, white shoulder cloth, navy tunic, gold and silver trident-and-wreath embroidery, back quiver and arrows, belts and boots from Image 1. The user explicitly liked this figure very much: preserve it faithfully.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nFinal constraints: keep the exact individual from Image 1, quiet complete full-body portrait, 2:3, 1024x1536. Young adult, anatomically human rounded ears. No shield, extra weapon, extra character or scenery. All helmet, quiver, weapon, fingers and both complete feet inside canvas. True transparent PNG background with Alpha=0 outside the actual physical silhouette and in every open gap; retain opaque character materials. REMOVE ALL source outer glow, colour mist, brown/grey halo, shadow and backdrop. No ground, floor, paper, text, frame or watermark. Thin soft painted contours, matte muted colours, clear simplified shapes, fine even pigment grain. Alter only the specified weapon and necessary gripping-finger detail; preserve all other person/design features.",
+      "supersedesAssetStem": "house-cerunia",
+      "sourceJob": "sources/warrior-revisions-20261104-a-jobs.json"
+    },
+    {
+      "id": "house-rinia-v2",
+      "prototypeId": "prototype-03",
+      "role": "Marinekriegerin",
+      "description": "Marinekriegerin in silbernem Schuppenpanzer und petrolfarbenem Mantel mit langem Dreizack und R?ckenk?cher.",
+      "equipment": [
+        "Dreizack mit genau drei Zinken und langem geradem Schaft",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "houseId": "house-rinia",
+      "assetStem": "house-rinia-v2",
+      "category": "warriors",
+      "mount": null,
+      "palette": [
+        "Petrol",
+        "Schwarz",
+        "Silber"
+      ],
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-rinia.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. A faithful localized weapon correction of the EXISTING Sylvarant warrior, not a newly designed character.\n\nInput images: Image 1 is the PRIMARY EDIT TARGET; preserve it. Image 2 is supporting matte painted STYLE ONLY; do not copy its knight design, griffin, blue palette, sword shape, background or colour mist.\n\nPRIMARY EDIT: Replace ONLY the sabre in her existing weapon hand with ONE complete functional TRIDENT held naturally in that same hand. The trident must have EXACTLY THREE clearly separated metal prongs: ONE central straight prong and TWO symmetric outer prongs, and a long continuous perfectly STRAIGHT wooden shaft. The weapon is a readable tall polearm, not a little symbol or a forked sword. Orient its head upward and butt downward, with shaft passing naturally through her closed gripping hand. Entire trident head, all THREE prongs, long straight shaft and butt must fit inside the image with transparent margin; if needed angle it very slightly away from her body while retaining the woman's existing arm position. Do not add a fourth prong or extra spear. Preserve the exact young woman's face, expression, dark brown tied hair, rounded human ears, open ribbed Roman helmet, head orientation, body proportions, pose, armour, petrol cloak, silver trident-and-laurel embroidery, back quiver and arrows, belts and boots from Image 1. Preserve existing palette, clothing, helmet and Roman cultural design. No Greek or Corinthian helmet.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nFinal constraints: keep the exact individual from Image 1, quiet complete full-body portrait, 2:3, 1024x1536. Young adult, anatomically human rounded ears. No shield, extra weapon, extra character or scenery. All helmet, quiver, weapon, fingers and both complete feet inside canvas. True transparent PNG background with Alpha=0 outside the actual physical silhouette and in every open gap; retain opaque character materials. REMOVE ALL source outer glow, colour mist, brown/grey halo, shadow and backdrop. No ground, floor, paper, text, frame or watermark. Thin soft painted contours, matte muted colours, clear simplified shapes, fine even pigment grain. Alter only the specified weapon and necessary gripping-finger detail; preserve all other person/design features.",
+      "supersedesAssetStem": "house-rinia",
+      "sourceJob": "sources/warrior-revisions-20261104-a-jobs.json"
+    },
+    {
+      "id": "house-maborel-v2",
+      "houseId": "house-maborel",
+      "assetStem": "house-maborel-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-02",
+      "role": "Schwerer Infanterist",
+      "description": "Junger schwerer Infanterist mit offenem spätrömischem Helm und kleinen verbundenen Lamellen in abwechselnd dunklen olivgrünen und hellen elfenbein-silbernen Reihen; Schildkröten-Scutum und gerader Gladius.",
+      "equipment": [
+        "Gerader Gladius",
+        "Großes aufgestelltes rechteckiges Scutum mit Schildkröte",
+        "Offener spätrömischer Helm",
+        "Kleinteiliger Lamellenpanzer in farblich abwechselnden Reihen",
+        "Kettenunterlage und gepanzerte Beine"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Olivgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "mount": null,
+      "supersedesAssetStem": "house-maborel",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-maborel.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/originals/maborel.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Project asset: one Sylvarant house warrior. Image 1 is ONLY the approved matte painted STYLE reference. Image 2 is the EDIT TARGET: preserve its house identity, quiet upright three-quarter composition, slim young human proportions and straight gladius, while applying the armour redesign below. Image 3 is ONLY the precise HOUSE EMBLEM and colours. The style reference and old target contain an unwanted colour halo: DO NOT reproduce it. STRICT true transparent PNG canvas, no mist, no outer shadow or coloured aura, including in all open gaps. Do not copy the blue griffin motif or Western helmet from the style reference.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nMABOREL USER CORRECTION, TOP PRIORITY: Completely remove the oversized hexagonal turtle-shell chest armour from Image2. REBUILD THE ENTIRE TORSO as genuine STANDARD LAMELLAR ARMOUR: many small narrow oblong rectangular lamella plates laced together in continuous overlapping HORIZONTAL ROWS across chest, abdomen and shoulders. Each lamella is only about two fingers wide, each row has many little laced plates. Clearly visible ties/rivets. Whole horizontal ROWS alternate in colour: DARK OLIVE GREEN row, PALE IVORY-SILVER row, DARK OLIVE GREEN row, PALE IVORY-SILVER row, continuing consistently down the torso. These bands are part of the actual little overlapping armour lamellae, not painted cloth stripes. No large plates, no hexagons, no geometric turtle-shell costume, no scales shaped like a turtle shell. The turtle is permitted ONLY as the small emblem on shoulder/chest and the large emblem on the SHIELD. Keep the dark mail underlayer, restrained ivory edging, ivory under-tunic, dark leather hanging skirt strips, olive metal greaves and complete armoured feet from the target, harmonized with the new standard lamellar cuirass.\n\nREPLACE THE CLOSED FACE HELMET with an OPEN late-ROMAN ridge helmet, dark olive dome and ivory/silver bands, hinged cheekpieces pulled back enough to expose the youthful25-year-old clean-shaven human face and normal rounded human ears. Face clearly visible; no faceplate, no visor, no mask, no nasal covering. Preserve the target's little turtle heraldry, colours and standing shield arrangement. Large dark green RECTANGULAR gently curved Roman SCUTUM is standing upright with lower edge at sole level, top at lower chest, left hand resting naturally ON ITS TOP EDGE. The turtle on the shield has an olive shell and ivory limbs like Image3. Right hand loosely holds a STRAIGHT gladius tip downward; NEVER CURVE THE BLADE. Keep all of the equipment, change the bad armour construction and open the helmet.\n\nFinal canvas EXACTLY 1024x1536, portrait2:3. One young slim adult HUMAN male, no pointed ears. Quiet upright complete full body. Entire helmet crest, every finger, entire straight sword, all shield edges when specified, and BOTH COMPLETE FEET in the canvas with 8percent free transparent margin on all sides. Matte muted olive/green, cream, silver-grey steel and restrained bronze; simplified painted shapes. Background alpha zero, no ground or floor, no scenery, no shadow, no paper, no text, no floating emblem, no watermark. Armour and cloth opaque. NO Greek/Corinthian helmet, no Greek hoplite equipment.",
+      "sourceJob": "sources/warrior-revisions-20261104-b-jobs.json"
+    },
+    {
+      "id": "house-stalitia-v2",
+      "houseId": "house-stalitia",
+      "assetStem": "house-stalitia-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-01",
+      "role": "Legionär",
+      "description": "Imposanter junger Legionär mit reichem römisch-ritterlichem Vollharnisch, Kammhelm, langem Segmentrock, Kettenlagen und vollständig gepanzerten Beinen; Säulenmotiv und gerader Gladius.",
+      "equipment": [
+        "Gerader Gladius",
+        "Geschlossener spätrömischer Kammhelm",
+        "Reicher römisch-ritterlicher Vollharnisch",
+        "Langer Segment- und Lamellenrock bis über die Knie",
+        "Kettenunterlagen",
+        "Oberschenkel-, Knie-, Schienbein- und Fußpanzer"
+      ],
+      "palette": [
+        "Schwarz",
+        "Grau",
+        "Graugrün",
+        "Creme",
+        "Stahl",
+        "Bronze"
+      ],
+      "mount": null,
+      "supersedesAssetStem": "house-stalitia",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-stalitia.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/originals/stalitia.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Project asset: one Sylvarant house warrior. Image 1 is ONLY the approved matte painted STYLE reference. Image 2 is the EDIT TARGET: preserve its house identity, quiet upright three-quarter composition, slim young human proportions and straight gladius, while applying the armour redesign below. Image 3 is ONLY the precise HOUSE EMBLEM and colours. The style reference and old target contain an unwanted colour halo: DO NOT reproduce it. STRICT true transparent PNG canvas, no mist, no outer shadow or coloured aura, including in all open gaps. Do not copy the blue griffin motif or Western helmet from the style reference.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nSTALITIA USER CORRECTION, TOP PRIORITY: The target looks too cheap and exposes far too much bare leg. Substantially REDESIGN it as an IMPOSING, expensive, beautifully layered ROMAN-LATIN KNIGHTLY FULL HARNESS on a still SLIM young22-year-old male human. This is a richer armour redesign, not a simple recolour or a bulky body. Graceful high-quality silver-grey steel cuirass and broad articulated ROMAN shoulder bands, dense layered vambraces, elbow armour and gauntlets, muted BRONZE edge fittings, grey-green enamel details and ivory-cream textile accents. Restrained elegant scroll/chased trim and small column-and-laurel fittings make the armour visibly costly without photorealistic surface detail. Additional dark close-fitting mail at neck, inner elbows, waist and between leg plates.\n\nNO BARE LEG WHATSOEVER. Rich articulated SEGMENTED AND LAMELLAR ARMOURED SKIRT descends from waist to BELOW THE KNEES: many overlapping horizontal metal segments/lamellar rows with narrow bronze edges over long dark mail layers. The hem covers the entire thigh and crosses over the knee tops. Below it both knee cops, full shin greaves and COMPLETE articulated closed steel sabatons are visible. Every inch of thighs, knees, shins and feet covered by armour/mail. The figure must look well protected and expensive, with much greater visual mass in armour layers than the old short leather skirt. No skin on arms or legs. A grey-green short draped cloak, a cream front cloth panel with the exact black column between green laurel branches from Image3. Keep house palette grey-green, cream, grey steel, black, with restrained bronze; not blue or gold.\n\nHELMET: an impressive CLOSED late-ROMAN ridge/cavalry helmet, domed Roman skull, bronze bands and a dignified strong LONGITUDINAL grey-green horsehair crest. Full Roman cavalry-style faceplate with two narrow eye apertures and short cheek armour. Clearly Roman-Latin, neither Greek nor Corinthian. No T-shaped Corinthian nose/eye silhouette. Young slim proportions, not an oversized brute. Right hand holds the target's STRAIGHT gladius tip down, whole sword visible. Left gauntleted hand resting calmly at belt. NO SHIELD needed, no shield. Preserve the column heraldry in black between green laurels on grey/cream field; it is a small worn motif, not separate scenery.\n\nFinal canvas EXACTLY 1024x1536, portrait2:3. One young slim adult HUMAN male, no pointed ears. Quiet upright complete full body. Entire helmet crest, every finger, entire straight sword, all shield edges when specified, and BOTH COMPLETE FEET in the canvas with 8percent free transparent margin on all sides. Matte muted olive/green, cream, silver-grey steel and restrained bronze; simplified painted shapes. Background alpha zero, no ground or floor, no scenery, no shadow, no paper, no text, no floating emblem, no watermark. Armour and cloth opaque. NO Greek/Corinthian helmet, no Greek hoplite equipment.",
+      "sourceJob": "sources/warrior-revisions-20261104-b-jobs.json"
+    },
+    {
+      "id": "pool-07-v2",
+      "houseId": "pool-07",
+      "assetStem": "house-pool-07-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in gr?n-silberner R?stung mit Schl?sselwappen, geradem zweischneidigem Schwert und R?ckenk?cher.",
+      "equipment": [
+        "Gerades zweischneidiges Schwert",
+        "Rückenköcher",
+        "Offener römischer Marinehelm",
+        "Beweglicher Ketten- und Plattenpanzer"
+      ],
+      "palette": [
+        "Mattsilber",
+        "Waldgrün",
+        "Bronze"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Asset type: existing Sylvarant house warrior PNG for Aleria. Input Image 1 is the exact EDIT TARGET. Input Image 2 supplies ONLY the approved painting STYLE; never copy its colors, armor, closed helmet, heraldry or pose. Make a surgical local edit of the held weapon in Image 1. Keep the exact same person, youthful face, expression, gaze, hair, naturally rounded human ears, entire Roman helmet, neck, anatomy, clothes, armor, cloak, colors, all key/anchor emblems, hands except minimally necessary grip correction, stance, boots and back quiver with its arrows, all untouched and visually identical to Image 1. Do not redesign or redraw the character. Retain the full 1024x1536 2:3 composition, exact figure scale and positions, complete feet and complete weapon tip inside frame. The whole weapon remains outside the leg. Change ONLY the curved saber into ONE normal STRAIGHT DOUBLE-EDGED SWORD: a perfectly straight blade center axis from guard to tip, two straight symmetrical cutting edges, broad normal blade tapering evenly to a centered symmetrical pointed tip, a subtle central ridge, no curved saber outline whatsoever. The blade, grip and pommel must share one straight functional axis. Give it a normal compact crossguard and leather-wrapped functional sword grip, the hand actually gripping the handle; no saber knuckle bow. Maintain the original point-down direction and overall length. No katana, no scimitar, no saber, no curved or bent blade, no arc, no single edge, no broad ornate fantasy weapon, no extra weapons. Scene/backdrop: actual transparent RGBA PNG outside the precise character and sword silhouette and in all open gaps; remove any exterior colored aura inherited from references, no backdrop, no ground, no shadow. No text or watermark.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nEdit target identity: key-emblem young human marine in forest-green clothing, silver and bronze Roman armor, open silver Roman helmet, dark curly hair, back quiver visible over image-right shoulder, free hand resting near belt. Preserve his entire image exactly; only replace the curved weapon at image-left with a straight normal two-edged sword. Keep the small silver key emblem on the chest unchanged.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-07.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-07",
+      "sourceJob": "sources/warrior-revisions-20261104-c-jobs.json"
+    },
+    {
+      "id": "pool-10-v2",
+      "houseId": "pool-10",
+      "assetStem": "house-pool-10-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-03",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger in bronzefarbenem Schuppenpanzer mit Ankerwappen, geradem zweischneidigem Schwert und R?ckenk?cher.",
+      "equipment": [
+        "Gerades zweischneidiges Schwert",
+        "Rückenköcher",
+        "Offener römischer Spangenhelm",
+        "Bronzefarbener Schuppenpanzer"
+      ],
+      "palette": [
+        "Bronze",
+        "Creme",
+        "Olivgrün"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Asset type: existing Sylvarant house warrior PNG for Aleria. Input Image 1 is the exact EDIT TARGET. Input Image 2 supplies ONLY the approved painting STYLE; never copy its colors, armor, closed helmet, heraldry or pose. Make a surgical local edit of the held weapon in Image 1. Keep the exact same person, youthful face, expression, gaze, hair, naturally rounded human ears, entire Roman helmet, neck, anatomy, clothes, armor, cloak, colors, all key/anchor emblems, hands except minimally necessary grip correction, stance, boots and back quiver with its arrows, all untouched and visually identical to Image 1. Do not redesign or redraw the character. Retain the full 1024x1536 2:3 composition, exact figure scale and positions, complete feet and complete weapon tip inside frame. The whole weapon remains outside the leg. Change ONLY the curved saber into ONE normal STRAIGHT DOUBLE-EDGED SWORD: a perfectly straight blade center axis from guard to tip, two straight symmetrical cutting edges, broad normal blade tapering evenly to a centered symmetrical pointed tip, a subtle central ridge, no curved saber outline whatsoever. The blade, grip and pommel must share one straight functional axis. Give it a normal compact crossguard and leather-wrapped functional sword grip, the hand actually gripping the handle; no saber knuckle bow. Maintain the original point-down direction and overall length. No katana, no scimitar, no saber, no curved or bent blade, no arc, no single edge, no broad ornate fantasy weapon, no extra weapons. Scene/backdrop: actual transparent RGBA PNG outside the precise character and sword silhouette and in all open gaps; remove any exterior colored aura inherited from references, no backdrop, no ground, no shadow. No text or watermark.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nEdit target identity: anchor-emblem young human marine in cream and olive clothing, bronze scale armor, open bronze Roman helmet with silver center band, short dark hair, back quiver visible over image-left shoulder, free hand relaxed beside image-right hip. Preserve his entire image exactly; only replace the curved weapon at image-left with a straight normal two-edged sword. Keep both bronze anchor emblems unchanged.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-10.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-10",
+      "sourceJob": "sources/warrior-revisions-20261104-c-jobs.json"
+    },
+    {
+      "id": "pool-11-v2",
+      "houseId": "pool-11",
+      "assetStem": "house-pool-11-v2",
+      "category": "warriors",
+      "prototypeId": "prototype-01",
+      "role": "Reich gerüsteter Legionär",
+      "description": "Ein eindrucksvoll gerüsteter Legionär in silbernem Platten- und Lamellenharnisch, dunkelrotem Mantel und geschlossenem römischem Kammhelm. Das Kapitellzeichen prägt Brust, Gürtel und Rüstungsbeschläge.",
+      "equipment": [
+        "Gerader Gladius",
+        "Geschlossener spätrömischer Kammhelm",
+        "Silberner Platten- und Lamellenharnisch",
+        "Gepanzerte Knie, Schienbeine und Füße",
+        "Dunkelroter Mantel"
+      ],
+      "palette": [
+        "Silber",
+        "Dunkelrot",
+        "Schwarz"
+      ],
+      "mount": null,
+      "prompt": "Use case: precise-object-edit. Edit the first referenced warrior of the unnamed silver column-capital house for Sylvarant, Aleria. The user finds his outfit much too cheap and wants a distinctly more interesting and impressive design. Completely redesign his ARMOR and HELMET while retaining the same young fit adult human male identity, calm upright full-body stance, rounded human ears under the helmet, silver/dark-red/black house palette and column-capital heraldry. Reference1 is the edit target and identity. Reference2 supplies ONLY this house's silver acanthus column-capital emblem on dark red. Reference3 supplies ONLY approved matte simplified painting, not its western armor, blue palette, griffin or halo.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nNEW DESIGN, clearly a rich Latin-Roman armored champion with a knightly touch: broad matte silver cuirass over dark mail, beautifully ordered fluted vertical breast sections and a small silver column-capital badge inset on a dark-red chest panel. Intricate but readable small capital-leaf motifs on a bronze-edged belt and the knee bosses. Broad articulated Roman shoulder defenses in unequal overlapping plates, one with a restrained black mantle edge. A CLOSED late-Roman ridge/spangen cavalry helmet with a dignified metal face visor, narrow eyes, neat small breathing perforations and fully enclosed cheeks; NO Greek or Corinthian/T-shaped nose helmet. The helmet has a striking compact lengthwise black-and-dark-red crest with a small silver acanthus front clasp, not giant horns or architectural props. An asymmetric rich dark red cloak lined in charcoal falls behind the LEFT shoulder and hangs toward the calf. At the waist a structured long armored skirt of narrow silver lamellar rows, dark leather pteryges and dark red cloth panels to below the knees. Fully plated knees, greaves and covered metal-tipped boots over dark cloth, NO bare thighs, knees or calves. Bracers with dark inset panels and restrained gold-bronze lines. This is a distinctive rich Roman layered silhouette, NOT the previous plain mail shirt with leather straps, cheap short skirt and bare legs, and NOT a copy of the style knight or any existing house warrior.\n\nOne straight double-edged Roman GLADIUS in his right hand, held quietly downward away from the body, clearly straight spine and two straight parallel edges tapering to a central point, small straight bronze guard and ivory grip. Left gauntleted hand rests naturally on the decorated broad belt; no shield, no additional sword, no quiver, no magic. Keep the stance composed but proud with a subtle body turn, both feet grounded, no battle action.\n\nOutput EXACTLY1024x1536, portrait2:3, complete full-body silhouette from crest to soles and swordtip; comfortably80percent of height, free margins on all sides. REAL TRANSPARENT PNG outside silhouette and every gap; absolutely no background, floor, outer shadows, fog or color halo. Do not copy invisible RGB glow from references. Simplify ornament to painted flat readable motifs, matte muted pigments, thin soft painted contours, fine even pigment grain, no glossy photorealism/CGI/3D. No text, watermark, names, buildings, giant architecture attached to armor or extra characters.",
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/house-pool-11.png",
+        "E:/Aleria/Vorschau/Sylvarant/assets/emblems/production/pool-11.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "supersedesAssetStem": "house-pool-11",
+      "sourceJob": "sources/warrior-revisions-20261104-root-jobs.json"
+    }
+  ]
+}

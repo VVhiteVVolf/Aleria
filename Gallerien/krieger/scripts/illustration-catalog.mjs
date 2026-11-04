@@ -15,12 +15,14 @@ function filesIn(root, relative) {
   });
 }
 
-export async function collectIllustrations(root, houseCatalog, selection) {
+export async function collectIllustrations(root, houseCatalog, selection, { houseIds = null } = {}) {
+  const scope = houseIds ? new Set(houseIds) : null;
   const entries = new Map();
   function add({ file, houseId = '', name, category = 'Hausdarstellung', affiliation = '', source, original = '', note = '' }) {
     // Reviewed archives can retain older house-/haus- aliases after a register admission.
     // Resolve at the shared boundary so provenance remains unchanged in every caller.
     if (houseId) houseId = houseCatalog.resolveHouse(houseId) || houseId;
+    if (scope && !scope.has(houseId)) return null;
     file = cleanPath(file);
     const absolute = new URL(file, root);
     if (!existsSync(absolute)) throw new Error(`Bild fehlt: ${file}`);
@@ -40,6 +42,7 @@ export async function collectIllustrations(root, houseCatalog, selection) {
   const houseFiles = filesIn(root, FAMILY_ROOT);
   for (const file of houseFiles.filter(file => file.endsWith('/haus.content.mjs'))) {
     const { HOUSE_CONTENT: content } = await import(pathToFileURL(fileURLToPath(new URL(file, root))));
+    if (scope && !scope.has(content.id)) continue;
     const houseId = houseCatalog.resolveHouse(content.id, content.name);
     if (!houseId || excluded.has(houseId)) continue;
     if (content.images?.scene) {
@@ -48,12 +51,14 @@ export async function collectIllustrations(root, houseCatalog, selection) {
     for (const entry of content.warriorGallery?.entries || []) {
       const item = add({ file: `${FAMILY_ROOT}/${entry.image}`, houseId, name: entry.name, category: /Knappe|Page/.test(entry.name) ? 'Ausbildung & Gefolge' : 'Hausdarstellung', source: file, note: entry.description });
       // The source gallery supplies the more specific label when the main illustration is identical.
-      item.name = entry.name;
+      if (item) item.name = entry.name;
     }
   }
   // Source inventories preserve full warrior illustrations separately from cropped portraits.
   const referenceFiles = filesIn(root, 'Stammbäume/assets/images/references').filter(file => file.endsWith('/krieger.png'));
-  const inventories = filesIn(root, 'Stammbäume/assets/data/source-inventories').filter(file => file.endsWith('.json'));
+  // Scoped work uses the selected reference image itself as provenance rather than
+  // importing unrelated, potentially mixed source-inventory documents.
+  const inventories = scope ? [] : filesIn(root, 'Stammbäume/assets/data/source-inventories').filter(file => file.endsWith('.json'));
   const provenance = new Map();
   function visit(value, source) {
     if (!value || typeof value !== 'object') return;
@@ -66,20 +71,21 @@ export async function collectIllustrations(root, houseCatalog, selection) {
   for (const file of inventories) visit(JSON.parse(readFileSync(new URL(file, root), 'utf8')), file);
   for (const file of referenceFiles) {
     const houseId = houseCatalog.resolveHouse(acceptedReferenceFamily(file) || file.split('/').at(-2));
+    if (!houseId && scope) continue;
     if (!houseId) throw new Error(`Referenz ohne Haus: ${file}`);
     add({ file, houseId, name: `${houseCatalog.houses.find(h => h.id === houseId).name} · Kriegerreferenz`, category: 'Archivierte Kriegerreferenz', ...provenance.get(file), source: provenance.get(file)?.source || file });
   }
   for (const entry of selection.additionalImages) add(entry);
   // Paladins belong to their religious tradition, never implicitly to a noble house.
-  for (const file of filesIn(root, 'BilderRüstungen').filter(file => /_paladin\.png$/.test(file))) {
+  for (const file of scope ? [] : filesIn(root, 'BilderRüstungen').filter(file => /_paladin\.png$/.test(file))) {
     const slug = path.posix.basename(file).replace('_paladin.png', '');
     const name = slug[0].toUpperCase() + slug.slice(1);
     add({ file, name: `Paladin · ${name}`, category: 'Paladine', affiliation: `Klerus · ${name}`, source: `Religionen/klerus/gottheiten/${slug}/index.html` });
   }
-  for (const file of filesIn(root, 'Orte').filter(file => /\/assets\/([^/]*stadtwache|wache|cochllamwyr-v1)\.png$/.test(file))) {
+  for (const file of scope ? [] : filesIn(root, 'Orte').filter(file => /\/assets\/([^/]*stadtwache|wache|cochllamwyr-v1)\.png$/.test(file))) {
     const place = file.split('/').at(-3).replaceAll('_', ' ');
     add({ file, name: file.includes('cochllamwyr') ? 'Cochllamwyr' : `Wache · ${place}`, category: 'Stadt- & Ortswachen', affiliation: `Stadt / Ort · ${place}`, source: file, note: 'Örtlicher Wachdienst. Eine Lage im Herrschaftsgebiet begründet keine persönliche Hauszugehörigkeit.' });
   }
-  appendLocalIllustrations(root, entries, add, selection);
+  appendLocalIllustrations(root, entries, add, selection, { houseIds });
   return [...entries.values()].sort((a, b) => a.name.localeCompare(b.name, 'de'));
 }

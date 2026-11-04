@@ -5,6 +5,7 @@
   if (!data) throw new Error("Herrschafts-Datenhelfer wurde nicht geladen.");
 
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
+  const neutralCrest = "/Stammbäume/assets/images/placeholders/neutral-crest.png";
   const portraitRoot = "/Stammbäume/assets/images/portraits";
   const banner = "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
@@ -40,22 +41,22 @@
       }),
     ]),
     data.familySection("Bürgerliche Häuser · Llysfaen", [
-      data.family("Jernigan", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Glyn", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Crewe", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Talfryn", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
-      data.family("Blevis", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
+      data.family("Jernigan", { familyId: "haus-jernigan", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Glyn", { familyId: "haus-glyn", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Crewe", { familyId: "haus-crewe", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Talfryn", { familyId: "haus-talfryn", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
+      data.family("Blevis", { familyId: "haus-blevis", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
       data.family("Argall", {
         familyId: "haus-argall", housePage: "kleinehaeuser.html",
         imageSrc: `${houseRoot}/Bürgerliche/Llysfaen/Argall.png`,
         seat: "Llysfaen",
         liege: "Wyrm",
       }),
-      data.family("Brogar", { seat: "Llysfaen", liege: "Wyrm", linked: false }),
+      data.family("Brogar", { familyId: "haus-brogar", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Llysfaen", liege: "Wyrm" }),
     ]),
     data.familySection("Bürgerliche Häuser · Craithglyn", [
-      data.family("Tynged", { seat: "Craithglyn", liege: "Wyrm", linked: false }),
-      data.family("Tarw", { seat: "Craithglyn", liege: "Wyrm", linked: false }),
+      data.family("Tynged", { familyId: "haus-tynged", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Craithglyn", liege: "Wyrm" }),
+      data.family("Tarw", { familyId: "haus-tarw", housePage: "kleinehaeuser.html", imageSrc: neutralCrest, seat: "Craithglyn", liege: "Wyrm" }),
     ]),
   ]);
 

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-03",
+  "status": "pass",
+  "browser": "Chrome via cua_repl",
+  "origin": "http://127.0.0.1:8897",
+  "checks": [
+    "Varangr full house page displays original figure, crest, reviewed chapters and canonical court members.",
+    "Varangr iframe actually loads Clan Varangr and renders the existing interactive family chart; lazy loading verified after fresh reload.",
+    "Varangr canonical tree opens the new reviewed house biography with original identity, rank, seat, current head and full house-page link.",
+    "Goldglanz overview displays both Blutstahl and Silberblut service relationships.",
+    "Goldzunge displays Bürgerliches Haus and civilian figure; blank existing wood crest retained.",
+    "Järnblod displays its extinct parent-house context, historical Thane rank and new heraldic representative figure."
+  ],
+  "genealogyEdited": false,
+  "productionDataSavedFromBrowser": false,
+  "published": false
+}

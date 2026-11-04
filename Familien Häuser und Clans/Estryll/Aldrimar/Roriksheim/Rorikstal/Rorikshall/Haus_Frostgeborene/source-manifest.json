@@ -1,0 +1,80 @@
+{
+  "id": "haus-frostgeborene",
+  "source": {
+    "attachmentId": "ad57068a-a9a8-46fb-a42e-5f79076739b5",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\ad57068a-a9a8-46fb-a42e-5f79076739b5\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/frostgeborene/animexx-original.html",
+    "bytes": 58572,
+    "sha256": "aabb140403934249193e90cffdef0d6860743b11478e6bdce08176257c07817d",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-frostgeborene",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Rorikshall",
+      "barony": "Rorikstal",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-rorikstal.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-frostgeborene",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "frostgeborene",
+    "familyId": "haus-frostgeborene",
+    "attachmentId": "ad57068a-a9a8-46fb-a42e-5f79076739b5",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/mq6s9st.png",
+    "path": "Stammbäume/assets/images/references/haus-frostgeborene/krieger.png",
+    "sourceStyle": "float:right; height:525px; width:350px",
+    "context": "Räubertum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 288780,
+    "sha256": "cfa7d13cdad452ce4ac05e57b86d5e2f9c282a954ad0c8fee371f55156fe321d",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-frostgeborene",
+    "url": "https://i.imgur.com/mq6s9st.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-frostgeborene/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Nordisch gekleideter Kämpfer mit Fell, Hörnerhelm und Schneeflockenschild.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-2.png"
+  },
+  "decisions": [
+    "Bürgerstand und eigene ID haus-frostgeborene bleiben erhalten. Keine Adelung durch Waffenübungen, Verwandtschaft oder den Begriff Clan in der alten Vorlage.",
+    "Die Herkunftserzählung wird textlich nur allgemein als Seitenzweig der Kampfgeborenen wiedergegeben. Keine Vaterschafts- oder Abstammungsdaten aus dem Anhang importieren.",
+    "Die Quelle unterscheidet das öffentliche Auftreten als Bastardhaus von der heimlichen Kontrolle der Frostwölfe. Für die spätere Seite darf Autorwissen nicht als allgemein bekannt dargestellt werden.",
+    "Bergefestung und Kontrolle im Norden des Freiwinter-Gebiets sind Quellenbehauptungen ohne neue gesicherte Kartenposition. Keine neue Siedlung, Festung, Grenzlinie oder Territorialhierarchie anlegen.",
+    "Die dünne Quelle wird nicht künstlich mit erfundenen Festen, Religion, Gründungsjahren oder Hofämtern verlängert.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

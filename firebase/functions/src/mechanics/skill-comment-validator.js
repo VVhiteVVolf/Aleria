@@ -93,7 +93,9 @@ function herausforderungClaimId(challenge = {}) {
 }
 
 function ruleSelectionDescriptors(entry = {}) {
-  return (Array.isArray(entry.segment?.skillRuleSelections) ? entry.segment.skillRuleSelections : []).slice(0, 20).map(selection => ({
+  const selections = Array.isArray(entry.segment?.skillRuleSelections) ? entry.segment.skillRuleSelections : [];
+  if (selections.length > 20) fail('invalid-argument', 'Eine Probe unterstützt höchstens 20 ausgewählte Unterstützungsregeln. Entferne überzählige Auswahlen.');
+  return selections.map(selection => ({
     actorId: clean(selection.sourceActorId, 240),
     ruleId: clean(selection.ruleId, 160),
     distanceMeters: Math.max(0, Math.min(9999, Number(selection.distanceMeters) || 0)),
@@ -191,6 +193,7 @@ export async function validateSkillCommentSegments({
     const actorRecord = records.get(recordKey(actorDescriptor.persistence));
     const allowed = getChecksForCommentKind(entry.segment.commentKind || entry.segment.kind);
     const settings = normalizeSkillCheckSettings({
+      saveContext: entry.segment.skillSaveContext || entry.submitted.saveContext,
       requiredSense: entry.segment.skillRequiredSense || entry.submitted.requiredSense,
       skillId: entry.segment.skillId || entry.submitted.skillId,
       customModifier: entry.segment.skillCustomModifier ?? entry.submitted.customModifier,

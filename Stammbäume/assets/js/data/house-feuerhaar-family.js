@@ -10,7 +10,7 @@ import { HOUSE_FEUERHAAR_PORTRAITS } from './house-feuerhaar-portraits.js';
 import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_EMBLEMS } from './tal-der-milane-house-profiles.js';

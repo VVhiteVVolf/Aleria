@@ -1,0 +1,93 @@
+{
+  "id": "haus-eibenschild",
+  "contentVersion": "20261103-kronental-v1",
+  "source": null,
+  "initialPage": null,
+  "authority": {
+    "familyId": "haus-eibenschild",
+    "baselineSourceRevision": 1,
+    "profile": {
+      "rankId": "huskarl",
+      "seat": "Vagaborg",
+      "barony": "Klageschild-Inseln",
+      "county": "Kronental",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-wellenschild",
+      "liegeHouseName": "Clan Wellenschild",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-kronental.png",
+        "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-kronental-klageschild-inseln.png",
+        "county": "assets/images/regions/aldrimar-kronental.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    },
+    "graphFingerprint": "7134a8ab224ed540c9d21e39eb15a050ecfab18503549a13c68954e2b85a21c3"
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-eibenschild",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-eibenschild",
+    "slug": "eibenschild",
+    "role": "warrior",
+    "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2577e416-5ae3-4fa3-8223-d347008a43c7.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-eibenschild/krieger-generated-v1.png",
+    "tool": "built-in image_gen",
+    "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+    "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kronental/clan-eibenschild.png",
+    "representative": true,
+    "namedPersonId": "",
+    "sha256": "91a27423575ed5613ba3b066cc1f5af7311b78753da609f8799a4fab99293621",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2048654,
+    "format": "PNG",
+    "mode": "RGBA",
+    "original": false
+  },
+  "illustrations": [
+    {
+      "id": "haus-eibenschild",
+      "slug": "eibenschild",
+      "role": "warrior",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2577e416-5ae3-4fa3-8223-d347008a43c7.png",
+      "assetPath": "Stammbäume/assets/images/references/haus-eibenschild/krieger-generated-v1.png",
+      "tool": "built-in image_gen",
+      "promptManifest": "diagnostics/kronental-clans-20261103/image-prompts.json",
+      "styleReference": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "crestReference": "E:/Aleria/Stammbäume/assets/images/houses/Aldrimar/Kronental/clan-eibenschild.png",
+      "representative": true,
+      "namedPersonId": "",
+      "sha256": "91a27423575ed5613ba3b066cc1f5af7311b78753da609f8799a4fab99293621",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2048654,
+      "format": "PNG",
+      "mode": "RGBA",
+      "original": false
+    }
+  ],
+  "decisions": [
+    "Nur vorhandene Registermetadaten; keine gelieferte HTML-Vorlage oder neue Hausgeschichte.",
+    "Kronental bleibt Register- und Ordnername; der aktuelle Herrschaftsverweis lautet Jarltum Heldenwacht.",
+    "Aktuelle IDs, Ränge, Orte, die fünf erloschenen Clans und ihre historischen Sitze bleiben erhalten.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; Graphen und Profile bleiben unverändert.",
+    "lineageRole allein begründet keine aktuelle Amtsbesetzung oder Erbfolge. Lebensdaten sind keine Amtszeiten.",
+    "König Sigurd und Jarl Skjor Vaeren bleiben getrennte Amtsträger; der Jarlsrat ist kein Königsrat.",
+    "Die repräsentativen Hausfiguren werden keinen neu benannten Angehörigen zugewiesen.",
+    "Spindelschlag bleibt bürgerlich mit Vaeren-Bindung; Morchaon und Hvelgrson bleiben bürgerlich ohne Lehnsherrn."
+  ]
+}

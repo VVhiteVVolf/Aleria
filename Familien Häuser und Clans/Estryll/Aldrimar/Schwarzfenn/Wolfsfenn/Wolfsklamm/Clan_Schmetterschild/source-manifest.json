@@ -1,0 +1,87 @@
+{
+  "id": "haus-schmetterschild",
+  "source": {
+    "attachmentId": "ac14df5c-2058-43b3-841a-9089a7d83ed7",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\ac14df5c-2058-43b3-841a-9089a7d83ed7\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/schmetterschild/animexx-original.html",
+    "bytes": 126366,
+    "sha256": "5c0f89a6dc706a94bf1ec1bf025ed8b978a23ba5d33f4524e13a2b01f78f8e47",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-schmetterschild",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Wolfsklamm",
+      "barony": "Wolfsfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-ragnulf",
+      "liegeHouseName": "Clan Ragnulf",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-schmetterschild",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-schmetterschild",
+    "familyId": "haus-schmetterschild",
+    "slug": "schmetterschild",
+    "canonicalSlug": "schmetterschild",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "ac14df5c-2058-43b3-841a-9089a7d83ed7",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/7REPrWb.png",
+    "sourceUrl": "https://i.imgur.com/7REPrWb.png",
+    "path": "Stammbäume/assets/images/references/haus-schmetterschild/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-schmetterschild/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 313291,
+    "sha256": "b21111058f0de0b8ba51472fc98bc60afebe53085770ed17939ac12f9c4f30b5",
+    "sha": "b21111058f0de0b8ba51472fc98bc60afebe53085770ed17939ac12f9c4f30b5",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Berittener Hauskrieger mit grünem Wappenrock, Axt und Schild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Aktueller Rang Hesire, Familiensitz Wolfsklamm. Skrammborg ist die eigene Burg im Besitzraum, keine neue geografische Einsortierung der gesamten Familie.",
+    "Hurins Brückenverteidigung ist eine heroische Ursprungserzählung. Aus der Axtleistung oder dem Flussnamen keine neuen Fähigkeiten, benannten Schlachten oder Ortspins ableiten.",
+    "Der bestehende Leitspruch Im Feuer geprüft, im Stahl verewigt bleibt erhalten. Schmiedewerk und selbst angepasste Ausrüstung sind konkrete Bräuche.",
+    "Sigvards Altersangabe nicht zu neuen Kriegsjahren verrechnen. Die zeitweilige Kontrolle Wolfsklamms ist historisch; sie ersetzt nicht die heutige Jarlsherrschaft der Ragnulf.",
+    "Düsterbruch liegt heute in Todesfenn, Grimfjell im unmittelbar verwalteten Wolfsfenn. Ordens- oder Nachbarorte werden nicht als zusätzliche Schmetterschild-Clanburgen erfunden.",
+    "Qualität der Ausbildung und des Handwerks kann beschrieben werden; konkrete Militärstärken und Vergleichszahlen werden nicht übernommen.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert."
+  ]
+}

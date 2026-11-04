@@ -1,0 +1,79 @@
+{
+  "id": "haus-soekeren",
+  "source": {
+    "attachmentId": "8add9f60-93b7-4156-99ab-329362eb671f",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\8add9f60-93b7-4156-99ab-329362eb671f\\Eingefügter Text.txt",
+    "archive": "diagnostics/roriksheim-clans-20261103/sources/soekeren/animexx-original.html",
+    "bytes": 101938,
+    "sha256": "3ca2595e370141a6bb3b704fab046635057d1aeb6d4a1f0a18b32902f75fc43d",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-soekeren",
+    "baselineSourceRevision": 5,
+    "profile": {
+      "rankId": "hesire",
+      "seat": "Klangheim",
+      "barony": "Skaldenheim",
+      "county": "Roriksheim",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-brathfengr",
+      "liegeHouseName": "Clan Brathfengr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+        "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+        "county": "assets/images/regions/aldrimar-roriksheim.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-soekeren",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "slug": "soekeren",
+    "familyId": "haus-soekeren",
+    "attachmentId": "8add9f60-93b7-4156-99ab-329362eb671f",
+    "imageIndex": 1,
+    "sourceUrl": "https://i.imgur.com/8eQC7mz.png",
+    "path": "Stammbäume/assets/images/references/haus-soekeren/krieger.png",
+    "sourceStyle": "float:right; height:300px; width:200px",
+    "context": "Huskarltum",
+    "status": "new",
+    "existing": false,
+    "visuallyInspected": true,
+    "bytes": 270145,
+    "sha256": "edd8fa3343376f03ac18ff52c18e1dc7235204cbce611f24f8b93ad272c93a14",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "downloadTool": "curl.exe --noproxy *",
+    "unchangedOriginal": true,
+    "id": "haus-soekeren",
+    "url": "https://i.imgur.com/8eQC7mz.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-soekeren/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "visualDescription": "Blau gekleideter Hornbläser auf einem Felsen, mit Schild und kleinem Tier.",
+    "contactSheet": "diagnostics/roriksheim-clans-20261103/original-images-review-3.png"
+  },
+  "decisions": [
+    "Kanonischer Titel Clan Sökeren und stabile ID haus-soekeren haben Vorrang vor Sökaren/Soekaren. Forsetti wird zur bestehenden Person Forseti der Trompeter berichtigt.",
+    "Wie bei Sterkr ist die weitgehend identische Windrufer-Erzählung gemeinsamer Kulturkontext. Sie wird nicht als vollständige eigene Hauschronik übernommen, sondern auf Forsetis Rolle im Ursprung begrenzt.",
+    "Klangheim/Skaldenheim und Brathfengr als Lehnsherr bleiben maßgeblich; keine unbelegten instrumentenspezifischen Prüfungen, Güter oder Hofämter ergänzen.",
+    "Neutralität und weitgehend unveränderte Beziehungen im Krieg der Prätendenten sind konkret übernehmbar.",
+    "Aktuelle IDs, Ränge, Orte, Wappen und Strukturen bleiben erhalten.",
+    "Stammbäume und Militärstatistiken der Vorlage vollständig ignoriert.",
+    "Keine genealogischen Datensätze durch diesen Inhaltsabgleich verändert."
+  ]
+}

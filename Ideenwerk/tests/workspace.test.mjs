@@ -6,16 +6,25 @@ import {parseWorkspace,parseProjectText} from '../modules/workspace/schema.mjs';
 import {createWorkspaceStore} from '../modules/workspace/store.mjs';
 import {createAutosave} from '../modules/workspace/storage.mjs';
 import {renderCard,moduleMatches} from '../modules/board/board-view.mjs';
+
+function populatedWorkspace() {
+  const workspace=createWorkspace();
+  workspace.boards[0].modules=TEMPLATES.map(template=>createModule(template.id));
+  const mindmap=workspace.boards[0].modules.find(module=>module.type==='mindmap');
+  mindmap.mindmap.nodes.push({id:'second-node',text:'Ein Versprechen',x:100,y:100,color:'sage'});
+  mindmap.mindmap.edges.push({id:'test-edge',from:mindmap.mindmap.nodes[0].id,to:'second-node',label:'verbindet'});
+  return workspace;
+}
 test('Alle Vorlagen mit Seiten, Bildern und Mindmap sind verlustfrei portabel',()=>{
   const project=createWorkspace();project.boards[0].modules.push(...TEMPLATES.map(template=>createModule(template.id)));
   project.boards[0].modules[0].pages[0].blocks[0].value='data:image/png;base64,aGVsbG8=';
   assert.deepEqual(parseProjectText(JSON.stringify(project)),project);
 });
 test('Import verwirft fremde Metadaten und lehnt kaputte Verweise und Bildquellen ab',()=>{
-  const project=createWorkspace();project.token='secret';assert.equal(parseWorkspace(project).token,undefined);
+  const project=populatedWorkspace();project.token='secret';assert.equal(parseWorkspace(project).token,undefined);
   const invalid=structuredClone(project);invalid.boards[0].modules[0].pages[0].blocks[0].value='https://example.org/tracker.png';
   assert.throws(()=>parseWorkspace(invalid),/eingebettete/);
-  const dangling=structuredClone(project);dangling.boards[0].modules[2].mindmap.edges[0].to='missing';assert.throws(()=>parseWorkspace(dangling),/Endpunkte/);
+  const dangling=structuredClone(project);dangling.boards[0].modules.find(module=>module.type==='mindmap').mindmap.edges[0].to='missing';assert.throws(()=>parseWorkspace(dangling),/Endpunkte/);
   const duplicate=structuredClone(project);duplicate.boards[0].modules.push(duplicate.boards[0].modules[0]);assert.throws(()=>parseWorkspace(duplicate),/Doppelte/);
   const future=structuredClone(project);future.version=99;assert.throws(()=>parseWorkspace(future),/Version/);
   assert.throws(()=>parseProjectText('{no'),/JSON/);
@@ -25,13 +34,13 @@ test('Import und Rendering führen HTML aus Inhalten nicht aus',()=>{
   const html=renderCard(module,'grid');assert.ok(!html.includes('<script>'));assert.ok(!html.includes('<img src=x'));assert.ok(html.includes('&lt;img'));
 });
 test('Suche findet Seitentexte und Mindmap-Knoten, aber keine Bilderdaten',()=>{
-  const project=createWorkspace();assert.ok(moduleMatches(project.boards[0].modules[2],'Versprechen','mindmap'));
+  const project=populatedWorkspace();assert.ok(moduleMatches(project.boards[0].modules.find(module=>module.type==='mindmap'),'Versprechen','mindmap'));
   assert.ok(moduleMatches(project.boards[0].modules[0],'Widersprüche','all')===false);
   assert.ok(!moduleMatches(project.boards[0].modules[0],'','story'));
   const module=createModule('character');module.pages[0].blocks[0].value='data:image/png;base64,aGVsbG8=';assert.ok(!moduleMatches(module,'aGVsbG8','all'));
 });
 test('Rückgängig und Wiederholen erhalten Bilder und gruppieren fortlaufende Eingaben',()=>{
-  const project=createWorkspace(),store=createWorkspaceStore(project);
+  const project=populatedWorkspace(),store=createWorkspaceStore(project);
   store.change(state=>{state.boards[0].modules[0].title='A';},{groupKey:'title'});
   store.change(state=>{state.boards[0].modules[0].title='AB';},{groupKey:'title'});
   store.undo();assert.deepEqual(store.get(),project);store.redo();assert.equal(store.get().boards[0].modules[0].title,'AB');

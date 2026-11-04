@@ -1,0 +1,338 @@
+{
+  "schema": "aleria.public-image-read-audit",
+  "checkedAt": "2026-11-03T18:24:22.848Z",
+  "externalWrites": 0,
+  "assets": 28,
+  "publicStatuses": {
+    "403": 28
+  },
+  "metadataStatuses": {
+    "403": 28
+  },
+  "allMetadataPublic": null,
+  "allMetadataHashMatches": null,
+  "allBucketsExpected": null,
+  "metadataErrorReasons": {
+    "accountDisabled": 28
+  },
+  "rules": {
+    "releaseStatus": 200,
+    "rulesetStatus": 200,
+    "releaseUpdated": "2026-08-06T00:29:17.483794Z",
+    "liveRulesHash": "d15a3262f1e9dc611fa87939da256123bc1aad30cce2a425b3681ed1b30abf74",
+    "localRulesHash": "d15a3262f1e9dc611fa87939da256123bc1aad30cce2a425b3681ed1b30abf74",
+    "liveEqualsLocal": true,
+    "publicMetadataClausePresent": true,
+    "sourceFileCount": 1
+  },
+  "results": [
+    {
+      "key": "trait:Perfektionistisch",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Charmant",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Redegewandt",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Klatschfreudig",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Kunstliebend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Empfindlich gegenüber Fehlern",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Romantisch",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Schlecht im Delegieren",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Ordnungsliebend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Beobachtend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Selbstbewusst",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Freundlich",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Zurückhaltend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Humorvoll",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Diszipliniert",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Bestimmend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Nachtragend",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Künstlerisch",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Temperamentvoll",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Unabhängig",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Leidenschaftlich",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Unberechenbar",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "trait:Liebevoll",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "portrait:gwen-hamnett",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "pet:silberstolz",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "pet:perle",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "pet:sir-balthasar",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    },
+    {
+      "key": "pet:sonnenaufgang",
+      "publicStatus": 403,
+      "authenticatedMetadataStatus": 403,
+      "metadataReadable": false,
+      "metadataErrorReason": "accountDisabled",
+      "metadataPublic": null,
+      "metadataHashMatches": null,
+      "familyIdMatches": null,
+      "expectedBucket": null
+    }
+  ]
+}

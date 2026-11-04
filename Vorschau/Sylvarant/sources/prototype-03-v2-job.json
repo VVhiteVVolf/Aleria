@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "provider": "built-in image_gen",
+  "createdAt": "2026-11-04",
+  "jobs": [
+    {
+      "id": "prototype-03-v2",
+      "category": "warriors",
+      "assetStem": "prototype-03-v2",
+      "name": "Marinekrieger",
+      "role": "Marinekrieger",
+      "description": "Marinekrieger mit offenem r?mischem Helm, beweglichem Stahl- und Kettenpanzer, geradem zweischneidigem Gladius und R?ckenk?cher.",
+      "equipment": [
+        "Gerader zweischneidiger Gladius",
+        "Rückenköcher",
+        "Offener römischer Helm",
+        "Beweglicher Stahl- und Kettenpanzer"
+      ],
+      "palette": [
+        "Dunkelpetrol",
+        "Silber",
+        "Bronze"
+      ],
+      "mount": null,
+      "references": [
+        "E:/Aleria/Vorschau/Sylvarant/assets/warriors/production/prototype-03.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Faithful localized weapon correction of the EXISTING Marinekrieger class prototype.\n\nInput images: Image 1 is the PRIMARY EDIT TARGET and must remain the same figure. Image 2 provides only the supporting approved matte painted STYLE; do not copy its armour, helmet, griffin, blue palette, long sword, background or colour mist.\n\nPRIMARY EDIT: Replace ONLY the curved sabre in the man's existing right hand (viewer left) with ONE unmistakable Roman GLADIUS, a short perfectly STRAIGHT symmetric double-edged steel sword. Two straight parallel cutting edges taper into a symmetric triangular spear point; small rounded straight guard, dark simple grip and rounded pommel. Blade points quietly downward in the same hand position, fully visible; fingers naturally close around the grip. No curved blade, sabre, scimitar, single cutting edge, spear or second drawn weapon.\n\nPRESERVE: Exactly the same young adult man, face, expression, dark short curly hair, rounded human ears, head orientation, open Roman helmet with bronze fittings and functional cheek guards, shoulder cloak, Roman segmented silver armour and chainmail, bronze trim, dark petrol tunic, leather straps/belts, back quiver and visible arrows, boots, body proportions, posture and hand positions from Image 1. Keep the existing Latin-Roman design and absence of heraldry. No Greek or Corinthian helmet. Do not redesign or add anything.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.\n\nFinal: complete full-body 2:3 portrait, 1024x1536, entire helmet, sword, quiver, fingers and both full feet inside frame with transparent margin. Young adult human, quiet upright pose, no shield or new props. Actual true transparent PNG exterior and open gaps, character materials opaque. Remove any outer glow, mist, brown/grey halo, background, ground or shadow; do not inherit these from either reference. No text, watermark or frame. Thin soft painted contours, matte muted colours, simplified shapes, fine even pigment grain. Change only the sword and necessary gripping-finger detail.",
+      "replaces": "prototype-03",
+      "supersedesAssetStem": "prototype-03"
+    }
+  ]
+}

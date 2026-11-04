@@ -1,0 +1,165 @@
+{
+  "id": "haus-cleir",
+  "contentVersion": "20261103-leitheach-v1",
+  "source": {
+    "attachmentId": "a02e8d85-8a20-4118-b4ce-646f9c08b2ea",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\a02e8d85-8a20-4118-b4ce-646f9c08b2ea\\Eingefügter Text.txt",
+    "archive": "diagnostics/leitheach-clans-20261103/sources/ua-cleir/animexx-original.html",
+    "bytes": 93766,
+    "sha256": "b12bd9a41893fe693d3878bd5ebd7d25e9665ec77834fa0c66794d852877d808",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-cleir",
+    "baselineSourceRevision": 3,
+    "profile": {
+      "rankId": "laird",
+      "seat": "Cairn Fàire",
+      "barony": "Tir na bhFiach",
+      "county": "Tir na Sinsear",
+      "kingdom": "Leitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gallchobhair",
+      "liegeHouseName": "Fir An’Gallchobhair",
+      "folderIcons": [
+        "assets/images/regions/Leitheach/leitheach.png",
+        "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+        "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+        ""
+      ],
+      "regionEmblems": {
+        "kingdom": "assets/images/regions/Leitheach/leitheach.png",
+        "county": "assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "barony": "assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+        "seat": ""
+      },
+      "folderPath": [
+        "Leitheach",
+        "Tir na Sinsear",
+        "Tir na Coimhthioch",
+        "Tir na bhFiach",
+        "Cairn Fàire"
+      ]
+    },
+    "graphFingerprint": "4424ccc39ba17130479aba6f3eb253df09c1d4e46e713506fa7a941532b52811",
+    "historicalMetadata": {
+      "historicalStatus": "",
+      "extinctHouse": false,
+      "ownHouseStatus": "active",
+      "extinctionEvent": null
+    }
+  },
+  "territory": {
+    "id": "haus-cleir",
+    "title": "Clan Ua’Cleir",
+    "territoryId": "leitheach-herrschaft-cleir",
+    "territoryName": "Tir na bhFiach",
+    "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
+    "territoryType": "Herrschaft",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na bhFiach",
+        "slug": "leitheach-herrschaft-cleir"
+      }
+    ],
+    "selectionBasis": "Eigenstaendige vorhandene Territoriumszuordnung",
+    "historical": false,
+    "notes": []
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-cleir",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-cleir",
+    "slug": "ua-cleir",
+    "canonicalSlug": "cleir",
+    "attachmentId": "a02e8d85-8a20-4118-b4ce-646f9c08b2ea",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/w9TCdC0.png",
+    "sourceImageIndex": 3,
+    "sourceStyle": "height:300px; width:200px",
+    "context": "4.) Tiarnatum",
+    "bytes": 318482,
+    "sha256": "9dc1c03531c61f1024ae92f6f21de3ae368ac7ee63f30f9fb5b02e127286dab1",
+    "width": 408,
+    "height": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "familyId": "haus-cleir",
+    "title": "Clan Ua’Cleir",
+    "canonicalKingdom": "Leitheach",
+    "canonicalCounty": "Tir na Sinsear",
+    "historical": false,
+    "historicalStatus": "active",
+    "sourceUrl": "https://i.imgur.com/w9TCdC0.png",
+    "path": "Stammbäume/assets/images/references/haus-cleir/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-cleir/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "status": "new",
+    "sha": "9dc1c03531c61f1024ae92f6f21de3ae368ac7ee63f30f9fb5b02e127286dab1",
+    "w": 408,
+    "h": 612,
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visuallyInspected": true,
+    "visualDescription": "Grün gekleideter Schwertkämpfer auf einem Baumstumpf mit Kleeblattschild.",
+    "contactSheet": "diagnostics/leitheach-clans-20261103/original-clan-figures.jpg",
+    "sourceAttachmentSha256": "b12bd9a41893fe693d3878bd5ebd7d25e9665ec77834fa0c66794d852877d808",
+    "representative": true,
+    "namedPersonId": "",
+    "format": "PNG",
+    "original": true
+  },
+  "decisions": [
+    "Leitheach ist ein eigenständiges Fürstentum der Cruinach/Kronalben auf Estryll. Weder Aldrimar noch das untergegangene Ceitheach sind Namensaliase.",
+    "Bestehende Identität haus-cleir, Rang Laird, Orts- und Dienstbindung haben Vorrang vor alten Infotabellen. Keine Orts- oder Graphänderungen.",
+    "Gelieferte Genealogien, Hofnamenslisten und Militärstatistiken vollständig ausgeschlossen; ausschließlich vorhandene Familienakte als Iframe vorgesehen.",
+    "Die Vorlage enthält keine ausgefüllten Erzählkapitel. Nur aktuelle belegte Profil- und Territorialdaten verwenden, keine persönlichen Gründungsdaten, Berufe oder Rituale erfinden.",
+    "Der Quellslug ua-cleir wird der bestehenden ID haus-cleir zugeordnet. Quellpräfixe und Schreibvarianten erzeugen keine zusätzliche Familie.",
+    "Dienst an Gallchobhair innerhalb Tir na Coimhthiochs; unter Tir na Sinsear verschachtelt. Keine pauschale direkte Unterstellung unter Mac Ard Cumhaill aus der Länderübersicht.",
+    "Leitheach ist ein eigenes Fürstentum; Aldrimar und Ceitheach sind keine kulturellen oder geografischen Vorlagen.",
+    "Aktuelle IDs, Rangstufen, Sitze, Dienstbindungen und kanonische Personenidentitäten bleiben erhalten.",
+    "Suileach, Iomrach und Dal T’Saor sind historische Hausverwaltungen. Lebende auswärtige Angehörige behalten ihren Lebensstatus.",
+    "Grünhand bleibt ein bürgerliches Sept ohne adeligen Rang; vorhandene Heraldik wird nicht erfunden oder ersetzt.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert; bestehende Graphen und Profile unverändert.",
+    "Amts- und Erbfolge nur durch vorhandene konkrete Titel belegt; lineageRole und Lebensdaten allein begründen keine Ämter.",
+    "Die Hausdarstellungen bleiben repräsentativ und werden keinen neu benannten Personen zugewiesen."
+  ]
+}

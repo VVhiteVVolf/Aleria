@@ -1,0 +1,1840 @@
+{
+  "schemaVersion": 1,
+  "country": "Solestia",
+  "checkedAtUtc": "2026-11-04T02:43:46.849967+00:00",
+  "scope": "Raw tool original provenance and declared active selection; no images, source manifests or runtime edited by audit.",
+  "expectedActiveCount": 29,
+  "activeCount": 29,
+  "archivedCount": 13,
+  "rawRecordsCount": 42,
+  "allRawFilesCount": 42,
+  "issues": [],
+  "unrecordedRawFiles": [],
+  "assets": [
+    {
+      "assetStem": "prototype-01",
+      "id": "prototype-01",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/prototype-01.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-f7bfcb5b-3a2b-4e01-b0d3-e0e68df1beea.png",
+      "resultManifest": "sources/prototypes-results.json",
+      "jobManifest": "sources/prototypes-jobs.json",
+      "jobId": "prototype-01",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "a72fc1567aef96e987b75ddf1cf3732b8ce9e16145b10bb7a55cfd4199d78442",
+      "recordedSha256": "a72fc1567aef96e987b75ddf1cf3732b8ce9e16145b10bb7a55cfd4199d78442",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-01",
+      "referencesExist": true,
+      "referencesCount": 1
+    },
+    {
+      "assetStem": "prototype-02",
+      "id": "prototype-02",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/prototype-02.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-befd825a-817d-4b68-807f-b08069c8a27c.png",
+      "resultManifest": "sources/prototypes-results.json",
+      "jobManifest": "sources/prototypes-jobs.json",
+      "jobId": "prototype-02",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "ac372f54c2df2242cba69469ae2cfb9e5ed0cf8cd602ba4d5744d87682cbe8fe",
+      "recordedSha256": "ac372f54c2df2242cba69469ae2cfb9e5ed0cf8cd602ba4d5744d87682cbe8fe",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-02",
+      "referencesExist": true,
+      "referencesCount": 1
+    },
+    {
+      "assetStem": "prototype-03",
+      "id": "prototype-03",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/prototype-03.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-52868cdf-d72d-4099-a38c-92c82a69ffe0.png",
+      "resultManifest": "sources/prototypes-results.json",
+      "jobManifest": "sources/prototypes-jobs.json",
+      "jobId": "prototype-03",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "a47ea9f16385affc8da546834bad143ba8be8546a7108ec045275bd4cbfc90b6",
+      "recordedSha256": "a47ea9f16385affc8da546834bad143ba8be8546a7108ec045275bd4cbfc90b6",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-03",
+      "referencesExist": true,
+      "referencesCount": 1
+    },
+    {
+      "assetStem": "prototype-04",
+      "id": "prototype-04",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/prototype-04.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-57bfb502-d27d-4d95-96ef-19179a4ae900.png",
+      "resultManifest": "sources/prototypes-results.json",
+      "jobManifest": "sources/prototypes-jobs.json",
+      "jobId": "prototype-04",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "2d5aa5868d0ad3c773edf432ffaaea24ead5cb2b4d1a2536abc78a338666f76f",
+      "recordedSha256": "2d5aa5868d0ad3c773edf432ffaaea24ead5cb2b4d1a2536abc78a338666f76f",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-04",
+      "referencesExist": true,
+      "referencesCount": 1
+    },
+    {
+      "assetStem": "prototype-05",
+      "id": "prototype-05",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/prototype-05.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-5300c81e-f204-44b5-9fe7-5da3e1576f57.png",
+      "resultManifest": "sources/prototypes-results.json",
+      "jobManifest": "sources/prototype-05-correction-job.json",
+      "jobId": "prototype-05",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "a574b2e0b3b4474d4e4b5e50a4c2498beae9a954357c8669d734891b4dbd1db2",
+      "recordedSha256": "a574b2e0b3b4474d4e4b5e50a4c2498beae9a954357c8669d734891b4dbd1db2",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-05",
+      "referencesExist": true,
+      "referencesCount": 2
+    },
+    {
+      "assetStem": "house-pool-01",
+      "id": "pool-01",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-01.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-953815d1-25f6-42c6-a7b0-6d63681c9861.png",
+      "resultManifest": "sources/house-warriors-a-results.json",
+      "jobManifest": "sources/house-warriors-a-jobs.json",
+      "jobId": "pool-01",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "3e5d8c0a056d0d3b378fcc3783edb97d6fc85e4db39265ffb69f435bee7c4ded",
+      "recordedSha256": "3e5d8c0a056d0d3b378fcc3783edb97d6fc85e4db39265ffb69f435bee7c4ded",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-01",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-02",
+      "id": "pool-02",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-02.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-9b553067-5d56-47f2-aaee-9c0c39e60f58.png",
+      "resultManifest": "sources/house-warriors-a-results.json",
+      "jobManifest": "sources/house-warriors-a-jobs.json",
+      "jobId": "pool-02",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "8070c18f0e85f75caed117c7f1d319f610b93d006d8879ea16063ca59ac7b301",
+      "recordedSha256": "8070c18f0e85f75caed117c7f1d319f610b93d006d8879ea16063ca59ac7b301",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-02",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-03",
+      "id": "pool-03",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-03.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-ed1761e6-3e04-4035-a690-350aaa472499.png",
+      "resultManifest": "sources/house-warriors-a-results.json",
+      "jobManifest": "sources/house-warriors-a-jobs.json",
+      "jobId": "pool-03",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "5492c73f225e899ef4829a6ff59f33b4d0ef0636c1679a6c173bea67a939ae47",
+      "recordedSha256": "5492c73f225e899ef4829a6ff59f33b4d0ef0636c1679a6c173bea67a939ae47",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-03",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-04",
+      "id": "pool-04",
+      "category": "warriors",
+      "status": "archived",
+      "raw": "assets/warriors/generated/house-pool-04.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-ec1bfae2-63df-42ba-aa20-0eeaca6e8c72.png",
+      "resultManifest": "sources/house-warriors-a-results.json",
+      "jobManifest": "sources/house-warriors-a-jobs.json",
+      "jobId": "pool-04",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "c479b27788bb6b3018874a16071d6f82ea3a45c969f61381022b16e190dca36f",
+      "recordedSha256": "c479b27788bb6b3018874a16071d6f82ea3a45c969f61381022b16e190dca36f",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-04",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-05",
+      "id": "pool-05",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-05.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-49416bec-27ed-4725-a192-da314ab10869.png",
+      "resultManifest": "sources/house-warriors-a-results.json",
+      "jobManifest": "sources/house-warriors-a-jobs.json",
+      "jobId": "pool-05",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "4c33426f452754460b07d1a1a25451630c525dcf6901b03d12c1301ce180f97b",
+      "recordedSha256": "4c33426f452754460b07d1a1a25451630c525dcf6901b03d12c1301ce180f97b",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-05",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-ducal",
+      "id": "house-ducal",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-ducal.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-4b9da1a8-7c9c-4f7d-849b-249991a2f431.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "house-ducal",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "79a230bef625e8a020296c198b1cbc346ccec67873c3fc7052fcc67995200201",
+      "recordedSha256": "79a230bef625e8a020296c198b1cbc346ccec67873c3fc7052fcc67995200201",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-ducal",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-07",
+      "id": "pool-07",
+      "category": "warriors",
+      "status": "archived",
+      "raw": "assets/warriors/generated/house-pool-07.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-02cb2be4-a547-461e-85fc-9d8bf35efd48.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-07",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "e3f37bde4cfa0a4ba78cff9757efe19e7779cd65552510ec60b60baf6b340532",
+      "recordedSha256": "e3f37bde4cfa0a4ba78cff9757efe19e7779cd65552510ec60b60baf6b340532",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-07",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-08",
+      "id": "pool-08",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-08.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-6b397cc0-383d-400e-aa6b-6886b454ab60.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-08",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "0908f89acc260105a07f3cc7b139b09aff80aea16dc5153dbf5ae9a8234feeca",
+      "recordedSha256": "0908f89acc260105a07f3cc7b139b09aff80aea16dc5153dbf5ae9a8234feeca",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-08",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-06",
+      "id": "pool-06",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-06.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-bc478619-0b65-4f3e-9018-b4699b1e7fab.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-06",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "915a2c7dad2279bcf563142ce91e475370186bead6f0740b663284020c0e2e90",
+      "recordedSha256": "915a2c7dad2279bcf563142ce91e475370186bead6f0740b663284020c0e2e90",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-06",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-09",
+      "id": "pool-09",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-09.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-e9917e54-b3da-4eea-a304-ee7e2999358c.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-09",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "02146e384f6cd6fefff69085fcee7af312be9d3b1d8c99305fc27e3c577830e1",
+      "recordedSha256": "02146e384f6cd6fefff69085fcee7af312be9d3b1d8c99305fc27e3c577830e1",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-09",
+      "referencesExist": true,
+      "referencesCount": 4
+    },
+    {
+      "assetStem": "house-pool-10",
+      "id": "pool-10",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-10.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-09c78493-49a1-49d5-a5b6-11e93dbea9ab.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-10",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "7f5058b226d2b6f7756127daf969b8b2b50504e7261e1d4e36162e80be8a2fa0",
+      "recordedSha256": "7f5058b226d2b6f7756127daf969b8b2b50504e7261e1d4e36162e80be8a2fa0",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-10",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-11",
+      "id": "pool-11",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-11.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a0c9-f2da-7570-9dd2-d273d866e4f5/exec-c824ad48-214c-4a1d-a5ef-8a27992db19b.png",
+      "resultManifest": "sources/house-warriors-root-results.json",
+      "jobManifest": "sources/house-warriors-root-jobs.json",
+      "jobId": "pool-11",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "e2f8d3e1febf5a869375bd144436aea1768a79e29ef4eb57203ed98566e23f89",
+      "recordedSha256": "e2f8d3e1febf5a869375bd144436aea1768a79e29ef4eb57203ed98566e23f89",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-11",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "house-pool-07-v2",
+      "id": "house-pool-07-v2",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-07-v2.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-2d9376d0-270c-48e9-9249-65a38267a491.png",
+      "resultManifest": "sources/house-pool-07-v2-result.json",
+      "jobManifest": "sources/house-pool-07-v2-job.json",
+      "jobId": "house-pool-07-v2",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "d7d9ea646308ca36db107de57805f6b2e87ab2ab431222000049d7ff1bd29588",
+      "recordedSha256": "d7d9ea646308ca36db107de57805f6b2e87ab2ab431222000049d7ff1bd29588",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-07-v2",
+      "referencesExist": true,
+      "referencesCount": 2
+    },
+    {
+      "assetStem": "house-pool-04-v2",
+      "id": "house-pool-04-v2",
+      "category": "warriors",
+      "status": "active",
+      "raw": "assets/warriors/generated/house-pool-04-v2.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-ded1a689-b1cb-4b9a-a7da-06e9f1f6054c.png",
+      "resultManifest": "sources/house-pool-04-v2-result.json",
+      "jobManifest": "sources/house-pool-04-v2-job.json",
+      "jobId": "house-pool-04-v2",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "263d739fbe77b885abe3684ea6948ed8b2b3e35b19ae3e9654db08a0a19e9e1d",
+      "recordedSha256": "263d739fbe77b885abe3684ea6948ed8b2b3e35b19ae3e9654db08a0a19e9e1d",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "house-pool-04-v2",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-01",
+      "id": "pool-01",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-01.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-957d998a-89b5-4651-9d4d-6b985d2ca43b.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-01",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "eb1936a2b122b9217760a61348f32cbc33ad047c24da80fe4d8579b068a6dd7b",
+      "recordedSha256": "eb1936a2b122b9217760a61348f32cbc33ad047c24da80fe4d8579b068a6dd7b",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-01",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-02",
+      "id": "pool-02",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-02.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-0d4c377e-e998-42f0-8a04-6423e4e868b8.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-02",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "8cfb771b19f2304665957aa29f932a9bfb074628f4f0c954bd1ab7b3a50c88e9",
+      "recordedSha256": "8cfb771b19f2304665957aa29f932a9bfb074628f4f0c954bd1ab7b3a50c88e9",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-02",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-03",
+      "id": "pool-03",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-03.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-6b6eae87-a114-422c-af69-7186b03e5e71.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-03",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "99a8151779dd63e75df2c7b213ca1fde25ab654e52a3b5f5a2aaadbf13a46ed4",
+      "recordedSha256": "99a8151779dd63e75df2c7b213ca1fde25ab654e52a3b5f5a2aaadbf13a46ed4",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-03",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-04",
+      "id": "pool-04",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/pool-04.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-f7722fbb-732b-4366-ba28-e1b1714d8b33.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-04",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "3ff3d7410c44217a19235f3e3a56cf7c642f38f2cbc1cf5322ca61d15ea55115",
+      "recordedSha256": "3ff3d7410c44217a19235f3e3a56cf7c642f38f2cbc1cf5322ca61d15ea55115",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-04",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-05",
+      "id": "pool-05",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-05.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-4cc63702-f885-43dc-8689-47c1d0e3c01a.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-05",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "f0964ffdbee5683acf567bbc0d8348242619e5f2ba372b8c7b06695fd93fbd4e",
+      "recordedSha256": "f0964ffdbee5683acf567bbc0d8348242619e5f2ba372b8c7b06695fd93fbd4e",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-05",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-06",
+      "id": "pool-06",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-06.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-c2c930aa-4b84-426b-9845-4441bd3ec7ea.png",
+      "resultManifest": "sources/additional-emblem-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-06",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "390c477e130639ab1ec884309fffc36c415ac2de2c4cdd00134c49d8423da106",
+      "recordedSha256": "390c477e130639ab1ec884309fffc36c415ac2de2c4cdd00134c49d8423da106",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-06",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-07",
+      "id": "pool-07",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-07.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-f4e77565-6815-4bce-8737-d32f2897576e.png",
+      "resultManifest": "sources/additional-emblem-b-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-07",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "840c861c93d5e218a5f4753aca71c9c98220024b63e59698f50a395045da1d44",
+      "recordedSha256": "840c861c93d5e218a5f4753aca71c9c98220024b63e59698f50a395045da1d44",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-07",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-08",
+      "id": "pool-08",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-08.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-1b6346eb-2400-4a49-92aa-fafbd681a78f.png",
+      "resultManifest": "sources/additional-emblem-b-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-08",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "f4e7e251c8008f73424a5a88516f0f2abadfac9de7ad210f3e0ebc9a583c8fb0",
+      "recordedSha256": "f4e7e251c8008f73424a5a88516f0f2abadfac9de7ad210f3e0ebc9a583c8fb0",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-08",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-09",
+      "id": "pool-09",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-09.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-2fb427f3-3749-411f-a7ae-21918f3ce292.png",
+      "resultManifest": "sources/additional-emblem-b-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-09",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "15637bcd778fd102a2acff8f380fd05525d990a797d4fa109e37614fbd287330",
+      "recordedSha256": "15637bcd778fd102a2acff8f380fd05525d990a797d4fa109e37614fbd287330",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-09",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-10",
+      "id": "pool-10",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-10.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-90af6623-64a8-4066-9b63-05ac612ca841.png",
+      "resultManifest": "sources/additional-emblem-b-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-10",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "9141002720eaa67b9692bcc42892ce5705f9f01368af931d37815edc406ea250",
+      "recordedSha256": "9141002720eaa67b9692bcc42892ce5705f9f01368af931d37815edc406ea250",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-10",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-11",
+      "id": "pool-11",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-11.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-78cdcda3-59fb-4fbb-bfe9-66ad960868b8.png",
+      "resultManifest": "sources/additional-emblem-b-results.json",
+      "jobManifest": "sources/additional-emblem-jobs.json",
+      "jobId": "pool-11",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "2b24ecac3fc73f7555de093eddf5a328dafd86d6a9f36d9fee229b3e0e38e053",
+      "recordedSha256": "2b24ecac3fc73f7555de093eddf5a328dafd86d6a9f36d9fee229b3e0e38e053",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-11",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "pool-04-v2",
+      "id": "pool-04-v2",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/pool-04-v2.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-7ce54e73-3378-4eb6-92af-ec0cf431c54f.png",
+      "resultManifest": "sources/pool-04-v2-result.json",
+      "jobManifest": "sources/pool-04-v2-job.json",
+      "jobId": "pool-04-v2",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "114ae219576dcab506b882e139174391dc67e56ea9fe320a2e74a1f32417e8f2",
+      "recordedSha256": "114ae219576dcab506b882e139174391dc67e56ea9fe320a2e74a1f32417e8f2",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-04-v2",
+      "referencesExist": true,
+      "referencesCount": 1
+    },
+    {
+      "assetStem": "ancient-grianeach",
+      "id": "ancient-grianeach",
+      "category": "emblems",
+      "status": "active",
+      "raw": "assets/emblems/generated/ancient-grianeach.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a40d-238b-7871-a9b3-cd1412c25521/exec-4fd9945d-6258-4577-b7c7-1188ec2b8e55.png",
+      "resultManifest": "sources/ancient-emblem-results.json",
+      "jobManifest": "sources/ancient-emblem-jobs.json",
+      "jobId": "ancient-grianeach",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "3b60a3b3cad8cedae7eba13114ce81caae0fd773b974faad94dc15e5694cb849",
+      "recordedSha256": "3b60a3b3cad8cedae7eba13114ce81caae0fd773b974faad94dc15e5694cb849",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "ancient-grianeach",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-01",
+      "id": "pool-01",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-01.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-043e77f3-3071-4a9f-9c4d-de100b1df354.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-01",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "67db525192629a5715fea91a26f6e35d26d14a498bd3e1b55c2a07c541521d10",
+      "recordedSha256": "67db525192629a5715fea91a26f6e35d26d14a498bd3e1b55c2a07c541521d10",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-01",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-02",
+      "id": "pool-02",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-02.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-e378d4b8-cc4f-4ae1-8f8b-495148275e40.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-02",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "66fb66ad3bb1a4ca1b151f1a9765c6b7bb2b637ffccc38aff3755f3283611234",
+      "recordedSha256": "66fb66ad3bb1a4ca1b151f1a9765c6b7bb2b637ffccc38aff3755f3283611234",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-02",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-03",
+      "id": "pool-03",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-03.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-5329a040-85b4-40b6-b588-8093c9f71ee0.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-03",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "6921224cd93a091369786fe1332eafa0904f3724bb0616c4217ae5e13f2eb732",
+      "recordedSha256": "6921224cd93a091369786fe1332eafa0904f3724bb0616c4217ae5e13f2eb732",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-03",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-04-v1",
+      "id": "pool-04-v1",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-04-v1.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-ec2ecd7b-e27d-413f-9130-67241fdeb944.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-04",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "5850424791567473216f09993b8d256c385774408ae7db6111984df1cdc71579",
+      "recordedSha256": "5850424791567473216f09993b8d256c385774408ae7db6111984df1cdc71579",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-04",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-05",
+      "id": "pool-05",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-05.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-9bd0c7bb-9a28-4f7b-8e96-69bed6419448.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-05",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "541ace682f336fd0b70edfd92cdef28ed0745023cbc9aa3344e81c96705671fa",
+      "recordedSha256": "541ace682f336fd0b70edfd92cdef28ed0745023cbc9aa3344e81c96705671fa",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-05",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-06",
+      "id": "pool-06",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-06.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-25e2556c-e068-4a5a-a1ab-1b17a3acc950.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-06",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "d0d900b4cfed0ea2867e7d5fac215fa8c9f078376a2c72dc0dbd50cdcecc4907",
+      "recordedSha256": "d0d900b4cfed0ea2867e7d5fac215fa8c9f078376a2c72dc0dbd50cdcecc4907",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-06",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-04-v2",
+      "id": "pool-04-v2",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-04-v2.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-c429ba93-276f-4c22-822a-95283a412b4e.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/pool-04-correction-job.json",
+      "jobId": "pool-04-v2",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "e431077e78e806b90650edfee054c96b206ba96349cad5ab657551cf88ed455a",
+      "recordedSha256": "e431077e78e806b90650edfee054c96b206ba96349cad5ab657551cf88ed455a",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-04",
+      "referencesExist": false,
+      "referencesCount": 1,
+      "referenceArchiveResolution": {
+        "kind": "historical-reference-relocated",
+        "status": "resolved-through-archive",
+        "jobManifest": "sources/pool-04-correction-job.json",
+        "historicalReference": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-04-v1.png",
+        "preservedArchive": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/early-pool-04-v1.png",
+        "archiveSha256": "5850424791567473216f09993b8d256c385774408ae7db6111984df1cdc71579",
+        "archiveToolOriginalByteIdentical": true,
+        "sourceJobUnchanged": true
+      }
+    },
+    {
+      "assetStem": "early-pool-07",
+      "id": "pool-07",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-07.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-284cc0c9-e8d2-4c60-a7ee-e9d29ddd8b42.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-07",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "acf18f670e474e4795d41de649fbaebff57a32f26809af49e8d372583e54200e",
+      "recordedSha256": "acf18f670e474e4795d41de649fbaebff57a32f26809af49e8d372583e54200e",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-07",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "early-pool-08",
+      "id": "pool-08",
+      "category": "emblems",
+      "status": "archived",
+      "raw": "assets/emblems/generated/early-pool-08.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a411-5646-74e3-a826-f258d0f63c38/exec-b4b81538-693d-482f-b35f-fc0e9fedb617.png",
+      "resultManifest": "sources/additional-emblem-results-early-20261104.json",
+      "jobManifest": "sources/additional-emblem-jobs-early-20261104.json",
+      "jobId": "pool-08",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "115ca2ca61013aff6c0badf90496203ef2c1e92386b6bc65a7e4252e807588a9",
+      "recordedSha256": "115ca2ca61013aff6c0badf90496203ef2c1e92386b6bc65a7e4252e807588a9",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "jobAssetStem": "pool-08",
+      "referencesExist": true,
+      "referencesCount": 3
+    },
+    {
+      "assetStem": "prototype-05-v1",
+      "id": "prototype-05-v1",
+      "category": "warriors",
+      "status": "archived",
+      "raw": "assets/warriors/generated-archive/prototype-05-v1.png",
+      "generatedFile": "C:/Users/fhg_r/.codex/generated_images/01a1a412-8aa2-7ae2-8742-cef9433d1865/exec-9c06ad61-b00b-4e79-b7f0-b505e79051a3.png",
+      "resultManifest": "sources/prototype-05-earlier-result.json",
+      "jobManifest": "sources/prototypes-jobs.json",
+      "jobId": "prototype-05",
+      "rawExists": true,
+      "toolOriginalExists": true,
+      "byteIdentical": true,
+      "sha256": "6527821c44a98cbafb8fe7cc2e90b2931b2d78d9a9e45070ee87bba79f98f576",
+      "recordedSha256": "6527821c44a98cbafb8fe7cc2e90b2931b2d78d9a9e45070ee87bba79f98f576",
+      "sha256MatchesRecord": true,
+      "matchingJobCount": 1,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "jobAssetStem": "prototype-05",
+      "referencesExist": true,
+      "referencesCount": 2
+    }
+  ],
+  "suppliedOriginals": [
+    {
+      "id": "realm-solestia",
+      "sourceFile": "C:/Users/fhg_r/Downloads/Länder/Solestia/Solestia Wappen.png",
+      "copiedOriginal": "assets/originals/solestia.png",
+      "byteIdentical": true,
+      "sourceSha256": "58119b1e979a550fa10d31e98760022ded98b6d7d9a9ba02f01dd04374b97d37",
+      "localSha256": "58119b1e979a550fa10d31e98760022ded98b6d7d9a9ba02f01dd04374b97d37",
+      "recordedSha256": "58119b1e979a550fa10d31e98760022ded98b6d7d9a9ba02f01dd04374b97d37",
+      "sha256MatchesRecord": true,
+      "originalUnchanged": true,
+      "alphaChanged": false
+    }
+  ],
+  "warnings": [
+    {
+      "kind": "historical-reference-relocated",
+      "status": "resolved-through-archive",
+      "jobManifest": "sources/pool-04-correction-job.json",
+      "historicalReference": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/pool-04-v1.png",
+      "preservedArchive": "E:/Aleria/Vorschau/Solestia/assets/emblems/generated/early-pool-04-v1.png",
+      "archiveSha256": "5850424791567473216f09993b8d256c385774408ae7db6111984df1cdc71579",
+      "archiveToolOriginalByteIdentical": true,
+      "sourceJobUnchanged": true
+    }
+  ],
+  "passed": true,
+  "activeGroups": {
+    "classPrototypes": 5,
+    "houseWarriors": 12,
+    "houseEmblems": 11,
+    "ancientEmblems": 1
+  },
+  "archiveGroups": {
+    "withdrawnEarlyEmblems": 9,
+    "supersededStirrupEmblem": 1,
+    "supersededStirrupWarrior": 1,
+    "supersededBotaWarrior": 1,
+    "supersededCavalryPrototype": 1
+  },
+  "runtimeCounts": {
+    "houses": 12,
+    "warriors": 12,
+    "prototypes": 5,
+    "art": 2
+  },
+  "runtimeSelections": [
+    {
+      "collection": "prototypes",
+      "id": "prototype-01",
+      "fullsize": "assets/warriors/production/prototype-01.png",
+      "preview": "assets/warriors/previews/prototype-01.webp",
+      "source": "assets/warriors/generated/prototype-01.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "prototypes",
+      "id": "prototype-02",
+      "fullsize": "assets/warriors/production/prototype-02.png",
+      "preview": "assets/warriors/previews/prototype-02.webp",
+      "source": "assets/warriors/generated/prototype-02.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "prototypes",
+      "id": "prototype-03",
+      "fullsize": "assets/warriors/production/prototype-03.png",
+      "preview": "assets/warriors/previews/prototype-03.webp",
+      "source": "assets/warriors/generated/prototype-03.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "prototypes",
+      "id": "prototype-04",
+      "fullsize": "assets/warriors/production/prototype-04.png",
+      "preview": "assets/warriors/previews/prototype-04.webp",
+      "source": "assets/warriors/generated/prototype-04.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "prototypes",
+      "id": "prototype-05",
+      "fullsize": "assets/warriors/production/prototype-05.png",
+      "preview": "assets/warriors/previews/prototype-05.webp",
+      "source": "assets/warriors/generated/prototype-05.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-01",
+      "fullsize": "assets/warriors/production/house-pool-01.png",
+      "preview": "assets/warriors/previews/house-pool-01.webp",
+      "source": "assets/warriors/generated/house-pool-01.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-02",
+      "fullsize": "assets/warriors/production/house-pool-02.png",
+      "preview": "assets/warriors/previews/house-pool-02.webp",
+      "source": "assets/warriors/generated/house-pool-02.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-03",
+      "fullsize": "assets/warriors/production/house-pool-03.png",
+      "preview": "assets/warriors/previews/house-pool-03.webp",
+      "source": "assets/warriors/generated/house-pool-03.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-04",
+      "fullsize": "assets/warriors/production/house-pool-04-v2.png",
+      "preview": "assets/warriors/previews/house-pool-04-v2.webp",
+      "source": "assets/warriors/generated/house-pool-04-v2.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-05",
+      "fullsize": "assets/warriors/production/house-pool-05.png",
+      "preview": "assets/warriors/previews/house-pool-05.webp",
+      "source": "assets/warriors/generated/house-pool-05.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "house-ducal",
+      "fullsize": "assets/warriors/production/house-ducal.png",
+      "preview": "assets/warriors/previews/house-ducal.webp",
+      "source": "assets/warriors/generated/house-ducal.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-06",
+      "fullsize": "assets/warriors/production/house-pool-06.png",
+      "preview": "assets/warriors/previews/house-pool-06.webp",
+      "source": "assets/warriors/generated/house-pool-06.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-07",
+      "fullsize": "assets/warriors/production/house-pool-07-v2.png",
+      "preview": "assets/warriors/previews/house-pool-07-v2.webp",
+      "source": "assets/warriors/generated/house-pool-07-v2.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-08",
+      "fullsize": "assets/warriors/production/house-pool-08.png",
+      "preview": "assets/warriors/previews/house-pool-08.webp",
+      "source": "assets/warriors/generated/house-pool-08.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-09",
+      "fullsize": "assets/warriors/production/house-pool-09.png",
+      "preview": "assets/warriors/previews/house-pool-09.webp",
+      "source": "assets/warriors/generated/house-pool-09.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-10",
+      "fullsize": "assets/warriors/production/house-pool-10.png",
+      "preview": "assets/warriors/previews/house-pool-10.webp",
+      "source": "assets/warriors/generated/house-pool-10.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "warriors",
+      "id": "pool-11",
+      "fullsize": "assets/warriors/production/house-pool-11.png",
+      "preview": "assets/warriors/previews/house-pool-11.webp",
+      "source": "assets/warriors/generated/house-pool-11.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "house-ducal",
+      "fullsize": "assets/originals/solestia.png",
+      "preview": "assets/originals/previews/solestia.webp",
+      "source": "assets/originals/solestia.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-01",
+      "fullsize": "assets/emblems/production/pool-01.png",
+      "preview": "assets/emblems/previews/pool-01.webp",
+      "source": "assets/emblems/generated/pool-01.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-02",
+      "fullsize": "assets/emblems/production/pool-02.png",
+      "preview": "assets/emblems/previews/pool-02.webp",
+      "source": "assets/emblems/generated/pool-02.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-03",
+      "fullsize": "assets/emblems/production/pool-03.png",
+      "preview": "assets/emblems/previews/pool-03.webp",
+      "source": "assets/emblems/generated/pool-03.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-04",
+      "fullsize": "assets/emblems/production/pool-04-v2.png",
+      "preview": "assets/emblems/previews/pool-04-v2.webp",
+      "source": "assets/emblems/generated/pool-04-v2.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-05",
+      "fullsize": "assets/emblems/production/pool-05.png",
+      "preview": "assets/emblems/previews/pool-05.webp",
+      "source": "assets/emblems/generated/pool-05.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-06",
+      "fullsize": "assets/emblems/production/pool-06.png",
+      "preview": "assets/emblems/previews/pool-06.webp",
+      "source": "assets/emblems/generated/pool-06.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-07",
+      "fullsize": "assets/emblems/production/pool-07.png",
+      "preview": "assets/emblems/previews/pool-07.webp",
+      "source": "assets/emblems/generated/pool-07.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-08",
+      "fullsize": "assets/emblems/production/pool-08.png",
+      "preview": "assets/emblems/previews/pool-08.webp",
+      "source": "assets/emblems/generated/pool-08.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-09",
+      "fullsize": "assets/emblems/production/pool-09.png",
+      "preview": "assets/emblems/previews/pool-09.webp",
+      "source": "assets/emblems/generated/pool-09.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-10",
+      "fullsize": "assets/emblems/production/pool-10.png",
+      "preview": "assets/emblems/previews/pool-10.webp",
+      "source": "assets/emblems/generated/pool-10.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "houses",
+      "id": "pool-11",
+      "fullsize": "assets/emblems/production/pool-11.png",
+      "preview": "assets/emblems/previews/pool-11.webp",
+      "source": "assets/emblems/generated/pool-11.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "art",
+      "id": "realm-solestia",
+      "fullsize": "assets/originals/solestia.png",
+      "preview": "assets/originals/previews/solestia.webp",
+      "source": "assets/originals/solestia.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    },
+    {
+      "collection": "art",
+      "id": "ancient-grianeach",
+      "fullsize": "assets/emblems/production/ancient-grianeach.png",
+      "preview": "assets/emblems/previews/ancient-grianeach.webp",
+      "source": "assets/emblems/generated/ancient-grianeach.png",
+      "selectedSourceActive": true,
+      "filesExist": true
+    }
+  ],
+  "runtimeActiveSourceCount": 29,
+  "archivedAssetsSelected": [],
+  "receiptCount": 31,
+  "assetReceipts": [
+    {
+      "id": "ancient-grianeach",
+      "source": "assets/emblems/generated/ancient-grianeach.png",
+      "production": "assets/emblems/production/ancient-grianeach.png",
+      "preview": "assets/emblems/previews/ancient-grianeach.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-01",
+      "source": "assets/emblems/generated/pool-01.png",
+      "production": "assets/emblems/production/pool-01.png",
+      "preview": "assets/emblems/previews/pool-01.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-02",
+      "source": "assets/emblems/generated/pool-02.png",
+      "production": "assets/emblems/production/pool-02.png",
+      "preview": "assets/emblems/previews/pool-02.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-03",
+      "source": "assets/emblems/generated/pool-03.png",
+      "production": "assets/emblems/production/pool-03.png",
+      "preview": "assets/emblems/previews/pool-03.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-04",
+      "source": "assets/emblems/generated/pool-04-v2.png",
+      "production": "assets/emblems/production/pool-04-v2.png",
+      "preview": "assets/emblems/previews/pool-04-v2.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-05",
+      "source": "assets/emblems/generated/pool-05.png",
+      "production": "assets/emblems/production/pool-05.png",
+      "preview": "assets/emblems/previews/pool-05.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-06",
+      "source": "assets/emblems/generated/pool-06.png",
+      "production": "assets/emblems/production/pool-06.png",
+      "preview": "assets/emblems/previews/pool-06.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-07",
+      "source": "assets/emblems/generated/pool-07.png",
+      "production": "assets/emblems/production/pool-07.png",
+      "preview": "assets/emblems/previews/pool-07.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-08",
+      "source": "assets/emblems/generated/pool-08.png",
+      "production": "assets/emblems/production/pool-08.png",
+      "preview": "assets/emblems/previews/pool-08.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-09",
+      "source": "assets/emblems/generated/pool-09.png",
+      "production": "assets/emblems/production/pool-09.png",
+      "preview": "assets/emblems/previews/pool-09.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-10",
+      "source": "assets/emblems/generated/pool-10.png",
+      "production": "assets/emblems/production/pool-10.png",
+      "preview": "assets/emblems/previews/pool-10.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "pool-11",
+      "source": "assets/emblems/generated/pool-11.png",
+      "production": "assets/emblems/production/pool-11.png",
+      "preview": "assets/emblems/previews/pool-11.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-ducal",
+      "source": "assets/warriors/generated/house-ducal.png",
+      "production": "assets/warriors/production/house-ducal.png",
+      "preview": "assets/warriors/previews/house-ducal.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-01",
+      "source": "assets/warriors/generated/house-pool-01.png",
+      "production": "assets/warriors/production/house-pool-01.png",
+      "preview": "assets/warriors/previews/house-pool-01.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-02",
+      "source": "assets/warriors/generated/house-pool-02.png",
+      "production": "assets/warriors/production/house-pool-02.png",
+      "preview": "assets/warriors/previews/house-pool-02.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-03",
+      "source": "assets/warriors/generated/house-pool-03.png",
+      "production": "assets/warriors/production/house-pool-03.png",
+      "preview": "assets/warriors/previews/house-pool-03.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-04",
+      "source": "assets/warriors/generated/house-pool-04.png",
+      "production": "assets/warriors/production/house-pool-04.png",
+      "preview": "assets/warriors/previews/house-pool-04.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-04-v2",
+      "source": "assets/warriors/generated/house-pool-04-v2.png",
+      "production": "assets/warriors/production/house-pool-04-v2.png",
+      "preview": "assets/warriors/previews/house-pool-04-v2.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-05",
+      "source": "assets/warriors/generated/house-pool-05.png",
+      "production": "assets/warriors/production/house-pool-05.png",
+      "preview": "assets/warriors/previews/house-pool-05.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-06",
+      "source": "assets/warriors/generated/house-pool-06.png",
+      "production": "assets/warriors/production/house-pool-06.png",
+      "preview": "assets/warriors/previews/house-pool-06.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-07",
+      "source": "assets/warriors/generated/house-pool-07.png",
+      "production": "assets/warriors/production/house-pool-07.png",
+      "preview": "assets/warriors/previews/house-pool-07.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-07-v2",
+      "source": "assets/warriors/generated/house-pool-07-v2.png",
+      "production": "assets/warriors/production/house-pool-07-v2.png",
+      "preview": "assets/warriors/previews/house-pool-07-v2.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-08",
+      "source": "assets/warriors/generated/house-pool-08.png",
+      "production": "assets/warriors/production/house-pool-08.png",
+      "preview": "assets/warriors/previews/house-pool-08.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-09",
+      "source": "assets/warriors/generated/house-pool-09.png",
+      "production": "assets/warriors/production/house-pool-09.png",
+      "preview": "assets/warriors/previews/house-pool-09.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-10",
+      "source": "assets/warriors/generated/house-pool-10.png",
+      "production": "assets/warriors/production/house-pool-10.png",
+      "preview": "assets/warriors/previews/house-pool-10.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "house-pool-11",
+      "source": "assets/warriors/generated/house-pool-11.png",
+      "production": "assets/warriors/production/house-pool-11.png",
+      "preview": "assets/warriors/previews/house-pool-11.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "prototype-01",
+      "source": "assets/warriors/generated/prototype-01.png",
+      "production": "assets/warriors/production/prototype-01.png",
+      "preview": "assets/warriors/previews/prototype-01.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "prototype-02",
+      "source": "assets/warriors/generated/prototype-02.png",
+      "production": "assets/warriors/production/prototype-02.png",
+      "preview": "assets/warriors/previews/prototype-02.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "prototype-03",
+      "source": "assets/warriors/generated/prototype-03.png",
+      "production": "assets/warriors/production/prototype-03.png",
+      "preview": "assets/warriors/previews/prototype-03.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "prototype-04",
+      "source": "assets/warriors/generated/prototype-04.png",
+      "production": "assets/warriors/production/prototype-04.png",
+      "preview": "assets/warriors/previews/prototype-04.webp",
+      "hashesMatch": true
+    },
+    {
+      "id": "prototype-05",
+      "source": "assets/warriors/generated/prototype-05.png",
+      "production": "assets/warriors/production/prototype-05.png",
+      "preview": "assets/warriors/previews/prototype-05.webp",
+      "hashesMatch": true
+    }
+  ],
+  "duplicateRawContents": [],
+  "protectedFileCount": 108,
+  "protectedFilesChangedDuringAudit": [],
+  "auditWrites": [
+    "diagnostics/solestia/source-original-audit.json"
+  ]
+}

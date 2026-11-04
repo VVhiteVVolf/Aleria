@@ -1,0 +1,31 @@
+{
+  "startedDate": "2026-11-03",
+  "completedDate": "2026-11-04",
+  "timezone": "Europe/Berlin",
+  "workspaceOnly": true,
+  "published": false,
+  "productionWrites": 0,
+  "traitBaselineCommit": "3bc537307276e6ecd52cf102c46b70a5d984f416",
+  "traits": { "reviewed": 185, "revised": 65, "retained": 120 },
+  "catalog": { "uniqueTechniques": 985, "confirmedClassOffers": 1028, "spellGradeForms": 538, "damageSamples": 63300 },
+  "checks": {
+    "domain": { "passed": 857, "failed": 0, "log": "verified-domain-tests.txt" },
+    "backend": { "passed": 119, "failed": 0, "log": "verified-backend-tests.txt" },
+    "emulator": { "passed": 80, "failed": 0, "log": "verified-emulator-tests.txt", "host": "127.0.0.1:8180", "project": "demo-aleria-combat-checkup" },
+    "diceAndBundle": { "passed": 19, "failed": 0 },
+    "additionalRuleContracts": { "passed": 30, "failed": 0, "overlapsDomain": true, "log": "new-rule-contracts.txt" },
+    "finalStartPersistence": { "passed": 21, "failed": 0, "overlapsBackend": true, "log": "final-start-persistence-tests.txt" },
+    "finalStartEmulator": { "passed": 7, "failed": 0, "includesPartialProfiles": true, "log": "../trait-balance-20261103/trait-emulator-tests.txt" },
+    "mechanicsParity": { "comparedFiles": 285, "algorithm": "SHA-256", "mismatches": 0 },
+    "publicBiographies": { "passed": true, "entries": 74 },
+    "traitRevisionManifest": { "passed": true, "entries": 65 },
+    "gameplayGuides": { "build": true, "check": true, "pages": 3, "finalVariantContracts": 4 },
+    "localEmulatorStopped": true,
+    "browser": { "developmentFlow": true, "traitInterfaces": true, "desktop": true, "mobile": true, "externalWritesBlocked": true, "errors": 0 }
+  },
+  "notes": [
+    "Targeted suites overlap the domain suite and are not added again to a unique total.",
+    "Earlier diagnostic failures remain available; only verified logs describe the final complete runs.",
+    "Historical source copies and genuine personal variants remain preserved; exact catalog copies receive the current runtime rules."
+  ]
+}

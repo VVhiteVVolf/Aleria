@@ -11,7 +11,7 @@ import { HOUSE_GRENDEL_PORTRAITS } from './house-grendel-portraits.js';
 import {
   IVARSHEIM_HOUSE_EMBLEMS,
   IVARSHEIM_HOUSE_PROFILES
-} from './ivarsheim-house-profiles.js';
+} from './ivarsheim-house-profiles.js?v=20261103-ivarsheim-v1';
 import { KRONENTAL_HOUSE_EMBLEMS } from './kronental-house-profiles.js';
 import { RORIKSHEIM_HOUSE_EMBLEMS } from './roriksheim-house-profiles.js';
 
@@ -315,7 +315,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     spouse('gudrun-grendel-spouse', 'Gudrun', 'female', '1566', '1620'),
     spouse('thorgrimm-windhueter', 'Thorgrimm Windhüter', 'male', '1573', '1627', 'house-windhueter'),
 
-    person('gunnar-grendel', 'Gunnar Grendel', 'male', '1585', '1625', {
+    person('gunnar-grendel', 'Gunnar Grendel', 'male', '1585', '1631', {
       title: 'Hesir des Clans Grendel von 1623 bis 1625'
     }),
     awayWoman('hlokk-grendel', 'Hlökk Grendel', '1590', '1627', 'Haus Blutklinge'),
@@ -409,7 +409,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     endedMarriage('marriage-leif-ljotunn-grendel'),
     endedMarriage('marriage-eirikr-gudrun-grendel', '1620'),
     endedMarriage('marriage-halldis-thorgrimm-grendel', '1627'),
-    endedMarriage('marriage-hljotrun-gunnar-wargh', '1625'),
+    endedMarriage('marriage-hljotrun-gunnar-wargh', '1631'),
     endedMarriage('marriage-hlokk-thorfid-grendel', '1627'),
     endedMarriage('marriage-austveig-finnr-sterkr', '1671'),
     endedMarriage('marriage-bagsecg-sigrun-grendel', '1627'),

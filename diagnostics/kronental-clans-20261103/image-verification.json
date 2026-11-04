@@ -1,0 +1,2756 @@
+{
+  "schema": "aleria.kronental-image-verification",
+  "version": 1,
+  "reviewedAt": "2026-11-03",
+  "status": "pass-with-minor-source-artifacts",
+  "scope": {
+    "total": 30,
+    "families": 29,
+    "suppliedOriginals": 19,
+    "generated": 11,
+    "wellensaengerVariants": 2
+  },
+  "summary": {
+    "allSourceHashesMatch": true,
+    "allPng": true,
+    "allRgba": true,
+    "allFullAlphaRange": false,
+    "allSuppliedUrlsPresentInAttachments": true,
+    "edgeAlpha1Ids": [
+      "haus-eisenbieger",
+      "haus-frostauge",
+      "haus-gullvig",
+      "haus-eibenschild",
+      "haus-donnerblut",
+      "haus-moorbrand",
+      "haus-jormung",
+      "haus-nidfengr",
+      "haus-tarbhann",
+      "haus-bjarnvarg",
+      "haus-tauwind",
+      "haus-hvelgrson"
+    ],
+    "edgeAbove16Ids": [
+      "haus-frostauge",
+      "haus-spindelschlag"
+    ],
+    "allHaveRealTransparency": true,
+    "generatedAlphaRange": [
+      0,
+      254
+    ],
+    "uniqueImageHashes": 30,
+    "allOriginalAttachmentHashesMatchReceipts": true,
+    "allHashesStillMatchAfterDiagnosticComposition": true,
+    "suppliedDimensionCounts": {
+      "408x612": 15,
+      "1024x1536": 1,
+      "409x610": 3
+    },
+    "generatedDimensionCounts": {
+      "1024x1536": 11
+    }
+  },
+  "contactSheet": "diagnostics/kronental-clans-20261103/all-clan-figures.jpg",
+  "additionalLightSheet": "diagnostics/kronental-clans-20261103/generated-clan-figures-light.jpg",
+  "method": "Asset bytes read only. Supplied originals compared to independent download receipt; generated assets compared bytewise to original tool output. White figure cells composited over a light sheet. No alpha changes or production-image writes.",
+  "productAssetsModified": false,
+  "entries": [
+    {
+      "id": "haus-vaeren",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-vaeren/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 364899,
+      "sha256": "da3c3c6bd14dfdcaaf2724751b581b915d6d0ba2e555c6b8f579d78f4ec21a0c",
+      "expectedSha256": "da3c3c6bd14dfdcaaf2724751b581b915d6d0ba2e555c6b8f579d78f4ec21a0c",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/Rt3lPnh.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 101450,
+        "alpha1": 2063,
+        "alpha1to3": 3891,
+        "alpha1to16": 7683,
+        "partiallyTransparent": 21468,
+        "opaque": 126778,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          3,
+          17,
+          400,
+          600
+        ],
+        "2": [
+          3,
+          17,
+          399,
+          600
+        ],
+        "4": [
+          3,
+          17,
+          398,
+          599
+        ],
+        "17": [
+          3,
+          17,
+          396,
+          597
+        ],
+        "128": [
+          3,
+          18,
+          391,
+          591
+        ],
+        "255": [
+          4,
+          20,
+          390,
+          589
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Goldgerüsteter Krieger mit Widderhelm, Axt und Widderrundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-riesentod",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-riesentod/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 264793,
+      "sha256": "cc757c7c6564e81f783f3e8d64e1b2a60ebecf41861effea1e6cd5c72920e38a",
+      "expectedSha256": "cc757c7c6564e81f783f3e8d64e1b2a60ebecf41861effea1e6cd5c72920e38a",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/wox658M.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 134463,
+        "alpha1": 1967,
+        "alpha1to3": 3705,
+        "alpha1to16": 7480,
+        "partiallyTransparent": 20253,
+        "opaque": 94980,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          38,
+          40,
+          378,
+          576
+        ],
+        "2": [
+          39,
+          40,
+          377,
+          576
+        ],
+        "4": [
+          40,
+          40,
+          377,
+          575
+        ],
+        "17": [
+          40,
+          41,
+          375,
+          573
+        ],
+        "128": [
+          41,
+          42,
+          370,
+          567
+        ],
+        "255": [
+          42,
+          44,
+          368,
+          565
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Dunkler Krieger mit Hornhelm, Hammer und rotem Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-eisenbieger",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-eisenbieger/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 362291,
+      "sha256": "ec0273dba856093cf853b680414ceba1f9af9db92f1a8b685ba91d76d3e66c79",
+      "expectedSha256": "ec0273dba856093cf853b680414ceba1f9af9db92f1a8b685ba91d76d3e66c79",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/QuHUNNe.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 99829,
+        "alpha1": 2358,
+        "alpha1to3": 4560,
+        "alpha1to16": 9092,
+        "partiallyTransparent": 24610,
+        "opaque": 125257,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 34,
+        "alpha1": 7,
+        "above3": 19,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          16,
+          20,
+          408,
+          600
+        ],
+        "2": [
+          17,
+          21,
+          408,
+          599
+        ],
+        "4": [
+          18,
+          21,
+          408,
+          598
+        ],
+        "17": [
+          19,
+          21,
+          406,
+          597
+        ],
+        "128": [
+          19,
+          22,
+          401,
+          591
+        ],
+        "255": [
+          20,
+          23,
+          400,
+          589
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Blau-goldener schwerer Krieger mit Hammer und Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-sturmgeborene",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-sturmgeborene/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 338960,
+      "sha256": "479ad7a1effcefd45e5d00f86d475f2fb984be3dca4fde3b7b9f358aaac806f7",
+      "expectedSha256": "479ad7a1effcefd45e5d00f86d475f2fb984be3dca4fde3b7b9f358aaac806f7",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/tRG3Uz9.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 114223,
+        "alpha1": 2010,
+        "alpha1to3": 3858,
+        "alpha1to16": 8106,
+        "partiallyTransparent": 22908,
+        "opaque": 112565,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          6,
+          23,
+          405,
+          602
+        ],
+        "2": [
+          7,
+          23,
+          404,
+          601
+        ],
+        "4": [
+          8,
+          23,
+          403,
+          601
+        ],
+        "17": [
+          8,
+          24,
+          401,
+          599
+        ],
+        "128": [
+          9,
+          24,
+          396,
+          593
+        ],
+        "255": [
+          10,
+          26,
+          395,
+          591
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Rot-goldener Krieger mit hohem Federkamm, Schwert und Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-frostauge",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-frostauge/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 334675,
+      "sha256": "2a74963e0379c999a716ce75b4738496e3b463c511b9cbea552b774085147390",
+      "expectedSha256": "2a74963e0379c999a716ce75b4738496e3b463c511b9cbea552b774085147390",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/idjxZBt.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 116658,
+        "alpha1": 1781,
+        "alpha1to3": 3345,
+        "alpha1to16": 6808,
+        "partiallyTransparent": 19857,
+        "opaque": 113181,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 62,
+        "alpha1": 8,
+        "above3": 46,
+        "above16": 14,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          8,
+          11,
+          408,
+          596
+        ],
+        "2": [
+          8,
+          12,
+          408,
+          595
+        ],
+        "4": [
+          9,
+          12,
+          408,
+          594
+        ],
+        "17": [
+          9,
+          12,
+          408,
+          593
+        ],
+        "128": [
+          10,
+          14,
+          404,
+          587
+        ],
+        "255": [
+          12,
+          16,
+          403,
+          585
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen.",
+        "Weiche halbtransparente Originalrandanteile reichen rechts bis zum Canvasrand; nicht durch die Integration hinzugefügt."
+      ],
+      "visualDescription": "Blauer Krieger mit Flügelhelm, Schwert und Augensonnenschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-wellenschild",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellenschild/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 229917,
+      "sha256": "a309332dad5d50d1737573ed45f7fa2db60e7790597114f6f2885b262cbb014c",
+      "expectedSha256": "a309332dad5d50d1737573ed45f7fa2db60e7790597114f6f2885b262cbb014c",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/vFt0y9u.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 144277,
+        "alpha1": 124,
+        "alpha1to3": 299,
+        "alpha1to16": 920,
+        "partiallyTransparent": 6120,
+        "opaque": 99299,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          52,
+          8,
+          377,
+          591
+        ],
+        "2": [
+          52,
+          8,
+          377,
+          591
+        ],
+        "4": [
+          52,
+          8,
+          377,
+          590
+        ],
+        "17": [
+          52,
+          9,
+          377,
+          590
+        ],
+        "128": [
+          53,
+          10,
+          377,
+          590
+        ],
+        "255": [
+          54,
+          12,
+          376,
+          588
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Speerträger mit offenem Helm, Fellmantel und blauem Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-gullvig",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-gullvig/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 304941,
+      "sha256": "95b1b6c8ec8919c1348d43c5f3d0d7a6e3e4fd8140bc212a66d6b54101d51d32",
+      "expectedSha256": "95b1b6c8ec8919c1348d43c5f3d0d7a6e3e4fd8140bc212a66d6b54101d51d32",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/EZTchz2.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 114364,
+        "alpha1": 2132,
+        "alpha1to3": 3978,
+        "alpha1to16": 8253,
+        "partiallyTransparent": 22804,
+        "opaque": 112528,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 55,
+        "alpha1": 9,
+        "above3": 29,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          10,
+          20,
+          408,
+          585
+        ],
+        "2": [
+          10,
+          20,
+          408,
+          585
+        ],
+        "4": [
+          11,
+          20,
+          408,
+          584
+        ],
+        "17": [
+          12,
+          20,
+          406,
+          582
+        ],
+        "128": [
+          12,
+          21,
+          401,
+          576
+        ],
+        "255": [
+          13,
+          23,
+          400,
+          575
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Rot-goldener Krieger mit Flügelhelm, erhobener Axt und Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 1966492,
+      "sha256": "703dda83bfecc81ff7f0e1c81e81cc3a243cf87edc25291ef1809ca79955110d",
+      "expectedSha256": "703dda83bfecc81ff7f0e1c81e81cc3a243cf87edc25291ef1809ca79955110d",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/ouMNV7a.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 799484,
+        "alpha1": 1621,
+        "alpha1to3": 2880,
+        "alpha1to16": 6433,
+        "partiallyTransparent": 25979,
+        "opaque": 747401,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          41,
+          55,
+          993,
+          1451
+        ],
+        "2": [
+          41,
+          55,
+          993,
+          1451
+        ],
+        "4": [
+          41,
+          55,
+          993,
+          1451
+        ],
+        "17": [
+          41,
+          55,
+          992,
+          1450
+        ],
+        "128": [
+          42,
+          56,
+          991,
+          1450
+        ],
+        "255": [
+          43,
+          57,
+          990,
+          1449
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Blau gerüstete Hausfigur mit Flügelhelm, Waffe und Sirenenschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-wellensaenger",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellensaenger/krieger-2.png",
+      "variant": 2,
+      "primary": false,
+      "bytes": 301108,
+      "sha256": "b04399e6df3ee21fb631d9b916946356753921030c1948d81ad53e65020e1876",
+      "expectedSha256": "b04399e6df3ee21fb631d9b916946356753921030c1948d81ad53e65020e1876",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/JUpeF3R.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 409,
+      "height": 610,
+      "aspectRatio": 0.670492,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 117176,
+        "alpha1": 1988,
+        "alpha1to3": 3850,
+        "alpha1to16": 8106,
+        "partiallyTransparent": 24598,
+        "opaque": 107716,
+        "total": 249490
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          14,
+          19,
+          403,
+          587
+        ],
+        "2": [
+          15,
+          19,
+          402,
+          587
+        ],
+        "4": [
+          16,
+          19,
+          401,
+          586
+        ],
+        "17": [
+          16,
+          19,
+          399,
+          584
+        ],
+        "128": [
+          17,
+          21,
+          394,
+          578
+        ],
+        "255": [
+          19,
+          26,
+          390,
+          576
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Zweite originale Wellensänger-Hausfigur mit Schwert und Sirenenschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-spindelschlag",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-spindelschlag/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 257686,
+      "sha256": "a6d388ed37189af534f29a4a49e80a1a375797ee3cc83ca69ca3df20ddbb39e9",
+      "expectedSha256": "a6d388ed37189af534f29a4a49e80a1a375797ee3cc83ca69ca3df20ddbb39e9",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/hvDOgqU.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 409,
+      "height": 610,
+      "aspectRatio": 0.670492,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 134081,
+        "alpha1": 1910,
+        "alpha1to3": 3659,
+        "alpha1to16": 7521,
+        "partiallyTransparent": 25050,
+        "opaque": 90359,
+        "total": 249490
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 12,
+        "alpha1": 0,
+        "above3": 11,
+        "above16": 8,
+        "above127": 1
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          19,
+          0,
+          379,
+          594
+        ],
+        "2": [
+          19,
+          0,
+          378,
+          593
+        ],
+        "4": [
+          20,
+          0,
+          377,
+          592
+        ],
+        "17": [
+          20,
+          0,
+          375,
+          591
+        ],
+        "128": [
+          21,
+          0,
+          370,
+          585
+        ],
+        "255": [
+          24,
+          3,
+          368,
+          582
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen.",
+        "Einige Federrandpixel reichen im gelieferten Original bis an den oberen Canvasrand. Dieses Originalartefakt bleibt erhalten."
+      ],
+      "visualDescription": "Grün gerüsteter Krieger mit Federhelm, Axt und Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-suedstahl",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-suedstahl/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 186335,
+      "sha256": "288fb9db6ffcedc0ab912b47224a3f69ebb2fd8c72b29c9f39c303e2cf6f1037",
+      "expectedSha256": "288fb9db6ffcedc0ab912b47224a3f69ebb2fd8c72b29c9f39c303e2cf6f1037",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/MkzyrRp.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 409,
+      "height": 610,
+      "aspectRatio": 0.670492,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 156201,
+        "alpha1": 162,
+        "alpha1to3": 364,
+        "alpha1to16": 1127,
+        "partiallyTransparent": 6519,
+        "opaque": 86770,
+        "total": 249490
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          64,
+          14,
+          357,
+          596
+        ],
+        "2": [
+          64,
+          14,
+          357,
+          596
+        ],
+        "4": [
+          64,
+          14,
+          356,
+          596
+        ],
+        "17": [
+          64,
+          14,
+          356,
+          596
+        ],
+        "128": [
+          65,
+          15,
+          355,
+          595
+        ],
+        "255": [
+          66,
+          16,
+          352,
+          594
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Krieger mit offenem Helm, Fellmantel, Krummschwert und blauem Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-albholz",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-albholz/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 207731,
+      "sha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "expectedSha256": "0c007e118f52c126849a205b5f99c06c5be7b04b50802246864166bd4132a68c",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/GUdQCnk.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 158882,
+        "alpha1": 1237,
+        "alpha1to3": 2362,
+        "alpha1to16": 4733,
+        "partiallyTransparent": 13242,
+        "opaque": 77572,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          74,
+          21,
+          319,
+          598
+        ],
+        "2": [
+          75,
+          21,
+          318,
+          597
+        ],
+        "4": [
+          76,
+          21,
+          317,
+          596
+        ],
+        "17": [
+          76,
+          21,
+          315,
+          595
+        ],
+        "128": [
+          77,
+          22,
+          310,
+          589
+        ],
+        "255": [
+          78,
+          23,
+          309,
+          587
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Grün-goldener Krieger mit geschlossenem Helm und gebogenem Schwert.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-wellenkrone",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-wellenkrone/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 275624,
+      "sha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "expectedSha256": "747d739036c388d8ca3a7ecb76e1d765d2b153b070101b5f3db1ecea9cc65160",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/fVc4D5w.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 114483,
+        "alpha1": 2424,
+        "alpha1to3": 4855,
+        "alpha1to16": 9953,
+        "partiallyTransparent": 28081,
+        "opaque": 107132,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          53,
+          9,
+          389,
+          602
+        ],
+        "2": [
+          53,
+          9,
+          388,
+          601
+        ],
+        "4": [
+          54,
+          9,
+          388,
+          600
+        ],
+        "17": [
+          55,
+          9,
+          386,
+          598
+        ],
+        "128": [
+          55,
+          11,
+          381,
+          592
+        ],
+        "255": [
+          56,
+          16,
+          380,
+          591
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Geweihhelm-Krieger mit Speer, Köcher und wellenverziertem Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-daemmerrufer",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-daemmerrufer/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 278656,
+      "sha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "expectedSha256": "c772edf14847c6f368b7dc5b2c7ca9d71a749d32df750e5aa0b4f03a8252dda6",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/kbX9DpR.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 103534,
+        "alpha1": 136,
+        "alpha1to3": 331,
+        "alpha1to16": 946,
+        "partiallyTransparent": 6596,
+        "opaque": 139566,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          4,
+          27,
+          401,
+          593
+        ],
+        "2": [
+          4,
+          27,
+          401,
+          593
+        ],
+        "4": [
+          4,
+          27,
+          401,
+          593
+        ],
+        "17": [
+          5,
+          27,
+          401,
+          593
+        ],
+        "128": [
+          5,
+          27,
+          401,
+          593
+        ],
+        "255": [
+          6,
+          28,
+          400,
+          592
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Musikerpaar in grüner Alltagskleidung mit Dudelsack und Laute.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-grimr",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-grimr/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 243720,
+      "sha256": "32f0a47e05d6f334ec3d3a8fd5fc2de2dcb4f4f088e5d70ef9eac9d7dc1b9418",
+      "expectedSha256": "32f0a47e05d6f334ec3d3a8fd5fc2de2dcb4f4f088e5d70ef9eac9d7dc1b9418",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/sNHRSOX.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 135182,
+        "alpha1": 1348,
+        "alpha1to3": 2551,
+        "alpha1to16": 5119,
+        "partiallyTransparent": 13875,
+        "opaque": 100639,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          23,
+          21,
+          381,
+          593
+        ],
+        "2": [
+          24,
+          22,
+          381,
+          593
+        ],
+        "4": [
+          25,
+          22,
+          380,
+          592
+        ],
+        "17": [
+          25,
+          22,
+          378,
+          590
+        ],
+        "128": [
+          26,
+          22,
+          373,
+          584
+        ],
+        "255": [
+          27,
+          28,
+          372,
+          583
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Grüner Krieger mit spitzem Helm, Speer und Hornsymbol-Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-skaife",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-skaife/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 237806,
+      "sha256": "5675eb81ea3db01c51b9b50c1a689b8e07e6d8c3de17447bc76469418c51162f",
+      "expectedSha256": "5675eb81ea3db01c51b9b50c1a689b8e07e6d8c3de17447bc76469418c51162f",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/mGjdqQn.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 131771,
+        "alpha1": 1943,
+        "alpha1to3": 3694,
+        "alpha1to16": 7362,
+        "partiallyTransparent": 19488,
+        "opaque": 98437,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          43,
+          12,
+          384,
+          591
+        ],
+        "2": [
+          43,
+          12,
+          383,
+          591
+        ],
+        "4": [
+          44,
+          12,
+          383,
+          590
+        ],
+        "17": [
+          45,
+          12,
+          381,
+          588
+        ],
+        "128": [
+          45,
+          13,
+          376,
+          582
+        ],
+        "255": [
+          47,
+          19,
+          374,
+          580
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Bärtiger Krieger mit Hornhelm, Speer und rotem Zeichen-Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-holmr",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-holmr/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 268899,
+      "sha256": "ab275e392907901982e07e7a87aa084da152cb477c23b5f89d368b80151bc369",
+      "expectedSha256": "ab275e392907901982e07e7a87aa084da152cb477c23b5f89d368b80151bc369",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/hG5YonB.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 125727,
+        "alpha1": 1937,
+        "alpha1to3": 3766,
+        "alpha1to16": 7484,
+        "partiallyTransparent": 19643,
+        "opaque": 104326,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          23,
+          15,
+          390,
+          591
+        ],
+        "2": [
+          24,
+          15,
+          390,
+          591
+        ],
+        "4": [
+          25,
+          15,
+          389,
+          590
+        ],
+        "17": [
+          25,
+          15,
+          387,
+          588
+        ],
+        "128": [
+          26,
+          16,
+          382,
+          582
+        ],
+        "255": [
+          27,
+          19,
+          380,
+          580
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Blaugrauer Krieger mit Hornhelm, Speer und drachenverziertem Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-isvanyr",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-isvanyr/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 353434,
+      "sha256": "c53619166ec19d4fb2b968a02e908a42c3d2e69f6d8a183fc1fb815d77c7f3f1",
+      "expectedSha256": "c53619166ec19d4fb2b968a02e908a42c3d2e69f6d8a183fc1fb815d77c7f3f1",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/n5qsu70.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 90678,
+        "alpha1": 2214,
+        "alpha1to3": 4097,
+        "alpha1to16": 8365,
+        "partiallyTransparent": 23856,
+        "opaque": 135162,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          14,
+          5,
+          398,
+          607
+        ],
+        "2": [
+          15,
+          6,
+          397,
+          606
+        ],
+        "4": [
+          16,
+          6,
+          396,
+          605
+        ],
+        "17": [
+          16,
+          6,
+          394,
+          604
+        ],
+        "128": [
+          17,
+          7,
+          390,
+          597
+        ],
+        "255": [
+          18,
+          8,
+          388,
+          596
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Krieger mit Geweihhelm, Fellkleidung, Axt und Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-mac-mamhar",
+      "kind": "supplied-original",
+      "assetPath": "Stammbäume/assets/images/references/haus-mac-mamhar/krieger.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 243999,
+      "sha256": "9afa629e1c716aec40735f21fba6fe896d613aabe85f811bac8b265156561c65",
+      "expectedSha256": "9afa629e1c716aec40735f21fba6fe896d613aabe85f811bac8b265156561c65",
+      "sourceReferenceType": "original download receipt SHA-256 and attachment URL",
+      "sourceReference": "https://i.imgur.com/uHoBBXh.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 408,
+      "height": 612,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 140255,
+        "alpha1": 100,
+        "alpha1to3": 253,
+        "alpha1to16": 689,
+        "partiallyTransparent": 4999,
+        "opaque": 104442,
+        "total": 249696
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          43,
+          20,
+          373,
+          590
+        ],
+        "2": [
+          43,
+          20,
+          373,
+          590
+        ],
+        "4": [
+          44,
+          20,
+          373,
+          590
+        ],
+        "17": [
+          44,
+          20,
+          373,
+          590
+        ],
+        "128": [
+          45,
+          21,
+          372,
+          590
+        ],
+        "255": [
+          45,
+          22,
+          372,
+          588
+        ]
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Unverändertes geliefertes Original auf heller Kontaktübersicht tatsächlich angesehen."
+      ],
+      "visualDescription": "Hellhaariger Krieger mit Hornhelm, Speer und Hahn-Rundschild.",
+      "attachmentSha256MatchesReceipt": true,
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-eibenschild",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-eibenschild/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2048654,
+      "sha256": "91a27423575ed5613ba3b066cc1f5af7311b78753da609f8799a4fab99293621",
+      "expectedSha256": "91a27423575ed5613ba3b066cc1f5af7311b78753da609f8799a4fab99293621",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-2577e416-5ae3-4fa3-8223-d347008a43c7.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 1036488,
+        "alpha1": 17339,
+        "alpha1to3": 23068,
+        "alpha1to16": 25840,
+        "partiallyTransparent": 536376,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 73,
+        "alpha1": 73,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          0,
+          994,
+          1522
+        ],
+        "2": [
+          192,
+          11,
+          863,
+          1518
+        ],
+        "4": [
+          193,
+          13,
+          863,
+          1516
+        ],
+        "17": [
+          193,
+          13,
+          863,
+          1515
+        ],
+        "128": [
+          194,
+          13,
+          862,
+          1514
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Offener Helm, Ketten- und Segmentpanzer, grüner Mantel, Speer und runder Eibenschild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-donnerblut",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-donnerblut/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2106835,
+      "sha256": "f118a1fdb0caeb88d7e02f96e4bef40df995f37b0b7fd9c3e3b71a39aafc73cd",
+      "expectedSha256": "f118a1fdb0caeb88d7e02f96e4bef40df995f37b0b7fd9c3e3b71a39aafc73cd",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-8ece3821-5a71-434f-90fc-d3e16cf5d931.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 928143,
+        "alpha1": 11756,
+        "alpha1to3": 15281,
+        "alpha1to16": 17779,
+        "partiallyTransparent": 644721,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 37,
+        "alpha1": 37,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          18,
+          1012,
+          1520
+        ],
+        "2": [
+          116,
+          18,
+          821,
+          1513
+        ],
+        "4": [
+          120,
+          20,
+          819,
+          1511
+        ],
+        "17": [
+          120,
+          20,
+          819,
+          1510
+        ],
+        "128": [
+          121,
+          21,
+          818,
+          1509
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Wangenhelm, Ketten- und Segmentpanzer, violetter Mantel, großer ruhender Hammer; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-moorbrand",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-moorbrand/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 1980272,
+      "sha256": "5d3f38703282c9e4a4948059e1d818e0bc4395e96ac030d9d4c18b01f77ba567",
+      "expectedSha256": "5d3f38703282c9e4a4948059e1d818e0bc4395e96ac030d9d4c18b01f77ba567",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-cf1143a2-4d93-43a4-874b-2281793fce35.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 1004302,
+        "alpha1": 15466,
+        "alpha1to3": 19837,
+        "alpha1to16": 21720,
+        "partiallyTransparent": 568562,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 3,
+        "alpha1": 3,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          15,
+          1012,
+          1517
+        ],
+        "2": [
+          148,
+          17,
+          830,
+          1509
+        ],
+        "4": [
+          149,
+          18,
+          828,
+          1508
+        ],
+        "17": [
+          150,
+          19,
+          826,
+          1507
+        ],
+        "128": [
+          151,
+          19,
+          826,
+          1506
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Dunkle Kapuze, roter gesteppter Rock, verstärkte Weste, kurzes einschneidiges Schwert; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-jormung",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-jormung/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2155071,
+      "sha256": "18d543a357f9f4ca40187360c258573cbe64e3688fe82be6958f67f980a7fd5f",
+      "expectedSha256": "18d543a357f9f4ca40187360c258573cbe64e3688fe82be6958f67f980a7fd5f",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-e51f7dcf-38d0-46d4-b07e-9914420f072b.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 976438,
+        "alpha1": 17838,
+        "alpha1to3": 24162,
+        "alpha1to16": 27112,
+        "partiallyTransparent": 596426,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 4,
+        "alpha1": 4,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          13,
+          1008,
+          1496
+        ],
+        "2": [
+          168,
+          15,
+          904,
+          1493
+        ],
+        "4": [
+          170,
+          15,
+          902,
+          1492
+        ],
+        "17": [
+          171,
+          15,
+          902,
+          1491
+        ],
+        "128": [
+          172,
+          15,
+          901,
+          1491
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Brillen-/Nasalhelm mit Kettenhaube, Schuppenkragen, blaugrünes Gewand, Speer und Rundschild mit Schlangenmotiv.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-nidfengr",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-nidfengr/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2194270,
+      "sha256": "04230d732cb5a142943c3fc00ca5efd7c6ce6a68fa898140c8cbb261e81ddf70",
+      "expectedSha256": "04230d732cb5a142943c3fc00ca5efd7c6ce6a68fa898140c8cbb261e81ddf70",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-425456de-68a9-48b8-9290-e44d8cb352af.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 960137,
+        "alpha1": 17615,
+        "alpha1to3": 22504,
+        "alpha1to16": 24662,
+        "partiallyTransparent": 612727,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 8,
+        "alpha1": 8,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          22,
+          1010,
+          1520
+        ],
+        "2": [
+          93,
+          22,
+          771,
+          1512
+        ],
+        "4": [
+          95,
+          24,
+          770,
+          1510
+        ],
+        "17": [
+          95,
+          24,
+          769,
+          1510
+        ],
+        "128": [
+          96,
+          25,
+          769,
+          1509
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Schlichter offener Nasalhelm, langes Kettenhemd und brauner Mantel, langstielige Axt; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-tarbhann",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-tarbhann/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 1964814,
+      "sha256": "fdda3b6f3c8c31bab3df230ffa758d84571e42e3d8987b3b6315c03be371f674",
+      "expectedSha256": "fdda3b6f3c8c31bab3df230ffa758d84571e42e3d8987b3b6315c03be371f674",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-1b8a6411-73ad-49b6-a40c-aeb1b743c286.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 1010625,
+        "alpha1": 29558,
+        "alpha1to3": 34682,
+        "alpha1to16": 37172,
+        "partiallyTransparent": 562239,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 58,
+        "alpha1": 58,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          25,
+          1010,
+          1536
+        ],
+        "2": [
+          148,
+          25,
+          795,
+          1524
+        ],
+        "4": [
+          150,
+          27,
+          793,
+          1523
+        ],
+        "17": [
+          150,
+          27,
+          793,
+          1522
+        ],
+        "128": [
+          151,
+          28,
+          792,
+          1522
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Kesselhelm, braune Lamellen-/Lederpanzerung über blauem Gewand, kurzes Schwert; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-bjarnvarg",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-bjarnvarg/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2243809,
+      "sha256": "3bd9768d0e73c53e5e036eb307076fb4132b9b93ed6a739cac35169e04d31390",
+      "expectedSha256": "3bd9768d0e73c53e5e036eb307076fb4132b9b93ed6a739cac35169e04d31390",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-29330b00-df90-4fc6-adba-a48fe77ffe87.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 760919,
+        "alpha1": 12275,
+        "alpha1to3": 16964,
+        "alpha1to16": 19986,
+        "partiallyTransparent": 811945,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 20,
+        "alpha1": 20,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          15,
+          1010,
+          1514
+        ],
+        "2": [
+          43,
+          43,
+          921,
+          1504
+        ],
+        "4": [
+          45,
+          43,
+          920,
+          1500
+        ],
+        "17": [
+          45,
+          45,
+          919,
+          1498
+        ],
+        "128": [
+          46,
+          45,
+          918,
+          1497
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Offener Stirnhelm, Schuppenkragen über Kettenhemd, dunkler Mantel, breite ruhende Axt; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-tauwind",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-tauwind/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2202830,
+      "sha256": "37d700f28f9e2365ba54f33768f125a8325e088450130da4ea5114c9714ecbb4",
+      "expectedSha256": "37d700f28f9e2365ba54f33768f125a8325e088450130da4ea5114c9714ecbb4",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-71b73d6f-afab-45dc-ab18-27befb26fd8c.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 899954,
+        "alpha1": 18270,
+        "alpha1to3": 26148,
+        "alpha1to16": 29559,
+        "partiallyTransparent": 672910,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 64,
+        "alpha1": 64,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          1,
+          1010,
+          1536
+        ],
+        "2": [
+          97,
+          6,
+          864,
+          1525
+        ],
+        "4": [
+          97,
+          8,
+          862,
+          1523
+        ],
+        "17": [
+          98,
+          8,
+          862,
+          1523
+        ],
+        "128": [
+          98,
+          9,
+          861,
+          1522
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Unbedeckter Kopf mit geflochtenem Haar, blaues Wolltuch, langer gesteppter Rock und Kettenkragen, Speer; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-morchaon",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-morchaon/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 1825433,
+      "sha256": "c2339883f213b96ff8a8bddd496d49149f15768555e4abcb3c905d6bf6da7be6",
+      "expectedSha256": "c2339883f213b96ff8a8bddd496d49149f15768555e4abcb3c905d6bf6da7be6",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-0db84062-0946-4b9f-b171-f0c7ec1051be.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 1045490,
+        "alpha1": 10801,
+        "alpha1to3": 14188,
+        "alpha1to16": 15999,
+        "partiallyTransparent": 527374,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          43,
+          20,
+          1018,
+          1518
+        ],
+        "2": [
+          240,
+          20,
+          849,
+          1513
+        ],
+        "4": [
+          240,
+          22,
+          848,
+          1511
+        ],
+        "17": [
+          240,
+          22,
+          847,
+          1511
+        ],
+        "128": [
+          241,
+          23,
+          847,
+          1510
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten."
+      ],
+      "visualDescription": "Bürgerlicher Mann in schlichter brauner Tunika und weinrotem Tuch, keine Waffen oder Rüstung.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-hvelgrson",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-hvelgrson/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2045089,
+      "sha256": "38886d3a9995731992f8ce469ddb6cba966ce57fb472a65a4db45e1f937c892e",
+      "expectedSha256": "38886d3a9995731992f8ce469ddb6cba966ce57fb472a65a4db45e1f937c892e",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-04736731-95e7-4e85-9704-ced5d5c97542.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 1001283,
+        "alpha1": 9151,
+        "alpha1to3": 12094,
+        "alpha1to16": 13513,
+        "partiallyTransparent": 571581,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 36,
+        "alpha1": 36,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          0,
+          17,
+          1010,
+          1536
+        ],
+        "2": [
+          223,
+          22,
+          772,
+          1523
+        ],
+        "4": [
+          225,
+          23,
+          772,
+          1522
+        ],
+        "17": [
+          225,
+          24,
+          772,
+          1522
+        ],
+        "128": [
+          226,
+          24,
+          771,
+          1521
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten.",
+        "Wenige Canvas-Randpixel mit Alpha 1; keine automatische Alphabearbeitung."
+      ],
+      "visualDescription": "Bürgerliche Frau mit Kappe, grünem Kleid, schlichtem Schultertuch und Eimer, keine Waffen oder Rüstung.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    },
+    {
+      "id": "haus-frostzorn",
+      "kind": "generated",
+      "assetPath": "Stammbäume/assets/images/references/haus-frostzorn/krieger-generated-v1.png",
+      "variant": 1,
+      "primary": true,
+      "bytes": 2272495,
+      "sha256": "e3309170607e3a63e8f538400e0f920ccf7db82b9c6008fe27d4d78b205847da",
+      "expectedSha256": "e3309170607e3a63e8f538400e0f920ccf7db82b9c6008fe27d4d78b205847da",
+      "sourceReferenceType": "unchanged built-in image tool output file",
+      "sourceReference": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a12c-eac8-7612-9891-77fd50bcf765\\exec-c65687d2-6a9b-4fe4-bea9-63df233647dd.png",
+      "sourceHashMatches": true,
+      "attachmentContainsOriginalUrl": null,
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "aspectRatio": 0.666667,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alphaCounts": {
+        "transparent": 877245,
+        "alpha1": 12384,
+        "alpha1to3": 17571,
+        "alpha1to16": 20242,
+        "partiallyTransparent": 695619,
+        "opaque": 0,
+        "total": 1572864
+      },
+      "canvasEdgeAlpha": {
+        "nonzero": 0,
+        "alpha1": 0,
+        "above3": 0,
+        "above16": 0,
+        "above127": 0
+      },
+      "boundsByAlphaThreshold": {
+        "1": [
+          25,
+          13,
+          1004,
+          1521
+        ],
+        "2": [
+          96,
+          13,
+          854,
+          1519
+        ],
+        "4": [
+          98,
+          14,
+          852,
+          1519
+        ],
+        "17": [
+          99,
+          15,
+          852,
+          1519
+        ],
+        "128": [
+          99,
+          15,
+          851,
+          1518
+        ],
+        "255": null
+      },
+      "visuallyInspected": true,
+      "visualFindings": [
+        "Auf der tatsächlich angesehenen hellen Kontaktübersicht keine breite Halo-Fläche und keine neu abgeschnittene Figur oder Ausrüstung sichtbar.",
+        "Tool-Original mit Alpha 0–254 unverändert erhalten."
+      ],
+      "visualDescription": "Repräsentative Piratenfigur mit kleinem offenem Helm, geflicktem blauem Umhang und gemischter leichter Rüstung, breite Axt; kein Schild.",
+      "hashStillMatchesAfterDiagnosticComposition": true
+    }
+  ],
+  "blockingIssues": [],
+  "visualReview": {
+    "allClanContactViewed": true,
+    "generatedLightContactViewed": true,
+    "lightComposition": "white cells on warm light sheet",
+    "newVisibleBroadHalos": false,
+    "newVisibleClipping": false,
+    "civilianPresentationConfirmed": [
+      "haus-morchaon",
+      "haus-hvelgrson"
+    ],
+    "variation": "Kessel-, Nasal-, Brillen- und Wangenhelme sowie Kapuze und unbedeckter Kopf; Kettenhemd, Lamellen, Schuppenkragen, gesteppte Kleidung und schlichte Zivilgewänder. Speere, Schwerter, Äxte und großer Hammer; mit und ohne Schild. Beide Wellensänger-Originale vollständig in der Kontaktübersicht enthalten."
+  },
+  "minorFindings": [
+    {
+      "kind": "generated-tool-alpha",
+      "ids": [
+        "haus-eibenschild",
+        "haus-donnerblut",
+        "haus-moorbrand",
+        "haus-jormung",
+        "haus-nidfengr",
+        "haus-tarbhann",
+        "haus-bjarnvarg",
+        "haus-tauwind",
+        "haus-morchaon",
+        "haus-hvelgrson",
+        "haus-frostzorn"
+      ],
+      "finding": "Alle 11 neuen Tool-Originale haben Alpha 0–254. Neun enthalten vereinzelte Canvas-Randpixel mit Alpha 1; Morchaon und Frostzorn haben keine nichttransparenten Canvas-Randpixel. Keine sichtbaren breiten Halos auf hellem Grund. Unverändert belassen."
+    },
+    {
+      "kind": "supplied-original-edge",
+      "ids": [
+        "haus-spindelschlag",
+        "haus-frostauge"
+      ],
+      "finding": "Spindelschlags Original erreicht mit Federrandpixeln den oberen Rand; Frostauges Original besitzt schwache Randtransparenz rechts. Hashgleiche Originale erhalten."
+    }
+  ]
+}

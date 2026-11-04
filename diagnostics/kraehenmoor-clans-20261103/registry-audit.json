@@ -1,0 +1,2250 @@
+{
+  "schema": "aleria.kraehenmoor-registry-house-audit",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03T19:12:59.731Z",
+  "publicOnly": true,
+  "scope": {
+    "kingdom": "Aldrimar",
+    "county": "Krähenmoor",
+    "mainSeat": "Moortal",
+    "baseline": "diagnostics/kraehenmoor-clans-20261103/baseline.json"
+  },
+  "summary": {
+    "families": 26,
+    "activeFamilies": 21,
+    "extinctClans": 5,
+    "rankCounts": {
+      "jarl": 1,
+      "huskarl": 11,
+      "thane": 5,
+      "hesire": 5,
+      "commoner": 1,
+      "unknown": 3
+    },
+    "suppliedAttachments": 14,
+    "suppliedOriginalIllustrations": 13,
+    "additionalFamiliesWithoutTemplate": 12,
+    "newIllustrationsRequired": 13,
+    "initialHousePages": 0,
+    "initialHouseBiographies": 0,
+    "initialFamiliesWithGalleryIllustration": 0
+  },
+  "findings": [
+    "Vollstaendiger oeffentlicher Ortsbestand: 26 Akten, darunter Schwarzstolz, zehn weitere Huskarle und der buergerliche Clan Goldzunge.",
+    "Vierzehn gelieferte Vorlagen decken die neun grossen lebenden und fuenf historischen Clans ab; darin liegen dreizehn Originalfiguren. Järnblod hat kein mitgeliefertes Originalbild. Zusammen mit den zwoelf zusaetzlichen Familien sind dreizehn echte Bildluecken zu ergaenzen.",
+    "Lokale Bildsuche in Stammbauembildern, fachlichen Hausordnern, Galerie und AvatarWerkstatt ergab fuer die zwoelf Zusatzhaeuser nur Wappen und Personenportraits beziehungsweise Reaktionsavatare, keine vorhandenen passenden Ganzkoerperdarstellungen.",
+    "Sindres Originalportrait wurde visuell angesehen: Animefigur mit Schiffshintergrund, Ausschnitt bis zum Oberschenkel. Als Personenportrait erhalten, nicht als freigestellte Clankriegerfigur einstufen.",
+    "Kraehenmoor bleibt von Schwarzfenn/Wolfsklamm getrennt. Kummerherz ist nur Hjerte-Nachfolger in Schwarzfenn, kein weiterer Kraehenmoor-Clan.",
+    "Jarnblod/Morfhia/Corcaigh sind Vorlagenslugs; technische IDs bleiben haus-jaernblod, haus-mac-morfhia und haus-mac-corcaigh.",
+    "Keine alten Stammbaumtabellen, Truppenstatistiken oder privaten Dossiers wurden fuer diesen Audit ausgewertet."
+  ],
+  "imageSearch": {
+    "searchedPublicDirectories": [
+      "Stammbäume/assets/images",
+      "Familien Häuser und Clans/Estryll",
+      "Gallerien",
+      "AleriaAlmanach/AvatarWerkstatt"
+    ],
+    "additionalCrestContactSheet": "diagnostics/kraehenmoor-clans-20261103/additional-crests.jpg",
+    "visuallyInspectedPersonPortrait": "Stammbäume/assets/images/portraits/haus-schwarzstolz/sindre-brandstolz.png"
+  },
+  "missingIllustrations": [
+    {
+      "id": "haus-schwarzstolz",
+      "title": "Clan Schwarzstolz",
+      "rankId": "huskarl",
+      "seat": "Eldvik",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+      "recommendation": "Dunkles Meergruen und Schwarz, zurueckhaltendes Krakenmotiv. Anonymer Huskarl aus der Kuestenregion; Sindres Narbe und Augenklappe sind keine allgemeinen Clanmerkmale."
+    },
+    {
+      "id": "haus-goldschwur",
+      "title": "Clan Goldschwur",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldschwur.png",
+      "recommendation": "Schwarz, Weiss und Gold; dekorativer goldener Spiralknoten. Schlichte Huskarlruestung, keine aus dem Motiv abgeleitete Berufsgeschichte."
+    },
+    {
+      "id": "haus-goldhand",
+      "title": "Clan Goldhand",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldhand.png",
+      "recommendation": "Dunkles Gruen und Gold; kleines kreuzfoermiges Beschlagmotiv. Huskarl bei Varangr in Moortal."
+    },
+    {
+      "id": "haus-guldskar",
+      "title": "Clan Guldskar",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-guldskar.png",
+      "recommendation": "Schwarz und Gold; geometrische Waagenornamentik nur als Wappenmotiv. Kein unbelegtes Richteramt."
+    },
+    {
+      "id": "haus-aurangr",
+      "title": "Clan Aurangr",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-aurangr.png",
+      "recommendation": "Dunkles Petrol und Gold; dezentes Hirschmotiv. Keine unbelegte Jagdtradition."
+    },
+    {
+      "id": "haus-fenngrim",
+      "title": "Clan Fenngrim",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-fenngrim.png",
+      "recommendation": "Sumpfgruen, Gold und Braun; funktionale Huskarlkleidung fuer das feuchte Nebelmoor. Keine aus dem Bild abgeleitete Heiler- oder Todestradition."
+    },
+    {
+      "id": "haus-brackwasser",
+      "title": "Clan Brackwasser",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-brackwasser.png",
+      "recommendation": "Sumpfgruen und Gold; praktische Stiefel und wetterfester Umhang fuer Nebelmoor. Keine unbelegte Faehrmann- oder Fischerrolle."
+    },
+    {
+      "id": "haus-sumpfgeborener",
+      "title": "Clan Sumpfgeborener",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-sumpfgeborener.png",
+      "recommendation": "Dunkles Gruen und mattes Gold; kleine Knochen-/Pfeilbeschlaege. Kein aus der Heraldik abgeleiteter Beruf."
+    },
+    {
+      "id": "haus-helmyr",
+      "title": "Clan Helmyr",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-helmyr.png",
+      "recommendation": "Moosgruen, Braun und Gold; dezente Baumornamentik und wetterfeste Kleidung. Keine unbelegte Wald- oder Totenkultgeschichte."
+    },
+    {
+      "id": "haus-taufwolf",
+      "title": "Clan Taufwolf",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-taufwolf.png",
+      "recommendation": "Dunkles Gruen und Gold; zurueckhaltendes Wolfsprofil als Motiv. Keine erfundene Tierverbindung."
+    },
+    {
+      "id": "haus-myrskarn",
+      "title": "Clan Myrskarn",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-myrskarn.png",
+      "recommendation": "Dunkles Pflaumenviolett und Gold; kleine Schneckenornamente. Huskarl in Moortal, kein erfundener Schneckenhandel."
+    },
+    {
+      "id": "haus-goldzunge",
+      "title": "Clan Goldzunge",
+      "rankId": "commoner",
+      "seat": "Moortal",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldzunge.png",
+      "recommendation": "Aktuelles Wappen ist ein schmuckloses rundes Holzfeld. Schlichte buergerliche Alltagskleidung aus Moortal; keine erfundene Berufsrolle, keine Adelsinsignien."
+    },
+    {
+      "id": "haus-jaernblod",
+      "title": "Clan Järnblod",
+      "rankId": "thane",
+      "seat": "Norrnaigh (Nordmänner)",
+      "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-jaernblod.png",
+      "recommendation": "Historischer Norrnaigh-Thane. Aktuelles Järnblod-Wappen als Motivgrundlage; keine vorhandene Originalfigur in der gelieferten Vorlage."
+    }
+  ],
+  "records": [
+    {
+      "id": "haus-varangr",
+      "title": "Clan Varangr",
+      "rankId": "jarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kraehenmoor.png",
+          "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "assets/images/regions/aldrimar-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Jarlsclan von Krähenmoor und Herren von Moortal. Die Varangr stiegen aus einer alten Norrnaigh-Kriegerschar zu wohlhabenden Eroberern, Diplomaten und Herren der Goldminen Krähenmoors auf.",
+      "sourceRevision": 9,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-varangr-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js",
+        "Stammbäume/assets/js/data/aldrimar-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "varangr",
+        "attachmentId": "c6792eb6-93ba-4a1e-87ca-3e7a5f26636c",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/varangr/animexx-original.html",
+        "sha256": "b2f84eabee7b7687b98a890030eb6ab15577b6bbdca862d1c8bd44cea44c73f0"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Varangr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/clan-varangr.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-varangr/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "01687f30ec6b3175d9cfbd544fe4fb467be701d2a234d563677b73dcc6b85460",
+        "portraitCount": 77,
+        "localPortraitCount": 77,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/portraits/haus-varangr/dagrun-goldschwur.png"
+        ],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/MY4f0QD.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [
+          {
+            "id": "hakon-varangr",
+            "name": "Hakon Varangr",
+            "title": "Jarl von Krähenmoor seit 1729"
+          }
+        ],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-schwarzstolz",
+      "title": "Clan Schwarzstolz",
+      "rankId": "huskarl",
+      "seat": "Eldvik",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Hesirentum von Schwarzfjord",
+        "Eldvik"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Eldvik",
+        "barony": "Hesirentum von Schwarzfjord",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Huskarlclan aus Eldvik im Hesirentum von Schwarzfjord. Sindre Brandstolz stammt als Bastard aus diesem Clan und kehrte ihm den Rücken, nachdem man ihn und seine Mutter nicht mehr dort haben wollte. Weitere Angehörige werden noch ausgearbeitet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-schwarzstolz-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Hesirentum_von_Schwarzfjord/Eldvik/Clan_Schwarzstolz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 1,
+        "localPortraitCount": 1,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
+          "Stammbäume/assets/images/portraits/haus-schwarzstolz/sindre-brandstolz.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Sindre Brandstolz!.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Sindre Brandstolz2.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_01.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_02.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_03.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_04.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_05.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_06.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_07.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_08.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_09.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_10.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_11.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_12.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_13.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_14.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_15.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_16.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_17.png",
+          "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_18.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Meergruen und Schwarz, zurueckhaltendes Krakenmotiv. Anonymer Huskarl aus der Kuestenregion; Sindres Narbe und Augenklappe sind keine allgemeinen Clanmerkmale."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Sindre Brandstolz ist der bekannte Bastard und Bootsmann; kein Clanoberhaupt. Sein Personportrait ist keine freigestellte Ganzkoerper-Clandarstellung.",
+        "Aeltere Notizen nennen Rang offen; aktueller Hausprofilrang huskarl hat Vorrang. Lehnsherr bleibt unbekannt.",
+        "Sindre Schwarzblut ist eine andere Person. Keine unbenannten Eltern oder Halbbrueder anlegen."
+      ]
+    },
+    {
+      "id": "haus-schattenherz",
+      "title": "Clan Schattenherz",
+      "rankId": "thane",
+      "seat": "Rabenfurt",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Rabenweide",
+        "Rabenfurt"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Rabenfurt",
+        "barony": "Thanentum Rabenweide",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Rabenfurt im Thanentum Rabenweide und Kadettenhaus des erloschenen Hjerte-Clans. Im Krieg der Prätendenten hielten die Schattenherzen die Brücke von Rabenfurt für die Rote Fraktion, erlitten 1632 vor Rorikshall jedoch eine vernichtende Niederlage.",
+      "sourceRevision": 6,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-schattenherz-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "schattenherz",
+        "attachmentId": "17f25594-487f-47d0-af36-7c2f187c87db",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/schattenherz/animexx-original.html",
+        "sha256": "053542e2bdf6ec9fa4c5a172d1ec5966f86b577bf08e19e8d9d116a65fe5b1ff"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Rabenweide/Rabenfurt/Clan_Schattenherz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schattenherz.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-schattenherz/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "d76e676f8550619da7dd6eb12d0e567848ae3a841d718e8a2ec187ed6e8d73d1",
+        "portraitCount": 40,
+        "localPortraitCount": 40,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/mG4OdPP.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [
+          {
+            "id": "ulfrik-schattenherz",
+            "name": "Ulfrik Schattenherz",
+            "title": "Thane des Clans Schattenherz seit 1711"
+          }
+        ],
+        "rankedHeirs": [
+          {
+            "id": "isbrand-schattenherz",
+            "name": "Isbrand Schattenherz",
+            "title": "Erster Erbe des Clans Schattenherz · Vetter und Rivale Simuns"
+          },
+          {
+            "id": "thjald-schattenherz",
+            "name": "Thjald Schattenherz",
+            "title": "Zweiter Erbe des Clans Schattenherz"
+          }
+        ],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-blutstahl",
+      "title": "Clan Blutstahl",
+      "rankId": "thane",
+      "seat": "Silberquell",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Silberquell im Thanentum Schimmerküste und Nachfahren des erloschenen Järnblod-Clans. Die Linie geht auf Fenrir und Skalli Järnblod zurück.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-blutstahl-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "blutstahl",
+        "attachmentId": "5ebf8980-61e7-489f-896b-e41be7243739",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/blutstahl/animexx-original.html",
+        "sha256": "3e5169326dd3e413494ccb40d617681a4c2e36afdf252f1e74f252359a64f656"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Blutstahl/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-blutstahl.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-blutstahl/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "976ae1a3d20c7408b8d58836eb4529ced5751271351536d16992e0094f285bd0",
+        "portraitCount": 35,
+        "localPortraitCount": 35,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/mkMUZoc.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-silberblut",
+      "title": "Clan Silberblut",
+      "rankId": "thane",
+      "seat": "Silberquell",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Thanenclan von Silberquell im Thanentum Schimmerküste und Nachfahren des erloschenen Järnblod-Clans. Die Linie geht auf Freki Järnblod und Skadi zurück.",
+      "sourceRevision": 2,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-silberblut-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "silberblut",
+        "attachmentId": "422ba630-8037-4cb8-bf53-75e6f36426c0",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/silberblut/animexx-original.html",
+        "sha256": "e07a3c837bf3ef239956324234edb6ce44d94b7e1ca72e91f16b91047093a43a"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Silberblut/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-silberblut.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-silberblut/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "c6a9fda164e6d401e899caa3ab201cccf72e9b6b21006143e8d1ab73f76d4be0",
+        "portraitCount": 32,
+        "localPortraitCount": 32,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/SSFSP56.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-kaltherz",
+      "title": "Clan Kaltherz",
+      "rankId": "hesire",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan aus Moortal und Kadettenlinie des erloschenen Hjerte-Clans. Die Kaltherzen gelten als geduldige Strategen und Meister verdeckter Einflussnahme; sie dienten den Varangr loyal und betrachten die Feuerherzen als Rivalen um das wahre Erbe der Hjerte.",
+      "sourceRevision": 6,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-kaltherz-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "kaltherz",
+        "attachmentId": "f06880dc-4d38-47ec-b3ca-d6cc8d46bd70",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/kaltherz/animexx-original.html",
+        "sha256": "8056e8e6ff33433ececbc55eab97f6dfd930eb87f6148844eb5fbade32d74d6f"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Kaltherz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-kaltherz.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-kaltherz/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "9ed88bbf8986757fb6a49fedf160dec3fddd3fc17778b725a69be55c7351a0f1",
+        "portraitCount": 33,
+        "localPortraitCount": 33,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/me1uC4q.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [
+          {
+            "id": "jorvik-kaltherz",
+            "name": "Jorvik Kaltherz",
+            "title": "Hesir des Clans Kaltherz seit 1711"
+          }
+        ],
+        "rankedHeirs": [
+          {
+            "id": "njvar-kaltherz",
+            "name": "Njvar Kaltherz",
+            "title": "Erster Erbe des Clans Kaltherz"
+          },
+          {
+            "id": "hjalmar-kaltherz",
+            "name": "Hjalmar Kaltherz",
+            "title": "Zweiter Erbe des Clans Kaltherz"
+          },
+          {
+            "id": "fjori-kaltherz",
+            "name": "Fjori Kaltherz",
+            "title": "Dritter Erbe des Clans Kaltherz"
+          }
+        ],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-feuerherz",
+      "title": "Clan Feuerherz",
+      "rankId": "hesire",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan aus Moortal und Kadettenlinie des erloschenen Hjerte-Clans. Die Feuerherzen gelten als impulsiv, tapfer und unerschütterlich ehrlich. Sie bevorzugen offene Konfrontation, verachten List und betrachten sich als die wahren Erben der Hjerte.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-feuerherz-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "feuerherz",
+        "attachmentId": "7cfdacea-b4fd-4584-b14c-ec50deb8429b",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/feuerherz/animexx-original.html",
+        "sha256": "fa656f00e283bc712a6cfc34ed2ca91ded8fe760b987dc7b4e5738f8a4238be0"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Feuerherz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-feuerherz.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-feuerherz/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "2112b40bcaaebf8cbc20aa06c24d1bd49daa9cc750ccca56f50609783dbab80a",
+        "portraitCount": 31,
+        "localPortraitCount": 31,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/lbVUg03.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [
+          {
+            "id": "lythar-feuerherz",
+            "name": "Lythar Feuerherz",
+            "title": "Hesir des Clans Feuerherz seit 1709"
+          }
+        ],
+        "rankedHeirs": [
+          {
+            "id": "rolfur-feuerherz",
+            "name": "Rolfur Feuerherz",
+            "title": "Erster Erbe des Clans Feuerherz"
+          },
+          {
+            "id": "kjalmar-feuerherz",
+            "name": "Kjalmar Feuerherz",
+            "title": "Zweiter Erbe des Clans Feuerherz"
+          },
+          {
+            "id": "frodi-feuerherz",
+            "name": "Frodi Feuerherz",
+            "title": "Dritter Erbe des Clans Feuerherz"
+          }
+        ],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-vragi",
+      "title": "Clan Vragi",
+      "rankId": "hesire",
+      "seat": "Rabenhain",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Rabenweide",
+        "Rabenforst",
+        "Rabenhain"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rabenhain",
+        "barony": "Thanentum Rabenweide",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-schattenherz",
+        "liegeHouseName": "Clan Schattenherz",
+        "folderPath": [
+          "Aldrimar",
+          "Krähenmoor",
+          "Thanentum Rabenweide",
+          "Rabenforst",
+          "Rabenhain"
+        ],
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-kraehenmoor.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenforst.png",
+          "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-kraehenmoor-rabenhain.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan aus Rabenhain im Rabenforst. Die vollständige Vragi-Linie reicht von Knar und Odinhild über zwei überlieferungsbedingte Generationensprünge bis zu den Kindern Tjodmars im Jahr 1740.",
+      "sourceRevision": 4,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-vragi-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "vragi",
+        "attachmentId": "09cdb2f7-75b4-49bb-bba4-36f30a249f5f",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/vragi/animexx-original.html",
+        "sha256": "b29132ca404e1b6b09b70c2ea729946857f9ea8544bb40364336c8675a127ff2"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Rabenweide/Rabenforst/Rabenhain/Clan_Vragi/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-vragi.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-vragi/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "90c1f8969e768bd52353048fc9ac95f421386d1345d17b9fb39821d793cf52da",
+        "portraitCount": 27,
+        "localPortraitCount": 27,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/SZQifHJ.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-schwarzblut",
+      "title": "Clan Schwarzblut",
+      "rankId": "hesire",
+      "seat": "Nebelwacht",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Hesirentum von Schwarzfjord",
+        "Nebelwacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Nebelwacht",
+        "barony": "Hesirentum von Schwarzfjord",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan von Nebelwacht im Schwarzfjord und Nachfahren des erloschenen Järnblod-Clans. Die Schwarzblut sind für Seefahrt, Bergbau und unbeugsame Küstenkrieger bekannt.",
+      "sourceRevision": 2,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-schwarzblut-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "schwarzblut",
+        "attachmentId": "18476498-cb27-49e5-9471-1fe412a502b6",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/schwarzblut/animexx-original.html",
+        "sha256": "293fcf2debe99a647fa9aea0178e3b40dfc24cca69cff18a7d1c0bbbe3075160"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Hesirentum_von_Schwarzfjord/Nebelwacht/Clan_Schwarzblut/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzblut.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-schwarzblut/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "1839877dcd392fe422843f937852e1c912fc2067a4d95d5d18a726397fe6d35c",
+        "portraitCount": 31,
+        "localPortraitCount": 31,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/Tir7bJU.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [
+          {
+            "id": "svanur-schwarzblut",
+            "name": "Svanur Schwarzblut",
+            "title": "Erster Erbe des Clans Schwarzblut"
+          }
+        ],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-goldglanz",
+      "title": "Clan Goldglanz",
+      "rankId": "hesire",
+      "seat": "Silberquell",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Thanentum Schimmerküste",
+        "Silberquell"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Silberquell",
+        "barony": "Thanentum Schimmerküste",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-blutstahl",
+        "liegeHouseName": "Clan Blutstahl",
+        "liegeHouses": [
+          {
+            "id": "house-blutstahl",
+            "name": "Clan Blutstahl"
+          },
+          {
+            "id": "house-silberblut",
+            "name": "Clan Silberblut"
+          }
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Hesirenclan aus Silberquell im Thanentum Schimmerküste. Der wohlhabende Brauerclan dient gemeinsam den Häusern Blutstahl und Silberblut und stützt seinen Einfluss auf Handel, Handwerk und ein weit verzweigtes Heiratsnetz.",
+      "sourceRevision": 3,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-goldglanz-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "goldglanz",
+        "attachmentId": "4a8f5fb8-cf04-4d29-a06f-23af5a900bc5",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/goldglanz/animexx-original.html",
+        "sha256": "15ce3e3368cb6027d460681079bb1cc85f02b8d0eff7ab02944feda3a108f899"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Thanentum_Schimmerkuste/Silberquell/Clan_Goldglanz/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-goldglanz/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "582184ee77cf8c54660a6ec4db261bf6f6ff9dcab2a0774322a2c76141d66e78",
+        "portraitCount": 36,
+        "localPortraitCount": 36,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/DqYI5oN.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": []
+    },
+    {
+      "id": "haus-goldschwur",
+      "title": "Clan Goldschwur",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Goldschwur. Der Clan ist bei seinem Lehnshaus Clan Varangr im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldschwur/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldschwur.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldschwur.png",
+          "Stammbäume/assets/images/portraits/haus-varangr/dagrun-goldschwur.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Schwarz, Weiss und Gold; dekorativer goldener Spiralknoten. Schlichte Huskarlruestung, keine aus dem Motiv abgeleitete Berufsgeschichte."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-goldhand",
+      "title": "Clan Goldhand",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Goldhand. Der Clan ist bei seinem Lehnshaus Clan Varangr im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldhand/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldhand.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldhand.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Gruen und Gold; kleines kreuzfoermiges Beschlagmotiv. Huskarl bei Varangr in Moortal."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-guldskar",
+      "title": "Clan Guldskar",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Guldskar. Der Clan ist bei seinem Lehnshaus Clan Varangr im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Guldskar/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-guldskar.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-guldskar.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Schwarz und Gold; geometrische Waagenornamentik nur als Wappenmotiv. Kein unbelegtes Richteramt."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-aurangr",
+      "title": "Clan Aurangr",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varangr",
+        "liegeHouseName": "Clan Varangr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Aurangr. Der Clan ist bei seinem Lehnshaus Clan Varangr im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Aurangr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-aurangr.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-aurangr.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Petrol und Gold; dezentes Hirschmotiv. Keine unbelegte Jagdtradition."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-fenngrim",
+      "title": "Clan Fenngrim",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Fenngrim. Der Clan ist bei seinem Lehnshaus Clan Feuerherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Fenngrim/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-fenngrim.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-fenngrim.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Sumpfgruen, Gold und Braun; funktionale Huskarlkleidung fuer das feuchte Nebelmoor. Keine aus dem Bild abgeleitete Heiler- oder Todestradition."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-brackwasser",
+      "title": "Clan Brackwasser",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Brackwasser. Der Clan ist bei seinem Lehnshaus Clan Feuerherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Brackwasser/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-brackwasser.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-brackwasser.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Sumpfgruen und Gold; praktische Stiefel und wetterfester Umhang fuer Nebelmoor. Keine unbelegte Faehrmann- oder Fischerrolle."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-sumpfgeborener",
+      "title": "Clan Sumpfgeborener",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-feuerherz",
+        "liegeHouseName": "Clan Feuerherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Sumpfgeborener. Der Clan ist bei seinem Lehnshaus Clan Feuerherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Sumpfgeborener/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-sumpfgeborener.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-sumpfgeborener.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Gruen und mattes Gold; kleine Knochen-/Pfeilbeschlaege. Kein aus der Heraldik abgeleiteter Beruf."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-helmyr",
+      "title": "Clan Helmyr",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Helmyr. Der Clan ist bei seinem Lehnshaus Clan Kaltherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Helmyr/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-helmyr.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-helmyr.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Moosgruen, Braun und Gold; dezente Baumornamentik und wetterfeste Kleidung. Keine unbelegte Wald- oder Totenkultgeschichte."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-taufwolf",
+      "title": "Clan Taufwolf",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Taufwolf. Der Clan ist bei seinem Lehnshaus Clan Kaltherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Taufwolf/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-taufwolf.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-taufwolf.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Gruen und Gold; zurueckhaltendes Wolfsprofil als Motiv. Keine erfundene Tierverbindung."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-myrskarn",
+      "title": "Clan Myrskarn",
+      "rankId": "huskarl",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-kaltherz",
+        "liegeHouseName": "Clan Kaltherz",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des Huskarlclans Myrskarn. Der Clan ist bei seinem Lehnshaus Clan Kaltherz im gemeinsamen Sitz Moortal verzeichnet.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Myrskarn/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-myrskarn.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-myrskarn.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Dunkles Pflaumenviolett und Gold; kleine Schneckenornamente. Huskarl in Moortal, kein erfundener Schneckenhandel."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-goldzunge",
+      "title": "Clan Goldzunge",
+      "rankId": "commoner",
+      "seat": "Moortal",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Jarltümliche Herrschaft von Nebelmoor",
+        "Moortal"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Moortal",
+        "barony": "Jarltümliche Herrschaft von Nebelmoor",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-stadt.png",
+          "barony": "assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete Familienakte des bürgerlichen Clans Goldzunge aus Moortal im Jarltum Krähenmoor.",
+      "sourceRevision": 1,
+      "extinct": false,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": null,
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Jarltumliche_Herrschaft_von_Nebelmoor/Moortal/Clan_Goldzunge/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldzunge.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [
+          "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldzunge.png"
+        ],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Aktuelles Wappen ist ein schmuckloses rundes Holzfeld. Schlichte buergerliche Alltagskleidung aus Moortal; keine erfundene Berufsrolle, keine Adelsinsignien."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Buergerlicher Clan; kein Huskarlrang und kein aus dem Namen abgeleiteter Beruf.",
+        "Platzhaltergruender mit Namen ??? sind keine ausformulierten historischen Personen und erhalten keine Personenkarte."
+      ]
+    },
+    {
+      "id": "haus-hjerte",
+      "title": "Clan Hjerte",
+      "rankId": "thane",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Einst mächtiger Norrnaigh-Clan aus dem Gebiet des späteren Krähenmoors. Der erloschene Stammclan zerfiel in die Kadettenlinien Kummerherz, Schattenherz, Feuerherz und Kaltherz.",
+      "sourceRevision": 3,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-hjerte-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "hjerte",
+        "attachmentId": "75681841-67b2-40ec-94b3-adc68657079e",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/hjerte/animexx-original.html",
+        "sha256": "e1cdd385999d4f7a5f7a41e8c988cc59a6a78fc110e7bb79e749fb0cdd1deca3"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Hjerte/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-hjerte.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-hjerte/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "915d9531c33419244ff1f685499f02214dac0eff9228393ae7bca52f8c497d2a",
+        "portraitCount": 5,
+        "localPortraitCount": 5,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/BhVDxjD.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Kulturordner sind keine Sitze; heutiges Oberhaupt und aktuelle Erben bleiben leer.",
+        "Historischer Thane-Rang bleibt erhalten."
+      ]
+    },
+    {
+      "id": "haus-jaernblod",
+      "title": "Clan Järnblod",
+      "rankId": "thane",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [
+        "Silberquell"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Silberquell"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Ausgestorbener Norrnaigh-Thanenclan von Krähenmoor. Aus den Järnblod gingen die Linien Schwarzblut, Blutstahl und Silberblut hervor.",
+      "sourceRevision": 3,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/house-jaernblod-family.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "jarnblod",
+        "attachmentId": "b60fe4f3-07a8-4916-a10c-adb4b2bb2db4",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/jarnblod/animexx-original.html",
+        "sha256": "338a1c441a4786f45e5cbedcfcfcb8e16b1ba8426589373e158f969647d9cdc6"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Jarnblod/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-jaernblod.png",
+        "crestExists": true,
+        "expectedOriginalPath": null,
+        "localOriginalExists": false,
+        "localOriginalSha256": null,
+        "portraitCount": 6,
+        "localPortraitCount": 6,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": true,
+        "illustrationRecommendation": "Historischer Norrnaigh-Thane. Aktuelles Järnblod-Wappen als Motivgrundlage; keine vorhandene Originalfigur in der gelieferten Vorlage."
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Kulturordner sind keine Sitze; heutiges Oberhaupt und aktuelle Erben bleiben leer.",
+        "Historischer Thane-Rang bleibt erhalten."
+      ]
+    },
+    {
+      "id": "haus-kaldhrafn",
+      "title": "Clan Kaldhrafn",
+      "rankId": "unknown",
+      "seat": "Norrnaigh (Nordmänner)",
+      "secondarySeats": [],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Norrnaigh-Clans Kaldhrafn aus Krähenmoor.",
+      "sourceRevision": 1,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "kaldhrafn",
+        "attachmentId": "0fd764b4-2773-4b25-92bb-cbf3c281e1ed",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/kaldhrafn/animexx-original.html",
+        "sha256": "12f03a0af61b31bda2858a66723d15f9d242d93f890af2042f68999c0a718699"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Kaldhrafn/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-kaldhrafn.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-kaldhrafn/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "b9e0ddf55698099f59bad3d1f4cf4f24998131fe5fc3938e0ae78e227f108300",
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/wAZpWE4.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Kulturordner sind keine Sitze; heutiges Oberhaupt und aktuelle Erben bleiben leer."
+      ]
+    },
+    {
+      "id": "haus-mac-morfhia",
+      "title": "Clan Mac Môrfhia",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Silberquell"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Silberquell"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Glaennath-Clans Mac Môrfhia aus Krähenmoor.",
+      "sourceRevision": 1,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "morfhia",
+        "attachmentId": "ba5dec39-b211-4c44-8901-592ec5093103",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/morfhia/animexx-original.html",
+        "sha256": "3587e273eb4a6a0faca2fa8b66fad7cb8cd66fe543ddd2c0ec73e1b0943105bf"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Morfhia/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-mac-morfhia.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-mac-morfhia/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "5da2ddaf091ee82b86204daad2533fcbaaab6e135d5279762bef41938440a474",
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/VHv4grp.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Kulturordner sind keine Sitze; heutiges Oberhaupt und aktuelle Erben bleiben leer."
+      ]
+    },
+    {
+      "id": "haus-mac-corcaigh",
+      "title": "Clan Mac Corcaigh",
+      "rankId": "unknown",
+      "seat": "Glaennath (Alben)",
+      "secondarySeats": [
+        "Moortal"
+      ],
+      "folderPath": [
+        "Aldrimar",
+        "Krähenmoor",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Krähenmoor",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Moortal"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "barony": "assets/images/regions/Cenyr/Ährental/Ausgestorben.png",
+          "county": "assets/images/regions/aldrimar-kraehenmoor.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "description": "Vorbereitete historische Familienakte des ausgestorbenen Glaennath-Clans Mac Corcaigh aus Krähenmoor.",
+      "sourceRevision": 1,
+      "extinct": true,
+      "sourceModules": [
+        "Stammbäume/assets/js/data/kraehenmoor-house-families.js",
+        "Stammbäume/assets/js/data/kraehenmoor-house-profiles.js"
+      ],
+      "attachment": {
+        "slug": "corcaigh",
+        "attachmentId": "60250c79-5276-4fa3-960d-95e126f1be3a",
+        "sourceArchive": "diagnostics/kraehenmoor-clans-20261103/sources/corcaigh/animexx-original.html",
+        "sha256": "7d3b2dec19faee18146d922ac7ed162ef95822b878db2e8345093fd1d7c726ce"
+      },
+      "houseBiography": {
+        "present": false,
+        "image": ""
+      },
+      "housePage": {
+        "registered": false,
+        "entry": null,
+        "plannedContentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Kraehenmoor/Ausgestorbene_Clans/Glaennath_Alben/Clan_Mac_Corcaigh/haus.content.mjs"
+      },
+      "images": {
+        "crest": "Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-mac-corcaigh.png",
+        "crestExists": true,
+        "expectedOriginalPath": "Stammbäume/assets/images/references/haus-mac-corcaigh/krieger.png",
+        "localOriginalExists": true,
+        "localOriginalSha256": "94e678dd70804dd84b2ccca47866fda7a66b28fe6c35d975fd3be82047c410f6",
+        "portraitCount": 0,
+        "localPortraitCount": 0,
+        "missingPortraits": [],
+        "candidateFiles": [],
+        "needsNewIllustration": false,
+        "illustrationRecommendation": null,
+        "originalUrl": "https://i.imgur.com/djsYPLC.png"
+      },
+      "gallery": {
+        "registered": true,
+        "illustrationIds": []
+      },
+      "explicitLeadershipEvidence": {
+        "headsWithCurrentTitle": [],
+        "rankedHeirs": [],
+        "note": "Nur explizite Titel und redaktionell belegte Quellen verwenden; Personenreihenfolge, Alter und lineageRole=head allein begruenden kein amtierendes Oberhaupt."
+      },
+      "safeguards": [
+        "Kulturordner sind keine Sitze; heutiges Oberhaupt und aktuelle Erben bleiben leer."
+      ]
+    }
+  ],
+  "originalImagesIntake": {
+    "originals": 13,
+    "newIllustrationsRequired": 13,
+    "contactSheet": "diagnostics/kraehenmoor-clans-20261103/original-clan-figures.jpg",
+    "visuallyInspected": true,
+    "hashesVerified": true,
+    "missingOriginalIds": [
+      "haus-jaernblod"
+    ]
+  }
+}

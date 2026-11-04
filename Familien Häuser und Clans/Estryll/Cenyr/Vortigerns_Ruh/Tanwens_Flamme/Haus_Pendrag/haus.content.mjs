@@ -15,9 +15,9 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "registerPage": true,
   "prepared": false,
-  "contentVersion": "20261024-vortigerns-v1",
-  "biographySourceRevision": 7,
-  "biographyPreviousDefaultFingerprints": [],
+  "contentVersion": "20261104-lore-fixes-v1",
+  "biographySourceRevision": 8,
+  "biographyPreviousDefaultFingerprints": ["3208:ac9b5627:b8c28819"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte des Hauses",
   "biographySummary": {

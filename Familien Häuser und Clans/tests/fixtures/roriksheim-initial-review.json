@@ -1,0 +1,1385 @@
+{
+  "schema": "aleria.roriksheim-initial-review",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "publicOnly": true,
+  "expectedCount": 33,
+  "extinctIds": [
+    "haus-bjornskar",
+    "haus-fiadhrach",
+    "haus-tiogar",
+    "haus-ulvasar",
+    "haus-vanir"
+  ],
+  "records": [
+    {
+      "id": "haus-wolfshorn",
+      "title": "Clan Wolfshorn",
+      "documentTitle": "Clan Wolfshorn",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Hornhall"
+      ],
+      "profile": {
+        "rankId": "knight",
+        "seat": "Hornhall",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "Clan Vangandr",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "Lieber fallen als weichen.",
+      "graphFingerprint": "5142a6bca7078a6c3d920f99c8fc8772ccc959383298f0129b052236c260a018",
+      "profileFingerprint": "df9f30e2c60d258bfa8cb7040c6dc18eaba1f2157d247b0d78e24f85d0dc6313",
+      "titleFingerprint": "32cd5ddae9ca28412cd8a2ad124f3bc7bbeb6cac084f4975b6b66bb072c0a0b8",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Hornhall/Clan_Wolfshorn/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-varulv",
+      "title": "Clan Varulv",
+      "documentTitle": "Clan Varulv",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "jarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-roriksheim.png",
+          "assets/images/regions/aldrimar-rorikstal.png",
+          "assets/images/regions/aldrimar-roriksheim-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "7409256d8716d4280c08ffaba4efadbf0472cd87f61f0f7aea3780b32f0854f5",
+      "profileFingerprint": "8f2c3e9ff22baf10cbcc064a143f0e92abd5aaf70da50943352b1929428f3e3d",
+      "titleFingerprint": "e0dd8230afe538bdd2cb204d8182c9e552a8f35d6999585a2c4de0d204153d22",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Varulv/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "title": "Clan Schwarzdorn",
+      "documentTitle": "Clan Schwarzdorn",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "motto": "Wo das Bier fließt, fließt auch die Macht",
+      "graphFingerprint": "73efc7050bb89507965f2d98ba021f5727e0b0d31bb94e2dac112adb2a7f3868",
+      "profileFingerprint": "842e7d3c792f83074ddff3c9653d6794bc21c265b0045c02b1f0288c91ce91d0",
+      "titleFingerprint": "3bfd3926c848eab157f6ef4de8844d74cf991b1aef29fc4d792f221c247ce77c",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Schwarzdorn/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-kampfgeborene",
+      "title": "Clan Kampfgeborene",
+      "documentTitle": "Clan Kampfgeborene",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 6,
+      "motto": "",
+      "graphFingerprint": "cdb08263a078eef05ced8f7e2f910ab861d72599d9bb68945eff989750c98223",
+      "profileFingerprint": "842e7d3c792f83074ddff3c9653d6794bc21c265b0045c02b1f0288c91ce91d0",
+      "titleFingerprint": "5cdf81f1591e9898bb4d2efaeb097c42cda82d5ae483d34f2d36e10c71d11d32",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Kampfgeborene/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-brathfengr",
+      "title": "Clan Brathfengr",
+      "documentTitle": "Clan Brathfengr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "755bbcd3038ff948c65d7b9f78c0a4523cb9d69f241ed8937de4ba951f056e73",
+      "profileFingerprint": "51a9ac6fae790641aef6cd54cbe981d0ea91144ccf645fce9bdb392bd36b9a0c",
+      "titleFingerprint": "9aae3e14e00d3c18d95f4ab738f1637bf036fb577799bca7e7f1e6d02843b7e0",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Brathfengr/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-sterkr",
+      "title": "Clan Sterkr",
+      "documentTitle": "Clan Sterkr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 4,
+      "motto": "",
+      "graphFingerprint": "4133beca5eacf146b050bdedbabe34cbdd3d5aa02f970f9bb47973b659150dc0",
+      "profileFingerprint": "c77d1a661f22f8dfb08fa734970667b9a586ee7275f9e30dfd70a6b5dd3ded98",
+      "titleFingerprint": "741b5e5331d6bf3789b0c1a78504f8caff357c39a6f030ddde6a3a11655694fd",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sterkr/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-soekeren",
+      "title": "Clan Sökeren",
+      "documentTitle": "Clan Sökeren",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "e6969075f0e41d425d444cb642da9016465f6085b820e7fbe36b9887e6511911",
+      "profileFingerprint": "c77d1a661f22f8dfb08fa734970667b9a586ee7275f9e30dfd70a6b5dd3ded98",
+      "titleFingerprint": "215f3b686dbe238c20a335da3fe14dbe2ef28d07a8ded36a97be24ae1c1fdfac",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sokeren/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-skald",
+      "title": "Clan Skald",
+      "documentTitle": "Clan Skald",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "e960cbeb96ecc48dfdd0fe701bb6be592ad4ce9c320f5b3aa71f364d314fdada",
+      "profileFingerprint": "c77d1a661f22f8dfb08fa734970667b9a586ee7275f9e30dfd70a6b5dd3ded98",
+      "titleFingerprint": "7e1153811d7218ef54f7900033415a072a6b996031cafb9f92226be4dcf3f75e",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Skald/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-vangandr",
+      "title": "Clan Vangandr",
+      "documentTitle": "Clan Vangandr",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Wolfspfad"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Wolfspfad",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "c30b24732c942ca84d40656c379a952db3414e9fb9c8834a62755ee1f085860a",
+      "profileFingerprint": "e46556d06b21dea3d80a291a3bea8065758dc76d74e7028562659e8bc514497f",
+      "titleFingerprint": "e5bef1f48ae8fad4670f91149585eb7232144f5d1dee5192dc0507b9e8c39d0d",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Wolfspfad/Clan_Vangandr/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "title": "Clan Nachtjäger",
+      "documentTitle": "Clan Nachtjäger",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Dämmergrund",
+        "Dämmertal",
+        "Horunn"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Horunn",
+        "barony": "Dämmergrund",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vangandr",
+        "liegeHouseName": "Clan Vangandr",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Dämmergrund",
+          "Dämmertal",
+          "Horunn"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-daemmertal.png",
+          "barony": "assets/images/regions/aldrimar-daemmergrund.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "993b6f666976eb763bdd4458357e8d233b759fe208e12d709ff2baa374347807",
+      "profileFingerprint": "d28e014eeb73a65e0e277f78e2c10d2e7a40ec43f5b7ccc21ff0f0251c1dad4f",
+      "titleFingerprint": "6c58a1e24212413e9bd2b6353f6bc0cd60c6540102432eca125b08f57f7b83e4",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Dammergrund/Dammertal/Horunn/Clan_Nachtjager/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-skaal",
+      "title": "Clan Skaal",
+      "documentTitle": "Clan Skaal",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Schwerthohn",
+        "Schwertfall"
+      ],
+      "profile": {
+        "rankId": "thane",
+        "seat": "Schwertfall",
+        "barony": "Schwerthohn",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwerthohn.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "b89a71dba137a073288da05b6e55d745cee2ebcb401a623cbb5f2b81d59110f9",
+      "profileFingerprint": "f42bf76a15897adb9a513a91fe8147c58c154f289ddffa946c2729b58ad797f0",
+      "titleFingerprint": "24f73794980fce31ca036118af8269dadfb516092992af667062dcb9f28ff126",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Schwerthohn/Schwertfall/Clan_Skaal/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-skjegg",
+      "title": "Clan Skjegg",
+      "documentTitle": "Clan Skjegg",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Schwarzacker",
+        "Grabesruh"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Grabesruh",
+        "barony": "Schwarzacker",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Klangheim"
+        ],
+        "liegeHouseId": "house-skaal",
+        "liegeHouseName": "Clan Skaal",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-schwarzacker.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "8bedd1ee91d3c6187e229072809159045ee98b7c80f6ac4e7dd3d53fdbeb7a2d",
+      "profileFingerprint": "373cbb112008cd8e06e5b1683bcdf51b493101877e8183c42f21c2dac54a0a15",
+      "titleFingerprint": "5db61bcef0fada339317046f911f85f387e05fa351a9d80e088e326265f9edc9",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Schwarzacker/Grabesruh/Clan_Skjegg/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-freiwinter",
+      "title": "Clan Freiwinter",
+      "documentTitle": "Clan Freiwinter",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Winterfänge",
+        "Wolfswacht"
+      ],
+      "profile": {
+        "rankId": "hesire",
+        "seat": "Wolfswacht",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Rorikstal",
+          "Winterfänge",
+          "Wolfswacht"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 5,
+      "motto": "",
+      "graphFingerprint": "fae5cc8d0f360ae2424a9c061f3d75c1d3a3afc9993eaed4e006d8c7f1814298",
+      "profileFingerprint": "8465c64af5688e912ddc7a9d5e686fa0632ca24dfd41433cb85cdb2fad039392",
+      "titleFingerprint": "52dc79c21e77ed86c45fbd2f4195a51b641636916d1160c01d5957696d50d1d4",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Winterfange/Wolfswacht/Clan_Freiwinter/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-gruenklang",
+      "title": "Clan Grünklang",
+      "documentTitle": "Clan Grünklang",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "8c37210d4a179a91554cd7c4e6857d3c8e76c7395b945e457bdf6f373c82175e",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "f2c0f86023344e851e5a02f521f08614d5818a2e1075773e1d9ea8722d437c11",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Grunklang/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-flammenschritt",
+      "title": "Clan Flammenschritt",
+      "documentTitle": "Clan Flammenschritt",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "4f39a1276b2893d89ab964d349b0688db5ad40e53d240a80a620f292e0fbb246",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "c45441142a27db3bc9116ac09fc41b63c8db2b751566ba893837beb5127aa901",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Flammenschritt/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-runensaenger",
+      "title": "Clan Runensänger",
+      "documentTitle": "Clan Runensänger",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "5eb2d21118df5cffb537693ed1c744127701af8dc06ec561c8d3411b446b7a9a",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "96f9fd0b52a1d562f0b0d67ec6fe26f3089de1621f56d1d2aaa9406b3f1cfefb",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Runensanger/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-sturmsaenger",
+      "title": "Clan Sturmsänger",
+      "documentTitle": "Clan Sturmsänger",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "78424f3b4326ff55b216e801aa3e0908a587db32a94fe43732c6b71b9457691c",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "bef6c91b4207082761a9bfe9aeefcb543d4b7b51a5bd5fa234baaa4524e79b4b",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Sturmsanger/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-liedtrinker",
+      "title": "Clan Liedtrinker",
+      "documentTitle": "Clan Liedtrinker",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "d4d856d4eb5624ff7b065736a9ec405c2d294176a9fbe69985099bd4acc4c805",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "8d4063e050398a179a879348cc10f1ae23684e176db9b30293d2b903c99e2840",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Liedtrinker/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-spottzunge",
+      "title": "Clan Spottzunge",
+      "documentTitle": "Clan Spottzunge",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-brathfengr",
+        "liegeHouseName": "Clan Brathfengr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "ef020a6729c7a8c506a17395e9c854d8954738a0aa3bf36faf612676968cce97",
+      "profileFingerprint": "94ec276dc2ecd88337d3d0061a46df7a193a987dd506f7907faa7fa23466fa6d",
+      "titleFingerprint": "3cf039cc87244aa691bc983c4e28c76ac4d733c84570fe12ef1f82d12a17a088",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Spottzunge/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-eisenjungfer",
+      "title": "Clan Eisenjungfer",
+      "documentTitle": "Clan Eisenjungfer",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Forsthain"
+        ],
+        "liegeHouseId": "house-skald",
+        "liegeHouseName": "Clan Skald",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 3,
+      "motto": "Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.",
+      "graphFingerprint": "4684cf92ed813920c5b07bc385c2bad5c79761bdb70f186a6eb5a27879f6e764",
+      "profileFingerprint": "5335e5ea68f9a376062ca396291bb41c70fd62cfae1baff40d59a7fd5ea9b255",
+      "titleFingerprint": "f26b9337a091fb1deaf5b95c9cd8b8572d9bf83f694add70968f3068ded56473",
+      "hadBiography": true,
+      "previousDefaultFingerprint": "5389:a8468d5b:7f675d25",
+      "protectedBiographyFingerprint": "aec0f8efa066e959abfc573eebe8a970e54303512d8ce40ab660de419a52c1f9",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Skaldenheim/Klangheim/Clan_Eisenjungfer/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-blutdorn",
+      "title": "Clan Blutdorn",
+      "documentTitle": "Clan Blutdorn",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "ad9d26c041c17866839960084dac1f77fe223254cd267d795c8a86e3df95f5fb",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "59a978718dfd60e94ffe7a5cbe312d910af637b56b1392c2331fd70bd58bf568",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Blutdorn/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-dornacker",
+      "title": "Clan Dornacker",
+      "documentTitle": "Clan Dornacker",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "a02307b1d3243eef384ab9c5802a1feac29cbabf6edf732f55d10a19ddc30618",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "5ef6d0f8d4164e83f929e5fc9c277aa4973c7dec5cf826b3b96d5023e42ad1ab",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Dornacker/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-baerenherz",
+      "title": "Clan Bärenherz",
+      "documentTitle": "Clan Bärenherz",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "e6b3aab22c4ae738f4bbde7de62bc3e16e608f12b0ba540527a79e004ab56b54",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "93165ec73afdf18caf44fc7fe89d7429e100f73de215522fb1bae090b459e071",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Barenherz/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-kraehenrufer",
+      "title": "Clan Krähenrufer",
+      "documentTitle": "Clan Krähenrufer",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "41d866347c6819b5410985c806cbf81b20cea1db30360f592a245244a162f939",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "2ab6363a0fdcc1f608d55453d7f297d229eee9903dce541fbef34ce2d016ee75",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Krahenrufer/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-unholdbann",
+      "title": "Clan Unholdbann",
+      "documentTitle": "Clan Unholdbann",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "cbe6413a99887e4cbc98e1546634a767e16bdf712c58c67093c3790db4750c0f",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "ec8cb132849fd0a8b470a0ee5997b8c85814393deac5e7488f86e83b39df6bbd",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Unholdbann/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-rotstahl",
+      "title": "Clan Rotstahl",
+      "documentTitle": "Clan Rotstahl",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 2,
+      "motto": "",
+      "graphFingerprint": "76d6fce4c3b75e31aa3651f1311a40a6b463bc2b13e4ec1ec934be48cc812c90",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "02b7da9d9fe098b3a97fbdf0cc26c23e5b3e23150a5af69a60424e802d4fc46d",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Rotstahl/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-bogenhand",
+      "title": "Clan Bogenhand",
+      "documentTitle": "Clan Bogenhand",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "5e06f49af09cd842a5da7f1ea56c690904f6f63efc81f91fd36db6d46cf44aad",
+      "profileFingerprint": "6c7f4210ebd0e4fccdccec0a6c57726429a9f1f9e7bcc6bd3cee2f5942a83b00",
+      "titleFingerprint": "c9526a137ed48ef6a824cf42e781c69135e67331dac651cf5de293f1550ab419",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Clan_Bogenhand/haus.content.mjs",
+      "hasSuppliedSource": false
+    },
+    {
+      "id": "haus-frostgeborene",
+      "title": "Haus Frostgeborene",
+      "documentTitle": "Haus Frostgeborene",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "profile": {
+        "rankId": "commoner",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "1dc4257bea3541ed5154b3404a417242dda954f5c39cf821dd37f438c358a0a8",
+      "profileFingerprint": "90cb616c495ec39b883fbf0e661aa5cd40cea9fd31bc3b84b8be9e08a4aa1d4c",
+      "titleFingerprint": "a9a33c38ba616925eb25b961096c0b1aa19664ff48bd3d0d1dc30d9b11a229ed",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Rorikstal/Rorikshall/Haus_Frostgeborene/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-ulvasar",
+      "title": "Clan Ulvasar",
+      "documentTitle": "Clan Ulvasar",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "027cc5c834d67c44aa65a3341c720cfd3ebb4a659b9bf91609d14f900d5d2480",
+      "profileFingerprint": "e79b99a98ce4de67df7746c59b77375c9fde9b51559329e28ad5ae5d6d4c91b3",
+      "titleFingerprint": "9a0ca31ede78c48330d4fdbfd23b53f605d741eeebb580a701000c8716d8e967",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Ulvasar/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-bjornskar",
+      "title": "Clan Bjornskar",
+      "documentTitle": "Clan Bjornskar",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "acddb0816c3a820ef8f70f4472927708dab830c7e2f44bdebe70f73d37d3eb54",
+      "profileFingerprint": "e79b99a98ce4de67df7746c59b77375c9fde9b51559329e28ad5ae5d6d4c91b3",
+      "titleFingerprint": "8ae5f7d93ab196cc964d6705892973c60b765362227f416369350d10429ffe26",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Bjornskar/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-vanir",
+      "title": "Clan Vanir",
+      "documentTitle": "Clan Vanir",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Norrnaigh (Nordmänner)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Norrnaigh (Nordmänner)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Connair bei Wolfspfad"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "82d933e843a948f01d3b1c5c6b524188c88e2aaf844f1ee1697fb54516fe5a6a",
+      "profileFingerprint": "a4ba0c4a255ea966bd91e718b46fb69264665ba655304adc777ba53dae2cebe9",
+      "titleFingerprint": "7e8b750b7a752d3a6a911d861369a9234a12ba73c34ce29d564d851f6ba5680f",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Norrnaigh_Nordmanner/Clan_Vanir/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-tiogar",
+      "title": "Clan Tíogar",
+      "documentTitle": "Clan Tíogar",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Tigairan bei Rorikshall"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "d84eafff17e0fefdb76d1d662bb3d25b4614704a97493642d30448bb2f40623b",
+      "profileFingerprint": "8c32c02bd54edf9c2f23294107c43efc72e7ae2cbe7c7f4c1cf7a24f0a853e78",
+      "titleFingerprint": "695de415e94406c0d58c8ef2b568d51eb4376c1927f583107ef7c8578dc79cb7",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Tiogar/haus.content.mjs",
+      "hasSuppliedSource": true
+    },
+    {
+      "id": "haus-fiadhrach",
+      "title": "Clan Fiadhrach",
+      "documentTitle": "Clan Fiadhrach",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Ausgestorbene Clans",
+        "Glaennath (Alben)"
+      ],
+      "profile": {
+        "rankId": "unknown",
+        "seat": "Glaennath (Alben)",
+        "barony": "Ausgestorbene Clans",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Connair bei Wolfspfad"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "sourceRevision": 1,
+      "motto": "",
+      "graphFingerprint": "a1735a3d462e88a042a49917f332f269c4e9dde282dc459f25159df9a359e7fc",
+      "profileFingerprint": "42ec500ea3a9e4c192293ea8c0aa86a404ad3e879e6633e1bcfc579e67873663",
+      "titleFingerprint": "2703408f08561eb2a75d996c482d992e17f08d71bf54215680765d1b6195a552",
+      "hadBiography": false,
+      "previousDefaultFingerprint": "",
+      "protectedBiographyFingerprint": "",
+      "contentPath": "Familien Häuser und Clans/Estryll/Aldrimar/Roriksheim/Ausgestorbene_Clans/Glaennath_Alben/Clan_Fiadhrach/haus.content.mjs",
+      "hasSuppliedSource": true
+    }
+  ],
+  "originalAssets": [
+    {
+      "id": "haus-varulv",
+      "path": "Stammbäume/assets/images/references/haus-varulv/krieger.png",
+      "sha256": "3b00838760a9b5910f4bb0f1d52d329c1886600ce2522231e32bcaba4bdd1f81",
+      "primary": true
+    },
+    {
+      "id": "haus-varulv",
+      "path": "Stammbäume/assets/images/references/haus-varulv/krieger-2.png",
+      "sha256": "c2dd49239f0aaa8fa3de2416034bade03b8c6125014d9de1638f6a947a7d0b58",
+      "primary": false
+    },
+    {
+      "id": "haus-vangandr",
+      "path": "Stammbäume/assets/images/references/haus-vangandr/krieger.png",
+      "sha256": "9103c730f6c5eab486249548f250496cbacdddd885a3c19b3df8567a07281808",
+      "primary": true
+    },
+    {
+      "id": "haus-freiwinter",
+      "path": "Stammbäume/assets/images/references/haus-freiwinter/krieger.png",
+      "sha256": "7dcc5107f398ab252523dead94532e6191d56392d52ecbaf82bf7206dbf963a4",
+      "primary": true
+    },
+    {
+      "id": "haus-skaal",
+      "path": "Stammbäume/assets/images/references/haus-skaal/krieger.png",
+      "sha256": "fbb73cb07cdf95534ea3fa4ee2104ba59e8cae01e4f511c2de7cdf1dce76862b",
+      "primary": true
+    },
+    {
+      "id": "haus-brathfengr",
+      "path": "Stammbäume/assets/images/references/haus-brathfengr/krieger.png",
+      "sha256": "2dcce02aa9552f5ff6542265fb0dcebe6c3d7829160c0356c0755ef5f6c02606",
+      "primary": true
+    },
+    {
+      "id": "haus-schwarzdorn",
+      "path": "Stammbäume/assets/images/references/haus-schwarzdorn/krieger.png",
+      "sha256": "90527e1d032370349e877630e9a88a673a215a5bff16018933c7825ac96bf3a8",
+      "primary": true
+    },
+    {
+      "id": "haus-kampfgeborene",
+      "path": "Stammbäume/assets/images/references/haus-kampfgeborene/krieger.png",
+      "sha256": "0a800c065d4886516026e0aa44f6cf2c773dc2abdda30b1e6bdb2f2c3d7f06e1",
+      "primary": true
+    },
+    {
+      "id": "haus-frostgeborene",
+      "path": "Stammbäume/assets/images/references/haus-frostgeborene/krieger.png",
+      "sha256": "cfa7d13cdad452ce4ac05e57b86d5e2f9c282a954ad0c8fee371f55156fe321d",
+      "primary": true
+    },
+    {
+      "id": "haus-nachtjaeger",
+      "path": "Stammbäume/assets/images/references/haus-nachtjaeger/krieger.png",
+      "sha256": "fcdbd8a6ab0289ae3db5873d54791014109c58f4d35590acbd2cdf28f9661cf4",
+      "primary": true
+    },
+    {
+      "id": "haus-skjegg",
+      "path": "Stammbäume/assets/images/references/haus-skjegg/krieger.png",
+      "sha256": "1ddce1067ff3d2eb5cf7cd65daffacda6155d948254e8a1c33f926c0f5fa5555",
+      "primary": true
+    },
+    {
+      "id": "haus-sterkr",
+      "path": "Stammbäume/assets/images/references/haus-sterkr/krieger.png",
+      "sha256": "1c19d734e3443950aa9cba0b5bd00ae630380b325ea06482d32dcdc962eafd9a",
+      "primary": true
+    },
+    {
+      "id": "haus-soekeren",
+      "path": "Stammbäume/assets/images/references/haus-soekeren/krieger.png",
+      "sha256": "edd8fa3343376f03ac18ff52c18e1dc7235204cbce611f24f8b93ad272c93a14",
+      "primary": true
+    },
+    {
+      "id": "haus-skald",
+      "path": "Stammbäume/assets/images/references/haus-skald/krieger.png",
+      "sha256": "02802d281c75fb57aebbfb31d7a99b176e6fc1ff458a85ee820dd98e8db9c9e6",
+      "primary": true
+    },
+    {
+      "id": "haus-ulvasar",
+      "path": "Stammbäume/assets/images/references/haus-ulvasar/krieger.png",
+      "sha256": "b0b5afedb6768906643eefa243f0c394b924be2f1af70fa73ea0ec997965b2ac",
+      "primary": true
+    },
+    {
+      "id": "haus-bjornskar",
+      "path": "Stammbäume/assets/images/references/haus-bjornskar/krieger.png",
+      "sha256": "2a8d54f0bb27139a18db56d5fc3ccfe979ffa04b901dc18dc9ab9a30dc2a33ff",
+      "primary": true
+    },
+    {
+      "id": "haus-vanir",
+      "path": "Stammbäume/assets/images/references/haus-vanir/krieger.png",
+      "sha256": "e3aed123dfaf5955425680144e0241429539c460c46af0775344367437615791",
+      "primary": true
+    },
+    {
+      "id": "haus-tiogar",
+      "path": "Stammbäume/assets/images/references/haus-tiogar/krieger.png",
+      "sha256": "5fbf52739317441bb7db48c469c218e43b4ea2aa0a6584abe63babe5b1dab72f",
+      "primary": true
+    },
+    {
+      "id": "haus-fiadhrach",
+      "path": "Stammbäume/assets/images/references/haus-fiadhrach/krieger.png",
+      "sha256": "1c9b3b7d8718078ec19c5286bac27a0de775030cf48af7ae44322ee46c4aa542",
+      "primary": true
+    }
+  ]
+}

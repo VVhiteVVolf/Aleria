@@ -531,7 +531,7 @@ export const HOUSE_VARANGR_FAMILY = withBlaithneachSourceCounterUpgrade(Object.f
       title: 'Jarl von Krähenmoor seit 1729'
     }),
     awayWoman('frida-varangr', 'Frida Varangr', '1694', '', 'Clan Feuerherz'),
-    person('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1720', {
+    person('rorik-varangr', 'Rörik Varangr', 'male', '1696', '1724', {
       extensions: {
         chartCenterBetweenPartnerPersonIds: ['gisrun-schattenherz', 'urd'],
         registryManagedExtensionFields: [
@@ -642,7 +642,7 @@ export const HOUSE_VARANGR_FAMILY = withBlaithneachSourceCounterUpgrade(Object.f
     partnership('marriage-frida-rolfur-varangr'),
     alignChildGroupBelowParentPair(
       clearPartnerOverChildrenAlignment(
-        partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1720' })
+        partnership('marriage-rorik-gisrun-varangr', { status: 'ended', end: '1724' })
       )
     ),
     alignPartnerOverChildren(partnership('affair-rorik-urd-varangr', {

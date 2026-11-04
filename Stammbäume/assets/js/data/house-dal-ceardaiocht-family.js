@@ -15,7 +15,7 @@ import {
 import {
   LEITHEACH_HOUSE_EMBLEMS
 } from './leitheach-house-profiles.js';
-import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
+import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js?v=20261103-sonnenkueste-v1';
 import {
   TIR_NA_SINSEAR_HOUSE_EMBLEMS,
   TIR_NA_SINSEAR_HOUSE_PROFILES,
@@ -122,12 +122,12 @@ export const HOUSE_DAL_CEARDAIOCHT_FAMILY = Object.freeze({
     createTirNaSinsearHouse('house-llwynog', "Haus Llwynog O'Aberon", SONNENKUESTE_HOUSE_EMBLEMS.llwynog)
   ],
   persons: [
-    person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1635', '1672', {
+    person('aonghus-gallchobhair', 'Aonghus Gallchobhair', 'male', '1610', '1672', {
       houseId: 'house-gallchobhair',
       familyRole: 'core',
-      notes: 'Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Das bereits festgelegte Geburtsjahr 1635 ersetzt die erneute Altangabe 1610.'
+      notes: 'Aonghus begründete als Gallchobhair-Spross den Clan Dál’Ceardaíocht. Die Nutzerkorrektur vom 4. November 2026 gibt den Kinderjahren 1630, 1632 und 1634 Vorrang; dafür wird seine frühere Datierung 1610–1672 wiederhergestellt.'
     }),
-    spouse('etain-ancient', 'Ètáin', 'female', '1622', '1695'),
+    spouse('etain-ancient', 'Ètáin', 'female', '1612', '1695'),
 
     person('wiomar-ceardaiocht', 'Wíomar Ceardaíocht', 'male', '1630', '1681'),
     spouse('glaine-mhuir', 'Glaine Mhuir', 'female', '1632', '1679', 'house-na-mhuir'),
@@ -213,7 +213,7 @@ export const HOUSE_DAL_CEARDAIOCHT_FAMILY = Object.freeze({
   ],
   parentages: [
     ...childrenOf(['wiomar-ceardaiocht', 'wunaire-ceardaiocht', 'seamus-ceardaiocht'], AONGHUS_FOUNDER_IDS, 'marriage-aonghus-etain', {
-      notes: 'Die überlieferten Geburtsjahre dieser Generation liegen vor dem bereits ausdrücklich korrigierten Geburtsjahr des Gründers Aonghus; der ungelöste Quellenwiderspruch wird bewusst erhalten.'
+      notes: 'Die Kinderjahre 1630, 1632 und 1634 bleiben gemäß Nutzerkorrektur vom 4. November 2026 erhalten. Aonghus ist nun auf 1610 und Ètáin auf 1612 datiert; die Eltern sind bei der ersten Geburt 20 beziehungsweise 18 Jahre alt.'
     }),
     ...childrenOf(['lugaid-ceardaiocht', 'praeleen-ceardaiocht'], WIOMAR_IDS, 'marriage-wiomar-glaine'),
     ...childrenOf(['zinotra-ceardaiocht'], SEAMUS_AFFAIR_IDS, 'affair-seamus-rannveig', {
@@ -263,17 +263,15 @@ export const HOUSE_DAL_CEARDAIOCHT_FAMILY = Object.freeze({
   },
   extensions: {
     sourceModule: 'Clan Dál’Ceardaíocht (bereitgestellte Altdaten)',
-    sourceNote: 'Genealogie, Lebensdaten, Oberhäupter und Erbfolge folgen der bereitgestellten Dál’Ceardaíocht-Hierarchie. Aonghus wird entsprechend der bereits ausdrücklich festgelegten Datierung 1635–1672 geführt; dadurch liegen die übernommenen Geburtsjahre seiner ersten drei Nachkommen vor seinem eigenen und bleiben als offener Quellenwiderspruch dokumentiert. Die offenkundig vertauschten Todesjahre des jüngeren Aonghus und Brónas werden zu 1733 normalisiert. Cari bleibt biologisches Kind des Hauses Llwynog und erscheint ausschließlich als Rógáns aufgenommenes Mündel. Sämtliche Bilder der bereitgestellten Ceardaíocht-Quelle werden als veraltet ignoriert; nur bereits bestehende Porträts identischer Weltpersonen werden wiederverwendet. Glaine und Dúna verwenden nun ihre kanonischen Na’Mhuir-Porträts und die einheitliche Na’Mhuir-Hauskennung. Lornas Hauskennung verweist nun auf die ausgearbeitete Hauptakte Dal T’Saor.',
+    sourceNote: 'Genealogie, Lebensdaten, Oberhäupter und Erbfolge folgen der bereitgestellten Dál’Ceardaíocht-Hierarchie. Gemäß Nutzerkorrektur vom 4. November 2026 haben die Kinderjahre 1630, 1632 und 1634 Vorrang: Aonghus wird wieder auf 1610–1672 und Ètáin auf 1612–1695 datiert. Damit ist der zuvor bewusst erhaltene Eltern-Kinder-Datierungskonflikt gelöst; die Amtsfolge und sämtliche Verbindungen bleiben unverändert. Die offenkundig vertauschten Todesjahre des jüngeren Aonghus und Brónas werden zu 1733 normalisiert. Cari bleibt biologisches Kind des Hauses Llwynog und erscheint ausschließlich als Rógáns aufgenommenes Mündel. Sämtliche Bilder der bereitgestellten Ceardaíocht-Quelle werden als veraltet ignoriert; nur bereits bestehende Porträts identischer Weltpersonen werden wiederverwendet. Glaine und Dúna verwenden nun ihre kanonischen Na’Mhuir-Porträts und die einheitliche Na’Mhuir-Hauskennung. Lornas Hauskennung verweist nun auf die ausgearbeitete Hauptakte Dal T’Saor.',
     sourceRevision: 5,
     blankFamily: false,
     preparedMainLine: false,
     sourceCorrections: Object.freeze([
-      'Aonghus Gallchobhair wurde mit der bereits festgelegten Datierung 1635–1672 statt der alten Tabellenangabe 1610–1672 übernommen.',
+      'Nutzerkorrektur 4. November 2026: Aonghus Gallchobhair wird auf 1610–1672 und Ètáin auf 1612–1695 datiert; die Geburtsjahre ihrer Kinder 1630, 1632 und 1634 bleiben unverändert.',
       'Die Todesjahre 1633 des jüngeren Aonghus und Brónas wurden als offenkundige Zahlendreher zu 1733 berichtigt.'
     ]),
-    sourceDiscrepancies: Object.freeze([
-      'Wíomar (1630), Wúnaire (1632) und Séamus (1634) werden als Kinder des auf 1635 datierten Gründers Aonghus überliefert. Die widersprüchlichen Kinderdaten bleiben bis zu einer inhaltlichen Klärung unverändert.'
-    ]),
+    sourceDiscrepancies: Object.freeze([]),
     inheritance: Object.freeze({
       title: 'Laird des Clans Dál’Ceardaíocht',
       publishedOrder: Object.freeze(['rogan-ceardaiocht', 'jocan-ceardaiocht', 'etain-ceardaiocht'])

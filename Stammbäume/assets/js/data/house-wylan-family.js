@@ -225,7 +225,7 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
     person('bettrys-wylan', 'Bettrys Wylan', 'female', '1558', '????'),
     person('dolena-wylan', 'Dolena Wylan', 'female', '1558', '', WYLAN_HOUSE_ID, { status: 'unknown' }),
     person('braith-marwolaeth', 'Braith Marwolaeth', 'female', '1557', '1671', 'house-marwolaeth'),
-    person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '????', 'house-neidr'),
+    person('daffyd-neidr', 'Daffyd Neidr', 'male', '1555', '1608', 'house-neidr'),
 
     person('vorath-wylan', 'Vorath Wylan', 'male', '1575', '1645'),
     person('wrnach-wylan', 'Wrnach Wylan', 'male', '1577', '1653', WYLAN_HOUSE_ID, {

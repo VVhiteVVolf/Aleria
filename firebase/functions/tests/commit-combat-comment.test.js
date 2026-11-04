@@ -75,3 +75,19 @@ test('authoritative comment resources recover a new day after replay state and k
   assert.deepEqual(nextDay.map(resource => resource.current), [1, 2]);
   assert.equal(nextDay[1].recoveryDayKey, 'scene:test:day-2');
 });
+
+test('the target limit rejects excess targets explicitly instead of silently dropping their receipts', () => {
+  const submissions = Array.from({ length: 21 }, (_, index) => ({ targetId: `target-${index}`, resolutionId: `roll-${index}` }));
+  const metadata = combatResolutions => ({ commentSegments: [{ combatAction: {}, combatResolutions }] });
+  assert.throws(() => combatCommentInternals.combatSegments(metadata(submissions)), /höchstens 20 unterschiedliche Ziele/);
+  const valid = combatCommentInternals.combatSegments(metadata(submissions.slice(0, 20)));
+  assert.equal(valid.length, 20);
+  assert.equal(valid.at(-1).targetCount, 20);
+  assert.equal(combatCommentInternals.combatSegments(metadata([...submissions.slice(0, 20), submissions[0]])).length, 20);
+});
+
+test('excess selected support rules are rejected before any selection is silently lost', () => {
+  assert.throws(() => combatCommentInternals.ruleSelectionDescriptors({ segment: { combatAction: {
+    ruleSelections: Array.from({ length: 21 }, () => ({}))
+  } } }), /höchstens 20 ausgewählte Unterstützungsregeln/);
+});

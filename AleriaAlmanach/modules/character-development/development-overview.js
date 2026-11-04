@@ -11,7 +11,7 @@ export function renderDevelopmentOverview(preview) {
     ['Max. TP', preview.after.maximumHitPoints],
     ['Kompetenz', `+${preview.after.proficiencyBonus}`],
     ['Neue Attacken', preview.changes.filter(change=>change.key.startsWith('purchase-')).length],
-    ['Traits', preview.plan.traitIds.length],
+    ['Aktive Merkmale', preview.profile.quirks.filter(trait => trait.active !== false).length],
     ['Balance', `${preview.balance.remaining} P`]
   ];
   return `<div class="development-overview" data-development-role="overview" aria-label="Vorschau der Entwicklung">${stats.map(([name,value]) => `<div><small>${name}</small><strong>${escape(value)}</strong></div>`).join('')}</div>`;

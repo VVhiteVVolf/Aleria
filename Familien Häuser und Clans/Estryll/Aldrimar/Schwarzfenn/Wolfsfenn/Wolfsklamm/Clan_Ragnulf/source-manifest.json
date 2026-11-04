@@ -1,0 +1,94 @@
+{
+  "id": "haus-ragnulf",
+  "source": {
+    "attachmentId": "c1432687-9ab8-456c-8f71-b374249b1d59",
+    "originalAttachment": "C:\\Users\\fhg_r\\.codex\\attachments\\c1432687-9ab8-456c-8f71-b374249b1d59\\Eingefügter Text.txt",
+    "archive": "diagnostics/wolfsklamm-clans-20261103/sources/ragnulf/animexx-original.html",
+    "bytes": 145933,
+    "sha256": "eaf9334f61b70b460df39578abe6f9e309f8257e80f7d5684755e8d15601c3f1",
+    "byteIdentical": true
+  },
+  "authority": {
+    "familyId": "haus-ragnulf",
+    "baselineSourceRevision": 4,
+    "profile": {
+      "rankId": "jarl",
+      "seat": "Wolfsklamm",
+      "barony": "Wolfsfenn",
+      "county": "Schwarzfenn",
+      "kingdom": "Aldrimar",
+      "secondarySeats": [],
+      "liegeHouseId": "house-vaeren",
+      "liegeHouseName": "Clan Vaeren",
+      "folderIcons": [
+        "assets/images/regions/aldrimar.png",
+        "assets/images/regions/aldrimar-schwarzfenn.png",
+        "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+        "assets/images/regions/aldrimar-stadt.png"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/aldrimar-stadt.png",
+        "barony": "assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+        "county": "assets/images/regions/aldrimar-schwarzfenn.png",
+        "kingdom": "assets/images/regions/aldrimar.png"
+      }
+    }
+  },
+  "genealogy": {
+    "imported": false,
+    "familyId": "haus-ragnulf",
+    "iframe": true
+  },
+  "militaryStatistics": {
+    "imported": false
+  },
+  "illustration": {
+    "id": "haus-ragnulf",
+    "familyId": "haus-ragnulf",
+    "slug": "ragnulf",
+    "canonicalSlug": "ragnulf",
+    "canonicalKingdom": "Aldrimar",
+    "canonicalCounty": "Schwarzfenn",
+    "attachmentId": "c1432687-9ab8-456c-8f71-b374249b1d59",
+    "imageIndex": 1,
+    "url": "https://i.imgur.com/hTYqsDp.png",
+    "sourceUrl": "https://i.imgur.com/hTYqsDp.png",
+    "path": "Stammbäume/assets/images/references/haus-ragnulf/krieger.png",
+    "assetPath": "Stammbäume/assets/images/references/haus-ragnulf/krieger.png",
+    "role": "warrior",
+    "primary": true,
+    "existing": false,
+    "sourceStyle": "float:right; height:450px; width:300px",
+    "context": "Huskarltum",
+    "visuallyInspected": true,
+    "status": "new",
+    "bytes": 300674,
+    "sha256": "936a0b8332467ab4b369be14b2f2f65ea6c87ce5462f2187e925d6f37ddb1226",
+    "sha": "936a0b8332467ab4b369be14b2f2f65ea6c87ce5462f2187e925d6f37ddb1226",
+    "width": 408,
+    "height": 612,
+    "w": 408,
+    "h": 612,
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "unchangedOriginal": true,
+    "downloadTool": "curl.exe --noproxy *",
+    "visualDescription": "Gerüsteter Hauskrieger mit Wolfspelz, Axt und Wolfsschild.",
+    "contactSheet": "diagnostics/wolfsklamm-clans-20261103/original-clan-figures.jpg"
+  },
+  "decisions": [
+    "Das Jarltum heißt Schwarzfenn, sein Hauptsitz Wolfsklamm; Wolfsfenn ist das jarltümliche Kernland. Keine Umbenennung des Jarltums oder des Registers.",
+    "Heutiger Rang Jarl unter Vaeren. Frühere Jarle und Fraktionsbindungen sind historische Erzählung, keine neue aktuelle Ratsbesetzung.",
+    "Ulvarsar wird zur bestehenden Clanschreibweise Ulvasar berichtigt. Historische Völker- und Fürstentumsnamen nicht ohne Beleg mit heutigen Ländern oder neuen Familien gleichsetzen.",
+    "Sankt Éirinn ist die ausführliche Quellform, Eirin eine abweichende Schreibweise in den kurzen Gegenquellen. Das gemeinsame Friedens- und Untergangsmotiv wird ohne neue Personenakte erzählt.",
+    "Die relative Datierung vor etwa hundert Jahren wird nicht zu einem Kriegsjahr verrechnet. Alle Militärstatistiken und die alte Infotabelle bleiben ausgeschlossen.",
+    "Die Formulierung ohne eigenen Handlungsstrang ist eine Autorenbemerkung. Als Welttext wird nur der damalige Ruf politischer Abhängigkeit von Varangr erhalten.",
+    "Jarltum Schwarzfenn und der Hauptsitz Wolfsklamm bleiben unterschiedliche Gebietsebenen.",
+    "Vorlagenstammbäume und Militärstatistiken vollständig ignoriert.",
+    "Die bestehenden Familienakten bleiben unverändert.",
+    "Die kanonischen Titel bestimmen Bjölf als Erben und Gulvar als zweiten Erben; Personenreihenfolge ist keine Erbfolge."
+  ]
+}

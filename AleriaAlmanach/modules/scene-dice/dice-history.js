@@ -47,7 +47,7 @@ function sanitizeHistoryEntry(entry = {}) {
     critical: ['success', 'failure'].includes(entry.critical) ? entry.critical : '',
     roller: String(entry.roller || '').trim().slice(0, 80),
     purpose: String(entry.purpose || '').trim().slice(0, 140),
-    rollType: ['general', 'attack', 'death-save'].includes(entry.rollType) ? entry.rollType : 'general'
+    rollType: ['general', 'attack', 'saving-throw', 'skill', 'death-save'].includes(entry.rollType) ? entry.rollType : 'general'
   };
 }
 

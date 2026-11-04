@@ -1,5 +1,5 @@
 import { createTerritoryPageCatalog } from '../territory-page/territory-source-catalog.mjs?v=heraldry-20261022';
-import pages from './pages.source.json' with { type: 'json' };
+import pages from './pages.source.json?v=20261104-lore-fixes-v1' with { type: 'json' };
 import catalog from '../../../Karten/Leitheach/territories.import.json' with { type: 'json' };
 import definitions from '../../../Karten/Leitheach/map-definitions.json' with { type: 'json' };
 import { describePlace } from '../../../Karten/Leitheach/places.mjs';

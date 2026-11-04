@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "source": "Nutzerfestlegung zu Solestias Ständen und Anreden, 4. November 2026",
+  "context": {
+    "title": "Stände und Anreden Solestias.",
+    "introduction": "Die überlieferten solestischen Titel stehen vor allem in Schriftstücken. Im mündlichen Alltag ist längst die Gemeine Zunge üblich; selbst der Sobirà wird meist schlicht Herzog genannt.",
+    "addresses": [
+      { "title": "Don und Doña", "text": "Ritter des Landes werden mit Don oder Doña und ihrem Vornamen angeredet." },
+      { "title": "Infant und Infanta", "text": "Prinzen und Prinzessinnen der herzoglichen Familie werden als Infant beziehungsweise Infanta angesprochen." },
+      { "title": "Albisches Vermächtnis", "text": "In Solestia gibt es keine Leibeigenschaft. Das noch nahe albische Kulturerbe prägt diese Freiheit." }
+    ]
+  },
+  "estates": [
+    { "id": "sobira", "name": "Sobirà", "commonTitle": "Herzog", "present": true, "description": "Der überlieferte Titel des Herzogs. Geläufig bleibt im Alltag die Bezeichnung Herzog in der Gemeinen Zunge." },
+    { "id": "conde", "name": "Conde", "commonTitle": "Graf", "present": false, "statusLabel": "In Solestia nicht vorhanden", "description": "Solestia hat keine Grafen. Conde wäre ihr solestischer Titel; diese Darstellung zeigt ausschließlich den hypothetischen Rang." },
+    { "id": "regulo", "name": "Regulo", "commonTitle": "Baron", "present": true, "description": "Der solestische Titel des Barons, heute vor allem in schriftlicher Form festgehalten." },
+    { "id": "hidalgo", "name": "Hidalgo", "commonTitle": "Ritterfürst", "present": true, "description": "Ritterfürsten sind in Solestia selten. Zwei Hidalgo-Familien haben ihren Sitz in der Hauptstadt." },
+    { "id": "senor", "name": "Señor", "commonTitle": "Ritterherr", "present": true, "description": "Ein Ritterherr mit Landbesitz beziehungsweise einer Burg. Er darf weitere Ritter schlagen und führen; seine Nachkommen dürfen den Ritterstand fortführen." },
+    { "id": "caballero", "name": "Caballero", "commonTitle": "Ritter", "present": true, "description": "Der solestische Ritter. Die persönliche Anrede lautet Don oder Doña, jeweils mit dem Vornamen." },
+    { "id": "escudero", "name": "Escudero", "commonTitle": "Knappe", "present": true, "description": "Die überlieferte solestische Bezeichnung für einen Knappen; im Gespräch ist die Gemeine Zunge üblich." },
+    { "id": "paje", "name": "Paje", "commonTitle": "Page", "present": true, "description": "Die überlieferte solestische Bezeichnung für einen Pagen, besonders in schriftlicher Form." },
+    { "id": "pechero", "name": "Pechero", "commonTitle": "Gemeines Volk", "present": true, "description": "Die schlichte Bezeichnung des gemeinen Volkes. Leibeigenschaft gibt es in Solestia nicht." }
+  ],
+  "houseAssignments": [
+    { "estateId": "sobira", "houseIds": ["house-ducal"] },
+    { "estateId": "regulo", "houseIds": ["pool-01", "pool-02", "pool-03", "pool-04", "pool-05", "pool-06", "pool-07", "pool-08", "pool-09"] },
+    { "estateId": "hidalgo", "houseIds": ["pool-10", "pool-11"] }
+  ]
+}

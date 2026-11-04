@@ -1,6 +1,6 @@
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
-import { HOUSE_DAL_CEARDAIOCHT_FAMILY } from './house-dal-ceardaiocht-family.js';
-import { HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY } from './house-fir-an-gallchobhair-family.js';
+import { HOUSE_DAL_CEARDAIOCHT_FAMILY } from './house-dal-ceardaiocht-family.js?v=20261104-lore-fixes-v1';
+import { HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY } from './house-fir-an-gallchobhair-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_NA_MHUIR_FAMILY } from './house-na-mhuir-family.js';
 import { HOUSE_UA_CLEIR_FAMILY } from './house-ua-cleir-family.js';
 import { HOUSE_UA_GHAISCIOCH_FAMILY } from './house-ua-ghaiscioch-family.js';
