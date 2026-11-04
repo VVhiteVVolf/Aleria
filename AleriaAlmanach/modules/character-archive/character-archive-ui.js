@@ -413,7 +413,7 @@ async function openArchive(options = {}) {
   renderArchive();
   globalThis.activateDialog('character-archive-overlay', { initialFocus: '[data-character-archive-field="search"]' });
   try {
-    await ensureCharacterArchiveLoaded();
+    await Promise.all([ensureCharacterArchiveLoaded(), globalThis.loadSceneActorData?.()]);
   } catch {
     if (request === state.openRequest) state.loadError = 'Bitte versuche es erneut. Deine gespeicherten Einträge bleiben erhalten.';
   } finally {
@@ -578,13 +578,6 @@ globalThis.AleriaCharacterArchive = Object.freeze({
   createProfileItem: createCharacterArchiveProfileItem,
   archiveRecord: archiveCharacterRecord,
   refresh: handleRecordsChanged
-});
-
-queueMicrotask(() => {
-  refreshLiveEntries();
-  ensureCharacterArchiveLoaded()
-    .then(() => refreshLiveEntries())
-    .catch(error => console.info('Charakterbogen-Archiv wird beim ersten Öffnen erneut geladen.', error));
 });
 
 const requestedCatalogSpell = new URLSearchParams(globalThis.location?.search || '').get('zauberkatalog');

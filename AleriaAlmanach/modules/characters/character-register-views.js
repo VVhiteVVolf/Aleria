@@ -25,6 +25,31 @@ let _characterRegisterViewMode = 'categories';
 let _characterRegisterSortMode = 'name-asc';
 let _characterRegisterSearch = '';
 let _characterRegisterSearchTimer = null;
+let _characterRegisterFamilyLoadState = 'idle';
+
+function renderCharacterRegisterGenealogyReadiness(grid) {
+  const genealogy = window.AleriaCharacterGenealogy;
+  if (typeof genealogy?.getFamilyMemberships === 'function'
+    || typeof genealogy?.ensureFamilyMemberships !== 'function') return false;
+  if (_characterRegisterFamilyLoadState === 'idle') {
+    _characterRegisterFamilyLoadState = 'loading';
+    Promise.resolve().then(() => genealogy.ensureFamilyMemberships()).then(() => {
+      _characterRegisterFamilyLoadState = 'idle';
+      // The genealogy feature's ready event repaints the current view.
+    }).catch(() => {
+      _characterRegisterFamilyLoadState = 'error';
+      if (document.getElementById('char-grid') && typeof renderCharGrid === 'function') renderCharGrid();
+    });
+  }
+  const status = document.createElement('div');
+  status.className = 'char-empty-hint';
+  status.setAttribute('role', 'status');
+  status.innerHTML = _characterRegisterFamilyLoadState === 'error'
+    ? 'Stammbäume konnten nicht geladen werden. <button type="button" data-character-register-action="retry-families">Erneut laden</button>'
+    : 'Stammbäume für die Registeransicht werden geladen …';
+  grid.appendChild(status);
+  return true;
+}
 
 function getCharacterRegisterViewMode() {
   return _characterRegisterViewMode;
@@ -299,9 +324,16 @@ function renderCharacterRegisterViewToolbar(grid) {
 }
 
 function handleCharacterRegisterViewClick(event) {
-  const trigger = event.target?.closest?.('[data-character-register-action="set-view"]');
+  const trigger = event.target?.closest?.('[data-character-register-action]');
   const grid = document.getElementById('char-grid');
   if (!trigger || !grid || !grid.contains(trigger) || trigger.disabled) return;
+  if (trigger.dataset.characterRegisterAction === 'retry-families') {
+    event.preventDefault();
+    _characterRegisterFamilyLoadState = 'idle';
+    if (typeof renderCharGrid === 'function') renderCharGrid();
+    return;
+  }
+  if (trigger.dataset.characterRegisterAction !== 'set-view') return;
   event.preventDefault();
   setCharacterRegisterViewMode(trigger.dataset.viewMode || 'families');
 }

@@ -1,9 +1,11 @@
 // Owns the loading soundtrack, its control, and the final fade on entry.
 export function createLoadingScreenSound({ button, control, src }, environment = window) {
-  const audio = new environment.Audio(src);
+  const audio = new environment.Audio();
   const lifetime = new AbortController();
   audio.loop = true;
-  audio.preload = 'auto';
+  // A blocked autoplay attempt must not eagerly download the complete song.
+  // Playback still starts without another click when browser policy allows it.
+  audio.preload = 'none';
   audio.volume = 0;
   let playing = false;
   let pending = false;
@@ -16,6 +18,20 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   let stopTimer = null;
   let resolveFade = null;
   let entered = false;
+  let sourceAssigned = false;
+
+  function releaseSource() {
+    if (!sourceAssigned) return;
+    audio.removeAttribute('src'); audio.load(); sourceAssigned = false;
+  }
+
+  function autoplayAllowed() {
+    if (environment.navigator?.userActivation?.isActive) return true;
+    try {
+      const policy = environment.navigator?.getAutoplayPolicy?.(audio);
+      return !['disallowed', 'allowed-muted'].includes(policy);
+    } catch { return true; }
+  }
 
   function render() {
     if (destroyed) return;
@@ -61,6 +77,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   async function start() {
     if (destroyed || entered || unavailable || manuallyStopped || pending) return false;
     if (playing && !stopping) return true;
+    if (!autoplayAllowed()) { render(); return false; }
     const current = ++operation;
     cancelFade();
     stopping = false;
@@ -68,6 +85,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
     if (!playing || audio.paused) audio.volume = 0;
     render();
     try {
+      if (!sourceAssigned) { audio.src = src; sourceAssigned = true; }
       await audio.play();
       if (destroyed || current !== operation) {
         if (destroyed || (!pending && !playing)) audio.pause();
@@ -79,7 +97,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
       void fadeTo(.55, 6000);
       return true;
     } catch {
-      if (current === operation) { pending = false; playing = false; render(); }
+      if (current === operation) { pending = false; playing = false; releaseSource(); render(); }
       return false;
     }
   }
@@ -121,8 +139,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
     cancelFade();
     audio.pause();
     audio.volume = 0;
-    audio.removeAttribute('src');
-    audio.load();
+    releaseSource();
     lifetime.abort();
     control.remove();
   }

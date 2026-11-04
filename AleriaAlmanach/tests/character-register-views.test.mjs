@@ -162,3 +162,47 @@ test('characters and creatures are primary registers instead of crowded theme ta
   assert.match(sidebarSource, /icon: 'Charakterbogen Archiv\.png'/);
   assert.match(sidebarSource, /data-archive-register-tab/);
 });
+
+test('family-derived register views wait for the real resolver and preserve a changed facet', async () => {
+  const context = createViewContext(), statuses = [];
+  let loads = 0, resolve;
+  const pending = new Promise(done => { resolve = done; });
+  context.window.AleriaCharacterGenealogy = { ensureFamilyMemberships() { loads++; return pending; } };
+  context.document.createElement = () => ({ setAttribute() {} });
+  const grid = { appendChild: status => statuses.push(status) };
+  assert.equal(loads, 0, 'importing view code must not load family records');
+  assert.equal(context.renderCharacterRegisterGenealogyReadiness(grid), true);
+  assert.match(statuses[0].innerHTML, /werden geladen/);
+  await new Promise(done => setImmediate(done));
+  assert.equal(loads, 1);
+  assert.equal(context.renderCharacterRegisterGenealogyReadiness(grid), true);
+  context.setCharacterRegisterViewMode('relevance', { render: false });
+  context.window.AleriaCharacterGenealogy.getFamilyMemberships = () => [];
+  resolve(); await new Promise(done => setImmediate(done));
+  assert.equal(context.renderCharacterRegisterGenealogyReadiness(grid), false);
+  assert.equal(context.getCharacterRegisterViewMode(), 'relevance');
+  assert.equal(loads, 1);
+});
+
+test('family loading errors offer retry and do not repaint a closed register', async () => {
+  const context = createViewContext(), statuses = [];
+  let reject, loads = 0, repaints = 0, mounted = false;
+  const pending = new Promise((_, fail) => { reject = fail; });
+  context.window.AleriaCharacterGenealogy = { ensureFamilyMemberships() { loads++; return loads === 1 ? pending : Promise.resolve(); } };
+  context.document.createElement = () => ({ setAttribute() {} });
+  const grid = { appendChild: status => statuses.push(status), contains: () => true };
+  context.document.getElementById = () => mounted ? grid : null;
+  context.renderCharGrid = () => { repaints++; };
+  context.renderCharacterRegisterGenealogyReadiness(grid);
+  await new Promise(done => setImmediate(done));
+  reject(new Error('offline')); await new Promise(done => setImmediate(done));
+  assert.equal(repaints, 0);
+  mounted = true;
+  context.renderCharacterRegisterGenealogyReadiness(grid);
+  assert.match(statuses.at(-1).innerHTML, /retry-families/);
+  const trigger = { dataset: { characterRegisterAction: 'retry-families' } };
+  context.handleCharacterRegisterViewClick({ target: { closest: () => trigger }, preventDefault() {} });
+  context.renderCharacterRegisterGenealogyReadiness(grid);
+  await new Promise(done => setImmediate(done));
+  assert.equal(loads, 2);
+});

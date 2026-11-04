@@ -112,6 +112,7 @@ function buildTradeCatalogItemHiddenMeta(item = {}) {
   const meta = {
     id: item.id || '',
     ...(item.canonicalKey ? { canonicalKey: item.canonicalKey } : {}),
+    ...(item.definitionKind === 'unique' || item.kind === 'unique' ? { definitionKind: 'unique' } : {}),
     ...(item.definitionRef ? { definitionRef: { ...item.definitionRef }, definitionCategory: item.definitionCategory || '' } : {}),
     descriptionTitle: item.descriptionTitle || '',
     featuresTitle: item.featuresTitle || '',
@@ -122,6 +123,17 @@ function buildTradeCatalogItemHiddenMeta(item = {}) {
     currencyCode: item.currencyCode || ''
   };
   return `<input type="hidden" class="me-trade-item-hidden-meta" value="${escapeHtml(JSON.stringify(meta))}">`;
+}
+
+function buildTradeCatalogPossessionKindEditor(item, index, mode) {
+  if (item.definitionRef) {
+    const label = item.definitionKind === 'unique' || item.kind === 'unique' ? 'Unikat aus dem Item-Builder.' : 'Mit einer Itemdefinition verknüpft.';
+    return `<div class="inline-edit-field wide"><span>Besitzart</span><small>${label} Die Besitzart wird von dieser Definition bestimmt. Änderungen bitte als passende Serien- oder Unikatdefinition im Item-Builder anlegen und über „Item laden“ übernehmen.</small></div>`;
+  }
+  return buildTradeCatalogSelect('Besitzart', 'definitionKind', item.definitionKind === 'unique' || item.kind === 'unique' ? 'unique' : 'shared', index, mode, [
+    { value: 'shared', label: 'Nachlieferbare Ware' },
+    { value: 'unique', label: 'Einzelstück (Unikat)' }
+  ]);
 }
 
 function buildTradeCatalogItemRows(items = [], mode = 'module') {
@@ -136,6 +148,7 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Titel', 'title', item.title, index, mode)}
         ${buildTradeCatalogInput('Untertitel', 'subtitle', item.subtitle, index, mode)}
         ${buildTradeCatalogInput('Kategorie-ID', 'category', item.category, index, mode)}
+        ${buildTradeCatalogPossessionKindEditor(item, index, mode)}
         ${buildTradeCatalogSelect('Sortimentstatus', 'status', item.status, index, mode, [
           { value: 'available', label: 'Sortimenteintrag' },
           { value: 'unavailable', label: 'Nicht erhältlich (sichtbar, nicht im Warenregister)' },
@@ -240,6 +253,7 @@ function createTradeCatalogItemFromItemDbItem(item = {}, categories = []) {
     : [];
   return sanitizeTradeCatalogItems([{
     canonicalKey: item.templateId || item.canonicalKey || item.id || '',
+    ...(item.definitionKind === 'unique' || item.kind === 'unique' ? { definitionKind: 'unique' } : {}),
     ...(item.definitionRef ? { definitionRef: { ...item.definitionRef }, definitionCategory: item.category } : {}),
     title: item.title || 'Neues Handelsgut',
     subtitle: item.type || item.categoryLabel || '',
@@ -392,6 +406,7 @@ function parseTradeCatalogItemHiddenMeta(row) {
 function collectTradeCatalogItems(block) {
   return Array.from(block.querySelectorAll('.module-trade-item-row')).map(row => ({
     ...parseTradeCatalogItemHiddenMeta(row),
+    ...(getTrimmedFormValue(row, '.me-trade-item-definitionKind') ? { definitionKind: getTrimmedFormValue(row, '.me-trade-item-definitionKind') } : {}),
     title: getTrimmedFormValue(row, '.me-trade-item-title'),
     subtitle: getTrimmedFormValue(row, '.me-trade-item-subtitle'),
     category: getTrimmedFormValue(row, '.me-trade-item-category'),

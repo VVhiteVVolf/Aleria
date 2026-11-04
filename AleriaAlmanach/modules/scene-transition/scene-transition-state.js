@@ -105,27 +105,35 @@ function makeSceneTransitionId() {
   return `transition-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
-function getSceneTransitionEndpoints() {
-  const endpointsByThread = new Map();
-  if (typeof getValidSections !== 'function') return [];
-  getValidSections().forEach(section => {
+// Keep navigation metadata separate from the persisted endpoint schema.
+function getSceneTransitionCatalog(sections = getValidSections()) {
+  const scenesByThread = new Map();
+  sections.forEach(section => {
     (section.entries || []).forEach(rawEntry => {
       const entry = typeof getRenderableEntry === 'function' ? getRenderableEntry(rawEntry) : rawEntry;
       if (!entry?.id || typeof getPages !== 'function') return;
       getPages(entry).forEach((page, pageIndex) => {
         if (!page?.sessionPage) return;
-        const pageKey = getPageCommentThreadKey(page, pageIndex);
+        const thread = getCommentThreadForPage(page, entry, pageIndex);
+        if (thread?.kind !== 'session') return;
         const endpoint = normalizeSceneTransitionEndpoint({
-          threadId: getSessionThreadId(entry.id, pageKey),
+          threadId: thread.threadId,
           entryId: entry.id,
           entryTitle: entry.title,
           pageTitle: page.pageTitle || entry.title
         });
-        if (!endpointsByThread.has(endpoint.threadId)) endpointsByThread.set(endpoint.threadId, endpoint);
+        if (!scenesByThread.has(endpoint.threadId)) {
+          scenesByThread.set(endpoint.threadId, { endpoint, section, entry, page });
+        }
       });
     });
   });
-  return Array.from(endpointsByThread.values());
+  return Array.from(scenesByThread.values());
+}
+
+function getSceneTransitionEndpoints() {
+  if (typeof getValidSections !== 'function') return [];
+  return getSceneTransitionCatalog().map(scene => scene.endpoint);
 }
 
 function getCurrentSceneTransitionEndpoint() {

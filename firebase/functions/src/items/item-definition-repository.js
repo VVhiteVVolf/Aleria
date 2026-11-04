@@ -10,7 +10,7 @@ export const definitionVersionRef = (database, reference) => database.collection
 export function productWithItemDefinition(product) {
   if (normalizeItemDefinitionRef(product.definitionRef)) return product;
   const id = `catalog:${createHash('sha256').update(String(product.id)).digest('hex').slice(0, 32)}`;
-  let definition = normalizeItemDefinition({ ...product, kind: 'shared',
+  let definition = normalizeItemDefinition({ ...product, kind: product.definitionKind === 'unique' || product.kind === 'unique' ? 'unique' : 'shared',
     description: [product.description, product.details].filter(Boolean).join('\n\n') }, { id, revision: 'draft' });
   definition = { ...definition, revision: definitionRevision(definition) };
   return { ...product, definitionRef: { id, revision: definition.revision }, definitionKind: definition.kind,

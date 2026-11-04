@@ -66,8 +66,10 @@ function getCommentDraftPayload() {
 
 function persistCommentDraft(immediate = false) {
   if (!isCommentFormOpen()) return;
+  if (typeof isCommentFormActorsReady === 'function' && !isCommentFormActorsReady()) return;
 
   const run = () => {
+    if (typeof isCommentFormActorsReady === 'function' && !isCommentFormActorsReady()) return;
     try {
       const key = getCommentDraftKey();
       if (!key) return;

@@ -117,6 +117,11 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   background: linear-gradient(#c6e3e6, #f7edc9 78%);
   contain: layout paint;
 }
+.almanach-loading__scene::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: #172344; opacity: 0;
+  animation: journey-shade var(--journey-cycle) linear infinite;
+}
 .almanach-loading__night, .almanach-loading__sunset, .almanach-loading__stars {
   position: absolute; inset: 0; pointer-events: none;
 }
@@ -156,12 +161,12 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   width: 200%;
   background-repeat: repeat-x;
   background-size: 50% 100%;
-  animation: journey-scroll 65s linear infinite, journey-tint var(--journey-cycle) linear infinite;
+  animation: journey-scroll 65s linear infinite;
 }
 .almanach-loading__hills {
   bottom: 13%; height: 100%;
   background-image: url('../../public/assets/loading-screen/hills-v1.webp');
-  animation-duration: 140s, var(--journey-cycle);
+  animation-duration: 140s;
 }
 .almanach-loading__landscape {
   bottom: 7%; height: 90%;
@@ -171,7 +176,6 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   position: absolute; inset: auto 0 0; height: 19%;
   border-top: 3px solid #63773f;
   background: linear-gradient(#dbca9d 0%, #e5d5ae 55%, #ebe1c3 56%, #b0b978 60%, #869e58 100%);
-  animation: journey-tint var(--journey-cycle) linear infinite;
 }
 .almanach-loading__road::after {
   content: ''; position: absolute; inset: 16% -100% 34% 0;
@@ -195,7 +199,6 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   --journey-leg-angle: 30deg;
   position: relative; flex: 0 0 20.8333%; width: 20.8333%; aspect-ratio: 1;
   background: url('../../public/assets/loading-screen/gawain-stand-v4.webp') center / contain no-repeat;
-  animation: journey-tint var(--journey-cycle) linear infinite;
 }
 .almanach-loading__traveller--fenrir { background-image: url('../../public/assets/loading-screen/fenrir-stand-v4.webp'); --journey-stride: 1.6s; --journey-phase: -.3s; margin-right: 10%; }
 .almanach-loading__traveller--guinevere { background-image: url('../../public/assets/loading-screen/guinevere-stand-v4.webp'); --journey-phase: -.44s; }
@@ -238,7 +241,7 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 .almanach-loading__recovery button { padding: 8px 12px; border: 1px solid #9f9b80; border-radius: 4px; background: transparent; color: var(--journey-ink); font: 12px/1.3 system-ui, sans-serif; cursor: pointer; }
 .almanach-loading__recovery button[hidden] { display: none; }
 .almanach-loading__recovery p { margin: 8px 0 0; color: var(--journey-muted); font: 11px/1.4 system-ui, sans-serif; }
-.almanach-loading[data-motion="paused"] *, .almanach-loading[data-motion="paused"] *::before, .almanach-loading[data-motion="paused"] *::after { animation-play-state: paused; }
+.almanach-loading:is([data-motion="paused"], [data-visibility="hidden"]) *, .almanach-loading:is([data-motion="paused"], [data-visibility="hidden"]) *::before, .almanach-loading:is([data-motion="paused"], [data-visibility="hidden"]) *::after { animation-play-state: paused; }
 
 @keyframes journey-scroll { to { transform: translateX(-50%); } }
 @keyframes journey-leg {
@@ -251,7 +254,7 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 @keyframes journey-cloud { from { translate: 25vw 0; } to { translate: -70vw 0; } }
 @keyframes journey-night { 0%, 42%, 100% { opacity: 0; } 54%, 88% { opacity: 1; } }
 @keyframes journey-sunset { 0%, 26%, 62%, 90%, 100% { opacity: 0; } 40%, 45% { opacity: 1; } 95% { opacity: .65; } }
-@keyframes journey-tint { 0%, 28%, 100% { filter: brightness(1) saturate(1); } 42% { filter: brightness(.88) sepia(.15); } 56%, 86% { filter: brightness(.5) saturate(.65); } 94% { filter: brightness(.85) sepia(.1); } }
+@keyframes journey-shade { 0%, 28%, 100% { opacity: 0; } 42% { opacity: .12; } 56%, 86% { opacity: .44; } 94% { opacity: .15; } }
 @keyframes journey-orbit { from { offset-distance: 50%; } to { offset-distance: 150%; } }
 
 @media (max-width: 600px) {

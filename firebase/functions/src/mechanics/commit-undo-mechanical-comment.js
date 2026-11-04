@@ -130,6 +130,9 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
     if (comment.inventoryTransaction?.group === true) {
       fail('failed-precondition', 'Dieser Beitrag belegt eine Buchung des Gruppenbestands. Korrigiere sie durch eine Gegenbuchung in der Gruppenkasse; der Beleg bleibt erhalten.');
     }
+    if (comment.sceneTrade || comment.inventoryTransaction?.trade === true) {
+      fail('failed-precondition', 'Dieser Beitrag belegt einen abgeschlossenen Handel. Korrigiere ihn durch eine Gegenbuchung; der Handelsbeleg bleibt erhalten.');
+    }
     if (!comment.serverValidatedMechanics && !comment.mechanicalAudit) {
       fail('failed-precondition', 'Dieser Beitrag ist kein serverseitig geprüfter Kampf-/Rast-Eintrag.');
     }

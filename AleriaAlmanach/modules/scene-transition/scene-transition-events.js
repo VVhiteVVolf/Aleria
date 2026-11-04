@@ -9,6 +9,13 @@ function setSceneTransitionStatus(message = '', type = 'info') {
   status.dataset.status = type;
 }
 
+function updateSceneTransitionOptionsSummary() {
+  const summary = document.querySelector('[data-scene-transition-options-summary]');
+  if (!summary) return;
+  const count = _sceneTransitionSelectedCharacterIds.size;
+  summary.textContent = `${getSceneTransitionIconPreset(_sceneTransitionSelectedIconKey).label} · ${count} ${count === 1 ? 'Figur' : 'Figuren'}`;
+}
+
 function getSceneTransitionDialogPayload() {
   const source = getCurrentSceneTransitionEndpoint();
   const targetThreadId = document.getElementById('scene-transition-target')?.value || '';
@@ -37,7 +44,7 @@ function renderSceneTransitionPreview() {
   if (!preview) return;
   const payload = getSceneTransitionDialogPayload();
   preview.innerHTML = payload.target.threadId
-    ? renderSceneTransitionBlock(payload, { hideActions: true, threadId: payload.source.threadId })
+    ? renderSceneTransitionBlock(payload, { hideActions: true, hideNavigation: true, threadId: payload.source.threadId })
     : '<div class="scene-transition-empty">Bitte zuerst eine Zielszene wählen.</div>';
 }
 
@@ -50,8 +57,8 @@ function openSceneTransitionDialog() {
   const overlay = ensureSceneTransitionDialog();
   _sceneTransitionSelectedCharacterIds = new Set(getCurrentCommentCastIds?.() || []);
   _sceneTransitionSelectedIconKey = 'general';
-  const target = overlay.querySelector('#scene-transition-target');
-  if (target) target.innerHTML = buildSceneTransitionTargetOptions();
+  initializeSceneTransitionTargetPicker(overlay, source);
+  overlay.querySelector('.scene-transition-options').open = false;
   const text = overlay.querySelector('#scene-transition-text');
   if (text) text.value = '';
   const picker = overlay.querySelector('[data-scene-transition-characters]');
@@ -60,9 +67,10 @@ function openSceneTransitionDialog() {
   if (iconPicker) iconPicker.innerHTML = buildSceneTransitionIconPicker(_sceneTransitionSelectedIconKey);
   const search = overlay.querySelector('[data-scene-transition-action="filter-characters"]');
   if (search) search.value = '';
+  updateSceneTransitionOptionsSummary();
   setSceneTransitionStatus('');
   renderSceneTransitionPreview();
-  activateDialog('scene-transition-overlay', { initialFocus: '#scene-transition-target' });
+  activateDialog('scene-transition-overlay', { initialFocus: '#scene-transition-target-search' });
 }
 
 function closeSceneTransitionDialog() {
@@ -77,6 +85,7 @@ function toggleSceneTransitionCharacter(button) {
   const selected = _sceneTransitionSelectedCharacterIds.has(id);
   button.classList.toggle('selected', selected);
   button.setAttribute('aria-pressed', String(selected));
+  updateSceneTransitionOptionsSummary();
   renderSceneTransitionPreview();
 }
 
@@ -94,6 +103,7 @@ function selectSceneTransitionIcon(button) {
     option.classList.toggle('selected', selected);
     option.setAttribute('aria-pressed', String(selected));
   });
+  updateSceneTransitionOptionsSummary();
   renderSceneTransitionPreview();
 }
 
@@ -105,7 +115,7 @@ async function submitSceneTransition() {
     return;
   }
   if (!payload.flavourText) {
-    setSceneTransitionStatus('Bitte den Flavourtext eintragen.', 'error');
+    setSceneTransitionStatus('Bitte den Erzähltext eintragen.', 'error');
     document.getElementById('scene-transition-text')?.focus();
     return;
   }
@@ -147,6 +157,7 @@ function handleSceneTransitionClick(event) {
   else if (action === 'close-dialog') closeSceneTransitionDialog();
   else if (action === 'toggle-character') toggleSceneTransitionCharacter(trigger);
   else if (action === 'select-icon') selectSceneTransitionIcon(trigger);
+  else if (action === 'select-target') selectSceneTransitionTarget(trigger);
   else if (action === 'open-target') openEntryById(trigger.dataset.transitionThreadId || '');
   else if (action === 'submit') submitSceneTransition();
   else return;
@@ -156,6 +167,7 @@ function handleSceneTransitionClick(event) {
 function handleSceneTransitionInput(event) {
   const action = event.target?.dataset?.sceneTransitionAction;
   if (action === 'filter-characters') filterSceneTransitionCharacters(event.target);
+  if (action === 'filter-targets') filterSceneTransitionTargets(event.target);
   if (action === 'update-preview') renderSceneTransitionPreview();
 }
 

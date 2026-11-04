@@ -4,6 +4,7 @@ import test from 'node:test';
 import vm from 'node:vm';
 import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from '../modules/module-store/module-store-revision.js';
 import { readFirebaseModuleEntry as decodeFirebaseModuleEntry } from '../modules/module-store/module-entry-serialization.js';
+import { createServerModuleStoreLoader } from '../modules/module-store/module-store-server-loader.js';
 
 const publishedAt = '2026-10-05T08:43:26.202Z';
 const publishedRevision = Date.parse(publishedAt);
@@ -56,6 +57,7 @@ function syncContext() {
     db: {}, MODULE_STORE_SPLIT_FORMAT: 'split-v1', MODULE_STORE_ENTRY_COLLECTION: 'module_store_entries',
     collection: (_db, path) => path,
     decodeFirebaseModuleEntry,
+    createServerModuleStoreLoader,
     _fb: { saveModuleStore: async payload => saved.push(clone(payload)), subscribeModuleStore: () => () => {} }
   });
   context.window = context;

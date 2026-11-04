@@ -226,13 +226,13 @@ function buildArchiveDashboardRecentTrail(sections = []) {
     </div>`;
 }
 
-function refreshArchiveDashboardHeroActions() {
+function refreshArchiveDashboardHeroActions(sections) {
   const current = document.querySelector('[data-dashboard-hero-actions]');
   const recent = document.querySelector('[data-dashboard-recent]');
   if (!current && !recent) return;
-  const sections = getValidSections();
-  if (current) current.outerHTML = buildArchiveDashboardHeroActions(sections);
-  if (recent) recent.innerHTML = buildArchiveDashboardRecentTrail(sections);
+  const currentSections = Array.isArray(sections) ? sections : getValidSections();
+  if (current) current.outerHTML = buildArchiveDashboardHeroActions(currentSections);
+  if (recent) recent.innerHTML = buildArchiveDashboardRecentTrail(currentSections);
 }
 
 document.addEventListener('almanach:dashboard-history-changed', refreshArchiveDashboardHeroActions);

@@ -45,6 +45,7 @@
       || isObject(comment.sceneItemEvent)
       || segments.some(segment => isObject(segment.sceneItemEvent))
       || isObject(comment.sceneInventoryTransfer)
+      || isObject(comment.sceneTrade)
       || String(comment.commentMode || '') === 'scene-inventory-transfer'
       || segments.some(segment => hasResolutionId(segment?.inventoryUse, 'usageId'))
     ) kinds.add('inventory');

@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { narrativeCommentInternals, buildNarrativeCommentDocument } from '../src/comments/commit-narrative-comment.js';
+import { narrativeCommentInternals, buildNarrativeCommentDocument, commitNarrativeCommentOperation } from '../src/comments/commit-narrative-comment.js';
+
+test('trade receipts cannot be forged through narrative comments, even as a nested segment', async () => {
+  for (const metadata of [{ sceneTrade: { lines: [] } }, { commentSegments: [{ sceneTrade: { lines: [] } }] }]) {
+    assert.equal(narrativeCommentInternals.containsPersistentMechanics(metadata), true);
+    await assert.rejects(commitNarrativeCommentOperation({ auth: { uid: 'owner', token: {} }, data: { entryId: 'scene', text: 'Handel', metadata } }, { database: {} }), /Transaktion/);
+  }
+});
 
 test('narrative comments reject nested state-changing mechanics', () => {
   assert.equal(narrativeCommentInternals.containsPersistentMechanics({

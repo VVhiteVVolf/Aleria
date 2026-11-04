@@ -16,10 +16,11 @@ export function containsPersistentMechanics(comment = {}) {
     || comment.combatStatus
     || comment.encounterTransaction
     || comment.sceneInventoryTransfer
+    || comment.sceneTrade
     || comment.lootClaim
     || comment.skillResolution
     || comment.serverValidatedMechanics
-    || segmentsOf(comment).some(segment => segment?.combatResolution || segment?.combatResolutions || segment?.inventoryUse || segment?.skillResolution)
+    || segmentsOf(comment).some(segment => segment?.combatResolution || segment?.combatResolutions || segment?.inventoryUse || segment?.skillResolution || segment?.sceneTrade)
   );
 }
 

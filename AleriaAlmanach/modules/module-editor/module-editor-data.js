@@ -1504,6 +1504,7 @@ function sanitizeTradeCatalogItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       ...(item?.canonicalKey ? { canonicalKey: String(item.canonicalKey).trim().slice(0, 240) } : {}),
+      ...(item?.definitionKind === 'unique' || item?.kind === 'unique' ? { definitionKind: 'unique' } : {}),
       ...(item?.definitionRef ? { definitionRef: { id: String(item.definitionRef.id || '').slice(0, 220), revision: String(item.definitionRef.revision || '').slice(0, 64) }, definitionCategory: String(item.definitionCategory || '').slice(0, 40) } : {}),
       id: slugify(item?.id || item?.title || `handelsgut-${index + 1}`, `handelsgut-${index + 1}`),
       category: slugify(item?.category || item?.categoryId || 'tiere', 'tiere'),

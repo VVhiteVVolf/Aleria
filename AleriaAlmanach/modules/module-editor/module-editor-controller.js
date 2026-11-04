@@ -197,10 +197,31 @@ function isModuleEditorAuthBypassed(context = _moduleEditorContext) {
   return context?.sourceKind === 'scene-comment-module';
 }
 
-function showModuleEditorForm() {
+let _moduleEditorFormRequest = 0;
+
+async function showModuleEditorForm() {
+  const request = ++_moduleEditorFormRequest;
+  const context = _moduleEditorContext;
   const authorized = canEditModuleContent() || isModuleEditorAuthBypassed();
   document.getElementById('module-editor-gate').style.display = authorized ? 'none' : 'flex';
-  document.getElementById('module-editor-body').classList.toggle('visible', authorized);
+  const body = document.getElementById('module-editor-body');
+  const loading = document.getElementById('module-editor-loading');
+  body.classList.toggle('visible', false);
+  if (loading) {
+    loading.hidden = !authorized;
+    loading.textContent = 'Szenenfiguren werden geladen …';
+  }
+  try {
+    if (authorized && context?.payload && typeof loadSceneActorData === 'function') await loadSceneActorData();
+  } catch {
+    if (request === _moduleEditorFormRequest && context === _moduleEditorContext && loading) {
+      loading.textContent = 'Szenenfiguren konnten nicht geladen werden. Bitte schließe den Editor und versuche es erneut.';
+    }
+    return false;
+  }
+  if (request !== _moduleEditorFormRequest || context !== _moduleEditorContext) return false;
+  if (loading) loading.hidden = true;
+  body.classList.toggle('visible', authorized);
   if (authorized && _moduleEditorContext?.payload) {
     if (_moduleEditorContext.restoredRecoveryDraft && _moduleEditorContext.recoveryBasePayload) {
       populateModuleEditor(_moduleEditorContext.recoveryBasePayload, _moduleEditorContext);
@@ -211,6 +232,7 @@ function showModuleEditorForm() {
       populateModuleEditor(_moduleEditorContext.payload, _moduleEditorContext);
     }
   }
+  return authorized;
 }
 
 function openModuleEditorAccessGate(onAuthorized) {
@@ -234,12 +256,11 @@ function openModuleEditor(payload, context) {
   bindModuleEditorLiveSync();
   document.getElementById('me-code').value = '';
   document.getElementById('me-code-error').style.display = 'none';
-  showModuleEditorForm();
+  showModuleEditorForm().then(ready => { if (ready) scheduleModuleEditorPreviewRefresh(); });
   const authorized = canEditModuleContent() || isModuleEditorAuthBypassed(_moduleEditorContext);
   activateDialog('module-editor-overlay', {
     initialFocus: authorized ? '#me-title, #me-json, button, input, textarea, select' : '#me-code'
   });
-  scheduleModuleEditorPreviewRefresh();
 }
 
 function closeModuleEditor() {
@@ -249,6 +270,9 @@ function closeModuleEditor() {
     return;
   }
   if (!confirmDiscardModuleEditorChanges('schließen')) return;
+  ++_moduleEditorFormRequest;
+  const loading = document.getElementById('module-editor-loading');
+  if (loading) loading.hidden = true;
   const pages = document.getElementById('me-pages');
   if (pages) globalThis.AleriaFamily?.workbench?.unmount?.({ root: pages });
   deactivateDialog('module-editor-overlay');
@@ -304,8 +328,7 @@ async function unlockModuleEditor() {
     onAuthorized?.();
     return;
   }
-  showModuleEditorForm();
-  scheduleModuleEditorPreviewRefresh();
+  if (await showModuleEditorForm()) scheduleModuleEditorPreviewRefresh();
 }
 
 

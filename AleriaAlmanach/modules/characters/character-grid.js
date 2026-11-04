@@ -319,6 +319,8 @@ function renderCharGrid() {
   if (typeof renderCharacterRegisterViewToolbar === 'function') {
     renderCharacterRegisterViewToolbar(grid);
   }
+  if (typeof renderCharacterRegisterGenealogyReadiness === 'function'
+    && renderCharacterRegisterGenealogyReadiness(grid)) return;
 
   if (_activeCharTab === 'Alle' && _hiddenBuiltinCharacterIds.size) {
     const restoreBtn = document.createElement('button');

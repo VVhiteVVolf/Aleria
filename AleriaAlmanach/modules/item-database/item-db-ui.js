@@ -14,9 +14,10 @@ function itemDbFormatPriceAsCopper(item) {
   return window.AleriaItemRegister?.formatPrice(item) || item.price || '';
 }
 
-// One native module entry in both development and the copied production scripts.
-// Mixing a bundled entry with this classic import would create two live stores.
-itemDbEnsureGlobalSync().catch(error => console.warn('Das Güterregister konnte nicht geladen werden.', error));
+// Keep the regional deep link working without loading the inventory catalogue
+// and its online subscriptions for every visit to the homepage.
+import('../item-register/item-register-route-entry.js?v=20261104-startup-v1').then(module => module.watchItemRegisterRoute())
+  .catch(error => console.warn('Der Register-Direktlink konnte nicht vorbereitet werden.', error));
 document.addEventListener('click', event => {
   if (!event.target.closest('[data-item-db-action="open"]')) return;
   event.preventDefault();

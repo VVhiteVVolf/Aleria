@@ -24,6 +24,7 @@ service cloud.firestore {
         || (data.keys().hasAny(['combatStatus']) && data.combatStatus != null)
         || (data.keys().hasAny(['inventoryTransaction']) && data.inventoryTransaction != null)
         || (data.keys().hasAny(['sceneInventoryTransfer']) && data.sceneInventoryTransfer != null)
+        || (data.keys().hasAny(['sceneTrade']) && data.sceneTrade != null)
         || (data.keys().hasAny(['sceneRest']) && data.sceneRest != null)
         || (data.keys().hasAny(['sceneRegeneration']) && data.sceneRegeneration != null)
         || (data.keys().hasAny(['sceneDiceRoll']) && data.sceneDiceRoll != null)
@@ -46,6 +47,14 @@ service cloud.firestore {
     function canonicalInventory(data) {
       return data.get('inventory', null) is map && data.inventory.get('definitionSchemaVersion', 0) == 1;
     }
+    function merchantOwnedCreature(data) {
+      return data.get('itemOrigin', null) is map
+        && (data.itemOrigin.get('disposition', '') == 'sold' || data.itemOrigin.get('ownerMerchantId', '') != '');
+    }
+    function preservesMerchantCreatureBinding() {
+      return (!merchantOwnedCreature(resource.data) && !merchantOwnedCreature(request.resource.data))
+        || (isModerator() && request.resource.data.get('itemOrigin', null) == resource.data.get('itemOrigin', null));
+    }
 
     function pureTimeMarker(data) {
       return data.get('sceneTimeEvent', null) is map
@@ -58,6 +67,7 @@ service cloud.firestore {
         && data.get('combatStatus', null) == null
         && data.get('inventoryTransaction', null) == null
         && data.get('sceneInventoryTransfer', null) == null
+        && data.get('sceneTrade', null) == null
         && data.get('sceneDiceRoll', null) == null
         && data.get('skillResolution', null) == null
         && data.get('commentSegments', []) in [null, []];
@@ -118,11 +128,14 @@ service cloud.firestore {
 
     match /creatures/{recordId} {
       allow read: if true;
-      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && !canonicalInventory(request.resource.data);
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && !canonicalInventory(request.resource.data)
+        && !merchantOwnedCreature(request.resource.data);
       allow update: if signedIn()
+        && preservesMerchantCreatureBinding()
         && (!(canonicalInventory(resource.data) || canonicalInventory(request.resource.data)) || !changesCombatRelevantProfile())
         && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId));
       allow delete: if signedIn() && !combatProfileLocked('creatures', recordId)
+        && (!merchantOwnedCreature(resource.data) || isModerator())
         && (resource.data.get('itemOrigin', null) == null || resource.data.itemOrigin.get('ownerCharacterId', '') == '');
     }
 
@@ -174,6 +187,12 @@ service cloud.firestore {
       allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
       allow write: if false;
     }
+    match /scene_trade_transactions/{documentId} {
+      allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
+      allow write: if false;
+    }
+    // The callable exposes only the public sold-item projection for a valid merchant.
+    match /item_merchant_sold/{documentId} { allow read, write: if false; }
 
     match /item_database/{documentId} {
       allow read: if true;

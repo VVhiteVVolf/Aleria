@@ -17,10 +17,7 @@ let _hiddenBuiltinCharacterIds = new Set();
 let _charOrganizeMode = false;
 let _collapsedCharGroups = new Set();
 
-let charactersChangedDispatchQueued = false;
-
 function emitCharactersChanged() {
-  charactersChangedDispatchQueued = false;
   document.dispatchEvent(new CustomEvent('aleria:characters-changed', {
     detail: { characters: getAllCharacterRecords().map(cloneCharacterRecord) }
   }));
@@ -28,12 +25,6 @@ function emitCharactersChanged() {
 
 function dispatchCharactersChanged() {
   if (typeof document?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return;
-  if (document.readyState !== 'complete' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-    if (charactersChangedDispatchQueued) return;
-    charactersChangedDispatchQueued = true;
-    window.addEventListener('load', emitCharactersChanged, { once: true });
-    return;
-  }
   emitCharactersChanged();
 }
 
@@ -53,6 +44,12 @@ function loadLocalCharacterDatabaseState() {
 }
 
 function loadCharacters() {
+  if (_charactersLoaded && _charTabsLoaded) {
+    // Archive navigation recreates the host even when records remain cached.
+    renderCharSubtabs();
+    renderCharGrid();
+    return Promise.resolve();
+  }
   if (!_characterLoadRequest) {
     _characterLoadRequest = loadCharacterRegisterData().finally(() => { _characterLoadRequest = null; });
   }

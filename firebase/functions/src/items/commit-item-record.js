@@ -11,6 +11,7 @@ import { synchronizeEquipmentFromInventory } from '../generated/character-equipm
 import { readItemDefinition, prepareUniqueItemClaims } from './item-definition-repository.js';
 import { withProtectedRecordRevisions } from '../mechanics/protected-record-revisions.js';
 import { applyExplicitInventoryLoadout, selectiveItemInventoryUpdate, withItemInventoryRevisions } from './item-inventory-update.js';
+import { assertCreatureMerchantWrite } from './creature-merchant-guard.js';
 
 const cleanId = value => {
   const id = String(value || '');
@@ -78,6 +79,7 @@ export async function commitItemRecordOperation(database, auth, input = {}) {
     if (before && before.ownerUid && before.ownerUid !== auth.uid && !canModerate) throw new HttpsError('permission-denied', 'Nur der Besitzer oder die Spielleitung kann dieses Inventar speichern.');
     const lock = await transaction.get(database.doc(`combat_profile_locks/${kind}/records/${id}`));
     const { ownerUid, createdBy, ...incoming } = input.data || {};
+    if (kind === 'creatures') assertCreatureMerchantWrite(before, incoming, canModerate);
     const options = input.options || {};
     if (shouldBlockCharacterWriteDuringEncounter(incoming, lock.data()?.activeEncounterKeys || [])) throw new HttpsError('failed-precondition', 'Das Inventar und der Kampfbogen sind während eines aktiven Kampfes geschützt.');
     const labels = kind === 'creatures' ? { combatProfile: 'Kampfprofil', inventory: 'Inventar', loot: 'Beute', biography: 'Biographie' } : undefined;

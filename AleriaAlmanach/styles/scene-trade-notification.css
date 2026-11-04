@@ -1,0 +1,19 @@
+/* Trade receipts share the timeline, but leave the roleplay visually dominant. */
+.scene-trade-notice{margin:.25rem 0;padding:.15rem 0;color:var(--ink-faded);font-size:.66rem;line-height:1.45}
+.scene-trade-notice>details>summary{display:flex;align-items:center;justify-content:center;gap:.4rem;list-style:none;cursor:pointer;padding:.25rem .3rem}
+.scene-trade-notice>details>summary::-webkit-details-marker{display:none}
+.scene-trade-notice>details>summary:focus-visible{outline:2px solid var(--gold-dark);outline-offset:2px;border-radius:3px}
+.scene-trade-mini-avatars{display:inline-flex;align-items:center;flex:0 0 auto}
+.scene-trade-mini-avatar{display:inline-grid;place-items:center;width:23px;height:23px;overflow:hidden;border:1px solid rgba(139,105,20,.35);border-radius:50%;background:var(--parchment-dark);color:var(--gold-dark);font-size:11px}
+.scene-trade-mini-avatar+.scene-trade-mini-avatar{margin-left:-4px}
+.scene-trade-mini-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.scene-trade-notice-text{min-width:0;overflow-wrap:anywhere}
+.scene-trade-notice-chevron{flex:0 0 auto;color:var(--gold-dark)}
+.scene-trade-notice details[open]>summary>.scene-trade-notice-chevron{transform:rotate(180deg)}
+.scene-trade-proof{margin:.3rem .6rem .5rem 2.6rem;padding:.2rem .65rem;border-left:1px solid rgba(139,105,20,.25);font-size:.65rem}
+.scene-trade-proof-lines{list-style:none;padding:0;margin:0}
+.scene-trade-proof-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem .65rem;padding:.35rem 0}
+.scene-trade-proof-lines strong{font-weight:600;color:var(--ink)}
+.scene-trade-proof-lines small{grid-column:1/-1;font:inherit;color:var(--ink-faded)}
+@media(max-width:600px){.scene-trade-notice>details>summary{align-items:flex-start;justify-content:flex-start}.scene-trade-proof{margin-left:.7rem}.scene-trade-proof-lines li{grid-template-columns:1fr}.scene-trade-proof-lines small{grid-column:auto}}
+@media(pointer:coarse){.scene-trade-notice>details>summary{min-height:44px;align-items:center}}

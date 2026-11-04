@@ -1,6 +1,27 @@
 ﻿// Comment form dialog lifecycle.
 let _commentFormInitialRenderToken = 0;
 
+function isCommentFormActorsReady() {
+  return document.getElementById('comment-form-overlay')?.dataset.actorLoading !== 'true';
+}
+
+function setCommentFormActorsLoading(loading) {
+  const overlay = document.getElementById('comment-form-overlay');
+  if (!overlay) return;
+  overlay.dataset.actorLoading = String(loading);
+  overlay.setAttribute('aria-busy', String(loading));
+  overlay.querySelectorAll('.cf-mode-toggle, .comment-compose-layout').forEach(node => { node.inert = loading; });
+  document.getElementById('cf-submit').disabled = loading;
+  let status = overlay.querySelector('[data-comment-actor-loading]');
+  const layout = overlay.querySelector('.comment-compose-layout');
+  if (!status && layout) {
+    status = document.createElement('p'); status.dataset.commentActorLoading = '';
+    status.className = 'comment-form-draft'; status.setAttribute('role', 'status');
+    status.textContent = 'Figuren werden geladen …'; layout.before(status);
+  }
+  if (status) status.hidden = !loading;
+}
+
 function scheduleCommentFormInitialRender(token) {
   const scheduleFrame = typeof requestAnimationFrame === 'function'
     ? requestAnimationFrame
@@ -15,9 +36,12 @@ function scheduleCommentFormInitialRender(token) {
   }, 0));
 }
 
-function openCommentForm() {
+async function openCommentForm(options = {}) {
   const initialRenderToken = ++_commentFormInitialRenderToken;
   const thread = getCurrentCommentThread();
+  const currentThreadId = () => typeof getCurrentCommentThreadId === 'function'
+    ? getCurrentCommentThreadId() : String(getCurrentCommentThread()?.threadId || '');
+  const threadId = currentThreadId();
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _commentInsertAfterId = null;
   _portraitUrl = null;
@@ -60,24 +84,41 @@ function openCommentForm() {
   if (typeof refreshCurrentModuleCommenterHighlights === 'function') {
     refreshCurrentModuleCommenterHighlights();
   }
-  restoreCommentDraft({ render: false });
   document.getElementById('cf-char-picker')?.replaceChildren();
   document.getElementById('cf-segment-list')?.replaceChildren();
   document.getElementById('cf-preview')?.replaceChildren();
   setCommentFormCounter();
-  activateDialog('comment-form-overlay', { initialFocus: '#cf-char-search' });
+  setCommentFormActorsLoading(true);
+  activateDialog('comment-form-overlay', { initialFocus: '[data-action="close-comment-form"]' });
   if (typeof initCommentPreviewSplitter === 'function') initCommentPreviewSplitter();
   if (typeof applyCommentPreviewLayout === 'function') applyCommentPreviewLayout();
-  scheduleCommentFormInitialRender(initialRenderToken);
+  try {
+    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+    if (initialRenderToken !== _commentFormInitialRenderToken || !isCommentFormOpen() || threadId !== currentThreadId()) return false;
+    restoreCommentDraft({ render: false });
+    setCommentFormActorsLoading(false);
+    options.afterReady?.();
+    scheduleCommentFormInitialRender(initialRenderToken);
+    return true;
+  } catch (error) {
+    if (initialRenderToken !== _commentFormInitialRenderToken || !isCommentFormOpen() || threadId !== currentThreadId()) return false;
+    const message = document.getElementById('cf-error');
+    message.textContent = error.message || 'Figuren konnten nicht geladen werden. Bitte das Fenster erneut öffnen.';
+    message.setAttribute('role', 'alert');
+    const overlay = document.getElementById('comment-form-overlay');
+    overlay.setAttribute('aria-busy', 'false');
+    const status = overlay.querySelector('[data-comment-actor-loading]'); if (status) status.hidden = true;
+    message.style.display = 'block'; return false;
+  }
 }
 
 function openCommentFormAfter(commentId) {
-  openCommentForm();
-  _commentInsertAfterId = String(commentId || '');
-  const title = document.getElementById('comment-form-title');
-  if (title) title.textContent = '*  Nachträglich antworten  *';
-  const note = document.getElementById('cf-draft-note');
-  if (note) note.textContent = 'Antwort wird an der gewählten Stelle eingefügt';
+  return openCommentForm({ afterReady() {
+    _commentInsertAfterId = String(commentId || '');
+    const title = document.getElementById('comment-form-title');
+    if (title) title.textContent = '*  Nachträglich antworten  *';
+    showCommentDraftNote('Antwort wird an der gewählten Stelle eingefügt');
+  } });
 }
 
 // The comment composer owns its draft. Challenge features hand over a target;
@@ -85,14 +126,15 @@ function openCommentFormAfter(commentId) {
 function openCommentFormForSkillChallenge(challenge, skillId = '') {
   const settings = window.AleriaSkillChecks?.getChallengeAttemptSettings?.(challenge, skillId);
   if (!settings) return;
-  openCommentForm();
-  setCommentMode('charakter', { render: false, persist: false });
-  const segment = makeCommentSegment(settings.kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', settings);
-  const emptyDefault = _commentSegments.length === 1 && !_commentSegments[0].text.trim() && _commentSegments[0].mechanicMode === 'normal';
-  if (emptyDefault) _commentSegments = [segment];
-  else _commentSegments.push(segment);
-  _commentKind = settings.kind;
-  persistCommentDraft();
+  return openCommentForm({ afterReady() {
+    setCommentMode('charakter', { render: false, persist: false });
+    const segment = makeCommentSegment(settings.kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', settings);
+    const emptyDefault = _commentSegments.length === 1 && !_commentSegments[0].text.trim() && _commentSegments[0].mechanicMode === 'normal';
+    if (emptyDefault) _commentSegments = [segment];
+    else _commentSegments.push(segment);
+    _commentKind = settings.kind;
+    persistCommentDraft();
+  } });
 }
 
 function closeCommentForm() {

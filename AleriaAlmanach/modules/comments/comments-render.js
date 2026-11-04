@@ -230,6 +230,13 @@ function renderCommentBubble(c, idx) {
   if (window.AleriaSceneRest?.isComment?.(c)) {
     return window.AleriaSceneRest.renderComment(c, idx);
   }
+  if (window.AleriaSceneTrade?.isComment?.(c)) {
+    return window.AleriaSceneTrade.renderComment(c);
+  }
+  if (c.sceneTrade || c.sceneInventoryTransfer?.presentation === 'compact') {
+    // Keep saved narration correct while ES-module dependencies are loading.
+    return `<article class="scene-trade-notice" data-scene-trade-pending data-comment-id="${escapeHtml(c.id || '')}">${escapeHtml(c.text || 'Inventarvorgang abgeschlossen.')}</article>`;
+  }
   if (typeof isSceneInventoryTransferComment === 'function' && isSceneInventoryTransferComment(c)) {
     return renderSceneInventoryTransferComment(c, idx);
   }

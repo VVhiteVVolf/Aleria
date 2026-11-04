@@ -2,9 +2,34 @@
 (function initializeSceneInventoryEvents() {
 let submitting = false;
 let pending = null;
+async function openTradeFromInventory() {
+  const dialog = document.getElementById('scene-inventory-overlay');
+  const threadId = dialog?.dataset?.sceneInventoryThreadId || getCurrentCommentThreadId();
+  if (!threadId) return setSceneInventoryStatus('Kein aktiver Szenen-Thread gefunden.', 'error');
+  const actorCharacterId = document.getElementById('scene-transfer-giver')?.value || '';
+  closeSceneInventoryDialog();
+  try {
+    const { openSceneTradeDialog } = await import('../scene-trade/scene-trade-controller.js');
+    await openSceneTradeDialog({ threadId, actorCharacterId, characters: getSceneInventoryCharacters(),
+      onCommitted: async ({ result }) => {
+        for (const character of result.characters || []) {
+          const index = _characters.findIndex(existing => existing.id === character.id);
+          if (index >= 0) _characters[index] = character;
+        }
+        renderCharGrid();
+        // Existing live comments receive the receipt. Preserve this scene's
+        // page/scroll and never open or scroll a different scene after checkout.
+        if (getCurrentCommentThreadId() === threadId) await loadCommentsIntoPage(threadId, true);
+      }
+    });
+  } catch (error) {
+    openSceneInventoryDialog(threadId);
+    setSceneInventoryStatus(error?.message || 'Der Handel konnte nicht geöffnet werden.', 'error');
+  }
+}
 async function submitSceneInventoryTransfer() {
   if (submitting) return;
-  const threadId = getCurrentCommentThreadId();
+  const threadId = document.getElementById('scene-inventory-overlay')?.dataset?.sceneInventoryThreadId || getCurrentCommentThreadId();
   const kind = document.getElementById('scene-transfer-kind')?.value || 'money';
   const input = {
     giverId: document.getElementById('scene-transfer-giver')?.value || '',
@@ -72,8 +97,7 @@ async function submitSceneInventoryTransfer() {
     pending = null;
     try {
       closeSceneInventoryDialog();
-      requestCommentAutoScroll(threadId);
-      await loadCommentsIntoPage(threadId, true, { page: 'last' });
+      await loadCommentsIntoPage(threadId, true);
       renderCharGrid();
     } catch (refreshError) {
       console.warn('Saved inventory transfer could not refresh its presentation:', refreshError);
@@ -95,7 +119,7 @@ document.addEventListener('click', event => {
   if (!trigger) return;
   event.preventDefault();
   const action = trigger.dataset.sceneInventoryAction;
-  if (action === 'open') openSceneInventoryDialog();
+  if (action === 'open') openSceneInventoryDialog(trigger.dataset.commentThreadId || getCurrentCommentThreadId());
   if (action === 'close') closeSceneInventoryDialog();
   if (action === 'submit') return submitSceneInventoryTransfer();
   if (action === 'pick-register-item') {
@@ -144,6 +168,7 @@ document.addEventListener('input', event => {
 });
 document.addEventListener('change', event => {
   if (!event.target?.closest?.('#scene-inventory-overlay')) return;
+  if (event.target.id === 'scene-transfer-kind' && event.target.value === 'scene-trade') return openTradeFromInventory();
   refreshSceneInventoryDialog({ refreshItems: event.target?.id === 'scene-transfer-giver' });
 });
 

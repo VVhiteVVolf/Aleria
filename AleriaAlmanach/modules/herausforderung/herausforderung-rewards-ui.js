@@ -101,7 +101,7 @@ function mountPickers(binding) {
   }
 }
 
-function refreshRegisterTemplates(root) {
+export function refreshHerausforderungRewardTemplates(root) {
   for (const picker of root.querySelectorAll('[data-hr-template-picker]')) refreshRegisterTemplatePicker(picker, templates());
 }
 
@@ -111,7 +111,7 @@ export function mountHerausforderungRewardEditor(root, { approaches, onChange, g
   bindings.set(root, binding);
   mountPickers(binding);
   if (previous) return;
-  document.addEventListener('aleria:item-register-records', () => refreshRegisterTemplates(root));
+  document.addEventListener('aleria:item-register-records', () => refreshHerausforderungRewardTemplates(root));
   root.addEventListener('click', event => {
     const trigger = event.target.closest('[data-hr-action]');
     if (!trigger || root.getAttribute('aria-busy') === 'true') return;

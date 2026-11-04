@@ -60,6 +60,17 @@ Sequenzprüfung verwirft ältere asynchrone Ladevorgänge, sobald eine neuere
 Serverrevision empfangen wurde. Direkte Modul-Lesezugriffe verwenden die
 Server-Varianten des vorhandenen Firebase-SDKs.
 
+`module-store-server-loader.js` teilt den bestätigten Split-Lesevorgang zwischen
+Startabfrage, gleichzeitigem Zugriff und dem ersten Live-Snapshot. Der Schlüssel
+enthält die positive Modulrevision, das kanonische Manifest und den vollständigen
+Serverzeitstempel einschließlich Nanosekunden. Die Konfiguration wird weiterhin
+frisch vom Server gelesen beziehungsweise bestätigt; nur die dazugehörige bereits
+bestätigte Eintragsabfrage wird im Arbeitsspeicher wiederverwendet. Eine geänderte
+Konfiguration, fehlende Revision, ein fehlendes Dokument oder ein Altformat
+verhindert die Wiederverwendung. Fehlgeschlagene Abfragen bleiben wiederholbar;
+ein älterer Fehler verwirft keine neuere laufende Abfrage. Der bestehende
+Sequenz- und Abmeldeschutz des Live-Abonnements bleibt maßgeblich.
+
 Eine laufende Inline-Bearbeitung erhält ihren Entwurf und merkt sich die
 neueste Online-Fassung. Speichern, Abbrechen und Schließen melden das Ende
 über `almanach:inline-module-edit-ended`; danach wird der neueste Online-Stand
@@ -71,7 +82,7 @@ Die kompakte, grün pulsierende Online-Anzeige öffnet ihre Details erst nach
 einem bewussten Klick oder der Tastaturbetätigung ihres echten Buttons.
 Fehler bleiben erkennbar; reduzierte Bewegung wird berücksichtigt.
 
-Prüfung: `node --test tests/module-store-revision.test.mjs` und
+Prüfung: `node --test --experimental-test-isolation=none tests/module-store-revision.test.mjs tests/module-store-online-source.test.mjs tests/module-store-server-loader.test.mjs tests/firebase-module-storage.test.mjs` und
 `node tests/module-store-local.browser.mjs`. Der Browsertest benötigt Playwright;
 optional setzen `PLAYWRIGHT_MODULE` und `PLAYWRIGHT_EXECUTABLE` dessen Modulpfad
 und den Browser. Er arbeitet mit isolierten Browserprofilen und blockiert alle

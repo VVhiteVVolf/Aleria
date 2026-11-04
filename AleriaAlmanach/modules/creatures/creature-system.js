@@ -238,10 +238,7 @@ async function materializeBuiltinCreature(id) {
   return run;
 }
 
-let changedDispatchQueued = false;
-
 function emitChanged() {
-  changedDispatchQueued = false;
   document.dispatchEvent(new CustomEvent('aleria:creatures-changed', {
     detail: { creatures: getSceneActors() }
   }));
@@ -249,12 +246,6 @@ function emitChanged() {
 
 function dispatchChanged() {
   if (typeof document?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return;
-  if (document.readyState !== 'complete' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-    if (changedDispatchQueued) return;
-    changedDispatchQueued = true;
-    window.addEventListener('load', emitChanged, { once: true });
-    return;
-  }
   emitChanged();
 }
 
@@ -1144,11 +1135,18 @@ function handleCommittedCreatureCombatProfile(event) {
   dispatchChanged();
 }
 
-export async function loadCreatures(options = {}) {
-  if (state.loading || (state.loaded && !options.force)) {
-    renderLibrary();
-    return state.creatures;
-  }
+let creatureLoadRequest = null;
+let creaturesRequested = false;
+
+export function loadCreatures(options = {}) {
+  creaturesRequested = true;
+  if (creatureLoadRequest) return creatureLoadRequest;
+  if (state.loaded && !options.force) return Promise.resolve(state.creatures);
+  creatureLoadRequest = loadCreatureRecords().finally(() => { creatureLoadRequest = null; });
+  return creatureLoadRequest;
+}
+
+async function loadCreatureRecords() {
   state.loading = true;
   renderLibrary();
   try {
@@ -1176,7 +1174,7 @@ export function getSceneActors() {
 
 function mount() {
   renderLibrary();
-  loadCreatures();
+  return loadCreatures();
 }
 
 document.addEventListener('click', handleClick);
@@ -1194,10 +1192,11 @@ document.addEventListener('aleria:item-register-records', event => {
   renderLibrary();
   dispatchChanged();
 });
-window.addEventListener('fb-ready', () => loadCreatures({ force: true }));
+window.addEventListener('fb-ready', () => { if (creaturesRequested) loadCreatures({ force: true }); });
 
 window.AleriaCreatures = Object.freeze({
   mount,
+  ensureLoaded: loadCreatures,
   reload: () => loadCreatures({ force: true }),
   getAll: () => state.creatures.map(clone),
   getById: id => clone(state.creatures.find(item => item.id === id) || null),
@@ -1206,6 +1205,3 @@ window.AleriaCreatures = Object.freeze({
   duplicate: duplicateCreature,
   materializeBuiltin: materializeBuiltinCreature
 });
-
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
-else mount();

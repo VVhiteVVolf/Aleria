@@ -58,7 +58,12 @@ function afterModalPageRender(entry, page, pageIndex, scope) {
   resetScroll();
   const thread = getCommentThreadForPage(page, entry, pageIndex);
   consumeCommentAutoScrollRequest(thread);
-  if (thread) loadCommentsIntoPage(thread.threadId);
+  if (thread) {
+    if (typeof loadSceneActorData === 'function') loadSceneActorData().catch(error => {
+      if (typeof showAppStatus === 'function') showAppStatus(error?.message || 'Szenenfiguren konnten nicht geladen werden.', 'error');
+    });
+    loadCommentsIntoPage(thread.threadId);
+  }
   else if (typeof stopCommentLiveUpdates === 'function') stopCommentLiveUpdates();
   syncCurlForRenderedPage(entry);
   if (typeof mountRegisteredModuleTemplatePage === 'function') {

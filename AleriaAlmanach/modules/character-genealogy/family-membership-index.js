@@ -1,5 +1,5 @@
 import { createWorldPersonId } from './genealogy-mapping.js?v=20260903-character-register-v2';
-import { listGenealogyFamilies } from './genealogy-source-repository.js';
+import { listGenealogyFamilies } from './genealogy-source-repository.js?v=20260903-genealogy-portrait-sync-v1';
 
 function cleanText(value) {
   return String(value || '').trim();

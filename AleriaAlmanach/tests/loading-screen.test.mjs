@@ -4,13 +4,14 @@ import { setMaxListeners } from 'node:events';
 import test from 'node:test';
 import vm from 'node:vm';
 import { createLoadingScreenSound } from '../modules/loading-screen/loading-screen-sound.js';
-import { LOADING_SCREEN_RIGS } from '../modules/loading-screen/loading-screen-walk.js';
+import { LOADING_SCREEN_RIGS, mountLoadingScreenWalk } from '../modules/loading-screen/loading-screen-walk.js';
 
 const source = readFileSync(new URL('../modules/loading-screen/loading-screen.js', import.meta.url), 'utf8');
 const settle = () => new Promise(resolve => setImmediate(resolve));
 class Controller extends AbortController { constructor() { super(); setMaxListeners(30, this.signal); } }
 
-function screen({ reducedMotion = false, artFails = false, withSound = false, deferSound = false } = {}) {
+function screen({ reducedMotion = false, artFails = false, withSound = false, deferSound = false,
+  withTravellers = false, hungWalk = false, hidden = false } = {}) {
   const window = new EventTarget();
   const document = new EventTarget();
   const timers = new Map();
@@ -29,7 +30,7 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
     element.remove = () => { element.removed = true; };
     return element;
   }
-  const root = node({ loadingImages: 'one.webp two.webp' });
+  const root = node();
   if (withSound) root.dataset.loadingSound = 'music.mp3';
   root.hidden = true;
   const content = node();
@@ -37,12 +38,13 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
   content.querySelector = () => target;
   const names = ['status', 'detail', 'hint', 'recovery', 'enter', 'pause', 'continue', 'progress', 'sound', 'sound-control'];
   const fields = Object.fromEntries(names.map(name => [name, node(['enter', 'pause', 'continue', 'sound'].includes(name) ? { loadingAction: name } : {})]));
-  const steps = ['page', 'shell', 'modules', 'characters', 'creatures', 'art'].map(name => node({ loadingStep: name }));
+  const steps = ['shell', 'modules'].map(name => node({ loadingStep: name }));
   for (const field of [...Object.values(fields), ...steps]) field.parent = root;
-  root.querySelector = selector => selector === 'progress' ? fields.progress
+  root.querySelector = selector => selector === '[data-loading-traveller]' ? withTravellers ? {} : null : selector === 'progress' ? fields.progress
     : fields[selector.match(/data-loading-(?:action="([^"]+)"|([^\]]+))/)?.slice(1).find(Boolean)] ?? null;
   root.querySelectorAll = selector => selector === 'button' ? [fields.pause, fields.sound, fields.enter, fields.continue] : steps;
   document.readyState = 'loading';
+  document.hidden = hidden;
   document.documentElement = node();
   document.querySelector = selector => selector === '[data-loading-screen]' ? root : content;
   document.activeElement = node();
@@ -62,8 +64,11 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
     } });
     if (!deferSound) finishSound();
   });
-  const context = vm.createContext({ window, document, AbortController: Controller, Image, console, loadSoundModule });
-  const runnable = withSound ? source.replace(/import\('\.\/loading-screen-sound\.js\?[^']+'\)/, 'loadSoundModule()') : source;
+  let walkImports = 0, walkMounts = 0;
+  const loadWalkModule = async () => { walkImports++; return { mountLoadingScreenWalk() { walkMounts++; return hungWalk ? new Promise(() => {}) : Promise.resolve(); } }; };
+  const context = vm.createContext({ window, document, AbortController: Controller, Image, console, loadSoundModule, loadWalkModule });
+  let runnable = withSound ? source.replace(/import\('\.\/loading-screen-sound\.js\?[^']+'\)/, 'loadSoundModule()') : source;
+  runnable = runnable.replace(/import\('\.\/loading-screen-walk\.js\?[^']+'\)/, 'loadWalkModule()');
   vm.runInContext(runnable, context);
   function emit(where, type, detail) { where.dispatchEvent(new CustomEvent(type, { detail })); }
   function mount() { document.readyState = 'interactive'; emit(document, 'readystatechange'); }
@@ -75,16 +80,17 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
     emit(window, 'almanach:initial-modules-settled', { offline });
     emit(document, 'aleria:characters-changed'); emit(document, 'aleria:creatures-changed');
   }
-  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack, finishSound: () => finishSound() };
+  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack,
+    walkImports: () => walkImports, walkMounts: () => walkMounts, finishSound: () => finishSound() };
 }
 
-test('the loading screen waits for all real milestones and only exits on user input', async () => {
+test('the loading screen waits for archive and first module settlement and only exits on user input', async () => {
   const ui = screen(); ui.mount(); await settle();
   assert.equal(ui.content.inert, true);
   assert.equal(ui.fields.enter.disabled, true);
   ui.click(); assert.notEqual(ui.root.dataset.state, 'leaving');
   ui.ready();
-  assert.equal(ui.fields.progress.value, 6);
+  assert.equal(ui.fields.progress.value, 2); assert.equal(ui.fields.progress.max, 2);
   assert.equal(ui.root.dataset.state, 'ready');
   assert.equal(ui.root.removed, undefined);
   ui.click(); assert.equal(ui.root.dataset.state, 'leaving');
@@ -98,8 +104,8 @@ test('the loading screen waits for all real milestones and only exits on user in
 
 test('early readiness signals and repeated signals cannot be lost or count twice', async () => {
   const ui = screen(); ui.ready(); ui.mount(); await settle();
-  assert.equal(ui.fields.progress.value, 6);
-  ui.ready(); assert.equal(ui.fields.progress.value, 6);
+  assert.equal(ui.fields.progress.value, 2);
+  ui.ready(); assert.equal(ui.fields.progress.value, 2);
 });
 
 test('pause does not dismiss the ready screen, and reduced motion starts paused', async () => {
@@ -131,10 +137,47 @@ test('startup errors offer recovery and do not masquerade as a successful load',
   ui.click(); assert.equal(ui.root.removed, undefined);
 });
 
-test('offline data and decorative image errors do not deadlock the application', async () => {
+test('offline settlement remains explicit and does not deadlock the application', async () => {
   const ui = screen({ artFails: true }); ui.mount(); await settle(); ui.ready(true);
   assert.equal(ui.root.dataset.state, 'ready');
   assert.match(ui.fields.detail.textContent, /Online-Daten/);
+});
+
+test('entry is ready before window.load and optional figure or creature events', async () => {
+  const ui = screen(); ui.mount(); await settle();
+  ui.emit(ui.window, 'almanach:app-ready');
+  assert.equal(ui.fields.progress.value, 1); assert.equal(ui.fields.enter.disabled, true);
+  ui.emit(ui.document, 'aleria:characters-changed'); ui.emit(ui.document, 'aleria:creatures-changed');
+  assert.equal(ui.fields.progress.value, 1);
+  ui.emit(ui.window, 'almanach:initial-modules-settled', { offline: false });
+  assert.equal(ui.document.readyState, 'interactive');
+  assert.equal(ui.fields.progress.value, 2); assert.equal(ui.fields.enter.disabled, false);
+  ui.click(); ui.tick(380); assert.equal(ui.content.inert, false);
+});
+
+test('a decorative rig request that never finishes cannot block a ready archive', async () => {
+  const ui = screen({ withTravellers: true, hungWalk: true }); ui.mount(); await settle();
+  assert.equal(ui.walkMounts(), 1);
+  ui.emit(ui.window, 'almanach:app-ready'); ui.emit(ui.window, 'almanach:initial-modules-settled');
+  assert.equal(ui.root.dataset.state, 'ready'); assert.equal(ui.fields.enter.disabled, false);
+  ui.click(); ui.tick(380); assert.equal(ui.root.removed, true);
+});
+
+test('reduced motion uses static artwork without importing the rig until explicitly resumed', async () => {
+  const ui = screen({ reducedMotion: true, withTravellers: true }); ui.mount(); await settle();
+  assert.equal(ui.walkImports(), 0); assert.equal(ui.root.dataset.motion, 'paused');
+  ui.click(ui.fields.pause); await settle();
+  assert.equal(ui.walkImports(), 1); assert.equal(ui.walkMounts(), 1); assert.equal(ui.root.dataset.motion, 'playing');
+});
+
+test('hidden tabs pause movement without changing the users animation choice', async () => {
+  const ui = screen({ hidden: true, withTravellers: true }); ui.mount(); await settle();
+  assert.equal(ui.walkImports(), 0); assert.equal(ui.root.dataset.visibility, 'hidden'); assert.equal(ui.root.dataset.motion, 'playing');
+  ui.document.hidden = false; ui.emit(ui.document, 'visibilitychange'); await settle();
+  assert.equal(ui.walkImports(), 1); assert.equal(ui.root.dataset.visibility, 'visible');
+  ui.click(ui.fields.pause); ui.document.hidden = true; ui.emit(ui.document, 'visibilitychange');
+  ui.document.hidden = false; ui.emit(ui.document, 'visibilitychange');
+  assert.equal(ui.root.dataset.motion, 'paused');
 });
 
 test('sound starts on mounting, retries on loading interactions, and receives the entry stop without restarting', async () => {
@@ -220,6 +263,28 @@ test('blocked autoplay leaves a working music button and can start after a gestu
   env.audio.blocked = false; env.sound.toggle(); await settle(); env.advance(6000);
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, .55);
+  env.sound.destroy();
+});
+
+test('soundtrack has no eager source and a known autoplay prohibition avoids requesting it', async () => {
+  const env = soundEnvironment();
+  env.platform.navigator = { getAutoplayPolicy: () => 'disallowed', userActivation: { isActive: false } };
+  assert.equal(env.audio.preload, 'none'); assert.equal(env.audio.src, undefined);
+  assert.equal(await env.sound.tryAutoplay(), false);
+  assert.equal(env.audio.src, undefined); assert.equal(env.audio.playCalls, undefined);
+  assert.equal(env.button.disabled, false);
+  env.platform.navigator.userActivation.isActive = true;
+  await env.sound.toggle();
+  assert.equal(env.audio.src, 'music.mp3'); assert.equal(env.audio.playCalls, 1);
+  assert.equal(env.audio.paused, false); env.sound.destroy();
+});
+
+test('unknown-policy autoplay still starts when allowed and releases its source after a blocked attempt', async () => {
+  const env = soundEnvironment(); env.audio.blocked = true;
+  await env.sound.tryAutoplay();
+  assert.equal(env.audio.src, ''); assert.equal(env.audio.released, true); assert.equal(env.audio.playCalls, 1);
+  env.audio.blocked = false; await env.sound.toggle();
+  assert.equal(env.audio.src, 'music.mp3'); assert.equal(env.audio.playCalls, 2);
   env.sound.destroy();
 });
 
@@ -341,6 +406,16 @@ test('entry during a pending autoplay request cancels it without late playback',
   env.sound.destroy();
 });
 
+test('manual muting during a pending play request survives its late success and further gestures', async () => {
+  const env = soundEnvironment(); let finishPlay, calls = 0;
+  env.audio.play = () => { calls++; return new Promise(resolve => { finishPlay = () => { env.audio.paused = false; resolve(); }; }); };
+  const starting = env.sound.tryAutoplay();
+  await env.sound.toggle(); finishPlay(); await starting;
+  assert.equal(env.audio.paused, true); assert.equal(env.button.attrs.get('data-sound-state'), 'muted');
+  assert.equal(await env.sound.tryAutoplay(), false); assert.equal(calls, 1);
+  env.sound.destroy();
+});
+
 test('re-enabling during manual fade-out cancels the old stop without cutting or resetting playback', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
   const stopping = env.sound.toggle(); env.advance(900);
@@ -409,6 +484,41 @@ test('each human leg crosses from behind the other leg to in front during a full
     assert.ok(footX(far, 30) < footX(near, -30), `${name}: first contact`);
     assert.ok(footX(far, -30) > footX(near, 30), `${name}: opposite contact must cross`);
   }
+});
+
+test('travellers keep static poses until their own complete rig is ready; failed parts keep the fallback', async () => {
+  const previousDocument = globalThis.document, previousImage = globalThis.Image;
+  const requests = [];
+  globalThis.Image = class {
+    set src(value) { this.source = value; requests.push(this); }
+    removeAttribute() { this.released = true; }
+  };
+  const node = () => ({ attrs: {}, style: {}, children: [], setAttribute(key, value) { this.attrs[key] = value; }, append(child) { this.children.push(child); } });
+  globalThis.document = { createElementNS: () => node() };
+  const actor = name => ({ dataset: { loadingTraveller: name }, children: ['static pose'], replaceChildren(child) { this.children = [child]; } });
+  const actors = [actor('gawain'), actor('freya')], root = { querySelectorAll: () => actors };
+  try {
+    const mounted = mountLoadingScreenWalk(root);
+    assert.equal(requests.length, 6); assert.deepEqual(actors[0].children, ['static pose']);
+    requests.filter(image => image.source.includes('gawain')).forEach(image => image.onload());
+    await settle();
+    assert.equal(actors[0].dataset.rig, 'true'); assert.deepEqual(actors[1].children, ['static pose']);
+    requests.filter(image => image.source.includes('freya')).forEach((image, index) => index ? image.onload() : image.onerror());
+    await mounted;
+    assert.equal(actors[1].dataset.rig, undefined); assert.deepEqual(actors[1].children, ['static pose']);
+  } finally { globalThis.document = previousDocument; globalThis.Image = previousImage; }
+});
+
+test('leaving the loading screen cancels pending rig images and prevents a late DOM replacement', async () => {
+  const previousImage = globalThis.Image, requests = [], controller = new AbortController();
+  globalThis.Image = class { set src(value) { requests.push(this); } removeAttribute() { this.released = true; } };
+  const actor = { dataset: { loadingTraveller: 'gawain' }, replaceChildren() { throw Error('must retain static pose'); } };
+  try {
+    const mounted = mountLoadingScreenWalk({ querySelectorAll: () => [actor] }, { signal: controller.signal });
+    controller.abort(); await mounted;
+    assert.equal(actor.dataset.rig, undefined); assert.equal(requests.length, 3);
+    assert.ok(requests.every(image => image.released));
+  } finally { globalThis.Image = previousImage; }
 });
 
 test('startup readiness is emitted after rendering, and a failed startup only emits an error', async () => {

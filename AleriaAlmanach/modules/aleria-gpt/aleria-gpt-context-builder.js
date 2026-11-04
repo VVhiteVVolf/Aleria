@@ -870,6 +870,7 @@ function summarizeAleriaGptContext(payload) {
 }
 
 async function buildAleriaGptContext(options = {}) {
+  if (typeof loadSceneActorData === 'function') await loadSceneActorData();
   const scope = normalizeAleriaGptScope(options);
   const characters = collectAleriaGptCharacters(options);
   const creatures = collectAleriaGptCreatures();

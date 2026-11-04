@@ -5,12 +5,8 @@
   const html = document.documentElement;
   const lifetime = new AbortController();
   const milestones = new Map([
-    ['page', { label: 'Seite', done: document.readyState === 'complete' }],
     ['shell', { label: 'Archiv', done: false }],
-    ['modules', { label: 'Weltwissen', done: false }],
-    ['characters', { label: 'Figuren', done: false }],
-    ['creatures', { label: 'Kreaturen', done: false }],
-    ['art', { label: 'Reisebilder', done: false }]
+    ['modules', { label: 'Weltwissen', done: false }]
   ]);
   let view = null;
   let slow = false;
@@ -22,6 +18,7 @@
   let contentAriaHidden = null;
   let previousFocus = null;
   let sound = null;
+  let walkRequest = null;
 
   html.dataset.almanachLoading = '';
   const slowTimer = window.setTimeout(() => { slow = true; render(); }, 15000);
@@ -46,14 +43,16 @@
     const finished = items.filter(item => item.done).length;
     view.root.dataset.state = failed ? 'error' : ready ? 'ready' : slow ? 'slow' : 'loading';
     view.root.dataset.motion = animationPaused ? 'paused' : 'playing';
+    view.root.dataset.visibility = document.hidden ? 'hidden' : 'visible';
     view.root.setAttribute('aria-busy', String(!ready && !failed));
     view.progress.value = finished;
+    view.progress.max = milestones.size;
     view.progress.setAttribute('aria-valuetext', `${finished} von ${items.length} Startschritten abgeschlossen`);
     view.status.textContent = failed ? 'Der Almanach konnte nicht vollständig starten.'
       : ready ? 'Dein Abenteuer kann beginnen.'
       : slow ? 'Die Reise dauert heute etwas länger …' : 'Aleria erwacht …';
     view.detail.textContent = failed ? 'Bitte lade die Seite noch einmal.'
-      : ready ? offline ? 'Der verfügbare Stand ist bereit. Online-Daten laden bei Verbindung nach.' : 'Die Welt ist bereit. Die Geschichten warten auf dich.'
+      : ready ? offline ? 'Der verfügbare Stand ist bereit. Online-Daten laden bei Verbindung nach.' : 'Das Archiv ist bereit. Weitere Inhalte können im Hintergrund nachladen.'
       : `Wird geladen: ${items.filter(item => !item.done).map(item => item.label).join(' · ')}`;
     view.enter.disabled = !ready;
     view.enter.textContent = ready ? 'Aleria betreten' : 'Die Welt wird geladen …';
@@ -98,7 +97,7 @@
 
   function handleClick(event) {
     const action = event.target.closest('[data-loading-action]')?.dataset.loadingAction;
-    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); return; }
+    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); loadWalk(); return; }
     if (action === 'sound') { sound?.toggle(); return; }
     if (action === 'reload') { window.location.reload(); return; }
     if (!isReady() && action !== 'continue') void sound?.tryAutoplay();
@@ -121,26 +120,13 @@
     }
   }
 
-  function loadArtwork() {
-    const sources = view.root.dataset.loadingImages.split(' ');
-    const requests = sources.map(src => new Promise(resolve => {
-      const img = new Image();
-      img.onload = () => resolve();
-      // Art is decorative; a failed image must not block the application.
-      img.onerror = () => resolve();
-      img.src = src;
-    }));
-    if (view.root.querySelector('[data-loading-traveller]')) requests.push(loadWalk());
-    Promise.allSettled(requests).then(() => complete('art'));
-  }
-
   function loadSound() {
     const button = view.root.querySelector('[data-loading-action="sound"]');
     const control = view.root.querySelector('[data-loading-sound-control]');
     const src = view.root.dataset.loadingSound;
     const pendingLoad = new AbortController();
     window.addEventListener('pagehide', () => pendingLoad.abort(), { once: true, signal: pendingLoad.signal });
-    import('./loading-screen-sound.js?v=20261013-v5').then(({ createLoadingScreenSound }) => {
+    import('./loading-screen-sound.js?v=20261104-startup-v1').then(({ createLoadingScreenSound }) => {
       const cancelled = pendingLoad.signal.aborted || (!leaving && (!view || view.root.hidden));
       pendingLoad.abort();
       if (cancelled) return;
@@ -158,9 +144,11 @@
   }
 
   function loadWalk() {
+    if (leaving || !view || animationPaused || document.hidden || !view.root.querySelector('[data-loading-traveller]')) return;
     const root = view.root;
-    return import('./loading-screen-walk.js?v=20261013-v5').then(({ mountLoadingScreenWalk }) => {
-      if (!leaving && view) return mountLoadingScreenWalk(root);
+    return walkRequest ||= import('./loading-screen-walk.js?v=20261104-startup-v1').then(({ mountLoadingScreenWalk }) => {
+      if (!leaving && view && !lifetime.signal.aborted && !animationPaused && !document.hidden) return mountLoadingScreenWalk(root, { signal: lifetime.signal });
+      if (view && !leaving) walkRequest = null;
     }).catch(error => console.warn('Die ruhige Laufanimation konnte nicht vorbereitet werden:', error));
   }
 
@@ -201,7 +189,9 @@
       render();
       root.focus({ preventScroll: true });
       if (root.dataset.loadingSound) loadSound();
-      loadArtwork();
+      // CSS supplies the static scenery immediately. Optional limb animation
+      // must never stand between a rendered archive and its readers.
+      loadWalk();
     } catch (error) {
       sound?.destroy();
       restoreContent();
@@ -212,14 +202,13 @@
     }
   }
 
-  listen(window, 'load', () => complete('page'), { once: true });
   listen(window, 'almanach:app-ready', () => complete('shell'), { once: true });
   listen(window, 'almanach:initial-modules-settled', event => {
     offline = event.detail?.offline === true;
     complete('modules');
   }, { once: true });
-  listen(document, 'aleria:characters-changed', () => complete('characters'), { once: true });
-  listen(document, 'aleria:creatures-changed', () => complete('creatures'), { once: true });
+  listen(document, 'visibilitychange', () => { render(); loadWalk(); });
+  listen(window, 'pagehide', () => { window.clearTimeout(slowTimer); lifetime.abort(); }, { once: true });
   listen(window, 'almanach:startup-error', () => { failed = true; render(); }, { once: true });
   listen(document, 'readystatechange', mount);
   listen(document, 'DOMContentLoaded', mount, { once: true });

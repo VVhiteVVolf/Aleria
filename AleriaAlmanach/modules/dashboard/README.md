@@ -4,6 +4,14 @@ Die Übersicht verwendet die vorhandenen Archivdaten, den lokalen Leseverlauf,
 die Szenenaktivität und die gespeicherten Archivfunken. Sie legt keinen eigenen
 Inhalts- oder Navigationszustand an.
 
+Die erste Übersicht erzeugt nur ihre sichtbaren Inhalte. Modulkarten sowie
+Charakter- und Kreaturenregister werden beim jeweiligen Reiteraufruf aufgebaut;
+die ausdrückliche Archivsuche durchsucht weiterhin alle Bereiche. Direkte
+Wechsel aus der Seitenleiste verwenden denselben bedarfsweisen Renderpfad.
+Dashboard und Seitenleiste teilen auch bei fehlendem Aktivitätsindex einen
+kurzzeitig gehaltenen Kommentarüberblick. Vollständige Export- und
+Sicherungsabfragen lesen weiterhin ihren eigenen frischen Datenstand.
+
 ## Gestaltung und Zuständigkeiten
 
 - `dashboard.css` gestaltet ausschließlich die Übersicht: Einstieg, Bestandszahlen,

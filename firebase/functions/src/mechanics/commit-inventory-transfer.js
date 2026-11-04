@@ -121,6 +121,7 @@ export async function commitInventoryTransferOperation(database, auth, data) {
     transaction.update(receiverRef, receiverUpdates);
     const transfer = {
       transferId: operationId,
+      presentation: 'compact',
       giver: { id: giverId, name: clean(giver.name, 160), portrait: clean(giver.portrait, 2000) },
       receiver: { id: receiverId, name: clean(receiver.name, 160), portrait: clean(receiver.portrait, 2000) },
       object: { ...result.object, visualIcon: clean(submittedObject.visualIcon, 2000) },

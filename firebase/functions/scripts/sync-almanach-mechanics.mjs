@@ -127,6 +127,8 @@ const files = [
   'inventory-use/zornkappe-effects.js',
   'loot/loot-model.js',
   'scene-inventory/scene-inventory-transfer-model.js',
+  'scene-trade/scene-trade-model.js',
+  'scene-trade/scene-trade-summary.js',
   'scene-rest/scene-rest-model.js',
   'scene-regeneration/scene-regeneration-model.js',
   'scene-regeneration/scene-regeneration-policy.js',

@@ -156,7 +156,7 @@ function applyAlmanachDashboardSceneActivity(sections = []) {
     count.hidden = !activeCount;
   }
   if (typeof refreshArchiveDashboardHeroActions === 'function') {
-    refreshArchiveDashboardHeroActions();
+    refreshArchiveDashboardHeroActions(sections);
   }
 }
 

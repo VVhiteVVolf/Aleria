@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
 import { assertServerModuleStoreSnapshot } from '../modules/module-store/module-store-online-source.js';
+import { createServerModuleStoreLoader } from '../modules/module-store/module-store-server-loader.js';
 
 const source = readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
 function repositoryMethod(name, nextName, overrides = {}) {
@@ -15,6 +16,7 @@ function repositoryMethod(name, nextName, overrides = {}) {
     MODULE_STORE_COLLECTION: 'char_tabs', MODULE_STORE_DOC: 'config',
     ...overrides
   });
+  context.loadServerModuleStore = createServerModuleStoreLoader({ loadSplit: (...args) => context.loadSplitModuleStore(...args) });
   return vm.runInContext(`({${source.slice(start, end)}})`, context)[name];
 }
 

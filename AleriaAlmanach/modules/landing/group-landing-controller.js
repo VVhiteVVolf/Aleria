@@ -3,13 +3,14 @@ import { applyGroupPreset } from './group-landing-model.js';
 import { groupCharacters, groupCreatures, groupScenes, groupMemberSnapshots, groupSceneSnapshot, observeGroupScene } from './group-landing-data.js';
 import { renderGroupBody, renderGroupRosterResults, renderGroupSummary, renderGroupScenePanel, renderGroupHeaderClock } from './group-landing-view.js';
 import { mountGroupRosterWindow } from './group-roster-window.js';
-import { createGroupEditor } from './group-landing-editor.js';
+import { createGroupEditor } from './group-landing-editor.js?v=20261104-startup-v1';
 import { mountGroupSceneControls, unmountGroupSceneControls } from './group-landing-scene-controls.js';
 import { mountGroupNavigation } from './group-landing-navigation.js';
 import { renderGroupInventory } from './group-landing-inventory-view.js';
 import { mountGroupMap } from './group-landing-map.js';
 import { landingQuestJournalShell } from './landing-quest-model.js';
 import { mountGroupQuestAccount } from './group-quest-account.js';
+import { requestItemRegister } from '../item-register/item-register-demand.js?v=20261104-startup-v1';
 
 const mounts = new WeakMap();
 const canEdit = () => globalThis.canEditModuleContent?.() === true;
@@ -47,6 +48,7 @@ function mount(context) {
   const abort = new AbortController();
   let comments = [], members = [], scenes = [], connection = group.threadId ? 'Szenenstand wird geladen …' : 'Noch keine Sitzung ausgewählt.';
   let stopScene = null, stopped = false;
+  let actorsReady = !!preview || typeof globalThis.loadSceneActorData !== 'function', actorRequest = null;
   const regionContent = new Map();
   const editor = createGroupEditor({ onSave: save });
   const stopNavigation = mountGroupNavigation(root, context.root, `${entry.id}:${context.pageIndex}`);
@@ -91,13 +93,41 @@ function mount(context) {
       makeId: prefix => `${prefix}-${crypto.randomUUID()}`,
       dateLabel: globalThis.AleriaCalendar?.format(globalThis.AleriaCalendar.current(), { withPlayDay: true }) || '' };
   }
-  function handleClick(event) {
+  function reportError(error) {
+    if (stopped) return;
+    const message = error?.message || 'Die Gruppenseite konnte nicht vollständig geladen werden.';
+    const target = root.querySelector('[data-group-region="error"]');
+    if (target) target.textContent = message;
+    globalThis.showAppStatus?.(message, 'error');
+  }
+  async function ensureActors() {
+    if (actorsReady) return;
+    if (!actorRequest) actorRequest = Promise.resolve().then(() => globalThis.loadSceneActorData()).then(() => {
+      actorsReady = true;
+      if (!stopped) refresh();
+    }).finally(() => { actorRequest = null; });
+    await actorRequest;
+  }
+  async function handleClick(event) {
     const trigger = event.target.closest?.('[data-group-action]');
     if (!trigger || !root.contains(trigger)) return;
     const action = trigger.dataset.groupAction;
-    if (action === 'profile') { globalThis.openCharProfile?.(trigger.dataset.characterId); return; }
-    if (action === 'creature-profile') { globalThis.AleriaCreatures?.open?.(trigger.dataset.creatureId); return; }
-    if (action === 'register') { globalThis.AleriaItemRegister?.open?.(trigger.dataset.itemKey || ''); return; }
+    if (action === 'profile' || action === 'creature-profile') {
+      try {
+        await ensureActors();
+        if (stopped) return;
+        const creature = action === 'creature-profile', id = creature ? trigger.dataset.creatureId : trigger.dataset.characterId;
+        if (!(creature ? groupCreatures() : groupCharacters()).some(record => record.id === id)) throw new Error('Der verknüpfte Personen- oder Kreaturbogen ist nicht verfügbar.');
+        if (creature) await globalThis.AleriaCreatures?.open?.(id);
+        else await globalThis.openCharProfile?.(id);
+      } catch (error) { reportError(error); }
+      return;
+    }
+    if (action === 'register') {
+      try { const register = await requestItemRegister(); if (!stopped) register.open(trigger.dataset.itemKey || ''); }
+      catch (error) { reportError(error); }
+      return;
+    }
     if (action === 'hierarchy') {
       const pageIndex = entry.pages.findIndex(page => page.hierarchyPage);
       if (pageIndex >= 0) globalThis.openModal?.(entry, { pageIndex });
@@ -112,11 +142,15 @@ function mount(context) {
     if (action === 'refresh') { connect(); return; }
     if (preview) return;
     if (trigger.hasAttribute('data-group-edit-entry') && !canEdit()) {
-      globalThis.requestModuleEditorAccess?.(() => { if (!stopped) editor.open('settings', editContext()); });
+      globalThis.requestModuleEditorAccess?.(() => {
+        ensureActors().then(() => { if (!stopped && canEdit()) editor.open('settings', editContext()); }).catch(reportError);
+      });
       return;
     }
     if (!canEdit()) return;
     try {
+      await ensureActors();
+      if (stopped || !canEdit()) return;
       const presetId = root.querySelector('[data-group-field="preset"]')?.value;
       if (action === 'apply-preset') {
         if (!presetId) return;
@@ -124,11 +158,11 @@ function mount(context) {
       } else if (action === 'delete-preset') {
         if (presetId) save({ ...data, group: { ...group, presets: group.presets.filter(preset => preset.id !== presetId) } });
       } else editor.open(action, editContext(trigger.dataset.memberId, trigger.dataset.itemId));
-    } catch (error) { setRegion('error', ''); root.querySelector('[data-group-region="error"]').textContent = error.message; }
+    } catch (error) { reportError(error); }
   }
   root.addEventListener('click', handleClick, { signal: abort.signal });
   root.addEventListener('aleria:group-edit-request', event => {
-    if (!preview && canEdit()) editor.open(event.detail.kind, editContext());
+    if (!preview && canEdit()) ensureActors().then(() => { if (!stopped && canEdit()) editor.open(event.detail.kind, editContext()); }).catch(reportError);
   }, { signal: abort.signal });
   root.addEventListener('error', event => {
     const target = event.target;
@@ -152,6 +186,7 @@ function mount(context) {
   }, { signal: abort.signal });
   mounts.set(context.root, { destroy() { stopped = true; abort.abort(); stopScene?.(); stopNavigation(); stopMap(); stopQuestAccount(); rosterWindow.destroy(); editor.close(); } });
   refresh(); connect();
+  if (!preview) ensureActors().catch(reportError);
 }
 
 function unmount({ root }) { mounts.get(root)?.destroy(); mounts.delete(root); }

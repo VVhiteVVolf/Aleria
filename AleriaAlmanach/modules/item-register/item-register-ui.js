@@ -1,6 +1,6 @@
 import { registerStore } from './item-register-store.js?v=20261020-arkaneum-v1';
 import { REGISTER_SECTIONS, queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
-import { mountRegisterNavigation } from './item-register-navigation.js?v=20261006-sidebar-equipment-v1';
+import { mountRegisterNavigation } from './item-register-navigation.js?v=20261104-startup-v1';
 import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261014-aldrimar-brewers-v1';
 import { createForm, collectOperation, quote } from './item-register-forms.js?v=20261014-aldrimar-brewers-v1';
 import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
@@ -12,10 +12,12 @@ import { regionalQuery, regionalHomeForHouse } from '../regional-equipment/regio
 import { openItemBuilder } from '../item-builder/item-builder-controller.js';
 import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js';
 import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
+import { createItemRegisterActivation } from './item-register-activation.js?v=20261104-startup-v1';
 
 const state = { open: false, section: 'standard', category: '', territoryId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false, expandedProviderGroups: new Set() };
 let panel, editor, form = null, busy = false, pendingOperation = null;
 let registerNavigation;
+let catalogStarted = false;
 const access = () => globalThis._fbAuth?.getAccess?.() || {};
 const snapshot = () => registerStore.snapshot();
 const selected = () => snapshot().items.find(item => item.id === state.selectedId);
@@ -65,7 +67,7 @@ export function openItemRegister(itemId = '') {
   const target = typeof itemId === 'string' && snapshot().items.find(item => item.id === itemId);
   if (target) { reset(target.section); state.category = target.category; state.listId = target.listId || ''; selectItem(target.id); }
   globalThis.activateDialog?.(panel.id, { initialFocus: '[data-ir-field="search"]' });
-  connect();
+  activation.ensure();
 }
 export function openItemRegisterSection(section) {
   if (!REGISTER_SECTIONS.some(entry => entry.id === section)) return;
@@ -241,16 +243,18 @@ function handleChange(event) {
   if (event.target === roles('import')) { importOffers(event.target.files[0]).catch(error => notice(error.message, true)); event.target.value = ''; }
 }
 function connect() {
+  if (!catalogStarted) {
+    catalogStarted = true;
+    if (typeof globalThis.itemDbExportDatabasePayload === 'function') registerStore.setLocalLegacy(globalThis.itemDbExportDatabasePayload());
+    watchModuleCatalog(registerStore);
+    watchStandardReleases(registerStore);
+  }
   itemDefinitionStore.connect(globalThis._fb?.itemDefinitions);
   registerStore.connect(globalThis._fb?.itemRegister, globalThis._fb);
 }
 
-if (typeof globalThis.itemDbExportDatabasePayload === 'function') registerStore.setLocalLegacy(globalThis.itemDbExportDatabasePayload());
+const activation = createItemRegisterActivation({ activate: connect, stop: () => registerStore.stop() });
 registerStore.subscribe(render);
-watchModuleCatalog(registerStore);
-window.addEventListener('fb-ready', connect);
-window.addEventListener('fb-load-error', connect);
-window.addEventListener('online', () => { registerStore.stop(); connect(); });
 window.addEventListener('aleria:auth-state-changed', render);
 document.addEventListener('aleria:item-definitions-changed', () => registerStore.refreshDefinitions());
 document.addEventListener('keydown', event => {
@@ -261,10 +265,8 @@ document.addEventListener('keydown', event => {
 }, true);
 
 globalThis.AleriaItemRegister = Object.freeze({ open: openItemRegister, openSection: openItemRegisterSection, close: closeItemRegister,
-  ensure: connect, store: registerStore, moneyState, moneyTotal, buildItem: openItemBuilder, resolveImage: resolveEquipmentImage,
+  ensure: activation.ensure, store: registerStore, moneyState, moneyTotal, buildItem: openItemBuilder, resolveImage: resolveEquipmentImage,
   getItems: () => registerStore.legacyIndex(), getByKey: key => { const item = registerStore.getByKey(key); return item ? toLegacyItem(item) : null; },
   formatPrice: item => formatPrice(item.priceRange || parsePrice(item.price, item.currency)) });
-if (globalThis._fb?.itemRegister) connect();
-watchStandardReleases(registerStore);
 registerNavigation = mountRegisterNavigation({ openSection: openItemRegisterSection, close: closeItemRegister });
 window.dispatchEvent(new CustomEvent('item-db-store-updated', { detail: { reason: 'register-ready' } }));

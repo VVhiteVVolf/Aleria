@@ -118,6 +118,7 @@ function showSpeakerProfileOverlay(html) {
 }
 
 function closeSpeakerProfileOverlay() {
+  if (typeof cancelSpeakerProfileRequest === 'function') cancelSpeakerProfileRequest();
   const overlay = document.getElementById('speaker-profile-overlay');
   if (!overlay) return;
   overlay.classList.remove('active');

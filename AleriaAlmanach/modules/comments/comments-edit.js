@@ -1,6 +1,8 @@
 ﻿// Edit existing comments: dialog lifecycle and code verification.
 // ── KOMMENTAR BEARBEITEN ─────────────────────────────────────────────────────
+let _editCommentOpenRequest = 0;
 function openEditComment(commentId) {
+  _editCommentOpenRequest += 1;
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _editTargetId = commentId;
   _editCommentData = null;
@@ -41,6 +43,7 @@ function openEditComment(commentId) {
 }
 
 function closeEditComment() {
+  _editCommentOpenRequest += 1;
   window.AleriaCombat?.releaseComposer?.(document.getElementById('ec-segment-list'));
   deactivateDialog('edit-comment-overlay');
   _editTargetId = null;
@@ -48,6 +51,8 @@ function closeEditComment() {
 }
 
 async function verifyEditCode() {
+  const request = ++_editCommentOpenRequest, targetId = _editTargetId;
+  const current = () => request === _editCommentOpenRequest && targetId === _editTargetId;
   const code = document.getElementById('ec-code').value.trim().toUpperCase();
   const errEl = document.getElementById('ec-code-error');
   const btn = document.getElementById('ec-verify-btn');
@@ -57,11 +62,16 @@ async function verifyEditCode() {
   btn.textContent = 'Prüfe...';
   try {
     const backend = await getCommentBackend({ timeoutMs: 1200 });
-    const data = await backend.verifyCommentCode(_editTargetId, code);
+    if (!current()) return;
+    const data = await backend.verifyCommentCode(targetId, code);
+    if (!current()) return;
     const transactionPolicy = window.AleriaCommentTransactions;
     if (transactionPolicy?.isImmutable?.(data)) {
       throw new Error(transactionPolicy.getLockMessage(data, 'bearbeitet'));
     }
+    btn.textContent = 'Figuren werden geladen …';
+    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+    if (!current()) return;
     _editCommentData = data;
     _editSelectedEmoteIdx = null;
     _editSelectedImageSetId = String(data.imageSetId || data.commentSegments?.[0]?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
@@ -174,8 +184,9 @@ async function verifyEditCode() {
     applyEditCharacterFilter();
     setEditFormCounter();
     updateEditFormPreview();
-    setTimeout(() => focusRichEditor('ec-text'), 30);
+    setTimeout(() => { if (current()) focusRichEditor('ec-text'); }, 30);
   } catch(e) {
+    if (!current()) return;
     errEl.textContent = e.message === 'Falscher Code'
       ? 'Falscher Code.'
       : getFriendlyErrorMessage(e, 'Fehler beim Prüfen.');

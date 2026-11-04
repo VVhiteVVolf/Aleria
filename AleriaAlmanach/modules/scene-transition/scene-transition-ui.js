@@ -36,7 +36,9 @@ function renderSceneTransitionBlock(input, options = {}) {
   const currentThreadId = String(options.threadId || getCurrentCommentThreadId?.() || '');
   const isArrival = currentThreadId === transition.target.threadId;
   const destination = isArrival ? transition.source : transition.target;
-  const directionLabel = isArrival ? 'Zurück zur Szene' : 'Szene öffnen';
+  const directionLabel = options.hideNavigation ? 'Zielszene' : (isArrival ? 'Zurück zur Szene' : 'Szene öffnen');
+  const navigationTag = options.hideNavigation ? 'div' : 'button';
+  const navigationAttributes = options.hideNavigation ? '' : `type="button" data-scene-transition-action="open-target" data-transition-thread-id="${escapeHtml(destination.threadId)}" aria-label="${escapeHtml(destination.pageTitle)} öffnen"`;
   const routeLabel = isArrival ? 'Von' : 'Nach';
   const actions = options.commentId && !options.hideActions ? `
     <div class="comment-narrator-actions scene-transition-actions">
@@ -46,12 +48,12 @@ function renderSceneTransitionBlock(input, options = {}) {
   return `<article class="scene-transition" data-transition-direction="${isArrival ? 'arrival' : 'departure'}">
     <div class="scene-transition-main">
       <div class="scene-transition-mark" title="${escapeHtml(transition.icon.label)}">${renderSceneTransitionIcon(transition.icon)}</div>
-      <div class="scene-transition-copy">${parseCommentMarkup(transition.flavourText)}</div>
-      <button class="scene-transition-open" type="button" data-scene-transition-action="open-target" data-transition-thread-id="${escapeHtml(destination.threadId)}" aria-label="${escapeHtml(destination.pageTitle)} öffnen">
+      <div class="scene-transition-copy"><small class="scene-transition-kicker">Szenenwechsel · ${isArrival ? 'Ankunft' : 'Aufbruch'}</small>${parseCommentMarkup(transition.flavourText)}</div>
+      <${navigationTag} class="scene-transition-open" ${navigationAttributes}>
         ${renderSceneTransitionArrow()}
         <span>${directionLabel}</span>
         <strong>${escapeHtml(destination.pageTitle)}</strong>
-      </button>
+      </${navigationTag}>
       ${actions}
     </div>
     <div class="scene-transition-route">
@@ -70,14 +72,6 @@ function renderSceneTransitionComment(comment, index = 0) {
     commentId: comment?.id || '',
     threadId: comment?.entryId || getCurrentCommentThreadId?.() || ''
   })}`;
-}
-
-function buildSceneTransitionTargetOptions(selectedThreadId = '') {
-  const source = getCurrentSceneTransitionEndpoint();
-  const targets = getSceneTransitionEndpoints().filter(endpoint => endpoint.threadId !== source?.threadId);
-  if (!targets.length) return '<option value="">Keine weitere interaktive Szene verfügbar</option>';
-  return `<option value="">Zielszene wählen …</option>${targets.map(endpoint => `
-    <option value="${escapeHtml(endpoint.threadId)}"${endpoint.threadId === selectedThreadId ? ' selected' : ''}>${escapeHtml(endpoint.entryTitle)} — ${escapeHtml(endpoint.pageTitle)}</option>`).join('')}`;
 }
 
 function buildSceneTransitionCharacterPicker(selectedIds = []) {
@@ -126,29 +120,39 @@ function ensureSceneTransitionDialog() {
       <button type="button" data-scene-transition-action="close-dialog" aria-label="Schließen">×</button>
     </header>
     <div class="scene-transition-dialog-body">
-      <section>
-        <label for="scene-transition-target">Zielszene</label>
-        <select id="scene-transition-target" data-scene-transition-action="update-preview"></select>
+      <section class="scene-transition-target-section" aria-labelledby="scene-transition-target-heading">
+        <div class="scene-transition-step-heading"><b aria-hidden="true">1</b><h3 id="scene-transition-target-heading">Zielszene wählen</h3></div>
+        <p class="scene-transition-origin" data-scene-transition-origin></p>
+        <input id="scene-transition-target" type="hidden">
+        <label for="scene-transition-target-search">Im Almanach suchen</label>
+        <input id="scene-transition-target-search" class="scene-transition-target-search" type="search" data-scene-transition-action="filter-targets" placeholder="Szene, Gemach oder Name …" aria-controls="scene-transition-target-browser">
+        <p class="scene-transition-target-count" data-scene-transition-target-count aria-live="polite"></p>
+        <div id="scene-transition-target-browser" class="scene-transition-target-browser" data-scene-transition-targets></div>
+        <p class="scene-transition-target-empty" data-scene-transition-target-empty hidden>Keine passende Szene gefunden. Suche nach einem anderen Namen oder Ort.</p>
+        <div class="scene-transition-target-selection" data-scene-transition-target-selection role="status"></div>
       </section>
-      <section>
-        <label>Symbol des Szenenwechsels</label>
-        <div class="scene-transition-icon-list" data-scene-transition-icons>
-          ${buildSceneTransitionIconPicker()}
-        </div>
-      </section>
-      <section>
-        <label for="scene-transition-text">Flavourtext</label>
+      <section class="scene-transition-composition" aria-labelledby="scene-transition-composition-heading">
+        <div class="scene-transition-step-heading"><b aria-hidden="true">2</b><h3 id="scene-transition-composition-heading">Den Wechsel beschreiben</h3></div>
+        <label for="scene-transition-text">Erzähltext</label>
         ${buildSceneTransitionFormatToolbar()}
-        <textarea id="scene-transition-text" rows="5" data-scene-transition-action="update-preview" placeholder="Gwendolyn Draig und Ser Alaric verlassen den Thronsaal …"></textarea>
-        <p>Die vorhandene Kommentarformatierung kann verwendet werden.</p>
+        <textarea id="scene-transition-text" rows="3" data-scene-transition-action="update-preview" placeholder="Gwendolyn Draig und Ser Alaric verlassen den Thronsaal …"></textarea>
       </section>
-      <section>
-        <label>Betroffene Figuren</label>
-        <input class="scene-transition-character-search" type="search" placeholder="Figur suchen …" data-scene-transition-action="filter-characters">
-        <div class="scene-transition-character-list" data-scene-transition-characters></div>
-      </section>
-      <section>
-        <label>Vorschau</label>
+      <details class="scene-transition-options">
+        <summary>Reiseart &amp; Figuren <small data-scene-transition-options-summary></small></summary>
+        <div class="scene-transition-options-body">
+          <section aria-labelledby="scene-transition-icons-label">
+            <label id="scene-transition-icons-label">Symbol des Szenenwechsels</label>
+            <div class="scene-transition-icon-list" data-scene-transition-icons>${buildSceneTransitionIconPicker()}</div>
+          </section>
+          <section>
+            <label for="scene-transition-character-search">Betroffene Figuren</label>
+            <input id="scene-transition-character-search" class="scene-transition-character-search" type="search" placeholder="Figur suchen …" data-scene-transition-action="filter-characters">
+            <div class="scene-transition-character-list" data-scene-transition-characters></div>
+          </section>
+        </div>
+      </details>
+      <section class="scene-transition-preview-section" aria-labelledby="scene-transition-preview-heading">
+        <div class="scene-transition-step-heading"><b aria-hidden="true">3</b><h3 id="scene-transition-preview-heading">Vorschau</h3></div>
         <div class="scene-transition-preview" data-scene-transition-preview></div>
       </section>
     </div>

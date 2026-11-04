@@ -9,7 +9,7 @@
       from "./modules/auth/firebase-auth-session.js?v=20261012-guild-v2";
     import { createFirebaseAccountActions } from './modules/auth/firebase-account-actions.js';
     import { firebasePublicConfig } from './modules/auth/firebase-public-config.js';
-    import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js';
+    import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js?v=20261104-startup-v1';
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { finalizeCommittedCommentNarration }
@@ -25,6 +25,7 @@
     import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-regional-equipment-v2';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
     import { assertServerModuleStoreSnapshot, subscribeServerModuleStore } from './modules/module-store/module-store-online-source.js';
+    import { createServerModuleStoreLoader } from './modules/module-store/module-store-server-loader.js';
     import { createWorldDateReadRepository, WORLD_DATE_DOCUMENT } from './modules/world-date/world-date-read-repository.mjs';
 
     const app = initializeApp(firebasePublicConfig);
@@ -39,7 +40,8 @@
     const worldDateReadRepository = createWorldDateReadRepository({ db, sdk: { doc, getDoc, onSnapshot } });
     const commentActivity = createCommentActivityRepository({
       readState: async () => (await getDoc(doc(db, 'comment_activity_meta', 'state'))).data(),
-      readThreads: async () => (await getDocs(collection(db, 'comment_activity'))).docs.map(record => record.data())
+      readThreads: async () => (await getDocs(collection(db, 'comment_activity'))).docs.map(record => record.data()),
+      readAll: async () => (await getDocs(collection(db, 'comments'))).docs.map(record => ({ id: record.id, ...record.data() }))
     });
     document.addEventListener('aleria:comments-updated', event => {
       if (event.detail?.threadId && Array.isArray(event.detail.comments)) commentActivity.update(event.detail.threadId, event.detail.comments);
@@ -434,6 +436,8 @@
         entryOverrides
       };
     }
+
+    const loadServerModuleStore = createServerModuleStoreLoader({ loadSplit: loadSplitModuleStore });
 
     async function saveSplitModuleStore(data) {
       const normalized = normalizeFirebaseModuleStore(data);
@@ -1214,7 +1218,7 @@
         }
       },
       async loadCommentActivity() {
-        return commentActivity.load();
+        return commentActivity.overview();
       },
       async loadAllCommentTurns() {
         try {
@@ -1348,12 +1352,7 @@
       async loadModuleStore() {
         try {
           const snap = assertServerModuleStoreSnapshot(await getDocFromServer(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC)));
-          if (!snap.exists()) return null;
-          const data = snap.data();
-          const splitStore = await loadSplitModuleStore(data, { serverOnly: true });
-          if (splitStore) return splitStore;
-          if (typeof data?.moduleStoreData === 'string') return { data: data.moduleStoreData };
-          return data?.moduleStore || null;
+          return await loadServerModuleStore(snap);
         } catch(e) {
           if (e?.code === 'module-store-awaiting-server') throw e;
           console.error('loadModuleStore:', e);
@@ -1392,12 +1391,7 @@
       subscribeModuleStore(onNext, onError) {
         return subscribeServerModuleStore({
           onSnapshot, reference: doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC), onNext, onError,
-          decode: async snap => {
-            if (!snap.exists()) return null;
-            const data = snap.data();
-            const splitStore = await loadSplitModuleStore(data, { serverOnly: true });
-            return splitStore || (typeof data?.moduleStoreData === 'string' ? { data: data.moduleStoreData } : (data?.moduleStore || null));
-          }
+          decode: loadServerModuleStore
         });
       },
       itemRegister: createItemRegisterFirebase({ db, collection, onSnapshot, httpsCallable, functions, requireUser: requireFirebaseUser }),

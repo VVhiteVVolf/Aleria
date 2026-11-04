@@ -25,8 +25,8 @@ test('dashboard and sidebar share one read, live changes appear immediately and 
   assert.equal((await repository.recent(12))[0].id, 'b');
   clock = 11000;
   assert.equal((await repository.recent(12))[0].id, 'a');
-  assert.equal(reads, 1);
-  clock = 31000; await repository.load(); assert.equal(reads, 2);
+  assert.equal(reads, 2);
+  clock = 31000; await repository.load(); assert.equal(reads, 3);
 });
 
 test('an uninitialized index and oversized recent requests retain the full-history fallback', async () => {
@@ -35,6 +35,63 @@ test('an uninitialized index and oversized recent requests retain the full-histo
   assert.equal(await repository.load(), null);
   assert.equal(await repository.recent(31), null);
   assert.equal(reads, 0);
+});
+
+test('dashboard and sidebar deduplicate the complete legacy fallback while retaining exact counts and activity ordering', async () => {
+  let reads = 0, clock = 100;
+  const source = Array.from({ length: 50 }, (_, index) => ({ id: `comment-${index}`, entryId: 'scene', text: `Comment ${index}`,
+    createdAtClient: index, combatResolution: { privatePayload: true } }));
+  source.push({ id: 'other', entryId: 'second-scene', text: 'Newer', activityAtClient: 200 });
+  const original = structuredClone(source);
+  const repository = createCommentActivityRepository({ now: () => clock, readState: async () => ({ ready: false }), readThreads: async () => [],
+    readAll: async () => { reads++; return structuredClone(source); } });
+  const [threads, recent] = await Promise.all([repository.overview(), repository.recent(12), repository.overview()]);
+  assert.equal(reads, 1);
+  assert.equal(threads.find(thread => thread.threadId === 'scene').commentCount, 50);
+  assert.equal(threads.find(thread => thread.threadId === 'scene').recentComments.length, 30);
+  assert.equal(recent[0].id, 'other');
+  assert.ok(recent.every(comment => !Object.hasOwn(comment, 'combatResolution')));
+  assert.deepEqual(source, original);
+  await repository.overview(); assert.equal(reads, 1);
+  clock += 31000; await repository.overview(); assert.equal(reads, 2);
+});
+
+test('failed legacy fallback reads can retry and confirmed thread changes invalidate their cache', async () => {
+  let reads = 0, fail = true;
+  const repository = createCommentActivityRepository({ readState: async () => { throw Error('Index temporarily unavailable'); }, readThreads: async () => [],
+    readAll: async () => { reads++; if (fail) throw Error('Network unavailable'); return [{ id: 'old', entryId: 'scene', text: 'old' }]; } });
+  await assert.rejects(repository.overview(), /Network unavailable/);
+  fail = false;
+  assert.equal((await repository.recent(12))[0].id, 'old');
+  assert.equal(reads, 2);
+  repository.update('scene', [{ id: 'new', entryId: 'scene', text: 'new', orderKey: 4 }]);
+  assert.equal((await repository.recent(12))[0].id, 'new');
+  assert.equal(reads, 3);
+});
+
+for (const mode of ['compact', 'fallback']) test(`a ${mode} read spanning a confirmed update cannot cache the older thread beyond its live overlay`, async () => {
+  let clock = 0, reads = 0, finish;
+  const old = { id: 'old', entryId: 'scene', text: 'Vorher', orderKey: 1 };
+  const latest = { id: 'latest', entryId: 'scene', text: 'Bestätigte Änderung', orderKey: 2 };
+  const encode = rows => mode === 'compact' ? [buildCommentThreadActivity('scene', rows)] : rows;
+  const read = () => {
+    reads++;
+    return reads === 1 ? new Promise(resolve => { finish = () => resolve(encode([old])); }) : Promise.resolve(encode([latest]));
+  };
+  const repository = createCommentActivityRepository({ now: () => clock, readState: async () => ({ ready: mode === 'compact' }),
+    readThreads: mode === 'compact' ? read : async () => { throw Error('Unavailable compact index must not be read.'); },
+    ...(mode === 'fallback' ? { readAll: read } : {}) });
+  const initial = repository.overview();
+  await new Promise(resolve => setImmediate(resolve));
+  repository.update('scene', [latest]);
+  finish();
+  assert.equal((await initial)[0].recentComments[0].id, 'latest');
+  assert.equal(reads, 1);
+  clock = 11000;
+  const afterOverlay = await repository.recent(12);
+  assert.equal(afterOverlay[0].id, 'latest');
+  assert.equal(reads, 2, 'The invalidated pending result must be revalidated instead of gaining a new cache lifetime.');
+  await repository.overview(); assert.equal(reads, 2, 'The subsequent fresh result remains shared.');
 });
 
 test('silent regeneration never appears in activity counts, previews or live overlays', async () => {

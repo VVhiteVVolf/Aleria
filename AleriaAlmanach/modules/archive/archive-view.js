@@ -526,7 +526,12 @@ function getArchiveRootSection(tabSections = [], tab = _activeTab) {
 function switchTab(tab, options = {}) {
   _activeTab = tab;
   if (options.resetPath) setActiveArchivePath(tab, []);
-  if (options.render) {
+  const main = document.getElementById('main-content');
+  const rendered = main?.dataset.archiveRenderedTab === tab
+    || (!!_archiveSearchNeedle && main?.dataset.archiveRenderedSearch === _archiveSearchNeedle);
+  // Direct sidebar/profile navigation uses the same entry point as tab buttons.
+  // Its target may not have been mounted yet on the lightweight overview.
+  if (options.render || (!options.sections && !rendered)) {
     renderAll();
     return;
   }
@@ -568,6 +573,10 @@ function renderAll() {
   clearTimeout(_archiveSearchRenderTimer);
   _archiveSearchRenderTimer = null;
   const sections = getValidSections();
+  const searchActive = !!_archiveSearchNeedle;
+  const showDashboard = _activeTab === 'Alle' && !searchActive;
+  const showCharacters = _activeTab === 'Charaktere' || searchActive;
+  const showCreatures = _activeTab === 'Kreaturen' || searchActive;
   const sectionByEntry = new Map();
   sections.forEach(section => {
     (section.entries || []).forEach(entry => {
@@ -575,8 +584,9 @@ function renderAll() {
     });
   });
   const customSectionSignatures = new Set(_customSections.map(section => makeSectionSignature(section)));
-  let entryMatchCount = 0;
-  let sectionMatchCount = 0;
+  let entryMatchCount = !searchActive && !shouldRenderArchiveDrilldown(_activeTab)
+    ? sections.reduce((count, section) => count + section.entries.length, 0) : 0;
+  let sectionMatchCount = !searchActive && !shouldRenderArchiveDrilldown(_activeTab) ? sections.length : 0;
   let priorityCardImageBudget = 10;
 
   const activeEl = document.activeElement;
@@ -604,13 +614,15 @@ function renderAll() {
     <div class="archive-search-meta" id="archive-search-meta"></div>`;
   main.appendChild(toolbar);
 
-  const dashboard = document.createElement('div');
-  dashboard.dataset.archiveDashboard = 'true';
-  dashboard.innerHTML = renderArchiveDashboard(sections);
-  main.appendChild(dashboard);
-  document.dispatchEvent(new CustomEvent('almanach-dashboard-rendered'));
-  if (typeof refreshAlmanachDashboardSceneActivity === 'function') {
-    refreshAlmanachDashboardSceneActivity(sections);
+  if (showDashboard) {
+    const dashboard = document.createElement('div');
+    dashboard.dataset.archiveDashboard = 'true';
+    dashboard.innerHTML = renderArchiveDashboard(sections);
+    main.appendChild(dashboard);
+    document.dispatchEvent(new CustomEvent('almanach-dashboard-rendered'));
+    if (typeof refreshAlmanachDashboardSceneActivity === 'function') {
+      refreshAlmanachDashboardSceneActivity(sections);
+    }
   }
 
   const searchInput = toolbar.querySelector('#archive-search-input');
@@ -635,7 +647,7 @@ function renderAll() {
     <div class="archive-empty-text" id="archive-empty-text"></div>`;
   main.appendChild(emptyState);
 
-  let renderSections = sections;
+  let renderSections = searchActive ? sections : [];
   const hierarchyBySignature = new Map();
   if (shouldRenderArchiveDrilldown(_activeTab)) {
     const currentPath = getActiveArchivePath(_activeTab);
@@ -696,33 +708,41 @@ function renderAll() {
   }
 
   // Charaktere Sektion
-  const charBlock = document.createElement('div');
-  charBlock.className = 'section-block visible';
-  charBlock.dataset.tab = 'Charaktere';
-  charBlock.dataset.sectionTheme = 'charaktere';
-  charBlock.dataset.hasMatches = _archiveSearchNeedle ? 'false' : 'true';
-  charBlock.innerHTML = `
+  let charBlock = null;
+  if (showCharacters) {
+    charBlock = document.createElement('div');
+    charBlock.className = 'section-block visible';
+    charBlock.dataset.tab = 'Charaktere';
+    charBlock.dataset.sectionTheme = 'charaktere';
+    charBlock.dataset.hasMatches = _archiveSearchNeedle ? 'false' : 'true';
+    charBlock.innerHTML = `
     <div class="section-header"><span class="section-title"><span>Charaktere</span></span></div>
     <div class="section-kicker">Personenregister, Porträts und Rollenprofile des Almanachs.</div>
     <div class="char-subtabs-bar" id="char-subtabs-bar"></div>
     <div class="char-grid" id="char-grid"></div>`;
-  main.appendChild(charBlock);
+    main.appendChild(charBlock);
+  }
 
-  const creatureBlock = document.createElement('div');
-  creatureBlock.className = 'section-block visible';
-  creatureBlock.dataset.tab = 'Kreaturen';
-  creatureBlock.dataset.sectionTheme = 'kreaturen';
-  creatureBlock.dataset.hasMatches = 'true';
-  creatureBlock.innerHTML = `
+  let creatureBlock = null;
+  if (showCreatures) {
+    creatureBlock = document.createElement('div');
+    creatureBlock.className = 'section-block visible';
+    creatureBlock.dataset.tab = 'Kreaturen';
+    creatureBlock.dataset.sectionTheme = 'kreaturen';
+    creatureBlock.dataset.hasMatches = 'true';
+    creatureBlock.innerHTML = `
     <div class="section-header"><span class="section-title"><span>Kreaturen</span></span></div>
     <div class="section-kicker">Monster, NSCs und mehrfach einsetzbare Gegner-Vorlagen.</div>
     <div id="creature-library-root"></div>`;
-  main.appendChild(creatureBlock);
+    main.appendChild(creatureBlock);
+  }
   _archiveEntryMatchCount = entryMatchCount;
   _archiveEntrySectionMatchCount = sectionMatchCount;
   _archiveSectionMatchCount = sectionMatchCount
-    + (charBlock.dataset.hasMatches !== 'false' ? 1 : 0)
-    + (creatureBlock.dataset.hasMatches !== 'false' ? 1 : 0);
+    + ((charBlock ? charBlock.dataset.hasMatches !== 'false' : !searchActive) ? 1 : 0)
+    + ((creatureBlock ? creatureBlock.dataset.hasMatches !== 'false' : !searchActive) ? 1 : 0);
+  main.dataset.archiveRenderedTab = _activeTab;
+  main.dataset.archiveRenderedSearch = _archiveSearchNeedle;
   switchTab(_activeTab, { sections });
   updateArchiveSearchUI();
 
@@ -735,8 +755,8 @@ function renderAll() {
       }
     }
   }
-  loadCharacters();
-  window.AleriaCreatures?.mount?.();
+  if (showCharacters) loadCharacters();
+  if (showCreatures) window.AleriaCreatures?.mount?.();
   AleriaArchiveNavigation.mount({ activeTab: _activeTab, focusActiveTab: refocusArchiveTab });
 }
 

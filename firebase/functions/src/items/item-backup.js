@@ -6,7 +6,7 @@ import { readItemDefinition } from './item-definition-repository.js';
 export const ITEM_BACKUP_COLLECTIONS = Object.freeze(['item_definition_versions', 'item_definitions', 'item_unique_claims',
   'item_register_offers', 'item_vendor_wallets', 'item_award_claims', 'item_definition_transactions', 'item_record_transactions',
   'item_migration_transactions', 'item_register_transactions', 'inventory_transfer_transactions', 'loot_claim_transactions',
-  'herausforderung_claims', 'herausforderung_effect_claims', 'mechanical_comment_transactions']);
+  'herausforderung_claims', 'herausforderung_effect_claims', 'mechanical_comment_transactions', 'scene_trade_transactions', 'item_merchant_sold']);
 export async function restoreItemBackupRecords(database, collectionName, records) {
   if (!ITEM_BACKUP_COLLECTIONS.includes(collectionName) || !Array.isArray(records) || records.length > 100 || JSON.stringify(records).length > 6000000) throw new HttpsError('invalid-argument', 'Der Item-Backupabschnitt ist ungültig.');
   return database.runTransaction(async transaction => {

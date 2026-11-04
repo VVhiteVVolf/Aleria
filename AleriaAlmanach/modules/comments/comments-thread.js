@@ -284,6 +284,9 @@ function renderCommentsToScroll(scroll, comments) {
     let pageCounter = 0;
     sceneTimeline.forEach(entry => {
       if (!Number.isFinite(entry.startSeconds)) return;
+      // A new trade receipt records the transaction without becoming another
+      // roleplay page or renumbering the following contribution.
+      if (entry.comment?.sceneTrade || entry.comment?.sceneInventoryTransfer?.presentation === 'compact') return;
       const dayIndex = getSceneDayFromSeconds(entry.startSeconds);
       pageCounter = dayIndex === dayCursor ? pageCounter + 1 : 1;
       dayCursor = dayIndex;
@@ -311,8 +314,10 @@ function renderCommentsToScroll(scroll, comments) {
       const key = String(c?.id ?? `idx-${absoluteIndex}`);
       const unreadDivider = typeof renderSceneUnreadDivider === 'function' ? renderSceneUnreadDivider(threadId, c, sortedComments) : '';
       const timeEntry = sceneTimelineById.get(String(c?.id || ''));
-      const timeMarkup = typeof renderSceneCommentTime === 'function' ? renderSceneCommentTime(timeEntry) : '';
-      const html = `${unreadDivider}${timeMarkup}${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
+      const quietTrade = !!c?.sceneTrade || c?.inventoryTransaction?.trade === true || c?.sceneInventoryTransfer?.presentation === 'compact';
+      const timeMarkup = !quietTrade && typeof renderSceneCommentTime === 'function' ? renderSceneCommentTime(timeEntry) : '';
+      const insertControl = quietTrade ? '' : renderCommentInsertControl(c, absoluteIndex, sortedComments);
+      const html = `${unreadDivider}${timeMarkup}${renderCommentBubble(c, absoluteIndex)}${insertControl}`;
       return { key, html };
     });
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);

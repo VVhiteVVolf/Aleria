@@ -3,6 +3,7 @@ import { addGroupInventoryItem, updateGroupInventoryItem } from './group-landing
 import { groupRegisterSnapshot, groupCatalogItems, groupItemPrice, categoryLabel } from './group-landing-register.js';
 import { html, groupPortrait, empty } from './group-landing-markup.js';
 import { field, select, iconField } from './group-landing-fields.js';
+import { requestItemRegister } from '../item-register/item-register-demand.js?v=20261104-startup-v1';
 
 const holderOptions = members => [['', 'Gemeinsamer Vorrat'], ...members.map(member => [member.id, member.name])];
 
@@ -48,6 +49,11 @@ export function mountInventoryChooser(overlay) {
   overlay.addEventListener('change', event => { if (['itemCategory', 'itemSection'].includes(event.target.name)) { limit = 30; render(); } }, { signal: abort.signal });
   overlay.addEventListener('click', event => { if (event.target.closest('[data-group-catalog-more]')) { limit += 30; render(); } }, { signal: abort.signal });
   globalThis.addEventListener('item-db-store-updated', render, { signal: abort.signal });
-  globalThis.AleriaItemRegister?.ensure?.(); render();
+  render();
+  requestItemRegister().then(() => { if (!abort.signal.aborted) render(); }).catch(error => {
+    if (abort.signal.aborted) return;
+    const status = overlay.querySelector('[role="alert"]');
+    if (status) status.textContent = error.message;
+  });
   return () => abort.abort();
 }

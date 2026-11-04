@@ -21,7 +21,8 @@ import {
   showHerausforderungValidation
 } from './herausforderung-ui.js?v=20261016-check-policy-v1';
 import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
-import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261015-check-options-v1';
+import { mountHerausforderungRewardEditor, refreshHerausforderungRewardTemplates } from './herausforderung-rewards-ui.js?v=20261104-startup-v1';
+import { requestItemRegister } from '../item-register/item-register-demand.js?v=20261104-startup-v1';
 import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
@@ -105,7 +106,12 @@ function openDialog(comment = null) {
   operationId = crypto.randomUUID();
   submittedDraft = '';
   const root = ensureHerausforderungDialog();
-  globalThis.AleriaItemRegister?.ensure?.();
+  const registerOperationId = operationId;
+  requestItemRegister().then(() => {
+    if (activeThreadId && operationId === registerOperationId && !submitting) refreshHerausforderungRewardTemplates(root);
+  }).catch(error => {
+    if (activeThreadId && operationId === registerOperationId && !submitting) setHerausforderungStatus(error.message, 'error');
+  });
   const title = root.querySelector('[data-herausforderung-field="title"]');
   const description = root.querySelector('[data-herausforderung-field="publicDescription"]');
   if (title) title.value = 'Herausforderung';

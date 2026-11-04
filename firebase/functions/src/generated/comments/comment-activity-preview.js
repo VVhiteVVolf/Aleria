@@ -1,4 +1,6 @@
-import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
+import '../scene-regeneration/scene-regeneration-policy.js';
+
+const isSilentSceneRegeneration = globalThis.AleriaSceneRegenerationPolicy.isComment;
 
 export const COMMENT_ACTIVITY_RECENT_LIMIT = 30;
 

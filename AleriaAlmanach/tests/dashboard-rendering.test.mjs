@@ -74,6 +74,19 @@ test('Dashboard rendert echte Archivdaten ohne leere Platzhaltertexte', () => {
   assert.doesNotMatch(html, /Noch keine|Keine interaktiven Szenen|Lorem ipsum|Platzhalter|Placeholder/i);
 });
 
+test('activity refresh reuses the current section projection while standalone history events read a fresh one', () => {
+  const { context, sections } = createContext();
+  const targets = { '[data-dashboard-hero-actions]': {}, '[data-dashboard-recent]': {} };
+  context.document.querySelector = selector => targets[selector] || null;
+  let reads = 0;
+  context.getValidSections = () => { reads++; return sections; };
+  context.refreshArchiveDashboardHeroActions(sections);
+  assert.equal(reads, 0);
+  assert.match(targets['[data-dashboard-hero-actions]'].outerHTML, /Der Hof von Celtigerns Wacht/);
+  context.refreshArchiveDashboardHeroActions({ type: 'almanach:dashboard-history-changed' });
+  assert.equal(reads, 1);
+});
+
 test('Platzhalterbilder und Platzhaltertexte werden nicht als Fundstück verwendet', () => {
   const { context } = createContext();
   context.getArchiveEntryPreviewImage = () => 'assets/Platzhalter.png';

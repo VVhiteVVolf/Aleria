@@ -20,7 +20,9 @@ function createHarness() {
       disabled: false,
       style: {},
       dataset: {},
+      setAttribute() {},
       removeAttribute() {},
+      querySelectorAll() { return []; }, querySelector() { return null; },
       replaceChildren() { calls.push(`clear:${id}`); }
     });
     return elements.get(id);
@@ -29,6 +31,7 @@ function createHarness() {
     console,
     CHARACTER_IMAGE_SET_DEFAULT_ID: 'default',
     getCurrentCommentThread: () => null,
+    loadSceneActorData: async () => { calls.push('actors'); },
     setCommentPreviewPanelState() {},
     makeCommentSegment: kind => ({ id: 'segment-1', kind, text: '' }),
     setRichEditorContent() {},
@@ -62,12 +65,14 @@ function createHarness() {
 test('das Kommentarfenster öffnet vor dem einmaligen schweren Erst-Render', async () => {
   const harness = createHarness();
   vm.runInContext(await readFile(sourceUrl, 'utf8'), harness.context, { filename: sourceUrl.pathname });
-  vm.runInContext('openCommentForm()', harness.context);
+  const opening = vm.runInContext('openCommentForm()', harness.context);
 
   assert.ok(harness.calls.includes('activate'));
   assert.equal(harness.calls.includes('picker'), false);
   assert.equal(harness.calls.includes('segments'), false);
   assert.equal(harness.calls.includes('preview'), false);
+  assert.equal(harness.calls.some(item => Array.isArray(item) && item[0] === 'draft'), false);
+  await opening;
   for (const name of ['player', 'mode', 'kind', 'draft']) {
     const call = harness.calls.find(item => Array.isArray(item) && item[0] === name);
     assert.equal(call?.[1]?.render, false);
@@ -84,7 +89,8 @@ test('das Kommentarfenster öffnet vor dem einmaligen schweren Erst-Render', asy
 test('ein bereits geschlossenes Kommentarfenster führt keinen verzögerten Render mehr aus', async () => {
   const harness = createHarness();
   vm.runInContext(await readFile(sourceUrl, 'utf8'), harness.context, { filename: sourceUrl.pathname });
-  vm.runInContext('openCommentForm(); closeCommentForm();', harness.context);
+  vm.runInContext('globalThis.opening = openCommentForm(); closeCommentForm();', harness.context);
+  await harness.context.opening;
   harness.frames.shift()?.();
   harness.timers.shift()?.();
 

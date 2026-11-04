@@ -8,6 +8,7 @@ const text = value => String(value ?? '').replace(/[\u200b-\u200d\ufeff]/g, '').
 const key = value => searchText(text(value)).replace(/\s+/g, ' ');
 const unique = values => [...new Set(values.filter(Boolean))];
 const prose = values => unique(values.map(text)).join('\n\n');
+const definitionKind = value => value?.definitionKind === 'unique' || value?.kind === 'unique' ? 'unique' : 'shared';
 // Stable local identities, not a security signature. The server rebuilds offers
 // from their source module and validates prices and revisions independently.
 function fingerprint(value) {
@@ -62,10 +63,10 @@ function goodsRows(page, pageIndex) {
     const known = new Set(['name', 'kind', 'description', 'price']);
     const facts = columns.filter(column => !known.has(column.id)).map(column => ({ label: column.label || column.id, value: cell(column.id) })).filter(fact => fact.value);
     if (context) facts.push({ label: goods.noteTitle || 'Hinweis des Hauses', value: context });
-    return { canonicalKey: text(row.canonicalKey), definitionRef: row.definitionRef || null, definitionCategory: text(row.definitionCategory), title: cell('name'), type: cell('kind'), category, description: cell('description'), details: text(row.details),
+    return { canonicalKey: text(row.canonicalKey), definitionRef: row.definitionRef || null, definitionKind: definitionKind(row), definitionCategory: text(row.definitionCategory), title: cell('name'), type: cell('kind'), category, description: cell('description'), details: text(row.details),
       image: text(row.image), unit: cell('portion') || cell('unit') || cell('pro'), availability: cell('availability'),
       price: cell('price'), currency: '', tags: [category, cell('kind')].filter(Boolean), attributes: [], facts,
-      source: { kind: 'goods-register', pageIndex, pageTitle: text(page.pageTitle || page.title), tableId: table.id || String(tableIndex), tableTitle: text(table.title), rowIndex }
+      source: { kind: 'goods-register', pageIndex, pageTitle: text(page.pageTitle || page.title), tableId: table.id || String(tableIndex), tableTitle: text(table.title), ...(definitionKind(row) === 'unique' && row.id ? { rowId: text(row.id) } : {}), rowIndex }
     };
   }));
   for (const [index, offer] of (goods.offers || []).entries()) {
@@ -96,7 +97,7 @@ function tradeRows(page, pageIndex) {
       { label: item.conditionsTitle || 'Kaufbedingungen', value: text(item.conditions) },
       { label: 'Preishinweis', value: text(item.priceNote) }
     ].filter(fact => fact.value);
-    const row = { canonicalKey: text(item.canonicalKey), definitionRef: item.definitionRef || null, definitionCategory: text(item.definitionCategory), title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
+    const row = { canonicalKey: text(item.canonicalKey), definitionRef: item.definitionRef || null, definitionKind: definitionKind(item), definitionCategory: text(item.definitionCategory), title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
       image: text(item.image), unit: text(item.unit), availability: '', price: unique([text(item.priceMin), text(item.priceMax)]).join(' - '),
       currency: text(item.currencyLabel || item.currencyCode), tags: unique([...(item.tags || []), ...(item.usageTags || [])]),
       attributes: item.attributes || [], facts, source: { kind: 'trade-catalog', pageIndex, pageTitle: text(page.pageTitle || page.title), itemId: text(item.id), itemIndex }
@@ -122,8 +123,12 @@ export function buildModuleOffers(entries = [], standards = []) {
     for (const row of rows) {
       if (!row.title || /^(?:neues handelsgut|neue ware|neuer eintrag)$/i.test(row.title)) continue;
       const standard = standardFor(row, standards);
+      const uniqueSource = row.definitionKind === 'unique';
+      const sourceIdentity = row.source.itemId || row.source.rowId;
+      if (uniqueSource && !row.definitionRef && !sourceIdentity) throw Error(`Das Unikat ${row.title} benötigt eine dauerhafte Quellkennung.`);
       const priceRange = parsePrice(row.price, row.currency);
-      const identity = [key(row.title), key(row.type), key(row.unit), priceRange || key(row.price)];
+      const identity = uniqueSource ? ['unique', sourceIdentity || row.definitionRef.id, row.source.priceOption || '']
+        : [key(row.title), key(row.type), key(row.unit), priceRange || key(row.price)];
       const id = `module:${fingerprint(entry.id)}:${fingerprint(identity)}`;
       const source = { ...row.source, moduleId: entry.id, moduleTitle: text(entry.title), moduleType: text(entry.type) };
       const details = prose([row.details, ...row.facts.map(fact => `${fact.label}: ${fact.value}`)]);
@@ -136,13 +141,16 @@ export function buildModuleOffers(entries = [], standards = []) {
       }
       const category = categoryFor(row, standard);
       offers.set(id, { id, canonicalKey: id, section: 'offer', aliases: [],
-        definitionRef: row.definitionRef || standard?.definitionRef || null,
-        definitionSourceId: `module-item:${fingerprint(entry.id)}:${fingerprint([key(row.title), key(row.type), key(row.unit)])}`,
+        definitionRef: row.definitionRef || (!uniqueSource ? standard?.definitionRef : null) || null,
+        ...(uniqueSource ? { definitionKind: 'unique' } : {}),
+        definitionSourceId: uniqueSource ? `module-unique:${fingerprint(entry.id)}:${fingerprint(sourceIdentity || row.definitionRef.id)}`
+          : `module-item:${fingerprint(entry.id)}:${fingerprint([key(row.title), key(row.type), key(row.unit)])}`,
         listId: `module:${entry.id}`, listName: text(entry.title), moduleId: entry.id, moduleSource: true,
         templateId: standard?.id || '', title: row.title, type: row.type || standard?.type || '', category,
         description: row.description || standard?.description || row.details || `${row.title} aus dem Angebot von ${text(entry.title)}${row.type ? ` (${row.type})` : ''}.`,
         details: details || standard?.details || '', image: row.image || standard?.image || '',
         price: row.price, currency: row.currency, priceRange, stock: /^(?:ausverkauft|nicht verfugbar|nicht erhaltlich)$/i.test(key(row.availability)) ? 0 : null,
+        ...(/^(?:ausverkauft|nicht verfugbar|nicht erhaltlich)$/i.test(key(row.availability)) ? { available: false } : {}),
         tags: unique([...row.tags, ...(standard?.tags || [])]), attributes: row.attributes,
         combatDefinition: standard?.combatDefinition || null,
         inventoryUseMode: standard?.inventoryUseMode || (['speisen', 'getraenke'].includes(category) ? 'consume' : 'auto'),
@@ -153,7 +161,7 @@ export function buildModuleOffers(entries = [], standards = []) {
   }
   return [...offers.values()].map(offer => {
     if (!offer.definitionRef) {
-      const definition = normalizeItemDefinition({ ...offer, id: offer.definitionSourceId, revision: 'draft', kind: 'shared',
+      const definition = normalizeItemDefinition({ ...offer, id: offer.definitionSourceId, revision: 'draft', kind: offer.definitionKind || 'shared',
         description: [offer.description, offer.details].filter(Boolean).join('\n\n'),
         mechanicsStatus: ['waffen', 'ruestungen'].includes(offer.category) ? 'provisional' : 'narrative' });
       const revision = fingerprint(itemDefinitionContent(definition));
@@ -163,6 +171,7 @@ export function buildModuleOffers(entries = [], standards = []) {
         useDefinition: definition.useDefinition, mechanicsStatus: definition.mechanicsStatus, definitionKind: definition.kind };
     } else {
       const definition = itemDefinitionRegistry.get(offer.definitionRef);
+      if (offer.definitionKind === 'unique' && definition && definition.kind !== 'unique') throw Error(`Die Unikatmarkierung von ${offer.title} widerspricht der verknüpften Seriendefinition.`);
       if (definition) offer = { ...offer, combatDefinition: definition.combatDefinition, inventoryUseMode: definition.inventoryUseMode,
         useDefinition: definition.useDefinition, mechanicsStatus: definition.mechanicsStatus, definitionKind: definition.kind };
     }

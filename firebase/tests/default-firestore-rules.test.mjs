@@ -51,6 +51,47 @@ test('Gruppenbuchungsbelege sind nur für Akteur und Spielleitung lesbar und fü
   }
 });
 
+test('Handelsbelege und Verkaufsablage bleiben serververwaltet; öffentliche Projektionen liefert die Callable', async () => {
+  const actor = environment.authenticatedContext('owner').firestore(), stranger = environment.authenticatedContext('other').firestore();
+  const gm = environment.authenticatedContext('gm', { aleriaRole: 'moderator' }).firestore();
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'scene_trade_transactions/test'), { actorUid: 'owner', receipt: { lines: [] } });
+    await setDoc(doc(context.firestore(), 'item_merchant_sold/test'), { merchantId: 'shop', item: { name: 'Persönlicher Gegenstand' } });
+    await setDoc(doc(context.firestore(), 'comments/trade-only'), comment('owner', { sceneTrade: { schemaVersion: 1, lines: [] } }));
+  });
+  await assertSucceeds(getDoc(doc(actor, 'scene_trade_transactions/test')));
+  await assertSucceeds(getDoc(doc(gm, 'scene_trade_transactions/test')));
+  await assertFails(getDoc(doc(stranger, 'scene_trade_transactions/test')));
+  for (const database of [actor, stranger, gm]) {
+    await assertFails(getDoc(doc(database, 'item_merchant_sold/test')));
+    for (const collection of ['scene_trade_transactions', 'item_merchant_sold']) {
+      await assertFails(setDoc(doc(database, `${collection}/forged`), { actorUid: 'owner' }));
+      await assertFails(updateDoc(doc(database, `${collection}/test`), { note: 'edit' }));
+      await assertFails(deleteDoc(doc(database, `${collection}/test`)));
+    }
+    await assertFails(updateDoc(doc(database, 'comments/trade-only'), { text: 'Handel ändern' }));
+    await assertFails(deleteDoc(doc(database, 'comments/trade-only')));
+  }
+});
+
+test('verkaufte Tiere bleiben beim Händler; ehemalige Besitzer können Bindung und Profil nicht verändern', async () => {
+  const owner = environment.authenticatedContext('owner').firestore(), gm = environment.authenticatedContext('gm', { aleriaRole: 'moderator' }).firestore();
+  const itemOrigin = { instanceId: 'horse-instance', inventoryItemId: 'horse-item', ownerCharacterId: '', ownerMerchantId: 'shop', disposition: 'sold' };
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'creatures/sold-horse'), { name: 'Morgenwind', ownerUid: 'owner', itemOrigin });
+    await setDoc(doc(context.firestore(), 'creatures/ordinary'), { name: 'Gewöhnliches Tier', ownerUid: 'owner' });
+  });
+  for (const changes of [{ name: 'Fremder Name' }, { itemOrigin: { disposition: 'owned' } }, { combatProfile: { hitPoints: { current: 99 } } }]) {
+    await assertFails(updateDoc(doc(owner, 'creatures/sold-horse'), changes));
+  }
+  await assertFails(deleteDoc(doc(owner, 'creatures/sold-horse')));
+  await assertSucceeds(updateDoc(doc(gm, 'creatures/sold-horse'), { notes: 'Geprüfter Händlerbestand' }));
+  await assertFails(updateDoc(doc(gm, 'creatures/sold-horse'), { itemOrigin: { disposition: 'owned' } }));
+  await assertSucceeds(updateDoc(doc(owner, 'creatures/ordinary'), { notes: 'Weiterhin editierbar' }));
+  await assertFails(updateDoc(doc(owner, 'creatures/ordinary'), { itemOrigin }));
+  await assertFails(setDoc(doc(owner, 'creatures/forged-sold'), { ownerUid: 'owner', itemOrigin }));
+});
+
 test('Questverläufe sind öffentlich lesbar; Browser können Fortschritt und Auszahlungen auch als GM nicht fälschen', async () => {
   const player=environment.authenticatedContext('owner').firestore(),gm=environment.authenticatedContext('gm',{aleriaRole:'moderator'}).firestore(),reader=environment.unauthenticatedContext().firestore();
   await environment.withSecurityRulesDisabled(async context=>{
@@ -215,6 +256,7 @@ test('Szenenzeit erlaubt kein Löschen verbundener Spielvorgänge, auch nicht al
     { combatStatus: { actorId: 'gawain', operation: 'add' } },
     { inventoryTransaction: { transactionId: 'inventory-1' } },
     { sceneInventoryTransfer: { transferId: 'transfer-1' } },
+    { sceneTrade: { schemaVersion: 1, lines: [] } },
     { sceneDiceRoll: { notation: '1W20', results: [12] } },
     { skillResolution: { resolutionId: 'skill-1' } },
     { commentSegments: [{ skillChallenge: { id: 'challenge-1' } }] },

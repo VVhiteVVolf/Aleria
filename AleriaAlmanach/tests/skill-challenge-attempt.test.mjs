@@ -42,7 +42,9 @@ test('the real composer bridge preserves the selected skill and restored text, w
     SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() { saves++; },
     makeCommentSegment: (kind, text, emote, side, time, language, color, settings) => ({ kind, text, ...settings }) });
   runInContext(await readFile(new URL('../modules/comments/comments-form.js', import.meta.url), 'utf8'), context);
-  runInContext("openCommentForm = () => {}; openCommentFormForSkillChallenge(challenge, 'seduction');", context);
+  const opening = runInContext("openCommentForm = async options => { await Promise.resolve(); options.afterReady?.(); return true; }; openCommentFormForSkillChallenge(challenge, 'seduction');", context);
+  assert.equal(context._commentSegments.length, 1, 'handoff waits until draft restoration is ready');
+  await opening;
   assert.equal(context._commentSegments.length, 2);
   assert.equal(context._commentSegments[0].text, 'Bestehender Entwurf');
   assert.equal(context._commentSegments[1].skillId, 'seduction');

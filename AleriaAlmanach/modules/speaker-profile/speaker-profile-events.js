@@ -20,16 +20,24 @@ function getCurrentSpeakerProfileThreadIds() {
 }
 
 async function openSpeakerProfileFromTrigger(trigger) {
+  const request = beginSpeakerProfileRequest(trigger);
   const payload = getSpeakerProfilePayloadFromTrigger(trigger);
   const fallbackName = payload.name || 'Sprecher';
   showSpeakerProfileOverlay(renderSpeakerProfileLoading(fallbackName));
 
-  const character = resolveSpeakerProfileCharacter(payload);
-  const comments = await loadSpeakerProfileComments(false);
-  const stats = buildSpeakerProfileStats(character, fallbackName, comments, getCurrentSpeakerProfileThreadIds());
-  showSpeakerProfileOverlay(renderSpeakerProfileContent(character, fallbackName, stats, payload));
-  if (typeof setSpeakerProfileAiContext === 'function') {
-    setSpeakerProfileAiContext({ character, fallbackName, stats });
+  try {
+    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+    if (!request.current()) return false;
+    const character = resolveSpeakerProfileCharacter(payload);
+    const comments = await loadSpeakerProfileComments(false);
+    if (!request.current()) return false;
+    const stats = buildSpeakerProfileStats(character, fallbackName, comments, getCurrentSpeakerProfileThreadIds());
+    showSpeakerProfileOverlay(renderSpeakerProfileContent(character, fallbackName, stats, payload));
+    if (typeof setSpeakerProfileAiContext === 'function') setSpeakerProfileAiContext({ character, fallbackName, stats });
+    return true;
+  } catch (error) {
+    if (request.current()) showSpeakerProfileOverlay(`<div class="speaker-profile-empty">${escapeHtml(error.message || 'Sprecherprofil konnte nicht geladen werden.')}</div>`);
+    return false;
   }
 }
 

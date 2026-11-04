@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Aleria Almanach mit szenengebundenem 3D-Würfelsystem",
   "scripts": {
+    "test:startup": "node --test --experimental-test-isolation=none tests/loading-screen.test.mjs tests/archive-initial-render.test.mjs tests/dashboard-rendering.test.mjs tests/dashboard-scene-activity.test.mjs tests/comment-activity-repository.test.mjs tests/module-store-server-loader.test.mjs tests/module-store-online-source.test.mjs tests/module-store-revision.test.mjs tests/firebase-module-storage.test.mjs tests/item-register-startup.test.mjs tests/item-register-demand.test.mjs tests/startup-demand.test.mjs tests/actor-demand-lifecycle.test.mjs tests/comment-form-performance.test.mjs tests/skill-challenge-attempt.test.mjs tests/genealogy-bootstrap.test.mjs tests/character-register-views.test.mjs tests/character-categories.test.mjs tests/character-family-memberships.test.mjs",
     "build:biographies": "node ../js/biography/build-public-biographies.mjs",
     "check:biographies": "node ../js/biography/build-public-biographies.mjs --check",
     "test:biographies": "node --test --experimental-test-isolation=none tests/biography-editions.test.mjs tests/biography-transfer.test.mjs tests/biography-rich-text-compatibility.test.mjs tests/biography-portrait-captions.test.mjs tests/biography-cards.test.mjs",

@@ -7,11 +7,8 @@ import {
 } from './genealogy-source-repository.js?v=20260903-genealogy-portrait-sync-v1';
 import {
   createCharacterMatchResolver,
-  findBestCharacterMatch,
-  normalizeCharacterGenealogy,
-  normalizeCharacterIdentity
+  findBestCharacterMatch
 } from './person-identity.js?v=20260903-genealogy-import-hangfix-v1';
-import { getDefaultCharacterFamilyMemberships } from './family-membership-index.js?v=20260903-character-register-v2';
 import {
   deduplicateGenealogyCandidates,
   filterGenealogyCandidates,
@@ -43,15 +40,6 @@ const state = {
   error: '',
   loadToken: 0
 };
-
-window.AleriaCharacterGenealogy = Object.freeze({
-  normalizeCharacterGenealogy,
-  normalizeCharacterIdentity,
-  findBestCharacterMatch,
-  getFamilyMemberships: getDefaultCharacterFamilyMemberships
-});
-
-document.dispatchEvent(new CustomEvent('aleria:character-genealogy-ready'));
 
 function escapeMarkup(value) {
   return String(value ?? '')
@@ -495,25 +483,31 @@ function selectFamily(familyId) {
   });
 }
 
-async function initializeProjectCandidates() {
-  state.candidatesByFamily = new Map();
-  for (let index = 0; index < state.families.length; index += 1) {
-    const record = state.families[index];
+async function initializeProjectCandidates(token = state.loadToken) {
+  const candidates = new Map(), families = [...state.families];
+  for (let index = 0; index < families.length; index += 1) {
+    if (token !== state.loadToken) return false;
+    const record = families[index];
     if (!record.family) continue;
     try {
-      state.candidatesByFamily.set(record.id, createFamilyCandidates(loadGenealogyFamily(record)));
+      candidates.set(record.id, createFamilyCandidates(loadGenealogyFamily(record)));
     } catch (error) {
       console.info(`Stammbaum ${record.id} konnte nicht für die Gesamtsuche vorbereitet werden.`, error);
     }
     if (index > 0 && index % 32 === 0) await yieldToMainThread();
   }
+  if (token !== state.loadToken) return false;
+  state.candidatesByFamily = candidates; return true;
 }
 
-async function openImportDialog() {
+export async function openImportDialog() {
+  const token = ++state.loadToken;
   ensureDialog();
   state.characterSnapshot = [];
+  state.candidates = []; state.candidatesByFamily = new Map(); state.activeFamily = null;
   state.matchResolver = null;
   state.matchCache.clear();
+  state.loading = false;
   state.error = '';
   state.search = '';
   state.matchFilter = 'available';
@@ -541,15 +535,24 @@ async function openImportDialog() {
   }
   state.loading = true;
   render();
-  await waitForDialogPaint();
-  state.characterSnapshot = getCharacters();
-  rebuildCharacterMatchResolver();
-  await initializeProjectCandidates();
+  try {
+    await Promise.all([waitForDialogPaint(), typeof window.loadSceneActorData === 'function'
+      ? window.loadSceneActorData() : window.AleriaCharacters?.reload?.()]);
+    if (token !== state.loadToken) return;
+    state.characterSnapshot = getCharacters();
+    rebuildCharacterMatchResolver();
+    if (!await initializeProjectCandidates(token)) return;
+  } catch (error) {
+    if (token !== state.loadToken) return;
+    state.loading = false; state.error = error.message || 'Die vorhandenen Figuren konnten nicht geprüft werden. Bitte erneut öffnen.';
+    render(); return;
+  }
   state.loading = false;
   selectFamily('');
   refreshSelectedCandidateFamily();
+  const registryToken = state.loadToken;
   void refreshGenealogyRegistry(state.families).then(merged => {
-    if (!merged) return;
+    if (!merged || registryToken !== state.loadToken) return;
     state.families = merged;
     merged.forEach(record => {
       if (!record.family || state.candidatesByFamily.has(record.id)) return;
@@ -561,6 +564,7 @@ async function openImportDialog() {
 
 function closeImportDialog() {
   if (state.batchSaving) return;
+  state.loadToken += 1;
   if (typeof window.deactivateDialog === 'function') window.deactivateDialog(DIALOG_ID);
   else {
     ensureDialog().classList.remove('active');
@@ -646,10 +650,6 @@ async function importSelectedCandidates() {
 
 async function handleAction(trigger) {
   const action = trigger.dataset.characterGenealogyAction;
-  if (action === 'open-import') {
-    await openImportDialog();
-    return;
-  }
   if (action === 'close') {
     closeImportDialog();
     return;
@@ -701,7 +701,7 @@ async function handleAction(trigger) {
 
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-character-genealogy-action]');
-  if (!trigger) return;
+  if (!trigger || trigger.dataset.characterGenealogyAction === 'open-import') return;
   event.preventDefault();
   void handleAction(trigger).catch(error => {
     console.error('Stammbaum-Charakterimport fehlgeschlagen:', error);

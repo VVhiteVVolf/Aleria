@@ -1,5 +1,16 @@
 // Choice between the compact scene metadata profile and the full character profile.
 let _speakerProfileChoicePayload = null;
+let _speakerProfileOpenRequest = 0;
+
+function cancelSpeakerProfileRequest() { _speakerProfileOpenRequest += 1; }
+function beginSpeakerProfileRequest(trigger) {
+  const request = ++_speakerProfileOpenRequest;
+  const entry = typeof currentEntry === 'undefined' ? null : currentEntry;
+  const thread = typeof getCurrentCommentThreadId === 'function' ? getCurrentCommentThreadId() : '';
+  return { current: () => request === _speakerProfileOpenRequest
+    && (typeof currentEntry === 'undefined' ? null : currentEntry) === entry
+    && (typeof getCurrentCommentThreadId === 'function' ? getCurrentCommentThreadId() : '') === thread };
+}
 
 function ensureSpeakerProfileChoiceDialog() {
   let overlay = document.getElementById('speaker-profile-choice-overlay');
@@ -14,7 +25,7 @@ function ensureSpeakerProfileChoiceDialog() {
   overlay.innerHTML = `<div class="speaker-profile-choice-card">
     <button class="speaker-profile-choice-close" type="button" data-speaker-choice-action="close" aria-label="Auswahl schließen">×</button>
     <div class="speaker-profile-choice-portrait" data-speaker-choice-portrait></div>
-    <div><span>Figur ansehen</span><h2 id="speaker-profile-choice-title" data-speaker-choice-name>Charakter</h2><p>Welche Ansicht möchtest du öffnen?</p></div>
+    <div><span>Figur ansehen</span><h2 id="speaker-profile-choice-title" data-speaker-choice-name>Charakter</h2><p data-speaker-choice-status>Welche Ansicht möchtest du öffnen?</p></div>
     <div class="speaker-profile-choice-actions">
       <button type="button" data-speaker-choice-action="mini"><strong>Mini-Datenprofil</strong><small>Stimmen, Metadaten und Szenenkontext</small></button>
       <button type="button" data-speaker-choice-action="full"><strong>Charakterprofil</strong><small>Vollständige Daten und Biografie</small></button>
@@ -25,20 +36,38 @@ function ensureSpeakerProfileChoiceDialog() {
   return overlay;
 }
 
-function openSpeakerProfileChoice(trigger) {
-  _speakerProfileChoicePayload = { trigger, ...getSpeakerProfilePayloadFromTrigger(trigger) };
-  if (!_speakerProfileChoicePayload.characterId || !getCharacterById(_speakerProfileChoicePayload.characterId)) {
-    return openSpeakerProfileFromTrigger(trigger);
-  }
+async function openSpeakerProfileChoice(trigger) {
+  closeSpeakerProfileOverlay();
+  const request = beginSpeakerProfileRequest(trigger);
+  const payload = { trigger, ...getSpeakerProfilePayloadFromTrigger(trigger) };
+  _speakerProfileChoicePayload = payload;
   const overlay = ensureSpeakerProfileChoiceDialog();
-  overlay.querySelector('[data-speaker-choice-name]').textContent = _speakerProfileChoicePayload.name || 'Charakter';
+  overlay.querySelector('[data-speaker-choice-name]').textContent = payload.name || 'Charakter';
   const portrait = overlay.querySelector('[data-speaker-choice-portrait]');
-  const src = sanitizeImageSrc(_speakerProfileChoicePayload.portrait || '');
-  portrait.innerHTML = src ? `<img src="${src}" alt="">` : `<span>${escapeHtml(getInitialChar(_speakerProfileChoicePayload.name))}</span>`;
-  activateDialog('speaker-profile-choice-overlay', { initialFocus: '[data-speaker-choice-action="mini"]' });
+  const src = sanitizeImageSrc(payload.portrait || '');
+  portrait.innerHTML = src ? `<img src="${src}" alt="">` : `<span>${escapeHtml(getInitialChar(payload.name))}</span>`;
+  const status = overlay.querySelector('[data-speaker-choice-status]');
+  const actions = [...overlay.querySelectorAll('[data-speaker-choice-action]')].filter(button => button.dataset.speakerChoiceAction !== 'close');
+  actions.forEach(button => { button.disabled = true; });
+  if (status) status.textContent = 'Figur wird geladen …';
+  activateDialog('speaker-profile-choice-overlay', { initialFocus: '[data-speaker-choice-action="close"]' });
+  try {
+    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+    if (!request.current() || !overlay.classList.contains('active')) return false;
+    if (!payload.characterId || !getCharacterById(payload.characterId)) {
+      closeSpeakerProfileChoice(); return openSpeakerProfileFromTrigger(trigger);
+    }
+    actions.forEach(button => { button.disabled = false; });
+    if (status) status.textContent = 'Welche Ansicht möchtest du öffnen?';
+    return true;
+  } catch (error) {
+    if (request.current() && overlay.classList.contains('active') && status) status.textContent = error.message || 'Die Figur konnte nicht geladen werden. Bitte erneut öffnen.';
+    return false;
+  }
 }
 
 function closeSpeakerProfileChoice() {
+  cancelSpeakerProfileRequest();
   deactivateDialog('speaker-profile-choice-overlay');
   _speakerProfileChoicePayload = null;
 }

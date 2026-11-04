@@ -1,5 +1,35 @@
 let _iconDirectorySearch = '';
 let _iconDirectoryFolder = 'all';
+let _iconDirectoryLoadRequest = null;
+let _iconDirectoryLoadError = false;
+const _iconDirectoryCatalogUrl = new URL('./icon-directory-data.js?v=20261104-startup-v1', document.currentScript?.src || document.baseURI).href;
+
+function loadIconDirectoryCatalog() {
+  if (Array.isArray(globalThis.ALERIA_ICON_DIRECTORY)) return Promise.resolve();
+  if (_iconDirectoryLoadRequest) return _iconDirectoryLoadRequest;
+  _iconDirectoryLoadError = false;
+  _iconDirectoryLoadRequest = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = _iconDirectoryCatalogUrl;
+    script.async = true;
+    script.addEventListener('load', () => {
+      if (Array.isArray(globalThis.ALERIA_ICON_DIRECTORY)) resolve();
+      else reject(new Error('Icon-Verzeichnis ist nicht verfügbar.'));
+    }, { once: true });
+    script.addEventListener('error', () => { script.remove(); reject(new Error('Icon-Verzeichnis konnte nicht geladen werden.')); }, { once: true });
+    document.head.appendChild(script);
+  }).catch(error => {
+    _iconDirectoryLoadError = true;
+    throw error;
+  }).finally(() => { _iconDirectoryLoadRequest = null; });
+  return _iconDirectoryLoadRequest;
+}
+
+function refreshIconDirectoryCatalog() {
+  const request = loadIconDirectoryCatalog();
+  renderIconDirectory();
+  return request.catch(() => {}).finally(renderIconDirectory);
+}
 
 function normalizeIconDirectoryText(value) {
   return String(value ?? '')
@@ -130,6 +160,13 @@ function renderIconDirectoryGrid() {
   const status = document.getElementById('icon-directory-status');
   if (!grid) return;
   const items = getIconDirectoryVisibleItems();
+  if (!Array.isArray(globalThis.ALERIA_ICON_DIRECTORY)) {
+    if (status) status.textContent = _iconDirectoryLoadError ? 'Icons konnten nicht geladen werden.' : 'Icon-Verzeichnis wird geladen …';
+    grid.innerHTML = _iconDirectoryLoadError
+      ? '<div class="icon-directory-empty">Bitte prüfe die Verbindung. <button type="button" data-icon-directory-action="retry">Erneut laden</button></div>'
+      : '<div class="icon-directory-empty">Icons werden bei Bedarf geladen …</div>';
+    return;
+  }
   if (status) status.textContent = `${items.length} von ${getIconDirectoryItems().length} Icons`;
   grid.innerHTML = items.map(item => {
     const src = sanitizeImageSrc(item.path || '');
@@ -171,6 +208,7 @@ function openIconDirectory({ anchor = document.activeElement } = {}) {
     (Number(getComputedStyle(parent).zIndex) || 0) + 1
   ));
   activateDialog('icon-directory-overlay', { initialFocus: '#icon-directory-search' });
+  if (!Array.isArray(globalThis.ALERIA_ICON_DIRECTORY)) refreshIconDirectoryCatalog();
 }
 
 function closeIconDirectory() {
@@ -213,6 +251,11 @@ function handleIconDirectoryClick(event) {
   const trigger = event.target?.closest?.('[data-icon-directory-action]');
   if (!trigger || !trigger.closest('#icon-directory-overlay')) return;
   const action = trigger.dataset.iconDirectoryAction;
+  if (action === 'retry') {
+    event.preventDefault();
+    refreshIconDirectoryCatalog();
+    return;
+  }
   if (action === 'close') {
     event.preventDefault();
     closeIconDirectory();

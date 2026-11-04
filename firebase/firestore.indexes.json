@@ -1,5 +1,8 @@
 {
   "indexes": [
+    { "collectionGroup": "item_merchant_sold", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "merchantId", "order": "ASCENDING" }, { "fieldPath": "at", "order": "DESCENDING" }
+    ] },
     { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
       { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "updatedAt", "order": "DESCENDING" }
     ] },

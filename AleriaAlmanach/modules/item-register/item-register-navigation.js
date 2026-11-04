@@ -1,10 +1,11 @@
 // Owns the shareable register entry URL; the register keeps ownership of its UI.
 const REGIONAL_HASH = '#laender-ruestungen-waffen';
+export const isItemRegisterRoute = hash => hash === REGIONAL_HASH;
 
 export function mountRegisterNavigation({ openSection, close }, host = window) {
   let openedFromRoute = false;
   function navigate() {
-    if (host.location.hash === REGIONAL_HASH) {
+    if (isItemRegisterRoute(host.location.hash)) {
       openedFromRoute = true;
       openSection('regional');
     } else if (openedFromRoute) {

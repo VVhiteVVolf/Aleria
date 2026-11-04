@@ -4,7 +4,7 @@ import { parsePrice } from '../item-register/item-register-money.js';
 import { groupNameKey } from './group-landing-roster.js';
 import { html, groupPortrait } from './group-landing-markup.js';
 import { field, select, iconField, mountGroupIconFields } from './group-landing-fields.js';
-import { inventoryEditorBody, collectInventoryEdit, mountInventoryChooser } from './group-landing-inventory-editor.js';
+import { inventoryEditorBody, collectInventoryEdit, mountInventoryChooser } from './group-landing-inventory-editor.js?v=20261104-startup-v1';
 import { LANDING_PRESENTATIONS } from './landing-model.js';
 const archiveOptions = characters => [['', 'Ohne Verknüpfung'], ...characters.map(character => [character.id, `${character.name}${character.title ? ' · ' + character.title : ''}`])];
 const titles = { select: 'Mitglieder aus der Hierarchie auswählen', member: 'Mitglied anpassen', guest: 'Gast aus dem Charakterarchiv', settings: 'Gruppe & Darstellung bearbeiten', map: 'Aktuelle Karte auswählen', scene: 'Interaktive Sitzungen verknüpfen', treasury: 'Gruppenkasse', inventory: 'Güter aus dem Handelsregister', 'inventory-item': 'Gruppenbestand bearbeiten', 'save-preset': 'Zusammenstellung merken' };

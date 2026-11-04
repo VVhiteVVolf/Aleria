@@ -4,6 +4,24 @@
 let _inlineModuleEdit = null;
 let _inlinePreviewRefreshTimer = null;
 let _inlineEditorEventSource = null;
+let _inlineModuleOpenRequest = 0;
+
+async function prepareInlineModuleActorData() {
+  const request = ++_inlineModuleOpenRequest;
+  const entry = currentEntry;
+  const renderToken = typeof _modalRenderToken === 'undefined' ? null : _modalRenderToken;
+  const archiveTab = typeof _activeTab === 'undefined' ? null : _activeTab;
+  const current = () => request === _inlineModuleOpenRequest && currentEntry === entry
+    && (renderToken === null || renderToken === _modalRenderToken)
+    && (archiveTab === null || archiveTab === _activeTab);
+  try {
+    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+    return current();
+  } catch (error) {
+    if (current() && typeof showAppStatus === 'function') showAppStatus(error.message || 'Figuren für die Bearbeitung konnten nicht geladen werden.', 'error');
+    return false;
+  }
+}
 
 function inlineEditorCssEscape(value) {
   const raw = String(value ?? '');
@@ -352,7 +370,8 @@ function openModuleEditorForImport() {
   );
 }
 
-function openModuleEditorForNew() {
+async function openModuleEditorForNew() {
+  if (!await prepareInlineModuleActorData()) return false;
   const preferred = getPreferredEditorSection();
   const draft = createModuleTemplateDraft('story', preferred);
 
@@ -377,9 +396,11 @@ function openModuleEditorForNew() {
   renderPage(0, 0);
   document.body.style.overflow = 'hidden';
   activateDialog('modal-overlay', { initialFocus: '.modal-close' });
+  return true;
 }
 
-function openModuleEditorForEntry(entryId) {
+async function openModuleEditorForEntry(entryId) {
+  if (!await prepareInlineModuleActorData()) return false;
   const payload = buildModuleExportPayload(entryId);
   if (!payload) return;
   const sourceKind = findCustomSectionByEntryId(entryId)
@@ -401,14 +422,16 @@ function openModuleEditorForEntry(entryId) {
   };
   setInlineModuleEditCleanBaseline();
   renderPage(Math.min(currentPage, Math.max(0, getPages(_inlineModuleEdit.draft).length - 1)), 0);
+  return true;
 }
 
 function openModuleEditorForCurrent() {
   if (!currentEntry?.id) return;
-  openModuleEditorForEntry(currentEntry.id);
+  return openModuleEditorForEntry(currentEntry.id);
 }
 
 function cancelInlineModuleEdit() {
+  _inlineModuleOpenRequest += 1;
   if (!_inlineModuleEdit) return;
   if (!confirmDiscardInlineModuleEditChanges('abbrechen')) return;
   const context = _inlineModuleEdit;

@@ -13,14 +13,22 @@ Almanach liegt in einem `display: contents`-Container und bleibt währenddessen
 `inert`. Beim Verlassen werden Sichtbarkeit, ARIA-Attribute und Fokus wiederhergestellt.
 Ohne das Ladeskript bleibt der Almanach zugänglich; die Ladeszene ist initial verborgen.
 
-Die sechs Schritte sind das `load`-Ereignis der Seite, `almanach:app-ready` nach
-dem lokalen Rendern, `almanach:initial-modules-settled` nach dem ersten Modulabgleich,
-die bestehenden Figuren-/Kreaturen-Ereignisse und die geladenen Reisegrafiken
-einschließlich sämtlicher Puppenteile. Der Balken zählt abgeschlossene Schritte,
-keine geschätzten Downloadprozente. Offline-Abgleich und Grafikfehler werden
-abgeschlossen, ohne einen erfolgreichen Online-Abruf vorzutäuschen. Nach 15 Sekunden
+Die zwei erforderlichen Schritte sind `almanach:app-ready` nach dem lokalen
+Rendern und `almanach:initial-modules-settled` nach dem ersten Modulabgleich.
+Der Balken zählt diese beiden Startschritte, keine geschätzten Downloadprozente.
+Der erste Modulabgleich bleibt erforderlich; eine Offline-Ausweichfassung wird
+ausdrücklich als verfügbarer Stand bezeichnet, ohne einen erfolgreichen
+Online-Abruf vorzutäuschen. `window.load`, Figuren-/Kreaturen-Ereignisse und
+dekorative Grafiken sind keine Eintrittssperren. Weitere Inhalte können nach der
+Freigabe im Hintergrund nachladen. Auch ein dauerhaft offener Bildabruf kann die
+Freigabe des bereitstehenden Archivs nicht verhindern. Nach 15 Sekunden
 erscheint eine ausdrückliche Weiter-Option, sobald das lokale Archiv bereit ist;
 Startfehler bieten stattdessen Neuladen. Keine künstliche Mindestwartezeit.
+
+Das HTML verwendet `progress max="2"` und die beiden
+`data-loading-step`-Kennungen `shell` und `modules`. Die Anzeige beschreibt die
+Startbereitschaft des Almanachs. Eine zusätzliche `data-loading-images`-Liste
+ist nicht erforderlich; CSS lädt Landschaft und statische Ersatzposen.
 
 Die neuen Signale greifen nicht auf Firebase zu und ändern keine Spielstände,
 Online-IDs, Ressourcen, Würfe oder Kampfverläufe.
@@ -31,9 +39,21 @@ Online-IDs, Ressourcen, Würfe oder Kampfverläufe.
 zusammen. Beide Beine schwingen kontinuierlich in Gegenphase durch dieselbe
 Mittelposition und wechseln dabei ihre vordere/hintere Stellung. Ein Bein wird beim
 Vorführen angehoben. Die Reihenfolge der SVG-Gruppen hält das hintere Bein hinter
-dem vorderen. Kopf, Torso, Kleidung und Ausrüstung wechseln niemals zwischen
+dem vorderen. Jede Figur behält ihre vollständige statische Ersatzpose, bis ihre
+eigenen drei Puppenteile geladen sind. Scheitert ein Teil, bleibt diese Ersatzpose
+erhalten; andere Figuren können ihre fertigen Puppen bereits verwenden. Beim
+Verlassen werden offene Bildanforderungen abgebrochen und verspätete
+DOM-Ersetzungen verhindert. Kopf, Torso, Kleidung und Ausrüstung wechseln niemals zwischen
 unterschiedlichen generierten Einzelbildern.
 Es gibt keine Masken durch Waffen, Umhänge oder Gelenke.
+
+Bei `prefers-reduced-motion` wird das Puppenmodul zunächst nicht importiert;
+die statischen Posen bleiben sichtbar. Ein ausdrückliches Einschalten der
+Animation lädt die Puppen nach. Unsichtbare Dokumente pausieren die Bewegung
+über `data-visibility` unabhängig von der manuellen Pausenwahl. Beim Zurückkehren
+bleibt eine vom Nutzer pausierte Animation pausiert. Tag und Nacht verwenden
+eine gemeinsame Überlagerung mit animierter Deckkraft statt fortlaufender
+Filterberechnungen auf sämtlichen Landschaftsebenen und Figuren.
 
 Die endgültigen Teile wurden mit dem eingebauten ImageGen erzeugt. Originale und
 vollständige Prompts stehen unter `assets/loading-screen/`, insbesondere
@@ -52,6 +72,13 @@ Die finalen Webgrafiken liegen in `public/assets/loading-screen/`.
 Nutzer bereitgestellte `Downloads/Ladebild musik.mpeg` (MP3, 219 Sekunden), als
 `ladebild-musik-v1.mp3` für das Web ohne Coverbild aufbereitet. Das Tonmodul wird
 im Kopf der Seite vorgeladen; sobald der Dialog existiert, wird Autoplay versucht.
+Das Audioelement entsteht ohne Quelle und mit `preload="none"`. Die Musikquelle
+wird erst beim Wiedergabeversuch zugewiesen. Meldet die optionale
+Autoplay-Policy des Browsers eine Sperre, wird ohne aktive Nutzerinteraktion
+keine Quelle angefordert. Browser ohne diese Policy-Schnittstelle versuchen
+weiterhin die erlaubte automatische Wiedergabe; ein abgewiesener Versuch gibt
+die Quelle sofort wieder frei. Damit wird der vollständige Titel bei einer
+Autoplay-Sperre nicht vorsorglich über `preload="auto"` angefordert.
 Bei einer Browsersperre wird der Start bei einer passenden Interaktion im
 Ladebildschirm erneut versucht; zusätzlich bleibt der Musikschalter verfügbar.
 Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
@@ -76,9 +103,13 @@ Tab bleibt im Ladedialog. Das Freigeben selbst startet keine Firebase-Schreibope
 
 `node --test --experimental-test-isolation=none tests/loading-screen.test.mjs tests/module-store-revision.test.mjs`
 
-Die Tests prüfen echte Ladefreigabe, frühe Ereignisse, expliziten Eintritt,
-Offline-/Fehlerpfade, Tonstart und Ausblenden, Beenden in Hintergrundtabs,
-vorhandene Grafiken und das Überkreuzen der Beine. Sie laufen auch im Netlify-Build.
+Die 33 Ladebildschirmtests prüfen echte Ladefreigabe vor `window.load`, frühe
+Ereignisse, hängende dekorative Abrufe, expliziten Eintritt, Offline-/Fehlerpfade,
+statische Posen bei reduzierter Bewegung, unabhängige Hintergrundtab-Pause,
+quellenloses Audio bis zum Wiedergabeversuch, erlaubtes und gesperrtes Autoplay,
+manuelles Stummschalten, Tonstart und Ausblenden, verspätete Wiedergabeantworten,
+Beenden in Hintergrundtabs, vollständige Ersatzposen bei fehlenden Puppenteilen,
+Abbruch offener Puppenabrufe und das Überkreuzen der Beine. Sie laufen auch im Netlify-Build.
 Die Puppen wurden zusätzlich in mehreren Phasen als Rastervorschau kontrolliert.
 Eine vollständige Browser-Layoutprüfung war in der Codex-Sitzung ohne verfügbaren
 Browser nicht möglich.

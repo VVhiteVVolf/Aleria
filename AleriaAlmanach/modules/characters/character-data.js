@@ -403,6 +403,17 @@ async function refreshCurrentModuleCommenterHighlights() {
   }
 }
 
+// Scenes and group folios need actor records; the archive overview does not.
+// Both repositories share in-flight work, so concurrent consumers remain cheap.
+async function loadSceneActorData() {
+  const results = await Promise.allSettled([
+    typeof loadCharacters === 'function' ? loadCharacters() : null,
+    window.AleriaCreatures?.ensureLoaded?.()
+  ]);
+  const failed = results.find(result => result.status === 'rejected');
+  if (failed) throw failed.reason;
+}
+
 function getAvailableCommentCharacters() {
   const castIds = getCurrentCommentCastIds();
   const allCharacters = getVisibleCharacterRecords();

@@ -21,7 +21,7 @@ export async function prepareGroupInventoryScene(database, transaction, account,
   return { commentId: reference.id, write() {
     transaction.create(reference, { entryId: threadId, text: details.text, charName: 'Erzähler', narrator: true,
       characterId: '', avatarKind: 'narrator', commentMode: 'scene-inventory-transfer', commentKind: 'scene-inventory-transfer-event',
-      sceneInventoryTransfer: details.transfer, inventoryTransaction: { schemaVersion: 3, validatedBy: 'commitGroupInventory', group: true, operations: 1 },
+      sceneInventoryTransfer: { ...details.transfer, presentation: 'compact' }, inventoryTransaction: { schemaVersion: 3, validatedBy: 'commitGroupInventory', group: true, operations: 1 },
       serverValidatedMechanics: true, serverCommitted: true, createdBy: details.actorUid, createdByRole: details.role,
       schemaVersion: 3, orderKey: details.orderKey, createdAtClient: details.orderKey,
       ts: FieldValue.serverTimestamp(), activityAt: FieldValue.serverTimestamp() });
