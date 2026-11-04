@@ -1,0 +1,152 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Perllan/person-a0e1ea6a.json",
+  "source": {
+    "kind": "supplied-family-export",
+    "documentId": "perllan",
+    "familyId": "perllan",
+    "personId": "person-a0e1ea6a",
+    "worldPersonId": "person--perllan--person-a0e1ea6a",
+    "picturedCompanions": []
+  },
+  "character": {
+    "name": "Rhosyn Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1723"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg",
+        "portraitCaption": "Rhosyn Perllan",
+        "biographyTitle": "Rhosyn Perllan",
+        "biographyText": "<p>Rhosyn Perllan wurde 1723 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Derwyn Perllan; eine namentlich nicht überlieferte Person (geboren 1701).</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Derwyn Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1701)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-a0e1ea6a"
+          }
+        ],
+        "footer": "Personenakte · Rhosyn Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-a0e1ea6a"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-a0e1ea6a",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1723",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-a0e1ea6a",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-a0e1ea6a",
+          "fingerprint": "{\"name\":\"Rhosyn Perllan\",\"title\":\"\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-2a0fa1e3\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-2a0fa1e3\",\"name\":\"Derwyn Perllan\"},{\"personId\":\"person-29996da3\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-29996da3\",\"name\":\"??\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-2a0fa1e3",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-2a0fa1e3",
+            "name": "Derwyn Perllan"
+          },
+          {
+            "personId": "person-29996da3",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-29996da3",
+            "name": "??"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--perllan--person-a0e1ea6a"
+  }
+}

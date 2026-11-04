@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1">
 <link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
-  <link rel="stylesheet" href="./styles/comments.css?v=20261102-set-order-v1">
+  <link rel="stylesheet" href="./styles/comments.css?v=20261104-comment-controls-v1">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
   <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
@@ -131,6 +131,7 @@
 <link rel="stylesheet" href="./styles/world-date.css?v=20260911-calendar-v2">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260910-archive-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20261017-intro-collapse-v1">
+<link rel="stylesheet" href="./modules/sync/firebase-sync-status.css?v=20261104-online-priority-v1">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20261013-combat-checkup-v1">
 <link rel="stylesheet" href="./styles/combat-status.css?v=20260922-profile-design-v1">
 <link rel="stylesheet" href="./styles/comments-condition-tracker.css?v=20260906-effect-rolls-v1">
@@ -144,7 +145,7 @@
   <link rel="stylesheet" href="./modules/theatre-program/theatre-program.css?v=20261017-v1">
   <!-- Firebase -->
   <link rel="stylesheet" href="./styles/account.css?v=20261012-guild-v3">
-  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261012-guild-v3"></script>
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261104-online-priority-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260903-genealogy-portrait-sync-v1"></script>
   <script src="../Fonts/Rheunwaith-Font-1.000/rheunwaith.js?v=2-gezeiten" defer></script>
   <script src="../Fonts/Karnrith-Font-2.000/karnrith.js?v=3" defer></script>
@@ -239,12 +240,12 @@
   <script src="./modules/module-editor/module-editor-aleria-date-field.js?v=20260723-aleria-calendar-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260912-archive-dialogs-v1" defer></script>
-  <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/sync/firebase-sync-status.js?v=20261104-online-priority-v1" defer></script>
   <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20261019-bannkreis-v1" defer></script>
-  <script src="./modules/module-store/module-store-local.js?v=20261014-module-storage-v2" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20261019-bannkreis-v1" defer></script>
+  <script src="./modules/module-store/module-store-local.js?v=20261104-online-priority-v1" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20261104-online-priority-v1" defer></script>
   <script src="./modules/module-store/module-store-sections.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
@@ -299,7 +300,7 @@
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261101-aleria-currency-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261104-explicit-empty-attributes-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2" defer></script>
@@ -324,7 +325,7 @@
   <script src="./modules/module-editor/module-editor-events.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20261014-module-storage-v2" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
-  <script src="./modules/inline-editor/inline-editor-state.js?v=20261102-biography-layout-v2" defer></script>
+  <script src="./modules/inline-editor/inline-editor-state.js?v=20261104-online-priority-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1" defer></script>
@@ -464,9 +465,9 @@
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260911-page-comments-v1" defer></script>
-  <script src="./modules/comments/comments-toolbar.js?v=20261012-scene-backup-v1" defer></script>
+  <script src="./modules/comments/comments-toolbar.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20261103-scene-regeneration-v1" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20260911-calendar-v2" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
@@ -477,8 +478,8 @@
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
   <script src="./modules/comments/comments-draft.js?v=20261015-check-options-v1" defer></script>
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
-  <script src="./modules/comments/comments-turn.js?v=20261012-scene-backup-v1" defer></script>
-  <script src="./modules/comments/comments-pagination.js?v=20261103-scene-regeneration-v1" defer></script>
+  <script src="./modules/comments/comments-turn.js?v=20261104-comment-controls-v1" defer></script>
+  <script src="./modules/comments/comments-pagination.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/comments/comments-thread.js?v=20261103-scene-regeneration-v1" defer></script>
   <script src="./modules/dashboard/dashboard-scene-activity.js?v=20261103-scene-regeneration-v1" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260919-play-days-v1" defer></script>
@@ -486,7 +487,7 @@
   <script src="./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-polls/scene-polls-events.js?v=20260625-scene-polls-v1" defer></script>
-  <script src="./modules/comments/comments-jump.js?v=20261103-scene-regeneration-v1" defer></script>
+  <script src="./modules/comments/comments-jump.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/comments/comments-submit.js?v=20261014-herausforderung-combat-v1" defer></script>
   <script src="./modules/comments/comments-showcase.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -525,7 +526,7 @@
   <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1" defer></script>
   <script src="./modules/modal/modal-layout.js?v=20260908-module-split-v1" defer></script>
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
-  <script src="./modules/modal/modal-controller.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/modal/modal-controller.js?v=20261104-online-priority-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20261004-biography-export-v1" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20261006-sidebar-equipment-v2" defer></script>
@@ -683,9 +684,12 @@
 </div>
 
 <div id="app-status-toast" class="app-status-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
-<div id="firebase-sync-status" class="firebase-sync-status" data-state="idle" role="status" aria-live="polite" aria-atomic="true" title="Klicken zum Minimieren">
-  <span class="firebase-sync-dot" aria-hidden="true"></span>
-  <span class="firebase-sync-label">Speicherstatus: bereit</span>
+<div id="firebase-sync-status" class="firebase-sync-status" data-state="idle" data-minimized="true" role="status" aria-live="polite" aria-atomic="false">
+  <button class="firebase-sync-toggle" type="button" data-action="toggle-firebase-sync-status" aria-expanded="false" aria-controls="firebase-sync-details" aria-label="Online-Speicher – Details anzeigen" title="Online-Speicher · Details anzeigen">
+    <span class="firebase-sync-dot" aria-hidden="true"></span>
+    <span class="firebase-sync-label">Online-Speicher</span>
+  </button>
+  <div class="firebase-sync-details" id="firebase-sync-details" hidden><p class="firebase-sync-detail">Der Online-Stand wird geladen.</p></div>
 </div>
 
 <!-- MODAL -->
@@ -705,7 +709,7 @@
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
 <script src="./modules/comments/comments-segment-events.js?v=20260816-segment-avatar-sets-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260816-segment-avatar-sets-v1" defer></script>
-<script src="./modules/comments/comments-input-events.js?v=20260821-fazit-workbench-v3" defer></script>
+<script src="./modules/comments/comments-input-events.js?v=20261104-comment-controls-v1" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
 <script src="./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1" defer></script>
 

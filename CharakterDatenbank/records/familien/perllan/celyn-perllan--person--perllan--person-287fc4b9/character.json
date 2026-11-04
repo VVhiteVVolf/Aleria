@@ -1,0 +1,407 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--perllan--person-287fc4b9",
+  "slug": "celyn-perllan",
+  "identity": {
+    "name": "Celyn Perllan",
+    "aliases": [],
+    "worldPersonId": "person--perllan--person-287fc4b9"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "perllan",
+      "label": "Familie Perllan"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "perllan",
+        "familyTitle": "Familie Perllan",
+        "personId": "person-287fc4b9",
+        "worldPersonId": "person--perllan--person-287fc4b9",
+        "houseId": "house-perllan",
+        "houseName": "Perllan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Celyn Perllan\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-813d2bd0\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-813d2bd0\",\"name\":\"Onnen Perllan\"},{\"personId\":\"person-5bfd79f1\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-5bfd79f1\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-02a890dc\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02a890dc\",\"name\":\"??\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--perllan--person-287fc4b9",
+      "documentIds": [
+        "person--perllan--person-287fc4b9"
+      ],
+      "documents": [
+        {
+          "documentId": "person--perllan--person-287fc4b9",
+          "createdAt": "2026-11-04T00:00:00.000Z",
+          "updatedAt": "2026-11-04T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "perllan",
+        "personId": "person-287fc4b9",
+        "worldPersonId": "person--perllan--person-287fc4b9",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Perllan/person-287fc4b9.json",
+    "sourceExportedAt": "2026-11-04T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-04T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--perllan--person-287fc4b9"
+    ],
+    "contentHash": "3997475059afa195d387de714927bd9a572d5228cb8e4ea371f8a4181d00eeba"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "perllan"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Celyn Perllan",
+        "title": "",
+        "fraktion": "Perllan",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-04T00:00:00.000Z",
+        "updatedAt": "2026-11-04T00:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            [
+              "Familie",
+              "Perllan"
+            ],
+            [
+              "Stand",
+              "Bürgerlich"
+            ],
+            [
+              "Geboren",
+              "1700"
+            ],
+            [
+              "Lebensstatus",
+              "Lebend"
+            ]
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg",
+            "portraitCaption": "Celyn Perllan",
+            "biographyTitle": "Celyn Perllan",
+            "biographyText": "<p>Celyn Perllan wurde 1700 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Onnen Perllan; eine namentlich nicht überlieferte Person (geboren 1674). Partnerschaften: eine namentlich nicht überlieferte Person.</p>",
+            "abilities": [],
+            "knightMentors": [],
+            "connectionsTitle": "Familie & Tierbegleiter",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Onnen Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-813d2bd0.jpg",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person (geboren 1674)",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Partnerperson"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Perllan",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+                "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+                "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-287fc4b9"
+              }
+            ],
+            "footer": "Personenakte · Celyn Perllan"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--perllan--person-287fc4b9"
+        },
+        "genealogy": {
+          "worldPersonId": "person--perllan--person-287fc4b9",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1700",
+          "death": "",
+          "houseId": "house-perllan",
+          "houseName": "Perllan",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "perllan",
+              "personId": "person-287fc4b9",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-04T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-287fc4b9",
+              "fingerprint": "{\"name\":\"Celyn Perllan\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-813d2bd0\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-813d2bd0\",\"name\":\"Onnen Perllan\"},{\"personId\":\"person-5bfd79f1\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-5bfd79f1\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-02a890dc\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02a890dc\",\"name\":\"??\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-813d2bd0",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-813d2bd0",
+                "name": "Onnen Perllan"
+              },
+              {
+                "personId": "person-5bfd79f1",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-5bfd79f1",
+                "name": "??"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-02a890dc",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-02a890dc",
+                "name": "??"
+              }
+            ],
+            "children": []
+          }
+        },
+        "id": "person--perllan--person-287fc4b9"
+      }
+    ]
+  },
+  "character": {
+    "name": "Celyn Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1700"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg",
+        "portraitCaption": "Celyn Perllan",
+        "biographyTitle": "Celyn Perllan",
+        "biographyText": "<p>Celyn Perllan wurde 1700 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Onnen Perllan; eine namentlich nicht überlieferte Person (geboren 1674). Partnerschaften: eine namentlich nicht überlieferte Person.</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Onnen Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-813d2bd0.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1674)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Partnerperson"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-287fc4b9"
+          }
+        ],
+        "footer": "Personenakte · Celyn Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-287fc4b9"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-287fc4b9",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-287fc4b9",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-287fc4b9",
+          "fingerprint": "{\"name\":\"Celyn Perllan\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-813d2bd0\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-813d2bd0\",\"name\":\"Onnen Perllan\"},{\"personId\":\"person-5bfd79f1\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-5bfd79f1\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-02a890dc\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02a890dc\",\"name\":\"??\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-813d2bd0",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-813d2bd0",
+            "name": "Onnen Perllan"
+          },
+          {
+            "personId": "person-5bfd79f1",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-5bfd79f1",
+            "name": "??"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-02a890dc",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-02a890dc",
+            "name": "??"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--perllan--person-287fc4b9"
+  }
+}

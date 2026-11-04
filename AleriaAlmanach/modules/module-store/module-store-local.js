@@ -121,9 +121,26 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
     return pending;
   }
 
+  async function preserveRecovery(signature, value) {
+    await ready();
+    const key = `sync-recovery:${signature}`;
+    if (!database) {
+      storage.setItem(key, value);
+      return;
+    }
+    await transact('readwrite', store => store.put(value, key));
+  }
+
   async function readLegacyRecovery() {
     await ready();
-    if (!database) return {};
+    if (!database) {
+      const records = {};
+      for (let index = 0; index < storage.length; index += 1) {
+        const key = storage.key(index);
+        if (key?.startsWith('sync-recovery:')) records[key] = storage.getItem(key);
+      }
+      return records;
+    }
     return transact('readonly', (store, setResult) => {
       const records = {};
       setResult(records);
@@ -131,10 +148,17 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
         const request = store.get(`legacy-recovery:${key}`);
         request.onsuccess = () => { if (request.result != null) records[key] = request.result; };
       });
+      const cursor = store.openCursor();
+      cursor.onsuccess = () => {
+        const record = cursor.result;
+        if (!record) return;
+        if (String(record.key).startsWith('sync-recovery:')) records[record.key] = record.value;
+        record.continue();
+      };
     });
   }
 
-  return Object.freeze({ ready, read, write, readLegacyRecovery,
+  return Object.freeze({ ready, read, write, readLegacyRecovery, preserveRecovery,
     flush: async () => {
       await pending;
       if (dirtyKeys.size) throw new Error('Eine lokale Moduländerung konnte noch nicht gesichert werden.');

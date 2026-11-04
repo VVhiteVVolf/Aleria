@@ -74,7 +74,8 @@ test('the revised maps retain thirteen district identities, 98 mapped places and
     assert.equal(map.publishedOriginal,false);
     assert.equal(map.noGeometryEdits,true);
     assert.equal(createHash('sha256').update(fs.readFileSync(new URL(map.original,root))).digest('hex'),map.sha256);
-    assert.equal(createHash('sha256').update(fs.readFileSync(map.sourcePath)).digest('hex'),map.sha256);
+    const originalSource = fs.existsSync(map.sourcePath) ? map.sourcePath : new URL(map.original, root);
+    assert.equal(createHash('sha256').update(fs.readFileSync(originalSource)).digest('hex'),map.sha256);
   }
   assert.equal(sources.webImages.length,4);
   for (const image of sources.webImages) {

@@ -1,7 +1,18 @@
 ﻿// Comment jump, author lookup, and scroll helpers.
 function normalizeCommentJumpText(value) {
-  if (typeof normalizeSearchText === 'function') return normalizeSearchText(value || '');
-  return String(value || '').toLowerCase().trim();
+  const text = typeof normalizeSearchText === 'function' ? normalizeSearchText(value || '') : String(value || '');
+  return String(text).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()
+    .replace(/ß/g, 'ss').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+}
+
+function findCommentAuthorMatches(comments, query) {
+  const normalized = normalizeCommentJumpText(query);
+  if (!normalized) return [];
+  const tokens = normalized.split(/\s+/);
+  const matches = (Array.isArray(comments) ? comments : []).filter(comment =>
+    getCommentAuthorNames(comment).some(name => tokens.every(token => normalizeCommentJumpText(name).includes(token))));
+  const exact = matches.filter(comment => getCommentAuthorNames(comment).some(name => normalizeCommentJumpText(name) === normalized));
+  return exact.length ? exact : matches;
 }
 
 function getCommentAuthorNames(comment) {
@@ -40,7 +51,7 @@ function setCommentJumpStatus(tools, message = '') {
 function syncCommentJumpTools(scroll, sortedComments) {
   const tools = getCommentJumpTools(scroll);
   if (!tools) return;
-  const datalist = tools.querySelector('#comment-author-jump-list');
+  const datalist = tools.querySelector('[data-comment-author-options]');
   const input = tools.querySelector('[data-comment-jump-input]');
   const namesByKey = new Map();
 
@@ -61,16 +72,8 @@ function syncCommentJumpTools(scroll, sortedComments) {
   }
 
   tools.dataset.commentCount = String(Array.isArray(sortedComments) ? sortedComments.length : 0);
-  setCommentJumpStatus(
-    tools,
-    namesByKey.size
-      ? `${namesByKey.size} Kommentator${namesByKey.size === 1 ? '' : 'en'} in diesem Verlauf`
-      : 'Noch keine Kommentatoren im Verlauf'
-  );
-
-  if (input && input.value && !Array.from(namesByKey.keys()).some(key => key.includes(normalizeCommentJumpText(input.value)))) {
-    input.removeAttribute('aria-invalid');
-  }
+  tools.dataset.commentAuthorCount = String(namesByKey.size);
+  updateCommentJumpSearchStatus(input, sortedComments);
 }
 
 function getActiveCommentsScroll(source = null) {
@@ -78,6 +81,32 @@ function getActiveCommentsScroll(source = null) {
   return scoped?.querySelector?.('#comments-scroll, .comments-scroll')
     || document.getElementById('comments-scroll')
     || document.querySelector('.comments-scroll');
+}
+
+function getCommentJumpHistory(scroll) {
+  const threadId = String(scroll?.dataset?.commentThreadId || '').trim();
+  const history = sortCommentsByTimeline(_commentCache[threadId] || []);
+  const comments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(history) || history;
+  return { threadId, history, comments };
+}
+
+function updateCommentJumpSearchStatus(source, visibleComments = null) {
+  const scroll = getActiveCommentsScroll(source);
+  const tools = source?.closest?.('[data-comment-quick-tools]') || getCommentJumpTools(scroll);
+  const input = tools?.querySelector('[data-comment-jump-input]');
+  if (!tools || !input) return;
+  input.removeAttribute('aria-invalid');
+  const query = normalizeCommentJumpText(input.value);
+  if (!query) {
+    const count = Number(tools.dataset.commentAuthorCount || 0);
+    setCommentJumpStatus(tools, count ? `${count} Kommentator${count === 1 ? '' : 'en'} im Verlauf · Namen eingeben und Enter drücken.` : 'Noch keine Kommentatoren im Verlauf.');
+    return;
+  }
+  const comments = visibleComments || getCommentJumpHistory(scroll).comments;
+  const matches = findCommentAuthorMatches(comments, query);
+  setCommentJumpStatus(tools, matches.length
+    ? `${matches.length} passende${matches.length === 1 ? 'r Beitrag' : ' Beiträge'} · Enter öffnet den jüngsten Treffer.`
+    : 'Kein passender Kommentator. Versuche einen anderen Namen oder Namensteil.');
 }
 
 function scrollActiveComments(direction, source = null) {
@@ -88,11 +117,11 @@ function scrollActiveComments(direction, source = null) {
   requestAnimationFrame(() => { scroll.scrollTop = top; });
 }
 
-function getCommentElementForJump(commentId) {
+function getCommentElementForJump(commentId, scroll = null) {
   const id = String(commentId || '');
   if (!id) return null;
   const escaped = window.CSS?.escape ? CSS.escape(id) : id.replace(/["\\]/g, '\\$&');
-  const nodes = Array.from(document.querySelectorAll(`[data-comment-id="${escaped}"]`));
+  const nodes = Array.from((scroll || document).querySelectorAll(`[data-comment-id="${escaped}"]`));
   return nodes[0] || null;
 }
 
@@ -106,13 +135,11 @@ function highlightCommentJumpTarget(element) {
 }
 
 function jumpToLatestCommentByAuthor(source = null) {
-  const tools = source?.closest?.('[data-comment-quick-tools]') || document.querySelector('[data-comment-quick-tools]');
+  const scroll = getActiveCommentsScroll(source);
+  const tools = source?.closest?.('[data-comment-quick-tools]') || getCommentJumpTools(scroll);
   const input = tools?.querySelector('[data-comment-jump-input]');
   const query = normalizeCommentJumpText(input?.value || '');
-  const scroll = getActiveCommentsScroll(source);
-  const threadId = String(scroll?.dataset?.commentThreadId || '').trim();
-  const history = sortCommentsByTimeline(_commentCache[threadId] || []);
-  const comments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(history) || history;
+  const { threadId, history, comments } = getCommentJumpHistory(scroll);
 
   if (!query) {
     setCommentJumpStatus(tools, 'Gib zuerst einen Kommentatornamen ein.');
@@ -120,10 +147,8 @@ function jumpToLatestCommentByAuthor(source = null) {
     return;
   }
 
-  const match = comments
-    .slice()
-    .reverse()
-    .find(comment => getCommentAuthorNames(comment).some(name => normalizeCommentJumpText(name).includes(query)));
+  const matches = findCommentAuthorMatches(comments, query);
+  const match = matches.at(-1);
 
   if (!match) {
     setCommentJumpStatus(tools, 'Kein Beitrag dieses Kommentators gefunden.');
@@ -132,22 +157,29 @@ function jumpToLatestCommentByAuthor(source = null) {
   }
 
   if (input) input.removeAttribute('aria-invalid');
-  let target = getCommentElementForJump(match.id);
+  let target = getCommentElementForJump(match.id, scroll);
   if (!target && typeof setCommentPageForCommentId === 'function') {
     setCommentPageForCommentId(threadId, match.id, history);
-    target = getCommentElementForJump(match.id);
+    target = getCommentElementForJump(match.id, scroll);
   }
   if (!target) {
     setCommentJumpStatus(tools, 'Treffer gefunden, aber der Beitrag ist gerade nicht sichtbar.');
     return;
   }
 
-  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
   highlightCommentJumpTarget(target);
-  setCommentJumpStatus(tools, `Jüngster Treffer: ${getCommentAuthorNames(match).join(', ')}`);
+  setCommentJumpStatus(tools, `Jüngster Treffer: ${getCommentAuthorNames(match).join(', ')} · ${matches.length} ${matches.length === 1 ? 'Beitrag' : 'Beiträge'}`);
 }
 
 function handleCommentJumpSearchKey(event) {
+  if (event.key === 'Escape') {
+    event.target.value = '';
+    updateCommentJumpSearchStatus(event.target);
+    event.preventDefault();
+    return;
+  }
   if (event.key !== 'Enter') return;
   event.preventDefault();
   jumpToLatestCommentByAuthor(event.target);

@@ -16,17 +16,17 @@ function buildCommentTurnBar(threadId) {
         <span class="comment-turn-kicker">Redestab</span>
         <span class="comment-turn-state" data-turn-state>Wird geladen...</span>
       </div>
-      <div class="comment-turn-actions">
-        <button class="comment-turn-btn" type="button" data-action="set-comment-turn" data-turn-value="erdi">Erdi</button>
-        <button class="comment-turn-btn" type="button" data-action="set-comment-turn" data-turn-value="patrick">Patrick</button>
-        <button class="comment-turn-btn comment-turn-ended" type="button" data-action="set-comment-turn" data-turn-value="ended">Sitzung beendet</button>
+      <div class="comment-turn-actions" role="group" aria-label="Redestab übergeben">
+        <button class="comment-turn-btn" type="button" data-action="set-comment-turn" data-turn-value="erdi" aria-pressed="false">Erdi</button>
+        <button class="comment-turn-btn" type="button" data-action="set-comment-turn" data-turn-value="patrick" aria-pressed="false">Patrick</button>
+        <button class="comment-turn-btn comment-turn-ended" type="button" data-action="set-comment-turn" data-turn-value="ended" aria-pressed="false">Sitzung beendet</button>
       </div>
       <p class="scene-backup-status" data-scene-backup-status role="status" aria-live="polite" hidden></p>
     </div>`;
 }
 
 function buildCommentToolsToggle() {
-  return '<button class="comment-tools-toggle" type="button" data-action="toggle-comment-tools" data-comment-tools-toggle>Bearbeitung anzeigen</button>';
+  return `<button class="comment-tools-toggle${_commentToolsVisible ? ' active' : ''}" type="button" data-action="toggle-comment-tools" data-comment-tools-toggle aria-pressed="${_commentToolsVisible ? 'true' : 'false'}">${_commentToolsVisible ? 'Bearbeitung ausblenden' : 'Bearbeitung anzeigen'}</button>`;
 }
 
 function buildCommentQuickToolsToggle() {
@@ -34,21 +34,33 @@ function buildCommentQuickToolsToggle() {
   return `<button class="comment-tools-toggle comment-quick-tools-toggle${quickToolsVisible ? ' active' : ''}" type="button" data-action="toggle-comment-quick-tools" data-comment-quick-tools-toggle aria-pressed="${quickToolsVisible ? 'true' : 'false'}">${quickToolsVisible ? 'Leiste ausblenden' : 'Leiste anzeigen'}</button>`;
 }
 
-function buildCommentQuickTools() {
+function buildCommentViewControls() {
+  return `<div class="comment-view-controls" role="group" aria-label="Kommentaransicht">
+    <span class="comment-view-controls-label">Ansicht</span>
+    ${buildCommentQuickToolsToggle()}
+    ${buildCommentToolsToggle()}
+  </div>`;
+}
+
+function buildCommentQuickTools(threadId = '') {
   const readerSettings = getCommentReaderSettings();
   const quickToolsVisible = getCommentQuickToolsVisible();
+  const authorListId = `comment-author-jump-list-${String(threadId || 'current').replace(/[^a-zA-Z0-9_-]/g, '-')}`;
   return `
     <div class="comment-quick-tools${quickToolsVisible ? '' : ' collapsed'}" data-comment-quick-tools${quickToolsVisible ? '' : ' hidden'}>
       <div class="comment-jump-search">
+        <label class="comment-jump-field">
+          <span>Kommentator suchen</span>
         <input
           type="search"
           class="comment-jump-input"
           data-comment-jump-input
-          list="comment-author-jump-list"
-          placeholder="Kommentator suchen..."
+          list="${escapeHtml(authorListId)}"
+          placeholder="Name oder Namensteil…"
           autocomplete="off">
-        <datalist id="comment-author-jump-list"></datalist>
-        <button class="comment-jump-btn" type="button" data-action="jump-to-latest-comment-author">Jüngste</button>
+        </label>
+        <datalist id="${escapeHtml(authorListId)}" data-comment-author-options></datalist>
+        <button class="comment-jump-btn" type="button" data-action="jump-to-latest-comment-author" title="Zum jüngsten passenden Beitrag springen">Suchen</button>
       </div>
       <div class="comment-scroll-actions" aria-label="Kommentar-Navigation">
         <button class="comment-scroll-btn" type="button" data-action="scroll-comments" data-direction="top" title="Zum Anfang" aria-label="Zum Anfang">↑</button>
@@ -65,7 +77,7 @@ function buildCommentQuickTools() {
         </label>
         <button class="comment-reader-reset" type="button" data-action="reset-comment-reader-settings" title="Darstellung zurücksetzen" aria-label="Darstellung zurücksetzen">↺</button>
       </div>
-      <div class="comment-jump-status" data-comment-jump-status></div>
+      <div class="comment-jump-status" data-comment-jump-status role="status" aria-live="polite"></div>
     </div>`;
 }
 

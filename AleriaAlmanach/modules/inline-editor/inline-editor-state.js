@@ -413,6 +413,7 @@ function cancelInlineModuleEdit() {
   if (!confirmDiscardInlineModuleEditChanges('abbrechen')) return;
   const context = _inlineModuleEdit;
   _inlineModuleEdit = null;
+  window.dispatchEvent(new CustomEvent('almanach:inline-module-edit-ended'));
   if (context.mode === 'new') {
     closeModal();
     renderAll();
@@ -471,6 +472,7 @@ async function saveInlineModuleEdit() {
     if (saveModuleStore() === false) return;
     await moduleStoreLocalPersistence.flush();
     _inlineModuleEdit = null;
+    window.dispatchEvent(new CustomEvent('almanach:inline-module-edit-ended'));
     refreshAfterModuleChange(entry.id);
   } catch (error) {
     alert(error.message || 'Modul konnte nicht gespeichert werden.');

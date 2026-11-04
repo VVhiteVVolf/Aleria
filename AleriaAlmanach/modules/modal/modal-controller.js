@@ -143,7 +143,9 @@ function closeModal() {
   document.body.style.overflow = '';
   syncSessionFocusShell(false);
   if (typeof stopCommentLiveUpdates === 'function') stopCommentLiveUpdates();
+  const wasInlineEditing = !!_inlineModuleEdit?.active;
   _inlineModuleEdit = null;
+  if (wasInlineEditing) window.dispatchEvent(new CustomEvent('almanach:inline-module-edit-ended'));
   currentEntry = null;
   currentPage = 0;
 }

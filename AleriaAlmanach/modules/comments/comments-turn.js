@@ -33,7 +33,9 @@ function renderCommentTurnState(threadId, state) {
           : 'Redestab noch nicht gesetzt.';
     }
     bar.querySelectorAll('.comment-turn-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.turnValue === current);
+      const active = btn.dataset.turnValue === current;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
   });
   if (typeof refreshSessionStatusTurn === 'function') refreshSessionStatusTurn(threadId, state);

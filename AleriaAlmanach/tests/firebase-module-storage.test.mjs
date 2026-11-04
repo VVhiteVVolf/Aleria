@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
+import { assertServerModuleStoreSnapshot } from '../modules/module-store/module-store-online-source.js';
 
 const source = readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
 function repositoryMethod(name, nextName, overrides = {}) {
@@ -9,7 +10,7 @@ function repositoryMethod(name, nextName, overrides = {}) {
   const end = source.indexOf(`      ${nextName}`, start);
   const context = vm.createContext({
     console: { error() {} }, db: {}, doc: (_db, ...parts) => parts.join('/'),
-    requireFirebaseUser: async () => ({ uid: 'player' }),
+    requireFirebaseUser: async () => ({ uid: 'player' }), assertServerModuleStoreSnapshot,
     notifyAppStatus() {}, getFirebaseErrorMessage: (_error, fallback) => fallback,
     MODULE_STORE_COLLECTION: 'char_tabs', MODULE_STORE_DOC: 'config',
     ...overrides
@@ -42,7 +43,7 @@ test('failed character-tab writes reject instead of reporting success', async ()
 
 test('failed split reads cannot be mistaken for an empty or legacy module store', async () => {
   const load = repositoryMethod('loadModuleStore', 'async saveModuleStore(', {
-    getDoc: async () => ({ exists: () => true, data: () => ({ moduleStoreManifest: { format: 'split-v1' } }) }),
+    getDocFromServer: async () => ({ exists: () => true, data: () => ({ moduleStoreManifest: { format: 'split-v1' } }) }),
     loadSplitModuleStore: async () => { throw new Error('unavailable'); }
   });
   await assert.rejects(load(), /unavailable/);
@@ -50,7 +51,7 @@ test('failed split reads cannot be mistaken for an empty or legacy module store'
 
 test('a genuinely missing online module store still returns null', async () => {
   const load = repositoryMethod('loadModuleStore', 'async saveModuleStore(', {
-    getDoc: async () => ({ exists: () => false })
+    getDocFromServer: async () => ({ exists: () => false })
   });
   assert.equal(await load(), null);
 });

@@ -85,6 +85,33 @@
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--family-tree--unknown-cadogan-spouse.json",
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-draenmelyn--rhiannon-draenmelyn.json",
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-sgrechiwr--cadogan-sgrechiwr.json",
+    "Charakter Archiv Exporte/Perllan/person-02e7bc53.json",
+    "Charakter Archiv Exporte/Perllan/person-0525b525.json",
+    "Charakter Archiv Exporte/Perllan/person-19abcc6c.json",
+    "Charakter Archiv Exporte/Perllan/person-1b72c8d5.json",
+    "Charakter Archiv Exporte/Perllan/person-287fc4b9.json",
+    "Charakter Archiv Exporte/Perllan/person-2a0fa1e3.json",
+    "Charakter Archiv Exporte/Perllan/person-44498061.json",
+    "Charakter Archiv Exporte/Perllan/person-458a8c43.json",
+    "Charakter Archiv Exporte/Perllan/person-4701179c.json",
+    "Charakter Archiv Exporte/Perllan/person-5b293f1b.json",
+    "Charakter Archiv Exporte/Perllan/person-5b891c03.json",
+    "Charakter Archiv Exporte/Perllan/person-6b4c948f.json",
+    "Charakter Archiv Exporte/Perllan/person-7e672734.json",
+    "Charakter Archiv Exporte/Perllan/person-801c8462.json",
+    "Charakter Archiv Exporte/Perllan/person-813d2bd0.json",
+    "Charakter Archiv Exporte/Perllan/person-a0e1ea6a.json",
+    "Charakter Archiv Exporte/Perllan/person-a61dcc92.json",
+    "Charakter Archiv Exporte/Perllan/person-adca1980.json",
+    "Charakter Archiv Exporte/Perllan/person-b57f28f9.json",
+    "Charakter Archiv Exporte/Perllan/person-b758cea4.json",
+    "Charakter Archiv Exporte/Perllan/person-c8b2b4fe.json",
+    "Charakter Archiv Exporte/Perllan/person-dd1b372f.json",
+    "Charakter Archiv Exporte/Perllan/person-e802f95d.json",
+    "Charakter Archiv Exporte/Perllan/person-ea0ed9b5.json",
+    "Charakter Archiv Exporte/Perllan/person-ec01a3c1.json",
+    "Charakter Archiv Exporte/Perllan/person-f3cccc1a.json",
+    "Charakter Archiv Exporte/Perllan/person-ffc03267.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/vk0xAa3ZcEhVvGC1CzNq.json",
     "Charakter Archiv Exporte/Startbesitz 2026-11-02/caralyn-chwedlonol.json",
@@ -277,8 +304,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-03T19:31:38.284290Z",
-  "count": 262,
+  "sourceExportedAt": "2026-11-04T00:00:00.000Z",
+  "count": 289,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -5314,6 +5341,492 @@
       "familyStatus": "linked",
       "path": "records/orte/gwynthor/gwen-hamnett--person--family-tree--unknown-cadogan-spouse/character.json",
       "contentHash": "3606386698f07abe9d94226f7553725c99ef183aed7df2c3329ba6321b3adc56"
+    },
+    {
+      "recordId": "character--person--perllan--person-02e7bc53",
+      "name": "Brwyn Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-02e7bc53",
+      "firestoreDocumentId": "person--perllan--person-02e7bc53",
+      "firestoreDocumentIds": [
+        "person--perllan--person-02e7bc53"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/brwyn-perllan--person--perllan--person-02e7bc53/character.json",
+      "contentHash": "27a629dc2ca88d5744db6ffff01572efebd62cb63efa741c349a889b8f933f2a"
+    },
+    {
+      "recordId": "character--person--perllan--person-0525b525",
+      "name": "Helyg Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-0525b525",
+      "firestoreDocumentId": "person--perllan--person-0525b525",
+      "firestoreDocumentIds": [
+        "person--perllan--person-0525b525"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/helyg-perllan--person--perllan--person-0525b525/character.json",
+      "contentHash": "567fd289cc33e85a81866d9fd3831b3dcfa177f42e2014889cbe51ba1a87b9ad"
+    },
+    {
+      "recordId": "character--person--perllan--person-19abcc6c",
+      "name": "Bedw Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-19abcc6c",
+      "firestoreDocumentId": "person--perllan--person-19abcc6c",
+      "firestoreDocumentIds": [
+        "person--perllan--person-19abcc6c"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/bedw-perllan--person--perllan--person-19abcc6c/character.json",
+      "contentHash": "828fae70738cda9f5d5a17b9a194bacb95c4ee95d96e58145ce88255ce3868f2"
+    },
+    {
+      "recordId": "character--person--perllan--person-1b72c8d5",
+      "name": "Celynnen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-1b72c8d5",
+      "firestoreDocumentId": "person--perllan--person-1b72c8d5",
+      "firestoreDocumentIds": [
+        "person--perllan--person-1b72c8d5"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/celynnen-perllan--person--perllan--person-1b72c8d5/character.json",
+      "contentHash": "ca55fc38d6ae07924f3b0750b745837929cb8315264a93c0d06aebcd556ae749"
+    },
+    {
+      "recordId": "character--person--perllan--person-287fc4b9",
+      "name": "Celyn Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-287fc4b9",
+      "firestoreDocumentId": "person--perllan--person-287fc4b9",
+      "firestoreDocumentIds": [
+        "person--perllan--person-287fc4b9"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/celyn-perllan--person--perllan--person-287fc4b9/character.json",
+      "contentHash": "3997475059afa195d387de714927bd9a572d5228cb8e4ea371f8a4181d00eeba"
+    },
+    {
+      "recordId": "character--person--perllan--person-2a0fa1e3",
+      "name": "Derwyn Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-2a0fa1e3",
+      "firestoreDocumentId": "person--perllan--person-2a0fa1e3",
+      "firestoreDocumentIds": [
+        "person--perllan--person-2a0fa1e3"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/derwyn-perllan--person--perllan--person-2a0fa1e3/character.json",
+      "contentHash": "d9614eae165a6b2a54c8ee1d3756012e65a47400d5ccc5355c08cc1d4c957cb0"
+    },
+    {
+      "recordId": "character--person--perllan--person-44498061",
+      "name": "Draenen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-44498061",
+      "firestoreDocumentId": "person--perllan--person-44498061",
+      "firestoreDocumentIds": [
+        "person--perllan--person-44498061"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/draenen-perllan--person--perllan--person-44498061/character.json",
+      "contentHash": "3b2796f9fd74fa0139b634e6922ed621471b4079a52a107b95b3b7dddac5cc9c"
+    },
+    {
+      "recordId": "character--person--perllan--person-458a8c43",
+      "name": "Ffawydd",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-458a8c43",
+      "firestoreDocumentId": "person--perllan--person-458a8c43",
+      "firestoreDocumentIds": [
+        "person--perllan--person-458a8c43"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/ffawydd--person--perllan--person-458a8c43/character.json",
+      "contentHash": "2d6cc1da1ccc2f7a09d303116d527766cd5c38b51b5541081029a52b0dc820cf"
+    },
+    {
+      "recordId": "character--person--perllan--person-4701179c",
+      "name": "Briallen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-4701179c",
+      "firestoreDocumentId": "person--perllan--person-4701179c",
+      "firestoreDocumentIds": [
+        "person--perllan--person-4701179c"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/briallen-perllan--person--perllan--person-4701179c/character.json",
+      "contentHash": "c24b2df752045d04710a30befba753090eaa871e95203ee3d8c6b67e15bad3ba"
+    },
+    {
+      "recordId": "character--person--perllan--person-5b293f1b",
+      "name": "Afallen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-5b293f1b",
+      "firestoreDocumentId": "person--perllan--person-5b293f1b",
+      "firestoreDocumentIds": [
+        "person--perllan--person-5b293f1b"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/afallen-perllan--person--perllan--person-5b293f1b/character.json",
+      "contentHash": "1e2e82cec53e7d3caaaff00a2b284f11f50fb37f9f29305d78c72e11f2ef7d7c"
+    },
+    {
+      "recordId": "character--person--perllan--person-5b891c03",
+      "name": "Blodwen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-5b891c03",
+      "firestoreDocumentId": "person--perllan--person-5b891c03",
+      "firestoreDocumentIds": [
+        "person--perllan--person-5b891c03"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/blodwen-perllan--person--perllan--person-5b891c03/character.json",
+      "contentHash": "a43cdde5da5c512e9ec5ed312a17f5be01a147cef4bf296b91c0994ee1af3666"
+    },
+    {
+      "recordId": "character--person--perllan--person-6b4c948f",
+      "name": "Draen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-6b4c948f",
+      "firestoreDocumentId": "person--perllan--person-6b4c948f",
+      "firestoreDocumentIds": [
+        "person--perllan--person-6b4c948f"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/draen-perllan--person--perllan--person-6b4c948f/character.json",
+      "contentHash": "ebc500c74732902f45bd350e8724cace0bfff6d5dc7c70cfd76d2194a0a5cde8"
+    },
+    {
+      "recordId": "character--person--perllan--person-7e672734",
+      "name": "Mesen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-7e672734",
+      "firestoreDocumentId": "person--perllan--person-7e672734",
+      "firestoreDocumentIds": [
+        "person--perllan--person-7e672734"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/mesen-perllan--person--perllan--person-7e672734/character.json",
+      "contentHash": "404600754dd00f3ca52e6cc22977e137c61df0cd4f3bd2073a572f373fe78be9"
+    },
+    {
+      "recordId": "character--person--perllan--person-801c8462",
+      "name": "Ysgaw Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-801c8462",
+      "firestoreDocumentId": "person--perllan--person-801c8462",
+      "firestoreDocumentIds": [
+        "person--perllan--person-801c8462"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/ysgaw-perllan--person--perllan--person-801c8462/character.json",
+      "contentHash": "14b5ed2f9c1670f19a4ea5a47414b12b7becf1766e7f9eea94d922e6acbb3a9e"
+    },
+    {
+      "recordId": "character--person--perllan--person-813d2bd0",
+      "name": "Onnen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-813d2bd0",
+      "firestoreDocumentId": "person--perllan--person-813d2bd0",
+      "firestoreDocumentIds": [
+        "person--perllan--person-813d2bd0"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/onnen-perllan--person--perllan--person-813d2bd0/character.json",
+      "contentHash": "88defef76bac1539069ea90f1b308b6b9a0b779caf40d3456d86c9de36d0ccac"
+    },
+    {
+      "recordId": "character--person--perllan--person-a0e1ea6a",
+      "name": "Rhosyn Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-a0e1ea6a",
+      "firestoreDocumentId": "person--perllan--person-a0e1ea6a",
+      "firestoreDocumentIds": [
+        "person--perllan--person-a0e1ea6a"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/rhosyn-perllan--person--perllan--person-a0e1ea6a/character.json",
+      "contentHash": "7601ed0af424cac02e33bf916d087d02f4dbed69f65adfc8746c52bfec47527b"
+    },
+    {
+      "recordId": "character--person--perllan--person-a61dcc92",
+      "name": "Aeron Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-a61dcc92",
+      "firestoreDocumentId": "person--perllan--person-a61dcc92",
+      "firestoreDocumentIds": [
+        "person--perllan--person-a61dcc92"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/aeron-perllan--person--perllan--person-a61dcc92/character.json",
+      "contentHash": "5a8fa1f74e4c7e986184ecda9a9a3de01c1f5c1e1465980287d156fd38a045f8"
+    },
+    {
+      "recordId": "character--person--perllan--person-adca1980",
+      "name": "Ywen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-adca1980",
+      "firestoreDocumentId": "person--perllan--person-adca1980",
+      "firestoreDocumentIds": [
+        "person--perllan--person-adca1980"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/ywen-perllan--person--perllan--person-adca1980/character.json",
+      "contentHash": "eb8442d5af674e9f4d39bcf48ae84db2e694cf628b8c4f8f59d16e9ac17af797"
+    },
+    {
+      "recordId": "character--person--perllan--person-b57f28f9",
+      "name": "Helygen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-b57f28f9",
+      "firestoreDocumentId": "person--perllan--person-b57f28f9",
+      "firestoreDocumentIds": [
+        "person--perllan--person-b57f28f9"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/helygen-perllan--person--perllan--person-b57f28f9/character.json",
+      "contentHash": "1d9ec3e8e0ffb9fddff45def5f8cf27cb39a374e13c8d50879712627ccb55614"
+    },
+    {
+      "recordId": "character--person--perllan--person-b758cea4",
+      "name": "Onn Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-b758cea4",
+      "firestoreDocumentId": "person--perllan--person-b758cea4",
+      "firestoreDocumentIds": [
+        "person--perllan--person-b758cea4"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/onn-perllan--person--perllan--person-b758cea4/character.json",
+      "contentHash": "bc7a538d78686950c72e46dce8e084f76f9f8ed378026615dab265a63d4b6ff3"
+    },
+    {
+      "recordId": "character--person--perllan--person-c8b2b4fe",
+      "name": "Bedwen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-c8b2b4fe",
+      "firestoreDocumentId": "person--perllan--person-c8b2b4fe",
+      "firestoreDocumentIds": [
+        "person--perllan--person-c8b2b4fe"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/bedwen-perllan--person--perllan--person-c8b2b4fe/character.json",
+      "contentHash": "fbd7128d08c048579a66b03357d2d3df70a3c46d4a1c315b025a293401f60dde"
+    },
+    {
+      "recordId": "character--person--perllan--person-dd1b372f",
+      "name": "Eirlys Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-dd1b372f",
+      "firestoreDocumentId": "person--perllan--person-dd1b372f",
+      "firestoreDocumentIds": [
+        "person--perllan--person-dd1b372f"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/eirlys-perllan--person--perllan--person-dd1b372f/character.json",
+      "contentHash": "ba00fe22cd1f66dcfb7c68f04c6f7c6f61fd64ac252822848164dc82f1002903"
+    },
+    {
+      "recordId": "character--person--perllan--person-e802f95d",
+      "name": "Gwern Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-e802f95d",
+      "firestoreDocumentId": "person--perllan--person-e802f95d",
+      "firestoreDocumentIds": [
+        "person--perllan--person-e802f95d"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/gwern-perllan--person--perllan--person-e802f95d/character.json",
+      "contentHash": "c4ed6f2aeaa7e4e85c6b40bd2c258184f69e7e519f5dbfc76cded01448d0d98a"
+    },
+    {
+      "recordId": "character--person--perllan--person-ea0ed9b5",
+      "name": "Derw Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-ea0ed9b5",
+      "firestoreDocumentId": "person--perllan--person-ea0ed9b5",
+      "firestoreDocumentIds": [
+        "person--perllan--person-ea0ed9b5"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/derw-perllan--person--perllan--person-ea0ed9b5/character.json",
+      "contentHash": "4ff47ec184c9906944479474ba313d674d411b3200fd9f07fc36f186a78b5c9d"
+    },
+    {
+      "recordId": "character--person--perllan--person-ec01a3c1",
+      "name": "Hedra Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-ec01a3c1",
+      "firestoreDocumentId": "person--perllan--person-ec01a3c1",
+      "firestoreDocumentIds": [
+        "person--perllan--person-ec01a3c1"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/hedra-perllan--person--perllan--person-ec01a3c1/character.json",
+      "contentHash": "9aa341691b63c8aaad67b13722f4679273cd057babe2e73109d6dd5901aac57a"
+    },
+    {
+      "recordId": "character--person--perllan--person-f3cccc1a",
+      "name": "Lili",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-f3cccc1a",
+      "firestoreDocumentId": "person--perllan--person-f3cccc1a",
+      "firestoreDocumentIds": [
+        "person--perllan--person-f3cccc1a"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/lili--person--perllan--person-f3cccc1a/character.json",
+      "contentHash": "66b1b1bd373c4b5c340bc3e36ee478495a371cca3b1dc3114f4c243b8777d0a8"
+    },
+    {
+      "recordId": "character--person--perllan--person-ffc03267",
+      "name": "Collen Perllan",
+      "aliases": [],
+      "worldPersonId": "person--perllan--person-ffc03267",
+      "firestoreDocumentId": "person--perllan--person-ffc03267",
+      "firestoreDocumentIds": [
+        "person--perllan--person-ffc03267"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "perllan",
+        "label": "Familie Perllan"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/perllan/collen-perllan--person--perllan--person-ffc03267/character.json",
+      "contentHash": "d2788e70cc3b0da511e8540d352cfef253d03f49513e2fc83eaee5bf86a521fd"
     }
   ]
 }

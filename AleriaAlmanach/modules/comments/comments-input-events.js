@@ -1,6 +1,10 @@
 ﻿// Input and keyboard delegation for comment forms.
 function handleEditCommentInput(event) {
   const field = event.target;
+  if (field?.matches?.('[data-comment-jump-input]')) {
+    updateCommentJumpSearchStatus(field);
+    return;
+  }
   if (field?.dataset?.action === 'update-showcase-preview') {
     updateShowcasePreview();
     return;

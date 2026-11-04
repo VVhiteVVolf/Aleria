@@ -1,0 +1,439 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--perllan--person-6b4c948f",
+  "slug": "draen-perllan",
+  "identity": {
+    "name": "Draen Perllan",
+    "aliases": [],
+    "worldPersonId": "person--perllan--person-6b4c948f"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "perllan",
+      "label": "Familie Perllan"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "perllan",
+        "familyTitle": "Familie Perllan",
+        "personId": "person-6b4c948f",
+        "worldPersonId": "person--perllan--person-6b4c948f",
+        "houseId": "house-perllan",
+        "houseName": "Perllan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Draen Perllan\",\"title\":\"\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-21ccdb87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-21ccdb87\",\"name\":\"??\"},{\"personId\":\"person-0525b525\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-0525b525\",\"name\":\"Helyg Perllan\"}],\"partners\":[{\"personId\":\"person-ce3e0813\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ce3e0813\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-02e7bc53\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02e7bc53\",\"name\":\"Brwyn Perllan\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--perllan--person-6b4c948f",
+      "documentIds": [
+        "person--perllan--person-6b4c948f"
+      ],
+      "documents": [
+        {
+          "documentId": "person--perllan--person-6b4c948f",
+          "createdAt": "2026-11-04T00:00:00.000Z",
+          "updatedAt": "2026-11-04T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "perllan",
+        "personId": "person-6b4c948f",
+        "worldPersonId": "person--perllan--person-6b4c948f",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Perllan/person-6b4c948f.json",
+    "sourceExportedAt": "2026-11-04T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-04T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--perllan--person-6b4c948f"
+    ],
+    "contentHash": "ebc500c74732902f45bd350e8724cace0bfff6d5dc7c70cfd76d2194a0a5cde8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "perllan"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Draen Perllan",
+        "title": "",
+        "fraktion": "Perllan",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-04T00:00:00.000Z",
+        "updatedAt": "2026-11-04T00:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            [
+              "Familie",
+              "Perllan"
+            ],
+            [
+              "Stand",
+              "Bürgerlich"
+            ],
+            [
+              "Geboren",
+              "1704"
+            ],
+            [
+              "Lebensstatus",
+              "Lebend"
+            ]
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png",
+            "portraitCaption": "Draen Perllan",
+            "biographyTitle": "Draen Perllan",
+            "biographyText": "<p>Draen Perllan wurde 1704 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: eine namentlich nicht überlieferte Person (geboren 1685); Helyg Perllan. Partnerschaften: eine namentlich nicht überlieferte Person (geboren 1708). Kinder: Brwyn Perllan.</p>",
+            "abilities": [],
+            "knightMentors": [],
+            "connectionsTitle": "Familie & Tierbegleiter",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person (geboren 1685)",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "Helyg Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-0525b525.jpg",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person (geboren 1708)",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Partnerperson"
+              },
+              {
+                "type": "connection",
+                "name": "Brwyn Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-02e7bc53.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Perllan",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+                "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+                "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-6b4c948f"
+              }
+            ],
+            "footer": "Personenakte · Draen Perllan"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--perllan--person-6b4c948f"
+        },
+        "genealogy": {
+          "worldPersonId": "person--perllan--person-6b4c948f",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1704",
+          "death": "",
+          "houseId": "house-perllan",
+          "houseName": "Perllan",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "perllan",
+              "personId": "person-6b4c948f",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-04T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-6b4c948f",
+              "fingerprint": "{\"name\":\"Draen Perllan\",\"title\":\"\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-21ccdb87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-21ccdb87\",\"name\":\"??\"},{\"personId\":\"person-0525b525\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-0525b525\",\"name\":\"Helyg Perllan\"}],\"partners\":[{\"personId\":\"person-ce3e0813\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ce3e0813\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-02e7bc53\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02e7bc53\",\"name\":\"Brwyn Perllan\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-21ccdb87",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-21ccdb87",
+                "name": "??"
+              },
+              {
+                "personId": "person-0525b525",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-0525b525",
+                "name": "Helyg Perllan"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-ce3e0813",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-ce3e0813",
+                "name": "??"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-02e7bc53",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-02e7bc53",
+                "name": "Brwyn Perllan"
+              }
+            ]
+          }
+        },
+        "id": "person--perllan--person-6b4c948f"
+      }
+    ]
+  },
+  "character": {
+    "name": "Draen Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1704"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png",
+        "portraitCaption": "Draen Perllan",
+        "biographyTitle": "Draen Perllan",
+        "biographyText": "<p>Draen Perllan wurde 1704 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: eine namentlich nicht überlieferte Person (geboren 1685); Helyg Perllan. Partnerschaften: eine namentlich nicht überlieferte Person (geboren 1708). Kinder: Brwyn Perllan.</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1685)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Helyg Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-0525b525.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1708)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Partnerperson"
+          },
+          {
+            "type": "connection",
+            "name": "Brwyn Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-02e7bc53.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-6b4c948f"
+          }
+        ],
+        "footer": "Personenakte · Draen Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-6b4c948f"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-6b4c948f",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1704",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-6b4c948f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-6b4c948f",
+          "fingerprint": "{\"name\":\"Draen Perllan\",\"title\":\"\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-21ccdb87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-21ccdb87\",\"name\":\"??\"},{\"personId\":\"person-0525b525\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-0525b525\",\"name\":\"Helyg Perllan\"}],\"partners\":[{\"personId\":\"person-ce3e0813\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ce3e0813\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-02e7bc53\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-02e7bc53\",\"name\":\"Brwyn Perllan\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-21ccdb87",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-21ccdb87",
+            "name": "??"
+          },
+          {
+            "personId": "person-0525b525",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-0525b525",
+            "name": "Helyg Perllan"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-ce3e0813",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-ce3e0813",
+            "name": "??"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-02e7bc53",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-02e7bc53",
+            "name": "Brwyn Perllan"
+          }
+        ]
+      }
+    },
+    "id": "person--perllan--person-6b4c948f"
+  }
+}

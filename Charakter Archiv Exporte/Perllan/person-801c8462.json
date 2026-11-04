@@ -1,0 +1,199 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Perllan/person-801c8462.json",
+  "source": {
+    "kind": "supplied-family-export",
+    "documentId": "perllan",
+    "familyId": "perllan",
+    "personId": "person-801c8462",
+    "worldPersonId": "person--perllan--person-801c8462",
+    "picturedCompanions": []
+  },
+  "character": {
+    "name": "Ysgaw Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-801c8462.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1702"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-801c8462.jpg",
+        "portraitCaption": "Ysgaw Perllan",
+        "biographyTitle": "Ysgaw Perllan",
+        "biographyText": "<p>Ysgaw Perllan wurde 1702 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: eine namentlich nicht überlieferte Person (geboren 1684); Helyg Perllan. Partnerschaften: eine namentlich nicht überlieferte Person (geboren 1708). Kinder: Onn Perllan; Lili.</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1684)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Helyg Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-0525b525.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1708)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Partnerperson"
+          },
+          {
+            "type": "connection",
+            "name": "Onn Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-b758cea4.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Lili",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-801c8462"
+          }
+        ],
+        "footer": "Personenakte · Ysgaw Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-801c8462"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-801c8462",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1702",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "bastard",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-801c8462",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-801c8462",
+          "fingerprint": "{\"name\":\"Ysgaw Perllan\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-801c8462.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ee9e3a1c\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ee9e3a1c\",\"name\":\"?? aus Aldrimar\"},{\"personId\":\"person-0525b525\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-0525b525\",\"name\":\"Helyg Perllan\"}],\"partners\":[{\"personId\":\"person-1afbd3a9\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1afbd3a9\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-b758cea4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-b758cea4\",\"name\":\"Onn Perllan\"},{\"personId\":\"person-f3cccc1a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-f3cccc1a\",\"name\":\"Lili\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-ee9e3a1c",
+            "type": "biological",
+            "legitimacy": "legitimized",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-ee9e3a1c",
+            "name": "?? aus Aldrimar"
+          },
+          {
+            "personId": "person-0525b525",
+            "type": "biological",
+            "legitimacy": "legitimized",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-0525b525",
+            "name": "Helyg Perllan"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-1afbd3a9",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-1afbd3a9",
+            "name": "??"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-b758cea4",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-b758cea4",
+            "name": "Onn Perllan"
+          },
+          {
+            "personId": "person-f3cccc1a",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-f3cccc1a",
+            "name": "Lili"
+          }
+        ]
+      }
+    },
+    "id": "person--perllan--person-801c8462"
+  }
+}

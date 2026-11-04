@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "houseId": "perllan",
+  "familyHouseId": "house-perllan",
+  "unpublishedFormerPlannedFamilyId": "haus-perllan",
+  "sourceFamilyId": "perllan",
+  "source": "C:/Users/fhg_r/Downloads/Perllan",
+  "sourceInventory": "Stammbäume/assets/data/source-inventories/perllan-20261104/",
+  "reviewedAt": "2026-11-04",
+  "houseFigureProvenance": "diagnostics/perllan-import-20261104/figure-generation.json",
+  "decisions": [
+    "Die gelieferte Perllan.html ist leer. Die Hausseite und ihre Kurzbiografie beschreiben ausschließlich die Angaben des Familienexports.",
+    "Die kanonische Familien- und Seiten-ID bleibt perllan, wie im Export und in der bereits bestehenden öffentlichen Akte. Die vorübergehend lokal geplante Kennung haus-perllan wurde vor Veröffentlichung verworfen. Keine zweite Familienakte anlegen; Haus-ID house-perllan und bestehende Personen-, Weltpersonen- und Beziehungs-IDs bleiben erhalten.",
+    "Herkunft Gwynthor, Kultur Cenyri, Alerische Kirche, ca. 1240, Waldgrün und keine eigene Herrschaftsverwaltung stammen aus extensions.generatorProfile.",
+    "Bürgerlicher Rang aus document.houseProfile.rankId. Keine Lehnsherrschaft, Berufe, Besitzungen oder Militärzahlen aus Hausfarbe und Herkunft ableiten.",
+    "Onns Originalportrait zeigt ein Eichhörnchen und ein Rotkehlchen; Lilis Originalportrait ein Kaninchen und eine Blaumeise. Als bildbelegte Tierbegleiter erwähnen; keine Namen, Ausbildung oder weitere Tierbindung erfinden.",
+    "Ywen ist in der Quelle als head markiert. Unbekannte Gründer und der Zeitsprung bleiben als Überlieferungslücke erhalten. Keine Gründerportraits, Amtszeiten oder Erbfolge erfinden.",
+    "Onnen ist eindeutig als verstorben markiert, Todesjahr unbekannt. Die unbekannte Ehefrau Ywens starb 1727. Andere unklare Lebensdaten werden in der Hausseite nicht ergänzt.",
+    "Alle namentlich überlieferten Personen erhalten Hausseitenkarten mit ihren bestehenden IDs und den unveränderten Originalportraits. Ein gesondertes repräsentatives Bürgerbild ergänzt die Hausdarstellung.",
+    "Die Hausseite verwendet ausschließlich die kanonische Familienakte per iframe. Die gemeinsame Quelle erzeugt Hausseite und Hausbiografie im vorhandenen System.",
+    "Lokale Umsetzung; kein Push, Deploy oder Live-Datenabgleich durch diesen Hausseitenauftrag."
+  ]
+}

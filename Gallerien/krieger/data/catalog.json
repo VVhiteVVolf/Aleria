@@ -6874,35 +6874,6 @@
       "missingNote": ""
     },
     {
-      "id": "haus-bragwen",
-      "name": "Familie Bragwen",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-bragwen&mode=view",
-      "sources": [
-        "haus-bragwen",
-        "haus-eiddfer"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-brynial",
-      "name": "Familie Brynial",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-brynial&mode=view",
-      "sources": [
-        "haus-brynial"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
       "id": "haus-celynfor",
       "name": "Familie Celynfor",
       "kind": "registered",
@@ -6947,35 +6918,6 @@
       "missingNote": ""
     },
     {
-      "id": "haus-dolweth",
-      "name": "Familie Dolweth",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-dolweth&mode=view",
-      "sources": [
-        "haus-dolweth"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-eiddfer",
-      "name": "Familie Eiddfer",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-eiddfer&mode=view",
-      "sources": [
-        "haus-eiddfer",
-        "haus-bragwen"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
       "id": "haus-fearnan",
       "name": "Familie Fearnan",
       "kind": "registered",
@@ -6989,48 +6931,6 @@
       "illustrationIds": [
         "bild-a524d543774fc3bc"
       ],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-helfaen",
-      "name": "Familie Helfaen",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-helfaen&mode=view",
-      "sources": [
-        "haus-helfaen"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-marchwern",
-      "name": "Familie Marchwern",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view",
-      "sources": [
-        "haus-marchwern"
-      ],
-      "illustrationIds": [],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-tirfelyn",
-      "name": "Familie Tirfelyn",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view",
-      "sources": [
-        "haus-tirfelyn"
-      ],
-      "illustrationIds": [],
       "missingNote": ""
     },
     {
@@ -7064,20 +6964,6 @@
       "illustrationIds": [
         "bild-4140a30b89ec1c51"
       ],
-      "missingNote": ""
-    },
-    {
-      "id": "haus-ysgellfor",
-      "name": "Familie Ysgellfor",
-      "kind": "registered",
-      "region": "Cenyr",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "rank": "Bürgerfamilie",
-      "tree": "Stammbäume/Stammbaum.html?family=haus-ysgellfor&mode=view",
-      "sources": [
-        "haus-ysgellfor"
-      ],
-      "illustrationIds": [],
       "missingNote": ""
     },
     {
@@ -18434,6 +18320,22 @@
       ],
       "illustrationIds": [
         "bild-349b9ff73dfa02bf"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "perllan",
+      "name": "Familie Perllan",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=perllan&mode=view",
+      "sources": [
+        "perllan"
+      ],
+      "illustrationIds": [
+        "bild-4b2ac0399face742"
       ],
       "missingNote": ""
     }
@@ -53138,6 +53040,27 @@
       ],
       "copies": [
         "Stammbäume/assets/images/references/haus-gruenhand/krieger-human-ears-v2.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-4b2ac0399face742",
+      "name": "Familie Perllan · Hausdarstellung",
+      "category": "Bürgerliche Hausdarstellung",
+      "affiliation": "",
+      "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/assets/perllan-buerger.png",
+      "sha256": "4b2ac0399face7422db62bca0b0eb9f63d76a03bd122402d87427b1f6ade3100",
+      "houseIds": [
+        "perllan"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/assets/perllan-buerger.png"
       ],
       "note": ""
     }

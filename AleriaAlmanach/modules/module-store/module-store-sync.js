@@ -313,97 +313,14 @@ function getModuleStoreSummary(payload) {
   return `${sectionCount} Bereiche, ${customModuleCount} eigene Module, ${overrideCount} Ueberschreibungen, ${normalized.archiveDashboardInsights.length} Archivfunken`;
 }
 
-function renderModuleStoreConflictPrompt(localPayload, remotePayload) {
-  const localDate = getModuleStoreUpdatedAt(localPayload)
-    ? new Date(getModuleStoreUpdatedAt(localPayload)).toLocaleString('de-DE')
-    : 'unbekannt';
-  const remoteDate = getModuleStoreUpdatedAt(remotePayload)
-    ? new Date(getModuleStoreUpdatedAt(remotePayload)).toLocaleString('de-DE')
-    : 'unbekannt';
-
-  showAppStatusHtml(`
-    <button class="app-status-close" type="button" data-action="dismiss-app-status" aria-label="Meldung schließen">×</button>
-    <div class="sync-conflict-panel">
-      <div class="sync-conflict-kicker">Sync-Konflikt</div>
-      <div class="sync-conflict-title">Lokaler Stand und Online-Stand unterscheiden sich.</div>
-      <div class="sync-conflict-grid">
-        <div>
-          <strong>Lokal</strong>
-          <span>${escapeHtml(localDate)}</span>
-          <small>${escapeHtml(getModuleStoreSummary(localPayload))}</small>
-        </div>
-        <div>
-          <strong>Online</strong>
-          <span>${escapeHtml(remoteDate)}</span>
-          <small>${escapeHtml(getModuleStoreSummary(remotePayload))}</small>
-        </div>
-      </div>
-      <div class="sync-conflict-actions">
-        <button type="button" data-action="resolve-module-sync-conflict" data-choice="remote">Online laden</button>
-        <button type="button" data-action="resolve-module-sync-conflict" data-choice="local">Lokal behalten</button>
-        <button type="button" data-action="export-full-almanach-backup">Backup</button>
-      </div>
-      <div class="sync-conflict-note">Vor dem Überschreiben ist ein Backup sinnvoll. Schließen blendet nur diese Meldung aus.</div>
-    </div>
-  `, 'error', { timeout: 0 });
-}
-
-function showModuleStoreSyncConflict(localPayload, remotePayload) {
-  clearTimeout(_moduleStoreRemoteSaveTimer);
-  _moduleStoreRemoteSaveTimer = null;
-  _moduleStoreSyncConflict = {
-    localPayload: deepClone(normalizeModuleStorePayload(localPayload)),
-    remotePayload: deepClone(normalizeModuleStorePayload(remotePayload))
-  };
-  updateFirebaseSyncStatus('error', 'Sync-Konflikt: lokaler und Online-Stand unterscheiden sich.');
-  renderModuleStoreConflictPrompt(_moduleStoreSyncConflict.localPayload, _moduleStoreSyncConflict.remotePayload);
-  if (document.getElementById('module-editor-overlay')?.classList.contains('active')) {
-    setModuleEditorStatus('Sync-Konflikt: Wähle unten rechts, ob Online geladen oder Lokal behalten werden soll. Backup vorher empfohlen.', true);
-  }
-}
-
+// Compatibility for old delegated actions: online is the only selectable source.
+// The status badge owns its details; no conflict dialog opens automatically.
 function showStoredModuleStoreConflict() {
-  if (!_moduleStoreSyncConflict) {
-    showAppStatus('Kein aktiver Modul-Sync-Konflikt vorhanden.', 'info');
-    return;
-  }
-  renderModuleStoreConflictPrompt(_moduleStoreSyncConflict.localPayload, _moduleStoreSyncConflict.remotePayload);
+  if (typeof setFirebaseSyncStatusMinimized === 'function') setFirebaseSyncStatusMinimized(false);
 }
 
-async function resolveModuleStoreSyncConflict(choice) {
-  if (!_moduleStoreSyncConflict) {
-    showAppStatus('Kein aktiver Modul-Sync-Konflikt vorhanden.', 'info');
-    return;
-  }
-  const localPayload = readLocalModuleStorePayload();
-  const remotePayload = normalizeModuleStorePayload(_moduleStoreSyncConflict.remotePayload);
-
-  try {
-    if (choice === 'remote') {
-      if (!confirm('Online-Stand laden?\n\nDein lokaler Modulstand wird durch den Online-Stand ersetzt. Vorher Backup empfohlen.')) return;
-      applyModuleStorePayload(remotePayload);
-      await writeLocalModuleStorePayload(remotePayload);
-      await writeModuleStoreSyncMeta(remotePayload);
-      updateModuleStoreSizePanel(remotePayload);
-      renderAll();
-      updateFirebaseSyncStatus('synced', 'Online-Stand manuell übernommen.');
-      showAppStatus('Online-Stand wurde geladen.', 'success');
-    } else if (choice === 'local') {
-      if (!confirm('Lokalen Stand behalten?\n\nDer lokale Modulstand wird nach Firebase geschrieben und überschreibt den Online-Modulstand. Vorher Backup empfohlen.')) return;
-      updateFirebaseSyncStatus('syncing', 'Lokaler Stand wird online gespeichert...');
-      await pushModuleStoreToFirebase(localPayload);
-      await writeModuleStoreSyncMeta(localPayload);
-      updateModuleStoreSizePanel(localPayload);
-      updateFirebaseSyncStatus('synced', 'Lokaler Stand wurde online gespeichert.');
-      showAppStatus('Lokaler Stand wurde online gespeichert.', 'success');
-    }
-    _moduleStoreSyncConflict = null;
-    updateFirebaseSyncStatus('synced', choice === 'remote' ? 'Online-Stand manuell übernommen.' : 'Lokaler Stand wurde online gespeichert.');
-  } catch (error) {
-    console.error('module sync conflict resolution failed:', error);
-    updateFirebaseSyncStatus('error', 'Konflikt konnte nicht aufgelöst werden.');
-    showFriendlyAppError(error, 'Sync-Konflikt konnte nicht aufgelöst werden.', { timeout: 0 });
-  }
+async function resolveModuleStoreSyncConflict() {
+  showStoredModuleStoreConflict();
 }
 
 window.resolveModuleStoreSyncConflict = resolveModuleStoreSyncConflict;
@@ -518,35 +435,37 @@ async function waitForFirebaseReady(timeoutMs = FIREBASE_READY_TIMEOUT_MS) {
   return !!window._fb;
 }
 
-async function pushModuleStoreToFirebase(payload) {
+async function pushModuleStoreToFirebase(payload, shouldSave = () => true) {
   await moduleStoreLocalPersistence.flush();
   const ready = await waitForFirebaseReady();
   if (!ready || !window._fb?.saveModuleStore) {
     throw new Error('Firebase ist nicht erreichbar. Moduländerungen bleiben lokal gespeichert.');
   }
+  if (!shouldSave()) return false;
   await window._fb.saveModuleStore(normalizeModuleStorePayload(payload));
   return true;
 }
 
 function scheduleRemoteModuleStoreSave(payload) {
   clearTimeout(_moduleStoreRemoteSaveTimer);
-  if (_moduleStoreSyncConflict) {
-    showModuleStoreSyncConflict(payload, _moduleStoreSyncConflict.remotePayload);
-    return;
-  }
+  _moduleStoreRemoteSaveTimer = null;
+  if (moduleStoreSyncActivity.initialReadPending || moduleStoreSyncActivity.deferredRemote) return;
+  const generation = moduleStoreSyncActivity.generation;
   updateFirebaseSyncStatus('syncing', 'Moduländerungen werden online gespeichert...');
   _moduleStoreRemoteSaveTimer = window.setTimeout(async () => {
     _moduleStoreRemoteSaveTimer = null;
     try {
-      await pushModuleStoreToFirebase(payload);
+      const current = () => generation === moduleStoreSyncActivity.generation
+        && !moduleStoreSyncActivity.initialReadPending
+        && getModuleStoreContentSignature(payload) === getModuleStoreContentSignature(readLocalModuleStorePayload());
+      if (!current()) return;
+      if (!await pushModuleStoreToFirebase(payload, current)) return;
       await writeModuleStoreSyncMeta(payload);
-      if (getModuleStoreContentSignature(payload) === getModuleStoreContentSignature(readLocalModuleStorePayload())) {
-        updateFirebaseSyncStatus('synced', 'Letzte Moduländerung ist online.');
-      }
+      if (current()) updateFirebaseSyncStatus('synced', 'Letzte Moduländerung ist online.');
     } catch (error) {
       console.error('remote module store save failed:', error);
-      updateFirebaseSyncStatus('error', 'Nur lokal gespeichert.');
-      showFriendlyAppError(error, 'Modul wurde lokal gespeichert, aber noch nicht online synchronisiert.');
+      updateFirebaseSyncStatus('error', 'Noch nicht online gespeichert. Deine Änderung bleibt gesichert.');
+      showFriendlyAppError(error, 'Modul wurde gesichert, aber noch nicht online synchronisiert.');
     }
   }, MODULE_STORE_REMOTE_SAVE_DELAY);
 }
@@ -584,60 +503,90 @@ function reportModuleStoreLocalSaveError(error) {
   }
 }
 
+const moduleStoreSyncActivity = { generation: 0, initialReadPending: false, deferredRemote: null };
 let moduleStoreRemoteApplyQueue = Promise.resolve();
 
+function cancelPendingModuleStoreUpload() {
+  moduleStoreSyncActivity.generation += 1;
+  clearTimeout(_moduleStoreRemoteSaveTimer);
+  _moduleStoreRemoteSaveTimer = null;
+}
+
 function applyRemoteModuleStore(payload) {
-  const apply = moduleStoreRemoteApplyQueue.catch(() => {}).then(() => processRemoteModuleStore(payload));
+  // Invalidate pending writes immediately, before a queued snapshot is hashed.
+  cancelPendingModuleStoreUpload();
+  const generation = moduleStoreSyncActivity.generation;
+  const apply = moduleStoreRemoteApplyQueue.catch(() => {}).then(() => processRemoteModuleStore(payload, generation));
   moduleStoreRemoteApplyQueue = apply;
   return apply;
 }
 
-async function processRemoteModuleStore(payload) {
-  const removedContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(payload);
-  if (!hasModuleStoreContent(payload) && !removedContentWasPruned) return;
-  if (_inlineModuleEdit?.active) return;
+async function preserveUnsyncedModuleStore(localPayload) {
+  const signature = await getModuleStoreSyncSignature(localPayload);
+  await moduleStoreLocalPersistence.preserveRecovery(signature, JSON.stringify({
+    schema: 'aleria.module-store-recovery', schemaVersion: 1,
+    reason: 'online-preferred', savedAt: new Date().toISOString(),
+    moduleStore: normalizeModuleStorePayload(localPayload)
+  }));
+}
 
+function deferOnlineModuleStoreDuringEdit(payload) {
+  if (!_inlineModuleEdit?.active) return false;
+  moduleStoreSyncActivity.deferredRemote = { payload };
+  updateFirebaseSyncStatus('syncing', 'Online-Änderung empfangen. Sie wird nach der Bearbeitung geladen.');
+  return true;
+}
+
+async function adoptOnlineModuleStore(remotePayload, generation) {
+  let recovered = false;
+  while (true) {
+    const state = await getCurrentModuleStoreSyncState(remotePayload);
+    if (generation !== moduleStoreSyncActivity.generation || deferOnlineModuleStoreDuringEdit(remotePayload)) return { applied: false, recovered };
+    if (!state.sameContent && hasModuleStoreContent(state.localPayload) && !state.localIsSynced) {
+      await preserveUnsyncedModuleStore(state.localPayload);
+      recovered = true;
+    }
+    // Edits made while the recovery transaction committed must also be retained.
+    if (getModuleStoreContentSignature(state.localPayload)
+      !== getModuleStoreContentSignature(readLocalModuleStorePayload())) continue;
+    if (generation !== moduleStoreSyncActivity.generation || deferOnlineModuleStoreDuringEdit(remotePayload)) return { applied: false, recovered };
+    applyModuleStorePayload(remotePayload);
+    if (!state.sameContent) {
+      await writeLocalModuleStorePayload(remotePayload);
+      updateModuleStoreSizePanel(remotePayload);
+      renderAll();
+    }
+    await writeModuleStoreSyncMeta(remotePayload);
+    _moduleStoreSyncConflict = null;
+    const stillCurrent = getModuleStoreContentSignature(remotePayload)
+      === getModuleStoreContentSignature(readLocalModuleStorePayload());
+    if (stillCurrent) updateFirebaseSyncStatus('synced', recovered
+      ? 'Online-Stand geladen. Eine abweichende Browserfassung ist im Vollbackup erhalten.'
+      : 'Online-Stand aktuell.');
+    return { applied: stillCurrent, recovered };
+  }
+}
+
+async function processRemoteModuleStore(payload, generation) {
+  if (generation !== moduleStoreSyncActivity.generation || deferOnlineModuleStoreDuringEdit(payload)) return;
   try {
     const remotePayload = normalizeModuleStorePayload(payload);
-    const { localPayload, localIsSynced, remoteIsSynced, sameContent } = await getCurrentModuleStoreSyncState(remotePayload);
-    if (_inlineModuleEdit?.active) return;
-
-    if (sameContent) {
-      await writeModuleStoreSyncMeta(remotePayload);
-      _moduleStoreSyncConflict = null;
-      const stillCurrent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload());
-      if (stillCurrent) updateFirebaseSyncStatus('synced', 'Online-Stand aktuell.');
-      if (removedContentWasPruned && stillCurrent) {
-        scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
-      }
-      return;
-    }
-    if (hasModuleStoreContent(localPayload) && !localIsSynced) {
-      if (remoteIsSynced) return;
-      showModuleStoreSyncConflict(localPayload, remotePayload);
-      return;
-    }
-    applyModuleStorePayload(remotePayload);
-    await writeLocalModuleStorePayload(remotePayload);
-    await writeModuleStoreSyncMeta(remotePayload);
-    updateModuleStoreSizePanel(remotePayload);
-    renderAll();
-    const stillCurrent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload());
-    if (stillCurrent) updateFirebaseSyncStatus('synced', 'Online-Stand übernommen.');
-    showAppStatus('Almanach-Module wurden synchronisiert.', 'success');
-    if (removedContentWasPruned && stillCurrent) {
+    const result = await adoptOnlineModuleStore(remotePayload, generation);
+    if (result.applied && globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(payload)) {
       scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
     }
   } catch (error) {
     console.error('remote module store apply failed:', error);
     updateFirebaseSyncStatus('error', 'Online gespeicherte Module konnten nicht übernommen werden.');
-    showAppStatus('Online gespeicherte Module konnten nicht übernommen werden.', 'error');
+    showAppStatus('Online gespeicherte Module konnten nicht übernommen werden. Deine Browserfassung bleibt erhalten.', 'error');
   }
 }
 
 async function setupModuleStoreRemoteSync() {
   if (_moduleStoreRemoteSyncStarted) return;
   _moduleStoreRemoteSyncStarted = true;
+  moduleStoreSyncActivity.initialReadPending = true;
+  cancelPendingModuleStoreUpload();
   let startupOffline = false;
 
   try {
@@ -646,77 +595,26 @@ async function setupModuleStoreRemoteSync() {
     if (!ready || !window._fb?.loadModuleStore) {
       _moduleStoreRemoteSyncStarted = false;
       startupOffline = true;
-      updateFirebaseSyncStatus('offline', 'Online-Speicher nicht erreichbar. Änderungen bleiben lokal.');
+      updateFirebaseSyncStatus('offline', 'Online-Speicher nicht erreichbar. Änderungen bleiben gesichert.');
       return;
     }
-    updateFirebaseSyncStatus('syncing', 'Online-Speicher wird geprüft...');
-
+    updateFirebaseSyncStatus('syncing', 'Online-Stand wird geladen...');
     const remoteSource = await window._fb.loadModuleStore();
-    // Edits made while the request was running must participate in the
-    // conflict check, rather than being replaced by the startup snapshot.
-    const removedRemoteContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(remoteSource);
-    const remotePayload = normalizeModuleStorePayload(remoteSource);
-    const { localPayload, localIsSynced, remoteIsSynced, sameContent } = await getCurrentModuleStoreSyncState(remotePayload);
-    const localHasContent = hasModuleStoreContent(localPayload);
-    const remoteHasContent = hasModuleStoreContent(remotePayload);
-    const localUpdated = getModuleStoreUpdatedAt(localPayload);
-    const remoteUpdated = getModuleStoreUpdatedAt(remotePayload);
-
-    // An unchanged cache is never a new edit, even if its clock is ahead of the
-    // online revision. Loading it must not republish an older set of modules.
-    const localCanPublish = localHasContent && !localIsSynced && remoteIsSynced;
-    if (localHasContent && remoteHasContent && !sameContent && !localIsSynced && !localCanPublish) {
-      showModuleStoreSyncConflict(localPayload, remotePayload);
+    await applyRemoteModuleStore(remoteSource);
+    subscribeToModuleStoreUpdates();
+  } catch (error) {
+    if (error?.code === 'module-store-awaiting-server') {
+      updateFirebaseSyncStatus('syncing', 'Warte auf den bestätigten Online-Stand...');
       subscribeToModuleStoreUpdates();
       return;
     }
-
-    if (removedRemoteContentWasPruned && !remoteHasContent && !localHasContent) {
-      const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
-      applyModuleStorePayload(migratedPayload);
-      await writeLocalModuleStorePayload(migratedPayload);
-      await pushModuleStoreToFirebase(migratedPayload);
-      await writeModuleStoreSyncMeta(migratedPayload);
-      updateModuleStoreSizePanel(migratedPayload);
-      updateFirebaseSyncStatus('synced', 'Entfernte Modulbereiche wurden online bereinigt.');
-    } else if (remoteHasContent && !localCanPublish && (!localHasContent || localIsSynced || sameContent || !localUpdated || remoteUpdated >= localUpdated)) {
-      applyModuleStorePayload(remotePayload);
-      await writeLocalModuleStorePayload(remotePayload);
-      await writeModuleStoreSyncMeta(remotePayload);
-      updateModuleStoreSizePanel(remotePayload);
-      if (!sameContent) {
-        renderAll();
-        showAppStatus('Almanach-Module wurden vom Online-Speicher geladen.', 'success');
-      }
-      updateFirebaseSyncStatus('synced', 'Online-Stand geladen.');
-      if (removedRemoteContentWasPruned
-        && getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload())) {
-        const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
-        applyModuleStorePayload(migratedPayload);
-        await writeLocalModuleStorePayload(migratedPayload);
-        await pushModuleStoreToFirebase(migratedPayload);
-        await writeModuleStoreSyncMeta(migratedPayload);
-      }
-    } else if (localHasContent && (localCanPublish || !remoteHasContent || !remoteUpdated || localUpdated > remoteUpdated)) {
-      const publishPayload = { ...localPayload, updatedAtClient: Math.max(Date.now(), localUpdated, remoteUpdated + 1) };
-      await writeLocalModuleStorePayload(publishPayload);
-      await pushModuleStoreToFirebase(publishPayload);
-      await writeModuleStoreSyncMeta(publishPayload);
-      updateModuleStoreSizePanel(publishPayload);
-      updateFirebaseSyncStatus('synced', 'Lokaler Stand wurde online gespeichert.');
-      if (!remoteHasContent) showAppStatus('Lokale Almanach-Module wurden online gespeichert.', 'success');
-    } else {
-      updateFirebaseSyncStatus('synced', remoteHasContent ? 'Online-Stand aktuell.' : 'Kein Modul-Backup nötig.');
-    }
-
-    subscribeToModuleStoreUpdates();
-  } catch (error) {
     _moduleStoreRemoteSyncStarted = false;
     startupOffline = true;
     console.error('module store remote sync failed:', error);
     updateFirebaseSyncStatus('error', 'Online-Synchronisation fehlgeschlagen.');
     showFriendlyAppError(error, 'Almanach-Module konnten nicht online synchronisiert werden.');
   } finally {
+    moduleStoreSyncActivity.initialReadPending = false;
     window.dispatchEvent(new CustomEvent('almanach:initial-modules-settled', {
       detail: { offline: startupOffline }
     }));
@@ -730,6 +628,13 @@ function subscribeToModuleStoreUpdates() {
     showFriendlyAppError(error, 'Online-Änderungen konnten nicht geladen werden. Lokale Änderungen bleiben erhalten.');
   });
 }
+
+window.addEventListener('almanach:inline-module-edit-ended', () => {
+  const deferred = moduleStoreSyncActivity.deferredRemote;
+  if (!deferred || _inlineModuleEdit?.active) return;
+  moduleStoreSyncActivity.deferredRemote = null;
+  applyRemoteModuleStore(deferred.payload);
+});
 
 window.addEventListener('fb-ready', () => {
   if (typeof _appInitialized !== 'undefined' && _appInitialized) setupModuleStoreRemoteSync();

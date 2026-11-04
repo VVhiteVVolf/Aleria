@@ -1,27 +1,19 @@
-// Firebase/module-store sync status badge.
+// Compact online status. Details appear only after an explicit click or keypress.
 const FIREBASE_SYNC_LABELS = {
-  idle: 'Speicherstatus: bereit',
-  local: 'Lokal gespeichert',
-  syncing: 'Synchronisiere...',
-  synced: 'Online synchronisiert',
-  error: 'Sync-Fehler',
-  offline: 'Offline'
+  idle: 'Online-Speicher',
+  local: 'Wird online gespeichert',
+  syncing: 'Online-Abgleich',
+  synced: 'Online aktuell',
+  error: 'Online-Abgleich pr\u00fcfen',
+  offline: 'Keine Online-Verbindung'
 };
-const FIREBASE_SYNC_MINIMIZED_KEY = 'aleria-firebase-sync-minimized-v1';
 let _firebaseSyncState = 'idle';
+let _firebaseSyncStatusMinimized = true;
 
 function escapeSyncStatusText(value) {
   if (typeof escapeHtml === 'function') return escapeHtml(value);
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function hasModuleStoreSyncConflict() {
-  return typeof _moduleStoreSyncConflict !== 'undefined' && !!_moduleStoreSyncConflict;
+  return String(value ?? '').replace(/[&<>"']/g, char =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 }
 
 function updateFirebaseSyncStatus(state = 'idle', detail = '') {
@@ -29,68 +21,57 @@ function updateFirebaseSyncStatus(state = 'idle', detail = '') {
   const status = document.getElementById('firebase-sync-status');
   if (!status) return;
   status.dataset.state = state;
-  status.dataset.conflict = state === 'error' && hasModuleStoreSyncConflict() ? 'true' : 'false';
-  const minimized = isFirebaseSyncStatusMinimized();
-  status.dataset.minimized = minimized ? 'true' : 'false';
-  status.setAttribute('title', minimized ? 'Speicherstatus anzeigen' : 'Speicherstatus minimieren');
-  status.setAttribute('aria-label', minimized ? 'Speicherstatus anzeigen' : 'Speicherstatus minimieren');
+  status.removeAttribute('title');
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-atomic', 'false');
   const label = FIREBASE_SYNC_LABELS[state] || FIREBASE_SYNC_LABELS.idle;
   status.innerHTML = `
-    <span class="firebase-sync-dot" aria-hidden="true"></span>
-    <span class="firebase-sync-label">${escapeSyncStatusText(label)}</span>
-    ${detail ? `<span class="firebase-sync-detail">${escapeSyncStatusText(detail)}</span>` : ''}
-    ${status.dataset.conflict === 'true' ? '<button class="firebase-sync-action" type="button" data-action="resolve-firebase-sync-conflict">Konflikt lösen</button>' : ''}
+    <button class="firebase-sync-toggle" type="button" data-action="toggle-firebase-sync-status"
+      aria-expanded="false" aria-controls="firebase-sync-details">
+      <span class="firebase-sync-dot" aria-hidden="true"></span>
+      <span class="firebase-sync-label">${escapeSyncStatusText(label)}</span>
+    </button>
+    <div class="firebase-sync-details" id="firebase-sync-details" hidden>
+      <p class="firebase-sync-detail">${escapeSyncStatusText(detail || label)}</p>
+      <button class="firebase-sync-action" type="button" data-action="export-full-almanach-backup">Vollbackup herunterladen</button>
+    </div>
   `;
+  setFirebaseSyncStatusMinimized(_firebaseSyncStatusMinimized);
 }
 
-window.updateFirebaseSyncStatus = updateFirebaseSyncStatus;
-
 function isFirebaseSyncStatusMinimized() {
-  try {
-    return localStorage.getItem(FIREBASE_SYNC_MINIMIZED_KEY) === '1';
-  } catch {
-    return false;
-  }
+  return _firebaseSyncStatusMinimized;
 }
 
 function setFirebaseSyncStatusMinimized(minimized) {
-  try {
-    localStorage.setItem(FIREBASE_SYNC_MINIMIZED_KEY, minimized ? '1' : '0');
-  } catch {
-    // Visual state still updates for this render.
-  }
+  _firebaseSyncStatusMinimized = !!minimized;
   const status = document.getElementById('firebase-sync-status');
   if (!status) return;
   status.dataset.minimized = minimized ? 'true' : 'false';
-  status.setAttribute('title', minimized ? 'Speicherstatus anzeigen' : 'Speicherstatus minimieren');
-  status.setAttribute('aria-label', minimized ? 'Speicherstatus anzeigen' : 'Speicherstatus minimieren');
+  const toggle = status.querySelector('.firebase-sync-toggle');
+  const details = status.querySelector('.firebase-sync-details');
+  const label = FIREBASE_SYNC_LABELS[_firebaseSyncState] || FIREBASE_SYNC_LABELS.idle;
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', minimized ? 'false' : 'true');
+    toggle.setAttribute('aria-label', `${label} \u2013 ${minimized ? 'Details anzeigen' : 'Details schlie\u00dfen'}`);
+    toggle.title = `${label} \u00b7 ${minimized ? 'Details anzeigen' : 'Details schlie\u00dfen'}`;
+  }
+  if (details) details.hidden = !!minimized;
 }
 
 function toggleFirebaseSyncStatusMinimized() {
   setFirebaseSyncStatusMinimized(!isFirebaseSyncStatusMinimized());
 }
 
+window.updateFirebaseSyncStatus = updateFirebaseSyncStatus;
 document.addEventListener('click', event => {
-  const action = event.target.closest?.('[data-action="resolve-firebase-sync-conflict"]');
-  if (action) {
-    event.preventDefault();
-    if (typeof showStoredModuleStoreConflict === 'function') showStoredModuleStoreConflict();
-    return;
-  }
-
-  const status = event.target.closest?.('#firebase-sync-status');
-  if (!status) return;
+  if (!event.target.closest?.('[data-action="toggle-firebase-sync-status"]')) return;
+  event.preventDefault();
   toggleFirebaseSyncStatusMinimized();
 });
-
 window.addEventListener('offline', () => {
-  updateFirebaseSyncStatus('offline', 'Offline - Änderungen bleiben lokal.');
-  if (typeof showAppStatus === 'function') {
-    showAppStatus('Du bist offline. Laden und Speichern kann fehlschlagen.', 'error', { timeout: 0 });
-  }
+  updateFirebaseSyncStatus('offline', 'Verbindung getrennt. Deine \u00c4nderungen bleiben gesichert.');
 });
-
 window.addEventListener('online', () => {
-  updateFirebaseSyncStatus('syncing', 'Verbindung wieder da - prüfe Online-Speicher...');
-  if (typeof showAppStatus === 'function') showAppStatus('Verbindung wiederhergestellt.', 'success');
+  updateFirebaseSyncStatus('syncing', 'Verbindung wiederhergestellt. Online-Stand wird geladen...');
 });

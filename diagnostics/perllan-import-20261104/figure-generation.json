@@ -1,0 +1,28 @@
+{
+  "schema": "aleria.generated-art-provenance",
+  "generatedAt": "2026-11-04",
+  "tool": "built-in image_gen",
+  "preset": "fantasy-rpg-character",
+  "subject": "Aeron Perllan, ergänzende bürgerliche Hausdarstellung nach geliefertem Porträt",
+  "destination": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/assets/perllan-buerger.png",
+  "originalToolFiles": [
+    "C:/Users/fhg_r/.codex/generated_images/01a1a726-31a5-7b70-bcb0-8d1586d33eb2/exec-4e23f306-a43f-4abb-b65d-f6ce28be89dd.png",
+    "C:/Users/fhg_r/.codex/generated_images/01a1a726-31a5-7b70-bcb0-8d1586d33eb2/exec-928deca4-32b7-469d-87ca-8220a18368a3.png"
+  ],
+  "referencePaths": [
+    "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+    "C:/Users/fhg_r/Downloads/Perllan/images/document-emblem.jpg",
+    "C:/Users/fhg_r/Downloads/Perllan/images/person-person-a61dcc92.jpg"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: Aleria Perllan bürgerliche Hausfigur, transparent PNG 2:3 full body. Create a new full-body illustration of Aeron Perllan based on reference image 3 for identity and clothing. Input image 1 ONLY supplies the approved matte painted fantasy-character STYLE (not its armor, blue color or weapons). Input image 2 supplies the family gold tree emblem on dark forest green. Input image 3 supplies the adult man's reddish tied-back hair, short reddish beard, green eyes, forest-green cloak with restrained gold botanical edging, cream shirt and plain brown leather apron with small pruning shears and sprig tucked into the pocket. Do not copy the garden background. Quiet upright three-quarter standing pose, both feet visible, relaxed hands, plain brown trousers and boots, no armor, no sword, no noble crown. Clear simplified readable shapes, thin soft painted contours, muted matte earthy colors, sparing soft shading, fine even gouache pigment grain, like a restrained historic fantasy game character. Match identity and existing outfit from portrait, no additional occupation claim or extra objects. Anatomically human rounded ears. Actual transparent background around entire silhouette and in gaps, no floor, outer shadow, colored halo, scenery, paper, lettering or watermark. The reference knight defines painting style only; no realistic skin, 3D, heavy comic outlines, dramatic light, oil strokes or splashes.",
+  "transparencyRefinementPrompt": "Edit this illustration only to correct transparency. Keep the exact full-body Aeron Perllan figure, clothing, colors, face, pose and matte painted style unchanged. Remove every colored glow, halo, outer shadow and translucent haze outside the character silhouette. Background must be fully transparent with alpha 0, including all open spaces between arms and body or cloak edges. Figure interiors must be fully opaque alpha 255, retaining only narrow antialiased boundary pixels. Do not add a background or change the drawing. Export transparent PNG.",
+  "validation": {
+    "mode": "RGBA",
+    "width": 1024,
+    "height": 1536,
+    "transparentPixels": 915146,
+    "figureAlphaMode": 253,
+    "backgroundSampleAlpha": 0,
+    "review": "Ganzkörper, menschliche Ohren, ruhige Pose, matte Farben; Schere und Schürze nur als visuelle Details der Originalvorlage, keine Berufs- oder Adelsfestlegung."
+  }
+}

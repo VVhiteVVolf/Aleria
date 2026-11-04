@@ -3,7 +3,7 @@
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     import { getFunctions, httpsCallable }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
-    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
+    import { getFirestore, collection, addDoc, getDocs, getDocsFromServer, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, getDocFromServer, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { createFirebaseAuthSession }
       from "./modules/auth/firebase-auth-session.js?v=20261012-guild-v2";
@@ -24,6 +24,7 @@
     import { readFirebaseModuleEntry as decodeFirebaseModuleEntry } from './modules/module-store/module-entry-serialization.js';
     import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-regional-equipment-v2';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
+    import { assertServerModuleStoreSnapshot, subscribeServerModuleStore } from './modules/module-store/module-store-online-source.js';
     import { createWorldDateReadRepository, WORLD_DATE_DOCUMENT } from './modules/world-date/world-date-read-repository.mjs';
 
     const app = initializeApp(firebasePublicConfig);
@@ -387,11 +388,12 @@
       };
     }
 
-    async function loadSplitModuleStore(configData) {
+    async function loadSplitModuleStore(configData, { serverOnly = false } = {}) {
       const manifest = configData?.moduleStoreManifest;
       if (!manifest || manifest.format !== MODULE_STORE_SPLIT_FORMAT) return null;
 
-      const snap = await getDocs(collection(db, MODULE_STORE_ENTRY_COLLECTION));
+      const snap = await (serverOnly ? getDocsFromServer : getDocs)(collection(db, MODULE_STORE_ENTRY_COLLECTION));
+      if (serverOnly) assertServerModuleStoreSnapshot(snap);
       const docsByEntryId = new Map();
       snap.docs.forEach(item => {
         const data = item.data();
@@ -1345,14 +1347,15 @@
       },
       async loadModuleStore() {
         try {
-          const snap = await getDoc(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC));
+          const snap = assertServerModuleStoreSnapshot(await getDocFromServer(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC)));
           if (!snap.exists()) return null;
           const data = snap.data();
-          const splitStore = await loadSplitModuleStore(data);
+          const splitStore = await loadSplitModuleStore(data, { serverOnly: true });
           if (splitStore) return splitStore;
           if (typeof data?.moduleStoreData === 'string') return { data: data.moduleStoreData };
           return data?.moduleStore || null;
         } catch(e) {
+          if (e?.code === 'module-store-awaiting-server') throw e;
           console.error('loadModuleStore:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Almanach-Module konnten nicht synchronisiert werden.'));
           // An unreadable store is not an empty store: callers must never
@@ -1387,29 +1390,14 @@
         }
       },
       subscribeModuleStore(onNext, onError) {
-        return onSnapshot(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC), snap => {
-          if (!snap.exists()) {
-            onNext(null);
-            return;
+        return subscribeServerModuleStore({
+          onSnapshot, reference: doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC), onNext, onError,
+          decode: async snap => {
+            if (!snap.exists()) return null;
+            const data = snap.data();
+            const splitStore = await loadSplitModuleStore(data, { serverOnly: true });
+            return splitStore || (typeof data?.moduleStoreData === 'string' ? { data: data.moduleStoreData } : (data?.moduleStore || null));
           }
-          (async () => {
-            try {
-              const data = snap.data();
-              const splitStore = await loadSplitModuleStore(data);
-              if (splitStore) {
-                onNext(splitStore);
-                return;
-              }
-              onNext(typeof data?.moduleStoreData === 'string' ? { data: data.moduleStoreData } : (data?.moduleStore || null));
-            } catch(error) {
-              console.error('subscribeModuleStore load:', error);
-              if (onError) onError(error);
-            }
-          })();
-        }, error => {
-          console.error('subscribeModuleStore:', error);
-          notifyAppStatus(getFirebaseErrorMessage(error, 'Live-Synchronisation der Almanach-Module konnte nicht verbunden werden.'));
-          if (onError) onError(error);
         });
       },
       itemRegister: createItemRegisterFirebase({ db, collection, onSnapshot, httpsCallable, functions, requireUser: requireFirebaseUser }),

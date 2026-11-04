@@ -2628,30 +2628,34 @@
     {
       "id": "perllan",
       "familyId": "perllan",
-      "title": "Perllan",
+      "title": "Familie Perllan",
       "motto": "",
-      "emblem": "https://i.imgur.com/CFNt2cq.jpeg",
-      "folderPath": [],
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
-        "county": "",
-        "kingdom": "",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
         "secondarySeats": [],
         "liegeHouseId": "",
         "liegeHouseName": "",
         "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
       "personCount": 44,
-      "sourceRevision": 0,
-      "revision": 1,
-      "updatedAt": "2026-11-04T15:18:12.361Z",
+      "revision": 2,
+      "updatedAt": "2026-11-04T17:09:23.782Z",
       "link": "Stammbaum.html?family=perllan&mode=view",
       "source": "github"
     },

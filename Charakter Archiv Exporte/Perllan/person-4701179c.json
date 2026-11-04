@@ -1,0 +1,168 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Perllan/person-4701179c.json",
+  "source": {
+    "kind": "supplied-family-export",
+    "documentId": "perllan",
+    "familyId": "perllan",
+    "personId": "person-4701179c",
+    "worldPersonId": "person--perllan--person-4701179c",
+    "picturedCompanions": []
+  },
+  "character": {
+    "name": "Briallen Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-4701179c.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1700"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-4701179c.jpg",
+        "portraitCaption": "Briallen Perllan",
+        "biographyTitle": "Briallen Perllan",
+        "biographyText": "<p>Briallen Perllan wurde 1700 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Collen Perllan; eine namentlich nicht überlieferte Person (geboren 1672). Partnerschaften: eine namentlich nicht überlieferte Person.</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Collen Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ffc03267.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1672)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Partnerperson"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-4701179c"
+          }
+        ],
+        "footer": "Personenakte · Briallen Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-4701179c"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-4701179c",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-4701179c",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-4701179c",
+          "fingerprint": "{\"name\":\"Briallen Perllan\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-4701179c.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ffc03267\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ffc03267\",\"name\":\"Collen Perllan\"},{\"personId\":\"person-4707e80f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-4707e80f\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-1a7e3edc\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1a7e3edc\",\"name\":\"??\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-ffc03267",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-ffc03267",
+            "name": "Collen Perllan"
+          },
+          {
+            "personId": "person-4707e80f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-4707e80f",
+            "name": "??"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-1a7e3edc",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-1a7e3edc",
+            "name": "??"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--perllan--person-4701179c"
+  }
+}

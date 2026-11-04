@@ -43,6 +43,34 @@ prüfen erneut, ob während der Prüfsumme eine Bearbeitung stattgefunden hat.
 Die Speicheranzeige bewertet den größten einzelnen Online-Eintrag einschließlich
 der Bereichsmetadaten, nicht die Summe aller separat gespeicherten Module.
 
+Seit dem 4. November 2026 wird beim Start und bei bestätigten Live-Änderungen
+immer der Online-Stand geladen. Ein Browsercache wird dabei niemals allein
+wegen seines Datums automatisch online veröffentlicht. Abweichende ungesendete
+Fassungen werden vor der Übernahme nach ihrem Inhalts-Hash unter
+`sync-recovery:*` aufbewahrt und im bestehenden Vollbackup mit exportiert.
+Eine fehlgeschlagene Sicherung verhindert die Ersetzung des Entwurfs.
+Auch Änderungen während einer asynchronen Prüfsumme oder Sicherung bleiben
+erhalten. Es gibt keinen automatisch geöffneten Konfliktdialog und keine
+Auswahl zwischen Lokal und Online mehr.
+
+`module-store-online-source.js` akzeptiert ausschließlich vom Server bestätigte
+Snapshots. Browsercache- und noch nicht bestätigte Schreib-Snapshots lösen
+keine Übernahme aus; Metadaten-Bestätigungen werden mit abonniert. Die
+Sequenzprüfung verwirft ältere asynchrone Ladevorgänge, sobald eine neuere
+Serverrevision empfangen wurde. Direkte Modul-Lesezugriffe verwenden die
+Server-Varianten des vorhandenen Firebase-SDKs.
+
+Eine laufende Inline-Bearbeitung erhält ihren Entwurf und merkt sich die
+neueste Online-Fassung. Speichern, Abbrechen und Schließen melden das Ende
+über `almanach:inline-module-edit-ended`; danach wird der neueste Online-Stand
+übernommen. Der gegebenenfalls gespeicherte Entwurf bleibt im Vollbackup.
+Überholte Speicher-Timer werden beim Empfang einer Online-Fassung verworfen;
+nach asynchronen Wartezeiten wird vor dem Schreiben erneut geprüft.
+
+Die kompakte, grün pulsierende Online-Anzeige öffnet ihre Details erst nach
+einem bewussten Klick oder der Tastaturbetätigung ihres echten Buttons.
+Fehler bleiben erkennbar; reduzierte Bewegung wird berücksichtigt.
+
 Prüfung: `node --test tests/module-store-revision.test.mjs` und
 `node tests/module-store-local.browser.mjs`. Der Browsertest benötigt Playwright;
 optional setzen `PLAYWRIGHT_MODULE` und `PLAYWRIGHT_EXECUTABLE` dessen Modulpfad

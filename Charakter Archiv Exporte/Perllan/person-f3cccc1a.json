@@ -1,0 +1,351 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Perllan/person-f3cccc1a.json",
+  "source": {
+    "kind": "supplied-family-export",
+    "documentId": "perllan",
+    "familyId": "perllan",
+    "personId": "person-f3cccc1a",
+    "worldPersonId": "person--perllan--person-f3cccc1a",
+    "picturedCompanions": [
+      {
+        "personId": "person-f3cccc1a",
+        "slug": "kaninchen",
+        "name": "Unbenanntes Kaninchen",
+        "species": "Kaninchen",
+        "detail": "Ein braun-weißes Kaninchen ist neben Lili abgebildet.",
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg"
+      },
+      {
+        "personId": "person-f3cccc1a",
+        "slug": "blaumeise",
+        "name": "Unbenannte Blaumeise",
+        "species": "Blaumeise",
+        "detail": "Eine blau-gelbe Meise ist links neben Lili abgebildet.",
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg"
+      }
+    ]
+  },
+  "character": {
+    "name": "Lili",
+    "title": "",
+    "fraktion": "",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": {
+      "items": [
+        {
+          "id": "perllan-person-f3cccc1a-kaninchen",
+          "instanceId": "perllan-person-f3cccc1a-kaninchen",
+          "name": "Unbenanntes Kaninchen",
+          "type": "Kaninchen",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "Ein braun-weißes Kaninchen ist neben Lili abgebildet. Name, Alter, Geschlecht und Ausbildung sind nicht überliefert.",
+          "ownerCharacterId": "person--perllan--person-f3cccc1a",
+          "ownerCharacterName": "Lili",
+          "individualizedAt": "2026-11-04T00:00:00.000Z",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Bezugsperson",
+              "value": "Lili"
+            },
+            {
+              "label": "Beleg",
+              "value": "Geliefertes Personenporträt"
+            },
+            {
+              "label": "Name",
+              "value": "Nicht überliefert"
+            },
+            {
+              "label": "Ausbildung",
+              "value": "Nicht überliefert"
+            }
+          ],
+          "sourceEvidence": {
+            "kind": "supplied-portrait",
+            "familyId": "perllan",
+            "personId": "person-f3cccc1a",
+            "worldPersonId": "person--perllan--person-f3cccc1a",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+            "observation": "Ein braun-weißes Kaninchen ist neben Lili abgebildet."
+          }
+        },
+        {
+          "id": "perllan-person-f3cccc1a-blaumeise",
+          "instanceId": "perllan-person-f3cccc1a-blaumeise",
+          "name": "Unbenannte Blaumeise",
+          "type": "Blaumeise",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "Eine blau-gelbe Meise ist links neben Lili abgebildet. Name, Alter, Geschlecht und Ausbildung sind nicht überliefert.",
+          "ownerCharacterId": "person--perllan--person-f3cccc1a",
+          "ownerCharacterName": "Lili",
+          "individualizedAt": "2026-11-04T00:00:00.000Z",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Bezugsperson",
+              "value": "Lili"
+            },
+            {
+              "label": "Beleg",
+              "value": "Geliefertes Personenporträt"
+            },
+            {
+              "label": "Name",
+              "value": "Nicht überliefert"
+            },
+            {
+              "label": "Ausbildung",
+              "value": "Nicht überliefert"
+            }
+          ],
+          "sourceEvidence": {
+            "kind": "supplied-portrait",
+            "familyId": "perllan",
+            "personId": "person-f3cccc1a",
+            "worldPersonId": "person--perllan--person-f3cccc1a",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+            "observation": "Eine blau-gelbe Meise ist links neben Lili abgebildet."
+          }
+        }
+      ],
+      "companions": [
+        {
+          "id": "card-perllan-person-f3cccc1a-kaninchen",
+          "inventoryItemId": "perllan-person-f3cccc1a-kaninchen",
+          "name": "Unbenanntes Kaninchen",
+          "species": "Kaninchen",
+          "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "role": "Abgebildeter Tierbegleiter",
+          "status": "Nicht festgelegt",
+          "summary": "Ein braun-weißes Kaninchen ist neben Lili abgebildet.",
+          "description": "Ein braun-weißes Kaninchen ist neben Lili abgebildet. Name, Alter, Geschlecht und Ausbildung sind nicht überliefert.",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Bezugsperson",
+              "value": "Lili"
+            },
+            {
+              "label": "Beleg",
+              "value": "Geliefertes Personenporträt"
+            },
+            {
+              "label": "Name",
+              "value": "Nicht überliefert"
+            },
+            {
+              "label": "Ausbildung",
+              "value": "Nicht überliefert"
+            }
+          ]
+        },
+        {
+          "id": "card-perllan-person-f3cccc1a-blaumeise",
+          "inventoryItemId": "perllan-person-f3cccc1a-blaumeise",
+          "name": "Unbenannte Blaumeise",
+          "species": "Blaumeise",
+          "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "role": "Abgebildeter Tierbegleiter",
+          "status": "Nicht festgelegt",
+          "summary": "Eine blau-gelbe Meise ist links neben Lili abgebildet.",
+          "description": "Eine blau-gelbe Meise ist links neben Lili abgebildet. Name, Alter, Geschlecht und Ausbildung sind nicht überliefert.",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Bezugsperson",
+              "value": "Lili"
+            },
+            {
+              "label": "Beleg",
+              "value": "Geliefertes Personenporträt"
+            },
+            {
+              "label": "Name",
+              "value": "Nicht überliefert"
+            },
+            {
+              "label": "Ausbildung",
+              "value": "Nicht überliefert"
+            }
+          ]
+        }
+      ],
+      "attributes": [],
+      "infoRows": [],
+      "showInfoTable": false,
+      "status": "Nicht festgelegt",
+      "hitpoints": "Nicht festgelegt",
+      "carryValue": "Nicht festgelegt",
+      "moneyNotice": "Ein Geldbestand ist in der gelieferten Familienakte nicht überliefert."
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1731"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+        "portraitCaption": "Lili",
+        "biographyTitle": "Lili",
+        "biographyText": "<p>Lili wurde 1731 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Ysgaw Perllan; eine namentlich nicht überlieferte Person (geboren 1708).</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Ysgaw Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-801c8462.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1708)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Unbenanntes Kaninchen",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+            "imageFormat": "portrait",
+            "detail": "Ein braun-weißes Kaninchen ist neben Lili abgebildet. Ein persönlicher Tiername ist nicht überliefert."
+          },
+          {
+            "type": "connection",
+            "name": "Unbenannte Blaumeise",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg",
+            "imageFormat": "portrait",
+            "detail": "Eine blau-gelbe Meise ist links neben Lili abgebildet. Ein persönlicher Tiername ist nicht überliefert."
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-f3cccc1a"
+          }
+        ],
+        "footer": "Personenakte · Lili"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-f3cccc1a"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-f3cccc1a",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1731",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-f3cccc1a",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-f3cccc1a",
+          "fingerprint": "{\"name\":\"Lili\",\"title\":\"\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-801c8462\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-801c8462\",\"name\":\"Ysgaw Perllan\"},{\"personId\":\"person-1afbd3a9\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1afbd3a9\",\"name\":\"??\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-801c8462",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-801c8462",
+            "name": "Ysgaw Perllan"
+          },
+          {
+            "personId": "person-1afbd3a9",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-1afbd3a9",
+            "name": "??"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--perllan--person-f3cccc1a"
+  }
+}

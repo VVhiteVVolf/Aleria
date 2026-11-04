@@ -106,8 +106,10 @@ function sanitizeCharacterInventoryRows(rows = [], fallback = [], maxRows = 40) 
     .slice(0, maxRows);
 }
 
-function sanitizeCharacterInventoryAttributes(items = [], fallback = []) {
-  const source = Array.isArray(items) && items.length ? items : fallback;
+function sanitizeCharacterInventoryAttributes(items, fallback = []) {
+  // An explicit empty list means no authored attributes. Only absent or invalid
+  // data receives the editor defaults; otherwise saving would invent stats.
+  const source = Array.isArray(items) ? items : fallback;
   return source
     .map((item, index) => ({
       label: String(item?.label || `Attribut ${index + 1}`).trim(),

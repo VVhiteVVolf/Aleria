@@ -24,12 +24,12 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Jede der 104 öffentlichen Familien besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio', async () => {
+test('Jede der 105 öffentlichen Familien einschließlich Perllan besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
-    'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod',
+    'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan',
   ];
-  assert.equal(families.length, 104);
+  assert.equal(families.length, 105);
   assert.equal(families.filter(record => !completedPageIds.includes(record.id)).length, 93);
   for (const id of completedPageIds) assert.ok(sources.has(id), id);
   for (const record of families) {
@@ -62,13 +62,18 @@ test('Neue Cochdon-, Llythfor- und Twyllod-Akten besitzen Familienbeschreibungen
   assert.ok(areaFamilies.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft führt ihre 64 ausgewählten Häuser mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
+test('Grafschaft führt ihre 65 ausgewählten Häuser einschließlich Perllan mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
   const cards = sections.flatMap(section => section.cards);
-  assert.equal(cards.length, 64);
-  assert.equal(new Set(cards.map(c => c.id)).size, 64);
+  assert.equal(cards.length, 65);
+  assert.equal(new Set(cards.map(c => c.id)).size, 65);
+  const perllan = cards.filter(card => card.id === 'perllan');
+  assert.equal(perllan.length, 1);
+  assert.ok(perllan[0].imageSrc.endsWith('/Perllan/perllan-emblem.png'));
+  assert.ok(perllan[0].href.endsWith('kleinehaeuser.html?haus=perllan'));
+  assert.equal(cards.filter(card => card.id !== 'perllan').length, 64);
   for (const card of cards) {
     assert.ok(areaFamilies.some(record => record.id === card.id), card.id);
     if (registry.byId(card.id)) {

@@ -31,8 +31,13 @@ test('missing client revisions fall back to the stored server timestamp', async 
 function syncContext() {
   const storage = new Map();
   const saved = [];
+  const listeners = new Map();
   const context = vm.createContext({
-    console, crypto, CustomEvent, TextEncoder, setTimeout, clearTimeout, addEventListener() {},
+    console, crypto, CustomEvent, TextEncoder, setTimeout, clearTimeout,
+    addEventListener(name, handler) {
+      if (!listeners.has(name)) listeners.set(name, []);
+      listeners.get(name).push(handler);
+    },
     MODULE_STORE_SCHEMA_VERSION: 1,
     MODULE_STORE_KEY: 'module-store', MODULE_STORE_SYNC_META_KEY: 'sync-meta',
     FIREBASE_READY_TIMEOUT_MS: 100,
@@ -41,10 +46,10 @@ function syncContext() {
     _moduleStoreRemoteSaveTimer: null, MODULE_STORE_REMOTE_SAVE_DELAY: 5,
     _inlineModuleEdit: { active: false },
     document: { getElementById: () => null },
-    localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) },
+    localStorage: { get length() { return storage.size; }, key: index => [...storage.keys()][index] || null, getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) },
     cleanCustomSection: clone, cleanModuleSectionMove: clone, sanitizeModuleEntry: clone, deepClone: clone,
     normalizeModuleTreeState: payload => ({ nodes: payload.moduleSectionNodes || [], assignments: payload.moduleNodeAssignments || {} }),
-    dispatchEvent() {}, invalidateArchiveSearchCache() {}, updateFirebaseSyncStatus() {},
+    dispatchEvent(event) { (listeners.get(event.type) || []).forEach(handler => handler(event)); }, invalidateArchiveSearchCache() {}, updateFirebaseSyncStatus() {},
     renderAll() {}, showAppStatus() {}, showAppStatusHtml() {},
     showFriendlyAppError(error) { throw error; }, escapeHtml: value => value,
     parseModuleStoreRevision, getFirebaseModuleStoreRevision,
@@ -59,7 +64,7 @@ function syncContext() {
   vm.runInContext(readFileSync(new URL('../modules/module-store/module-store-sync.js', import.meta.url), 'utf8'), context);
   const firebase = readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
   vm.runInContext(firebase.slice(firebase.indexOf('    function normalizeFirebaseModuleStore('), firebase.indexOf('    async function hashDeleteCode(')), context);
-  return { context, saved };
+  return { context, saved, storage };
 }
 
 function store(revision, name) {
@@ -122,32 +127,40 @@ test('an equal live snapshot establishes a missing sync receipt', async () => {
   assert.equal(await context.isLocalModuleStoreSynced(payload), true);
 });
 
-test('only local offline edits are uploaded when the online baseline is unchanged', async () => {
+test('online always wins on startup while offline edits remain in the full-backup recovery', async () => {
   const { context, saved } = syncContext();
   const baseline = store(300, 'Basis');
-  const local = store(200, 'Eigene Bearbeitung trotz abweichender Geräteuhr');
+  const local = store(200, 'Offline draft');
   await context.writeModuleStoreSyncMeta(baseline);
   context.writeLocalModuleStorePayload(local);
   context._fb.loadModuleStore = async () => baseline;
   await context.setupModuleStoreRemoteSync();
-  assert.equal(saved.length, 1);
-  assert.equal(saved[0].customSections[0].entries[0].title, local.customSections[0].entries[0].title);
+  assert.equal(saved.length, 0);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Basis');
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Offline draft');
   assert.equal(context._moduleStoreSyncConflict, null);
 });
 
-test('edits made during the initial online read are preserved', async () => {
+test('edits made during the initial online read are recovered without interrupting online loading', async () => {
   const { context, saved } = syncContext();
   const baseline = store(100, 'Basis');
   await context.writeModuleStoreSyncMeta(baseline);
   context.writeLocalModuleStorePayload(baseline);
   context._fb.loadModuleStore = async () => {
-    context.writeLocalModuleStorePayload(store(200, 'Während des Ladens bearbeitet'));
-    return store(300, 'Online ebenfalls bearbeitet');
+    context.writeLocalModuleStorePayload(store(200, 'Edited during load'));
+    return store(300, 'Online edited');
   };
+  const prompts = [];
+  context.showAppStatusHtml = (...args) => prompts.push(args);
+  context.showAppStatus = (...args) => prompts.push(args);
   await context.setupModuleStoreRemoteSync();
-  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Während des Ladens bearbeitet');
-  assert.ok(context._moduleStoreSyncConflict);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Online edited');
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Edited during load');
+  assert.equal(context._moduleStoreSyncConflict, null);
   assert.equal(saved.length, 0);
+  assert.equal(prompts.length, 0);
 });
 
 test('failed reads cannot publish a local cache as an allegedly empty online store', async () => {
@@ -161,17 +174,21 @@ test('failed reads cannot publish a local cache as an allegedly empty online sto
   assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Lokaler Cache');
 });
 
-test('detecting a conflict cancels queued automatic writes', async () => {
+test('incoming online state cancels stale queued uploads while deliberate later edits still save', async () => {
   const { context, saved } = syncContext();
-  const local = store(200, 'Lokaler Entwurf');
+  const local = store(200, 'Local draft');
+  context.writeLocalModuleStorePayload(local);
   context.scheduleRemoteModuleStoreSave(local);
-  context.showModuleStoreSyncConflict(local, store(300, 'Anderer Online-Stand'));
+  await context.applyRemoteModuleStore(store(300, 'Online state'));
   await new Promise(resolve => setTimeout(resolve, 20));
   assert.equal(saved.length, 0);
   assert.equal(context._moduleStoreRemoteSaveTimer, null);
-  context.scheduleRemoteModuleStoreSave(store(400, 'Weitere lokale Änderung'));
+  const edited = store(400, 'Deliberate edit');
+  context.writeLocalModuleStorePayload(edited);
+  context.scheduleRemoteModuleStoreSave(edited);
   await new Promise(resolve => setTimeout(resolve, 20));
-  assert.equal(saved.length, 0);
+  assert.equal(saved.length, 1);
+  assert.equal(saved[0].customSections[0].entries[0].title, 'Deliberate edit');
 });
 
 test('the split module round trip retains section icons and content', async () => {
@@ -200,24 +217,30 @@ for (const remoteRevision of [0, 100]) {
   });
 }
 
-test('unsynced user edits still raise a conflict and stay in local storage', async () => {
+test('unsynced drafts are retained once without any online/local choice', async () => {
   const { context, saved } = syncContext();
-  await context.writeModuleStoreSyncMeta(store(100, 'Synchronisierter Stand'));
-  context.writeLocalModuleStorePayload(store(200, 'Eigene Bearbeitung'));
-  context._fb.loadModuleStore = async () => store(300, 'Neue Veröffentlichung');
+  await context.writeModuleStoreSyncMeta(store(100, 'Baseline'));
+  context.writeLocalModuleStorePayload(store(200, 'Unsent draft'));
+  context._fb.loadModuleStore = async () => store(300, 'Publication');
   await context.setupModuleStoreRemoteSync();
-  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Eigene Bearbeitung');
-  assert.ok(context._moduleStoreSyncConflict);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Publication');
+  assert.equal(context._moduleStoreSyncConflict, null);
   assert.equal(saved.length, 0);
+  await context.applyRemoteModuleStore(store(300, 'Publication'));
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.keys(recoveries).length, 1);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Unsent draft');
 });
 
-test('a first local module can still be saved when the online store is empty', async () => {
+test('an empty online store is loaded without automatically publishing an old browser draft', async () => {
   const { context, saved } = syncContext();
-  context.writeLocalModuleStorePayload(store(200, 'Erstes Modul'));
+  context.writeLocalModuleStorePayload(store(200, 'Browser only'));
   context._fb.loadModuleStore = async () => null;
   await context.setupModuleStoreRemoteSync();
-  assert.equal(saved.length, 1);
-  assert.equal(saved[0].customSections[0].entries[0].title, 'Erstes Modul');
+  assert.equal(saved.length, 0);
+  assert.equal(context.readLocalModuleStorePayload().customSections.length, 0);
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Browser only');
 });
 
 test('Windreiter layout repair does not turn an unchanged cache into an unsynced edit', async () => {
@@ -319,7 +342,7 @@ test('receipt migration keeps offline edits unsynced and preserves the original 
   assert.equal(await context.isLocalModuleStoreSynced(baseline), true);
 });
 
-test('edits made while an incoming snapshot is being hashed cannot be overwritten', async () => {
+test('edits made while an incoming snapshot is hashed are recovered before online takes priority', async () => {
   const { context, saved } = syncContext();
   const baseline = store(100, 'Basis');
   await context.writeModuleStoreSyncMeta(baseline);
@@ -334,8 +357,10 @@ test('edits made while an incoming snapshot is being hashed cannot be overwritte
     return subtle.digest(...args);
   } } };
   await context.applyRemoteModuleStore(store(300, 'Neuer Online-Stand'));
-  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Während der Prüfsumme bearbeitet');
-  assert.ok(context._moduleStoreSyncConflict);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Neuer Online-Stand');
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Während der Prüfsumme bearbeitet');
+  assert.equal(context._moduleStoreSyncConflict, null);
   assert.equal(saved.length, 0);
 });
 
@@ -351,4 +376,51 @@ test('successive live snapshots do not mistake an in-progress cache write for an
   assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Zweite Online-Änderung');
   assert.equal(context._moduleStoreSyncConflict, null);
   assert.equal(await context.isLocalModuleStoreSynced(context.readLocalModuleStorePayload()), true);
+});
+
+test('an inline edit defers only the newest online snapshot and cannot upload over that unseen revision', async () => {
+  const { context, saved } = syncContext();
+  const baseline = store(100, 'Baseline');
+  context.writeLocalModuleStorePayload(baseline);
+  await context.writeModuleStoreSyncMeta(baseline);
+  context._inlineModuleEdit.active = true;
+  await context.applyRemoteModuleStore(store(200, 'Earlier online'));
+  await context.applyRemoteModuleStore(store(300, 'Latest online'));
+  const draft = store(400, 'Finished draft');
+  context.writeLocalModuleStorePayload(draft);
+  context.scheduleRemoteModuleStoreSave(draft);
+  await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(saved.length, 0);
+  context._inlineModuleEdit = null;
+  context.dispatchEvent(new CustomEvent('almanach:inline-module-edit-ended'));
+  await vm.runInContext('moduleStoreRemoteApplyQueue', context);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Latest online');
+  const recoveries = await vm.runInContext('moduleStoreLocalPersistence.readLegacyRecovery()', context);
+  assert.equal(Object.values(recoveries).map(JSON.parse)[0].moduleStore.customSections[0].entries[0].title, 'Finished draft');
+  assert.equal(saved.length, 0);
+});
+
+test('a newer received snapshot invalidates an older adoption still hashing its baseline', async () => {
+  const { context } = syncContext();
+  const baseline = store(100, 'Baseline');
+  context.writeLocalModuleStorePayload(baseline);
+  await context.writeModuleStoreSyncMeta(baseline);
+  let release, started;
+  const gate = new Promise(resolve => { release = resolve; });
+  const entered = new Promise(resolve => { started = resolve; });
+  const subtle = crypto.subtle;
+  let paused = false;
+  context.crypto = { subtle: { digest: async (...args) => {
+    if (!paused) { paused = true; started(); await gate; }
+    return subtle.digest(...args);
+  } } };
+  const rendered = [];
+  context.renderAll = () => rendered.push(context.readLocalModuleStorePayload().customSections[0].entries[0].title);
+  const old = context.applyRemoteModuleStore(store(200, 'Older online'));
+  await entered;
+  const latest = context.applyRemoteModuleStore(store(300, 'Latest online'));
+  release();
+  await Promise.all([old, latest]);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Latest online');
+  assert.deepEqual(rendered, ['Latest online']);
 });

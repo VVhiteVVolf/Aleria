@@ -80,6 +80,7 @@
       family("haus-rhwyd", "Rhwyd", "Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-penrudd", "Penrudd", "Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png", { seat: "Bannkreis Gwynthor · Zum Roten Tor · Penrudd-Hof", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-llythfor", "Llythfor", "Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png", { seat: "Gwynthor", rank: "Bürgerliche Familie", href: `${housePage}kleinehaeuser.html?haus=haus-llythfor` }),
+      family("perllan", "Perllan", "Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png", { seat: "Gwynthor", rank: "Bürgerliche Familie" }),
       family("haus-gwregysdu", "Gwregysdu", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-valerus", "Valerus", "Venalys/haus-valerus.png", { seat: "Gwynthor · Die rote Klaue", rank: "Bürgerliches Haus" }),
       family("haus-fearnan", "Fearnan", "/AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),

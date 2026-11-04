@@ -1,0 +1,152 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Perllan/person-e802f95d.json",
+  "source": {
+    "kind": "supplied-family-export",
+    "documentId": "perllan",
+    "familyId": "perllan",
+    "personId": "person-e802f95d",
+    "worldPersonId": "person--perllan--person-e802f95d",
+    "picturedCompanions": []
+  },
+  "character": {
+    "name": "Gwern Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-e802f95d.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1717"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-e802f95d.jpg",
+        "portraitCaption": "Gwern Perllan",
+        "biographyTitle": "Gwern Perllan",
+        "biographyText": "<p>Gwern Perllan wurde 1717 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Aeron Perllan; eine namentlich nicht überlieferte Person (geboren 1698).</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Aeron Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a61dcc92.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1698)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-e802f95d"
+          }
+        ],
+        "footer": "Personenakte · Gwern Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-e802f95d"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-e802f95d",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-e802f95d",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-e802f95d",
+          "fingerprint": "{\"name\":\"Gwern Perllan\",\"title\":\"\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-e802f95d.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a61dcc92\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-a61dcc92\",\"name\":\"Aeron Perllan\"},{\"personId\":\"person-d8a0ec35\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-d8a0ec35\",\"name\":\"??\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-a61dcc92",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-a61dcc92",
+            "name": "Aeron Perllan"
+          },
+          {
+            "personId": "person-d8a0ec35",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-d8a0ec35",
+            "name": "??"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--perllan--person-e802f95d"
+  }
+}

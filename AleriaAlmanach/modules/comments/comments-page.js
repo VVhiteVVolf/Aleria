@@ -57,8 +57,6 @@ function buildCommentActionBar(hintText, options = {}) {
       <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>
       ${fazitButton}
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>
-      ${buildCommentQuickToolsToggle()}
-      ${buildCommentToolsToggle()}
     </div>`;
 }
 
@@ -84,10 +82,11 @@ function buildCommentsPage(entry, pageIndex, total) {
         "></div>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden;">
+        ${buildCommentViewControls()}
         <div class="comments-scroll" id="comments-scroll">
           <div class="comment-empty" id="comments-loading">Lade Kommentare\u2026</div>
         </div>
-        ${buildCommentQuickTools()}
+        ${buildCommentQuickTools(entry.id)}
         ${buildCommentTurnBar(entry.id)}
         ${buildCommentActionBar('Hinterlasse eine Stimme aus Charakterperspektive')}
       </div>
@@ -140,6 +139,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
               aria-pressed="${focusMode ? 'true' : 'false'}">${focusMode ? '↙' : '⛶'}</button>
             </div>
           </div>
+          ${buildCommentViewControls()}
           ${intro}
         </div>
         <div
@@ -150,7 +150,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
           <div class="comment-empty" id="comments-loading">Lade Sitzung…</div>
         </div>
         <div class="session-footer" role="region" aria-label="Szenenwerkzeuge" tabindex="0">
-          ${buildCommentQuickTools()}
+          ${buildCommentQuickTools(threadId)}
           ${buildCommentTurnBar(threadId)}
           ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.', { allowSceneTime: true })}
         </div>
@@ -173,6 +173,7 @@ function buildEmbeddedCommentsSection(thread, hintText = '') {
         <div class="module-embedded-comments-kicker">${kicker}</div>
         <div class="module-embedded-comments-hint">${safeHint}</div>
       </div>
+      ${buildCommentViewControls()}
       <div
         class="comments-scroll"
         id="comments-scroll"
@@ -180,7 +181,7 @@ function buildEmbeddedCommentsSection(thread, hintText = '') {
         data-empty-text="${safeText}">
         <div class="comment-empty" id="comments-loading">Lade Kommentare…</div>
       </div>
-      ${buildCommentQuickTools()}
+      ${buildCommentQuickTools(thread.threadId)}
       ${buildCommentTurnBar(thread.threadId)}
       ${buildCommentActionBar(formHint)}
     </div>`;
@@ -193,6 +194,7 @@ function buildOrganicCommentsContinuation(thread, hintText = '') {
   const formHint = hintText || 'Direkt an den bestehenden Kommentar anknüpfen';
   return `
     <div class="module-organic-comments">
+      ${buildCommentViewControls()}
       <div
         class="comments-scroll"
         id="comments-scroll"
@@ -200,7 +202,7 @@ function buildOrganicCommentsContinuation(thread, hintText = '') {
         data-empty-text="${safeText}">
         <div class="comment-empty" id="comments-loading">Lade Kommentare…</div>
       </div>
-      ${buildCommentQuickTools()}
+      ${buildCommentQuickTools(thread.threadId)}
       ${buildCommentTurnBar(thread.threadId)}
       ${buildCommentActionBar(formHint)}
     </div>`;

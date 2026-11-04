@@ -184,7 +184,7 @@ function renderCommentPaginationControls(threadId, pageInfo) {
           data-action="set-comment-page"
           data-comment-thread-id="${safeThreadId}"
           data-comment-page="${prevPage}"
-          ${currentPage <= 1 ? 'disabled' : ''}>Zurueck</button>
+          ${currentPage <= 1 ? 'disabled' : ''}>Zurück</button>
         ${buildCommentPaginationPageButtons(threadId, pageInfo)}
         <button
           type="button"

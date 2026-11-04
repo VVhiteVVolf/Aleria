@@ -1,0 +1,259 @@
+{
+  "schema": "aleria.family-source-inventory",
+  "schemaVersion": 1,
+  "reviewed": "2026-11-04",
+  "familyId": "perllan",
+  "sourceDocumentId": "perllan",
+  "sourceName": "Nutzerdownload Perllan",
+  "sourceHtmlEmpty": true,
+  "counts": {
+    "persons": 44,
+    "namedPersons": 27,
+    "unnamedPartners": 15,
+    "founderPlaceholders": 2,
+    "partnerships": 16,
+    "parentages": 27,
+    "portraits": 27
+  },
+  "adaptations": [
+    "Bestehende kanonische Dokument-ID perllan erhalten; Registertitel Familie Perllan.",
+    "Herkunft Gwynthor im bestehenden geographischen Bürgerregister; kein erfundener Hof oder Lehnsherr.",
+    "Originalbilder bytegleich unter lokalen aktiven URLs.",
+    "Alle Personen-IDs und worldPersonIds, Datumswerte, Lebensstatus, Verbindungen und Präsentationsdaten unverändert."
+  ],
+  "canonicalIdentityReview": {
+    "reviewed": "2026-11-04",
+    "remoteCommit": "ec32389e89f88bd9b754da93862d933344b03066",
+    "familyId": "perllan",
+    "supersededUnpublishedDraftId": "haus-perllan",
+    "decision": "Der Nutzer hat dieselben 44 Quellpersonen vor diesem Release über den Web-Publisher als perllan veröffentlicht. Diese vorhandene Identität wird fortgeführt; keine zweite Familienakte und kein Alias."
+  },
+  "reviewNotes": [
+    "Die leere HTML-Datei enthält keine Hausbio.",
+    "Gwern und Draenen teilen dasselbe Porträt; ihre Identitäten bleiben getrennt.",
+    "Ysgaws Legitimierung sowie Helygs als geheim markierte, öffentlich sichtbare Affäre bleiben wie geliefert.",
+    "Unbekannte Gründer sind Platzhalter; der vorhandene Zeitsprung und ihr gelieferter Lebensstatus bleiben erhalten."
+  ],
+  "counterpartReview": {
+    "method": "Kanonische Registerpersonen nach worldPersonId, Originalporträt und Vorname mit Geburtsjahr abgeglichen.",
+    "matches": [
+      {
+        "sourcePersonId": "person-a0e1ea6a",
+        "otherFamilyId": "haus-awenydd",
+        "otherPersonId": "rhosyn-awenydd",
+        "decision": "Getrennte Namensgleiche: Rhosyn 1723 hat in Perllan Derwyn als Vater; Rhosyn Awenydd 1723 hat Gwern als Vater und ein anderes Porträt."
+      }
+    ]
+  },
+  "picturedAnimals": [
+    {
+      "ownerPersonId": "person-b758cea4",
+      "portrait": "images/person-person-b758cea4.jpg",
+      "animals": [
+        "Eichhörnchen",
+        "Rotkehlchen"
+      ],
+      "evidence": "Bildbeleg; Namen und Spielwerte nicht überliefert."
+    },
+    {
+      "ownerPersonId": "person-f3cccc1a",
+      "portrait": "images/person-person-f3cccc1a.jpg",
+      "animals": [
+        "Kaninchen",
+        "Blaumeise"
+      ],
+      "evidence": "Bildbeleg; Namen und Spielwerte nicht überliefert."
+    }
+  ],
+  "files": [
+    {
+      "path": "family.json",
+      "bytes": 39375,
+      "sha256": "c3cb4aa7c735b23b4dfa4e4e4ad71cd73a41921c4de86ce957cf32eb3af6d601"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 6433,
+      "sha256": "08e78b2141c988d6610c1139a75e18eeff5429295a329f613f01469f7e67c2bc"
+    },
+    {
+      "path": "Perllan.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/document-emblem.jpg",
+      "bytes": 362282,
+      "sha256": "24162803f5dd6d3045624f1d472f9d86e63c41b8178b70bae4149c5f04df1690",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/document-emblem.jpg"
+    },
+    {
+      "path": "images/person-person-adca1980.jpg",
+      "bytes": 246017,
+      "sha256": "a738bbaea88285f6ef9e0c62cf57af2ea7f1acaf5c150da04d9fae3a1a0eb7ef",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-adca1980.jpg"
+    },
+    {
+      "path": "images/person-person-ffc03267.jpg",
+      "bytes": 246402,
+      "sha256": "5f66204cfbbed772efeef5c652cd3ff21092a58a3889267496a59cbbc226290f",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ffc03267.jpg"
+    },
+    {
+      "path": "images/person-person-813d2bd0.jpg",
+      "bytes": 259149,
+      "sha256": "e14724dec66c695e0ffc0303f1b9808ca94fea3779550d8d64bcb22d41fbce33",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-813d2bd0.jpg"
+    },
+    {
+      "path": "images/person-person-ea0ed9b5.jpg",
+      "bytes": 243463,
+      "sha256": "bbfebc99f1b6d39ddd4ed106c98ac4f4f215d5adfb7356ed97cb4b5bf7f14642",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ea0ed9b5.jpg"
+    },
+    {
+      "path": "images/person-person-0525b525.jpg",
+      "bytes": 253348,
+      "sha256": "2b67a885eedcc05a75fdf8896c4ed2368f63fef3bef2dbe61ffb62f6dbb7a25a",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-0525b525.jpg"
+    },
+    {
+      "path": "images/person-person-a61dcc92.jpg",
+      "bytes": 248756,
+      "sha256": "94af2688d1b892d84a72ec3fbaed32452874252cdfe9e69044e838f01b6f9d66",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a61dcc92.jpg"
+    },
+    {
+      "path": "images/person-person-2a0fa1e3.jpg",
+      "bytes": 252943,
+      "sha256": "9cece8b39a8dc02e5e4499cf9d3b2aafffb98fdf25b3ec815847beeaee3aef7f",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg"
+    },
+    {
+      "path": "images/person-person-4701179c.jpg",
+      "bytes": 297839,
+      "sha256": "9c5290c72f33bf89f6f88372443f28c8a099895ec0bfa17fb2f12c3b6a36d7eb",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-4701179c.jpg"
+    },
+    {
+      "path": "images/person-person-19abcc6c.jpg",
+      "bytes": 261793,
+      "sha256": "83f36c1aac571ac2d6045b0281417217135f2d5169052a983588370c0092cc31",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-19abcc6c.jpg"
+    },
+    {
+      "path": "images/person-person-287fc4b9.jpg",
+      "bytes": 282116,
+      "sha256": "c41369412cd6ff3c16b9ce856fe11c6e132e10d3b86766e0008b4f5ab6c34e35",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-287fc4b9.jpg"
+    },
+    {
+      "path": "images/person-person-c8b2b4fe.jpg",
+      "bytes": 271552,
+      "sha256": "ca724e6ffd5e0df25087b30c2c128be909dcb01723c8ff434071d7e38f33b669",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-c8b2b4fe.jpg"
+    },
+    {
+      "path": "images/person-person-dd1b372f.jpg",
+      "bytes": 288971,
+      "sha256": "e13b4f051c565ffa8ed050d42275d8fa685f0c1c9da0f4d87d8c892f3861d37a",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-dd1b372f.jpg"
+    },
+    {
+      "path": "images/person-person-801c8462.jpg",
+      "bytes": 283156,
+      "sha256": "144a3e7364347c8b1aadbee92237796ae420af7b6aea2fd6416da416eb3f8cae",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-801c8462.jpg"
+    },
+    {
+      "path": "images/person-person-6b4c948f.png",
+      "bytes": 1827487,
+      "sha256": "3747f0353aa6b4a74aa8906f010b5704a6188e92123ef70b27faaf1c434dd689",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-6b4c948f.png"
+    },
+    {
+      "path": "images/person-person-5b891c03.jpg",
+      "bytes": 273155,
+      "sha256": "9948d7ee98df325a9cbeeba04546431f343b0c9dd817253ddbfa91b44cd7b381",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-5b891c03.jpg"
+    },
+    {
+      "path": "images/person-person-e802f95d.jpg",
+      "bytes": 272234,
+      "sha256": "bf6832a2c6c35bea6e35de2731396300933ac09e0828231ef74d9b84f678bd47",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-e802f95d.jpg"
+    },
+    {
+      "path": "images/person-person-7e672734.jpg",
+      "bytes": 235566,
+      "sha256": "b2749c54f02b0cf8bc86d7e5e0ed4c89af83daf55bba1a41a2f6e50d6378f66e",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-7e672734.jpg"
+    },
+    {
+      "path": "images/person-person-ec01a3c1.jpg",
+      "bytes": 276079,
+      "sha256": "0ee8329e7eed638c9cff0d762ce783a574f3570d9ef727a58c3e4c16bc5e9313",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ec01a3c1.jpg"
+    },
+    {
+      "path": "images/person-person-5b293f1b.jpg",
+      "bytes": 281928,
+      "sha256": "c8d1619e63c61f17b44b347e3b6724b82d332d8a5d04174f64d132d826cb42c9",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-5b293f1b.jpg"
+    },
+    {
+      "path": "images/person-person-a0e1ea6a.jpg",
+      "bytes": 257618,
+      "sha256": "1de6698da862874ddc5af7910f1882b5247bc65474725c1f96a89ea8857d386b",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg"
+    },
+    {
+      "path": "images/person-person-1b72c8d5.jpg",
+      "bytes": 324003,
+      "sha256": "9f0730df86e253404adf3bc27d371a59ec756f41ae426619c3d58d3edb88c3dd",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-1b72c8d5.jpg"
+    },
+    {
+      "path": "images/person-person-44498061.jpg",
+      "bytes": 272234,
+      "sha256": "bf6832a2c6c35bea6e35de2731396300933ac09e0828231ef74d9b84f678bd47",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-44498061.jpg"
+    },
+    {
+      "path": "images/person-person-b57f28f9.jpg",
+      "bytes": 234400,
+      "sha256": "f3cff78e361a78e36546cbbf9a1255d5512b039a5dd72ecd24d32f678c083a18",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-b57f28f9.jpg"
+    },
+    {
+      "path": "images/person-person-458a8c43.jpg",
+      "bytes": 279902,
+      "sha256": "82b2e893a6d4ee64f773d784d798406974d2323beb5245a522f8784824845d4f",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-458a8c43.jpg"
+    },
+    {
+      "path": "images/person-person-b758cea4.jpg",
+      "bytes": 292213,
+      "sha256": "3233a72e3a9e77607bcfb8cb66ff6283ca3c57b525d4ce8634530f6a52fbbf50",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-b758cea4.jpg"
+    },
+    {
+      "path": "images/person-person-f3cccc1a.jpg",
+      "bytes": 284548,
+      "sha256": "132df7eceb9e3e7d1fb4dfac4123462f36d3034831c81d6013bd07f93959beb8",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-f3cccc1a.jpg"
+    },
+    {
+      "path": "images/person-person-02e7bc53.jpg",
+      "bytes": 249545,
+      "sha256": "585e37338895ff0bee5c180790c56d29c8aa038fa8f1d19e7c1d2ecdfb7d85d7",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-02e7bc53.jpg"
+    },
+    {
+      "path": "images/house-house-perllan.jpg",
+      "bytes": 362282,
+      "sha256": "24162803f5dd6d3045624f1d472f9d86e63c41b8178b70bae4149c5f04df1690",
+      "activePath": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/house-house-perllan.jpg"
+    }
+  ]
+}

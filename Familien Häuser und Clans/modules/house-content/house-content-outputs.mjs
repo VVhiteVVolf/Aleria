@@ -46,7 +46,7 @@ export function createHousePageData(content) {
     ...(content.scenes?.length ? { scenes: content.scenes } : {}),
     ...(content.warriorGallery?.entries?.length ? { warriorGallery: content.warriorGallery } : {}),
     images, court: { groups, cadets },
-    figures: { heading: content.page === 'kleinehaeuser.html' ? '11. Historische Figuren' : '12. Historische Figuren', tableTitle: content.figuresTitle, entries: figures },
+    figures: { heading: content.sectionTitles?.historicalFigures || (content.page === 'kleinehaeuser.html' ? '11. Historische Figuren' : '12. Historische Figuren'), tableTitle: content.figuresTitle, entries: figures },
     familyTreeEmbed: { src: treeLink(content.id), title: `Stammbaum von ${content.name}` },
     trivia: content.trivia,
   };

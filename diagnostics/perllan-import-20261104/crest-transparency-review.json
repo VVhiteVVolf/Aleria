@@ -1,0 +1,48 @@
+{
+  "schema": "aleria.image-edit-provenance",
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "request": "Perllan-Wappen: weißen Außenhintergrund transparent machen.",
+  "tool": "built-in image_gen",
+  "skill": "C:/Users/fhg_r/.codex/skills/.system/imagegen/SKILL.md",
+  "useCase": "background-extraction",
+  "source": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/document-emblem.jpg",
+  "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+  "sha256": "acd19abe477357343e800a9f081e30d519674413db417410d49d864ce3ffcc61",
+  "selectedToolOriginal": "C:/Users/fhg_r/.codex/generated_images/01a1a727-4f94-7941-99de-cb2283cb7d9e/exec-f41651c1-3cc2-4d74-9488-3dc7f0697a58.png",
+  "candidateToolOriginals": [
+    "C:/Users/fhg_r/.codex/generated_images/01a1a727-4f94-7941-99de-cb2283cb7d9e/exec-f41651c1-3cc2-4d74-9488-3dc7f0697a58.png",
+    "C:/Users/fhg_r/.codex/generated_images/01a1a727-4f94-7941-99de-cb2283cb7d9e/exec-6cfc3135-47a2-4bf2-9df7-00290cbc43eb.png",
+    "C:/Users/fhg_r/.codex/generated_images/01a1a727-4f94-7941-99de-cb2283cb7d9e/exec-9599ec45-cbfb-40c8-a283-c83556c58e22.png"
+  ],
+  "selection": "Erste Fassung liegt dem Originalmotiv und dessen Textur am nächsten. Zwei weitere Transparenzkorrekturen verändern die Textur stärker; nicht aktiv verwendet. Die Werkzeugvorschau zeigt einzelne RGB-Randfarben ohne ihren tatsächlichen sehr niedrigen Alphawert und ist dafür visuell irreführend.",
+  "prompt": "Use case: background-extraction. Asset type: existing Perllan family coat of arms for a website. Input image 1 is the EDIT TARGET. Primary request: remove ONLY the white background OUTSIDE the outermost circular gold border and make that outside area truly transparent (alpha 0). Preserve the exact existing circular emblem without redrawing or restyling: exact gold tree and roots, gold leaves and small flowers, all red berries, dark forest-green solid interior, Celtic gold circular knot border, gold texture and all existing edges. Every pixel INSIDE the circle must remain fully opaque. Keep the same centered square composition and proportions and a clean antialiased circular boundary. The white square corners become transparent. No white halo, no glow, no shadow, no replacement background, no checkerboard painted into the image. Do not simplify any motif, do not remove the green interior, do not change the branches, berries, flowers or knotwork. Output a transparent PNG.",
+  "validation": {
+    "mode": "RGBA",
+    "width": 1254,
+    "height": 1254,
+    "transparentPixels": 417344,
+    "fullyOpaquePixels": 445,
+    "partialAlphaPixels": 1154727,
+    "cornerAlpha": [0, 0, 0, 0],
+    "minimumInteriorAlphaWithinRadius570": 252,
+    "nonzeroAlphaBeyondRadius620": 2103,
+    "alphaMeasurementCenter": [626.5, 626.5],
+    "maxAlphaBeyondRadius620": 3,
+    "maxAlphaBeyondRadius625": 2,
+    "maxAlphaBeyondRadius630": 1,
+    "pixelsBeyondRadius620AlphaAbove10": 0,
+    "samplePixel620x0": [255, 255, 0, 1],
+    "review": "Weißes Rechteck entfernt; Kreis, Waldgrün, goldener Baum, rote Beeren und Knotenrand visuell erhalten. Außerhalb Radius 620 liegen ausschließlich Alphawerte 0–3; die in der Werkzeugvorschau gelb erscheinenden RGB-Randpixel sind effektiv unsichtbar, keine sichtbaren Goldfragmente. ImageGen liefert nahezu opakes Innenalpha 252–254. Keine pixelgenaue RGB-Identität behauptet. Unveränderte Original-JPGs bleiben erhalten."
+  },
+  "sourcePreservation": {
+    "originalSourceFilesUnchanged": 32,
+    "originalActiveImageCopiesUnchanged": 29,
+    "historicalSourceInventoryUnchanged": true
+  },
+  "referencesChanged": [
+    "Stammbäume/assets/js/data/house-perllan-family.js: PERLLAN_EMBLEM, document.emblem und house-perllan.emblem",
+    "Stammbäume/assets/data/source-inventories/perllan-20261104/import-source.mjs: aktive Hintergrundfreistellung als separate Ableitung"
+  ],
+  "sharedProjections": "Vom Hauptagenten zu aktualisieren; in diesem Bildauftrag nicht erzeugt."
+}

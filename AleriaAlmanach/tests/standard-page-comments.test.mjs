@@ -14,6 +14,7 @@ function createRenderer({ editing = false } = {}) {
     sanitizeImageSrc: value => value,
     renderStaticCommentSequence: sequence => sequence.map(item => `<aside>${item.text}</aside>`).join(''),
     buildCommentQuickTools: () => '',
+    buildCommentViewControls: () => '',
     buildCommentTurnBar: () => '',
     buildCommentQuickToolsToggle: () => '',
     buildCommentToolsToggle: () => '',

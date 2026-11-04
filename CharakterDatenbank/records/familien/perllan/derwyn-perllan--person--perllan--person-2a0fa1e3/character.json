@@ -1,0 +1,469 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--perllan--person-2a0fa1e3",
+  "slug": "derwyn-perllan",
+  "identity": {
+    "name": "Derwyn Perllan",
+    "aliases": [],
+    "worldPersonId": "person--perllan--person-2a0fa1e3"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "perllan",
+      "label": "Familie Perllan"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "perllan",
+        "familyTitle": "Familie Perllan",
+        "personId": "person-2a0fa1e3",
+        "worldPersonId": "person--perllan--person-2a0fa1e3",
+        "houseId": "house-perllan",
+        "houseName": "Perllan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Derwyn Perllan\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ffc03267\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ffc03267\",\"name\":\"Collen Perllan\"},{\"personId\":\"person-4707e80f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-4707e80f\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-29996da3\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-29996da3\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-a0e1ea6a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-a0e1ea6a\",\"name\":\"Rhosyn Perllan\"},{\"personId\":\"person-1b72c8d5\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1b72c8d5\",\"name\":\"Celynnen Perllan\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--perllan--person-2a0fa1e3",
+      "documentIds": [
+        "person--perllan--person-2a0fa1e3"
+      ],
+      "documents": [
+        {
+          "documentId": "person--perllan--person-2a0fa1e3",
+          "createdAt": "2026-11-04T00:00:00.000Z",
+          "updatedAt": "2026-11-04T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "perllan",
+        "personId": "person-2a0fa1e3",
+        "worldPersonId": "person--perllan--person-2a0fa1e3",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Perllan/person-2a0fa1e3.json",
+    "sourceExportedAt": "2026-11-04T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-04T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--perllan--person-2a0fa1e3"
+    ],
+    "contentHash": "d9614eae165a6b2a54c8ee1d3756012e65a47400d5ccc5355c08cc1d4c957cb0"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "perllan"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Derwyn Perllan",
+        "title": "",
+        "fraktion": "Perllan",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-04T00:00:00.000Z",
+        "updatedAt": "2026-11-04T00:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            [
+              "Familie",
+              "Perllan"
+            ],
+            [
+              "Stand",
+              "Bürgerlich"
+            ],
+            [
+              "Geboren",
+              "1698"
+            ],
+            [
+              "Lebensstatus",
+              "Lebend"
+            ]
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg",
+            "portraitCaption": "Derwyn Perllan",
+            "biographyTitle": "Derwyn Perllan",
+            "biographyText": "<p>Derwyn Perllan wurde 1698 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Collen Perllan; eine namentlich nicht überlieferte Person (geboren 1672). Partnerschaften: eine namentlich nicht überlieferte Person (geboren 1701). Kinder: Rhosyn Perllan; Celynnen Perllan.</p>",
+            "abilities": [],
+            "knightMentors": [],
+            "connectionsTitle": "Familie & Tierbegleiter",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Collen Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ffc03267.jpg",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person (geboren 1672)",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "eine namentlich nicht überlieferte Person (geboren 1701)",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Partnerperson"
+              },
+              {
+                "type": "connection",
+                "name": "Rhosyn Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              },
+              {
+                "type": "connection",
+                "name": "Celynnen Perllan",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-1b72c8d5.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Perllan",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+                "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+                "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-2a0fa1e3"
+              }
+            ],
+            "footer": "Personenakte · Derwyn Perllan"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--perllan--person-2a0fa1e3"
+        },
+        "genealogy": {
+          "worldPersonId": "person--perllan--person-2a0fa1e3",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1698",
+          "death": "",
+          "houseId": "house-perllan",
+          "houseName": "Perllan",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "perllan",
+              "personId": "person-2a0fa1e3",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-04T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-2a0fa1e3",
+              "fingerprint": "{\"name\":\"Derwyn Perllan\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ffc03267\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ffc03267\",\"name\":\"Collen Perllan\"},{\"personId\":\"person-4707e80f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-4707e80f\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-29996da3\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-29996da3\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-a0e1ea6a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-a0e1ea6a\",\"name\":\"Rhosyn Perllan\"},{\"personId\":\"person-1b72c8d5\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1b72c8d5\",\"name\":\"Celynnen Perllan\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-ffc03267",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-ffc03267",
+                "name": "Collen Perllan"
+              },
+              {
+                "personId": "person-4707e80f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-4707e80f",
+                "name": "??"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-29996da3",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-29996da3",
+                "name": "??"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-a0e1ea6a",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-a0e1ea6a",
+                "name": "Rhosyn Perllan"
+              },
+              {
+                "personId": "person-1b72c8d5",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--perllan--person-1b72c8d5",
+                "name": "Celynnen Perllan"
+              }
+            ]
+          }
+        },
+        "id": "person--perllan--person-2a0fa1e3"
+      }
+    ]
+  },
+  "character": {
+    "name": "Derwyn Perllan",
+    "title": "",
+    "fraktion": "Perllan",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-04T00:00:00.000Z",
+    "updatedAt": "2026-11-04T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Familie",
+          "Perllan"
+        ],
+        [
+          "Stand",
+          "Bürgerlich"
+        ],
+        [
+          "Geboren",
+          "1698"
+        ],
+        [
+          "Lebensstatus",
+          "Lebend"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg",
+        "portraitCaption": "Derwyn Perllan",
+        "biographyTitle": "Derwyn Perllan",
+        "biographyText": "<p>Derwyn Perllan wurde 1698 geboren und gehört zur bürgerlichen Familie Perllan.</p><p>Eltern: Collen Perllan; eine namentlich nicht überlieferte Person (geboren 1672). Partnerschaften: eine namentlich nicht überlieferte Person (geboren 1701). Kinder: Rhosyn Perllan; Celynnen Perllan.</p>",
+        "abilities": [],
+        "knightMentors": [],
+        "connectionsTitle": "Familie & Tierbegleiter",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Collen Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-ffc03267.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1672)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "eine namentlich nicht überlieferte Person (geboren 1701)",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Partnerperson"
+          },
+          {
+            "type": "connection",
+            "name": "Rhosyn Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-a0e1ea6a.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Celynnen Perllan",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-1b72c8d5.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Perllan",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png",
+            "text": "Stammbaum mit den überlieferten Verwandtschaftsverbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-2a0fa1e3"
+          }
+        ],
+        "footer": "Personenakte · Derwyn Perllan"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--perllan--person-2a0fa1e3"
+    },
+    "genealogy": {
+      "worldPersonId": "person--perllan--person-2a0fa1e3",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "houseId": "house-perllan",
+      "houseName": "Perllan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "perllan",
+          "personId": "person-2a0fa1e3",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-04T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-04T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=perllan&mode=view&person=person-2a0fa1e3",
+          "fingerprint": "{\"name\":\"Derwyn Perllan\",\"title\":\"\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-perllan\",\"portrait\":\"../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/person-person-2a0fa1e3.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ffc03267\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-ffc03267\",\"name\":\"Collen Perllan\"},{\"personId\":\"person-4707e80f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-4707e80f\",\"name\":\"??\"}],\"partners\":[{\"personId\":\"person-29996da3\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-29996da3\",\"name\":\"??\"}],\"children\":[{\"personId\":\"person-a0e1ea6a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-a0e1ea6a\",\"name\":\"Rhosyn Perllan\"},{\"personId\":\"person-1b72c8d5\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--perllan--person-1b72c8d5\",\"name\":\"Celynnen Perllan\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-ffc03267",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-ffc03267",
+            "name": "Collen Perllan"
+          },
+          {
+            "personId": "person-4707e80f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-4707e80f",
+            "name": "??"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-29996da3",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-29996da3",
+            "name": "??"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-a0e1ea6a",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-a0e1ea6a",
+            "name": "Rhosyn Perllan"
+          },
+          {
+            "personId": "person-1b72c8d5",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--perllan--person-1b72c8d5",
+            "name": "Celynnen Perllan"
+          }
+        ]
+      }
+    },
+    "id": "person--perllan--person-2a0fa1e3"
+  }
+}
