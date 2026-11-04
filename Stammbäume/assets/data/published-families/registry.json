@@ -2,6 +2,184 @@
   "schemaVersion": 1,
   "families": [
     {
+      "id": "haus-baerenherz",
+      "familyId": "haus-baerenherz",
+      "title": "Clan Bärenherz",
+      "motto": "",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-baerenherz.png",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "personCount": 6,
+      "revision": 1,
+      "updatedAt": "2026-10-17T22:37:50.387Z",
+      "link": "Stammbaum.html?family=haus-baerenherz&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-eisenjungfer",
+      "familyId": "haus-eisenjungfer",
+      "title": "Clan Eisenjungfer",
+      "motto": "Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Skaldenheim",
+        "Klangheim"
+      ],
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Forsthain"
+        ],
+        "liegeHouseId": "house-skald",
+        "liegeHouseName": "Clan Skald",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "personCount": 29,
+      "revision": 1,
+      "updatedAt": "2026-10-17T22:37:50.387Z",
+      "link": "Stammbaum.html?family=haus-eisenjungfer&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-rotstahl",
+      "familyId": "haus-rotstahl",
+      "title": "Clan Rotstahl",
+      "motto": "",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-rotstahl.png",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "personCount": 4,
+      "revision": 1,
+      "updatedAt": "2026-10-17T22:37:50.387Z",
+      "link": "Stammbaum.html?family=haus-rotstahl&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-unholdbann",
+      "familyId": "haus-unholdbann",
+      "title": "Clan Unholdbann",
+      "motto": "",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-unholdbann.png",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "personCount": 3,
+      "revision": 1,
+      "updatedAt": "2026-10-17T22:37:50.387Z",
+      "link": "Stammbaum.html?family=haus-unholdbann&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-varulv",
+      "familyId": "haus-varulv",
+      "title": "Clan Varulv",
+      "motto": "",
+      "emblem": "assets/images/houses/Aldrimar/clan-varulv.png",
+      "folderPath": [
+        "Aldrimar",
+        "Roriksheim",
+        "Rorikstal",
+        "Rorikshall"
+      ],
+      "houseProfile": {
+        "rankId": "jarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-roriksheim.png",
+          "assets/images/regions/aldrimar-rorikstal.png",
+          "assets/images/regions/aldrimar-roriksheim-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      },
+      "personCount": 73,
+      "revision": 1,
+      "updatedAt": "2026-10-17T22:37:50.387Z",
+      "link": "Stammbaum.html?family=haus-varulv&mode=view",
+      "source": "github"
+    },
+    {
       "id": "eisenherz",
       "familyId": "eisenherz",
       "title": "Eisenherz",
@@ -32,6 +210,108 @@
       "revision": 1,
       "updatedAt": "2026-08-16T14:51:32.987Z",
       "link": "Stammbaum.html?family=eisenherz&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-celynfor",
+      "familyId": "haus-celynfor",
+      "title": "Familie Celynfor",
+      "motto": "",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 2,
+      "revision": 2,
+      "updatedAt": "2026-10-20T17:36:18.197Z",
+      "link": "Stammbaum.html?family=haus-celynfor&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-fearnan",
+      "familyId": "haus-fearnan",
+      "title": "Familie Fearnan",
+      "motto": "",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 4,
+      "revision": 2,
+      "updatedAt": "2026-10-20T17:36:18.197Z",
+      "link": "Stammbaum.html?family=haus-fearnan&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-torvik",
+      "familyId": "haus-torvik",
+      "title": "Familie Torvik",
+      "motto": "",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 3,
+      "revision": 2,
+      "updatedAt": "2026-10-20T17:36:18.197Z",
+      "link": "Stammbaum.html?family=haus-torvik&mode=view",
       "source": "github"
     },
     {
@@ -743,6 +1023,40 @@
       "source": "github"
     },
     {
+      "id": "haus-dubhdarach",
+      "familyId": "haus-dubhdarach",
+      "title": "Haus Dubhdarach",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 8,
+      "revision": 2,
+      "updatedAt": "2026-10-14T16:37:45.782Z",
+      "link": "Stammbaum.html?family=haus-dubhdarach&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-dyger",
       "familyId": "haus-dyger",
       "title": "Haus Dyger",
@@ -872,6 +1186,40 @@
       "revision": 3,
       "updatedAt": "2026-09-12T11:58:42.936Z",
       "link": "Stammbaum.html?family=haus-gafyr&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-gofrann",
+      "familyId": "haus-gofrann",
+      "title": "Haus Gofrann",
+      "motto": "Stahl und Wort.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-tlawd",
+        "liegeHouseName": "Haus Tlawd",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 24,
+      "revision": 1,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-gofrann&mode=view",
       "source": "github"
     },
     {
@@ -1077,6 +1425,107 @@
       "source": "github"
     },
     {
+      "id": "haus-llythfor",
+      "familyId": "haus-llythfor",
+      "title": "Haus Llythfor",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 11,
+      "revision": 6,
+      "updatedAt": "2026-10-31T03:18:01.852Z",
+      "link": "Stammbaum.html?family=haus-llythfor&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-lothaire",
+      "familyId": "haus-lothaire",
+      "title": "Haus Lothaire",
+      "motto": "Erkenntnis wächst aus Widerspruch.",
+      "emblem": "assets/images/houses/Brevanor/Lothaire.png",
+      "folderPath": [
+        "Brevanor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "Brevanor",
+        "secondarySeats": [
+          "Lothaires Arkaneum · Gwynthor-Stadt"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 7,
+      "revision": 1,
+      "updatedAt": "2026-10-20T16:22:50.044Z",
+      "link": "Stammbaum.html?family=haus-lothaire&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-maerllys",
+      "familyId": "haus-maerllys",
+      "title": "Haus Maerllys",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 19,
+      "revision": 3,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-maerllys&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-mathgraig",
       "familyId": "haus-mathgraig",
       "title": "Haus Mathgraig",
@@ -1108,6 +1557,39 @@
       "revision": 3,
       "updatedAt": "2026-10-05T22:55:55.091Z",
       "link": "Stammbaum.html?family=haus-mathgraig&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-merek",
+      "familyId": "haus-merek",
+      "title": "Haus Merek",
+      "motto": "",
+      "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Rhonwens Tränen"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "Rhonwens Tränen",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/rhonwens-traenen.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 2,
+      "revision": 1,
+      "updatedAt": "2026-10-21T20:43:40.568Z",
+      "link": "Stammbaum.html?family=haus-merek&mode=view",
       "source": "github"
     },
     {
@@ -1382,6 +1864,83 @@
       "source": "github"
     },
     {
+      "id": "haus-pendrwn",
+      "familyId": "haus-pendrwn",
+      "title": "Haus Pendrwn",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 12,
+      "revision": 1,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-pendrwn&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-penrudd",
+      "familyId": "haus-penrudd",
+      "title": "Haus Penrudd",
+      "motto": "Ein Platz am Feuer.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 28,
+      "revision": 5,
+      "updatedAt": "2026-10-31T05:28:08.451Z",
+      "link": "Stammbaum.html?family=haus-penrudd&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-penry",
       "familyId": "haus-penry",
       "title": "Haus Penry",
@@ -1481,6 +2040,40 @@
       "revision": 4,
       "updatedAt": "2026-10-06T17:03:06.111Z",
       "link": "Stammbaum.html?family=haus-prys&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-raves",
+      "familyId": "haus-raves",
+      "title": "Haus Raves",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 19,
+      "revision": 3,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-raves&mode=view",
       "source": "github"
     },
     {
@@ -1585,6 +2178,107 @@
       "source": "github"
     },
     {
+      "id": "haus-skellor",
+      "familyId": "haus-skellor",
+      "title": "Haus Skellor",
+      "motto": "",
+      "emblem": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Rhonwens Tränen"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "Rhonwens Tränen",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/rhonwens-traenen.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 19,
+      "revision": 3,
+      "updatedAt": "2026-10-21T21:18:54.822Z",
+      "link": "Stammbaum.html?family=haus-skellor&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-sonnenfels",
+      "familyId": "haus-sonnenfels",
+      "title": "Haus Sonnenfels",
+      "motto": "",
+      "emblem": "assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+      "folderPath": [
+        "Weisenfluh",
+        "Burg Sonnenfels"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Burg Sonnenfels",
+        "barony": "",
+        "county": "",
+        "kingdom": "Weisenfluh",
+        "secondarySeats": [
+          "Gwynthor · Die Lachende Nixe"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 25,
+      "revision": 2,
+      "updatedAt": "2026-10-16T16:07:00.630Z",
+      "link": "Stammbaum.html?family=haus-sonnenfels&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-svathamar",
+      "familyId": "haus-svathamar",
+      "title": "Haus Svathamar",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 10,
+      "revision": 2,
+      "updatedAt": "2026-10-14T16:37:45.782Z",
+      "link": "Stammbaum.html?family=haus-svathamar&mode=view",
+      "source": "github"
+    },
+    {
       "id": "haus-swyll",
       "familyId": "haus-swyll",
       "title": "Haus Swyll",
@@ -1616,6 +2310,40 @@
       "revision": 2,
       "updatedAt": "2026-09-02T21:52:30.020Z",
       "link": "Stammbaum.html?family=haus-swyll&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-tlawd",
+      "familyId": "haus-tlawd",
+      "title": "Haus Tlawd",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 31,
+      "revision": 1,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-tlawd&mode=view",
       "source": "github"
     },
     {
@@ -1687,105 +2415,6 @@
       "source": "github"
     },
     {
-      "id": "haus-udgorn",
-      "familyId": "haus-udgorn",
-      "title": "Haus Udgorn",
-      "motto": "",
-      "emblem": "assets/images/houses/Vennyr/haus-udgorn.png",
-      "folderPath": [
-        "Vennyr",
-        "Tir Gorllewin",
-        "Mynyddharbwr"
-      ],
-      "houseProfile": {
-        "rankId": "unknown",
-        "seat": "Mynyddharbwr",
-        "barony": "",
-        "county": "Tir Gorllewin",
-        "kingdom": "Vennyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-dyfrgi",
-        "liegeHouseName": "Haus Dyfrgi",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "assets/images/regions/Vennyr/Tir Gorllewin.png",
-          "kingdom": "assets/images/regions/vennyr.png"
-        }
-      },
-      "personCount": 0,
-      "revision": 1,
-      "updatedAt": "2026-10-05T09:57:14.237Z",
-      "link": "Stammbaum.html?family=haus-udgorn&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-ysgrif",
-      "familyId": "haus-ysgrif",
-      "title": "Haus Ysgrif",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 17,
-      "revision": 2,
-      "updatedAt": "2026-08-09T03:41:38.250Z",
-      "link": "Stammbaum.html?family=haus-ysgrif&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "tharn",
-      "familyId": "tharn",
-      "title": "Tharn",
-      "motto": "",
-      "emblem": "https://i.imgur.com/qsWVYlf.png",
-      "folderPath": [
-        "Aeldrunmar",
-        "Jarltum der Tharn"
-      ],
-      "houseProfile": {
-        "rankId": "county",
-        "seat": "",
-        "barony": "",
-        "county": "Jarltum der Tharn",
-        "kingdom": "Aeldrunmar",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": "assets/images/regions/aeldrunmar.png"
-        }
-      },
-      "personCount": 31,
-      "revision": 1,
-      "updatedAt": "2026-08-12T11:03:00.281Z",
-      "link": "Stammbaum.html?family=tharn&mode=view",
-      "source": "github"
-    },
-    {
       "id": "haus-trevoryn",
       "familyId": "haus-trevoryn",
       "title": "Haus Trevoryn",
@@ -1820,654 +2449,36 @@
       "source": "github"
     },
     {
-      "id": "haus-svathamar",
-      "familyId": "haus-svathamar",
-      "title": "Haus Svathamar",
+      "id": "haus-udgorn",
+      "familyId": "haus-udgorn",
+      "title": "Haus Udgorn",
       "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+      "emblem": "assets/images/houses/Vennyr/haus-udgorn.png",
       "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
+        "Vennyr",
+        "Tir Gorllewin",
+        "Mynyddharbwr"
       ],
       "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 10,
-      "revision": 2,
-      "updatedAt": "2026-10-14T16:37:45.782Z",
-      "link": "Stammbaum.html?family=haus-svathamar&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-dubhdarach",
-      "familyId": "haus-dubhdarach",
-      "title": "Haus Dubhdarach",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 8,
-      "revision": 2,
-      "updatedAt": "2026-10-14T16:37:45.782Z",
-      "link": "Stammbaum.html?family=haus-dubhdarach&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-raves",
-      "familyId": "haus-raves",
-      "title": "Haus Raves",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "house-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 19,
-      "revision": 3,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-raves&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-veltrane",
-      "familyId": "haus-veltrane",
-      "title": "Haus Veltrane",
-      "motto": "",
-      "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
-      "folderPath": [
-        "Kaiserreich Argentum",
-        "Unsortiert"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "",
+        "rankId": "unknown",
+        "seat": "Mynyddharbwr",
         "barony": "",
-        "county": "Unsortiert",
-        "kingdom": "Kaiserreich Argentum",
+        "county": "Tir Gorllewin",
+        "kingdom": "Vennyr",
         "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
+        "liegeHouseId": "haus-dyfrgi",
+        "liegeHouseName": "Haus Dyfrgi",
         "regionEmblems": {
           "seat": "",
           "barony": "",
-          "county": "",
-          "kingdom": ""
+          "county": "assets/images/regions/Vennyr/Tir Gorllewin.png",
+          "kingdom": "assets/images/regions/vennyr.png"
         }
       },
-      "personCount": 4,
-      "revision": 2,
-      "updatedAt": "2026-10-16T00:26:06.470Z",
-      "link": "Stammbaum.html?family=haus-veltrane&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-maerllys",
-      "familyId": "haus-maerllys",
-      "title": "Haus Maerllys",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 19,
-      "revision": 3,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-maerllys&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-sonnenfels",
-      "familyId": "haus-sonnenfels",
-      "title": "Haus Sonnenfels",
-      "motto": "",
-      "emblem": "assets/images/houses/Weisenfluh/haus-sonnenfels.png",
-      "folderPath": [
-        "Weisenfluh",
-        "Burg Sonnenfels"
-      ],
-      "houseProfile": {
-        "rankId": "knight",
-        "seat": "Burg Sonnenfels",
-        "barony": "",
-        "county": "",
-        "kingdom": "Weisenfluh",
-        "secondarySeats": [
-          "Gwynthor · Die Lachende Nixe"
-        ],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 25,
-      "revision": 2,
-      "updatedAt": "2026-10-16T16:07:00.630Z",
-      "link": "Stammbaum.html?family=haus-sonnenfels&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-gofrann",
-      "familyId": "haus-gofrann",
-      "title": "Haus Gofrann",
-      "motto": "Stahl und Wort.",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-tlawd",
-        "liegeHouseName": "Haus Tlawd",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 24,
+      "personCount": 0,
       "revision": 1,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-gofrann&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-tlawd",
-      "familyId": "haus-tlawd",
-      "title": "Haus Tlawd",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "knight",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-gafyr",
-        "liegeHouseName": "Haus Gafyr",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 31,
-      "revision": 1,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-tlawd&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-vann",
-      "familyId": "haus-vann",
-      "title": "Haus Vann",
-      "motto": "Dem Gast das Beste.",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 23,
-      "revision": 1,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-vann&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-pendrwn",
-      "familyId": "haus-pendrwn",
-      "title": "Haus Pendrwn",
-      "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "haus-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "assets/images/regions/gwynthor.png",
-          "barony": "assets/images/regions/llamreis-ankunft.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 12,
-      "revision": 1,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
-      "link": "Stammbaum.html?family=haus-pendrwn&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-baerenherz",
-      "familyId": "haus-baerenherz",
-      "title": "Clan Bärenherz",
-      "motto": "",
-      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-baerenherz.png",
-      "folderPath": [
-        "Aldrimar",
-        "Roriksheim",
-        "Rorikstal",
-        "Rorikshall"
-      ],
-      "houseProfile": {
-        "rankId": "huskarl",
-        "seat": "Rorikshall",
-        "barony": "Rorikstal",
-        "county": "Roriksheim",
-        "kingdom": "Aldrimar",
-        "secondarySeats": [],
-        "liegeHouseId": "house-varulv",
-        "liegeHouseName": "Clan Varulv",
-        "regionEmblems": {
-          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
-          "barony": "assets/images/regions/aldrimar-rorikstal.png",
-          "county": "assets/images/regions/aldrimar-roriksheim.png",
-          "kingdom": "assets/images/regions/aldrimar.png"
-        }
-      },
-      "personCount": 6,
-      "revision": 1,
-      "updatedAt": "2026-10-17T22:37:50.387Z",
-      "link": "Stammbaum.html?family=haus-baerenherz&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-rotstahl",
-      "familyId": "haus-rotstahl",
-      "title": "Clan Rotstahl",
-      "motto": "",
-      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-rotstahl.png",
-      "folderPath": [
-        "Aldrimar",
-        "Roriksheim",
-        "Rorikstal",
-        "Rorikshall"
-      ],
-      "houseProfile": {
-        "rankId": "huskarl",
-        "seat": "Rorikshall",
-        "barony": "Rorikstal",
-        "county": "Roriksheim",
-        "kingdom": "Aldrimar",
-        "secondarySeats": [],
-        "liegeHouseId": "house-varulv",
-        "liegeHouseName": "Clan Varulv",
-        "regionEmblems": {
-          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
-          "barony": "assets/images/regions/aldrimar-rorikstal.png",
-          "county": "assets/images/regions/aldrimar-roriksheim.png",
-          "kingdom": "assets/images/regions/aldrimar.png"
-        }
-      },
-      "personCount": 4,
-      "revision": 1,
-      "updatedAt": "2026-10-17T22:37:50.387Z",
-      "link": "Stammbaum.html?family=haus-rotstahl&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-unholdbann",
-      "familyId": "haus-unholdbann",
-      "title": "Clan Unholdbann",
-      "motto": "",
-      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-unholdbann.png",
-      "folderPath": [
-        "Aldrimar",
-        "Roriksheim",
-        "Rorikstal",
-        "Rorikshall"
-      ],
-      "houseProfile": {
-        "rankId": "huskarl",
-        "seat": "Rorikshall",
-        "barony": "Rorikstal",
-        "county": "Roriksheim",
-        "kingdom": "Aldrimar",
-        "secondarySeats": [],
-        "liegeHouseId": "house-varulv",
-        "liegeHouseName": "Clan Varulv",
-        "regionEmblems": {
-          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
-          "barony": "assets/images/regions/aldrimar-rorikstal.png",
-          "county": "assets/images/regions/aldrimar-roriksheim.png",
-          "kingdom": "assets/images/regions/aldrimar.png"
-        }
-      },
-      "personCount": 3,
-      "revision": 1,
-      "updatedAt": "2026-10-17T22:37:50.387Z",
-      "link": "Stammbaum.html?family=haus-unholdbann&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-varulv",
-      "familyId": "haus-varulv",
-      "title": "Clan Varulv",
-      "motto": "",
-      "emblem": "assets/images/houses/Aldrimar/clan-varulv.png",
-      "folderPath": [
-        "Aldrimar",
-        "Roriksheim",
-        "Rorikstal",
-        "Rorikshall"
-      ],
-      "houseProfile": {
-        "rankId": "jarl",
-        "seat": "Rorikshall",
-        "barony": "Rorikstal",
-        "county": "Roriksheim",
-        "kingdom": "Aldrimar",
-        "secondarySeats": [],
-        "liegeHouseId": "house-vaeren",
-        "liegeHouseName": "Clan Vaeren",
-        "folderIcons": [
-          "assets/images/regions/aldrimar.png",
-          "assets/images/regions/aldrimar-roriksheim.png",
-          "assets/images/regions/aldrimar-rorikstal.png",
-          "assets/images/regions/aldrimar-roriksheim-stadt.png"
-        ],
-        "regionEmblems": {
-          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
-          "barony": "assets/images/regions/aldrimar-rorikstal.png",
-          "county": "assets/images/regions/aldrimar-roriksheim.png",
-          "kingdom": "assets/images/regions/aldrimar.png"
-        }
-      },
-      "personCount": 73,
-      "revision": 1,
-      "updatedAt": "2026-10-17T22:37:50.387Z",
-      "link": "Stammbaum.html?family=haus-varulv&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-eisenjungfer",
-      "familyId": "haus-eisenjungfer",
-      "title": "Clan Eisenjungfer",
-      "motto": "Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.",
-      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
-      "folderPath": [
-        "Aldrimar",
-        "Roriksheim",
-        "Skaldenheim",
-        "Klangheim"
-      ],
-      "houseProfile": {
-        "rankId": "huskarl",
-        "seat": "Klangheim",
-        "barony": "Skaldenheim",
-        "county": "Roriksheim",
-        "kingdom": "Aldrimar",
-        "secondarySeats": [
-          "Forsthain"
-        ],
-        "liegeHouseId": "house-skald",
-        "liegeHouseName": "Clan Skald",
-        "regionEmblems": {
-          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
-          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
-          "county": "assets/images/regions/aldrimar-roriksheim.png",
-          "kingdom": "assets/images/regions/aldrimar.png"
-        }
-      },
-      "personCount": 29,
-      "revision": 1,
-      "updatedAt": "2026-10-17T22:37:50.387Z",
-      "link": "Stammbaum.html?family=haus-eisenjungfer&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-lothaire",
-      "familyId": "haus-lothaire",
-      "title": "Haus Lothaire",
-      "motto": "Erkenntnis wächst aus Widerspruch.",
-      "emblem": "assets/images/houses/Brevanor/Lothaire.png",
-      "folderPath": [
-        "Brevanor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "",
-        "barony": "",
-        "county": "",
-        "kingdom": "Brevanor",
-        "secondarySeats": [
-          "Lothaires Arkaneum · Gwynthor-Stadt"
-        ],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 7,
-      "revision": 1,
-      "updatedAt": "2026-10-20T16:22:50.044Z",
-      "link": "Stammbaum.html?family=haus-lothaire&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-fearnan",
-      "familyId": "haus-fearnan",
-      "title": "Familie Fearnan",
-      "motto": "",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "house-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 4,
-      "revision": 2,
-      "updatedAt": "2026-10-20T17:36:18.197Z",
-      "link": "Stammbaum.html?family=haus-fearnan&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-torvik",
-      "familyId": "haus-torvik",
-      "title": "Familie Torvik",
-      "motto": "",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "house-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 3,
-      "revision": 2,
-      "updatedAt": "2026-10-20T17:36:18.197Z",
-      "link": "Stammbaum.html?family=haus-torvik&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-celynfor",
-      "familyId": "haus-celynfor",
-      "title": "Familie Celynfor",
-      "motto": "",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Gwynthor"
-      ],
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Gwynthor",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "house-draig",
-        "liegeHouseName": "Haus Draig",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "personCount": 2,
-      "revision": 2,
-      "updatedAt": "2026-10-20T17:36:18.197Z",
-      "link": "Stammbaum.html?family=haus-celynfor&mode=view",
+      "updatedAt": "2026-10-05T09:57:14.237Z",
+      "link": "Stammbaum.html?family=haus-udgorn&mode=view",
       "source": "github"
     },
     {
@@ -2515,77 +2526,11 @@
       "source": "github"
     },
     {
-      "id": "haus-skellor",
-      "familyId": "haus-skellor",
-      "title": "Haus Skellor",
-      "motto": "",
-      "emblem": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Rhonwens Tränen"
-      ],
-      "houseProfile": {
-        "rankId": "knight",
-        "seat": "",
-        "barony": "Rhonwens Tränen",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "assets/images/regions/rhonwens-traenen.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 19,
-      "revision": 3,
-      "updatedAt": "2026-10-21T21:18:54.822Z",
-      "link": "Stammbaum.html?family=haus-skellor&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-merek",
-      "familyId": "haus-merek",
-      "title": "Haus Merek",
-      "motto": "",
-      "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
-      "folderPath": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Rhonwens Tränen"
-      ],
-      "houseProfile": {
-        "rankId": "knight",
-        "seat": "",
-        "barony": "Rhonwens Tränen",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "regionEmblems": {
-          "seat": "",
-          "barony": "assets/images/regions/rhonwens-traenen.png",
-          "county": "assets/images/regions/celtigerns-wacht.png",
-          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
-        }
-      },
-      "personCount": 2,
-      "revision": 1,
-      "updatedAt": "2026-10-21T20:43:40.568Z",
-      "link": "Stammbaum.html?family=haus-merek&mode=view",
-      "source": "github"
-    },
-    {
-      "id": "haus-penrudd",
-      "familyId": "haus-penrudd",
-      "title": "Haus Penrudd",
-      "motto": "Ein Platz am Feuer.",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+      "id": "haus-vann",
+      "familyId": "haus-vann",
+      "title": "Haus Vann",
+      "motto": "Dem Gast das Beste.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
       "folderPath": [
         "Cenyr",
         "Celtigerns Wacht",
@@ -2598,18 +2543,9 @@
         "barony": "Llamreis Ankunft",
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
-        "secondarySeats": [
-          "Zum Roten Tor",
-          "Penrudd-Hof"
-        ],
-        "liegeHouseId": "house-draig",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
         "liegeHouseName": "Haus Draig",
-        "folderPath": [
-          "Cenyr",
-          "Celtigerns Wacht",
-          "Llamreis Ankunft",
-          "Gwynthor"
-        ],
         "regionEmblems": {
           "seat": "",
           "barony": "",
@@ -2617,18 +2553,50 @@
           "kingdom": ""
         }
       },
-      "personCount": 28,
-      "revision": 5,
-      "updatedAt": "2026-10-31T05:28:08.451Z",
-      "link": "Stammbaum.html?family=haus-penrudd&mode=view",
+      "personCount": 23,
+      "revision": 1,
+      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "link": "Stammbaum.html?family=haus-vann&mode=view",
       "source": "github"
     },
     {
-      "id": "haus-llythfor",
-      "familyId": "haus-llythfor",
-      "title": "Haus Llythfor",
+      "id": "haus-veltrane",
+      "familyId": "haus-veltrane",
+      "title": "Haus Veltrane",
       "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
+      "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+      "folderPath": [
+        "Kaiserreich Argentum",
+        "Unsortiert"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "Unsortiert",
+        "kingdom": "Kaiserreich Argentum",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 4,
+      "revision": 2,
+      "updatedAt": "2026-10-16T00:26:06.470Z",
+      "link": "Stammbaum.html?family=haus-veltrane&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-ysgrif",
+      "familyId": "haus-ysgrif",
+      "title": "Haus Ysgrif",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
       "folderPath": [
         "Cenyr",
         "Celtigerns Wacht",
@@ -2642,6 +2610,35 @@
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
         "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 17,
+      "revision": 2,
+      "updatedAt": "2026-08-09T03:41:38.250Z",
+      "link": "Stammbaum.html?family=haus-ysgrif&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "perllan",
+      "familyId": "perllan",
+      "title": "Perllan",
+      "motto": "",
+      "emblem": "https://i.imgur.com/CFNt2cq.jpeg",
+      "folderPath": [],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
         "liegeHouseId": "",
         "liegeHouseName": "",
         "regionEmblems": {
@@ -2651,10 +2648,43 @@
           "kingdom": ""
         }
       },
-      "personCount": 11,
-      "revision": 6,
-      "updatedAt": "2026-10-31T03:18:01.852Z",
-      "link": "Stammbaum.html?family=haus-llythfor&mode=view",
+      "personCount": 44,
+      "sourceRevision": 0,
+      "revision": 1,
+      "updatedAt": "2026-11-04T15:18:12.361Z",
+      "link": "Stammbaum.html?family=perllan&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "tharn",
+      "familyId": "tharn",
+      "title": "Tharn",
+      "motto": "",
+      "emblem": "https://i.imgur.com/qsWVYlf.png",
+      "folderPath": [
+        "Aeldrunmar",
+        "Jarltum der Tharn"
+      ],
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "",
+        "county": "Jarltum der Tharn",
+        "kingdom": "Aeldrunmar",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/aeldrunmar.png"
+        }
+      },
+      "personCount": 31,
+      "revision": 1,
+      "updatedAt": "2026-08-12T11:03:00.281Z",
+      "link": "Stammbaum.html?family=tharn&mode=view",
       "source": "github"
     }
   ]
