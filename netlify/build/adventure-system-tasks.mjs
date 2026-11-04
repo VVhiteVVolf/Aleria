@@ -1,6 +1,7 @@
 // Separate release gates for shared adventure presentation and authoritative
 // possession mechanics. Every generator is validation-only in this pipeline.
 import { readFileSync, readdirSync } from 'node:fs';
+import { BUILTIN_TRADE_SOURCE_FILES } from '../../AleriaAlmanach/modules/scene-trade/scene-trade-builtins.js';
 const mechanicalSourceInputs = readdirSync(new URL('../../firebase/functions/src/generated/', import.meta.url), { recursive: true })
   .filter(file => /\.(?:m?js|json)$/.test(file)).map(file => `AleriaAlmanach/modules/${file.replaceAll('\\', '/')}`);
 const goodsModuleInputs = [...readFileSync(new URL('../../AleriaAlmanach/AleriaAlmanach.html', import.meta.url), 'utf8')
@@ -52,7 +53,7 @@ export const ADVENTURE_SYSTEM_TASKS = [
   },
   {
     id: 'item-mechanics', label: 'Versioned item standards, transfers, equipment, use and authoritative transaction regressions',
-    inputs: [...mechanicalFeatures, ...mechanicalSourceInputs, ...goodsModuleInputs, ...currencyArtInputs, 'AleriaAlmanach/modules/regional-equipment/',
+    inputs: [...mechanicalFeatures, ...mechanicalSourceInputs, ...goodsModuleInputs, ...BUILTIN_TRADE_SOURCE_FILES, ...currencyArtInputs, 'AleriaAlmanach/modules/regional-equipment/',
       'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/economy-calculator/',
       'AleriaAlmanach/modules/economy-pricing/', 'AleriaAlmanach/modules/gwynthor-geography/',
       'Anzeigetafeln/tools/build-notice-reward-catalog.mjs', 'Anzeigetafeln/assets/data/notice-reward-catalog.json', 'Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs',
@@ -63,7 +64,7 @@ export const ADVENTURE_SYSTEM_TASKS = [
       'Familien Häuser und Clans/', 'firebase/functions/src/', 'firebase/functions/tests/', 'firebase/functions/scripts/sync-almanach-mechanics.mjs',
       'firebase/functions/package.json', 'firebase/functions/package-lock.json', 'firebase/firestore.rules', 'firebase/firestore.indexes.json',
       ...itemTests.map(frontend)],
-    commands: [dependencyCheck, ['netlify/build/check-mechanics-projection.mjs'], ['AleriaAlmanach/scripts/build-item-register.mjs', '--check'],
+    commands: [dependencyCheck, test('netlify/tests/scene-trade-build-inputs.test.mjs'), ['netlify/build/check-mechanics-projection.mjs'], ['AleriaAlmanach/scripts/build-item-register.mjs', '--check'],
       ['Anzeigetafeln/tools/build-notice-reward-catalog.mjs', '--check'], test(...itemTests.map(frontend)),
       test('firebase/functions/tests/*.test.js')]
   }
