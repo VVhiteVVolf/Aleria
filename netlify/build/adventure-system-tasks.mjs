@@ -57,6 +57,7 @@ export const ADVENTURE_SYSTEM_TASKS = [
       'AleriaAlmanach/modules/economy-pricing/', 'AleriaAlmanach/modules/gwynthor-geography/',
       'Anzeigetafeln/tools/build-notice-reward-catalog.mjs', 'Anzeigetafeln/assets/data/notice-reward-catalog.json', 'Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs',
       'AleriaAlmanach/scripts/build-item-register.mjs', 'AleriaAlmanach/scripts/source-pages/', 'AleriaAlmanach/docs/inventory/',
+      'AleriaAlmanach/scripts/build-scene-trade-builtins.mjs', 'AleriaAlmanach/scripts/scene-trade/',
       'AleriaAlmanach/tests/fixtures/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/package.json', 'AleriaAlmanach/package-lock.json', 'Markt/', 'Stammbäume/assets/js/',
       'Familien Häuser und Clans/', 'firebase/functions/src/', 'firebase/functions/tests/', 'firebase/functions/scripts/sync-almanach-mechanics.mjs',

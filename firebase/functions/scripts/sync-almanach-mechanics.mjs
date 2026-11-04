@@ -1,6 +1,7 @@
 import { cp, mkdir, readFile, rm } from 'node:fs/promises';
 import { dirname, isAbsolute, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildSceneTradeBuiltins } from '../../../AleriaAlmanach/scripts/build-scene-trade-builtins.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
@@ -129,6 +130,7 @@ const files = [
   'scene-inventory/scene-inventory-transfer-model.js',
   'scene-trade/scene-trade-model.js',
   'scene-trade/scene-trade-summary.js',
+  'scene-trade/scene-trade-builtins.js',
   'scene-rest/scene-rest-model.js',
   'scene-regeneration/scene-regeneration-model.js',
   'scene-regeneration/scene-regeneration-policy.js',
@@ -159,6 +161,9 @@ async function collectMechanicsFiles(entryPoints) {
   return [...collected].sort();
 }
 
+// Build the canonical public source snapshot first, then use the ordinary
+// shared-mechanics projection so browser/server bytes have one owner.
+await buildSceneTradeBuiltins({ root });
 const mechanicsFiles = await collectMechanicsFiles(files);
 const expectedTarget = resolve(root, 'firebase/functions/src/generated');
 if (targetRoot !== expectedTarget || relative(root, targetRoot).startsWith('..')) throw new Error('Unsafe generated mechanics target');

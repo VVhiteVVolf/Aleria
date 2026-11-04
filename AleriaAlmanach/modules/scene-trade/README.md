@@ -97,3 +97,17 @@ neue Verkaufsindex gemeinsam durch den bestehenden öffentlichen Releaseweg.
 Der bekannte Functions-Deployblocker `BILLING_DISABLED` ist durch diese lokale
 Implementierung nicht aufgehoben. Es wurden keine produktiven Inventare oder
 Kreaturen migriert und keine Abrechnungseinstellungen geändert.
+## Öffentliche Standardmodule
+
+Mitgelieferte Händler und Szenen müssen keinen künstlichen Online-Override
+erhalten. Der Builder `scripts/build-scene-trade-builtins.mjs` liest ausschließlich
+committed öffentliche Browserquellen und erzeugt eine schlanke kanonische
+Projektion. Seitenpositionen und sämtliche angebotenen Artikel, Revisionen und
+Preise werden gegen die bestehende Angebotsnormalisierung geprüft. Unabhängige
+Biografien und Seitentexte werden nicht kopiert; die Datei wird beim Start nicht
+importiert. Der Mechanik-Sync erzeugt und kopiert sie vor dem Functions-Deploy.
+
+Aktuelle Online-Dokumente haben Vorrang. Ein fehlender, aber ausdrücklich im
+Manifest erklärter Override führt zu einem Fehler statt zu alten Standardpreisen.
+Versteckte oder geschlossene Szenen und eingeschränkte Bereiche bleiben gesperrt.
+Das Nachschlagen legt keine Module an und ändert weder Inventare noch Szenendaten.

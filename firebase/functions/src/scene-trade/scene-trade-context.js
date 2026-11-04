@@ -2,6 +2,7 @@ import { HttpsError } from 'firebase-functions/v2/https';
 import { parseSceneThread } from '../backup/scene-backup-format.js';
 import { buildModuleOffers, isShopModule } from '../generated/item-register/item-register-module-catalog.js';
 import { STANDARD_ITEMS } from '../generated/item-register/item-register-standard.js';
+import { findBuiltinTradeModule } from '../generated/scene-trade/scene-trade-builtins.js';
 
 export const tradeId = value => {
   if (typeof value !== 'string' || !/^[\w:.-]{1,220}$/.test(value)) throw new HttpsError('invalid-argument', 'Eine Handelskennung ist ungültig.');
@@ -12,27 +13,40 @@ export const tradeMerchantId = value => {
   return value;
 };
 const moduleRef = (database, id) => database.doc(`module_store_entries/${encodeURIComponent(id).replace(/\./g, '%2E')}`);
-const storedEntry = snapshot => {
+function storedEntry(snapshot) {
   const data = snapshot.data();
-  return data?.entryJson ? JSON.parse(data.entryJson) : data?.entry;
-};
-function assertPublic(entry, manifest) {
+  try { return data?.entryJson ? JSON.parse(data.entryJson) : data?.entry; }
+  catch { throw new HttpsError('failed-precondition', 'Die gespeicherte Modulversion ist ungültig.'); }
+}
+function assertPublic(entry, manifest, canonical) {
   const id = entry?.id;
   const section = manifest?.customSections?.find(section => section.entryIds?.includes(id));
   const assigned = manifest?.moduleSectionNodes?.find(node => node.id === manifest?.moduleNodeAssignments?.[id]);
-  const effective = assigned || manifest?.moduleSectionMoves?.[id] || section;
+  const effective = assigned || manifest?.moduleSectionMoves?.[id] || section || canonical?.section;
   if (!isShopModule(entry) || !manifest || manifest.hiddenModuleIds?.[id]
     || ['Test', 'Familien'].includes(effective?.tab || effective?.key)
-    || (!section && !manifest.entryOverrideIds?.includes(id))) {
+    || (!section && !manifest.entryOverrideIds?.includes(id) && canonical?.entry?.id !== id)) {
     throw new HttpsError('failed-precondition', 'Dieses öffentliche Modul ist nicht mehr verfügbar.');
   }
+}
+
+async function readPublicTradeModule(database, transaction, id, manifest) {
+  const snapshot = await transaction.get(moduleRef(database, id));
+  const canonical = findBuiltinTradeModule(id);
+  const declaredOverride = manifest?.entryOverrideIds?.includes(id)
+    || manifest?.customSections?.some(section => section.entryIds?.includes(id));
+  // A missing declared server revision is an error, never permission to trade
+  // against an older built-in price, scene status or page definition.
+  const entry = snapshot.exists ? storedEntry(snapshot) : !declaredOverride ? canonical?.entry : undefined;
+  assertPublic(entry, manifest, canonical);
+  if (entry.id !== id) throw new HttpsError('failed-precondition', 'Die Modulkennung stimmt nicht mit der gespeicherten Version überein.');
+  return entry;
 }
 
 export async function readTradeScene(database, transaction, entryId, manifest) {
   const location = parseSceneThread(entryId);
   if (!location) throw new HttpsError('invalid-argument', 'Eine gültige interaktive Szene ist erforderlich.');
-  const entry = storedEntry(await transaction.get(moduleRef(database, location.moduleId)));
-  assertPublic(entry, manifest);
+  const entry = await readPublicTradeModule(database, transaction, location.moduleId, manifest);
   const page = entry.pages?.find((page, index) => page.sessionPage && String(page.commentThreadKey || index) === location.pageKey);
   const turn = await transaction.get(database.doc(`comment_turns/${entryId}`));
   if (entry.id !== location.moduleId || !page || page.sessionStatus === 'ended' || turn.data()?.current === 'ended') {
@@ -45,9 +59,7 @@ export async function readTradeMerchant(database, transaction, merchantId, manif
   tradeMerchantId(merchantId);
   if (merchantId.startsWith('module:')) {
     const id = merchantId.slice(7);
-    const entry = storedEntry(await transaction.get(moduleRef(database, id)));
-    assertPublic(entry, manifest);
-    if (entry.id !== id) throw new HttpsError('failed-precondition', 'Der Händler wurde nicht gefunden.');
+    const entry = await readPublicTradeModule(database, transaction, id, manifest);
     const products = buildModuleOffers([entry], STANDARD_ITEMS);
     if (!products.length) throw new HttpsError('failed-precondition', 'Dieser Anbieter besitzt kein öffentliches Sortiment.');
     const portrait = [entry.portrait, entry.image, entry.symbol, entry.pages?.[0]?.image].find(value => typeof value === 'string' && value.trim()) || '';
