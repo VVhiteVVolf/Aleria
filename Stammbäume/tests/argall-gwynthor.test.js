@@ -8,7 +8,6 @@ import { assertValidFamily } from '../assets/js/domain/family-schema.js';
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
 import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
 import { createFamilyChartOverview } from '../assets/js/adapters/family-chart-overview-policy.js';
-import { familyChartPersonAppearanceId } from '../assets/js/adapters/family-chart-person-appearance-router.js';
 import { getPersonBiographyModule } from '../assets/js/modules/person-biography/person-biography-model.js';
 import { buildRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-model.js';
 import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
@@ -58,7 +57,7 @@ test('the four people reuse public identities and biographies while Argalls regi
   for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
     const person = graph.getPerson(spec.id);
     assert.equal(person.worldPersonId, spec.worldPersonId);
-    assert.equal(person.portrait, spec.portrait);
+    assert.equal(person.portrait, `..${spec.portrait}`);
     assert.equal(person.houseId, spec.houseId);
     // The shared public biography catalog may wrap the same prose in paragraphs.
     assert.equal(getPersonBiographyModule(person).biography.biographyText.replace(/<\/?p>/g, ''), spec.biography);
@@ -89,7 +88,7 @@ test('the additive source upgrade preserves existing people, relationships and e
     for (const record of previous[collection]) assert.deepEqual(upgraded[collection].find(item => item.id === record.id), record);
   }
   for (const id of newIds) assert.equal(upgraded.persons.filter(person => person.id === id).length, 1);
-  assert.equal(upgraded.extensions.sourceRevision, 6);
+  assert.equal(upgraded.extensions.sourceRevision, 7);
   assert.deepEqual(resolveRegisteredFamilyUpgrade(family, upgraded), upgraded);
 });
 
@@ -107,7 +106,7 @@ test('the source correction updates only the new households managed relationship
   assert.ok(corrected.persons.find(p => p.id === mother.id).extensions.biographyModule.stats.some(row => row.value === 'Aberon'));
 });
 
-for (const savedRevision of [3, 4, 5]) test(`saved source revision ${savedRevision} gains missing portraits and the authored affair without replacing personal work`, () => {
+for (const savedRevision of [3, 4, 5, 6]) test(`saved source revision ${savedRevision} gains missing portraits and the authored affair without replacing personal work`, () => {
   const saved = structuredClone(family);
   saved.extensions.sourceRevision = savedRevision;
   for (const id of newIds) saved.persons.find(person => person.id === id).portrait = '';
@@ -115,23 +114,23 @@ for (const savedRevision of [3, 4, 5]) test(`saved source revision ${savedRevisi
   saved.persons.find(person => person.id === squire.id).portrait = customPortrait;
   saved.persons.find(person => person.id === captain.id).notes = 'Eigene Recherche zum Hauptmann';
   saved.persons.find(person => person.id === mother.id).extensions.biographyModule.biography.biographyText = 'Eigene Biografie zu Gwenella';
-  delete saved.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds;
+  saved.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds = [ARGALL_GWYNTHOR_UNION_ID];
   saved.view.orientation = 'horizontal';
   saved.view.focusPersonId = captain.id;
   const affair = saved.partnerships.find(partnership => partnership.id === ARGALL_GWYNTHOR_UNION_ID);
-  affair.type = 'union'; affair.status = 'unknown'; affair.notes = '';
+  if (savedRevision < 6) { affair.type = 'union'; affair.status = 'unknown'; affair.notes = ''; }
   const before = structuredClone(saved);
 
   const { family: corrected, upgraded } = reconcileFamilyWithProjectOrigin({ family: saved, projectOriginFamily: family });
   assert.equal(upgraded, true);
-  assert.equal(corrected.extensions.sourceRevision, 6);
+  assert.equal(corrected.extensions.sourceRevision, 7);
   for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
     const person = corrected.persons.find(person => person.id === spec.id);
-    assert.equal(person.portrait, spec.id === squire.id ? customPortrait : spec.portrait);
+    assert.equal(person.portrait, spec.id === squire.id ? customPortrait : `..${spec.portrait}`);
   }
   assert.equal(corrected.persons.find(person => person.id === captain.id).notes, 'Eigene Recherche zum Hauptmann');
   assert.equal(corrected.persons.find(person => person.id === mother.id).extensions.biographyModule.biography.biographyText, 'Eigene Biografie zu Gwenella');
-  assert.deepEqual(corrected.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds, [ARGALL_GWYNTHOR_UNION_ID]);
+  assert.deepEqual(corrected.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds, []);
   assert.deepEqual(corrected.view, before.view);
   for (const collection of ['persons', 'partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps']) {
     for (const record of before[collection]) {
@@ -150,16 +149,56 @@ for (const savedRevision of [3, 4, 5]) test(`saved source revision ${savedRevisi
   assert.deepEqual(saved, before);
 });
 
-test('source revision six is the final aggregated boundary and later personal removals are not refilled', () => {
+test('source revision seven is the final aggregated boundary and later personal removals are not refilled', () => {
   const registered = FAMILY_REGISTRY.find(record => record.id === 'haus-argall').family;
-  assert.equal(family.extensions.sourceRevision, 6);
-  assert.equal(registered.extensions.sourceRevision, 6);
+  assert.equal(family.extensions.sourceRevision, 7);
+  assert.equal(registered.extensions.sourceRevision, 7);
   const saved = structuredClone(registered);
   saved.persons.find(person => person.id === captain.id).portrait = '';
   saved.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds = [];
   const corrected = reconcileFamilyWithProjectOrigin({ family: saved, projectOriginFamily: registered });
   assert.equal(corrected.upgraded, false);
   assert.deepEqual(corrected.family, saved);
+});
+
+test('source six repairs only the four exact former image defaults and authored duplicate view', () => {
+  const saved = structuredClone(family);
+  saved.extensions.sourceRevision = 6;
+  for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
+    const person = saved.persons.find(person => person.id === spec.id);
+    person.portrait = spec.portrait;
+    person.extensions.biographyModule.biography.portrait = spec.portrait;
+    person.extensions.biographyModule.biography.biographyText = `Persönlicher Text ${spec.id}`;
+  }
+  const motherPerson = saved.persons.find(person => person.id === mother.id);
+  motherPerson.extensions.chartRepeatForPartnershipIds = [ARGALL_GWYNTHOR_MARRIAGE_ID, ARGALL_GWYNTHOR_UNION_ID];
+  saved.persons.find(person => person.id === squire.id).extensions.biographyModule.biography.portrait = '/eigene-bilder/bio-perwyn.png';
+  const corrected = resolveRegisteredFamilyUpgrade(family, saved);
+  for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
+    const person = corrected.persons.find(person => person.id === spec.id);
+    assert.equal(person.portrait, `..${spec.portrait}`);
+    assert.equal(person.extensions.biographyModule.biography.portrait,
+      spec.id === squire.id ? '/eigene-bilder/bio-perwyn.png' : `..${spec.portrait}`);
+    assert.equal(person.extensions.biographyModule.biography.biographyText, `Persönlicher Text ${spec.id}`);
+  }
+  assert.deepEqual(corrected.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds,
+    [ARGALL_GWYNTHOR_MARRIAGE_ID]);
+  assert.deepEqual(corrected.parentages, saved.parentages);
+  assert.deepEqual(corrected.partnerships, saved.partnerships);
+});
+
+for (const pageUrl of [
+  'https://dieweltvonaleria.netlify.app/Stammb%C3%A4ume/Stammbaum.html',
+  'http://127.0.0.1:5500/Aleria/Stammb%C3%A4ume/Stammbaum.html',
+  'file:///E:/Aleria/Stammb%C3%A4ume/Stammbaum.html'
+]) test(`the family portrait projection resolves beside the project root: ${pageUrl}`, () => {
+  const projectRoot = new URL('../', pageUrl);
+  for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
+    const person = family.persons.find(person => person.id === spec.id);
+    const expected = new URL(spec.portrait.slice(1), projectRoot).href;
+    assert.equal(new URL(person.portrait, pageUrl).href, expected);
+    assert.equal(new URL(person.extensions.biographyModule.biography.portrait, pageUrl).href, expected);
+  }
 });
 
 test('the bounded correction preserves authored relationship notes, supplied portraits and additional person views', () => {
@@ -175,7 +214,7 @@ test('the bounded correction preserves authored relationship notes, supplied por
   const corrected = resolveRegisteredFamilyUpgrade(family, saved);
   assert.equal(corrected.persons.find(person => person.id === captain.id).portrait, '/eigene-bilder/rhydric.png');
   assert.deepEqual(corrected.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds,
-    [ARGALL_GWYNTHOR_MARRIAGE_ID, ARGALL_GWYNTHOR_UNION_ID]);
+    [ARGALL_GWYNTHOR_MARRIAGE_ID]);
   const correctedAffair = corrected.partnerships.find(partnership => partnership.id === ARGALL_GWYNTHOR_UNION_ID);
   assert.equal(correctedAffair.type, 'affair');
   assert.equal(correctedAffair.notes, affair.notes);
@@ -196,10 +235,11 @@ test('the overview includes the divorced household and Gwenellas childless affai
     if (node) pending.push(...node.rels.children, ...node.rels.spouses);
   }
   for (const id of newIds) assert.ok(visited.has(id), `${id} must remain reachable in the complete overview.`);
-  const repeatedMotherId = familyChartPersonAppearanceId(mother.id, ARGALL_GWYNTHOR_UNION_ID);
-  assert.equal(byId.get(repeatedMotherId).data.aleria.personId, mother.id);
-  assert.equal(chart.getPartnershipLine(repeatedMotherId, bard.id).type, 'affair');
-  assert.deepEqual(byId.get(repeatedMotherId).rels.children, []);
+  assert.equal(overview.componentCount, 1);
+  assert.equal(byId.get(mother.id).data.aleria.personId, mother.id);
+  assert.equal(chart.getPartnershipLine(mother.id, bard.id).type, 'affair');
+  assert.deepEqual(byId.get(bard.id).rels.children, []);
+  assert.equal(overview.data.filter(node => node.data.aleria.personId === mother.id).length, 1);
   assert.equal(family.persons.filter(person => person.id === mother.id).length, 1);
 });
 

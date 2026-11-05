@@ -1,6 +1,7 @@
 import { normalizeFamily } from '../domain/family-schema.js';
 import { withCwingodHouseNameUpgrade } from '../data/cwingod-house-name-upgrade.js';
 import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261104-content-lore-v1';
+import { correctRegisteredExtensionValue } from './family-registry-extension-corrections.js';
 
 const ENTITY_COLLECTIONS = Object.freeze([
   'persons',
@@ -62,6 +63,14 @@ function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}, 
 
   managedExtensionFields.forEach(fieldName => {
     if (Object.hasOwn(registeredExtensions, fieldName)) {
+      const mode = registeredExtensions.registryManagedExtensionFieldMergeModes?.[fieldName];
+      if (!applyManagedFields && ['remove-known-values', 'replace-known-paths'].includes(mode)) {
+        result[fieldName] = correctRegisteredExtensionValue({ mode,
+          registered: registeredExtensions[fieldName], local: localExtensions[fieldName],
+          corrections: registeredExtensions.registryManagedExtensionFieldCorrections?.[fieldName]
+        });
+        return;
+      }
       if (registeredExtensions.registryManagedExtensionFieldMergeModes?.[fieldName] === 'append-unique'
         && Array.isArray(registeredExtensions[fieldName]) && Array.isArray(localExtensions[fieldName])) {
         result[fieldName] = [...new Set([...localExtensions[fieldName], ...registeredExtensions[fieldName]])];

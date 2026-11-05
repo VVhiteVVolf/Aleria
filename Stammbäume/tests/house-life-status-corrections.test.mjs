@@ -123,6 +123,15 @@ test('the reviewed Argall view amendment restores the exact old protection and r
   const changedView = structuredClone(family);
   changedView.persons.find(person => person.id === 'gwenella-spouse-rhydric-argall').extensions.chartRepeatForPartnershipIds.push('unreviewed-partnership');
   assert.throws(() => protectedValue(changedView), /Unexpected protected-family amendment/);
+  for (const id of ['rhydric-argall', 'perwyn-argall', 'gwenella-spouse-rhydric-argall', 'maelor-ffionydd']) {
+    for (const field of ['portrait', 'biographyPortrait']) {
+      const changedPortrait = structuredClone(family);
+      const target = changedPortrait.persons.find(person => person.id === id);
+      if (field === 'portrait') target.portrait = '../unreviewed-portrait.png';
+      else target.extensions.biographyModule.biography.portrait = '../unreviewed-biography.png';
+      assert.throws(() => protectedValue(changedPortrait), /Unexpected protected-family amendment/);
+    }
+  }
   assert.deepEqual(family, original);
 });
 

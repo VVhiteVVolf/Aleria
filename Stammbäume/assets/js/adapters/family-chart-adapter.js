@@ -39,6 +39,7 @@ import {
 } from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';
+import { completeFamilyChartPartnerTraversal } from './family-chart-partner-traversal.js';
 import {
   insertTimeJumpAsSerialBarrier,
   resolveFamilyChartSerialPredecessorId
@@ -1331,6 +1332,7 @@ export function createFamilyChartSession(config) {
   chart.setBeforeUpdate?.(() => {
     linkRenderer.prepareUpdate();
     const tree = chart.store?.getTree?.();
+    completeFamilyChartPartnerTraversal({ tree, data: overview.data, orientation: view.orientation });
     const layout = applyFamilyChartLayoutPipeline({
       tree,
       family,

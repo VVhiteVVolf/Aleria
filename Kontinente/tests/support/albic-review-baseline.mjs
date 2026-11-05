@@ -31,6 +31,11 @@ export function protectedAlbicFamilies(records) {
     // pre-existing versions for the historical content proof.
     const provenance = getRegisteredSourceMetadataProvenance(record.id);
     if (provenance.fields.length) applyFamilyMetadataReview(copy, { familyId: record.id, ...provenance });
+    // Restore only the exact source7 portrait/view correction to its reviewed
+    // source6 predecessor before the existing source6-to4 metadata proof.
+    if (record.id === gwynthorArgall.layoutRevisionCorrection.familyId) {
+      applyFamilyMetadataReview(copy, gwynthorArgall.layoutRevisionCorrection);
+    }
     // The saved-record boundary changed only these exact Argall metadata leaves.
     // Restore their reviewed revision-4 values before the unchanged complete
     // Argall content fingerprint below; never omit person or relationship data.

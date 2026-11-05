@@ -7,6 +7,9 @@ import annotations from './support/house-lore-source-annotations-review-20261104
 import argall from './support/gwynthor-argall-family-review-20261105.json' with { type: 'json' };
 import { projectReviewedHouseCorrections } from './support/reviewed-house-correction-projection.mjs';
 import { protectedAlbicFamilies, reviewHash } from './support/albic-review-baseline.mjs';
+import { applyFamilyMetadataReview } from './support/apply-family-metadata-review.mjs';
+import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 
 const current = id => structuredClone(FAMILY_REGISTRY.find(record => record.id === id));
 const entityFor = (record, change) => change.collection === 'document' ? record.family.document
@@ -101,10 +104,33 @@ test('Argall revision6 validates every exact metadata leaf before restoring its 
   assert.equal(current('haus-argall').family.extensions.registryManagedEntitySourceRevision, 3);
   for (const field of review.fields) {
     const record = current('haus-argall');
+    applyFamilyMetadataReview(record, argall.layoutRevisionCorrection);
     let parent = record;
     for (const segment of field.path.slice(0, -1)) parent = segment.startsWith('@')
       ? parent.find(row => row.id === segment.slice(1)) : parent[segment];
     parent[field.path.at(-1)] = 'Unapproved metadata';
+    assert.throws(() => applyFamilyMetadataReview(record, review), /approved-metadata/, field.path.join('/'));
+  }
+});
+
+test('Argall source7 restores the exact source6 predecessor and rejects every unreviewed portrait/view/metadata leaf', () => {
+  const review = argall.layoutRevisionCorrection;
+  assert.equal(review.proof.changedPaths, 36);
+  assert.equal(review.proof.changedContentPaths, 9);
+  assert.equal(review.proof.otherContentDifferences, 0);
+  assert.equal(review.proof.previousProjectedSha256, argall.metadataRevisionCorrection.proof.currentProjectedSha256);
+  assert.equal(review.proof.originalProjectedSha256, argall.families['haus-argall'].afterSha256);
+  assert.equal(review.proof.sourceFiles.length, 9);
+  for (const source of review.proof.sourceFiles) {
+    const bytes = fs.readFileSync(new URL('../../' + source.path, import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256, source.path);
+  }
+  for (const field of review.fields) {
+    const record = current('haus-argall');
+    let parent = record;
+    for (const segment of field.path.slice(0, -1)) parent = segment.startsWith('@')
+      ? parent.find(row => row.id === segment.slice(1)) : parent[segment];
+    parent[field.path.at(-1)] = 'Unapproved source7 edit';
     assert.throws(() => protectedAlbicFamilies([record]), /approved-metadata/, field.path.join('/'));
   }
 });

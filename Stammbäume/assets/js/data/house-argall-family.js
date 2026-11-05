@@ -278,7 +278,7 @@ export const HOUSE_ARGALL_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 6,
+    sourceRevision: 7,
     registryManagedEntitySourceRevision: 3,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     sourceNote: 'Haus Argall ist als kleines Bürgerhaus von Llysfaen angelegt. Auf unbekanntes Gründerpaar, eisernen Hausknoten und genau einen seriellen Zeitsprung folgt Cyran Argall als Großvater Brinthans und Uthyrs. Brinthan ist gegenwärtiges Oberhaupt; seine Tochter Shylene und ihr Sohn Iolo behalten die bereits in Haus Draig geführten Jahrgänge 1710 und 1735. Owain, Shylene, Iolo und ihre Affäre verwenden in beiden Akten dieselben Weltpersonen- und Verbindungs-IDs. Uthyrs Ehefrau Rhewena sowie alle weiteren erfundenen Vornamen folgen dem Rheunwaith-Namensschema des Aleria Almanachs. Maelric, Sairwen, Ellian, Avelys, Thalwyn, Perwyn und Iolo sind unter 28 und bleiben unverheiratet. Brenar, Nerwen und Avelyn aus der Elterngeneration sind verstorben; Iwrian lebt als einzige Ausnahme noch. Iwrians Söhne Dyrwyn und der elf Jahre jüngere Rhydric bilden die Vetterlinie; Rhydric verwaltet Caer Ysgellfor in Gwynthor und hat mit seiner geschiedenen Frau Gwenella den Sohn und Knappen Perwyn. Gwenellas jetzige Verbindung zu Maelor Ffionydd ist keine weitere Ehe und begründet keine Vaterschaft des Barden. Der Stammsitz des Hauses bleibt Llysfaen. Die zwölf vorgegebenen Porträts und das Hauswappen wurden lokal gesichert.'

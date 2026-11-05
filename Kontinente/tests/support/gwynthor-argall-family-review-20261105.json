@@ -1147,5 +1147,693 @@
       "nonMetadataDifferences": 0,
       "entitySourceRevisionUnchanged": 3
     }
+  },
+  "layoutRevisionCorrection": {
+    "familyId": "haus-argall",
+    "fields": [
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions"
+        ],
+        "beforePresent": true,
+        "before": {
+          "portrait": 6
+        },
+        "afterPresent": false
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "biographyModule",
+          "biography",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedFieldPreviousValues"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "portrait": [
+            "",
+            "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldRevisions"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": 7
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": "replace-known-paths"
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldCorrections"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": [
+            {
+              "path": [
+                "biography",
+                "portrait"
+              ],
+              "previousValues": [
+                "",
+                "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+              ],
+              "value": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+            }
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions"
+        ],
+        "beforePresent": true,
+        "before": {
+          "portrait": 6
+        },
+        "afterPresent": false
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "biographyModule",
+          "biography",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedFieldPreviousValues"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "portrait": [
+            "",
+            "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedExtensionFieldRevisions"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": 7
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": "replace-known-paths"
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedExtensionFieldCorrections"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": [
+            {
+              "path": [
+                "biography",
+                "portrait"
+              ],
+              "previousValues": [
+                "",
+                "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png"
+              ],
+              "value": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png"
+            }
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions"
+        ],
+        "beforePresent": true,
+        "before": {
+          "portrait": 6
+        },
+        "afterPresent": false
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "chartRepeatForPartnershipIds"
+        ],
+        "beforePresent": true,
+        "before": [
+          "union-gwenella-maelor-ffionydd"
+        ],
+        "afterPresent": true,
+        "after": []
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldRevisions",
+          "chartRepeatForPartnershipIds"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldRevisions",
+          "biographyModule"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes",
+          "chartRepeatForPartnershipIds"
+        ],
+        "beforePresent": true,
+        "before": "append-unique",
+        "afterPresent": true,
+        "after": "remove-known-values"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes",
+          "biographyModule"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": "replace-known-paths"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "biographyModule",
+          "biography",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedFieldPreviousValues"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "portrait": [
+            "",
+            "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldCorrections"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": [
+            {
+              "path": [
+                "biography",
+                "portrait"
+              ],
+              "previousValues": [
+                "",
+                "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png"
+              ],
+              "value": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png"
+            }
+          ],
+          "chartRepeatForPartnershipIds": [
+            "union-gwenella-maelor-ffionydd"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions"
+        ],
+        "beforePresent": true,
+        "before": {
+          "portrait": 6
+        },
+        "afterPresent": false
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "biographyModule",
+          "biography",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
+        "afterPresent": true,
+        "after": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png"
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldPreviousValues"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "portrait": [
+            "",
+            "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedExtensionFieldRevisions"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": 7
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": "replace-known-paths"
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedExtensionFieldCorrections"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "biographyModule": [
+            {
+              "path": [
+                "biography",
+                "portrait"
+              ],
+              "previousValues": [
+                "",
+                "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png"
+              ],
+              "value": "../AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png"
+            }
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "extensions",
+          "sourceRevision"
+        ],
+        "beforePresent": true,
+        "before": 6,
+        "afterPresent": true,
+        "after": 7
+      }
+    ],
+    "historicalObjectOrders": [
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions"
+        ],
+        "keys": [
+          "registryManagedSourceRevision",
+          "registryManagedFields",
+          "registryManagedFieldRevisions",
+          "registryManagedFieldFillOnlyRevisions",
+          "registryManagedExtensionFields",
+          "biographyModule"
+        ]
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions"
+        ],
+        "keys": [
+          "registryManagedSourceRevision",
+          "registryManagedFields",
+          "registryManagedFieldRevisions",
+          "registryManagedFieldFillOnlyRevisions",
+          "registryManagedExtensionFields",
+          "biographyModule"
+        ]
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions"
+        ],
+        "keys": [
+          "registryManagedSourceRevision",
+          "registryManagedFields",
+          "registryManagedFieldRevisions",
+          "registryManagedFieldFillOnlyRevisions",
+          "registryManagedExtensionFields",
+          "chartRepeatForPartnershipIds",
+          "registryManagedExtensionFieldRevisions",
+          "registryManagedExtensionFieldMergeModes",
+          "biographyModule"
+        ]
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions"
+        ],
+        "keys": [
+          "registryManagedSourceRevision",
+          "registryManagedFields",
+          "registryManagedFieldRevisions",
+          "registryManagedFieldFillOnlyRevisions",
+          "registryManagedExtensionFields",
+          "biographyModule"
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-05",
+    "previousSourceRevision": 6,
+    "sourceRevision": 7,
+    "reason": "Only the exact four known portrait defaults, their biography portrait paths and the single authored duplicate-view reference change. Entity identities, dates, notes, biographies, marriage, affair and parentage facts remain identical. Restore the complete revision6 predecessor before the existing immutable6-to4 review.",
+    "proof": {
+      "receipt": "diagnostics/public-release-20261105/argall-layout-fix/overlay.json",
+      "receiptSha256": "195ce4cda5a66e84cee674a3770051ae5a653668fc0aca99cb6eb01c767dd841",
+      "sourceFiles": [
+        {
+          "path": "Stammbäume/assets/js/adapters/family-chart-adapter.js",
+          "sha256": "03190ccc9d5f87c84830b73006ddfb9d167ac36163458638de4eda30ce6aa3e1"
+        },
+        {
+          "path": "Stammbäume/assets/js/adapters/family-chart-partner-traversal.js",
+          "sha256": "cabe9f62c9c2a24dd2f58f0e98cf7be4c3ea38863098ce740129a552f1d131e2"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/argall-gwynthor-household.js",
+          "sha256": "a91ce40e39e1f04d3b81b3c9fd7933857021d173159ccc398ce2aa5ee607acea"
+        },
+        {
+          "path": "Stammbäume/assets/js/data/house-argall-family.js",
+          "sha256": "45f26a27c9ea79b4c5829d81dd449cdba61341a63d1533544acb8c0d445f5aa6"
+        },
+        {
+          "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+          "sha256": "cf920821519a469452e7f54db3b82dba93504861c6aacdec23f5b4e751ec8b96"
+        },
+        {
+          "path": "Stammbäume/assets/js/services/family-registry-extension-corrections.js",
+          "sha256": "f620c04ff3dc7c81d0d2d2d98b86394624ce37307d6f332dca1c8a5e737e0651"
+        },
+        {
+          "path": "Stammbäume/tests/argall-gwynthor.test.js",
+          "sha256": "957d7bd3c6d648c69ade156217a9e4341dfcc71799c0721288bf4e4e87c29d4e"
+        },
+        {
+          "path": "Stammbäume/tests/family-chart-partner-traversal.test.js",
+          "sha256": "4e43eb3f7fe1f28524f286d39809569d64959624fd898800b868c7c26a13edd1"
+        },
+        {
+          "path": "Stammbäume/tools/check-release.mjs",
+          "sha256": "743269e30405612216024eef6c29b3ecb4ab1adea615506b4c19245c4099fe74"
+        }
+      ],
+      "changedPaths": 36,
+      "changedContentPaths": 9,
+      "changedPortraitPaths": 8,
+      "changedAuthoredViewLists": 1,
+      "otherContentDifferences": 0,
+      "previousProjectedSha256": "1e4687e1eb382396d703720411652a95a50e9179d2b58f052d4f8058ff3b2179",
+      "currentProjectedSha256": "8146e3d6a96af258af9ac2d1e3168abd8fac5587916a97dbb9b688287f9df6e6",
+      "originalProjectedSha256": "bcf8e7a13d6871e4ab03b202d42d7f2b3a8df00e7a8620d5a8133ba69472d374",
+      "historicalRegistrySha256": "9b8b850e3068dcfb54ea6f2e90e9aa96bc9c3ae3dadc79139256d6f590bfd98a"
+    }
   }
 }

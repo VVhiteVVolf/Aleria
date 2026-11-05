@@ -8,6 +8,7 @@ export const ARGALL_GWYNTHOR_MARRIAGE_ID = 'marriage-rhydric-gwenella-argall';
 export const ARGALL_GWYNTHOR_UNION_ID = 'union-gwenella-maelor-ffionydd';
 
 function householdPerson(spec, familyStatus, residence, familyRole = 'core') {
+  const portrait = `..${spec.portrait}`;
   return createFamilyPerson({
     id: spec.id,
     worldPersonId: spec.worldPersonId,
@@ -17,24 +18,26 @@ function householdPerson(spec, familyStatus, residence, familyRole = 'core') {
     houseId: spec.houseId,
     familyRole,
     title: spec.role,
-    portrait: spec.portrait,
+    portrait,
     tags: [`${spec.age} Jahre`],
     notes: spec.biography,
     extensions: {
       registryManagedSourceRevision: 3,
       registryManagedFields: ['portrait', 'title', 'notes', 'familyRole'],
-      // Source 6 is newer than both source 4 and its aggregated biography revision 5.
-      // Saved records at any of those earlier boundaries can lack the portraits.
-      // Fill those gaps without replacing an individually supplied portrait.
-      registryManagedFieldRevisions: { portrait: 6 },
-      registryManagedFieldFillOnlyRevisions: { portrait: 6 },
+      // Source 7 repairs exactly the former root-relative default and missing
+      // images through source 6. Individually supplied portraits stay local.
+      registryManagedFieldRevisions: { portrait: 7 },
+      registryManagedFieldPreviousValues: { portrait: ['', spec.portrait] },
       registryManagedExtensionFields: ['biographyModule', ...(spec === mother ? ['chartRepeatForPartnershipIds'] : [])],
+      registryManagedExtensionFieldRevisions: { biographyModule: 7, ...(spec === mother ? { chartRepeatForPartnershipIds: 7 } : {}) },
+      registryManagedExtensionFieldMergeModes: { biographyModule: 'replace-known-paths', ...(spec === mother ? { chartRepeatForPartnershipIds: 'remove-known-values' } : {}) },
+      registryManagedExtensionFieldCorrections: {
+        biographyModule: [{ path: ['biography', 'portrait'], previousValues: ['', spec.portrait], value: portrait }],
+        ...(spec === mother ? { chartRepeatForPartnershipIds: [ARGALL_GWYNTHOR_UNION_ID] } : {})
+      },
       ...(spec === mother ? {
-        // The divorced pair keeps Perwyn's line; this separate view exposes
-        // Gwenella's childless present affair without changing genealogy.
-        chartRepeatForPartnershipIds: [ARGALL_GWYNTHOR_UNION_ID],
-        registryManagedExtensionFieldRevisions: { chartRepeatForPartnershipIds: 6 },
-        registryManagedExtensionFieldMergeModes: { chartRepeatForPartnershipIds: 'append-unique' }
+        // Retire only the former authored duplicate; other personal views survive.
+        chartRepeatForPartnershipIds: []
       } : {}),
       biographyModule: {
         schema: 'aleria.biography-module', schemaVersion: 1,
@@ -47,7 +50,7 @@ function householdPerson(spec, familyStatus, residence, familyRole = 'core') {
           { label: 'Wohnsitz', value: residence }
         ],
         biography: {
-          portrait: spec.portrait,
+          portrait,
           biographyTitle: 'Biografie', biographyText: spec.biography,
           extraSections: [{ position: 'afterIntro', mode: 'text', title: 'Erscheinung', text: spec.appearance }]
         }
