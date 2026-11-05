@@ -2,7 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import vm from 'node:vm';
-import { loadPublicCenyrCoverageInputs } from '../modules/house-coverage/cenyr-house-coverage-node.mjs';
+import { createHash } from 'node:crypto';
+import { loadPublicCenyrCoverageInputs, auditCenyrHouseCoverage } from '../modules/house-coverage/cenyr-house-coverage-node.mjs';
+import { createRuralFamilyCoverageProfile } from '../modules/house-coverage/rural-family-profile.mjs';
+import { FLEISCHSAMMLER_FAMILIES_INDEX } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
+import countyBaseline from './fixtures/celtigerns-family-cards-baseline-20261104.json' with { type: 'json' };
 import { normalizeFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
 import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
 import { withHouseBiographyDefault } from '../../Stammbäume/assets/js/modules/house-biography/house-biography-registry-default.js';
@@ -12,10 +16,12 @@ const project = new URL('../../', import.meta.url);
 const registryContext = { window: {} };
 vm.runInNewContext(await readFile(new URL('haeuser.registry.js', feature), 'utf8'), registryContext);
 const registry = registryContext.window.HaeuserRegistry;
-const { project: publicFamilyRegistry } = loadPublicCenyrCoverageInputs();
+const { project: publicFamilyRegistry, scope: publicCenyrScope } = loadPublicCenyrCoverageInputs();
 const areaFamilies = publicFamilyRegistry.filter(r => r.folderPath.includes('Celtigerns Wacht') || r.id === 'haus-von-hochreuth');
 const families = areaFamilies.filter(record => registry.byId(record.id));
 const familiesWithoutHousePage = areaFamilies.filter(record => !registry.byId(record.id));
+const profileCoverage = await auditCenyrHouseCoverage({ allowlistIds: publicCenyrScope.map(record => record.id) });
+const localityIds = new Set(FLEISCHSAMMLER_FAMILIES_INDEX.map(record => record.familyId));
 const sources = new Map();
 for (const record of families) {
   const entry = registry.byId(record.id);
@@ -24,7 +30,7 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Jede der 105 öffentlichen Familien einschließlich Perllan besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio', async () => {
+test('Die 105 eigenständigen öffentlichen Hausseiten einschließlich Perllan bleiben erreichbar und mit ihren Bios verknüpft', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
     'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan',
@@ -50,8 +56,24 @@ test('Jede der 105 öffentlichen Familien einschließlich Perllan besitzt eine e
   }
 });
 
-test('Neue Cochdon-, Llythfor- und Twyllod-Akten besitzen Familienbeschreibungen und eine gezielt ausgearbeitete Twyllod-Bio', () => {
-  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), []);
+test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; acht örtliche Familien besitzen echte zugängliche Familienprofile', async () => {
+  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), [...localityIds].sort());
+  assert.equal(profileCoverage.ok, true);
+  assert.equal(profileCoverage.records.filter(record => record.existingPage.kind === 'family-record').length, localityIds.size);
+  for (const record of familiesWithoutHousePage) {
+    const profile = createRuralFamilyCoverageProfile(record, record.family.extensions.houseBiographyModule);
+    const checked = profileCoverage.records.find(row => row.stableId === record.id);
+    assert.ok(profile, record.id);
+    assert.equal(checked.existingPage.kind, 'family-record', record.id);
+    assert.equal(checked.existingPage.path, profile.href);
+    assert.equal(checked.existingBiography.present, true);
+    assert.equal(checked.profileImageRole, 'family-crest');
+    assert.deepEqual(checked.missing, { page: false, bio: false, art: false, localArt: false });
+    assert.ok(profile.biography.house.biographyText.trim(), record.id);
+    await access(new URL(profile.sourcePath, project));
+    await access(new URL(profile.href, project));
+    assert.equal(checked.boundPageScenePath, '', 'A family crest is not a commissioned warrior image');
+  }
   for (const id of ['haus-cochdon', 'haus-llythfor', 'haus-twyllod']) {
     const record = areaFamilies.find(record => record.id === id);
     assert.ok(record, id);
@@ -62,27 +84,38 @@ test('Neue Cochdon-, Llythfor- und Twyllod-Akten besitzen Familienbeschreibungen
   assert.ok(areaFamilies.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft führt ihre 65 ausgewählten Häuser einschließlich Perllan mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
+test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt ausschließlich die acht belegten örtlichen Familienprofile', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
-  const cards = sections.flatMap(section => section.cards);
-  assert.equal(cards.length, 65);
-  assert.equal(new Set(cards.map(c => c.id)).size, 65);
+  const cards = JSON.parse(JSON.stringify(sections.flatMap(section => section.cards)));
+  assert.equal(countyBaseline.beforeCommit, '887693c81224ec8fd7e17cab50c8dcbb5a0f6d05');
+  assert.equal(countyBaseline.cards.length, 65);
+  assert.equal(createHash('sha256').update(JSON.stringify(countyBaseline.cards)).digest('hex'), 'f024aebd0206f205811cf7947ae208f748bd6e596925e8f58280d5515b6f8e96');
+  const existingCards = cards.filter(card => !localityIds.has(card.id));
+  assert.deepEqual(existingCards, countyBaseline.cards, 'Every original card, image, link and card order remains unchanged');
+  assert.deepEqual(cards.filter(card => localityIds.has(card.id)).map(card => card.id).sort(), [...localityIds].sort());
+  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size);
+  assert.equal(new Set(cards.map(c => c.id)).size, cards.length);
   const perllan = cards.filter(card => card.id === 'perllan');
   assert.equal(perllan.length, 1);
   assert.ok(perllan[0].imageSrc.endsWith('/Perllan/perllan-emblem.png'));
   assert.ok(perllan[0].href.endsWith('kleinehaeuser.html?haus=perllan'));
-  assert.equal(cards.filter(card => card.id !== 'perllan').length, 64);
+  assert.equal(existingCards.filter(card => card.id !== 'perllan').length, 64);
   for (const card of cards) {
     assert.ok(areaFamilies.some(record => record.id === card.id), card.id);
     if (registry.byId(card.id)) {
       assert.equal(card.href, '/Familien%20H%C3%A4user%20und%20Clans/' + registry.linkFor(card.id));
     } else {
+      const profile = createRuralFamilyCoverageProfile(areaFamilies.find(record => record.id === card.id),
+        areaFamilies.find(record => record.id === card.id).family.extensions.houseBiographyModule);
+      assert.ok(profile, card.id);
       const target = new URL(card.href, 'http://aleria.local');
       assert.equal(decodeURIComponent(target.pathname), '/Stammbäume/Stammbaum.html');
       assert.equal(target.searchParams.get('family'), card.id);
       assert.equal(target.searchParams.get('mode'), 'view');
+      assert.equal(target.href, new URL(profile.href, 'http://aleria.local/').href);
+      assert.equal(decodeURIComponent(card.imageSrc), '/Stammbäume/' + profile.imageSource);
       await access(new URL('Stammbäume/Stammbaum.html', project));
     }
     await access(new URL(card.imageSrc.slice(1), project));
