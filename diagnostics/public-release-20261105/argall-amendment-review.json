@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-05",
+  "targetOnly": true,
+  "files": [
+    {
+      "file": "Stammbäume/tests/house-life-status-corrections.test.mjs",
+      "bytes": 13265,
+      "sha256": "1c93f5873a57fa24ca40179725670a253f7e802005036474182cf265bc63834a"
+    },
+    {
+      "file": "Stammbäume/tests/argall-portrait-affair-amendment.mjs",
+      "bytes": 1405,
+      "sha256": "87ae6b1827f6824cf932cac6d0609d675add15d560f980a90d4cc8946a702244"
+    },
+    {
+      "file": "Stammbäume/tests/fixtures/argall-portrait-affair-amendment-20261105.json",
+      "bytes": 1143,
+      "sha256": "f9d714e732575a50df27d48e5acc602a616517d868d69f6ff9d2bab4e1a29765"
+    }
+  ],
+  "historicalReceipts": [
+    {
+      "file": "diagnostics/house-life-status-20261104/before.json",
+      "sha256": "7f91823fcd76e5ebd3f35cb9d6840576e2462d4799da72a8240cb87c4a4b46da",
+      "mainBytesPreserved": true
+    },
+    {
+      "file": "diagnostics/house-life-status-20261104/metadata-containers.json",
+      "sha256": "ae4107a2622676c39e3f9fcc4057211d3170b6b2edf25805f0ae7724fe4f3156",
+      "mainBytesPreserved": true
+    },
+    {
+      "file": "Familien Häuser und Clans/tests/fixtures/house-life-status-corrections-20261104.json",
+      "sha256": "bd190074367a12e45a6f745f06911c9eb5dd834c09f308cbae88da8af57c65c2",
+      "mainBytesPreserved": true
+    }
+  ],
+  "protection": {
+    "currentProtectedHash": "775a01a2d906d17681a7596cdebbd513216a5b8c00973d936a7187c141d47771",
+    "previousProtectedHash": "ec8791e21d5deaf6fbc4ef49b9fcd5b340dd5446275fce75cef3f4115dc81ab9",
+    "exactReversePatchOnly": "One chartRepeatForPartnershipIds extension on the existing mother person; no life fields or genealogy modified",
+    "unreviewedNotesAndViewChangesRejected": true
+  },
+  "validation": {
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "command": "node --test --experimental-test-isolation=none Stammbäume/tests/house-life-status-corrections.test.mjs Stammbäume/tests/argall-gwynthor.test.js"
+  },
+  "archivalAlbenFailures": {
+    "partOfOfficialFamilyChartsTask": false,
+    "unmodified": true,
+    "reason": "The dated source-revision and whole-family fingerprints predate 21 higher source revisions and later approved family work."
+  },
+  "gitOrLiveWrites": false
+}
