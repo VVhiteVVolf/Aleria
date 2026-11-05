@@ -1,0 +1,12 @@
+.mathringen-workbench .estate-card{background:#e6e5d8}
+.mathringen-workbench .house-art-card,.mathringen-workbench .prototype-grid article{background:#e5e4d5}
+.mathringen-art-dialog h2{overflow-wrap:anywhere}
+.mathringen-art-dialog .art-detail-layout figure{position:static}
+.mathringen-art-dialog .art-detail-layout figure img{max-height:72vh;object-fit:contain}
+.mathringen-art-dialog .prototype-art-detail figure img{height:72vh}
+.mathringen-art-dialog .house-figure-pair{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center}
+.mathringen-art-dialog .house-figure-pair figure:first-child img{max-height:45vh}
+.mathringen-art-dialog .house-figure-pair figure:nth-child(2) img{height:72vh}
+.mathringen-workbench .prototype-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1100px){.mathringen-workbench .prototype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.mathringen-workbench .prototype-grid,.mathringen-art-dialog .house-figure-pair{grid-template-columns:1fr}}

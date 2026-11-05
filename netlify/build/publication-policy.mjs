@@ -30,6 +30,9 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Phalantia/scripts/',
   'Vorschau/Klythesia/sources/',
   'Vorschau/Klythesia/scripts/',
+  'Vorschau/Mathringen/sources/',
+  'Vorschau/Mathringen/scripts/',
+  'Vorschau/Mathringen/tests/',
   'Vorschau/shared/heraldic-artifacts/',
   'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/modules/gawain-duncan/source/',
@@ -93,6 +96,9 @@ export function isAuthoringArchive(file) {
     || file === 'Vorschau/Phalantia/source-import.json'
     || file === 'Vorschau/Klythesia/assets.source.json'
     || file === 'Vorschau/Klythesia/source-import.json'
+    || file === 'Vorschau/Mathringen/assets.source.json'
+    || file === 'Vorschau/Mathringen/source-import.json'
+    || /^Vorschau\/Mathringen\/assets\/(?:estates|warriors|emblems)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
     || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/(?:house-|realm-)?manifest\.json$/.test(file)
     || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/originals\//.test(file)
     || file === 'Vorschau/Venalys/assets/estates/manifest.json'

@@ -1,11 +1,11 @@
 import { escapeHtml as e } from './render.mjs';
-import { renderArtButton,artworkImage,artworkOriginal } from '../../Leukonia/art-view.mjs';
+import { renderArtButton,artworkImage,artworkOriginal } from './art-media.mjs';
 
 /** Cultural facts remain in each country; this view owns only social-card presentation. */
 export function renderEstates(estates,context) {
   if (!estates?.length || !context) return '';
   const customs = (context.addresses || []).map(item => `<article><h3>${e(item.title)}</h3><p>${e(item.text)}</p></article>`).join('');
-  return `<section class="section country-estates" id="staende"><p class="eyebrow">${e(context.eyebrow || 'Gesellschaft und überlieferte Titel')}</p><h2>${e(context.title)}</h2><p class="section-intro">${e(context.introduction)}</p><div class="estate-grid">${estates.map(estate => `<article class="estate-card${estate.present ? '' : ' estate-absent'}"><div class="estate-art">${renderArtButton(estate,{ kind:'estate',label:`${estate.name} · ${estate.commonTitle}` })}</div><p class="eyebrow">${e(estate.commonTitle)}</p><h3>${e(estate.name)}</h3>${estate.present ? '' : `<p class="estate-status">${e(estate.statusLabel)}</p>`}<p>${e(estate.description)}</p></article>`).join('')}</div>${customs ? `<div class="estate-customs">${customs}</div>` : ''}</section>`;
+  return `<section class="section country-estates" id="${e(context.sectionId || 'staende')}"><p class="eyebrow">${e(context.eyebrow || 'Gesellschaft und überlieferte Titel')}</p><h2>${e(context.title)}</h2><p class="section-intro">${e(context.introduction)}</p><div class="estate-grid">${estates.map(estate => `<article class="estate-card${estate.present ? '' : ' estate-absent'}"><div class="estate-art">${renderArtButton(estate,{ kind:'estate',label:`${estate.name} · ${estate.commonTitle}` })}</div><p class="eyebrow">${e(estate.commonTitle)}</p><h3>${e(estate.name)}</h3>${estate.present ? '' : `<p class="estate-status">${e(estate.statusLabel)}</p>`}<p>${e(estate.description)}</p></article>`).join('')}</div>${customs ? `<div class="estate-customs">${customs}</div>` : ''}</section>`;
 }
 
 export function renderEstateDetails(estate,{ source }) {

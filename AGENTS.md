@@ -1,3 +1,7 @@
+# Mathringen: gezielte Releasefreigabe vom 5. November 2026
+
+Der Nutzer hat Push auf master, Deploy und anschließende Bereinigung temporärer Daten freigegeben. Veröffentlicht werden die Mathringen-Vorbereitung und ihre gemeinsamen Darstellungsabhängigkeiten. 44 Haus- und Stadtsitze bleiben Vorschläge; 21 Stände-/Rang-/Kleruscomics und sieben männliche Klassenprototypen sind geprüft. Quellen, Prompts, Vorversionen und unabhängige lokale Aufträge bleiben erhalten. Keine Firebase- oder Spieldatenänderungen.
+
 # Stille Geldübergaben und Ausgaben: Releasefreigabe vom 5. November 2026
 
 Nutzerauftrag: Übergabeoberfläche verbessern und schnell online veröffentlichen.

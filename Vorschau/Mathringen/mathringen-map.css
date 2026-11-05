@@ -1,0 +1,11 @@
+.mathringen-placement .map-canvas{min-width:1500px}
+.mathringen-placement #map-dialog .map-canvas{min-width:0}
+.mathringen-placement .crest-group{max-width:150px;flex-wrap:wrap;white-space:normal}
+.mathringen-placement .clan-pin,.mathringen-placement .clan-pin img{width:31px;height:31px}
+.mathringen-placement .city-name{font-size:12px;max-width:130px;white-space:normal;line-height:1.15;text-align:center;padding:2px 4px;background:#eeeadbdc;color:#252922;border:1px solid #9e9a86}
+.mathringen-placement .house-choice{align-items:flex-start;gap:10px}
+.mathringen-placement .house-choice>span{min-width:0;width:100%}
+.mathringen-placement .house-choice strong{font-size:19px;overflow-wrap:anywhere}
+.mathringen-placement .seat-card>header{min-height:0}
+.mathringen-placement .placement-toolbar,.mathringen-placement .unassigned{background:#e1e3d5;border-color:var(--line)}
+@media print{.mathringen-placement .map-canvas{min-width:0}}
