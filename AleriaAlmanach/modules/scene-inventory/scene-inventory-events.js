@@ -2,6 +2,84 @@
 (function initializeSceneInventoryEvents() {
 let submitting = false;
 let pending = null;
+function currentMoneyDialog(overlay, token) {
+  return !!overlay?.classList.contains('active') && overlay.dataset.sceneInventoryOpenToken === token;
+}
+function restorePendingMoney(overlay, request) {
+  const object = request.sceneEvent.transfer.object;
+  const values = { 'scene-transfer-kind': 'money', 'scene-transfer-giver': request.giverId,
+    'scene-transfer-receiver': request.receiverId || '', 'scene-transfer-money-mode': object.targetKind,
+    'scene-transfer-currency': object.currency, 'scene-transfer-money-amount': String(object.quantity) };
+  for (const [id, value] of Object.entries(values)) { const input = document.getElementById(id); if (input) input.value = value; }
+  overlay.dataset.sceneMoneyPending = 'true';
+  refreshSceneInventoryDialog();
+  setSceneInventoryDialogLocked(true);
+  const submit = overlay.querySelector('[data-scene-inventory-action="submit"]');
+  if (submit) { submit.disabled = false; submit.textContent = 'Offene Buchung prüfen'; }
+  setSceneInventoryStatus('Die Bestätigung einer Geldbewegung fehlt noch. Bitte dieselbe Buchung erneut prüfen.', 'info');
+}
+async function openInventoryWithMoneyRecovery(threadId) {
+  const overlay = await openSceneInventoryDialog(threadId);
+  if (!overlay?.classList.contains('active')) return;
+  const token = overlay.dataset.sceneInventoryOpenToken;
+  overlay.dataset.sceneMoneyPending = 'false'; overlay.dataset.sceneMoneySubmitting = 'false';
+  setSceneInventoryDialogLocked(true);
+  try {
+    const { getSceneMoneyTransferSession } = await import('./scene-inventory-money-client.js');
+    const session = await getSceneMoneyTransferSession(overlay.dataset.sceneInventoryThreadId);
+    if (!currentMoneyDialog(overlay, token)) return;
+    const request = session.pending();
+    if (request) restorePendingMoney(overlay, request);
+    else { setSceneInventoryDialogLocked(false); refreshSceneInventoryDialog(); }
+  } catch (error) {
+    if (currentMoneyDialog(overlay, token)) {
+      setSceneInventoryDialogLocked(false);
+      setSceneInventoryStatus(error?.message || 'Die Geldbewegung konnte nicht vorbereitet werden.', 'error');
+    }
+  }
+}
+async function submitSceneMoneyTransfer(threadId, input) {
+  const overlay = document.getElementById('scene-inventory-overlay'), token = overlay?.dataset.sceneInventoryOpenToken;
+  let session;
+  submitting = true;
+  if (overlay) overlay.dataset.sceneMoneySubmitting = 'true';
+  setSceneInventoryDialogLocked(true);
+  try {
+    const client = await import('./scene-inventory-money-client.js');
+    session = await client.getSceneMoneyTransferSession(threadId);
+    let request = session.pending();
+    const retry = !!request;
+    if (!request) {
+      const prepared = await prepareSceneInventoryTransfer(input);
+      request = client.buildSceneMoneyRequest({ threadId, giver: prepared.giver, receiver: prepared.receiver, transfer: prepared.transfer });
+    }
+    const committed = retry ? await session.retry() : await session.submit(request);
+    for (const [id, inventory] of [[request.giverId, committed.giverInventory], [request.receiverId, committed.receiverInventory]]) {
+      if (!id || !inventory) continue;
+      const index = _characters.findIndex(character => character.id === id);
+      if (index >= 0) _characters[index] = { ..._characters[index], inventory };
+    }
+    // Money never enters the scene timeline, comment refresh or auto-scroll.
+    try { renderCharGrid(); } catch (error) { console.warn('Geld gebucht; Inventaransicht konnte nicht aktualisiert werden.', error); }
+    if (currentMoneyDialog(overlay, token)) closeSceneInventoryDialog();
+  } catch (error) {
+    if (currentMoneyDialog(overlay, token)) {
+      const request = session?.pending();
+      if (request) restorePendingMoney(overlay, request);
+      else { overlay.dataset.sceneMoneyPending = 'false'; setSceneInventoryDialogLocked(false); }
+      setSceneInventoryStatus(request ? 'Die Antwort fehlt noch. Bitte die offene Geldbewegung unverändert erneut prüfen.'
+        : error?.message || 'Die Geldbewegung konnte nicht gebucht werden.', 'error');
+    }
+  } finally {
+    submitting = false;
+    if (currentMoneyDialog(overlay, token)) {
+      overlay.dataset.sceneMoneySubmitting = 'false';
+      const request = session?.pending();
+      if (request) restorePendingMoney(overlay, request);
+      else { setSceneInventoryDialogLocked(false); refreshSceneInventoryDialog(); }
+    }
+  }
+}
 async function openTradeFromInventory() {
   const dialog = document.getElementById('scene-inventory-overlay');
   const threadId = dialog?.dataset?.sceneInventoryThreadId || getCurrentCommentThreadId();
@@ -28,7 +106,7 @@ async function openTradeFromInventory() {
       }
     });
   } catch (error) {
-    openSceneInventoryDialog(threadId);
+    await openInventoryWithMoneyRecovery(threadId);
     setSceneInventoryStatus(error?.message || 'Der Handel konnte nicht geöffnet werden.', 'error');
   }
 }
@@ -40,6 +118,7 @@ async function submitSceneInventoryTransfer() {
     giverId: document.getElementById('scene-transfer-giver')?.value || '',
     receiverId: document.getElementById('scene-transfer-receiver')?.value || '',
     kind,
+    targetKind: kind === 'money' ? document.getElementById('scene-transfer-money-mode')?.value || 'character' : undefined,
     currency: document.getElementById('scene-transfer-currency')?.value || 'gold',
     quantity: kind === 'item'
       ? document.getElementById('scene-transfer-item-amount')?.value
@@ -53,6 +132,7 @@ async function submitSceneInventoryTransfer() {
   const flavour = String(document.getElementById('scene-transfer-flavour')?.value || '').trim();
   const visualIcon = String(document.getElementById('scene-transfer-icon')?.value || '').trim();
   if (!threadId) { setSceneInventoryStatus('Kein aktiver Szenen-Thread gefunden.', 'error'); return; }
+  if (kind === 'money') return submitSceneMoneyTransfer(threadId, input);
   if (!window._fb?.transferCharacterInventories) { setSceneInventoryStatus('Firebase-Inventarübertragung ist nicht verfügbar.', 'error'); return; }
   const key = JSON.stringify({ threadId, input, flavour, visualIcon });
   if (pending?.key !== key) pending = { key };
@@ -124,7 +204,10 @@ document.addEventListener('click', event => {
   if (!trigger) return;
   event.preventDefault();
   const action = trigger.dataset.sceneInventoryAction;
-  if (action === 'open') openSceneInventoryDialog(trigger.dataset.commentThreadId || getCurrentCommentThreadId());
+  if (action === 'open') {
+    if (submitting) return;
+    return openInventoryWithMoneyRecovery(trigger.dataset.commentThreadId || getCurrentCommentThreadId());
+  }
   if (action === 'close') closeSceneInventoryDialog();
   if (action === 'submit') return submitSceneInventoryTransfer();
   if (action === 'pick-register-item') {
@@ -169,10 +252,11 @@ document.addEventListener('almanach-icon-selected', event => {
 });
 
 document.addEventListener('input', event => {
-  if (event.target?.closest?.('#scene-inventory-overlay')) refreshSceneInventoryDialog();
+  if (event.target?.closest?.('#scene-inventory-overlay') && event.target.matches?.('#scene-transfer-money-amount, #scene-transfer-item-amount, #scene-transfer-register-amount, #scene-transfer-unit-copper, #scene-transfer-icon')) refreshSceneInventoryDialog();
 });
 document.addEventListener('change', event => {
   if (!event.target?.closest?.('#scene-inventory-overlay')) return;
+  if (!event.target.matches?.('#scene-transfer-kind, #scene-transfer-giver, #scene-transfer-receiver, #scene-transfer-currency, #scene-transfer-money-mode, #scene-transfer-item, #scene-transfer-money-amount, #scene-transfer-item-amount, #scene-transfer-register-amount')) return;
   if (event.target.id === 'scene-transfer-kind' && event.target.value === 'scene-trade') return openTradeFromInventory();
   refreshSceneInventoryDialog({ refreshItems: event.target?.id === 'scene-transfer-giver' });
 });

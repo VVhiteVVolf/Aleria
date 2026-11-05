@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { commitInventoryTransferOperation } from '../src/mechanics/commit-inventory-transfer.js';
 import { STANDARD_ITEMS } from '../src/generated/item-register/item-register-standard.js';
 import { database } from './fixtures/combat-transaction-database.js';
@@ -26,6 +27,61 @@ test('a money transfer preserves both exact saved profiles and held loadouts wit
   const before = ['giver', 'receiver'].map(id => structuredClone(db.data.get(`characters/${id}`).combatProfile));
   await commitInventoryTransferOperation(db, auth, input());
   for (const [index, id] of ['giver', 'receiver'].entries()) assert.deepEqual(db.data.get(`characters/${id}`).combatProfile, before[index]);
+});
+
+test('money writes only wallet fields and never allocates a scene comment or reads item definitions', async () => {
+  const db = store(), allowedCollections = new Set(['characters', 'inventory_transfer_transactions']);
+  for (const id of ['giver', 'receiver']) {
+    const record = db.data.get(`characters/${id}`);
+    linkedSword(record, `${id}-held`);
+    record.inventory.customArchive = { unchanged: true };
+    record.inventory.definitionSchemaVersion = 0;
+  }
+  db.data.set('comment_thread_activity/scene', { lastActivity: 'unchanged' });
+  const originalCollection = db.collection;
+  db.collection = name => { assert(allowedCollections.has(name), `Unexpected money collection: ${name}`); return originalCollection(name); };
+  const writes = [], transaction = db.runTransaction.bind(db);
+  db.runTransaction = work => transaction(tx => work({ ...tx, update(reference, updates) {
+    writes.push({ path: reference.path, fields: Object.keys(updates).sort() }); tx.update(reference, updates);
+  } }));
+  const before = ['giver', 'receiver'].map(id => structuredClone(db.data.get(`characters/${id}`)));
+  const response = await commitInventoryTransferOperation(db, { uid: 'another-player', token: {} }, { ...input(),
+    expectedRevisions: { 'character:giver': 1, 'character:receiver': 1 } });
+  assert.equal(response.id, null); assert.equal(response.silent, true);
+  for (const [index, id] of ['giver', 'receiver'].entries()) {
+    const after = db.data.get(`characters/${id}`);
+    assert.deepEqual(after.combatProfile, before[index].combatProfile);
+    assert.deepEqual(after.inventory.items, before[index].inventory.items);
+    assert.deepEqual(after.inventory.customArchive, before[index].inventory.customArchive);
+    assert.equal(after.inventory.definitionSchemaVersion, 0);
+    assert.equal(after.ownerUid, before[index].ownerUid);
+  }
+  assert.equal(writes.length, 2);
+  for (const write of writes) assert.deepEqual(write.fields, ['inventory.money', 'inventory.moneyState', 'inventory.revision', 'updatedAt']);
+  assert.equal(rows(db, 'comments').length, 0);
+  assert.deepEqual(db.data.get('comment_thread_activity/scene'), { lastActivity: 'unchanged' });
+  const receipt = rows(db, 'inventory_transfer_transactions')[0][1];
+  assert.equal(receipt.kind, 'money'); assert.equal(receipt.targetKind, 'character');
+  for (const field of ['commentId', 'entryId', 'flavour', 'visualIcon', 'sceneEvent']) assert.equal(Object.hasOwn(receipt, field), false);
+});
+
+test('a sink expenditure changes one wallet, makes change automatically and needs neither recipient nor scene', async () => {
+  const db = store();
+  db.data.get('characters/giver').inventory.moneyState = { copper: 1 };
+  delete db.data.get('characters/giver').ownerUid;
+  db.data.delete('characters/receiver');
+  const response = await commitInventoryTransferOperation(db, { uid: 'anonymous-firebase-uid', token: {} }, {
+    giverId: 'giver', operationId: 'sink-payment', expectedRevisions: { 'character:giver': 1 },
+    sceneEvent: { transfer: { flavour: 'Not a scene message', object: { kind: 'money', targetKind: 'sink', currency: 'pfennig', quantity: 90, visualIcon: 'not-rendered.png' } } }
+  });
+  assert.equal(response.id, null); assert.equal(response.silent, true); assert.equal(response.receiverInventory, null);
+  assert.equal(response.giverInventory.moneyState.copper, 0);
+  assert.equal(response.giverInventory.moneyState.pfennig, 10);
+  assert.equal(response.giverInventory.moneyState.totalCopper, 0.1);
+  assert.equal(rows(db, 'characters').length, 1);
+  assert.equal(rows(db, 'comments').length, 0);
+  assert.equal(rows(db, 'inventory_transfer_transactions').length, 1);
+  assert.equal(rows(db, 'inventory_transfer_transactions')[0][1].targetKind, 'sink');
 });
 
 test('a held profile weapon cannot be transferred by reconciling its older unequipped inventory flag first', async () => {
@@ -75,7 +131,7 @@ test('a real unequipped gear handoff changes only the moved item bindings on eit
   assert.equal(db.data.get('characters/giver').combatProfile.weapons.length, 0);
 });
 
-test('repeated and simultaneous transfers book wallets and their scene event exactly once', async () => {
+test('repeated and simultaneous money transfers book wallets once without a scene event', async () => {
   const db = store();
   const [first, second] = await Promise.all([commitInventoryTransferOperation(db, auth, input()), commitInventoryTransferOperation(db, auth, input())]);
   assert.equal(first.id, second.id);
@@ -83,7 +139,8 @@ test('repeated and simultaneous transfers book wallets and their scene event exa
   assert.equal(first.receiverInventory.revision, db.data.get('characters/receiver').inventory.revision);
   assert.equal(db.data.get('characters/giver').inventory.moneyState.totalCopper, 1.71);
   assert.equal(db.data.get('characters/receiver').inventory.moneyState.totalCopper, 2.29);
-  assert.equal(rows(db, 'comments').length, 1);
+  assert.equal(first.id, null); assert.equal(first.silent, true);
+  assert.equal(rows(db, 'comments').length, 0);
   assert.equal(rows(db, 'inventory_transfer_transactions').length, 1);
   assert.equal(db.data.get('characters/giver').combatProfile.hitPoints.current, 7);
   assert.equal(db.data.get('characters/giver').combatProfile.resources[0].current, 2);
@@ -101,14 +158,77 @@ test('a replay returns current inventories instead of restoring an old receipt s
   assert.equal(replay.receiverInventory.moneyState.totalCopper, 2.29);
 });
 
-test('failed authorization, invalid quantities and insufficient funds leave all records untouched', async () => {
+test('missing authentication, invalid quantities and insufficient funds leave all records untouched', async () => {
   const db = store(), before = structuredClone([...db.data]);
   await assert.rejects(commitInventoryTransferOperation(db, null, input()), /Anmeldung/);
-  await assert.rejects(commitInventoryTransferOperation(db, { uid: 'other', token: {} }, input()), /Besitzer/);
   for (const quantity of [0, -1, 1.5, Number.MAX_SAFE_INTEGER]) {
     await assert.rejects(commitInventoryTransferOperation(db, auth, input({ kind: 'money', currency: 'gold', quantity })));
   }
   assert.deepEqual([...db.data], before);
+});
+
+test('money checks all first-use revisions and combat locks but exact retries return current inventories', async () => {
+  for (const mutate of [
+    request => { request.expectedRevisions['character:giver'] = 0; },
+    request => { request.expectedRevisions['character:receiver'] = 2; },
+    request => { delete request.expectedRevisions['character:receiver']; }
+  ]) {
+    const db = store(), before = structuredClone([...db.data]);
+    const request = { ...input(), expectedRevisions: { 'character:giver': 1, 'character:receiver': 1 } };
+    mutate(request);
+    await assert.rejects(commitInventoryTransferOperation(db, auth, request), /revision|geändert/i);
+    assert.deepEqual([...db.data], before);
+  }
+  for (const id of ['giver', 'receiver']) {
+    const db = store(); db.data.set(`combat_profile_locks/characters/records/${id}`, { activeEncounterKeys: ['fight'] });
+    const before = structuredClone([...db.data]);
+    await assert.rejects(commitInventoryTransferOperation(db, auth, input()), /Kampf/);
+    assert.deepEqual([...db.data], before);
+  }
+  const db = store(), request = { ...input(), expectedRevisions: { 'character:giver': 1, 'character:receiver': 1 } };
+  await commitInventoryTransferOperation(db, auth, request);
+  db.data.get('characters/giver').inventory.moneyState.totalCopper = 7;
+  const replay = await commitInventoryTransferOperation(db, auth, request);
+  assert.equal(replay.giverInventory.moneyState.totalCopper, 7);
+  assert.equal(rows(db, 'inventory_transfer_transactions').length, 1);
+  const before = structuredClone([...db.data]);
+  await assert.rejects(commitInventoryTransferOperation(db, auth, { ...request, expectedRevisions: { 'character:giver': 0, 'character:receiver': 1 } }), /Vorgangs-ID/);
+  assert.deepEqual([...db.data], before);
+});
+
+test('historical money receipts and their comments remain unchanged when an old request is replayed', async () => {
+  const db = store(), request = input();
+  const identity = { giverId: request.giverId, receiverId: request.receiverId, entryId: request.entryId, transfer: request.sceneEvent.transfer };
+  const receipt = { fingerprint: createHash('sha256').update(JSON.stringify(identity)).digest('hex'), commentId: 'historic', legacy: true };
+  db.data.set('inventory_transfer_transactions/owner-transfer-one', receipt);
+  db.data.set('comments/historic', { text: 'Historical receipt', sceneInventoryTransfer: { old: true } });
+  const before = structuredClone([...db.data]);
+  const response = await commitInventoryTransferOperation(db, auth, request);
+  assert.equal(response.id, null); assert.equal(response.silent, true);
+  assert.deepEqual([...db.data], before);
+});
+
+test('money sink rejects a recipient, unknown targets and invalid character identities without writes', async () => {
+  for (const change of [
+    request => { request.sceneEvent.transfer.object.targetKind = 'sink'; },
+    request => { request.sceneEvent.transfer.object.targetKind = 'invented'; },
+    request => { request.giverId = 'nested/character'; },
+    request => { request.receiverId = 'giver'; }
+  ]) {
+    const db = store(), request = input(), before = structuredClone([...db.data]); change(request);
+    await assert.rejects(commitInventoryTransferOperation(db, auth, request));
+    assert.deepEqual([...db.data], before);
+  }
+});
+
+test('item handoffs keep their existing ownership restriction and create their existing scene receipt', async () => {
+  const db = store();
+  db.data.get('characters/giver').inventory.items.push({ id: 'keepsake', name: 'Andenken', quantity: '1' });
+  const request = input({ kind: 'item', itemId: 'keepsake', quantity: 1 }), before = structuredClone([...db.data]);
+  await assert.rejects(commitInventoryTransferOperation(db, { uid: 'other-player', token: {} }, request), /Besitzer/);
+  assert.deepEqual([...db.data], before);
+  const result = await commitInventoryTransferOperation(db, auth, request);
+  assert.ok(result.id); assert.equal(result.silent, undefined); assert.equal(rows(db, 'comments').length, 1);
 });
 
 test('free register grants use server mechanics and identity, without inventing a paid purchase', async () => {

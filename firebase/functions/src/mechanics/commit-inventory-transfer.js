@@ -7,6 +7,7 @@ import { canManageCharacter } from '../generated/item-register/item-register-mod
 import { resolveRegisterItemTemplate } from './item-register-template.js';
 import { productWithItemDefinition, prepareTemplateDefinition, prepareUniqueItemClaims, readItemDefinitionIndex } from '../items/item-definition-repository.js';
 import { transferredEquipmentProfile } from '../items/item-transfer-equipment.js';
+import { commitSceneMoneyTransferOperation } from './commit-scene-money-transfer.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -25,6 +26,7 @@ export async function commitInventoryTransferOperation(database, auth, data) {
   const submittedEvent = input.sceneEvent && typeof input.sceneEvent === 'object' ? input.sceneEvent : {};
   const submittedTransfer = submittedEvent.transfer && typeof submittedEvent.transfer === 'object' ? submittedEvent.transfer : {};
   const submittedObject = submittedTransfer.object && typeof submittedTransfer.object === 'object' ? submittedTransfer.object : {};
+  if (submittedObject.kind === 'money') return commitSceneMoneyTransferOperation(database, auth, input, submittedTransfer);
   if (!giverId || !receiverId || giverId === receiverId || !entryId) {
     fail('invalid-argument', 'Geber, Empfänger und Szene müssen eindeutig sein.');
   }

@@ -31,6 +31,16 @@ function getSceneInventoryItemQuantity(item = {}) {
 // resolves registerTemplate independently; this local record is only a preview.
 async function prepareSceneInventoryTransfer(input = {}) {
   const giver = getSceneInventoryCharacter(input.giverId);
+  if (input.kind === 'money') {
+    if (!giver) throw new Error('Bitte eine gespeicherte Figur als Geber wählen.');
+    const receiver = input.targetKind === 'sink' ? null : getSceneInventoryCharacter(input.receiverId);
+    if (input.targetKind !== 'sink' && !receiver) throw new Error('Bitte einen gespeicherten Empfänger wählen.');
+    const { applySceneMoneyTransfer } = await import('./scene-inventory-money.js');
+    const result = applySceneMoneyTransfer(giver, receiver, {
+      kind: 'money', targetKind: input.targetKind || 'character', currency: input.currency, quantity: input.quantity
+    });
+    return { giver, receiver, ...result, transfer: result.object };
+  }
   const receiver = getSceneInventoryCharacter(input.receiverId);
   if (!giver || !receiver) throw new Error('Geber und Empfänger müssen gespeicherte Charaktere sein.');
   if (giver.id === receiver.id) throw new Error('Geber und Empfänger müssen verschieden sein.');

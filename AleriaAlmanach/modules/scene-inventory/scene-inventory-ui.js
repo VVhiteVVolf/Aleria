@@ -3,10 +3,6 @@ function buildSceneInventoryControl(threadId = '') {
   return `<button class="scene-inventory-toggle" type="button" data-scene-inventory-action="open" data-comment-thread-id="${escapeHtml(threadId)}" aria-label="Inventar-Interaktion öffnen" title="Inventar-Interaktion"><img src="../IconOrdner/CK3 icons alt/Icon_loot.png" alt="" aria-hidden="true"></button>`;
 }
 
-function buildSceneInventoryCharacterOptions() {
-  return getSceneInventoryCharacters().map(character => `<option value="${escapeHtml(character.id)}">${escapeHtml(character.name)}</option>`).join('');
-}
-
 function ensureSceneInventoryDialog() {
   let overlay = document.getElementById('scene-inventory-overlay');
   if (overlay) return overlay;
@@ -18,20 +14,23 @@ function ensureSceneInventoryDialog() {
   overlay.setAttribute('aria-hidden', 'true');
   overlay.setAttribute('aria-labelledby', 'scene-inventory-title');
   overlay.innerHTML = `<div class="scene-inventory-card">
-    <header><div><span>Szeneninteraktion</span><h2 id="scene-inventory-title">Gegenstand übergeben</h2></div><button type="button" data-scene-inventory-action="close" aria-label="Dialog schließen">×</button></header>
+    <header><div><span>Inventar</span><h2 id="scene-inventory-title">Geld bewegen</h2></div><button type="button" data-scene-inventory-action="close" aria-label="Dialog schließen">×</button></header>
     <div class="scene-inventory-body">
+      <div class="scene-inventory-toolbar"><label><span>Aktion</span><select id="scene-transfer-kind"><option value="money">Geld bewegen</option><option value="item">Gegenstand übergeben</option><option value="scene-trade">Handeln · Kaufen oder verkaufen</option><option value="register-item">Freie Registerzuteilung (Spielleitung)</option></select></label>
+        <div class="scene-money-target" data-scene-money-controls><input id="scene-transfer-money-mode" type="hidden" value="character"><span>Verwendung</span><div class="scene-inventory-segments" role="group" aria-label="Geld verwenden"><button type="button" data-scene-money-target="character" aria-pressed="true">An Figur</button><button type="button" data-scene-money-target="sink" aria-pressed="false">Ausgeben · Bank</button></div></div></div>
+      <p class="scene-money-privacy" data-scene-money-controls>Nur im Inventar · unsichtbar in der Szene</p>
+      <div class="scene-inventory-scope"><span>Figuren auswählen</span><div class="scene-inventory-segments" role="group" aria-label="Figurenauswahl filtern"><button type="button" data-scene-inventory-scope="scene" aria-pressed="true">In dieser Szene <small data-scene-scope-count>…</small></button><button type="button" data-scene-inventory-scope="all" aria-pressed="false">Alle Figuren <small data-scene-scope-count>…</small></button></div></div>
       <div class="scene-inventory-parties">
-        <section><div class="scene-inventory-portrait" data-scene-transfer-giver-portrait></div><label>Geber<select id="scene-transfer-giver"></select></label></section>
+        <section><input type="hidden" id="scene-transfer-giver"><div data-scene-inventory-picker="giver"><p>Figuren werden vorbereitet …</p></div></section>
         <div class="scene-inventory-object-preview" data-scene-transfer-object><span>◆</span><strong>Übergabe</strong><small>Wähle Geld oder Gegenstand</small></div>
-        <section><div class="scene-inventory-portrait" data-scene-transfer-receiver-portrait></div><label>Empfänger<select id="scene-transfer-receiver"></select></label></section>
+        <section data-scene-inventory-receiver><input type="hidden" id="scene-transfer-receiver"><div data-scene-inventory-picker="receiver"><p>Figuren werden vorbereitet …</p></div></section>
       </div>
       <div class="scene-inventory-fields">
-        <label><span>Quelle</span><select id="scene-transfer-kind"><option value="money">Geld übergeben</option><option value="item">Gegenstand übergeben</option><option value="scene-trade">Handeln · Kaufen oder verkaufen</option><option value="register-item">Freie Registerzuteilung (Spielleitung)</option></select></label>
-        <div class="scene-transfer-money-fields"><label><span>Währung</span><select id="scene-transfer-currency"><option value="gold">Gold</option><option value="silver">Silber</option><option value="copper">Kupfer</option></select></label><label><span>Menge</span><input id="scene-transfer-money-amount" type="number" min="1" step="1" value="1"></label></div>
+        <div class="scene-transfer-money-fields"><div class="scene-money-amount"><label><span>Betrag</span><input id="scene-transfer-money-amount" type="number" min="1" step="1" inputmode="numeric" value="1"></label><label><span>Währung</span><select id="scene-transfer-currency"><option value="gold">Gold</option><option value="silver">Silber</option><option value="copper" selected>Kupfer</option><option value="pfennig">Eisenpfennig</option></select></label></div><div class="scene-money-quick" role="group" aria-label="Schnellbetrag">${[1, 10, 90, 100].map(amount => `<button type="button" data-scene-money-amount="${amount}">${amount}</button>`).join('')}</div><div class="scene-money-preview" data-scene-money-preview aria-live="polite"></div></div>
         <div class="scene-transfer-item-fields" hidden><label><span>Gegenstand</span><select id="scene-transfer-item"></select></label><label><span>Menge</span><input id="scene-transfer-item-amount" type="number" min="1" step="1" value="1"></label></div>
         <div class="scene-transfer-register-fields" hidden><button type="button" data-scene-inventory-action="pick-register-item">Item aus Register wählen</button><div data-scene-transfer-register-summary>Noch kein Registeritem gewählt</div><label><span>Menge</span><input id="scene-transfer-register-amount" type="number" min="1" step="1" value="1"></label><label data-scene-purchase-price hidden><span>Vereinbarter Stückpreis (KT)</span><input id="scene-transfer-unit-copper" type="number" min="0" step="0.01" value="0"></label></div>
-        <label class="wide scene-transfer-icon-field"><span>Transaktionsicon <small>(optional)</small></span><span><input id="scene-transfer-icon" type="text" placeholder="Icon aus dem Aleria-Verzeichnis wählen"><button type="button" data-scene-inventory-action="pick-icon">Icon wählen</button><button type="button" data-scene-inventory-action="clear-icon" aria-label="Transaktionsicon entfernen">×</button></span></label>
-        <label class="wide"><span>Flavourtext</span><textarea id="scene-transfer-flavour" rows="3" maxlength="500" placeholder="Gwendolyn legt den schweren Beutel in Gawains Hand …"></textarea></label>
+        <label class="wide scene-transfer-icon-field" data-scene-item-narrative><span>Transaktionsicon <small>(optional)</small></span><span><input id="scene-transfer-icon" type="text" placeholder="Icon aus dem Aleria-Verzeichnis wählen"><button type="button" data-scene-inventory-action="pick-icon">Icon wählen</button><button type="button" data-scene-inventory-action="clear-icon" aria-label="Transaktionsicon entfernen">×</button></span></label>
+        <label class="wide" data-scene-item-narrative><span>Flavourtext</span><textarea id="scene-transfer-flavour" rows="3" maxlength="500" placeholder="Gwendolyn legt den schweren Beutel in Gawains Hand …"></textarea></label>
       </div>
     </div>
     <footer><div data-scene-inventory-status role="status"></div><div><button type="button" data-scene-inventory-action="close">Abbrechen</button><button class="primary" type="button" data-scene-inventory-action="submit">Übergabe vollziehen</button></div></footer>
@@ -45,12 +44,6 @@ function setSceneInventoryStatus(message = '', type = 'info') {
   if (!target) return;
   target.dataset.status = type;
   target.textContent = String(message || '');
-}
-
-function renderSceneInventoryPortrait(character, target) {
-  if (!target) return;
-  const src = sanitizeImageSrc(character?.portrait || '');
-  target.innerHTML = src ? `<img src="${src}" alt="${escapeHtml(character.name)}">` : `<span>${escapeHtml(getInitialChar(character?.name || '?'))}</span>`;
 }
 
 function refreshSceneInventoryItems({ preserveSelection = true } = {}) {
@@ -68,30 +61,45 @@ function refreshSceneInventoryItems({ preserveSelection = true } = {}) {
 }
 
 function refreshSceneInventoryDialog({ refreshItems = false } = {}) {
+  const overlay = document.getElementById('scene-inventory-overlay');
+  if (!overlay) return;
   const giver = getSceneInventoryCharacter(document.getElementById('scene-transfer-giver')?.value);
   const receiver = getSceneInventoryCharacter(document.getElementById('scene-transfer-receiver')?.value);
   const kind = document.getElementById('scene-transfer-kind')?.value || 'money';
-  renderSceneInventoryPortrait(giver, document.querySelector('[data-scene-transfer-giver-portrait]'));
-  renderSceneInventoryPortrait(receiver, document.querySelector('[data-scene-transfer-receiver-portrait]'));
+  const previousKind = overlay.dataset.sceneInventoryKind;
+  const money = kind === 'money', sink = money && overlay.querySelector('#scene-transfer-money-mode')?.value === 'sink';
+  overlay.dataset.sceneInventoryKind = kind;
+  overlay.dataset.sceneInventoryTarget = sink ? 'sink' : 'character';
+  overlay.querySelector('#scene-inventory-title').textContent = money ? 'Geld bewegen' : 'Gegenstand übergeben';
+  for (const target of overlay.querySelectorAll('[data-scene-money-controls]')) target.hidden = !money;
+  for (const target of overlay.querySelectorAll('[data-scene-item-narrative]')) target.hidden = money;
+  overlay.querySelector('[data-scene-inventory-receiver]').hidden = sink;
   document.querySelector('.scene-transfer-money-fields').hidden = kind !== 'money';
   document.querySelector('.scene-transfer-item-fields').hidden = kind !== 'item';
   document.querySelector('.scene-transfer-register-fields').hidden = !['register-item', 'register-purchase'].includes(kind);
   document.querySelector('[data-scene-purchase-price]').hidden = kind !== 'register-purchase';
   document.getElementById('scene-transfer-giver').closest('section').hidden = kind === 'register-purchase';
-  if (refreshItems) refreshSceneInventoryItems();
+  if (kind === 'item' && (refreshItems || previousKind !== 'item')) refreshSceneInventoryItems();
   const object = document.querySelector('[data-scene-transfer-object]');
   if (!object) return;
-  if (kind === 'money') {
-    const amount = document.getElementById('scene-transfer-money-amount')?.value || '1';
-    const currency = document.getElementById('scene-transfer-currency')?.selectedOptions?.[0]?.textContent || 'Gold';
-    object.innerHTML = `<img src="../IconOrdner/CK3 icons alt/Icon_gold.png" alt=""><strong>${escapeHtml(amount)} ${escapeHtml(currency)}</strong><small>Geldübergabe</small>`;
-  } else if (kind === 'item') {
+  object.hidden = money;
+  if (kind === 'item') {
     const item = getSceneInventoryData(giver || {}).items.find((entry, index) => String(entry.id || index) === String(document.getElementById('scene-transfer-item')?.value));
     renderSceneInventoryObjectPreview(object, item, 'Charakterinventar');
-  } else {
+  } else if (!money) {
     renderSceneInventoryObjectPreview(object, getSceneInventoryRegisterItem(), 'Item-Register');
   }
-  applySceneInventoryCustomIconPreview(object);
+  if (!money) applySceneInventoryCustomIconPreview(object);
+  const submit = overlay.querySelector('[data-scene-inventory-action="submit"]');
+  if (submit) submit.textContent = money ? (sink ? 'Betrag ausbuchen' : 'Geld übertragen') : 'Übergabe vollziehen';
+  const token = overlay.dataset.sceneInventoryOpenToken;
+  void Promise.all([import('./scene-inventory-people.js'), import('./scene-inventory-money-ui.js')]).then(([people, moneyUi]) => {
+    if (!token || overlay.dataset.sceneInventoryOpenToken !== token || !overlay.classList.contains('active')) return;
+    people.refreshSceneInventoryPeople(overlay);
+    moneyUi.refreshSceneInventoryMoneyPreview(overlay, { giver, receiver });
+  }).catch(error => {
+    if (token && overlay.dataset.sceneInventoryOpenToken === token && overlay.classList.contains('active')) setSceneInventoryStatus(error?.message || 'Die Inventarvorschau konnte nicht vorbereitet werden.', 'error');
+  });
 }
 
 function renderSceneInventoryObjectPreview(target, item = null, sourceLabel = '') {
@@ -115,20 +123,22 @@ function refreshSceneInventoryRegisterSummary() {
   target.textContent = item ? `${item.title} · ${item.categoryLabel || item.type || 'Item'}` : 'Noch kein Registeritem gewählt';
 }
 
-function openSceneInventoryDialog(threadId = '') {
+async function openSceneInventoryDialog(threadId = '') {
   const characters = getSceneInventoryCharacters();
   if (characters.length < 1) {
-    if (typeof showAppStatus === 'function') showAppStatus('Für eine Übergabe werden mindestens zwei gespeicherte Charaktere benötigt.', 'error');
+    if (typeof showAppStatus === 'function') showAppStatus('Für eine Inventarbuchung wird eine gespeicherte Figur benötigt.', 'error');
     return;
   }
   const overlay = ensureSceneInventoryDialog();
   overlay.dataset.sceneInventoryThreadId = String(threadId || getCurrentCommentThreadId() || '');
-  const options = buildSceneInventoryCharacterOptions();
-  overlay.querySelector('#scene-transfer-giver').innerHTML = options;
-  overlay.querySelector('#scene-transfer-receiver').innerHTML = options;
+  const token = crypto.randomUUID(); overlay.dataset.sceneInventoryOpenToken = token;
+  overlay.dataset.sceneMoneyPending = 'false'; overlay.dataset.sceneMoneySubmitting = 'false';
+  setSceneInventoryDialogLocked(true);
   overlay.querySelector('#scene-transfer-giver').value = characters[0].id;
   overlay.querySelector('#scene-transfer-receiver').value = (characters[1] || characters[0]).id;
   overlay.querySelector('#scene-transfer-kind').value = 'money';
+  overlay.querySelector('#scene-transfer-money-mode').value = 'character';
+  overlay.querySelector('#scene-transfer-currency').value = 'copper';
   overlay.querySelector('#scene-transfer-money-amount').value = '1';
   overlay.querySelector('#scene-transfer-item-amount').value = '1';
   overlay.querySelector('#scene-transfer-register-amount').value = '1';
@@ -137,8 +147,41 @@ function openSceneInventoryDialog(threadId = '') {
   setSceneInventoryRegisterItem(null);
   refreshSceneInventoryRegisterSummary();
   setSceneInventoryStatus('');
+  activateDialog('scene-inventory-overlay', { initialFocus: '#scene-transfer-kind' });
   refreshSceneInventoryDialog({ refreshItems: true });
-  activateDialog('scene-inventory-overlay', { initialFocus: '#scene-transfer-giver' });
+  try {
+    const [people, moneyUi] = await Promise.all([import('./scene-inventory-people.js'), import('./scene-inventory-money-ui.js')]);
+    if (overlay.dataset.sceneInventoryOpenToken !== token || !overlay.classList.contains('active')) return null;
+    const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
+    const comments = typeof _commentCache !== 'undefined' && Array.isArray(_commentCache[overlay.dataset.sceneInventoryThreadId]) ? _commentCache[overlay.dataset.sceneInventoryThreadId] : [];
+    people.mountSceneInventoryPeople(overlay, { characters, entry: thread?.threadId === overlay.dataset.sceneInventoryThreadId ? thread.entry : null, comments });
+    moneyUi.mountSceneInventoryMoneyControls(overlay);
+    setSceneInventoryDialogLocked(false);
+    refreshSceneInventoryDialog({ refreshItems: true });
+  } catch (error) { if (overlay.dataset.sceneInventoryOpenToken === token) setSceneInventoryStatus(error?.message || 'Die Inventarauswahl konnte nicht geöffnet werden.', 'error'); }
+  return overlay.dataset.sceneInventoryOpenToken === token ? overlay : null;
 }
 
-function closeSceneInventoryDialog() { deactivateDialog('scene-inventory-overlay'); }
+function setSceneInventoryDialogLocked(locked) {
+  const overlay = document.getElementById('scene-inventory-overlay');
+  if (!overlay) return;
+  overlay.dataset.sceneInventoryLocked = String(!!locked);
+  for (const input of overlay.querySelectorAll('input, select, textarea, button')) {
+    if (input.dataset.sceneInventoryAction === 'close') continue;
+    if (input.dataset.sceneInventoryAction === 'submit' && overlay.dataset.sceneMoneyPending === 'true') {
+      input.disabled = overlay.dataset.sceneMoneySubmitting === 'true';
+      input.textContent = input.disabled ? 'Wird gespeichert …' : 'Offene Buchung prüfen';
+    } else input.disabled = !!locked;
+  }
+  for (const picker of overlay.querySelectorAll('[data-trade-actor-picker][open]')) if (locked) picker.open = false;
+}
+
+function closeSceneInventoryDialog() {
+  const overlay = document.getElementById('scene-inventory-overlay');
+  if (overlay) overlay.dataset.sceneInventoryOpenToken = '';
+  deactivateDialog('scene-inventory-overlay');
+  void Promise.all([import('./scene-inventory-people.js'), import('./scene-inventory-money-ui.js')]).then(([people, moneyUi]) => {
+    if (overlay?.dataset.sceneInventoryOpenToken) return;
+    people.disposeSceneInventoryPeople(overlay); moneyUi.disposeSceneInventoryMoneyControls(overlay);
+  }).catch(() => {});
+}

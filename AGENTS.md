@@ -1,3 +1,12 @@
+# Stille Geldübergaben und Ausgaben: Releasefreigabe vom 5. November 2026
+
+Nutzerauftrag: Übergabeoberfläche verbessern und schnell online veröffentlichen.
+Geldtransfer und Ausgabe an Bank/Leere erfolgen für angemeldete Nutzer frei,
+ohne Szenenkommentar, Benachrichtigung oder Szenenaktivität. Automatisches
+Wechselgeld, Guthaben, Bestandsrevisionen und Doppelbuchungsschutz sind geprüft.
+Gegenstandsübergaben und historische Belege behalten ihren bisherigen Ablauf.
+Ausschließlich diesen Auftrag veröffentlichen; unabhängige Quellen erhalten.
+
 # Freier Szenenhandel: Releasefreigabe vom 5. November 2026
 
 Nutzerfreigabe: „Deploy, aber schnell!“ Rollen-, Besitzer- und Verwalter-
