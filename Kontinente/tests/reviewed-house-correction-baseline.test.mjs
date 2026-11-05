@@ -4,6 +4,7 @@ import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.regis
 import lore from '../../Stammbäume/assets/data/source-inventories/house-lore-corrections-20261104.json' with { type: 'json' };
 import lifeStatus from '../../Stammbäume/assets/data/source-inventories/house-life-status-corrections-20261104.json' with { type: 'json' };
 import annotations from './support/house-lore-source-annotations-review-20261104.json' with { type: 'json' };
+import argall from './support/gwynthor-argall-family-review-20261105.json' with { type: 'json' };
 import { projectReviewedHouseCorrections } from './support/reviewed-house-correction-projection.mjs';
 import { protectedAlbicFamilies, reviewHash } from './support/albic-review-baseline.mjs';
 
@@ -65,5 +66,27 @@ test('amendment projection keeps unrelated identities, ranks and relationship ch
     try { projected = protectedAlbicFamilies([record]); }
     catch (error) { assert(error instanceof assert.AssertionError); continue; }
     assert.notEqual(reviewHash(projected), expected);
+  }
+});
+
+test('the four approved Argall additions restore the exact historical record without rebasing its hash', () => {
+  const record = current('haus-argall'), copy = structuredClone(record);
+  assert.deepEqual(protectedAlbicFamilies([record])[0], argall.families['haus-argall'].before);
+  assert.deepEqual(record, copy, 'Historical projection never edits the active family');
+  for (const [collection, additions] of [['persons', 4], ['partnerships', 2], ['parentages', 2]]) {
+    assert.equal(record.family[collection].length, argall.families['haus-argall'].before.family[collection].length + additions);
+  }
+});
+
+test('Argall approval rejects changed old relatives, new identities, parentage, partnerships and source text', () => {
+  for (const mutate of [
+    record => { record.family.persons[0].birth = 'unapproved'; },
+    record => { record.family.persons.find(person => person.id === 'perwyn-argall').worldPersonId = 'unapproved'; },
+    record => { record.family.parentages.find(row => row.id === 'parentage-perwyn-argall').childId = 'unapproved'; },
+    record => { record.family.partnerships.find(row => row.id === 'union-gwenella-maelor-ffionydd').type = 'marriage'; },
+    record => { record.family.extensions.sourceNote += ' Unapproved claim'; }
+  ]) {
+    const record = current('haus-argall'); mutate(record);
+    assert.throws(() => protectedAlbicFamilies([record]), /approved-gwynthor-family/);
   }
 });

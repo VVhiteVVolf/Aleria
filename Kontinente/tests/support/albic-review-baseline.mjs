@@ -9,6 +9,7 @@ import gawainPublic from './gawain-public-person-review-20261101.json' with { ty
 import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'json' };
 import gwynthorCourt from './gwynthor-court-family-review-20261030.json' with { type: 'json' };
 import gwynthorTroetzli from './gwynthor-troetzli-family-review-20261031.json' with { type: 'json' };
+import gwynthorArgall from './gwynthor-argall-family-review-20261105.json' with { type: 'json' };
 import kingdomMetadata from './kingdom-metadata-review-20261101.json' with { type: 'json' };
 import traitCards from './character-trait-card-review-20261102.json' with { type: 'json' };
 import gwyllachAges from './gwyllach-age-review-20261102.json' with { type: 'json' };
@@ -167,7 +168,7 @@ export function protectedAlbicFamilies(records) {
     // Approved Gwynthor stories add relatives to existing families. Check each
     // complete current record before restoring its exact published predecessor
     // for the older territorial review; never rebase the historical hash.
-    const familyReview = gwynthorCourt.families[record.id] || gwynthorTroetzli.families[record.id];
+    const familyReview = gwynthorCourt.families[record.id] || gwynthorTroetzli.families[record.id] || gwynthorArgall.families[record.id];
     if (familyReview) {
       assert.equal(reviewHash(copy), familyReview.afterSha256, `${record.id}/approved-gwynthor-family`);
       return structuredClone(familyReview.before);

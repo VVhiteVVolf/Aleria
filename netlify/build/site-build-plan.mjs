@@ -27,20 +27,50 @@ export function readSourceTree(root) {
   });
 }
 
-export function taskFingerprint(task, tree, runtime) {
-  const selected = tree.filter(({ file }) => isTaskInput(task, file))
-    .sort((a, b) => a.file.localeCompare(b.file, 'en'));
+function sourceTreeLookup(tree) {
+  const files = new Map();
+  const directories = new Map();
+  const ordered = tree.slice().sort((a, b) => a.file.localeCompare(b.file, 'en'));
+  const add = (index, name, entry) => {
+    if (!index.has(name)) index.set(name, []);
+    index.get(name).push(entry);
+  };
+  for (const [order, entry] of ordered.entries()) {
+    const indexed = { ...entry, order };
+    add(files, entry.file, indexed);
+    for (let end = entry.file.indexOf('/'); end >= 0; end = entry.file.indexOf('/', end + 1)) {
+      add(directories, entry.file.slice(0, end + 1), indexed);
+    }
+  }
+  return input => (input.endsWith('/') ? directories : files).get(input) || [];
+}
+
+function fingerprintTask(task, lookup, runtime) {
+  const selected = new Set();
+  for (const input of [...SHARED_BUILD_INPUTS, ...task.inputs]) {
+    for (const entry of lookup(input)) selected.add(entry);
+  }
+  // Overlapping inputs select each tree entry once. Preserve the original stable
+  // English collation without sorting the same path strings for every task.
+  const excludes = task.excludes || [];
+  const ordered = [...selected].filter(({ file }) => !excludes.some(input => matches(file, input)))
+    .sort((a, b) => a.order - b.order);
   const hash = createHash('sha256').update(JSON.stringify({
     version: BUILD_RECEIPT_VERSION, id: task.id, commands: task.commands, runtime
   }));
-  for (const { file, object } of selected) hash.update('\0' + file + '\0' + object);
+  for (const { file, object } of ordered) hash.update('\0' + file + '\0' + object);
   return hash.digest('hex');
+}
+
+export function taskFingerprint(task, tree, runtime) {
+  return fingerprintTask(task, sourceTreeLookup(tree), runtime);
 }
 
 export function selectBuildTasks(tasks, tree, { baseline, siteId, runtime, force = false, now = Date.now() }) {
   const usable = isPublishedReceipt(baseline, siteId);
+  const lookup = sourceTreeLookup(tree);
   return tasks.map(task => {
-    const fingerprint = taskFingerprint(task, tree, runtime);
+    const fingerprint = fingerprintTask(task, lookup, runtime);
     const previous = usable ? baseline.tasks?.[task.id] : null;
     const age = now - Date.parse(previous?.verifiedAt || '');
     const reusable = previous?.fingerprint === fingerprint && age >= 0 && age < MAX_VALIDATION_AGE_MS;

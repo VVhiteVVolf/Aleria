@@ -6,18 +6,36 @@ import { readSourceTree, selectBuildTasks } from './site-build-plan.mjs';
 import { readPublishedReceipt, readLocalReceipt, writeBuildReceipt } from './site-build-receipt.mjs';
 import { preparePublication } from './site-publish.mjs';
 import { reportBuildCache } from './site-build-metrics.mjs';
+import { openBuildCheckpoints } from './build-checkpoints.mjs';
 
 const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url));
 
 export async function executeBuildPlan(plan, { root = repositoryRoot, log = console.log,
-  run = args => runNode(args, root) } = {}) {
-  for (const task of plan) {
-    log(`[site-build] ${task.run ? 'RUN' : 'REUSE'} ${task.id}: ${task.reason}`);
-    if (!task.run) continue;
-    const start = performance.now();
-    for (const args of task.commands) await run(args);
-    task.verifiedAt = new Date().toISOString();
-    log(`[site-build] DONE ${task.id} in ${((performance.now() - start) / 1000).toFixed(2)}s`);
+  run = args => runNode(args, root), localCheckpoints } = {}) {
+  const checkpoints = await openBuildCheckpoints(root, localCheckpoints);
+  const full = localCheckpoints?.force || plan.some(task => task.reason === 'full validation requested');
+  try {
+    for (const task of plan) {
+      const checkpointTime = !full && task.run && await checkpoints?.reuse(task);
+      if (checkpointTime) {
+        task.run = false;
+        task.reason = 'unchanged locally verified inputs';
+        task.verifiedAt = checkpointTime;
+      }
+      log(`[site-build] ${task.run ? 'RUN' : 'REUSE'} ${task.id}: ${task.reason}`);
+      if (!task.run) continue;
+      const start = performance.now();
+      for (const args of task.commands) await run(args);
+      task.verifiedAt = new Date().toISOString();
+      await checkpoints?.save(task);
+      log(`[site-build] DONE ${task.id} in ${((performance.now() - start) / 1000).toFixed(2)}s`);
+    }
+  } catch (error) {
+    if (checkpoints) {
+      try { await checkpoints.validate(); }
+      catch (validationError) { throw new AggregateError([error, validationError], 'Build failed and the workspace changed; no new checkpoint was saved.'); }
+    }
+    throw error;
   }
 }
 

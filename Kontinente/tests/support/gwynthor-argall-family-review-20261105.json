@@ -1,0 +1,905 @@
+{
+  "reviewedAt": "2026-11-05",
+  "beforeCommit": "887693c81224ec8fd7e17cab50c8dcbb5a0f6d05",
+  "previousProtectedSha256": "9b8b850e3068dcfb54ea6f2e90e9aa96bc9c3ae3dadc79139256d6f590bfd98a",
+  "reason": "Explicit release authorization for the previously completed spoiler-free Argall household. Four people, two partnerships, two parentage entries and their bounded source note are new. All existing raw people and relationships match the public predecessor. The complete current projected Argall record is hash-bound before restoring its exact public predecessor for historical territorial proofs. Eight new independent locality families are outside the original captured id set.",
+  "approved": [
+    {
+      "collection": "persons",
+      "addedIds": [
+        "rhydric-argall",
+        "perwyn-argall",
+        "gwenella-spouse-rhydric-argall",
+        "maelor-ffionydd"
+      ]
+    },
+    {
+      "collection": "partnerships",
+      "addedIds": [
+        "marriage-rhydric-gwenella-argall",
+        "union-gwenella-maelor-ffionydd"
+      ]
+    },
+    {
+      "collection": "parentages",
+      "addedIds": [
+        "parentage-rhydric-argall",
+        "parentage-perwyn-argall"
+      ]
+    },
+    {
+      "path": "family/extensions/sourceNote",
+      "beforeSha256": "99209cad143a36bb65d0ee1727ca9f6138c367ac82358b7b985ba2d7b611c164",
+      "afterSha256": "ef5587cced5d1ffe6b559c12af740334e9498f799e3da09edef7f8b3d9e40035"
+    }
+  ],
+  "families": {
+    "haus-argall": {
+      "before": {
+        "id": "haus-argall",
+        "title": "Haus Argall",
+        "status": "active",
+        "type": "commoner",
+        "listing": "listed",
+        "additionalPlacements": [],
+        "houseProfile": {
+          "rankId": "commoner",
+          "secondarySeats": [],
+          "liegeHouseId": "haus-wyrm",
+          "liegeHouseName": "Haus Wyrm"
+        },
+        "link": "Stammbaum.html?family=haus-argall&mode=view",
+        "family": {
+          "schema": "aleria.family-tree",
+          "schemaVersion": 1,
+          "document": {
+            "id": "haus-argall",
+            "title": "Haus Argall",
+            "motto": "",
+            "description": "Ein kleines bürgerliches Haus aus Llysfaen mit zwei Brüderlinien, einer schmalen Vetterlinie und Shylene Argalls Verbindung zu Owain Draig.",
+            "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png",
+            "houseProfile": {
+              "rankId": "commoner",
+              "secondarySeats": [],
+              "liegeHouseId": "haus-wyrm",
+              "liegeHouseName": "Haus Wyrm"
+            }
+          },
+          "houses": [
+            {
+              "id": "house-argall",
+              "name": "Haus Argall",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png",
+              "status": "active"
+            },
+            {
+              "id": "house-draig",
+              "name": "Haus Draig",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "status": "active"
+            }
+          ],
+          "persons": [
+            {
+              "id": "haus-argall-gruender",
+              "name": "???",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "dead",
+              "birth": "",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt."
+            },
+            {
+              "id": "haus-argall-gruenderin",
+              "name": "???",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "dead",
+              "birth": "",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "married",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt."
+            },
+            {
+              "id": "cyran-argall",
+              "worldPersonId": "person--haus-argall--cyran-argall",
+              "name": "Cyran Argall",
+              "title": "Ältestes überliefertes Oberhaupt des Hauses Argall",
+              "sex": "male",
+              "status": "dead",
+              "birth": "1629",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gweneth-spouse-argall",
+              "worldPersonId": "person--family-tree--gweneth-spouse-argall",
+              "name": "Gweneth",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1633",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "brenar-argall",
+              "worldPersonId": "person--haus-argall--brenar-argall",
+              "name": "Brenar Argall",
+              "title": "Vater Brinthans und Uthyrs",
+              "sex": "male",
+              "status": "dead",
+              "birth": "1659",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "nerwen-spouse-argall",
+              "worldPersonId": "person--family-tree--nerwen-spouse-argall",
+              "name": "Nerwen",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1663",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "iwrian-argall",
+              "worldPersonId": "person--haus-argall--iwrian-argall",
+              "name": "Iwrian Argall",
+              "title": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1662",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "avelyn-spouse-argall",
+              "worldPersonId": "person--family-tree--avelyn-spouse-argall",
+              "name": "Avelyn",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1666",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "brinthan-argall",
+              "worldPersonId": "person--haus-argall--brinthan-argall",
+              "name": "Brinthan Argall",
+              "title": "Oberhaupt des Hauses Argall",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1687",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/brinthan-argall.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [
+                "53 Jahre"
+              ],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "eris-argall",
+              "worldPersonId": "person--family-tree--eris-argall",
+              "name": "Eris Argall",
+              "title": "Ehefrau Brinthan Argalls",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1691",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/eris-argall.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "49 Jahre"
+              ],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "uthyr-argall",
+              "worldPersonId": "person--haus-argall--uthyr-argall",
+              "name": "Uthyr Argall",
+              "title": "Jüngerer Bruder Brinthan Argalls",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1688",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/uthyr-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "52 Jahre"
+              ],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "rhewena-argall",
+              "worldPersonId": "person--family-tree--rhewena-argall",
+              "name": "Rhewena",
+              "title": "Ehefrau Uthyr Argalls",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1690",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/rhewena-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "50 Jahre"
+              ],
+              "notes": "Der Vorname Rhewena ist aus dem weiblichen Rheunwaith-Präfix Rhew und der Endung -ena gebildet.",
+              "extensions": {}
+            },
+            {
+              "id": "shylene-argall",
+              "worldPersonId": "person--haus-argall--shylene-argall",
+              "name": "Shylene Argall",
+              "title": "Tochter Brinthan und Eris Argalls · Affäre Owain Draigs",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1710",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/shylene-argall.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "30 Jahre"
+              ],
+              "notes": "Ihre geheime Affäre mit Owain Draig wird in beiden Familienakten unter derselben Verbindungs-ID geführt.",
+              "extensions": {}
+            },
+            {
+              "id": "owain-draig",
+              "worldPersonId": "person--haus-draig--owain-draig",
+              "name": "Owain Draig",
+              "title": "Geheime Affäre Shylene Argalls",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1694",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-draig/owain-draig.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-draig",
+              "familyRole": "affair",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "iolo-draig",
+              "worldPersonId": "person--haus-draig--iolo-draig",
+              "name": "Iolo Argall",
+              "title": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1735",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/iolo-argall.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "bastard",
+              "lineageRole": "branch",
+              "tags": [
+                "5 Jahre"
+              ],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "maelric-argall",
+              "worldPersonId": "person--haus-argall--maelric-argall",
+              "name": "Maelric Argall",
+              "title": "Ältester Sohn Uthyr und Rhewena Argalls",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1715",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/maelric-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "25 Jahre"
+              ],
+              "notes": "Unverheiratet und ohne Verlobung.",
+              "extensions": {}
+            },
+            {
+              "id": "sairwen-argall",
+              "worldPersonId": "person--haus-argall--sairwen-argall",
+              "name": "Sairwen Argall",
+              "title": "Älteste Tochter Uthyr und Rhewena Argalls",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1719",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/sairwen-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "21 Jahre"
+              ],
+              "notes": "Unverheiratet und ohne Verlobung.",
+              "extensions": {}
+            },
+            {
+              "id": "ellian-argall",
+              "worldPersonId": "person--haus-argall--ellian-argall",
+              "name": "Ellian Argall",
+              "title": "Jüngerer Sohn Uthyr und Rhewena Argalls",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1724",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/ellian-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "16 Jahre"
+              ],
+              "notes": "Unverheiratet und ohne Verlobung.",
+              "extensions": {}
+            },
+            {
+              "id": "avelys-argall",
+              "worldPersonId": "person--haus-argall--avelys-argall",
+              "name": "Avelys Argall",
+              "title": "Jüngste Tochter Uthyr und Rhewena Argalls",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1728",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/avelys-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "12 Jahre"
+              ],
+              "notes": "Unverheiratet und ohne Verlobung.",
+              "extensions": {}
+            },
+            {
+              "id": "dyrwyn-argall",
+              "worldPersonId": "person--haus-argall--dyrwyn-argall",
+              "name": "Dyrwyn Argall",
+              "title": "Vetter Brinthan und Uthyr Argalls",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1689",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/dyrwyn-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "ellena-spouse-argall",
+              "worldPersonId": "person--family-tree--ellena-spouse-argall",
+              "name": "Ellena",
+              "title": "Ehefrau Dyrwyn Argalls",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1693",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "thalwyn-argall",
+              "worldPersonId": "person--haus-argall--thalwyn-argall",
+              "name": "Thalwyn Argall",
+              "title": "Sohn der Argall-Vetterlinie",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1717",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-argall/thalwyn-argall.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-argall",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "23 Jahre"
+              ],
+              "notes": "Unverheiratet und ohne Verlobung.",
+              "extensions": {}
+            }
+          ],
+          "partnerships": [
+            {
+              "id": "marriage-haus-argall-founders",
+              "participantIds": [
+                "haus-argall-gruender",
+                "haus-argall-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Gründerehe des Hauses."
+            },
+            {
+              "id": "marriage-cyran-gweneth-argall",
+              "participantIds": [
+                "cyran-argall",
+                "gweneth-spouse-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-brenar-nerwen-argall",
+              "participantIds": [
+                "brenar-argall",
+                "nerwen-spouse-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-iwrian-avelyn-argall",
+              "participantIds": [
+                "iwrian-argall",
+                "avelyn-spouse-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-brinthan-eris-argall",
+              "participantIds": [
+                "brinthan-argall",
+                "eris-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-uthyr-rhewena-argall",
+              "participantIds": [
+                "uthyr-argall",
+                "rhewena-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-dyrwyn-ellena-argall",
+              "participantIds": [
+                "dyrwyn-argall",
+                "ellena-spouse-argall"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "affair-owain-shylene",
+              "participantIds": [
+                "owain-draig",
+                "shylene-argall"
+              ],
+              "type": "affair",
+              "status": "secret",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Geheime Affäre zwischen Owain Draig und Shylene Argall.",
+              "extensions": {}
+            }
+          ],
+          "parentages": [
+            {
+              "id": "parentage-cyran-argall",
+              "childId": "cyran-argall",
+              "parentIds": [
+                "haus-argall-gruender",
+                "haus-argall-gruenderin"
+              ],
+              "partnershipId": "marriage-haus-argall-founders",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "visibility": "public",
+              "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Cyran Argall.",
+              "extensions": {
+                "timeJumpId": "gap-argall-to-1629"
+              }
+            },
+            {
+              "id": "parentage-brenar-argall",
+              "childId": "brenar-argall",
+              "parentIds": [
+                "cyran-argall",
+                "gweneth-spouse-argall"
+              ],
+              "partnershipId": "marriage-cyran-gweneth-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-iwrian-argall",
+              "childId": "iwrian-argall",
+              "parentIds": [
+                "cyran-argall",
+                "gweneth-spouse-argall"
+              ],
+              "partnershipId": "marriage-cyran-gweneth-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-brinthan-argall",
+              "childId": "brinthan-argall",
+              "parentIds": [
+                "brenar-argall",
+                "nerwen-spouse-argall"
+              ],
+              "partnershipId": "marriage-brenar-nerwen-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-uthyr-argall",
+              "childId": "uthyr-argall",
+              "parentIds": [
+                "brenar-argall",
+                "nerwen-spouse-argall"
+              ],
+              "partnershipId": "marriage-brenar-nerwen-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-dyrwyn-argall",
+              "childId": "dyrwyn-argall",
+              "parentIds": [
+                "iwrian-argall",
+                "avelyn-spouse-argall"
+              ],
+              "partnershipId": "marriage-iwrian-avelyn-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-shylene-argall",
+              "childId": "shylene-argall",
+              "parentIds": [
+                "brinthan-argall",
+                "eris-argall"
+              ],
+              "partnershipId": "marriage-brinthan-eris-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-iolo-draig",
+              "childId": "iolo-draig",
+              "parentIds": [
+                "owain-draig",
+                "shylene-argall"
+              ],
+              "partnershipId": "affair-owain-shylene",
+              "type": "biological",
+              "legitimacy": "illegitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Iolo Argall ist der uneheliche Sohn aus Shylenes geheimer Affäre mit Owain Draig.",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-maelric-argall",
+              "childId": "maelric-argall",
+              "parentIds": [
+                "uthyr-argall",
+                "rhewena-argall"
+              ],
+              "partnershipId": "marriage-uthyr-rhewena-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-sairwen-argall",
+              "childId": "sairwen-argall",
+              "parentIds": [
+                "uthyr-argall",
+                "rhewena-argall"
+              ],
+              "partnershipId": "marriage-uthyr-rhewena-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-ellian-argall",
+              "childId": "ellian-argall",
+              "parentIds": [
+                "uthyr-argall",
+                "rhewena-argall"
+              ],
+              "partnershipId": "marriage-uthyr-rhewena-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-avelys-argall",
+              "childId": "avelys-argall",
+              "parentIds": [
+                "uthyr-argall",
+                "rhewena-argall"
+              ],
+              "partnershipId": "marriage-uthyr-rhewena-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-thalwyn-argall",
+              "childId": "thalwyn-argall",
+              "parentIds": [
+                "dyrwyn-argall",
+                "ellena-spouse-argall"
+              ],
+              "partnershipId": "marriage-dyrwyn-ellena-argall",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            }
+          ],
+          "lineage": {
+            "founderPartnershipId": "marriage-haus-argall-founders",
+            "houseId": "house-argall",
+            "crestSubtitle": "Bürgerliches Haus aus Llysfaen",
+            "crestEmblemScale": 0.86,
+            "crestFrame": "iron",
+            "crestFrameScale": 1,
+            "timeGap": {
+              "enabled": false,
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": ""
+            }
+          },
+          "cadetBranches": [],
+          "timeJumps": [
+            {
+              "id": "gap-argall-to-1629",
+              "parentPartnershipId": "marriage-haus-argall-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "cyran-argall"
+              ],
+              "years": 0,
+              "fromYear": "????",
+              "toYear": "1629",
+              "label": "Die belegte Argall-Linie setzt mit Cyran, dem Großvater Brinthans und Uthyrs, um 1629 wieder ein",
+              "notes": "Der Zeitsprung ist der einzige absolute Generationentrenner und führt direkt zur höchsten konkret ausgearbeiteten Generation.",
+              "extensions": {
+                "preparedPlaceholder": true,
+                "registryManagedFields": [
+                  "parentPartnershipId",
+                  "parentPersonId",
+                  "childIds",
+                  "fromYear",
+                  "toYear",
+                  "label",
+                  "notes"
+                ]
+              }
+            }
+          ],
+          "presentation": {
+            "relationshipColors": {
+              "marriage": "#326c4a",
+              "engagement": "#b88b37",
+              "union": "#8e2724",
+              "affair": "#704485",
+              "concubinage": "#704485",
+              "political": "#9d7d48",
+              "forced": "#c7a974",
+              "biological": "#8e2724",
+              "adoptive": "#2f75a8",
+              "foster": "#2f75a8",
+              "step": "#7eb4d7",
+              "magical": "#704485",
+              "claimed": "#62615e"
+            }
+          },
+          "view": {
+            "focusPersonId": "haus-argall-gruender",
+            "orientation": "vertical",
+            "ancestorDepth": 20,
+            "descendantDepth": 20,
+            "limitGenerations": false,
+            "showSiblings": true
+          },
+          "extensions": {
+            "blankFamily": false,
+            "preparedTimeJump": true,
+            "pendingDescendantReview": false,
+            "registryManagedViewFields": [
+              "focusPersonId",
+              "limitGenerations"
+            ],
+            "sourceNote": "Haus Argall ist als kleines Bürgerhaus von Llysfaen angelegt. Auf unbekanntes Gründerpaar, eisernen Hausknoten und genau einen seriellen Zeitsprung folgt Cyran Argall als Großvater Brinthans und Uthyrs. Brinthan ist gegenwärtiges Oberhaupt; seine Tochter Shylene und ihr Sohn Iolo behalten die bereits in Haus Draig geführten Jahrgänge 1710 und 1735. Owain, Shylene, Iolo und ihre Affäre verwenden in beiden Akten dieselben Weltpersonen- und Verbindungs-IDs. Uthyrs Ehefrau Rhewena sowie alle weiteren erfundenen Vornamen folgen dem Rheunwaith-Namensschema des Aleria Almanachs. Maelric, Sairwen, Ellian, Avelys, Thalwyn und Iolo sind unter 28 und bleiben unverheiratet. Brenar, Nerwen und Avelyn aus der Elterngeneration sind verstorben; Iwrian lebt als einzige Ausnahme noch. Iwrians einziger Sohn Dyrwyn bildet mit einem einzigen unverheirateten Nachkommen die bewusst schmale Vetterlinie. Die zwölf vorgegebenen Porträts und das Hauswappen wurden lokal gesichert."
+          }
+        }
+      },
+      "afterSha256": "bcf8e7a13d6871e4ab03b202d42d7f2b3a8df00e7a8620d5a8133ba69472d374"
+    }
+  }
+}

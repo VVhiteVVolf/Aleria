@@ -390,6 +390,8 @@ const referenceChecks = vm.runInContext(`
       infernalContext: (infernalPages[0]?.description || '') + ' ' + (infernalPages[0]?.stats || []).flat().join(' '),
       infernalVisibleLayers: getVisibleLanguageAlphabetLayers(infernalPages[1]?.language || {}).length,
       infernalLanguageSectionCount: infernalPages[1]?.language?.sections?.length || 0,
+      infernalLanguageSections: infernalPages[1]?.language?.sections || [],
+      infernalOriginalLanguageSections: infernalSource?.pages?.[1]?.language?.sections || [],
       infernalNativeName: infernalPages[1]?.language?.nativeName || '',
       infernalNameCounts: (infernalPages[2]?.nameList?.groups || []).map(group => group.names.length),
       infernalUniqueNameCounts: (infernalPages[2]?.nameList?.groups || []).map(group => new Set(group.names.map(name => name.toLocaleLowerCase('de'))).size),
@@ -464,6 +466,8 @@ const referenceChecks = vm.runInContext(`
       stoicheiaInfoCount: stoicheiaPages[0]?.stats?.length || 0,
       stoicheiaContext: (stoicheiaPages[0]?.description || '') + ' ' + (stoicheiaPages[1]?.language?.sections || []).map(section => section.text).join(' '),
       stoicheiaLanguageSectionCount: stoicheiaPages[1]?.language?.sections?.length || 0,
+      stoicheiaLanguageSections: stoicheiaPages[1]?.language?.sections || [],
+      stoicheiaOriginalLanguageSections: stoicheiaSource?.pages?.[1]?.language?.sections || [],
       stoicheiaAlphabetImageCount: (stoicheiaPages[1]?.language?.alphabetLayers || []).filter(layer => layer.image).length,
       stoicheiaEntryHasImage: Boolean(stoicheia?.image || stoicheiaPages.some(page => page.image)),
       stoicheiaNameCounts: (stoicheiaPages[2]?.nameList?.groups || []).map(group => group.names.length),
@@ -557,7 +561,11 @@ if (referenceChecks.infernalPageCount !== 4) failures.push('infernal: Das Modul 
 if (JSON.stringify(referenceChecks.infernalPageTypes) !== JSON.stringify(['story', 'language', 'name-list', 'script-table'])) failures.push(`infernal: Erwartete Seitentypen story/language/name-list/script-table fehlen (${referenceChecks.infernalPageTypes.join(', ')}).`);
 if (referenceChecks.infernalInfoCount !== 6) failures.push('infernal: Die Story-Seite besitzt nicht genau sechs Infokarten.');
 if (referenceChecks.infernalVisibleLayers !== 2) failures.push('infernal: Zeichentafel und Schriftprobe werden nicht als zwei sichtbare Ebenen erkannt.');
-if (referenceChecks.infernalLanguageSectionCount !== 8) failures.push(`infernal: Die gründliche Sprachbeschreibung sollte acht Abschnitte besitzen (${referenceChecks.infernalLanguageSectionCount}).`);
+const expectedInfernalSections = ['Kosmische Gegenordnung', 'Zarakhuls Zwangssprache und Orins Eingriff',
+  'Sprache als wirkende Macht', 'Lautung & Sprechgestalt', 'Die 30 Sigillen', 'Brandmal, Beschwörung & Vertrag',
+  'Wirkungsketten & Wortbildung', 'Wahre Namen & Dienstnamen', 'Kontaktmagie, Preis & Vertragsbruch'];
+validateLanguageSections('infernal', referenceChecks.infernalLanguageSections,
+  referenceChecks.infernalOriginalLanguageSections, expectedInfernalSections);
 if (JSON.stringify(referenceChecks.infernalNameCounts) !== JSON.stringify([200, 200])) failures.push(`infernal: Erwartet werden je 200 Namen pro Geschlecht (${referenceChecks.infernalNameCounts.join(', ')}).`);
 if (JSON.stringify(referenceChecks.infernalUniqueNameCounts) !== JSON.stringify([200, 200])) failures.push('infernal: Die Namenslisten enthalten Duplikate.');
 if (referenceChecks.infernalNameStyle !== 'infernal') failures.push('infernal: Die Namensverzierung verwendet nicht den Nharazim-Stil.');
@@ -616,6 +624,17 @@ if (!fs.existsSync(kanaanithDataPath)) {
   });
 }
 
+function validateLanguageSections(id, sections, originalSections, expectedTitles) {
+  const titles = sections.map(section => section.title);
+  if (JSON.stringify(titles) !== JSON.stringify(expectedTitles)) {
+    failures.push(`${id}: Die benannten Sprachabschnitte einschließlich der neuen Herkunft müssen vollständig und in Reihenfolge erhalten bleiben (${titles.join(' · ')}).`);
+  }
+  if (JSON.stringify(sections) !== JSON.stringify(originalSections)) {
+    failures.push(`${id}: Der JSON-Roundtrip hat Text oder Eigenschaften eines Sprachabschnitts verändert.`);
+  }
+  if (sections.some(section => !section.text.trim())) failures.push(`${id}: Ein benannter Sprachabschnitt enthält keinen Text.`);
+}
+
 function validatePackagedLanguage({
   id,
   checks,
@@ -624,13 +643,15 @@ function validatePackagedLanguage({
   syllableCount,
   dataPath,
   maleKey,
-  femaleKey
+  femaleKey,
+  sectionTitles
 }) {
   if (!checks.found) failures.push(`${id}: Fester Eintrag im Sprachen-Reiter fehlt.`);
   if (checks.pageCount !== 4) failures.push(`${id}: Das Modul besitzt nicht genau vier Seiten.`);
   if (JSON.stringify(checks.pageTypes) !== JSON.stringify(['story', 'language', 'name-list', 'script-table'])) failures.push(`${id}: Erwartete Seitentypen story/language/name-list/script-table fehlen (${checks.pageTypes.join(', ')}).`);
   if (checks.infoCount !== 6) failures.push(`${id}: Die Story-Seite besitzt nicht genau sechs Infokarten.`);
-  if (checks.sectionCount !== 8) failures.push(`${id}: Die gründliche Sprachbeschreibung sollte acht Abschnitte besitzen (${checks.sectionCount}).`);
+  if (sectionTitles) validateLanguageSections(id, checks.sections, checks.originalSections, sectionTitles);
+  else if (checks.sectionCount !== 8) failures.push(`${id}: Die gründliche Sprachbeschreibung sollte acht Abschnitte besitzen (${checks.sectionCount}).`);
   if (!contextTerms.every(term => checks.context.includes(term))) failures.push(`${id}: Kanonischer Sprach- oder Kulturkontext ist unvollständig.`);
   if (checks.imageCount !== 0 || checks.hasImage) failures.push(`${id}: Bildfelder sollten mangels lokaler Bildtafeln leer bleiben.`);
   if (JSON.stringify(checks.nameCounts) !== JSON.stringify([200, 200])) failures.push(`${id}: Erwartet werden je 200 Namen pro Geschlecht (${checks.nameCounts.join(', ')}).`);
@@ -692,6 +713,8 @@ validatePackagedLanguage({
     pageTypes: referenceChecks.stoicheiaPageTypes,
     infoCount: referenceChecks.stoicheiaInfoCount,
     sectionCount: referenceChecks.stoicheiaLanguageSectionCount,
+    sections: referenceChecks.stoicheiaLanguageSections,
+    originalSections: referenceChecks.stoicheiaOriginalLanguageSections,
     context: referenceChecks.stoicheiaContext,
     imageCount: referenceChecks.stoicheiaAlphabetImageCount,
     hasImage: referenceChecks.stoicheiaEntryHasImage,
@@ -710,7 +733,11 @@ validatePackagedLanguage({
   syllableCount: 61,
   dataPath: path.resolve(almanachRoot, '../Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json'),
   maleKey: 'namen_maennlich',
-  femaleKey: 'namen_weiblich'
+  femaleKey: 'namen_weiblich',
+  sectionTitles: ['Vom Kana’anith zum Stoicheia', 'Aechanath, Aechneach und die zerstreuten Zungen',
+    'Phalantia und Klythesia: getrennte Reiche, gemeinsame Sprache', 'Athara & der erste Nomophylax',
+    'Die 24 Grundzeichen', 'Vier Tetrades', 'Körper, Geist & Polis', 'Die 37 Rhemata',
+    'Formenlehre & Wortbildung', 'Namen, Krieg & gebundene Zukunft']
 });
 
 [

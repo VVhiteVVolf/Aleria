@@ -12,7 +12,7 @@ test('prepare resumes the verified package, full runs revalidate, and unknown ov
   const root = await mkdtemp(path.join(tmpdir(), 'aleria-release-flow-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: 'pipe' });
-  for (const name of ['release', 'snapshot', 'git-state', 'prepared-release', 'release-timings',
+  for (const name of ['release', 'snapshot', 'canonical-source', 'git-state', 'prepared-release', 'release-timings',
     'publication-inventory', 'netlify-client']) {
     await mkdir(path.join(root, 'netlify/release'), { recursive: true });
     await copyFile(path.join(sourceRoot, 'netlify/release', name + '.mjs'), path.join(root, 'netlify/release', name + '.mjs'));

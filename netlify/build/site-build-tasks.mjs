@@ -433,6 +433,9 @@ export const SITE_BUILD_TASKS = [
       'firebase/functions/src/generated/item-register/', 'firebase/functions/src/generated/economy-pricing/',
       'AleriaAlmanach/scripts/build-economy-calculator.mjs',
       'AleriaAlmanach/scripts/build-economy-price-reference.mjs', 'AleriaAlmanach/scripts/build-economy-price-review.mjs',
+      'AleriaAlmanach/scripts/check-module-template-assets.js', 'AleriaAlmanach/scripts/check-module-template-roundtrip.js',
+      'AleriaAlmanach/modules/language/', 'AleriaAlmanach/modules/name-list/', 'AleriaAlmanach/modules/script-table/',
+      'AleriaAlmanach/data/sections.js', 'Fonts/',
       'AleriaAlmanach/tests/economy-calculator.test.mjs', 'AleriaAlmanach/tests/economy-price-review.test.mjs', 'AleriaAlmanach/AleriaAlmanach.html'],
     commands: [['AleriaAlmanach/scripts/build-economy-price-reference.mjs', '--check'], ['AleriaAlmanach/scripts/build-economy-price-review.mjs', '--check'],
       ['AleriaAlmanach/scripts/build-economy-calculator.mjs', '--check'], testCommand(almanach('economy-calculator'), almanach('economy-price-review')),
@@ -594,6 +597,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
+      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'AleriaAlmanach/modules/character-trait-review/', 'AleriaAlmanach/modules/character-development/',
