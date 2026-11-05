@@ -4,7 +4,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { createFamilyCandidates } from '../modules/character-genealogy/genealogy-mapping.js';
 import { ARGALL_CAPTAIN_PEOPLE } from '../modules/fleischsammler-argall/household.mjs';
-import { ARGALL_CAPTAIN_FEATURE, buildArgallHouseholdExports } from '../modules/fleischsammler-argall/character-content.mjs';
+import { ARGALL_CAPTAIN_FEATURE, buildArgallHouseholdExports, buildArgallHouseholdCandidates } from '../modules/fleischsammler-argall/character-content.mjs';
 import { buildAuthoredCharacterImport } from '../../CharakterDatenbank/lib/authored-character-import.mjs';
 
 const root = new URL('../../', import.meta.url);
@@ -40,7 +40,7 @@ test('the bounded family-linked import preserves unrelated inventory, resources 
     snapshot: { characters: [{ id: 'old', inventory: { items: [{ id: 'live-item' }] }, combatProfile: { hitPoints: { current: 2 } } }], charTabs: { tabs: ['Alle'], map: {} } },
     report: { summary: { sourceDocuments: 1, total: 1 }, pending: [] }
   };
-  const candidates = createFamilyCandidates(family);
+  const candidates = buildArgallHouseholdCandidates(family);
   const result = buildAuthoredCharacterImport(prior, exports, ARGALL_CAPTAIN_FEATURE, candidates);
   assert.deepEqual(result.snapshot.characters.find(person => person.id === 'old'), prior.snapshot.characters[0]);
   assert.deepEqual(result.registry.records.find(record => record.recordId === 'old'), prior.registry.records[0]);
@@ -60,5 +60,31 @@ test('all four individual portraits and canonical character records exist', asyn
     assert.equal(matches.length, 1, spec.name);
     assert.equal(matches[0].portrait, spec.portrait);
     assert.ok((await stat(new URL(spec.portrait.slice(1), root))).size > 1000, spec.name);
+  }
+});
+
+test('tree-relative display portraits export the exact canonical sources without changing family records', async () => {
+  for (const prefix of ['', '..']) {
+    const input = structuredClone(family);
+    for (const spec of Object.values(people)) {
+      const person = input.family.persons.find(person => person.id === spec.id);
+      person.portrait = prefix + spec.portrait;
+      person.extensions.biographyModule.biography.portrait = prefix + spec.portrait;
+    }
+    const before = structuredClone(input);
+    const originalCandidates = createFamilyCandidates(input);
+    const candidates = buildArgallHouseholdCandidates(input);
+    assert.equal(candidates.length, originalCandidates.length);
+    for (const candidate of candidates.filter(candidate => !Object.values(people).some(spec => spec.id === candidate.personId))) {
+      assert.deepEqual(candidate, originalCandidates.find(original => original.personId === candidate.personId));
+    }
+    for (const entry of buildArgallHouseholdExports(input)) {
+      const spec = Object.values(people).find(spec => spec.worldPersonId === entry.character.id);
+      assert.equal(entry.character.portrait, spec.portrait);
+      assert.equal(entry.character.biography.biography.portrait, spec.portrait);
+      assert.equal(JSON.parse(entry.character.genealogy.sources[0].fingerprint).portrait, spec.portrait);
+      assert.equal(JSON.stringify(entry, null, 2) + '\n', await readFile(new URL(entry.sourcePath, root), 'utf8'));
+    }
+    assert.deepEqual(input, before);
   }
 });

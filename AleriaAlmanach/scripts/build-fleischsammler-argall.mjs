@@ -1,8 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
-import { createFamilyCandidates } from '../modules/character-genealogy/genealogy-mapping.js';
 import { importAuthoredCharacters } from '../../CharakterDatenbank/scripts/import-authored-characters.mjs';
-import { ARGALL_CAPTAIN_FEATURE, buildArgallHouseholdExports } from '../modules/fleischsammler-argall/character-content.mjs';
+import { ARGALL_CAPTAIN_FEATURE, buildArgallHouseholdExports, buildArgallHouseholdCandidates } from '../modules/fleischsammler-argall/character-content.mjs';
 
 const root = new URL('../../', import.meta.url);
 const family = FAMILY_REGISTRY.find(record => record.id === 'haus-argall');
@@ -20,5 +19,5 @@ for (const entry of exports) {
 }
 console.log(JSON.stringify(await importAuthoredCharacters({
   sources: exports.map(entry => entry.sourcePath), feature: ARGALL_CAPTAIN_FEATURE,
-  familyCandidates: createFamilyCandidates(family), check
+  familyCandidates: buildArgallHouseholdCandidates(family), check
 })));
